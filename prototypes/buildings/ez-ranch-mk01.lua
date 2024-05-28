@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 20
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 
@@ -49,9 +48,9 @@ ENTITY {
     module_specification = {
         module_slots = MODULE_SLOTS
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"korlex"},
-    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
+    crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -64,18 +63,14 @@ ENTITY {
                 filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off.png",
                 width = 352,
                 height = 352,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16)
             },
             {
                 filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off-mask.png",
                 width = 352,
                 height = 352,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
@@ -213,8 +208,8 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             pipe_connections = {
                 {type = "input-output", position = {0.5, -5.5}},

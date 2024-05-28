@@ -1,32 +1,31 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['xyhiphoe-1']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-2']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-3']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-4']),
+        RECIPE('xyhiphoe-1'):copy(),
+        RECIPE('xyhiphoe-2'):copy(),
+        RECIPE('xyhiphoe-3'):copy(),
+        RECIPE('xyhiphoe-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hot-cold'
 
-        FUN.add_ingredient_amount(recipe, 'xyhiphoe-cub', 1)
+        recipe:add_ingredient_amount('xyhiphoe-cub', 1)
         if i == 4 then
-            FUN.add_result_amount(recipe, 'xyhiphoe', 1)
+            recipe:add_result_amount('xyhiphoe', 1)
         else
-            FUN.add_result(recipe, {'xyhiphoe', 1})
+            recipe:add_result({'xyhiphoe', 1})
         end
 
-        local phyto_barrel_count = math.ceil(FUN.remove_ingredient(recipe, 'phytoplankton') / 50)
+        local _, phyto_barrel_count = recipe:remove_ingredient('phytoplankton')
+        phyto_barrel_count = math.ceil(phyto_barrel_count / 50)
         if phyto_barrel_count > 0 then
-            FUN.add_ingredient(recipe, {'phytoplankton-barrel', phyto_barrel_count})
-            FUN.add_result(recipe, {'empty-barrel', phyto_barrel_count})
+            recipe:add_ingredient({'phytoplankton-barrel', phyto_barrel_count})
+            recipe:add_result({'empty-barrel', phyto_barrel_count})
         end
+        
+        recipe:add_ingredient({name = 'liquid-nitrogen', amount = 5, type = 'fluid', fluidbox_index = 1})
+        recipe:add_result({type = 'fluid', name = 'nitrogen', amount = 50})
 
-        FUN.add_ingredient(recipe, {name = 'liquid-nitrogen', amount = 5, type = 'fluid', fluidbox_index = 1})
-        FUN.add_result(recipe, {type = 'fluid', name = 'nitrogen', amount = 50})
-
-        FUN.add_ingredient(recipe, {name = 'redhot-coke', amount = 1, type = 'item'})
-        FUN.add_result(recipe, {type = 'item', name = 'coke', amount = 1})
+        recipe:add_ingredient({name = 'redhot-coke', amount = 1, type = 'item'})
+        recipe:add_result({type = 'item', name = 'coke', amount = 1})
 
         recipe.energy_required = math.ceil(recipe.energy_required * 8 / 14)
         data:extend{recipe}
@@ -52,17 +51,17 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs{
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-1']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-2']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-3']),
-        table.deepcopy(data.raw.recipe['xyhiphoe-cub-4']),
+        RECIPE('xyhiphoe-cub-1'):copy(),
+        RECIPE('xyhiphoe-cub-2'):copy(),
+        RECIPE('xyhiphoe-cub-3'):copy(),
+        RECIPE('xyhiphoe-cub-4'):copy(),
     } do
         recipe.name = recipe.name .. '-acetone'
-        FUN.remove_result(recipe, 'waste-water')
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'waste-water', amount = 250, fluidbox_index = 2})
-        FUN.add_result_amount(recipe, 'xyhiphoe-cub', 2)
-        FUN.remove_ingredient(recipe, 'pressured-water')
-        FUN.add_result(recipe, {type = 'fluid', name = 'acetone', amount = i*150})
+        recipe:remove_result('waste-water')
+        recipe:add_ingredient({type = 'fluid', name = 'waste-water', amount = 250, fluidbox_index = 2})
+        recipe:add_result_amount('xyhiphoe-cub', 2)
+        recipe:remove_ingredient('pressured-water')
+        recipe:add_result({type = 'fluid', name = 'acetone', amount = i*150})
         data:extend{recipe}
     end
 end

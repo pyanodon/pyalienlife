@@ -1,8 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------CALF MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'mukmoux-calf',
 	category = 'rc',
 	allowed_module_categories = {'mukmoux'},
@@ -194,7 +192,7 @@ FUN.autorecipes {
 
 --raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'mukmoux',
 	category = 'mukmoux',
 	module_limitations = 'mukmoux',

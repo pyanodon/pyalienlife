@@ -1,23 +1,21 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
-    local recipe = table.deepcopy(data.raw.recipe['yotoi-seeds'])
+    local recipe = RECIPE('yotoi-seeds'):copy()
     recipe.name = 'yotoi-seeds-cold'
-    FUN.add_ingredient(recipe, {type = 'fluid', name = 'cold-air', amount = 30})
-    FUN.add_ingredient(recipe, {type = 'item', name = 'yotoi-leaves', amount = 1})
-    FUN.multiply_result_amount(recipe, 'yotoi-seeds', 3)
+    recipe:add_ingredient({type = 'fluid', name = 'cold-air', amount = 30})
+    recipe:add_ingredient({type = 'item', name = 'yotoi-leaves', amount = 1})
+    recipe:multiply_result_amount('yotoi-seeds', 3)
     recipe.energy_required = recipe.energy_required * 4
     data:extend{recipe}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yotoi-1']),
-        table.deepcopy(data.raw.recipe['yotoi-2']),
-        table.deepcopy(data.raw.recipe['yotoi-3']),
-        table.deepcopy(data.raw.recipe['yotoi-4']),
+        RECIPE('yotoi-1'):copy(),
+        RECIPE('yotoi-2'):copy(),
+        RECIPE('yotoi-3'):copy(),
+        RECIPE('yotoi-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-free-leaves'
-        FUN.add_ingredient(recipe, {'burner-inserter', 1})
-        FUN.add_result(recipe, {name = 'yotoi-leaves', amount = i*4, type = 'item'})
+        recipe:add_ingredient({'burner-inserter', 1})
+        recipe:add_result({name = 'yotoi-leaves', amount = i*4, type = 'item'})
         recipe.main_product = 'yotoi-leaves'
         data:extend{recipe}
     end
@@ -53,30 +51,30 @@ if data and not yafc_turd_integration then
     }
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yotoi-2']),
-        table.deepcopy(data.raw.recipe['yotoi-3']),
-        table.deepcopy(data.raw.recipe['yotoi-4']),
-        table.deepcopy(data.raw.recipe['yotoi-fruit-2']),
-        table.deepcopy(data.raw.recipe['yotoi-fruit-3']),
-        table.deepcopy(data.raw.recipe['yotoi-fruit-4']),
+        RECIPE('yotoi-2'):copy(),
+        RECIPE('yotoi-3'):copy(),
+        RECIPE('yotoi-4'):copy(),
+        RECIPE('yotoi-fruit-2'):copy(),
+        RECIPE('yotoi-fruit-3'):copy(),
+        RECIPE('yotoi-fruit-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-nutrient'
-        local amount = FUN.remove_ingredient(recipe, 'fertilizer')
-        FUN.add_result(recipe, {'fertilizer', amount})
-        FUN.add_result_amount(recipe, 'yotoi', 1)
-        FUN.add_result_amount(recipe, 'yotoi-fruit', 1)
+        local _, amount = recipe:remove_ingredient('fertilizer')
+        recipe:add_result({'fertilizer', amount})
+        recipe:add_result_amount('yotoi', 1)
+        recipe:add_result_amount('yotoi-fruit', 1)
         recipe.main_product = 'fertilizer'
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk01']),
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk02']),
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk03']),
-        table.deepcopy(data.raw.recipe['yotoi-aloe-orchard-mk04']),
+        RECIPE('yotoi-aloe-orchard-mk01'):copy(),
+        RECIPE('yotoi-aloe-orchard-mk02'):copy(),
+        RECIPE('yotoi-aloe-orchard-mk03'):copy(),
+        RECIPE('yotoi-aloe-orchard-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nutrient'
-        FUN.add_ingredient(recipe, {'nutrient', 2^(i-1)})
+        recipe:add_ingredient({'nutrient', 2^(i-1)})
         data:extend{recipe}
     end
 end

@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{{
         type = 'recipe',
@@ -17,32 +15,32 @@ if data and not yafc_turd_integration then
         },
     }}
 
-    FUN.productivity{'chlorinated-water'}
+    py.allow_productivity{'chlorinated-water'}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Moss 1']),
-        table.deepcopy(data.raw.recipe['Moss 2']),
-        table.deepcopy(data.raw.recipe['Moss 3']),
-        table.deepcopy(data.raw.recipe['Moss 4']),
-        table.deepcopy(data.raw.recipe['Moss 5']),
+        RECIPE('Moss 1'):copy(),
+        RECIPE('Moss 2'):copy(),
+        RECIPE('Moss 3'):copy(),
+        RECIPE('Moss 4'):copy(),
+        RECIPE('Moss 5'):copy(),
     }) do
         recipe.name = recipe.name .. '-chlorinated'
-        FUN.add_ingredient(recipe, {name = 'chlorinated-water', amount = 1, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moss', 1.3)
+        recipe:add_ingredient({name = 'chlorinated-water', amount = 1, type = 'item'})
+        recipe:multiply_result_amount('moss', 1.3)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Moss 1']),
-        table.deepcopy(data.raw.recipe['Moss 2']),
-        table.deepcopy(data.raw.recipe['Moss 3']),
-        table.deepcopy(data.raw.recipe['Moss 4']),
-        table.deepcopy(data.raw.recipe['Moss 5']),
+        RECIPE('Moss 1'):copy(),
+        RECIPE('Moss 2'):copy(),
+        RECIPE('Moss 3'):copy(),
+        RECIPE('Moss 4'):copy(),
+        RECIPE('Moss 5'):copy(),
     }) do
         recipe.name = recipe.name .. '-without-sludge'
-        FUN.remove_ingredient(recipe, 'dirty-water-light')
-        if i ~= 1 then FUN.add_result(recipe, {type = 'item', name = 'gravel', amount_min = 1, amount_max = 5}) end
+        recipe:remove_ingredient('dirty-water-light')
+        if i ~= 1 then recipe:add_result({type = 'item', name = 'gravel', amount_min = 1, amount_max = 5}) end
         recipe.main_product = 'moss'
         data:extend{recipe}
     end
@@ -81,13 +79,13 @@ if data and not yafc_turd_integration then
     }
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['moss-farm-mk01']),
-        table.deepcopy(data.raw.recipe['moss-farm-mk02']),
-        table.deepcopy(data.raw.recipe['moss-farm-mk03']),
-        table.deepcopy(data.raw.recipe['moss-farm-mk04']),
+        RECIPE('moss-farm-mk01'):copy(),
+        RECIPE('moss-farm-mk02'):copy(),
+        RECIPE('moss-farm-mk03'):copy(),
+        RECIPE('moss-farm-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-bioreactor'
-        FUN.add_ingredient(recipe, {name = 'bio-reactor-mk0'..i, amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'bio-reactor-mk0'..i, amount = 1, type = 'item'})
         data:extend{recipe}
     end
 end

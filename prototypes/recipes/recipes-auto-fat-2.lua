@@ -1,9 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-
 ------------------ARTHURIANS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-arthurians-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
@@ -58,7 +55,7 @@ FUN.autorecipes {
 
 ------------------AUOGS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-auog-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -113,7 +110,7 @@ FUN.autorecipes {
 
 ------------------COTTONGUTS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-cottongut-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
@@ -166,7 +163,7 @@ FUN.autorecipes {
 }
 ------------------DHILMOS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-dhilmos-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -223,7 +220,7 @@ FUN.autorecipes {
 
 ------------------KMAUTS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-kmauts-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -278,7 +275,7 @@ FUN.autorecipes {
 
 ------------------KORLEX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-korlex-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -333,7 +330,7 @@ FUN.autorecipes {
 
 ------------------MUKMOUX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-mukmoux-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -388,7 +385,7 @@ FUN.autorecipes {
 
 ------------------PHADAI------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-phadai-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -443,7 +440,7 @@ FUN.autorecipes {
 
 ------------------SCRONDRIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-scrondrix-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -498,7 +495,7 @@ FUN.autorecipes {
 
 ------------------SIMIKS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-simik-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -553,7 +550,7 @@ FUN.autorecipes {
 
 ------------------TRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-trits-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -607,7 +604,7 @@ FUN.autorecipes {
 
 ------------------ULRIC------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-ulric-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -662,7 +659,7 @@ FUN.autorecipes {
 
 ------------------VONIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-vonix-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -722,7 +719,7 @@ FUN.autorecipes {
 
 ------------------ZIPIR------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-fat-zipir-2',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',

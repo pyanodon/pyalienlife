@@ -1,6 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'phagnot-improved',
 	category = 'phagnot',
 	--module_limitations = 'phagnot',

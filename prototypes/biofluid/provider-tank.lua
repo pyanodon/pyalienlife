@@ -102,4 +102,6 @@ ENTITY {
     collision_mask = collision_mask_util.get_default_mask('furnace')
 }
 
-collision_mask_util.add_layer(data.raw.furnace['provider-tank'].collision_mask, vessel_collision_mask)
+if not mods.pystellarexpedition then
+    collision_mask_util.add_layer(data.raw.furnace['provider-tank'].collision_mask, vessel_collision_mask)
+end

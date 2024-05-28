@@ -1,61 +1,59 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     local biomass = {'nacl-biomass', 's-biomass', 'ni-biomass', 'ti-biomass'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['bhoddos-1']),
-        table.deepcopy(data.raw.recipe['bhoddos-2']),
-        table.deepcopy(data.raw.recipe['bhoddos-3']),
-        table.deepcopy(data.raw.recipe['bhoddos-4']),
+        RECIPE('bhoddos-1'):copy(),
+        RECIPE('bhoddos-2'):copy(),
+        RECIPE('bhoddos-3'):copy(),
+        RECIPE('bhoddos-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-meltdown'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.3333)
-        FUN.remove_ingredient(recipe, 'fungal-substrate')
-        FUN.remove_ingredient(recipe, 'fungal-substrate-02')
-        FUN.remove_ingredient(recipe, 'fungal-substrate-03')
-        FUN.remove_ingredient(recipe, 'biomass')
-        FUN.remove_ingredient(recipe, 'moss')
-        FUN.remove_ingredient(recipe, 'manure')
-        FUN.remove_ingredient(recipe, 'bacteria-1-barrel')
-        FUN.remove_result(recipe, 'empty-barrel')
+        recipe:remove_ingredient('fungal-substrate')
+        recipe:remove_ingredient('fungal-substrate-02')
+        recipe:remove_ingredient('fungal-substrate-03')
+        recipe:remove_ingredient('biomass')
+        recipe:remove_ingredient('moss')
+        recipe:remove_ingredient('manure')
+        recipe:remove_ingredient('bacteria-1-barrel')
+        recipe:remove_result('empty-barrel')
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['bhoddos-1']),
-        table.deepcopy(data.raw.recipe['bhoddos-2']),
-        table.deepcopy(data.raw.recipe['bhoddos-3']),
-        table.deepcopy(data.raw.recipe['bhoddos-4']),
+        RECIPE('bhoddos-1'):copy(),
+        RECIPE('bhoddos-2'):copy(),
+        RECIPE('bhoddos-3'):copy(),
+        RECIPE('bhoddos-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-exoenzymes'
-        FUN.add_ingredient(recipe, {type = 'item', name = 'soil', amount = i})
-        FUN.add_result(recipe, {type = 'item', name = 'plutonium-oxide', amount = i})
+        recipe:add_ingredient({type = 'item', name = 'soil', amount = i})
+        recipe:add_result({type = 'item', name = 'plutonium-oxide', amount = i})
         recipe.main_product = 'plutonium-oxide'
         data:extend{recipe}
     end
 
     for i, spore in pairs({
-        table.deepcopy(data.raw.recipe['bhoddos-spore']),
-        table.deepcopy(data.raw.recipe['bhoddos-spore-3']),
+        RECIPE('bhoddos-spore'):copy(),
+        RECIPE('bhoddos-spore-3'):copy(),
     }) do
         spore.name = spore.name .. '-upgraded'
         spore.main_product = 'bhoddos-spore'
         spore.ingredients = {
             {'rich-dust', 1}
         }
-        FUN.multiply_result_amount(spore, 'bhoddos-spore', 10)
+        spore:multiply_result_amount('bhoddos-spore', 10)
         data:extend{spore}
     end
 
-    local sporopollenin = table.deepcopy(data.raw.recipe['sporopollenin'])
+    local sporopollenin = RECIPE('sporopollenin'):copy()
     sporopollenin.name = 'sporopollenin-gills'
-    FUN.remove_ingredient(sporopollenin, 'navens-spore')
-    FUN.remove_ingredient(sporopollenin, 'rennea')
+    sporopollenin:remove_ingredient('navens-spore')
+    sporopollenin:remove_ingredient('rennea')
     data:extend{sporopollenin}
 
-    local biomass_sporopollenin = table.deepcopy(data.raw.recipe['biomass-sporopollenin'])
+    local biomass_sporopollenin = RECIPE('biomass-sporopollenin'):copy()
     biomass_sporopollenin.name = biomass_sporopollenin.name .. '-nerfed'
-    FUN.multiply_ingredient_amount(biomass_sporopollenin, 'sporopollenin', 3)
+    biomass_sporopollenin:multiply_ingredient_amount('sporopollenin', 3)
     biomass_sporopollenin.results = {
         {type = 'item', name = 'fungal-substrate', amount = 2}
     }

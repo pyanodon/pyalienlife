@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 3
 
 RECIPE {
@@ -49,9 +48,9 @@ ENTITY {
     module_specification = {
         module_slots = MODULE_SLOTS
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"zungror"},
-    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "zungror-lair-mk01"),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "zungror-lair-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

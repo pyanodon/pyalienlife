@@ -54,7 +54,7 @@ ENTITY {
     module_specification = {
         module_slots = 100
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"kicalk"},
     crafting_speed = 0.08,
     energy_source = {
@@ -172,31 +172,31 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
+            pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {0.0, 7.0}}}
         },
         {
             production_type = "input",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
+            pipe_covers = py.pipe_covers(false, true, true, true),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {0.0, -7.0}}}
         },
         {
             production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
-            pipe_covers = DATA.Pipes.covers(false, false, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
+            pipe_covers = py.pipe_covers(false, false, true, true),
             base_level = 1,
             pipe_connections = {{type = "output", position = {-7.0, 0.0}}}
         },
         {
             production_type = "output",
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
-            pipe_covers = DATA.Pipes.covers(false, false, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
+            pipe_covers = py.pipe_covers(false, false, true, true),
             base_level = 1,
             pipe_connections = {{type = "output", position = {7.0, 0.0}}}
         },

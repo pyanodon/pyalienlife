@@ -1,7 +1,4 @@
 local prototypes = require 'caravan-prototypes'
-local Table = require('__stdlib__/stdlib/utils/table')
-local Position = require('__stdlib__/stdlib/area/position')
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 require 'caravan-gui-shared'
 
 local function generate_button_status(caravan_data, schedule_id, action_id)
@@ -129,7 +126,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 			end
 		end
 		actions = actions or prototype.actions.default
-		actions = Table.map(actions, function(v) return {'caravan-actions.' .. v, v} end)
+		actions = table.map(actions, function(v) return {'caravan-actions.' .. v, v} end)
 		local py_add_action = schedule_flow.add{type = 'drop-down', name = 'py_add_action', items = actions, tags = tags}
 		py_add_action.style.width = 340
 		py_add_action.style.height = 36
@@ -223,7 +220,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 	if caravan_data.fuel_inventory then
 		local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
 		fuel_flow.style.vertical_align = 'center'
-		local favorite_food_tooltip = generate_favorite_food_tooltip(prototypes[entity.name].favorite_foods, 'caravan-gui')
+		local favorite_food_tooltip = py.generate_favorite_food_tooltip(prototypes[entity.name].favorite_foods, 'caravan-gui')
 		for i = 1, #caravan_data.fuel_inventory do
 			local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_fuel_slot_' .. i, style = 'inventory_slot', tags = {unit_number = caravan_data.unit_number, i = i}}
 			fuel_slot.sprite = 'utility/slot_icon_fuel'

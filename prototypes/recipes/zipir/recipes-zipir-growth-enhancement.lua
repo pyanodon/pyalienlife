@@ -1,6 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'zipir-improved',
 	category = 'zipir',
 	module_limitations = 'zipir',

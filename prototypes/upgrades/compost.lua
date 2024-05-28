@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data.raw.fluid['sweet-syrup'].default_temperature = 0
     data.raw.recipe['sweet-syrup'].results[1].temperature = 10
@@ -17,8 +15,8 @@ if data and not yafc_turd_integration then
             emissions_per_minute = -1,
             fluid_box = {
                 base_area = 0.5,
-                pipe_covers = DATA.Pipes.covers(false, true, true, true),
-                pipe_picture = DATA.Pipes.pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
                 pipe_connections = {
                     {position = {4, -6}},
                     {position = {-4, -6}},
@@ -38,8 +36,8 @@ if data and not yafc_turd_integration then
         entity.order = data.raw.item[name].order
         table.insert(entity.fluid_boxes, {
             production_type = 'output',
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
             base_area = 1,
             base_level = 1,
             pipe_connections = {{type = 'output', position = {0.0, 6.0}}},
@@ -169,24 +167,24 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['compost-plant-mk01']),
-        table.deepcopy(data.raw.recipe['compost-plant-mk02']),
-        table.deepcopy(data.raw.recipe['compost-plant-mk03']),
-        table.deepcopy(data.raw.recipe['compost-plant-mk04']),
+        RECIPE('compost-plant-mk01'):copy(),
+        RECIPE('compost-plant-mk02'):copy(),
+        RECIPE('compost-plant-mk03'):copy(),
+        RECIPE('compost-plant-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-pump'
-		FUN.add_ingredient(recipe, {type = 'item', name = 'offshore-pump', amount = 2*i})
+		recipe:add_ingredient({type = 'item', name = 'offshore-pump', amount = 2*i})
         data:extend{recipe}
     end
 
-    local fine_powdered_biomass = table.deepcopy(data.raw.recipe['fine-powdered-biomass'])
+    local fine_powdered_biomass = RECIPE('fine-powdered-biomass'):copy()
     fine_powdered_biomass.name = 'fine-powdered-biomass-irragration'
-    FUN.add_ingredient(fine_powdered_biomass, {type = 'fluid', name = 'water', amount = 250})
+    fine_powdered_biomass:add_ingredient({type = 'fluid', name = 'water', amount = 250})
     fine_powdered_biomass.category = 'washer'
     fine_powdered_biomass.energy_required = 3
     fine_powdered_biomass.main_product = 'steam'
-    FUN.add_result(fine_powdered_biomass, {type = 'fluid', name = 'steam', amount = 250, temperature = 250})
-    FUN.add_result(fine_powdered_biomass, {type = 'item', name = 'dried-biomass', amount = 4})
+    fine_powdered_biomass:add_result({type = 'fluid', name = 'steam', amount = 250, temperature = 250})
+    fine_powdered_biomass:add_result({type = 'item', name = 'dried-biomass', amount = 4})
     data:extend{fine_powdered_biomass}
 end
 

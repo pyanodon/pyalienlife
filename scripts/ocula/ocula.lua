@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 Oculua = {}
 Oculua.events = {}
 
@@ -56,7 +54,7 @@ end
 
 function Oculua.find_ipod(player, item)
 	local checked_logistic_networks = {}
-	for _, ipod_data in FUN.shuffled_pairs(global.ipods) do
+	for _, ipod_data in py.shuffled_pairs(global.ipods) do
 		local ipod = ipod_data.entity
 		if ipod.force ~= player.force or ipod.surface ~= player.surface then goto continue end
 		if ipod_data.active_oculua >= #ipod_data.inventory then goto continue end
@@ -69,6 +67,22 @@ function Oculua.find_ipod(player, item)
 		::continue::
 	end
 	return nil
+end
+
+-- Checks if an item has metadata, such as item-with-tags or equipement grids. TODO: remove this and use temp luainvnetories instead
+local basic_item_types = {['item'] = true, ['capsule'] = true, ['gun'] = true, ['rail-planner'] = true, ['module'] = true}
+local function check_for_basic_item(item)
+	local items_with_metadata = global.items_with_metadata
+	if not items_with_metadata then
+		items_with_metadata = {}
+		for item_name, prototype in pairs(game.item_prototypes) do
+			if not basic_item_types[prototype.type] then
+				items_with_metadata[item_name] = true
+			end
+		end
+		global.items_with_metadata = items_with_metadata
+	end
+	return not items_with_metadata[item]
 end
 
 function Oculua.process_player(player)
@@ -86,7 +100,7 @@ function Oculua.process_player(player)
 		if not request_slot then goto continue end
 		local item = request_slot.name
 
-		if not FUN.check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
+		if not check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
 		local needed = request_slot.count - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
 		if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end
 

@@ -1,4 +1,4 @@
-local noise = require("noise")
+local noise = require 'noise'
 data.raw.fish.fish.minable.result = 'fish'
 data.raw.fish.fish.autoplace = {
     probability_expression = noise.define_noise_function( function(x, y, tile, map)

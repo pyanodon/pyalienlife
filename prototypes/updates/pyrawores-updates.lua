@@ -38,10 +38,6 @@ RECIPE('ralesia-plantation-mk02'):add_ingredient({type = "item", name = "duralum
 RECIPE('ralesia-plantation-mk03'):add_ingredient({type = "item", name = "stainless-steel", amount = 25}):add_ingredient({type = "item", name = "aluminium-plate", amount = 40})
 RECIPE('ralesia-plantation-mk04'):add_ingredient({type = "item", name = "super-steel", amount = 25})
 
-RECIPE('cadaveric-arum-mk02'):add_ingredient({type = "item", name = "duralumin", amount = 40}):add_ingredient({type = "item", name = "titanium-plate", amount = 50})
-RECIPE('cadaveric-arum-mk03'):add_ingredient({type = "item", name = "stainless-steel", amount = 25}):add_ingredient({type = "item", name = "aluminium-plate", amount = 40})
-RECIPE('cadaveric-arum-mk04'):add_ingredient({type = "item", name = "super-steel", amount = 25})
-
 RECIPE("chemical-plant-mk02"):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient({type = "item", name = "latex", amount = 20})
 
 RECIPE("chemical-plant-mk03"):add_ingredient({type = "item", name = "neuroprocessor", amount = 20}):add_ingredient({type = "item", name = "latex", amount = 20}):add_ingredient({type = "item", name = "ticocr-alloy", amount = 40}):add_ingredient({type = "item", name = "neuromorphic-chip", amount = 40})
@@ -66,11 +62,11 @@ RECIPE('phosphate-mine-02'):add_ingredient({type = "item", name = "neuroprocesso
 RECIPE("bof-mk01"):remove_ingredient("steam-engine"):replace_ingredient("washer", "steel-furnace")
 RECIPE("casting-unit-mk01"):replace_ingredient("steam-engine", "steel-furnace")
 
-RECIPE("borax-mine"):add_unlock("glass"):set_enabled(false)
-RECIPE("glassworks-mk01"):add_unlock("glass"):set_enabled(false)
-RECIPE("glass-1"):add_unlock("glass"):set_enabled(false)
-RECIPE("molten-glass"):add_unlock("glass"):set_enabled(false)
-RECIPE("aluminium-plate-1"):add_unlock("moss-mk01"):set_enabled(false)
+RECIPE("borax-mine"):add_unlock("glass").enabled = false
+RECIPE("glassworks-mk01"):add_unlock("glass").enabled = false
+RECIPE("glass-1"):add_unlock("glass").enabled = false
+RECIPE("molten-glass"):add_unlock("glass").enabled = false
+RECIPE("aluminium-plate-1"):add_unlock("moss-mk01").enabled = false
 
 --TECHNOLOGIES--
 -- TECHNOLOGY('aluminium-mk03'):add_pack('py-science-pack-3')

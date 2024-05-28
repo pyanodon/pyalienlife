@@ -1,26 +1,24 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs{
-        table.deepcopy(data.raw.recipe['bio-scafold']),
-        table.deepcopy(data.raw.recipe['bio-scafold-2']),
-        table.deepcopy(data.raw.recipe['bio-scafold-3']),
-        table.deepcopy(data.raw.recipe['bio-scafold-4']),
+        RECIPE('bio-scafold'):copy(),
+        RECIPE('bio-scafold-2'):copy(),
+        RECIPE('bio-scafold-3'):copy(),
+        RECIPE('bio-scafold-4'):copy(),
     } do
         recipe.name = recipe.name .. '-with-lamp'
-        FUN.add_ingredient(recipe, {'small-lamp', 1})
-        FUN.multiply_result_amount(recipe, 'bio-scafold', 2)
+        recipe:add_ingredient({'small-lamp', 1})
+        recipe:multiply_result_amount('bio-scafold', 2)
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['bio-printer-mk01']),
-        table.deepcopy(data.raw.recipe['bio-printer-mk02']),
-        table.deepcopy(data.raw.recipe['bio-printer-mk03']),
-        table.deepcopy(data.raw.recipe['bio-printer-mk04']),
+        RECIPE('bio-printer-mk01'):copy(),
+        RECIPE('bio-printer-mk02'):copy(),
+        RECIPE('bio-printer-mk03'):copy(),
+        RECIPE('bio-printer-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-yag'
-        FUN.add_ingredient(recipe, {type = 'item', name = 'yag-laser-module', amount = 2*i})
+        recipe:add_ingredient({type = 'item', name = 'yag-laser-module', amount = 2*i})
         data:extend{recipe}
     end
 

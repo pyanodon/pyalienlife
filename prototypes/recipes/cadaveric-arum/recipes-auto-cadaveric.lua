@@ -1,7 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'cadaveric-arum',
 	category = 'arum',
 	module_limitations = 'arum',

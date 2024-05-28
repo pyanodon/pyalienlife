@@ -31,4 +31,4 @@ RECIPE {
         {type = "item", name = "quartz-tube", amount = 1, probability = 0.75},
     },
     main_product = "bio-oil",
-}:add_unlock("bioprocessing"):change_category('hor')
+}:add_unlock("bioprocessing").category = 'hor'

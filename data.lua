@@ -2,10 +2,6 @@
 --i.e. 0.01 * ( 1 + ( 15 * 6 )
 --module bonus is a whole number do to the size of the bonus amount
 
-require('__stdlib__/stdlib/data/data').Util.create_data_globals()
-local RECIPE = require '__stdlib__/stdlib/data/recipe'
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 require 'prototypes/item-groups'
 require 'prototypes/recipe-categories'
 require 'prototypes/fuel-categories'
@@ -857,6 +853,6 @@ for i, item in pairs(bio_list) do
             order = i,
             localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
         }:add_unlock('compost')
-        FUN.add_to_description(type, prototype, {'item-description.compost-amount', math.floor(item.biomass_amount / item.item_amount * 10) / 10})
+        py.add_to_description(type, prototype, {'item-description.compost-amount', math.floor(item.biomass_amount / item.item_amount * 10) / 10})
     end
 end

@@ -1,37 +1,35 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['trits-cub-1']),
-        table.deepcopy(data.raw.recipe['trits-cub-2']),
-        table.deepcopy(data.raw.recipe['trits-cub-3']),
-        table.deepcopy(data.raw.recipe['trits-cub-4']),
+        RECIPE('trits-cub-1'):copy(),
+        RECIPE('trits-cub-2'):copy(),
+        RECIPE('trits-cub-3'):copy(),
+        RECIPE('trits-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-mgo'
-        FUN.remove_ingredient(recipe, 'trits')
+        recipe:remove_ingredient('trits')
         data:extend{recipe}
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['trits-1']),
-        table.deepcopy(data.raw.recipe['trits-2']),
-        table.deepcopy(data.raw.recipe['trits-3']),
-        table.deepcopy(data.raw.recipe['trits-4']),
+        RECIPE('trits-1'):copy(),
+        RECIPE('trits-2'):copy(),
+        RECIPE('trits-3'):copy(),
+        RECIPE('trits-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-dc'
         recipe.energy_required = recipe.energy_required * 2
-        FUN.multiply_result_amount(recipe, 'trits', 1.5)
+        recipe:multiply_result_amount('trits', 1.5)
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['trits-reef-mk01']),
-        table.deepcopy(data.raw.recipe['trits-reef-mk02']),
-        table.deepcopy(data.raw.recipe['trits-reef-mk03']),
-        table.deepcopy(data.raw.recipe['trits-reef-mk04']),
+        RECIPE('trits-reef-mk01'):copy(),
+        RECIPE('trits-reef-mk02'):copy(),
+        RECIPE('trits-reef-mk03'):copy(),
+        RECIPE('trits-reef-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nexelit'
-        FUN.add_ingredient(recipe, {'high-grade-nexelit', i * 100})
+        recipe:add_ingredient({'high-grade-nexelit', i * 100})
         data:extend{recipe}
     end
 end

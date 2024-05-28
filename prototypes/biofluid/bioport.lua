@@ -80,7 +80,7 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     dying_explosion = 'medium-explosion',
-    collision_mask = {vessel_collision_mask},
+    collision_mask = not mods.pystellarexpedition and {vessel_collision_mask},
     crafting_speed = 1,
     energy_usage = '1W',
     crafting_categories = {'biofluid'},

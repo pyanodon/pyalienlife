@@ -1,51 +1,49 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['grod-1']),
-        table.deepcopy(data.raw.recipe['grod-2']),
-        table.deepcopy(data.raw.recipe['grod-3']),
-        table.deepcopy(data.raw.recipe['grod-4']),
+        RECIPE('grod-1'):copy(),
+        RECIPE('grod-2'):copy(),
+        RECIPE('grod-3'):copy(),
+        RECIPE('grod-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-pressured'
-        FUN.remove_ingredient(recipe, 'water')
-        FUN.add_ingredient(recipe, {name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
-        FUN.multiply_result_amount(recipe, 'grod', 1.25)
+        recipe:remove_ingredient('water')
+        recipe:add_ingredient({name = 'pressured-water', amount = 1000, type = 'fluid', fluidbox_index = 1})
+        recipe:multiply_result_amount('grod', 1.25)
         data:extend{recipe}
     end
 
     for recipe, result in pairs({
-        [table.deepcopy(data.raw.recipe['grod-al'])] = 'al-biomass',
-        [table.deepcopy(data.raw.recipe['grod-al-2'])] = 'al-biomass',
-        [table.deepcopy(data.raw.recipe['grod-al-3'])] = 'al-biomass',
-        [table.deepcopy(data.raw.recipe['grod-pb'])] = 'pb-biomass',
-        [table.deepcopy(data.raw.recipe['grod-pb-2'])] = 'pb-biomass',
-        [table.deepcopy(data.raw.recipe['grod-pb-3'])] = 'pb-biomass',
-        [table.deepcopy(data.raw.recipe['grod-sn'])] = 'sn-biomass',
-        [table.deepcopy(data.raw.recipe['grod-sn-2'])] = 'sn-biomass',
-        [table.deepcopy(data.raw.recipe['grod-sn-3'])] = 'sn-biomass',
+        [RECIPE('grod-al'):copy()] = 'al-biomass',
+        [RECIPE('grod-al-2'):copy()] = 'al-biomass',
+        [RECIPE('grod-al-3'):copy()] = 'al-biomass',
+        [RECIPE('grod-pb'):copy()] = 'pb-biomass',
+        [RECIPE('grod-pb-2'):copy()] = 'pb-biomass',
+        [RECIPE('grod-pb-3'):copy()] = 'pb-biomass',
+        [RECIPE('grod-sn'):copy()] = 'sn-biomass',
+        [RECIPE('grod-sn-2'):copy()] = 'sn-biomass',
+        [RECIPE('grod-sn-3'):copy()] = 'sn-biomass',
     }) do
         recipe.name = recipe.name .. '-tailings'
-        FUN.add_ingredient_amount(recipe, 'dirty-water-heavy', 100)
-        FUN.multiply_result_amount(recipe, result, 3)
+        recipe:add_ingredient_amount('dirty-water-heavy', 100)
+        recipe:multiply_result_amount(result, 3)
         data:extend{recipe}
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['grod-1']),
-        table.deepcopy(data.raw.recipe['grod-2']),
-        table.deepcopy(data.raw.recipe['grod-3']),
-        table.deepcopy(data.raw.recipe['grod-4']),
+        RECIPE('grod-1'):copy(),
+        RECIPE('grod-2'):copy(),
+        RECIPE('grod-3'):copy(),
+        RECIPE('grod-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-dry'
-        FUN.remove_ingredient(recipe, 'water')
+        recipe:remove_ingredient('water')
         data:extend{recipe}
     end
 
-    local seeds = table.deepcopy(data.raw.recipe['grod-seeds'])
+    local seeds = RECIPE('grod-seeds'):copy()
     seeds.name = 'grod-seeds-heavy-water'
     seeds.main_product = 'grod-seeds'
-    FUN.add_result(seeds, {type = 'fluid', name = 'geothermal-water', amount = 60})
+    seeds:add_result({type = 'fluid', name = 'geothermal-water', amount = 60})
     data:extend{seeds}
 end
 

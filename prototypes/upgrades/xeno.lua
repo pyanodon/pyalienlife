@@ -1,18 +1,16 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['caged-xeno-1']),
-        table.deepcopy(data.raw.recipe['caged-xeno-2']),
-        table.deepcopy(data.raw.recipe['caged-xeno-3']),
-        table.deepcopy(data.raw.recipe['caged-xeno-4']),
+        RECIPE('caged-xeno-1'):copy(),
+        RECIPE('caged-xeno-2'):copy(),
+        RECIPE('caged-xeno-3'):copy(),
+        RECIPE('caged-xeno-4'):copy(),
     }) do
         recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         recipe.name = recipe.name .. '-dna-polymerase'
         if i == 1 or i == 3 then
-            FUN.add_result(recipe, {name = 'dna-polymerase', amount = i, type = 'item'})
+            recipe:add_result({name = 'dna-polymerase', amount = i, type = 'item'})
         else
-            FUN.add_result(recipe, {name = 'chimeric-proteins', amount = i, type = 'item'})
+            recipe:add_result({name = 'chimeric-proteins', amount = i, type = 'item'})
         end
         data:extend{recipe}
     end
@@ -40,16 +38,16 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['xeno-egg-1']),
-        table.deepcopy(data.raw.recipe['xeno-egg-2']),
-        table.deepcopy(data.raw.recipe['xeno-egg-3']),
-        table.deepcopy(data.raw.recipe['xeno-egg-4']),
+        RECIPE('xeno-egg-1'):copy(),
+        RECIPE('xeno-egg-2'):copy(),
+        RECIPE('xeno-egg-3'):copy(),
+        RECIPE('xeno-egg-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-cheap'
-        FUN.remove_ingredient(recipe, 'bones')
-        FUN.remove_ingredient(recipe, 'fish')
-        FUN.add_ingredient(recipe, {'hydrofluoric-acid-barrel', 1})
-        FUN.add_result_amount(recipe, 'empty-barrel', 1)
+        recipe:remove_ingredient('bones')
+        recipe:remove_ingredient('fish')
+        recipe:add_ingredient({'hydrofluoric-acid-barrel', 1})
+        recipe:add_result_amount('empty-barrel', 1)
         data:extend{recipe}
     end
 end

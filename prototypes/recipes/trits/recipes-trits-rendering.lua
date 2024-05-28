@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------RENDERING------------------
 
 local INPUT_AMOUNT = 1
@@ -23,7 +21,7 @@ local IMP_BRAIN = 5
 local IMP_SPECIAL = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'trits',

@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 8
 local FULL_CRAFTING_SPEED = 2 -- crafting speed when full of mk01 modules
 
@@ -39,9 +38,9 @@ ENTITY {
         module_slots = MODULE_SLOTS,
     },
     match_animation_speed_to_activity = false,
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"ulric"},
-    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
+    crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -55,7 +54,6 @@ ENTITY {
                 width = 383,
                 height = 448,
                 frame_count = 1,
-                --line_length = 8,
                 shift = util.by_pixel(0, -32),
             },
             {
@@ -63,7 +61,6 @@ ENTITY {
                 width = 383,
                 height = 448,
                 frame_count = 1,
-                --line_length = 8,
                 shift = util.by_pixel(0, -32),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },

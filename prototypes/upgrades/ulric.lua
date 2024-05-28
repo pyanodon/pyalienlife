@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{
         {
@@ -56,25 +54,25 @@ if data and not yafc_turd_integration then
     }
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ulric-cub-1']),
-        table.deepcopy(data.raw.recipe['ulric-cub-2']),
-        table.deepcopy(data.raw.recipe['ulric-cub-3']),
-        table.deepcopy(data.raw.recipe['ulric-cub-4']),
+        RECIPE('ulric-cub-1'):copy(),
+        RECIPE('ulric-cub-2'):copy(),
+        RECIPE('ulric-cub-3'):copy(),
+        RECIPE('ulric-cub-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-saddle'
-        FUN.add_ingredient(recipe, {name = 'saddle', amount = 1, type = 'item'})
+        recipe:add_ingredient({name = 'saddle', amount = 1, type = 'item'})
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ulric-1']),
-        table.deepcopy(data.raw.recipe['ulric-2']),
-        table.deepcopy(data.raw.recipe['ulric-3']),
-        table.deepcopy(data.raw.recipe['ulric-4']),
+        RECIPE('ulric-1'):copy(),
+        RECIPE('ulric-2'):copy(),
+        RECIPE('ulric-3'):copy(),
+        RECIPE('ulric-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-manure'
-        FUN.add_result(recipe, {name = 'manure', amount = 2, type = 'item'})
-        if i ~= 1 then FUN.add_result(recipe, {name = 'bedding', amount_max = 1, type = 'item', amount_min = 0}) end
+        recipe:add_result({name = 'manure', amount = 2, type = 'item'})
+        if i ~= 1 then recipe:add_result({name = 'bedding', amount_max = 1, type = 'item', amount_min = 0}) end
         data:extend{recipe}
     end
 end

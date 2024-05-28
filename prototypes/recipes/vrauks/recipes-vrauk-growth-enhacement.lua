@@ -1,6 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'vrauks-improved',
 	category = 'vrauks',
 	--module_limitations = 'vrauks',

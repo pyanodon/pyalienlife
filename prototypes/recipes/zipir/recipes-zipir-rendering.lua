@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------RENDERING------------------
 
 local INPUT_AMOUNT = 1
@@ -19,7 +17,7 @@ local IMP_BLOOD = 170
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-zipir',
 	category = 'slaughterhouse',
 	--module_limitations = 'zipir',

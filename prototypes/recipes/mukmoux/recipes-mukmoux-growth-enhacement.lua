@@ -1,6 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'mukmoux-improved',
 	category = 'mukmoux',
 	--module_limitations = 'mukmoux',

@@ -1,42 +1,42 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yaedols-spores']),
-        table.deepcopy(data.raw.recipe['yaedols-spores-2']),
-        table.deepcopy(data.raw.recipe['yaedols-spores-3']),
-        table.deepcopy(data.raw.recipe['yaedols-spore-mk02']),
-        table.deepcopy(data.raw.recipe['yaedols-spore-mk03']),
-        table.deepcopy(data.raw.recipe['yaedols-spore-mk04']),
+        RECIPE('yaedols-spores'):copy(),
+        RECIPE('yaedols-spores-2'):copy(),
+        RECIPE('yaedols-spores-3'):copy(),
+        RECIPE('yaedols-spore-mk02'):copy(),
+        RECIPE('yaedols-spore-mk03'):copy(),
+        RECIPE('yaedols-spore-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-coke-oven-gas'
-        FUN.add_ingredient(recipe, {minimum_temperature = 100, name = 'coke-oven-gas', type = 'fluid', amount = 1})
+        recipe:add_ingredient({minimum_temperature = 100, name = 'coke-oven-gas', type = 'fluid', amount = 1})
         data:extend{recipe}
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['yaedols-1']),
-        table.deepcopy(data.raw.recipe['yaedols-2']),
-        table.deepcopy(data.raw.recipe['yaedols-3']),
-        table.deepcopy(data.raw.recipe['yaedols-4']),
+        RECIPE('yaedols-1'):copy(),
+        RECIPE('yaedols-2'):copy(),
+        RECIPE('yaedols-3'):copy(),
+        RECIPE('yaedols-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hot-air'
-        FUN.add_ingredient(recipe, {name = 'hot-air', amount = 60, type = 'fluid', fluidbox_index = 2})
-        FUN.add_result(recipe, {name = 'cold-air', amount = 60, type = 'fluid'})
+        recipe:add_ingredient({name = 'hot-air', amount = 60, type = 'fluid', fluidbox_index = 2})
+        recipe:add_result({name = 'cold-air', amount = 60, type = 'fluid'})
         recipe.main_product = 'cold-air'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
 
-        local nitrogen_barrels = math.ceil(FUN.remove_ingredient(recipe, 'nitrogen') / 50)
+        local _, amount_removed = recipe:remove_ingredient('nitrogen')
+        local nitrogen_barrels = math.ceil(amount_removed / 50)
         if nitrogen_barrels > 0 then
-            FUN.add_ingredient(recipe, {name = 'nitrogen-barrel', amount = nitrogen_barrels, type = 'item'})
-            nitrogen_barrels = nitrogen_barrels + FUN.remove_result(recipe, 'empty-barrel')
-            FUN.add_result(recipe, {'empty-barrel', nitrogen_barrels})
+            recipe:add_ingredient({name = 'nitrogen-barrel', amount = nitrogen_barrels, type = 'item'})
+            local _, amount_removed = recipe:remove_result('empty-barrel')
+            nitrogen_barrels = nitrogen_barrels + amount_removed
+            recipe:add_result({'empty-barrel', nitrogen_barrels})
         end
 
         data:extend{recipe}
     end
 
-    local spore = table.deepcopy(data.raw.recipe['yaedols-spores'])
+    local spore = RECIPE('yaedols-spores'):copy()
     spore.energy_required = 2
     spore.results = {
         {type = 'item', probability = 0.9, name = 'yaedols-spores', amount = 4},

@@ -1,20 +1,18 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
-    local manure = table.deepcopy(data.raw.recipe['manure-bacteria'])
+    local manure = RECIPE('manure-bacteria'):copy()
     manure.name = 'manure-bacteria-fish'
-    FUN.add_ingredient(manure, {name = 'fish-hydrolysate', type = 'fluid', amount = 5})
-    FUN.multiply_result_amount(manure, 'manure-bacteria', 1.5)
+    manure:add_ingredient({name = 'fish-hydrolysate', type = 'fluid', amount = 5})
+    manure:multiply_result_amount('manure-bacteria', 1.5)
 
-    local darkness = table.deepcopy(data.raw.recipe['zogna-bacteria'])
-    FUN.remove_ingredient(darkness, 'small-lamp')
+    local darkness = RECIPE('zogna-bacteria'):copy()
+    darkness:remove_ingredient('small-lamp')
     darkness.name = 'zogna-bacteria-darkness'
     darkness.energy_required = 8
 
-    local icd = table.deepcopy(data.raw.recipe['bio-sample'])
+    local icd = RECIPE('bio-sample'):copy()
     icd.name = 'bio-sample-icd'
-    FUN.add_ingredient(icd, {name = 'pressured-air', type = 'fluid', amount = 50})
-    FUN.add_ingredient(icd, {name = 'pressured-water', type = 'fluid', amount = 50})
+    icd:add_ingredient({name = 'pressured-air', type = 'fluid', amount = 50})
+    icd:add_ingredient({name = 'pressured-water', type = 'fluid', amount = 50})
     icd.results = {{name = 'bio-sample', amount_max = 2, type = 'item', amount_min = 1}}
 
     data:extend{darkness, manure, icd}

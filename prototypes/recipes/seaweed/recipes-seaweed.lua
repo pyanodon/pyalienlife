@@ -1,4 +1,4 @@
-local noise = require("noise")
+local noise = require 'noise'
 --------------------------SEA WEED-----------------------
 data:extend({
     {

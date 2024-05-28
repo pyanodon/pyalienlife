@@ -1,8 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --pooping--
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'manure',
 	category = 'ulric',
 	module_limitations = 'ulric',

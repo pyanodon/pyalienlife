@@ -1,9 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-
 -- ------------------PHADAI CARAPACE------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-carapace-phadai',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -41,7 +38,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------DINGRITS PELT------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-pelt-dingrits',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -81,7 +78,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------DINGRITS SPIKES------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-spikes-dingrits',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -121,7 +118,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------SCRONDRIX PINEAL------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-pineal-scrondrix',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -159,7 +156,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------KMAUTS TENDONS------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-tendon-kmauts',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -197,7 +194,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------PHAGNOT BLADDER------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-bladder-phagnot',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -234,7 +231,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------VONIX VENON GLAND------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-venon-vonix',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -274,7 +271,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------TRITS PHOTOPHORES------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-photophore-trits',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',
@@ -308,7 +305,7 @@ local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
 -- ------------------XYHIPHOE SHELL------------------
 
--- FUN.autorecipes {
+-- py.autorecipes {
 --     name = 'rendering-shell-xyhiphoe',
 -- 	category = 'slaughterhouse',
 -- 	--module_limitations = 'auog',

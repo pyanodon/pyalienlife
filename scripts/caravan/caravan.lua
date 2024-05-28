@@ -6,8 +6,6 @@ require 'caravan-gui'
 require 'caravan-global-gui'
 require 'caravan-connected-gui'
 local prototypes = require 'caravan-prototypes'
-local Position = require('__stdlib__/stdlib/area/position')
-local Table = require('__stdlib__/stdlib/utils/table')
 
 local function goto_entity(caravan_data, entity)
 	local caravan = caravan_data.entity
@@ -317,7 +315,7 @@ gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
 			stop_actions(caravan_data)
 		else
 			local position; if schedule.entity then position = schedule.entity.position else position = schedule.position end
-			if Position.distance_squared(position, caravan_data.entity.position) < 1000 then
+			if py.distance_squared(position, caravan_data.entity.position) < 1000 then
 				begin_action(caravan_data, tags.action_id)
 			end
 		end
@@ -472,7 +470,7 @@ Caravan.events[60] = function(event)
 		local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
 		if needs_fuel then
-			draw_error_sprite(entity, 'utility.fuel_icon', 30)
+			py.draw_error_sprite(entity, 'utility.fuel_icon', 30)
 			goto continue
 		end
 
@@ -508,11 +506,11 @@ Caravan.events[60] = function(event)
 			guis_to_update[caravan_data.unit_number] = true
 		else
 			if schedule.entity and schedule.entity.valid then
-				if Position.distance_squared(schedule.entity.position, entity.position) > 1000 then
+				if py.distance_squared(schedule.entity.position, entity.position) > 1000 then
 					goto_entity(caravan_data, schedule.entity)
 				end
 			else
-				if Position.distance_squared(schedule.position, entity.position) > 1000 then
+				if py.distance_squared(schedule.position, entity.position) > 1000 then
 					goto_position(caravan_data, schedule.position)
 				end
 			end
@@ -636,7 +634,7 @@ Caravan.events.on_entity_settings_pasted = function(event)
 	::continue::
 
 	stop_actions(destination_data)
-	destination_data.schedule = Table.deep_copy(source_data.schedule)
+	destination_data.schedule = table.deepcopy(source_data.schedule)
 	for _, player in pairs(game.connected_players) do
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end

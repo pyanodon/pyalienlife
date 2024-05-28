@@ -204,7 +204,7 @@ Slaughterhouse.events.on_init = function()
 	global.opened_slaughterhouses = global.opened_slaughterhouses or {}
 end
 
-script.on_event(defines.events.on_tick, function()
+py.on_event(defines.events.on_tick, function()
     if not global.watch_slaughterhouse then return end
 
 	for player_index, entity in pairs(global.watched_slaughterhouses) do

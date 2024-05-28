@@ -1,15 +1,13 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['breed-fish-1']),
-        table.deepcopy(data.raw.recipe['breed-fish-2']),
-        table.deepcopy(data.raw.recipe['breed-fish-3']),
-        table.deepcopy(data.raw.recipe['breed-fish-4']),
+        RECIPE('breed-fish-1'):copy(),
+        RECIPE('breed-fish-2'):copy(),
+        RECIPE('breed-fish-3'):copy(),
+        RECIPE('breed-fish-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-agressive-selection'
-        FUN.add_result_amount(recipe, 'fish', -i)
-        FUN.add_result(recipe, {'fish-food-01', i})
+        recipe:add_result_amount('fish', -i)
+        recipe:add_result({'fish-food-01', i})
         data:extend{recipe}
     end
 
@@ -30,15 +28,15 @@ if data and not yafc_turd_integration then
     }}
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['breed-fish-egg-1']),
-        table.deepcopy(data.raw.recipe['breed-fish-egg-2']),
-        table.deepcopy(data.raw.recipe['breed-fish-egg-3']),
-        table.deepcopy(data.raw.recipe['breed-fish-egg-4']),
+        RECIPE('breed-fish-egg-1'):copy(),
+        RECIPE('breed-fish-egg-2'):copy(),
+        RECIPE('breed-fish-egg-3'):copy(),
+        RECIPE('breed-fish-egg-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-doused'
-        FUN.remove_result(recipe, 'waste-water')
-        FUN.add_result(recipe, {type = 'fluid', name = 'pressured-water', amount = 100})
-        FUN.multiply_result_amount(recipe, 'fish-egg', 1.2)
+        recipe:remove_result('waste-water')
+        recipe:add_result({type = 'fluid', name = 'pressured-water', amount = 100})
+        recipe:multiply_result_amount('fish-egg', 1.2)
         for _, ingredient in pairs(recipe.ingredients) do
             if ingredient.name == 'water-saline' then
                 ingredient.name = 'water'

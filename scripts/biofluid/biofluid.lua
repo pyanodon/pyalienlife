@@ -145,7 +145,7 @@ function Biofluid.render_error_icons()
 		local failure_reason = Biofluid.why_isnt_my_bioport_working(bioport_data)
 		local status_icon = Biofluid.status_icons[failure_reason]
 		if status_icon then
-			draw_error_sprite(entity, status_icon, 71)
+			py.draw_error_sprite(entity, status_icon, 71)
 			bioport_data.active = nil
 		else
 			bioport_data.active = true
@@ -560,7 +560,7 @@ function Biofluid.get_unfulfilled_requests()
 		local network_id = requester_data.network_id
 		local network = global.biofluid_networks[network_id]
 		if not network or not next(network.bioports) then
-			draw_error_sprite(requester, 'utility.too_far_from_roboport_icon', 71)
+			py.draw_error_sprite(requester, 'utility.too_far_from_roboport_icon', 71)
 			goto continue
 		end
 		local fluid_name = requester_data.name

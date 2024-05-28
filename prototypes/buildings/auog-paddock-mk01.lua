@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 4
 local FULL_CRAFTING_SPEED = 2 -- crafting speed when full of mk01 modules
 
@@ -46,9 +45,9 @@ ENTITY {
     module_specification = {
         module_slots = MODULE_SLOTS
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"auog"},
-    crafting_speed = FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
+    crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

@@ -1,8 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --Raising
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'xeno-improved',
 	category = 'xeno',
 	--module_limitations = 'xeno',

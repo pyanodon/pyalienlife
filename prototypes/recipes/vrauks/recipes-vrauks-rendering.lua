@@ -1,5 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------RENDERING------------------
 
 local INPUT_AMOUNT = 1
@@ -17,7 +15,7 @@ local IMP_BLOOD = 600
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-vrauks',
 	category = 'slaughterhouse',
 	subgroup = 'py-alienlife-vrauks',

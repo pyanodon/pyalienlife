@@ -122,7 +122,7 @@ function Biofluid.build_bioport_gui(entity, player)
 
     local fuel_flow = content_flow.add{type = 'flow', name = 'fuel_flow', direction = 'horizontal'}
     fuel_flow.style.vertical_align = 'center'
-    local favorite_food_tooltip = generate_favorite_food_tooltip(Biofluid.favorite_foods, 'biofluid-gui')
+    local favorite_food_tooltip = py.generate_favorite_food_tooltip(Biofluid.favorite_foods, 'biofluid-gui')
     for i = 1, Biofluid.fuel_size do
         local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_biofluid_food_' .. i, style = 'inventory_slot', tags = {unit_number = entity.unit_number, i = i}}
         fuel_slot.sprite = 'utility/slot_icon_fuel'
@@ -137,7 +137,7 @@ function Biofluid.build_bioport_gui(entity, player)
 
     local module_flow = content_flow.add{type = 'flow', name = 'module_flow', direction = 'horizontal'}
     module_flow.style.vertical_align = 'center'
-    local allowed_module_tooltip = generate_allowed_module_tooltip(Biofluid.biorobots)
+    local allowed_module_tooltip = py.generate_allowed_module_tooltip(Biofluid.biorobots)
     for i = 1, Biofluid.module_size do
         local module_slot = module_flow.add{type = 'sprite-button', name = 'py_biofluid_module_' .. i, style = 'inventory_slot', tags = {unit_number = entity.unit_number, i = i}}
         module_slot.sprite = 'utility/slot_icon_module'

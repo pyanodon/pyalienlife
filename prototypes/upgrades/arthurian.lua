@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{
         {
@@ -28,34 +26,34 @@ if data and not yafc_turd_integration then
         }
     }
 
-    FUN.productivity{'abacus'}
+    py.allow_productivity{'abacus'}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['arthurian maturing 1']),
-        table.deepcopy(data.raw.recipe['arthurian maturing 2']),
-        table.deepcopy(data.raw.recipe['arthurian maturing 3']),
-        table.deepcopy(data.raw.recipe['arthurian maturing 4']),
+        RECIPE('arthurian maturing 1'):copy(),
+        RECIPE('arthurian maturing 2'):copy(),
+        RECIPE('arthurian maturing 3'):copy(),
+        RECIPE('arthurian maturing 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-abacus'
-        FUN.add_ingredient(recipe, {name = 'abacus', amount = i, type = 'item'})
+        recipe:add_ingredient({name = 'abacus', amount = i, type = 'item'})
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['arthurian egg 1']),
-        table.deepcopy(data.raw.recipe['arthurian egg 2']),
-        table.deepcopy(data.raw.recipe['arthurian egg 3']),
-        table.deepcopy(data.raw.recipe['arthurian egg 4']),
+        RECIPE('arthurian egg 1'):copy(),
+        RECIPE('arthurian egg 2'):copy(),
+        RECIPE('arthurian egg 3'):copy(),
+        RECIPE('arthurian egg 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hot-stones'
-        FUN.add_ingredient(recipe, {name = 'hot-stone-brick', amount = 2, type = 'item'})
-        FUN.add_result(recipe, {name = 'warmer-stone-brick', amount = 2, type = 'item'})
-        FUN.add_result_amount(recipe, 'arthurian-egg', i)
-        local barrels = FUN.remove_result(recipe, 'empty-barrel')
-        FUN.add_result(recipe, {'hot-air-barrel', barrels})
+        recipe:add_ingredient({name = 'hot-stone-brick', amount = 2, type = 'item'})
+        recipe:add_result({name = 'warmer-stone-brick', amount = 2, type = 'item'})
+        recipe:add_result_amount('arthurian-egg', i)
+        local _, barrels = recipe:remove_result('empty-barrel')
+        recipe:add_result({'hot-air-barrel', barrels})
         recipe.energy_required = recipe.energy_required / 2
         recipe.main_product = 'warmer-stone-brick'
-        FUN.remove_ingredient(recipe, 'bedding')
+        recipe:remove_ingredient('bedding')
         data:extend{recipe}
     end
 

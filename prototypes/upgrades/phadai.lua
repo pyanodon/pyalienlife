@@ -1,30 +1,28 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data.raw.recipe['energy-drinkb'].category = 'chemistry'
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 1']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 2']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 3']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
+        RECIPE('Phadai Dance Dance Revolution 1'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 2'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 3'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-piezoelectric'
-        FUN.add_ingredient(recipe, {name = 'crystallographic-substrate', amount = 2 * i, type = 'item'})
-        FUN.add_result(recipe, {name = 'proton-donor', amount = 6 * i, type = 'item'})
+        recipe:add_ingredient({name = 'crystallographic-substrate', amount = 2 * i, type = 'item'})
+        recipe:add_result({name = 'proton-donor', amount = 6 * i, type = 'item'})
         recipe.main_product = 'proton-donor'
         data:extend{recipe}
     end
 
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 1']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 2']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 3']),
-        table.deepcopy(data.raw.recipe['Phadai Dance Dance Revolution 4']),
+        RECIPE('Phadai Dance Dance Revolution 1'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 2'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 3'):copy(),
+        RECIPE('Phadai Dance Dance Revolution 4'):copy(),
     }) do
         recipe.name = recipe.name .. '-dubstep'
-        FUN.multiply_result_amount(recipe, 'carapace', 2)
-        FUN.add_result_amount(recipe, 'used-phadai', -1)
+        recipe:multiply_result_amount('carapace', 2)
+        recipe:add_result_amount('used-phadai', -1)
         data:extend{recipe}
     end
 end

@@ -47,7 +47,7 @@ ENTITY {
     module_specification = {
         module_slots = 20
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"korlex"},
     crafting_speed = 0.02,
     energy_source = {
@@ -62,18 +62,14 @@ ENTITY {
                 filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off.png",
                 width = 352,
                 height = 352,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16)
             },
             {
                 filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off-mask.png",
                 width = 352,
                 height = 352,
-                --line_length = 5,
                 frame_count = 1,
-                --animation_speed = 0.3,
                 shift = util.by_pixel(16, -16),
                 tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },

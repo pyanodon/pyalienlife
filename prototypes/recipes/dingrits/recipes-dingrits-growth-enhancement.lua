@@ -1,6 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'dingrits-improved',
 	category = 'dingrits',
 	--module_limitations = 'dingrits',

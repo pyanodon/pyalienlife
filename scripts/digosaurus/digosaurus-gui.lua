@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 function Digosaurus.update_gui(gui)
 	local dig_data = global.dig_sites[gui.tags.unit_number]
 	if not Digosaurus.validity_check(dig_data) then gui.destroy() return end
@@ -7,7 +5,7 @@ function Digosaurus.update_gui(gui)
 	local entity = dig_data.entity
 
 	content_flow.status_flow.electricity.value = entity.energy / entity.electric_buffer_size
-	content_flow.status_flow.consumption.caption = {'', FUN.format_energy(entity.energy, 'W'), '/', FUN.format_energy(entity.electric_buffer_size, 'W')}
+	content_flow.status_flow.consumption.caption = {'', py.format_energy(entity.energy, 'W'), '/', py.format_energy(entity.electric_buffer_size, 'W')}
 
 	local status, img
 	if entity.to_be_deconstructed() then
@@ -48,7 +46,7 @@ function Digosaurus.update_gui(gui)
 			element.sprite = 'utility/slot_icon_fuel'
 			element.number = nil
 		end
-		element.tooltip = generate_favorite_food_tooltip(Digosaurus.favorite_foods, 'digosaurus-gui')
+		element.tooltip = py.generate_favorite_food_tooltip(Digosaurus.favorite_foods, 'digosaurus-gui')
 	end
 end
 
