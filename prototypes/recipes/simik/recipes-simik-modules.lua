@@ -213,7 +213,7 @@ RECIPE {
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'strorix-unknown-sample', amount = 3},
         {type = 'item', name = 'bio-scafold', amount = 8},
-        {type = 'item', name = 'regolite-rock', amount = 50},
+        {type = 'item', name = 'rich-gas', amount = 50},
         {type = 'item', name = 'bmp', amount = 1},
         {type = 'fluid', name = 'psc', amount = 500},
         {type = 'fluid', name = 'gta', amount = 100},
