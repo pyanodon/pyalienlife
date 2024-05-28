@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 local pyAE = (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalternativeenergy)
 local pySE = (data and mods.pystellarexpedition) or (script and script.active_mods.pystellarexpedition)
 
@@ -54,26 +52,24 @@ if data and not yafc_turd_integration then
 
     for _, path in pairs{'laser', 'music', 'lard'} do
         for _, recipe_name in pairs(rendering_recipes) do
-            local recipe = table.deepcopy(data.raw.recipe[recipe_name])
+            local recipe = RECIPE(recipe_name):copy(function(r) return r.name .. '-' .. path end)
             recipe.localised_name = recipe.localised_name or {'recipe-name.'..recipe_name}
-            FUN.standardize_results(recipe)
-            recipe.name = recipe.name .. '-' .. path
             for _, ingredient in pairs(things_to_add[path].ingredients) do
-                FUN.add_ingredient(recipe, ingredient)
+                recipe:add_ingredient(ingredient)
             end
             for _, result in pairs(things_to_add[path].results) do
-                FUN.add_result(recipe, result)
+                recipe:add_result(result)
             end
             for _, product in pairs(products_to_buff[path]) do
                 if product == 'brain' then
                     for _, result in pairs(recipe.results) do
                         if (result[1] or result.name) == 'brain' then
-                            FUN.add_result(recipe, {name = 'brain', amount = 1, type = 'item', probability = 0.05})
+                            recipe:add_result({name = 'brain', amount = 1, type = 'item', probability = 0.05})
                             break
                         end
                     end
                 else
-                    FUN.multiply_result_amount(recipe, product, 2)
+                    recipe:multiply_result_amount(product, 2)
                 end
             end
             data:extend{recipe}

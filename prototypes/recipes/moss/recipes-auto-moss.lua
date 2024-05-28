@@ -1,7 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'moss',
 	category = 'moss',
 	module_limitations = 'moss',

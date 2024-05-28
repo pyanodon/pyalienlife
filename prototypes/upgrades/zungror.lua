@@ -1,39 +1,37 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
-    local zungror = table.deepcopy(data.raw.recipe['zungror'])
+    local zungror = RECIPE('zungror'):copy()
     zungror.name = 'zungror-with-yaedols-codex'
-    FUN.add_ingredient(zungror, {name = 'yaedols-codex', amount = 6, type = 'item'})
+    zungror:add_ingredient({name = 'yaedols-codex', amount = 6, type = 'item'})
     data:extend{zungror}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['zungror-cocoon-1']),
-        table.deepcopy(data.raw.recipe['zungror-cocoon-2']),
-        table.deepcopy(data.raw.recipe['zungror-cocoon-3']),
+        RECIPE('zungror-cocoon-1'):copy(),
+        RECIPE('zungror-cocoon-2'):copy(),
+        RECIPE('zungror-cocoon-3'):copy(),
     }) do
         recipe.name = recipe.name .. '-rich-clay'
-        FUN.add_ingredient(recipe, {name = 'rich-clay', amount = 2, type = 'item'})
+        recipe:add_ingredient({name = 'rich-clay', amount = 2, type = 'item'})
         data:extend{recipe}
     end
 
-    local duplicated_spinner = table.deepcopy(data.raw.recipe['vsk'])
+    local duplicated_spinner = RECIPE('vsk'):copy()
     duplicated_spinner.name = 'vsk-duplicated'
     duplicated_spinner.energy_required = duplicated_spinner.energy_required * 3
-    FUN.multiply_result_amount(duplicated_spinner, 'vsk', 3)
+    duplicated_spinner:multiply_result_amount('vsk', 3)
     data:extend{duplicated_spinner}
 
-    local buffed_fiber = table.deepcopy(data.raw.recipe['pre-fiber-1'])
+    local buffed_fiber = RECIPE('pre-fiber-1'):copy()
     buffed_fiber.name = 'pre-fiber-1-buffed'
-    FUN.multiply_ingredient_amount(buffed_fiber, 'zungror-cocoon', 0.5)
+    buffed_fiber:multiply_ingredient_amount('zungror-cocoon', 0.5)
     data:extend{buffed_fiber}
 
     for isotope, recipe in pairs({
-        [{'pu-239', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-1']),
-        [{'pu-240', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-2']),
-        [{'pu-238', 2}] = table.deepcopy(data.raw.recipe['zungror-raising-3']),
+        [{'pu-239', 2}] = RECIPE('zungror-raising-1'):copy(),
+        [{'pu-240', 2}] = RECIPE('zungror-raising-2'):copy(),
+        [{'pu-238', 2}] = RECIPE('zungror-raising-3'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-funny-rock'
-        FUN.add_ingredient(recipe, isotope)
+        recipe:add_ingredient(isotope)
         data:extend{recipe}
     end
 end

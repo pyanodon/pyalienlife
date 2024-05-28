@@ -1,6 +1,4 @@
-	local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-------------------RENDERING------------------
+	------------------RENDERING------------------
 
 local INPUT_AMOUNT = 1
 
@@ -21,7 +19,7 @@ local IMP_BLOOD = 250
 local IMP_BRAIN = 4
 
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering',
 	category = 'slaughterhouse',
 	--module_limitations = 'mukmoux',

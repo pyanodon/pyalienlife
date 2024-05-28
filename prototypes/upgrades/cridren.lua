@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{{
         type = 'recipe',
@@ -46,29 +44,29 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cridren-1']),
-        table.deepcopy(data.raw.recipe['cridren-2']),
-        table.deepcopy(data.raw.recipe['cridren-3']),
-        table.deepcopy(data.raw.recipe['cridren-4']),
+        RECIPE('cridren-1'):copy(),
+        RECIPE('cridren-2'):copy(),
+        RECIPE('cridren-3'):copy(),
+        RECIPE('cridren-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-neural-cranio'
-        FUN.multiply_ingredient_amount(recipe, 'caged-arthurian', 2)
-        FUN.multiply_result_amount(recipe, 'cridren', 2)
-        FUN.add_result_amount(recipe, 'cridren', 1)
+        recipe:multiply_ingredient_amount('caged-arthurian', 2)
+        recipe:multiply_result_amount('cridren', 2)
+        recipe:add_result_amount('cridren', 1)
         recipe.energy_required = recipe.energy_required * 2
-        FUN.multiply_result_amount(recipe, 'cage', 2)
+        recipe:multiply_result_amount('cage', 2)
         data:extend{recipe}
     end
 
     local mufflers = {'polycrystalline-slab', 'alag-grid', 'wall-shield', 'reinforced-wall-shield'}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk01']),
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk02']),
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk03']),
-        table.deepcopy(data.raw.recipe['cridren-enclosure-mk04']),
+        RECIPE('cridren-enclosure-mk01'):copy(),
+        RECIPE('cridren-enclosure-mk02'):copy(),
+        RECIPE('cridren-enclosure-mk03'):copy(),
+        RECIPE('cridren-enclosure-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-mufflers'
-        FUN.add_ingredient(recipe, {mufflers[i], i * 35})
+        recipe:add_ingredient({mufflers[i], i * 35})
         data:extend{recipe}
     end
 end

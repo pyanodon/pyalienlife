@@ -45,7 +45,7 @@ ENTITY {
     module_specification = {
         module_slots = 100
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"kmauts"},
     crafting_speed = .0633,
     energy_source = {
@@ -61,32 +61,26 @@ ENTITY {
                 filename = "__pyfusionenergygraphics__/graphics/entity/kmauts-enclosure/layer-1.png",
                 width = 338,
                 height = 357,
-                --line_length = 9,
                 frame_count = 1,
                 shift = {0.248, -0.591},
                 priority = "low"
-                --animation_speed = 0.75,
             },
             --WALLS
             {
                 filename = "__pyfusionenergygraphics__/graphics/entity/kmauts-enclosure/layer-2.png",
                 width = 338,
                 height = 357,
-                --line_length = 9,
                 frame_count = 1,
                 shift = {0.248, -0.591},
                 priority = "low"
-                --animation_speed = 0.75,
             },
 			{
                 filename = "__pyfusionenergygraphics__/graphics/entity/kmauts-enclosure/layer-2-mask.png",
                 width = 338,
                 height = 357,
-                --line_length = 9,
                 frame_count = 1,
                 shift = {0.248, -0.591},
                 priority = "low",
-                --animation_speed = 0.75,
 				tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
             },
             --TREE
@@ -94,11 +88,9 @@ ENTITY {
                 filename = "__pyfusionenergygraphics__/graphics/entity/kmauts-enclosure/layer-3.png",
                 width = 338,
                 height = 357,
-                --line_length = 9,
                 frame_count = 1,
                 shift = {0.248, -0.591},
                 priority = "extra-high"
-                --animation_speed = 0.75,
             }
         }
     },
@@ -226,8 +218,6 @@ ENTITY {
                 frame_count = 1,
                 width = 338,
                 height = 357,
-                --line_length = 31,
-                --animation_speed = 0.4,
                 priority = "extra-high"
             }
         }

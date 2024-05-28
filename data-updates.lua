@@ -1,33 +1,29 @@
-require('__stdlib__/stdlib/data/data').Util.create_data_globals()
-local table = require('__stdlib__/stdlib/utils/table')
-local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
-
-require('prototypes/updates/autoplace-fish')
-require('prototypes/updates/base-updates')
+require 'prototypes/updates/autoplace-fish'
+require 'prototypes/updates/base-updates'
 local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
 if mods['pycoalprocessing'] then
-    require('prototypes/updates/pycoalprocessing-updates')
+    require 'prototypes/updates/pycoalprocessing-updates'
     ITEM('automation-science-pack', 'tool'):set('icon', '__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png')
 end
 
 if mods['pyfusionenergy'] then
-    require('prototypes/updates/pyfusionenergy-updates')
+    require 'prototypes/updates/pyfusionenergy-updates'
 end
 
 if mods['pyrawores'] then
-    require('prototypes/updates/pyrawores-updates')
+    require 'prototypes/updates/pyrawores-updates'
 end
 
 if mods['pyhightech'] then
-    require('prototypes/technologies/kicalk')
-    require('prototypes/technologies/schrodinger-antelope')
-    require('prototypes/buildings/antelope-enclosure-mk01')
-    require('prototypes/updates/pyhightech-updates')
+    require 'prototypes/technologies/kicalk'
+    require 'prototypes/technologies/schrodinger-antelope'
+    require 'prototypes/buildings/antelope-enclosure-mk01'
+    require 'prototypes/updates/pyhightech-updates'
 end
 
 if mods['pypetroleumhandling'] then
-    require('prototypes/updates/pypetroleumhandling-updates')
+    require 'prototypes/updates/pypetroleumhandling-updates'
 end
 
 TECHNOLOGY('ralesia'):add_pack('py-science-pack-1')
@@ -61,12 +57,13 @@ end
 
 data.raw.item.fawogae = nil
 
-for _, player in DATA:pairs('character') do
-    player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
-end
-
-for _, controller in DATA:pairs('god-controller') do
-    controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'wpu-handcrafting' + 'research-handcrafting'
+for _, player_type in pairs{'character', 'god-controller'} do
+    for _, player in pairs(data.raw[player_type]) do
+        player.crafting_categories = player.crafting_categories or {}
+        table.insert(player.crafting_categories, 'wpu-handcrafting')
+        table.insert(player.crafting_categories, 'research-handcrafting')
+        player.crafting_categories = table.dedupe(player.crafting_categories)
+    end
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -149,13 +146,13 @@ RECIPE('ball-mill-mk01'):remove_unlock('crusher'):add_unlock('crusher-2')
 ----------------------------------------------------------------------------------------------------
 
 if mods['pyalternativeenergy'] then
-    require('__pyalternativeenergy__/prototypes/updates/base-updates')
-    if mods['pycoalprocessing'] then require('__pyalternativeenergy__/prototypes/updates/pycoalprocessing-updates') end
-    if mods['pyalienlife'] then require('__pyalternativeenergy__/prototypes/updates/pyalienlife-updates') end
-    if mods['pyfusionenergy'] then require('__pyalternativeenergy__/prototypes/updates/pyfusionenergy-updates') end
-    if mods['pyhightech'] then require('__pyalternativeenergy__/prototypes/updates/pyhightech-updates') end
-    if mods['pyrawores'] then require('__pyalternativeenergy__/prototypes/updates/pyrawores-updates') end
-    if mods['pypetroleumhandling'] then require('__pyalternativeenergy__/prototypes/updates/pypetroleumhandling-updates') end
+    require '__pyalternativeenergy__/prototypes/updates/base-updates'
+    if mods['pycoalprocessing'] then require '__pyalternativeenergy__/prototypes/updates/pycoalprocessing-updates' end
+    if mods['pyalienlife'] then require '__pyalternativeenergy__/prototypes/updates/pyalienlife-updates' end
+    if mods['pyfusionenergy'] then require '__pyalternativeenergy__/prototypes/updates/pyfusionenergy-updates' end
+    if mods['pyhightech'] then require '__pyalternativeenergy__/prototypes/updates/pyhightech-updates' end
+    if mods['pyrawores'] then require '__pyalternativeenergy__/prototypes/updates/pyrawores-updates' end
+    if mods['pypetroleumhandling'] then require '__pyalternativeenergy__/prototypes/updates/pypetroleumhandling-updates' end
 end
 
 if mods.pystellarexpedition then
@@ -169,7 +166,7 @@ end
 -- TURD
 ----------------------------------------------------------------------------------------------------
 
-require('prototypes/upgrades/tech-upgrades')
+require 'prototypes/upgrades/tech-upgrades'
 
 ----------------------------------------------------------------------------------------------------
 -- replace_ingredient
@@ -179,7 +176,7 @@ for _, recipe in pairs(data.raw.recipe) do
     local r = RECIPE(recipe)
     r:replace_ingredient('py-fertilizer', 'fertilizer')
     r:replace_ingredient('organics', 'biomass')
-    FUN.results_replacer(r.name, 'organics', 'biomass')
+    r:replace_result('organics', 'biomass')
     r:replace_ingredient('ralesia', 'ralesias')
     r:replace_ingredient('raw-fish', 'fish')
 end
@@ -217,7 +214,7 @@ for _, module in pairs(data.raw.module) do
     end
 
     if module.limitation then
-        module.dict_limitation = table.array_to_dictionary(module.limitation, true)
+        module.dict_limitation = table.invert(module.limitation)
     end
 end
 
@@ -272,10 +269,6 @@ data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03',
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
---data.raw.recipe['fill-milk-barrel'] = nil
---data.raw.recipe['empty-milk-barrel'] = nil
-
---FUN.global_item_replacer('fawogae', 'fawogae-mk01')
 
 --RECIPES UPDATES
 
@@ -316,14 +309,11 @@ RECIPE {
 
 --copy`s of combustion recipes with biomass
 for _,recipe in pairs(data.raw.recipe) do
-    --log('hit')
     if recipe.category == 'combustion' and string.match(recipe.name, 'biomass') == nil then
-        --log('hit')
         local recipe_copy = table.deepcopy(recipe)
         local name = recipe_copy.name
         if recipe_copy.ingredients ~= nil then
             for i, ing in pairs(recipe_copy.ingredients) do
-                --log('hit')
                 if ing.name == 'coke' then
                     ing.name = 'biomass'
                     local locale
@@ -335,8 +325,6 @@ for _,recipe in pairs(data.raw.recipe) do
                             type = ingred.type
                         end
                     end
-                    --log(serpent.block(recipe.ingredients))
-                    --log(locale)
                     for _, result in pairs(recipe.results) do
                         if result.name == 'combustion-mixture1' then
                             temp = result.temperature
@@ -352,27 +340,15 @@ for _,recipe in pairs(data.raw.recipe) do
                         results = recipe_copy.results,
                         icon = recipe_copy.icon,
                         icon_size = recipe_copy.icon_size,
-                        --main_product = 'combustion-mixture1',
                         subgroup = recipe_copy.subgroup,
                         order = recipe_copy.order,
                         localised_name = {'recipe-name.biomass-combustion', {type .. '-name.' ..locale}, temp}
                     }
-                    -- log(serpent.block(data.raw.recipe[name .. '-biomass']))
-                    --log('hit')
                     for _, tech in pairs(data.raw.technology) do
-                        --log('hit')
-                        --log(serpent.block(tech))
                         if tech.effects ~= nil then
                             for _, effect in pairs(tech.effects) do
-                                --log('hit')
-                                --log(serpent.block(effect))
-                                --log(serpent.block(effect.type))
-                                --log(serpent.block(effect.recipe))
-                                --log(serpent.block(name))
                                 if effect.type == 'unlock-recipe' and effect.recipe == name then
-                                    --log('hit')
                                     RECIPE(name .. '-biomass'):add_unlock(tech.name)
-                                    --log(serpent.block(data.raw.technology[tech.name]))
                                     break
                                 end
                             end
@@ -381,7 +357,6 @@ for _,recipe in pairs(data.raw.recipe) do
                 end
             end
         end
-        --log(serpent.block(data.raw.recipe[name .. '-biomass']))
     end
 end
 

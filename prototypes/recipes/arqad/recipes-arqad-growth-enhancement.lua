@@ -1,6 +1,4 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-FUN.autorecipes {
+py.autorecipes {
     name = 'arqad-improve',
 	category = 'arqad',
 	--module_limitations = 'arqad',

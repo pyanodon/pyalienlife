@@ -1,7 +1,5 @@
-local FUN = require('__pycoalprocessing__/prototypes/functions/functions')
-
 if mods.pyalternativeenergy then -- used in turd upgrade zipir path 3
-	local recipe = table.deepcopy(data.raw.recipe['zipir1-pyvoid'])
+	local recipe = RECIPE('zipir1-pyvoid'):copy()
 	recipe.name = 'zipir1-pyvoid-hatchery'
 	recipe.icons = nil
 	recipe.icon = '__pyhightechgraphics__/graphics/icons/rendering.png'
@@ -355,7 +353,7 @@ local recipes_list = {
 }
 
 --adding to module limitation list
-FUN.productivity(recipes_list)
+py.allow_productivity(recipes_list)
 
 local mod_cats = {
 	'tree',

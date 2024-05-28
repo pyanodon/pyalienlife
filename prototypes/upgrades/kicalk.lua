@@ -1,12 +1,10 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-1']),
-        table.deepcopy(data.raw.recipe['kicalk-2']),
-        table.deepcopy(data.raw.recipe['kicalk-3']),
-        table.deepcopy(data.raw.recipe['kicalk-4']),
-        table.deepcopy(data.raw.recipe['kicalk-5']),
+        RECIPE('kicalk-1'):copy(),
+        RECIPE('kicalk-2'):copy(),
+        RECIPE('kicalk-3'):copy(),
+        RECIPE('kicalk-4'):copy(),
+        RECIPE('kicalk-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-dry'
         local amount = recipe.results[1].amount
@@ -53,27 +51,27 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk01']),
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk02']),
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk03']),
-        table.deepcopy(data.raw.recipe['kicalk-plantation-mk04']),
+        RECIPE('kicalk-plantation-mk01'):copy(),
+        RECIPE('kicalk-plantation-mk02'):copy(),
+        RECIPE('kicalk-plantation-mk03'):copy(),
+        RECIPE('kicalk-plantation-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-mesh'
-        FUN.add_ingredient(recipe, {name = 'heating-system', amount = i, type = 'item'})
+        recipe:add_ingredient({name = 'heating-system', amount = i, type = 'item'})
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-1']),
-        table.deepcopy(data.raw.recipe['kicalk-2']),
-        table.deepcopy(data.raw.recipe['kicalk-3']),
-        table.deepcopy(data.raw.recipe['kicalk-4']),
-        table.deepcopy(data.raw.recipe['kicalk-5']),
+        RECIPE('kicalk-1'):copy(),
+        RECIPE('kicalk-2'):copy(),
+        RECIPE('kicalk-3'):copy(),
+        RECIPE('kicalk-4'):copy(),
+        RECIPE('kicalk-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-saline'
-        FUN.add_result(recipe, {type = 'item', name = 'kicalk-seeds', amount = i * 4})
-        FUN.remove_ingredient(recipe, 'water')
-        FUN.add_ingredient(recipe, {type = 'fluid', amount = 200, name = 'water-saline', fluidbox_index = 1})
+        recipe:add_result({type = 'item', name = 'kicalk-seeds', amount = i * 4})
+        recipe:remove_ingredient('water')
+        recipe:add_ingredient({type = 'fluid', amount = 200, name = 'water-saline', fluidbox_index = 1})
         recipe.main_product = 'kicalk'
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
@@ -101,23 +99,23 @@ if data and not yafc_turd_integration then
     }
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['kicalk-1']),
-        table.deepcopy(data.raw.recipe['kicalk-2']),
-        table.deepcopy(data.raw.recipe['kicalk-3']),
-        table.deepcopy(data.raw.recipe['kicalk-4']),
-        table.deepcopy(data.raw.recipe['kicalk-5']),
+        RECIPE('kicalk-1'):copy(),
+        RECIPE('kicalk-2'):copy(),
+        RECIPE('kicalk-3'):copy(),
+        RECIPE('kicalk-4'):copy(),
+        RECIPE('kicalk-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-rotation'
         recipe.main_product = 'kicalk'
         for _, other in pairs(other_species[i]) do
-            FUN.add_ingredient(recipe, other[1])
-            FUN.add_result(recipe, other[2])
-            recipe.main_product = other[2][1]
+            recipe:add_ingredient(other[1])
+            recipe:add_result(other[2])
+            recipe.main_product = other[2].name
         end
         if i == 5 then
-            FUN.add_ingredient(recipe, {'ulric-cub', 1})
+            recipe:add_ingredient({'ulric-cub', 1})
         end
-        FUN.multiply_result_amount(recipe, 'kicalk', 1.35)
+        recipe:multiply_result_amount('kicalk', 1.35)
         data:extend{recipe}
     end
 end

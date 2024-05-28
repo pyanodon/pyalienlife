@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{{
         type = 'recipe',
@@ -31,9 +29,9 @@ if data and not yafc_turd_integration then
         category = 'crafting'
     }}
 
-    local machine_recipe = table.deepcopy(data.raw.recipe['data-array'])
+    local machine_recipe = RECIPE('data-array'):copy()
     machine_recipe.name = machine_recipe.name .. '-with-solar'
-    FUN.add_ingredient(machine_recipe, {name = 'solar-panel-mk01', amount = 2, type = 'item'})
+    machine_recipe:add_ingredient({name = 'solar-panel-mk01', amount = 2, type = 'item'})
     data:extend{machine_recipe}
 end
 

@@ -1,4 +1,4 @@
-local util = require('util')
+local util = require 'util'
 
 RECIPE {
 	type = 'recipe',

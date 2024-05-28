@@ -1,9 +1,7 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
-    local recipe = table.deepcopy(data.raw.recipe['navens-sample'])
+    local recipe = RECIPE('navens-sample'):copy()
     recipe.name = 'navens-sample-with-vonix-gen'
-    FUN.add_ingredient(recipe, {'vonix-codex', 5})
+    recipe:add_ingredient({'vonix-codex', 5})
     data:extend{recipe}
 
     data:extend{{
@@ -54,14 +52,14 @@ if data and not yafc_turd_integration then
     local profit = {1, 2, 4, 6}
     if not mods.pyalternativeenergy then victims[4] = 'antelope' end
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['navens-1']),
-        table.deepcopy(data.raw.recipe['navens-2']),
-        table.deepcopy(data.raw.recipe['navens-3']),
-        table.deepcopy(data.raw.recipe['navens-4']),
+        RECIPE('navens-1'):copy(),
+        RECIPE('navens-2'):copy(),
+        RECIPE('navens-3'):copy(),
+        RECIPE('navens-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-abomination'
-        FUN.add_ingredient(recipe, {name = victims[i], amount = 1, type = 'item'})
-        FUN.remove_ingredient(recipe, 'guts')
+        recipe:add_ingredient({name = victims[i], amount = 1, type = 'item'})
+        recipe:remove_ingredient('guts')
         recipe.main_product = 'navens-abomination'
         recipe.results = {{'navens-abomination', profit[i]}}
         recipe.energy_required = recipe.energy_required * 1.5
@@ -69,15 +67,15 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['navens-spore']),
-        table.deepcopy(data.raw.recipe['navens-spore-2']),
-        table.deepcopy(data.raw.recipe['navens-spore-3']),
-        table.deepcopy(data.raw.recipe['navens-spore-mk02']),
-        table.deepcopy(data.raw.recipe['navens-spore-mk03']),
-        table.deepcopy(data.raw.recipe['navens-spore-mk04']),
+        RECIPE('navens-spore'):copy(),
+        RECIPE('navens-spore-2'):copy(),
+        RECIPE('navens-spore-3'):copy(),
+        RECIPE('navens-spore-mk02'):copy(),
+        RECIPE('navens-spore-mk03'):copy(),
+        RECIPE('navens-spore-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-sterilization'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'phosphorus-tricloride', amount = 1})
+        recipe:add_ingredient({type = 'fluid', name = 'phosphorus-tricloride', amount = 1})
         data:extend{recipe}
     end
 end

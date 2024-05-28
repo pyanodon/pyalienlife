@@ -46,7 +46,7 @@ ENTITY {
     module_specification = {
         module_slots = 3
     },
-    allowed_effects = {"speed","productivity",'consumption'},
+    allowed_effects = {'speed', 'productivity', 'consumption'},
     crafting_categories = {"compost"},
     crafting_speed = 3,
     source_inventory_size = 1,
@@ -237,8 +237,8 @@ working_visualisations = {
         --1
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {0.0, -6.0}}},
@@ -247,8 +247,8 @@ working_visualisations = {
         --[[
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {-2.0, -6.0}}},

@@ -1,25 +1,23 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
-    local py_science_1 = table.deepcopy(data.raw.recipe['py-science-pack-1'])
-    local py_science_2 = table.deepcopy(data.raw.recipe['py-science-pack-2'])
-    local py_science_3 = table.deepcopy(data.raw.recipe['py-science-pack-3'])
-    local py_science_4 = table.deepcopy(data.raw.recipe['py-science-pack-4'])
+    local py_science_1 = RECIPE('py-science-pack-1'):copy()
+    local py_science_2 = RECIPE('py-science-pack-2'):copy()
+    local py_science_3 = RECIPE('py-science-pack-3'):copy()
+    local py_science_4 = RECIPE('py-science-pack-4'):copy()
 
     py_science_1.name = py_science_1.name .. '-turd'
     py_science_2.name = py_science_2.name .. '-turd'
     py_science_3.name = py_science_3.name .. '-turd'
     py_science_4.name = py_science_4.name .. '-turd'
 
-    FUN.add_ingredient(py_science_1, {name = 'chitin', amount = 5, type = 'item'})
-    FUN.add_ingredient(py_science_2, {name = 'sl-concentrate', amount = 4, type = 'item'})
-    if mods.pyalternativeenergy then FUN.add_ingredient(py_science_3, {name = 'passivation-layer', amount = 2, type = 'item'}) end
-    FUN.add_ingredient(py_science_4, {name = 'mova-pulp3', amount = 100, type = 'fluid'})
+    py_science_1:add_ingredient({name = 'chitin', amount = 5, type = 'item'})
+    py_science_2:add_ingredient({name = 'sl-concentrate', amount = 4, type = 'item'})
+    if mods.pyalternativeenergy then py_science_3:add_ingredient({name = 'passivation-layer', amount = 2, type = 'item'}) end
+    py_science_4:add_ingredient({name = 'mova-pulp3', amount = 100, type = 'fluid'})
 
-    FUN.add_result_amount(py_science_1, 'py-science-pack-1', 2)
-    FUN.add_result_amount(py_science_2, 'py-science-pack-2', 6)
-    FUN.add_result_amount(py_science_3, 'py-science-pack-3', 1)
-    FUN.add_result_amount(py_science_4, 'py-science-pack-4', 1)
+    py_science_1:add_result_amount('py-science-pack-1', 2)
+    py_science_2:add_result_amount('py-science-pack-2', 6)
+    py_science_3:add_result_amount('py-science-pack-3', 1)
+    py_science_4:add_result_amount('py-science-pack-4', 1)
 
     data:extend{py_science_1, py_science_2, py_science_3, py_science_4}
 end

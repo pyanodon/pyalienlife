@@ -1,5 +1,3 @@
-local Position = require('__stdlib__/stdlib/area/position')
-
 local caravan_actions = {
 	['outpost'] = {
 		'time-passed',

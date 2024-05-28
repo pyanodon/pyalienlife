@@ -1,16 +1,14 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 if mods['pyhightech'] then
-    require('prototypes/recipes/moondrop/recipes-moondrop-products')
+    require 'prototypes/recipes/moondrop/recipes-moondrop-products'
     RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
-    FUN.results_replacer('arqad-mk02','empty-barrel','empty-barrel', 2)
+    RECIPE('arqad-mk02'):replace_result('empty-barrel','empty-barrel', 2)
     RECIPE('arqad-mk03'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
     --data.raw.recipe['arqad-mk03'].results[4] = nil
-    FUN.results_replacer('arqad-mk03','empty-barrel','empty-barrel', 4)
+    RECIPE('arqad-mk03'):replace_result('empty-barrel','empty-barrel', 4)
     RECIPE('arqad-mk04'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-gas', amount = 10})
     --data.raw.recipe['arqad-mk04'].results[5] = nil
-    FUN.results_replacer('arqad-mk04','empty-barrel','empty-barrel', 8)
+    RECIPE('arqad-mk04'):replace_result('empty-barrel','empty-barrel', 8)
 end
 
 RECIPE("mixer-mk01"):remove_unlock("drilling-fluid-mk01"):add_unlock("machines-mk01")
@@ -21,13 +19,13 @@ RECIPE("reformer-mk01"):remove_unlock('oil-machines-mk01'):add_unlock('scrude')
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 data.raw['assembling-machine']['guar-gum-plantation'].module_specification.module_slots = 16
-data.raw['assembling-machine']['guar-gum-plantation'].crafting_speed = FUN.farm_speed(16, FULL_CRAFTING_SPEED)
+data.raw['assembling-machine']['guar-gum-plantation'].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
 data.raw['assembling-machine']['guar-gum-plantation-mk02'].module_specification.module_slots = 32
-data.raw['assembling-machine']['guar-gum-plantation-mk02'].crafting_speed = FUN.farm_speed_derived(32, "guar-gum-plantation")
+data.raw['assembling-machine']['guar-gum-plantation-mk02'].crafting_speed = py.farm_speed_derived(32, "guar-gum-plantation")
 data.raw['assembling-machine']['guar-gum-plantation-mk03'].module_specification.module_slots = 48
-data.raw['assembling-machine']['guar-gum-plantation-mk03'].crafting_speed = FUN.farm_speed_derived(48, "guar-gum-plantation")
+data.raw['assembling-machine']['guar-gum-plantation-mk03'].crafting_speed = py.farm_speed_derived(48, "guar-gum-plantation")
 data.raw['assembling-machine']['guar-gum-plantation-mk04'].module_specification.module_slots = 64
-data.raw['assembling-machine']['guar-gum-plantation-mk04'].crafting_speed = FUN.farm_speed_derived(64, "guar-gum-plantation")
+data.raw['assembling-machine']['guar-gum-plantation-mk04'].crafting_speed = py.farm_speed_derived(64, "guar-gum-plantation")
 
 --TECHNOLOGIES--
 TECHNOLOGY("drilling-fluid-mk01"):add_pack("py-science-pack-1")
@@ -72,19 +70,15 @@ RECIPE('rubber-01'):add_ingredient({type = "item", name = "latex", amount = 1})
 RECIPE('rubber-02'):add_ingredient({type = "item", name = "latex", amount = 2})
 RECIPE('rubber-03'):add_ingredient({type = "item", name = "latex", amount = 3})
 RECIPE('rubber-04'):add_ingredient({type = "item", name = "latex", amount = 4})
-RECIPE('logistic-science-01'):replace_ingredient("water","crude-oil")
-RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
-RECIPE('production-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('production-science-pack'):add_ingredient({type = "item", name = "small-parts-03", amount = 10})
-RECIPE('chemical-science-01'):replace_ingredient("water","crude-oil")
 RECIPE('harvester'):replace_ingredient("small-parts-01","small-parts-02")
 RECIPE('seeds-extract-01'):add_ingredient({type = "item", name = "guar-seeds", amount = 100})
 RECIPE('arqad-jelly-01'):replace_ingredient("active-carbon","carbon-black"):replace_ingredient("oleochemicals-barrel","btx-barrel")
 
-FUN.results_replacer("crude-from-manure", "crude-oil", "scrude")
-FUN.results_replacer("crude-from-manure", "ash", "soot")
-FUN.results_replacer("guar-separation", "organics", "biomass")
-FUN.results_replacer("bitumen-comb", "tar", "bitumen")
+RECIPE('crude-from-manure'):replace_result("crude-oil", "scrude")
+RECIPE('crude-from-manure'):replace_result("ash", "soot")
+RECIPE('guar-separation'):replace_result("organics", "biomass")
+RECIPE('bitumen-comb'):replace_result("tar", "bitumen")
 
 RECIPE("mining-limestone"):remove_unlock("excavation-2"):add_unlock("excavation-1")
 
@@ -117,7 +111,7 @@ RECIPE {
     results = {
         {type = 'fluid', name = 'raw-gas', amount = 50}
     }
-}:add_unlock('phagnot-mk02'):change_category('gas-refinery')
+}:add_unlock('phagnot-mk02').category = 'gas-refinery'
 
 RECIPE {
     type = 'recipe',

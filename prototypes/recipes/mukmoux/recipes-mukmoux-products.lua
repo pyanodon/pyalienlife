@@ -1,9 +1,7 @@
 
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --MANURE
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'manure',
 	category = 'mukmoux',
 	--module_limitations = 'mukmoux',

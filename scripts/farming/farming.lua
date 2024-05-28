@@ -1,7 +1,7 @@
 Farming = {}
 Farming.events = {}
 
----@type table<string, string>
+---@as table<string, string>
 ---Contains key-value pairs of `{farm_name = farm_domain}`
 -- See `scripts/farming/farm-build-list.lua` for an example
 local farm_buildings = require 'farm-building-list'
@@ -44,7 +44,7 @@ function Farming.disable_machine(entity)
 		entity.crafting_progress = 0.0001
 		entity.bonus_progress = 0
 	end
-	draw_error_sprite(entity, 'no_module_' .. kingdom, 30)
+	py.draw_error_sprite(entity, 'no_module_' .. kingdom, 30)
 end
 
 Farming.events.on_init = function()
@@ -72,7 +72,7 @@ Farming.events[59] = function(event)
 		if not farm.valid then
 			global.disabled_farm_buildings[unit_number] = nil
 		elseif farm.get_module_inventory().is_empty() then
-			draw_error_sprite(farm, 'no_module_' .. Farming.get_kingdom(farm), 30)
+			py.draw_error_sprite(farm, 'no_module_' .. Farming.get_kingdom(farm), 30)
 		else
 			global.disabled_farm_buildings[unit_number] = nil
 			farm.active = true

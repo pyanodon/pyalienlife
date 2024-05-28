@@ -1,17 +1,15 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['korlex-milk-1']),
-        table.deepcopy(data.raw.recipe['korlex-milk-2']),
-        table.deepcopy(data.raw.recipe['korlex-milk-3']),
-        table.deepcopy(data.raw.recipe['korlex-milk-4']),
+        RECIPE('korlex-milk-1'):copy(),
+        RECIPE('korlex-milk-2'):copy(),
+        RECIPE('korlex-milk-3'):copy(),
+        RECIPE('korlex-milk-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-doubled'
-        FUN.multiply_ingredient_amount(recipe, 'water-barrel', 2)
-        FUN.multiply_ingredient_amount(recipe, 'empty-barrel-milk', 2)
-        FUN.multiply_result_amount(recipe, 'empty-barrel', 2)
-        FUN.multiply_result_amount(recipe, 'barrel-milk', 2)
+        recipe:multiply_ingredient_amount('water-barrel', 2)
+        recipe:multiply_ingredient_amount('empty-barrel-milk', 2)
+        recipe:multiply_result_amount('empty-barrel', 2)
+        recipe:multiply_result_amount('barrel-milk', 2)
         recipe.energy_required = recipe.energy_required * 2
         data:extend{recipe}
     end
@@ -33,40 +31,40 @@ if data and not yafc_turd_integration then
     }}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['korlex-1']),
-        table.deepcopy(data.raw.recipe['korlex-2']),
-        table.deepcopy(data.raw.recipe['korlex-3']),
-        table.deepcopy(data.raw.recipe['korlex-4']),
+        RECIPE('korlex-1'):copy(),
+        RECIPE('korlex-2'):copy(),
+        RECIPE('korlex-3'):copy(),
+        RECIPE('korlex-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-slowed'
-        FUN.add_ingredient(recipe, {'barrel-milk', i})
-        FUN.add_result(recipe, {'empty-barrel-milk', i})
+        recipe:add_ingredient({'barrel-milk', i})
+        recipe:add_result({'empty-barrel-milk', i})
         recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['korlex-milk-1']),
-        table.deepcopy(data.raw.recipe['korlex-milk-2']),
-        table.deepcopy(data.raw.recipe['korlex-milk-3']),
-        table.deepcopy(data.raw.recipe['korlex-milk-4']),
+        RECIPE('korlex-milk-1'):copy(),
+        RECIPE('korlex-milk-2'):copy(),
+        RECIPE('korlex-milk-3'):copy(),
+        RECIPE('korlex-milk-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-pressured'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'pressured-hydrogen', amount = 20})
+        recipe:add_ingredient({type = 'fluid', name = 'pressured-hydrogen', amount = 20})
         recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
-        FUN.add_result(recipe, {type = 'item', name = 'kimberlite-grade3', amount_min = i*11, amount_max = i*16})
+        recipe:add_result({type = 'item', name = 'kimberlite-grade3', amount_min = i*11, amount_max = i*16})
         recipe.main_product = 'kimberlite-grade3'
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ez-ranch-mk01']),
-        table.deepcopy(data.raw.recipe['ez-ranch-mk02']),
-        table.deepcopy(data.raw.recipe['ez-ranch-mk03']),
-        table.deepcopy(data.raw.recipe['ez-ranch-mk04']),
+        RECIPE('ez-ranch-mk01'):copy(),
+        RECIPE('ez-ranch-mk02'):copy(),
+        RECIPE('ez-ranch-mk03'):copy(),
+        RECIPE('ez-ranch-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nexelit'
-        FUN.add_ingredient(recipe, {type = 'item', name = 'saturated-nexelit-cartridge', amount = 10 * i})
+        recipe:add_ingredient({type = 'item', name = 'saturated-nexelit-cartridge', amount = 10 * i})
         data:extend{recipe}
     end
 end

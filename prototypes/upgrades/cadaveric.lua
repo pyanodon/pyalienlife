@@ -1,39 +1,37 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-2']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-3']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
+        RECIPE('cadaveric-arum-1'):copy(),
+        RECIPE('cadaveric-arum-2'):copy(),
+        RECIPE('cadaveric-arum-3'):copy(),
+        RECIPE('cadaveric-arum-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-soil'
-        FUN.add_ingredient(recipe, {name = 'soil', amount = 40 * i, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'cadaveric-arum', 1.3)
+        recipe:add_ingredient({name = 'soil', amount = 40 * i, type = 'item'})
+        recipe:multiply_result_amount('cadaveric-arum', 1.3)
         recipe.energy_required = math.ceil(recipe.energy_required * 1.15)
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk01']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk02']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk03']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-mk04']),
+        RECIPE('cadaveric-arum-mk01'):copy(),
+        RECIPE('cadaveric-arum-mk02'):copy(),
+        RECIPE('cadaveric-arum-mk03'):copy(),
+        RECIPE('cadaveric-arum-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-nanofibrils'
-        FUN.add_ingredient(recipe, {name = 'nanofibrils', amount = 10 * (2 ^ (i - 1)), type = 'item'})
+        recipe:add_ingredient({name = 'nanofibrils', amount = 10 * (2 ^ (i - 1)), type = 'item'})
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['cadaveric-arum-1']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-2']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-3']),
-        table.deepcopy(data.raw.recipe['cadaveric-arum-4']),
+        RECIPE('cadaveric-arum-1'):copy(),
+        RECIPE('cadaveric-arum-2'):copy(),
+        RECIPE('cadaveric-arum-3'):copy(),
+        RECIPE('cadaveric-arum-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-msa'
         recipe.main_product = 'cadaveric-arum'
-        FUN.add_result(recipe, {name = 'msa', amount = 55 * i, type = 'fluid'})
+        recipe:add_result({name = 'msa', amount = 55 * i, type = 'fluid'})
         data:extend{recipe}
     end
 end

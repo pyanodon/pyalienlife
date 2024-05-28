@@ -67,7 +67,7 @@ RECIPE {
     main_product = 'negasium',
     subgroup = 'py-alienlife-items',
     order = 'a1'
-}:add_unlock('cottongut-science-mk03'):change_category('nano'):add_ingredient({type = 'item', name = 'kicalk-seeds', amount = 1})
+}:add_unlock('cottongut-science-mk03'):add_ingredient({type = 'item', name = 'kicalk-seeds', amount = 1}).category = 'nano'
 
 RECIPE {
     type = 'recipe',
@@ -127,4 +127,4 @@ RECIPE {
     main_product = 'denatured-seismite',
     subgroup = 'py-alienlife-items',
     order = 'a1'
-}:add_unlock('cottongut-science-mk05'):change_category('nano'):add_ingredient({type = 'item', name = 'kicalk-seeds', amount = 20})
+}:add_unlock('cottongut-science-mk05'):add_ingredient({type = 'item', name = 'kicalk-seeds', amount = 20}).category = 'nano'

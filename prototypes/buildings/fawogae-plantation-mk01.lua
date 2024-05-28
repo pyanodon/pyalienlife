@@ -61,7 +61,7 @@ ENTITY {
     module_specification = {
         module_slots = 20
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"fawogae"},
     crafting_speed = 0.1,
     energy_source = {
@@ -82,16 +82,16 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {-3.5, 0.5}}}
         },
 		{
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(false, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
+            pipe_covers = py.pipe_covers(false, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {3.5, -0.5}}}

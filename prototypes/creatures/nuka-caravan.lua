@@ -1,5 +1,5 @@
-local util = require('util')
-local sounds = require('__base__.prototypes.entity.sounds')
+local util = require 'util'
+local sounds = require '__base__.prototypes.entity.sounds'
 
 RECIPE {
     type = 'recipe',

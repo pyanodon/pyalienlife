@@ -1,4 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 local path_1_module_effect = {consumption = 3, speed = -0.1, productivity = 0, type = 'module-effects'}
 local path_1_effects = {}
 local category = 'creature-chamber'
@@ -23,7 +22,7 @@ if data and not yafc_turd_integration then
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do
         if recipe.category == category then
-            FUN.standardize_results(recipe)
+            recipe:standardize()
             local dna_samples = {}
             for _, ingredient in pairs(recipe.ingredients or {}) do
                 local name = ingredient[1] or ingredient.name
@@ -40,9 +39,9 @@ if data and not yafc_turd_integration then
                     local amount = sample.amount or sample[2] or 1
                     local name = sample.name or sample[1]
                     if amount >= 5 then
-                        FUN.multiply_ingredient_amount(replacement, name, 0.1)
+                        replacement:multiply_ingredient_amount(name, 0.1)
                     else
-                        FUN.add_result(replacement, {type = 'item', name = name, amount = amount, probability = 0.8})
+                        replacement:add_result({type = 'item', name = name, amount = amount, probability = 0.8})
                     end
                 end
                 to_add[#to_add + 1] = replacement
@@ -59,19 +58,19 @@ if data and not yafc_turd_integration then
         'arthurian-mk04',
     }
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['creature-chamber-mk01']),
-        table.deepcopy(data.raw.recipe['creature-chamber-mk02']),
-        table.deepcopy(data.raw.recipe['creature-chamber-mk03']),
-        table.deepcopy(data.raw.recipe['creature-chamber-mk04']),
+        RECIPE('creature-chamber-mk01'):copy(),
+        RECIPE('creature-chamber-mk02'):copy(),
+        RECIPE('creature-chamber-mk03'):copy(),
+        RECIPE('creature-chamber-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-arthurian'
-        FUN.add_ingredient(recipe, {type = 'item', name = arthurians[i], amount = 1})
+        recipe:add_ingredient({type = 'item', name = arthurians[i], amount = 1})
         data:extend{recipe}
     end
 
     for _, unit_name in pairs(units) do
         local unit = table.deepcopy(data.raw.unit[unit_name])
-        local recipe = table.deepcopy(data.raw.recipe[unit_name])
+        local recipe = RECIPE(unit_name):copy()
         local item = table.deepcopy(data.raw.item[unit_name] or data.raw['item-with-tags'][unit_name] or data.raw.module[unit_name])
         if not item then error('no item for ' .. unit_name) end
         local name = unit_name .. '-turd'

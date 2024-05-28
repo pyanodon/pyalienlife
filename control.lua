@@ -1,33 +1,10 @@
-_G.gui_events = {
-	[defines.events.on_gui_click] = {},
-	[defines.events.on_gui_confirmed] = {},
-	[defines.events.on_gui_text_changed] = {},
-	[defines.events.on_gui_checked_state_changed] = {},
-	[defines.events.on_gui_selection_state_changed] = {},
-	[defines.events.on_gui_checked_state_changed] = {},
-	[defines.events.on_gui_elem_changed] = {},
-	[defines.events.on_gui_value_changed] = {},
-	[defines.events.on_gui_location_changed] = {},
-	[defines.events.on_gui_selected_tab_changed] = {},
-	[defines.events.on_gui_switch_state_changed] = {}
-}
-local function process_gui_event(event)
-	if event.element and event.element.valid then
-		for pattern, f in pairs(gui_events[event.name]) do
-			if event.element.name:match(pattern) then f(event); return end
-		end
-	end
-end
-
-for event, _ in pairs(gui_events) do
-	script.on_event(event, process_gui_event)
-end
+require '__pypostprocessing__.lib'
 
 ---@param favorite_foods table
 ---@param locale string
----@return table
-_G.generate_favorite_food_tooltip = function(favorite_foods, locale)
-    ---@type (string|table)[]
+---@return LocalisedString
+py.generate_favorite_food_tooltip = function(favorite_foods, locale)
+    ---@type LocalisedString
 	local favorites = {''}
 	for food, actions in pairs(favorite_foods) do
 		favorites[#favorites + 1] = {locale .. '.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
@@ -35,29 +12,6 @@ _G.generate_favorite_food_tooltip = function(favorite_foods, locale)
 	end
 	favorites[#favorites] = nil
 	return {locale .. '.favorite-foods-main', favorites}
-end
-
-_G.generate_allowed_module_tooltip = function(allowed_modules)
-    ---@type (string|table)[]
-	local favorites = {'', {'gui.module-description'}, '\n'}
-	for module, _ in pairs(allowed_modules) do
-		favorites[#favorites + 1] = {'', '[font=heading-2][item=' .. module .. '][/font]', ' ', game.item_prototypes[module].localised_name}
-		favorites[#favorites + 1] = '\n'
-	end
-	favorites[#favorites] = nil
-	return favorites
-end
-
-_G.draw_error_sprite = function(entity, sprite, time_to_live)
-    rendering.draw_sprite{
-        sprite = sprite,
-        x_scale = 0.5,
-        y_scale = 0.5,
-        target = entity,
-        surface = entity.surface,
-        time_to_live = 30,
-        render_layer = 'air-entity-info-icon'
-    }
 end
 
 require 'scripts.wiki.text-pages'
@@ -147,7 +101,7 @@ end)
 script.on_configuration_changed(init)
 
 local on_built = {defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events.script_raised_revive, defines.events.script_raised_built}
-script.on_event(on_built, function(event)
+py.on_event(on_built, function(event)
     Oculua.events.on_built(event)
     Caravan.events.on_built(event)
     Digosaurus.events.on_built(event)
@@ -160,7 +114,7 @@ script.on_event(on_built, function(event)
     Mounts.events.on_built(event)
 end)
 
-script.on_event(defines.events.on_ai_command_completed, function(event)
+py.on_event(defines.events.on_ai_command_completed, function(event)
     Caravan.events.ai_command_completed(event)
     Digosaurus.events.on_ai_command_completed(event)
     Oculua.events.on_ai_command_completed(event)
@@ -168,7 +122,7 @@ script.on_event(defines.events.on_ai_command_completed, function(event)
 end)
 
 local on_destroyed = {defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.script_raised_destroy, defines.events.on_entity_died}
-script.on_event(on_destroyed, function(event)
+py.on_event(on_destroyed, function(event)
     Caravan.events.on_destroyed(event)
     Digosaurus.events.on_destroyed(event)
     Oculua.events.on_destroyed(event)
@@ -179,11 +133,11 @@ script.on_event(on_destroyed, function(event)
     Smart_Farm.events.on_destroyed(event)
 end)
 
-script.on_event(defines.events.on_player_removed_equipment, function(event)
+py.on_event(defines.events.on_player_removed_equipment, function(event)
     Mounts.events.on_player_removed_equipment(event)
 end)
 
-script.on_event(defines.events.on_gui_opened, function(event)
+py.on_event(defines.events.on_gui_opened, function(event)
     Caravan.events.on_gui_opened_connected(event)
     Oculua.events.on_gui_opened(event)
     Digosaurus.events.on_gui_opened(event)
@@ -191,60 +145,62 @@ script.on_event(defines.events.on_gui_opened, function(event)
     Biofluid.events.on_gui_opened(event)
 end)
 
-script.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
+py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Caravan.events.close_gui(event)
     Digosaurus.events.close_gui(event)
     Slaughterhouse.events.on_gui_closed(event)
     Biofluid.events.on_gui_closed(event)
 end)
 
-script.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
+py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
 
-script.on_event(defines.events.on_entity_destroyed, function(event)
+py.on_event(defines.events.on_entity_destroyed, function(event)
 	Caravan.events.on_entity_destroyed(event)
 	Farming.events.on_entity_destroyed(event)
     Slaughterhouse.events.on_entity_destroyed(event)
     Worm.events.on_entity_destroyed(event)
 end)
 
-script.on_event(defines.events.on_entity_settings_pasted, function(event)
+py.on_event(defines.events.on_entity_settings_pasted, function(event)
     Caravan.events.on_entity_settings_pasted(event)
     Biofluid.events.on_entity_settings_pasted(event)
 end)
 
-script.on_nth_tick(41, Vatbrain.events[41])
-script.on_nth_tick(43, Oculua.events[43])
-script.on_nth_tick(59, Farming.events[59])
-script.on_nth_tick(60, Caravan.events[60])
-script.on_nth_tick(61, Digosaurus.events[61])
-script.on_nth_tick(121, Farming.events[121])
-script.on_nth_tick(143, Biofluid.events[143])
-script.on_nth_tick(221, Oculua.events[221])
-script.on_nth_tick(239, Mounts.events[239])
-script.on_nth_tick(397, Ulric.events[397])
-script.on_nth_tick(432000, Turd.events[432000])
+py.on_nth_tick(41, Vatbrain.events[41])
+py.on_nth_tick(43, Oculua.events[43])
+py.on_nth_tick(59, Farming.events[59])
+py.on_nth_tick(60, Caravan.events[60])
+py.on_nth_tick(61, Digosaurus.events[61])
+py.on_nth_tick(121, Farming.events[121])
+py.on_nth_tick(143, Biofluid.events[143])
+py.on_nth_tick(221, Oculua.events[221])
+py.on_nth_tick(239, Mounts.events[239])
+py.on_nth_tick(397, Ulric.events[397])
+py.on_nth_tick(432000, Turd.events[432000])
 
-script.on_nth_tick(7, function()
+py.on_nth_tick(7, function()
     for _, player in pairs(game.connected_players) do
 		local gui = player.gui.relative.digosaurus_gui
 		if gui then Digosaurus.update_gui(gui); goto continue end
         gui = Caravan.get_caravan_gui(player)
-        if gui then Caravan.update_gui(gui, true, player); goto continue end
+        if gui then Caravan.update_gui(gui, true); goto continue end
         gui = player.gui.relative.bioport_gui
         if gui then Biofluid.update_bioport_gui(player, gui); goto continue end
         ::continue::
 	end
 end)
 
-script.on_event('open-gui', function(event)
+py.on_event('open-gui', function(event)
     Caravan.events.on_open_gui(event)
     Caravan.events.used_capsule(event)
 end)
 
-script.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
-script.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
-script.on_event(defines.events.on_selected_entity_changed, Turd.events.on_selected_entity_changed)
-script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
-script.on_event(defines.events.on_player_rotated_entity, Biofluid.events.on_player_rotated_entity)
-script.on_event(defines.events.on_player_setup_blueprint, Biofluid.events.on_player_setup_blueprint)
-script.on_event(defines.events.on_player_fast_transferred, Biofluid.events.on_player_fast_transferred)
+py.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
+py.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
+py.on_event(defines.events.on_selected_entity_changed, Turd.events.on_selected_entity_changed)
+py.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
+py.on_event(defines.events.on_player_rotated_entity, Biofluid.events.on_player_rotated_entity)
+py.on_event(defines.events.on_player_setup_blueprint, Biofluid.events.on_player_setup_blueprint)
+py.on_event(defines.events.on_player_fast_transferred, Biofluid.events.on_player_fast_transferred)
+
+py.finalize_events()

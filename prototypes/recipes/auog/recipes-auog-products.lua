@@ -1,7 +1,5 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 --Aoug breeding
-FUN.autorecipes {
+py.autorecipes {
     name = 'auog-pooping',
 	category = 'auog',
 	module_limitations = 'auog',

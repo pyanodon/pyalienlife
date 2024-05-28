@@ -1,4 +1,4 @@
-local util = require('util')
+local util = require 'util'
 local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
 _G.caravan_collision_mask = collision_mask_util.get_first_unused_layer()

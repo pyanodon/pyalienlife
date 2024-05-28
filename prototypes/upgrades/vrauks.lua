@@ -1,34 +1,32 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['vrauks-1']),
-        table.deepcopy(data.raw.recipe['vrauks-2']),
-        table.deepcopy(data.raw.recipe['vrauks-3']),
-        table.deepcopy(data.raw.recipe['vrauks-4']),
-        table.deepcopy(data.raw.recipe['vrauks-5']),
-        table.deepcopy(data.raw.recipe['vrauks-cocoon-1']),
-        table.deepcopy(data.raw.recipe['vrauks-cocoon-2']),
-        table.deepcopy(data.raw.recipe['vrauks-cocoon-3']),
-        table.deepcopy(data.raw.recipe['vrauks-cocoon-4']),
-        table.deepcopy(data.raw.recipe['vrauks-cocoon-5']),
+        RECIPE('vrauks-1'):copy(),
+        RECIPE('vrauks-2'):copy(),
+        RECIPE('vrauks-3'):copy(),
+        RECIPE('vrauks-4'):copy(),
+        RECIPE('vrauks-5'):copy(),
+        RECIPE('vrauks-cocoon-1'):copy(),
+        RECIPE('vrauks-cocoon-2'):copy(),
+        RECIPE('vrauks-cocoon-3'):copy(),
+        RECIPE('vrauks-cocoon-4'):copy(),
+        RECIPE('vrauks-cocoon-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-no-water'
-        FUN.remove_ingredient(recipe, 'syrup-01-barrel')
-        FUN.remove_ingredient(recipe, 'water-barrel')
-        FUN.remove_result(recipe, 'empty-barrel')
+        recipe:remove_ingredient('syrup-01-barrel')
+        recipe:remove_ingredient('water-barrel')
+        recipe:remove_result('empty-barrel')
         data:extend{recipe}
     end
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['vrauks-paddock-mk01']),
-        table.deepcopy(data.raw.recipe['vrauks-paddock-mk02']),
-        table.deepcopy(data.raw.recipe['vrauks-paddock-mk03']),
-        table.deepcopy(data.raw.recipe['vrauks-paddock-mk04']),
+        RECIPE('vrauks-paddock-mk01'):copy(),
+        RECIPE('vrauks-paddock-mk02'):copy(),
+        RECIPE('vrauks-paddock-mk03'):copy(),
+        RECIPE('vrauks-paddock-mk04'):copy(),
     }) do
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. '-with-lamp'
-        FUN.add_result(recipe, {'small-lamp', i*32})
+        recipe:add_result({'small-lamp', i*32})
         data:extend{recipe}
     end
 

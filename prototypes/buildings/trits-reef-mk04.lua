@@ -1,4 +1,3 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 local MODULE_SLOTS = 4
 
 RECIPE {
@@ -48,9 +47,9 @@ ENTITY {
     module_specification = {
         module_slots = MODULE_SLOTS
     },
-    allowed_effects = {"speed","productivity",'consumption','pollution'},
+    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"trits"},
-    crafting_speed = FUN.farm_speed_derived(MODULE_SLOTS, "trits-reef-mk01"),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "trits-reef-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -178,8 +177,8 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(true, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {-1.5, 5.5}}},
@@ -187,8 +186,8 @@ ENTITY {
         },
         {
             production_type = "input",
-            pipe_covers = DATA.Pipes.covers(true, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = -1,
             pipe_connections = {{type = "input", position = {1.5, 5.5}}},
@@ -196,8 +195,8 @@ ENTITY {
         },
         {
             production_type = "output",
-            pipe_covers = DATA.Pipes.covers(true, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = 1,
             pipe_connections = {{type = "output", position = {-1.5, -5.5}}},
@@ -205,8 +204,8 @@ ENTITY {
         },
         {
             production_type = "output",
-            pipe_covers = DATA.Pipes.covers(true, true, true, true),
-            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             base_area = 10,
             base_level = 1,
             pipe_connections = {{type = "output", position = {1.5, -5.5}}},

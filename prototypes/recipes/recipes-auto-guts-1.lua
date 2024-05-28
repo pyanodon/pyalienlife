@@ -1,9 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
-
 ------------------ARTHURIANS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-arthurians',
 	category = 'slaughterhouse',
 	--module_limitations = 'arthurian',
@@ -40,7 +37,7 @@ FUN.autorecipes {
 
 ------------------ARQAD------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-arqad',
 	category = 'slaughterhouse',
 	--module_limitations = 'arqad',
@@ -77,7 +74,7 @@ FUN.autorecipes {
 
 ------------------AUOGS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-auog',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -114,7 +111,7 @@ FUN.autorecipes {
 
 ------------------COTTONGUT------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-cottongut',
 	category = 'slaughterhouse',
 	--module_limitations = 'cottongut',
@@ -150,7 +147,7 @@ FUN.autorecipes {
 
 ------------------DHILMOS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-dhilmos',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -189,7 +186,7 @@ FUN.autorecipes {
 
 ------------------DINGRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-dingrits',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -226,7 +223,7 @@ FUN.autorecipes {
 
 ------------------KMAUTS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-kmauts',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -263,7 +260,7 @@ FUN.autorecipes {
 
 ------------------KORLEX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-korlex',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -300,7 +297,7 @@ FUN.autorecipes {
 
 ------------------MUKMOUX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-mukmoux',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -337,7 +334,7 @@ FUN.autorecipes {
 
 ------------------PHADAI------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-phadai',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -374,7 +371,7 @@ FUN.autorecipes {
 
 ------------------PHAGNOT------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-phagnot',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -411,7 +408,7 @@ FUN.autorecipes {
 
 ------------------SCRONDRIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-scrondrix',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -448,7 +445,7 @@ FUN.autorecipes {
 
 ------------------SIMIKS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-simik',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -485,7 +482,7 @@ FUN.autorecipes {
 
 ------------------TRITS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-trits',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -521,7 +518,7 @@ FUN.autorecipes {
 
 ------------------ULRIC------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-ulric',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -558,7 +555,7 @@ FUN.autorecipes {
 
 ------------------VONIX------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-vonix',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -597,7 +594,7 @@ FUN.autorecipes {
 
 ------------------VRAUKS------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-vrauks',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -637,7 +634,7 @@ FUN.autorecipes {
 
 ------------------XYHIPHOE------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-xyhiphoe',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',
@@ -669,7 +666,7 @@ FUN.autorecipes {
 }
 ------------------ZIPIR------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-guts-zipir',
 	category = 'slaughterhouse',
 	--module_limitations = 'auog',

@@ -1,8 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------RENDERING------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'rendering-antelope',
 	category = 'slaughterhouse',
 	--module_limitations = 'antelope',

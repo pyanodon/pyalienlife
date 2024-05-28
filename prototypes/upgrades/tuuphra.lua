@@ -1,10 +1,8 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
-    local recipe = table.deepcopy(data.raw.recipe['tuuphra-seeds'])
+    local recipe = RECIPE('tuuphra-seeds'):copy()
     recipe.name = recipe.name .. '-with-water'
-    FUN.add_ingredient(recipe, {type = 'fluid', name = 'water', amount = 1000})
-    FUN.add_result_amount(recipe, 'tuuphra-seeds', 3)
+    recipe:add_ingredient({type = 'fluid', name = 'water', amount = 1000})
+    recipe:add_result_amount('tuuphra-seeds', 3)
     data:extend{recipe}
 
     data:extend{
@@ -59,16 +57,16 @@ if data and not yafc_turd_integration then
     }
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['tuuphra-1']),
-        table.deepcopy(data.raw.recipe['tuuphra-2']),
-        table.deepcopy(data.raw.recipe['tuuphra-3']),
-        table.deepcopy(data.raw.recipe['tuuphra-4']),
+        RECIPE('tuuphra-1'):copy(),
+        RECIPE('tuuphra-2'):copy(),
+        RECIPE('tuuphra-3'):copy(),
+        RECIPE('tuuphra-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-fungicide'
-        FUN.add_ingredient(recipe, {'fungicide', 1})
-        FUN.add_result_amount(recipe, 'tuuphra', 1)
-        FUN.remove_ingredient(recipe, 'pesticide-mk01')
-        FUN.remove_ingredient(recipe, 'pesticide-mk02')
+        recipe:add_ingredient({'fungicide', 1})
+        recipe:add_result_amount('tuuphra', 1)
+        recipe:remove_ingredient('pesticide-mk01')
+        recipe:remove_ingredient('pesticide-mk02')
         recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend{recipe}
     end

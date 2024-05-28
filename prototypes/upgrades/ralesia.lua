@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     data:extend{
         {
@@ -26,36 +24,36 @@ if data and not yafc_turd_integration then
         }
     }
 
-    local recipe = table.deepcopy(data.raw.recipe['ralesia-seeds'])
-    FUN.add_ingredient(recipe, {'paper-towel', 1})
+    local recipe = RECIPE('ralesia-seeds'):copy()
+    recipe:add_ingredient({'paper-towel', 1})
     recipe.energy_required = 3
-    FUN.multiply_result_amount(recipe, 'ralesia-seeds', 2)
+    recipe:multiply_result_amount('ralesia-seeds', 2)
     recipe.name = 'ralesia-seeds-paper-towel'
     data:extend{recipe}
 
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk01']),
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk02']),
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk03']),
-        table.deepcopy(data.raw.recipe['ralesia-plantation-mk04']),
+        RECIPE('ralesia-plantation-mk01'):copy(),
+        RECIPE('ralesia-plantation-mk02'):copy(),
+        RECIPE('ralesia-plantation-mk03'):copy(),
+        RECIPE('ralesia-plantation-mk04'):copy(),
     }) do
         recipe.name = recipe.name .. '-with-ceramic'
-        FUN.add_ingredient(recipe, {name = 'mirror-mk0'..i, amount = 50 * i, type = 'item'})
+        recipe:add_ingredient({name = 'mirror-mk0'..i, amount = 50 * i, type = 'item'})
         data:extend{recipe}
     end
 
     local fluidbox_indexs = {2, 2, 2, 1, 1}
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['ralesias-1']),
-        table.deepcopy(data.raw.recipe['ralesias-2']),
-        table.deepcopy(data.raw.recipe['ralesias-3']),
-        table.deepcopy(data.raw.recipe['ralesias-4']),
+        RECIPE('ralesias-1'):copy(),
+        RECIPE('ralesias-2'):copy(),
+        RECIPE('ralesias-3'):copy(),
+        RECIPE('ralesias-4'):copy(),
     }) do
         recipe.name = recipe.name .. '-hydrogen-burn'
-        FUN.remove_ingredient(recipe, 'water')
-        local old_hydrogen = FUN.remove_ingredient(recipe, 'hydrogen')
-        FUN.add_ingredient(recipe, {name = 'hydrogen', amount = old_hydrogen + 50, type = 'fluid', fluidbox_index = fluidbox_indexs[i]})
-        FUN.add_result(recipe, {name = 'helium', type = 'fluid', amount = i*2})
+        recipe:remove_ingredient('water')
+        local _, old_hydrogen = recipe:remove_ingredient('hydrogen')
+        recipe:add_ingredient({name = 'hydrogen', amount = old_hydrogen + 50, type = 'fluid', fluidbox_index = fluidbox_indexs[i]})
+        recipe:add_result({name = 'helium', type = 'fluid', amount = i*2})
         recipe.main_product = 'helium'
         data:extend{recipe}
     end

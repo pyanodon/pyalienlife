@@ -1,8 +1,6 @@
-local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-
 ------------------EGG MAKER------------------
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arthurian-egg',
 	category = 'rc',
 	allowed_module_categories = {'arthurian'},
@@ -160,7 +158,7 @@ FUN.autorecipes {
 
 --incubatting
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arthurian-incubating',
 	category = 'research',
 	module_limitations = 'arthurian',
@@ -189,7 +187,7 @@ FUN.autorecipes {
 
 --maturing
 
-FUN.autorecipes {
+py.autorecipes {
     name = 'arthurian-maturing',
 	category = 'arthurian',
 	module_limitations = 'arthurian',

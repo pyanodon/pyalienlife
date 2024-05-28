@@ -1,4 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 local is_pyse = (data and mods['pystellarexpedition']) or (script and script.active_mods['pystellarexpedition'])
 
 local cags_effects
@@ -24,14 +23,14 @@ if is_pyse then cags_effects = {
 
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        table.deepcopy(data.raw.recipe['arqad-egg-1']),
-        table.deepcopy(data.raw.recipe['arqad-egg-2']),
-        table.deepcopy(data.raw.recipe['arqad-egg-3']),
-        table.deepcopy(data.raw.recipe['arqad-egg-4']),
-        table.deepcopy(data.raw.recipe['arqad-egg-5']),
+        RECIPE('arqad-egg-1'):copy(),
+        RECIPE('arqad-egg-2'):copy(),
+        RECIPE('arqad-egg-3'):copy(),
+        RECIPE('arqad-egg-4'):copy(),
+        RECIPE('arqad-egg-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-cold'
-        FUN.add_ingredient(recipe, {type = 'fluid', name = 'purest-nitrogen-gas', amount = 100})
+        recipe:add_ingredient({type = 'fluid', name = 'purest-nitrogen-gas', amount = 100})
         for _, result in pairs(recipe.results) do
             if result.name == 'arqad-queen' then
                 result.probability = 0.995
@@ -42,12 +41,12 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, result_name in pairs({
-        [table.deepcopy(data.raw.recipe['wax'])] = 'wax',
-        [table.deepcopy(data.raw.recipe['wax-to-lube'])] = 'lubricant',
-        [table.deepcopy(data.raw.recipe['honey-comb'])] = 'arqad-honey',
+        [RECIPE('wax'):copy()] = 'wax',
+        [RECIPE('wax-to-lube'):copy()] = 'lubricant',
+        [RECIPE('honey-comb'):copy()] = 'arqad-honey',
     }) do
         recipe.name = recipe.name .. '-buffed'
-        FUN.multiply_result_amount(recipe, result_name, 3)
+        recipe:multiply_result_amount(result_name, 3)
         data:extend{recipe}
     end
 
@@ -115,21 +114,21 @@ if data and not yafc_turd_integration then
         end
     else
         for i, machine_recipe in pairs({
-            table.deepcopy(data.raw.recipe['arqad-hive-mk01']),
-            table.deepcopy(data.raw.recipe['arqad-hive-mk02']),
-            table.deepcopy(data.raw.recipe['arqad-hive-mk03']),
-            table.deepcopy(data.raw.recipe['arqad-hive-mk04']),
+            RECIPE('arqad-hive-mk01'):copy(),
+            RECIPE('arqad-hive-mk02'):copy(),
+            RECIPE('arqad-hive-mk03'):copy(),
+            RECIPE('arqad-hive-mk04'):copy(),
         }) do
             machine_recipe.name = machine_recipe.name .. '-with-cags'
-            FUN.add_ingredient(machine_recipe, {name = 'cags', amount = 10 * i, type = 'item'})
+            machine_recipe:add_ingredient({name = 'cags', amount = 10 * i, type = 'item'})
             data:extend{machine_recipe}
         end
     end
 
-    local ez_queen = table.deepcopy(data.raw.recipe['arqad'])
+    local ez_queen = RECIPE('arqad'):copy()
     ez_queen.name = 'ez-queen'
-    FUN.remove_result(ez_queen, 'arqad')
-    FUN.add_result(ez_queen, {'arqad-queen', 1})
+    ez_queen:remove_result('arqad')
+    ez_queen:add_result({'arqad-queen', 1})
     ez_queen.energy_required = ez_queen.energy_required * 2
     ez_queen.main_product = 'arqad-queen'
     data:extend{ez_queen}

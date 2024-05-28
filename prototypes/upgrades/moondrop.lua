@@ -1,16 +1,14 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 if data and not yafc_turd_integration then
     for _, recipe in pairs({
-        table.deepcopy(data.raw.recipe['moondrop-1']),
-        table.deepcopy(data.raw.recipe['moondrop-2']),
-        table.deepcopy(data.raw.recipe['moondrop-3']),
-        table.deepcopy(data.raw.recipe['moondrop-4']),
-        table.deepcopy(data.raw.recipe['moondrop-5']),
+        RECIPE('moondrop-1'):copy(),
+        RECIPE('moondrop-2'):copy(),
+        RECIPE('moondrop-3'):copy(),
+        RECIPE('moondrop-4'):copy(),
+        RECIPE('moondrop-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-cu'
-        FUN.add_ingredient(recipe, {name = 'copper-ore', amount = 10, type = 'item'})
-        FUN.multiply_result_amount(recipe, 'moondrop', 1.2)
+        recipe:add_ingredient({name = 'copper-ore', amount = 10, type = 'item'})
+        recipe:multiply_result_amount('moondrop', 1.2)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend{recipe}
     end
