@@ -118,6 +118,7 @@ local recipes_list = {
 	'energy-drink',
 	'energy-drinkb',
 	'enzyme-pks',
+	'enzyme-pks-nickel-carbonyl',
 	'ethanol-combustion',
 	'ethanol',
 	'ethylene-from-fruit',
@@ -305,7 +306,7 @@ local recipes_list = {
 	'zogna-bacteria-darkness',
 	'zogna-bacteria',
 	'zymogens',
-
+  
 	'deposited-core',
 	'biofilm-pyht',
 	'graphene-roll',

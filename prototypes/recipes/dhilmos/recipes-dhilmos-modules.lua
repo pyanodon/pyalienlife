@@ -214,7 +214,7 @@ RECIPE {
         {type = 'item', name = 'dhilmos-codex-mk04', amount = 1},
         {type = 'item', name = 'cdna', amount = 2},
         {type = 'item', name = 'bio-scafold', amount = 8},
-        {type = 'item', name = 'regolite-rock', amount = 5},
+        {type = 'item', name = 'rich-gas', amount = 5},
         {type = 'item', name = 'cysteine', amount = 1},
         {type = 'item', name = 'solidified-sarcorus', amount = 2},
         {type = 'item', name = 'enediyne', amount = 1},
