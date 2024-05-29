@@ -115,7 +115,7 @@ local unit = {
         ammo_type = _G.make_unit_melee_ammo_type(0),
         animation = animation
     },
-    vision_distance = 30,
+    vision_distance = 0,
     movement_speed = 0.3,
     distance_per_frame = 0.5,
     pollution_to_join_attack = 4,
