@@ -154,10 +154,10 @@ RECIPE {
       {type = 'item', name = 'moss-mk04', amount = 2},
       {type = 'item', name = 'cdna', amount = 3},
       {type = 'item', name = 'moss-gen', amount = 5},
-      {type = 'fluid', name = 'tholins', amount = 50},
-      {type = 'fluid', name = 'psc', amount = 50},
+      {type = 'item', name = 'tissue-engineered-fat', amount = 2},
       {type = 'item', name = 'chimeric-proteins', amount = 5},
-      {type = 'item', name = 'rich-gas', amount = 5},
+      {type = 'fluid', name = 'tholins', amount = 50},
+      {type = 'fluid', name = 'rich-gas', amount = 100},
       },
   results = {
       {type = 'item', name = 'moss-mk04', amount = 4},
