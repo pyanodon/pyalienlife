@@ -100,7 +100,7 @@ ITEM{
         }
       },
       },
-      vision_distance = 30,
+      vision_distance = 0,
       movement_speed = 0.28,
       distance_per_frame = 0.13,
       pollution_to_join_attack = 4,

@@ -134,7 +134,7 @@ data:extend
 		}
 	},
 	},
-	vision_distance = 40,
+	vision_distance = 0,
 	movement_speed = 0.2*1.4,
 	distance_per_frame = 1,
 	pollution_to_join_attack = 4,
