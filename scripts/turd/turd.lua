@@ -284,6 +284,17 @@ local function handle_removed_items(surface, force, machine, removed_items)
 end
 
 local function recipe_replacement(old, new, force, assembling_machine_list)
+	local has_error = false
+	if not old then
+		game.print('ERROR while applying T.U.R.D. recipe replacement. Recipe "' .. effect.old .. '" does not exist.')
+		has_error = true
+	end
+	if not new then
+		game.print('ERROR while applying T.U.R.D. recipe replacement. Recipe "' .. effect.new .. '" does not exist.')
+		has_error = true
+	end
+	if has_error then return end
+
 	old.enabled = false
 	if new then new.enabled = true end
 
@@ -375,10 +386,10 @@ local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assemblin
 	defunctionize_effect_table(sub_tech)
 	for _, effect in pairs(sub_tech.effects) do
 		if effect.type == 'unlock-recipe' then
-			recipes[effect.recipe].enabled = true
+			if recipes[effect.recipe] then recipes[effect.recipe].enabled = true end
 		elseif effect.type == 'recipe-replacement' then
 			local old, new = recipes[effect.old], recipes[effect.new]
-			if old.enabled then recipe_replacement(old, new, force, assembling_machine_list) end
+			if not old or old.enabled then recipe_replacement(old, new, force, assembling_machine_list) end
 		elseif effect.type == 'module-effects' then
 			module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
 		elseif effect.type == 'machine-replacement' then
@@ -404,7 +415,7 @@ local function unselect_recipes_for_subtech(sub_tech, force, assembling_machine_
 	for _, effect in pairs(sub_tech.effects) do
 		if (effect.type == 'unlock-recipe' or effect.type == 'recipe-replacement') and not effect.also_unlocked_by_techs then
 			local recipe = recipes[effect.new or effect.recipe]
-			if recipe and recipe.enabled then
+			if not recipe or recipe.enabled then
 				recipe_replacement(recipe, effect.old and recipes[effect.old], force, assembling_machine_list)
 			end
 		elseif effect.type == 'machine-replacement' then
