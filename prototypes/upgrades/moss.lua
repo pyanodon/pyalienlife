@@ -40,7 +40,7 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. '-without-sludge'
         recipe:remove_ingredient('dirty-water-light')
-        if i ~= 1 then recipe:add_result({type = 'item', name = 'gravel', amount_min = 1, amount_max = 5}) end
+        if i ~= 1 then recipe:add_result{type = 'item', name = 'coarse', amount_min = 5, amount_max = 10} end
         recipe.main_product = 'moss'
         data:extend{recipe}
     end
