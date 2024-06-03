@@ -8,6 +8,10 @@ Date: ?
     - Fixed that mk2 and mk3 starch recipes did not accept productivity.
     - Allowed productivity on tuuphra path 3.
     - Fixed the PKS recipes not accepting prod mods
+    - Fixed the PKS and cottongut turd recipes not accepting prod mods
+    - Changed dhilmos, simik, moss and xeno mk04 to use rich gas instead of regolites to allow full zero input
+  Bugfixes:
+    - The smart farm now properly cleans up any autoplaced tilled dirt tiles when the entity is mined.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.34
 Date: 2024-9-5
