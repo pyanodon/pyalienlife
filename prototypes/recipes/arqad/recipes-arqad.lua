@@ -390,3 +390,20 @@ RECIPE {
     order = 'a',
 }:add_unlock("growth-hormone")
 ]]--
+
+RECIPE {
+    name = 'used-comb-oil-recycling',
+    type = 'recipe',
+    category = 'upgrader',
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'used-comb', amount = 1},
+        {type = 'fluid', name = 'water', amount = 10},
+    },
+    results = {
+        {type = 'fluid', name = 'residual-oil', amount = 50},
+        {type = 'fluid', name = 'bitumen', amount = 25},
+    },
+    main_product = 'residual-oil',
+}:add_unlock('heavy-oil-mk01')

@@ -10,6 +10,8 @@ Date: ?
     - Fixed the PKS recipes not accepting prod mods
     - Fixed the PKS and cottongut turd recipes not accepting prod mods
     - Changed dhilmos, simik, moss and xeno mk04 to use rich gas instead of regolites to allow full zero input
+    - Used combs can now be biomassed for 15 biomass each. (https://github.com/pyanodon/pybugreports/issues/492)
+    - Added a new recipe to convert used combs into residual oil and bitumen.
   Bugfixes:
     - The smart farm now properly cleans up any autoplaced tilled dirt tiles when the entity is mined.
     - Fixed a mod compatibility crash when selecting a TURD that replaces a recipe that was deleted by a 3rd party mod. (https://github.com/pyanodon/pybugreports/issues/506)
