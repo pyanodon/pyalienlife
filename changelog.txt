@@ -2,14 +2,19 @@
 Version: 2.1.35
 Date: !!!
   Changes:
-    - Fixed the PKS and cottongut turd recipes not accepting prod mods
-    - Changed dhilmos, simik, moss and xeno mk04 to use rich gas instead of regolites to allow full zero input
+    - Fixed the PKS and cottongut turd recipes not accepting prod mods.
+    - Changed dhilmos, simik, moss and xeno mk04 to use rich gas instead of regolites to allow full zero input.
     - Used combs can now be biomassed for 15 biomass each. (https://github.com/pyanodon/pybugreports/issues/492)
     - Added a new recipe to convert used combs into residual oil and bitumen.
+    - Fixed heavy oil stage 1 technology not having any effects.
+    - Reorganized the pyAL recipe tab.
   Bugfixes:
     - The smart farm now properly cleans up any autoplaced tilled dirt tiles when the entity is mined.
     - Fixed a mod compatibility crash when selecting a TURD that replaces a recipe that was deleted by a 3rd party mod. (https://github.com/pyanodon/pybugreports/issues/506)
     - Fixed a crash related to a biofluid bioport having no fuel. (https://github.com/pyanodon/pybugreports/issues/488)
+  TURD:
+    - Moondrop path 2 no longer deletes the original methane recipe. Now it lets you use both.
+    - Moss path 2 now outputs coarse fraction instead of gravel.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.34
 Date: 2024-5-9
