@@ -245,11 +245,13 @@ Biofluid.events[143] = function()
 				local bioport_data = global.biofluid_bioports[bioport.unit_number]
 				if bioport_data and bioport_data.active then
 					local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
-					local allocated = network_data.allocated_fluids_from_providers
-					allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
-					requester_data.incoming = requester_data.incoming + delivery_amount
-					bioport_data.active = nil
-					break
+					if delivery_amount ~= 0 then
+						local allocated = network_data.allocated_fluids_from_providers
+						allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
+						requester_data.incoming = requester_data.incoming + delivery_amount
+						bioport_data.active = nil
+						break
+					end
 				end
 			end
 		end
@@ -500,7 +502,7 @@ local function dropoff(biorobot_data)
 			amount = contents.amount + amount,
 			temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
 		}
-	else
+	elseif amount > 0 then
 		requester.fluidbox[1] = {name = name, amount = amount, temperature = temperature}
 	end
 	go_home(biorobot_data)
