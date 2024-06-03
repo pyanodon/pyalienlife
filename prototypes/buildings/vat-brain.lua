@@ -23,7 +23,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/vat-brain.png",
     icon_size = 64,
     flags = {},
-    subgroup = 'vatbrain',
+    subgroup = 'py-alienlife-vatbrain',
     order = "a",
     place_result = "vat-brain",
     stack_size = 10
