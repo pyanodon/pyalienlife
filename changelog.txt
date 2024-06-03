@@ -8,6 +8,7 @@ Date: !!!
     - Added a new recipe to convert used combs into residual oil and bitumen.
     - Fixed heavy oil stage 1 technology not having any effects.
     - Reorganized the pyAL recipe tab.
+    - Renamed vat brain from vat-brain to vatbrain.
   Bugfixes:
     - The smart farm now properly cleans up any autoplaced tilled dirt tiles when the entity is mined.
     - Fixed a mod compatibility crash when selecting a TURD that replaces a recipe that was deleted by a 3rd party mod. (https://github.com/pyanodon/pybugreports/issues/506)
