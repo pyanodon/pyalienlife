@@ -130,6 +130,7 @@ local function init()
     Ulric.events.on_init()
     Biofluid.events.on_init()
     Mounts.events.on_init()
+    Smart_Farm.events.on_init()
 end
 
 script.on_init(function()
