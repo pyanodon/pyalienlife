@@ -4,7 +4,7 @@ if data and not yafc_turd_integration then
             type = 'module',
             name = 'dingrits-alpha',
             stack_size = 50,
-            subgroup = 'py-alienlife-modules',
+            subgroup = 'py-alienlife-dingrits',
             category = 'dingrits',
             icon = '__pyalienlifegraphics__/graphics/icons/alpha-dingrit.png',
             icon_size = 64,
