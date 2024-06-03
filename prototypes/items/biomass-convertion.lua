@@ -1,5 +1,6 @@
 local biomass_convertion =
 {
+    ['used-comb'] = {item_amount = 2, biomass_amount = 30},
     ['ralesia'] = {item_amount = 10, biomass_amount = 20},
     ['native-flora'] = {item_amount = 10, biomass_amount = 20},
     ['wood'] = {item_amount = 5, biomass_amount = 30},

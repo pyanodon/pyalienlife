@@ -21,6 +21,7 @@ for _, drill in pairs(data.raw['mining-drill']) do
 end
 
 local recipes_list = {
+	'used-comb-oil-recycling',
 	'adam42-gen-laser',
 	'adam42-gen',
 	'zipir-grow-01',
