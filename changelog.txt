@@ -18,6 +18,7 @@ Date: ?
     - The smart farm now properly cleans up any autoplaced tilled dirt tiles when the entity is mined.
     - Fixed a mod compatibility crash when selecting a TURD that replaces a recipe that was deleted by a 3rd party mod. (https://github.com/pyanodon/pybugreports/issues/506)
     - Fixed a crash related to a biofluid bioport having no fuel. (https://github.com/pyanodon/pybugreports/issues/488)
+    - Fixed that some of the bioreserve replicators did not allow productivity. (https://github.com/pyanodon/pybugreports/issues/509)
   TURD:
     - Moondrop path 2 no longer deletes the original methane recipe. Now it lets you use both.
     - Moss path 2 now outputs coarse fraction instead of gravel.
