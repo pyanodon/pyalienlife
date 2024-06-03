@@ -23,8 +23,8 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/vat-brain.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-others",
-    order = "z",
+    subgroup = 'vatbrain',
+    order = "a",
     place_result = "vat-brain",
     stack_size = 10
 }
