@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.35
-Date: ?
+Date: 2024-6-3
   Changes:
     - Fixed that productivity couldn't be used on cottongut science recipes mk01, mk02, and mk04
     - Fixed that the cottongut turd path 1 upgraded recipes did not accept productivity. (https://github.com/pyanodon/pybugreports/issues/493)
