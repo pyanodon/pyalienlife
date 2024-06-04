@@ -44,6 +44,18 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
+    for _, recipe in pairs {
+        table.deepcopy(data.raw.recipe['Moss 1']),
+        table.deepcopy(data.raw.recipe['Moss 2']),
+        table.deepcopy(data.raw.recipe['Moss 3']),
+        table.deepcopy(data.raw.recipe['Moss 4']),
+        table.deepcopy(data.raw.recipe['Moss 5']),
+    } do
+        recipe.name = recipe.name .. '-without-sludge-for-real'
+        FUN.remove_ingredient(recipe, 'dirty-water-light')
+        data:extend{recipe}
+    end
+
     data:extend{
         {
             type = 'recipe',
@@ -153,6 +165,19 @@ return {
                 {old = 'moss-farm-mk02', new = 'moss-farm-mk02-with-bioreactor', type = 'recipe-replacement'},
                 {old = 'moss-farm-mk03', new = 'moss-farm-mk03-with-bioreactor', type = 'recipe-replacement'},
                 {old = 'moss-farm-mk04', new = 'moss-farm-mk04-with-bioreactor', type = 'recipe-replacement'},
+            }
+        },
+        {
+            name = 'remove-muddy-sludge',
+            icon = '__pyalienlifegraphics3__/graphics/technology/carbide-c.png',
+            icon_size = 128,
+            order = 'c-a',
+            effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {old = 'Moss 1', new = 'Moss 1-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss 2', new = 'Moss 2-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss 3', new = 'Moss 3-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss 4', new = 'Moss 4-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss 5', new = 'Moss 5-without-sludge-for-real', type = 'recipe-replacement'},
             }
         }
     },
