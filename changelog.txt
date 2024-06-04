@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.35
-Date: !!!
+Date: 2024-6-3
   Changes:
     - Fixed the PKS and cottongut turd recipes not accepting prod mods.
     - Changed dhilmos, simik, moss and xeno mk04 to use rich gas instead of regolites to allow full zero input.
