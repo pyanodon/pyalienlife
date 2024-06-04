@@ -14,12 +14,14 @@ Date: ?
     - Added a new recipe to convert used combs into residual oil and bitumen.
     - Fixed heavy oil stage 1 technology not having any effects.
     - Reorganized the pyAL recipe tab.
+    - The dingrido can now use its long legs to walk on top of buildings without damaging them.
     - Renamed vat brain from vat-brain to vatbrain.
   Bugfixes:
     - The smart farm now properly cleans up any autoplaced tilled dirt tiles when the entity is mined.
     - Fixed a mod compatibility crash when selecting a TURD that replaces a recipe that was deleted by a 3rd party mod. (https://github.com/pyanodon/pybugreports/issues/506)
     - Fixed a crash related to a biofluid bioport having no fuel. (https://github.com/pyanodon/pybugreports/issues/488)
     - Fixed that some of the bioreserve replicators did not allow productivity. (https://github.com/pyanodon/pybugreports/issues/509)
+    - Fixed that the first tier of hazard concrete did not actually stop vehicle movement. (https://github.com/pyanodon/pybugreports/issues/490)
   TURD:
     - Moondrop path 2 no longer deletes the original methane recipe. Now it lets you use both.
     - Moss path 2 now outputs coarse fraction instead of gravel.

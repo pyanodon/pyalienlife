@@ -506,6 +506,7 @@ for _, tile in pairs(data.raw.tile) do
     if collision_mask_util.mask_contains_layer(tile.collision_mask, 'water-tile') then
         collision_mask_util.add_layer(tile.collision_mask, caravan_collision_mask)
         if not mods.pystellarexpedition then collision_mask_util.add_layer(tile.collision_mask, vessel_collision_mask) end
+        collision_mask_util.add_layer(tile.collision_mask, dingrido_collision_mask)
     end
 end
 
@@ -524,5 +525,23 @@ for _, character in pairs(data.raw.character) do
             end
         end
         character.flags = new_flags
+    end
+end
+
+-- dingrido collision mask
+local dingrido_nonwalkable_prototypes = {
+    'unit-spawner',
+    'tree',
+    'simple-entity',
+    'cliff',
+    'unit',
+}
+for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
+    for _, entity in pairs(data.raw[prototype]) do
+        entity.collision_mask = collision_mask_util.get_mask(entity)
+
+        if collision_mask_util.mask_contains_layer(entity.collision_mask, 'player-layer') and not collision_mask_util.mask_contains_layer(entity.collision_mask, 'floor-layer') then
+            collision_mask_util.add_layer(entity.collision_mask, dingrido_collision_mask)
+        end
     end
 end
