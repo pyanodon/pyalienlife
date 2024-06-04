@@ -29,7 +29,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-chlorinated'
         FUN.add_ingredient(recipe, {name = 'chlorinated-water', amount = 1, type = 'item'})
         FUN.multiply_result_amount(recipe, 'moss', 1.3)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.75)
         data:extend{recipe}
     end
 
@@ -41,9 +41,8 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['Moss 5']),
     }) do
         recipe.name = recipe.name .. '-without-sludge'
-        FUN.remove_ingredient(recipe, 'dirty-water-light')
-        if i ~= 1 then FUN.add_result(recipe, {type = 'item', name = 'coarse', amount_min = 5, amount_max = 10}) end
-        recipe.main_product = 'moss'
+        FUN.add_result(recipe, {type = 'item', name = 'coarse', amount_min = 5 * (i - 1), amount_max = 5 * i})
+        recipe.main_product = 'coarse'
         data:extend{recipe}
     end
 

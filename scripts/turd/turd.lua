@@ -285,16 +285,10 @@ local function handle_removed_items(surface, force, machine, removed_items)
 end
 
 local function recipe_replacement(old, new, force, assembling_machine_list)
-	local has_error = false
 	if not old then
-		game.print('ERROR while applying T.U.R.D. recipe replacement. Recipe "' .. effect.old .. '" does not exist.')
-		has_error = true
+		game.print('ERROR while applying T.U.R.D. Recipe does not exist. Please report this.')
+		return
 	end
-	if not new then
-		game.print('ERROR while applying T.U.R.D. recipe replacement. Recipe "' .. effect.new .. '" does not exist.')
-		has_error = true
-	end
-	if has_error then return end
 
 	old.enabled = false
 	if new then new.enabled = true end

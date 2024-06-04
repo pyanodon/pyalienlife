@@ -2710,7 +2710,7 @@ ITEM {
 	fuel_category = 'phadai-food',
 	fuel_value = '120MJ',
 	fuel_acceleration_multiplier = 1,
-	fuel_top_speed_multiplier = 1.5
+	fuel_top_speed_multiplier = 3.5
 }
 
 ITEM {
@@ -2725,7 +2725,7 @@ ITEM {
 	fuel_category = 'phadai-food',
 	fuel_value = '160MJ',
 	fuel_acceleration_multiplier = 1,
-	fuel_top_speed_multiplier = 2
+	fuel_top_speed_multiplier = 5.5
 }
 
 ITEM {
