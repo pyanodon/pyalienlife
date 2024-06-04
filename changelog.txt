@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.38
+Date: 2024-6-4
+  TURD:
+    - Added a 4th path to the moss turd. This path contains the effects of the 'legacy' path 2. This exists to aid in migration and prevent large base rebuilds.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.37
 Date: 2024-6-4
   Changes:
