@@ -270,10 +270,7 @@ data:extend{{
 		}
 	},
 	sound_no_fuel = {
-		{
-			filename = '__base__/sound/fight/tank-no-fuel-1.ogg',
-			volume = 0.6
-		}
+		{filename = '__pyalienlifegraphics3__/sounds/dingrito-out.ogg', volume = 0.9},
 	},
 	sound_minimum_speed = 0.15,
 	vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},

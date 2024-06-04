@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.36
+Date: 2024-6-4
+  Mounts:
+    - Fixed bad SFX for phadaisus when flying over player-placed tiles. (https://github.com/pyanodon/pybugreports/issues/376)
+    - Fixed that the dingrido was using the tank out of fuel SFX for when it was starved. It now has its own SFX.
+    - Fixed phadaisus spazzing out the camera when giving max exoskeletons and top tier food. (https://github.com/pyanodon/pybugreports/issues/438)
+    - Fixed that the MK03 mount was faster than the MK04 mount with max exoskeletons.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.35
 Date: 2024-6-3
   Changes:

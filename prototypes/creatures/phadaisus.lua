@@ -248,11 +248,12 @@ vehicle_leg.graphics_set = {}
 vehicle_leg.collision_mask = {}
 vehicle_leg.target_position_randomisation_distance = 0
 vehicle_leg.working_sound = nil
-vehicle_leg.minimal_step_size = 0.4
-vehicle_leg.part_length = 0.3
-vehicle_leg.movement_based_position_selection_distance = 0.7
-vehicle_leg.initial_movement_speed = 0.01
-vehicle_leg.movement_acceleration = 1.25
+vehicle_leg.minimal_step_size = 0
+vehicle_leg.part_length = 2
+vehicle_leg.movement_based_position_selection_distance = 1.5 -- I have no idea what this does.
+vehicle_leg.initial_movement_speed = 1
+vehicle_leg.movement_acceleration = 0
+vehicle_leg.walking_sound_volume_modifier = 0
 data:extend{vehicle_leg}
 
 local flamethrower = table.deepcopy(data.raw['gun']['tank-flamethrower'])
