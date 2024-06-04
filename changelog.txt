@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.37
+Date: 2024-6-4
+  Changes:
+    - Fixed that phadaisus was snail speed when using 0 exoskeletons.
+  TURD:
+    - Moss turd path 2 coarse fraction amount now scales with the tier of moss recipe used.
+    - Moss turd path 2 no longer removes muddy sludge.
+    - Increased the speed buff from moss turd path 1 from 10% to 25%.
+    - NOTE: If you already picked moss turd, you will have a 5 hour grace period to change them to a diffrent option.
+    - Fixed a crash when resetting moondrop turd path 2. (https://github.com/pyanodon/pybugreports/issues/516)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.36
 Date: 2024-6-4
   Mounts:

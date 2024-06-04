@@ -25,9 +25,9 @@ if data and not yafc_turd_integration then
         RECIPE('Moss 5'):copy(),
     }) do
         recipe.name = recipe.name .. '-chlorinated'
-        recipe:add_ingredient({name = 'chlorinated-water', amount = 1, type = 'item'})
+        recipe:add_ingredient{name = 'chlorinated-water', amount = 1, type = 'item'}
         recipe:multiply_result_amount('moss', 1.3)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.75)
         data:extend{recipe}
     end
 
@@ -39,9 +39,8 @@ if data and not yafc_turd_integration then
         RECIPE('Moss 5'):copy(),
     }) do
         recipe.name = recipe.name .. '-without-sludge'
-        recipe:remove_ingredient('dirty-water-light')
-        if i ~= 1 then recipe:add_result{type = 'item', name = 'coarse', amount_min = 5, amount_max = 10} end
-        recipe.main_product = 'moss'
+        recipe:add_result{type = 'item', name = 'coarse', amount_min = 5 * (i - 1), amount_max = 5 * i}
+        recipe.main_product = 'coarse'
         data:extend{recipe}
     end
 
