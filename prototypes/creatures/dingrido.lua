@@ -1,4 +1,7 @@
 local util = require('util')
+local collision_mask_util = require '__core__/lualib/collision-mask-util'
+
+_G.dingrido_collision_mask = collision_mask_util.get_first_unused_layer()
 
 RECIPE {
     type = 'recipe',
@@ -40,6 +43,7 @@ ITEM {
 data:extend{{
 	type = 'car',
 	name = 'dingrido',
+	collision_mask = {dingrido_collision_mask, 'train-layer'},
 	icon = '__pyalienlifegraphics__/graphics/icons/dingrido.png',
 	icon_size = 64,
 	flags = {'placeable-neutral', 'player-creation', 'placeable-off-grid', 'not-flammable'},
@@ -54,6 +58,7 @@ data:extend{{
 	has_belt_immunity = false,
 	immune_to_rock_impacts = true,
 	energy_per_hit_point = 0.5,
+	render_layer = 'higher-object-under',
 	resistances = {
 		{
 			type = 'fire',
@@ -293,3 +298,6 @@ data:extend{{
 		size = {64, 64}
 	},
 }}
+
+data.raw.tile['hazard-concrete-left'].vehicle_friction_modifier = 400
+data.raw.tile['hazard-concrete-right'].vehicle_friction_modifier = 400
