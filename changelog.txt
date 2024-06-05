@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.39
+Date: 2024-6-5
+  Bugfixes:
+    - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.38
 Date: 2024-6-4
   TURD:
@@ -398,7 +403,7 @@ Date: 2023-7-25
     - zoology tech now adds +20 logistic trash slots.
     - fixed extreme high fuel buffer size. reduce stack size of gastrocapacitor 50->10. aerial caravan fuel size 4->2. standard & nuclear caravan fuel size 2->1
     - reduce stack size of workers food mk1, mk2 from 50->10
-  BugChanges:
+  Bugfixes:
     - fixed an ocula crash with the trainsaver mod
     - fixed that the quality cottongut food was referencing moondrop in the item tooltip even though it had no moondrop in the crafting recipe
     - fixed that thikats and workodile where showing up in kill statistics
@@ -519,7 +524,7 @@ Date: 2023-1-31
     - Added compost biomass amount to some tooltips
     - Radius visualization for smart farms
     - My body is stone. My voice, fire. The earth trebmles to my very presence. I am a god in human flesh. Despair, ye mortals
-  BugChanges:
+  Bugfixes:
     - Slaughterhouse gui no longer crashes in multiplayer
     - Fixed that RC could craft without modules
     - Locale fix for zungror, dhilmos
