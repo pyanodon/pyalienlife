@@ -19,6 +19,7 @@ local function create_gui(gui, player)
     end
     local table = gui.add{
         type = 'table',
+        name = 'table',
         column_count = 4
     }
     for key, caravan_data in pairs(global.caravans) do
@@ -28,6 +29,20 @@ local function create_gui(gui, player)
     end
 end
 
+local function on_search(search_key, gui, player)
+    search_key = search_key:lower()
+    for _, child in pairs(gui.table.children) do
+        if child.type == 'frame' then
+            local unit_number = child.tags.unit_number
+            local caravan_data = global.caravans[unit_number]
+            if caravan_data then
+                child.visible = search_key == '' or Caravan.get_name(caravan_data):lower():find(search_key, 1, true)
+            end
+        end
+    end
+end
+
 remote.add_interface('pywiki_caravan_manager', {
-	create_gui = create_gui
+	create_gui = create_gui,
+    on_search = on_search,
 })
