@@ -3,6 +3,7 @@ Version: 2.1.39
 Date: 2024-6-5
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
+    - Added Russian translation to the caravan global GUI. (https://github.com/pyanodon/pyalienlife/pull/248)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.38
 Date: 2024-6-4
