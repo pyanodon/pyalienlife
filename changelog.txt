@@ -3,6 +3,7 @@ Version: 2.1.39
 Date: ?
   Changes:
     - Reworked the SFX for the fastwood forestry. (https://github.com/pyanodon/pybugreports/issues/486)
+    - Added support for > ≥ < ≤ ≠ to the biofluid requester tanks. Should be interesting for temp mixing (https://github.com/pyanodon/pybugreports/issues/498)
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
   Locale:
@@ -61,7 +62,7 @@ Date: 2024-6-3
     - Moss path 2 now outputs coarse fraction instead of gravel.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.34
-Date: 2024-9-5
+Date: 2024-5-9
   Changes:
     - Fixed that rennea and arum seeds mk02-mk04 didnt show tier pips.
     - Optimized the biofluid network UPS by >10X. Huge thanks to @Harvester on Discord for the test world.

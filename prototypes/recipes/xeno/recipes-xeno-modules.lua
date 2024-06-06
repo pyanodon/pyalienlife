@@ -223,10 +223,10 @@ RECIPE {
         {type = 'item', name = 'bio-scafold', amount = 8},
         {type = 'item', name = 'nanochondria', amount = 1},
         {type = 'item', name = 'reca', amount = 1},
-        {type = 'fluid', name = 'rich-gas', amount = 10},
         {type = 'item', name = 'immunosupressants', amount = 1},
         {type = 'fluid', name = 'psc', amount = 100},
         {type = 'fluid', name = 'sulfuric-acid', amount = 250},
+        {type = 'fluid', name = 'rich-gas', amount = 200},
         },
     results = {
         {type = 'item', name = 'xeno-mk04', amount = 5},
