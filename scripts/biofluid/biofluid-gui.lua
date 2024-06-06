@@ -174,6 +174,7 @@ function Biofluid.update_requester_gui(player, gui)
 	temperature_flow.py_biofluid_temperature.text = tostring(requester_data.target_temperature)
 	temperature_flow.py_biofluid_temperature.enabled = enabled
 	temperature_flow.py_biofluid_temperature_equality_operator.selected_index = requester_data.temperature_operator or 1
+	temperature_flow.py_biofluid_temperature_equality_operator.enabled = enabled
 end
 
 function Biofluid.build_requester_gui(entity, player)
@@ -349,13 +350,11 @@ gui_events[defines.events.on_gui_switch_state_changed]['py_biofluid_temperature_
 	local requester_data = global.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.care_about_temperature = element.switch_state == 'right'
+
 	local textfield = element.parent.py_biofluid_temperature
-	if requester_data.care_about_temperature then
-		textfield.enabled = true
-		textfield.text = tostring(requester_data.target_temperature)
-	else
-		textfield.enabled = false
-	end
+	local equality_operator = element.parent.py_biofluid_temperature_equality_operator
+	textfield.enabled = requester_data.care_about_temperature
+	equality_operator.enabled = requester_data.care_about_temperature
 end
 
 gui_events[defines.events.on_gui_text_changed]['py_biofluid_temperature'] = function(event)
