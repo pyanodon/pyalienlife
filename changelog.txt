@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.39
-Date: 2024-6-5
+Date: ?
+  Changes:
+    - Reworked the SFX for the fastwood forestry. (https://github.com/pyanodon/pybugreports/issues/486)
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
   Locale:

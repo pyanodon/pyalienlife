@@ -252,9 +252,12 @@ ENTITY {
         },
         off_when_no_fluid_recipe = true
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.75},
-        audible_distance_modifier = 0.32,
+        fade_in_ticks = 60,
+        fade_out_ticks = 60,
+        sound = {filename = '__pyalienlifegraphics__/sounds/fwf.ogg', volume = 1.5},
+        idle_sound = {filename = '__pyalienlifegraphics__/sounds/fwf-idle.ogg', volume = 0.5},
+        audible_distance_modifier = 1,
     }
 }
