@@ -49,6 +49,7 @@ Biofluid.events.on_built = function(event)
 			incoming = 0,
 			care_about_temperature = tags.care_about_temperature or false,
 			target_temperature = tags.target_temperature or 15,
+			temperature_operator = tags.temperature_operator or 1,
 			priority = tags.priority or 0
 		}
 	elseif connection_type == Biofluid.ROBOPORT then
@@ -230,7 +231,25 @@ Biofluid.events[143] = function()
 			sort(providers, provider_sort_function)
 			for _, p in pairs(providers) do
 				local contents = p.fluidbox[1]
-				if target_temperature and contents.temperature ~= target_temperature then goto continue end
+				if target_temperature then
+					local stored_temperature = contents.temperature
+					local operator = Biofluid.equality_operators[unfulfilled_request.temperature_operator or 1]
+					if operator == '=' then
+						if not (stored_temperature == target_temperature) then goto continue end
+					elseif operator == '>' then
+						if not (stored_temperature > target_temperature) then goto continue end
+					elseif operator == '≥' then
+						if not (stored_temperature >= target_temperature) then goto continue end
+					elseif operator == '<' then
+						if not (stored_temperature < target_temperature) then goto continue end
+					elseif operator == '≤' then
+						if not (stored_temperature <= target_temperature) then goto continue end
+					elseif operator == '≠' then
+						if not (stored_temperature ~= target_temperature) then goto continue end
+					else
+						error('Invalid operator: ' .. operator)
+					end
+				end
 				local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
 				provider = p
 				unfulfilled_request.amount = min(amount, can_give)
@@ -589,6 +608,7 @@ function Biofluid.get_unfulfilled_requests()
 		}
 		if requester_data.care_about_temperature then
 			result[#result].target_temperature = requester_data.target_temperature
+			result[#result].temperature_operator = requester_data.temperature_operator 
 		end
 
 		local relavant_fluids_by_network = relavant_fluids[network_id]
@@ -644,6 +664,7 @@ Biofluid.events.on_entity_settings_pasted = function(event)
 	destination_data.amount = source_data.amount
 	destination_data.care_about_temperature = source_data.care_about_temperature
 	destination_data.target_temperature = source_data.target_temperature
+	destination_data.temperature_operator = source_data.temperature_operator
 	destination_data.priority = source_data.priority
 
 	for _, player in pairs(game.connected_players) do
@@ -671,6 +692,7 @@ Biofluid.events.on_player_setup_blueprint = function(event)
 				amount = requester_data.amount,
 				care_about_temperature = requester_data.care_about_temperature,
 				target_temperature = requester_data.target_temperature,
+				temperature_operator = requester_data.temperature_operator,
 				priority = requester_data.priority
 			})
 		end
@@ -763,7 +785,6 @@ function Biofluid.update_graphics(entity)
 		end
 	elseif entity.name == VESSEL then
 		local connections = Biofluid.find_heat_connections(entity)
-		local network_positions = Biofluid.network_positions(entity.surface_index)
 		local animation_index = ''
 		for _, connection in pairs(connections) do
 			if Biofluid.is_looking_at_us(entity, connection) then

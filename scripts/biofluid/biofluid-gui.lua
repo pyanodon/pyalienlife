@@ -173,6 +173,7 @@ function Biofluid.update_requester_gui(player, gui)
 	temperature_flow.py_biofluid_temperature_switch.switch_state = enabled and 'right' or 'left'
 	temperature_flow.py_biofluid_temperature.text = tostring(requester_data.target_temperature)
 	temperature_flow.py_biofluid_temperature.enabled = enabled
+	temperature_flow.py_biofluid_temperature_equality_operator.selected_index = requester_data.temperature_operator or 1
 end
 
 function Biofluid.build_requester_gui(entity, player)
@@ -242,9 +243,18 @@ function Biofluid.build_requester_gui(entity, player)
 
 	content_flow.add{type = 'line'}
 	content_flow.add{type = 'label', caption = {'gui.temperature-filter'}}.style.font = 'heading-3'
+
 	local temperature_flow = content_flow.add{type = 'flow', direction = 'horizontal', name = 'temperature_flow'}
 	temperature_flow.style.vertical_align = 'center'
 	temperature_flow.add{type = 'switch', allow_none_state = false, left_label_caption = {'gui-constant.off'}, right_label_caption = {'gui-constant.on'}, name = 'py_biofluid_temperature_switch', tags = tags}
+
+	temperature_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
+
+	temperature_flow.add{type = 'label', caption = '°C'}.style.font = 'heading-2'
+
+	local equality_operator = temperature_flow.add{type = 'drop-down', name = 'py_biofluid_temperature_equality_operator', items = Biofluid.equality_operators, tags = tags, style = 'circuit_condition_comparator_dropdown'}
+	equality_operator.style.left_margin = 10
+
 	local temperature = temperature_flow.add{type = 'textfield', name = 'py_biofluid_temperature', tags = tags}
 	temperature.numeric = true
 	temperature.style.width = 55
@@ -354,4 +364,12 @@ gui_events[defines.events.on_gui_text_changed]['py_biofluid_temperature'] = func
 	local requester_data = global.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.target_temperature = tonumber(element.text) or 15
+end
+
+gui_events[defines.events.on_gui_selection_state_changed]['py_biofluid_temperature_equality_operator'] = function(event)
+	local element = event.element
+	local unit_number = element.tags.unit_number
+	local requester_data = global.biofluid_requesters[unit_number]
+	if not requester_data then return end
+	requester_data.temperature_operator = element.selected_index
 end

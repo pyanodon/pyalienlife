@@ -67,3 +67,5 @@ Biofluid.taco_bell = {
 	['huzu'] = 0.8,
 	['gobachov'] = 0.6,
 }
+
+Biofluid.equality_operators = {'=', '>', '≥', '<', '≤', '≠'}

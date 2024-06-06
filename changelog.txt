@@ -3,6 +3,7 @@ Version: 2.1.39
 Date: ?
   Changes:
     - Reworked the SFX for the fastwood forestry. (https://github.com/pyanodon/pybugreports/issues/486)
+    - Added support for > ≥ < ≤ ≠ to the biofluid requester tanks. Should be interesting for temp mixing (https://github.com/pyanodon/pybugreports/issues/498)
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
   Locale:
