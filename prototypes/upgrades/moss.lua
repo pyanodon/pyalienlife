@@ -31,28 +31,28 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    for i, recipe in pairs({
+    for i, recipe in pairs{
         RECIPE('Moss 1'):copy(),
         RECIPE('Moss 2'):copy(),
         RECIPE('Moss 3'):copy(),
         RECIPE('Moss 4'):copy(),
         RECIPE('Moss 5'):copy(),
-    }) do
+    } do
         recipe.name = recipe.name .. '-without-sludge'
         recipe:add_result{type = 'item', name = 'coarse', amount_min = 5 * (i - 1), amount_max = 5 * i}
         recipe.main_product = 'coarse'
         data:extend{recipe}
     end
 
-    for _, recipe in pairs {
-        table.deepcopy(data.raw.recipe['Moss 1']),
-        table.deepcopy(data.raw.recipe['Moss 2']),
-        table.deepcopy(data.raw.recipe['Moss 3']),
-        table.deepcopy(data.raw.recipe['Moss 4']),
-        table.deepcopy(data.raw.recipe['Moss 5']),
+    for _, recipe in pairs{
+        RECIPE('Moss 1'):copy(),
+        RECIPE('Moss 2'):copy(),
+        RECIPE('Moss 3'):copy(),
+        RECIPE('Moss 4'):copy(),
+        RECIPE('Moss 5'):copy(),
     } do
         recipe.name = recipe.name .. '-without-sludge-for-real'
-        FUN.remove_ingredient(recipe, 'dirty-water-light')
+        recipe:remove_ingredient('dirty-water-light')
         data:extend{recipe}
     end
 
