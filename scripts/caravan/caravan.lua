@@ -39,6 +39,36 @@ local function wander(caravan_data)
 	}
 end
 
+local no_fuel_map_tag = {
+	type = 'virtual',
+	name = 'no-fuel'
+}
+
+local function add_fuel_alert(entity)
+	for _, player in pairs(game.players) do
+		if player.valid then
+			player.add_custom_alert(
+				entity,
+				no_fuel_map_tag,
+				{'virtual-signal-name.no-fuel'},
+				true
+			)
+		end
+	end
+end
+
+local function remove_fuel_alert(prototype)
+	for _, player in pairs(game.players) do
+		if player.valid then
+			player.remove_alert({
+				prototype = prototype,
+				icon = no_fuel_map_tag,
+				message = {'virtual-signal-name.no-fuel'}
+			})
+		end
+	end
+end
+
 Caravan.events.init = function()
 	global.caravans = global.caravans or {}
 	global.last_opened_caravan = global.last_opened_caravan or {}
@@ -447,11 +477,6 @@ local function caravan_sort_function(a, b)
 	return (a.arrival_tick or 0) < (b.arrival_tick or 0)
 end
 
-local no_fuel_map_tag = {
-	type = 'virtual',
-	name = 'no-fuel'
-}
-
 Caravan.events[60] = function(event)
 	local guis_to_update = {}
 
@@ -472,6 +497,10 @@ Caravan.events[60] = function(event)
 		local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
 		if needs_fuel then
+			-- 300 ticks/5 seconds is how long these alerts last
+			if event.tick % 300 == 0 then
+				add_fuel_alert(entity)
+			end
 			draw_error_sprite(entity, 'utility.fuel_icon', 30)
 			goto continue
 		end
@@ -591,6 +620,8 @@ Caravan.events.on_destroyed = function(event)
 	local entity = event.entity
 	local prototype = prototypes[entity.name]
 	if not prototype then return end
+
+	remove_fuel_alert(prototype.placeable_by)
 
 	local buffer = event.buffer
 	if buffer then
