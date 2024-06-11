@@ -55,7 +55,7 @@ _G.draw_error_sprite = function(entity, sprite, time_to_live)
         y_scale = 0.5,
         target = entity,
         surface = entity.surface,
-        time_to_live = 30,
+        time_to_live = time_to_live or 30,
         render_layer = 'air-entity-info-icon'
     }
 end
