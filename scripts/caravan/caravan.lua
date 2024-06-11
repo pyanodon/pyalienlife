@@ -45,8 +45,11 @@ local no_fuel_map_tag = {
 }
 
 local function add_fuel_alert(entity)
+	local target_force = entity.force_index
 	for _, player in pairs(game.players) do
-		if player.valid then
+		if player.valid and player.force_index == target_force then
+			-- You could use train alerts which have the wrong notification string but *do* stack
+			-- player.add_alert(entity, defines.alert_type.train_out_of_fuel)
 			player.add_custom_alert(
 				entity,
 				no_fuel_map_tag,
@@ -57,13 +60,20 @@ local function add_fuel_alert(entity)
 	end
 end
 
-local function remove_fuel_alert(prototype)
+local function remove_fuel_alert(entity)
+	if not entity.valid then
+		-- it'll disappear after a few seconds anyway
+		return
+	end
+
+	local target_force = entity.force_index
 	for _, player in pairs(game.players) do
-		if player.valid then
+		if player.valid and player.force_index == target_force then
+			-- You could use train alerts which have the wrong notification string but *do* stack
+			-- player.remove_alert({prototype = prototype, type = defines.alert_type.train_out_of_fuel})
+			-- If we specify more than one criteria here, it'll only pay attention to one for some reason
 			player.remove_alert({
-				prototype = prototype,
-				icon = no_fuel_map_tag,
-				message = {'virtual-signal-name.no-fuel'}
+				entity = entity
 			})
 		end
 	end
@@ -618,10 +628,8 @@ end
 
 Caravan.events.on_destroyed = function(event)
 	local entity = event.entity
-	local prototype = prototypes[entity.name]
-	if not prototype then return end
 
-	remove_fuel_alert(prototype.placeable_by)
+	remove_fuel_alert(event.entity)
 
 	local buffer = event.buffer
 	if buffer then
