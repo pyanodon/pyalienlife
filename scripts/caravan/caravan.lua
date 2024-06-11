@@ -628,6 +628,8 @@ end
 
 Caravan.events.on_destroyed = function(event)
 	local entity = event.entity
+	local prototype = prototypes[entity.name]
+	if not prototype then return end
 
 	remove_fuel_alert(event.entity)
 
