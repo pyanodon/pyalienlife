@@ -282,3 +282,48 @@ function Digosaurus.scan_ores(dig_data)
     --rendering.clear('pyalienlife')
     --for _, ore in pairs(dig_data.scanned_ores) do rendering.draw_circle{color = {1, 1, 1}, radius = 0.2, filled = true, target = ore, surface = ore.surface} end
 end
+
+local function swap_to_stack(player, item_name, cursor_stack)
+    -- has inventory?
+    local inventory = player.get_inventory(defines.inventory.character_main)
+    if not inventory then
+        return false
+    end
+    -- has a digosaurus placement item?
+    local stack, stack_pos = inventory.find_item_stack(item_name)
+    if not stack then
+        return false
+    end
+    -- The pipette item is only in cursor, so we delete it first
+    cursor_stack.clear()
+    -- then set the cursor stack
+    if cursor_stack.swap_stack(stack) then
+        player.hand_location = {
+            inventory = defines.inventory.character_main,
+            slot = stack_pos
+        }
+        return true
+    end
+    return false
+end
+
+Digosaurus.events.on_player_cursor_stack_changed = function(event)
+    local player = game.players[event.player_index]
+    if player and player.valid then
+        -- valid cursor?
+        local stack = player.cursor_stack
+        if not stack or not stack.valid_for_read then
+            return
+        end
+        -- is it the item we want?
+        local ghost_name = player.cursor_ghost or ''
+        if stack.name ~= 'pipette-dino-dig-site' and ghost_name ~= 'pipette-dino-dig-site' then
+            return
+        end
+        -- Try to add to cursor from inventory, otherwise set the ghost
+        if not swap_to_stack(player, 'dino-dig-site', stack) then
+            stack.clear()
+            player.cursor_ghost = 'dino-dig-site'
+        end
+    end
+end
