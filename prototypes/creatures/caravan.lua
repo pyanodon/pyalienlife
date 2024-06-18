@@ -230,7 +230,7 @@ ITEM {
 	flags = {'hidden', 'not-stackable', 'only-in-cursor'},
 }
 
---[[data:extend{
+data:extend{
 	{
 		type = 'virtual-signal',
 		icon = '__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk01.png',
@@ -263,4 +263,4 @@ ITEM {
 		icon_size = 64,
 		localised_name = {'virtual-signal-name.no-fuel'}
 	},
-}--]]
+}

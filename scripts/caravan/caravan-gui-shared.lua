@@ -178,7 +178,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         sprite = 'utility/logistic_network_panel_white',
         hovered_sprite = 'utility/logistic_network_panel_black',
         clicked_sprite = 'utility/logistic_network_panel_black',
-        tooltip = {'caravan-shared.open', {'entity-name.' .. entity.name}},
+        tooltip = {'caravan-shared.open', {'entity-name.' .. entity.name:gsub('-turd', '')}},
         tags = {unit_number = caravan_data.unit_number}
     }
 

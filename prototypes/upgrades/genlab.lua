@@ -36,7 +36,7 @@ return {
         icon = '__pyalienlifegraphics3__/graphics/technology/updates/u-genlab.png',
         icon_size = 128,
         order = 'c-a',
-        prerequisites = {'biotech-machines-mk03'},
+        prerequisites = {'biotech-machines-mk03', 'personal-laser-defense-equipment'},
         unit = {
             count = 500,
             ingredients = {

@@ -495,6 +495,7 @@ Turd.events.on_init = function()
 	global.turd_reset_remaining = global.turd_reset_remaining or {}
 	global.turd_machine_replacements = global.turd_machine_replacements or {}
     global.turd_migrations = global.turd_migrations or {}
+	global.turd_bhoddos = global.turd_bhoddos or {}
 end
 
 local function starts_with(str, start)

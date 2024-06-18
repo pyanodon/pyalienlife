@@ -244,6 +244,41 @@ ENTITY {
   allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
 }
 
+
+ENTITY{
+  name = 'pipette-dino-dig-site',
+  type = 'mining-drill',
+  localised_name = {'entity-name.dino-dig-site'},
+  localised_description = {'entity-description.dino-dig-site'},
+  icon = ENTITY('dino-dig-site').icon,
+  icon_size = ENTITY('dino-dig-site').icon_size,
+  flags = {'hidden', 'not-blueprintable', 'not-in-made-in'},
+  minable = ENTITY('dino-dig-site').minable,
+  collision_box = ENTITY('dino-dig-site').collision_box,
+  selection_box = ENTITY('dino-dig-site').selection_box,
+  animation = ENTITY('dino-dig-site').animation,
+  energy_usage = '1W',
+  energy_source = ENTITY('dino-dig-site').energy_source,
+  vector_to_place_result = {0, 0},
+  resource_searching_radius = 1.0,
+  mining_speed = 0,
+  resource_categories = {'ore-nexelit'}
+}
+
+ITEM {
+  type = 'item',
+  name = 'pipette-dino-dig-site',
+  localised_name = {'?', {'item-name.dino-dig-site'}, {'entity-name.dino-dig-site'}},
+  localised_description = {'?', {'item-description.dino-dig-site'}, {'entity-description.dino-dig-site'}},
+  icon = '__pyalienlifegraphics3__/graphics/icons/outpost-mining.png',
+  icon_size = 64,
+  flags = {'hidden', 'hide-from-bonus-gui', 'only-in-cursor'},
+  subgroup = 'other',
+  order = 'z-a',
+  place_result = 'pipette-dino-dig-site',
+  stack_size = 1
+}
+
 ENTITY {
   type = 'container',
   localised_name = {'entity-name.dino-dig-site'},
