@@ -15,6 +15,8 @@ Date: ?
     - Added Russian translation to the caravan global GUI. (https://github.com/pyanodon/pyalienlife/pull/248)
     - Fixed typos in fast wood forestry turd. (https://github.com/pyanodon/pybugreports/issues/518)
     - Fixed missing key for upgraded caravans in the manager (https://github.com/pyanodon/pybugreports/issues/527)
+  TURD:
+    - Allowed productivity in all 3 paths of the composter TURD.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.38
 Date: 2024-6-4

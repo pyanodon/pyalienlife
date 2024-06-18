@@ -188,6 +188,8 @@ if data and not yafc_turd_integration then
     FUN.add_result(fine_powdered_biomass, {type = 'fluid', name = 'steam', amount = 250, temperature = 250})
     FUN.add_result(fine_powdered_biomass, {type = 'item', name = 'dried-biomass', amount = 4})
     data:extend{fine_powdered_biomass}
+
+    FUN.productivity{'worm-wood', 'cheap-retrovirus', 'fine-powdered-biomass-irragration'}
 end
 
 return {
