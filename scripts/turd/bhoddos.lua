@@ -15,7 +15,7 @@ local function has_picked_bhoodos_path_1(force_index)
     return bonuses and bonuses['bhoddos-upgrade'] == 'extra-drones'
 end
 
-Turd.events[432000] = function()
+Turd.events[101] = function()
     local forces_with_bhoddos_path_1 = {}
     for _, force in pairs(game.forces) do
         local force_index = force.index
@@ -28,15 +28,16 @@ Turd.events[432000] = function()
 
     local active_cultues_per_surface_per_force = {}
     for _, surface in pairs(game.surfaces) do
-        local per_surface = {}
-        active_cultues_per_surface_per_force[surface.index] = per_surface
+        active_cultues_per_surface_per_force[surface.index] = {}
+        local per_surface = active_cultues_per_surface_per_force[surface.index]
         for _, entity in pairs(surface.find_entities_filtered{
             type = 'assembling-machine',
             name = cultures,
             force = forces_with_bhoddos_path_1
         }) do
-            if entity.active and entity.crafting_progress ~= 0 then
+            if entity.active and entity.crafting_progress ~= 0 and entity.crafting_progress ~= 1 then
                 local per_force = per_surface[entity.force_index]
+                global.turd_bhoddos[entity.force_index] = (global.turd_bhoddos[entity.force_index] or 0) + 101
                 if not per_force then
                     per_force = {}
                     per_surface[entity.force_index] = per_force
@@ -49,16 +50,19 @@ Turd.events[432000] = function()
     local exploded_cultures = {}
     for _, per_surface in pairs(active_cultues_per_surface_per_force) do
         for _, per_force in pairs(per_surface) do
-            local entity = per_force[math.random(#per_force)]
-            entity.destructible = false
-            entity.surface.create_entity{
-                name = 'atomic-rocket',
-                position = entity.position,
-                target = entity,
-                speed = 1,
-                max_range = 0.1
-            }
-            exploded_cultures[#exploded_cultures + 1] = entity
+            if (global.turd_bhoddos[per_force[1].force_index] or 0) >= 432000 then
+                global.turd_bhoddos[per_force[1].force_index] = 0
+                local entity = per_force[math.random(#per_force)]
+                entity.destructible = false
+                entity.surface.create_entity{
+                    name = 'atomic-rocket',
+                    position = entity.position,
+                    target = entity,
+                    speed = 1,
+                    max_range = 0.1
+                }
+                exploded_cultures[#exploded_cultures + 1] = entity
+            end
         end
     end
 

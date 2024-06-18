@@ -7,6 +7,7 @@ Date: ?
     - Added personal-laser-defense-equipment as a prereq for genlab turd.
     - Added no-food/fuel alerts for caravans.
     - Added support for using pipette drill selection on nexelit ore
+    - Bhoddos turd path 1 now scales with number of active colonies
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
     - Fixed crash while opening the caravan gui multiple times (https://github.com/pyanodon/pybugreports/issues/522)
