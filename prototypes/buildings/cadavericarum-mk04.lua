@@ -1,5 +1,5 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
-local MODULE_SLOTS = 10
+local MODULE_SLOTS = 16
 
 local pipe = {
     south = {
