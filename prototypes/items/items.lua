@@ -7908,7 +7908,7 @@ ITEM {
 	subgroup = 'py-alienlife-vrauks',
 	order = 'v-b',
 	stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 1.5}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 2}},
 	limitation = {},
 	limitation_message_key = 'vrauks'
 }
@@ -7927,7 +7927,7 @@ ITEM {
 	subgroup = 'py-alienlife-vrauks',
 	order = 'v-c',
 	stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 2}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 3}},
 	limitation = {},
 	limitation_message_key = 'vrauks'
 }
@@ -7946,7 +7946,7 @@ ITEM {
 	subgroup = 'py-alienlife-vrauks',
 	order = 'v-d',
 	stack_size = 50,
-	effect = {pollution = {bonus = 1}, speed = {bonus = 2.5}},
+	effect = {pollution = {bonus = 1}, speed = {bonus = 4}},
 	limitation = {},
 	limitation_message_key = 'vrauks'
 }

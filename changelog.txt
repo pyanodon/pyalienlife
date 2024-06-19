@@ -6,8 +6,8 @@ Date: ?
     - Added support for > ≥ < ≤ ≠ to the biofluid requester tanks. Should be interesting for temp mixing (https://github.com/pyanodon/pybugreports/issues/498)
     - Added personal-laser-defense-equipment as a prereq for genlab turd.
     - Added no-food/fuel alerts for caravans.
-    - Added support for using pipette drill selection on nexelit ore
-    - Bhoddos turd path 1 now scales with number of active colonies
+    - Added support for using pipette drill selection on nexelit ore.
+    - Vrauks module speed buffed from 100%, 150%, 200%, 250% to 100%, 200%, 300%, 400% in order to match the other pyAL modules.
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
     - Fixed crash while opening the caravan gui multiple times (https://github.com/pyanodon/pybugreports/issues/522)
@@ -17,6 +17,7 @@ Date: ?
     - Fixed missing key for upgraded caravans in the manager (https://github.com/pyanodon/pybugreports/issues/527)
   TURD:
     - Allowed productivity in all 3 paths of the composter TURD.
+    - Bhoddos turd path 1 now scales with number of machines. However, they only explode if actively crafting.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.38
 Date: 2024-6-4
