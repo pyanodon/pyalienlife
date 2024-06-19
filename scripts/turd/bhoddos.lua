@@ -1,67 +1,25 @@
-local cultures = {
-    'bhoddos-culture-mk01',
-    'bhoddos-culture-mk02',
-    'bhoddos-culture-mk03',
-    'bhoddos-culture-mk04',
-}
+local lib = require('scripts/turd/bhoddos-lib')
 
-local is_bhoddos_culture = {}
-for _, name in pairs(cultures) do
-    is_bhoddos_culture[name] = true
-end
-
-local function has_picked_bhoodos_path_1(force_index)
-    local bonuses = global.turd_bonuses[force_index]
-    return bonuses and bonuses['bhoddos-upgrade'] == 'extra-drones'
-end
-
-Turd.events[101] = function()
-    local forces_with_bhoddos_path_1 = {}
-    for _, force in pairs(game.forces) do
-        local force_index = force.index
-        if has_picked_bhoodos_path_1(force_index) then
-            table.insert(forces_with_bhoddos_path_1, force_index)
-        end
-    end
-
-    if #forces_with_bhoddos_path_1 == 0 then return end
-
-    local active_cultues_per_surface_per_force = {}
-    for _, surface in pairs(game.surfaces) do
-        active_cultues_per_surface_per_force[surface.index] = {}
-        local per_surface = active_cultues_per_surface_per_force[surface.index]
-        for _, entity in pairs(surface.find_entities_filtered{
-            type = 'assembling-machine',
-            name = cultures,
-            force = forces_with_bhoddos_path_1
-        }) do
-            if entity.active and entity.crafting_progress ~= 0 and entity.crafting_progress ~= 1 then
-                local per_force = per_surface[entity.force_index]
-                global.turd_bhoddos[entity.force_index] = (global.turd_bhoddos[entity.force_index] or 0) + 101
-                if not per_force then
-                    per_force = {}
-                    per_surface[entity.force_index] = per_force
-                end
-                per_force[#per_force + 1] = entity
-            end
-        end
-    end
-
+Turd.events[123] = function()
+    local forces_with_bhoddos_path_1 = lib.forces_with_bhoddos_path_1()
     local exploded_cultures = {}
-    for _, per_surface in pairs(active_cultues_per_surface_per_force) do
-        for _, per_force in pairs(per_surface) do
-            if (global.turd_bhoddos[per_force[1].force_index] or 0) >= 432000 then
-                global.turd_bhoddos[per_force[1].force_index] = 0
-                local entity = per_force[math.random(#per_force)]
-                entity.destructible = false
-                entity.surface.create_entity{
-                    name = 'atomic-rocket',
-                    position = entity.position,
-                    target = entity,
-                    speed = 1,
-                    max_range = 0.1
-                }
-                exploded_cultures[#exploded_cultures + 1] = entity
+    for _, force_index in pairs(forces_with_bhoddos_path_1) do
+        if global.turd_bhoddos[force_index] then
+            for _, culture in pairs(global.turd_bhoddos[force_index]) do
+                if culture.valid and culture.active and culture.crafting_progress ~= 0 and culture.crafting_progress ~= 1 then
+                    local probability = math.floor(432000 / 123 + 0.5)
+                    if math.random(probability) == 69 then
+                        table.insert(exploded_cultures, culture)
+                        culture.destructible = false
+                        culture.surface.create_entity{
+                            name = 'atomic-rocket',
+                            position = culture.position,
+                            target = culture,
+                            speed = 1,
+                            max_range = 0.1
+                        }
+                    end
+                end
             end
         end
     end
@@ -94,7 +52,7 @@ Turd.events.on_selected_entity_changed = function(event)
         circles = {}
         global.bhoddos_circles = circles
     end
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local selected = player.selected
     local previous_selected = event.last_entity
     local previous_selected_unit_number = previous_selected and previous_selected.unit_number
@@ -103,7 +61,9 @@ Turd.events.on_selected_entity_changed = function(event)
         rendering.destroy(circles[previous_selected_unit_number])
         circles[previous_selected_unit_number] = nil
     end
-    if selected and is_bhoddos_culture[selected.name] then
-        if has_picked_bhoodos_path_1(player.force_index) then draw_circle(selected) end
+    if selected and lib.cultures[selected.name] then
+        if lib.forces_with_bhoddos_path_1()[player.force_index] then draw_circle(selected) end
     end
 end
+
+return lib
