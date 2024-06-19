@@ -12,6 +12,7 @@ if data and not yafc_turd_integration then
         entity.placeable_by = {item = name, count = 1}
         entity.base_productivity = i * 0.05
         entity.localised_description = entity.localised_description or {'entity-description.' .. name}
+        table.insert(entity.flags, 'not-in-made-in')
         entity.energy_source = {
             type = 'fluid',
             emissions_per_minute = -1,

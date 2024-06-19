@@ -13,6 +13,7 @@ Date: ?
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
     - Fixed crash while opening the caravan gui multiple times (https://github.com/pyanodon/pybugreports/issues/522)
+    - Fixed "Composter MK 01" displaying twice in the 'made-in' section for biomass recipes.
   Locale:
     - Added Russian translation to the caravan global GUI. (https://github.com/pyanodon/pyalienlife/pull/248)
     - Fixed typos in fast wood forestry turd. (https://github.com/pyanodon/pybugreports/issues/518)
