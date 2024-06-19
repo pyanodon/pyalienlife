@@ -20,6 +20,7 @@ Date: ?
   TURD:
     - Allowed productivity in all 3 paths of the composter TURD.
     - Bhoddos turd path 1 now scales with number of machines. However, they only explode if actively crafting.
+    - Removed ometad from baffles.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.38
 Date: 2024-6-4

@@ -26,7 +26,6 @@ if data and not yafc_turd_integration then
             name = 'baffles',
             result = 'baffles',
             ingredients = {
-                {type = 'item', name = 'ometad', amount = 10},
                 {type = 'item', name = 'rpc-mesh', amount = 8},
                 {type = 'item', name = 'cobalt-sulfate', amount = 20},
                 {type = 'item', name = 'hardener', amount = 2},
