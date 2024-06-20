@@ -129,6 +129,7 @@ local function create_turd_page(gui, player)
 		header_flow.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'technology-name.' .. name}, '[/color][/font]'}}
 		header_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
 
+		header_flow.add {type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'turd.affected-buildings'}, ':[/color][/font]'}}
 		for affected_entity in pairs(tech_upgrade.affected_entities) do
 			local sprite = header_flow.add{type = 'choose-elem-button', elem_type = 'entity', style = 'transparent_slot'}
 			sprite.elem_value = affected_entity
