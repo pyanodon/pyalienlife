@@ -9,7 +9,7 @@ Date: ?
     - Added support for using pipette drill selection on nexelit ore.
     - Vrauks module speed buffed from 100%, 150%, 200%, 250% -> 100%, 200%, 300%, 400% in order to match the other pyAL modules.
     - Cadaveric arum speed buffed from 100%, 125%, 150%, 175% -> 100%, 200%, 300%, 400% in order to match the other pyAL modules.
-    - The changed the number of module slots in the cadaveric arum farm building from 4,6,8,10 -> 4,8,12,16 in order to prevent floating point crafting speeds.
+    - Changed the number of module slots in the cadaveric arum farm building from 4,6,8,10 -> 4,8,12,16 in order to prevent floating point crafting speeds.
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
     - Fixed crash while opening the caravan gui multiple times (https://github.com/pyanodon/pybugreports/issues/522)
