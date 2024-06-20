@@ -176,4 +176,8 @@ data:extend(
         type = "module-category",
         name = "digosaurus"
     },
+    {
+        type = "module-category",
+        name = "sawblade"
+    },
 })

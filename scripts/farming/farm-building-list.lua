@@ -35,6 +35,7 @@ local farm_buildings = {
 	['sap-extractor'] = 'plant',
 	['seaweed-crop'] = 'plant',
 	['sponge-culture'] = 'plant',
+	['turd-wpu'] = 'plant',
 	['tuuphra-plantation'] = 'plant',
 	['yotoi-aloe-orchard'] = 'plant',
 	['bhoddos-culture'] = 'fungi',
