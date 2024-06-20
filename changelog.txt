@@ -19,6 +19,7 @@ Date: ?
     - Fixed typos in fast wood forestry turd. (https://github.com/pyanodon/pybugreports/issues/518)
     - Fixed missing key for upgraded caravans in the manager (https://github.com/pyanodon/pybugreports/issues/527)
   TURD:
+    - Added a "dice" button to the TURD GUI for those who have analysis paralysis.
     - Allowed productivity in all 3 paths of the composter TURD.
     - Bhoddos turd path 1 now scales with number of machines. However, they only explode if actively crafting.
     - Removed ometad from baffles.

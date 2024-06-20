@@ -129,13 +129,17 @@ local function create_turd_page(gui, player)
 		header_flow.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'technology-name.' .. name}, '[/color][/font]'}}
 		header_flow.add{type = 'empty-widget', style = 'py_empty_widget'}
 
-		header_flow.add {type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'turd.affected-buildings'}, ':[/color][/font]'}}
+		header_flow.add{type = 'label', caption = {'', '[font=default-semibold][color=255,230,192]', {'turd.affected-buildings'}, ':[/color][/font]'}}
 		for affected_entity in pairs(tech_upgrade.affected_entities) do
 			local sprite = header_flow.add{type = 'choose-elem-button', elem_type = 'entity', style = 'transparent_slot'}
 			sprite.elem_value = affected_entity
 			sprite.locked = true
 		end
 
+		header_flow.add{
+			name = 'py_turd_randomize_button', type = 'sprite-button', style = 'frame_action_button', tooltip = {'turd.randomize'},
+			sprite = 'random-white', hovered_sprite = 'random-black', clicked_sprite = 'random-black'
+		}.visible = false
 		header_flow.add{
 			name = 'py_open_turd_techtree', type = 'sprite-button', style = 'frame_action_button', tooltip = {'turd.open-in-tech-tree'},
 			sprite = 'utility/technology_white', hovered_sprite = 'utility/technology_black', clicked_sprite = 'utility/technology_black'
@@ -250,6 +254,10 @@ end
 gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 	local frame = event.element.parent.parent
 	local gui = frame.parent
+	local player = game.get_player(event.player_index)
+	local tech_name = frame.tags.name
+	local selected_upgrade = global.turd_bonuses[player.force_index][tech_name] or NOT_SELECTED
+	local is_researched = player.force.technologies[tech_name].researched
 
 	for _, tech_upgrade_element in pairs(gui.children) do
 		local sub_tech_flow = tech_upgrade_element.sub_tech_flow
@@ -261,16 +269,19 @@ gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 			end
 
 			local button = tech_upgrade_element.header_flow.py_minimize_turd
+			local randomize_button = tech_upgrade_element.header_flow.py_turd_randomize_button
 			if sub_tech_flow.visible then
 				button.sprite = 'up-black'
 				button.hovered_sprite = 'up-black'
 				button.clicked_sprite = 'up-black'
 				button.style = 'frame_action_button_always_on'
+				randomize_button.visible = is_researched and selected_upgrade == NOT_SELECTED
 			else
 				button.sprite = 'down-white'
 				button.hovered_sprite = 'down-black'
 				button.clicked_sprite = 'down-black'
 				button.style = 'frame_action_button'
+				randomize_button.visible = false
 			end
 		end
 	end
@@ -435,6 +446,16 @@ local function destroy_all_hidden_beacons(force)
 	end
 end
 
+gui_events[defines.events.on_gui_click]['py_turd_randomize_button'] = function(event)
+	local element = event.element
+	local frame = element.parent.parent
+	local sub_tech_flow = frame.sub_tech_flow
+	local random_choice = math.random(#sub_tech_flow.children)
+	local sub_tech = sub_tech_flow.children[random_choice]
+	local confirm_button = sub_tech.info_flow.py_turd_confirm_button
+	gui_events[defines.events.on_gui_click]['py_turd_confirm_button']{element = confirm_button, player_index = event.player_index}
+end
+
 gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(event)
 	local element = event.element
 	local master_tech_name = element.tags.master_tech_name
@@ -443,6 +464,8 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 	local player = game.get_player(event.player_index)
 	local force = player.force
 	local force_index = force.index
+	local header_flow = sub_tech_flow.parent.header_flow
+	local randomize_button = header_flow.py_turd_randomize_button
 
 	if not force.technologies[master_tech_name].researched then return end
 
@@ -458,6 +481,7 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		force.print{'turd.font', {'turd.selected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = sub_tech_name
 		apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
+		randomize_button.visible = false
 	else
 		global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] or 0
 		if global.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then
@@ -481,6 +505,7 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		elseif resets_left > 0 and reset_label then
 			reset_label.caption = {'turd.resets-left', resets_left}
 		end
+		randomize_button.visible = true
 	end
 
 	for _, sub_tech in pairs(sub_tech_flow.children) do
