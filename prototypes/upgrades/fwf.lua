@@ -1,5 +1,3 @@
-local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
-
 --[[
                                                          .
                                               .         ;  
@@ -133,7 +131,7 @@ if data and not yafc_turd_integration then
             module_slots = MODULE_SLOTS
         }
         entity.allowed_effects = {'speed', 'productivity', 'pollution'}
-        entity.crafting_speed = i == 1 and FUN.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or FUN.farm_speed_derived(MODULE_SLOTS, 'turd-wpu')
+        entity.crafting_speed = i == 1 and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, 'turd-wpu')
         data:extend{entity}
     end
 
@@ -186,11 +184,9 @@ if data and not yafc_turd_integration then
         },
     }
 
-    local phenolic_board_with_laquer = table.deepcopy(data.raw.recipe['phenolicboard'])
-    phenolic_board_with_laquer.name = 'phenolicboard-with-laquer'
-    FUN.add_ingredient(phenolic_board_with_laquer, {type = 'item', name = 'lacquer-resin', amount = 20})
-    FUN.add_result_amount(phenolic_board_with_laquer, 'phenolicboard', 1)
-    data:extend{phenolic_board_with_laquer}
+    local phenolic_board_with_laquer = RECIPE(data.raw.recipe['phenolicboard']):copy('phenolicboard-with-laquer')
+    phenolic_board_with_laquer:add_ingredient{type = 'item', name = 'lacquer-resin', amount = 20}
+    phenolic_board_with_laquer:add_result_amount('phenolicboard', 1)
 
     RECIPE {
         type = 'recipe',
@@ -220,9 +216,9 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe['wood-seedling-mk04']),
     } do
         seedling_recipe.name = seedling_recipe.name .. '-turd'
-        FUN.remove_ingredient(seedling_recipe, 'moss')
-        FUN.remove_ingredient(seedling_recipe, 'chelator')
-        FUN.add_ingredient(seedling_recipe, {type = 'fluid', name = 'anthracene-oil', amount = 35})
+        seedling_recipe:remove_ingredient('moss')
+        seedling_recipe:remove_ingredient('chelator')
+        seedling_recipe:add_ingredient{type = 'fluid', name = 'anthracene-oil', amount = 35}
         data:extend{seedling_recipe}
     end
 end
