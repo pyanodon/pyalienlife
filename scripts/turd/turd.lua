@@ -2,7 +2,7 @@ Turd = {}
 Turd.events = {}
 local Table = require('__stdlib__/stdlib/utils/table')
 local tech_upgrades, farm_building_tiers = table.unpack(require 'prototypes/upgrades/tech-upgrades')
-require 'bhoddos'
+local bhoddos_lib = require('bhoddos')
 
 local NOT_SELECTED = 333 -- enum
 
@@ -551,6 +551,10 @@ Turd.events.on_built = function(event)
 			machine_replacement(entity.name, new, {entity})
 		end
 	end
+
+	if bhoddos_lib.cultures[entity.name] then
+		bhoddos_lib.update_culture_table(entity, 'add')
+	end
 end
 
 Turd.events.on_destroyed = function(event)
@@ -560,6 +564,10 @@ Turd.events.on_destroyed = function(event)
 	global.turd_beaconed_machines[entity.unit_number] = nil
 	if not beacon or not beacon.valid then return end
 	beacon.destroy()
+
+	if bhoddos_lib.cultures[entity.name] then
+		bhoddos_lib.update_culture_table(entity, 'remove')
+	end
 end
 
 remote.add_interface('pywiki_turd_page', {
