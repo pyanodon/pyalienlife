@@ -1,5 +1,7 @@
 local FUN = require("__pycoalprocessing__/prototypes/functions/functions")
 
+ITEM('automation-science-pack', 'tool'):set('icon', '__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png')
+
 --TECHNOLOGY--
 -- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('energy-3'):add_pack('py-science-pack-3')
@@ -177,6 +179,3 @@ data.raw["recipe-category"]["ralesia"].allowed_module_categories = { "ralesia" }
 data.raw["recipe-category"]["ralesia"].modules_required = true
 data.raw["recipe-category"]["ulric"].allowed_module_categories = { "ulric" }
 data.raw["recipe-category"]["ulric"].modules_required = true
-
-data.raw.tile['hazard-concrete-left'].vehicle_friction_modifier = 400
-data.raw.tile['hazard-concrete-right'].vehicle_friction_modifier = 400

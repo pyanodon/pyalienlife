@@ -8,7 +8,10 @@ local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
 if mods['pycoalprocessing'] then
     require('prototypes/updates/pycoalprocessing-updates')
-    ITEM('automation-science-pack', 'tool'):set('icon', '__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png')
+end
+
+if mods['pyindustry'] then
+    require('prototypes/updates/pyindustry-updates')
 end
 
 if mods['pyfusionenergy'] then
