@@ -1,4 +1,4 @@
-local MODULE_SLOTS = 8
+local MODULE_SLOTS = 12
 
 local pipe = {
     south = {

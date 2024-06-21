@@ -1,3 +1,5 @@
+ITEM('automation-science-pack', 'tool'):set('icon', '__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png')
+
 --TECHNOLOGY--
 -- TECHNOLOGY('coal-processing-3'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('energy-3'):add_pack('py-science-pack-3')

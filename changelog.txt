@@ -1,20 +1,38 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.40
+Date: 2024-6-21
+  Changes:
+    - Buffed asphalt, quartz, and coal tiles from +325% speed to +350% speed in order to match all the other tiles.
+  Bugfixes:
+    - Fixed a crash related to bhoddos turd path 1. (https://mods.factorio.com/mod/pyalienlife/discussion/66759b0b1a46d1b1067e7f90)
+    - Fixed that the first tier of hazard concrete did not actually stop vehicle movement. (https://github.com/pyanodon/pybugreports/issues/490)
+    - Fixed that the pY tile speed increase did not effect mounts. (https://github.com/pyanodon/pybugreports/issues/532)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.39
-Date: ?
+Date: 2024-6-19
   Changes:
     - Reworked the SFX for the fastwood forestry. (https://github.com/pyanodon/pybugreports/issues/486)
     - Added support for > ≥ < ≤ ≠ to the biofluid requester tanks. Should be interesting for temp mixing (https://github.com/pyanodon/pybugreports/issues/498)
     - Added personal-laser-defense-equipment as a prereq for genlab turd.
     - Added no-food/fuel alerts for caravans.
-    - Added support for using pipette drill selection on nexelit ore
-    - Bhoddos turd path 1 now scales with number of active colonies
+    - Added support for using pipette drill selection on nexelit ore.
+    - Vrauks module speed buffed from 100%, 150%, 200%, 250% -> 100%, 200%, 300%, 400% in order to match the other pyAL modules.
+    - Cadaveric arum speed buffed from 100%, 125%, 150%, 175% -> 100%, 200%, 300%, 400% in order to match the other pyAL modules.
+    - Changed the number of module slots in the cadaveric arum farm building from 4,6,8,10 -> 4,8,12,16 in order to prevent floating point crafting speeds.
   Bugfixes:
     - Fixed that the caravan global gui search bar would crash when used. (https://github.com/pyanodon/pybugreports/issues/517)
     - Fixed crash while opening the caravan gui multiple times (https://github.com/pyanodon/pybugreports/issues/522)
+    - Fixed "Composter MK 01" displaying twice in the 'made-in' section for biomass recipes.
   Locale:
     - Added Russian translation to the caravan global GUI. (https://github.com/pyanodon/pyalienlife/pull/248)
     - Fixed typos in fast wood forestry turd. (https://github.com/pyanodon/pybugreports/issues/518)
     - Fixed missing key for upgraded caravans in the manager (https://github.com/pyanodon/pybugreports/issues/527)
+  TURD:
+    - Added a "dice" button to the TURD GUI for those who have analysis paralysis.
+    - Allowed productivity in all 3 paths of the composter TURD.
+    - Bhoddos turd path 1 now scales with number of machines. However, they only explode if actively crafting.
+    - Removed ometad from baffles.
+    - Added "Affected buildings:" text into the TURD GUI.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.38
 Date: 2024-6-4

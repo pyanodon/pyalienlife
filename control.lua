@@ -177,7 +177,7 @@ script.on_nth_tick(143, Biofluid.events[143])
 script.on_nth_tick(221, Oculua.events[221])
 script.on_nth_tick(239, Mounts.events[239])
 script.on_nth_tick(397, Ulric.events[397])
-script.on_nth_tick(101, Turd.events[101])
+script.on_nth_tick(123, Turd.events[123])
 
 py.on_nth_tick(7, function()
     for _, player in pairs(game.connected_players) do
