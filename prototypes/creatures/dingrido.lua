@@ -295,6 +295,3 @@ data:extend{{
 		size = {64, 64}
 	},
 }}
-
-data.raw.tile['hazard-concrete-left'].vehicle_friction_modifier = 400
-data.raw.tile['hazard-concrete-right'].vehicle_friction_modifier = 400
