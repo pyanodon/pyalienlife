@@ -578,7 +578,7 @@ Turd.events.on_built = function(event)
 		end
 	end
 
-	if bhoddos_lib.cultures[entity.name] then
+	if entity.valid and bhoddos_lib.cultures[entity.name] then
 		bhoddos_lib.update_culture_table(entity, 'add')
 	end
 end

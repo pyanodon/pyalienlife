@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.40
+Date: 2024-6-21
+  Bugfixes:
+    - Fixed a crash related to bhoddos turd path 1. (https://mods.factorio.com/mod/pyalienlife/discussion/66759b0b1a46d1b1067e7f90)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.39
 Date: 2024-6-19
   Changes:
