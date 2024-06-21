@@ -188,7 +188,7 @@ if data and not yafc_turd_integration then
     fine_powdered_biomass:add_result({type = 'item', name = 'dried-biomass', amount = 4})
     data:extend{fine_powdered_biomass}
 
-    FUN.productivity{'worm-wood', 'cheap-retrovirus', 'fine-powdered-biomass-irragration'}
+    py.allow_productivity{'worm-wood', 'cheap-retrovirus', 'fine-powdered-biomass-irragration'}
 end
 
 return {
