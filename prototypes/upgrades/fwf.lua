@@ -207,6 +207,12 @@ if data and not yafc_turd_integration then
         },
         subgroup = 'py-fluids',
         main_product = 'anthracene-oil',
+        crafting_machine_tint = {
+            primary = defines.color.floralwhite,
+            secondary = defines.color.goldenrod,
+            tertiary = defines.color.gold,
+            quaternary = defines.color.darkturquoise,
+        },
     }
 
     for _, seedling_recipe in pairs{
