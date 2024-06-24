@@ -137,7 +137,7 @@ RECIPE('automation-science-pack'):replace_ingredient('electronic-circuit', 'smal
 RECIPE('offshore-pump'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('lab'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('assembling-machine-1'):replace_ingredient('electronic-circuit', 'inductor1')
-RECIPE('soil-extractormk01'):replace_ingredient('electronic-circuit', 'inductor1')
+RECIPE('soil-extractor-mk01'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('distilator'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('electronics-factory-mk01'):replace_ingredient('electric-mining-drill', 'fluid-drill-mk01')
 RECIPE('hpf'):replace_ingredient('electronic-circuit', 'inductor1')
