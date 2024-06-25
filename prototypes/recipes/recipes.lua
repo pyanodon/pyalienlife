@@ -1724,11 +1724,11 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'sporopollenin', amount = 5},
-        {type = 'fluid', name = 'refsyngas', amount = 150},
+        {type = 'fluid', name = 'refsyngas', amount = 100},
         {type = 'item', name = 'lead-plate', amount = 2},
     },
     results = {
-        {type = 'fluid', name = 'oleochemicals', amount = 60},
+        {type = 'fluid', name = 'oleochemicals', amount = 200},
     },
     --main_product = "b-molasse",
 }:add_unlock("mycology-mk03")
