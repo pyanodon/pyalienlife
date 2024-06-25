@@ -3,6 +3,7 @@ Version: 2.1.41
 Date: ?
   Changes:
     - Refined concrete and all its color variants now properly stop vehicle movement. (https://github.com/pyanodon/pybugreports/issues/314)
+    - Buffed reproductive complex speed from 0.999 -> 1
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.40
 Date: 2024-6-21
