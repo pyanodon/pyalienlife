@@ -87,7 +87,7 @@ RECIPE {
 
 for i = 1, 4 do
     local name = 'rc-mk0' .. i
-    local icon = '__pycoalprocessinggraphics__/graphics/icons/' .. name .. '.png'
+    local icon = '__pyalienlifegraphics2__/graphics/icons/' .. name .. '.png'
     local icon_size = 64
     local module_slots = 2 * i
 
