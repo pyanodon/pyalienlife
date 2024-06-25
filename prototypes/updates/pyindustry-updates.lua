@@ -10,7 +10,19 @@ for _, py_tile in pairs {
     'py-steel',
     'py-aluminium',
     'py-nexelit',
-    'lab-white'
+    'lab-white',
+    'refined-concrete',
+    'refined-concrete-red',
+    'refined-concrete-green',
+    'refined-concrete-blue',
+    'refined-concrete-orange',
+    'refined-concrete-yellow',
+    'refined-concrete-pink',
+    'refined-concrete-purple',
+    'refined-concrete-black',
+    'refined-concrete-brown',
+    'refined-concrete-cyan',
+    'refined-concrete-acid',
 } do
     if not data.raw.tile[py_tile] then error('Tile ' .. py_tile .. ' not found') end
     data.raw.tile[py_tile].walking_speed_modifier = 3.5
