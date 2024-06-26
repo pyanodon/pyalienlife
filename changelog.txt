@@ -193,7 +193,7 @@ Date: 2024-3-24
     - Fixed vrauk MK02+ duplication with turd path 2. (https://github.com/pyanodon/pybugreports/issues/406)
     - Fixed improper pipe connections for simik dens (https://github.com/pyanodon/pybugreports/issues/404)
     - Added a warning when using the conversion recipes of creature chamber turd path 3 (https://github.com/pyanodon/pybugreports/issues/396)
-    - Fixed certian catalyst outputs not set properly when combined with ulric saddle turd (https://github.com/pyanodon/pybugreports/issues/402)
+    - Fixed certain catalyst outputs not set properly when combined with ulric saddle turd (https://github.com/pyanodon/pybugreports/issues/402)
     - Fixed missing used ulric mk04 output from ulric gene sample mk04 collection
     - Fixed misaligned pipe connections for korlex turd path 2 (https://github.com/pyanodon/pybugreports/issues/439)
     - Changed internal name of "venon-gland" to "venom-gland" (https://github.com/pyanodon/pybugreports/issues/436)
@@ -241,7 +241,7 @@ Date: 2014-1-24
   Changes:
     - fixed that smelter mk02 had an unneeded requirement on py sci 3. shut up it counts as a bug fix
     - fixed a crash when entering the editor mode while the biopyanoport gui was open
-    - fixed that the biopyanoport could leave broken graphics after being picked up in certian cases
+    - fixed that the biopyanoport could leave broken graphics after being picked up in certain cases
     - fixed that the sponge path 2 recipe replacements did not allow productivity even though the original recipes allowed it. (https://github.com/pyanodon/pybugreports/issues/372)
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.17
@@ -261,7 +261,7 @@ Date: 2024-1-19
     - Reworked mounts. See the pycodex for more information.
     - Buffed fawogae path 3. No longer replaces the fawogae -> raw coal recipe and instead lets you have both.
     - Fixed that antelopes had no blood.
-    - Fixed a crash when loading certian old saves. (https://github.com/pyanodon/pyalienlife/pull/223)
+    - Fixed a crash when loading certain old saves. (https://github.com/pyanodon/pyalienlife/pull/223)
     - To smooth the endgame difficuly spike: Snarer hearts removed from perfect samples (now imperfect samples, ha) replaced with dingrit spikes.
     - Snarer hearts added to utility science pack. Kevlar removed from utility science pack.
     - Fixed that composter turd path 1 module bonus did not work. (https://github.com/pyanodon/pybugreports/issues/370)
@@ -386,7 +386,7 @@ Date: 2023-9-3
     - fixed that recombinant-ery-2 was too fast. 13sec -> 120sec (https://github.com/pyanodon/pybugreports/issues/313)
     - fixed that recombinant-ery-3 did not allow prod when recombinant-ery-1 and recombinant-ery-2 allowed it. (https://github.com/pyanodon/pybugreports/issues/313)
     - fixed that vonix mk2 and mk3 module recipes were negative loops. (https://github.com/pyanodon/pybugreports/issues/312)
-    - fixed that certian mk2 mk3 spore collector recipes were worse than the mk1 recipes. no longer % based (https://github.com/pyanodon/pybugreports/issues/311)
+    - fixed that certain mk2 mk3 spore collector recipes were worse than the mk1 recipes. no longer % based (https://github.com/pyanodon/pybugreports/issues/311)
     - fixed that "bone improved simik" recipes didn't actually give any bones (https://github.com/pyanodon/pybugreports/issues/309)
     - blocked all scriped entities from working with picker dollies (https://github.com/pyanodon/pybugreports/issues/300)
     - remove duplicated items from pyHT (ralesia, fertilizer) (https://github.com/pyanodon/pybugreports/issues/303)
@@ -404,7 +404,7 @@ Date: 2023-9-3
 Version: 2.1.7
 Date: 2023-7-27
   Changes:
-    - fixed a crash with ulric infusion when used in combination with certian inventory size increasing mods
+    - fixed a crash with ulric infusion when used in combination with certain inventory size increasing mods
     - fixed crash with 2.1.6 migration when migrating from pre-TURD saves
     - fixed that turing into an ulric would reset all connected caravan schedules
     - fixed that you could skip cadaveric-arum-mk03 when seeding cadaveric-arum-mk04
