@@ -123,14 +123,14 @@ RECIPE('fiberboard'):set_fields{results = {
 data.raw.item.satellite.rocket_launch_product =
     {
         type = 'item',
-        name = 'destablilized-toxirus',
+        name = 'destabilized-toxirus',
         amount = 6
     }
 
 RECIPE('satellite'):add_ingredient({type = 'item', name = 'cottongut', amount = 150})
 RECIPE('satellite'):add_ingredient({type = 'item', name = 'antimatter', amount = 3})
 
-RECIPE('space-science-pack'):add_ingredient({type = 'item', name = 'destablilized-toxirus', amount = 1}):add_ingredient({type = 'item', name = 'strangelets', amount = 5})
+RECIPE('space-science-pack'):add_ingredient({type = 'item', name = 'destabilized-toxirus', amount = 1}):add_ingredient({type = 'item', name = 'strangelets', amount = 5})
 
 RECIPE('automation-science-pack'):replace_ingredient('electronic-circuit', 'small-parts-01')
 
@@ -180,7 +180,7 @@ RECIPE('solid-separator'):replace_ingredient('electronic-circuit', 'inductor1')
 RECIPE('perfect-samples'):add_ingredient{type = 'item', name = 'dimensional-gastricorg', amount = 1}
 
 RECIPE('simik-mk03'):add_ingredient({type = 'item', name = 'strangelets', amount = 1})
-RECIPE('simik-mk04r'):add_ingredient({type = 'item', name = 'destablilized-toxirus', amount = 1})
+RECIPE('simik-mk04r'):add_ingredient({type = 'item', name = 'destabilized-toxirus', amount = 1})
 
 RECIPE('battery-mk01'):replace_ingredient('plastic-bar', 'melamine'):replace_ingredient('formic-acid', 'cyanic-acid'):replace_ingredient('coke', {type = 'item', name = 'graphite', amount = 3})
 -- Vanilla mining drill for non-fluid ores only
@@ -429,7 +429,7 @@ RECIPE('superconductor-servomechanims').category = 'research'
 RECIPE('superconductor'):add_ingredient({type = 'item', name = 'biobattery', amount = 2}).category = 'research'
 RECIPE('sc-unit'):add_ingredient({type = 'item', name = 're-magnet', amount = 12})
 RECIPE('harmonic-absorber').category = 'research'
-RECIPE('diamagnetic-material').category = 'research'--:remove_unlock('earnshaw-theorem'):add_unlock('pharmagenomics')
+RECIPE('diamagnetic-material').category = 'research'--:remove_unlock('earnshaw-theorem'):add_unlock('pharmacogenomics')
 RECIPE('paramagnetic-material').category = 'research'
 RECIPE('myoglobin').category = 'genlab'
 

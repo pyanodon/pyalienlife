@@ -63,7 +63,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/biotech-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk03","pharmagenomics"},
+    prerequisites = {"biotech-mk03","pharmacogenomics"},
     dependencies = {'biotech-mk03'},
     effects = {},
     unit = {

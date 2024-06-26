@@ -50,7 +50,7 @@ RECIPE {
         {type = 'fluid', name = 'kerosene', amount = 450},
     },
     --main_product = "tar",
-}:add_unlock("chromasome-infocrystalization")
+}:add_unlock("chromosome-infocrystalization")
 
 RECIPE {
     type = 'recipe',
@@ -68,4 +68,4 @@ RECIPE {
     },
     subgroup = 'py-alienlife-arqad'
     --main_product = "arqad-jelly-barrel",
-}:add_unlock("chromasome-infocrystalization")
+}:add_unlock("chromosome-infocrystalization")

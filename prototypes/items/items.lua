@@ -5304,7 +5304,7 @@ ITEM {
 
 ITEM {
 	type = 'item',
-	name = 'destablilized-toxirus',
+	name = 'destabilized-toxirus',
 	icon = '__pyalienlifegraphics__/graphics/icons/destablilized-toxirus.png',
 	icon_size = 64,
 	flags = {},

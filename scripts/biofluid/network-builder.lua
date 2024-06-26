@@ -168,7 +168,7 @@ end
 -- CONSTRUCTIVE
 function Biofluid.built_pipe(entity)
 	if entity.type == TO_GROUND then
-		-- edge case: if a pipe-to-ground is built that seperates two existing pipe-to-grounds then we need to split the existing network
+		-- edge case: if a pipe-to-ground is built that separates two existing pipe-to-grounds then we need to split the existing network
 		local neighbor = Biofluid.find_underground_neighbour(entity)
 		if neighbor then
 			local previous_position = entity.position

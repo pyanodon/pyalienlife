@@ -521,7 +521,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'enzyme-pks', amount = 1},
     },
-}:add_unlock("pharmagenomics")
+}:add_unlock("pharmacogenomics")
 
 RECIPE {
     type = 'recipe',

@@ -609,7 +609,7 @@ RECIPE {
         {type = 'item', name = 'fur', amount = 10},
     },
     main_product = "fur",
-}:add_unlock('pharmagenomics')
+}:add_unlock('pharmacogenomics')
 
 RECIPE {
     type = 'recipe',
@@ -823,7 +823,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zymogens', amount = 1}
     }
-}:add_unlock('pharmagenomics')
+}:add_unlock('pharmacogenomics')
 
 RECIPE {
     type = 'recipe',
@@ -844,7 +844,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'mmp', amount = 1}
     }
-}:add_unlock('pharmagenomics'):replace_ingredient("fetal-serum","dms")
+}:add_unlock('pharmacogenomics'):replace_ingredient("fetal-serum","dms")
 
 RECIPE {
     type = 'recipe',
@@ -859,7 +859,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'peptidase-m58', amount = 1}
     }
-}:add_unlock('pharmagenomics')
+}:add_unlock('pharmacogenomics')
 
 RECIPE {
     type = 'recipe',
@@ -881,7 +881,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'alien-enzymes', amount = 1}
     }
-}:add_unlock('pharmagenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1})--:add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
+}:add_unlock('pharmacogenomics'):add_ingredient({type = "item", name = "paramagnetic-material", amount = 1})--:add_ingredient({type = "item", name = "diamagnetic-material", amount = 1})
 
 RECIPE {
     type = 'recipe',

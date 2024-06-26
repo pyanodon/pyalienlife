@@ -73,7 +73,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/mass-production.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {'biotech-mk04','organ-printing-mk03','pharmagenomics'},
+    prerequisites = {'biotech-mk04','organ-printing-mk03','pharmacogenomics'},
     dependencies = {"organ-printing-mk03"},
     effects = {},
     unit = {

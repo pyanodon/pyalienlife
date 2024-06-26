@@ -307,7 +307,7 @@ Date: 2024-1-8
     - buffed atomizer T.U.R.D path 2; cognition-osteochain requirement reduced from 5 -> 2
     - buffed sap T.U.R.D path 2 to give resveratrol instead of cellulose
     - buffed paths 1&2 of moondrop T.U.R.D. path 1 output multipler increased from 10% to 20%. path 2 oxygen output increased 30->40. path 2 recipe time decreased 15s -> 8s. path 2 lamp recycle chance increased 50% -> 75%
-    - buffed all three paths of moss T.U.R.D (chlorinated water is effected by productivity, path 2 gives 10% stone back as gravel, path 3 refined syngas recipe is now useable)
+    - buffed all three paths of moss T.U.R.D (chlorinated water is effected by productivity, path 2 gives 10% stone back as gravel, path 3 refined syngas recipe is now usable)
     - added creature chamber T.U.R.D (avalible at py science pack 2) credit: soren
     - reworked scrondrix T.U.R.D path 1 & 2
     - reworked kicalk T.U.R.D path 1
@@ -728,7 +728,7 @@ Version: 1.12.0
 Date: 2021-02-05
   Changes:
     - fixed crash when pyhightech isnt active related to cottongut utility science needing intelligent unit.
-    - Doubled Destablilized toxirus return from satilite.
+    - Doubled Destabilized toxirus return from satilite.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.11
 Date: 2021-02-02

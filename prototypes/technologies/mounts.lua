@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = '__pyalienlifegraphics__/graphics/technology/mounts-mk03.png',
     icon_size = 128,
     order = 'c-a',
-    prerequisites = {mods.pyalternativeenergy and 'zungror' or 'pharmagenomics'},
+    prerequisites = {mods.pyalternativeenergy and 'zungror' or 'pharmacogenomics'},
     effects = {},
     unit = {
         count = 350,
