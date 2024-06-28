@@ -7,8 +7,40 @@ require 'caravan-global-gui'
 require 'caravan-connected-gui'
 local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
-local Table = require('__stdlib__/stdlib/utils/table')
 
+---@class Caravan
+---@field arrival_tick number? The gametick that this caravan arrived at its destination. Used to queue most recent caravans first.
+---@field entity LuaEntity? The associated LuaEntity of the caravan.
+---@field fuel_bar int The amount of fuel the caravan has in the red bar GUI element. Does not account for stored brains.
+---@field fuel_inventory LuaInventory The inventory of the caravan that stores fuel.
+---@field inventory LuaInventory The script-created inventory of the caravan.
+---@field itemised boolean? Whether this caravan has been itemised. If true, it exist in 'backpack' mode. When placed down again, it retains the schedule.
+---@field last_eaten_fuel_value int The last value of fuel that was eaten by the caravan. This exists becuase we must divide by the fuel_bar in order to get the 'fullness' of the red bar in the GUI.
+---@field retry_pathfinder number? The number of seconds until the pathfinder request is resubmitted. If nil, the pathfinder is not being retried.
+---@field schedule CaravanSchedule[] The schedule of the caravan. Each element is a table with a localised_name, position, entity, and actions.
+---@field schedule_id int The index of the schedule that the caravan is currently following. This is used to highlight the grey 'play' button in the GUI. If this == -1, the caravan is idle.
+---@field action_id int The action index of the schedule that the caravan is currently following. This is used to highlight the grey 'play' button in the GUI. If this == -1, the caravan is idle.
+---@field unit_number number The unit number of the caravan entity.
+
+---@class CaravanSchedule
+---@field actions CaravanAction[] The actions that the caravan will perform (in order of this array) when it reaches this schedule. Each element is a table with a type and localised_name.
+---@field entity LuaEntity? The entity that the caravan will travel to. If this is nil, the caravan will travel to the position.
+---@field localised_name LocalisedString The name of the schedule. This is displayed in the GUI.
+---@field position MapPosition The position that the caravan will travel to. Used as a fallback in case of no entity or invalid entity.
+
+---@class CaravanAction
+---@field async? boolean Whether this action should be 'ticked' once and then move on to the next action. If false or nil, the caravan will wait until the action is complete before moving on. Note that some action types ignore this field such as 'time passed'.
+---@field circuit_condition_left? string If this action is a circuit condition, this is the left side of the equation. Generated from a choose-elem-button.
+---@field circuit_condition_right? string If this action is a circuit condition, this is the right side of the equation. Generated from a choose-elem-button.
+---@field wait_time int? The amount of time that the caravan will wait if this is a 'time passed' action.
+---@field elem_value string? The item that the caravan will interact with if this is an 'item count' action.
+---@field item_count int? The amount of items that the caravan will interact with if this is an 'item count' action.
+---@field localised_name LocalisedString The name of the action. This is displayed in the GUI.
+---@field type string The type of the action. This is used to determine what the caravan will do when it reaches this action.
+
+---Pathfinds a caravan to follow another entity
+---@param caravan_data Caravan
+---@param entity LuaEntity
 local function goto_entity(caravan_data, entity)
 	local caravan = caravan_data.entity
 	caravan.set_command{
@@ -20,6 +52,9 @@ local function goto_entity(caravan_data, entity)
 	caravan_data.arrival_tick = nil
 end
 
+---Pathfinds a caravan to a position
+---@param caravan_data Caravan
+---@param position MapPosition
 local function goto_position(caravan_data, position)
 	local caravan = caravan_data.entity
 	caravan.set_command{
@@ -31,6 +66,8 @@ local function goto_position(caravan_data, position)
 	caravan_data.arrival_tick = nil
 end
 
+---Sets the caravan to walk aimlessly in a radius.
+---@param caravan_data Caravan
 local function wander(caravan_data)
 	caravan_data.entity.set_command{
 		type = defines.command.wander,
@@ -44,6 +81,9 @@ local no_fuel_map_tag = {
 	name = 'no-fuel'
 }
 
+---Function to render a red 'fuel alert' similar to the locomotive out of fuel alert.
+---This renders on the player GUI in the same slot as the locomotive alert or 'entities damaged' alert.
+---@param entity LuaEntity
 local function add_fuel_alert(entity)
 	local target_force = entity.force_index
 	for _, player in pairs(game.players) do
@@ -60,6 +100,8 @@ local function add_fuel_alert(entity)
 	end
 end
 
+---Function to remove the red 'fuel alert' from the player GUI.
+---@param entity LuaEntity
 local function remove_fuel_alert(entity)
 	if not entity.valid then
 		-- it'll disappear after a few seconds anyway
@@ -85,7 +127,15 @@ Caravan.events.init = function()
 	global.make_operable_next_tick = global.make_operable_next_tick or {}
 end
 
+---@param v table
+---@return boolean
 local function exists_and_valid(v) return v and v.valid end
+
+---Checks if the caravan entity is valid, the caravan inventory is valid, and the fuel inventory is valid.
+---If not, all lua objects are destroyed and the caravan is removed from the global table.
+---If this caravan is itemized, then we return false however lua objects are not destroyed.
+---@param caravan_data Caravan
+---@return boolean
 function Caravan.validity_check(caravan_data)
 	if not caravan_data or caravan_data.itemised then return false end
 	local inventory, fuel_inventory = caravan_data.inventory, caravan_data.fuel_inventory
@@ -142,10 +192,17 @@ Caravan.events.used_capsule = function(event)
 	Caravan.build_gui(player, caravan_data.entity)
 end
 
+---Is this caravan currently doing anything?
+---@param caravan_data Caravan
+---@return boolean
 Caravan.is_automated = function(caravan_data)
 	return caravan_data.schedule_id and caravan_data.schedule_id >= 0
 end
 
+---Reduces the fuel bar of the caravan by 1. If the fuel bar is empty, it will instead attempt to eat fuel from the fuel inventory.
+---If this function returns false, the caravan is starved and all actions stop.
+---@param caravan_data Caravan
+---@return boolean
 local function eat(caravan_data)
 	if caravan_data.fuel_bar == 0 then
 		local fuel = caravan_data.fuel_inventory
@@ -162,11 +219,13 @@ local function eat(caravan_data)
 	return true
 end
 
+---Stops all actions of the caravan and cancels the current pathfinder request.
+---This is used for example when it runs out of food or the GUI is interacted with.
+---@param caravan_data Caravan
 local function stop_actions(caravan_data)
 	caravan_data.schedule_id = -1
 	caravan_data.action_id = -1
 	caravan_data.stored_energy = nil
-	caravan_data.last_outpost_location = nil
 	caravan_data.arrival_tick = nil
 	wander(caravan_data)
 end
@@ -222,7 +281,7 @@ gui_events[defines.events.on_gui_click]['py_blocking_caravan'] = function(event)
 	local tags = element.tags
 	local caravan_data = global.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
-	action.async= not element.state
+	action.async = not element.state
 	stop_actions(caravan_data)
 end
 
@@ -278,7 +337,12 @@ gui_events[defines.events.on_gui_click]['py_refocus'] = function(event)
 	camera.zoom = prototypes[caravan_data.entity.name].camera_zoom or 1
 end
 
-local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
+---Starts a caravan pathfinding to its next scheduled entity. Sets the action ID to -1 becuase it cannot do actions while in transit.
+---This is called whenever it finishes all its actions on the previous schedule or it is started manually via the GUI.
+---@param caravan_data Caravan
+---@param schedule_id int
+---@param skip_eating boolean?
+local function begin_schedule(caravan_data, schedule_id, skip_eating)
 	if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
 		if caravan_data.schedule_id ~= schedule_id then
 			if not skip_eating and not eat(caravan_data) then stop_actions(caravan_data); return end
@@ -314,6 +378,9 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating, is_retry)
 	caravan_data.last_scheduled_tick = game.tick
 end
 
+---Begins the action with the specified ID inside the caravan's current schedule.
+---@param caravan_data Caravan
+---@param action_id int
 local function begin_action(caravan_data, action_id)
 	local entity = caravan_data.entity
 	local schedule = caravan_data.schedule[caravan_data.schedule_id]
@@ -483,6 +550,9 @@ Caravan.events.ai_command_completed = function(event)
 	end
 end
 
+---Sort function to sort caravans by arrival time. Used to give priority to whichever caravans have been waiting the longest.
+---@param a Caravan
+---@param b Caravan
 local function caravan_sort_function(a, b)
 	return (a.arrival_tick or 0) < (b.arrival_tick or 0)
 end
@@ -518,7 +588,7 @@ Caravan.events[60] = function(event)
 		if caravan_data.retry_pathfinder then
 			caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
 			if caravan_data.retry_pathfinder == 0 then
-				begin_schedule(caravan_data, caravan_data.schedule_id, true, true)
+				begin_schedule(caravan_data, caravan_data.schedule_id, true)
 			end
 			if caravan_data.retry_pathfinder == 0 then
 				caravan_data.retry_pathfinder = nil
@@ -678,7 +748,7 @@ Caravan.events.on_entity_settings_pasted = function(event)
 	::continue::
 
 	stop_actions(destination_data)
-	destination_data.schedule = Table.deep_copy(source_data.schedule)
+	destination_data.schedule = table.deepcopy(source_data.schedule)
 	for _, player in pairs(game.connected_players) do
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end
@@ -697,6 +767,9 @@ remote.add_interface('caravans', {
 	end
 })
 
+---This is called whenever an entity is swapped out for an identical entity. For example ulric man steroids transforming the player character into a different entity.
+---@param old LuaEntity
+---@param new LuaEntity
 function Caravan.entity_changed_unit_number(old, new)
 	if not old.valid then error('Don\'t call this with an invalid entity') end
 	for _, caravan_data in pairs(global.caravans) do

@@ -4,6 +4,10 @@ local Position = require('__stdlib__/stdlib/area/position')
 local FUN = require '__pycoalprocessing__/prototypes/functions/functions'
 require 'caravan-gui-shared'
 
+---Given a action index in a caravan GUI, returns the GUI style and sprite for the corresponding button.
+---@param caravan_data Caravan
+---@param schedule_id int
+---@param action_id int
 local function generate_button_status(caravan_data, schedule_id, action_id)
 	local style = 'train_schedule_action_button'
 	local sprite = 'utility/play'
@@ -14,6 +18,9 @@ local function generate_button_status(caravan_data, schedule_id, action_id)
 	return style, sprite
 end
 
+---Creates the GUI pane for the caravan's schedule. Tries to lossely follow the vanilla train schedule GUI.
+---@param gui LuaGuiElement
+---@param caravan_data Caravan
 function Caravan.build_schedule_gui(gui, caravan_data)
 	for i, schedule in ipairs(caravan_data.schedule) do
 		local prototype = prototypes[caravan_data.entity.name]
@@ -137,6 +144,10 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 	gui.add{type = 'button', name = 'py_add_outpost', style = 'train_schedule_add_station_button', caption = {'caravan-gui.add-outpost'}}
 end
 
+---Creates a caravan GUI. The caravan GUI consists of a lua inventory, a camera, a fuel inventory, and a schedule pane.
+---@param player LuaPlayer
+---@param entity LuaEntity
+---@param from_remote_manager boolean Is this GUI opened from the py codex? If so, hide the inventory so that the player cannot teleport items.
 function Caravan.build_gui(player, entity, from_remote_manager)
 	local caravan_data = global.caravans[entity.unit_number]
 	local prototype = prototypes[entity.name]
@@ -266,6 +277,9 @@ Caravan.events.on_open_gui = function(event)
 	Caravan.build_gui(player, entity)
 end
 
+---Resets the fuel inventory, the fuel bar, and the schedule pane of the caravan GUI to reflect the current state of the caravan.
+---@param gui LuaGuiElement
+---@param weak boolean Optimization: If false, don't update the schedule pane.
 function Caravan.update_gui(gui, weak)
 	local caravan_data = global.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
