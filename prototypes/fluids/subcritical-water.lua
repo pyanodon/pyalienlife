@@ -17,18 +17,17 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'subcritical-water-02',
-    category = 'combustion',
+    category = 'bhoddos',
     enabled = false,
-    energy_required = 10,
+    energy_required = 60,
     ingredients = {
-        {type = 'fluid', name = 'pressured-water', amount = 200},
-        {type = 'item',  name = 'fuelrod-mk01',    amount = 1},
+        {type = 'fluid', name = 'pressured-water', amount = 1500},
     },
     results = {
-        {type = 'fluid', name = 'subcritical-water', amount = 200},
+        {type = 'fluid', name = 'subcritical-water', amount = 1500},
     },
     main_product = 'subcritical-water'
-}:add_unlock('biotech-mk03')
+}:add_unlock('bhoddos-mk02'):allow_productivity()
 
 FLUID {
     type = 'fluid',
