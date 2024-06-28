@@ -1923,10 +1923,10 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = 'fluid', name = 'blood', amount = 100},
+        {type = 'fluid', name = 'blood', amount = 500},
     },
     results = {
-        {type = 'item', name = 'albumin', amount = 1},
+        {type = 'item', name = 'albumin', amount = 5},
     },
     --main_product = "cocoon",
 }:add_unlock("biotech-mk02")
