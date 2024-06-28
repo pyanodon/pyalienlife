@@ -98,11 +98,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'honeycomb', amount = 1},
+        {type = 'item', name = 'honeycomb', amount = 5},
     },
     results = {
-        {type = 'item', name = 'empty-honeycomb', amount = 1},
-        {type = 'fluid', name = 'arqad-honey', amount = 50},
+        {type = 'item', name = 'empty-honeycomb', amount = 5},
+        {type = 'fluid', name = 'arqad-honey', amount = 250},
     },
     main_product = "arqad-honey",
 }:add_unlock("arqad")
