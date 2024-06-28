@@ -5,6 +5,7 @@ require 'italian-names'
 require 'caravan-gui'
 require 'caravan-global-gui'
 require 'caravan-connected-gui'
+require '__core__.lualib.util'
 local prototypes = require 'caravan-prototypes'
 local Position = require('__stdlib__/stdlib/area/position')
 
