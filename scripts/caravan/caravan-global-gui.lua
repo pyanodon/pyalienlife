@@ -13,8 +13,8 @@ local function create_gui(gui, player)
         gui.style.horizontal_align = 'center'
         gui.style.horizontally_stretchable = true
         gui.add{type = 'label', caption = ''}
-        gui.add{type = 'label', caption = {'caravan-global-gui.empty'}}.style.single_line = false
-        gui.add{type = 'label', caption = {'caravan-global-gui.empty-2'}}.style.single_line = false
+        gui.add{type = 'label', caption = {'caravan-gui.empty'}}.style.single_line = false
+        gui.add{type = 'label', caption = {'caravan-gui.empty-2'}}.style.single_line = false
         return
     end
     local table = gui.add{
@@ -22,6 +22,9 @@ local function create_gui(gui, player)
         name = 'table',
         column_count = 4
     }
+    for i = 1, 4 do
+        table.add {type = 'empty-widget'}.style.horizontally_stretchable = true
+    end
     for key, caravan_data in pairs(global.caravans) do
         if Caravan.validity_check(caravan_data) and caravan_data.entity.force_index == player.force_index then
             Caravan.add_gui_row(caravan_data, key, table)

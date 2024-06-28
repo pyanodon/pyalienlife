@@ -18,7 +18,7 @@ local function instantiate_main_frame(gui, anchor)
         return gui.relative.add{
             type = 'frame',
             name = 'py_global_caravan_gui',
-            caption = {'caravan-global-gui.caption'},
+            caption = {'caravan-gui.caption'},
             direction = 'vertical',
             anchor = anchor
         }
@@ -27,7 +27,7 @@ local function instantiate_main_frame(gui, anchor)
     return gui.relative.caravan_flow.add{
         type = 'frame',
         name = 'py_global_caravan_gui',
-        caption = {'caravan-global-gui.caption'},
+        caption = {'caravan-gui.caption'},
         direction = 'vertical',
     }
 end
