@@ -1,12 +1,3 @@
-py = py or {}
-if py.tints then error('This is not supposed to be in master branch. Frozen only. Please delete lines 1-8') end
-py.tints = {
-    {r = 1.0,   g = 1.0,   b = 0.0,   a = 1.0},
-    {r = 1.0,   g = 0.0,   b = 0.0,   a = 1.0},
-    {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
-    {r = 1.0,   g = 0.0,   b = 1.0,   a = 1.0}
-}
-
 RECIPE {
     type = 'recipe',
     name = 'rc-mk01',
