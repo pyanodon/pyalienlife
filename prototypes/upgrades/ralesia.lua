@@ -44,7 +44,7 @@ if data and not yafc_turd_integration then
         data:extend{recipe}
     end
 
-    local fluidbox_indexs = {2, 2, 2, 1, 1}
+    local fluidbox_indexs = {2, 2, 1, 1}
     for i, recipe in pairs({
         table.deepcopy(data.raw.recipe['ralesias-1']),
         table.deepcopy(data.raw.recipe['ralesias-2']),
