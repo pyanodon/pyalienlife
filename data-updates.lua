@@ -176,11 +176,11 @@ require 'prototypes/upgrades/tech-upgrades'
 ----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
-    r:replace_ingredient('py-fertilizer', 'fertilizer')
-    r:replace_ingredient('organics', 'biomass')
-    r:replace_result('organics', 'biomass')
-    r:replace_ingredient('ralesia', 'ralesias')
-    r:replace_ingredient('raw-fish', 'fish')
+    recipe:replace_ingredient('py-fertilizer', 'fertilizer')
+    recipe:replace_ingredient('organics', 'biomass')
+    recipe:replace_result('organics', 'biomass')
+    recipe:replace_ingredient('ralesia', 'ralesias')
+    recipe:replace_ingredient('raw-fish', 'fish')
 end
 
 ----------------------------------------------------------------------------------------------------
