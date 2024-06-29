@@ -176,7 +176,6 @@ require 'prototypes/upgrades/tech-upgrades'
 ----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
-    local r = RECIPE(recipe)
     r:replace_ingredient('py-fertilizer', 'fertilizer')
     r:replace_ingredient('organics', 'biomass')
     r:replace_result('organics', 'biomass')
