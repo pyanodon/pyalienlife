@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.42
+Date: ?
+  Changes:
+    - Fixed crash when copy-pasting caravan schedules.
+  Bugfixes:
+    - Fixed ralesia turd 3 having overlapping fluid inputs (https://github.com/pyanodon/pybugreports/issues/530)
+---------------------------------------------------------------------------------------------------
 Version: 2.1.41
 Date: 2024-6-27
   Changes:
