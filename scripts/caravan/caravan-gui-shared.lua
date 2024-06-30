@@ -100,7 +100,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local entity = caravan_data.entity
     local prototype = prototypes[entity.name]
 
-    table = table.add{type = 'frame', style = 'inside_shallow_frame_with_padding', direction = 'vertical', tags = {unit_number = key}}
+    table = table.add{type = 'frame', direction = 'vertical', tags = {unit_number = key}}
 
     local button_flow = table.add{type = 'flow', direction = 'horizontal'}
     button_flow.style.vertical_align = 'top'
@@ -169,7 +169,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         button.style.bottom_margin = -4
     end
 
-    local camera_frame = table.add{type = 'frame', name = 'camera_frame', style = 'py_nice_frame'}
+    local camera_frame = table.add{type = 'frame', name = 'camera_frame', style = 'inside_shallow_frame'}
 	local camera = camera_frame.add{type = 'camera', name = 'camera', style = 'py_caravan_camera', position = entity.position, surface_index = entity.surface.index}
 	camera.entity = entity
 	camera.visible = true
