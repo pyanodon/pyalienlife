@@ -182,7 +182,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	local providers_by_contents = {}
 	network_data.providers_by_contents = providers_by_contents
 	local providers = network_data.providers
-	local min_fluid_reserve = settings.global['pal_min_fluid_reserve'].value
+	local min_fluid_reserve = settings.global['py-min_fluid_reserve'].value
 
 	for k, provider in pairs(providers) do
 		if not provider.valid then
@@ -573,7 +573,7 @@ end
 function Biofluid.get_unfulfilled_requests()
 	local relavant_fluids = {}
 	local result = {}
-	local min_fluid_request = settings.global['pal_min_fluid_request'].value
+	local min_fluid_request = settings.global['py-min_fluid_request'].value
 
 	for unit_number, requester_data in pairs(global.biofluid_requesters) do
 		local requester = requester_data.entity

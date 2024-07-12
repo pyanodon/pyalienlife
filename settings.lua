@@ -1,7 +1,7 @@
 data:extend{
 	{
 		type = 'double-setting',
-		name = 'pal_min_fluid_reserve',
+		name = 'py-min_fluid_reserve',
 		setting_type = 'runtime-global',
 		minimum_value = 1,
 		maximum_value = 20000,
@@ -9,7 +9,7 @@ data:extend{
 	},
 	{
 		type = 'double-setting',
-		name = 'pal_min_fluid_request',
+		name = 'py-min_fluid_request',
 		setting_type = 'runtime-global',
 		minimum_value = 1,
 		maximum_value = 20000,
