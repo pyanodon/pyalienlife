@@ -58,6 +58,23 @@ if data and not yafc_turd_integration then
             },
             main_product = 'nanofibrils'
         },
+        {
+            type = 'recipe',
+            name = 'filtration-media-2-nanofibril-turd',
+            category = 'crafting',
+            enabled = false,
+            energy_required = 100,
+            ingredients = {
+                {type = 'item', name = 'gravel', amount = 25},
+                {type = 'item', name = 'active-carbon', amount = 10},
+                {type = 'item', name = 'nanofibrils', amount = 2},
+                {type = 'item', name = 'cellulose', amount = 25},
+                {type = "item", name = "micro-fiber", amount = 15},
+            },
+            results = {
+                {type = 'item', name = 'filtration-media', amount = 150},
+            },
+        }
     }
 end
 
@@ -111,7 +128,8 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = 'nanofibrils-xyhiphoe', type = 'unlock-recipe'}
+                {recipe = 'nanofibrils-xyhiphoe', type = 'unlock-recipe'},
+                {old = 'filtration-media-2', new = 'filtration-media-2-nanofibril-turd', type = 'recipe-replacement'},
             }
         }
     }

@@ -1842,13 +1842,13 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'gravel', amount = 100},
-        {type = 'item', name = 'active-carbon', amount = 20},
+        {type = 'item', name = 'gravel', amount = 25},
+        {type = 'item', name = 'active-carbon', amount = 10},
         {type = 'item', name = 'nanofibrils', amount = 2},
         {type = 'item', name = 'cellulose', amount = 25},
     },
     results = {
-        {type = 'item', name = 'filtration-media', amount = 75},
+        {type = 'item', name = 'filtration-media', amount = 200},
     },
 }:add_unlock("filtration-mk02"):add_ingredient({type = "item", name = "micro-fiber", amount = 15})
 

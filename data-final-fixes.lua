@@ -134,6 +134,8 @@ local recipes_list = {
 	'fetal-serum-01',
 	'fiber-01',
 	'fiber-dry-storage',
+	'filtration-media-2',
+	'filtration-media-2-nanofibril-turd',
 	'filtration-media-3',
 	'filtration-media-4',
 	'fish-food-01',

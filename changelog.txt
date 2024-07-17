@@ -6,6 +6,7 @@ Date: ?
     - Modified requirements for a trip in the Biofluid network: provider has to have 10000 fluid present and requester has to have 10000 missing.
     - Added map settings to control the amounts in the previous point.
     - Modified the in-game wiki text accordingly.
+    - Buffed filtration media recipe from nanofibrils
   Bugfixes:
     - Fixed ralesia turd 3 having overlapping fluid inputs (https://github.com/pyanodon/pybugreports/issues/530)
 ---------------------------------------------------------------------------------------------------
