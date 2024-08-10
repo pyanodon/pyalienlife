@@ -7,6 +7,7 @@ Date: ?
     - Added map settings to control the amounts in the previous point.
     - Modified the in-game wiki text accordingly.
     - Buffed filtration media recipe from nanofibrils
+    - Misc. locale updates
   Bugfixes:
     - Fixed ralesia turd 3 having overlapping fluid inputs (https://github.com/pyanodon/pybugreports/issues/530)
 ---------------------------------------------------------------------------------------------------
