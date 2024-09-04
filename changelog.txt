@@ -19,7 +19,6 @@ Date: 2024-9-4
     - Added fawogae to vrauk cocoon 3
     - Removed condensed seep syrup from vrauk cocoon 4 and 5
     - Removed pheromones from vrauk cocoon 5
-    - Increased output of vrauks 4 and 5 
   Bugfixes:
     - Fixed ralesia turd 3 having overlapping fluid inputs (https://github.com/pyanodon/pybugreports/issues/530)
 ---------------------------------------------------------------------------------------------------
