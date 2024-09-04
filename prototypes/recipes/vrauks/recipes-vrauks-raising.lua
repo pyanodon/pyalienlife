@@ -7,7 +7,6 @@ FUN.autorecipes {
     subgroup = "py-alienlife-vrauks",
     order = "b",
     main_product = "vrauks",
-    crafting_speed = 160,
     mats = {
         -- base
         {
@@ -20,6 +19,7 @@ FUN.autorecipes {
             results = {
                 {name = "vrauks", amount = 2},
             },
+            crafting_speed = 160,
             tech = "vrauks"
         },
         -- py science 1
@@ -32,6 +32,7 @@ FUN.autorecipes {
                 {name = "saps", amount = 10}
             },
             results = {{name = "vrauks", amount = 4},},
+            crafting_speed = 130,
             tech = "vrauks-mk02"
         },
         -- py science 2
@@ -43,30 +44,35 @@ FUN.autorecipes {
                 {name = "saps", add_amount = 10}
             },
             results = {{name = "vrauks", amount = 8}},
+            crafting_speed = 100,
             tech = "vrauks-mk03"
         },
         -- py science 3
         {
             ingredients = {
+                {name = "saps", remove_item = true},
+                {name = "moss", remove_item = true},
+                {name = "vrauks-food-01", remove_item = true},
                 {name = "cocoon", add_amount = 10},
-                {name = "bedding", add_amount = 5},
+                {name = "bedding", add_amount = 3},
                 {name = "honeycomb", amount = 4},
                 {name = "syrup-01-barrel", amount = 2, return_barrel = true},
                 {name = "gh", amount = 1}
             },
-            results = {{name = "vrauks", amount = 12}},
+            results = {{name = "vrauks", amount = 16}},
+            crafting_speed = 70,
             tech = "vrauks-mk04"
         },
         -- py science 4
         {
             ingredients = {
                 {name = "cocoon", add_amount = 10},
-                {name = "bedding", add_amount = 5},
-                {name = "vrauks-food-01", add_amount = 7},
+                {name = "bedding", add_amount = 4},
                 {name = "vrauks-food-02", add_amount = 6},
                 {name = "antiviral", amount = 1}
             },
-            results = {{name = "vrauks", remove_item = true}, {name = "vrauks", amount = 20}},
+            results = {{name = "vrauks", amount = 32}},
+            crafting_speed = 40,
             tech = "vrauks-mk05"
         }
     }
