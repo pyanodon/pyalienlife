@@ -8,6 +8,17 @@ Date: ?
     - Modified the in-game wiki text accordingly.
     - Buffed filtration media recipe from nanofibrils
     - Misc. locale updates
+    - Adjusted crafting time of vrauks 2-5
+    - Removed sap, moss, and vrauk food 1 from vrauk 4 and 5
+    - Reduced bedding in vrauk 4 and 5
+    - Increased output of vrauks 4 and 5
+    - Adjusted vrauk cocoon recipes 1-5 output
+    - Adjusted vrauk cocoon 2-5 crafting time
+    - Added native flora to vrauk cocoon 1
+    - Removed sap, moss from vrauk cocoon 3-5
+    - Added fawogae to vrauk cocoon 3
+    - Removed condensed seep syrup from vrauk cocoon 4 and 5
+    - Removed pheromones from vrauk cocoon 5
   Bugfixes:
     - Fixed ralesia turd 3 having overlapping fluid inputs (https://github.com/pyanodon/pybugreports/issues/530)
 ---------------------------------------------------------------------------------------------------

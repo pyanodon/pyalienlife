@@ -88,7 +88,6 @@ FUN.autorecipes {
     subgroup = "py-alienlife-vrauks",
     order = "c",
     main_product = "cocoon",
-    crafting_speed = 40,
     mats = {
         -- base
         {
@@ -96,51 +95,67 @@ FUN.autorecipes {
                 --{name = "vrauks", amount = 2},
                 {name = "moss", amount = 10},
                 {name = "saps", amount = 3},
+                {name = "native-flora", amount = 5},
                 {name = "water-barrel", amount = 4, return_barrel = true}
             },
             results = {
-                {name = "cocoon", amount_min = 5, amount_max = 8},
+                {name = "cocoon", amount_min = 4, amount_max = 6},
                 --{name = "vrauks", amount = 2},
             },
+            crafting_speed = 40,
             tech = "vrauks"
         },
         -- -- py science 1
         {
-            ingredients = {{name = "native-flora", amount = 5}, {name = "vrauks-food-01", amount = 1}},
+            ingredients = {
+                {name = "moss", add_amount = 10},
+                {name = "saps", add_amount = 3},
+                {name = "native-flora", add_amount = 5},
+                {name = "vrauks-food-01", amount = 1}
+            },
             results = {{name = "cocoon", amount_min = 8, amount_max = 12}},
+            crafting_speed = 35,
             tech = "vrauks-mk02"
         },
         -- -- py science 2
         {
             ingredients = {
+                {name = "saps", remove_item = true},
+                {name = "moss", remove_item = true},
+                {name = "native-flora", add_amount = 5},
                 {name = "bedding", amount = 1},
-                {name='vrauks-food-01',remove_item = true},
+                {name='vrauks-food-01', add_amount = 1},
                 {name = "vrauks-food-02", amount = 1},
-                {name = "saps", add_amount = 7}
+                {name = "saps", add_amount = 7},
+                {name = "fawogae", amount = 5}
             },
-            results = {{name = "cocoon", amount_min = 12, amount_max = 18}},
+            results = {{name = "cocoon", amount_min = 16, amount_max = 24}},
+            crafting_speed = 30,
             tech = "vrauks-mk03"
         },
         -- -- py science 3
         {
             ingredients = {
-                {name = "vrauks-food-02", add_amount = 8},
-                {name = "bedding", add_amount = 5},
+                {name = "vrauks-food-01", remove_item = true},
+                {name = "native-flora", remove_item = true},
+                {name = "vrauks-food-02", add_amount = 2},
+                {name = "bedding", add_amount = 3},
                 {name = "honeycomb", amount = 4},
-                {name = "syrup-01-barrel", amount = 2, return_barrel = true},
-                {name = "fawogae", amount = 5}
+                --{name = "syrup-01-barrel", amount = 2, return_barrel = true},
             },
-            results = {{name = "cocoon", amount_min = 17, amount_max = 28}},
+            results = {{name = "cocoon", amount_min = 32, amount_max = 48}},
+            crafting_speed = 20,
             tech = "vrauks-mk04"
         },
         -- -- py science 4
         {
             ingredients = {
-                {name = "vrauks-food-02", add_amount = 8},
-                {name = "bedding", add_amount = 5},
-				{name = "pheromones", amount = 1},
+                {name = "vrauks-food-02", add_amount = 3},
+                {name = "bedding", add_amount = 4},
+				--{name = "pheromones", amount = 1},
             },
-            results = {{name = "cocoon", amount_min = 26, amount_max = 41}},
+            results = {{name = "cocoon", amount_min = 64, amount_max = 96}},
+            crafting_speed = 10,
             tech = "vrauks-mk05"
         }
     }
