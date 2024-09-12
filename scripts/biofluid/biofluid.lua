@@ -182,6 +182,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	local providers_by_contents = {}
 	network_data.providers_by_contents = providers_by_contents
 	local providers = network_data.providers
+	local min_fluid_reserve = settings.global['py-min_fluid_reserve'].value
 
 	for k, provider in pairs(providers) do
 		if not provider.valid then
@@ -194,7 +195,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 		if not relavant_fluids[name] then goto continue end
 		local already_allocated = network_data.allocated_fluids_from_providers[provider.unit_number] or 0
 		local can_give = contents.amount - already_allocated
-		if can_give < 500 then goto continue end
+		if can_give < min_fluid_reserve then goto continue end
 
 		local list = providers_by_contents[name] or {}
 		providers_by_contents[name] = list
@@ -572,6 +573,8 @@ end
 function Biofluid.get_unfulfilled_requests()
 	local relavant_fluids = {}
 	local result = {}
+	local min_fluid_request = settings.global['py-min_fluid_request'].value
+
 	for unit_number, requester_data in pairs(global.biofluid_requesters) do
 		local requester = requester_data.entity
 		if not requester or not requester.valid then
@@ -598,7 +601,7 @@ function Biofluid.get_unfulfilled_requests()
 			already_stored = already_stored + contents.amount
 		end
 		local request_size = goal - already_stored
-		if request_size < goal / 3 then goto continue end
+		if request_size < min_fluid_request then goto continue end
 		result[#result+1] = {
 			name = fluid_name,
 			amount = request_size,
