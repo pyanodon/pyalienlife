@@ -1,5 +1,4 @@
 if data and not yafc_turd_integration then
-    require("__pycoalprocessing__/prototypes/functions/functions")
     RECIPE {
         type = 'recipe',
         name = 'naphtha-arqad',
