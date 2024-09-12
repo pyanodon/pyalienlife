@@ -24,7 +24,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/vatbrain-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"vatbrain-nk01"},
+    prerequisites = {"vatbrain-mk01"},
     dependencies = {"vatbrain-mk01"},
     effects = {},
     unit = {
