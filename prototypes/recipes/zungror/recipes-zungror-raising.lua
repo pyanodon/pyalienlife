@@ -73,15 +73,15 @@ py.autorecipes {
 -- 	"zungror-cocoon-1",
 -- 	"auog-pup-breeding-1"
 -- }
--- data.raw.module["effectivity-module"].limitation_blacklist = {
+-- data.raw.module["efficiency-module"].limitation_blacklist = {
 -- 	"zungror-cocoon-1",
 -- 	"auog-pup-breeding-1"
 -- }
--- data.raw.module["effectivity-module-2"].limitation_blacklist = {
+-- data.raw.module["efficiency-module-2"].limitation_blacklist = {
 -- 	"zungror-cocoon-1",
 -- 	"auog-pup-breeding-1"
 -- }
--- data.raw.module["effectivity-module-3"].limitation_blacklist = {
+-- data.raw.module["efficiency-module-3"].limitation_blacklist = {
 -- 	"zungror-cocoon-1",
 -- 	"auog-pup-breeding-1"
 -- }
