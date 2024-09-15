@@ -111,7 +111,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
             pipe_covers = py.pipe_covers(true, true, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {1.0, -4.0}}},
+            pipe_connections = {{flow_direction = "output", position = {1.0, -3.2}, direction = defines.direction.north}},
             priority = "extra-high"
         },
         --North2
@@ -120,7 +120,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
             pipe_covers = py.pipe_covers(true, true, true, true),
             base_level = 1,
-            pipe_connections = {{type = "output", position = {-1.0, -4.0}}},
+            pipe_connections = {{flow_direction = "output", position = {-1.0, -3.2}, direction = defines.direction.north}},
             priority = "extra-high"
         },
         --South
@@ -130,7 +130,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(true, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {2.0, 4.0}}},
+            pipe_connections = {{flow_direction = "input", position = {2.0, 3.2}, direction = defines.direction.south}},
             priority = "extra-high"
         },
         {
@@ -139,7 +139,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(true, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 4.0}}},
+            pipe_connections = {{flow_direction = "input", position = {0.0, 3.2}, direction = defines.direction.south}},
             priority = "extra-high"
         },
         --South2
@@ -149,7 +149,7 @@ ENTITY {
             pipe_covers = py.pipe_covers(true, true, true, true),
             base_area = 10,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {-2.0, 4.0}}},
+            pipe_connections = {{flow_direction = "input", position = {-2.0, 3.2}, direction = defines.direction.south}},
             priority = "extra-high"
         },
         off_when_no_fluid_recipe = true

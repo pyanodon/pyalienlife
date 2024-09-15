@@ -261,7 +261,7 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 base_area = 10,
                 base_level = -1,
-                pipe_connections = {{type = 'input', position = {4.5, 11.5}}}
+                pipe_connections = {{flow_direction = 'input', position = {4.5, 10.6}, direction = defines.direction.south}}
             },
             {
                 production_type = 'input',
@@ -269,7 +269,7 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 base_area = 10,
                 base_level = -1,
-                pipe_connections = {{type = 'input', position = {6.5, 11.5}}}
+                pipe_connections = {{flow_direction = 'input', position = {6.5, 10.6}, direction = defines.direction.south}}
             },
             {
                 production_type = 'input',
@@ -277,14 +277,14 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 base_area = 10,
                 base_level = -1,
-                pipe_connections = {{type = 'input', position = {0.5, 11.5}}}
+                pipe_connections = {{flow_direction = 'input', position = {0.5, 10.6}, direction = defines.direction.south}}
             },
             {
                 production_type = 'output',
                 pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 base_level = 1,
-                pipe_connections = {{type = 'output', position = {-1.5, 11.5}}}
+                pipe_connections = {{flow_direction = 'output', position = {-1.5, 10.6}, direction = defines.direction.south}}
             },
             off_when_no_fluid_recipe = true
         },
