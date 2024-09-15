@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 100},
-        {"nbti-alloy", 100},
-        {"super-steel", 100},
-        {"aluminium-mine", 1},
-        {"glass", 120},
-        {"neuromorphic-chip", 50},
-        {"processing-unit", 20},
+        {type = "item", name = "concrete", amount = 100},
+        {type = "item", name = "nbti-alloy", amount = 100},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "aluminium-mine", amount = 1},
+        {type = "item", name = "glass", amount = 120},
+        {type = "item", name = "neuromorphic-chip", amount = 50},
+        {type = "item", name = "processing-unit", amount = 20},
     },
     results = {
-        {"vonix-den-mk01", 1}
+        {type = "item", name = "vonix-den-mk01", amount = 1}
     }
 }:add_unlock("vonix"):add_ingredient({type = "item", name = "small-parts-01", amount = 500})
 

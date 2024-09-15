@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"fwf-mk03", 1},
-        {"science-coating", 30},
-        {"wall-shield", 10},
-        {"super-alloy", 30},
-        {"kevlar", 100},
-        {"control-unit", 40},
+        {type = "item", name = "fwf-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 30},
+        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "super-alloy", amount = 30},
+        {type = "item", name = "kevlar", amount = 100},
+        {type = "item", name = "control-unit", amount = 40},
     },
     results = {
-        {"fwf-mk04", 1}
+        {type = "item", name = "fwf-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"moss-farm-mk03", 1},
-        {"divertor", 5},
-        {"boron-carbide", 100},
-        {"science-coating", 20},
-        {"wall-shield", 10},
-        {"control-unit", 10}
+        {type = "item", name = "moss-farm-mk03", amount = 1},
+        {type = "item", name = "divertor", amount = 5},
+        {type = "item", name = "boron-carbide", amount = 100},
+        {type = "item", name = "science-coating", amount = 20},
+        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "control-unit", amount = 10}
     },
     results = {
-        {"moss-farm-mk04", 1}
+        {type = "item", name = "moss-farm-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

@@ -17,7 +17,7 @@
         {type = 'item', name = 'automated-factory-mk03', amount = 1},
 			},
         results = {
-            {'pydrive', 1}
+            {type = "item", name = 'pydrive', amount = 1}
         }
     }:add_unlock("domestication-mk05")
 

@@ -6,13 +6,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"auog-paddock-mk01", 1},
-        {"titanium-plate", 35},
-        {"electronic-circuit", 10},
-        {"duralumin", 50},
+        {type = "item", name = "auog-paddock-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 35},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "duralumin", amount = 50},
     },
     results = {
-        {"auog-paddock-mk02", 1}
+        {type = "item", name = "auog-paddock-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

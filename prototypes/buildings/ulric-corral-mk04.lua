@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"agzn-alloy", 20},
-        {"metallic-glass", 20},
-        {"ulric-corral-mk03", 1},
-        {"nenbit-matrix", 50},
-        {"control-unit", 15},
-        {"low-density-structure", 15},
+        {type = "item", name = "agzn-alloy", amount = 20},
+        {type = "item", name = "metallic-glass", amount = 20},
+        {type = "item", name = "ulric-corral-mk03", amount = 1},
+        {type = "item", name = "nenbit-matrix", amount = 50},
+        {type = "item", name = "control-unit", amount = 15},
+        {type = "item", name = "low-density-structure", amount = 15},
     },
     results = {
-        {"ulric-corral-mk04", 1}
+        {type = "item", name = "ulric-corral-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

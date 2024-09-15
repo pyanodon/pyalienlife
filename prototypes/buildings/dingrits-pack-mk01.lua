@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nbti-alloy", 40},
-        {"small-lamp", 20},
-        {"concrete", 200},
-        {"concrete-wall", 50},
-        {"electronic-circuit", 50},
-        {"steel-plate", 50},
+        {type = "item", name = "nbti-alloy", amount = 40},
+        {type = "item", name = "small-lamp", amount = 20},
+        {type = "item", name = "concrete", amount = 200},
+        {type = "item", name = "concrete-wall", amount = 50},
+        {type = "item", name = "electronic-circuit", amount = 50},
+        {type = "item", name = "steel-plate", amount = 50},
     },
     results = {
-        {"dingrits-pack-mk01", 1}
+        {type = "item", name = "dingrits-pack-mk01", amount = 1}
     }
 }:add_unlock("dingrits")
 

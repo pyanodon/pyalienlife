@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"grods-swamp-mk03", 1},
-        {"super-alloy", 25},
-        {"blanket", 5},
-        {"control-unit", 10},
-        {"metallic-glass", 40},
-        {"boron-carbide", 40},
+        {type = "item", name = "grods-swamp-mk03", amount = 1},
+        {type = "item", name = "super-alloy", amount = 25},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "metallic-glass", amount = 40},
+        {type = "item", name = "boron-carbide", amount = 40},
     },
     results = {
-        {"grods-swamp-mk04", 1}
+        {type = "item", name = "grods-swamp-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

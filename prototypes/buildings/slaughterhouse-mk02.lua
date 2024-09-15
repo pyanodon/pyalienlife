@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"duralumin", 50},
-        {"niobium-pipe", 20},
-        {"lead-plate", 40},
-        {"engine-unit", 20},
-        {"advanced-circuit", 30},
-        {"slaughterhouse-mk01", 1},
-        {"latex", 25},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "lead-plate", amount = 40},
+        {type = "item", name = "engine-unit", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "slaughterhouse-mk01", amount = 1},
+        {type = "item", name = "latex", amount = 25},
     },
     results = {
-        {"slaughterhouse-mk02", 1}
+        {type = "item", name = "slaughterhouse-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02")
 

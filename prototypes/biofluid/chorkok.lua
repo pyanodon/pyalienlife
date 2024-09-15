@@ -5,18 +5,18 @@ RECIPE {
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {'earth-bat-sample', 1},
-        {'strorix-unknown-sample', 1},
-        {'cdna', 3},
-        {'perfect-samples', 1},
-        {'bio-sample', 15},
-        {'pheromones', 5},
+        {type = "item", name = 'earth-bat-sample', amount = 1},
+        {type = "item", name = 'strorix-unknown-sample', amount = 1},
+        {type = "item", name = 'cdna', amount = 3},
+        {type = "item", name = 'perfect-samples', amount = 1},
+        {type = "item", name = 'bio-sample', amount = 15},
+        {type = "item", name = 'pheromones', amount = 5},
         {type = 'fluid', name = 'artificial-blood', amount = 100},
         {type = 'fluid', name = 'fetal-serum', amount = 100},
         {type = 'fluid', name = 'coal-slurry', amount = 200},
     },
     results = {
-        {'chorkok', 1}
+        {type = "item", name = 'chorkok', amount = 1}
     }
 }:add_unlock{'biofluid-mk03'}
 

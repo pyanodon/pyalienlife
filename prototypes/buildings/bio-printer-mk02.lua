@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"bio-printer-mk01", 1},
-        {"stainless-steel", 60},
-        {"glass", 40},
-        {"advanced-circuit", 20},
-        {"engine-unit", 20},
-        {"titanium-plate", 20},
-        {"latex", 30},
-        {"neuroprocessor", 20},
+        {type = "item", name = "bio-printer-mk01", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 60},
+        {type = "item", name = "glass", amount = 40},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "engine-unit", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"bio-printer-mk02", 1}
+        {type = "item", name = "bio-printer-mk02", amount = 1}
     }
 }:add_unlock("organ-printing-mk02")
 

@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 900},
-        {"pump", 5},
-        {"engine-unit", 5},
-        {"treated-wood", 50},
-        {"pipe", 40},
-        {"electronic-circuit", 20},
-        {"titanium-plate", 50},
-        {"steel-plate", 50},
-        {"glass", 40},
+        {type = "item", name = "stone-brick", amount = 900},
+        {type = "item", name = "pump", amount = 5},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "treated-wood", amount = 50},
+        {type = "item", name = "pipe", amount = 40},
+        {type = "item", name = "electronic-circuit", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 50},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "glass", amount = 40},
     },
     results = {
-        {"space-grods-swamp-mk01", 1}
+        {type = "item", name = "space-grods-swamp-mk01", amount = 1}
     }
 }:add_unlock("grod")
 

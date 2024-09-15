@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-                {"xyhiphoe-pool-mk01", 1},
-                {'glass', 100},
-                {'lead-plate', 10},
-                {'nexelit-plate', 15},
-                {'advanced-circuit', 10},
-                {"neuroprocessor", 30},
-                {"engine-unit", 5},
-                {"latex", 30},
-                {"niobium-plate", 20},
+                {type = "item", name = "xyhiphoe-pool-mk01", amount = 1},
+                {type = "item", name = 'glass', amount = 100},
+                {type = "item", name = 'lead-plate', amount = 10},
+                {type = "item", name = 'nexelit-plate', amount = 15},
+                {type = "item", name = 'advanced-circuit', amount = 10},
+                {type = "item", name = "neuroprocessor", amount = 30},
+                {type = "item", name = "engine-unit", amount = 5},
+                {type = "item", name = "latex", amount = 30},
+                {type = "item", name = "niobium-plate", amount = 20},
             },
     results = {
-        {"xyhiphoe-pool-mk02", 1}
+        {type = "item", name = "xyhiphoe-pool-mk02", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 50})
 

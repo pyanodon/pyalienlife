@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"steel-plate", 15},
-        {"pipe", 10},
-        {"auog", 1},
-        {"iron-plate", 50},
-        {"aluminium-plate", 50},
-        {"lead-plate", 30},
-        {"iron-stick", 30},
-        {"iron-gear-wheel", 40}
+        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "pipe", amount = 10},
+        {type = "item", name = "auog", amount = 1},
+        {type = "item", name = "iron-plate", amount = 50},
+        {type = "item", name = "aluminium-plate", amount = 50},
+        {type = "item", name = "lead-plate", amount = 30},
+        {type = "item", name = "iron-stick", amount = 30},
+        {type = "item", name = "iron-gear-wheel", amount = 40}
     },
     results = {
-        {"generator-1", 1}
+        {type = "item", name = "generator-1", amount = 1}
     }
 }:add_unlock("domestication")
 

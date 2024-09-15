@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"vrauks-paddock-mk01", 1},
-        {"plastic-bar", 20},
-        {"advanced-circuit", 10},
-        {"neuroprocessor", 30},
-        {"latex", 30},
-        {"niobium-plate", 20},
+        {type = "item", name = "vrauks-paddock-mk01", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "neuroprocessor", amount = 30},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "niobium-plate", amount = 20},
     },
     results = {
-        {"vrauks-paddock-mk02", 1}
+        {type = "item", name = "vrauks-paddock-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

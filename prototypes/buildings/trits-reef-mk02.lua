@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 100},
-        {"lead-plate", 50},
-        {"steel-plate", 100},
-        {"latex", 50},
-        {"trits-reef-mk01", 1},
-        {"engine-unit", 5},
-        {"neuroprocessor", 30},
-        {"advanced-circuit", 35},
+        {type = "item", name = "concrete", amount = 100},
+        {type = "item", name = "lead-plate", amount = 50},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "latex", amount = 50},
+        {type = "item", name = "trits-reef-mk01", amount = 1},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "neuroprocessor", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 35},
     },
     results = {
-        {"trits-reef-mk02", 1}
+        {type = "item", name = "trits-reef-mk02", amount = 1}
     }
 }:add_unlock("water-animals-mk02")
 

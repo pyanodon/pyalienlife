@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'prandium-lab-mk01', 1},
-        {"advanced-circuit", 20},
-        {"small-lamp", 8},
-        {"nexelit-plate", 30},
-        {"steel-plate", 40},
-        {"glass", 50},
+        {type = "item", name = 'prandium-lab-mk01', amount = 1},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "small-lamp", amount = 8},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "glass", amount = 50},
     },
     results = {
-        {"prandium-lab-mk02", 1}
+        {type = "item", name = "prandium-lab-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient('small-parts-02')
 

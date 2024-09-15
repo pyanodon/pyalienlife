@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"mukmoux-pasture-mk01", 1},
-        {"lead-plate", 10},
-        {"latex", 20},
-        {"neuroprocessor", 30},
-        {"advanced-circuit", 10}
+        {type = "item", name = "mukmoux-pasture-mk01", amount = 1},
+        {type = "item", name = "lead-plate", amount = 10},
+        {type = "item", name = "latex", amount = 20},
+        {type = "item", name = "neuroprocessor", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 10}
     },
     results = {
-        {"mukmoux-pasture-mk02", 1}
+        {type = "item", name = "mukmoux-pasture-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

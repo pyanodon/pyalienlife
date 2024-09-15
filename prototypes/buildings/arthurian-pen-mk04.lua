@@ -6,13 +6,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"arthurian-pen-mk03", 1},
-        {"metallic-glass", 20},
-        {"super-steel", 40},
-        {"control-unit", 10},
+        {type = "item", name = "arthurian-pen-mk03", amount = 1},
+        {type = "item", name = "metallic-glass", amount = 20},
+        {type = "item", name = "super-steel", amount = 40},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"arthurian-pen-mk04", 1}
+        {type = "item", name = "arthurian-pen-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

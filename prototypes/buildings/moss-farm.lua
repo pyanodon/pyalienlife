@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"soil", 50},
-        {"iron-plate", 20},
-        {"aluminium-plate", 10},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 10},
-        {"steam-engine", 2},
+        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "soil", amount = 50},
+        {type = "item", name = "iron-plate", amount = 20},
+        {type = "item", name = "aluminium-plate", amount = 10},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 10},
+        {type = "item", name = "steam-engine", amount = 2},
     },
     results = {
-        {"moss-farm-mk01", 1}
+        {type = "item", name = "moss-farm-mk01", amount = 1}
     }
 }:add_unlock("moss-mk01")
 

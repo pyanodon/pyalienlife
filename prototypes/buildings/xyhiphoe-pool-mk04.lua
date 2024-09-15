@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'xyhiphoe-pool-mk03', 1},
-        {"control-unit", 10},
-        {'super-steel', 30},
-        {'low-density-structure', 15},
-        {'nbfe-alloy', 20},
-        {"metallic-glass", 100},
+        {type = "item", name = 'xyhiphoe-pool-mk03', amount = 1},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = 'super-steel', amount = 30},
+        {type = "item", name = 'low-density-structure', amount = 15},
+        {type = "item", name = 'nbfe-alloy', amount = 20},
+        {type = "item", name = "metallic-glass", amount = 100},
     },
 results = {
-        {"xyhiphoe-pool-mk04", 1}
+        {type = "item", name = "xyhiphoe-pool-mk04", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk04")
 

@@ -44,10 +44,10 @@ for food, value in pairs(Digosaurus.favorite_foods) do
         enabled = false,
         energy_required = 10,
         ingredients = {
-            {food, 1}
+            {type = "item", name = food, amount = 1}
         },
         results = {
-            {'nexelit-ore', value}
+            {type = "item", name = 'nexelit-ore', amount = value}
         },
         category = 'dino-dig-site',
         hide_from_player_crafting = true

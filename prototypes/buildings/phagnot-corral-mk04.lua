@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"phagnot-corral-mk03", 1},
-        {"science-coating", 30},
-        {"wall-shield", 15},
-        {"nbfe-alloy", 100},
-        {"kevlar", 80},
-        {"control-unit", 40},
+        {type = "item", name = "phagnot-corral-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 30},
+        {type = "item", name = "wall-shield", amount = 15},
+        {type = "item", name = "nbfe-alloy", amount = 100},
+        {type = "item", name = "kevlar", amount = 80},
+        {type = "item", name = "control-unit", amount = 40},
     },
     results = {
-        {"phagnot-corral-mk04", 1}
+        {type = "item", name = "phagnot-corral-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

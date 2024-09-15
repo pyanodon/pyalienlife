@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"molybdenum-plate", 50},
-        {"spore-collector-mk02", 1},
-        {"electric-engine-unit", 15},
-        {"sc-unit", 10},
-        {"super-steel", 80},
-        {"processing-unit", 40},
+        {type = "item", name = "molybdenum-plate", amount = 50},
+        {type = "item", name = "spore-collector-mk02", amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 15},
+        {type = "item", name = "sc-unit", amount = 10},
+        {type = "item", name = "super-steel", amount = 80},
+        {type = "item", name = "processing-unit", amount = 40},
     },
     results = {
-        {"spore-collector-mk03", 1}
+        {type = "item", name = "spore-collector-mk03", amount = 1}
     }
 }:add_unlock("mycology-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

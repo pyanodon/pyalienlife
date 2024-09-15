@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"micro-mine-mk01", 1},
-        {"duralumin", 20},
-        {"advanced-circuit", 15},
-        {"engine-unit", 10},
-        {"latex", 30},
+        {type = "item", name = "micro-mine-mk01", amount = 1},
+        {type = "item", name = "duralumin", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "latex", amount = 30},
     },
     results = {
-        {"micro-mine-mk02", 1}
+        {type = "item", name = "micro-mine-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

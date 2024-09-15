@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"py-heat-exchanger", 1},
-        {"dhilmos-pool-mk02", 1},
-        {"molybdenum-plate", 20},
-        {"boron-carbide", 30},
-        {"processing-unit", 50},
-        {"electric-engine-unit", 10},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "dhilmos-pool-mk02", amount = 1},
+        {type = "item", name = "molybdenum-plate", amount = 20},
+        {type = "item", name = "boron-carbide", amount = 30},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 10},
     },
     results = {
-        {"dhilmos-pool-mk03", 1}
+        {type = "item", name = "dhilmos-pool-mk03", amount = 1}
     }
 }:add_unlock("water-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {'iron-gear-wheel',    200},
-        {'steel-plate',        100},
-        {'iron-plate',         200},
-        {'titanium-plate',     100},
-        {'glass',              50},
-        {'stone-brick',        400},
-        {'electronic-circuit', 20},
-        {'concrete',           100},
-        {'steam-engine',       3},
+        {type = "item", name = 'iron-gear-wheel', amount = 200},
+        {type = "item", name = 'steel-plate', amount = 100},
+        {type = "item", name = 'iron-plate', amount = 200},
+        {type = "item", name = 'titanium-plate', amount = 100},
+        {type = "item", name = 'glass', amount = 50},
+        {type = "item", name = 'stone-brick', amount = 400},
+        {type = "item", name = 'electronic-circuit', amount = 20},
+        {type = "item", name = 'concrete', amount = 100},
+        {type = "item", name = 'steam-engine', amount = 3},
     },
     results = {
-        {'rc-mk01', 1}
+        {type = "item", name = 'rc-mk01', amount = 1}
     }
 }:add_unlock('biotech-machines-mk01')
 

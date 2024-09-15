@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"atomizer-mk02", 1},
-        {"processing-unit", 30},
-        {"stainless-steel", 30},
-        {"electric-engine-unit", 10},
-        {"molybdenum-plate", 30},
-        {"ticocr-alloy", 20},
+        {type = "item", name = "atomizer-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "stainless-steel", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "molybdenum-plate", amount = 30},
+        {type = "item", name = "ticocr-alloy", amount = 20},
     },
     results = {
-        {"atomizer-mk03", 1}
+        {type = "item", name = "atomizer-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

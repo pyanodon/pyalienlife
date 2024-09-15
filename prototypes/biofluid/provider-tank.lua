@@ -7,16 +7,16 @@ RECIPE {
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {'earth-generic-sample', 1},
-        {'cdna', 1},
-        {'alien-sample01', 2},
-        {'red-wire', 2},
+        {type = "item", name = 'earth-generic-sample', amount = 1},
+        {type = "item", name = 'cdna', amount = 1},
+        {type = "item", name = 'alien-sample01', amount = 2},
+        {type = "item", name = 'red-wire', amount = 2},
         {type = 'fluid', name = 'water-saline', amount = 50},
         {type = 'fluid', name = 'fetal-serum', amount = 10},
         {type = 'fluid', name = 'coal-slurry', amount = 50},
     },
     results = {
-        {'provider-tank', 1}
+        {type = "item", name = 'provider-tank', amount = 1}
     }
 }:add_unlock('biofluid-mk01')
 

@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"simik-den-mk03", 1},
-        {"super-alloy", 20},
-        {"control-unit", 10},
-        {"nenbit-matrix", 50},
-        {"metallic-glass", 30},
+        {type = "item", name = "simik-den-mk03", amount = 1},
+        {type = "item", name = "super-alloy", amount = 20},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "nenbit-matrix", amount = 50},
+        {type = "item", name = "metallic-glass", amount = 30},
     },
     results = {
-        {"simik-den-mk04", 1}
+        {type = "item", name = "simik-den-mk04", amount = 1}
     }
 }--:add_unlock("land-animals-mk04")
 

@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"steel-plate", 15},
-        {"steam-engine", 5},
-        {"glass", 50},
-        {"titanium-plate", 15},
-        {"duralumin", 50},
-        {"electronic-circuit", 15},
-        {"iron-gear-wheel", 20},
+        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "steam-engine", amount = 5},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "titanium-plate", amount = 15},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "electronic-circuit", amount = 15},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
     },
     results = {
-        {"biofactory-mk01", 1}
+        {type = "item", name = "biofactory-mk01", amount = 1}
     }
 }:add_unlock("plastics")
 

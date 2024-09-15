@@ -11,14 +11,14 @@ RECIPE {
     enabled = false,
     category = 'creature-chamber',
     ingredients = {
-        {'earth-generic-sample', 1},
-        {'microcin-j25', 1},
-        {'alien-sample01', 2},
+        {type = "item", name = 'earth-generic-sample', amount = 1},
+        {type = "item", name = 'microcin-j25', amount = 1},
+        {type = "item", name = 'alien-sample01', amount = 2},
         {type = 'fluid', name = 'water-saline', amount = 20},
         {type = 'fluid', name = 'coal-slurry', amount = 20},
     },
     results = {
-        {'vessel', 40}
+        {type = "item", name = 'vessel', amount = 40}
     }
 }:add_unlock('biofluid-mk01')
 

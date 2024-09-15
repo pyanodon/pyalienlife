@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"biofactory-mk03", 1},
-        {"nbfe-alloy", 30},
-        {"nenbit-matrix", 25},
-        {"boron-carbide", 40},
-        {"control-unit", 10},
-        {"super-steel", 100},
+        {type = "item", name = "biofactory-mk03", amount = 1},
+        {type = "item", name = "nbfe-alloy", amount = 30},
+        {type = "item", name = "nenbit-matrix", amount = 25},
+        {type = "item", name = "boron-carbide", amount = 40},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "super-steel", amount = 100},
     },
     results = {
-        {"biofactory-mk04", 1}
+        {type = "item", name = "biofactory-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

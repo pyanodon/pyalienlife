@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"zipir-reef-mk02", 1},
-        {"py-heat-exchanger", 1},
-        {"processing-unit", 40},
-        {"nbti-alloy", 35},
-        {"electric-engine-unit", 10},
-        {"nichrome", 30},
+        {type = "item", name = "zipir-reef-mk02", amount = 1},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "nbti-alloy", amount = 35},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "nichrome", amount = 30},
     },
     results = {
-        {"zipir-reef-mk03", 1}
+        {type = "item", name = "zipir-reef-mk03", amount = 1}
     }
 }:add_unlock("water-animals-mk03")
 

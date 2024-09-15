@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        -- {"ticocr-alloy", 15},
-        {"sponge-culture-mk02", 1},
-        {"nbti-alloy", 25},
-        {"electric-engine-unit", 5},
-        {"low-density-structure", 50},
-        {"processing-unit", 30},
+        -- {type = "item", name = "ticocr-alloy", amount = 15},
+        {type = "item", name = "sponge-culture-mk02", amount = 1},
+        {type = "item", name = "nbti-alloy", amount = 25},
+        {type = "item", name = "electric-engine-unit", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 50},
+        {type = "item", name = "processing-unit", amount = 30},
     },
     results = {
-        {"sponge-culture-mk03", 1}
+        {type = "item", name = "sponge-culture-mk03", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

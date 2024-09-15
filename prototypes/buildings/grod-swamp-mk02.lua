@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"grods-swamp-mk01", 1},
-        {"latex", 15},
-        {"engine-unit", 20},
-        {"treated-wood", 50},
-        {"niobium-pipe", 20},
-        {"advanced-circuit", 20},
-        {"glass", 40},
-        {"plastic-bar", 30},
+        {type = "item", name = "grods-swamp-mk01", amount = 1},
+        {type = "item", name = "latex", amount = 15},
+        {type = "item", name = "engine-unit", amount = 20},
+        {type = "item", name = "treated-wood", amount = 50},
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "glass", amount = 40},
+        {type = "item", name = "plastic-bar", amount = 30},
     },
     results = {
-        {"grods-swamp-mk02", 1}
+        {type = "item", name = "grods-swamp-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

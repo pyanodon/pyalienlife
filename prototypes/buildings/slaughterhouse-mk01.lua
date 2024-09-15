@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 100},
-        {"pipe", 20},
-        {"titanium-plate", 40},
-        {"steam-engine", 10},
-        {"electronic-circuit", 50},
-        {"iron-gear-wheel", 70},
-        {"glass", 50},
+        {type = "item", name = "stone-brick", amount = 100},
+        {type = "item", name = "pipe", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 40},
+        {type = "item", name = "steam-engine", amount = 10},
+        {type = "item", name = "electronic-circuit", amount = 50},
+        {type = "item", name = "iron-gear-wheel", amount = 70},
+        {type = "item", name = "glass", amount = 50},
     },
     results = {
-        {"slaughterhouse-mk01", 1}
+        {type = "item", name = "slaughterhouse-mk01", amount = 1}
     }
 }:add_unlock("rendering")
 

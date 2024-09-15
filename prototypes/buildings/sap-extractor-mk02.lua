@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"sap-extractor-mk01", 1},
-        {"treated-wood", 100},
-        {"engine-unit", 2},
-        {"duralumin", 12},
-        {"fast-inserter", 2},
-        {"advanced-circuit", 15},
-        {"steel-plate", 40},
+        {type = "item", name = "sap-extractor-mk01", amount = 1},
+        {type = "item", name = "treated-wood", amount = 100},
+        {type = "item", name = "engine-unit", amount = 2},
+        {type = "item", name = "duralumin", amount = 12},
+        {type = "item", name = "fast-inserter", amount = 2},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "steel-plate", amount = 40},
     },
     results = {
-        {"sap-extractor-mk02", 1}
+        {type = "item", name = "sap-extractor-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 15})
 

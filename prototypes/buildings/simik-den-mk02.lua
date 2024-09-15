@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"simik-den-mk01", 1},
-        {"nbti-alloy", 30},
-        {"engine-unit", 2},
-        {"nexelit-plate", 10},
-        {"latex", 20},
-        {"neuroprocessor", 30},
+        {type = "item", name = "simik-den-mk01", amount = 1},
+        {type = "item", name = "nbti-alloy", amount = 30},
+        {type = "item", name = "engine-unit", amount = 2},
+        {type = "item", name = "nexelit-plate", amount = 10},
+        {type = "item", name = "latex", amount = 20},
+        {type = "item", name = "neuroprocessor", amount = 30},
     },
     results = {
-        {"simik-den-mk02", 1}
+        {type = "item", name = "simik-den-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk03")
 

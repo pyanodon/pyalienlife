@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"sap-extractor-mk03", 1},
-        {"super-steel", 100},
-        {"divertor", 5},
-        {"science-coating", 20},
-        {"control-unit", 30},
-        {"nenbit-matrix", 40},
+        {type = "item", name = "sap-extractor-mk03", amount = 1},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "divertor", amount = 5},
+        {type = "item", name = "science-coating", amount = 20},
+        {type = "item", name = "control-unit", amount = 30},
+        {type = "item", name = "nenbit-matrix", amount = 40},
     },
     results = {
-        {"sap-extractor-mk04", 1}
+        {type = "item", name = "sap-extractor-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

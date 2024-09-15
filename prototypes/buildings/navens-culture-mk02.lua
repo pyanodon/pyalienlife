@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"navens-culture-mk01", 1},
-        {"nexelit-plate", 20},
-        {"engine-unit", 3},
-        {"latex", 25},
-        {"neuroprocessor", 30},
-        {"advanced-circuit", 15},
-        {"lead-plate", 40},
+        {type = "item", name = "navens-culture-mk01", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "engine-unit", amount = 3},
+        {type = "item", name = "latex", amount = 25},
+        {type = "item", name = "neuroprocessor", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "lead-plate", amount = 40},
     },
     results = {
-        {"navens-culture-mk02", 1}
+        {type = "item", name = "navens-culture-mk02", amount = 1}
     }
 }:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

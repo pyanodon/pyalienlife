@@ -15,13 +15,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"botanical-nursery", 1},
-        {"duralumin", 40},
-        {"glass", 30},
-        {"steel-plate", 25},
+        {type = "item", name = "botanical-nursery", amount = 1},
+        {type = "item", name = "duralumin", amount = 40},
+        {type = "item", name = "glass", amount = 30},
+        {type = "item", name = "steel-plate", amount = 25},
     },
     results = {
-        {"space-kicalk-plantation-mk01", 1}
+        {type = "item", name = "space-kicalk-plantation-mk01", amount = 1}
     }
 }:add_unlock('kicalk')
 

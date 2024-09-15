@@ -5,18 +5,18 @@ RECIPE {
     enabled = false,
     category = 'creature-chamber',
     ingredients = {
-        {'megadar', 1},
-        {'earth-generic-sample', 5},
-        {'cdna', 5},
-        {'resveratrol', 10},
-        {'alien-sample-02', 5},
-        {'bio-sample', 20},
+        {type = "item", name = 'megadar', amount = 1},
+        {type = "item", name = 'earth-generic-sample', amount = 5},
+        {type = "item", name = 'cdna', amount = 5},
+        {type = "item", name = 'resveratrol', amount = 10},
+        {type = "item", name = 'alien-sample-02', amount = 5},
+        {type = "item", name = 'bio-sample', amount = 20},
         {type = 'fluid', name = 'water-saline', amount = 200},
         {type = 'fluid', name = 'fetal-serum', amount = 100},
         {type = 'fluid', name = 'coal-slurry', amount = 100},
     },
     results = {
-        {'bioport', 1}
+        {type = "item", name = 'bioport', amount = 1}
     }
 }:add_unlock{'biofluid-mk01'}
 

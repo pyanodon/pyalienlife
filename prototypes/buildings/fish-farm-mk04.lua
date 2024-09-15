@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"fish-farm-mk03", 1},
-        {"boron-carbide", 50},
-        {"blanket", 1},
-        {"silver-foam", 20},
-        {"divertor", 10},
-        {"metallic-glass", 30},
-        {"control-unit", 10},
+        {type = "item", name = "fish-farm-mk03", amount = 1},
+        {type = "item", name = "boron-carbide", amount = 50},
+        {type = "item", name = "blanket", amount = 1},
+        {type = "item", name = "silver-foam", amount = 20},
+        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "metallic-glass", amount = 30},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"fish-farm-mk04", 1}
+        {type = "item", name = "fish-farm-mk04", amount = 1}
     }
 }:add_unlock("water-animals-mk04")
 

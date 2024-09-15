@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"kmauts-enclosure-mk03", 1},
-        {"divertor", 10},
-        {"kevlar", 100},
-        {"nbfe-alloy", 100},
-        {"blanket", 5},
-        {"control-unit", 10},
+        {type = "item", name = "kmauts-enclosure-mk03", amount = 1},
+        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "kevlar", amount = 100},
+        {type = "item", name = "nbfe-alloy", amount = 100},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"kmauts-enclosure-mk04", 1}
+        {type = "item", name = "kmauts-enclosure-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk05")
 

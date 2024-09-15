@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"zungror-lair-mk01", 1},
-        {"ticocr-alloy", 50},
-        {"low-density-structure", 100},
-        {"metallic-glass", 100},
-        {"processing-unit", 50},
-        {"control-unit", 20},
-        {"molybdenum-plate", 50},
+        {type = "item", name = "zungror-lair-mk01", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "low-density-structure", amount = 100},
+        {type = "item", name = "metallic-glass", amount = 100},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "control-unit", amount = 20},
+        {type = "item", name = "molybdenum-plate", amount = 50},
     },
     results = {
-        {"zungror-lair-mk02", 1}
+        {type = "item", name = "zungror-lair-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk03")
 

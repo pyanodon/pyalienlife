@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 20},
-        {"nbti-alloy", 40},
-        {"iron-stick", 500},
-        {"steam-engine", 2},
-        {"latex", 30},
-        {"advanced-circuit", 50},
-        {"super-steel", 50},
+        {type = "item", name = "concrete", amount = 20},
+        {type = "item", name = "nbti-alloy", amount = 40},
+        {type = "item", name = "iron-stick", amount = 500},
+        {type = "item", name = "steam-engine", amount = 2},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 50},
+        {type = "item", name = "super-steel", amount = 50},
     },
     results = {
-        {"phadai-enclosure-mk01", 1}
+        {type = "item", name = "phadai-enclosure-mk01", amount = 1}
     }
 }:add_unlock("phadai")
 

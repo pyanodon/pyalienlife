@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"moss-farm-mk01", 1},
-        {"assembling-machine-2", 1},
-        {"plastic-bar", 20},
-        {"duralumin", 50},
-        {"engine-unit", 10},
-        {"advanced-circuit", 15}
+        {type = "item", name = "moss-farm-mk01", amount = 1},
+        {type = "item", name = "assembling-machine-2", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 15}
     },
     results = {
-        {"moss-farm-mk02", 1}
+        {type = "item", name = "moss-farm-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

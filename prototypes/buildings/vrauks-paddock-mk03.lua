@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"vrauks-paddock-mk02", 1},
-        {"molybdenum-plate", 20},
-        {"processing-unit", 10},
-        {"nexelit-plate", 30},
-        {"stainless-steel", 30},
-        {"niobium-plate", 30},
+        {type = "item", name = "vrauks-paddock-mk02", amount = 1},
+        {type = "item", name = "molybdenum-plate", amount = 20},
+        {type = "item", name = "processing-unit", amount = 10},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "stainless-steel", amount = 30},
+        {type = "item", name = "niobium-plate", amount = 30},
     },
     results = {
-        {"vrauks-paddock-mk03", 1}
+        {type = "item", name = "vrauks-paddock-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

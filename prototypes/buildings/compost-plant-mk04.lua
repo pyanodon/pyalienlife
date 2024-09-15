@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"compost-plant-mk03", 1},
-        {"super-steel", 100},
-        {"boron-carbide", 50},
-        {"control-unit", 10},
-        {"metallic-glass", 20},
-        {"nenbit-matrix", 40},
-        {"science-coating", 30},
+        {type = "item", name = "compost-plant-mk03", amount = 1},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "boron-carbide", amount = 50},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "metallic-glass", amount = 20},
+        {type = "item", name = "nenbit-matrix", amount = 40},
+        {type = "item", name = "science-coating", amount = 30},
     },
     results = {
-        {"compost-plant-mk04", 1}
+        {type = "item", name = "compost-plant-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

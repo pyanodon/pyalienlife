@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"blanket", 5},
-        {"wall-shield", 20},
-        {"nbfe-alloy", 40},
-        {"super-steel", 100},
-        {"control-unit", 10},
-        {"slaughterhouse-mk03", 1},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "wall-shield", amount = 20},
+        {type = "item", name = "nbfe-alloy", amount = 40},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "slaughterhouse-mk03", amount = 1},
     },
     results = {
-        {"slaughterhouse-mk04", 1}
+        {type = "item", name = "slaughterhouse-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

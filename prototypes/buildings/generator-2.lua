@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stainless-steel", 15},
-        {"niobium-pipe", 10},
-        {"nexelit-plate", 25},
-        {"advanced-circuit", 10},
-        {"dingrits", 1},
-        {"engine-unit", 5},
-        {"nbfe-alloy", 20},
-        {"iron-gear-wheel", 40}
+        {type = "item", name = "stainless-steel", amount = 15},
+        {type = "item", name = "niobium-pipe", amount = 10},
+        {type = "item", name = "nexelit-plate", amount = 25},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "dingrits", amount = 1},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "nbfe-alloy", amount = 20},
+        {type = "item", name = "iron-gear-wheel", amount = 40}
     },
     results = {
-        {"generator-2", 1}
+        {type = "item", name = "generator-2", amount = 1}
     }
 }:add_unlock("domestication-mk04")
 

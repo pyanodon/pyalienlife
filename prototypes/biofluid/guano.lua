@@ -16,8 +16,8 @@ RECIPE {
     enabled = false,
     category = 'mixer',
     ingredients = {
-        {'manure', 8},
-        {'guano', 8},
+        {type = "item", name = 'manure', amount = 8},
+        {type = "item", name = 'guano', amount = 8},
         {type = 'fluid', name = 'water', amount = 5}
     },
     results = {

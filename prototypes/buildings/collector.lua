@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {'electric-mining-drill', 2},
-        {'soil-extractor-mk01',   1},
-        {'electronic-circuit',    5},
-        {'iron-gear-wheel',       10},
-        {'iron-plate',            20},
-        {'steam-engine',          1},
+        {type = "item", name = 'electric-mining-drill', amount = 2},
+        {type = "item", name = 'soil-extractor-mk01', amount = 1},
+        {type = "item", name = 'electronic-circuit', amount = 5},
+        {type = "item", name = 'iron-gear-wheel', amount = 10},
+        {type = "item", name = 'iron-plate', amount = 20},
+        {type = "item", name = 'steam-engine', amount = 1},
     },
     results = {
-        {'collector', 1}
+        {type = "item", name = 'collector', amount = 1}
     }
 } --:add_unlock("biotech-mk01")
 

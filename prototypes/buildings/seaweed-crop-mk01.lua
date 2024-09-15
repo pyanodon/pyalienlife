@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 30},
-        {"limestone", 25},
-        {"pipe", 15},
-        {"electronic-circuit", 10},
-        {"steam-engine", 3},
-        {"tin-plate", 50},
+        {type = "item", name = "stone-brick", amount = 30},
+        {type = "item", name = "limestone", amount = 25},
+        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "steam-engine", amount = 3},
+        {type = "item", name = "tin-plate", amount = 50},
     },
     results = {
-        {"seaweed-crop-mk01", 1}
+        {type = "item", name = "seaweed-crop-mk01", amount = 1}
     }
 }:add_unlock("seaweed-mk01")
 

@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"fluid-drill-mk02", 1},
-        {"small-parts-02", 20},
-        {"electric-engine-unit", 4},
-        {"advanced-circuit", 5},
-        {"stainless-steel", 40},
-        {"niobium-pipe", 20},
+        {type = "item", name = "fluid-drill-mk02", amount = 1},
+        {type = "item", name = "small-parts-02", amount = 20},
+        {type = "item", name = "electric-engine-unit", amount = 4},
+        {type = "item", name = "advanced-circuit", amount = 5},
+        {type = "item", name = "stainless-steel", amount = 40},
+        {type = "item", name = "niobium-pipe", amount = 20},
     },
     results = {
-        {"fluid-drill-mk03", 1}
+        {type = "item", name = "fluid-drill-mk03", amount = 1}
     }
 }:add_unlock("machines-mk03")
 

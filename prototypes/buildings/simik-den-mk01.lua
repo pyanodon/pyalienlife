@@ -8,18 +8,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"concrete", 20},
-        {"gate", 1},
-        {"nbfe-alloy", 20},
-        {"sncr-alloy", 20},
-        {"big-electric-pole", 8},
-        {"lens", 10},
-        {"advanced-circuit", 20},
-        {"pump", 1},
-        {"steel-plate", 50},
+        {type = "item", name = "concrete", amount = 20},
+        {type = "item", name = "gate", amount = 1},
+        {type = "item", name = "nbfe-alloy", amount = 20},
+        {type = "item", name = "sncr-alloy", amount = 20},
+        {type = "item", name = "big-electric-pole", amount = 8},
+        {type = "item", name = "lens", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "pump", amount = 1},
+        {type = "item", name = "steel-plate", amount = 50},
     },
     results = {
-        {"simik-den-mk01", 1}
+        {type = "item", name = "simik-den-mk01", amount = 1}
     }
 }:add_unlock("simik-mk01")
 

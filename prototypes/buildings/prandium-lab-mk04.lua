@@ -6,13 +6,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"prandium-lab-mk03", 1},
-        {'processing-unit', 15},
-        {"super-steel", 40},
-        {"super-alloy", 30},
+        {type = "item", name = "prandium-lab-mk03", amount = 1},
+        {type = "item", name = 'processing-unit', amount = 15},
+        {type = "item", name = "super-steel", amount = 40},
+        {type = "item", name = "super-alloy", amount = 30},
     },
     results = {
-        {"prandium-lab-mk04", 1}
+        {type = "item", name = "prandium-lab-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04"):replace_ingredient('processing-unit', 'intelligent-unit')
 

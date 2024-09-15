@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"kevlar", 100},
-        {"sponge-culture-mk03", 1},
-        {"blanket", 5},
-        {"metallic-glass", 50},
-        {"control-unit", 10},
+        {type = "item", name = "kevlar", amount = 100},
+        {type = "item", name = "sponge-culture-mk03", amount = 1},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "metallic-glass", amount = 50},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"sponge-culture-mk04", 1}
+        {type = "item", name = "sponge-culture-mk04", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk04")
 

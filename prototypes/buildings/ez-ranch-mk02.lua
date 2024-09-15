@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ez-ranch-mk01", 1},
-        {"titanium-plate", 30},
-        {"duralumin", 30},
-        {"latex", 30},
-        {"plastic-bar", 50},
-        {"engine-unit", 20},
-        {"advanced-circuit", 20},
+        {type = "item", name = "ez-ranch-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 30},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "plastic-bar", amount = 50},
+        {type = "item", name = "engine-unit", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 20},
     },
     results = {
-        {"ez-ranch-mk02", 1}
+        {type = "item", name = "ez-ranch-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100})
 

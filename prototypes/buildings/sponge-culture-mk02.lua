@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"steel-plate", 15},
-        {"sponge-culture-mk01", 1},
-        {"engine-unit", 4},
-        {"titanium-plate", 15},
-        {"duralumin", 50},
-        {"latex", 30},
-        {"neuroprocessor", 20},
-        {"advanced-circuit", 30},
+        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "sponge-culture-mk01", amount = 1},
+        {type = "item", name = "engine-unit", amount = 4},
+        {type = "item", name = "titanium-plate", amount = 15},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 30},
     },
     results = {
-        {"sponge-culture-mk02", 1}
+        {type = "item", name = "sponge-culture-mk02", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

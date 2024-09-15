@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"fish-farm-mk02", 1},
-        {"ticocr-alloy", 50},
-        {"py-heat-exchanger", 1},
-        {"electric-engine-unit", 4},
-        {"sc-unit", 20},
-        {"neuromorphic-chip", 30},
-        {"processing-unit", 50},
+        {type = "item", name = "fish-farm-mk02", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 4},
+        {type = "item", name = "sc-unit", amount = 20},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "processing-unit", amount = 50},
     },
     results = {
-        {"fish-farm-mk03", 1}
+        {type = "item", name = "fish-farm-mk03", amount = 1}
     }
 }:add_unlock("water-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

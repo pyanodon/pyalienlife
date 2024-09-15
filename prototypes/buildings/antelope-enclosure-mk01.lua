@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 200},
-        {"paramagnetic-material", 50},
-        {"super-alloy", 50},
-        {"graphene-roll", 50},
-        {"glass", 100},
-        {"processing-unit", 40},
+        {type = "item", name = "concrete", amount = 200},
+        {type = "item", name = "paramagnetic-material", amount = 50},
+        {type = "item", name = "super-alloy", amount = 50},
+        {type = "item", name = "graphene-roll", amount = 50},
+        {type = "item", name = "glass", amount = 100},
+        {type = "item", name = "processing-unit", amount = 40},
     },
     results = {
-        {"antelope-enclosure-mk01", 1}
+        {type = "item", name = "antelope-enclosure-mk01", amount = 1}
     }
 }:add_unlock("schrodinger-antelope")
 

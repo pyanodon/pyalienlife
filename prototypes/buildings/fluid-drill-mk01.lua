@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"burner-mining-drill", 2},
-        {"iron-gear-wheel", 30},
-        {"pipe", 20},
-        {"inductor1", 10},
-        {"steel-plate", 5},
-        {"steam-engine", 1},
+        {type = "item", name = "burner-mining-drill", amount = 2},
+        {type = "item", name = "iron-gear-wheel", amount = 30},
+        {type = "item", name = "pipe", amount = 20},
+        {type = "item", name = "inductor1", amount = 10},
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "steam-engine", amount = 1},
     },
     results = {
-        {"fluid-drill-mk01", 1}
+        {type = "item", name = "fluid-drill-mk01", amount = 1}
     }
 }:add_unlock("mining-with-fluid")
 

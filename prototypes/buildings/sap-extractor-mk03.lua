@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"sap-extractor-mk02", 1},
-        {"nexelit-plate", 100},
-        {"molybdenum-plate", 20},
-        {"stainless-steel", 50},
-        {"electric-engine-unit", 3},
-        {"processing-unit", 30},
-        {"nichrome", 40},
+        {type = "item", name = "sap-extractor-mk02", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 100},
+        {type = "item", name = "molybdenum-plate", amount = 20},
+        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 3},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "nichrome", amount = 40},
     },
     results = {
-        {"sap-extractor-mk03", 1}
+        {type = "item", name = "sap-extractor-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

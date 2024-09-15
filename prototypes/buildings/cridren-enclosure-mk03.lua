@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"ticocr-alloy", 30},
-        {"cridren-enclosure-mk02", 1},
-        {"low-density-structure", 40},
-        {"py-heat-exchanger", 1},
-        {"stainless-steel", 30},
-        {"processing-unit", 30},
+        {type = "item", name = "ticocr-alloy", amount = 30},
+        {type = "item", name = "cridren-enclosure-mk02", amount = 1},
+        {type = "item", name = "low-density-structure", amount = 40},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 30},
+        {type = "item", name = "processing-unit", amount = 30},
     },
     results = {
-        {"cridren-enclosure-mk03", 1}
+        {type = "item", name = "cridren-enclosure-mk03", amount = 1}
     }
 }:add_unlock("cridren-mk03")
 

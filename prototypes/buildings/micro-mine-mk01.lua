@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"electric-mining-drill", 1},
-        {"glass", 12},
-        {"inserter", 5},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 20},
+        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "electric-mining-drill", amount = 1},
+        {type = "item", name = "glass", amount = 12},
+        {type = "item", name = "inserter", amount = 5},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
     },
     results = {
-        {"micro-mine-mk01", 1}
+        {type = "item", name = "micro-mine-mk01", amount = 1}
     }
 }:add_unlock("basic-substrate")
 

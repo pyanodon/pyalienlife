@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ez-ranch-mk03", 1},
-        {"kevlar", 50},
-        {"super-alloy", 30},
-        {"super-steel", 60},
-        {"control-unit", 10},
-        {"blanket", 1},
+        {type = "item", name = "ez-ranch-mk03", amount = 1},
+        {type = "item", name = "kevlar", amount = 50},
+        {type = "item", name = "super-alloy", amount = 30},
+        {type = "item", name = "super-steel", amount = 60},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "blanket", amount = 1},
     },
     results = {
-        {"ez-ranch-mk04", 1}
+        {type = "item", name = "ez-ranch-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

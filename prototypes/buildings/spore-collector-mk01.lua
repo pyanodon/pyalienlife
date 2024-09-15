@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"steel-plate", 50},
-        {"gasifier", 1},
-        {"steam-engine", 3},
-        {"iron-plate", 20},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 20},
+        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "gasifier", amount = 1},
+        {type = "item", name = "steam-engine", amount = 3},
+        {type = "item", name = "iron-plate", amount = 20},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
     },
     results = {
-        {"spore-collector-mk01", 1}
+        {type = "item", name = "spore-collector-mk01", amount = 1}
     }
 }:add_unlock("mycology-mk01")
 

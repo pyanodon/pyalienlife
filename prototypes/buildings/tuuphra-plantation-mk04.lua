@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"tuuphra-plantation-mk03", 1},
-        {"science-coating", 15},
-        {"super-steel", 100},
-        {"kevlar", 80},
-        {"control-unit", 30},
+        {type = "item", name = "tuuphra-plantation-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "kevlar", amount = 80},
+        {type = "item", name = "control-unit", amount = 30},
     },
     results = {
-        {"tuuphra-plantation-mk04", 1}
+        {type = "item", name = "tuuphra-plantation-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

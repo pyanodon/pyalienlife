@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"rennea-plantation-mk02", 1},
-        {"nichrome", 15},
-        {"ticocr-alloy", 20},
-        {"processing-unit", 50},
-        {"molybdenum-plate", 40},
-        {"electric-engine-unit", 12},
-        {"nexelit-plate", 40},
+        {type = "item", name = "rennea-plantation-mk02", amount = 1},
+        {type = "item", name = "nichrome", amount = 15},
+        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "molybdenum-plate", amount = 40},
+        {type = "item", name = "electric-engine-unit", amount = 12},
+        {type = "item", name = "nexelit-plate", amount = 40},
     },
     results = {
-        {"rennea-plantation-mk03", 1}
+        {type = "item", name = "rennea-plantation-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"genlab-mk02", 1},
-        {"boron-carbide", 30},
-        {"processing-unit", 40},
-        {"sc-unit", 20},
-        {"nichrome", 40},
-        {"nexelit-plate", 30},
-        {"ticocr-alloy", 30},
+        {type = "item", name = "genlab-mk02", amount = 1},
+        {type = "item", name = "boron-carbide", amount = 30},
+        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "sc-unit", amount = 20},
+        {type = "item", name = "nichrome", amount = 40},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "ticocr-alloy", amount = 30},
     },
     results = {
-        {"genlab-mk03", 1}
+        {type = "item", name = "genlab-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03")
 

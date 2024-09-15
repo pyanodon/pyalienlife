@@ -7,14 +7,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {'steel-plate',        20},
-        {'titanium-plate',     20},
-        {'iron-gear-wheel',    20},
-        {'iron-plate',         10},
-        {'electronic-circuit', 10}
+        {type = "item", name = 'steel-plate', amount = 20},
+        {type = "item", name = 'titanium-plate', amount = 20},
+        {type = "item", name = 'iron-gear-wheel', amount = 20},
+        {type = "item", name = 'iron-plate', amount = 10},
+        {type = "item", name = 'electronic-circuit', amount = 10}
     },
     results = {
-        {'ulric-corral-mk01', 1}
+        {type = "item", name = 'ulric-corral-mk01', amount = 1}
     }
 }
 

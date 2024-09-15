@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"divertor", 10},
-        {"scrondrix-pen-mk03", 1},
-        {"wall-shield", 10},
-        {"control-unit", 10},
-        {"silver-foam", 50},
-        {"agzn-alloy", 40},
+        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "scrondrix-pen-mk03", amount = 1},
+        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "silver-foam", amount = 50},
+        {type = "item", name = "agzn-alloy", amount = 40},
     },
     results = {
-        {"scrondrix-pen-mk04", 1}
+        {type = "item", name = "scrondrix-pen-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

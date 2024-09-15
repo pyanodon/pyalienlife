@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"soil", 900},
-        {"pump", 5},
-        {"steam-engine", 5},
-        {"treated-wood", 50},
-        {"pipe", 30},
-        {"electronic-circuit", 50},
-        {"tin-plate", 50},
-        {"steel-plate", 50},
-        {"storage-tank", 4},
+        {type = "item", name = "soil", amount = 900},
+        {type = "item", name = "pump", amount = 5},
+        {type = "item", name = "steam-engine", amount = 5},
+        {type = "item", name = "treated-wood", amount = 50},
+        {type = "item", name = "pipe", amount = 30},
+        {type = "item", name = "electronic-circuit", amount = 50},
+        {type = "item", name = "tin-plate", amount = 50},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "storage-tank", amount = 4},
     },
     results = {
-        {"rennea-plantation-mk01", 1}
+        {type = "item", name = "rennea-plantation-mk01", amount = 1}
     }
 }:add_unlock("rennea")
 

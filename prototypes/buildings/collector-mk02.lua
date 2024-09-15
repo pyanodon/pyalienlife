@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"collector", 1},
-        {"glass", 30},
-        {"nexelit-plate", 15},
-        {"duralumin", 10},
-        {"advanced-circuit", 10},
-        {"engine-unit", 1},
-        {"latex", 10},
-        {"neuroprocessor", 5},
+        {type = "item", name = "collector", amount = 1},
+        {type = "item", name = "glass", amount = 30},
+        {type = "item", name = "nexelit-plate", amount = 15},
+        {type = "item", name = "duralumin", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "engine-unit", amount = 1},
+        {type = "item", name = "latex", amount = 10},
+        {type = "item", name = "neuroprocessor", amount = 5},
     },
     results = {
-        {"collector-mk02", 1}
+        {type = "item", name = "collector-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 50})
 

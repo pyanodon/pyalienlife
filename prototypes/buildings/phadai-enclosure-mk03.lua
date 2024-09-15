@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"phadai-enclosure-mk02", 1},
-        {"py-heat-exchanger", 1},
-        {"boron-carbide", 35},
-        {"ticocr-alloy", 30},
-        {"electric-engine-unit", 4},
-        {"processing-unit", 50},
-        {"low-density-structure", 50},
+        {type = "item", name = "phadai-enclosure-mk02", amount = 1},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "boron-carbide", amount = 35},
+        {type = "item", name = "ticocr-alloy", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 4},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "low-density-structure", amount = 50},
     },
     results = {
-        {"phadai-enclosure-mk03", 1}
+        {type = "item", name = "phadai-enclosure-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
 

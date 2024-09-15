@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"control-unit", 10},
-        {"super-steel", 100},
-        {"nenbit-matrix", 50},
-        {"xenopen-mk03", 1},
-        {"wall-shield", 15},
-        {"super-alloy", 20},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "nenbit-matrix", amount = 50},
+        {type = "item", name = "xenopen-mk03", amount = 1},
+        {type = "item", name = "wall-shield", amount = 15},
+        {type = "item", name = "super-alloy", amount = 20},
     },
     results = {
-        {"xenopen-mk04", 1}
+        {type = "item", name = "xenopen-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk05")
 

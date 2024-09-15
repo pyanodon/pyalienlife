@@ -13,14 +13,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"kicalk-plantation-mk02", 1},
-        {"electric-engine-unit", 10},
-        {"processing-unit", 40},
-        {"neuromorphic-chip", 30},
-        {"nichrome", 35},
+        {type = "item", name = "kicalk-plantation-mk02", amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "nichrome", amount = 35},
     },
     results = {
-        {"kicalk-plantation-mk03", 1}
+        {type = "item", name = "kicalk-plantation-mk03", amount = 1}
     }
 }:add_unlock('botany-mk03')
 

@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"bhoddos-culture-mk02", 1},
-        {"boron-carbide", 30},
-        {"super-alloy", 30},
-        {"ticocr-alloy", 40},
-        {"neuroprocessor", 20},
-        {"electric-engine-unit", 2},
-        {"processing-unit", 35},
-        {"stainless-steel", 50},
+        {type = "item", name = "bhoddos-culture-mk02", amount = 1},
+        {type = "item", name = "boron-carbide", amount = 30},
+        {type = "item", name = "super-alloy", amount = 30},
+        {type = "item", name = "ticocr-alloy", amount = 40},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "electric-engine-unit", amount = 2},
+        {type = "item", name = "processing-unit", amount = 35},
+        {type = "item", name = "stainless-steel", amount = 50},
     },
     results = {
-        {"bhoddos-culture-mk03", 1}
+        {type = "item", name = "bhoddos-culture-mk03", amount = 1}
     }
 }:add_unlock("mycology-mk04")
 

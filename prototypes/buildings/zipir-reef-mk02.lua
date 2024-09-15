@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"zipir-reef-mk01", 1},
-        {"automated-factory-mk02", 2},
-        {"titanium-plate", 100},
-        {"advanced-circuit", 20},
-        {"niobium-pipe", 35},
-        {"latex", 30},
-        {"engine-unit", 4},
-        {"neuroprocessor", 20},
+        {type = "item", name = "zipir-reef-mk01", amount = 1},
+        {type = "item", name = "automated-factory-mk02", amount = 2},
+        {type = "item", name = "titanium-plate", amount = 100},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "niobium-pipe", amount = 35},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "engine-unit", amount = 4},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"zipir-reef-mk02", 1}
+        {type = "item", name = "zipir-reef-mk02", amount = 1}
     }
 }:add_unlock("water-animals-mk02")
 

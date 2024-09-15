@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"glass", 50},
-        {"automated-factory-mk01", 1},
-        {"gasifier", 1},
-        {"aluminium-plate", 30},
-        {"steel-plate", 40},
-        {"iron-gear-wheel", 50},
-        {"pipe", 20},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "automated-factory-mk01", amount = 1},
+        {type = "item", name = "gasifier", amount = 1},
+        {type = "item", name = "aluminium-plate", amount = 30},
+        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "iron-gear-wheel", amount = 50},
+        {type = "item", name = "pipe", amount = 20},
     },
     results = {
-        {"arqad-hive-mk01", 1}
+        {type = "item", name = "arqad-hive-mk01", amount = 1}
     }
 }:add_unlock("arqad")
 

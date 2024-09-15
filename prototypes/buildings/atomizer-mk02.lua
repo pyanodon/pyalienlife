@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"atomizer-mk01", 1},
-        {"advanced-circuit", 10},
-        {"engine-unit", 6},
-        {"lead-plate", 20},
-        {"latex", 30},
-        {"neuroprocessor", 20},
+        {type = "item", name = "atomizer-mk01", amount = 1},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "engine-unit", amount = 6},
+        {type = "item", name = "lead-plate", amount = 20},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"atomizer-mk02", 1}
+        {type = "item", name = "atomizer-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

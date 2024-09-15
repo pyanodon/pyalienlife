@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"rennea-plantation-mk03", 1},
-        {"science-coating", 15},
-        {"agzn-alloy", 20},
-        {"control-unit", 10},
-        {"nbfe-alloy", 100},
-        {"wall-shield", 10},
+        {type = "item", name = "rennea-plantation-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "agzn-alloy", amount = 20},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "nbfe-alloy", amount = 100},
+        {type = "item", name = "wall-shield", amount = 10},
     },
     results = {
-        {"rennea-plantation-mk04", 1}
+        {type = "item", name = "rennea-plantation-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

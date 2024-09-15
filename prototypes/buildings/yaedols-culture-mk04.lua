@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"py-heat-exchanger", 1},
-        {"nenbit-matrix", 50},
-        {"super-steel", 100},
-        {"control-unit", 10},
-        {"yaedols-culture-mk03", 1},
-        {"metallic-glass", 50},
-        {"science-coating", 20},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "nenbit-matrix", amount = 50},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "yaedols-culture-mk03", amount = 1},
+        {type = "item", name = "metallic-glass", amount = 50},
+        {type = "item", name = "science-coating", amount = 20},
     },
     results = {
-        {"yaedols-culture-mk04", 1}
+        {type = "item", name = "yaedols-culture-mk04", amount = 1}
     }
 }:add_unlock("mycology-mk05")
 

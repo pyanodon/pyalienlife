@@ -7,14 +7,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"soil", 500},
-        {"steel-plate", 100},
-        {"duralumin", 30},
-        {"storage-tank", 5},
-        {"electronic-circuit", 10}
+        {type = "item", name = "soil", amount = 500},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "storage-tank", amount = 5},
+        {type = "item", name = "electronic-circuit", amount = 10}
     },
     results = {
-        {"mukmoux-pasture-mk01", 1}
+        {type = "item", name = "mukmoux-pasture-mk01", amount = 1}
     }
 }:add_unlock("mukmoux")
 

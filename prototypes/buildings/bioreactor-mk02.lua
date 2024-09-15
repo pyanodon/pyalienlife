@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"bio-reactor-mk01", 1},
-        {"steel-plate", 50},
-        {"glass", 50},
-        {"advanced-circuit", 10},
-        {"titanium-plate", 20},
-        {"latex", 30},
-        {"engine-unit", 5},
-        {"neuroprocessor", 20},
+        {type = "item", name = "bio-reactor-mk01", amount = 1},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"bio-reactor-mk02", 1}
+        {type = "item", name = "bio-reactor-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02")
 

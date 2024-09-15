@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"fish-farm-mk01", 1},
-        {"glass", 100},
-        {"duralumin", 30},
-        {"latex", 30},
-        {"engine-unit", 4},
-        {"neuroprocessor", 10},
-        {"advanced-circuit", 30},
-        {"nbti-alloy", 30},
+        {type = "item", name = "fish-farm-mk01", amount = 1},
+        {type = "item", name = "glass", amount = 100},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "engine-unit", amount = 4},
+        {type = "item", name = "neuroprocessor", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "nbti-alloy", amount = 30},
     },
     results = {
-        {"fish-farm-mk02", 1}
+        {type = "item", name = "fish-farm-mk02", amount = 1}
     }
 }:add_unlock("water-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

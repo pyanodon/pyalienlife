@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"compost-plant-mk01", 1},
-        {"stainless-steel", 60},
-        {"advanced-circuit", 30},
-        {"titanium-plate", 20},
-        {"latex", 30},
-        {"engine-unit", 30},
-        {"neuroprocessor", 20},
+        {type = "item", name = "compost-plant-mk01", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 60},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "engine-unit", amount = 30},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"compost-plant-mk02", 1}
+        {type = "item", name = "compost-plant-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

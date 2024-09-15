@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"yotoi-aloe-orchard-mk03", 1},
-        {"silver-foam", 40},
-        {"blanket", 5},
-        {"control-unit", 10},
-        {"kevlar", 100},
+        {type = "item", name = "yotoi-aloe-orchard-mk03", amount = 1},
+        {type = "item", name = "silver-foam", amount = 40},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "kevlar", amount = 100},
     },
     results = {
-        {"yotoi-aloe-orchard-mk04", 1}
+        {type = "item", name = "yotoi-aloe-orchard-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

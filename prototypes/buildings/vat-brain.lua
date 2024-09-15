@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"brain", 15},
-        {"washer", 1},
-        {"nexelit-plate", 20},
-        {"titanium-plate", 35},
-        {"electronic-circuit", 10},
-        {"glass", 50},
-        {"nickel-plate", 25},
+        {type = "item", name = "brain", amount = 15},
+        {type = "item", name = "washer", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 35},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "nickel-plate", amount = 25},
     },
     results = {
-        {"vat-brain", 1}
+        {type = "item", name = "vat-brain", amount = 1}
     }
 }:add_unlock("vatbrain-mk01")
 

@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"advanced-circuit", 40},
-        {"latex", 35},
-        {"neuroprocessor", 20},
-        {"xenopen-mk01", 1},
-        {"duralumin", 30},
-        {"plastic-bar", 50},
+        {type = "item", name = "advanced-circuit", amount = 40},
+        {type = "item", name = "latex", amount = 35},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "xenopen-mk01", amount = 1},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "plastic-bar", amount = 50},
     },
     results = {
-        {"xenopen-mk02", 1}
+        {type = "item", name = "xenopen-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

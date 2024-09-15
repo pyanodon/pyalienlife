@@ -5,17 +5,17 @@ RECIPE {
     category = 'creature-chamber',
     enabled = false,
     ingredients = {
-        {'earth-generic-sample', 2},
-        {'earth-potato-sample', 1},
-        {'cdna', 2},
-        {'alien-sample-03', 3},
-        {'bio-sample', 10},
+        {type = "item", name = 'earth-generic-sample', amount = 2},
+        {type = "item", name = 'earth-potato-sample', amount = 1},
+        {type = "item", name = 'cdna', amount = 2},
+        {type = "item", name = 'alien-sample-03', amount = 3},
+        {type = "item", name = 'bio-sample', amount = 10},
         {type = 'fluid', name = 'water-saline', amount = 50},
         {type = 'fluid', name = 'fetal-serum', amount = 50},
         {type = 'fluid', name = 'coal-slurry', amount = 100},
     },
     results = {
-        {'huzu', 1}
+        {type = "item", name = 'huzu', amount = 1}
     }
 }:add_unlock{'biofluid-mk02'}
 

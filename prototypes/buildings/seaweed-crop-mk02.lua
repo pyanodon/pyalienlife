@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"duralumin", 35},
-        {"engine-unit", 5},
-        {"seaweed-crop-mk01", 1},
-        {"niobium-pipe", 20},
-        {"advanced-circuit", 20},
-        {"steel-plate", 40},
+        {type = "item", name = "duralumin", amount = 35},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "seaweed-crop-mk01", amount = 1},
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "steel-plate", amount = 40},
     },
     results = {
-        {"seaweed-crop-mk02", 1}
+        {type = "item", name = "seaweed-crop-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"phadai-enclosure-mk03", 1},
-        {"divertor", 5},
-        {"metallic-glass", 35},
-        {"super-alloy", 10},
-        {"control-unit", 50},
-        {"nenbit-matrix", 50},
+        {type = "item", name = "phadai-enclosure-mk03", amount = 1},
+        {type = "item", name = "divertor", amount = 5},
+        {type = "item", name = "metallic-glass", amount = 35},
+        {type = "item", name = "super-alloy", amount = 10},
+        {type = "item", name = "control-unit", amount = 50},
+        {type = "item", name = "nenbit-matrix", amount = 50},
     },
     results = {
-        {"phadai-enclosure-mk04", 1}
+        {type = "item", name = "phadai-enclosure-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk05")
 

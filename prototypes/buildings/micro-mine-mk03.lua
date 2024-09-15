@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"micro-mine-mk02", 1},
-        {"nexelit-plate", 60},
-        {"ticocr-alloy", 20},
-        {"processing-unit", 30},
-        {"electric-engine-unit", 20},
-        {"nichrome", 30},
+        {type = "item", name = "micro-mine-mk02", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 60},
+        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 20},
+        {type = "item", name = "nichrome", amount = 30},
     },
     results = {
-        {"micro-mine-mk03", 1}
+        {type = "item", name = "micro-mine-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

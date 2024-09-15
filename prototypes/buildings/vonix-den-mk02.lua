@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 100},
-        {"ticocr-alloy", 50},
-        {"super-steel", 50},
-        {"vonix-den-mk01", 1},
-        {"metallic-glass", 100},
-        {"processing-unit", 20},
-        {"control-unit", 20},
+        {type = "item", name = "concrete", amount = 100},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "vonix-den-mk01", amount = 1},
+        {type = "item", name = "metallic-glass", amount = 100},
+        {type = "item", name = "processing-unit", amount = 20},
+        {type = "item", name = "control-unit", amount = 20},
     },
     results = {
-        {"vonix-den-mk02", 1}
+        {type = "item", name = "vonix-den-mk02", amount = 1}
     }
 }:add_unlock("vonix-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100}):replace_ingredient("processing-unit", "intelligent-unit")
 

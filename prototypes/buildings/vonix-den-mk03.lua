@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"control-unit", 10},
-        {"super-steel", 100},
-        {"super-alloy", 100},
-        {"vonix-den-mk02", 1},
-        {"metallic-glass", 100},
-        {"processing-unit", 50},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "super-steel", amount = 100},
+        {type = "item", name = "super-alloy", amount = 100},
+        {type = "item", name = "vonix-den-mk02", amount = 1},
+        {type = "item", name = "metallic-glass", amount = 100},
+        {type = "item", name = "processing-unit", amount = 50},
     },
     results = {
-        {"vonix-den-mk03", 1}
+        {type = "item", name = "vonix-den-mk03", amount = 1}
     }
 }:add_unlock("vonix-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 100}):replace_ingredient("processing-unit", "intelligent-unit")
 

@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 100},
-        {"distilator", 1},
-        {"micro-mine-mk01", 1},
-        {"electronic-circuit", 50},
-        {"glass", 40},
-        {"copper-cable", 100},
+        {type = "item", name = "iron-plate", amount = 100},
+        {type = "item", name = "distilator", amount = 1},
+        {type = "item", name = "micro-mine-mk01", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 50},
+        {type = "item", name = "glass", amount = 40},
+        {type = "item", name = "copper-cable", amount = 100},
     },
     results = {
-        {"research-center-mk01", 1}
+        {type = "item", name = "research-center-mk01", amount = 1}
     }
 }:add_unlock("py-science-pack-mk01")
 

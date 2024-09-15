@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"mixer-mk01", 1},
-        {"tailings-pond", 1},
-        {"steel-plate", 40},
-        --{"glass", 35}
+        {type = "item", name = "mixer-mk01", amount = 1},
+        {type = "item", name = "tailings-pond", amount = 1},
+        {type = "item", name = "steel-plate", amount = 40},
+        --{type = "item", name = "glass", amount = 35}
     },
     results = {
-        {"bio-reactor-mk01", 1}
+        {type = "item", name = "bio-reactor-mk01", amount = 1}
     }
 }:add_unlock("cottongut-science-mk01")
 
