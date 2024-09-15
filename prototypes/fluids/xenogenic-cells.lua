@@ -4,6 +4,7 @@ FLUID {
     icon = "__pyalienlifegraphics__/graphics/icons/xenogenic-cells.png",
 	icon_size = 64,
     default_temperature = 10,
+    base_flow_rate = 100,
     base_color = {r = 0.356, g = 0.384, b = 0.384},
     flow_color = {r = 1, g = 1, b = 1},
     max_temperature = 100,
