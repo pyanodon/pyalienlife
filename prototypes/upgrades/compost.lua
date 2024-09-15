@@ -15,7 +15,7 @@ if data and not yafc_turd_integration then
             type = 'fluid',
             emissions_per_minute = -1,
             fluid_box = {
-                base_area = 0.5,
+                volume = 100,
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
                 pipe_connections = {
@@ -39,8 +39,7 @@ if data and not yafc_turd_integration then
             production_type = 'output',
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
-            base_area = 1,
-            base_level = 1,
+            volume = 100,
             pipe_connections = {{type = 'output', position = {0.0, 6.0}}},
             secondary_draw_orders = { north = -1 }
         })

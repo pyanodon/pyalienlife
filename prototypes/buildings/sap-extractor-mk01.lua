@@ -99,7 +99,7 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {0.0, -2.4}, direction = defines.direction.north}},
             secondary_draw_orders = { north = -1 }

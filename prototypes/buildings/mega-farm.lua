@@ -87,7 +87,7 @@ ENTITY {
           production_type = "input",
           pipe_covers = py.pipe_covers(false, true, true, true),
           pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
-          base_area = 10,
+          volume = 1000,
           base_level = -1,
           pipe_connections = {{type = "input", position = {4.0, 0.0}}},
           priority = "extra-high"
@@ -96,7 +96,7 @@ ENTITY {
         production_type = "input",
         pipe_covers = py.pipe_covers(false, true, true, true),
         pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
-        base_area = 10,
+        volume = 1000,
         base_level = -1,
         pipe_connections = {{type = "input", position = {-4.0, 0.0}}},
         priority = "extra-high"

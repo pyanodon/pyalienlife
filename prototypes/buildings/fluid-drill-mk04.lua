@@ -53,8 +53,7 @@ ENTITY {
     {
         production_type = "input-output",
         pipe_covers = pipecoverspictures(),
-        base_area = 1,
-        height = 2,
+        volume = 200,
         base_level = -1,
         pipe_connections = {
             { position = {-3, 0}},

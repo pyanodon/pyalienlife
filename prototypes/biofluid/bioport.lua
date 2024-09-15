@@ -90,7 +90,7 @@ ENTITY {
         {
             production_type = 'output',
             base_area = 1,
-            base_level = 1,
+            volume = 100,
             pipe_connections = {{type = 'output', position = {0, -3}}},
         },
         off_when_no_fluid_recipe = false
