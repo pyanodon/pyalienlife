@@ -88,7 +88,6 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {0.0, 4.1}, direction = defines.direction.south}},
             secondary_draw_orders = { north = -1 }
         },
@@ -97,7 +96,6 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-2.0, 4.1}, direction = defines.direction.south}},
             secondary_draw_orders = { north = -1 }
         },
@@ -106,7 +104,6 @@ ENTITY {
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {2.0, 4.1}, direction = defines.direction.south}},
             secondary_draw_orders = { north = -1 }
         },
