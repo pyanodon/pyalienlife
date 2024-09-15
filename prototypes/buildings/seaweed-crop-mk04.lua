@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"metallic-glass", 30},
-        {"seaweed-crop-mk03", 1},
-        {"low-density-structure", 20},
-        {"control-unit", 10},
-        {"nenbit-matrix", 50},
+        {type = "item", name = "metallic-glass", amount = 30},
+        {type = "item", name = "seaweed-crop-mk03", amount = 1},
+        {type = "item", name = "low-density-structure", amount = 20},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "nenbit-matrix", amount = 50},
     },
     results = {
-        {"seaweed-crop-mk04", 1}
+        {type = "item", name = "seaweed-crop-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

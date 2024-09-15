@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'zungror-lair-mk03', 1},
-        {'intelligent-unit', 25},
-        {'divertor', 5},
-        {'metallic-glass', 35},
-        {'super-alloy', 10},
-        {'control-unit', 50},
-        {'nenbit-matrix', 50},
+        {type = "item", name = 'zungror-lair-mk03', amount = 1},
+        {type = "item", name = 'intelligent-unit', amount = 25},
+        {type = "item", name = 'divertor', amount = 5},
+        {type = "item", name = 'metallic-glass', amount = 35},
+        {type = "item", name = 'super-alloy', amount = 10},
+        {type = "item", name = 'control-unit', amount = 50},
+        {type = "item", name = 'nenbit-matrix', amount = 50},
     },
     results = {
-        {'zungror-lair-mk04', 1}
+        {type = "item", name = 'zungror-lair-mk04', amount = 1}
     }
 }:add_unlock('land-animals-mk05'):add_ingredient({'bose-einstein-superfluid', 100}):add_ingredient({type = 'item', name = 'harmonic-absorber', amount = 10}):add_ingredient({type = 'item', name = 'var-josephson-junction', amount = 10})
 

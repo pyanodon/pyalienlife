@@ -15,16 +15,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"plastic-bar", 100},
-        {"advanced-circuit", 20},
-        {"duralumin", 60},
-        {"cadaveric-arum-mk01", 1},
-        {"latex", 10},
-        {"neuroprocessor", 10},
-        {"titanium-plate", 50},
+        {type = "item", name = "plastic-bar", amount = 100},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "duralumin", amount = 60},
+        {type = "item", name = "cadaveric-arum-mk01", amount = 1},
+        {type = "item", name = "latex", amount = 10},
+        {type = "item", name = "neuroprocessor", amount = 10},
+        {type = "item", name = "titanium-plate", amount = 50},
     },
     results = {
-        {"cadaveric-arum-mk02", 1}
+        {type = "item", name = "cadaveric-arum-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02")
 

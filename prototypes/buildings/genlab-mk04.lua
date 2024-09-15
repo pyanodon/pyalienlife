@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"genlab-mk03", 1},
-        {"nenbit-matrix", 40},
-        {"control-unit", 10},
-        {"kevlar", 100},
-        {"divertor", 10},
-        {"low-density-structure", 30},
+        {type = "item", name = "genlab-mk03", amount = 1},
+        {type = "item", name = "nenbit-matrix", amount = 40},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "kevlar", amount = 100},
+        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "low-density-structure", amount = 30},
     },
     results = {
-        {"genlab-mk04", 1}
+        {type = "item", name = "genlab-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

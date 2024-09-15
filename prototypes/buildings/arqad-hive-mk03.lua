@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"glass", 50},
-        {"arqad-hive-mk02", 1},
-        {"nichrome", 20},
-        {"sc-unit", 10},
-        {"ticocr-alloy", 40},
-        {"electric-engine-unit", 3},
-        {"neuromorphic-chip", 40},
-        {"stainless-steel", 40},
-        {"molybdenum-plate", 20},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "arqad-hive-mk02", amount = 1},
+        {type = "item", name = "nichrome", amount = 20},
+        {type = "item", name = "sc-unit", amount = 10},
+        {type = "item", name = "ticocr-alloy", amount = 40},
+        {type = "item", name = "electric-engine-unit", amount = 3},
+        {type = "item", name = "neuromorphic-chip", amount = 40},
+        {type = "item", name = "stainless-steel", amount = 40},
+        {type = "item", name = "molybdenum-plate", amount = 20},
     },
     results = {
-        {"arqad-hive-mk03", 1}
+        {type = "item", name = "arqad-hive-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03")
 

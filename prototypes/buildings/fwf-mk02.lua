@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"fwf-mk01", 1},
-        {"titanium-plate", 30},
-        {"duralumin", 30},
-        {"latex", 30},
-        {"plastic-bar", 50},
-        {"engine-unit", 5},
-        {"advanced-circuit", 20},
+        {type = "item", name = "fwf-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 30},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "plastic-bar", amount = 50},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "advanced-circuit", amount = 20},
     },
     results = {
-        {"fwf-mk02", 1}
+        {type = "item", name = "fwf-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

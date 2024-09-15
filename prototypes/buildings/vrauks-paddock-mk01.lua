@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"micro-mine-mk01", 1},
-        {"stone-brick", 20},
-        {"iron-plate", 20},
-        {"copper-plate", 20},
-        {"glass", 20},
-        {"aluminium-plate", 40},
+        {type = "item", name = "micro-mine-mk01", amount = 1},
+        {type = "item", name = "stone-brick", amount = 20},
+        {type = "item", name = "iron-plate", amount = 20},
+        {type = "item", name = "copper-plate", amount = 20},
+        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "aluminium-plate", amount = 40},
     },
     results = {
-        {"vrauks-paddock-mk01", 1}
+        {type = "item", name = "vrauks-paddock-mk01", amount = 1}
     }
 }:add_unlock("vrauks")
 

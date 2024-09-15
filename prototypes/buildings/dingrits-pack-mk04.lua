@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"dingrits-pack-mk03", 1},
-        {"super-alloy", 50},
-        {"boron-carbide", 50},
-        {"metallic-glass", 40},
-        {"science-coating", 15},
-        {"control-unit", 10},
+        {type = "item", name = "dingrits-pack-mk03", amount = 1},
+        {type = "item", name = "super-alloy", amount = 50},
+        {type = "item", name = "boron-carbide", amount = 50},
+        {type = "item", name = "metallic-glass", amount = 40},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"dingrits-pack-mk04", 1}
+        {type = "item", name = "dingrits-pack-mk04", amount = 1}
     }
 }--:add_unlock("land-animals-mk04")
 

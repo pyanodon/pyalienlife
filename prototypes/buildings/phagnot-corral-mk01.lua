@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"titanium-plate", 50},
-        {"steel-plate", 100},
-        {"duralumin", 50},
-        {"glass", 80},
-        {"electronic-circuit", 35},
+        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "titanium-plate", amount = 50},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "glass", amount = 80},
+        {type = "item", name = "electronic-circuit", amount = 35},
     },
     results = {
-        {"phagnot-corral-mk01", 1}
+        {type = "item", name = "phagnot-corral-mk01", amount = 1}
     }
 }:add_unlock("phagnot")
 

@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"arqad-hive-mk03", 1},
-        {"science-coating", 15},
-        {"processing-unit", 30},
-        {"low-density-structure", 30},
-        {"metallic-glass", 10},
+        {type = "item", name = "arqad-hive-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "metallic-glass", amount = 10},
     },
     results = {
-        {"arqad-hive-mk04", 1}
+        {type = "item", name = "arqad-hive-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

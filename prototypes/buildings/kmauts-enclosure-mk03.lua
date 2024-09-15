@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"kmauts-enclosure-mk02", 1},
-        {"py-heat-exchanger", 1},
-        {"ticocr-alloy", 30},
-        {"low-density-structure", 50},
-        {"molybdenum-plate", 30},
-        {"processing-unit", 20},
+        {type = "item", name = "kmauts-enclosure-mk02", amount = 1},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 30},
+        {type = "item", name = "low-density-structure", amount = 50},
+        {type = "item", name = "molybdenum-plate", amount = 30},
+        {type = "item", name = "processing-unit", amount = 20},
     },
     results = {
-        {"kmauts-enclosure-mk03", 1}
+        {type = "item", name = "kmauts-enclosure-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

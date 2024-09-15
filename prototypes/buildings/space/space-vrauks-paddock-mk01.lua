@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"micro-mine-mk01", 1},
-        {"plastic-bar", 20},
-        {"steel-plate", 40},
-        {"glass", 20},
-        {"titanium-plate", 40},
+        {type = "item", name = "micro-mine-mk01", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 40},
     },
     results = {
-        {"space-vrauks-paddock-mk01", 1}
+        {type = "item", name = "space-vrauks-paddock-mk01", amount = 1}
     }
 }:add_unlock("vrauks")
 

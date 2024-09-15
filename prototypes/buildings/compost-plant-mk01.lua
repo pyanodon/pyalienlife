@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"titanium-plate", 80},
-        {"steam-engine", 10},
-        {"steel-plate", 100},
-        {"duralumin", 30},
-        {"electronic-circuit", 40},
-        {"iron-gear-wheel", 50},
+        {type = "item", name = "titanium-plate", amount = 80},
+        {type = "item", name = "steam-engine", amount = 10},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "electronic-circuit", amount = 40},
+        {type = "item", name = "iron-gear-wheel", amount = 50},
     },
     results = {
-        {"compost-plant-mk01", 1}
+        {type = "item", name = "compost-plant-mk01", amount = 1}
     }
 }:add_unlock("compost")
 

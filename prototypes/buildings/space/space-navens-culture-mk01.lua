@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"gasifier", 2},
-        {"glass", 30},
-        {"nexelit-plate", 20},
-        {"duralumin", 35},
-        {"steel-plate", 50},
-        {"advanced-circuit", 15},
-        {"tin-plate", 50},
+        {type = "item", name = "gasifier", amount = 2},
+        {type = "item", name = "glass", amount = 30},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "duralumin", amount = 35},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "tin-plate", amount = 50},
     },
     results = {
-        {"space-navens-culture-mk01", 1}
+        {type = "item", name = "space-navens-culture-mk01", amount = 1}
     }
 }:add_unlock("navens"):add_ingredient({type = "item", name = "small-parts-01", amount = 30})
 

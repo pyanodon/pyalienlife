@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"iron-plate", 100},
-        {"electronic-circuit", 15},
-        {"small-lamp", 8},
-        {"aluminium-plate", 40},
-        {"steel-plate", 40},
-        {"iron-gear-wheel", 30},
-        {"glass", 50},
+        {type = "item", name = "iron-plate", amount = 100},
+        {type = "item", name = "electronic-circuit", amount = 15},
+        {type = "item", name = "small-lamp", amount = 8},
+        {type = "item", name = "aluminium-plate", amount = 40},
+        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "iron-gear-wheel", amount = 30},
+        {type = "item", name = "glass", amount = 50},
     },
     results = {
-        {"space-prandium-lab-mk01", 1}
+        {type = "item", name = "space-prandium-lab-mk01", amount = 1}
     }
 }:add_unlock("cottongut-mk01")
 

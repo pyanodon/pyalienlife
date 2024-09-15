@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"steel-plate", 50},
-        {"sand", 100},
-        {"iron-plate", 50},
-        {"duralumin", 50},
-        {"wood", 50},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 50},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "sand", amount = 100},
+        {type = "item", name = "iron-plate", amount = 50},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "wood", amount = 50},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 50},
     },
     results = {
-        {"pyphoon-bay", 1}
+        {type = "item", name = "pyphoon-bay", amount = 1}
     }
 }:add_unlock("domestication")
 

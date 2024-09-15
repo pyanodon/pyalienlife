@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"latex", 25},
-        {"titanium-plate", 20},
-        {"ulric-corral-mk01", 1},
-        {"duralumin", 15},
-        {"advanced-circuit", 15},
-        {"neuroprocessor", 15},
+        {type = "item", name = "latex", amount = 25},
+        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "ulric-corral-mk01", amount = 1},
+        {type = "item", name = "duralumin", amount = 15},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "neuroprocessor", amount = 15},
     },
     results = {
-        {"ulric-corral-mk02", 1}
+        {type = "item", name = "ulric-corral-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
 

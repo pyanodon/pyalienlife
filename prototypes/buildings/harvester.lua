@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {'botanical-nursery-mk02', 2},
-        {'soil-extractor-mk02',    1},
-        {'advanced-circuit',       20},
-        {'iron-gear-wheel',        100},
-        {'plastic-bar',            80},
-        --{"control-unit", 5},
+        {type = "item", name = 'botanical-nursery-mk02', amount = 2},
+        {type = "item", name = 'soil-extractor-mk02', amount = 1},
+        {type = "item", name = 'advanced-circuit', amount = 20},
+        {type = "item", name = 'iron-gear-wheel', amount = 100},
+        {type = "item", name = 'plastic-bar', amount = 80},
+        --{type = "item", name = "control-unit", amount = 5},
     },
     results = {
-        {'harvester', 1}
+        {type = "item", name = 'harvester', amount = 1}
     }
 }:add_unlock('mega-farm')
 

@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone-brick", 30},
-        {"soil", 100},
-        {"pipe", 15},
-        {"inserter", 2},
-        {"electronic-circuit", 5},
-        {"steam-engine", 1},
-        {"iron-plate", 30},
+        {type = "item", name = "stone-brick", amount = 30},
+        {type = "item", name = "soil", amount = 100},
+        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "inserter", amount = 2},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "steam-engine", amount = 1},
+        {type = "item", name = "iron-plate", amount = 30},
     },
     results = {
-        {"sap-extractor-mk01", 1}
+        {type = "item", name = "sap-extractor-mk01", amount = 1}
     }
 }:add_unlock("sap-mk01")
 

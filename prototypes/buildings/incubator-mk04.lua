@@ -13,16 +13,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"wall-shield", 30},
-        {"incubator-mk03", 1},
-        {"control-unit", 10},
-        {"boron-carbide", 20},
-        {"super-alloy", 20},
-        {"blanket", 5},
-        {"nbfe-alloy", 50},
+        {type = "item", name = "wall-shield", amount = 30},
+        {type = "item", name = "incubator-mk03", amount = 1},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "boron-carbide", amount = 20},
+        {type = "item", name = "super-alloy", amount = 20},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "nbfe-alloy", amount = 50},
     },
     results = {
-        {"incubator-mk04", 1}
+        {type = "item", name = "incubator-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

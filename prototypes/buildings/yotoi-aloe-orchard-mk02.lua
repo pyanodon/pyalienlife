@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"yotoi-aloe-orchard-mk01", 1},
-        {"stainless-steel", 50},
-        {"engine-unit", 2},
-        {"niobium-pipe", 15},
-        {"advanced-circuit", 20},
-        {"plastic-bar", 40},
-        {"concrete", 100},
+        {type = "item", name = "yotoi-aloe-orchard-mk01", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "engine-unit", amount = 2},
+        {type = "item", name = "niobium-pipe", amount = 15},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "plastic-bar", amount = 40},
+        {type = "item", name = "concrete", amount = 100},
     },
     results = {
-        {"yotoi-aloe-orchard-mk02", 1}
+        {type = "item", name = "yotoi-aloe-orchard-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02")
 

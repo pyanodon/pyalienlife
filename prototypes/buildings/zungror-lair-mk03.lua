@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"zungror-lair-mk02", 1},
-        {"super-alloy", 100},
-        {"super-steel", 10},
-        {"metallic-glass", 50},
-        {"science-coating", 50},
-        {"nbfe-alloy", 25},
-        {"intelligent-unit", 25},
+        {type = "item", name = "zungror-lair-mk02", amount = 1},
+        {type = "item", name = "super-alloy", amount = 100},
+        {type = "item", name = "super-steel", amount = 10},
+        {type = "item", name = "metallic-glass", amount = 50},
+        {type = "item", name = "science-coating", amount = 50},
+        {type = "item", name = "nbfe-alloy", amount = 25},
+        {type = "item", name = "intelligent-unit", amount = 25},
     },
     results = {
-        {"zungror-lair-mk03", 1}
+        {type = "item", name = "zungror-lair-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "superconductor-servomechanims", amount = 5}):add_ingredient({type = "item", name = "harmonic-absorber", amount = 10})
 

@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"phagnot-corral-mk02", 1},
-        {"nichrome", 50},
-        {"low-density-structure", 100},
-        {"sc-unit", 10},
-        {"nexelit-plate", 80},
-        {"processing-unit", 40},
+        {type = "item", name = "phagnot-corral-mk02", amount = 1},
+        {type = "item", name = "nichrome", amount = 50},
+        {type = "item", name = "low-density-structure", amount = 100},
+        {type = "item", name = "sc-unit", amount = 10},
+        {type = "item", name = "nexelit-plate", amount = 80},
+        {type = "item", name = "processing-unit", amount = 40},
     },
     results = {
-        {"phagnot-corral-mk03", 1}
+        {type = "item", name = "phagnot-corral-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03")
 

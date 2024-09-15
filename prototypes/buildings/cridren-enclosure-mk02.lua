@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nexelit-plate", 80},
-        {"cridren-enclosure-mk01", 1},
-        {"duralumin", 100},
-        {"concrete", 30},
-        {"neuromorphic-chip", 30},
-        {"advanced-circuit", 40},
+        {type = "item", name = "nexelit-plate", amount = 80},
+        {type = "item", name = "cridren-enclosure-mk01", amount = 1},
+        {type = "item", name = "duralumin", amount = 100},
+        {type = "item", name = "concrete", amount = 30},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 40},
     },
     results = {
-        {"cridren-enclosure-mk02", 1}
+        {type = "item", name = "cridren-enclosure-mk02", amount = 1}
     }
 }:add_unlock("cridren-mk02")
 

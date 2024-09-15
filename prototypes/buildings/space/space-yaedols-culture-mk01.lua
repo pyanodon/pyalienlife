@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 200},
-        {"titanium-plate", 100},
-        {"storage-tank", 1},
-        {"duralumin", 50},
-        {"glass", 20},
-        {"electronic-circuit", 100},
-        {"pump", 5},
+        {type = "item", name = "concrete", amount = 200},
+        {type = "item", name = "titanium-plate", amount = 100},
+        {type = "item", name = "storage-tank", amount = 1},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "electronic-circuit", amount = 100},
+        {type = "item", name = "pump", amount = 5},
     },
     results = {
-        {"space-yaedols-culture-mk01", 1}
+        {type = "item", name = "space-yaedols-culture-mk01", amount = 1}
     }
 }:add_unlock("yaedols")
 

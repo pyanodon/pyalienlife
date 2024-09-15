@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"tuuphra-plantation-mk02", 1},
-        {"molybdenum-plate", 15},
-        {"ticocr-alloy", 50},
-        {"neuromorphic-chip", 20},
-        {"processing-unit", 30},
-        {"electric-engine-unit", 8},
+        {type = "item", name = "tuuphra-plantation-mk02", amount = 1},
+        {type = "item", name = "molybdenum-plate", amount = 15},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "neuromorphic-chip", amount = 20},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 8},
     },
     results = {
-        {"tuuphra-plantation-mk03", 1}
+        {type = "item", name = "tuuphra-plantation-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03")
 

@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"creature-chamber-mk03", 1},
-        {"science-coating", 30},
-        {"agzn-alloy", 30},
-        {"silver-foam", 20},
-        {"low-density-structure", 30},
-        {"control-unit", 5},
+        {type = "item", name = "creature-chamber-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 30},
+        {type = "item", name = "agzn-alloy", amount = 30},
+        {type = "item", name = "silver-foam", amount = 20},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "control-unit", amount = 5},
     },
     results = {
-        {"creature-chamber-mk04", 1}
+        {type = "item", name = "creature-chamber-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

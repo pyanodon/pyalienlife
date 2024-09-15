@@ -13,17 +13,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"molybdenum-plate", 50},
-        {"incubator-mk02", 1},
-        {"processing-unit", 30},
-        {"low-density-structure", 20},
-        {"electric-engine-unit", 5},
-        {"nbti-alloy", 10},
-        {"ticocr-alloy", 20},
-        {"sc-unit", 15},
+        {type = "item", name = "molybdenum-plate", amount = 50},
+        {type = "item", name = "incubator-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "low-density-structure", amount = 20},
+        {type = "item", name = "electric-engine-unit", amount = 5},
+        {type = "item", name = "nbti-alloy", amount = 10},
+        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "sc-unit", amount = 15},
     },
     results = {
-        {"incubator-mk03", 1}
+        {type = "item", name = "incubator-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

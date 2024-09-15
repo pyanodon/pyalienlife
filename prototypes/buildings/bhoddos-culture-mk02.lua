@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"bhoddos-culture-mk01", 1},
-        {"titanium-plate", 40},
-        {"engine-unit", 2},
-        {"lead-plate", 50},
-        {"latex", 40},
-        {"neuroprocessor", 20},
-        {"advanced-circuit", 15},
-        {"tin-plate", 50},
+        {type = "item", name = "bhoddos-culture-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 40},
+        {type = "item", name = "engine-unit", amount = 2},
+        {type = "item", name = "lead-plate", amount = 50},
+        {type = "item", name = "latex", amount = 40},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 15},
+        {type = "item", name = "tin-plate", amount = 50},
     },
     results = {
-        {"bhoddos-culture-mk02", 1}
+        {type = "item", name = "bhoddos-culture-mk02", amount = 1}
     }
 }:add_unlock("mycology-mk03")
 

@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nexelit-plate", 50},
-        {"stainless-steel", 30},
-        {"low-density-structure", 40},
-        {"electric-engine-unit", 20},
-        {"processing-unit", 30},
-        {"slaughterhouse-mk02", 1},
+        {type = "item", name = "nexelit-plate", amount = 50},
+        {type = "item", name = "stainless-steel", amount = 30},
+        {type = "item", name = "low-density-structure", amount = 40},
+        {type = "item", name = "electric-engine-unit", amount = 20},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "slaughterhouse-mk02", amount = 1},
     },
     results = {
-        {"slaughterhouse-mk03", 1}
+        {type = "item", name = "slaughterhouse-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03")
 

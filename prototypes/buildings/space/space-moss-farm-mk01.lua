@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"stone-brick", 50},
-        {"soil", 50},
-        {"iron-plate", 20},
-        {"aluminium-plate", 10},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 10},
+        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "soil", amount = 50},
+        {type = "item", name = "iron-plate", amount = 20},
+        {type = "item", name = "aluminium-plate", amount = 10},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 10},
     },
     results = {
-        {"space-moss-farm-mk01", 1}
+        {type = "item", name = "space-moss-farm-mk01", amount = 1}
     }
 }
 

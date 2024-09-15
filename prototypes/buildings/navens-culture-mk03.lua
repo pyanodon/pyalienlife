@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"navens-culture-mk02", 1},
-        {"py-heat-exchanger", 1},
-        {"nichrome", 25},
-        {"neuromorphic-chip", 30},
-        {"electric-engine-unit", 2},
-        {"processing-unit", 35},
-        {"ticocr-alloy", 20},
+        {type = "item", name = "navens-culture-mk02", amount = 1},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "nichrome", amount = 25},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 2},
+        {type = "item", name = "processing-unit", amount = 35},
+        {type = "item", name = "ticocr-alloy", amount = 20},
     },
     results = {
-        {"navens-culture-mk03", 1}
+        {type = "item", name = "navens-culture-mk03", amount = 1}
     }
 }:add_unlock("mycology-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

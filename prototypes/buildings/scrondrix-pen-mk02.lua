@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"duralumin", 100},
-        {"scrondrix-pen-mk01", 1},
-        {"niobium-pipe", 20},
-        {"advanced-circuit", 30},
-        {"plastic-bar", 50},
-        {"nexelit-plate", 40},
+        {type = "item", name = "duralumin", amount = 100},
+        {type = "item", name = "scrondrix-pen-mk01", amount = 1},
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "plastic-bar", amount = 50},
+        {type = "item", name = "nexelit-plate", amount = 40},
     },
     results = {
-        {"scrondrix-pen-mk02", 1}
+        {type = "item", name = "scrondrix-pen-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

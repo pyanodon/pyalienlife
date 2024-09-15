@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"mukmoux-pasture-mk03", 1},
-        {"metallic-glass", 50},
-        {"science-coating", 20},
-        {"silver-foam", 30},
-        {"control-unit", 5}
+        {type = "item", name = "mukmoux-pasture-mk03", amount = 1},
+        {type = "item", name = "metallic-glass", amount = 50},
+        {type = "item", name = "science-coating", amount = 20},
+        {type = "item", name = "silver-foam", amount = 30},
+        {type = "item", name = "control-unit", amount = 5}
     },
     results = {
-        {"mukmoux-pasture-mk04", 1}
+        {type = "item", name = "mukmoux-pasture-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

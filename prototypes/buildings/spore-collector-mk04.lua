@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"science-coating", 50},
-        {"spore-collector-mk03", 1},
-        {"super-alloy", 10},
-        {"nenbit-matrix", 60},
-        {"control-unit", 15},
+        {type = "item", name = "science-coating", amount = 50},
+        {type = "item", name = "spore-collector-mk03", amount = 1},
+        {type = "item", name = "super-alloy", amount = 10},
+        {type = "item", name = "nenbit-matrix", amount = 60},
+        {type = "item", name = "control-unit", amount = 15},
     },
     results = {
-        {"spore-collector-mk04", 1}
+        {type = "item", name = "spore-collector-mk04", amount = 1}
     }
 }:add_unlock("mycology-mk05")
 

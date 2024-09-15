@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"arthurian-pen-mk02", 1},
-        {"nichrome", 20},
-        {"sc-unit", 10},
-        {"neuromorphic-chip", 40},
-        {"stainless-steel", 40},
-        {"molybdenum-plate", 20},
+        {type = "item", name = "arthurian-pen-mk02", amount = 1},
+        {type = "item", name = "nichrome", amount = 20},
+        {type = "item", name = "sc-unit", amount = 10},
+        {type = "item", name = "neuromorphic-chip", amount = 40},
+        {type = "item", name = "stainless-steel", amount = 40},
+        {type = "item", name = "molybdenum-plate", amount = 20},
     },
     results = {
-        {"arthurian-pen-mk03", 1}
+        {type = "item", name = "arthurian-pen-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03")
 

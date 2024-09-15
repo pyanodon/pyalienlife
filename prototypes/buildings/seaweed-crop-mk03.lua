@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ticocr-alloy", 35},
-        {"seaweed-crop-mk02", 1},
-        {"neuromorphic-chip", 20},
-        {"processing-unit", 30},
-        {"stainless-steel", 50},
-        {"electric-engine-unit", 10},
+        {type = "item", name = "ticocr-alloy", amount = 35},
+        {type = "item", name = "seaweed-crop-mk02", amount = 1},
+        {type = "item", name = "neuromorphic-chip", amount = 20},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 10},
     },
     results = {
-        {"seaweed-crop-mk03", 1}
+        {type = "item", name = "seaweed-crop-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

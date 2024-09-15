@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"ticocr-alloy", 50},
-        {"nbti-alloy", 100},
-        {"electric-engine-unit", 10},
-        {"stainless-steel", 50},
-        {"trits-reef-mk02", 1},
-        {"processing-unit", 50},
+        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "nbti-alloy", amount = 100},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "trits-reef-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 50},
     },
     results = {
-        {"trits-reef-mk03", 1}
+        {type = "item", name = "trits-reef-mk03", amount = 1}
     }
 }:add_unlock("water-animals-mk03")
 

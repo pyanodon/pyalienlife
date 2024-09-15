@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"zipir-reef-mk03", 1},
-        {"blanket", 5},
-        {"processing-unit", 40},
-        {"science-coating", 15},
-        {"nenbit-matrix", 30},
+        {type = "item", name = "zipir-reef-mk03", amount = 1},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "science-coating", amount = 15},
+        {type = "item", name = "nenbit-matrix", amount = 30},
     },
     results = {
-        {"zipir-reef-mk04", 1}
+        {type = "item", name = "zipir-reef-mk04", amount = 1}
     }
 }:add_unlock("water-animals-mk04")
 

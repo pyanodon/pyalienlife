@@ -7,15 +7,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"electronic-circuit", 25},
-        {"titanium-plate", 40},
-        {"concrete", 100},
-        {"concrete-wall", 100},
-        {"steel-plate", 30},
-        {"plastic-bar", 50},
+        {type = "item", name = "electronic-circuit", amount = 25},
+        {type = "item", name = "titanium-plate", amount = 40},
+        {type = "item", name = "concrete", amount = 100},
+        {type = "item", name = "concrete-wall", amount = 100},
+        {type = "item", name = "steel-plate", amount = 30},
+        {type = "item", name = "plastic-bar", amount = 50},
     },
     results = {
-        {"xenopen-mk01", 1}
+        {type = "item", name = "xenopen-mk01", amount = 1}
     }
 }:add_unlock("xeno")
 

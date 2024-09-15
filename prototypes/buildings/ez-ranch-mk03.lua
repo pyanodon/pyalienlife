@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ez-ranch-mk02", 1},
-        {"ticocr-alloy", 30},
-        {"super-steel", 50},
-        {"nbti-alloy", 50},
-        {"nexelit-plate", 50},
-        {"electric-engine-unit", 12},
-        {"processing-unit", 40},
+        {type = "item", name = "ez-ranch-mk02", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 30},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "nbti-alloy", amount = 50},
+        {type = "item", name = "nexelit-plate", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 12},
+        {type = "item", name = "processing-unit", amount = 40},
     },
     results = {
-        {"ez-ranch-mk03", 1}
+        {type = "item", name = "ez-ranch-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
 

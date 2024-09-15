@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"steel-plate", 10},
-        {"engine-unit", 3},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 20},
+        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "steel-plate", amount = 10},
+        {type = "item", name = "engine-unit", amount = 3},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
     },
     results = {
-        {"space-fwf-mk01", 1}
+        {type = "item", name = "space-fwf-mk01", amount = 1}
     }
 }:add_unlock("botany-mk01")
 

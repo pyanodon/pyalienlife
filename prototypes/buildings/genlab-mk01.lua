@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"biofactory-mk01", 1},
-        {"plastic-bar", 20},
-        {"py-tank-3000", 2},
-        {"steel-plate", 15},
-        {"electronic-circuit", 15},
-        {"glass", 50},
-        {"duralumin", 20},
-        {"titanium-plate", 40},
+        {type = "item", name = "biofactory-mk01", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "py-tank-3000", amount = 2},
+        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 15},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "duralumin", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 40},
     },
     results = {
-        {"genlab-mk01", 1}
+        {type = "item", name = "genlab-mk01", amount = 1}
     }
 }:add_unlock("genetics-mk01")
 

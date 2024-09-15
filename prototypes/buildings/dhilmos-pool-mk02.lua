@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nbti-alloy", 40},
-        {"dhilmos-pool-mk01", 1},
-        {"nexelit-plate", 20},
-        {"plastic-bar", 25},
-        {"neuroprocessor", 50},
-        {"engine-unit", 10},
-        {"neuromorphic-chip", 30},
-        {"advanced-circuit", 50},
-        {"tin-plate", 50},
+        {type = "item", name = "nbti-alloy", amount = 40},
+        {type = "item", name = "dhilmos-pool-mk01", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "plastic-bar", amount = 25},
+        {type = "item", name = "neuroprocessor", amount = 50},
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 50},
+        {type = "item", name = "tin-plate", amount = 50},
     },
     results = {
-        {"dhilmos-pool-mk02", 1}
+        {type = "item", name = "dhilmos-pool-mk02", amount = 1}
     }
 }:add_unlock("dhilmos-mk02")
 

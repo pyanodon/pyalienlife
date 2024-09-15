@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"duralumin", 50},
-        {"spore-collector-mk01", 1},
-        {"engine-unit", 8},
-        {"iron-plate", 80},
-        {"advanced-circuit", 20},
-        {"neuroprocessor", 30},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "spore-collector-mk01", amount = 1},
+        {type = "item", name = "engine-unit", amount = 8},
+        {type = "item", name = "iron-plate", amount = 80},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "neuroprocessor", amount = 30},
     },
     results = {
-        {"spore-collector-mk02", 1}
+        {type = "item", name = "spore-collector-mk02", amount = 1}
     }
 }:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
 

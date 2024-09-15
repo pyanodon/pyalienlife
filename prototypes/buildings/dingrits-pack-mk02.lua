@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"dingrits-pack-mk01", 1},
-        {"duralumin", 50},
-        {"lead-plate", 50},
-        {"latex", 40},
-        {"neuroprocessor", 20},
-        {"advanced-circuit", 15},
+        {type = "item", name = "dingrits-pack-mk01", amount = 1},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "lead-plate", amount = 50},
+        {type = "item", name = "latex", amount = 40},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 15},
     },
     results = {
-        {"dingrits-pack-mk02", 1}
+        {type = "item", name = "dingrits-pack-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

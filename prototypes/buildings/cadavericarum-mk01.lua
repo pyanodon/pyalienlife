@@ -16,14 +16,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"botanical-nursery", 1},
-        {"plastic-bar", 100},
-        {"electronic-circuit", 25},
-        {"steel-plate", 60},
-        {"hydrocyclone-mk01", 1}
+        {type = "item", name = "botanical-nursery", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 100},
+        {type = "item", name = "electronic-circuit", amount = 25},
+        {type = "item", name = "steel-plate", amount = 60},
+        {type = "item", name = "hydrocyclone-mk01", amount = 1}
     },
     results = {
-        {"cadaveric-arum-mk01", 1}
+        {type = "item", name = "cadaveric-arum-mk01", amount = 1}
     }
 }:add_unlock("cadaveric-arum")
 

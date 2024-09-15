@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"processing-unit", 40},
-        {"super-steel", 35},
-        {"neuromorphic-chip", 20},
-        {"xenopen-mk02", 1},
-        {"nbti-alloy", 30},
-        {"plastic-bar", 50},
+        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "super-steel", amount = 35},
+        {type = "item", name = "neuromorphic-chip", amount = 20},
+        {type = "item", name = "xenopen-mk02", amount = 1},
+        {type = "item", name = "nbti-alloy", amount = 30},
+        {type = "item", name = "plastic-bar", amount = 50},
     },
     results = {
-        {"xenopen-mk03", 1}
+        {type = "item", name = "xenopen-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

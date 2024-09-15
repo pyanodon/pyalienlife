@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"arthurian-pen-mk01", 1},
-        {"concrete", 20},
-        {"titanium-plate", 30},
-        {"lead-plate", 50},
-        {"latex", 40},
-        {"neuroprocessor", 20},
+        {type = "item", name = "arthurian-pen-mk01", amount = 1},
+        {type = "item", name = "concrete", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 30},
+        {type = "item", name = "lead-plate", amount = 50},
+        {type = "item", name = "latex", amount = 40},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"arthurian-pen-mk02", 1}
+        {type = "item", name = "arthurian-pen-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02")
 

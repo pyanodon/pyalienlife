@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"phadai-enclosure-mk01", 1},
-        {"nbti-alloy", 40},
-        {"engine-unit", 3},
-        {"neuromorphic-chip", 35},
-        {"nenbit-matrix", 30},
-        {"processing-unit", 50},
-        {"super-steel", 50},
+        {type = "item", name = "phadai-enclosure-mk01", amount = 1},
+        {type = "item", name = "nbti-alloy", amount = 40},
+        {type = "item", name = "engine-unit", amount = 3},
+        {type = "item", name = "neuromorphic-chip", amount = 35},
+        {type = "item", name = "nenbit-matrix", amount = 30},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "super-steel", amount = 50},
     },
     results = {
-        {"phadai-enclosure-mk02", 1}
+        {type = "item", name = "phadai-enclosure-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

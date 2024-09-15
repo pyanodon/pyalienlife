@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"steel-plate", 100},
-        {"niobium-plate", 50},
-        {"niobium-pipe", 20},
-        {"electronic-circuit", 100},
-        {"plastic-bar", 60},
-        {"iron-plate", 4},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "niobium-plate", amount = 50},
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "electronic-circuit", amount = 100},
+        {type = "item", name = "plastic-bar", amount = 60},
+        {type = "item", name = "iron-plate", amount = 4},
     },
     results = {
-        {"space-scrondrix-pen-mk01", 1}
+        {type = "item", name = "space-scrondrix-pen-mk01", amount = 1}
     }
 }:add_unlock("scrondrix")
 

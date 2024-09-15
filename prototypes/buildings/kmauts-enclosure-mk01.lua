@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"pipe", 10},
-        {"automated-factory-mk02", 2},
-        {"gasifier", 2},
-        {"nexelit-plate", 30},
-        {"super-steel", 40},
-        {"iron-gear-wheel", 30},
-        {"glass", 50},
+        {type = "item", name = "pipe", amount = 10},
+        {type = "item", name = "automated-factory-mk02", amount = 2},
+        {type = "item", name = "gasifier", amount = 2},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "super-steel", amount = 40},
+        {type = "item", name = "iron-gear-wheel", amount = 30},
+        {type = "item", name = "glass", amount = 50},
     },
     results = {
-        {"kmauts-enclosure-mk01", 1}
+        {type = "item", name = "kmauts-enclosure-mk01", amount = 1}
     }
 }:add_unlock("kmauts")
 

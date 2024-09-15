@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"spore-collector-mk01", 1},
-        {"automated-factory-mk01", 2},
-        {"steel-plate", 100},
-        {"electronic-circuit", 20},
-        {"pipe", 15}
+        {type = "item", name = "spore-collector-mk01", amount = 1},
+        {type = "item", name = "automated-factory-mk01", amount = 2},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "electronic-circuit", amount = 20},
+        {type = "item", name = "pipe", amount = 15}
     },
     results = {
-        {"space-zipir-reef-mk01", 1}
+        {type = "item", name = "space-zipir-reef-mk01", amount = 1}
     }
 }:add_unlock("zipir")
 

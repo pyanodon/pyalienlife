@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"duralumin", 10},
-        {"washer", 1},
-        {"titanium-plate", 35},
-        {"electronic-circuit", 10},
-        {"steam-engine", 5},
-        {"glass", 50},
-        {"nickel-plate", 25},
+        {type = "item", name = "duralumin", amount = 10},
+        {type = "item", name = "washer", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 35},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "steam-engine", amount = 5},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "nickel-plate", amount = 25},
     },
     results = {
-        {"atomizer-mk01", 1}
+        {type = "item", name = "atomizer-mk01", amount = 1}
     }
 }:add_unlock("molecular-decohesion")
 

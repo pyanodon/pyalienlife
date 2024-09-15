@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"metallic-glass", 20},
-        {"dhilmos-pool-mk03", 1},
-        {"super-alloy", 100},
-        {"boron-carbide", 50},
-        {"control-unit", 10},
+        {type = "item", name = "metallic-glass", amount = 20},
+        {type = "item", name = "dhilmos-pool-mk03", amount = 1},
+        {type = "item", name = "super-alloy", amount = 100},
+        {type = "item", name = "boron-carbide", amount = 50},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"dhilmos-pool-mk04", 1}
+        {type = "item", name = "dhilmos-pool-mk04", amount = 1}
     }
 }:add_unlock("water-animals-mk04")
 

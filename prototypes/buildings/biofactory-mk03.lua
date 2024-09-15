@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"biofactory-mk02", 1},
-        {"neuromorphic-chip", 30},
-        {"boron-carbide", 15},
-        {"ticocr-alloy", 40},
-        {"electric-engine-unit", 15},
-        {"processing-unit", 30},
-        {"nichrome", 25},
+        {type = "item", name = "biofactory-mk02", amount = 1},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "boron-carbide", amount = 15},
+        {type = "item", name = "ticocr-alloy", amount = 40},
+        {type = "item", name = "electric-engine-unit", amount = 15},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "nichrome", amount = 25},
     },
     results = {
-        {"biofactory-mk03", 1}
+        {type = "item", name = "biofactory-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

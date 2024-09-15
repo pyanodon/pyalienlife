@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"bio-printer-mk03", 1},
-        {"control-unit", 10},
-        {"wall-shield", 15},
-        {"nbfe-alloy", 40},
-        {"silver-foam", 20},
-        {"divertor", 10},
+        {type = "item", name = "bio-printer-mk03", amount = 1},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "wall-shield", amount = 15},
+        {type = "item", name = "nbfe-alloy", amount = 40},
+        {type = "item", name = "silver-foam", amount = 20},
+        {type = "item", name = "divertor", amount = 10},
     },
     results = {
-        {"bio-printer-mk04", 1}
+        {type = "item", name = "bio-printer-mk04", amount = 1}
     }
 }:add_unlock("mass-production")
 

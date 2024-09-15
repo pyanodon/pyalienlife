@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"research-center-mk03", 1},
-        {"wall-shield", 30},
-        {"control-unit", 15},
-        {"boron-carbide", 25},
-        {"low-density-structure", 20},
-        {"blanket", 5},
-        {"nbfe-alloy", 50},
+        {type = "item", name = "research-center-mk03", amount = 1},
+        {type = "item", name = "wall-shield", amount = 30},
+        {type = "item", name = "control-unit", amount = 15},
+        {type = "item", name = "boron-carbide", amount = 25},
+        {type = "item", name = "low-density-structure", amount = 20},
+        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "nbfe-alloy", amount = 50},
     },
     results = {
-        {"research-center-mk04", 1}
+        {type = "item", name = "research-center-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

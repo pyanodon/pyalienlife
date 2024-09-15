@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"compost-plant-mk02", 1},
-        {"super-alloy", 40},
-        {"py-heat-exchanger", 1},
-        {"stainless-steel", 30},
-        {"processing-unit", 30},
-        {"electric-engine-unit", 20},
-        {"ticocr-alloy", 20},
+        {type = "item", name = "compost-plant-mk02", amount = 1},
+        {type = "item", name = "super-alloy", amount = 40},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 30},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 20},
+        {type = "item", name = "ticocr-alloy", amount = 20},
     },
     results = {
-        {"compost-plant-mk03", 1}
+        {type = "item", name = "compost-plant-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

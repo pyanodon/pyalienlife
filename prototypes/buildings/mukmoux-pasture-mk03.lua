@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"mukmoux-pasture-mk02", 1},
-        {"nexelit-plate", 50},
-        {"nbti-alloy", 20},
-        {"ticocr-alloy", 30},
-        {"processing-unit", 30}
+        {type = "item", name = "mukmoux-pasture-mk02", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 50},
+        {type = "item", name = "nbti-alloy", amount = 20},
+        {type = "item", name = "ticocr-alloy", amount = 30},
+        {type = "item", name = "processing-unit", amount = 30}
     },
     results = {
-        {"mukmoux-pasture-mk03", 1}
+        {type = "item", name = "mukmoux-pasture-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

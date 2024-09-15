@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"creature-chamber-mk02", 1},
-        {"ticocr-alloy", 30},
-        {"nbti-alloy", 50},
-        {"electric-engine-unit", 12},
-        {"nexelit-plate", 50},
-        {"processing-unit", 40},
+        {type = "item", name = "creature-chamber-mk02", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 30},
+        {type = "item", name = "nbti-alloy", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 12},
+        {type = "item", name = "nexelit-plate", amount = 50},
+        {type = "item", name = "processing-unit", amount = 40},
     },
     results = {
-        {"creature-chamber-mk03", 1}
+        {type = "item", name = "creature-chamber-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03")
 

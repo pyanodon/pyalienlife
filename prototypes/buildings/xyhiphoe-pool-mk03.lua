@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-                {'xyhiphoe-pool-mk02', 1},
-                {'titanium-plate', 50},
-                {"nbti-alloy", 20},
-                {'stainless-steel', 20},
-                {"electric-engine-unit", 8},
-                {"molybdenum-plate", 20},
-                {'processing-unit', 10}
+                {type = "item", name = 'xyhiphoe-pool-mk02', amount = 1},
+                {type = "item", name = 'titanium-plate', amount = 50},
+                {type = "item", name = "nbti-alloy", amount = 20},
+                {type = "item", name = 'stainless-steel', amount = 20},
+                {type = "item", name = "electric-engine-unit", amount = 8},
+                {type = "item", name = "molybdenum-plate", amount = 20},
+                {type = "item", name = 'processing-unit', amount = 10}
             },
     results = {
-        {"xyhiphoe-pool-mk03", 1}
+        {type = "item", name = "xyhiphoe-pool-mk03", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

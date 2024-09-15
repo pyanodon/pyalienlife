@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"concrete", 50},
-        {"duralumin", 50},
-        {"glass", 20},
-        {"advanced-circuit", 50},
-        {"yaedols-culture-mk01", 1},
-        {"latex", 50},
-        {"neuroprocessor", 50},
+        {type = "item", name = "concrete", amount = 50},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 50},
+        {type = "item", name = "yaedols-culture-mk01", amount = 1},
+        {type = "item", name = "latex", amount = 50},
+        {type = "item", name = "neuroprocessor", amount = 50},
     },
     results = {
-        {"yaedols-culture-mk02", 1}
+        {type = "item", name = "yaedols-culture-mk02", amount = 1}
     }
 }:add_unlock("mycology-mk03")
 

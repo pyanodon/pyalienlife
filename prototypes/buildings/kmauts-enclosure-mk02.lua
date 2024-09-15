@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"kmauts-enclosure-mk01", 1},
-        {"gasifier", 1},
-        {"nexelit-plate", 30},
-        {"lead-plate", 20},
-        {"latex", 30},
-        {"neuroprocessor", 20},
+        {type = "item", name = "kmauts-enclosure-mk01", amount = 1},
+        {type = "item", name = "gasifier", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "lead-plate", amount = 20},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "neuroprocessor", amount = 20},
     },
     results = {
-        {"kmauts-enclosure-mk02", 1}
+        {type = "item", name = "kmauts-enclosure-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
 

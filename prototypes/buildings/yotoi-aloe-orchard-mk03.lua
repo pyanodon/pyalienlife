@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"yotoi-aloe-orchard-mk02", 1},
-        {"sc-unit", 10},
-        {"neuromorphic-chip", 15},
-        {"processing-unit", 30},
-        {"electric-engine-unit", 2},
-        {"latex", 100},
+        {type = "item", name = "yotoi-aloe-orchard-mk02", amount = 1},
+        {type = "item", name = "sc-unit", amount = 10},
+        {type = "item", name = "neuromorphic-chip", amount = 15},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "electric-engine-unit", amount = 2},
+        {type = "item", name = "latex", amount = 100},
     },
     results = {
-        {"yotoi-aloe-orchard-mk03", 1}
+        {type = "item", name = "yotoi-aloe-orchard-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03")
 

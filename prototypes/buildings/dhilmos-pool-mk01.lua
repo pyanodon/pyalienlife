@@ -7,18 +7,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"nbti-alloy", 40},
-        {"steam-engine", 2},
-        {"glass", 35},
-        {"nexelit-plate", 20},
-        {"duralumin", 50},
-        {"plastic-bar", 25},
-        {"stainless-steel", 50},
-        {"advanced-circuit", 50},
-        {"tin-plate", 50},
+        {type = "item", name = "nbti-alloy", amount = 40},
+        {type = "item", name = "steam-engine", amount = 2},
+        {type = "item", name = "glass", amount = 35},
+        {type = "item", name = "nexelit-plate", amount = 20},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "plastic-bar", amount = 25},
+        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "advanced-circuit", amount = 50},
+        {type = "item", name = "tin-plate", amount = 50},
     },
     results = {
-        {"dhilmos-pool-mk01", 1}
+        {type = "item", name = "dhilmos-pool-mk01", amount = 1}
     }
 }:add_unlock("dhilmos")
 

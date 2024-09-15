@@ -572,7 +572,7 @@ RECIPE {
         {type = 'item', name = 'small-electric-pole', amount = 1},
     },
     results = {
-        {'ulric-infusion-equipment', 1}
+        {type = "item", name = 'ulric-infusion-equipment', amount = 1}
     }
 }:add_unlock('symbiosis-mk01')
 

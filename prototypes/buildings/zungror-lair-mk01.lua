@@ -7,20 +7,20 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone", 300},
-        {"concrete", 200},
-        {"iron-plate", 200},
-        {"glass", 50},
-        {"gun-turret", 1},
-        {"laser-turret", 1},
-        {"automated-factory-mk01", 1},
-        {"stainless-steel", 100},
-        {"titanium-plate", 50},
-        {"latex", 100},
-        {"advanced-circuit", 200},
+        {type = "item", name = "stone", amount = 300},
+        {type = "item", name = "concrete", amount = 200},
+        {type = "item", name = "iron-plate", amount = 200},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "gun-turret", amount = 1},
+        {type = "item", name = "laser-turret", amount = 1},
+        {type = "item", name = "automated-factory-mk01", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 100},
+        {type = "item", name = "titanium-plate", amount = 50},
+        {type = "item", name = "latex", amount = 100},
+        {type = "item", name = "advanced-circuit", amount = 200},
     },
     results = {
-        {"zungror-lair-mk01", 1}
+        {type = "item", name = "zungror-lair-mk01", amount = 1}
     }
 }:add_unlock("zungror")
 

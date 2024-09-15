@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"vrauks-paddock-mk03", 1},
-        {"silver-foam", 20},
-        {"control-unit", 10},
-        {"agzn-alloy", 30},
-        {"low-density-structure", 30},
-        {"nenbit-matrix", 40},
+        {type = "item", name = "vrauks-paddock-mk03", amount = 1},
+        {type = "item", name = "silver-foam", amount = 20},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "agzn-alloy", amount = 30},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "nenbit-matrix", amount = 40},
     },
     results = {
-        {"vrauks-paddock-mk04", 1}
+        {type = "item", name = "vrauks-paddock-mk04", amount = 1}
     }
 }:add_unlock("land-animals-mk04")
 

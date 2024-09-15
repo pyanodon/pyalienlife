@@ -15,16 +15,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"nichrome", 20},
-        {"processing-unit", 20},
-        {"molybdenum-plate", 60},
-        {"cadaveric-arum-mk02", 1},
-        {"stainless-steel", 10},
-        {"boron-carbide", 15},
-        {"sc-unit", 10},
+        {type = "item", name = "nichrome", amount = 20},
+        {type = "item", name = "processing-unit", amount = 20},
+        {type = "item", name = "molybdenum-plate", amount = 60},
+        {type = "item", name = "cadaveric-arum-mk02", amount = 1},
+        {type = "item", name = "stainless-steel", amount = 10},
+        {type = "item", name = "boron-carbide", amount = 15},
+        {type = "item", name = "sc-unit", amount = 10},
     },
     results = {
-        {"cadaveric-arum-mk03", 1}
+        {type = "item", name = "cadaveric-arum-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

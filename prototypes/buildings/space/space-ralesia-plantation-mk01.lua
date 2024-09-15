@@ -33,17 +33,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"soil", 300},
-        {"pipe", 15},
-        {"electronic-circuit", 25},
-        {"stone", 100},
-        {"iron-plate", 30},
-        {"duralumin", 10},
-        {"treated-wood", 50},
-        {"small-lamp", 20}
+        {type = "item", name = "soil", amount = 300},
+        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 25},
+        {type = "item", name = "stone", amount = 100},
+        {type = "item", name = "iron-plate", amount = 30},
+        {type = "item", name = "duralumin", amount = 10},
+        {type = "item", name = "treated-wood", amount = 50},
+        {type = "item", name = "small-lamp", amount = 20}
     },
     results = {
-        {"space-ralesia-plantation-mk01", 1}
+        {type = "item", name = "space-ralesia-plantation-mk01", amount = 1}
     }
 }:add_unlock("ralesia")
 

@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"grods-swamp-mk02", 1},
-        {"molybdenum-plate", 15},
-        {"low-density-structure", 20},
-        {"processing-unit", 40},
-        {"electric-engine-unit", 8},
-        {"nexelit-plate", 40},
-        {"nbti-alloy", 30},
+        {type = "item", name = "grods-swamp-mk02", amount = 1},
+        {type = "item", name = "molybdenum-plate", amount = 15},
+        {type = "item", name = "low-density-structure", amount = 20},
+        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "electric-engine-unit", amount = 8},
+        {type = "item", name = "nexelit-plate", amount = 40},
+        {type = "item", name = "nbti-alloy", amount = 30},
     },
     results = {
-        {"grods-swamp-mk03", 1}
+        {type = "item", name = "grods-swamp-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

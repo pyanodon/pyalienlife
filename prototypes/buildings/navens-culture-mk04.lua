@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"navens-culture-mk03", 1},
-        {"silver-foam", 25},
-        {"metallic-glass", 30},
-        {"control-unit", 15},
-        {"wall-shield", 10},
+        {type = "item", name = "navens-culture-mk03", amount = 1},
+        {type = "item", name = "silver-foam", amount = 25},
+        {type = "item", name = "metallic-glass", amount = 30},
+        {type = "item", name = "control-unit", amount = 15},
+        {type = "item", name = "wall-shield", amount = 10},
     },
     results = {
-        {"navens-culture-mk04", 1}
+        {type = "item", name = "navens-culture-mk04", amount = 1}
     }
 }:add_unlock("mycology-mk05")
 

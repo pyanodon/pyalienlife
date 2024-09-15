@@ -40,15 +40,15 @@ RECIPE {
   name = 'dino-dig-site',
   enabled = false,
   ingredients = {
-      {'steel-plate', 50},
-      {'duralumin', 30},
-      {'electronic-circuit', 10},
-      {'lead-plate', 50},
-      {'titanium-plate', 100},
-      {'small-parts-01', 100},
+      {type = "item", name = 'steel-plate', amount = 50},
+      {type = "item", name = 'duralumin', amount = 30},
+      {type = "item", name = 'electronic-circuit', amount = 10},
+      {type = "item", name = 'lead-plate', amount = 50},
+      {type = "item", name = 'titanium-plate', amount = 100},
+      {type = "item", name = 'small-parts-01', amount = 100},
   },
   results = {
-      {'dino-dig-site', 1}
+      {type = "item", name = 'dino-dig-site', amount = 1}
   }
 }:add_unlock{'nexelit-mk01'}
 

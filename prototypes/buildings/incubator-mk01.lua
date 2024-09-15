@@ -13,16 +13,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"glass", 50},
-        {"steam-engine", 2},
-        {"gasifier", 1},
-        {"titanium-plate", 30},
-        --{"plastic-bar", 30},
-        {"iron-gear-wheel", 30},
-        {"duralumin", 15},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "steam-engine", amount = 2},
+        {type = "item", name = "gasifier", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 30},
+        --{type = "item", name = "plastic-bar", amount = 30},
+        {type = "item", name = "iron-gear-wheel", amount = 30},
+        {type = "item", name = "duralumin", amount = 15},
     },
     results = {
-        {"incubator-mk01", 1}
+        {type = "item", name = "incubator-mk01", amount = 1}
     }
 }:add_unlock("biotech-mk01")
 

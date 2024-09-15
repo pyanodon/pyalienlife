@@ -7,18 +7,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"lab", 1},
-        -- {"carbon-filter", 1},
-        {"glass", 140},
-        {"duralumin", 30},
-        {"pump", 5},
-        {"steel-plate", 50},
-        -- {"nexelit-plate", 15},
-        {"electronic-circuit", 50},
-        {"lead-plate", 40},
+        {type = "item", name = "lab", amount = 1},
+        -- {type = "item", name = "carbon-filter", amount = 1},
+        {type = "item", name = "glass", amount = 140},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "pump", amount = 5},
+        {type = "item", name = "steel-plate", amount = 50},
+        -- {type = "item", name = "nexelit-plate", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 50},
+        {type = "item", name = "lead-plate", amount = 40},
     },
     results = {
-        {"fish-farm-mk01", 1}
+        {type = "item", name = "fish-farm-mk01", amount = 1}
     }
 }:add_unlock("fish-mk01")
 

@@ -13,15 +13,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"kicalk-plantation-mk03", 1},
-        {"control-unit", 10},
-        {"divertor", 5},
-        {"wall-shield", 5},
-        {"nenbit-matrix", 20},
-        {"agzn-alloy", 35},
+        {type = "item", name = "kicalk-plantation-mk03", amount = 1},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "divertor", amount = 5},
+        {type = "item", name = "wall-shield", amount = 5},
+        {type = "item", name = "nenbit-matrix", amount = 20},
+        {type = "item", name = "agzn-alloy", amount = 35},
     },
     results = {
-        {"kicalk-plantation-mk04", 1}
+        {type = "item", name = "kicalk-plantation-mk04", amount = 1}
     }
 }:add_unlock('botany-mk04')
 

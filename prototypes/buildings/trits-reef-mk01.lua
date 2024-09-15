@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"titanium-plate", 100},
-        {"iron-plate", 150},
-        {"aluminium-plate", 50},
-        {"steam-engine", 5},
-        {"pump", 3},
-        {"glass", 200},
-        {"electronic-circuit", 50},
+        {type = "item", name = "titanium-plate", amount = 100},
+        {type = "item", name = "iron-plate", amount = 150},
+        {type = "item", name = "aluminium-plate", amount = 50},
+        {type = "item", name = "steam-engine", amount = 5},
+        {type = "item", name = "pump", amount = 3},
+        {type = "item", name = "glass", amount = 200},
+        {type = "item", name = "electronic-circuit", amount = 50},
     },
     results = {
-        {"trits-reef-mk01", 1}
+        {type = "item", name = "trits-reef-mk01", amount = 1}
     }
 }:add_unlock("trits")
 

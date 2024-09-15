@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone", 100},
-        {"soil", 300},
-        {"iron-plate", 80},
+        {type = "item", name = "stone", amount = 100},
+        {type = "item", name = "soil", amount = 300},
+        {type = "item", name = "iron-plate", amount = 80},
     },
     results = {
-        {"space-auog-paddock-mk01", 1}
+        {type = "item", name = "space-auog-paddock-mk01", amount = 1}
     }
 }:add_unlock("auog"):add_ingredient({type = "item", name = "bolts", amount = 50})
 

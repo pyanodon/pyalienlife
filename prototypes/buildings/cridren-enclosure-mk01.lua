@@ -7,14 +7,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"titanium-plate", 100},
-        {"stainless-steel", 100},
-        {"concrete-wall", 50},
-        {"glass", 30},
-        {"advanced-circuit", 40},
+        {type = "item", name = "titanium-plate", amount = 100},
+        {type = "item", name = "stainless-steel", amount = 100},
+        {type = "item", name = "concrete-wall", amount = 50},
+        {type = "item", name = "glass", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 40},
     },
     results = {
-        {"cridren-enclosure-mk01", 1}
+        {type = "item", name = "cridren-enclosure-mk01", amount = 1}
     }
 }:add_unlock("cridren")
 

@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"science-coating", 30},
-        {"cridren-enclosure-mk03", 1},
-        {"nenbit-matrix", 40},
-        {"metallic-glass", 35},
-        {"super-steel", 30},
-        {"control-unit", 20},
+        {type = "item", name = "science-coating", amount = 30},
+        {type = "item", name = "cridren-enclosure-mk03", amount = 1},
+        {type = "item", name = "nenbit-matrix", amount = 40},
+        {type = "item", name = "metallic-glass", amount = 35},
+        {type = "item", name = "super-steel", amount = 30},
+        {type = "item", name = "control-unit", amount = 20},
     },
     results = {
-        {"cridren-enclosure-mk04", 1}
+        {type = "item", name = "cridren-enclosure-mk04", amount = 1}
     }
 }:add_unlock("cridren-mk04")
 

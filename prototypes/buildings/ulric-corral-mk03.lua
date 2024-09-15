@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"sc-unit", 15},
-        {"nbti-alloy", 20},
-        {"ulric-corral-mk02", 1},
-        {"nichrome", 15},
-        {"processing-unit", 15},
-        {"boron-carbide", 15},
+        {type = "item", name = "sc-unit", amount = 15},
+        {type = "item", name = "nbti-alloy", amount = 20},
+        {type = "item", name = "ulric-corral-mk02", amount = 1},
+        {type = "item", name = "nichrome", amount = 15},
+        {type = "item", name = "processing-unit", amount = 15},
+        {type = "item", name = "boron-carbide", amount = 15},
     },
     results = {
-        {"ulric-corral-mk03", 1}
+        {type = "item", name = "ulric-corral-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 25})
 

@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"fwf-mk02", 1},
-        {"nexelit-plate", 30},
-        {"molybdenum-plate", 30},
-        {"low-density-structure", 30},
-        {"boron-carbide", 50},
-        {"electric-engine-unit", 10},
-        {"processing-unit", 40},
+        {type = "item", name = "fwf-mk02", amount = 1},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "molybdenum-plate", amount = 30},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "boron-carbide", amount = 50},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "processing-unit", amount = 40},
     },
     results = {
-        {"fwf-mk03", 1}
+        {type = "item", name = "fwf-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

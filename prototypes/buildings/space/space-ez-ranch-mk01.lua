@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"engine-unit", 10},
-        {"plastic-bar", 20},
-        {"steel-plate", 100},
-        {"duralumin", 30},
-        {"glass", 20},
-        {"titanium-plate", 40},
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "steel-plate", amount = 100},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "titanium-plate", amount = 40},
     },
     results = {
-        {"space-ez-ranch-mk01", 1}
+        {type = "item", name = "space-ez-ranch-mk01", amount = 1}
     }
 }:add_unlock("korlex"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
 

@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"steel-plate", 15},
-        {"glass", 100},
-        {"titanium-plate", 15},
-        {"duralumin", 50},
-        {"iron-plate", 15},
-        {"pipe", 15},
-        {"electronic-circuit", 15},
-        {"iron-gear-wheel", 20},
+        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "glass", amount = 100},
+        {type = "item", name = "titanium-plate", amount = 15},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "iron-plate", amount = 15},
+        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 15},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
     },
     results = {
-        {"space-sponge-culture-mk01", 1}
+        {type = "item", name = "space-sponge-culture-mk01", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk01")
 

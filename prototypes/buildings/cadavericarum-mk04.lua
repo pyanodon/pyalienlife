@@ -15,15 +15,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"control-unit", 10},
-        {"wall-shield", 10},
-        {"cadaveric-arum-mk03", 1},
-        {"super-steel", 70},
-        {"blanket", 2},
-        {"kevlar", 50},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "cadaveric-arum-mk03", amount = 1},
+        {type = "item", name = "super-steel", amount = 70},
+        {type = "item", name = "blanket", amount = 2},
+        {type = "item", name = "kevlar", amount = 50},
     },
     results = {
-        {"cadaveric-arum-mk04", 1}
+        {type = "item", name = "cadaveric-arum-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

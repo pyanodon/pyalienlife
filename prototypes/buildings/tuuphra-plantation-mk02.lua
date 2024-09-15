@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"tuuphra-plantation-mk01", 1},
-        {"titanium-plate", 15},
-        {"duralumin", 50},
-        {"latex", 30},
-        {"neuroprocessor", 20},
-        {"advanced-circuit", 30},
-        {"engine-unit", 5},
+        {type = "item", name = "tuuphra-plantation-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 15},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "engine-unit", amount = 5},
     },
     results = {
-        {"tuuphra-plantation-mk02", 1}
+        {type = "item", name = "tuuphra-plantation-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02")
 

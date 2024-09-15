@@ -6,20 +6,20 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"concrete", 200},
-        {"treated-wood", 50},
-        --{"control-unit", 10},
-        --{"boron-carbide", 30},
-        --{"super-alloy", 20},
-        --{"blanket", 5},
-        {"nbfe-alloy", 50},
-        {"kevlar", 100},
-        --{"divertor", 10},
-        --{"metallic-glass", 30},
-        {"advanced-circuit", 50},
+        {type = "item", name = "concrete", amount = 200},
+        {type = "item", name = "treated-wood", amount = 50},
+        --{type = "item", name = "control-unit", amount = 10},
+        --{type = "item", name = "boron-carbide", amount = 30},
+        --{type = "item", name = "super-alloy", amount = 20},
+        --{type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "nbfe-alloy", amount = 50},
+        {type = "item", name = "kevlar", amount = 100},
+        --{type = "item", name = "divertor", amount = 10},
+        --{type = "item", name = "metallic-glass", amount = 30},
+        {type = "item", name = "advanced-circuit", amount = 50},
     },
     results = {
-        {"mega-farm", 1}
+        {type = "item", name = "mega-farm", amount = 1}
     }
 }:add_unlock("mega-farm")
 

@@ -7,16 +7,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"ralesia-plantation-mk01", 1},
-        {"pump", 4},
-        {"electronic-circuit", 20},
-        {"steel-plate", 40},
-        {"steam-engine", 4},
-        {"pipe", 10},
-        {"glass", 100}
+        {type = "item", name = "ralesia-plantation-mk01", amount = 1},
+        {type = "item", name = "pump", amount = 4},
+        {type = "item", name = "electronic-circuit", amount = 20},
+        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "steam-engine", amount = 4},
+        {type = "item", name = "pipe", amount = 10},
+        {type = "item", name = "glass", amount = 100}
     },
     results = {
-        {"xyhiphoe-pool-mk01", 1}
+        {type = "item", name = "xyhiphoe-pool-mk01", amount = 1}
     }
 }:add_unlock("water-invertebrates-mk01")
 

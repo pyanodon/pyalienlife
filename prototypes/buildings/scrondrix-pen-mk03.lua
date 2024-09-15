@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"molybdenum-plate", 100},
-        {"scrondrix-pen-mk02", 1},
-        {"ticocr-alloy", 20},
-        {"processing-unit", 30},
-        {"nexelit-plate", 50},
-        {"low-density-structure", 40},
+        {type = "item", name = "molybdenum-plate", amount = 100},
+        {type = "item", name = "scrondrix-pen-mk02", amount = 1},
+        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "nexelit-plate", amount = 50},
+        {type = "item", name = "low-density-structure", amount = 40},
     },
     results = {
-        {"scrondrix-pen-mk03", 1}
+        {type = "item", name = "scrondrix-pen-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 

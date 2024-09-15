@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"collector-mk03", 1},
-        {"science-coating", 20},
-        {"divertor", 5},
-        {"control-unit", 5},
-        {"metallic-glass", 10},
-        {"boron-carbide", 30},
+        {type = "item", name = "collector-mk03", amount = 1},
+        {type = "item", name = "science-coating", amount = 20},
+        {type = "item", name = "divertor", amount = 5},
+        {type = "item", name = "control-unit", amount = 5},
+        {type = "item", name = "metallic-glass", amount = 10},
+        {type = "item", name = "boron-carbide", amount = 30},
     },
     results = {
-        {"collector-mk04", 1}
+        {type = "item", name = "collector-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

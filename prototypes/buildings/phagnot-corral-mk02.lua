@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"phagnot-corral-mk01", 1},
-        {"titanium-plate", 50},
-        {"latex", 100},
-        {"neuroprocessor", 30},
-        {"nexelit-plate", 80},
-        {"advanced-circuit", 20},
+        {type = "item", name = "phagnot-corral-mk01", amount = 1},
+        {type = "item", name = "titanium-plate", amount = 50},
+        {type = "item", name = "latex", amount = 100},
+        {type = "item", name = "neuroprocessor", amount = 30},
+        {type = "item", name = "nexelit-plate", amount = 80},
+        {type = "item", name = "advanced-circuit", amount = 20},
     },
     results = {
-        {"phagnot-corral-mk02", 1}
+        {type = "item", name = "phagnot-corral-mk02", amount = 1}
     }
 }:add_unlock("land-animals-mk02")
 

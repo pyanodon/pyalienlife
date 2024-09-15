@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"py-heat-exchanger", 1},
-        {"molybdenum-plate", 50},
-        {"sc-unit", 10},
-        {"processing-unit", 50},
-        {"yaedols-culture-mk02", 1},
-        {"latex", 50},
-        {"neuromorphic-chip", 20},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
+        {type = "item", name = "molybdenum-plate", amount = 50},
+        {type = "item", name = "sc-unit", amount = 10},
+        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "yaedols-culture-mk02", amount = 1},
+        {type = "item", name = "latex", amount = 50},
+        {type = "item", name = "neuromorphic-chip", amount = 20},
     },
     results = {
-        {"yaedols-culture-mk03", 1}
+        {type = "item", name = "yaedols-culture-mk03", amount = 1}
     }
 }:add_unlock("mycology-mk04")
 

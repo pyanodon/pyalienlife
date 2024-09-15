@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"dingrits-pack-mk02", 1},
-        {"low-density-structure", 30},
-        {"molybdenum-plate", 50},
-        {"stainless-steel", 40},
-        {"nexelit-plate", 30},
-        {"processing-unit", 25},
+        {type = "item", name = "dingrits-pack-mk02", amount = 1},
+        {type = "item", name = "low-density-structure", amount = 30},
+        {type = "item", name = "molybdenum-plate", amount = 50},
+        {type = "item", name = "stainless-steel", amount = 40},
+        {type = "item", name = "nexelit-plate", amount = 30},
+        {type = "item", name = "processing-unit", amount = 25},
     },
     results = {
-        {"dingrits-pack-mk03", 1}
+        {type = "item", name = "dingrits-pack-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 40})
 

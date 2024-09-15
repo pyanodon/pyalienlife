@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {'steel-plate', 50},
-        {'glass', 40},
-        {'titanium-plate', 100},
-        {'duralumin', 50},
-        {'electronic-circuit', 30},
-        {'iron-gear-wheel', 50},
-        {'iron-plate', 1}
+        {type = "item", name = 'steel-plate', amount = 50},
+        {type = "item", name = 'glass', amount = 40},
+        {type = "item", name = 'titanium-plate', amount = 100},
+        {type = "item", name = 'duralumin', amount = 50},
+        {type = "item", name = 'electronic-circuit', amount = 30},
+        {type = "item", name = 'iron-gear-wheel', amount = 50},
+        {type = "item", name = 'iron-plate', amount = 1}
     },
     results = {
-        {'ipod', 1}
+        {type = "item", name = 'ipod', amount = 1}
     }
 }:add_unlock('domestication-mk02')
 

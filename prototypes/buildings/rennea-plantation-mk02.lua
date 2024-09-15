@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"rennea-plantation-mk01", 1},
-        {"engine-unit", 10},
-        {"treated-wood", 20},
-        {"niobium-pipe", 20},
-        {"advanced-circuit", 50},
-        {"lead-plate", 30},
-        {"storage-tank", 4},
+        {type = "item", name = "rennea-plantation-mk01", amount = 1},
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "treated-wood", amount = 20},
+        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "advanced-circuit", amount = 50},
+        {type = "item", name = "lead-plate", amount = 30},
+        {type = "item", name = "storage-tank", amount = 4},
     },
     results = {
-        {"rennea-plantation-mk02", 1}
+        {type = "item", name = "rennea-plantation-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02")
 

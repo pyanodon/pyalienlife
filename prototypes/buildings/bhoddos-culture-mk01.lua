@@ -8,15 +8,15 @@ RECIPE {
     enabled = false,
     ingredients = {
         {mods.pyalternativeenergy and 'nuclear-reactor' or 'gasifier', 1},
-        {'glass', 30},
-        {'nexelit-plate', 20},
-        {'duralumin', 35},
-        {'steel-plate', 50},
-        {'electronic-circuit', 15},
-        {'tin-plate', 50},
+        {type = "item", name = 'glass', amount = 30},
+        {type = "item", name = 'nexelit-plate', amount = 20},
+        {type = "item", name = 'duralumin', amount = 35},
+        {type = "item", name = 'steel-plate', amount = 50},
+        {type = "item", name = 'electronic-circuit', amount = 15},
+        {type = "item", name = 'tin-plate', amount = 50},
     },
     results = {
-        {'bhoddos-culture-mk01', 1}
+        {type = "item", name = 'bhoddos-culture-mk01', amount = 1}
     }
 }:add_unlock('bhoddos')
 

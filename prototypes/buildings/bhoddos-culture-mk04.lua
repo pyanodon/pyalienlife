@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"bhoddos-culture-mk03", 1},
-        {"control-unit", 10},
-        {"wall-shield", 15},
-        {"nbfe-alloy", 40},
-        {"silver-foam", 20},
-        {"divertor", 10},
+        {type = "item", name = "bhoddos-culture-mk03", amount = 1},
+        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "wall-shield", amount = 15},
+        {type = "item", name = "nbfe-alloy", amount = 40},
+        {type = "item", name = "silver-foam", amount = 20},
+        {type = "item", name = "divertor", amount = 10},
     },
     results = {
-        {"bhoddos-culture-mk04", 1}
+        {type = "item", name = "bhoddos-culture-mk04", amount = 1}
     }
 }:add_unlock("mycology-mk05")
 

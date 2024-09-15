@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"glass", 35},
-        {"steel-plate", 50},
-        {"duralumin", 50},
-        {"steam-engine", 1},
-        {"pipe", 15},
-        {"electronic-circuit", 20},
-        {"plastic-bar", 40},
+        {type = "item", name = "glass", amount = 35},
+        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "steam-engine", amount = 1},
+        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 20},
+        {type = "item", name = "plastic-bar", amount = 40},
     },
     results = {
-        {"yotoi-aloe-orchard-mk01", 1}
+        {type = "item", name = "yotoi-aloe-orchard-mk01", amount = 1}
     }
 }:add_unlock("yotoi")
 

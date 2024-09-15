@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone-brick", 30},
-        {"limestone", 25},
-        {"pipe", 15},
-        {"electronic-circuit", 10},
-        {"steam-engine", 2},
-        {"duralumin", 100},
-        {"tin-plate", 50},
+        {type = "item", name = "stone-brick", amount = 30},
+        {type = "item", name = "limestone", amount = 25},
+        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "steam-engine", amount = 2},
+        {type = "item", name = "duralumin", amount = 100},
+        {type = "item", name = "tin-plate", amount = 50},
     },
     results = {
-        {"tuuphra-plantation-mk01", 1}
+        {type = "item", name = "tuuphra-plantation-mk01", amount = 1}
     }
 }:add_unlock("tuuphra")
 

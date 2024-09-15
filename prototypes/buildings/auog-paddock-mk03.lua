@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"auog-paddock-mk02", 1},
-        {"nbti-alloy", 25},
-        {"advanced-circuit", 20},
-        {"neuromorphic-chip", 30},
-        {"py-heat-exchanger", 1},
+        {type = "item", name = "auog-paddock-mk02", amount = 1},
+        {type = "item", name = "nbti-alloy", amount = 25},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "py-heat-exchanger", amount = 1},
     },
     results = {
-        {"auog-paddock-mk03", 1}
+        {type = "item", name = "auog-paddock-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
 

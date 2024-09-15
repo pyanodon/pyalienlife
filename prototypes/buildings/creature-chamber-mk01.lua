@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"genlab-mk01", 1},
-        {"plastic-bar", 20},
-        {"duralumin", 30},
-        {"steel-plate", 40},
-        {"lead-plate", 15},
-        {"electronic-circuit", 30},
-        {"glass", 50},
-        {"titanium-plate", 40},
+        {type = "item", name = "genlab-mk01", amount = 1},
+        {type = "item", name = "plastic-bar", amount = 20},
+        {type = "item", name = "duralumin", amount = 30},
+        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "lead-plate", amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 30},
+        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "titanium-plate", amount = 40},
     },
     results = {
-        {"creature-chamber-mk01", 1}
+        {type = "item", name = "creature-chamber-mk01", amount = 1}
     }
 }:add_unlock("biotech-machines-mk01")
 

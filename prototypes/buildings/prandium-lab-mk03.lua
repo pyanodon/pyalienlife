@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"prandium-lab-mk02", 1},
-        {"processing-unit", 30},
-        {"ticocr-alloy", 20},
-        {"stainless-steel", 40},
-        {"molybdenum-plate", 20},
+        {type = "item", name = "prandium-lab-mk02", amount = 1},
+        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "stainless-steel", amount = 40},
+        {type = "item", name = "molybdenum-plate", amount = 20},
     },
     results = {
-        {"prandium-lab-mk03", 1}
+        {type = "item", name = "prandium-lab-mk03", amount = 1}
     }
 }:add_unlock("land-animals-mk03")
 

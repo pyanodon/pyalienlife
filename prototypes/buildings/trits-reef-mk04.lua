@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"super-steel", 50},
-        {"wall-shield", 10},
-        {"kevlar", 100},
-        {"science-coating", 30},
-        {"trits-reef-mk03", 1},
-        {"control-unit", 10},
+        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "kevlar", amount = 100},
+        {type = "item", name = "science-coating", amount = 30},
+        {type = "item", name = "trits-reef-mk03", amount = 1},
+        {type = "item", name = "control-unit", amount = 10},
     },
     results = {
-        {"trits-reef-mk04", 1}
+        {type = "item", name = "trits-reef-mk04", amount = 1}
     }
 }:add_unlock("water-animals-mk04")
 
