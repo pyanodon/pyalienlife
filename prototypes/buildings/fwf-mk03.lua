@@ -252,7 +252,7 @@ ENTITY {
         },
         off_when_no_fluid_recipe = true
     },
-    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     working_sound = {
         fade_in_ticks = 60,
         fade_out_ticks = 60,

@@ -264,7 +264,7 @@ data:extend{{
     fast_replaceable_group = 'vessel',
     next_upgrade = nil,
     render_layer = 'lower-object-above-shadow',
-    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
 }}
 
 local ug_pipe_animation = {}

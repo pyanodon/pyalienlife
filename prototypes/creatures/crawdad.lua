@@ -278,7 +278,7 @@ data:extend{{
 	},
 	sound_minimum_speed = 0.05,
 	sound_scaling_ratio = 0.8,
-	vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact.ogg', volume = 0.65},
+	vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
 	working_sound = {
 		sound = {
 			filename = '__pyalienlifegraphics3__/sounds/crawdad-breath.ogg',
