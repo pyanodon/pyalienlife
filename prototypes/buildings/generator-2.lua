@@ -59,7 +59,9 @@ ENTITY {
 			effectivity = 3,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
-			emissions_per_minute = 0,
+			emissions_per_minute = {
+			    pollution = 0
+			},
 		},
 	effectivity = 2,
 	max_power_output = "60MW",

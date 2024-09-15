@@ -50,7 +50,9 @@ ENTITY {
     energy_source = {
         type = 'electric',
         usage_priority = 'secondary-input',
-        emissions_per_minute = 0.06,
+        emissions_per_minute = {
+            pollution = 0.06
+        },
     },
     energy_usage = '600kW',
     mining_power = 2,
