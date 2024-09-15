@@ -54,7 +54,9 @@ ENTITY {
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
-      emissions_per_minute = 0.06,
+      emissions_per_minute = {
+          pollution = 0.06
+      },
     },
     energy_usage = "1300kW",
     animation = {

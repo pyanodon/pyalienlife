@@ -13,7 +13,9 @@ if data and not yafc_turd_integration then
         table.insert(entity.flags, 'not-in-made-in')
         entity.energy_source = {
             type = 'fluid',
-            emissions_per_minute = -1,
+            emissions_per_minute = {
+                pollution = -1
+            },
             fluid_box = {
                 volume = 100,
                 pipe_covers = py.pipe_covers(false, true, true, true),

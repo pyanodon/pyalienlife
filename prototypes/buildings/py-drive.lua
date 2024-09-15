@@ -100,7 +100,9 @@ ENTITY {
   energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 3,
+      emissions_per_minute = {
+          pollution = 3
+      },
       render_no_power_icon = true,
       output_flow_limit = "0W",
       buffer_capacity = '10MW'
