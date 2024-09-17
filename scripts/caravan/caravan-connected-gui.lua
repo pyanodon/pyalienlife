@@ -33,7 +33,7 @@ local function instantiate_main_frame(gui, anchor)
 end
 
 function Caravan.has_any_caravan(entity)
-    for _, caravan_data in pairs(global.caravans) do
+    for _, caravan_data in pairs(storage.caravans) do
         if Caravan.has_entity_in_schedule(caravan_data, entity) then return true end
     end
     return false
@@ -60,7 +60,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     local scroll_pane = main_frame.add{type = 'scroll-pane'}
     scroll_pane.style.top_margin = -6
     
-    for key, caravan_data in pairs(global.caravans) do
+    for key, caravan_data in pairs(storage.caravans) do
         if Caravan.has_entity_in_schedule(caravan_data, entity) then
             scroll_pane.add{type = 'empty-widget'}.style.height = 3
             Caravan.add_gui_row(caravan_data, key, scroll_pane)

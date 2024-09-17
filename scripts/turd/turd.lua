@@ -10,7 +10,7 @@ views = table.map(views, function(v) return {'turd.visible-' .. v, v} end)
 
 local function check_viewable(element, player, researched_technologies)
 	local name = element.tags.name
-	local view_type = views[global.turd_views[player.index] or 1][2]
+	local view_type = views[storage.turd_views[player.index] or 1][2]
 	if view_type == 'all' then
 		return true
 	elseif not researched_technologies[name].researched then
@@ -18,7 +18,7 @@ local function check_viewable(element, player, researched_technologies)
 	elseif view_type == 'researched' then
 		return true
 	end
-	local selection = global.turd_bonuses[player.force.index][name] or NOT_SELECTED
+	local selection = storage.turd_bonuses[player.force.index][name] or NOT_SELECTED
 	if view_type == 'selected' then
 		return selection ~= NOT_SELECTED
 	elseif view_type == 'unselected' then
@@ -49,14 +49,14 @@ local function on_search(search_key, gui, player)
 end
 
 local function has_turd_migration(force_index, sub_tech_name)
-	return game.tick < ((global.turd_migrations[force_index] or {})[sub_tech_name] or 0)
+	return game.tick < ((storage.turd_migrations[force_index] or {})[sub_tech_name] or 0)
 end
 
 local function update_confirm_button(element, player, researched_technologies)
 	local force_index = player.force_index
-	global.turd_bonuses[force_index] = global.turd_bonuses[force_index] or {}
+	storage.turd_bonuses[force_index] = storage.turd_bonuses[force_index] or {}
 	local name = element.tags.master_tech_name
-	local selected_upgrade = global.turd_bonuses[force_index][name] or NOT_SELECTED
+	local selected_upgrade = storage.turd_bonuses[force_index][name] or NOT_SELECTED
 	researched_technologies = researched_technologies or player.force.technologies
 
 	if not researched_technologies[name].researched then
@@ -67,7 +67,7 @@ local function update_confirm_button(element, player, researched_technologies)
 		element.caption = {'turd.select'}
 	elseif selected_upgrade == element.tags.sub_tech_name then
 		if has_turd_migration(force_index, selected_upgrade)then
-			local ticks_remaining = global.turd_migrations[force_index][selected_upgrade] - game.tick
+			local ticks_remaining = storage.turd_migrations[force_index][selected_upgrade] - game.tick
 			local hours = math.floor(ticks_remaining / 216000)
 			local minutes = math.floor(ticks_remaining / 3600) % 60
 			local seconds = math.floor(ticks_remaining / 60) % 60
@@ -75,7 +75,7 @@ local function update_confirm_button(element, player, researched_technologies)
 			if seconds < 10 then seconds = '0' .. seconds end
 			element.style = 'confirm_button_without_tooltip'
 			element.caption = {'turd.unselect-migrate', hours, minutes, seconds}
-		elseif (global.turd_reset_remaining[force_index] or 0) > 0 then
+		elseif (storage.turd_reset_remaining[force_index] or 0) > 0 then
 			element.style = 'confirm_button_without_tooltip'
 			element.caption = {'turd.unselect'}
 		else
@@ -100,13 +100,13 @@ local function create_turd_page(gui, player)
 	local label = textbox_frame.add{type = 'label', caption = {'pywiki-descriptions.turd'}, style = 'label_with_left_padding'}
 	label.style.single_line = false
 
-	local resets = global.turd_reset_remaining[player.force_index] or 0
+	local resets = storage.turd_reset_remaining[player.force_index] or 0
 	if resets ~= 0 then
 		local reset_label = textbox_frame.add{type = 'label', caption = {'turd.resets-left', resets}, style = 'label_with_left_padding', name = 'py_resets_left'}
 		reset_label.style.single_line = false
 	end
 
-	local py_select_view = textbox_frame.add{type = 'drop-down', name = 'py_select_view', items = views, selected_index = global.turd_views[player.index] or 1}
+	local py_select_view = textbox_frame.add{type = 'drop-down', name = 'py_select_view', items = views, selected_index = storage.turd_views[player.index] or 1}
 	py_select_view.style.width = 200
 	py_select_view.style.top_margin = 10
 
@@ -238,7 +238,7 @@ end
 gui_events[defines.events.on_gui_selection_state_changed]['py_select_view'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
-	global.turd_views[event.player_index] = element.selected_index
+	storage.turd_views[event.player_index] = element.selected_index
 	local search_key = remote.call('pywiki', 'get_page_searchbar', player).text
 	on_search(search_key, element.parent.parent, player)
 end
@@ -255,7 +255,7 @@ gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 	local gui = frame.parent
 	local player = game.get_player(event.player_index)
 	local tech_name = frame.tags.name
-	local selected_upgrade = global.turd_bonuses[player.force_index][tech_name] or NOT_SELECTED
+	local selected_upgrade = storage.turd_bonuses[player.force_index][tech_name] or NOT_SELECTED
 	local is_researched = player.force.technologies[tech_name].researched
 
 	for _, tech_upgrade_element in pairs(gui.children) do
@@ -313,7 +313,7 @@ local function recipe_replacement(old, new, force, assembling_machine_list)
 end
 
 local function create_hidden_beacon(machine, module_name, item_prototypes)
-	local beacon = global.turd_beaconed_machines[machine.unit_number]
+	local beacon = storage.turd_beaconed_machines[machine.unit_number]
 	if not beacon or not beacon.valid then
 		beacon = machine.surface.create_entity{name = 'hidden-beacon-turd', position = machine.position, force = machine.force}
 		beacon.destructible = false
@@ -325,7 +325,7 @@ local function create_hidden_beacon(machine, module_name, item_prototypes)
 	inventory.clear()
 	if not item_prototypes[module_name] then module_name = module_name .. '-mk0' .. farm_building_tiers[machine.name] end
 	inventory.insert{name = module_name, count = 1}
-	global.turd_beaconed_machines[machine.unit_number] = beacon
+	storage.turd_beaconed_machines[machine.unit_number] = beacon
 end
 
 local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
@@ -335,7 +335,7 @@ local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, f
 		if i then create_hidden_beacon(machine, module_name, item_prototypes) end
 	end
 	for entity in pairs(tech_upgrade.affected_entities) do
-		global.turd_unlocked_modules[force.index][entity] = module_name
+		storage.turd_unlocked_modules[force.index][entity] = module_name
 	end
 end
 
@@ -382,7 +382,7 @@ local function find_all_assembling_machines(force)
 end
 
 local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assembling_machine_list)
-	local turd_bonuses = global.turd_bonuses[force.index] or {}
+	local turd_bonuses = storage.turd_bonuses[force.index] or {}
 	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
 	if selection == NOT_SELECTED then return end
 	local sub_tech = tech_upgrade.sub_techs[selection]
@@ -400,14 +400,14 @@ local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assemblin
 			module_effects(tech_upgrade, sub_tech, assembling_machine_list, force, item_prototypes)
 		elseif effect.type == 'machine-replacement' then
 			assembling_machine_list = machine_replacement(effect.old, effect.new, assembling_machine_list)
-			global.turd_machine_replacements[force.index] = global.turd_machine_replacements[force.index] or {}
-			global.turd_machine_replacements[force.index][effect.old] = effect.new
+			storage.turd_machine_replacements[force.index] = storage.turd_machine_replacements[force.index] or {}
+			storage.turd_machine_replacements[force.index][effect.old] = effect.new
 		end
 	end
 end
 
 local function reapply_turd_bonuses(force)
-	global.turd_unlocked_modules[force.index] = {}
+	storage.turd_unlocked_modules[force.index] = {}
 	local assembling_machine_list = find_all_assembling_machines(force)
 
 	for master_tech_name, tech_upgrade in pairs(tech_upgrades) do
@@ -426,20 +426,20 @@ local function unselect_recipes_for_subtech(sub_tech, force, assembling_machine_
 			end
 		elseif effect.type == 'machine-replacement' then
 			assembling_machine_list = machine_replacement(effect.new, effect.old, assembling_machine_list)
-			if global.turd_machine_replacements[force.index] then
-				global.turd_machine_replacements[force.index][effect.old] = nil
+			if storage.turd_machine_replacements[force.index] then
+				storage.turd_machine_replacements[force.index][effect.old] = nil
 			end
 		end
 	end
 end
 
 local function destroy_all_hidden_beacons(force)
-	global.turd_unlocked_modules[force.index] = {}
-	for unit_number, beacon in pairs(global.turd_beaconed_machines) do
+	storage.turd_unlocked_modules[force.index] = {}
+	for unit_number, beacon in pairs(storage.turd_beaconed_machines) do
 		if not beacon.valid then
-			global.turd_beaconed_machines[unit_number] = nil
+			storage.turd_beaconed_machines[unit_number] = nil
 		elseif beacon.force == force then
-			global.turd_beaconed_machines[unit_number] = nil
+			storage.turd_beaconed_machines[unit_number] = nil
 			beacon.destroy()
 		end
 	end
@@ -473,8 +473,8 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		return
 	end
 
-	local turd_bonuses = global.turd_bonuses[force_index] or {}
-	global.turd_bonuses[force_index] = turd_bonuses
+	local turd_bonuses = storage.turd_bonuses[force_index] or {}
+	storage.turd_bonuses[force_index] = turd_bonuses
 	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
 	if selection == NOT_SELECTED then
 		force.print{'turd.font', {'turd.selected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
@@ -482,22 +482,22 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 		apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
 		randomize_button.visible = false
 	else
-		global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] or 0
-		if global.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then
+		storage.turd_reset_remaining[force_index] = storage.turd_reset_remaining[force_index] or 0
+		if storage.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then
 			return
 		end
 		force.print{'turd.font', {'turd.unselected-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
 		turd_bonuses[master_tech_name] = NOT_SELECTED
 		if has_turd_migration(force_index, sub_tech_name) then
-			global.turd_migrations[force_index][sub_tech_name] = 0
+			storage.turd_migrations[force_index][sub_tech_name] = 0
 		else
-			global.turd_reset_remaining[force_index] = global.turd_reset_remaining[force_index] - 1
+			storage.turd_reset_remaining[force_index] = storage.turd_reset_remaining[force_index] - 1
 		end
 		unselect_recipes_for_subtech(tech_upgrades[master_tech_name].sub_techs[selection], force, find_all_assembling_machines(force))
 		destroy_all_hidden_beacons(force)
 		reapply_turd_bonuses(force)
 
-		local resets_left = global.turd_reset_remaining[force_index]
+		local resets_left = storage.turd_reset_remaining[force_index]
 		local reset_label = sub_tech_flow.parent.parent.textbox_frame.py_resets_left
 		if resets_left == 0 and reset_label then
 			reset_label.destroy()
@@ -514,14 +514,14 @@ gui_events[defines.events.on_gui_click]['py_turd_confirm_button'] = function(eve
 end
 
 Turd.events.on_init = function()
-	global.turd_bonuses = global.turd_bonuses or {}
-	global.turd_beaconed_machines = global.turd_beaconed_machines or {}
-	global.turd_unlocked_modules = global.turd_unlocked_modules or {}
-	global.turd_views = global.turd_views or {}
-	global.turd_reset_remaining = global.turd_reset_remaining or {}
-	global.turd_machine_replacements = global.turd_machine_replacements or {}
-    global.turd_migrations = global.turd_migrations or {}
-	global.turd_bhoddos = global.turd_bhoddos or {}
+	storage.turd_bonuses = storage.turd_bonuses or {}
+	storage.turd_beaconed_machines = storage.turd_beaconed_machines or {}
+	storage.turd_unlocked_modules = storage.turd_unlocked_modules or {}
+	storage.turd_views = storage.turd_views or {}
+	storage.turd_reset_remaining = storage.turd_reset_remaining or {}
+	storage.turd_machine_replacements = storage.turd_machine_replacements or {}
+    storage.turd_migrations = storage.turd_migrations or {}
+	storage.turd_bhoddos = storage.turd_bhoddos or {}
 end
 
 local function starts_with(str, start)
@@ -534,10 +534,10 @@ local function on_researched(event)
 	local force_index = force.index
 
 	if tech_upgrades[technology.name] then
-		global.turd_bonuses[force_index] = global.turd_bonuses[force_index] or {}
-		global.turd_bonuses[force_index][technology.name] = NOT_SELECTED
+		storage.turd_bonuses[force_index] = storage.turd_bonuses[force_index] or {}
+		storage.turd_bonuses[force_index][technology.name] = NOT_SELECTED
 	elseif starts_with(technology.name, 'turd-partial-respec') then
-		global.turd_reset_remaining[force_index] = (global.turd_reset_remaining[force_index] or 0) + 1
+		storage.turd_reset_remaining[force_index] = (storage.turd_reset_remaining[force_index] or 0) + 1
 		return
 	end
 
@@ -563,15 +563,15 @@ Turd.events.on_built = function(event)
 	if not entity.valid or not entity.unit_number then return end
 	local force_index = entity.force_index
 
-	if global.turd_unlocked_modules[force_index] then
-		local module_name = global.turd_unlocked_modules[force_index][entity.name]
+	if storage.turd_unlocked_modules[force_index] then
+		local module_name = storage.turd_unlocked_modules[force_index][entity.name]
 		if module_name then
 			create_hidden_beacon(entity, module_name, game.item_prototypes)
 		end
 	end
 
-	if global.turd_machine_replacements[force_index] then
-		local new = global.turd_machine_replacements[force_index][entity.name]
+	if storage.turd_machine_replacements[force_index] then
+		local new = storage.turd_machine_replacements[force_index][entity.name]
 		if new then
 			machine_replacement(entity.name, new, {entity})
 		end
@@ -585,8 +585,8 @@ end
 Turd.events.on_destroyed = function(event)
     local entity = event.entity
 	if not entity.valid or not entity.unit_number then return end
-	local beacon = global.turd_beaconed_machines[entity.unit_number]
-	global.turd_beaconed_machines[entity.unit_number] = nil
+	local beacon = storage.turd_beaconed_machines[entity.unit_number]
+	storage.turd_beaconed_machines[entity.unit_number] = nil
 	if not beacon or not beacon.valid then return end
 	beacon.destroy()
 

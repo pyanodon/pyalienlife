@@ -49,9 +49,9 @@ local machines_with_gui = {
 
 Slaughterhouse.events.on_entity_destroyed = function(event)
 	local unit_number = event.unit_number
-	if not unit_number or not global.opened_slaughterhouses[unit_number] then return end
+	if not unit_number or not storage.opened_slaughterhouses[unit_number] then return end
 
-	global.opened_slaughterhouses[unit_number] = nil
+	storage.opened_slaughterhouses[unit_number] = nil
 	for _, player in pairs(game.players) do
 		local gui = player.gui.screen.slaughterhouse
 		if gui and gui.tags.entity == unit_number then gui.destroy() end
@@ -72,10 +72,10 @@ function Slaughterhouse.create_slaughterhouse_gui(player_index, entity)
 	local content_frame = main_frame.add{type = 'frame', name = 'content_frame', direction = 'vertical', style = 'inside_shallow_frame_with_padding'}
     content_frame.style.vertically_stretchable = true
     Slaughterhouse.build_animal_table(content_frame, player)
-	global.opened_slaughterhouses[entity.unit_number] = entity
+	storage.opened_slaughterhouses[entity.unit_number] = entity
 	script.register_on_entity_destroyed(entity)
-	global.watched_slaughterhouses[player_index] = nil
-	global.watch_slaughterhouse = not not next(global.watched_slaughterhouses)
+	storage.watched_slaughterhouses[player_index] = nil
+	storage.watch_slaughterhouse = not not next(storage.watched_slaughterhouses)
 end
 
 function Slaughterhouse.get_animal_item(animal)
@@ -122,22 +122,22 @@ Slaughterhouse.events.on_gui_opened = function(event)
 	if not string.match(entity.name, 'slaughterhouse%-') and not string.match(entity.name, 'rc%-') then return end
 
 	if entity.get_recipe() then
-		global.watched_slaughterhouses[event.player_index] = entity
-		global.watch_slaughterhouse = true
+		storage.watched_slaughterhouses[event.player_index] = entity
+		storage.watch_slaughterhouse = true
 	else
 		Slaughterhouse.create_slaughterhouse_gui(event.player_index, entity)
 	end
 end
 
 Slaughterhouse.events.on_gui_closed = function(event)
-	if not global.watched_slaughterhouses then return end
+	if not storage.watched_slaughterhouses then return end
 	local player = game.get_player(event.player_index)
 	if event.gui_type == defines.gui_type.custom then
 		local gui = player.gui.screen.slaughterhouse
 		if gui then gui.destroy() end
 	end
-	global.watched_slaughterhouses[event.player_index] = nil
-	global.watch_slaughterhouse = not not next(global.watched_slaughterhouses)
+	storage.watched_slaughterhouses[event.player_index] = nil
+	storage.watch_slaughterhouse = not not next(storage.watched_slaughterhouses)
 end
 
 function Slaughterhouse.set_recipe(player, entity, recipe)
@@ -177,7 +177,7 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_animal_.+'] = functio
 	end
 
 	if recipe_count == 1 then
-		local entity = global.opened_slaughterhouses[main_frame.tags.entity]
+		local entity = storage.opened_slaughterhouses[main_frame.tags.entity]
 		if not entity or not entity.valid then return end
 		Slaughterhouse.set_recipe(player, entity, avalible_recipe)
 	end
@@ -193,23 +193,23 @@ gui_events[defines.events.on_gui_click]['py_slaughterhouse_recipe_.+'] = functio
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local main_frame = element.parent.parent.parent.parent
-	local entity = global.opened_slaughterhouses[main_frame.tags.entity]
+	local entity = storage.opened_slaughterhouses[main_frame.tags.entity]
 	local recipe = element.tags.recipe
 	if not entity or not entity.valid then return end
 	Slaughterhouse.set_recipe(player, entity, recipe)
 end
 
 Slaughterhouse.events.on_init = function()
-	global.watched_slaughterhouses = global.watched_slaughterhouses or {}
-	global.opened_slaughterhouses = global.opened_slaughterhouses or {}
+	storage.watched_slaughterhouses = storage.watched_slaughterhouses or {}
+	storage.opened_slaughterhouses = storage.opened_slaughterhouses or {}
 end
 
 py.on_event(defines.events.on_tick, function()
-    if not global.watch_slaughterhouse then return end
+    if not storage.watch_slaughterhouse then return end
 
-	for player_index, entity in pairs(global.watched_slaughterhouses) do
+	for player_index, entity in pairs(storage.watched_slaughterhouses) do
 		if not entity.valid then
-			global.watched_slaughterhouses[player_index] = nil
+			storage.watched_slaughterhouses[player_index] = nil
 			return
 		end
 

@@ -132,7 +132,7 @@ local function get_outpost_inventory(outpost)
 	elseif type == 'cargo-wagon' then
 		return outpost.get_inventory(defines.inventory.cargo_wagon)
 	elseif prototypes[outpost.name] then
-		local caravan_data = global.caravans[outpost.unit_number]
+		local caravan_data = storage.caravans[outpost.unit_number]
 		return caravan_data.inventory
 	end
 end

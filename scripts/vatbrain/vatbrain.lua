@@ -2,7 +2,7 @@ Vatbrain = {}
 Vatbrain.events = {}
 
 Vatbrain.events.on_init = function()
-	global.vatbrains = global.vatbrains or {}
+	storage.vatbrains = storage.vatbrains or {}
 end
 
 Vatbrain.events.on_built = function(event)
@@ -14,7 +14,7 @@ Vatbrain.events.on_built = function(event)
 		position = entity.position,
 		force = entity.force,
 	}
-	global.vatbrains[beacon.unit_number] = {beacon = beacon, vatbrain = entity}
+	storage.vatbrains[beacon.unit_number] = {beacon = beacon, vatbrain = entity}
 end
 
 Vatbrain.events.on_destroyed = function(event)
@@ -23,7 +23,7 @@ Vatbrain.events.on_destroyed = function(event)
 
     local beacon = entity.surface.find_entities_filtered{position = entity.position, radius = 3, name = 'hidden-beacon', limit = 1}[1]
     if beacon then
-        global.vatbrains[beacon.unit_number] = nil
+        storage.vatbrains[beacon.unit_number] = nil
         beacon.destroy()
     end
 end
@@ -35,7 +35,7 @@ local cartridge_tiers = {
     ['brain-food-04'] = {module = 'vatbrain-4', tier = 4},
 }
 Vatbrain.events[41] = function()
-    for _, vatbrain_data in pairs(global.vatbrains) do
+    for _, vatbrain_data in pairs(storage.vatbrains) do
         local vatbrain, beacon = vatbrain_data.vatbrain, vatbrain_data.beacon
         if not vatbrain or not vatbrain.valid or not beacon or not beacon.valid then goto continue end
         beacon.active = false

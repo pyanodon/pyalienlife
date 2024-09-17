@@ -1,7 +1,7 @@
 require 'caravan-gui-shared'
 
 function Caravan.has_any_caravan_at_all()
-	for _, caravan in pairs(global.caravans) do
+	for _, caravan in pairs(storage.caravans) do
 		if Caravan.validity_check(caravan) then return true end
 	end
 	return false
@@ -17,7 +17,7 @@ local function create_gui(gui, player)
         style = 'filter_group_table'
     }
     if has_any then
-        for key, caravan_data in pairs(global.caravans) do
+        for key, caravan_data in pairs(storage.caravans) do
             if Caravan.validity_check(caravan_data) and caravan_data.entity.force_index == player.force_index then
                 Caravan.add_gui_row(caravan_data, key, table)
             end
@@ -49,7 +49,7 @@ local function on_search(search_key, gui, player)
     for _, child in pairs(gui.table.children) do
         if child.type == 'frame' then
             local unit_number = child.tags.unit_number
-            local caravan_data = global.caravans[unit_number]
+            local caravan_data = storage.caravans[unit_number]
             if caravan_data then
                 child.visible = search_key == '' or Caravan.get_name(caravan_data):lower():find(search_key, 1, true)
             end

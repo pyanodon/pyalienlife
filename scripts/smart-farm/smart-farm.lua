@@ -21,7 +21,7 @@ for _, filename in pairs(farm_filenames) do
 end
 
 Smart_Farm.events.on_init = function()
-	global.smart_farm_landfill_data = global.smart_farm_landfill_data or {}
+	storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
 end
 
 local function get_fence_positions(entity)
@@ -74,11 +74,11 @@ Smart_Farm.events.on_built = function(event)
 		if not previous_tile.valid or previous_tile.collides_with('water-tile') then goto continue end
 		table.insert(landfill_tiles, {name = 'landfill', position = position})
 
-		global.smart_farm_landfill_data[x] = global.smart_farm_landfill_data[x] or {}
-		if global.smart_farm_landfill_data[x][y] then
-			global.smart_farm_landfill_data[x][y].depth = global.smart_farm_landfill_data[x][y].depth + 1
+		storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
+		if storage.smart_farm_landfill_data[x][y] then
+			storage.smart_farm_landfill_data[x][y].depth = storage.smart_farm_landfill_data[x][y].depth + 1
 		else
-			global.smart_farm_landfill_data[x][y] = {depth = 1, name = previous_tile.name}
+			storage.smart_farm_landfill_data[x][y] = {depth = 1, name = previous_tile.name}
 		end
 
 		::continue::
@@ -102,17 +102,17 @@ Smart_Farm.events.on_destroyed = function(event)
 	for _, position in pairs(get_landfill_positions(entity)) do
 		local x, y = position[1], position[2]
 
-		if not global.smart_farm_landfill_data[x] or not global.smart_farm_landfill_data[x][y] then goto continue end
+		if not storage.smart_farm_landfill_data[x] or not storage.smart_farm_landfill_data[x][y] then goto continue end
 
-		local data = global.smart_farm_landfill_data[x][y]
+		local data = storage.smart_farm_landfill_data[x][y]
 		data.depth = data.depth - 1
 
 		if data.depth > 0 then goto continue end
 		table.insert(tiles_to_reset, {name = data.name, position = position})
 
-		global.smart_farm_landfill_data[x][y] = nil
-		if table_size(global.smart_farm_landfill_data[x]) == 0 then
-			global.smart_farm_landfill_data[x] = nil
+		storage.smart_farm_landfill_data[x][y] = nil
+		if table_size(storage.smart_farm_landfill_data[x]) == 0 then
+			storage.smart_farm_landfill_data[x] = nil
 		end
 
 		::continue::

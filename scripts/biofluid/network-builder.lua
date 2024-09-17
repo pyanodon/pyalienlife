@@ -53,10 +53,10 @@ local TANK_CONNECTION = {{
 }}
 
 function Biofluid.network_positions(surface_index)
-	local network_positions = global.network_positions[surface_index]
+	local network_positions = storage.network_positions[surface_index]
 	if not network_positions then
 		network_positions = {}
-		global.network_positions[surface_index] = network_positions
+		storage.network_positions[surface_index] = network_positions
 	end
 	return network_positions
 end
@@ -254,8 +254,8 @@ function Biofluid.is_looking_at_us(entity, connection)
 end
 
 function Biofluid.join_networks(new_id, old_id, network_positions)
-	local new = global.biofluid_networks[new_id]
-	local old = global.biofluid_networks[old_id]
+	local new = storage.biofluid_networks[new_id]
+	local old = storage.biofluid_networks[old_id]
 
 	if not new or not old then
 		game.print('ERROR: Attempt to join two non-existant biofluid networks. ' .. new_id .. ' ' .. old_id .. '. Please report this bug on our github.')
@@ -276,14 +276,14 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 	end
 	for unit_number, entity in pairs(old.bioports) do
 		new.bioports[unit_number] = entity
-		if global.biofluid_bioports[unit_number] then
-			global.biofluid_bioports[unit_number].network_id = new_id
+		if storage.biofluid_bioports[unit_number] then
+			storage.biofluid_bioports[unit_number].network_id = new_id
 		end
 	end
 	for unit_number, entity in pairs(old.requesters) do
 		new.requesters[unit_number] = entity
-		if global.biofluid_requesters[unit_number] then
-			global.biofluid_requesters[unit_number].network_id = new_id
+		if storage.biofluid_requesters[unit_number] then
+			storage.biofluid_requesters[unit_number].network_id = new_id
 		end
 	end
 	for _, entity in pairs(old.providers) do
@@ -291,11 +291,11 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 			new.providers[#new.providers+1] = entity
 		end
 	end
-	global.biofluid_networks[old_id] = nil
+	storage.biofluid_networks[old_id] = nil
 end
 
 function Biofluid.create_network(force_index)
-	local network_id = #global.biofluid_networks + 1
+	local network_id = #storage.biofluid_networks + 1
 	local network = {
 		force_index = force_index,
 		network_id = network_id,
@@ -305,12 +305,12 @@ function Biofluid.create_network(force_index)
 		positions = {},
 		allocated_fluids_from_providers = {}
 	}
-	global.biofluid_networks[network_id] = network
+	storage.biofluid_networks[network_id] = network
 	return network_id
 end
 
 function Biofluid.add_to_network(network_id, entity, connections)
-	local network = global.biofluid_networks[network_id]
+	local network = storage.biofluid_networks[network_id]
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	if not network or not network_positions then
@@ -330,13 +330,13 @@ function Biofluid.add_to_network(network_id, entity, connections)
 	local unit_number = entity.unit_number
 	if entity_type == Biofluid.ROBOPORT then
 		network.bioports[unit_number] = entity
-		if global.biofluid_bioports[unit_number] then
-			global.biofluid_bioports[unit_number].network_id = network_id
+		if storage.biofluid_bioports[unit_number] then
+			storage.biofluid_bioports[unit_number].network_id = network_id
 		end
 	elseif entity_type == Biofluid.REQUESTER then
 		network.requesters[unit_number] = entity
-		if global.biofluid_requesters[unit_number] then
-			global.biofluid_requesters[unit_number].network_id = network_id
+		if storage.biofluid_requesters[unit_number] then
+			storage.biofluid_requesters[unit_number].network_id = network_id
 		end
 	elseif entity_type == Biofluid.PROVIDER then
 		network.providers[#network.providers+1] = entity
@@ -356,7 +356,7 @@ function Biofluid.destroyed_pipe(entity)
 		if network_positions[x] and network_positions[x][y] then
 			if not network then
 				network_id = network_positions[x][y].network_id
-				network = global.biofluid_networks[network_id]
+				network = storage.biofluid_networks[network_id]
 			end
 			network_positions[x][y] = nil
 			if not next(network_positions[x]) then
@@ -397,7 +397,7 @@ function Biofluid.destroyed_pipe(entity)
 end
 
 function Biofluid.split_network(network_id, network_positions)
-	local network = global.biofluid_networks[network_id]
+	local network = storage.biofluid_networks[network_id]
 	local positions = network.positions
 	local entities = {}
 	Biofluid.delete_network(network_id)
@@ -417,11 +417,11 @@ function Biofluid.split_network(network_id, network_positions)
 end
 
 function Biofluid.delete_network(network_id)
-	global.biofluid_networks[network_id] = nil
+	storage.biofluid_networks[network_id] = nil
 end
 
 function Biofluid.remove_from_network(network_id, entity, connections)
-	local network = global.biofluid_networks[network_id]
+	local network = storage.biofluid_networks[network_id]
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	for _, connection in pairs(connections) do
