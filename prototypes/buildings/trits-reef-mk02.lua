@@ -60,120 +60,122 @@ ENTITY {
         },
     },
     energy_usage = "700kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off.png",
-        width = 384,
-        height = 512,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(32, -96)
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(-120, -174),
+                west_position = util.by_pixel(-120, -174),
+                south_position = util.by_pixel(-120, -174),
+                east_position = util.by_pixel(-120, -174),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a1.png",
+                    frame_count = 179,
+                    line_length = 30,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(-56, -174),
+                west_position = util.by_pixel(-56, -174),
+                south_position = util.by_pixel(-56, -174),
+                east_position = util.by_pixel(-56, -174),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a2.png",
+                    frame_count = 179,
+                    line_length = 30,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(8, -174),
+                west_position = util.by_pixel(8, -174),
+                south_position = util.by_pixel(8, -174),
+                east_position = util.by_pixel(8, -174),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a3.png",
+                    frame_count = 179,
+                    line_length = 30,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(72, -174),
+                west_position = util.by_pixel(72, -174),
+                south_position = util.by_pixel(72, -174),
+                east_position = util.by_pixel(72, -174),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a4.png",
+                    frame_count = 179,
+                    line_length = 30,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(136, -174),
+                west_position = util.by_pixel(136, -174),
+                south_position = util.by_pixel(136, -174),
+                east_position = util.by_pixel(136, -174),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a5.png",
+                    frame_count = 179,
+                    line_length = 30,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            --OVER
+            {
+                north_position = util.by_pixel(32, -96),
+                west_position = util.by_pixel(32, -96),
+                south_position = util.by_pixel(32, -96),
+                east_position = util.by_pixel(32, -96),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/over.png",
+                    width = 384,
+                    height = 512,
+                    frame_count = 1,
+                    line_length = 1,
+                    --shift = util.by_pixel(32, -96),
+                }
+            },
         },
-        {
-            filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off-mask.png",
+        animation = {
+            layers = {
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off.png",
             width = 384,
             height = 512,
             frame_count = 1,
             line_length = 1,
-            shift = util.by_pixel(32, -96),
-            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-        },
-        {
-            filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/over.png",
-            width = 384,
-            height = 512,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(32, -96),
-        },
-      },
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-120, -174),
-            west_position = util.by_pixel(-120, -174),
-            south_position = util.by_pixel(-120, -174),
-            east_position = util.by_pixel(-120, -174),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a1.png",
-                frame_count = 179,
-                line_length = 30,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(-56, -174),
-            west_position = util.by_pixel(-56, -174),
-            south_position = util.by_pixel(-56, -174),
-            east_position = util.by_pixel(-56, -174),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a2.png",
-                frame_count = 179,
-                line_length = 30,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(8, -174),
-            west_position = util.by_pixel(8, -174),
-            south_position = util.by_pixel(8, -174),
-            east_position = util.by_pixel(8, -174),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a3.png",
-                frame_count = 179,
-                line_length = 30,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(72, -174),
-            west_position = util.by_pixel(72, -174),
-            south_position = util.by_pixel(72, -174),
-            east_position = util.by_pixel(72, -174),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a4.png",
-                frame_count = 179,
-                line_length = 30,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(136, -174),
-            west_position = util.by_pixel(136, -174),
-            south_position = util.by_pixel(136, -174),
-            east_position = util.by_pixel(136, -174),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/a5.png",
-                frame_count = 179,
-                line_length = 30,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        --OVER
-        {
-            north_position = util.by_pixel(32, -96),
-            west_position = util.by_pixel(32, -96),
-            south_position = util.by_pixel(32, -96),
-            east_position = util.by_pixel(32, -96),
-            animation = {
+            shift = util.by_pixel(32, -96)
+            },
+            {
+                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off-mask.png",
+                width = 384,
+                height = 512,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(32, -96),
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+            },
+            {
                 filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/over.png",
                 width = 384,
                 height = 512,
                 frame_count = 1,
                 line_length = 1,
-                --shift = util.by_pixel(32, -96),
-            }
+                shift = util.by_pixel(32, -96),
+            },
+          },
         },
     },
 

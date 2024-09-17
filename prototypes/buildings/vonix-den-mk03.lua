@@ -58,141 +58,143 @@ ENTITY {
         },
     },
     energy_usage = "3000kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off.png",
-        width = 352,
-        height = 352,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(16, -16)
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(191, 64),
+                west_position = util.by_pixel(191, 64),
+                south_position = util.by_pixel(191, 64),
+                east_position = util.by_pixel(191, 64),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/sh.png",
+                    frame_count = 150,
+                    line_length = 10,
+                    width = 64,
+                    height = 128,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, 128),
+                west_position = util.by_pixel(-0, 128),
+                south_position = util.by_pixel(-0, 128),
+                east_position = util.by_pixel(-0, 128),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a1.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, 64),
+                west_position = util.by_pixel(-0, 64),
+                south_position = util.by_pixel(-0, 64),
+                east_position = util.by_pixel(-0, 64),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a2.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, 0),
+                west_position = util.by_pixel(-0, 0),
+                south_position = util.by_pixel(-0, 0),
+                east_position = util.by_pixel(-0, 0),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a3.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -64),
+                west_position = util.by_pixel(-0, -64),
+                south_position = util.by_pixel(-0, -64),
+                east_position = util.by_pixel(-0, -64),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a4.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -128),
+                west_position = util.by_pixel(-0, -128),
+                south_position = util.by_pixel(-0, -128),
+                east_position = util.by_pixel(-0, -128),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a5.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -192),
+                west_position = util.by_pixel(-0, -192),
+                south_position = util.by_pixel(-0, -192),
+                east_position = util.by_pixel(-0, -192),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a6.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -256),
+                west_position = util.by_pixel(-0, -256),
+                south_position = util.by_pixel(-0, -256),
+                east_position = util.by_pixel(-0, -256),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a7.png",
+                    frame_count = 150,
+                    line_length = 6,
+                    width = 320,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+    
         },
-        {
-            filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off-mask.png",
+        animation = {
+            layers = {
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off.png",
             width = 352,
             height = 352,
             frame_count = 1,
             line_length = 1,
-            shift = util.by_pixel(16, -16),
-            tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+            shift = util.by_pixel(16, -16)
             },
-      },
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(191, 64),
-            west_position = util.by_pixel(191, 64),
-            south_position = util.by_pixel(191, 64),
-            east_position = util.by_pixel(191, 64),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/sh.png",
-                frame_count = 150,
-                line_length = 10,
-                width = 64,
-                height = 128,
-                animation_speed = 0.4
-            }
+            {
+                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off-mask.png",
+                width = 352,
+                height = 352,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -16),
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+          },
         },
-        {
-            north_position = util.by_pixel(-0, 128),
-            west_position = util.by_pixel(-0, 128),
-            south_position = util.by_pixel(-0, 128),
-            east_position = util.by_pixel(-0, 128),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a1.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, 64),
-            west_position = util.by_pixel(-0, 64),
-            south_position = util.by_pixel(-0, 64),
-            east_position = util.by_pixel(-0, 64),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a2.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, 0),
-            west_position = util.by_pixel(-0, 0),
-            south_position = util.by_pixel(-0, 0),
-            east_position = util.by_pixel(-0, 0),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a3.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -64),
-            west_position = util.by_pixel(-0, -64),
-            south_position = util.by_pixel(-0, -64),
-            east_position = util.by_pixel(-0, -64),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a4.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -128),
-            west_position = util.by_pixel(-0, -128),
-            south_position = util.by_pixel(-0, -128),
-            east_position = util.by_pixel(-0, -128),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a5.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -192),
-            west_position = util.by_pixel(-0, -192),
-            south_position = util.by_pixel(-0, -192),
-            east_position = util.by_pixel(-0, -192),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a6.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -256),
-            west_position = util.by_pixel(-0, -256),
-            south_position = util.by_pixel(-0, -256),
-            east_position = util.by_pixel(-0, -256),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/a7.png",
-                frame_count = 150,
-                line_length = 6,
-                width = 320,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

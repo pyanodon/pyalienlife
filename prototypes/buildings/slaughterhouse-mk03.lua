@@ -56,103 +56,105 @@ ENTITY {
         },
     },
     energy_usage = "700kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/base.png",
-                width = 384,
-                height = 32,
-                line_length = 5,
-                frame_count = 105,
-                animation_speed = 0.3,
-                run_mode = "backward",
-                shift = util.by_pixel(16, 160)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a1.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                animation_speed = 0.3,
-                -- run_mode = "backward",
-                shift = util.by_pixel(-128, -18)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a1-mask.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                animation_speed = 0.3,
-                run_mode = "backward",
-                shift = util.by_pixel(-128, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                animation_speed = 0.3,
-                run_mode = "backward",
-                shift = util.by_pixel(-32, -18)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2-mask.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                animation_speed = 0.3,
-                run_mode = "backward",
-                shift = util.by_pixel(-32, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                animation_speed = 0.3,
-                --run_mode = "backward",
-                shift = util.by_pixel(64, -18)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3-mask.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                animation_speed = 0.3,
-                --run_mode = "backward",
-                shift = util.by_pixel(64, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                --run_mode = "backward",
-                animation_speed = 0.3,
-                shift = util.by_pixel(160, -18)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4-mask.png",
-                width = 96,
-                height = 324,
-                line_length = 21,
-                frame_count = 105,
-                --run_mode = "backward",
-                animation_speed = 0.3,
-                shift = util.by_pixel(160, -18),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/base.png",
+                    width = 384,
+                    height = 32,
+                    line_length = 5,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    run_mode = "backward",
+                    shift = util.by_pixel(16, 160)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a1.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    -- run_mode = "backward",
+                    shift = util.by_pixel(-128, -18)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a1-mask.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    run_mode = "backward",
+                    shift = util.by_pixel(-128, -18),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    run_mode = "backward",
+                    shift = util.by_pixel(-32, -18)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2-mask.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    run_mode = "backward",
+                    shift = util.by_pixel(-32, -18),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    --run_mode = "backward",
+                    shift = util.by_pixel(64, -18)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3-mask.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    animation_speed = 0.3,
+                    --run_mode = "backward",
+                    shift = util.by_pixel(64, -18),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    --run_mode = "backward",
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(160, -18)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4-mask.png",
+                    width = 96,
+                    height = 324,
+                    line_length = 21,
+                    frame_count = 105,
+                    --run_mode = "backward",
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(160, -18),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+            }
+        },
     },
 
     fluid_boxes = {

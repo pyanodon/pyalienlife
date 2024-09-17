@@ -55,113 +55,115 @@ ENTITY {
         },
     },
     energy_usage = "1000kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a1.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 128)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a1-mask.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 128),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 64)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2-mask.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 64),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3-mask.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 0),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4-mask.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -64),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -128)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5-mask.png",
-                width = 352,
-                height = 64,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -128),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a6.png",
-                width = 352,
-                height = 32,
-                line_length = 5,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -176)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a1.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 128)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a1-mask.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 128),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 64)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2-mask.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 64),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3-mask.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 0),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4-mask.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -64),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -128)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5-mask.png",
+                    width = 352,
+                    height = 64,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -128),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a6.png",
+                    width = 352,
+                    height = 32,
+                    line_length = 5,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -176)
+                },
+            }
+        },
     },
 
     fluid_boxes = {

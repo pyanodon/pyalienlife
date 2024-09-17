@@ -59,35 +59,37 @@ ENTITY {
         },
     },
     energy_usage = "600kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/bottom.png",
-        width = 384,
-        height = 32,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(16, 160)
-        },
-        {
-            filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/off.png",
+    graphics_set = {
+        animation = {
+            layers = {
+            {
+            filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/bottom.png",
             width = 384,
-            height = 512,
+            height = 32,
             frame_count = 1,
             line_length = 1,
-            shift = util.by_pixel(16, -112)
-        },
-        {
-            filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/off-mask.png",
-            width = 384,
-            height = 512,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -112),
-            tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+            shift = util.by_pixel(16, 160)
+            },
+            {
+                filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/off.png",
+                width = 384,
+                height = 512,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -112)
+            },
+            {
+                filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/off-mask.png",
+                width = 384,
+                height = 512,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -112),
+                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+            },
         },
     },
-},
+    },
 working_visualisations = {
     {
         north_position = util.by_pixel(-144, -112),

@@ -60,38 +60,40 @@ ENTITY {
         },
     },
     energy_usage = "550kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/i.png",
-                width = 160,
-                height = 178,
-                line_length = 10,
-                frame_count = 100,
-                animation_speed = 0.3,
-                shift = util.by_pixel(0, -10)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/i-mask.png",
-                width = 160,
-                height = 178,
-                line_length = 10,
-                frame_count = 100,
-                animation_speed = 0.3,
-                shift = util.by_pixel(0, -10),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/shadow.png",
-                width = 160,
-                height = 160,
-                line_length = 10,
-                frame_count = 100,
-                animation_speed = 0.3,
-                shift = util.by_pixel(5, -5),
-                draw_as_shadow = true,
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/i.png",
+                    width = 160,
+                    height = 178,
+                    line_length = 10,
+                    frame_count = 100,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(0, -10)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/i-mask.png",
+                    width = 160,
+                    height = 178,
+                    line_length = 10,
+                    frame_count = 100,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(0, -10),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/shadow.png",
+                    width = 160,
+                    height = 160,
+                    line_length = 10,
+                    frame_count = 100,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(5, -5),
+                    draw_as_shadow = true,
+                },
+            }
+        },
     },
 
 

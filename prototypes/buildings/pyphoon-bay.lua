@@ -57,88 +57,90 @@ ENTITY {
         },
     },
     energy_usage = "100kW",
-    animation = {
-        layers = {
-            --off
+    graphics_set = {
+        working_visualisations = {
+    
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/off.png",
-                width = 320,
-                height = 349,
-                frame_count = 1,
-                shift = util.by_pixel(-0, -16)
+                north_position = util.by_pixel(-128, -16),
+                west_position = util.by_pixel(-128, -16),
+                south_position = util.by_pixel(-128, -16),
+                east_position = util.by_pixel(-128, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a1.png",
+                    frame_count = 150,
+                    line_length = 32,
+                    width = 64,
+                    height = 349,
+                    animation_speed = 0.5
+                }
             },
-        }
-    },
-    working_visualisations = {
-
-        {
-            north_position = util.by_pixel(-128, -16),
-            west_position = util.by_pixel(-128, -16),
-            south_position = util.by_pixel(-128, -16),
-            east_position = util.by_pixel(-128, -16),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a1.png",
-                frame_count = 150,
-                line_length = 32,
-                width = 64,
-                height = 349,
-                animation_speed = 0.5
-            }
+            {
+                north_position = util.by_pixel(-64, -16),
+                west_position = util.by_pixel(-64, -16),
+                south_position = util.by_pixel(-64, -16),
+                east_position = util.by_pixel(-64, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a2.png",
+                    frame_count = 150,
+                    line_length = 32,
+                    width = 64,
+                    height = 349,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -16),
+                west_position = util.by_pixel(-0, -16),
+                south_position = util.by_pixel(-0, -16),
+                east_position = util.by_pixel(-0, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a3.png",
+                    frame_count = 150,
+                    line_length = 32,
+                    width = 64,
+                    height = 349,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(64, -16),
+                west_position = util.by_pixel(64, -16),
+                south_position = util.by_pixel(64, -16),
+                east_position = util.by_pixel(64, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a4.png",
+                    frame_count = 150,
+                    line_length = 32,
+                    width = 64,
+                    height = 349,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(128, -16),
+                west_position = util.by_pixel(128, -16),
+                south_position = util.by_pixel(128, -16),
+                east_position = util.by_pixel(128, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a5.png",
+                    frame_count = 150,
+                    line_length = 32,
+                    width = 64,
+                    height = 349,
+                    animation_speed = 0.5
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(-64, -16),
-            west_position = util.by_pixel(-64, -16),
-            south_position = util.by_pixel(-64, -16),
-            east_position = util.by_pixel(-64, -16),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a2.png",
-                frame_count = 150,
-                line_length = 32,
-                width = 64,
-                height = 349,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -16),
-            west_position = util.by_pixel(-0, -16),
-            south_position = util.by_pixel(-0, -16),
-            east_position = util.by_pixel(-0, -16),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a3.png",
-                frame_count = 150,
-                line_length = 32,
-                width = 64,
-                height = 349,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(64, -16),
-            west_position = util.by_pixel(64, -16),
-            south_position = util.by_pixel(64, -16),
-            east_position = util.by_pixel(64, -16),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a4.png",
-                frame_count = 150,
-                line_length = 32,
-                width = 64,
-                height = 349,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(128, -16),
-            west_position = util.by_pixel(128, -16),
-            south_position = util.by_pixel(128, -16),
-            east_position = util.by_pixel(128, -16),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/a5.png",
-                frame_count = 150,
-                line_length = 32,
-                width = 64,
-                height = 349,
-                animation_speed = 0.5
+        animation = {
+            layers = {
+                --off
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/pyphoon-bay/off.png",
+                    width = 320,
+                    height = 349,
+                    frame_count = 1,
+                    shift = util.by_pixel(-0, -16)
+                },
             }
         },
     },

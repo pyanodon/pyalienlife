@@ -112,61 +112,63 @@ ENTITY {
         },
         off_when_no_fluid_recipe = true
     },
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
-                priority = "high",
-                width = 256,
-                height = 32,
-                line_length = 8,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 96)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
-                priority = "high",
-                width = 128,
-                height = 227,
-                line_length = 15,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-48, -31)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
-                priority = "high",
-                width = 128,
-                height = 227,
-                line_length = 15,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-48, -31),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
-                priority = "high",
-                width = 128,
-                height = 227,
-                line_length = 15,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(80, -31)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
-                priority = "high",
-                width = 128,
-                height = 227,
-                line_length = 15,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(80, -31),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
+                    priority = "high",
+                    width = 256,
+                    height = 32,
+                    line_length = 8,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 96)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
+                    priority = "high",
+                    width = 128,
+                    height = 227,
+                    line_length = 15,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-48, -31)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
+                    priority = "high",
+                    width = 128,
+                    height = 227,
+                    line_length = 15,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-48, -31),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
+                    priority = "high",
+                    width = 128,
+                    height = 227,
+                    line_length = 15,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(80, -31)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
+                    priority = "high",
+                    width = 128,
+                    height = 227,
+                    line_length = 15,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(80, -31),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

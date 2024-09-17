@@ -58,94 +58,96 @@ ENTITY {
         },
     },
     energy_usage = "350kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/off.png",
-                width = 383,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(0, -32),
+                north_position = util.by_pixel(114, -37),
+                west_position = util.by_pixel(114, -37),
+                south_position = util.by_pixel(114, -37),
+                east_position = util.by_pixel(114, -37),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/alpha.png",
+                    frame_count = 100,
+                    line_length = 10,
+                    width = 128,
+                    height = 128,
+                    animation_speed = 0.3
+                }
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/off-mask.png",
-                width = 383,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(0, -32),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(-128, 136),
+                west_position = util.by_pixel(-128, 136),
+                south_position = util.by_pixel(-128, 136),
+                east_position = util.by_pixel(-128, 136),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/leftdown.png",
+                    frame_count = 100,
+                    line_length = 10,
+                    width = 96,
+                    height = 96,
+                    animation_speed = 0.3
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(114, -37),
-            west_position = util.by_pixel(114, -37),
-            south_position = util.by_pixel(114, -37),
-            east_position = util.by_pixel(114, -37),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/alpha.png",
-                frame_count = 100,
-                line_length = 10,
-                width = 128,
-                height = 128,
-                animation_speed = 0.3
-            }
+            {
+                north_position = util.by_pixel(-82, -9),
+                west_position = util.by_pixel(-82, -9),
+                south_position = util.by_pixel(-82, -9),
+                east_position = util.by_pixel(-82, -9),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/left.png",
+                    frame_count = 100,
+                    line_length = 10,
+                    width = 96,
+                    height = 96,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(5, -11),
+                west_position = util.by_pixel(5, -11),
+                south_position = util.by_pixel(5, -11),
+                east_position = util.by_pixel(5, -11),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/mid.png",
+                    frame_count = 100,
+                    line_length = 20,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(63, 112),
+                west_position = util.by_pixel(63, 112),
+                south_position = util.by_pixel(63, 112),
+                east_position = util.by_pixel(63, 112),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/mom.png",
+                    frame_count = 100,
+                    line_length = 10,
+                    width = 96,
+                    height = 128,
+                    animation_speed = 0.3
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(-128, 136),
-            west_position = util.by_pixel(-128, 136),
-            south_position = util.by_pixel(-128, 136),
-            east_position = util.by_pixel(-128, 136),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/leftdown.png",
-                frame_count = 100,
-                line_length = 10,
-                width = 96,
-                height = 96,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(-82, -9),
-            west_position = util.by_pixel(-82, -9),
-            south_position = util.by_pixel(-82, -9),
-            east_position = util.by_pixel(-82, -9),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/left.png",
-                frame_count = 100,
-                line_length = 10,
-                width = 96,
-                height = 96,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(5, -11),
-            west_position = util.by_pixel(5, -11),
-            south_position = util.by_pixel(5, -11),
-            east_position = util.by_pixel(5, -11),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/mid.png",
-                frame_count = 100,
-                line_length = 20,
-                width = 64,
-                height = 96,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(63, 112),
-            west_position = util.by_pixel(63, 112),
-            south_position = util.by_pixel(63, 112),
-            east_position = util.by_pixel(63, 112),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/mom.png",
-                frame_count = 100,
-                line_length = 10,
-                width = 96,
-                height = 128,
-                animation_speed = 0.3
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/off.png",
+                    width = 383,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -32),
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ulric-corral/off-mask.png",
+                    width = 383,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -32),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
             }
         },
     },

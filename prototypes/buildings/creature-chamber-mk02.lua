@@ -58,75 +58,77 @@ ENTITY {
         },
     },
     energy_usage = "600kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/base.png",
-                width = 384,
-                height = 32,
-                line_length = 5,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(16, 160)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a1.png",
-                width = 128,
-                height = 320,
-                line_length = 16,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(-112, -16)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a1-mask.png",
-                width = 128,
-                height = 320,
-                line_length = 16,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(-112, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2.png",
-                width = 128,
-                height = 320,
-                line_length = 16,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(16, -16)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2-mask.png",
-                width = 128,
-                height = 320,
-                line_length = 16,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3.png",
-                width = 128,
-                height = 320,
-                line_length = 16,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(144, -16)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3-mask.png",
-                width = 128,
-                height = 320,
-                line_length = 16,
-                frame_count = 80,
-                animation_speed = 0.3,
-                shift = util.by_pixel(144, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/base.png",
+                    width = 384,
+                    height = 32,
+                    line_length = 5,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(16, 160)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a1.png",
+                    width = 128,
+                    height = 320,
+                    line_length = 16,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(-112, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a1-mask.png",
+                    width = 128,
+                    height = 320,
+                    line_length = 16,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(-112, -16),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2.png",
+                    width = 128,
+                    height = 320,
+                    line_length = 16,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(16, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2-mask.png",
+                    width = 128,
+                    height = 320,
+                    line_length = 16,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3.png",
+                    width = 128,
+                    height = 320,
+                    line_length = 16,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(144, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3-mask.png",
+                    width = 128,
+                    height = 320,
+                    line_length = 16,
+                    frame_count = 80,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(144, -16),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
     fluid_boxes = {
         --1

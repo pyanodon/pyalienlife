@@ -68,41 +68,43 @@ ENTITY {
         },
     },
     energy_usage = "3400kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum.png",
-				priority = "extra-high",
-                width = 288,
-                height = 295,
-                line_length = 5,
-                frame_count = 20,
-                animation_speed = 0.3,
-                shift = util.by_pixel(0, -4),
-            },
-            {
-                filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum-mask.png",
-				priority = "extra-high",
-                width = 288,
-                height = 295,
-                line_length = 5,
-                frame_count = 20,
-                animation_speed = 0.3,
-                shift = util.by_pixel(0, -4),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/shadow.png",
-				priority = "extra-high",
-                width = 298,
-                height = 295,
-                line_length = 5,
-                frame_count = 20,
-                animation_speed = 0.3,
-                shift = util.by_pixel(6, -4),
-                draw_as_shadow = true,
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum.png",
+    				priority = "extra-high",
+                    width = 288,
+                    height = 295,
+                    line_length = 5,
+                    frame_count = 20,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(0, -4),
+                },
+                {
+                    filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum-mask.png",
+    				priority = "extra-high",
+                    width = 288,
+                    height = 295,
+                    line_length = 5,
+                    frame_count = 20,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(0, -4),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/shadow.png",
+    				priority = "extra-high",
+                    width = 298,
+                    height = 295,
+                    line_length = 5,
+                    frame_count = 20,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(6, -4),
+                    draw_as_shadow = true,
+                }
             }
-        }
+        },
     },
     fluid_boxes = {
         --1

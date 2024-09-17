@@ -62,72 +62,74 @@ ENTITY {
         },
     },
     energy_usage = "1000kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/off.png",
-                width = 384,
-                height = 384,
-                line_length = 1,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16)
+                north_position = util.by_pixel(-112, 32),
+                west_position = util.by_pixel(-112, 32),
+                south_position = util.by_pixel(-112, 32),
+                east_position = util.by_pixel(-112, 32),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/a.png",
+                    frame_count = 100,
+                    line_length = 12,
+                    width = 128,
+                    height = 224,
+                    animation_speed = 0.4,
+                }
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/off-mask.png",
-                width = 384,
-                height = 384,
-                line_length = 1,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(16, 32),
+                west_position = util.by_pixel(16, 32),
+                south_position = util.by_pixel(16, 32),
+                east_position = util.by_pixel(16, 32),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/b.png",
+                    frame_count = 100,
+                    line_length = 12,
+                    width = 128,
+                    height = 224,
+                    animation_speed = 0.4,
+                }
             },
-        }
+            {
+                north_position = util.by_pixel(128, 32),
+                west_position = util.by_pixel(128, 32),
+                south_position = util.by_pixel(128, 32),
+                east_position = util.by_pixel(128, 32),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/c.png",
+                    frame_count = 100,
+                    line_length = 12,
+                    width = 96,
+                    height = 224,
+                    animation_speed = 0.4,
+                }
+            },
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/off.png",
+                    width = 384,
+                    height = 384,
+                    line_length = 1,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/off-mask.png",
+                    width = 384,
+                    height = 384,
+                    line_length = 1,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
 
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-112, 32),
-            west_position = util.by_pixel(-112, 32),
-            south_position = util.by_pixel(-112, 32),
-            east_position = util.by_pixel(-112, 32),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/a.png",
-                frame_count = 100,
-                line_length = 12,
-                width = 128,
-                height = 224,
-                animation_speed = 0.4,
-            }
-        },
-        {
-            north_position = util.by_pixel(16, 32),
-            west_position = util.by_pixel(16, 32),
-            south_position = util.by_pixel(16, 32),
-            east_position = util.by_pixel(16, 32),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/b.png",
-                frame_count = 100,
-                line_length = 12,
-                width = 128,
-                height = 224,
-                animation_speed = 0.4,
-            }
-        },
-        {
-            north_position = util.by_pixel(128, 32),
-            west_position = util.by_pixel(128, 32),
-            south_position = util.by_pixel(128, 32),
-            east_position = util.by_pixel(128, 32),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/grods-swamp/c.png",
-                frame_count = 100,
-                line_length = 12,
-                width = 96,
-                height = 224,
-                animation_speed = 0.4,
-            }
-        },
-    },
 
     fluid_boxes = {
         --1

@@ -58,102 +58,104 @@ ENTITY {
         },
     },
     energy_usage = "600kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
-        width = 305,
-        height = 290,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(8,-1),
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(-112.5, -50),
+                west_position = util.by_pixel(-112.5, -50),
+                south_position = util.by_pixel(-112.5, -50),
+                east_position = util.by_pixel(-112.5, -50),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/a.png",
+                    frame_count = 255,
+                    line_length = 32,
+                    width = 64,
+                    height = 192,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(0,0)
+                }
+            },
+            {
+                north_position = util.by_pixel(-112.5, -50),
+                west_position = util.by_pixel(-112.5, -50),
+                south_position = util.by_pixel(-112.5, -50),
+                east_position = util.by_pixel(-112.5, -50),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/b.png",
+                    frame_count = 255,
+                    line_length = 32,
+                    width = 64,
+                    height = 192,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(64,0)
+                }
+            },
+            {
+                north_position = util.by_pixel(-112.5, -50),
+                west_position = util.by_pixel(-112.5, -50),
+                south_position = util.by_pixel(-112.5, -50),
+                east_position = util.by_pixel(-112.5, -50),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/c.png",
+                    frame_count = 255,
+                    line_length = 32,
+                    width = 64,
+                    height = 192,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(128,0)
+                }
+            },
+            {
+                north_position = util.by_pixel(-112.5, -50),
+                west_position = util.by_pixel(-112.5, -50),
+                south_position = util.by_pixel(-112.5, -50),
+                east_position = util.by_pixel(-112.5, -50),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/d.png",
+                    frame_count = 255,
+                    line_length = 32,
+                    width = 64,
+                    height = 192,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(192,0)
+                }
+            },
+            {
+                north_position = util.by_pixel(-112.5, -50),
+                west_position = util.by_pixel(-112.5, -50),
+                south_position = util.by_pixel(-112.5, -50),
+                east_position = util.by_pixel(-112.5, -50),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/e.png",
+                    frame_count = 255,
+                    line_length = 32,
+                    width = 13,
+                    height = 192,
+                    animation_speed = 0.5,
+                    shift = util.by_pixel(230,0)
+                }
+            },
         },
-        {
-            filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
+        animation = {
+            layers = {
+            {
+            filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
             width = 305,
             height = 290,
             frame_count = 1,
             line_length = 1,
             shift = util.by_pixel(8,-1),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
             },
-    }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-112.5, -50),
-            west_position = util.by_pixel(-112.5, -50),
-            south_position = util.by_pixel(-112.5, -50),
-            east_position = util.by_pixel(-112.5, -50),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/a.png",
-                frame_count = 255,
-                line_length = 32,
-                width = 64,
-                height = 192,
-                animation_speed = 0.5,
-                shift = util.by_pixel(0,0)
-            }
-        },
-        {
-            north_position = util.by_pixel(-112.5, -50),
-            west_position = util.by_pixel(-112.5, -50),
-            south_position = util.by_pixel(-112.5, -50),
-            east_position = util.by_pixel(-112.5, -50),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/b.png",
-                frame_count = 255,
-                line_length = 32,
-                width = 64,
-                height = 192,
-                animation_speed = 0.5,
-                shift = util.by_pixel(64,0)
-            }
-        },
-        {
-            north_position = util.by_pixel(-112.5, -50),
-            west_position = util.by_pixel(-112.5, -50),
-            south_position = util.by_pixel(-112.5, -50),
-            east_position = util.by_pixel(-112.5, -50),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/c.png",
-                frame_count = 255,
-                line_length = 32,
-                width = 64,
-                height = 192,
-                animation_speed = 0.5,
-                shift = util.by_pixel(128,0)
-            }
-        },
-        {
-            north_position = util.by_pixel(-112.5, -50),
-            west_position = util.by_pixel(-112.5, -50),
-            south_position = util.by_pixel(-112.5, -50),
-            east_position = util.by_pixel(-112.5, -50),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/d.png",
-                frame_count = 255,
-                line_length = 32,
-                width = 64,
-                height = 192,
-                animation_speed = 0.5,
-                shift = util.by_pixel(192,0)
-            }
-        },
-        {
-            north_position = util.by_pixel(-112.5, -50),
-            west_position = util.by_pixel(-112.5, -50),
-            south_position = util.by_pixel(-112.5, -50),
-            east_position = util.by_pixel(-112.5, -50),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/e.png",
-                frame_count = 255,
-                line_length = 32,
-                width = 13,
-                height = 192,
-                animation_speed = 0.5,
-                shift = util.by_pixel(230,0)
-            }
+            {
+                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
+                width = 305,
+                height = 290,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(8,-1),
+                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+        }
         },
     },
     fluid_boxes = {

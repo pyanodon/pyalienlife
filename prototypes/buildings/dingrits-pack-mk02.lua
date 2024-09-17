@@ -58,171 +58,173 @@ ENTITY {
         },
     },
     energy_usage = "700kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off.png",
-        width = 480,
-        height = 480,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(16, -16)
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(-80, -144),
+                west_position = util.by_pixel(-80, -144),
+                south_position = util.by_pixel(-80, -144),
+                east_position = util.by_pixel(-80, -144),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/waterfall.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 96,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-128, -176),
+                west_position = util.by_pixel(-128, -176),
+                south_position = util.by_pixel(-128, -176),
+                east_position = util.by_pixel(-128, -176),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/top.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 64,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-64, -64),
+                west_position = util.by_pixel(-64, -64),
+                south_position = util.by_pixel(-64, -64),
+                east_position = util.by_pixel(-64, -64),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/ahhh.png",
+                    frame_count = 40,
+                    line_length = 20,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-5, -96),
+                west_position = util.by_pixel(-5, -96),
+                south_position = util.by_pixel(-5, -96),
+                east_position = util.by_pixel(-5, -96),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/yell.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 96,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(109, 20),
+                west_position = util.by_pixel(109, 20),
+                south_position = util.by_pixel(109, 20),
+                east_position = util.by_pixel(109, 20),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/eat.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(144, 19),
+                west_position = util.by_pixel(144, 19),
+                south_position = util.by_pixel(144, 19),
+                east_position = util.by_pixel(144, 19),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/eat-side.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(51, -9),
+                west_position = util.by_pixel(51, -9),
+                south_position = util.by_pixel(51, -9),
+                east_position = util.by_pixel(51, -9),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/mid.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-18, 80),
+                west_position = util.by_pixel(-18, 80),
+                south_position = util.by_pixel(-18, 80),
+                east_position = util.by_pixel(-18, 80),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/pup.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 64,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(14, 104),
+                west_position = util.by_pixel(14, 104),
+                south_position = util.by_pixel(14, 104),
+                east_position = util.by_pixel(14, 104),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/mother.png",
+                    frame_count = 80,
+                    line_length = 20,
+                    width = 64,
+                    height = 95,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(60, -96),
+                west_position = util.by_pixel(60, -96),
+                south_position = util.by_pixel(60, -96),
+                east_position = util.by_pixel(60, -96),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/sleep.png",
+                    frame_count = 40,
+                    line_length = 20,
+                    width = 64,
+                    height = 64,
+                    run_mode = "forward-then-backward",
+                    animation_speed = 0.3
+                }
+            },
         },
-        {
-            filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off-mask.png",
+        animation = {
+            layers = {
+            {
+            filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off.png",
             width = 480,
             height = 480,
             frame_count = 1,
             line_length = 1,
-            shift = util.by_pixel(16, -16),
-            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+            shift = util.by_pixel(16, -16)
             },
-      },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off-mask.png",
+                width = 480,
+                height = 480,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -16),
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+          },
+        },
     },
 
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-80, -144),
-            west_position = util.by_pixel(-80, -144),
-            south_position = util.by_pixel(-80, -144),
-            east_position = util.by_pixel(-80, -144),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/waterfall.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 96,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-128, -176),
-            west_position = util.by_pixel(-128, -176),
-            south_position = util.by_pixel(-128, -176),
-            east_position = util.by_pixel(-128, -176),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/top.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 64,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-64, -64),
-            west_position = util.by_pixel(-64, -64),
-            south_position = util.by_pixel(-64, -64),
-            east_position = util.by_pixel(-64, -64),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/ahhh.png",
-                frame_count = 40,
-                line_length = 20,
-                width = 64,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-5, -96),
-            west_position = util.by_pixel(-5, -96),
-            south_position = util.by_pixel(-5, -96),
-            east_position = util.by_pixel(-5, -96),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/yell.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 96,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(109, 20),
-            west_position = util.by_pixel(109, 20),
-            south_position = util.by_pixel(109, 20),
-            east_position = util.by_pixel(109, 20),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/eat.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 64,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(144, 19),
-            west_position = util.by_pixel(144, 19),
-            south_position = util.by_pixel(144, 19),
-            east_position = util.by_pixel(144, 19),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/eat-side.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 64,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(51, -9),
-            west_position = util.by_pixel(51, -9),
-            south_position = util.by_pixel(51, -9),
-            east_position = util.by_pixel(51, -9),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/mid.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 64,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-18, 80),
-            west_position = util.by_pixel(-18, 80),
-            south_position = util.by_pixel(-18, 80),
-            east_position = util.by_pixel(-18, 80),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/pup.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 64,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(14, 104),
-            west_position = util.by_pixel(14, 104),
-            south_position = util.by_pixel(14, 104),
-            east_position = util.by_pixel(14, 104),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/mother.png",
-                frame_count = 80,
-                line_length = 20,
-                width = 64,
-                height = 95,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(60, -96),
-            west_position = util.by_pixel(60, -96),
-            south_position = util.by_pixel(60, -96),
-            east_position = util.by_pixel(60, -96),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/sleep.png",
-                frame_count = 40,
-                line_length = 20,
-                width = 64,
-                height = 64,
-                run_mode = "forward-then-backward",
-                animation_speed = 0.3
-            }
-        },
-    },
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

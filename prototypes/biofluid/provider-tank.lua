@@ -65,11 +65,13 @@ ENTITY {
         },
         production_type = 'input'
     }},
-    animation = {
-        north = graphic,
-        east = graphic,
-        south = graphic,
-        west = graphic,
+    graphics_set = {
+        animation = {
+            north = graphic,
+            east = graphic,
+            south = graphic,
+            west = graphic,
+        },
     },
     show_recipe_icon = false,
     crafting_speed = 1,

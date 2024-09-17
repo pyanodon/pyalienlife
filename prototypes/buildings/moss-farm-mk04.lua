@@ -58,86 +58,88 @@ ENTITY {
         },
     },
     energy_usage = "800kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a-base.png",
-                width = 192,
-                height = 32,
-                line_length = 10,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(0, 80)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a1.png",
-                width = 64,
-                height = 256,
-                line_length = 20,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-64, -64)
-            },
-
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-1.png",
-                width = 64,
-                height = 256,
-                line_length = 20,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-64, -64),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a2.png",
-                width = 64,
-                height = 256,
-                line_length = 20,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(0, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-2.png",
-                width = 64,
-                height = 256,
-                line_length = 20,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(0, -64),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a3.png",
-                width = 64,
-                height = 256,
-                line_length = 20,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(64, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-3.png",
-                width = 64,
-                height = 256,
-                line_length = 20,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(64, -64),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/sh.png",
-                width = 64,
-                height = 201,
-                line_length = 20,
-                frame_count = 120,
-                draw_as_shadow = true,
-                animation_speed = 0.4,
-                shift = util.by_pixel(96, -10)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a-base.png",
+                    width = 192,
+                    height = 32,
+                    line_length = 10,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(0, 80)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a1.png",
+                    width = 64,
+                    height = 256,
+                    line_length = 20,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-64, -64)
+                },
+    
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-1.png",
+                    width = 64,
+                    height = 256,
+                    line_length = 20,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-64, -64),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a2.png",
+                    width = 64,
+                    height = 256,
+                    line_length = 20,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(0, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-2.png",
+                    width = 64,
+                    height = 256,
+                    line_length = 20,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(0, -64),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/a3.png",
+                    width = 64,
+                    height = 256,
+                    line_length = 20,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(64, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-3.png",
+                    width = 64,
+                    height = 256,
+                    line_length = 20,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(64, -64),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/sh.png",
+                    width = 64,
+                    height = 201,
+                    line_length = 20,
+                    frame_count = 120,
+                    draw_as_shadow = true,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(96, -10)
+                },
+            }
+        },
     },
 
     fluid_boxes = {

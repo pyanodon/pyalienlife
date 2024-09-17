@@ -59,86 +59,88 @@ ENTITY {
         },
     },
     energy_usage = "2000kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/off.png",
-                width = 384,
-                height = 384,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -16)
+                north_position = util.by_pixel(-128, -16),
+                west_position = util.by_pixel(-128, -16),
+                south_position = util.by_pixel(-128, -16),
+                east_position = util.by_pixel(-128, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a1.png",
+                    frame_count = 150,
+                    line_length = 21,
+                    width = 96,
+                    height = 256,
+                    animation_speed = 0.35,
+                    draw_as_glow = true,
+                }
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/off-mask.png",
-                width = 384,
-                height = 384,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                north_position = util.by_pixel(-32, -16),
+                west_position = util.by_pixel(-32, -16),
+                south_position = util.by_pixel(-32, -16),
+                east_position = util.by_pixel(-32, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a2.png",
+                    frame_count = 150,
+                    line_length = 21,
+                    width = 96,
+                    height = 256,
+                    animation_speed = 0.35,
+                    draw_as_glow = true,
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-128, -16),
-            west_position = util.by_pixel(-128, -16),
-            south_position = util.by_pixel(-128, -16),
-            east_position = util.by_pixel(-128, -16),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a1.png",
-                frame_count = 150,
-                line_length = 21,
-                width = 96,
-                height = 256,
-                animation_speed = 0.35,
-                draw_as_glow = true,
-            }
+            {
+                north_position = util.by_pixel(64, -16),
+                west_position = util.by_pixel(64, -16),
+                south_position = util.by_pixel(64, -16),
+                east_position = util.by_pixel(64, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a3.png",
+                    frame_count = 150,
+                    line_length = 21,
+                    width = 96,
+                    height = 256,
+                    animation_speed = 0.35,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(144, -16),
+                west_position = util.by_pixel(144, -16),
+                south_position = util.by_pixel(144, -16),
+                east_position = util.by_pixel(144, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a4.png",
+                    frame_count = 150,
+                    line_length = 21,
+                    width = 64,
+                    height = 256,
+                    animation_speed = 0.35,
+                    draw_as_glow = true,
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(-32, -16),
-            west_position = util.by_pixel(-32, -16),
-            south_position = util.by_pixel(-32, -16),
-            east_position = util.by_pixel(-32, -16),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a2.png",
-                frame_count = 150,
-                line_length = 21,
-                width = 96,
-                height = 256,
-                animation_speed = 0.35,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(64, -16),
-            west_position = util.by_pixel(64, -16),
-            south_position = util.by_pixel(64, -16),
-            east_position = util.by_pixel(64, -16),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a3.png",
-                frame_count = 150,
-                line_length = 21,
-                width = 96,
-                height = 256,
-                animation_speed = 0.35,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(144, -16),
-            west_position = util.by_pixel(144, -16),
-            south_position = util.by_pixel(144, -16),
-            east_position = util.by_pixel(144, -16),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/a4.png",
-                frame_count = 150,
-                line_length = 21,
-                width = 64,
-                height = 256,
-                animation_speed = 0.35,
-                draw_as_glow = true,
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/off.png",
+                    width = 384,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fish-farm/off-mask.png",
+                    width = 384,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
             }
         },
     },

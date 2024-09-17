@@ -62,94 +62,96 @@ ENTITY {
         },
     },
     energy_usage = "1000kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/off.png",
-                width = 352,
-                height = 384,
-                frame_count = 1,
-                shift = util.by_pixel(0, -16)
+                north_position = {-4.5, 0.0},
+                west_position = {-4.5, 0.0},
+                south_position = {-4.5, 0.0},
+                east_position = {-4.5, 0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a1.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 352,
+                    animation_speed = 0.3
+                }
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/off-mask.png",
-                width = 352,
-                height = 384,
-                frame_count = 1,
-                shift = util.by_pixel(0, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                north_position = {-2.5, 0.0},
+                west_position = {-2.5, 0.0},
+                south_position = {-2.5, 0.0},
+                east_position = {-2.5, 0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a2.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 352,
+                    animation_speed = 0.3
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = {-4.5, 0.0},
-            west_position = {-4.5, 0.0},
-            south_position = {-4.5, 0.0},
-            east_position = {-4.5, 0.0},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a1.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 352,
-                animation_speed = 0.3
-            }
+            {
+                north_position = {-0.5, 0.0},
+                west_position = {-0.5, 0.0},
+                south_position = {-0.5, 0.0},
+                east_position = {-0.5, 0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a3.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 352,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = {1.5, 0.0},
+                west_position = {1.5, 0.0},
+                south_position = {1.5, 0.0},
+                east_position = {1.5, 0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a4.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 352,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = {3.5, 0.0},
+                west_position = {3.5, 0.0},
+                south_position = {3.5, 0.0},
+                east_position = {3.5, 0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a5.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 352,
+                    animation_speed = 0.3
+                }
+            },
         },
-        {
-            north_position = {-2.5, 0.0},
-            west_position = {-2.5, 0.0},
-            south_position = {-2.5, 0.0},
-            east_position = {-2.5, 0.0},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a2.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 352,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = {-0.5, 0.0},
-            west_position = {-0.5, 0.0},
-            south_position = {-0.5, 0.0},
-            east_position = {-0.5, 0.0},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a3.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 352,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = {1.5, 0.0},
-            west_position = {1.5, 0.0},
-            south_position = {1.5, 0.0},
-            east_position = {1.5, 0.0},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a4.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 352,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = {3.5, 0.0},
-            west_position = {3.5, 0.0},
-            south_position = {3.5, 0.0},
-            east_position = {3.5, 0.0},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a5.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 352,
-                animation_speed = 0.3
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/off.png",
+                    width = 352,
+                    height = 384,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/off-mask.png",
+                    width = 352,
+                    height = 384,
+                    frame_count = 1,
+                    shift = util.by_pixel(0, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
             }
         },
     },

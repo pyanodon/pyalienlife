@@ -57,113 +57,115 @@ ENTITY {
         },
     },
     energy_usage = "450kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a1.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, 112)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a1-mask.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, 112),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a2.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, 48)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a2-mask.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, 48),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a3.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -16)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a3-mask.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -16),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a4.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -80)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a4-mask.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -80),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a5.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -144)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a5-mask.png",
-                width = 302,
-                height = 64,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -144),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a6.png",
-                width = 302,
-                height = 32,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(6, -192)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a1.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, 112)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a1-mask.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, 112),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a2.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, 48)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a2-mask.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, 48),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a3.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a3-mask.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -16),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a4.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -80)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a4-mask.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -80),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a5.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -144)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a5-mask.png",
+                    width = 302,
+                    height = 64,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -144),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a6.png",
+                    width = 302,
+                    height = 32,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(6, -192)
+                },
+            }
+        },
     },
 
     fluid_boxes = {

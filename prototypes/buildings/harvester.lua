@@ -66,27 +66,29 @@ ENTITY {
     circuit_wire_connection_points = circuit_connector_definitions['harvester'].points,
     circuit_connector_sprites = circuit_connector_definitions['harvester'].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    animations = {
-        layers = {
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/left.png',
-                width = 128,
-                height = 256,
-                line_length = 16,
-                frame_count = 100,
-                animation_speed = 0.3,
-                shift = {-1.5, -0.5}
-            },
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/right.png',
-                width = 128,
-                height = 256,
-                line_length = 16,
-                frame_count = 100,
-                animation_speed = 0.3,
-                shift = {2.5, -0.5}
+    graphics_set = {
+        animations = {
+            layers = {
+                {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/left.png',
+                    width = 128,
+                    height = 256,
+                    line_length = 16,
+                    frame_count = 100,
+                    animation_speed = 0.3,
+                    shift = {-1.5, -0.5}
+                },
+                {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/right.png',
+                    width = 128,
+                    height = 256,
+                    line_length = 16,
+                    frame_count = 100,
+                    animation_speed = 0.3,
+                    shift = {2.5, -0.5}
+                }
             }
-        }
+        },
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     working_sound = {
