@@ -59,66 +59,68 @@ ENTITY {
         },
     },
     energy_usage = "800kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/left.png",
-                width = 96,
-                height = 318,
-                line_length = 21,
-                frame_count = 100,
-                animation_speed = 0.5,
-                shift = {-2.532, -0.966}
-            },
-			{
-                filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/left-mask.png",
-                width = 96,
-                height = 318,
-                line_length = 21,
-                frame_count = 100,
-                animation_speed = 0.5,
-                shift = {-2.532, -0.966},
-				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/mid.png",
-                width = 96,
-                height = 318,
-                line_length = 21,
-                frame_count = 100,
-                animation_speed = 0.5,
-                shift = {0.468, -0.966}
-            },
-			{
-                filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/mid-mask.png",
-                width = 96,
-                height = 318,
-                line_length = 21,
-                frame_count = 100,
-                animation_speed = 0.5,
-                shift = {0.468, -0.966},
-				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/right.png",
-                width = 82,
-                height = 318,
-                line_length = 21,
-                frame_count = 100,
-                animation_speed = 0.5,
-                shift = {3.250, -0.966}
-            },
-			{
-                filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/right-mask.png",
-                width = 82,
-                height = 318,
-                line_length = 21,
-                frame_count = 100,
-                animation_speed = 0.5,
-                shift = {3.250, -0.966},
-				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/left.png",
+                    width = 96,
+                    height = 318,
+                    line_length = 21,
+                    frame_count = 100,
+                    animation_speed = 0.5,
+                    shift = {-2.532, -0.966}
+                },
+    			{
+                    filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/left-mask.png",
+                    width = 96,
+                    height = 318,
+                    line_length = 21,
+                    frame_count = 100,
+                    animation_speed = 0.5,
+                    shift = {-2.532, -0.966},
+    				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/mid.png",
+                    width = 96,
+                    height = 318,
+                    line_length = 21,
+                    frame_count = 100,
+                    animation_speed = 0.5,
+                    shift = {0.468, -0.966}
+                },
+    			{
+                    filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/mid-mask.png",
+                    width = 96,
+                    height = 318,
+                    line_length = 21,
+                    frame_count = 100,
+                    animation_speed = 0.5,
+                    shift = {0.468, -0.966},
+    				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/right.png",
+                    width = 82,
+                    height = 318,
+                    line_length = 21,
+                    frame_count = 100,
+                    animation_speed = 0.5,
+                    shift = {3.250, -0.966}
+                },
+    			{
+                    filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/right-mask.png",
+                    width = 82,
+                    height = 318,
+                    line_length = 21,
+                    frame_count = 100,
+                    animation_speed = 0.5,
+                    shift = {3.250, -0.966},
+    				tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                }
             }
-        }
+        },
     },
     fluid_boxes = {
         {

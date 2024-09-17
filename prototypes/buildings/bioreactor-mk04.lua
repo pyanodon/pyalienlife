@@ -56,56 +56,58 @@ ENTITY {
         },
     },
     energy_usage = "1000kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-            filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off.png",
-            width = 246,
-            height = 236,
-            frame_count = 1,
-            shift = {0.312, -0.218},
+                north_position = {0.312, -0.218},
+                west_position = {0.312, -0.218},
+                south_position = {0.312, -0.218},
+                east_position = {0.312, -0.218},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on.png",
+                    frame_count = 50,
+                    width = 246,
+                    height = 236,
+                    line_length = 8,
+                    animation_speed = 0.3,
+                    priority = "medium"
+                }
             },
             {
-            filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off-mask.png",
-            width = 246,
-            height = 236,
-            frame_count = 1,
-            shift = {0.312, -0.218},
-            tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                north_position = {0.312, -0.218},
+                west_position = {0.312, -0.218},
+                south_position = {0.312, -0.218},
+                east_position = {0.312, -0.218},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on-mask.png",
+                    frame_count = 50,
+                    width = 246,
+                    height = 236,
+                    line_length = 8,
+                    animation_speed = 0.3,
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
+                    priority = "medium"
+                }
             },
         },
-    },
-    working_visualisations = {
-        {
-            north_position = {0.312, -0.218},
-            west_position = {0.312, -0.218},
-            south_position = {0.312, -0.218},
-            east_position = {0.312, -0.218},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on.png",
-                frame_count = 50,
+        animation = {
+            layers = {
+                {
+                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off.png",
                 width = 246,
                 height = 236,
-                line_length = 8,
-                animation_speed = 0.3,
-                priority = "medium"
-            }
-        },
-        {
-            north_position = {0.312, -0.218},
-            west_position = {0.312, -0.218},
-            south_position = {0.312, -0.218},
-            east_position = {0.312, -0.218},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on-mask.png",
-                frame_count = 50,
+                frame_count = 1,
+                shift = {0.312, -0.218},
+                },
+                {
+                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off-mask.png",
                 width = 246,
                 height = 236,
-                line_length = 8,
-                animation_speed = 0.3,
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0},
-                priority = "medium"
-            }
+                frame_count = 1,
+                shift = {0.312, -0.218},
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+            },
         },
     },
     fluid_boxes = {

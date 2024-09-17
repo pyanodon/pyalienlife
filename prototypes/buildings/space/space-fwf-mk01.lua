@@ -57,72 +57,74 @@ ENTITY {
         },
     },
     energy_usage = "200kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/base.png",
-                width = 352,
-                height = 32,
-                line_length = 5,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(0, 160)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f1.png",
-                width = 64,
-                height = 384,
-                line_length = 32,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-144, -48)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f2.png",
-                width = 64,
-                height = 384,
-                line_length = 32,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-80, -48)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f3.png",
-                width = 64,
-                height = 384,
-                line_length = 32,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-16, -48)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f4.png",
-                width = 64,
-                height = 384,
-                line_length = 32,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(48, -48)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f5.png",
-                width = 64,
-                height = 384,
-                line_length = 32,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(112, -48)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/fwf/f6.png",
-                width = 32,
-                height = 384,
-                line_length = 32,
-                frame_count = 136,
-                animation_speed = 0.4,
-                shift = util.by_pixel(160, -48)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/base.png",
+                    width = 352,
+                    height = 32,
+                    line_length = 5,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(0, 160)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/f1.png",
+                    width = 64,
+                    height = 384,
+                    line_length = 32,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-144, -48)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/f2.png",
+                    width = 64,
+                    height = 384,
+                    line_length = 32,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-80, -48)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/f3.png",
+                    width = 64,
+                    height = 384,
+                    line_length = 32,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-16, -48)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/f4.png",
+                    width = 64,
+                    height = 384,
+                    line_length = 32,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(48, -48)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/f5.png",
+                    width = 64,
+                    height = 384,
+                    line_length = 32,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(112, -48)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/fwf/f6.png",
+                    width = 32,
+                    height = 384,
+                    line_length = 32,
+                    frame_count = 136,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(160, -48)
+                },
+            }
+        },
     },
 
     fluid_boxes = {

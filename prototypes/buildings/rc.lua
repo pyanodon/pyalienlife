@@ -135,123 +135,125 @@ for i = 1, 4 do
             },
         },
         energy_usage = (500 * i) .. 'kW',
-        animation = {
-            layers = {
-                --TERRAIN
+        graphics_set = {
+            working_visualisations = {
+                --trits
                 {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/off.png',
-                    width = 768,
-                    height = 768,
-                    frame_count = 1,
-                    shift = util.by_pixel(0, -0),
-                    priority = 'low',
+                    north_position = util.by_pixel(-192, -224),
+                    west_position = util.by_pixel(-192, -224),
+                    south_position = util.by_pixel(-192, -224),
+                    east_position = util.by_pixel(-192, -224),
+                    animation = {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/trit.png',
+                        frame_count = 75,
+                        width = 192,
+                        height = 192,
+                        line_length = 10,
+                        animation_speed = 0.3,
+                        priority = 'medium'
+                    }
                 },
                 {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/mask.png',
-                    width = 768,
-                    height = 768,
-                    frame_count = 1,
-                    shift = util.by_pixel(0, 1),
-                    priority = 'low',
-                    tint = py.tints[i],
+                    north_position = util.by_pixel(-112, 48),
+                    west_position = util.by_pixel(-112, 48),
+                    south_position = util.by_pixel(-112, 48),
+                    east_position = util.by_pixel(-112, 48),
+                    animation = {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/tree.png',
+                        frame_count = 50,
+                        width = 160,
+                        height = 160,
+                        line_length = 10,
+                        animation_speed = 0.5,
+                        priority = 'medium'
+                    }
                 },
                 {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/l.png',
-                    width = 768,
-                    height = 768,
-                    frame_count = 1,
-                    draw_as_glow = true,
-                    priority = 'extra-high',
-                    shift = util.by_pixel(0, -0),
+                    north_position = util.by_pixel(160, -176),
+                    west_position = util.by_pixel(160, -176),
+                    south_position = util.by_pixel(160, -176),
+                    east_position = util.by_pixel(160, -176),
+                    animation = {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/arqad.png',
+                        frame_count = 100,
+                        width = 192,
+                        height = 160,
+                        line_length = 10,
+                        animation_speed = 0.5,
+                        priority = 'medium'
+                    }
                 },
                 {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/l.png',
-                    width = 768,
-                    height = 768,
-                    frame_count = 1,
-                    draw_as_glow = true,
-                    priority = 'extra-high',
-                    shift = util.by_pixel(0, -0),
+                    north_position = util.by_pixel(-48, -192),
+                    west_position = util.by_pixel(-48, -192),
+                    south_position = util.by_pixel(-48, -192),
+                    east_position = util.by_pixel(-48, -192),
+                    animation = {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/screen.png',
+                        frame_count = 152,
+                        width = 96,
+                        height = 64,
+                        line_length = 20,
+                        animation_speed = 0.3,
+                        draw_as_glow = true,
+                        priority = 'medium'
+                    }
                 },
-            }
-        },
-        working_visualisations = {
-            --trits
-            {
-                north_position = util.by_pixel(-192, -224),
-                west_position = util.by_pixel(-192, -224),
-                south_position = util.by_pixel(-192, -224),
-                east_position = util.by_pixel(-192, -224),
-                animation = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/trit.png',
-                    frame_count = 75,
-                    width = 192,
-                    height = 192,
-                    line_length = 10,
-                    animation_speed = 0.3,
-                    priority = 'medium'
-                }
+                {
+                    north_position = util.by_pixel(-48, -192),
+                    west_position = util.by_pixel(-48, -192),
+                    south_position = util.by_pixel(-48, -192),
+                    east_position = util.by_pixel(-48, -192),
+                    animation = {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/screen.png',
+                        frame_count = 152,
+                        width = 96,
+                        height = 64,
+                        line_length = 20,
+                        animation_speed = 0.3,
+                        draw_as_glow = true,
+                        priority = 'medium'
+                    }
+                },
             },
-            {
-                north_position = util.by_pixel(-112, 48),
-                west_position = util.by_pixel(-112, 48),
-                south_position = util.by_pixel(-112, 48),
-                east_position = util.by_pixel(-112, 48),
-                animation = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/tree.png',
-                    frame_count = 50,
-                    width = 160,
-                    height = 160,
-                    line_length = 10,
-                    animation_speed = 0.5,
-                    priority = 'medium'
-                }
-            },
-            {
-                north_position = util.by_pixel(160, -176),
-                west_position = util.by_pixel(160, -176),
-                south_position = util.by_pixel(160, -176),
-                east_position = util.by_pixel(160, -176),
-                animation = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/arqad.png',
-                    frame_count = 100,
-                    width = 192,
-                    height = 160,
-                    line_length = 10,
-                    animation_speed = 0.5,
-                    priority = 'medium'
-                }
-            },
-            {
-                north_position = util.by_pixel(-48, -192),
-                west_position = util.by_pixel(-48, -192),
-                south_position = util.by_pixel(-48, -192),
-                east_position = util.by_pixel(-48, -192),
-                animation = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/screen.png',
-                    frame_count = 152,
-                    width = 96,
-                    height = 64,
-                    line_length = 20,
-                    animation_speed = 0.3,
-                    draw_as_glow = true,
-                    priority = 'medium'
-                }
-            },
-            {
-                north_position = util.by_pixel(-48, -192),
-                west_position = util.by_pixel(-48, -192),
-                south_position = util.by_pixel(-48, -192),
-                east_position = util.by_pixel(-48, -192),
-                animation = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/rc/screen.png',
-                    frame_count = 152,
-                    width = 96,
-                    height = 64,
-                    line_length = 20,
-                    animation_speed = 0.3,
-                    draw_as_glow = true,
-                    priority = 'medium'
+            animation = {
+                layers = {
+                    --TERRAIN
+                    {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/off.png',
+                        width = 768,
+                        height = 768,
+                        frame_count = 1,
+                        shift = util.by_pixel(0, -0),
+                        priority = 'low',
+                    },
+                    {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/mask.png',
+                        width = 768,
+                        height = 768,
+                        frame_count = 1,
+                        shift = util.by_pixel(0, 1),
+                        priority = 'low',
+                        tint = py.tints[i],
+                    },
+                    {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/l.png',
+                        width = 768,
+                        height = 768,
+                        frame_count = 1,
+                        draw_as_glow = true,
+                        priority = 'extra-high',
+                        shift = util.by_pixel(0, -0),
+                    },
+                    {
+                        filename = '__pyalienlifegraphics2__/graphics/entity/rc/l.png',
+                        width = 768,
+                        height = 768,
+                        frame_count = 1,
+                        draw_as_glow = true,
+                        priority = 'extra-high',
+                        shift = util.by_pixel(0, -0),
+                    },
                 }
             },
         },

@@ -57,134 +57,136 @@ ENTITY {
         },
     },
     energy_usage = "190kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-            filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base.png",
-            width = 480,
-            height = 544,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(0, -32),
+                north_position = util.by_pixel(7, -37),
+                west_position = util.by_pixel(7, -37),
+                south_position = util.by_pixel(7, -37),
+                east_position = util.by_pixel(7, -37),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/alpha.png",
+                    scale = 1,
+                    frame_count = 92,
+                    line_length = 16,
+                    width = 128,
+                    height = 160,
+                    animation_speed = 0.25
+                }
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base-mask.png",
+                north_position = util.by_pixel(-155, 170),
+                west_position = util.by_pixel(-155, 170),
+                south_position = util.by_pixel(-155, 170),
+                east_position = util.by_pixel(-155, 170),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/eat-bottom-left.png",
+                    scale = 1,
+                    frame_count = 80,
+                    line_length = 16,
+                    width = 128,
+                    height = 96,
+                    animation_speed = 0.2
+                }
+            },
+            {
+                north_position = util.by_pixel(-145, 66),
+                west_position = util.by_pixel(-145, 66),
+                south_position = util.by_pixel(-145, 66),
+                east_position = util.by_pixel(-145, 66),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/eat-mid-left.png",
+                    scale = 0.85,
+                    frame_count = 80,
+                    line_length = 16,
+                    width = 128,
+                    height = 128,
+                    animation_speed = 0.2
+                }
+            },
+            {
+                north_position = util.by_pixel(168, -32),
+                west_position = util.by_pixel(168, -32),
+                south_position = util.by_pixel(168, -32),
+                east_position = util.by_pixel(168, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/eat-mid-right.png",
+                    scale = 1,
+                    frame_count = 80,
+                    line_length = 16,
+                    width = 64,
+                    height = 128,
+                    animation_speed = 0.2
+                }
+            },
+            {
+                north_position = util.by_pixel(111, 139),
+                west_position = util.by_pixel(111, 139),
+                south_position = util.by_pixel(111, 139),
+                east_position = util.by_pixel(111, 139),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/mom.png",
+                    scale = 1,
+                    frame_count = 60,
+                    line_length = 10,
+                    width = 160,
+                    height = 128,
+                    animation_speed = 0.2
+                }
+            },
+            {
+                north_position = util.by_pixel(45, -143),
+                west_position = util.by_pixel(45, -143),
+                south_position = util.by_pixel(45, -143),
+                east_position = util.by_pixel(45, -143),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/shout.png",
+                    scale = 1,
+                    frame_count = 90,
+                    line_length = 16,
+                    width = 128,
+                    height = 96,
+                    animation_speed = 0.2
+                }
+            },
+            {
+                north_position = util.by_pixel(187, -138),
+                west_position = util.by_pixel(187, -138),
+                south_position = util.by_pixel(187, -138),
+                east_position = util.by_pixel(187, -138),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/water.png",
+                    scale = 1,
+                    frame_count = 60,
+                    line_length = 12,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.2
+                }
+            },
+    
+        },
+        animation = {
+            layers = {
+                {
+                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base.png",
                 width = 480,
                 height = 544,
                 frame_count = 1,
                 line_length = 1,
                 shift = util.by_pixel(0, -32),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base-mask.png",
+                    width = 480,
+                    height = 544,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(0, -32),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
             },
         },
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(7, -37),
-            west_position = util.by_pixel(7, -37),
-            south_position = util.by_pixel(7, -37),
-            east_position = util.by_pixel(7, -37),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/alpha.png",
-                scale = 1,
-                frame_count = 92,
-                line_length = 16,
-                width = 128,
-                height = 160,
-                animation_speed = 0.25
-            }
-        },
-        {
-            north_position = util.by_pixel(-155, 170),
-            west_position = util.by_pixel(-155, 170),
-            south_position = util.by_pixel(-155, 170),
-            east_position = util.by_pixel(-155, 170),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/eat-bottom-left.png",
-                scale = 1,
-                frame_count = 80,
-                line_length = 16,
-                width = 128,
-                height = 96,
-                animation_speed = 0.2
-            }
-        },
-        {
-            north_position = util.by_pixel(-145, 66),
-            west_position = util.by_pixel(-145, 66),
-            south_position = util.by_pixel(-145, 66),
-            east_position = util.by_pixel(-145, 66),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/eat-mid-left.png",
-                scale = 0.85,
-                frame_count = 80,
-                line_length = 16,
-                width = 128,
-                height = 128,
-                animation_speed = 0.2
-            }
-        },
-        {
-            north_position = util.by_pixel(168, -32),
-            west_position = util.by_pixel(168, -32),
-            south_position = util.by_pixel(168, -32),
-            east_position = util.by_pixel(168, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/eat-mid-right.png",
-                scale = 1,
-                frame_count = 80,
-                line_length = 16,
-                width = 64,
-                height = 128,
-                animation_speed = 0.2
-            }
-        },
-        {
-            north_position = util.by_pixel(111, 139),
-            west_position = util.by_pixel(111, 139),
-            south_position = util.by_pixel(111, 139),
-            east_position = util.by_pixel(111, 139),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/mom.png",
-                scale = 1,
-                frame_count = 60,
-                line_length = 10,
-                width = 160,
-                height = 128,
-                animation_speed = 0.2
-            }
-        },
-        {
-            north_position = util.by_pixel(45, -143),
-            west_position = util.by_pixel(45, -143),
-            south_position = util.by_pixel(45, -143),
-            east_position = util.by_pixel(45, -143),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/shout.png",
-                scale = 1,
-                frame_count = 90,
-                line_length = 16,
-                width = 128,
-                height = 96,
-                animation_speed = 0.2
-            }
-        },
-        {
-            north_position = util.by_pixel(187, -138),
-            west_position = util.by_pixel(187, -138),
-            south_position = util.by_pixel(187, -138),
-            east_position = util.by_pixel(187, -138),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/water.png",
-                scale = 1,
-                frame_count = 60,
-                line_length = 12,
-                width = 64,
-                height = 96,
-                animation_speed = 0.2
-            }
-        },
-
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

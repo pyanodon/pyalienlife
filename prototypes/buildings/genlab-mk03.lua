@@ -57,56 +57,58 @@ ENTITY {
         },
     },
     energy_usage = "700kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/genlab/base.png",
-                width = 256,
-                height = 32,
-                line_length = 8,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 96)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a1.png",
-                width = 128,
-                height = 288,
-                line_length = 16,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-48, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a1-mask.png",
-                width = 128,
-                height = 288,
-                line_length = 16,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-48, -64),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2.png",
-                width = 128,
-                height = 288,
-                line_length = 16,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(80, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2-mask.png",
-                width = 128,
-                height = 288,
-                line_length = 16,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(80, -64),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/genlab/base.png",
+                    width = 256,
+                    height = 32,
+                    line_length = 8,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 96)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/genlab/a1.png",
+                    width = 128,
+                    height = 288,
+                    line_length = 16,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-48, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/genlab/a1-mask.png",
+                    width = 128,
+                    height = 288,
+                    line_length = 16,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-48, -64),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2.png",
+                    width = 128,
+                    height = 288,
+                    line_length = 16,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(80, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2-mask.png",
+                    width = 128,
+                    height = 288,
+                    line_length = 16,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(80, -64),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+            }
+        },
     },
     fluid_boxes = {
         --1

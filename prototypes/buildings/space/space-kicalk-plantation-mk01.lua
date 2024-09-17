@@ -65,41 +65,43 @@ ENTITY {
         },
     },
     energy_usage = "900kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation.png",
-				priority = "extra-high",
-                width = 229,
-                height = 235,
-                line_length = 8,
-                frame_count = 50,
-                animation_speed = 0.4,
-                shift = util.by_pixel(0, -5),
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation-mask.png",
-				priority = "extra-high",
-                width = 229,
-                height = 235,
-                line_length = 8,
-                frame_count = 50,
-                animation_speed = 0.4,
-                shift = util.by_pixel(0, -5),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/shadow.png",
-				priority = "extra-high",
-                width = 253,
-                height = 242,
-                line_length = 8,
-                frame_count = 50,
-                animation_speed = 0.4,
-                shift = util.by_pixel(18, -1),
-                draw_as_shadow = true,
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation.png",
+    				priority = "extra-high",
+                    width = 229,
+                    height = 235,
+                    line_length = 8,
+                    frame_count = 50,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(0, -5),
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation-mask.png",
+    				priority = "extra-high",
+                    width = 229,
+                    height = 235,
+                    line_length = 8,
+                    frame_count = 50,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(0, -5),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/shadow.png",
+    				priority = "extra-high",
+                    width = 253,
+                    height = 242,
+                    line_length = 8,
+                    frame_count = 50,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(18, -1),
+                    draw_as_shadow = true,
+                },
+            }
+        },
     },
     fluid_boxes = {
         --1

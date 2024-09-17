@@ -53,54 +53,56 @@ ENTITY {
         },
     },
     energy_usage = "900kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/bot.png",
-                width = 256,
-                height = 64,
-                line_length = 8,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 95)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/1.png",
-                width = 64,
-                height = 288,
-                line_length = 32,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-80, -80)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/2.png",
-                width = 64,
-                height = 288,
-                line_length = 32,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-16, -80)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/3.png",
-                width = 64,
-                height = 288,
-                line_length = 32,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(48, -80)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/4.png",
-                width = 64,
-                height = 288,
-                line_length = 32,
-                frame_count = 120,
-                animation_speed = 0.4,
-                shift = util.by_pixel(112, -80)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/bot.png",
+                    width = 256,
+                    height = 64,
+                    line_length = 8,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 95)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/1.png",
+                    width = 64,
+                    height = 288,
+                    line_length = 32,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-80, -80)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/2.png",
+                    width = 64,
+                    height = 288,
+                    line_length = 32,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-16, -80)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/3.png",
+                    width = 64,
+                    height = 288,
+                    line_length = 32,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(48, -80)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vat-brain/4.png",
+                    width = 64,
+                    height = 288,
+                    line_length = 32,
+                    frame_count = 120,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(112, -80)
+                },
+            }
+        },
     },
     fluid_boxes = {
         --1

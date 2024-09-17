@@ -58,178 +58,180 @@ ENTITY {
         },
     },
     energy_usage = "350kW",
-    animation = {
-        layers = {
-            --TERRAIN
+    graphics_set = {
+        working_visualisations = {
+            --critters
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/off.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(-0, -32),
-                priority = "very-low",
+                north_position = util.by_pixel(-128, -0),
+                west_position = util.by_pixel(-128, -0),
+                south_position = util.by_pixel(-128, -0),
+                east_position = util.by_pixel(-128, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a1.png",
+                    frame_count = 150,
+                    width = 64,
+                    height = 320,
+                    line_length = 30,
+                    animation_speed = 0.4,
+                    priority = "low"
+                }
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/off-mask.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(-0, -32),
-                priority = "very-low",
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(-64, -0),
+                west_position = util.by_pixel(-64, -0),
+                south_position = util.by_pixel(-64, -0),
+                east_position = util.by_pixel(-64, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a2.png",
+                    frame_count = 150,
+                    width = 64,
+                    height = 320,
+                    line_length = 30,
+                    animation_speed = 0.4,
+                    priority = "low"
+                }
             },
-        }
-    },
-    working_visualisations = {
-        --critters
-        {
-            north_position = util.by_pixel(-128, -0),
-            west_position = util.by_pixel(-128, -0),
-            south_position = util.by_pixel(-128, -0),
-            east_position = util.by_pixel(-128, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a1.png",
-                frame_count = 150,
-                width = 64,
-                height = 320,
-                line_length = 30,
-                animation_speed = 0.4,
-                priority = "low"
-            }
+            {
+                north_position = util.by_pixel(-0, -0),
+                west_position = util.by_pixel(-0, -0),
+                south_position = util.by_pixel(-0, -0),
+                east_position = util.by_pixel(-0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a3.png",
+                    frame_count = 150,
+                    width = 64,
+                    height = 320,
+                    line_length = 30,
+                    animation_speed = 0.4,
+                    priority = "low"
+                }
+            },
+            {
+                north_position = util.by_pixel(64, -0),
+                west_position = util.by_pixel(64, -0),
+                south_position = util.by_pixel(64, -0),
+                east_position = util.by_pixel(64, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a4.png",
+                    frame_count = 150,
+                    width = 64,
+                    height = 320,
+                    line_length = 30,
+                    animation_speed = 0.4,
+                    priority = "low"
+                }
+            },
+            {
+                north_position = util.by_pixel(128, -0),
+                west_position = util.by_pixel(128, -0),
+                south_position = util.by_pixel(128, -0),
+                east_position = util.by_pixel(128, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a5.png",
+                    frame_count = 150,
+                    width = 64,
+                    height = 320,
+                    line_length = 30,
+                    animation_speed = 0.4,
+                    priority = "low"
+                }
+            },
+            --CENTER
+            {
+                north_position = util.by_pixel(-0, -32),
+                west_position = util.by_pixel(-0, -32),
+                south_position = util.by_pixel(-0, -32),
+                east_position = util.by_pixel(-0, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/center.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(-0, -0),
+                    priority = "medium"
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -32),
+                west_position = util.by_pixel(-0, -32),
+                south_position = util.by_pixel(-0, -32),
+                east_position = util.by_pixel(-0, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/center-mask.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(-0, -0),
+                    priority = "medium",
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                }
+            },
+            --POSTE
+            {
+                north_position = util.by_pixel(-0, -32),
+                west_position = util.by_pixel(-0, -32),
+                south_position = util.by_pixel(-0, -32),
+                east_position = util.by_pixel(-0, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/poste.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    util.by_pixel(-0, -0),
+                    priority = "medium"
+                }
+            },
+            --FRONT
+            {
+                north_position = util.by_pixel(-0, -32),
+                west_position = util.by_pixel(-0, -32),
+                south_position = util.by_pixel(-0, -32),
+                east_position = util.by_pixel(-0, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/front.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    util.by_pixel(-0, -0),
+                    priority = "extra-high"
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -32),
+                west_position = util.by_pixel(-0, -32),
+                south_position = util.by_pixel(-0, -32),
+                east_position = util.by_pixel(-0, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/front-mask.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    util.by_pixel(-0, -0),
+                    priority = "extra-high",
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(-64, -0),
-            west_position = util.by_pixel(-64, -0),
-            south_position = util.by_pixel(-64, -0),
-            east_position = util.by_pixel(-64, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a2.png",
-                frame_count = 150,
-                width = 64,
-                height = 320,
-                line_length = 30,
-                animation_speed = 0.4,
-                priority = "low"
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -0),
-            west_position = util.by_pixel(-0, -0),
-            south_position = util.by_pixel(-0, -0),
-            east_position = util.by_pixel(-0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a3.png",
-                frame_count = 150,
-                width = 64,
-                height = 320,
-                line_length = 30,
-                animation_speed = 0.4,
-                priority = "low"
-            }
-        },
-        {
-            north_position = util.by_pixel(64, -0),
-            west_position = util.by_pixel(64, -0),
-            south_position = util.by_pixel(64, -0),
-            east_position = util.by_pixel(64, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a4.png",
-                frame_count = 150,
-                width = 64,
-                height = 320,
-                line_length = 30,
-                animation_speed = 0.4,
-                priority = "low"
-            }
-        },
-        {
-            north_position = util.by_pixel(128, -0),
-            west_position = util.by_pixel(128, -0),
-            south_position = util.by_pixel(128, -0),
-            east_position = util.by_pixel(128, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/a5.png",
-                frame_count = 150,
-                width = 64,
-                height = 320,
-                line_length = 30,
-                animation_speed = 0.4,
-                priority = "low"
-            }
-        },
-        --CENTER
-        {
-            north_position = util.by_pixel(-0, -32),
-            west_position = util.by_pixel(-0, -32),
-            south_position = util.by_pixel(-0, -32),
-            east_position = util.by_pixel(-0, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/center.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(-0, -0),
-                priority = "medium"
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -32),
-            west_position = util.by_pixel(-0, -32),
-            south_position = util.by_pixel(-0, -32),
-            east_position = util.by_pixel(-0, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/center-mask.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(-0, -0),
-                priority = "medium",
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            }
-        },
-        --POSTE
-        {
-            north_position = util.by_pixel(-0, -32),
-            west_position = util.by_pixel(-0, -32),
-            south_position = util.by_pixel(-0, -32),
-            east_position = util.by_pixel(-0, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/poste.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                util.by_pixel(-0, -0),
-                priority = "medium"
-            }
-        },
-        --FRONT
-        {
-            north_position = util.by_pixel(-0, -32),
-            west_position = util.by_pixel(-0, -32),
-            south_position = util.by_pixel(-0, -32),
-            east_position = util.by_pixel(-0, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/front.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                util.by_pixel(-0, -0),
-                priority = "extra-high"
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -32),
-            west_position = util.by_pixel(-0, -32),
-            south_position = util.by_pixel(-0, -32),
-            east_position = util.by_pixel(-0, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/front-mask.png",
-                width = 384,
-                height = 448,
-                frame_count = 1,
-                util.by_pixel(-0, -0),
-                priority = "extra-high",
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+        animation = {
+            layers = {
+                --TERRAIN
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/off.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(-0, -32),
+                    priority = "very-low",
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/prandium-lab/off-mask.png",
+                    width = 384,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(-0, -32),
+                    priority = "very-low",
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
             }
         },
     },

@@ -59,150 +59,152 @@ ENTITY {
         },
     },
     energy_usage = "850kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off.png",
-                width = 352,
-                height = 352,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16)
+                north_position = util.by_pixel(48, 80),
+                west_position = util.by_pixel(48, 80),
+                south_position = util.by_pixel(48, 80),
+                east_position = util.by_pixel(48, 80),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/jump.png",
+                    frame_count = 100,
+                    line_length = 9,
+                    width = 224,
+                    height = 160,
+                    animation_speed = 0.55
+                }
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off-mask.png",
-                width = 352,
-                height = 352,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(0, -64.5),
+                west_position = util.by_pixel(0, -64.5),
+                south_position = util.by_pixel(0, -64.5),
+                east_position = util.by_pixel(0, -64.5),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/rotor.png",
+                    frame_count = 20,
+                    line_length = 5,
+                    width = 64,
+                    height = 64,
+                    animation_speed = 0.4
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(48, 80),
-            west_position = util.by_pixel(48, 80),
-            south_position = util.by_pixel(48, 80),
-            east_position = util.by_pixel(48, 80),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/jump.png",
-                frame_count = 100,
-                line_length = 9,
-                width = 224,
-                height = 160,
-                animation_speed = 0.55
-            }
+            {
+                north_position = util.by_pixel(112, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/milk.png",
+                    frame_count = 70,
+                    line_length = 10,
+                    width = 96,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-96, 48),
+                west_position = util.by_pixel(-96, 48),
+                south_position = util.by_pixel(-96, 48),
+                east_position = util.by_pixel(-96, 48),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/mother.png",
+                    frame_count = 100,
+                    line_length = 25,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-128, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-01.png",
+                    frame_count = 100,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-64, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-02.png",
+                    frame_count = 100,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(-0, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-03.png",
+                    frame_count = 100,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(64, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-04.png",
+                    frame_count = 100,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(128, -32),
+                west_position = util.by_pixel(112, -32),
+                south_position = util.by_pixel(112, -32),
+                east_position = util.by_pixel(112, -32),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-05.png",
+                    frame_count = 100,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.4
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(0, -64.5),
-            west_position = util.by_pixel(0, -64.5),
-            south_position = util.by_pixel(0, -64.5),
-            east_position = util.by_pixel(0, -64.5),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/rotor.png",
-                frame_count = 20,
-                line_length = 5,
-                width = 64,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(112, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/milk.png",
-                frame_count = 70,
-                line_length = 10,
-                width = 96,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-96, 48),
-            west_position = util.by_pixel(-96, 48),
-            south_position = util.by_pixel(-96, 48),
-            east_position = util.by_pixel(-96, 48),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/mother.png",
-                frame_count = 100,
-                line_length = 25,
-                width = 64,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-128, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-01.png",
-                frame_count = 100,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-64, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-02.png",
-                frame_count = 100,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-0, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-03.png",
-                frame_count = 100,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(64, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-04.png",
-                frame_count = 100,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(128, -32),
-            west_position = util.by_pixel(112, -32),
-            south_position = util.by_pixel(112, -32),
-            east_position = util.by_pixel(112, -32),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/snow-05.png",
-                frame_count = 100,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.4
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off.png",
+                    width = 352,
+                    height = 352,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/ez-ranch/off-mask.png",
+                    width = 352,
+                    height = 352,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
             }
         },
     },

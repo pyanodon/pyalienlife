@@ -96,94 +96,96 @@ ENTITY {
         },
         off_when_no_fluid_recipe = true
     },
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a1.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, 128)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a1-mask.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, 128),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a2.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, 32)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a2-mask.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, 32),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a3.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a3-mask.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, -64),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a4.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, -160)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a4-mask.png",
-                width = 367,
-                height = 96,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, -160),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a5.png",
-                width = 367,
-                height = 32,
-                line_length = 5,
-                frame_count = 100,
-                animation_speed = 0.4,
-                shift = util.by_pixel(8, -192)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a1.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, 128)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a1-mask.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, 128),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a2.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, 32)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a2-mask.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, 32),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a3.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a3-mask.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, -64),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a4.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, -160)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a4-mask.png",
+                    width = 367,
+                    height = 96,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, -160),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a5.png",
+                    width = 367,
+                    height = 32,
+                    line_length = 5,
+                    frame_count = 100,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(8, -192)
+                },
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

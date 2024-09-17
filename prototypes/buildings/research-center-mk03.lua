@@ -57,133 +57,135 @@ ENTITY {
         },
     },
     energy_usage = "1200kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/off-bottom.png",
-                width = 352,
-                height = 32,
-                frame_count = 1,
-                shift = util.by_pixel(16, 144)
+                north_position = util.by_pixel(16, -128),
+                west_position = util.by_pixel(16, -128),
+                south_position = util.by_pixel(16, -128),
+                east_position = util.by_pixel(16, -128),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/on.png",
+                    width = 352,
+                    height = 512,
+                    frame_count = 1,
+                    draw_as_glow = true,
+                }
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/off.png",
-                width = 352,
-                height = 512,
-                frame_count = 1,
-                shift = util.by_pixel(16, -128)
+                north_position = util.by_pixel(16, -128),
+                west_position = util.by_pixel(16, -128),
+                south_position = util.by_pixel(16, -128),
+                east_position = util.by_pixel(16, -128),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/on-mask.png",
+                    width = 352,
+                    height = 512,
+                    frame_count = 1,
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                }
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/off-mask.png",
-                width = 352,
-                height = 512,
-                frame_count = 1,
-                shift = util.by_pixel(16, -128),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                north_position = util.by_pixel(-96, -52),
+                west_position = util.by_pixel(-96, -52),
+                south_position = util.by_pixel(-96, -52),
+                east_position = util.by_pixel(-96, -52),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/blink-left.png",
+                    width = 32,
+                    height = 32,
+                    frame_count = 25,
+                    line_length = 5,
+                    animation_speed = 0.5,
+                    draw_as_glow = true,
+                }
             },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(16, -128),
-            west_position = util.by_pixel(16, -128),
-            south_position = util.by_pixel(16, -128),
-            east_position = util.by_pixel(16, -128),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/on.png",
-                width = 352,
-                height = 512,
-                frame_count = 1,
-                draw_as_glow = true,
-            }
+            {
+                north_position = util.by_pixel(84, -53),
+                west_position = util.by_pixel(84, -53),
+                south_position = util.by_pixel(84, -53),
+                east_position = util.by_pixel(84, -53),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/blink-right.png",
+                    width = 64,
+                    height = 64,
+                    frame_count = 25,
+                    line_length = 5,
+                    animation_speed = 0.5,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(0, -63),
+                west_position = util.by_pixel(0, -63),
+                south_position = util.by_pixel(0, -63),
+                east_position = util.by_pixel(0, -63),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/center.png",
+                    width = 64,
+                    height = 64,
+                    frame_count = 250,
+                    line_length = 30,
+                    animation_speed = 0.8,
+                    scale= 0.9,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(0, -112),
+                west_position = util.by_pixel(0, -112),
+                south_position = util.by_pixel(0, -112),
+                east_position = util.by_pixel(0, -112),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/tela-down.png",
+                    width = 128,
+                    height = 96,
+                    frame_count = 248,
+                    line_length = 16,
+                    animation_speed = 0.3,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(0, -224),
+                west_position = util.by_pixel(0, -224),
+                south_position = util.by_pixel(0, -224),
+                east_position = util.by_pixel(0, -224),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/tela-up.png",
+                    width = 128,
+                    height = 128,
+                    frame_count = 248,
+                    line_length = 16,
+                    animation_speed = 0.3,
+                    draw_as_glow = true,
+                }
+            },
         },
-        {
-            north_position = util.by_pixel(16, -128),
-            west_position = util.by_pixel(16, -128),
-            south_position = util.by_pixel(16, -128),
-            east_position = util.by_pixel(16, -128),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/on-mask.png",
-                width = 352,
-                height = 512,
-                frame_count = 1,
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            }
-        },
-        {
-            north_position = util.by_pixel(-96, -52),
-            west_position = util.by_pixel(-96, -52),
-            south_position = util.by_pixel(-96, -52),
-            east_position = util.by_pixel(-96, -52),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/blink-left.png",
-                width = 32,
-                height = 32,
-                frame_count = 25,
-                line_length = 5,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(84, -53),
-            west_position = util.by_pixel(84, -53),
-            south_position = util.by_pixel(84, -53),
-            east_position = util.by_pixel(84, -53),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/blink-right.png",
-                width = 64,
-                height = 64,
-                frame_count = 25,
-                line_length = 5,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(0, -63),
-            west_position = util.by_pixel(0, -63),
-            south_position = util.by_pixel(0, -63),
-            east_position = util.by_pixel(0, -63),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/center.png",
-                width = 64,
-                height = 64,
-                frame_count = 250,
-                line_length = 30,
-                animation_speed = 0.8,
-                scale= 0.9,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(0, -112),
-            west_position = util.by_pixel(0, -112),
-            south_position = util.by_pixel(0, -112),
-            east_position = util.by_pixel(0, -112),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/tela-down.png",
-                width = 128,
-                height = 96,
-                frame_count = 248,
-                line_length = 16,
-                animation_speed = 0.3,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(0, -224),
-            west_position = util.by_pixel(0, -224),
-            south_position = util.by_pixel(0, -224),
-            east_position = util.by_pixel(0, -224),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/research-center/tela-up.png",
-                width = 128,
-                height = 128,
-                frame_count = 248,
-                line_length = 16,
-                animation_speed = 0.3,
-                draw_as_glow = true,
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/off-bottom.png",
+                    width = 352,
+                    height = 32,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, 144)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/off.png",
+                    width = 352,
+                    height = 512,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -128)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/research-center/off-mask.png",
+                    width = 352,
+                    height = 512,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -128),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
             }
         },
     },

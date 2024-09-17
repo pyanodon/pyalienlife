@@ -69,152 +69,154 @@ ENTITY {
     circuit_wire_connection_points = circuit_connector_definitions["collector-mkxx"].points,
     circuit_connector_sprites = circuit_connector_definitions["collector-mkxx"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    animations = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f1.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-96, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f2.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-64, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f3.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(-32, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f4.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(0, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f5.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(32, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f6.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(64, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f7.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(96, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f8.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                shift = util.by_pixel(128, 0)
-            },
---MASKS
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f1-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(-96, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f2-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(-64, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f3-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(-32, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f4-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(0, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f5-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(32, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f6-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(64, 0)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/collector/f7-mask.png",
-                width = 32,
-                height = 288,
-                line_length = 64,
-                frame_count = 255,
-                animation_speed = 0.2,
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
-                shift = util.by_pixel(96, 0)
-            },
-        }
+    graphics_set = {
+        animations = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f1.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(-96, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f2.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(-64, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f3.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(-32, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f4.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(0, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f5.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(32, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f6.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(64, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f7.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(96, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f8.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    shift = util.by_pixel(128, 0)
+                },
+    --MASKS
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f1-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(-96, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f2-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(-64, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f3-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(-32, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f4-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(0, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f5-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(32, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f6-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(64, 0)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/collector/f7-mask.png",
+                    width = 32,
+                    height = 288,
+                    line_length = 64,
+                    frame_count = 255,
+                    animation_speed = 0.2,
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0},
+                    shift = util.by_pixel(96, 0)
+                },
+            }
+        },
     },
 
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

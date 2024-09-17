@@ -63,84 +63,86 @@ ENTITY {
         },
     },
     energy_usage = '1MW',
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off.png',
-                width = 384,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(16, -32)
+                north_position = util.by_pixel(-128, -48),
+                west_position = util.by_pixel(-128, -48),
+                south_position = util.by_pixel(-128, -48),
+                east_position = util.by_pixel(-128, -48),
+                animation = {
+                    filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a1.png',
+                    frame_count = 100,
+                    line_length = 20,
+                    width = 96,
+                    height = 384,
+                    animation_speed = 0.4
+                }
             },
             {
-                filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off-mask.png',
-                width = 384,
-                height = 416,
-                frame_count = 1,
-                shift = util.by_pixel(16, -32),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(-32, -48),
+                west_position = util.by_pixel(-32, -48),
+                south_position = util.by_pixel(-32, -48),
+                east_position = util.by_pixel(-32, -48),
+                animation = {
+                    filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a2.png',
+                    frame_count = 100,
+                    line_length = 20,
+                    width = 96,
+                    height = 384,
+                    animation_speed = 0.4
+                }
             },
-        }
+            {
+                north_position = util.by_pixel(64, -48),
+                west_position = util.by_pixel(64, -48),
+                south_position = util.by_pixel(64, -48),
+                east_position = util.by_pixel(64, -48),
+                animation = {
+                    filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a3.png',
+                    frame_count = 100,
+                    line_length = 20,
+                    width = 96,
+                    height = 384,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(160, -48),
+                west_position = util.by_pixel(160, -48),
+                south_position = util.by_pixel(160, -48),
+                east_position = util.by_pixel(160, -48),
+                animation = {
+                    filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a4.png',
+                    frame_count = 100,
+                    line_length = 20,
+                    width = 96,
+                    height = 384,
+                    animation_speed = 0.4
+                }
+            },
+        },
+        animation = {
+            layers = {
+                {
+                    filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off.png',
+                    width = 384,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -32)
+                },
+                {
+                    filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/off-mask.png',
+                    width = 384,
+                    height = 416,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
 
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-128, -48),
-            west_position = util.by_pixel(-128, -48),
-            south_position = util.by_pixel(-128, -48),
-            east_position = util.by_pixel(-128, -48),
-            animation = {
-                filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a1.png',
-                frame_count = 100,
-                line_length = 20,
-                width = 96,
-                height = 384,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(-32, -48),
-            west_position = util.by_pixel(-32, -48),
-            south_position = util.by_pixel(-32, -48),
-            east_position = util.by_pixel(-32, -48),
-            animation = {
-                filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a2.png',
-                frame_count = 100,
-                line_length = 20,
-                width = 96,
-                height = 384,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(64, -48),
-            west_position = util.by_pixel(64, -48),
-            south_position = util.by_pixel(64, -48),
-            east_position = util.by_pixel(64, -48),
-            animation = {
-                filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a3.png',
-                frame_count = 100,
-                line_length = 20,
-                width = 96,
-                height = 384,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(160, -48),
-            west_position = util.by_pixel(160, -48),
-            south_position = util.by_pixel(160, -48),
-            east_position = util.by_pixel(160, -48),
-            animation = {
-                filename = '__pyalienlifegraphics__/graphics/entity/bhoddos-culture/a4.png',
-                frame_count = 100,
-                line_length = 20,
-                width = 96,
-                height = 384,
-                animation_speed = 0.4
-            }
-        },
-    },
 
     fluid_boxes = {
         --1

@@ -59,104 +59,106 @@ ENTITY {
         },
     },
     energy_usage = "450kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s1.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, 160)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s1-mask.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, 160),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s2.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, 64)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s2-mask.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, 64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s3.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s3-mask.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, -32),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s4.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, -128)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s4-mask.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, -128),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s5.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, -224)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s5-mask.png",
-                width = 448,
-                height = 96,
-                line_length = 4,
-                frame_count = 75,
-                animation_speed = 0.35,
-                shift = util.by_pixel(16, -224),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s1.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, 160)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s1-mask.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, 160),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s2.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, 64)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s2-mask.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, 64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s3.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, -32)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s3-mask.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s4.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, -128)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s4-mask.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, -128),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s5.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, -224)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/rennea-plantation/s5-mask.png",
+                    width = 448,
+                    height = 96,
+                    line_length = 4,
+                    frame_count = 75,
+                    animation_speed = 0.35,
+                    shift = util.by_pixel(16, -224),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
 
     fluid_boxes = {

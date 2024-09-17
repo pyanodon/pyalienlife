@@ -113,135 +113,137 @@ ENTITY {
         },
         off_when_no_fluid_recipe = true
     },
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/base.png",
-                priority = "high",
-                width = 320,
-                height = 32,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 128)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/base-mask.png",
-                priority = "high",
-                width = 320,
-                height = 32,
-                line_length = 6,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, 128),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a1.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-112, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a1-mask.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-112, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a2.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-48, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a2-mask.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(-48, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a3.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a3-mask.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(16, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a4.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(80, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a4-mask.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(80, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a5.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(144, -64)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a5-mask.png",
-                priority = "high",
-                width = 64,
-                height = 352,
-                line_length = 32,
-                frame_count = 150,
-                animation_speed = 0.4,
-                shift = util.by_pixel(144, -64),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/base.png",
+                    priority = "high",
+                    width = 320,
+                    height = 32,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 128)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/base-mask.png",
+                    priority = "high",
+                    width = 320,
+                    height = 32,
+                    line_length = 6,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, 128),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a1.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-112, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a1-mask.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-112, -64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a2.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-48, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a2-mask.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(-48, -64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a3.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a3-mask.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(16, -64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a4.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(80, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a4-mask.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(80, -64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a5.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(144, -64)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a5-mask.png",
+                    priority = "high",
+                    width = 64,
+                    height = 352,
+                    line_length = 32,
+                    frame_count = 150,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(144, -64),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

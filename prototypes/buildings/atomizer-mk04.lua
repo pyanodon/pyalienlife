@@ -59,40 +59,42 @@ ENTITY {
       },
     },
     energy_usage = "1300kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/atomizer/off.png",
-                width = 256,
-                height = 256,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16)
+                north_position = util.by_pixel(0, -16),
+                west_position = util.by_pixel(0, -16),
+                south_position = util.by_pixel(0, -16),
+                east_position = util.by_pixel(0, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/atomizer/on.png",
+                    priority = "high",
+                    frame_count = 90,
+                    line_length = 9,
+                    width = 224,
+                    height = 192,
+                    animation_speed = 0.5,
+                    draw_as_glow = true,
+                }
             },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/atomizer/off-mask.png",
-                width = 256,
-                height = 256,
-                frame_count = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-            },
-        }
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(0, -16),
-            west_position = util.by_pixel(0, -16),
-            south_position = util.by_pixel(0, -16),
-            east_position = util.by_pixel(0, -16),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/atomizer/on.png",
-                priority = "high",
-                frame_count = 90,
-                line_length = 9,
-                width = 224,
-                height = 192,
-                animation_speed = 0.5,
-                draw_as_glow = true,
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/atomizer/off.png",
+                    width = 256,
+                    height = 256,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/atomizer/off-mask.png",
+                    width = 256,
+                    height = 256,
+                    frame_count = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
             }
         },
     },

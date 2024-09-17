@@ -56,38 +56,40 @@ ENTITY {
         },
     },
     energy_usage = "150kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/base.png",
-                width = 243,
-                height = 32,
-                line_length = 6,
-                frame_count = 40,
-                animation_speed = 0.4,
-                shift = util.by_pixel(10, 96)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/up.png",
-                width = 243,
-                height = 320,
-                line_length = 8,
-                frame_count = 40,
-                animation_speed = 0.4,
-                shift = util.by_pixel(10, -80)
-            },
-
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
-                width = 243,
-                height = 320,
-                line_length = 8,
-                frame_count = 40,
-                animation_speed = 0.4,
-                shift = util.by_pixel(10, -80),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/base.png",
+                    width = 243,
+                    height = 32,
+                    line_length = 6,
+                    frame_count = 40,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(10, 96)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/up.png",
+                    width = 243,
+                    height = 320,
+                    line_length = 8,
+                    frame_count = 40,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(10, -80)
+                },
+    
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
+                    width = 243,
+                    height = 320,
+                    line_length = 8,
+                    frame_count = 40,
+                    animation_speed = 0.4,
+                    shift = util.by_pixel(10, -80),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
 
     fluid_boxes = {

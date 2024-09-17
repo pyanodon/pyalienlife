@@ -58,97 +58,99 @@ ENTITY {
         },
     },
     energy_usage = "800kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off.png",
-        width = 352,
-        height = 352,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(16, -16)
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(-96, -62),
+                west_position = util.by_pixel(-96, -62),
+                south_position = util.by_pixel(-96, -62),
+                east_position = util.by_pixel(-96, -62),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a1.png",
+                    frame_count = 182,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(-32, -62),
+                west_position = util.by_pixel(-32, -62),
+                south_position = util.by_pixel(-32, -62),
+                east_position = util.by_pixel(-32, -62),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a2.png",
+                    frame_count = 182,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(32, -62),
+                west_position = util.by_pixel(32, -62),
+                south_position = util.by_pixel(32, -62),
+                east_position = util.by_pixel(32, -62),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a3.png",
+                    frame_count = 182,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(96, -62),
+                west_position = util.by_pixel(96, -62),
+                south_position = util.by_pixel(96, -62),
+                east_position = util.by_pixel(96, -62),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a4.png",
+                    frame_count = 182,
+                    line_length = 32,
+                    width = 64,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(144, -62),
+                west_position = util.by_pixel(144, -62),
+                south_position = util.by_pixel(144, -62),
+                east_position = util.by_pixel(144, -62),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a5.png",
+                    frame_count = 182,
+                    line_length = 32,
+                    width = 32,
+                    height = 320,
+                    animation_speed = 0.3
+                }
+            },
         },
-        {
-            filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off-mask.png",
+        animation = {
+            layers = {
+            {
+            filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off.png",
             width = 352,
             height = 352,
             frame_count = 1,
             line_length = 1,
-            shift = util.by_pixel(16, -16),
-            tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+            shift = util.by_pixel(16, -16)
             },
-      },
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-96, -62),
-            west_position = util.by_pixel(-96, -62),
-            south_position = util.by_pixel(-96, -62),
-            east_position = util.by_pixel(-96, -62),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a1.png",
-                frame_count = 182,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(-32, -62),
-            west_position = util.by_pixel(-32, -62),
-            south_position = util.by_pixel(-32, -62),
-            east_position = util.by_pixel(-32, -62),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a2.png",
-                frame_count = 182,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(32, -62),
-            west_position = util.by_pixel(32, -62),
-            south_position = util.by_pixel(32, -62),
-            east_position = util.by_pixel(32, -62),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a3.png",
-                frame_count = 182,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(96, -62),
-            west_position = util.by_pixel(96, -62),
-            south_position = util.by_pixel(96, -62),
-            east_position = util.by_pixel(96, -62),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a4.png",
-                frame_count = 182,
-                line_length = 32,
-                width = 64,
-                height = 320,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(144, -62),
-            west_position = util.by_pixel(144, -62),
-            south_position = util.by_pixel(144, -62),
-            east_position = util.by_pixel(144, -62),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/a5.png",
-                frame_count = 182,
-                line_length = 32,
-                width = 32,
-                height = 320,
-                animation_speed = 0.3
-            }
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off-mask.png",
+                width = 352,
+                height = 352,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -16),
+                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+          },
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

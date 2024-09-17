@@ -67,72 +67,74 @@ ENTITY {
         },
     },
     energy_usage = "1500kW",
-    animation = {
-        layers ={
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/incubator/off.png",
-                width = 224,
-                height = 257,
-                frame_count = 1,
-                shift = {-0.00, -0.15}
+                north_position = {-0.25, -1.624},
+                west_position = {-0.25, -1.624},
+                south_position = {-0.25, -1.624},
+                east_position = {-0.25, -1.624},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/incubator/main.png",
+                    frame_count = 100,
+                    width = 140,
+                    height = 163,
+                    line_length = 14,
+                    animation_speed = 0.3,
+                    priority = "medium",
+                    run_mode = "forward-then-backward"
+                }
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/incubator/off-mask.png",
-                width = 224,
-                height = 257,
-                frame_count = 1,
-                shift = {-0.00, -0.15},
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                north_position = {-0.0, -3.156},
+                west_position = {-0.0, -3.156},
+                south_position = {-0.0, -3.156},
+                east_position = {-0.0, -3.156},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/incubator/cooler.png",
+                    frame_count = 80,
+                    width = 224,
+                    height = 64,
+                    line_length = 9,
+                    animation_speed = 0.5,
+                    priority = "high"
+                }
             },
-        },
-},
-    working_visualisations = {
-        {
-            north_position = {-0.25, -1.624},
-            west_position = {-0.25, -1.624},
-            south_position = {-0.25, -1.624},
-            east_position = {-0.25, -1.624},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/incubator/main.png",
-                frame_count = 100,
-                width = 140,
-                height = 163,
-                line_length = 14,
-                animation_speed = 0.3,
-                priority = "medium",
-                run_mode = "forward-then-backward"
+            {
+                north_position = {2.0, -0.556},
+                west_position = {2.0, -0.556},
+                south_position = {2.0, -0.556},
+                east_position = {2.0, -0.556},
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/incubator/smoke.png",
+                    frame_count = 50,
+                    width = 96,
+                    height = 96,
+                    line_length = 20,
+                    animation_speed = 0.5,
+                    priority = "high"
+                }
             }
         },
-        {
-            north_position = {-0.0, -3.156},
-            west_position = {-0.0, -3.156},
-            south_position = {-0.0, -3.156},
-            east_position = {-0.0, -3.156},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/incubator/cooler.png",
-                frame_count = 80,
-                width = 224,
-                height = 64,
-                line_length = 9,
-                animation_speed = 0.5,
-                priority = "high"
-            }
-        },
-        {
-            north_position = {2.0, -0.556},
-            west_position = {2.0, -0.556},
-            south_position = {2.0, -0.556},
-            east_position = {2.0, -0.556},
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/incubator/smoke.png",
-                frame_count = 50,
-                width = 96,
-                height = 96,
-                line_length = 20,
-                animation_speed = 0.5,
-                priority = "high"
-            }
-        }
+        animation = {
+            layers ={
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/incubator/off.png",
+                    width = 224,
+                    height = 257,
+                    frame_count = 1,
+                    shift = {-0.00, -0.15}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/incubator/off-mask.png",
+                    width = 224,
+                    height = 257,
+                    frame_count = 1,
+                    shift = {-0.00, -0.15},
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+            },
+    },
     },
     fluid_boxes = {
         {

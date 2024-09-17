@@ -56,63 +56,65 @@ ENTITY {
         },
     },
     energy_usage = "1200kW",
-    animation = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a1.png",
-                width = 64,
-                height = 416,
-                line_length = 32,
-                frame_count = 110,
-                animation_speed = 0.3,
-                shift = util.by_pixel(-128, -37)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a2.png",
-                width = 64,
-                height = 416,
-                line_length = 32,
-                frame_count = 110,
-                animation_speed = 0.3,
-                shift = util.by_pixel(-64, -37)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a3.png",
-                width = 64,
-                height = 416,
-                line_length = 32,
-                frame_count = 110,
-                animation_speed = 0.3,
-                shift = util.by_pixel(-0, -37)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a4.png",
-                width = 64,
-                height = 416,
-                line_length = 32,
-                frame_count = 110,
-                animation_speed = 0.3,
-                shift = util.by_pixel(64, -37)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a5.png",
-                width = 64,
-                height = 416,
-                line_length = 32,
-                frame_count = 110,
-                animation_speed = 0.3,
-                shift = util.by_pixel(128, -37)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/data-array/a6.png",
-                width = 32,
-                height = 416,
-                line_length = 32,
-                frame_count = 110,
-                animation_speed = 0.3,
-                shift = util.by_pixel(176, -37)
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/data-array/a1.png",
+                    width = 64,
+                    height = 416,
+                    line_length = 32,
+                    frame_count = 110,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(-128, -37)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/data-array/a2.png",
+                    width = 64,
+                    height = 416,
+                    line_length = 32,
+                    frame_count = 110,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(-64, -37)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/data-array/a3.png",
+                    width = 64,
+                    height = 416,
+                    line_length = 32,
+                    frame_count = 110,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(-0, -37)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/data-array/a4.png",
+                    width = 64,
+                    height = 416,
+                    line_length = 32,
+                    frame_count = 110,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(64, -37)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/data-array/a5.png",
+                    width = 64,
+                    height = 416,
+                    line_length = 32,
+                    frame_count = 110,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(128, -37)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/data-array/a6.png",
+                    width = 32,
+                    height = 416,
+                    line_length = 32,
+                    frame_count = 110,
+                    animation_speed = 0.3,
+                    shift = util.by_pixel(176, -37)
+                },
+            }
+        },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {

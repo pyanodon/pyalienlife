@@ -59,158 +59,160 @@ ENTITY {
         },
     },
     energy_usage = "650kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
+    
             {
-            filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off.png",
-            width = 448,
-            height = 480,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -32)
+                north_position = {2, -0.0},
+                west_position = {2, -0.0},
+                south_position = {2, -0.0},
+                east_position = {2, -0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/dance-floor.png",
+                    frame_count = 50,
+                    line_length = 8,
+                    width = 224,
+                    height = 224,
+                    animation_speed = 0.5,
+                    draw_as_glow = true,
+                }
             },
             {
-            filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off-mask.png",
-            width = 448,
-            height = 480,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -32),
-            tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                north_position = {3, -0.5},
+                west_position = {3, -0.5},
+                south_position = {3, -0.5},
+                east_position = {3, -0.5},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/dance.png",
+                    frame_count = 45,
+                    line_length = 15,
+                    width = 128,
+                    height = 159,
+                    animation_speed = 0.45
+                }
             },
-        }
-    },
-    working_visualisations = {
-
-        {
-            north_position = {2, -0.0},
-            west_position = {2, -0.0},
-            south_position = {2, -0.0},
-            east_position = {2, -0.0},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/dance-floor.png",
-                frame_count = 50,
-                line_length = 8,
-                width = 224,
-                height = 224,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            }
+            {
+                north_position = {3.8, 4.0},
+                west_position = {3.8, 4.0},
+                south_position = {3.8, 4.0},
+                east_position = {3.8, 4.0},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/idle-bot.png",
+                    frame_count = 50,
+                    line_length = 5,
+                    width = 128,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = {-3.0, 0.0},
+                west_position = {-3.0, 0.0},
+                south_position = {-3.0, 0.0},
+                east_position = {-3.0, 0.0},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/patpat.png",
+                    frame_count = 30,
+                    line_length = 10,
+                    width = 160,
+                    height = 96,
+                    animation_speed = 0.35
+                }
+            },
+            {
+                north_position = {-3.0, 3.0},
+                west_position = {-3.0, 3.0},
+                south_position = {-3.0, 3.0},
+                east_position = {-3.0, 3.0},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/woo.png",
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 160,
+                    height = 96,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = {-1.0, -2.0},
+                west_position = {-1.0, -2.0},
+                south_position = {-1.0, -2.0},
+                east_position = {-1.0, -2.0},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/jump.png",
+                    frame_count = 30,
+                    line_length = 10,
+                    width = 128,
+                    height = 128,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = {3.5, -4.0},
+                west_position = {3.5, -4.0},
+                south_position = {3.5, -4.0},
+                east_position = {3.5, -4.0},
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/idle-up.png",
+                    frame_count = 50,
+                    line_length = 10,
+                    width = 64,
+                    height = 64,
+                    animation_speed = 0.4
+                }
+            },
+            {
+                north_position = util.by_pixel(0, -144),
+                west_position = util.by_pixel(0, -144),
+                south_position = util.by_pixel(0, -144),
+                east_position = util.by_pixel(0, -144),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/spot-up.png",
+                    frame_count = 50,
+                    blend_mode = "additive",
+                    line_length = 5,
+                    width = 352,
+                    height = 192,
+                    animation_speed = 0.4,
+                    draw_as_glow = true,
+                }
+            },
+            {
+                north_position = util.by_pixel(0, 48),
+                west_position = util.by_pixel(0, 48),
+                south_position = util.by_pixel(0, 48),
+                east_position = util.by_pixel(0, 48),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/spot-bot.png",
+                    frame_count = 50,
+                    blend_mode = "additive",
+                    line_length = 5,
+                    width = 352,
+                    height = 192,
+                    animation_speed = 0.4,
+                    draw_as_glow = true,
+                }
+            },
         },
-        {
-            north_position = {3, -0.5},
-            west_position = {3, -0.5},
-            south_position = {3, -0.5},
-            east_position = {3, -0.5},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/dance.png",
-                frame_count = 45,
-                line_length = 15,
-                width = 128,
-                height = 159,
-                animation_speed = 0.45
-            }
-        },
-        {
-            north_position = {3.8, 4.0},
-            west_position = {3.8, 4.0},
-            south_position = {3.8, 4.0},
-            east_position = {3.8, 4.0},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/idle-bot.png",
-                frame_count = 50,
-                line_length = 5,
-                width = 128,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = {-3.0, 0.0},
-            west_position = {-3.0, 0.0},
-            south_position = {-3.0, 0.0},
-            east_position = {-3.0, 0.0},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/patpat.png",
-                frame_count = 30,
-                line_length = 10,
-                width = 160,
-                height = 96,
-                animation_speed = 0.35
-            }
-        },
-        {
-            north_position = {-3.0, 3.0},
-            west_position = {-3.0, 3.0},
-            south_position = {-3.0, 3.0},
-            east_position = {-3.0, 3.0},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/woo.png",
-                frame_count = 50,
-                line_length = 10,
-                width = 160,
-                height = 96,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = {-1.0, -2.0},
-            west_position = {-1.0, -2.0},
-            south_position = {-1.0, -2.0},
-            east_position = {-1.0, -2.0},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/jump.png",
-                frame_count = 30,
-                line_length = 10,
-                width = 128,
-                height = 128,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = {3.5, -4.0},
-            west_position = {3.5, -4.0},
-            south_position = {3.5, -4.0},
-            east_position = {3.5, -4.0},
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/idle-up.png",
-                frame_count = 50,
-                line_length = 10,
-                width = 64,
-                height = 64,
-                animation_speed = 0.4
-            }
-        },
-        {
-            north_position = util.by_pixel(0, -144),
-            west_position = util.by_pixel(0, -144),
-            south_position = util.by_pixel(0, -144),
-            east_position = util.by_pixel(0, -144),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/spot-up.png",
-                frame_count = 50,
-                blend_mode = "additive",
-                line_length = 5,
-                width = 352,
-                height = 192,
-                animation_speed = 0.4,
-                draw_as_glow = true,
-            }
-        },
-        {
-            north_position = util.by_pixel(0, 48),
-            west_position = util.by_pixel(0, 48),
-            south_position = util.by_pixel(0, 48),
-            east_position = util.by_pixel(0, 48),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/spot-bot.png",
-                frame_count = 50,
-                blend_mode = "additive",
-                line_length = 5,
-                width = 352,
-                height = 192,
-                animation_speed = 0.4,
-                draw_as_glow = true,
+        animation = {
+            layers = {
+                {
+                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off.png",
+                width = 448,
+                height = 480,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -32)
+                },
+                {
+                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off-mask.png",
+                width = 448,
+                height = 480,
+                frame_count = 1,
+                line_length = 1,
+                shift = util.by_pixel(16, -32),
+                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
             }
         },
     },

@@ -56,56 +56,58 @@ ENTITY {
         },
     },
     energy_usage = "200kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off.png",
-                width = 448,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(2, -1),
+                north_position = util.by_pixel(-78, 63),
+                west_position = util.by_pixel(-78, 63),
+                south_position = util.by_pixel(-78, 63),
+                east_position = util.by_pixel(-78, 63),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/left.png",
+                    frame_count = 96,
+                    line_length = 12,
+                    width = 160,
+                    height = 256,
+                    animation_speed = 0.3
+                }
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off-mask.png",
-                width = 448,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(2, -1),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(82, 63),
+                west_position = util.by_pixel(82, 63),
+                south_position = util.by_pixel(82, 63),
+                east_position = util.by_pixel(82, 63),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/right.png",
+                    frame_count = 96,
+                    line_length = 12,
+                    width = 160,
+                    height = 256,
+                    animation_speed = 0.3
+                }
             },
-        }
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off.png",
+                    width = 448,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(2, -1),
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off-mask.png",
+                    width = 448,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(2, -1),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                },
+            }
+        },
     },
 
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-78, 63),
-            west_position = util.by_pixel(-78, 63),
-            south_position = util.by_pixel(-78, 63),
-            east_position = util.by_pixel(-78, 63),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/left.png",
-                frame_count = 96,
-                line_length = 12,
-                width = 160,
-                height = 256,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(82, 63),
-            west_position = util.by_pixel(82, 63),
-            south_position = util.by_pixel(82, 63),
-            east_position = util.by_pixel(82, 63),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/right.png",
-                frame_count = 96,
-                line_length = 12,
-                width = 160,
-                height = 256,
-                animation_speed = 0.3
-            }
-        },
-    },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.5},
