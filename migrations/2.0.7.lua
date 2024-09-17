@@ -1,7 +1,7 @@
-if global.farms then
-	game.print('pYAL: Migrated ' .. #(global.indexed_farm_list or {}) .. ' farm buildings')
-	global.farms = nil
-	global.indexed_farm_list = nil
+if storage.farms then
+	game.print('pYAL: Migrated ' .. #(storage.indexed_farm_list or {}) .. ' farm buildings')
+	storage.farms = nil
+	storage.indexed_farm_list = nil
 	rendering.clear('pyalienlife')
 	---@diagnostic disable-next-line: different-requires
 	require '__pyalienlife__/scripts/farming/farming.lua'

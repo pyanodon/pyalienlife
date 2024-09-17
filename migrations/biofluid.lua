@@ -6,11 +6,11 @@ require 'scripts.biofluid.biofluid-gui'
 local broken_graphics = {}
 local invalid_coords = {}
 
-global.biofluid_undergrounds = global.biofluid_undergrounds or {}
-global.network_positions = global.network_positions or {}
+storage.biofluid_undergrounds = storage.biofluid_undergrounds or {}
+storage.network_positions = storage.network_positions or {}
 
 for _, surface in pairs(game.surfaces) do
-    local network_positions = global.network_positions[surface.index]
+    local network_positions = storage.network_positions[surface.index]
     if network_positions then
         for x, yy in pairs(network_positions) do
             for y, data in pairs(yy) do
@@ -29,10 +29,10 @@ end
 
 for _, data in pairs(invalid_coords) do
     game.print('failed to migrate vessel at ' .. data[2] .. ', ' .. data[3])
-    global.network_positions[data[1]][data[2]][data[3]] = nil
+    storage.network_positions[data[1]][data[2]][data[3]] = nil
 end
 
-for _, underground_data in pairs(global.biofluid_undergrounds) do
+for _, underground_data in pairs(storage.biofluid_undergrounds) do
     local entity = underground_data.entity
     if entity and entity.valid then
         local heat_connection = underground_data.heat_connection

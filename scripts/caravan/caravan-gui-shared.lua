@@ -195,7 +195,7 @@ gui_events[defines.events.on_gui_click]['py_click_caravan'] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local caravan_data = global.caravans[tags.unit_number]
+    local caravan_data = storage.caravans[tags.unit_number]
     if Caravan.validity_check(caravan_data) then
         Caravan.build_gui(player, caravan_data.entity)
     end
@@ -204,7 +204,7 @@ end
 gui_events[defines.events.on_gui_click]['py_view_inventory_button'] = function(event)
     local element = event.element
     local tags = element.tags
-    local caravan_data = global.caravans[tags.unit_number]
+    local caravan_data = storage.caravans[tags.unit_number]
     local tooltip = Caravan.get_summary_tooltip(caravan_data)
     element.tooltip = tooltip
 end
@@ -213,7 +213,7 @@ gui_events[defines.events.on_gui_click]['py_open_map_button'] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local caravan_data = global.caravans[tags.unit_number]
+    local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
 
     player.opened = nil
@@ -272,7 +272,7 @@ end
 
 gui_events[defines.events.on_gui_click]['py_rename_caravan_button'] = function(event)
     local element = event.element
-    local caravan_data = global.caravans[element.tags.unit_number]
+    local caravan_data = storage.caravans[element.tags.unit_number]
     local caption_flow = element.parent
     if caption_flow.title then
         title_edit_mode(caption_flow, caravan_data)
@@ -283,12 +283,12 @@ end
 
 gui_events[defines.events.on_gui_text_changed]['py_rename_caravan_textfield'] = function(event)
     local element = event.element
-    local caravan_data = global.caravans[element.tags.index]
+    local caravan_data = storage.caravans[element.tags.index]
     caravan_data.name = element.text
 end
 
 gui_events[defines.events.on_gui_confirmed]['py_rename_caravan_textfield'] = function(event)
     local element = event.element
-    local caravan_data = global.caravans[element.tags.index]
+    local caravan_data = storage.caravans[element.tags.index]
     title_display_mode(element.parent, caravan_data)
 end

@@ -25,12 +25,12 @@ local atan2 = math.atan2
 local pi = math.pi
 
 Biofluid.events.on_init = function()
-	global.biofluid_robots = global.biofluid_robots or {}
-	global.biofluid_requesters = global.biofluid_requesters or {}
-	global.biofluid_bioports = global.biofluid_bioports or {}
-	global.biofluid_undergrounds = global.biofluid_undergrounds or {}
-	global.biofluid_networks = global.biofluid_networks or {}
-	global.network_positions = global.network_positions or {}
+	storage.biofluid_robots = storage.biofluid_robots or {}
+	storage.biofluid_requesters = storage.biofluid_requesters or {}
+	storage.biofluid_bioports = storage.biofluid_bioports or {}
+	storage.biofluid_undergrounds = storage.biofluid_undergrounds or {}
+	storage.biofluid_networks = storage.biofluid_networks or {}
+	storage.network_positions = storage.network_positions or {}
 end
 
 Biofluid.events.on_built = function(event)
@@ -42,7 +42,7 @@ Biofluid.events.on_built = function(event)
 	local unit_number = entity.unit_number
 	if connection_type == Biofluid.REQUESTER then
 		local tags = event.tags or {}
-		global.biofluid_requesters[unit_number] = {
+		storage.biofluid_requesters[unit_number] = {
 			entity = entity,
 			name = tags.name,
 			amount = tags.amount or 0,
@@ -53,7 +53,7 @@ Biofluid.events.on_built = function(event)
 			priority = tags.priority or 0
 		}
 	elseif connection_type == Biofluid.ROBOPORT then
-		global.biofluid_bioports[unit_number] = {
+		storage.biofluid_bioports[unit_number] = {
 			entity = entity,
 			fuel_remaning = 0,
 			active = false,
@@ -66,7 +66,7 @@ Biofluid.events.on_built = function(event)
 	elseif entity.type == 'pipe-to-ground' then
 		entity.operable = false
 		local underground_data = {entity = entity}
-		global.biofluid_undergrounds[unit_number] = underground_data
+		storage.biofluid_undergrounds[unit_number] = underground_data
 		Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 	elseif connection_type == Biofluid.PROVIDER then
 		entity.operable = false
@@ -129,7 +129,7 @@ Biofluid.events.on_player_rotated_entity = function(event)
 	if Biofluid.connectable[entity.name] then
 		Biofluid.rotated_pipe(entity, event.previous_direction)
 		if entity.type == 'pipe-to-ground' then
-			local underground_data = global.biofluid_undergrounds[entity.unit_number]
+			local underground_data = storage.biofluid_undergrounds[entity.unit_number]
 			if not underground_data then return end
 			Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 		end
@@ -137,10 +137,10 @@ Biofluid.events.on_player_rotated_entity = function(event)
 end
 
 function Biofluid.render_error_icons()
-	for unit_number, bioport_data in pairs(global.biofluid_bioports) do
+	for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
 		local entity = bioport_data.entity
 		if not entity or not entity.valid then
-			global.biofluid_bioports[unit_number] = nil
+			storage.biofluid_bioports[unit_number] = nil
 			goto continue
 		end
 		local failure_reason = Biofluid.why_isnt_my_bioport_working(bioport_data)
@@ -208,13 +208,13 @@ end
 Biofluid.events[143] = function()
 	Biofluid.render_error_icons()
 
-	local networks = global.biofluid_networks
+	local networks = storage.biofluid_networks
 	if not next(networks) then return end
 	local unfulfilled_requests, relavant_fluids = Biofluid.get_unfulfilled_requests()
 
 	for _, unfulfilled_request in pairs(unfulfilled_requests) do
 		local network_id = unfulfilled_request.network_id
-		local network_data = global.biofluid_networks[network_id]
+		local network_data = storage.biofluid_networks[network_id]
 		local providers_by_contents = network_data.providers_by_contents
 
 		if not providers_by_contents then
@@ -260,9 +260,9 @@ Biofluid.events[143] = function()
 		end
 
 		if provider then
-			local requester_data = global.biofluid_requesters[unfulfilled_request.entity.unit_number]
+			local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
 			for _, bioport in random_order(network_data.bioports) do
-				local bioport_data = global.biofluid_bioports[bioport.unit_number]
+				local bioport_data = storage.biofluid_bioports[bioport.unit_number]
 				if bioport_data and bioport_data.active then
 					local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 					if delivery_amount ~= 0 then
@@ -277,7 +277,7 @@ Biofluid.events[143] = function()
 		end
 	end
 
-	for _, network_data in pairs(global.biofluid_networks) do network_data.providers_by_contents = nil end
+	for _, network_data in pairs(storage.biofluid_networks) do network_data.providers_by_contents = nil end
 end
 
 local function set_target(biorobot_data, target)
@@ -334,7 +334,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 		network_id = bioport_data.network_id
 	}
 	set_target(biorobot_data, provider.position)
-	global.biofluid_robots[robot.unit_number] = biorobot_data
+	storage.biofluid_robots[robot.unit_number] = biorobot_data
 	Biofluid.update_bioport_animation(bioport_data)
 	return delivery_amount
 end
@@ -379,7 +379,7 @@ end
 
 local function reset_provider_allocations(biorobot_data)
 	local delivery_amount = biorobot_data.delivery_amount
-	local network_data = global.biofluid_networks[biorobot_data.network_id]
+	local network_data = storage.biofluid_networks[biorobot_data.network_id]
 	if not network_data then return end
 	local provider_unit_number = biorobot_data.provider_unit_number
 	local allocated = network_data.allocated_fluids_from_providers
@@ -390,14 +390,14 @@ local function reset_provider_allocations(biorobot_data)
 end
 
 local function reset_requester_allocations(biorobot_data)
-	local requester_data = global.biofluid_requesters[biorobot_data.requester]
+	local requester_data = storage.biofluid_requesters[biorobot_data.requester]
 	if requester_data then
 		requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount
 	end
 end
 
 local function make_homeless(biorobot_data)
-	global.biofluid_robots[biorobot_data.entity.unit_number] = nil
+	storage.biofluid_robots[biorobot_data.entity.unit_number] = nil
 	rendering.draw_sprite{
 		target = biorobot_data.entity,
 		sprite = 'utility.no_storage_space_icon',
@@ -409,7 +409,7 @@ end
 
 local function find_new_home(biorobot_data, network_data)
 	if not network_data then
-		network_data = global.biofluid_networks[biorobot_data.network_id]
+		network_data = storage.biofluid_networks[biorobot_data.network_id]
 		if not network_data then make_homeless(biorobot_data); return end
 	end
 	local old_home = biorobot_data.bioport
@@ -417,7 +417,7 @@ local function find_new_home(biorobot_data, network_data)
 	local min_robot_count = 999
 	for unit_number, bioport in pairs(network_data.bioports) do
 		if bioport.valid then
-			local bioport_data = global.biofluid_bioports[bioport.unit_number]
+			local bioport_data = storage.biofluid_bioports[bioport.unit_number]
 			if unit_number ~= old_home and bioport.valid and bioport_data then
 				local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
 				if robot_count < 6 then
@@ -446,9 +446,9 @@ local function go_home(biorobot_data)
 		reset_requester_allocations(biorobot_data)
 	end
 	biorobot_data.status = RETURNING
-	local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
+	local bioport_data = storage.biofluid_bioports[biorobot_data.bioport]
 	local network_id = bioport_data and bioport_data.network_id or biorobot_data.network_id
-	local network_data = global.biofluid_networks[network_id]
+	local network_data = storage.biofluid_networks[network_id]
 	if not bioport_data or not bioport_data.entity or (network_data and random() > 0.9 and table_size(network_data.bioports) > 1) then
 		if network_data then
 			find_new_home(biorobot_data, network_data)
@@ -476,7 +476,7 @@ local function pickup(biorobot_data)
 	if not contents or contents.name ~= name then go_home(biorobot_data); return end
 	local delivery_amount = min(contents.amount, biorobot_data.delivery_amount)
 	if delivery_amount == 0 then go_home(biorobot_data); return end
-	local requester_data = global.biofluid_requesters[biorobot_data.requester]
+	local requester_data = storage.biofluid_requesters[biorobot_data.requester]
 	if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
 	local new_amount = contents.amount - delivery_amount
 	if new_amount == 0 then
@@ -510,7 +510,7 @@ local function pickup(biorobot_data)
 end
 
 local function dropoff(biorobot_data)
-	local requester_data = global.biofluid_requesters[biorobot_data.requester]
+	local requester_data = storage.biofluid_requesters[biorobot_data.requester]
 	if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
 	local requester = requester_data.entity
 	local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
@@ -535,14 +535,14 @@ local function dropoff(biorobot_data)
 end
 
 local function returning(biorobot_data)
-	local bioport_data = global.biofluid_bioports[biorobot_data.bioport]
+	local bioport_data = storage.biofluid_bioports[biorobot_data.bioport]
 	if not bioport_data then find_new_home(biorobot_data); return end
 	local bioport = bioport_data.entity
 	if not bioport.valid then find_new_home(biorobot_data); return end
 	local biorobot = biorobot_data.entity
 	local inventory = bioport.get_inventory(INPUT_INVENTORY)
 	if inventory.insert{name = biorobot.name, count = 1} == 1 then
-		global.biofluid_robots[biorobot.unit_number] = nil
+		storage.biofluid_robots[biorobot.unit_number] = nil
 		biorobot.destroy()
 		Biofluid.update_bioport_animation(bioport_data)
 	else
@@ -551,7 +551,7 @@ local function returning(biorobot_data)
 end
 
 Biofluid.events.on_ai_command_completed = function(event)
-	local biorobot_data = global.biofluid_robots[event.unit_number]
+	local biorobot_data = storage.biofluid_robots[event.unit_number]
 	if not biorobot_data then return end
 	if event.result ~= defines.behavior_result.success then go_home(biorobot_data); return end
 
@@ -575,14 +575,14 @@ function Biofluid.get_unfulfilled_requests()
 	local result = {}
 	local min_fluid_request = settings.global['py-min_fluid_request'].value
 
-	for unit_number, requester_data in pairs(global.biofluid_requesters) do
+	for unit_number, requester_data in pairs(storage.biofluid_requesters) do
 		local requester = requester_data.entity
 		if not requester or not requester.valid then
-			global.biofluid_requesters[unit_number] = nil
+			storage.biofluid_requesters[unit_number] = nil
 			goto continue
 		end
 		local network_id = requester_data.network_id
-		local network = global.biofluid_networks[network_id]
+		local network = storage.biofluid_networks[network_id]
 		if not network or not next(network.bioports) then
 			py.draw_error_sprite(requester, 'utility.too_far_from_roboport_icon', 71)
 			goto continue
@@ -631,7 +631,7 @@ end
 function Biofluid.why_isnt_my_bioport_working(bioport_data)
 	local entity = bioport_data.entity
 	if not entity.valid then return 'entity-status.working' end
-	local network = global.biofluid_networks[bioport_data.network_id]
+	local network = storage.biofluid_networks[bioport_data.network_id]
 	if not network then return 'entity-status.working' end
 
 	local has_food = bioport_data.fuel_remaning ~= 0
@@ -659,7 +659,7 @@ end
 
 Biofluid.events.on_entity_settings_pasted = function(event)
     local source, destination = event.source, event.destination
-	local requesters = global.biofluid_requesters
+	local requesters = storage.biofluid_requesters
 	local source_data, destination_data = requesters[source.unit_number], requesters[destination.unit_number]
 	if not source_data or not destination_data then return end
 
@@ -684,7 +684,7 @@ Biofluid.events.on_player_setup_blueprint = function(event)
 	if not blueprint.valid_for_read then blueprint = player.cursor_stack end
 	if not blueprint or not blueprint.valid_for_read then return end
 
-	local requesters = global.biofluid_requesters
+	local requesters = storage.biofluid_requesters
 	local max_index = blueprint.get_blueprint_entity_count()
 	for index, entity in pairs(event.mapping.get()) do
 		if index > max_index then return end
@@ -709,24 +709,24 @@ Biofluid.events.on_destroyed = function(event)
 		Biofluid.destroyed_pipe(entity)
 		local unit_number = entity.unit_number
 		if entity.type == 'pipe-to-ground' then
-			local underground_data = global.biofluid_undergrounds[unit_number]
+			local underground_data = storage.biofluid_undergrounds[unit_number]
 			if not underground_data then return end
 			local heat_connection = underground_data.heat_connection
 			if not heat_connection or not heat_connection.valid then return end
 			heat_connection.destroy()
-			global.biofluid_undergrounds[unit_number] = nil
+			storage.biofluid_undergrounds[unit_number] = nil
 		elseif entity.name == BIOPORT then
-			local bioport_data = global.biofluid_bioports[unit_number]
+			local bioport_data = storage.biofluid_bioports[unit_number]
 			if not bioport_data then return end
 			local graphic = bioport_data.animation_entity
 			if graphic and graphic.valid then graphic.destroy() end
-			global.biofluid_bioports[unit_number] = nil
+			storage.biofluid_bioports[unit_number] = nil
 		else
-			global.biofluid_requesters[unit_number] = nil
+			storage.biofluid_requesters[unit_number] = nil
 		end
 	elseif Biofluid.biorobots[name] then
 		local unit_number = entity.unit_number
-		local biorobot_data = global.biofluid_robots[unit_number]
+		local biorobot_data = storage.biofluid_robots[unit_number]
 		if not biorobot_data then return end
 		local status = biorobot_data.status
 		if status == PICKING_UP then
@@ -735,12 +735,12 @@ Biofluid.events.on_destroyed = function(event)
 		elseif status == DROPPING_OFF then
 			reset_requester_allocations(biorobot_data)
 		end
-		global.biofluid_robots[unit_number] = nil
+		storage.biofluid_robots[unit_number] = nil
 	end
 end
 
 Biofluid.events.on_player_fast_transferred = function(event)
-	local bioport_data = global.biofluid_bioports[event.entity.unit_number]
+	local bioport_data = storage.biofluid_bioports[event.entity.unit_number]
 	if not bioport_data then return end
 	Biofluid.update_bioport_animation(bioport_data)
 end
@@ -780,7 +780,7 @@ function Biofluid.update_graphics(entity)
 				graphics_variation = 5
 			end
 		end
-		local underground_data = global.biofluid_undergrounds[entity.unit_number]
+		local underground_data = storage.biofluid_undergrounds[entity.unit_number]
 		if not underground_data then return end
 		local heat_connection = underground_data.heat_connection
 		if heat_connection and heat_connection.valid then
@@ -796,7 +796,7 @@ function Biofluid.update_graphics(entity)
 		end
 		entity.graphics_variation = animations[animation_index] or 1
 	elseif entity.name == BIOPORT then
-		local bioport_data = global.biofluid_bioports[entity.unit_number]
+		local bioport_data = storage.biofluid_bioports[entity.unit_number]
 		if not bioport_data then return end
 		local animation_entity = bioport_data.animation_entity
 		if not animation_entity or not animation_entity.valid then

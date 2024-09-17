@@ -4,8 +4,8 @@ Turd.events[123] = function()
     local forces_with_bhoddos_path_1 = lib.forces_with_bhoddos_path_1()
     local exploded_cultures = {}
     for _, force_index in pairs(forces_with_bhoddos_path_1) do
-        if global.turd_bhoddos[force_index] then
-            for _, culture in pairs(global.turd_bhoddos[force_index]) do
+        if storage.turd_bhoddos[force_index] then
+            for _, culture in pairs(storage.turd_bhoddos[force_index]) do
                 if culture.valid and culture.active and culture.crafting_progress ~= 0 and culture.crafting_progress ~= 1 then
                     local probability = math.floor(432000 / 123 + 0.5)
                     if math.random(probability) == 69 then
@@ -40,17 +40,17 @@ end
 local radius = 76 / 2
 
 local function draw_circle(entity)
-    global.bhoddos_circles[entity.unit_number] = rendering.draw_circle{
+    storage.bhoddos_circles[entity.unit_number] = rendering.draw_circle{
         draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = radius,
         target = entity, filled = true, surface = entity.surface
     }
 end
 
 Turd.events.on_selected_entity_changed = function(event)
-    local circles = global.bhoddos_circles
+    local circles = storage.bhoddos_circles
     if not circles then
         circles = {}
-        global.bhoddos_circles = circles
+        storage.bhoddos_circles = circles
     end
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local selected = player.selected

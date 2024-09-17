@@ -1,5 +1,5 @@
-global.dig_sites = global.dig_sites or {}
-for _, dig_data in pairs(global.dig_sites) do
+storage.dig_sites = storage.dig_sites or {}
+for _, dig_data in pairs(storage.dig_sites) do
 	if dig_data.powersource then
 		dig_data.powersource = nil
 		for item, count in pairs(dig_data.digosaur_inventory.get_contents()) do

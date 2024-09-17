@@ -146,7 +146,7 @@ end
 ---@param entity LuaEntity
 ---@param from_remote_manager boolean Is this GUI opened from the py codex? If so, hide the inventory so that the player cannot teleport items.
 function Caravan.build_gui(player, entity, from_remote_manager)
-	local caravan_data = global.caravans[entity.unit_number]
+	local caravan_data = storage.caravans[entity.unit_number]
 	local prototype = prototypes[entity.name]
 	
 	local main_frame
@@ -278,7 +278,7 @@ end
 ---@param gui LuaGuiElement
 ---@param weak boolean Optimization: If false, don't update the schedule pane.
 function Caravan.update_gui(gui, weak)
-	local caravan_data = global.caravans[gui.tags.unit_number]
+	local caravan_data = storage.caravans[gui.tags.unit_number]
 	if not Caravan.validity_check(caravan_data) then gui.destroy() return end
 	local content_flow = gui.content_frame.content_flow
 	local state, img = Caravan.status_img(caravan_data)

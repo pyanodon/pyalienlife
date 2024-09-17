@@ -3,7 +3,7 @@ local lib = {}
 ---@param force_index integer
 ---@return boolean
 local function has_picked_bhoddos_path_1(force_index)
-    local bonuses = global.turd_bonuses[force_index]
+    local bonuses = storage.turd_bonuses[force_index]
     return bonuses and bonuses['bhoddos-upgrade'] == 'extra-drones'
 end
 
@@ -24,10 +24,10 @@ end
 lib.update_culture_table = function(entity, action)
     local force = entity.force_index
     if action == 'add' then
-        if not global.turd_bhoddos[force] then global.turd_bhoddos[force] = {} end
-        global.turd_bhoddos[force][entity.unit_number] = entity
+        if not storage.turd_bhoddos[force] then storage.turd_bhoddos[force] = {} end
+        storage.turd_bhoddos[force][entity.unit_number] = entity
     elseif action == 'remove' then
-        global.turd_bhoddos[force][entity.unit_number] = nil
+        storage.turd_bhoddos[force][entity.unit_number] = nil
     end
 end
 

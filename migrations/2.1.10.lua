@@ -1,11 +1,11 @@
 local function exists_and_valid(v) return v and v.valid end
 
-if not global.caravans then return end
+if not storage.caravans then return end
 local found = false
 local new = {}
 local migrated = 0
 
-for _, caravan_data in pairs(global.caravans) do
+for _, caravan_data in pairs(storage.caravans) do
 	if caravan_data.is_aerial and script.active_mods.pyalternativeenergy and exists_and_valid(caravan_data.entity) then
 		local entity = caravan_data.entity
 		local _, player = next(game.connected_players)
@@ -36,9 +36,9 @@ for _, caravan_data in pairs(global.caravans) do
 	found = true
 	::continue::
 end
-global.caravans = new
+storage.caravans = new
 if found then
-	global.caravan_queue = nil
+	storage.caravan_queue = nil
 end
 
 if migrated > 0 then

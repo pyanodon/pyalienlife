@@ -4,7 +4,7 @@ Ulric.events = {}
 Ulric.transformation_time = 60 * 60 * 10 -- ticks
 
 Ulric.events.on_init = function()
-	global.ulricman_timers = global.ulricman_timers or {}
+	storage.ulricman_timers = storage.ulricman_timers or {}
 end
 
 Ulric.events.used_capsule = function(event)
@@ -38,14 +38,14 @@ Ulric.events.used_capsule = function(event)
 	character.destroy()
 	player.play_sound{path = 'ulric-man-transform'}
 
-	global.ulricman_timers[player.index] = Ulric.transformation_time
+	storage.ulricman_timers[player.index] = Ulric.transformation_time
 end
 
 local update_rate = 397
 Ulric.events[update_rate] = function()
-	for k, ticks_remaning in pairs(global.ulricman_timers) do
+	for k, ticks_remaning in pairs(storage.ulricman_timers) do
 		ticks_remaning = ticks_remaning - update_rate
-		global.ulricman_timers[k] = ticks_remaning
+		storage.ulricman_timers[k] = ticks_remaning
 		if ticks_remaning <= 0 then
 			local player = game.get_player(k)
 			local ulric = player.character
@@ -56,7 +56,7 @@ Ulric.events[update_rate] = function()
 				local inventory = ulric.get_main_inventory()
 				if inventory.get_item_count('ulric-infusion') > 0 then
 					inventory.remove{name = 'ulric-infusion', count = 1}
-					global.ulricman_timers[k] = Ulric.transformation_time
+					storage.ulricman_timers[k] = Ulric.transformation_time
 					goto injection
 				end
 			end
@@ -77,7 +77,7 @@ Ulric.events[update_rate] = function()
 				player.play_sound{path = 'ulric-man-untransform'}
 			end
 
-			global.ulricman_timers[k] = nil
+			storage.ulricman_timers[k] = nil
 		end
 
 		::injection::

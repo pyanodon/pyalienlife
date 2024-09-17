@@ -4,11 +4,11 @@ Mounts.events = {}
 local transfer_efficiency = 2
 
 Mounts.events.on_init = function()
-	global.mounts = global.mounts or {}
+	storage.mounts = storage.mounts or {}
 end
 
 Mounts.events[239] = function(event)
-	for id, spider in pairs(global.mounts) do
+	for id, spider in pairs(storage.mounts) do
 		if spider.valid then
 			local grid = spider.grid
 			for _, equipment in pairs(grid.equipment) do
@@ -25,7 +25,7 @@ Mounts.events[239] = function(event)
 				end
 			end
 		else
-			global.mounts[id] = nil
+			storage.mounts[id] = nil
 			return
 		end
 	end
@@ -45,13 +45,13 @@ Mounts.events.on_built = function(event)
 		name = 'py-mount-generator',
 		position = {3, 0},
 	}
-	global.mounts[entity.unit_number] = entity
+	storage.mounts[entity.unit_number] = entity
 end
 
 Mounts.events.on_destroyed = function(event)
     local entity = event.entity
 	local unit_number = entity.unit_number
-	if unit_number then global.mounts[unit_number] = nil end
+	if unit_number then storage.mounts[unit_number] = nil end
 end
 
 Mounts.events.on_player_removed_equipment = function(event)

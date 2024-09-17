@@ -122,9 +122,9 @@ local function remove_fuel_alert(entity)
 end
 
 Caravan.events.init = function()
-	global.caravans = global.caravans or {}
-	global.last_opened_caravan = global.last_opened_caravan or {}
-	global.make_operable_next_tick = global.make_operable_next_tick or {}
+	storage.caravans = storage.caravans or {}
+	storage.last_opened_caravan = storage.last_opened_caravan or {}
+	storage.make_operable_next_tick = storage.make_operable_next_tick or {}
 end
 
 ---@param v table
@@ -147,7 +147,7 @@ function Caravan.validity_check(caravan_data)
 		if caravan_data.entity.valid then caravan_data.entity.destroy() end
 		if exists_and_valid(inventory) then inventory.destroy() end
 		if exists_and_valid(fuel_inventory) then fuel_inventory.destroy() end
-		global.caravans[caravan_data.unit_number] = nil
+		storage.caravans[caravan_data.unit_number] = nil
 		return false
 	end
 	return true
@@ -159,7 +159,7 @@ Caravan.events.used_capsule = function(event)
 	if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= 'caravan-control' then return end
 	cursor_stack.clear()
 
-	local caravan_data = global.last_opened_caravan[player.index]
+	local caravan_data = storage.last_opened_caravan[player.index]
 	if not Caravan.validity_check(caravan_data) then return end
 	local schedule = caravan_data.schedule
 	local prototype = prototypes[caravan_data.entity.name]
@@ -171,7 +171,7 @@ Caravan.events.used_capsule = function(event)
 		collision_mask = {'object-layer', 'player-layer', 'train-layer', 'resource-layer', 'floor-layer', 'transport-belt-layer', 'ghost-layer'}
 	}[1]
 	if entity then
-		if entity.operable then global.make_operable_next_tick[#global.make_operable_next_tick + 1] = entity end
+		if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
 		entity.operable = false
 		if only_outpost and entity.name ~= prototype.outpost then return end
 		if entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface then return end
@@ -241,14 +241,14 @@ gui_events[defines.events.on_gui_click]['py_add_outpost'] = function(event)
 		stack.clear()
 	end
 	stack.set_stack{name = 'caravan-control'}
-	global.last_opened_caravan[player.index] = global.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
+	storage.last_opened_caravan[player.index] = storage.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
 	player.opened = nil
 end
 
 gui_events[defines.events.on_gui_selection_state_changed]['py_add_action'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
-	local caravan_data = global.caravans[element.tags.unit_number]
+	local caravan_data = storage.caravans[element.tags.unit_number]
 	local schedule = caravan_data.schedule[element.tags.schedule_id]
 	local actions = schedule.actions
 
@@ -265,7 +265,7 @@ gui_events[defines.events.on_gui_click]['py_delete_schedule'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local schedule = caravan_data.schedule
 	if tags.action_id then schedule = schedule[tags.schedule_id].actions end
 	local id = tags.action_id or tags.schedule_id
@@ -279,7 +279,7 @@ end
 gui_events[defines.events.on_gui_click]['py_blocking_caravan'] = function(event)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
 	action.async = not element.state
 	stop_actions(caravan_data)
@@ -290,7 +290,7 @@ gui_events[defines.events.on_gui_click]['py_shuffle_schedule_.'] = function(even
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local schedule = caravan_data.schedule
 	if tags.action_id then schedule = schedule[tags.schedule_id].actions end
 	local id = tags.action_id or tags.schedule_id
@@ -309,7 +309,7 @@ gui_events[defines.events.on_gui_click]['py_outpost_name'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local schedule = caravan_data.schedule[tags.schedule_id]
 	local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
 	local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_flow.py_refocus
@@ -328,7 +328,7 @@ gui_events[defines.events.on_gui_click]['py_refocus'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
 	local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_flow.py_refocus
 
@@ -401,7 +401,7 @@ gui_events[defines.events.on_gui_click]['py_schedule_play'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 
 	if caravan_data.schedule_id == tags.schedule_id then
 		stop_actions(caravan_data)
@@ -416,7 +416,7 @@ gui_events[defines.events.on_gui_click]['py_action_play'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local schedule = caravan_data.schedule[tags.schedule_id]
 
 	if caravan_data.schedule_id == tags.schedule_id then
@@ -439,7 +439,7 @@ gui_events[defines.events.on_gui_click]['py_fuel_slot_.'] = function(event)
 	local player = game.get_player(event.player_index)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local cursor_stack = player.cursor_stack
 	if not cursor_stack then return end
 	local fuel_stack = caravan_data.fuel_inventory[tags.i]
@@ -453,7 +453,7 @@ end
 gui_events[defines.events.on_gui_elem_changed]['py_item_count'] = function(event)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
 
 	action.elem_value = element.elem_value
@@ -462,7 +462,7 @@ end
 gui_events[defines.events.on_gui_text_changed]['py_item_count_text'] = function(event)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
 	local item_count = tonumber(element.text)
 
@@ -479,7 +479,7 @@ end
 gui_events[defines.events.on_gui_elem_changed]['py_circuit_condition_right'] = function(event)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
 
 	action.circuit_condition_right = element.elem_value
@@ -488,7 +488,7 @@ end
 gui_events[defines.events.on_gui_elem_changed]['py_circuit_condition_left'] = function(event)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
 
 	action.circuit_condition_left = element.elem_value
@@ -497,7 +497,7 @@ end
 gui_events[defines.events.on_gui_text_changed]['py_time_passed_text'] = function(event)
 	local element = event.element
 	local tags = element.tags
-	local caravan_data = global.caravans[tags.unit_number]
+	local caravan_data = storage.caravans[tags.unit_number]
 	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
 
 	action.wait_time = tonumber(element.text or 5)
@@ -505,7 +505,7 @@ end
 
 Caravan.events.ai_command_completed = function(event)
 	local unit_number = event.unit_number
-	local caravan_data = global.caravans[unit_number]
+	local caravan_data = storage.caravans[unit_number]
 	if not caravan_data or not Caravan.validity_check(caravan_data) then return end
 	local schedule = caravan_data.schedule[caravan_data.schedule_id]
 	local status = event.result
@@ -538,7 +538,7 @@ Caravan.events.ai_command_completed = function(event)
 		}
 		local prototype = prototypes[entity.name]
 		if prototype.requeue_required then
-			global.caravan_queue = nil
+			storage.caravan_queue = nil
 			caravan_data.arrival_tick = game.tick
 		end
 	end
@@ -560,18 +560,18 @@ end
 Caravan.events[60] = function(event)
 	local guis_to_update = {}
 
-	if not global.caravan_queue then
+	if not storage.caravan_queue then
 		local queue = {}
-		for _, caravan_data in pairs(global.caravans) do
+		for _, caravan_data in pairs(storage.caravans) do
 			if Caravan.validity_check(caravan_data) then
 				queue[#queue+1] = caravan_data
 			end
 		end
 		table.sort(queue, caravan_sort_function)
-		global.caravan_queue = queue
+		storage.caravan_queue = queue
 	end
 
-	for _, caravan_data in pairs(global.caravan_queue) do
+	for _, caravan_data in pairs(storage.caravan_queue) do
 		if not Caravan.validity_check(caravan_data) then goto continue end
 		local entity = caravan_data.entity
 		local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
@@ -637,16 +637,16 @@ Caravan.events[60] = function(event)
 		end
 	end
 
-	if next(global.make_operable_next_tick) then
-		for _, entity in pairs(global.make_operable_next_tick) do
+	if next(storage.make_operable_next_tick) then
+		for _, entity in pairs(storage.make_operable_next_tick) do
 			if entity.valid then entity.operable = true end
 		end
-		global.make_operable_next_tick = {}
+		storage.make_operable_next_tick = {}
 	end
 end
 
 function Caravan.instantiate_caravan(entity)
-	local existing = global.caravans[entity.unit_number]
+	local existing = storage.caravans[entity.unit_number]
 	if existing then return existing end
 
 	local prototype = prototypes[entity.name]
@@ -668,7 +668,7 @@ function Caravan.instantiate_caravan(entity)
 		caravan_data.inventory = game.create_inventory(prototype.inventory_size)
 	end
 
-	global.caravans[entity.unit_number] = caravan_data
+	storage.caravans[entity.unit_number] = caravan_data
 	return caravan_data
 end
 
@@ -681,19 +681,19 @@ Caravan.events.on_built = function(event)
 	local stack = event.stack
 	local tags = stack and stack.valid_for_read and stack.type == 'item-with-tags' and stack.tags
 
-	if tags and tags.unit_number and global.caravans[tags.unit_number] then
-		local caravan_data = global.caravans[tags.unit_number]
+	if tags and tags.unit_number and storage.caravans[tags.unit_number] then
+		local caravan_data = storage.caravans[tags.unit_number]
 		caravan_data.itemised = nil
 		caravan_data.unit_number = entity.unit_number
 		caravan_data.entity = entity
 		stop_actions(caravan_data)
-		global.caravans[entity.unit_number] = caravan_data
-		global.caravans[tags.unit_number] = nil
+		storage.caravans[entity.unit_number] = caravan_data
+		storage.caravans[tags.unit_number] = nil
 	else
 		Caravan.instantiate_caravan(entity)
 	end
 	script.register_on_entity_destroyed(entity)
-	global.caravan_queue = nil
+	storage.caravan_queue = nil
 end
 
 Caravan.events.on_destroyed = function(event)
@@ -706,7 +706,7 @@ Caravan.events.on_destroyed = function(event)
 	local buffer = event.buffer
 	if buffer then
 		buffer[1].tags = {unit_number = entity.unit_number}
-		local caravan_data = global.caravans[entity.unit_number]
+		local caravan_data = storage.caravans[entity.unit_number]
 		if caravan_data then
 			buffer[1].custom_description = {
 				'',
@@ -717,16 +717,16 @@ Caravan.events.on_destroyed = function(event)
 			}
 		end
 	end
-	global.caravan_queue = nil
+	storage.caravan_queue = nil
 end
 
 Caravan.events.on_entity_destroyed = function(event)
 	local unit_number = event.unit_number
-	local caravan_data = global.caravans[unit_number]
+	local caravan_data = storage.caravans[unit_number]
 
 	if not caravan_data then return end
 
-	global.caravans[unit_number].itemised = true
+	storage.caravans[unit_number].itemised = true
 	for _, player in pairs(game.connected_players) do
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == unit_number then gui.destroy(); player.opened = nil end
@@ -738,7 +738,7 @@ end
 
 Caravan.events.on_entity_settings_pasted = function(event)
     local source, destination = event.source, event.destination
-	local source_data, destination_data = global.caravans[source.unit_number], global.caravans[destination.unit_number]
+	local source_data, destination_data = storage.caravans[source.unit_number], storage.caravans[destination.unit_number]
 	if not source_data or not destination_data then return end
 
 	for _, prototype in pairs(source.prototype.additional_pastable_entities) do
@@ -758,7 +758,7 @@ end
 remote.add_interface('caravans', {
 	get_caravan_count = function()
 		local result = 0
-		for _, caravan_data in pairs(global.caravans) do
+		for _, caravan_data in pairs(storage.caravans) do
 			if caravan_data.entity and caravan_data.entity.valid and not caravan_data.itemised then
 				result = result + 1
 			end
@@ -772,7 +772,7 @@ remote.add_interface('caravans', {
 ---@param new LuaEntity
 function Caravan.entity_changed_unit_number(old, new)
 	if not old.valid then error('Don\'t call this with an invalid entity') end
-	for _, caravan_data in pairs(global.caravans) do
+	for _, caravan_data in pairs(storage.caravans) do
 		for _, schedule in pairs(caravan_data.schedule) do
 			if schedule.entity == old then
 				schedule.localised_name = {'caravan-gui.entity-position', new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}

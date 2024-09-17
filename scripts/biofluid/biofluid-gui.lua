@@ -13,11 +13,11 @@ end
 
 function Biofluid.update_bioport_gui(player, gui)
 	local unit_number = gui.tags.unit_number
-	local bioport_data = global.biofluid_bioports[unit_number]
+	local bioport_data = storage.biofluid_bioports[unit_number]
 	if not bioport_data then player.opened = nil; return end
 	local entity = bioport_data.entity
 	if not entity or not entity.valid then player.opened = nil; return end
-	local network = global.biofluid_networks[bioport_data.network_id]
+	local network = storage.biofluid_networks[bioport_data.network_id]
 	if not network then player.opened = nil; return end
 	Biofluid.update_bioport_animation(bioport_data)
 
@@ -149,11 +149,11 @@ end
 
 function Biofluid.update_requester_gui(player, gui)
 	local unit_number = gui.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then player.opened = nil; return end
 	local entity = requester_data.entity
 	if not entity or not entity.valid then player.opened = nil; return end
-	local network = global.biofluid_networks[requester_data.network_id]
+	local network = storage.biofluid_networks[requester_data.network_id]
 	if not network then player.opened = nil; return end
 
 	local status = 'entity-status.working'
@@ -284,7 +284,7 @@ local function gui_click(event, inventory_index)
 	local element = event.element
 	local unit_number = element.tags.unit_number
 	local slot_index = element.tags.slot_index
-	local bioport_data = global.biofluid_bioports[unit_number]
+	local bioport_data = storage.biofluid_bioports[unit_number]
 	if not bioport_data then return end
 	local entity = bioport_data.entity
 	if not entity or not entity.valid then return end
@@ -308,7 +308,7 @@ gui_events[defines.events.on_gui_click]['py_guano_output'] = function(event) gui
 gui_events[defines.events.on_gui_elem_changed]['py_request_type'] = function(event)
 	local element = event.element
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.name = element.elem_value
 end
@@ -321,7 +321,7 @@ gui_events[defines.events.on_gui_text_changed]['py_request_amount'] = function(e
 		element.text = tostring(number)
 	end
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.amount = number
 end
@@ -329,7 +329,7 @@ end
 gui_events[defines.events.on_gui_click]['py_change_priority_.'] = function(event)
 	local element = event.element
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	local change = element.tags.up and 1 or -1
 	requester_data.priority = requester_data.priority + change
@@ -339,7 +339,7 @@ end
 gui_events[defines.events.on_gui_text_changed]['py_requester_priority_input'] = function(event)
 	local element = event.element
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.priority = tonumber(element.text) or 0
 end
@@ -347,7 +347,7 @@ end
 gui_events[defines.events.on_gui_switch_state_changed]['py_biofluid_temperature_switch'] = function(event)
 	local element = event.element
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.care_about_temperature = element.switch_state == 'right'
 
@@ -360,7 +360,7 @@ end
 gui_events[defines.events.on_gui_text_changed]['py_biofluid_temperature'] = function(event)
 	local element = event.element
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.target_temperature = tonumber(element.text) or 15
 end
@@ -368,7 +368,7 @@ end
 gui_events[defines.events.on_gui_selection_state_changed]['py_biofluid_temperature_equality_operator'] = function(event)
 	local element = event.element
 	local unit_number = element.tags.unit_number
-	local requester_data = global.biofluid_requesters[unit_number]
+	local requester_data = storage.biofluid_requesters[unit_number]
 	if not requester_data then return end
 	requester_data.temperature_operator = element.selected_index
 end
