@@ -24,23 +24,14 @@ ENTITY {
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/crops/kicalk/kicalk.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/kicalk/hr-kicalk.png",
             priority = "extra-high",
-            width = 64,
-            height = 80,
+            width = 128,
+            height = 160,
             frame_count = 8,
             variation_count = 1,
+            scale = 0.5,
             shift = util.by_pixel(0, -16),
-            hr_version = {
-                filename = "__pyalienlifegraphics__/graphics/entity/crops/kicalk/hr-kicalk.png",
-                priority = "extra-high",
-                width = 128,
-                height = 160,
-                frame_count = 8,
-                variation_count = 1,
-                scale = 0.5,
-                shift = util.by_pixel(0, -16),
-            }
         }
     }
 }
