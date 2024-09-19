@@ -41,21 +41,13 @@ ENTITY {
     stage_counts = {800, 400, 200},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia/ralesia.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia/hr-ralesia.png",
             priority = "extra-high",
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 8,
             variation_count = 3,
-            hr_version = {
-                filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia/hr-ralesia.png",
-                priority = "extra-high",
-                width = 128,
-                height = 128,
-                frame_count = 8,
-                variation_count = 3,
-                scale = 0.5
-            }
+            scale = 0.5
         }
     }
 }

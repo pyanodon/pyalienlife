@@ -49,22 +49,13 @@ ENTITY {
     stage_counts = {20000, 13000, 10000, 5000, 3000, 1000, 500, 100},
     stages = {
         sheet = {
-            filename = '__pyalienlifegraphics3__/graphics/entity/nexelit/nexelit.png',
+            filename = '__pyalienlifegraphics3__/graphics/entity/nexelit/hr-nexelit.png',
             priority = 'extra-high',
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 8,
             variation_count = 8,
-            scale = 1.5,
-            hr_version = {
-                filename = '__pyalienlifegraphics3__/graphics/entity/nexelit/hr-nexelit.png',
-                priority = 'extra-high',
-                width = 128,
-                height = 128,
-                frame_count = 8,
-                variation_count = 8,
-                scale = 0.75
-            }
+            scale = 0.75
         }
     }
 }

@@ -49,25 +49,15 @@ ENTITY {
     stage_counts = {20000, 15000, 11000, 8000, 5000, 3000, 1000, 500, 300, 200, 100},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/rich-1.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/hr-rich-1.png",
             priority = "extra-high",
-            width = 64,
-            height = 80,
+            width = 128,
+            height = 160,
             frame_count = 64,
             randomize_visual_position = true,
             variation_count = 11,
             shift = util.by_pixel(0, -16),
-            hr_version = {
-                filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/hr-rich-1.png",
-                priority = "extra-high",
-                width = 128,
-                height = 160,
-                frame_count = 64,
-                randomize_visual_position = true,
-                variation_count = 11,
-                shift = util.by_pixel(0, -16),
-                scale = 0.65
-                }
+            scale = 0.65
             },
     }
 }
