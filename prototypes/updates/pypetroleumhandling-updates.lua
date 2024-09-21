@@ -35,7 +35,7 @@ TECHNOLOGY("kevlar-mk02"):add_pack("py-science-pack-1"):add_pack("py-science-pac
 TECHNOLOGY("drilling-fluid-mk03"):add_pack("py-science-pack-2")
 TECHNOLOGY("small-parts-mk02"):add_pack("py-science-pack-2")
 TECHNOLOGY("small-parts-mk03"):add_pack("py-science-pack-3")
-TECHNOLOGY("stack-inserter-2"):add_pack("py-science-pack-3")
+TECHNOLOGY("bulk-inserter-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-3")
 
 TECHNOLOGY("plastics"):set_fields{prerequisites = {}}
