@@ -55,7 +55,7 @@ ENTITY {
 	burner =
 		{
 			type = "burner",
-			fuel_category = "auog",
+			fuel_categories = {"auog"},
 			effectivity = 2,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
