@@ -28,7 +28,7 @@ ENTITY {
     highlight = true,
     minable = {
         mining_time = 1,
-        results = {{'nexelit-ore', 1}}
+        results = {{type = "item", name = 'nexelit-ore', amount = 1}}
     },
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
