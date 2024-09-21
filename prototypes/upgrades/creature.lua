@@ -115,7 +115,7 @@ if data and not yafc_turd_integration then
 elseif script then
     path_1_effects = function()
         local result = {path_1_module_effect}
-        for _, recipe in pairs(game.get_filtered_recipe_prototypes{{filter = 'category', category = category}}) do
+        for _, recipe in pairs(prototypes.get_filtered_recipe{{filter = 'category', category = category}}) do
             if recipe.name:match('.+%-earth%-sample%-turd') then
                 result[#result + 1] = {type = 'recipe-replacement', old = recipe.name:gsub('%-earth%-sample%-turd', ''), new = recipe.name}
             end
