@@ -17,7 +17,7 @@ TECHNOLOGY('energy-2'):add_pack('py-science-pack-2')
 TECHNOLOGY('radars-mk02'):add_pack('py-science-pack-2')
 TECHNOLOGY('kevlar'):add_pack('py-science-pack-2')
 TECHNOLOGY('fine-electronics'):add_pack('py-science-pack-2')
-TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-2')
+TECHNOLOGY('advanced-circuit'):add_pack('py-science-pack-2')
 TECHNOLOGY('nexelit-mk01'):add_prereq('titanium-mk01'):add_prereq('lead-mk01')
 TECHNOLOGY('artillery-2'):add_pack('py-science-pack-3')
 

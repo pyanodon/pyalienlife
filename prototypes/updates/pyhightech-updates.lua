@@ -15,7 +15,7 @@ TECHNOLOGY('integrated-circuits-1'):add_pack('py-science-pack-2')
 TECHNOLOGY('basic-electronics'):add_pack('py-science-pack-2')
 TECHNOLOGY('semiconductor-doping-mk02'):add_pack('py-science-pack-3')
 TECHNOLOGY('integrated-circuits-2'):add_pack('py-science-pack-3')
-TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-3')
+TECHNOLOGY('advanced-circuit'):add_pack('py-science-pack-3')
 
 --(( BUILDINGS ))--
 require 'prototypes/buildings/cadavericarum-mk01'
@@ -91,9 +91,9 @@ require 'prototypes/ores/arum'
 --TECHNOLOGY--
 TECHNOLOGY('nano-tech'):add_prereq('microbiology-mk03')
 --TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
-TECHNOLOGY('advanced-electronics'):add_prereq('chitin')
+TECHNOLOGY('advanced-circuit'):add_prereq('chitin')
 TECHNOLOGY('antitumor'):add_prereq('earnshaw-theorem')
--- TECHNOLOGY('advanced-electronics'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('advanced-circuit'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('aerogel'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('graphene'):add_pack('py-science-pack-3')
@@ -387,9 +387,9 @@ RECIPE('fungal-substrate-02'):add_ingredient({type = 'item', name = 'urea', amou
 RECIPE('alien-sample-03'):replace_ingredient('plastic-bar', 'graphene-roll')
 RECIPE('log7-2'):add_ingredient({type = 'item', name = 'wood-seedling', amount = 3}):subgroup_order('py-alienlife-plants', 'a'):add_unlock('wood-processing-3').category = 'fwf'
 --RECIPE('urea'):replace_ingredient('fawogae', 'seaweed'):subgroup_order('py-alienlife-items', 'a')
-RECIPE('bonemeal2'):remove_unlock('advanced-electronics'):subgroup_order('py-alienlife-items', 'a')
-RECIPE('bonemeal3'):remove_unlock('advanced-electronics'):subgroup_order('py-alienlife-items', 'a')
-RECIPE('bonemeal4'):remove_unlock('advanced-electronics'):subgroup_order('py-alienlife-items', 'a')
+RECIPE('bonemeal2'):remove_unlock('advanced-circuit'):subgroup_order('py-alienlife-items', 'a')
+RECIPE('bonemeal3'):remove_unlock('advanced-circuit'):subgroup_order('py-alienlife-items', 'a')
+RECIPE('bonemeal4'):remove_unlock('advanced-circuit'):subgroup_order('py-alienlife-items', 'a')
 RECIPE('cobalt-extract'):replace_ingredient('sulfuric-acid', 'cyanic-acid')
 RECIPE('neuroprocessor'):replace_ingredient('electronic-circuit', 'pcb2'):add_ingredient({type = 'item', name = 'resistor1', amount = 5}):add_ingredient({type = 'item', name = 'capacitor1', amount = 5}):add_ingredient({type = 'item', name = 'inductor1', amount = 10})
 RECIPE('empty-neuromorphic-chip'):add_ingredient({type = 'item', name = 'bakelite', amount = 5}):add_ingredient({type = 'item', name = 'micro-fiber', amount = 4}):add_ingredient({type = 'item', name = 'capacitor2', amount = 5}):add_ingredient({type = 'item', name = 'melamine', amount = 10}):add_ingredient({type = 'item', name = 'paramagnetic-material', amount = 2}):add_ingredient({type = 'item', name = 'nylon-parts', amount = 10})--:add_ingredient({type = 'item', name = 'diamagnetic-material', amount = 4})
@@ -435,7 +435,7 @@ RECIPE('myoglobin').category = 'genlab'
 
 RECIPE('zipir-carcass'):remove_unlock('basic-electronics')
 RECIPE('capacitor-core'):add_ingredient({type = 'item', name = 'nano-cellulose', amount = 2})
-RECIPE('fawogae2'):remove_unlock('advanced-electronics')
+RECIPE('fawogae2'):remove_unlock('advanced-circuit')
 --RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea').category = 'vrauks'):subgroup_order('py-alienlife-auog', 'a'
 ITEM('urea'):subgroup_order('py-alienlife-auog', 'a')
@@ -444,8 +444,8 @@ RECIPE('waste-water-urea'):subgroup_order('py-alienlife-recipes', 'a'):remove_un
 RECIPE('ammonia-urea'):subgroup_order('py-alienlife-recipes', 'a'):remove_unlock('basic-electronics'):add_unlock('biotech-mk02')
 RECIPE('urea2'):remove_unlock('auog-2')
 RECIPE('urea'):set_fields {enabled = false}
-RECIPE('mukmoux-fat2'):remove_unlock('advanced-electronics')
-RECIPE('mukmoux-fat3'):remove_unlock('advanced-electronics')
+RECIPE('mukmoux-fat2'):remove_unlock('advanced-circuit')
+RECIPE('mukmoux-fat3'):remove_unlock('advanced-circuit')
 RECIPE('fertilizer'):remove_unlock('basic-electronics')
 RECIPE('advanced-circuit'):add_ingredient({type = 'item', name = 'battery', amount = 5}):add_ingredient({type = 'item', name = 'mosfet', amount = 5})
 RECIPE('processing-unit'):add_ingredient({type = 'item', name = 'mosfet', amount = 10}):add_ingredient({type = 'item', name = 'neuromorphic-chip', amount = 1})
@@ -1465,7 +1465,7 @@ RECIPE {
         {type = 'item', name = 'cooling-system', amount = 1},
     },
     --main_product = 'chloral',
-}:add_unlock('advanced-electronics')
+}:add_unlock('advanced-circuit')
 
 -- RECIPE {
 --     type = 'recipe',
