@@ -47,9 +47,7 @@ ENTITY {
     collision_box = {{-5.6, -5.6}, {5.6, 5.6}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"arqad"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "arqad-hive-mk01"),

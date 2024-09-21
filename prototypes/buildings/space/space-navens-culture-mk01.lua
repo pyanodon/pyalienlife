@@ -45,9 +45,7 @@ ENTITY {
     collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 4
-    },
+    module_slots = 4,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"navens"},
     crafting_speed = 0.02,

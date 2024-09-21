@@ -42,9 +42,7 @@ ENTITY {
     collision_box = {{-6.6, -6.6}, {6.6, 6.6}},
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"auog"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "auog-paddock-mk01"),

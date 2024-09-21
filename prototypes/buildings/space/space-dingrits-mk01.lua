@@ -45,9 +45,7 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     collision_mask = {'ground-tile','water-tile','layer-14'},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 20
-    },
+    module_slots = 20,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"dingrits"},
     crafting_speed = 0.075,

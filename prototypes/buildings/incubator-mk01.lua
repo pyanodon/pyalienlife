@@ -52,9 +52,7 @@ ENTITY {
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 1
-    },
+    module_slots = 1,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"incubator"},
     crafting_speed = 1,

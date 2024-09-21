@@ -14,12 +14,7 @@ ENTITY{
     energy_source = {type = 'void'},
     energy_usage = '1W',
     distribution_effectivity = 1,
-    module_specification = {
-        module_slots = 1,
-        module_info_icon_shift = {0, 0},
-        module_info_multi_row_initial_height_modifier = -0.3,
-        module_info_max_icons_per_row = 2
-    },
+    module_slots = 1,
     rotate = false,
     orientation_to_variation = false,
     selectable_in_game = false,
@@ -44,12 +39,7 @@ ENTITY{
     energy_source = {type = 'void'},
     energy_usage = '1W',
     distribution_effectivity = 1,
-    module_specification = {
-        module_slots = 1,
-        module_info_icon_shift = {0, 0},
-        module_info_multi_row_initial_height_modifier = -0.3,
-        module_info_max_icons_per_row = 2
-    },
+    module_slots = 1,
     rotate = false,
     orientation_to_variation = false,
     selectable_in_game = false,

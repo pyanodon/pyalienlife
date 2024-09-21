@@ -45,9 +45,7 @@ ENTITY {
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
     
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"consumption", "speed", 'pollution', 'productivity'},
     crafting_categories = {"sap"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "sap-extractor-mk01"),

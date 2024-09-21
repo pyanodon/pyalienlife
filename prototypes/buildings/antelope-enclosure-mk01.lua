@@ -46,9 +46,7 @@ ENTITY {
     selection_box = {{-8.5, -8.5}, {8.5, 8.5}},
     --collision_mask = {'ground-tile','water-tile','layer-14'},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"antelope"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),

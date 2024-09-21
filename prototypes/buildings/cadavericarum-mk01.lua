@@ -53,9 +53,7 @@ ENTITY {
     collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"arum"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),

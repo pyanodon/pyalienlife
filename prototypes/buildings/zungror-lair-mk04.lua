@@ -45,9 +45,7 @@ ENTITY {
     collision_box = {{-8.6, -8.6}, {8.6, 8.6}},
     selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {'speed','productivity','consumption','pollution'},
     crafting_categories = {'zungror'},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, 'zungror-lair-mk01'),

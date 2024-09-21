@@ -119,11 +119,7 @@ for i = 1, 4 do
         match_animation_speed_to_activity = false,
         draw_entity_info_icon_background = false,
         entity_info_icon_shift = util.by_pixel(165, 265),
-        module_specification = {
-            module_info_icon_scale = 0.6,
-            module_info_icon_shift = util.by_pixel(160, 230),
-            module_slots = module_slots,
-        },
+        module_slots = module_slots,
         allowed_effects = {'speed', 'consumption', 'pollution', 'productivity'},
         crafting_categories = {'rc'},
         crafting_speed = i / (module_slots + 1), -- # modules + 1 building = target speed of 1

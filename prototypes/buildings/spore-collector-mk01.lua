@@ -42,9 +42,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    module_specification = {
-        module_slots = 1
-    },
+    module_slots = 1,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"spore"},
     crafting_speed = 1,

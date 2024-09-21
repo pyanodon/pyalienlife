@@ -42,9 +42,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-5.8, -5.8}, {5.8, 5.8}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
-    module_specification = {
-        module_slots = 8,
-    },
+    module_slots = 8,
     match_animation_speed_to_activity = false,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"ulric"},
