@@ -52,7 +52,7 @@ ENTITY {
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "bhoddos-culture-mk01"),
     energy_source = {
         type = "burner",
-        fuel_category = "fuelrod",
+        fuel_categories = {"fuelrod"},
         effectivity = 1,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
