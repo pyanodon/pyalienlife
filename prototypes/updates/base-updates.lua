@@ -5,7 +5,7 @@ table.insert(data.raw.lab.lab.inputs, 'py-science-pack-4')
 
 --TECHNOLOGY('automobilism'):remove_pack('logistic-science-pack'):remove_prereq('logistics-2')
 TECHNOLOGY('logistics-2'):add_pack('py-science-pack-2')
-TECHNOLOGY('stack-inserter'):add_pack('py-science-pack-2')
+TECHNOLOGY('bulk-inserter'):add_pack('py-science-pack-2')
 TECHNOLOGY('inserter-capacity-bonus-1'):add_pack('py-science-pack-2')
 TECHNOLOGY('inserter-capacity-bonus-2'):add_pack('py-science-pack-2')
 TECHNOLOGY('modular-armor'):add_pack('py-science-pack-2')
