@@ -263,22 +263,22 @@ RECIPE('cadaveric-arum-mk04'):remove_unlock('basic-electronics')
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 ITEM('moondrop-greenhouse-mk01'):subgroup_order('py-alienlife-farm-buildings-mk01', 'b')
-data.raw['assembling-machine']['moondrop-greenhouse-mk01'].module_specification.module_slots = 16
+data.raw['assembling-machine']['moondrop-greenhouse-mk01'].module_slots = 16
 data.raw['assembling-machine']['moondrop-greenhouse-mk01'].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
 
 RECIPE('moondrop-greenhouse-mk02'):add_unlock('botany-mk02')
 ITEM('moondrop-greenhouse-mk02'):subgroup_order('py-alienlife-farm-buildings-mk02', 'b')
-data.raw['assembling-machine']['moondrop-greenhouse-mk02'].module_specification.module_slots = 32
+data.raw['assembling-machine']['moondrop-greenhouse-mk02'].module_slots = 32
 data.raw['assembling-machine']['moondrop-greenhouse-mk02'].crafting_speed = py.farm_speed_derived(32, 'moondrop-greenhouse-mk01')
 
 RECIPE('moondrop-greenhouse-mk03'):add_unlock('botany-mk03')
 ITEM('moondrop-greenhouse-mk03'):subgroup_order('py-alienlife-farm-buildings-mk03', 'b')
-data.raw['assembling-machine']['moondrop-greenhouse-mk03'].module_specification.module_slots = 48
+data.raw['assembling-machine']['moondrop-greenhouse-mk03'].module_slots = 48
 data.raw['assembling-machine']['moondrop-greenhouse-mk03'].crafting_speed = py.farm_speed_derived(48, 'moondrop-greenhouse-mk01')
 
 RECIPE('moondrop-greenhouse-mk04'):add_unlock('botany-mk04')
 ITEM('moondrop-greenhouse-mk04'):subgroup_order('py-alienlife-farm-buildings-mk04', 'b')
-data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_specification.module_slots = 64
+data.raw['assembling-machine']['moondrop-greenhouse-mk04'].module_slots = 64
 data.raw['assembling-machine']['moondrop-greenhouse-mk04'].crafting_speed = py.farm_speed_derived(64, 'moondrop-greenhouse-mk01')
 
 RECIPE('harvester'):add_ingredient({type = 'item', name = 'aerogel', amount = 20})--:replace_ingredient('plastic-bar', 'biopolymer')

@@ -49,7 +49,7 @@ table.insert(data.raw['assembling-machine']['wpu-mk02'].crafting_categories, 'wp
 table.insert(data.raw['assembling-machine']['wpu-mk03'].crafting_categories, 'wpu-handcrafting')
 table.insert(data.raw['assembling-machine']['wpu-mk04'].crafting_categories, 'wpu-handcrafting')
 
-data.raw.lab.lab.module_specification.module_slots = 0
+data.raw.lab.lab.module_slots = 0
 data.raw.lab.lab.allowed_effects = {'consumption', 'productivity', 'pollution'}
 
 --RECIPES--

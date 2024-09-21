@@ -41,9 +41,7 @@ ENTITY {
     collision_box = {{-6.6, -6.6}, {6.6, 6.6}},
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 4
-    },
+    module_slots = 4,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"auog"},
     crafting_speed = 0.075,

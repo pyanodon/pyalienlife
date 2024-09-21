@@ -44,9 +44,7 @@ ENTITY {
     collision_box = {{-6.2, -6.2}, {6.2, 6.2}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"seaweed"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "seaweed-crop-mk01"),

@@ -105,7 +105,7 @@ local function build_tech_upgrade(tech_upgrade)
                     local mk1_name = tech_upgrade.affected_entities[1]
                     mk1 = data.raw.furnace[mk1_name] or data.raw['assembling-machine'][mk1_name]
                     if not mk1 then error('TURD ERROR: No mk1 building found: ' .. mk1_name) end
-                    mk1_module_slots = mk1.module_specification.module_slots
+                    mk1_module_slots = mk1.module_slots
                 end
 
 
@@ -171,7 +171,7 @@ local function build_tech_upgrade(tech_upgrade)
                         module.name = module.name .. '-mk0' .. i
                         module.tier = i
                         if i ~= 1 and entity.module_specification then
-                            local module_slots = entity.module_specification.module_slots
+                            local module_slots = entity.module_slots
                             local desired_speed = entity.crafting_speed * (module_slots + 1/i) * i
                             module.effect.speed.bonus = (desired_speed / entity.crafting_speed) * effect.speed
                         end

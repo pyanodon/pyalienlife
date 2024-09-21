@@ -73,9 +73,7 @@ ENTITY {
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 12
-    },
+    module_slots = 12,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
     crafting_categories = {"ralesia"},
     crafting_speed = 0.06,
