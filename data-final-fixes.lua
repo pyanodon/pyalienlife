@@ -357,6 +357,7 @@ local recipes_list = {
 	'cottongut-science-blue-seeds',
 	'cottongut-science-py-seeds',
 	'cottongut-science-prod-seeds',
+	'subcritical-water-02',
 }
 
 --adding to module limitation list
