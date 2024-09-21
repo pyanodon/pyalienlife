@@ -26,7 +26,7 @@ ENTITY {
     minable = {
         mining_time = 1,
         results = {
-            {"native-flora", 1}
+            {type = "item", name = "native-flora", amount = 1}
         },
     },
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
