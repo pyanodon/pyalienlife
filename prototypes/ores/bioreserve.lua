@@ -1,5 +1,7 @@
 local resource_autoplace = require 'resource-autoplace'
 
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["ore-bioreserve"] = {}
+
 data:extend{{
     type = "autoplace-control",
     category = "resource",
@@ -8,10 +10,10 @@ data:extend{{
     order = "p-bio"
 }}
 
-data:extend{{
-    type = "noise-layer",
-    name = "ore-bioreserve"
-}}
+-- data:extend{{
+--     type = "noise-layer",
+--     name = "ore-bioreserve"
+-- }}
 
 ENTITY {
     type = "resource",

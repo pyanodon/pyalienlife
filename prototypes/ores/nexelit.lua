@@ -1,4 +1,6 @@
 local resource_autoplace = require 'resource-autoplace'
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls['ore-nexelit'] = {}
+
 data:extend{{
     type = 'autoplace-control',
     category = 'resource',
@@ -7,10 +9,10 @@ data:extend{{
     order = 'p-bio'
 }}
 
-data:extend{{
-    type = 'noise-layer',
-    name = 'ore-nexelit'
-}}
+-- data:extend{{
+--     type = 'noise-layer',
+--     name = 'ore-nexelit'
+-- }}
 
 ENTITY {
     type = 'resource',
