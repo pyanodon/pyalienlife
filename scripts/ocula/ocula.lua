@@ -75,7 +75,7 @@ local function check_for_basic_item(item)
 	local items_with_metadata = storage.items_with_metadata
 	if not items_with_metadata then
 		items_with_metadata = {}
-		for item_name, prototype in pairs(game.item_prototypes) do
+		for item_name, prototype in pairs(prototypes.item) do
 			if not basic_item_types[prototype.type] then
 				items_with_metadata[item_name] = true
 			end
@@ -125,7 +125,7 @@ function Oculua.process_player(player)
 		local inventory = pickup_point.get_inventory(CHEST)
 		if not inventory then goto continue end
 
-		local target_count = math.min(insertable_count, needed, inventory.get_item_count(item), game.item_prototypes[item].stack_size * Oculua.inventory_size)
+		local target_count = math.min(insertable_count, needed, inventory.get_item_count(item), prototypes.item[item].stack_size * Oculua.inventory_size)
 		if target_count <= 0 then goto continue end
 		local oculua_data = Oculua.spawn_oculua(ipod_data, player)
 		oculua_data.item = item

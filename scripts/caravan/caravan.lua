@@ -468,7 +468,7 @@ gui_events[defines.events.on_gui_text_changed]['py_item_count_text'] = function(
 
 	if action.elem_value then
 		if item_count then
-			item_count = math.min(item_count, game.item_prototypes[action.elem_value].stack_size * #caravan_data.inventory)
+			item_count = math.min(item_count, prototypes.item[action.elem_value].stack_size * #caravan_data.inventory)
 		end
 		action.item_count = item_count
 	else

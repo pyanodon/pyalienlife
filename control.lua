@@ -7,7 +7,7 @@ py.generate_favorite_food_tooltip = function(favorite_foods, locale)
     ---@type LocalisedString
 	local favorites = {''}
 	for food, actions in pairs(favorite_foods) do
-		favorites[#favorites + 1] = {locale .. '.favorite-foods-sub', '[item=' .. food .. ']', game.item_prototypes[food].localised_name, actions}
+		favorites[#favorites + 1] = {locale .. '.favorite-foods-sub', '[item=' .. food .. ']', prototypes.item[food].localised_name, actions}
 		favorites[#favorites + 1] = '\n'
 	end
 	favorites[#favorites] = nil

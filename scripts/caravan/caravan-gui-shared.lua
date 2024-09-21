@@ -16,7 +16,7 @@ function Caravan.status_img(caravan_data)
 end
 
 local function convert_to_tooltip_row(name, count)
-    return {'', '\n[item=' .. name .. '] ', game.item_prototypes[name].localised_name, ' ×', count}
+    return {'', '\n[item=' .. name .. '] ', prototypes.item[name].localised_name, ' ×', count}
 end
 
 function Caravan.get_inventory_tooltip(caravan_data)

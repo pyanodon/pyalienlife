@@ -110,8 +110,8 @@ local function create_turd_page(gui, player)
 	py_select_view.style.width = 200
 	py_select_view.style.top_margin = 10
 
-	local item_prototypes = game.item_prototypes
-	local recipe_prototypes = game.recipe_prototypes
+	local item_prototypes = prototypes.item
+	local recipe_prototypes = prototypes.recipe
 	local researched_technologies = player.force.technologies
 
 	for name, tech_upgrade in pairs(tech_upgrades) do
@@ -388,7 +388,7 @@ local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assemblin
 	local sub_tech = tech_upgrade.sub_techs[selection]
 
 	local recipes = force.recipes
-	local item_prototypes = game.item_prototypes
+	local item_prototypes = prototypes.item
 	defunctionize_effect_table(sub_tech)
 	for _, effect in pairs(sub_tech.effects) do
 		if effect.type == 'unlock-recipe' then
@@ -566,7 +566,7 @@ Turd.events.on_built = function(event)
 	if storage.turd_unlocked_modules[force_index] then
 		local module_name = storage.turd_unlocked_modules[force_index][entity.name]
 		if module_name then
-			create_hidden_beacon(entity, module_name, game.item_prototypes)
+			create_hidden_beacon(entity, module_name, prototypes.item)
 		end
 	end
 
