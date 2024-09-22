@@ -1,16 +1,16 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
-        RECIPE('Scrondrix 1'):copy(),
-        RECIPE('Scrondrix 2'):copy(),
-        RECIPE('Scrondrix 3'):copy(),
-        RECIPE('Scrondrix 4'):copy(),
+        RECIPE('Scrondrix-1'):copy(),
+        RECIPE('Scrondrix-2'):copy(),
+        RECIPE('Scrondrix-3'):copy(),
+        RECIPE('Scrondrix-4'):copy(),
         RECIPE('scrondrix-mk02'):copy(),
         RECIPE('scrondrix-mk03'):copy(),
         RECIPE('scrondrix-mk04'):copy(),
-        RECIPE('Scrondrix cub 1'):copy(),
-        RECIPE('Scrondrix cub 2'):copy(),
-        RECIPE('Scrondrix cub 3'):copy(),
-        RECIPE('Scrondrix cub 4'):copy(),
+        RECIPE('Scrondrix-cub-1'):copy(),
+        RECIPE('Scrondrix-cub-2'):copy(),
+        RECIPE('Scrondrix-cub-3'):copy(),
+        RECIPE('Scrondrix-cub-4'):copy(),
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-boron'
@@ -24,17 +24,17 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs({
-        RECIPE('Scrondrix 1'):copy(),
-        RECIPE('Scrondrix 2'):copy(),
-        RECIPE('Scrondrix 3'):copy(),
-        RECIPE('Scrondrix 4'):copy(),
+        RECIPE('Scrondrix-1'):copy(),
+        RECIPE('Scrondrix-2'):copy(),
+        RECIPE('Scrondrix-3'):copy(),
+        RECIPE('Scrondrix-4'):copy(),
         RECIPE('scrondrix-mk02'):copy(),
         RECIPE('scrondrix-mk03'):copy(),
         RECIPE('scrondrix-mk04'):copy(),
-        RECIPE('Scrondrix cub 1'):copy(),
-        RECIPE('Scrondrix cub 2'):copy(),
-        RECIPE('Scrondrix cub 3'):copy(),
-        RECIPE('Scrondrix cub 4'):copy(),
+        RECIPE('Scrondrix-cub-1'):copy(),
+        RECIPE('Scrondrix-cub-2'):copy(),
+        RECIPE('Scrondrix-cub-3'):copy(),
+        RECIPE('Scrondrix-cub-4'):copy(),
     }) do
         if i > 4 and i < 8 then recipe.localised_name = {'recipe-name.' .. recipe.name} end
         recipe.name = recipe.name .. '-vegan'
@@ -57,7 +57,7 @@ if data and not yafc_turd_integration then
     brains:multiply_result_amount('brain', 16)
     brains:multiply_result_amount('pineal-gland', 0.25)
 
-    local experimental = RECIPE('Caged scrondrix 9'):copy()
+    local experimental = RECIPE('Caged-scrondrix-9'):copy()
     experimental.name = 'scrondrix-experimental-treatment'
     experimental:add_ingredient({name = 'arthurian-codex', amount = 1, type = 'item'})
     experimental.results = {
