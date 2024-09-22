@@ -95,8 +95,9 @@ data:extend{{
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 0.98,
 	braking_power = '30MW',
-	burner = {
-		fuel_category = 'dingrit-food',
+	energy_source = {
+		type = "burner",
+		fuel_categories = {'dingrit-food'},
 		effectivity = 1,
 		fuel_inventory_size = 3
 	},
