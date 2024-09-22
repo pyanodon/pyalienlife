@@ -291,6 +291,7 @@ ITEM {
 	type = 'ammo',
 	icon = '__pyalienlifegraphics__/graphics/icons/dragon-breath-ammo.png',
 	icon_size = 64,
+	ammo_category = 'dragon-breath',
 	ammo_type = {
 		action = {
 			action_delivery = {
@@ -299,7 +300,6 @@ ITEM {
 			},
 			type = 'direct'
 		},
-		category = 'dragon-breath',
 		clamp_position = true,
 		consumption_modifier = 1,
 		source_type = 'vehicle',
