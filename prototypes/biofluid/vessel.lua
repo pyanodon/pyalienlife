@@ -458,16 +458,10 @@ underground_pipe.icon = data.raw.item['vessel-to-ground'].icon
 underground_pipe.icon_size = 64
 underground_pipe.icon_mipmaps = nil
 underground_pipe.fluid_box = {
-    base_area = 0.01,
-    base_level = 1999,
+    volume = 1,
     pipe_connections = {
-        {
-            position = {0, -1}
-        },
-        {
-            position = {0, 1},
-            max_underground_distance = 48
-        }
+        {position = {0, underground_pipe.collision_box[1][2]}, direction = defines.direction.north},
+        {position = {0, underground_pipe.collision_box[2][2]}, direction = defines.direction.south, connection_type='underground', max_underground_distance = 48}
     }
 }
 underground_pipe.collision_mask = not mods.pystellarexpedition and {layers = {[vessel_collision_mask] = true}}
@@ -480,10 +474,10 @@ local function blank()
 	}
 end
 underground_pipe.pictures = {
-    up = blank(),
-    down = blank(),
-    left = blank(),
-    right = blank(),
+    north = blank(),
+    south = blank(),
+    west = blank(),
+    east = blank(),
 }
 underground_pipe.integration_patch = ug_pipe_integration
 underground_pipe.integration_patch_render_layer = 'lower-object'
