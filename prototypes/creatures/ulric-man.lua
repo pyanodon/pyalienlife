@@ -413,6 +413,7 @@ data:extend(
             mining_speed = 10000,
             mining_with_tool_particles_animation_positions = {19},
             running_sound_animation_positions = {5, 16},
+            moving_sound_animation_positions = {5, 16},
             synced_footstep_particle_triggers = movement_triggers.character,
             footprint_particles = {
                 {
