@@ -95,7 +95,7 @@ local unit = {
     healing_per_tick = 0.01,
     collision_box = {{0,0}, {0,0}},
     resistances = {{type = 'fire', percent = 100}},
-    collision_mask = {},
+    collision_mask = {layers = {}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     attack_parameters = {
         type = 'projectile',

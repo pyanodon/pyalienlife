@@ -58,7 +58,7 @@ data:extend{{
 	minable = {mining_time = 0.1, result = 'caravan'},
 	max_health = 3125,
 	order = 'b-b-a',
-	collision_mask = {caravan_collision_mask, 'not-colliding-with-itself'},
+	collision_mask = {layers = {caravan_collision_mask, 'not-colliding-with-itself'}},
 	subgroup = 'enemies',
 	healing_per_tick = 0.03,
 	collision_box = {{-0.45, -0.45}, {0.45, 0.45}},

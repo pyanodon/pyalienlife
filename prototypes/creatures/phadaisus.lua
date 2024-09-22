@@ -91,7 +91,7 @@ data:extend{{
 	},
 	selection_priority = 51,
 	collision_box = {{0, 0}, {0, 0}},
-	collision_mask = {},
+	collision_mask = {layers = {}},
 	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 1,
@@ -245,7 +245,7 @@ data:extend{{
 local vehicle_leg = table.deepcopy(data.raw['spider-leg']['spidertron-leg-1'])
 vehicle_leg.name = 'py-fake-spidertron-leg'
 vehicle_leg.graphics_set = {}
-vehicle_leg.collision_mask = {}
+vehicle_leg.collision_mask = {layers = {}}
 vehicle_leg.target_position_randomisation_distance = 0
 vehicle_leg.working_sound = nil
 vehicle_leg.minimal_step_size = 0

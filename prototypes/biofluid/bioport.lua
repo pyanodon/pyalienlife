@@ -80,7 +80,7 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     dying_explosion = 'medium-explosion',
-    collision_mask = not mods.pystellarexpedition and {vessel_collision_mask},
+    collision_mask = not mods.pystellarexpedition and {layers = {vessel_collision_mask}},
     crafting_speed = 1,
     energy_usage = '1W',
     crafting_categories = {'biofluid'},
@@ -392,7 +392,7 @@ ENTITY {
     subgroup = data.raw.item['bioport'].subgroup,
     order = data.raw.item['bioport'].order,
     collision_box = data.raw['assembling-machine']['bioport'].collision_box,
-    collision_mask = {},
+    collision_mask = {layers = {}},
     render_layer = 'lower-object-above-shadow',
     animations = variants,
 }
