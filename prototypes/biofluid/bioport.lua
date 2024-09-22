@@ -386,7 +386,8 @@ append_shifted(variants[5].layers, {gap, gap_glow}, {0, 2})
 ENTITY {
     type = 'simple-entity-with-owner',
     name = 'bioport-floor-animation',
-    flags = {'hidden', 'placeable-neutral', 'no-automated-item-insertion', 'no-automated-item-removal', 'not-flammable'},
+    hidden = true,
+    flags = {'placeable-neutral', 'no-automated-item-insertion', 'no-automated-item-removal', 'not-flammable'},
     icon = data.raw.item['bioport'].icon,
     icon_size = data.raw.item['bioport'].icon_size,
     subgroup = data.raw.item['bioport'].subgroup,

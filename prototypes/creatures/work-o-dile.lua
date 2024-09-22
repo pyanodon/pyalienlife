@@ -255,7 +255,8 @@ ENTITY {
   selectable_in_game = false,
   remove_decoratives = false,
   collision_mask = {layers = {}},
-  flags = {'not-in-kill-statistics', 'placeable-neutral', 'hidden', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
+  hidden = true,
+  flags = {'not-in-kill-statistics', 'placeable-neutral', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
   max_health = time_taken_for_workodile_to_mine,
   picture = {
     filename = '__core__/graphics/empty.png',

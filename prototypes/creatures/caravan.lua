@@ -231,7 +231,8 @@ ITEM {
     icon_size = 64,
     order = 'a',
     stack_size = 1,
-	flags = {'hidden', 'not-stackable', 'only-in-cursor'},
+	hidden = true,
+	flags = {'not-stackable', 'only-in-cursor'},
 }
 
 data:extend{
