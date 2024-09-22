@@ -40,7 +40,7 @@ local graphic = {layers = {{
     shift = util.by_pixel(1.75, 0),
     scale = 0.5
 }}}
-
+local pipe_pos = data.raw['pipe']['pipe'].collision_box[1][1]
 ENTITY {
     name = 'requester-tank',
     type = 'furnace',
@@ -58,11 +58,10 @@ ENTITY {
     selection_box = data.raw['pipe']['pipe'].selection_box,
     working_sound = nil, -- TODO
     fluid_boxes = {{
-        base_area = Biofluid.tank_size / 100,
-        base_level = 999,
+        volume = Biofluid.tank_size,
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
-            {position = {0, -1}, type = 'output'},
+            {flow_direction = 'output', position = {0, pipe_pos}, direction = defines.direction.north},
         },
         production_type = 'output'
     }},
