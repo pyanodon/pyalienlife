@@ -18,11 +18,11 @@ if data and not yafc_turd_integration then
     py.allow_productivity{'chlorinated-water'}
 
     for _, recipe in pairs({
-        RECIPE('Moss 1'):copy(),
-        RECIPE('Moss 2'):copy(),
-        RECIPE('Moss 3'):copy(),
-        RECIPE('Moss 4'):copy(),
-        RECIPE('Moss 5'):copy(),
+        RECIPE('Moss-1'):copy(),
+        RECIPE('Moss-2'):copy(),
+        RECIPE('Moss-3'):copy(),
+        RECIPE('Moss-4'):copy(),
+        RECIPE('Moss-5'):copy(),
     }) do
         recipe.name = recipe.name .. '-chlorinated'
         recipe:add_ingredient{name = 'chlorinated-water', amount = 1, type = 'item'}
@@ -32,11 +32,11 @@ if data and not yafc_turd_integration then
     end
 
     for i, recipe in pairs{
-        RECIPE('Moss 1'):copy(),
-        RECIPE('Moss 2'):copy(),
-        RECIPE('Moss 3'):copy(),
-        RECIPE('Moss 4'):copy(),
-        RECIPE('Moss 5'):copy(),
+        RECIPE('Moss-1'):copy(),
+        RECIPE('Moss-2'):copy(),
+        RECIPE('Moss-3'):copy(),
+        RECIPE('Moss-4'):copy(),
+        RECIPE('Moss-5'):copy(),
     } do
         recipe.name = recipe.name .. '-without-sludge'
         recipe:add_result{type = 'item', name = 'coarse', amount_min = 5 * (i - 1), amount_max = 5 * i}
@@ -45,11 +45,11 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs{
-        RECIPE('Moss 1'):copy(),
-        RECIPE('Moss 2'):copy(),
-        RECIPE('Moss 3'):copy(),
-        RECIPE('Moss 4'):copy(),
-        RECIPE('Moss 5'):copy(),
+        RECIPE('Moss-1'):copy(),
+        RECIPE('Moss-2'):copy(),
+        RECIPE('Moss-3'):copy(),
+        RECIPE('Moss-4'):copy(),
+        RECIPE('Moss-5'):copy(),
     } do
         recipe.name = recipe.name .. '-without-sludge-for-real'
         recipe:remove_ingredient('dirty-water-light')

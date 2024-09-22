@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs({
         RECIPE('fawogae-1'):copy(),
-        RECIPE('fawogae with manure'):copy(),
-        RECIPE('fawogae with improved substrate'):copy(),
-        RECIPE('fawogae with special substrate'):copy(),
-        RECIPE('fawogae with growth hormone'):copy(),
+        RECIPE('fawogae-with-manure'):copy(),
+        RECIPE('fawogae-with-improved-substrate'):copy(),
+        RECIPE('fawogae-with-special-substrate'):copy(),
+        RECIPE('fawogae-with-growth-hormone'):copy(),
     }) do
         recipe.name = recipe.name .. '-nitrogen'
         recipe:remove_ingredient('water')
