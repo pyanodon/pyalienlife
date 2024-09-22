@@ -70,10 +70,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = 'Phadai Dance Dance Revolution 1', new = 'Phadai Dance Dance Revolution 1-piezoelectric', type = 'recipe-replacement'},
-                {old = 'Phadai Dance Dance Revolution 2', new = 'Phadai Dance Dance Revolution 2-piezoelectric', type = 'recipe-replacement'},
-                {old = 'Phadai Dance Dance Revolution 3', new = 'Phadai Dance Dance Revolution 3-piezoelectric', type = 'recipe-replacement'},
-                {old = 'Phadai Dance Dance Revolution 4', new = 'Phadai Dance Dance Revolution 4-piezoelectric', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-1', new = 'Phadai-Dance-Dance-Revolution-1-piezoelectric', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-2', new = 'Phadai-Dance-Dance-Revolution-2-piezoelectric', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-3', new = 'Phadai-Dance-Dance-Revolution-3-piezoelectric', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-4', new = 'Phadai-Dance-Dance-Revolution-4-piezoelectric', type = 'recipe-replacement'},
             }
         },
         {
@@ -82,10 +82,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = 'Phadai Dance Dance Revolution 1', new = 'Phadai Dance Dance Revolution 1-dubstep', type = 'recipe-replacement'},
-                {old = 'Phadai Dance Dance Revolution 2', new = 'Phadai Dance Dance Revolution 2-dubstep', type = 'recipe-replacement'},
-                {old = 'Phadai Dance Dance Revolution 3', new = 'Phadai Dance Dance Revolution 3-dubstep', type = 'recipe-replacement'},
-                {old = 'Phadai Dance Dance Revolution 4', new = 'Phadai Dance Dance Revolution 4-dubstep', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-1', new = 'Phadai-Dance-Dance-Revolution-1-dubstep', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-2', new = 'Phadai-Dance-Dance-Revolution-2-dubstep', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-3', new = 'Phadai-Dance-Dance-Revolution-3-dubstep', type = 'recipe-replacement'},
+                {old = 'Phadai-Dance-Dance-Revolution-4', new = 'Phadai-Dance-Dance-Revolution-4-dubstep', type = 'recipe-replacement'},
             }
         }
     },

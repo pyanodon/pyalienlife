@@ -96,10 +96,10 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {old = 'fawogae-1', new = 'fawogae-1-nitrogen', type = 'recipe-replacement'},
-                {old = 'fawogae with manure', new = 'fawogae with manure-nitrogen', type = 'recipe-replacement'},
-                {old = 'fawogae with improved substrate', new = 'fawogae with improved substrate-nitrogen', type = 'recipe-replacement'},
-                {old = 'fawogae with special substrate', new = 'fawogae with special substrate-nitrogen', type = 'recipe-replacement'},
-                {old = 'fawogae with growth hormone', new = 'fawogae with growth hormone-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae-with-manure', new = 'fawogae-with-manure-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae-with-improved-substrate', new = 'fawogae-with-improved-substrate-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae-with-special-substrate', new = 'fawogae-with-special-substrate-nitrogen', type = 'recipe-replacement'},
+                {old = 'fawogae-with-growth-hormone', new = 'fawogae-with-growth-hormone-nitrogen', type = 'recipe-replacement'},
             }
         },
         {
