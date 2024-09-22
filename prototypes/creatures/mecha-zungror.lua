@@ -11,13 +11,6 @@ zungror.minimap_representation = {
     size = {64, 64}
 }
 zungror.icon_tintable_mask = '__pyalienlifegraphics__/graphics/icons/mount-mask.png'
-data.raw['spidertron-remote']['spidertron-remote'].subgroup = 'py-alienlife-special-creatures'
-data.raw['spidertron-remote']['spidertron-remote'].order = 'z-c'
-
-RECIPE('spidertron-remote').ingredients = {
-    {mods.pyalternativeenergy and 'electronics-mk01' or 'copper-plate', 5},
-    {'electronic-circuit', 5}
-}
 
 RECIPE {
     name = 'spidertron',
@@ -49,8 +42,6 @@ RECIPE {
     },
     main_product = 'spidertron',
 }:add_unlock('spidertron')
-
-RECIPE('spidertron-remote'):add_unlock('spidertron')
 
 local zungror = data.raw['spider-vehicle'].spidertron
 zungror.inventory_size = 160
