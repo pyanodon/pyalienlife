@@ -1,7 +1,11 @@
 local util = require 'util'
-local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
-_G.dingrido_collision_mask = collision_mask_util.get_first_unused_layer()
+data:extend{{
+	type = "collision-layer",
+	name = "dingrido_collision_mask"
+}}
+
+_G.dingrido_collision_mask = data.raw["collision-layer"].dingrido_collision_mask
 
 RECIPE {
     type = 'recipe',
