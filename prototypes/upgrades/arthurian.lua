@@ -114,10 +114,10 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {productivity = 0.25, type = 'module-effects'},
                 {recipe = 'abacus', type = 'unlock-recipe'},
-                {old = 'arthurian maturing 1', new = 'arthurian maturing 1-abacus', type = 'recipe-replacement'},
-                {old = 'arthurian maturing 2', new = 'arthurian maturing 2-abacus', type = 'recipe-replacement'},
-                {old = 'arthurian maturing 3', new = 'arthurian maturing 3-abacus', type = 'recipe-replacement'},
-                {old = 'arthurian maturing 4', new = 'arthurian maturing 4-abacus', type = 'recipe-replacement'},
+                {old = 'arthurian-maturing-1', new = 'arthurian-maturing-1-abacus', type = 'recipe-replacement'},
+                {old = 'arthurian-maturing-2', new = 'arthurian-maturing-2-abacus', type = 'recipe-replacement'},
+                {old = 'arthurian-maturing-3', new = 'arthurian-maturing-3-abacus', type = 'recipe-replacement'},
+                {old = 'arthurian-maturing-4', new = 'arthurian-maturing-4-abacus', type = 'recipe-replacement'},
             },
         },
         {
@@ -126,10 +126,10 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = 'arthurian egg 1', new = 'arthurian egg 1-hot-stones', type = 'recipe-replacement'},
-                {old = 'arthurian egg 2', new = 'arthurian egg 2-hot-stones', type = 'recipe-replacement'},
-                {old = 'arthurian egg 3', new = 'arthurian egg 3-hot-stones', type = 'recipe-replacement'},
-                {old = 'arthurian egg 4', new = 'arthurian egg 4-hot-stones', type = 'recipe-replacement'},
+                {old = 'arthurian-egg-1', new = 'arthurian-egg-1-hot-stones', type = 'recipe-replacement'},
+                {old = 'arthurian-egg-2', new = 'arthurian-egg-2-hot-stones', type = 'recipe-replacement'},
+                {old = 'arthurian-egg-3', new = 'arthurian-egg-3-hot-stones', type = 'recipe-replacement'},
+                {old = 'arthurian-egg-4', new = 'arthurian-egg-4-hot-stones', type = 'recipe-replacement'},
             }
         },
         {

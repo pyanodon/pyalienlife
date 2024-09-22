@@ -131,11 +131,11 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {recipe = 'chlorinated-water', type = 'unlock-recipe'},
-                {old = 'Moss 1', new = 'Moss 1-chlorinated', type = 'recipe-replacement'},
-                {old = 'Moss 2', new = 'Moss 2-chlorinated', type = 'recipe-replacement'},
-                {old = 'Moss 3', new = 'Moss 3-chlorinated', type = 'recipe-replacement'},
-                {old = 'Moss 4', new = 'Moss 4-chlorinated', type = 'recipe-replacement'},
-                {old = 'Moss 5', new = 'Moss 5-chlorinated', type = 'recipe-replacement'},
+                {old = 'Moss-1', new = 'Moss-1-chlorinated', type = 'recipe-replacement'},
+                {old = 'Moss-2', new = 'Moss-2-chlorinated', type = 'recipe-replacement'},
+                {old = 'Moss-3', new = 'Moss-3-chlorinated', type = 'recipe-replacement'},
+                {old = 'Moss-4', new = 'Moss-4-chlorinated', type = 'recipe-replacement'},
+                {old = 'Moss-5', new = 'Moss-5-chlorinated', type = 'recipe-replacement'},
             },
         },
         {
@@ -145,11 +145,11 @@ return {
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 1.5, type = 'module-effects'},
-                {old = 'Moss 1', new = 'Moss 1-without-sludge', type = 'recipe-replacement'},
-                {old = 'Moss 2', new = 'Moss 2-without-sludge', type = 'recipe-replacement'},
-                {old = 'Moss 3', new = 'Moss 3-without-sludge', type = 'recipe-replacement'},
-                {old = 'Moss 4', new = 'Moss 4-without-sludge', type = 'recipe-replacement'},
-                {old = 'Moss 5', new = 'Moss 5-without-sludge', type = 'recipe-replacement'},
+                {old = 'Moss-1', new = 'Moss-1-without-sludge', type = 'recipe-replacement'},
+                {old = 'Moss-2', new = 'Moss-2-without-sludge', type = 'recipe-replacement'},
+                {old = 'Moss-3', new = 'Moss-3-without-sludge', type = 'recipe-replacement'},
+                {old = 'Moss-4', new = 'Moss-4-without-sludge', type = 'recipe-replacement'},
+                {old = 'Moss-5', new = 'Moss-5-without-sludge', type = 'recipe-replacement'},
             }
         },
         {
@@ -173,11 +173,11 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = 'Moss 1', new = 'Moss 1-without-sludge-for-real', type = 'recipe-replacement'},
-                {old = 'Moss 2', new = 'Moss 2-without-sludge-for-real', type = 'recipe-replacement'},
-                {old = 'Moss 3', new = 'Moss 3-without-sludge-for-real', type = 'recipe-replacement'},
-                {old = 'Moss 4', new = 'Moss 4-without-sludge-for-real', type = 'recipe-replacement'},
-                {old = 'Moss 5', new = 'Moss 5-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss-1', new = 'Moss-1-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss-2', new = 'Moss-2-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss-3', new = 'Moss-3-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss-4', new = 'Moss-4-without-sludge-for-real', type = 'recipe-replacement'},
+                {old = 'Moss-5', new = 'Moss-5-without-sludge-for-real', type = 'recipe-replacement'},
             }
         }
     },
