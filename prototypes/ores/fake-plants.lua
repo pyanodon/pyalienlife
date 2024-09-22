@@ -45,7 +45,7 @@ data:extend({
           result = "wood"
         },
 		selectable_in_game = false,
-        emissions_per_second = -0.001,
+        emissions_per_second = {pollution = -0.001},
         max_health = 20,
         collision_box = {{0,0}, {0,0}},
 		collision_mask = {layers = {}},

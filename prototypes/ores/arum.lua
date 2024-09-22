@@ -51,7 +51,7 @@ data:extend({
           mining_time = 0.5,
           result = "wood"
         },
-        emissions_per_second = -0.001,
+        emissions_per_second = {pollution = -0.001},
         max_health = 20,
         collision_box = {{0,0}, {0,0}},
         selection_box = {{0,0}, {0,0}},
