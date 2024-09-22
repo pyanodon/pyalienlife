@@ -89,9 +89,8 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = 'output',
-            base_area = 1,
             volume = 100,
-            pipe_connections = {{type = 'output', position = {0, -3}}},
+            pipe_connections = {{flow_direction = 'output', position = {0, -2.3}, direction = defines.direction.north}},
         },
         off_when_no_fluid_recipe = false
     },
