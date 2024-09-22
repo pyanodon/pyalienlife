@@ -262,7 +262,7 @@ data:extend{{
     corpse = 'small-remnants',
     collision_box = table.deepcopy(data.raw['pipe']['pipe'].collision_box),
     selection_box = table.deepcopy(data.raw['pipe']['pipe'].selection_box),
-    collision_mask = not mods.pystellarexpedition and {layers = {vessel_collision_mask}},
+    collision_mask = not mods.pystellarexpedition and {layers = {[vessel_collision_mask] = true}},
     animations = animations,
     fast_replaceable_group = 'vessel',
     next_upgrade = nil,
@@ -470,7 +470,7 @@ underground_pipe.fluid_box = {
         }
     }
 }
-underground_pipe.collision_mask = not mods.pystellarexpedition and {layers = {vessel_collision_mask}}
+underground_pipe.collision_mask = not mods.pystellarexpedition and {layers = {[vessel_collision_mask] = true}}
 local function blank()
 	return {
 		filename = '__core__/graphics/empty.png',
