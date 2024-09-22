@@ -1,7 +1,10 @@
-local collision_mask_util = require '__core__/lualib/collision-mask-util'
 
 if not mods.pystellarexpedition then
-    _G.vessel_collision_mask = collision_mask_util.get_first_unused_layer()
+    data:extend{{
+        type = "collision-layer",
+        name = "vessel_collision_mask"
+    }}
+    _G.vessel_collision_mask = data.raw["collision-layer"].vessel_collision_mask
 end
 
 RECIPE {
