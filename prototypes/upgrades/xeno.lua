@@ -32,7 +32,7 @@ if data and not yafc_turd_integration then
         results = {
             {'caged-xeno', 1},
             {'xeno-egg', 6},
-            {'empty-barrel', 6}
+            {'barrel', 6}
         },
         allowed_module_categories = {'xeno'},
     }}
@@ -47,7 +47,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient('bones')
         recipe:remove_ingredient('fish')
         recipe:add_ingredient({'hydrofluoric-acid-barrel', 1})
-        recipe:add_result_amount('empty-barrel', 1)
+        recipe:add_result_amount('barrel', 1)
         data:extend{recipe}
     end
 end

@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir2', amount = 1, probability = 0.005},
         {type = 'item', name = 'zipir1', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "zipir-mk02",
     icons =
@@ -56,7 +56,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir3', amount = 1, probability = 0.004},
         {type = 'item', name = 'zipir2', amount = 1, probability = 0.6},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "zipir-mk03",
     icons =
@@ -89,7 +89,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'zipir4', amount = 1, probability = 0.003},
         {type = 'item', name = 'zipir3', amount = 1, probability = 0.7},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "zipir-mk04",
     icons =

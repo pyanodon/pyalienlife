@@ -175,7 +175,7 @@ RECIPE {
     energy_required = 50,
     ingredients = {
         {type = 'item', name = 'sugar', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 1},
+        {type = 'item', name = 'barrel', amount = 1},
     },
     results = {
         {type = 'item', name = 'wax-barrel', amount = 1},
@@ -211,7 +211,7 @@ RECIPE {
         {type = 'item', name = 'oleochemicals-barrel', amount = 3},
     },
     results = {
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
         {type = 'item', name = 'empty-honeycomb', amount = 5},
     },
     main_product = "empty-honeycomb",
@@ -251,7 +251,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'arqad-propolis', amount = 2},  --FUTURE USE IN PESTICIDE PRODUCTION--
-        {type = 'item', name = 'empty-barrel', amount = 4},
+        {type = 'item', name = 'barrel', amount = 4},
     },
     main_product = "arqad-propolis",
 }:add_unlock("arqad-mk02")

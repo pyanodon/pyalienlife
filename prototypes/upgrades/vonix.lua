@@ -20,7 +20,7 @@ if data and not yafc_turd_integration then
             {type = 'item', name = 'vonix', amount = 1},
             {type = 'item', name = 'vonix', amount = 1, probability = 0.95},
             {type = 'item', name = 'cage', amount = 2},
-            {type = 'item', name = 'empty-barrel', amount = 6},
+            {type = 'item', name = 'barrel', amount = 6},
         },
         energy_required = 85,
         category = 'rc',
@@ -34,7 +34,7 @@ if data and not yafc_turd_integration then
         RECIPE('vonix-raising-3'):copy(),
     }) do
         recipe.name = recipe.name .. '-cancer'
-        local _, barrel_count = recipe:remove_result('empty-barrel')
+        local _, barrel_count = recipe:remove_result('barrel')
         recipe:add_result({'mutant-enzymes-barrel', barrel_count})
         recipe.icon = '__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png'
         recipe.icon_size = 64

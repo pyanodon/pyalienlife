@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dhilmos-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'dhilmos', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "dhilmos-mk02",
     icons =
@@ -57,7 +57,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dhilmos-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'dhilmos', amount = 1, probability = 0.6},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "dhilmos-mk03",
     icons =
@@ -91,7 +91,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'dhilmos-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'dhilmos', amount = 1, probability = 0.7},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "dhilmos-mk04",
     icons =

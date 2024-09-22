@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-doubled'
         recipe:multiply_ingredient_amount('water-barrel', 2)
         recipe:multiply_ingredient_amount('empty-barrel-milk', 2)
-        recipe:multiply_result_amount('empty-barrel', 2)
+        recipe:multiply_result_amount('barrel', 2)
         recipe:multiply_result_amount('barrel-milk', 2)
         recipe.energy_required = recipe.energy_required * 2
         data:extend{recipe}

@@ -15,7 +15,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient('moss')
         recipe:remove_ingredient('manure')
         recipe:remove_ingredient('bacteria-1-barrel')
-        recipe:remove_result('empty-barrel')
+        recipe:remove_result('barrel')
         data:extend{recipe}
     end
 

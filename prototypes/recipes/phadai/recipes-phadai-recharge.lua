@@ -13,7 +13,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'phadai', amount = 3},
-        {type = 'item', name = 'empty-barrel', amount = 2},
+        {type = 'item', name = 'barrel', amount = 2},
     },
     main_product = 'phadai'
 }:add_unlock("phadai")

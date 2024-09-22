@@ -24,7 +24,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'tuuphra-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'tuuphra', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "tuuphra-mk02",
     icons =

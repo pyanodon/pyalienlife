@@ -22,7 +22,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'zungror-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'empty-barrel', amount = 15},
+        {type = 'item', name = 'barrel', amount = 15},
         {type = 'item', name = 'zungror', amount = 1, probability = 0.5},
 	{type = 'item', name = 'cage', amount = 1},
     },
@@ -57,7 +57,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'zungror-mk03', amount = 1, probability = 0.004},
-        {type = 'item', name = 'empty-barrel', amount = 15},
+        {type = 'item', name = 'barrel', amount = 15},
         {type = 'item', name = 'zungror', amount = 1, probability = 0.6},
 	{type = 'item', name = 'cage', amount = 1},
     },
@@ -92,7 +92,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'zungror-mk04', amount = 1, probability = 0.003},
-        {type = 'item', name = 'empty-barrel', amount = 15},
+        {type = 'item', name = 'barrel', amount = 15},
         {type = 'item', name = 'zungror', amount = 1, probability = 0.7},
     },
     main_product = "zungror-mk04",

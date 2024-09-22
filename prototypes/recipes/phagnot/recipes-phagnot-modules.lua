@@ -22,7 +22,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'phagnot-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'barrel', amount = 5},
         {type = 'item', name = 'phagnot', amount = 1, probability = 0.5},
     },
     --main_product = "phagnot-mk02",
@@ -52,7 +52,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'phagnot-cub-mk02', amount = 1},
         {type = 'item', name = 'phagnot-cub-mk02', amount = 1, probability = 0.5},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'barrel', amount = 5},
         {type = 'item', name = 'phagnot-cub', amount = 1, probability = 0.5},
         {type = 'item', name = 'phagnot-mk02', amount_min = 0, amount_max = 2}
     },
@@ -104,7 +104,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'phagnot-mk03', amount = 1, probability = 0.004},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'barrel', amount = 5},
         {type = 'item', name = 'phagnot', amount = 1, probability = 0.6},
     },
     --main_product = "phagnot-mk03",
@@ -136,7 +136,7 @@ RECIPE {
         {type = 'item', name = 'phagnot-cub-mk03', amount = 1},
         {type = 'item', name = 'phagnot-cub-mk03', amount = 1, probability = 0.5},
         {type = 'item', name = 'phagnot-cub-mk02', amount = 1, probability = 0.25},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'barrel', amount = 5},
         {type = 'item', name = 'phagnot-cub', amount = 1, probability = 0.25},
     },
     main_product = "phagnot-mk03",
@@ -187,7 +187,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'phagnot-mk04', amount = 1, probability = 0.003},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'barrel', amount = 5},
         {type = 'item', name = 'phagnot', amount = 1, probability = 0.7},
     },
     --main_product = "phagnot-mk04",
@@ -221,7 +221,7 @@ RECIPE {
         {type = 'item', name = 'phagnot-cub-mk04', amount = 1, probability = 0.5},
         {type = 'item', name = 'phagnot-cub-mk03', amount = 1, probability = 0.4},
         {type = 'item', name = 'phagnot-cub-mk03', amount = 1, probability = 0.3},
-        {type = 'item', name = 'empty-barrel', amount = 5},
+        {type = 'item', name = 'barrel', amount = 5},
         {type = 'item', name = 'phagnot-cub', amount = 1, probability = 0.25},
     },
     main_product = "phagnot-mk04",

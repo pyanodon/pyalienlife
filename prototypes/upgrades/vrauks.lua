@@ -14,7 +14,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. '-no-water'
         recipe:remove_ingredient('syrup-01-barrel')
         recipe:remove_ingredient('water-barrel')
-        recipe:remove_result('empty-barrel')
+        recipe:remove_result('barrel')
         data:extend{recipe}
     end
 

@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'arthurian-egg-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'arthurian-egg', amount = 1, probability = 0.5},
-        {type = 'item', name = 'empty-barrel', amount = 4},
+        {type = 'item', name = 'barrel', amount = 4},
 	{type = 'item', name = 'cage', amount = 1},
     },
     --main_product = "arthurian-mk02",
@@ -75,7 +75,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'arthurian-mk02', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
     },
     --main_product = "arthurian-mk02",
     icons =
@@ -136,7 +136,7 @@ RECIPE {
         {type = 'item', name = 'arthurian-egg-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'arthurian-egg-mk02', amount = 1, probability = 0.4},
         {type = 'item', name = 'arthurian-egg', amount = 1, probability = 0.3},
-        {type = 'item', name = 'empty-barrel', amount = 4},
+        {type = 'item', name = 'barrel', amount = 4},
     },
     main_product = "arthurian-egg-mk03",
     icons =
@@ -187,7 +187,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'arthurian-mk03', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
     },
     --main_product = "arthurian-mk03",
     icons =
@@ -249,7 +249,7 @@ RECIPE {
         {type = 'item', name = 'arthurian-egg-mk03', amount = 1, probability = 0.45},
         {type = 'item', name = 'arthurian-egg-mk02', amount = 1, probability = 0.35},
         {type = 'item', name = 'arthurian-egg', amount = 1, probability = 0.25},
-        {type = 'item', name = 'empty-barrel', amount = 4},
+        {type = 'item', name = 'barrel', amount = 4},
     },
     main_product = "arthurian-egg-mk04",
     icons =
@@ -300,7 +300,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'arthurian-mk04', amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
     },
     --main_product = "arthurian-mk04",
     icons =

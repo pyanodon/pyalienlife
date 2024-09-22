@@ -22,7 +22,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'moondrop', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk02",
     icons =
@@ -101,7 +101,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'moondrop', amount = 1, probability = 0.6},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk03",
     icons =
@@ -181,7 +181,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'moondrop-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'moondrop', amount = 1, probability = 0.7},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk04",
     icons =

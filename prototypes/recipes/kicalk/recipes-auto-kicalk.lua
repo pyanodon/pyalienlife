@@ -78,7 +78,7 @@ py.autorecipes {
 			results =
 				{
 					{name='kicalk', amount = 50},
-					{name='empty-barrel', amount = 1}
+					{name='barrel', amount = 1}
 				},
 			crafting_speed = 30,
 			tech = 'kicalk-mk04',

@@ -13,7 +13,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'arqad-propolis', amount = 5},  --FUTURE USE IN PESTICIDE PRODUCTION--
-        {type = 'item', name = 'empty-barrel', amount = 6},
+        {type = 'item', name = 'barrel', amount = 6},
     },
     main_product = "arqad-propolis",
 }:add_unlock("cardial-hypopharynx")
