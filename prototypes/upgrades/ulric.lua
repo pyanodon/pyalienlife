@@ -36,7 +36,7 @@ if data and not yafc_turd_integration then
         },
         {
             type = 'recipe',
-            name = 'noooo dont turn that horse into glue',
+            name = 'noooo-dont-turn-that-horse-into-glue',
             energy_required = 8,
             enabled = false,
             category = 'impact-crusher',

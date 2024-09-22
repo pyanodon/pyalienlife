@@ -53,7 +53,7 @@ py.autorecipes {
 				},
 			crafting_speed = 10,
 			tech = 'water-animals-mk01',
-			name = 'Extract Oil from fish',
+			name = 'Extract-Oil-from-fish',
 			icon = "__pyalienlifegraphics__/graphics/icons/fish-oil.png",
 			icon_size = 64,
 		},

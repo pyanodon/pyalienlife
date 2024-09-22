@@ -23,7 +23,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'nanochondria',
-			name = 'Caged scrondrix 9',
+			name = 'Caged-scrondrix-9',
 		},
 		--[[
 			nanochondria and gh
@@ -38,7 +38,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'nanochondria',
-			name = 'Caged scrondrix 10',
+			name = 'Caged-scrondrix-10',
 		},
 		]]--
 		--bmp
@@ -56,7 +56,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'bmp',
-			name = 'Caged scrondrix 11',
+			name = 'Caged-scrondrix-11',
 		},
 --[[
 		--bmp and gh
@@ -72,7 +72,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'bmp',
-			name = 'Caged scrondrix 12',
+			name = 'Caged-scrondrix-12',
 		},
 		]]--
 		--rna anabolic
@@ -90,7 +90,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'anabolic-rna',
-			name = 'Caged scrondrix 13',
+			name = 'Caged-scrondrix-13',
 		},
 		--[[
 		--rna anabolic and gh
@@ -106,7 +106,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'anabolic-rna',
-			name = 'Caged scrondrix 14',
+			name = 'Caged-scrondrix-14',
 		},
 		]]--
 		--antitumor
@@ -124,7 +124,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'antitumor',
-			name = 'Caged scrondrix 15',
+			name = 'Caged-scrondrix-15',
 		},
 		--[[
 		--antitumor and gh
@@ -140,7 +140,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'antitumor',
-			name = 'Caged scrondrix 16',
+			name = 'Caged-scrondrix-16',
 		},
 		]]
 		--Recombinant Ery
@@ -158,7 +158,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'recombinant-ery',
-			name = 'Caged scrondrix 17',
+			name = 'Caged-scrondrix-17',
 		},
 		--[[
 		--Recombinant Ery and gh
@@ -173,7 +173,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'recombinant-ery',
-			name = 'Caged scrondrix 18',
+			name = 'Caged-scrondrix-18',
 		},]]
 		--reca
 		{
@@ -190,7 +190,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'reca',
-			name = 'Caged scrondrix 19',
+			name = 'Caged-scrondrix-19',
 		},
 		--[[
 		--reca and gh
@@ -205,7 +205,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'reca',
-			name = 'Caged scrondrix 20',
+			name = 'Caged-scrondrix-20',
 		},]]
 		--orexigenic
 		{
@@ -222,7 +222,7 @@ py.autorecipes {
 				},
 			crafting_speed = 90,
 			tech = 'orexigenic',
-			name = 'Caged scrondrix 21',
+			name = 'Caged-scrondrix-21',
 		},
 		--[[
 		--orexigenic and gh
@@ -237,7 +237,7 @@ py.autorecipes {
 				},
 			crafting_speed = 30,
 			tech = 'orexigenic',
-			name = 'Caged scrondrix 22',
+			name = 'Caged-scrondrix-22',
 		},]]
 	}
 }
