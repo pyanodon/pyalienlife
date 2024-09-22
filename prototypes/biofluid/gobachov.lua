@@ -107,7 +107,7 @@ local unit = {
     vision_distance = 0,
     movement_speed = 0.09,
     distance_per_frame = 0.13,
-    pollution_to_join_attack = 4,
+    absorptions_to_join_attack = {pollution = 4},
     distraction_cooldown = 300,
     max_pursue_distance = 50,
     dying_explosion = 'blood-explosion-small',
