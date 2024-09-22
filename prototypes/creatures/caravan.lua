@@ -5,7 +5,7 @@ data:extend{{
 	name = "caravan_collision_mask"
 }}
 
-_G.caravan_collision_mask = data.raw["collision-layer"].caravan_collision_mask
+_G.caravan_collision_mask = "caravan_collision_mask"
 
 local zoology = data.raw.technology['zoology']
 zoology.effects[#zoology.effects+1] = {

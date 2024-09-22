@@ -4,7 +4,7 @@ if not mods.pystellarexpedition then
         type = "collision-layer",
         name = "vessel_collision_mask"
     }}
-    _G.vessel_collision_mask = data.raw["collision-layer"].vessel_collision_mask
+    _G.vessel_collision_mask = "vessel_collision_mask"
 end
 
 RECIPE {

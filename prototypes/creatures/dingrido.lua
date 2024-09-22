@@ -5,7 +5,7 @@ data:extend{{
 	name = "dingrido_collision_mask"
 }}
 
-_G.dingrido_collision_mask = data.raw["collision-layer"].dingrido_collision_mask
+_G.dingrido_collision_mask = "dingrido_collision_mask"
 
 RECIPE {
     type = 'recipe',

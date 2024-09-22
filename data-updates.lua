@@ -388,14 +388,14 @@ local vessel_placeable_entities = {
 
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
     local mask = collision_mask_util.get_mask(prototype)
-    if collision_mask_util.mask_contains_layer(mask, 'water-tile') then
+    if mask.layers['water-tile'] then
         if not walkable_types[prototype.type] then
-            if not collision_mask_util.mask_contains_layer(mask, 'floor-layer') and collision_mask_util.mask_contains_layer(mask, 'player-layer') then
+            if not mask.layers['floor-layer'] and mask.layers['player-layer'] then
                 collision_mask_util.add_layer(mask, caravan_collision_mask)
             end
         end
         if not mods.pystellarexpedition and not vessel_placeable_entities[prototype.type] then
-            if prototype.type == 'splitter' or (not collision_mask_util.mask_contains_layer(mask, 'floor-layer') and collision_mask_util.mask_contains_layer(mask, 'player-layer')) then
+            if prototype.type == 'splitter' or (not mask.layers['floor-layer'] and mask.layers['player-layer']) then
                 collision_mask_util.add_layer(mask, vessel_collision_mask)
             end
         end
@@ -404,10 +404,10 @@ end
 
 for _, tile in pairs(data.raw.tile) do
     tile.collision_mask = collision_mask_util.get_mask(tile)
-    if collision_mask_util.mask_contains_layer(tile.collision_mask, 'water-tile') then
-        collision_mask_util.add_layer(tile.collision_mask, caravan_collision_mask)
-        if not mods.pystellarexpedition then collision_mask_util.add_layer(tile.collision_mask, vessel_collision_mask) end
-        collision_mask_util.add_layer(tile.collision_mask, dingrido_collision_mask)
+    if tile.collision_mask.layers['water-tile'] then
+        tile.collision_mask.layers[caravan_collision_mask] = true
+        if not mods.pystellarexpedition then tile.collision_mask.layers[vessel_collision_mask] = true end
+        tile.collision_mask.layers[dingrido_collision_mask] = true
     end
 end
 
@@ -441,7 +441,7 @@ for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
     for _, entity in pairs(data.raw[prototype]) do
         entity.collision_mask = collision_mask_util.get_mask(entity)
 
-        if collision_mask_util.mask_contains_layer(entity.collision_mask, 'player-layer') and not collision_mask_util.mask_contains_layer(entity.collision_mask, 'floor-layer') then
+        if entity.collision_mask.layers['player-layer'] and not entity.collision_mask.layers['floor-layer'] then
             collision_mask_util.add_layer(entity.collision_mask, dingrido_collision_mask)
         end
     end

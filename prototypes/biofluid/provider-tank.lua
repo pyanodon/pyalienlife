@@ -105,5 +105,5 @@ ENTITY {
 }
 
 if not mods.pystellarexpedition then
-    collision_mask_util.add_layer(data.raw.furnace['provider-tank'].collision_mask, vessel_collision_mask)
+    data.raw.furnace['provider-tank'].collision_mask.layers[vessel_collision_mask] = true
 end
