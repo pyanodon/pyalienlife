@@ -145,7 +145,7 @@ ENTITY {
 	subgroup = 'creatures',
 	healing_per_tick = 0.01,
 	collision_box = {{0,0}, {0,0}},
-  collision_mask = {},
+  collision_mask = {layers = {}},
 	attack_parameters = {
 		type = 'projectile',
 		range = 1,
@@ -289,7 +289,7 @@ ENTITY {
   flags = {'hidden', 'placeable-neutral', 'no-automated-item-removal', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
   max_health = 350,
   collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
-  collision_mask = {},
+  collision_mask = {layers = {}},
   inventory_size = 2,
   enable_inventory_bar = false,
   picture = {
@@ -348,7 +348,7 @@ ENTITY {
   collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
   selectable_in_game = false,
   remove_decoratives = false,
-  collision_mask = {},
+  collision_mask = {layers = {}},
   flags = {'not-in-kill-statistics', 'placeable-neutral', 'hidden', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
   max_health = time_taken_for_digosaurus_to_mine,
   picture = {

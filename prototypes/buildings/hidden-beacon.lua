@@ -18,7 +18,7 @@ ENTITY{
     rotate = false,
     orientation_to_variation = false,
     selectable_in_game = false,
-    collision_mask = {},
+    collision_mask = {layers = {}},
     subgroup = data.raw.item.beacon.subgroup,
     order = 'a',
 }
@@ -43,7 +43,7 @@ ENTITY{
     rotate = false,
     orientation_to_variation = false,
     selectable_in_game = false,
-    collision_mask = {},
+    collision_mask = {layers = {}},
     subgroup = data.raw.item.beacon.subgroup,
     order = 'a',
 }

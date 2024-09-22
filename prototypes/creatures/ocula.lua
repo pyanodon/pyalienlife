@@ -47,7 +47,7 @@ ITEM{
         resistances = {},
         healing_per_tick = 0.01,
         collision_box = {{0,0}, {0,0}},
-        collision_mask = {},
+        collision_mask = {layers = {}},
         selection_box = {{-0.8, -0.8}, {0.8, 0.8}},
         attack_parameters =
         {

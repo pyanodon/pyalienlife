@@ -336,7 +336,7 @@ ENTITY {
     type = "rocket-silo-rocket",
     name = "mega-farm-invisa-rocket",
     flags = {"not-on-map"},
-    collision_mask = {"not-colliding-with-itself"},
+    collision_mask = {layers = {"not-colliding-with-itself"}},
     collision_box = {{-2, -7}, {2, 4}},
     selection_box = {{0, 0}, {0, 0}},
     dying_explosion = "massive-explosion",

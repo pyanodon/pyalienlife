@@ -48,7 +48,7 @@ data:extend({
         emissions_per_second = -0.001,
         max_health = 20,
         collision_box = {{0,0}, {0,0}},
-		collision_mask = {},
+		collision_mask = {layers = {}},
         selection_box = {{0,0}, {0,0}},
         drawing_box = {{-0.6, -1.8}, {0.6, 0.3}},
         subgroup = "trees",
