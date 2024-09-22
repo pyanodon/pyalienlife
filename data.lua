@@ -850,6 +850,6 @@ for i, item in pairs(bio_list) do
             order = i,
             localised_name = {'', 'Compost ' .. item.item_amount .. ' x ', {local_name_type .. '-name.' .. i}}
         }:add_unlock('compost')
-        py.add_to_description(type, prototype, {'item-description.compost-amount', math.floor(item.biomass_amount / item.item_amount * 10) / 10})
+        py.add_to_description(type, prototype, {'item-description.compost-amount', tostring(math.floor(item.biomass_amount / item.item_amount * 10) / 10)})
     end
 end
