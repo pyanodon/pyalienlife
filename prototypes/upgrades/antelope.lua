@@ -33,7 +33,7 @@ if data and not yafc_turd_integration then
             icon = '__pyalienlifegraphics3__/graphics/icons/pos-tilope.png',
             icon_size = 64,
             limitation_message_key = 'antelope',
-            effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
+            effect = {pollution = 1, speed = 1},
             tier = 1,
             order = 'r',
             category = 'antelope'
@@ -46,7 +46,7 @@ if data and not yafc_turd_integration then
             icon = '__pyalienlifegraphics3__/graphics/icons/neutra-lope.png',
             icon_size = 64,
             limitation_message_key = 'antelope',
-            effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
+            effect = {pollution = 1, speed = 1},
             tier = 1,
             order = 'r',
             category = 'antelope'
@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
             icon = '__pyalienlifegraphics3__/graphics/icons/anti-lope.png',
             icon_size = 64,
             limitation_message_key = 'antelope',
-            effect = {pollution = {bonus = 1}, speed = {bonus = 1}},
+            effect = {pollution = 1, speed = 1},
             tier = 1,
             order = 'r',
             category = 'antelope'

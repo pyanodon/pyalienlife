@@ -10,7 +10,7 @@ if data and not yafc_turd_integration then
             icon_size = 64,
             tier = 5,
             order = 'd-e',
-            effect = {pollution = {bonus = 1},speed = {bonus = 4},productivity={bonus = 0.01}},
+            effect = {pollution = 1,speed = 4,productivity= 0.01},
             limitation = {},
             limitation_message_key = 'dingrits',
             fuel_category = 'dingrits',

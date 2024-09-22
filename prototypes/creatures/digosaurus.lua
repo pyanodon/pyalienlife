@@ -28,7 +28,7 @@ ITEM {
 	flags = {},
 	localised_name = {'entity-name.digosaurus'},
 	localised_description = {'entity-description.digosaurus'},
-	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+	effect = {pollution = 1,speed = 1},
   limitation = {},
   limitation_message_key = "digosaurus",
   category = "digosaurus",
