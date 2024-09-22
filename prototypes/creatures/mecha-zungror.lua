@@ -45,9 +45,9 @@ RECIPE {
 
 local zungror = data.raw['spider-vehicle'].spidertron
 zungror.inventory_size = 160
-zungror.energy_source = nil
-zungror.burner = {
-    fuel_category = 'gastrocapacitor',
+zungror.energy_source = {
+    type = "burner",
+    fuel_categories = {'gastrocapacitor'},
     effectivity = 1,
     fuel_inventory_size = 4
 }

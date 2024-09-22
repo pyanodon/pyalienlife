@@ -96,8 +96,9 @@ data:extend{{
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 1,
 	braking_power = '5MW',
-	burner = {
-		fuel_category = 'phadai-food',
+	energy_source = {
+		type = "burner",
+		fuel_categories = {'phadai-food'},
 		effectivity = 1,
 		fuel_inventory_size = 4
 	},
@@ -226,6 +227,7 @@ data:extend{{
 	spider_engine = {
 		legs = {
 			{
+				walking_group = 1,
 				blocking_legs = {},
 				ground_position = {0, 0},
 				leg = 'py-fake-spidertron-leg',
