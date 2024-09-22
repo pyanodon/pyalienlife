@@ -344,7 +344,7 @@ for _,recipe in pairs(data.raw.recipe) do
                         icon_size = recipe_copy.icon_size,
                         subgroup = recipe_copy.subgroup,
                         order = recipe_copy.order,
-                        localised_name = {'recipe-name.biomass-combustion', {type .. '-name.' ..locale}, temp}
+                        localised_name = {'recipe-name.biomass-combustion', {type .. '-name.' ..locale}, tostring(temp)}
                     }
                     for _, tech in pairs(data.raw.technology) do
                         if tech.effects ~= nil then
