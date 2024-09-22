@@ -64,6 +64,7 @@ data:extend
       type = 'projectile',
       range = 0,
       cooldown = 0,
+      ammo_category = "melee",
       ammo_type = _G.make_unit_melee_ammo_type(0),
       --sound = make_biter_roars(0.4),
 	animation =

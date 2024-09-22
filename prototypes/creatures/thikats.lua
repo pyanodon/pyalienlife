@@ -191,6 +191,7 @@ ENTITY {
 		type = 'projectile',
 		range = 1,
 		cooldown = 49 * 2 ,
+		ammo_category = "melee",
 		ammo_type = _G.make_unit_melee_ammo_type(1),
 		animation = mining_animation
 	},
