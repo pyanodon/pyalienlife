@@ -2,13 +2,13 @@ if mods['pyhightech'] then
     require 'prototypes/recipes/moondrop/recipes-moondrop-products'
     RECIPE('arqad-mk02'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-fueloil', amount = 25})
     --data.raw.recipe['arqad-mk02'].results[3] = nil
-    RECIPE('arqad-mk02'):replace_result('empty-barrel','empty-barrel', 2)
+    RECIPE('arqad-mk02'):replace_result('barrel','barrel', 2)
     RECIPE('arqad-mk03'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-diesel', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 10})
     --data.raw.recipe['arqad-mk03'].results[4] = nil
-    RECIPE('arqad-mk03'):replace_result('empty-barrel','empty-barrel', 4)
+    RECIPE('arqad-mk03'):replace_result('barrel','barrel', 4)
     RECIPE('arqad-mk04'):remove_ingredient('crude-oil-barrel'):add_ingredient({type = 'item', name = 'moondrop-kerosene', amount = 40}):add_ingredient({type = 'item', name = 'moondrop-gas', amount = 10})
     --data.raw.recipe['arqad-mk04'].results[5] = nil
-    RECIPE('arqad-mk04'):replace_result('empty-barrel','empty-barrel', 8)
+    RECIPE('arqad-mk04'):replace_result('barrel','barrel', 8)
 end
 
 RECIPE("mixer-mk01"):remove_unlock("drilling-fluid-mk01"):add_unlock("machines-mk01")

@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'yaedols-mk02', amount = 1, probability = 0.005},
         {type = 'item', name = 'yaedols', amount = 1, probability = 0.5},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk02",
     icons =
@@ -97,7 +97,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'yaedols-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'yaedols', amount = 1, probability = 0.6},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk03",
     icons =
@@ -173,7 +173,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'yaedols-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'yaedols', amount = 1, probability = 0.7},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk04",
     icons =

@@ -53,7 +53,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name='auog-pup', probability = 0.25, amount_min = 1, amount_max = 4},
-        {type = 'item', name = 'empty-barrel', amount = 2}
+        {type = 'item', name = 'barrel', amount = 2}
     },
     --main_product = "auog-mk02",
     icons =
@@ -83,7 +83,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-pup-mk02', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
     },
     --main_product = "auog-mk02",
     icons =
@@ -113,7 +113,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-mk02', amount_min = 2, amount_max = 4},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
         {type = 'item', name = 'empty-barrel-milk', amount = 2},
     },
     --main_product = "auog-mk02",
@@ -176,7 +176,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-pup-mk03', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
     },
     --main_product = "auog-mk02",
     icons =
@@ -206,7 +206,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-mk03', amount_min = 1, amount_max = 4},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
         {type = 'item', name = 'empty-barrel-milk', amount = 2},
     },
     --main_product = "auog-mk02",
@@ -269,7 +269,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-pup-mk04', amount = 5},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
     },
     --main_product = "auog-mk02",
     icons =
@@ -299,7 +299,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'auog-mk04', amount_min = 1, amount_max = 4},
-        {type = 'item', name = 'empty-barrel', amount = 3},
+        {type = 'item', name = 'barrel', amount = 3},
         {type = 'item', name = 'empty-barrel-milk', amount = 2},
     },
     --main_product = "auog-mk02",

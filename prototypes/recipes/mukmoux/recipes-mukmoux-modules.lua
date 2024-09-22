@@ -23,7 +23,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'mukmoux-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'empty-barrel', amount = 6},
+        {type = 'item', name = 'barrel', amount = 6},
         {type = 'item', name = 'mukmoux', amount = 1, probability = 0.5},
     },
     --main_product = "mukmoux-mk02",
@@ -58,7 +58,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'mukmoux-mk03', amount = 1, probability = 0.004},
-        {type = 'item', name = 'empty-barrel', amount = 6},
+        {type = 'item', name = 'barrel', amount = 6},
         {type = 'item', name = 'mukmoux', amount = 1, probability = 0.6},
     },
     --main_product = "mukmoux-mk03",
@@ -93,7 +93,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'mukmoux-mk04', amount = 1, probability = 0.003},
-        {type = 'item', name = 'empty-barrel', amount = 6},
+        {type = 'item', name = 'barrel', amount = 6},
         {type = 'item', name = 'mukmoux', amount = 1, probability = 0.7},
     },
     --main_product = "mukmoux-mk04",

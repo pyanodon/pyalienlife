@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
         phyto_barrel_count = math.ceil(phyto_barrel_count / 50)
         if phyto_barrel_count > 0 then
             recipe:add_ingredient({'phytoplankton-barrel', phyto_barrel_count})
-            recipe:add_result({'empty-barrel', phyto_barrel_count})
+            recipe:add_result({'barrel', phyto_barrel_count})
         end
         
         recipe:add_ingredient({name = 'liquid-nitrogen', amount = 5, type = 'fluid', fluidbox_index = 1})

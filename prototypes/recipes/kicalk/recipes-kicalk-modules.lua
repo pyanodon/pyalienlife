@@ -102,7 +102,7 @@ RECIPE {
         {type = 'item', name = 'kicalk-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'kicalk-seeds-mk03', amount = 1, probability = 0.01},
         {type = 'item', name = 'kicalk', amount = 1, probability = 0.6},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "kicalk-mk03",
     icons =
@@ -184,7 +184,7 @@ RECIPE {
         {type = 'item', name = 'kicalk-mk04', amount = 1, probability = 0.003},
         {type = 'item', name = 'kicalk-seeds-mk04', amount = 1, probability = 0.008},
         {type = 'item', name = 'kicalk', amount = 1, probability = 0.7},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "kicalk-mk04",
     icons =

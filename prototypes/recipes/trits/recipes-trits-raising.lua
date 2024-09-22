@@ -93,7 +93,7 @@ py.autorecipes {
 					{name = 'pheromones', amount =1},
 					{name = 'moondrop', amount =10},
                     --{name = 'wood-seeds', amount =15},
-					--{name = 'water-barrel', amount=6,return_item={name = 'empty-barrel', amount=6}},
+					--{name = 'water-barrel', amount=6,return_item={name = 'barrel', amount=6}},
 					--{name = 'sea-sponge', amount = 1},
 				},
 			results =

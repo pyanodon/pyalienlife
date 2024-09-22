@@ -80,7 +80,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'caged-scrondrix', amount = 10},
-        {type = 'item', name = 'empty-barrel', amount = 1},
+        {type = 'item', name = 'barrel', amount = 1},
     },
     main_product = "caged-scrondrix",
     subgroup = 'py-alienlife-scrondrix',
@@ -103,7 +103,7 @@ RECIPE {
     },
     results = {
         {type = 'item', name = 'caged-scrondrix', amount = 20},
-        {type = 'item', name = 'empty-barrel', amount = 1},
+        {type = 'item', name = 'barrel', amount = 1},
     },
     main_product = "caged-scrondrix",
     subgroup = 'py-alienlife-scrondrix',

@@ -49,7 +49,7 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient({name = 'hot-stone-brick', amount = 2, type = 'item'})
         recipe:add_result({name = 'warmer-stone-brick', amount = 2, type = 'item'})
         recipe:add_result_amount('arthurian-egg', i)
-        local _, barrels = recipe:remove_result('empty-barrel')
+        local _, barrels = recipe:remove_result('barrel')
         recipe:add_result({'hot-air-barrel', barrels})
         recipe.energy_required = recipe.energy_required / 2
         recipe.main_product = 'warmer-stone-brick'
@@ -72,7 +72,7 @@ if data and not yafc_turd_integration then
             {name = 'arthurian', amount = 4, type = 'item'},
             {name = 'agar', amount = 5, type = 'item'},
             {name = 'blood-barrel', amount = 3, type = 'item'},
-            {name = 'empty-barrel', amount = 3, type = 'item'},
+            {name = 'barrel', amount = 3, type = 'item'},
         },
         category = 'arthurian',
         main_product = 'agar'

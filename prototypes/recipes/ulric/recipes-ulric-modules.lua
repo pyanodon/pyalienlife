@@ -21,7 +21,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk02', amount = 1, probability = 0.005},
-        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'barrel', amount = 7, catalyst_amount = 7},
         {type = 'item', name = 'ulric', amount = 1, probability = 0.5, catalyst_amount = 1},
     },
     --main_product = "ulric-mk02",
@@ -106,7 +106,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-cub-mk02', amount = 1},
         {type = 'item', name = 'used-ulric-mk02', amount = 1, catalyst_amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'barrel', amount = 7, catalyst_amount = 7},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -191,7 +191,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk03', amount = 1, probability = 0.004},
-        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'barrel', amount = 7, catalyst_amount = 7},
         {type = 'item', name = 'ulric-mk02', amount = 1, probability = 0.6, catalyst_amount = 1},
     },
     --main_product = "ulric-mk03",
@@ -267,7 +267,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-cub-mk03', amount = 1},
         {type = 'item', name = 'used-ulric-mk03', amount = 1, catalyst_amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'barrel', amount = 7, catalyst_amount = 7},
     },
     --main_product = "ulric-mk03",
     icons =
@@ -343,7 +343,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'ulric-mk04', amount = 1, probability = 0.003},
-        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'barrel', amount = 7, catalyst_amount = 7},
         {type = 'item', name = 'ulric-mk03', amount = 1, probability = 0.7, catalyst_amount = 1},
     },
     --main_product = "ulric-mk04",
@@ -419,7 +419,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ulric-cub-mk04', amount = 1},
         {type = 'item', name = 'used-ulric-mk04', amount = 1, catalyst_amount = 1},
-        {type = 'item', name = 'empty-barrel', amount = 7, catalyst_amount = 7},
+        {type = 'item', name = 'barrel', amount = 7, catalyst_amount = 7},
     },
     --main_product = "ulric-mk04",
     icons =

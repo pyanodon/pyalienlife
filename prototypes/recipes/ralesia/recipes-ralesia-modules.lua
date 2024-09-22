@@ -99,7 +99,7 @@ RECIPE {
     results = {
         {type = 'item', name = 'ralesias-mk03', amount = 1, probability = 0.004},
         {type = 'item', name = 'ralesias', amount = 1, probability = 0.6},
-        --{type = 'item', name = 'empty-barrel', amount = 7},
+        --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "ralesias-mk03",
     icons =

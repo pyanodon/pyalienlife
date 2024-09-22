@@ -104,7 +104,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'rennea-mk02', amount = 4},
-        {type = 'item', name = 'empty-barrel', amount = 12},
+        {type = 'item', name = 'barrel', amount = 12},
     },
     main_product = "rennea-mk02",
     icons =
@@ -243,7 +243,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'rennea-mk03', amount = 4},
-        {type = 'item', name = 'empty-barrel', amount = 12},
+        {type = 'item', name = 'barrel', amount = 12},
     },
     main_product = "rennea-mk03",
     icons =
@@ -382,7 +382,7 @@ RECIPE {
         },
     results = {
         {type = 'item', name = 'rennea-mk04', amount = 4},
-        {type = 'item', name = 'empty-barrel', amount = 12},
+        {type = 'item', name = 'barrel', amount = 12},
     },
     main_product = "rennea-mk04",
     icons =
