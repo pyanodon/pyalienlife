@@ -1,11 +1,12 @@
-local noise = require 'noise'
+data:extend{{
+    type = "noise-expression",
+    name = "py_fish",
+    -- 0% chance of spawning in starting area (tier == 0)
+    -- Using this is equivalent to has_starting_area_placement = false
+    expression = "0.002 + (0.01 * clamp(var('wlc_elevation_minimum'), 0, 1))"
+}}
 data.raw.fish.fish.minable.result = 'fish'
 data.raw.fish.fish.autoplace = {
-    probability_expression = noise.define_noise_function( function(x, y, tile, map)
-        -- equiv to: limited_water < 0 and 0 or 1
-        local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
-        -- 0.2% or 1.2%
-        return 0.002 + (0.01 * limited_water)
-      end),
+    probability_expression = "py_fish",
     order = 'fish'
 }

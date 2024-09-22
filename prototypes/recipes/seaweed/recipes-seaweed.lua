@@ -1,5 +1,12 @@
-local noise = require 'noise'
 --------------------------SEA WEED-----------------------
+data:extend{{
+    type = "noise-expression",
+    name = "py_seaweed",
+    -- 0% chance of spawning in starting area (tier == 0)
+    -- Using this is equivalent to has_starting_area_placement = false
+    expression = "0.004 + (0.01 * clamp(var('wlc_elevation_minimum'), 0, 1))"
+}}
+
 data:extend({
     {
         type = 'tree',
@@ -45,12 +52,7 @@ data:extend({
             }
         },
         autoplace = {
-            probability_expression = noise.define_noise_function( function(x, y, tile, map)
-                -- equiv to: limited_water < 0 and 0 or 1
-                local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
-                -- 0.4% or 1.4%
-                return 0.004 + (0.01 * limited_water)
-              end),
+            probability_expression = "py_seaweed",
             order = 'seaweed'
         }
     }
