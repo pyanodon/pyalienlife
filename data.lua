@@ -1,7 +1,7 @@
 --module bonus formula = crafting speed * ( 1 + ( module bounus in decimal * number of modules )
 --i.e. 0.01 * ( 1 + ( 15 * 6 )
 --module bonus is a whole number do to the size of the bonus amount
-
+require 'prototypes/make_unit_melee_ammo_type'
 require 'prototypes/item-groups'
 require 'prototypes/recipe-categories'
 require 'prototypes/fuel-categories'
