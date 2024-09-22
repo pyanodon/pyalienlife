@@ -253,7 +253,7 @@ ENTITY {
   icon_size = 64,
   collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
   selectable_in_game = false,
-  remove_decoratives = false,
+  remove_decoratives = "false",
   collision_mask = {layers = {}},
   hidden = true,
   flags = {'not-in-kill-statistics', 'placeable-neutral', 'not-selectable-in-game', 'not-rotatable', 'not-flammable', 'placeable-off-grid', 'hide-alt-info'},
