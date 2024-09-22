@@ -52,11 +52,10 @@ ENTITY {
         production_type = "input-output",
         pipe_covers = pipecoverspictures(),
         volume = 200,
-        base_level = -1,
         pipe_connections = {
-            { position = {-3, 0}},
-            { position = {3, 0} },
-            { position = {0, 3} }
+            {flow_direction = "input-output", position = {-2.3, 0}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.3, 0}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 2.3}, direction = defines.direction.south}
         }
     },
     energy_source =
