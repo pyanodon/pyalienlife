@@ -161,7 +161,7 @@ local function build_tech_upgrade(tech_upgrade)
                 if effective_speed then
                     local adjusted_speed = effect.speed * 100
                     if adjusted_speed >= 0 then adjusted_speed = '+' .. adjusted_speed end
-                    py.add_to_description('module', module, {'turd.adjusted-speed', adjusted_speed})
+                    py.add_to_description('module', module, {'turd.adjusted-speed', tostring(adjusted_speed)})
                 end
 
                 if tech_upgrade.module_category and effect.speed and effect.speed ~= 0 then
