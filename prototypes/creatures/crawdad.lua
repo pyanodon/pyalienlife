@@ -130,8 +130,9 @@ data:extend{{
 	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
 	effectivity = 1,
 	braking_power = '2MW',
-	burner = {
-		fuel_category = 'fish',
+	energy_source = {
+		type = "burner",
+		fuel_categories = {'fish'},
 		effectivity = 1,
 		fuel_inventory_size = 2
 	},
