@@ -110,6 +110,8 @@ ENTITY {
     lamp_energy_usage = "10kW",
     active_energy_usage = "3990kW",
     rocket_entity = "mega-farm-invisa-rocket",
+    rocket_quick_relaunch_start_offset = 0,
+    cargo_station_parameters = {hatch_definitions = {{}}},
 
     times_to_blink = 1,
     light_blinking_speed = 1 / (3 * 60),
@@ -330,6 +332,13 @@ ENTITY {
 	]]--
   }
 
+data:extend{{
+  type = "cargo-pod",
+  name = "dQw4w9WgXcQ",
+  inventory_size = 0,
+  spawned_container = "steel-chest"
+}}
+
 ENTITY {
     type = "rocket-silo-rocket",
     name = "mega-farm-invisa-rocket",
@@ -344,6 +353,7 @@ ENTITY {
     engine_starting_speed = 1,
     flying_speed = 1,
     flying_acceleration = 1,
+    cargo_pod_entity = "dQw4w9WgXcQ",
 
     glow_light =
     {
