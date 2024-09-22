@@ -516,6 +516,7 @@ ITEM {
 			type = 'stream',
 			range = 99999,
 			cooldown = 60,
+            ammo_category = "ulric-infusion",
 			ammo_type = {
 				category = 'caravan-control',
 				target_type = 'position',
