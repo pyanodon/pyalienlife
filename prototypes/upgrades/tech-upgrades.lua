@@ -134,10 +134,10 @@ local function build_tech_upgrade(tech_upgrade)
                     order = 'z',
                     stack_size = 1,
                     effect = {
-                        consumption = {bonus = effect.consumption or 0},
-                        speed = {bonus = effective_speed or effect.speed or 0},
-                        productivity = {bonus = effect.productivity or 0},
-                        pollution = {bonus = -1 * (effect.pollution or 0.01)}
+                        consumption = effect.consumption or 0,
+                        speed = effective_speed or effect.speed or 0,
+                        productivity = effect.productivity or 0,
+                        pollution = -1 * (effect.pollution or 0.01)
                     },
                     localised_name = {'technology-name.' .. tech.name},
                     localised_description = {'turd.font', {'turd.module'}},
@@ -173,7 +173,7 @@ local function build_tech_upgrade(tech_upgrade)
                         if i ~= 1 and entity.module_specification then
                             local module_slots = entity.module_slots
                             local desired_speed = entity.crafting_speed * (module_slots + 1/i) * i
-                            module.effect.speed.bonus = (desired_speed / entity.crafting_speed) * effect.speed
+                            module.effect.speed = (desired_speed / entity.crafting_speed) * effect.speed
                         end
                         if i ~= 1 then
                             module.localised_name = {'', {'technology-name.' .. tech.name}, ' MK0' .. i}

@@ -87,7 +87,7 @@ if data and not yafc_turd_integration then
             subgroup = 'py-alienlife-tree',
             order = 'u[sawblade]-a[mk0' .. i .. ']',
             stack_size = 10,
-            effect = {pollution = {bonus = 1}, speed = {bonus = i}, productivity = {bonus = i / 20}},
+            effect = {pollution = 1, speed = i, productivity = 20},
             limitation_message_key = 'sawblade',
 	        category = 'sawblade',
 	        tier = i,

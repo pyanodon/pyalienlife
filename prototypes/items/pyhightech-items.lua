@@ -100,7 +100,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-a",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 0.25}},
+    effect = {pollution = 1,speed = 0.25},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -120,7 +120,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-b",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 0.5}},
+    effect = {pollution = 1,speed = 0.5},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -140,7 +140,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-c",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+    effect = {pollution = 1,speed = 1},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -160,7 +160,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1.5}},
+    effect = {pollution = 1,speed = 1.5},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -268,7 +268,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+    effect = {pollution = 1,speed = 1},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -288,7 +288,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+    effect = {pollution = 1,speed = 2},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -308,7 +308,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 3}},
+    effect = {pollution = 1,speed = 3},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -328,7 +328,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 4}},
+    effect = {pollution = 1,speed = 4},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -496,7 +496,7 @@ ITEM {
     subgroup = 'py-alienlife-cadaveric',
     order = "cad-a",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+    effect = {pollution = 1,speed = 1},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -516,7 +516,7 @@ ITEM {
     subgroup = 'py-alienlife-cadaveric',
     order = "cad-b",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 2}},
+    effect = {pollution = 1,speed = 2},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -536,7 +536,7 @@ ITEM {
     subgroup = 'py-alienlife-cadaveric',
     order = "cad-c",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 3}},
+    effect = {pollution = 1,speed = 3},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -556,7 +556,7 @@ ITEM {
     subgroup = 'py-alienlife-cadaveric',
     order = "cad-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 4}},
+    effect = {pollution = 1,speed = 4},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -572,7 +572,7 @@ ITEM {
     subgroup = "py-alienlife-antelope",
     order = "r",
     stack_size = 50,
-	effect = {pollution = {bonus = 1},speed = {bonus = 1}},
+	effect = {pollution = 1,speed = 1},
 	limitation = {},
 	limitation_message_key = "antelope"
 }
