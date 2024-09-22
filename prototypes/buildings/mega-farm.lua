@@ -106,9 +106,9 @@ ENTITY {
       usage_priority = "primary-input"
     },
     energy_usage = "6050kW", --energy usage used when crafting the rocket
-    idle_energy_usage = "1500KW",
-    lamp_energy_usage = "10KW",
-    active_energy_usage = "3990KW",
+    idle_energy_usage = "1500kW",
+    lamp_energy_usage = "10kW",
+    active_energy_usage = "3990kW",
     rocket_entity = "mega-farm-invisa-rocket",
 
     times_to_blink = 1,
