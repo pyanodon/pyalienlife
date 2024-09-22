@@ -5,6 +5,7 @@ if data and not yafc_turd_integration then
     for i = 1, 4 do
         local name = 'compost-plant-mk0' .. i
         local entity = table.deepcopy(data.raw['furnace'][name])
+        local collision_box = entity.collision_box
         entity.name = name .. '-turd'
         entity.localised_name = {'entity-name.' .. name}
         entity.placeable_by = {item = name, count = 1}
@@ -21,8 +22,8 @@ if data and not yafc_turd_integration then
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
                 pipe_connections = {
-                    {position = {4, -6}},
-                    {position = {-4, -6}},
+                    {position = {4, -5.2}, direction = defines.direction.north},
+                    {position = {-4, -5.2}, direction = defines.direction.north},
                 },
                 production_type = 'input-output',
                 filter = 'sweet-syrup',
@@ -42,7 +43,7 @@ if data and not yafc_turd_integration then
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures('assembling-machine-3', nil, {0.0, -0.88}, nil, nil),
             volume = 100,
-            pipe_connections = {{type = 'output', position = {0.0, 6.0}}},
+            pipe_connections = {{flow_direction = 'output', position = {0.0, 5.2}, direction = defines.direction.south}},
             secondary_draw_orders = { north = -1 }
         })
         data:extend{entity}
