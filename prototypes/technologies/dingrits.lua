@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/dingrits.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk03","biotech-mk03","genetic-design"},
+    prerequisites = {"land-animals-mk03","biotech-mk03",},
     effects = {},
     unit = {
         count = 200,
