@@ -271,6 +271,7 @@ data.raw.module['sap-tree-mk04'].limitation = {'sap-01', 'sap-mk02', 'sap-mk03',
 
 --remove steel barrel based milk
 data.raw.item['milk-barrel'] = nil
+data.raw.recipe['milk-barrel'] = nil
 
 --RECIPES UPDATES
 
