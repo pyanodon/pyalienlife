@@ -91,8 +91,8 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk05.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk04", "schrodinger-antelope-upgrade", "dingrits-upgrade"},
-    dependencies = {"land-animals-mk04", "schrodinger-antelope-upgrade", "dingrits-upgrade"},
+    prerequisites = {"land-animals-mk04", "dingrits-upgrade"}, --TODO:see why it thinks this tech doesnt exist "schrodinger-antelope-upgrade"
+    dependencies = {"land-animals-mk04", "dingrits-upgrade"}, --TODO:see why it thinks this tech doesnt exist "schrodinger-antelope-upgrade"
     effects = {},
     unit = {
         count = 700,
