@@ -105,5 +105,5 @@ ENTITY {
 }
 
 if not mods.pystellarexpedition then
-    data.raw.furnace['requester-tank'].collision_mask.layers[vessel_collision_mask] = true
+    data.raw.furnace['requester-tank'].collision_mask.layers.vessel_collision_mask = true
 end
