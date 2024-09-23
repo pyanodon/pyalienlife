@@ -407,9 +407,9 @@ end
 for _, tile in pairs(data.raw.tile) do
     tile.collision_mask = collision_mask_util.get_mask(tile)
     if tile.collision_mask.layers.water_tile then
-        tile.collision_mask.layers[caravan_collision_mask] = true
-        if not mods.pystellarexpedition then tile.collision_mask.layers[vessel_collision_mask] = true end
-        tile.collision_mask.layers[dingrido_collision_mask] = true
+        tile.collision_mask.layers.caravan_collision_mask = true
+        if not mods.pystellarexpedition then tile.collision_mask.layers.vessel_collision_mask = true end
+        tile.collision_mask.layers.dingrido_collision_mask = true
     end
 end
 
@@ -438,13 +438,14 @@ local dingrido_nonwalkable_prototypes = {
     'simple-entity',
     'cliff',
     'unit',
+    'turret',
 }
 for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
     for _, entity in pairs(data.raw[prototype]) do
         entity.collision_mask = collision_mask_util.get_mask(entity)
 
-        if entity.collision_mask.layers['player-layer'] and not entity.collision_mask.layers['floor-layer'] then
-            collision_mask_util.add_layer(entity.collision_mask, dingrido_collision_mask)
+        if entity.collision_mask.layers.player and not entity.collision_mask.layers.floor then
+            entity.collision_mask.layers.dingrido_collision_mask = true
         end
     end
 end

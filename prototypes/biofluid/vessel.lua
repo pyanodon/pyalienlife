@@ -4,7 +4,6 @@ if not mods.pystellarexpedition then
         type = "collision-layer",
         name = "vessel_collision_mask"
     }}
-    _G.vessel_collision_mask = "vessel_collision_mask"
 end
 
 RECIPE {
@@ -262,7 +261,7 @@ data:extend{{
     corpse = 'small-remnants',
     collision_box = table.deepcopy(data.raw['pipe']['pipe'].collision_box),
     selection_box = table.deepcopy(data.raw['pipe']['pipe'].selection_box),
-    collision_mask = not mods.pystellarexpedition and {layers = {[vessel_collision_mask] = true}},
+    collision_mask = not mods.pystellarexpedition and {layers = {vessel_collision_mask = true}},
     animations = animations,
     fast_replaceable_group = 'vessel',
     next_upgrade = nil,
@@ -464,7 +463,7 @@ underground_pipe.fluid_box = {
         {position = {0, underground_pipe.collision_box[2][2]}, direction = defines.direction.south, connection_type='underground', max_underground_distance = 48}
     }
 }
-underground_pipe.collision_mask = not mods.pystellarexpedition and {layers = {[vessel_collision_mask] = true}}
+underground_pipe.collision_mask = not mods.pystellarexpedition and {layers = {vessel_collision_mask = true}}
 local function blank()
 	return {
 		filename = '__core__/graphics/empty.png',
