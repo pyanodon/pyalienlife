@@ -204,13 +204,14 @@ end
 ---@param caravan_data Caravan
 ---@return boolean
 local function eat(caravan_data)
+	local entity = caravan_data.entity
 	if caravan_data.fuel_bar == 0 then
 		local fuel = caravan_data.fuel_inventory
 		for item, count in pairs(fuel.get_contents()) do
 			fuel.remove{name = item, count = 1}
-			caravan_data.fuel_bar = prototypes[caravan_data.entity.name].favorite_foods[item]
+			caravan_data.fuel_bar = prototypes[entity.name].favorite_foods[item]
 			caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
-			caravan_data.entity.force.item_production_statistics.on_flow(item, -1)
+			entity.force.get_item_production_statistics(entity.surface_index).on_flow(item, -1)
 			return true
 		end
 		return false

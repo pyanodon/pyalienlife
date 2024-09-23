@@ -348,7 +348,7 @@ function Biofluid.eat(bioport_data)
 			if removed ~= 0 then
 				bioport_data.fuel_remaning = calories
 				bioport_data.last_eaten_fuel_value = calories
-				bioport.force.item_production_statistics.on_flow(food, -1)
+				bioport.force.get_item_production_statistics(bioport.surface_index).on_flow(food, -1)
 				return true
 			end
 		end
@@ -373,7 +373,7 @@ function Biofluid.poop(bioport_data, robot_name)
 		local entity = bioport_data.entity
 		entity.get_inventory(OUTPUT_INVENTORY).insert(special_delivery)
 		entity.products_finished = entity.products_finished + batch_size
-        entity.force.item_production_statistics.on_flow('guano', batch_size)
+        entity.force.get_item_production_statistics(entity.surface_index).on_flow('guano', batch_size)
 	end
 end
 
