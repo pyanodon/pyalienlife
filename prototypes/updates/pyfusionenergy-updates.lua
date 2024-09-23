@@ -41,8 +41,8 @@ RECIPE('sc-wire'):add_ingredient({type = 'item', name = 'agzn-alloy', amount = 1
 RECIPE('bio-reactor-mk01'):remove_unlock('ethanolamine')
 
 RECIPE("wastewater-filtration"):add_unlock("filtration")
-RECIPE('xyhiphoe-blood'):remove_unlock('xyhiphoe')
-RECIPE('vanabins'):remove_ingredient("xyhiphoe-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 150})
+RECIPE('arthropod-blood'):remove_unlock('xyhiphoe')
+RECIPE('vanabins'):remove_ingredient("arthropod-blood"):add_ingredient({type = "fluid", name = "arthropod-blood", amount = 150})
 RECIPE('kmauts-enclosure-mk01'):remove_unlock('helium-processing') --substituir por versao pyal
 RECIPE('kmauts-enclosure-mk02'):remove_unlock('machines-mk02')
 RECIPE('kmauts-enclosure-mk03'):remove_unlock('machines-mk03')
@@ -66,14 +66,5 @@ data.raw["recipe-category"]["xyhiphoe"].modules_required = true
 RECIPE('log7'):replace_result("log", "log",9)
 RECIPE('log8'):replace_result("log", "log",10)
 
-RECIPE('fill-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
-RECIPE('empty-xyhiphoe-blood-barrel'):remove_unlock('fluid-handling')
-data.raw.fluid['xyhiphoe-blood'] = nil
-data.raw.recipe['xyhiphoe-blood'] = nil
-data.raw.recipe['fill-xyhiphoe-blood-barrel'] = nil
-data.raw.recipe['empty-xyhiphoe-blood-barrel'] = nil
-data.raw.recipe['xyhiphoe-hydrocyclone'].ingredients[2].name = 'arthropod-blood'
 RECIPE('xyhiphoe-hydrocyclone'):remove_unlock('advanced-mining-facilities'):add_unlock('biotech-mk04')
 RECIPE('arthropod-blood-to-organic-solvent'):remove_unlock('biotech-mk03'):add_unlock('biotech-mk02')
-data.raw.item['xyhiphoe-blood-barrel'] = nil
-data.raw.recipe['xyhiphoe-blood-barrel-pyvoid'] = nil

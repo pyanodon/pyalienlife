@@ -461,7 +461,6 @@ local biomass_convertion =
     ['blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
     ['a-molasse'] = {item_amount = 30, biomass_amount = 12, type = 'fluid'},
     ['arthropod-blood'] = {item_amount = 10, biomass_amount = 5, type = 'fluid'},
-    --['xyhiphoe-blood'] = {item_amount = 10, biomass_amount = 10, type = 'fluid'},
     ['b-molasse'] = {item_amount = 10, biomass_amount = 12, type = 'fluid'},
     ['casein-mixture'] = {item_amount = 10, biomass_amount = 7, type = 'fluid'},
     ['casein-pulp-01'] = {item_amount = 10, biomass_amount = 8, type = 'fluid'},
