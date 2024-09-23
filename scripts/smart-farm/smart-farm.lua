@@ -71,7 +71,7 @@ Smart_Farm.events.on_built = function(event)
 		local x, y = position[1], position[2]
 
 		local previous_tile = surface.get_tile(position)
-		if not previous_tile.valid or previous_tile.collides_with('water-tile') then goto continue end
+		if not previous_tile.valid or previous_tile.collides_with(water_tile) then goto continue end
 		table.insert(landfill_tiles, {name = 'landfill', position = position})
 
 		storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}

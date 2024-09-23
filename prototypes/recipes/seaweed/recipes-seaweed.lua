@@ -20,7 +20,7 @@ data:extend({
         order = 'b-a',
         collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
         selection_box = {{-0.5, -0.3}, {0.5, 0.3}},
-        collision_mask = {layers = {["ground-tile"] = true, ["colliding-with-tiles-only"] = true}},
+        collision_mask = {layers = {ground_tile = true}, colliding_with_tiles_only = true},
         pictures = {
             {
                 filename = '__pyalienlifegraphics2__/graphics/icons/seaweed-water-01.png',

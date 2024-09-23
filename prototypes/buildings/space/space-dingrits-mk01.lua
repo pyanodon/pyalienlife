@@ -43,7 +43,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-6.8, -6.8}, {6.8, 6.8}},
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
-    collision_mask = {layers = {['ground-tile'] = true,['water-tile'] = true,['layer-14'] = true}},
+    collision_mask = {layers = {ground_tile = true,water_tile = true,['layer-14'] = true}},
     match_animation_speed_to_activity = false,
     module_slots = 20,
     allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},

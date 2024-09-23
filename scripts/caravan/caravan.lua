@@ -168,7 +168,7 @@ Caravan.events.used_capsule = function(event)
 	local entity = player.selected or player.surface.find_entities_filtered{
 		position = event.cursor_position,
 		limit = 1,
-		collision_mask = {layers = {['object-layer'] = true, ['player-layer'] = true, train = true, ['resource-layer'] = true, ['floor-layer'] = true, ['transport-belt-layer'] = true, ['ghost-layer'] = true}}
+		collision_mask = {layers = {object = true, ['player-layer'] = true, train = true, ['resource-layer'] = true, ['floor-layer'] = true, ['transport-belt-layer'] = true, ['ghost-layer'] = true}}
 	}[1]
 	if entity then
 		if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end

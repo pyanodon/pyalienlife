@@ -48,7 +48,7 @@ local unit = {
     map_color = {1, 1, 1},
     order = 'b-b-a',
     subgroup = 'enemies',
-    collision_mask = {layers = {[caravan_collision_mask] = true, not_colliding_with_itself = true}},
+    collision_mask = {layers = {[caravan_collision_mask] = true}, not_colliding_with_itself = true},
     resistances = {
         {
             type = 'fire',
