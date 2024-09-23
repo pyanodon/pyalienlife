@@ -56,7 +56,7 @@ data:extend
     healing_per_tick = 0.1,
 	collision_box = {{0,0}, {0,0}},
 	render_layer = 'air-object',
-	collision_mask = {layers = {['not-colliding-with-itself'] = true}},
+	collision_mask = {layers = {not_colliding_with_itself = true}},
     selection_box = {{-1.5, -3}, {1.5, 3}},
 	selection_priority = 51,
     attack_parameters =
