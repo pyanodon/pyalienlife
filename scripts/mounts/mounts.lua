@@ -14,12 +14,12 @@ Mounts.events[239] = function(event)
 			for _, equipment in pairs(grid.equipment) do
 				local missing = equipment.max_energy - equipment.energy
 				if missing > 0 then
-					if spider.burner.remaining_burning_fuel < missing / transfer_efficiency then
-						equipment.energy = equipment.energy + spider.burner.remaining_burning_fuel * transfer_efficiency
-						spider.burner.remaining_burning_fuel = 0
+					if spider.energy_source.remaining_burning_fuel < missing / transfer_efficiency then
+						equipment.energy = equipment.energy + spider.energy_source.remaining_burning_fuel * transfer_efficiency
+						spider.energy_source.remaining_burning_fuel = 0
 						break
 					else
-						spider.burner.remaining_burning_fuel = spider.burner.remaining_burning_fuel - missing / transfer_efficiency
+						spider.energy_source.remaining_burning_fuel = spider.energy_source.remaining_burning_fuel - missing / transfer_efficiency
 						equipment.energy = equipment.energy + missing
 					end
 				end
