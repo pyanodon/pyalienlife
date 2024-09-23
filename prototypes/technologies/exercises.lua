@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/exercises.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"genetic-design"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 400,
