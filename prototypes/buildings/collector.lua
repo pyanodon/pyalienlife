@@ -61,7 +61,7 @@ ENTITY {
         width = 4,
         height = 4
     },
-    collision_mask = {layers = {['item-layer'] = true, ['object-layer'] = true, ['water-tile'] = true}},
+    collision_mask = {layers = {item = true, object = true, water_tile = true}},
     circuit_wire_connection_points = circuit_connector_definitions['collector-mkxx'].points,
     circuit_connector_sprites = circuit_connector_definitions['collector-mkxx'].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,

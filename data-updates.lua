@@ -402,7 +402,7 @@ collision_mask_util.collect_prototypes_with_layer = function(layer)
 
 for _, tile in pairs(data.raw.tile) do
     tile.collision_mask = collision_mask_util.get_mask(tile)
-    if tile.collision_mask.layers['water-tile'] then
+    if tile.collision_mask.layers.water_tile then
         tile.collision_mask.layers[caravan_collision_mask] = true
         if not mods.pystellarexpedition then tile.collision_mask.layers[vessel_collision_mask] = true end
         tile.collision_mask.layers[dingrido_collision_mask] = true
