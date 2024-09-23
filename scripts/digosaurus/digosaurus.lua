@@ -95,7 +95,7 @@ function Digosaurus.eat(food_inventory, food_inventory_contents, force)
     for food in pairs(food_inventory_contents) do
         if Digosaurus.favorite_foods[food] then
             food_inventory.remove{name = food, count = 1}
-            force.item_production_statistics.on_flow(food, -1)
+            force.get_item_production_statistics().on_flow(food, -1) -- todo THIS WILL CRASH put a surface in get_item_production_statistics()
             return food
         end
     end
@@ -185,7 +185,8 @@ Digosaurus.events.on_ai_command_completed = function(event)
                     dig_data.scanned_ores[digosaur_data.ore_id] = nil
                 end
                 dig_data.entity.products_finished = dig_data.entity.products_finished + 1
-                dig_data.entity.force.item_production_statistics.on_flow(product.name, to_insert)
+                local surface_index = dig_data.entity.surface_index
+                dig_data.entity.force.get_item_production_statistics(surface_index).on_flow(product.name, to_insert)
                 return
             end
         end

@@ -49,7 +49,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 		}
 		schedule_frame.add{
 			type = 'sprite-button', name = 'py_delete_schedule', style = 'py_schedule_move_button', tags = tags,
-			sprite = 'utility/close_white', hovered_sprite = 'utility/close_black', clicked_sprite = 'utility/close_black'
+			sprite = 'utility/close', hovered_sprite = 'utility/close_black', clicked_sprite = 'utility/close_black'
 		}
 
 		for j, action in ipairs(schedule.actions) do
@@ -119,7 +119,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 
 			action_frame.add{
 				type = 'sprite-button', name = 'py_delete_schedule', style = 'py_schedule_move_button', tags = tags,
-				sprite = 'utility/close_white', hovered_sprite = 'utility/close_black', clicked_sprite = 'utility/close_black'
+				sprite = 'utility/close', hovered_sprite = 'utility/close_black', clicked_sprite = 'utility/close_black'
 			}
 		end
 

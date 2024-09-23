@@ -156,9 +156,9 @@ function Caravan.add_gui_row(caravan_data, key, table)
         type = 'sprite-button',
         name = 'py_open_map_button',
         style = 'frame_action_button',
-        sprite = 'utility/search_white',
-        hovered_sprite = 'utility/search_black',
-        clicked_sprite = 'utility/search_black',
+        sprite = 'utility/search',
+        hovered_sprite = 'utility/search_icon',
+        clicked_sprite = 'utility/search_icon',
         tooltip = {'caravan-gui.view-on-map'},
         tags = {unit_number = caravan_data.unit_number}
     }
