@@ -388,18 +388,21 @@ local vessel_placeable_entities = {
     ['inserter'] = true
 }
 
-collision_mask_util.collect_prototypes_with_layer = function(layer)
-    local prototype_list = {}
-    for type, default_mask in pairs (default_masks) do
-      for name, entity in pairs (data.raw[type] or {}) do
-        local entity_mask = entity.collision_mask or default_mask
-        if entity_mask.layers[layer] then
-          table.insert(prototype_list, entity)
+for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer('object-layer')) do
+    local mask = collision_mask_util.get_mask(prototype)
+    if mask.layers['water-tile'] then
+        if not walkable_types[prototype.type] then
+            if not mask.layers['floor-layer'] and mask.layers['player-layer'] then
+                collision_mask_util.add_layer(mask, caravan_collision_mask)
+            end
         end
-      end
+        if not mods.pystellarexpedition and not vessel_placeable_entities[prototype.type] then
+            if prototype.type == 'splitter' or (not mask.layers['floor-layer'] and mask.layers['player-layer']) then
+                collision_mask_util.add_layer(mask, vessel_collision_mask)
+            end
+        end
     end
-    return prototype_list
-  end
+end
 
 for _, tile in pairs(data.raw.tile) do
     tile.collision_mask = collision_mask_util.get_mask(tile)
