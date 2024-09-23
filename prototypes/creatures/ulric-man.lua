@@ -246,7 +246,7 @@ data:extend(
             order = 'a',
             eat = {
                 {
-                    filename = '__base__/sound/eat.ogg',
+                    filename = '__base__/sound/eat-5.ogg',
                     volume = 1
                 }
             },

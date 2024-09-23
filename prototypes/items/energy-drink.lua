@@ -26,7 +26,7 @@ ITEM {
 							{
 								sound = {
 									{
-										filename = '__base__/sound/eat.ogg',
+										filename = '__base__/sound/eat-5.ogg',
 										volume = 0.6
 									},
 									{
