@@ -75,7 +75,7 @@ local function update_confirm_button(element, player, researched_technologies)
 			if seconds < 10 then seconds = '0' .. seconds end
 			element.style = 'confirm_button_without_tooltip'
 			element.caption = {'turd.unselect-migrate', hours, minutes, seconds}
-		elseif (storage.turd_reset_remaining[force_index] or 0) > 0 then
+		elseif (storage.turd_reset_remaining[force_index] or 0) >= 0 then
 			element.style = 'confirm_button_without_tooltip'
 			element.caption = {'turd.unselect'}
 		else
@@ -141,7 +141,7 @@ local function create_turd_page(gui, player)
 		}.visible = false
 		header_flow.add{
 			name = 'py_open_turd_techtree', type = 'sprite-button', style = 'frame_action_button', tooltip = {'turd.open-in-tech-tree'},
-			sprite = 'utility/technology_white', hovered_sprite = 'utility/technology_black', clicked_sprite = 'utility/technology_black'
+			sprite = 'utility/technology_white', hovered_sprite = 'utility/technology_white', clicked_sprite = 'utility/technology_white'
 		}
 		header_flow.add{name = 'py_minimize_turd', type = 'sprite-button', style = 'frame_action_button', sprite = 'down-white', hovered_sprite = 'down-black', clicked_sprite = 'down-black'}
 
