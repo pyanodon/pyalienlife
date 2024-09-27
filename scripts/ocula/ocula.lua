@@ -147,7 +147,7 @@ function Oculua.render_altmode_icon(oculua_data)
 		only_in_alt_mode = true,
 		x_scale = 0.9,
 		y_scale = 0.9
-	}
+	}.id
 	oculua_data.alt_mode = rendering.draw_sprite{
 		sprite = 'item/' .. oculua_data.item,
 		target = oculua_data.entity,
@@ -156,13 +156,13 @@ function Oculua.render_altmode_icon(oculua_data)
 		only_in_alt_mode = true,
 		x_scale = 1.2,
 		y_scale = 1.2
-	}
+	}.id
 end
 
 function Oculua.destroy_altmode_icon(oculua_data)
 	if oculua_data.count == 0 then
-		if oculua_data.alt_mode then rendering.destroy(oculua_data.alt_mode) end
-		if oculua_data.alt_mode_light then rendering.destroy(oculua_data.alt_mode_light) end
+		if oculua_data.alt_mode then rendering.get_object_by_id(oculua_data.alt_mode).destroy() end
+		if oculua_data.alt_mode_light then rendering.get_object_by_id(oculua_data.alt_mode_light).destroy() end
 	end
 end
 
