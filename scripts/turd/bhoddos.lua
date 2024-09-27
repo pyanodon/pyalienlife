@@ -43,7 +43,7 @@ local function draw_circle(entity)
     storage.bhoddos_circles[entity.unit_number] = rendering.draw_circle{
         draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = radius,
         target = entity, filled = true, surface = entity.surface
-    }
+    }.id
 end
 
 Turd.events.on_selected_entity_changed = function(event)
@@ -58,7 +58,7 @@ Turd.events.on_selected_entity_changed = function(event)
     local previous_selected_unit_number = previous_selected and previous_selected.unit_number
 
     if previous_selected_unit_number and circles[previous_selected_unit_number] then
-        rendering.destroy(circles[previous_selected_unit_number])
+        rendering.get_object_by_id(circles[previous_selected_unit_number]).destroy()
         circles[previous_selected_unit_number] = nil
     end
     if selected and lib.cultures[selected.name] then
