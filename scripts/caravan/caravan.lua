@@ -722,7 +722,7 @@ Caravan.events.on_destroyed = function(event)
 end
 
 Caravan.events.on_object_destroyed = function(event)
-	local unit_number = event.unit_number
+	local unit_number = event.useful_id
 	local caravan_data = storage.caravans[unit_number]
 
 	if not caravan_data then return end
