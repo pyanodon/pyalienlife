@@ -83,7 +83,7 @@ function Biofluid.update_bioport_animation(bioport_data)
 			animation_data.stage = new_stage
 			if new_stage == 0 then
 				if animation_data.id then
-					rendering.destroy(animation_data.id)
+					rendering.get_object_by_id(animation_data.id).destroy()
 					animation_data.id = nil
 				end
 			else
@@ -97,7 +97,7 @@ function Biofluid.update_bioport_animation(bioport_data)
 						target = entity,
 						surface = entity.surface,
 						animation_speed = creature_name == 'chorkok' and 0.25 or 0.5
-					}
+					}.id
 				end
 			end
 		end
@@ -498,7 +498,7 @@ local function pickup(biorobot_data)
 		only_in_alt_mode = true,
 		x_scale = 0.5,
 		y_scale = 0.5,
-	}
+	}.id
 	biorobot_data.alt_mode_sprite = rendering.draw_sprite{
 		sprite = 'fluid/' .. name,
 		target = entity,
@@ -506,7 +506,7 @@ local function pickup(biorobot_data)
 		only_in_alt_mode = true,
 		x_scale = 0.8,
 		y_scale = 0.8,
-	}
+	}.id
 end
 
 local function dropoff(biorobot_data)
@@ -527,10 +527,10 @@ local function dropoff(biorobot_data)
 	end
 	go_home(biorobot_data)
 	if biorobot_data.alt_mode_sprite then
-		rendering.destroy(biorobot_data.alt_mode_sprite)
+		rendering.get_object_by_id(biorobot_data.alt_mode_sprite).destroy()
 	end
 	if biorobot_data.alt_mode_shadow then
-		rendering.destroy(biorobot_data.alt_mode_shadow)
+		rendering.get_object_by_id(biorobot_data.alt_mode_shadow).destroy()
 	end
 end
 
