@@ -48,7 +48,7 @@ local machines_with_gui = {
 }
 
 Slaughterhouse.events.on_object_destroyed = function(event)
-	local unit_number = event.unit_number
+	local unit_number = event.useful_id
 	if not unit_number or not storage.opened_slaughterhouses[unit_number] then return end
 
 	storage.opened_slaughterhouses[unit_number] = nil

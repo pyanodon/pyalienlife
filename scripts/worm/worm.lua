@@ -18,7 +18,7 @@ Worm.events.on_built = function(event)
 end
 
 Worm.events.on_object_destroyed = function(event)
-	local unit_number = event.unit_number
+	local unit_number = event.useful_id
 	local skin = storage.worm_skins[unit_number]
 
 	if not skin or not skin.valid then return end

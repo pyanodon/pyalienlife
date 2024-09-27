@@ -61,7 +61,7 @@ Farming.events.on_built = function(event)
 end
 
 Farming.events.on_object_destroyed = function(event)
-	local unit_number = event.unit_number
+	local unit_number = event.useful_id
 	if not unit_number then return end
 	storage.disabled_farm_buildings[unit_number] = nil
 end
