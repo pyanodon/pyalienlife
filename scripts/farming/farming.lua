@@ -39,7 +39,7 @@ function Farming.disable_machine(entity)
 	if not kingdom then return end
     entity.active = false
 	storage.disabled_farm_buildings[entity.unit_number] = entity
-	script.register_on_entity_destroyed(entity)
+	script.register_on_object_destroyed(entity)
 	if entity.is_crafting() then
 		entity.crafting_progress = 0.0001
 		entity.bonus_progress = 0
@@ -60,7 +60,7 @@ Farming.events.on_built = function(event)
 	if entity.type == 'assembling-machine' then Farming.disable_machine(entity) end
 end
 
-Farming.events.on_entity_destroyed = function(event)
+Farming.events.on_object_destroyed = function(event)
 	local unit_number = event.unit_number
 	if not unit_number then return end
 	storage.disabled_farm_buildings[unit_number] = nil

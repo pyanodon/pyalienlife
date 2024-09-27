@@ -693,7 +693,7 @@ Caravan.events.on_built = function(event)
 	else
 		Caravan.instantiate_caravan(entity)
 	end
-	script.register_on_entity_destroyed(entity)
+	script.register_on_object_destroyed(entity)
 	storage.caravan_queue = nil
 end
 
@@ -721,7 +721,7 @@ Caravan.events.on_destroyed = function(event)
 	storage.caravan_queue = nil
 end
 
-Caravan.events.on_entity_destroyed = function(event)
+Caravan.events.on_object_destroyed = function(event)
 	local unit_number = event.unit_number
 	local caravan_data = storage.caravans[unit_number]
 
