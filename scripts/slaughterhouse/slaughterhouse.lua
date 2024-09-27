@@ -47,7 +47,7 @@ local machines_with_gui = {
 	['rc-mk04'] = true,
 }
 
-Slaughterhouse.events.on_entity_destroyed = function(event)
+Slaughterhouse.events.on_object_destroyed = function(event)
 	local unit_number = event.unit_number
 	if not unit_number or not storage.opened_slaughterhouses[unit_number] then return end
 
@@ -73,7 +73,7 @@ function Slaughterhouse.create_slaughterhouse_gui(player_index, entity)
     content_frame.style.vertically_stretchable = true
     Slaughterhouse.build_animal_table(content_frame, player)
 	storage.opened_slaughterhouses[entity.unit_number] = entity
-	script.register_on_entity_destroyed(entity)
+	script.register_on_object_destroyed(entity)
 	storage.watched_slaughterhouses[player_index] = nil
 	storage.watch_slaughterhouse = not not next(storage.watched_slaughterhouses)
 end

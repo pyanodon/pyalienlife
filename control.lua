@@ -155,11 +155,11 @@ end)
 
 py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
 
-py.on_event(defines.events.on_entity_destroyed, function(event)
-	Caravan.events.on_entity_destroyed(event)
-	Farming.events.on_entity_destroyed(event)
-    Slaughterhouse.events.on_entity_destroyed(event)
-    Worm.events.on_entity_destroyed(event)
+py.on_event(defines.events.on_object_destroyed, function(event)
+	Caravan.events.on_object_destroyed(event)
+	Farming.events.on_object_destroyed(event)
+    Slaughterhouse.events.on_object_destroyed(event)
+    Worm.events.on_object_destroyed(event)
 end)
 
 py.on_event(defines.events.on_entity_settings_pasted, function(event)
