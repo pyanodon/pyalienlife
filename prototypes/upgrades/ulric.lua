@@ -108,7 +108,7 @@ return {
             icon_size = 128,
             order = 'c-a',
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = 'noooo dont turn that horse into glue', type = 'unlock-recipe'},
+                {recipe = 'noooo-dont-turn-that-horse-into-glue', type = 'unlock-recipe'},
             },
         },
         {
