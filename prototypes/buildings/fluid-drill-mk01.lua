@@ -99,7 +99,7 @@ ENTITY {
     circuit_connector_sprites = circuit_connector_definitions["fluid-drill-mkxx"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
-        animations = {
+        animation = {
             layers = {
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/raw.png",
