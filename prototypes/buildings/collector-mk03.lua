@@ -67,7 +67,7 @@ ENTITY {
     circuit_connector_sprites = circuit_connector_definitions["collector-mkxx"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
-        animations = {
+        animation = {
             layers = {
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/collector/f1.png",

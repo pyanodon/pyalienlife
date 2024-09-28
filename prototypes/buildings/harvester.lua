@@ -65,7 +65,7 @@ ENTITY {
     circuit_connector_sprites = circuit_connector_definitions['harvester'].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
-        animations = {
+        animation = {
             layers = {
                 {
                     filename = '__pyalienlifegraphics2__/graphics/entity/mega-farm/harvester/left.png',
