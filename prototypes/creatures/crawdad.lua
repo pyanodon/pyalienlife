@@ -177,83 +177,44 @@ data:extend{{
 		layers = {
 			{
 				priority = 'low',
-				width = 128,
-				height = 128,
-				frame_count = 20,
+				width = 256,
+				height = 256,
 				slice = 16,
 				lines_per_file = 16,
+				frame_count = 20,
 				direction_count = 64,
 				shift = util.by_pixel(-0.0, -0.0),
 				animation_speed = 1.8,
 				max_advance = 1,
 				filenames = {
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-01.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-02.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-03.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-04.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-05.png'
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-01.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-02.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-03.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-04.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-05.png'
 				},
-				hr_version = {
-					priority = 'low',
-					width = 256,
-					height = 256,
-					slice = 16,
-					lines_per_file = 16,
-					frame_count = 20,
-					direction_count = 64,
-					shift = util.by_pixel(-0.0, -0.0),
-					animation_speed = 1.8,
-					max_advance = 1,
-					filenames = {
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-01.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-02.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-03.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-04.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-05.png'
-					},
-					scale = 0.75
-				}
+				scale = 0.75
 			},
 			{
 				priority = 'low',
-				width = 128,
-				height = 128,
-				frame_count = 20,
+				width = 256,
+				height = 256,
 				slice = 16,
 				lines_per_file = 16,
-				direction_count = 64,
+				frame_count = 20,
 				draw_as_shadow = true,
+				direction_count = 64,
 				shift = util.by_pixel(-0.0, -0.0),
 				animation_speed = 1.8,
 				max_advance = 1,
 				filenames = {
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-sh-01.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-sh-02.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-sh-03.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-sh-04.png',
-					'__pyalienlifegraphics3__/graphics/entity/crawdad/crawdad-sh-05.png'
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-01.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-02.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-03.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-04.png',
+				'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-05.png'
 				},
-				hr_version = {
-					priority = 'low',
-					width = 256,
-					height = 256,
-					slice = 16,
-					lines_per_file = 16,
-					frame_count = 20,
-					draw_as_shadow = true,
-					direction_count = 64,
-					shift = util.by_pixel(-0.0, -0.0),
-					animation_speed = 1.8,
-					max_advance = 1,
-					filenames = {
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-01.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-02.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-03.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-04.png',
-						'__pyalienlifegraphics3__/graphics/entity/crawdad/hr-crawdad-sh-05.png'
-					},
-					scale = 0.75
-				}
+				scale = 0.75
 			}
 		}
 	},

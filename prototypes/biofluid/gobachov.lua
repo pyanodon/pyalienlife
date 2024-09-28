@@ -33,48 +33,27 @@ ITEM {
 local animation = {
     layers = {
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png',
             priority = 'high',
             line_length = 25,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 25,
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
             direction_count = 16,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png',
-                priority = 'high',
-                line_length = 25,
-                width = 128,
-                height = 128,
-                frame_count = 25,
-                shift = util.by_pixel(33.5, 18.75),
-                draw_as_shadow = true,
-                direction_count = 16,
-                scale = 0.5
-            }
+            scale = 0.5
         },
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/carry.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-carry.png',
             priority = 'high',
             line_length = 25,
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 25,
             shift = util.by_pixel(0, 0),
             direction_count = 16,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-carry.png',
-                priority = 'high',
-                line_length = 25,
-                width = 128,
-                height = 128,
-                frame_count = 25,
-                shift = util.by_pixel(0, 0),
-                direction_count = 16,
-                scale = 0.5
-            }
+            scale = 0.5
         }
     }
 }

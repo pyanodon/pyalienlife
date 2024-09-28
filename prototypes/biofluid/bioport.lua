@@ -98,58 +98,32 @@ ENTITY {
     integration_patch = {
         layers = {
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/raw.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png',
                 priority = 'extra-high',
-                width = 175,
-                height = 182,
+                width = 351,
+                height = 365,
                 shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png',
-                    priority = 'extra-high',
-                    width = 351,
-                    height = 365,
-                    shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                    scale = 0.5,
-                    frame_count = 1
-                },
+                scale = 0.5,
                 frame_count = 1
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/glow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
                 priority = 'extra-high',
-                width = 175,
-                height = 182,
+                width = 351,
+                height = 365,
                 shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                 draw_as_glow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
-                    priority = 'extra-high',
-                    width = 351,
-                    height = 365,
-                    shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                    draw_as_glow = true,
-                    scale = 0.5,
-                    frame_count = 1
-                },
+                scale = 0.5,
                 frame_count = 1
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/sh.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png',
                 priority = 'extra-high',
                 draw_as_shadow = true,
-                width = 176,
-                height = 116,
+                width = 352,
+                height = 232,
                 shift = {1.5, 1.5 - 9/32},
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png',
-                    priority = 'extra-high',
-                    draw_as_shadow = true,
-                    width = 352,
-                    height = 232,
-                    shift = {1.5, 1.5 - 9/32},
-                    scale = 0.5,
-                    frame_count = 1
-                },
+                scale = 0.5,
                 frame_count = 1
             }
         }
@@ -275,74 +249,39 @@ for _, direction in pairs{'north', 'east', 'south', 'west'} do
     idle_animation[direction_inversion[direction]] = {
         layers = {
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-' .. direction .. '.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
-                animation_speed = 0.5,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5
-                }
+                scale = 0.335,
+                animation_speed = 0.5
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-' .. direction .. '-glow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-glow.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
+                scale = 0.335,
                 animation_speed = 0.5,
-                draw_as_glow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-glow.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5,
-                    draw_as_glow = true
-                }
+                draw_as_glow = true
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-' .. direction .. '-shadow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-shadow.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
+                scale = 0.335,
                 animation_speed = 0.5,
-                draw_as_shadow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-' .. direction .. '-shadow.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5,
-                    draw_as_shadow = true
-                }
+                draw_as_shadow = true
             }
         }
     }
@@ -353,7 +292,6 @@ local function append_shifted(original, new_layers, shift)
         if not layer.draw_as_light then
             layer.shift = layer.shift or {0, 0}
             layer.shift = {layer.shift[1] + shift[1], layer.shift[2] + shift[2]}
-            layer.hr_version.shift = layer.shift
             original[#original+1] = layer
         end
     end

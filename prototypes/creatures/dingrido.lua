@@ -140,73 +140,41 @@ data:extend{{
 		layers = {
 			{
 				priority = 'low',
-				width = 128,
-				height = 128,
+				width = 256,
+				height = 256,
 				frame_count = 16,
 				direction_count = 64,
 				shift = util.by_pixel(-0.0, -0.0),
 				animation_speed = 1,
 				max_advance = 1,
 				stripes = {
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-01.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					},
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-02.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					},
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-03.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					},
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-04.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					}
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-01.png',
+				width_in_frames = 16,
+				height_in_frames = 16
 				},
-				hr_version = {
-					priority = 'low',
-					width = 256,
-					height = 256,
-					frame_count = 16,
-					direction_count = 64,
-					shift = util.by_pixel(-0.0, -0.0),
-					animation_speed = 1,
-					max_advance = 1,
-					stripes = {
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-01.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						},
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-02.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						},
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-03.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						},
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-04.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						}
-					},
-					scale = 0.85
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-02.png',
+				width_in_frames = 16,
+				height_in_frames = 16
+				},
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-03.png',
+				width_in_frames = 16,
+				height_in_frames = 16
+				},
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-04.png',
+				width_in_frames = 16,
+				height_in_frames = 16
 				}
+				},
+				scale = 0.85
 			},
 			{
 				priority = 'low',
-				width = 128,
-				height = 128,
+				width = 256,
+				height = 256,
 				frame_count = 16,
 				draw_as_shadow = true,
 				direction_count = 64,
@@ -214,61 +182,28 @@ data:extend{{
 				max_advance = 1,
 				animation_speed = 1,
 				stripes = {
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-01.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					},
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-02.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					},
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-03.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					},
-					{
-						filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-04.png',
-						width_in_frames = 16,
-						height_in_frames = 16
-					}
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-01.png',
+				width_in_frames = 16,
+				height_in_frames = 16
 				},
-				hr_version = {
-					priority = 'low',
-					width = 256,
-					height = 256,
-					frame_count = 16,
-					draw_as_shadow = true,
-					direction_count = 64,
-					shift = util.by_pixel(0.0, 0.0),
-					max_advance = 1,
-					animation_speed = 1,
-					stripes = {
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-01.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						},
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-02.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						},
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-03.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						},
-						{
-							filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-04.png',
-							width_in_frames = 16,
-							height_in_frames = 16
-						}
-					},
-					scale = 0.85
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-02.png',
+				width_in_frames = 16,
+				height_in_frames = 16
+				},
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-03.png',
+				width_in_frames = 16,
+				height_in_frames = 16
+				},
+				{
+				filename = '__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-04.png',
+				width_in_frames = 16,
+				height_in_frames = 16
 				}
+				},
+				scale = 0.85
 			}
 		}
 	},

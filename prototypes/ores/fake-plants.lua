@@ -64,17 +64,8 @@ data:extend({
             height = ore.stages.sheet.height,
             frame_count = ore.stages.sheet.frame_count,
             variation_count = ore.stages.sheet.variation_count,
+            scale = ore.stages.sheet.scale,
             shift = ore.stages.sheet.shift or nil,
-			hr_version = {
-                filename = ore.stages.sheet.hr_version.filename,
-                priority = "extra-high",
-                width = ore.stages.sheet.hr_version.width,
-                height = ore.stages.sheet.hr_version.height,
-                frame_count = ore.stages.sheet.hr_version.frame_count,
-                variation_count = ore.stages.sheet.hr_version.variation_count,
-                scale = ore.stages.sheet.hr_version.scale,
-                shift = ore.stages.sheet.hr_version.shift or nil,
-            }
           }
         }
       }
