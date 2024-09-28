@@ -105,74 +105,39 @@ for _, variant in pairs(variants) do
     animations[#animations+1] = {
         layers = {
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
-                animation_speed = 0.5,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'..(variant=='alone' and 'straight-base-vertical' or variant)..'.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5
-                }
+                scale = 0.335,
+                animation_speed = 0.5
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
+                scale = 0.335,
                 animation_speed = 0.5,
-                draw_as_glow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (glow_translations[variant] or variant) ..'-glow.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5,
-                    draw_as_glow = true
-                }
+                draw_as_glow = true
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
+                scale = 0.335,
                 animation_speed = 0.5,
-                draw_as_shadow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-'.. (shadow_translations[variant] or variant) ..'-shadow.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5,
-                    draw_as_shadow = true
-                }
+                draw_as_shadow = true
             },
             {
                 filename = '__core__/graphics/light-small.png',
@@ -190,51 +155,28 @@ for _, variant in pairs(variants) do
 end
 
 local gap = {
-    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical.png',
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical.png',
     priority = 'high',
-    width = 640/5/2,
-    height = 768/6/2,
+    width = 640/5,
+    height = 768/6,
     frame_count = 5*6,
     line_length = 5,
     shift = util.by_pixel(0, 8),
-    scale = 0.335*2,
-    animation_speed = 0.5,
-    hr_version = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical.png',
-        priority = 'high',
-        width = 640/5,
-        height = 768/6,
-        frame_count = 5*6,
-        line_length = 5,
-        shift = util.by_pixel(0, 8),
-        scale = 0.335,
-        animation_speed = 0.5
-    }
+    scale = 0.335,
+    animation_speed = 0.5
 }
 
 local gap_glow = {
-    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-straight-vertical-glow.png',
+    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical-glow.png',
     priority = 'high',
-    width = 640/5/2,
-    height = 768/6/2,
+    width = 640/5,
+    height = 768/6,
     frame_count = 5*6,
     line_length = 5,
     shift = util.by_pixel(0, 8),
-    scale = 0.335*2,
+    scale = 0.335,
     animation_speed = 0.5,
     draw_as_glow = true,
-    hr_version = {
-        filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-straight-vertical-glow.png',
-        priority = 'high',
-        width = 640/5,
-        height = 768/6,
-        frame_count = 5*6,
-        line_length = 5,
-        shift = util.by_pixel(0, 8),
-        scale = 0.335,
-        animation_speed = 0.5,
-        draw_as_glow = true,
-    }
 }
 
 local function fix_gap(index)
@@ -275,74 +217,39 @@ for cardinal, direction in pairs{['north'] = 'up', ['east'] = 'right', ['south']
     ug_pipe_animation[#ug_pipe_animation + 1] = {
         layers = {
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
-                animation_speed = 0.5,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5
-                }
+                scale = 0.335,
+                animation_speed = 0.5
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '-glow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-glow.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
+                scale = 0.335,
                 animation_speed = 0.5,
                 draw_as_glow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-glow.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5,
-                    draw_as_glow = true,
-                }
             },
             {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-' .. direction .. '-shadow.png',
+                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-shadow.png',
                 priority = 'high',
-                width = 640/5/2,
-                height = 768/6/2,
+                width = 640/5,
+                height = 768/6,
                 frame_count = 5*6,
                 line_length = 5,
                 shift = {0, 0},
-                scale = 0.335*2,
+                scale = 0.335,
                 animation_speed = 0.5,
                 draw_as_shadow = true,
-                hr_version = {
-                    filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-' .. direction .. '-shadow.png',
-                    priority = 'high',
-                    width = 640/5,
-                    height = 768/6,
-                    frame_count = 5*6,
-                    line_length = 5,
-                    shift = {0, 0},
-                    scale = 0.335,
-                    animation_speed = 0.5,
-                    draw_as_shadow = true,
-                }
             },
             {
                 filename = '__core__/graphics/light-small.png',
@@ -363,76 +270,41 @@ end
 ug_pipe_animation[#ug_pipe_animation + 1] = {
     layers = {
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down.png',
             priority = 'high',
-            width = 640/5/2,
-            height = 768/6/2,
+            width = 640/5,
+            height = 768/6,
             frame_count = 5*6,
             line_length = 5,
             shift = {0, 0},
-            scale = 0.335*2,
-            animation_speed = 0.5,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down.png',
-                priority = 'high',
-                width = 640/5,
-                height = 768/6,
-                frame_count = 5*6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.335,
-                animation_speed = 0.5
-            }
+            scale = 0.335,
+            animation_speed = 0.5
         },
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down-alone-glow.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down-alone-glow.png',
             priority = 'high',
-            width = 640/5/2,
-            height = 768/6/2,
+            width = 640/5,
+            height = 768/6,
             frame_count = 5*6,
             line_length = 5,
             shift = {0, 0},
-            scale = 0.335*2,
+            scale = 0.335,
             animation_speed = 0.5,
             draw_as_glow = true,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down-alone-glow.png',
-                priority = 'high',
-                width = 640/5,
-                height = 768/6,
-                frame_count = 5*6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.335,
-                animation_speed = 0.5,
-                draw_as_glow = true,
-            }
         },
         gap,
         gap_glow,
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down-shadow.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down-shadow.png',
             priority = 'high',
-            width = 640/5/2,
-            height = 768/6/2,
+            width = 640/5,
+            height = 768/6,
             frame_count = 5*6,
             line_length = 5,
             shift = {0, 0},
-            scale = 0.335*2,
+            scale = 0.335,
             animation_speed = 0.5,
             draw_as_shadow = true,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-to-ground-down-shadow.png',
-                priority = 'high',
-                width = 640/5,
-                height = 768/6,
-                frame_count = 5*6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.335,
-                animation_speed = 0.5,
-                draw_as_shadow = true,
-            }
         },
         {
             filename = '__core__/graphics/light-small.png',

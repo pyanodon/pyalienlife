@@ -34,48 +34,27 @@ ITEM {
 local animation = {
     layers = {
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/huzu/carry-sh.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/huzu/hr-carry-sh.png',
             priority = 'high',
             line_length = 25,
-            width = 80,
-            height = 80,
+            width = 160,
+            height = 160,
             frame_count = 30,
             shift = util.by_pixel(33.5, 18.75),
             draw_as_shadow = true,
             direction_count = 16,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/huzu/hr-carry-sh.png',
-                priority = 'high',
-                line_length = 25,
-                width = 160,
-                height = 160,
-                frame_count = 30,
-                shift = util.by_pixel(33.5, 18.75),
-                draw_as_shadow = true,
-                direction_count = 16,
-                scale = 0.5
-            }
+            scale = 0.5
         },
         {
-            filename = '__pyalienlifegraphics2__/graphics/entity/bots/huzu/carry.png',
+            filename = '__pyalienlifegraphics2__/graphics/entity/bots/huzu/hr-carry.png',
             priority = 'high',
             line_length = 25,
-            width = 80,
-            height = 80,
+            width = 160,
+            height = 160,
             frame_count = 30,
             shift = util.by_pixel(0, -5),
             direction_count = 16,
-            hr_version = {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/huzu/hr-carry.png',
-                priority = 'high',
-                line_length = 25,
-                width = 160,
-                height = 160,
-                frame_count = 30,
-                shift = util.by_pixel(0, -5),
-                direction_count = 16,
-                scale = 0.5
-            }
+            scale = 0.5
         }
     }
 }
