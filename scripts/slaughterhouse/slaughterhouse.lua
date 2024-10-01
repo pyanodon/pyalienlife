@@ -144,7 +144,7 @@ function Slaughterhouse.set_recipe(player, entity, recipe)
 	for item, count in pairs(entity.set_recipe(recipe)) do
 		count = count - player.insert{name = item, count = count}
 		if count > 0 then
-			player.surface.spill_item_stack(player.position, {name = item, count = count}, true)
+			player.surface.spill_item_stack{position = player.position, stack = {name = item, count = count}, enable_looted = true}
 		end
 	end
 	player.opened = entity

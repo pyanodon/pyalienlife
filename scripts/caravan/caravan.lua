@@ -237,7 +237,7 @@ gui_events[defines.events.on_gui_click]['py_add_outpost'] = function(event)
 	if not stack then return end
 	if stack.valid_for_read then
 		if player.insert(stack) == 0 then
-			player.surface.spill_item_stack(player.position, stack, true, player.force)
+			player.surface.spill_item_stack{position = player.position, stack = stack, enable_looted = true, force = player.force}
 		end
 		stack.clear()
 	end

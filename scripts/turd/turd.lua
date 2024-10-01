@@ -287,10 +287,10 @@ gui_events[defines.events.on_gui_click]['py_minimize_turd'] = function(event)
 end
 
 local function handle_removed_items(surface, force, machine, removed_items)
-	for name, count in pairs(removed_items) do
-		local cannot_insert = count - machine.insert{name = name, count = count}
-		if cannot_insert ~= 0 then
-			surface.spill_item_stack(machine.position, {name = name, count = cannot_insert}, true, force, false)
+	for _, item in pairs(removed_items) do
+		item.count = item.count - machine.insert(item)
+		if item.count ~= 0 then
+			surface.spill_item_stack{position = machine.position, stack = item, enable_looted = true, force = force, allow_belts = false}
 		end
 	end
 end

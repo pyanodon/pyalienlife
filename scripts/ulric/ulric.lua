@@ -109,7 +109,7 @@ Ulric.transfer_character_inventory = function(old, new)
 					local inserted_count = new_inventory.insert(old_stack)
 					if original_count ~= inserted_count then
 						old_stack.count = original_count - inserted_count
-						new.surface.spill_item_stack(new.position, old_stack, true, nil, false)
+						new.surface.spill_item_stack{position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false}
 					end
 				end
 				old_stack.clear()
