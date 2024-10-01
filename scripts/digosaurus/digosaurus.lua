@@ -72,7 +72,7 @@ function Digosaurus.start_mining_command(dig_data, i)
         create_build_effect_smoke = false
     }
 
-    digosaur.set_command{
+    digosaur.commandable.set_command{
         type = defines.command.attack,
         target = proxy,
         distraction = defines.distraction.none
@@ -149,7 +149,7 @@ Digosaurus.events.on_ai_command_completed = function(event)
 
     if digosaur_data.state == 'mining' then
         digosaur_data.state = 'returning'
-        digosaur.set_command{
+        digosaur.commandable.set_command{
             type = defines.command.go_to_location,
             destination_entity = storage.dig_sites[digosaur_data.parent].entity,
             distraction = defines.distraction.none,
