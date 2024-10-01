@@ -1,0 +1,1 @@
+storage.on_tick = {}
