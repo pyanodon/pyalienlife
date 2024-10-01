@@ -230,7 +230,7 @@ function Oculua.clear_incoming_oculua_items(oculua_data)
 		if network then
 			network.insert(items)
 		else
-			oculua.surface.spill_item_stack(oculua.position, items, false, oculua.force, false)
+			oculua.surface.spill_item_stack{position = oculua.position, stack = items, enable_looted = false, force = oculua.force, allow_belts = false}
 		end
 		oculua_data.count = 0
 	end
