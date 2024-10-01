@@ -24,7 +24,7 @@ function Oculua.set_target(oculua_data, target)
 		Oculua.go_home(oculua_data)
 		return
 	end
-	entity.set_command{
+	entity.commandable.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = target,
 		radius = Oculua.range,
@@ -246,7 +246,7 @@ end
 function Oculua.wander(oculua_data)
 	local oculua = oculua_data.entity
 	game.print{'oculua.wandering', math.floor(oculua.position.x * 10) / 10, math.floor(oculua.position.y * 10) / 10}
-	oculua.set_command{
+	oculua.commandable.set_command{
 		type = defines.command.wander,
 		distraction = defines.distraction.none
 	}
@@ -263,7 +263,7 @@ function Oculua.go_home(oculua_data)
 		Oculua.wander(oculua_data)
 		return
 	end
-	entity.set_command{
+	entity.commandable.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = ipod,
 		radius = 0.5,

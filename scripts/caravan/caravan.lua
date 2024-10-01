@@ -43,7 +43,7 @@ local prototypes = require 'caravan-prototypes'
 ---@param entity LuaEntity
 local function goto_entity(caravan_data, entity)
 	local caravan = caravan_data.entity
-	caravan.set_command{
+	caravan.commandable.set_command{
 		type = defines.command.go_to_location,
 		destination_entity = entity,
 		distraction = defines.distraction.none,
@@ -57,7 +57,7 @@ end
 ---@param position MapPosition
 local function goto_position(caravan_data, position)
 	local caravan = caravan_data.entity
-	caravan.set_command{
+	caravan.commandable.set_command{
 		type = defines.command.go_to_location,
 		destination = position,
 		distraction = defines.distraction.none,
@@ -69,7 +69,7 @@ end
 ---Sets the caravan to walk aimlessly in a radius.
 ---@param caravan_data Caravan
 local function wander(caravan_data)
-	caravan_data.entity.set_command{
+	caravan_data.entity.commandable.set_command{
 		type = defines.command.wander,
 		distraction = defines.distraction.none,
 		radius = 10
@@ -532,7 +532,7 @@ Caravan.events.ai_command_completed = function(event)
 	else
 		local entity = caravan_data.entity
 		begin_action(caravan_data, 1)
-		entity.set_command{
+		entity.commandable.set_command{
 			type = defines.command.stop,
 			distraction = defines.distraction.none,
 			pathfind_flags = {}

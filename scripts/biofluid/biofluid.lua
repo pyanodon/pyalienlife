@@ -281,7 +281,7 @@ Biofluid.events[143] = function()
 end
 
 local function set_target(biorobot_data, target)
-	biorobot_data.entity.set_command{
+	biorobot_data.entity.commandable.set_command{
 		type = defines.command.go_to_location,
 		destination = target,
 		radius = 0.5,
