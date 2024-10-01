@@ -169,8 +169,8 @@ end
 Oculua.events[221] = function()
 	if not storage.should_run_oculua_code then return end -- Save on UPS if no ipods are built
 	for _, player in pairs(game.connected_players) do
-		if player.character and player.character_personal_logistic_requests_enabled and not player.force.find_logistic_network_by_position(player.position, player.surface) then
 			Oculua.process_player(player)
+		if player.character and player.get_requester_point().enabled and not player.force.find_logistic_network_by_position(player.position, player.surface) then
 		end
 	end
 
