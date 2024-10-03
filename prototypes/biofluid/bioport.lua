@@ -86,13 +86,13 @@ ENTITY {
     crafting_categories = {'biofluid'},
     energy_source = {type = 'void'},
     show_recipe_icon = false,
+    fluid_boxes_off_when_no_fluid_recipe = false,
     fluid_boxes = {
         {
             production_type = 'output',
             volume = 100,
             pipe_connections = {{flow_direction = 'output', position = {0, -2.3}, direction = defines.direction.north}},
         },
-        off_when_no_fluid_recipe = false
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
     integration_patch = {

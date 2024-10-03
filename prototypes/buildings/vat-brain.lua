@@ -104,6 +104,7 @@ ENTITY {
             }
         },
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
         --1
         {
@@ -144,7 +145,6 @@ ENTITY {
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-1.0, 3.3}, direction = defines.direction.south}}
         },
-        off_when_no_fluid_recipe = true
     },
     radius_visualisation_specification = {
         sprite = {

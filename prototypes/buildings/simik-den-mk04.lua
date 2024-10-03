@@ -224,6 +224,7 @@ ENTITY {
         idle_sound = {filename = "__pyalienlifegraphics2__/sounds/simik-den.ogg", volume = 0.0},
         audible_distance_modifier = 0.35,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
         --1
         {
@@ -237,6 +238,5 @@ ENTITY {
             },
             secondary_draw_orders = { north = -1 }
         },
-        off_when_no_fluid_recipe = true
     },
 }
