@@ -148,6 +148,7 @@ ENTITY {
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 0.3},
         apparent_volume = 2.5
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
         {
             production_type = "output",
@@ -158,6 +159,5 @@ ENTITY {
             pipe_connections = {{flow_direction = "output", position = {0.0, -4.8}, direction = defines.direction.north}},
             secondary_draw_orders = { north = -1 }
         },
-        off_when_no_fluid_recipe = true
     },
 }

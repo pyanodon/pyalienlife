@@ -170,6 +170,7 @@ ENTITY {
             }
         },
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
         --1
         {
@@ -202,7 +203,6 @@ ENTITY {
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {6.2, 0.0}, direction = defines.direction.east}}
         },
-        off_when_no_fluid_recipe = true
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
