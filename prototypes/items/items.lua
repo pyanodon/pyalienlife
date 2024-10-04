@@ -8974,11 +8974,13 @@ ITEM {
 	subgroup = 'py-alienlife-dingrits',
 	order = 'x',
 	stack_size = 1,
+    weight = 200e3,
 	rocket_launch_products = {{
 		type = 'item',
 		name = 'space-dingrit-return',
 		amount = 1
-	}}
+	}},
+    send_to_orbit_mode = "automated"
 }
 
 ITEM {
