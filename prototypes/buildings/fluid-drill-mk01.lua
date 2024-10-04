@@ -52,9 +52,9 @@ ENTITY {
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-            {flow_direction = "input-output", position = {-2.3, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.3, 0}, direction = defines.direction.east},
-            {flow_direction = "input-output", position = {0, 2.3}, direction = defines.direction.south}
+            {flow_direction = "input-output", position = {-2.0, 0}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.0, 0}, direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 2.0}, direction = defines.direction.south}
         }
     },
     energy_source =
