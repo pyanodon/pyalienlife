@@ -243,7 +243,7 @@ fluid_boxes = {
         pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
         volume = 1000,
         base_level = -1,
-        pipe_connections = {{flow_direction = "input", position = {0.0, -5.2}, direction = defines.direction.north}},
+        pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
         secondary_draw_orders = { north = -1 }
     },
     --[[
@@ -253,7 +253,7 @@ fluid_boxes = {
         pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
         volume = 1000,
         base_level = -1,
-        pipe_connections = {{flow_direction = "input", position = {-2.0, -5.2}, direction = defines.direction.north}},
+        pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}},
         secondary_draw_orders = { north = -1 }
     },
     ]]

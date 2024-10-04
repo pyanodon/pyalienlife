@@ -234,8 +234,8 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {
-                {flow_direction = "input", position = {0.5, -7.6}, direction = defines.direction.north},
-                {flow_direction = "input", position = {-0.5, -7.6}, direction = defines.direction.north}
+                {flow_direction = "input", position = {0.5, -7.5}, direction = defines.direction.north},
+                {flow_direction = "input", position = {-0.5, -7.5}, direction = defines.direction.north}
             },
             secondary_draw_orders = { north = -1 }
         },
