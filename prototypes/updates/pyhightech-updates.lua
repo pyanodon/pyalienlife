@@ -120,12 +120,11 @@ RECIPE('fiberboard'):set_fields{results = {
 }}
 
 --remove space science from satellite
-data.raw.item.satellite.rocket_launch_product =
-    {
-        type = 'item',
-        name = 'destabilized-toxirus',
-        amount = 6
-    }
+data.raw.item.satellite.rocket_launch_products = {{
+    type = 'item',
+    name = 'destabilized-toxirus',
+    amount = 6
+}}
 
 RECIPE('satellite'):add_ingredient({type = 'item', name = 'cottongut', amount = 150})
 RECIPE('satellite'):add_ingredient({type = 'item', name = 'antimatter', amount = 3})
