@@ -125,6 +125,7 @@ data.raw.item.satellite.rocket_launch_products = {{
     name = 'destabilized-toxirus',
     amount = 6
 }}
+data.raw.item.satellite.weight = 200e3
 
 RECIPE('satellite'):add_ingredient({type = 'item', name = 'cottongut', amount = 150})
 RECIPE('satellite'):add_ingredient({type = 'item', name = 'antimatter', amount = 3})
