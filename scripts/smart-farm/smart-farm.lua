@@ -122,8 +122,9 @@ Smart_Farm.events.on_destroyed = function(event)
 	surface.set_tiles(tiles_to_reset, true, false, false, true)
 end
 
+---@param event EventData.on_rocket_launched
 Smart_Farm.events.on_rocket_launched = function(event)
-	local silo = event.rocket_silo
+	local silo = event.rocket_silo --[[@as LuaEntity]]
 	if silo.name ~= 'mega-farm' then return end
 	local surface = silo.surface
 	local position = silo.position

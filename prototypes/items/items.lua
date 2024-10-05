@@ -8806,7 +8806,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ITEM {
@@ -8817,7 +8819,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ITEM {
@@ -8828,7 +8832,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ITEM {
@@ -8839,7 +8845,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ITEM {
@@ -8850,7 +8858,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ITEM {
@@ -8861,7 +8871,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ITEM {
@@ -8872,7 +8884,9 @@ ITEM {
 	flags = {},
 	subgroup = 'py-alienlife-replicators',
 	order = 'x',
-	stack_size = 1
+	stack_size = 1,
+	weight = 1,
+	send_to_orbit_mode = "automated"
 }
 
 ---special parts----
