@@ -224,11 +224,13 @@ ENTITY {
     buffer_capacity = '400kJ',
     drain = '400kW'
   },
-  animation = {
-    north = dig_site_graphic,
-    east = dig_site_graphic,
-    south = dig_site_graphic,
-    west = dig_site_graphic,
+  graphics_set = {
+    animation = {
+      north = dig_site_graphic,
+      east = dig_site_graphic,
+      south = dig_site_graphic,
+      west = dig_site_graphic,
+    },
   },
   radius_visualisation_specification = {
     sprite = {
@@ -258,7 +260,7 @@ ENTITY{
   minable = ENTITY('dino-dig-site').minable,
   collision_box = ENTITY('dino-dig-site').collision_box,
   selection_box = ENTITY('dino-dig-site').selection_box,
-  animation = ENTITY('dino-dig-site').animation,
+  graphics_set = ENTITY('dino-dig-site').graphics_set,
   energy_usage = '1W',
   energy_source = ENTITY('dino-dig-site').energy_source,
   vector_to_place_result = {0, 0},

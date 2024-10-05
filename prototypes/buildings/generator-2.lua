@@ -65,46 +65,44 @@ ENTITY {
 		},
 	effectivity = 2,
 	max_power_output = "60MW",
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a1.png",
-                    width = 128,
-                    height = 256,
-                    line_length = 16,
-                    frame_count = 85,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -16)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a2.png",
-                    width = 128,
-                    height = 256,
-                    line_length = 16,
-                    frame_count = 85,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -16)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a1.png",
-                    width = 128,
-                    height = 256,
-                    line_length = 16,
-                    frame_count = 85,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -16)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a2.png",
-                    width = 128,
-                    height = 256,
-                    line_length = 16,
-                    frame_count = 85,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -16)
-                },
-        },
+    animation = {
+        layers = {
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a1.png",
+                width = 128,
+                height = 256,
+                line_length = 16,
+                frame_count = 85,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-48, -16)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a2.png",
+                width = 128,
+                height = 256,
+                line_length = 16,
+                frame_count = 85,
+                animation_speed = 0.4,
+                shift = util.by_pixel(80, -16)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a1.png",
+                width = 128,
+                height = 256,
+                line_length = 16,
+                frame_count = 85,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-48, -16)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-2/a2.png",
+                width = 128,
+                height = 256,
+                line_length = 16,
+                frame_count = 85,
+                animation_speed = 0.4,
+                shift = util.by_pixel(80, -16)
+            },
     },
     },
 

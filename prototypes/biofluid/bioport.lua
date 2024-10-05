@@ -95,40 +95,42 @@ ENTITY {
         },
     },
     vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
-    integration_patch = {
-        layers = {
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png',
-                priority = 'extra-high',
-                width = 351,
-                height = 365,
-                shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                scale = 0.5,
-                frame_count = 1
-            },
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
-                priority = 'extra-high',
-                width = 351,
-                height = 365,
-                shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                draw_as_glow = true,
-                scale = 0.5,
-                frame_count = 1
-            },
-            {
-                filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png',
-                priority = 'extra-high',
-                draw_as_shadow = true,
-                width = 352,
-                height = 232,
-                shift = {1.5, 1.5 - 9/32},
-                scale = 0.5,
-                frame_count = 1
+    graphics_set = {
+        integration_patch = {
+            layers = {
+                {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png',
+                    priority = 'extra-high',
+                    width = 351,
+                    height = 365,
+                    shift = util.by_pixel(16.75, -38.75 - 32 - 9),
+                    scale = 0.5,
+                    frame_count = 1
+                },
+                {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png',
+                    priority = 'extra-high',
+                    width = 351,
+                    height = 365,
+                    shift = util.by_pixel(16.75, -38.75 - 32 - 9),
+                    draw_as_glow = true,
+                    scale = 0.5,
+                    frame_count = 1
+                },
+                {
+                    filename = '__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png',
+                    priority = 'extra-high',
+                    draw_as_shadow = true,
+                    width = 352,
+                    height = 232,
+                    shift = {1.5, 1.5 - 9/32},
+                    scale = 0.5,
+                    frame_count = 1
+                }
             }
-        }
-    },
-    integration_patch_render_layer = 'higher-object-under'
+        },
+        integration_patch_render_layer = 'higher-object-under'
+    }
 }
 
 local function random_order(l)

@@ -65,8 +65,7 @@ ENTITY {
 		},
 	effectivity = 1,
 	max_power_output = "22MW",
-    graphics_set = {
-        animation = {
+    animation = {
             layers = {
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a1.png",
@@ -141,7 +140,6 @@ ENTITY {
                     shift = util.by_pixel(128, -32)
                 },
         },
-    },
     },
 
     min_perceived_performance = 0.1,
