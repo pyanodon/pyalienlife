@@ -167,19 +167,19 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
     Biofluid.events.on_entity_settings_pasted(event)
 end)
 
-script.on_nth_tick(41, Vatbrain.events[41])
-script.on_nth_tick(43, Oculua.events[43])
-script.on_nth_tick(59, Farming.events[59])
-script.on_nth_tick(60, Caravan.events[60])
-script.on_nth_tick(61, Digosaurus.events[61])
-script.on_nth_tick(121, Farming.events[121])
-script.on_nth_tick(143, Biofluid.events[143])
-script.on_nth_tick(221, Oculua.events[221])
-script.on_nth_tick(239, Mounts.events[239])
-script.on_nth_tick(397, Ulric.events[397])
-script.on_nth_tick(123, Turd.events[123])
+py.register_on_nth_tick(41, "Vatbrain", "pyal", Vatbrain.events[41])
+py.register_on_nth_tick(43, "Oculua", "pyal", Oculua.events[43])
+py.register_on_nth_tick(59, "Farming", "pyal", Farming.events[59])
+py.register_on_nth_tick(60, "Caravan", "pyal", Caravan.events[60])
+py.register_on_nth_tick(61, "Digosaurus", "pyal", Digosaurus.events[61])
+py.register_on_nth_tick(121, "Farming", "pyal", Farming.events[121])
+py.register_on_nth_tick(143, "Biofluid", "pyal", Biofluid.events[143])
+py.register_on_nth_tick(221, "Oculua", "pyal", Oculua.events[221])
+py.register_on_nth_tick(239, "Mounts", "pyal", Mounts.events[239])
+py.register_on_nth_tick(397, "Ulric", "pyal", Ulric.events[397])
+py.register_on_nth_tick(123, "Turd", "pyal", Turd.events[123])
 
-py.on_nth_tick(7, function()
+py.register_on_nth_tick(7, "digosaurus", "pyal", function()
     for _, player in pairs(game.connected_players) do
 		local gui = player.gui.relative.digosaurus_gui
 		if gui then Digosaurus.update_gui(gui); goto continue end
@@ -204,5 +204,12 @@ script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule
 script.on_event(defines.events.on_player_rotated_entity, Biofluid.events.on_player_rotated_entity)
 script.on_event(defines.events.on_player_setup_blueprint, Biofluid.events.on_player_setup_blueprint)
 script.on_event(defines.events.on_player_fast_transferred, Biofluid.events.on_player_fast_transferred)
+
+remote.add_interface("pyal", {
+    ---@param func string
+    execute_on_nth_tick = function(func)
+        py.mod_nth_tick_funcs[func]()
+    end
+})
 
 py.finalize_events()
