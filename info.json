@@ -19,5 +19,10 @@
   "package": {
     "ignore": [],
     "scripts": {}
-  }
+  },
+  "quality_required": false,
+  "space_travel_required": false,
+  "spoiling_required": false,
+  "freezing_required": false,
+  "segmented_units_required": false
 }
