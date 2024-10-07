@@ -1,4 +1,4 @@
-local prototypes = require 'caravan-prototypes'
+local caravan_prototypes = require 'caravan-prototypes'
 
 function Caravan.status_img(caravan_data)
     local entity = caravan_data.entity
@@ -18,7 +18,7 @@ end
 local function convert_to_tooltip_row(item)
     local name = item.name
     local count = item.count
-    local quality = item.quality
+    local quality = item.quality or 'normal'
     return {'', '\n[item=' .. name .. ',quality=' .. quality .. '] ', prototypes.item[name].localised_name, ' ×', count}
 end
 
@@ -97,7 +97,7 @@ end
 
 function Caravan.add_gui_row(caravan_data, key, table)
     local entity = caravan_data.entity
-    local prototype = prototypes[entity.name]
+    local prototype = caravan_prototypes[entity.name]
 
     table = table.add{type = 'frame', direction = 'vertical', tags = {unit_number = key}}
 
@@ -133,7 +133,7 @@ function Caravan.add_gui_row(caravan_data, key, table)
         type = 'sprite-button',
         name = 'py_view_inventory_button',
         style = 'frame_action_button',
-        sprite = 'utility/expand_dots_white',
+        sprite = 'utility/expand_dots',
         hovered_sprite = 'utility/expand_dots',
         clicked_sprite = 'utility/expand_dots',
         tooltip = tooltip,
@@ -216,7 +216,11 @@ gui_events[defines.events.on_gui_click]['py_open_map_button'] = function(event)
     local entity = caravan_data.entity
 
     player.opened = nil
-    player.zoom_to_world(entity.position, 0.5, entity)
+    player.set_controller{   
+        type = defines.controllers.remote,
+        position = entity.position,
+    }
+    player.centered_on = entity
 end
 
 local function title_edit_mode(caption_flow, caravan_data)
