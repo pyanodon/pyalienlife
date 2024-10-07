@@ -15,8 +15,11 @@ function Caravan.status_img(caravan_data)
     end
 end
 
-local function convert_to_tooltip_row(name, count)
-    return {'', '\n[item=' .. name .. '] ', prototypes.item[name].localised_name, ' ×', count}
+local function convert_to_tooltip_row(item)
+    local name = item.name
+    local count = item.count
+    local quality = item.quality
+    return {'', '\n[item=' .. name .. ',quality=' .. quality .. '] ', prototypes.item[name].localised_name, ' ×', count}
 end
 
 function Caravan.get_inventory_tooltip(caravan_data)
@@ -24,17 +27,13 @@ function Caravan.get_inventory_tooltip(caravan_data)
     ---@type (table | string)[]
     local inventory_contents = {'', '\n[img=utility/trash_white] ', {'caravan-gui.the-inventory-is-empty'}}
     if inventory and inventory.valid then
-        local sorted_contents = {}
-        for name, count in pairs(inventory.get_contents()) do
-            sorted_contents[#sorted_contents + 1] = {name = name, count = count}
-        end
+        local sorted_contents = inventory.get_contents()
         table.sort(sorted_contents, function(a, b) return a.count > b.count end)
         
         local i = 0
         for _, item in pairs(sorted_contents) do
             if i == 0 then inventory_contents = {''} end
-            local name, count = item.name, item.count
-            inventory_contents[#inventory_contents + 1] = convert_to_tooltip_row(name, count)
+            inventory_contents[#inventory_contents + 1] = convert_to_tooltip_row(item)
             i = i + 1
             if i == 10 then
                 if #sorted_contents > 10 then
@@ -86,8 +85,8 @@ function Caravan.get_summary_tooltip(caravan_data)
     local fuel_inventory_contents = {''}
     if fuel_inventory and fuel_inventory.valid then
         local i = 0
-        for name, count in pairs(fuel_inventory.get_contents()) do
-            fuel_inventory_contents[#fuel_inventory_contents + 1] = convert_to_tooltip_row(name, count)
+        for _, item in pairs(fuel_inventory.get_contents()) do
+            fuel_inventory_contents[#fuel_inventory_contents + 1] = convert_to_tooltip_row(item)
             i = i + 1
             if i == 10 then break end
         end

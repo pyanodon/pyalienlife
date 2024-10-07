@@ -207,7 +207,8 @@ local function eat(caravan_data)
 	local entity = caravan_data.entity
 	if caravan_data.fuel_bar == 0 then
 		local fuel = caravan_data.fuel_inventory
-		for item, count in pairs(fuel.get_contents()) do
+		for _, item in pairs(fuel.get_contents()) do
+			item = item.name
 			fuel.remove{name = item, count = 1}
 			caravan_data.fuel_bar = prototypes[entity.name].favorite_foods[item]
 			caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
