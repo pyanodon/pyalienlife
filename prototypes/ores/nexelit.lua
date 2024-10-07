@@ -57,7 +57,7 @@ ENTITY {
             height = 128,
             frame_count = 8,
             variation_count = 8,
-            scale = 0.75
+            scale = 1
         }
     }
 }

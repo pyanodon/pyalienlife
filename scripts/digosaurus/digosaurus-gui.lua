@@ -43,7 +43,7 @@ function Digosaurus.update_gui(gui)
 			element.sprite = 'item/' .. slot.name
 			element.number = slot.count
 		else
-			element.sprite = 'utility/slot_icon_fuel'
+			element.sprite = 'slot_icon_fuel'
 			element.number = nil
 		end
 		element.tooltip = py.generate_favorite_food_tooltip(Digosaurus.favorite_foods, 'digosaurus-gui')

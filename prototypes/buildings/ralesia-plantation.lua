@@ -82,13 +82,13 @@ RECIPE {
 }:add_unlock('botany-mk04')
 
 data.raw['assembling-machine']['ralesia-plantation-mk01'].crafting_speed = py.farm_speed(MODULE_SLOTS * 1, FULL_CRAFTING_SPEED)
-data.raw['assembling-machine']['ralesia-plantation-mk01'].module_specification = {module_slots = MODULE_SLOTS * 1}
+data.raw['assembling-machine']['ralesia-plantation-mk01'].module_slots = MODULE_SLOTS * 1
 
 data.raw['assembling-machine']['ralesia-plantation-mk02'].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 2, 'ralesia-plantation-mk01')
-data.raw['assembling-machine']['ralesia-plantation-mk02'].module_specification = {module_slots = MODULE_SLOTS * 2}
+data.raw['assembling-machine']['ralesia-plantation-mk02'].module_slots = MODULE_SLOTS * 2
 
 data.raw['assembling-machine']['ralesia-plantation-mk03'].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 3, 'ralesia-plantation-mk02')
-data.raw['assembling-machine']['ralesia-plantation-mk03'].module_specification = {module_slots = MODULE_SLOTS * 3}
+data.raw['assembling-machine']['ralesia-plantation-mk03'].module_slots = MODULE_SLOTS * 3
 
 data.raw['assembling-machine']['ralesia-plantation-mk04'].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 4, 'ralesia-plantation-mk03')
-data.raw['assembling-machine']['ralesia-plantation-mk04'].module_specification = {module_slots = MODULE_SLOTS * 4}
+data.raw['assembling-machine']['ralesia-plantation-mk04'].module_slots = MODULE_SLOTS * 4

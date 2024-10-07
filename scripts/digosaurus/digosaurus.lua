@@ -102,11 +102,12 @@ function Digosaurus.eat(food_inventory, food_inventory_contents, force)
 end
 
 local time_to_live = 30
-Digosaurus.events[61] = function(event)
+py.register_on_nth_tick(61, 'Digosaurus', 'pyal', function(event)
     for _, dig_data in pairs(storage.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
         local entity = dig_data.entity
         local food_inventory_contents = dig_data.food_inventory.get_contents()
+        game.print(serpent.block(food_inventory_contents))
 
         if table_size(dig_data.scanned_ores) == 0 then
             py.draw_error_sprite(entity, 'utility.warning_icon', time_to_live)
@@ -138,7 +139,7 @@ Digosaurus.events[61] = function(event)
 
         ::continue::
     end
-end
+end)
 
 Digosaurus.events.on_ai_command_completed = function(event)
     local unit_number = event.unit_number

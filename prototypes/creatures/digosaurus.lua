@@ -241,9 +241,7 @@ ENTITY {
     distance = 12.5,
     offset = {0, -16}
   },
-  module_specification = {
-    module_slots = 4
-  },
+  module_slots = 4,
   allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
 }
 
