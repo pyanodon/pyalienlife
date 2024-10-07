@@ -43,7 +43,7 @@ local function on_search(search_key, gui, player)
 		if sub_tech_flow then
 			local tech_upgrade = tech_upgrades[element.tags.name]
 			local name = tech_upgrade.master_tech.name:lower()
-			element.visible = check_viewable(element, player, researched_technologies) and name:find(search_key, 1, true)
+			element.visible = not not (check_viewable(element, player, researched_technologies) and name:find(search_key, 1, true))
 		end
 	end
 end
