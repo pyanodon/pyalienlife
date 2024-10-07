@@ -127,9 +127,7 @@ if data and not yafc_turd_integration then
         entity.subgroup = data.raw.item[name].subgroup
         entity.order = data.raw.item[name].order
         table.insert(entity.flags, 'not-in-made-in')
-        entity.module_specification = {
-            module_slots = MODULE_SLOTS
-        }
+        entity.module_slots = MODULE_SLOTS
         entity.allowed_effects = {'speed', 'productivity', 'pollution'}
         entity.crafting_speed = i == 1 and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, 'turd-wpu')
         data:extend{entity}

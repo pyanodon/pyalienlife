@@ -45,11 +45,8 @@ ENTITY {
     rocket_parts_required = 1,
     crafting_speed = 1,
     to_be_inserted_to_rocket_inventory_size = 1,
-    module_specification =
-    {
-      module_slots = 4,
-      module_info_icon_shift = {0, 3.3}
-    },
+    module_slots = 4,
+    icon_draw_specification = {shift = {0, 3.3}},
     --fixed_recipe = "rocket-part",
     show_recipe_icon = true,
     allowed_effects = {"consumption", "speed"},
