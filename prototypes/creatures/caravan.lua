@@ -217,7 +217,7 @@ data:extend{{
 				shift = util.mul_shift(util.by_pixel(-0, 48)),
 				direction_count = 16,
 				draw_as_shadow = true,
-					flags = {'no-scale'},
+				flags = {'no-scale'},
 			}
 		}
 	}

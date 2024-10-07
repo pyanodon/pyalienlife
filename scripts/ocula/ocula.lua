@@ -167,8 +167,14 @@ end
 
 function Oculua.destroy_altmode_icon(oculua_data)
 	if oculua_data.count == 0 then
-		if oculua_data.alt_mode then rendering.get_object_by_id(oculua_data.alt_mode).destroy() end
-		if oculua_data.alt_mode_light then rendering.get_object_by_id(oculua_data.alt_mode_light).destroy() end
+		if oculua_data.alt_mode then
+			local alt_mode = rendering.get_object_by_id(oculua_data.alt_mode)
+			if alt_mode then alt_mode.destroy() end
+		end
+		if oculua_data.alt_mode_light then
+			local alt_mode_light = rendering.get_object_by_id(oculua_data.alt_mode_light)
+			if alt_mode_light then alt_mode_light.destroy() end
+		end
 	end
 end
 

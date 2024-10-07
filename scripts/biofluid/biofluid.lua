@@ -83,7 +83,8 @@ function Biofluid.update_bioport_animation(bioport_data)
 			animation_data.stage = new_stage
 			if new_stage == 0 then
 				if animation_data.id then
-					rendering.get_object_by_id(animation_data.id).destroy()
+					local animation = rendering.get_object_by_id(animation_data.id)
+					if animation then animation.destroy() end
 					animation_data.id = nil
 				end
 			else
@@ -527,10 +528,12 @@ local function dropoff(biorobot_data)
 	end
 	go_home(biorobot_data)
 	if biorobot_data.alt_mode_sprite then
-		rendering.get_object_by_id(biorobot_data.alt_mode_sprite).destroy()
+		local alt_mode_sprite = rendering.get_object_by_id(biorobot_data.alt_mode_sprite)
+		if alt_mode_sprite then alt_mode_sprite.destroy() end
 	end
 	if biorobot_data.alt_mode_shadow then
-		rendering.get_object_by_id(biorobot_data.alt_mode_shadow).destroy()
+		local alt_mode_shadow = rendering.get_object_by_id(biorobot_data.alt_mode_shadow)
+		if alt_mode_shadow then alt_mode_shadow.destroy() end
 	end
 end
 
