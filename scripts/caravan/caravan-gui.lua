@@ -190,9 +190,9 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         type = 'sprite-button',
         name = 'py_rename_caravan_button',
         style = 'frame_action_button',
-        sprite = 'utility/rename_icon_small_white',
-        hovered_sprite = 'utility/rename_icon_small_black',
-        clicked_sprite = 'utility/rename_icon_small_black',
+        sprite = 'rename_icon_small_white',
+        hovered_sprite = 'rename_icon_small_black',
+        clicked_sprite = 'rename_icon_small_black',
         tags = {unit_number = entity.unit_number, maximal_width = 300}
     }
 
@@ -234,7 +234,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 		local favorite_food_tooltip = py.generate_favorite_food_tooltip(prototypes[entity.name].favorite_foods, 'caravan-gui')
 		for i = 1, #caravan_data.fuel_inventory do
 			local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_fuel_slot_' .. i, style = 'inventory_slot', tags = {unit_number = caravan_data.unit_number, i = i}}
-			fuel_slot.sprite = 'utility/slot_icon_fuel'
+			fuel_slot.sprite = 'slot_icon_fuel'
 			fuel_slot.tooltip = favorite_food_tooltip
 		end
 		fuel_flow.add{type = 'progressbar', name = 'fuel_bar', style = 'burning_progressbar'}.style.horizontally_stretchable = true
@@ -292,7 +292,7 @@ function Caravan.update_gui(gui, weak)
 				element.sprite = 'item/' .. stack.name
 				element.number = stack.count
 			else
-				element.sprite = 'utility/slot_icon_fuel'
+				element.sprite = 'slot_icon_fuel'
 				element.number = nil
 			end
 		end

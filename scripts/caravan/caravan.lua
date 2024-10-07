@@ -168,7 +168,7 @@ Caravan.events.used_capsule = function(event)
 	local entity = player.selected or player.surface.find_entities_filtered{
 		position = event.cursor_position,
 		limit = 1,
-		collision_mask = {layers = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}}
+		collision_mask = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}
 	}[1]
 	if entity then
 		if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
@@ -559,7 +559,7 @@ local function caravan_sort_function(a, b)
 	return (a.arrival_tick or 0) < (b.arrival_tick or 0)
 end
 
-Caravan.events[60] = function(event)
+Caravan.events[60] = function()
 	local guis_to_update = {}
 
 	if not storage.caravan_queue then
@@ -580,7 +580,7 @@ Caravan.events[60] = function(event)
 
 		if needs_fuel then
 			-- 300 ticks/5 seconds is how long these alerts last
-			if event.tick % 300 == 0 then
+			if game.tick % 300 == 0 then
 				add_fuel_alert(entity)
 			end
 			py.draw_error_sprite(entity, 'utility.fuel_icon', 30)

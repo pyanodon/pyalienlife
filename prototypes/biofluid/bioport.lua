@@ -335,4 +335,5 @@ ENTITY {
     collision_mask = {layers = {}},
     render_layer = 'lower-object-above-shadow',
     animations = variants,
+    selectable_in_game = false,
 }

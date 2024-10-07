@@ -120,9 +120,9 @@ function Caravan.add_gui_row(caravan_data, key, table)
         type = 'sprite-button',
         name = 'py_rename_caravan_button',
         style = 'frame_action_button',
-        sprite = 'utility/rename_icon_small_white',
-        hovered_sprite = 'utility/rename_icon_small_black',
-        clicked_sprite = 'utility/rename_icon_small_black',
+        sprite = 'rename_icon_small_white',
+        hovered_sprite = 'rename_icon_small_black',
+        clicked_sprite = 'rename_icon_small_black',
         tags = {unit_number = key, maximal_width = 150}
     }
 
@@ -262,9 +262,9 @@ local function title_display_mode(caption_flow, caravan_data)
     }
     local button = caption_flow.py_rename_caravan_button
     button.style = 'frame_action_button'
-    button.sprite = 'utility/rename_icon_small_white'
-    button.hovered_sprite = 'utility/rename_icon_small_black'
-    button.clicked_sprite = 'utility/rename_icon_small_black'
+    button.sprite = 'rename_icon_small_white'
+    button.hovered_sprite = 'rename_icon_small_black'
+    button.clicked_sprite = 'rename_icon_small_black'
 
     title.style.maximal_width = button.tags.maximal_width or error('No maximal width')
 end

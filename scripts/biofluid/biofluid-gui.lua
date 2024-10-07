@@ -31,7 +31,7 @@ function Biofluid.update_bioport_gui(player, gui)
 	for _, element in pairs(fuel_flow.children) do
 		if element.type == 'sprite-button' and element.name ~= 'py_guano_output' then
 			local tags = element.tags
-			element.sprite = 'utility/slot_icon_fuel'
+			element.sprite = 'slot_icon_fuel'
 			element.number = nil
 			element.visible = false
 			tags.slot_index = nil
@@ -41,7 +41,7 @@ function Biofluid.update_bioport_gui(player, gui)
 	local module_flow = content_flow.module_flow
 	for _, element in pairs(module_flow.children) do
 		local tags = element.tags
-		element.sprite = 'utility/slot_icon_module'
+		element.sprite = 'utility/empty_module_slot'
 		element.number = nil
 		tags.slot_index = nil
 		element.tags = tags
@@ -127,7 +127,7 @@ function Biofluid.build_bioport_gui(entity, player)
     local favorite_food_tooltip = py.generate_favorite_food_tooltip(Biofluid.favorite_foods, 'biofluid-gui')
     for i = 1, Biofluid.fuel_size do
         local fuel_slot = fuel_flow.add{type = 'sprite-button', name = 'py_biofluid_food_' .. i, style = 'inventory_slot', tags = {unit_number = entity.unit_number, i = i}}
-        fuel_slot.sprite = 'utility/slot_icon_fuel'
+        fuel_slot.sprite = 'slot_icon_fuel'
         fuel_slot.tooltip = favorite_food_tooltip
     end
 	local bar_flow = fuel_flow.add{type = 'flow', name = 'bar_flow', direction = 'vertical'}
@@ -142,7 +142,7 @@ function Biofluid.build_bioport_gui(entity, player)
     local allowed_module_tooltip = py.generate_allowed_module_tooltip(Biofluid.biorobots)
     for i = 1, Biofluid.module_size do
         local module_slot = module_flow.add{type = 'sprite-button', name = 'py_biofluid_module_' .. i, style = 'inventory_slot', tags = {unit_number = entity.unit_number, i = i}}
-        module_slot.sprite = 'utility/slot_icon_module'
+        module_slot.sprite = 'utility/empty_module_slot'
         module_slot.tooltip = allowed_module_tooltip
     end
 
