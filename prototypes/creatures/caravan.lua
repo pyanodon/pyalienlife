@@ -89,7 +89,8 @@ data:extend{{
 					height = 224,
 					frame_count = 30,
 					direction_count = 16,
-					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5)
+					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
+					flags = {'no-scale'},
 				},
 				{
 					filenames = {
@@ -110,7 +111,8 @@ data:extend{{
 					height = 224,
 					frame_count = 30,
 					direction_count = 16,
-					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5)
+					shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
+					flags = {'no-scale'},
 				},
 				{
 					filenames = {
@@ -132,7 +134,8 @@ data:extend{{
 					shift = util.mul_shift(util.by_pixel(0, 48)),
 					direction_count = 16,
 					--scale = scale,
-					draw_as_shadow = true
+					draw_as_shadow = true,
+					flags = {'no-scale'},
 				}
 			}
 		}
@@ -168,7 +171,8 @@ data:extend{{
 				frame_count = 30,
 				direction_count = 16,
 				shift = util.mul_shift(util.by_pixel(-0, -0)),
-				scale = _G.scale
+				scale = _G.scale,
+				flags = {'no-scale'},
 			},
 			{
 				filenames = {
@@ -190,7 +194,8 @@ data:extend{{
 				frame_count = 30,
 				direction_count = 16,
 				shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-				scale = _G.scale
+				scale = _G.scale,
+				flags = {'no-scale'},
 			},
 			{
 				filenames = {
@@ -211,7 +216,8 @@ data:extend{{
 				frame_count = 30,
 				shift = util.mul_shift(util.by_pixel(-0, 48)),
 				direction_count = 16,
-				draw_as_shadow = true
+				draw_as_shadow = true,
+					flags = {'no-scale'},
 			}
 		}
 	}
