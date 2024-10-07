@@ -130,9 +130,9 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	local position = silo.position
 	position.y = position.y - 15
 
-	local replicator = next(event.rocket.get_inventory(defines.inventory.rocket).get_contents())
+	local replicator = event.rocket.get_inventory(defines.inventory.rocket).get_contents()[1]
 	if not replicator then return end
-	local farm = farms[replicator]
+	local farm = farms[replicator.name]
 	if not farm then return end
 	
 	local output

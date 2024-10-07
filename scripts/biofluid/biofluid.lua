@@ -636,7 +636,8 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 
 	local has_food = bioport_data.fuel_remaning ~= 0
 	local has_creature = false
-	for item, _ in pairs(entity.get_inventory(INPUT_INVENTORY).get_contents()) do
+	for _, item in pairs(entity.get_inventory(INPUT_INVENTORY).get_contents()) do
+		item = item.name
 		if not has_food and Biofluid.favorite_foods[item] then
 			has_food = true
 		elseif not has_creature and Biofluid.biorobots[item] then

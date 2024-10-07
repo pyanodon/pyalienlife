@@ -51,7 +51,9 @@ function Biofluid.update_bioport_gui(player, gui)
 	local contents = inventory.get_contents()
 	local i = 1
 	local j = 1
-	for name, count in pairs(contents) do
+	for _, item in pairs(contents) do
+		local name = item.name
+		
 		local slot_index = Biofluid.bioport_slot_indexes[name]
 		local slot = inventory[slot_index]
 		if slot.valid_for_read then
