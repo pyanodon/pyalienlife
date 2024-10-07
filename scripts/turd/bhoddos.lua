@@ -58,7 +58,8 @@ Turd.events.on_selected_entity_changed = function(event)
     local previous_selected_unit_number = previous_selected and previous_selected.unit_number
 
     if previous_selected_unit_number and circles[previous_selected_unit_number] then
-        rendering.get_object_by_id(circles[previous_selected_unit_number]).destroy()
+        local rendering_object = rendering.get_object_by_id(circles[previous_selected_unit_number])
+        if rendering_object then rendering_object.destroy() end
         circles[previous_selected_unit_number] = nil
     end
     if selected and lib.cultures[selected.name] then
