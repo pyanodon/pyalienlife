@@ -85,17 +85,18 @@ function Digosaurus.start_mining_command(dig_data, i)
 end
 
 function Digosaurus.has_food(food_inventory_contents)
-    for food in pairs(Digosaurus.favorite_foods) do
-        if food_inventory_contents[food] then return true end
+    for _, item in pairs(food_inventory_contents) do
+        if Digosaurus.favorite_foods[item.name] then return true end
     end
     return false
 end
 
-function Digosaurus.eat(food_inventory, food_inventory_contents, force)
-    for food in pairs(food_inventory_contents) do
+function Digosaurus.eat(food_inventory, food_inventory_contents, entity)
+    for _, food in pairs(food_inventory_contents) do
+        food = food.name
         if Digosaurus.favorite_foods[food] then
             food_inventory.remove{name = food, count = 1}
-            force.get_item_production_statistics().on_flow(food, -1) -- todo THIS WILL CRASH put a surface in get_item_production_statistics()
+            entity.force.get_item_production_statistics(entity.surface_index).on_flow(food, -1) -- todo THIS WILL CRASH put a surface in get_item_production_statistics()
             return food
         end
     end
@@ -107,7 +108,6 @@ py.register_on_nth_tick(61, 'Digosaurus', 'pyal', function(event)
         if not Digosaurus.validity_check(dig_data) then goto continue end
         local entity = dig_data.entity
         local food_inventory_contents = dig_data.food_inventory.get_contents()
-        game.print(serpent.block(food_inventory_contents))
 
         if table_size(dig_data.scanned_ores) == 0 then
             py.draw_error_sprite(entity, 'utility.warning_icon', time_to_live)
@@ -129,7 +129,7 @@ py.register_on_nth_tick(61, 'Digosaurus', 'pyal', function(event)
                 if not digosaur_data and dig_data.digosaur_inventory[i].valid_for_read then
                     digosaur_data = Digosaurus.start_mining_command(dig_data, i)
                     if digosaur_data then
-                        local food = Digosaurus.eat(dig_data.food_inventory, food_inventory_contents, entity.force)
+                        local food = Digosaurus.eat(dig_data.food_inventory, food_inventory_contents, entity)
                         digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[food]
                         goto continue
                     end
