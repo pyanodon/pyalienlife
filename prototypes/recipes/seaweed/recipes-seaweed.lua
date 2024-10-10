@@ -1,11 +1,5 @@
 --------------------------SEA WEED-----------------------
-data:extend{{
-    type = "noise-expression",
-    name = "py_seaweed",
-    -- 0% chance of spawning in starting area (tier == 0)
-    -- Using this is equivalent to has_starting_area_placement = false
-    expression = "0.004 + (0.01 * clamp(var('wlc_elevation_minimum'), 0, 1))"
-}}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings.seaweed = {}
 
 data:extend({
     {
@@ -52,8 +46,9 @@ data:extend({
             }
         },
         autoplace = {
-            probability_expression = "py_seaweed",
+            probability_expression = 0.004,
             order = 'seaweed'
-        }
+        },
+        protected_from_tile_building = false
     }
 })
