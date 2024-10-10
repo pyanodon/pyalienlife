@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "science-coating", amount = 50},
+        {type = "item", name = "science-coating",      amount = 50},
         {type = "item", name = "spore-collector-mk03", amount = 1},
-        {type = "item", name = "super-alloy", amount = 10},
-        {type = "item", name = "nenbit-matrix", amount = 60},
-        {type = "item", name = "control-unit", amount = 15},
+        {type = "item", name = "super-alloy",          amount = 10},
+        {type = "item", name = "nenbit-matrix",        amount = 60},
+        {type = "item", name = "control-unit",         amount = 15},
     },
     results = {
         {type = "item", name = "spore-collector-mk04", amount = 1}
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "spore-collector-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/spore-collector-mk04.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "spore-collector-mk04"},
     fast_replaceable_group = "spore-collector",
@@ -73,7 +73,7 @@ ENTITY {
                     animation_speed = 0.4,
                     shift = util.by_pixel(10, -80)
                 },
-    
+
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
                     width = 243,

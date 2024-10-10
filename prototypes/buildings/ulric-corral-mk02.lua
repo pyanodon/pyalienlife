@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "latex", amount = 25},
-        {type = "item", name = "titanium-plate", amount = 20},
+        {type = "item", name = "latex",             amount = 25},
+        {type = "item", name = "titanium-plate",    amount = 20},
         {type = "item", name = "ulric-corral-mk01", amount = 1},
-        {type = "item", name = "duralumin", amount = 15},
-        {type = "item", name = "advanced-circuit", amount = 15},
-        {type = "item", name = "neuroprocessor", amount = 15},
+        {type = "item", name = "duralumin",         amount = 15},
+        {type = "item", name = "advanced-circuit",  amount = 15},
+        {type = "item", name = "neuroprocessor",    amount = 15},
     },
     results = {
         {type = "item", name = "ulric-corral-mk02", amount = 1}
     }
-}:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
+}:add_unlock("land-animals-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 25}
 
 ITEM {
     type = "item",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     module_slots = MODULE_SLOTS,
     match_animation_speed_to_activity = false,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"ulric"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "ulric-corral-mk01"),
     energy_source = {

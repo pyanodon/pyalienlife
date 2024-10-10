@@ -8,24 +8,24 @@ Ulric.events.on_init = function()
 end
 
 Ulric.events.used_capsule = function(event)
-	if event.item.name ~= 'ulric-infusion' then return end
+	if event.item.name ~= "ulric-infusion" then return end
 
 	local player = game.get_player(event.player_index)
 	local cursor_stack = player.cursor_stack
 	local character = player.character
-	if not character or not character.valid or character.name == 'ulric-man' then
+	if not character or not character.valid or character.name == "ulric-man" then
 		if cursor_stack then
 			if cursor_stack.valid_for_read then
 				cursor_stack.count = cursor_stack.count + 1
 			else
-				cursor_stack.set_stack{name = 'ulric-infusion', count = 1}
+				cursor_stack.set_stack {name = "ulric-infusion", count = 1}
 			end
 		end
 		return
 	end
 
-	local ulric = player.surface.create_entity{
-		name = 'ulric-man',
+	local ulric = player.surface.create_entity {
+		name = "ulric-man",
 		force = player.force,
 		position = player.position,
 		create_build_effect_smoke = false,
@@ -36,7 +36,7 @@ Ulric.events.used_capsule = function(event)
 	player.character = ulric
 	Caravan.entity_changed_unit_number(character, ulric)
 	character.destroy()
-	player.play_sound{path = 'ulric-man-transform'}
+	player.play_sound {path = "ulric-man-transform"}
 
 	storage.ulricman_timers[player.index] = Ulric.transformation_time
 end
@@ -51,19 +51,19 @@ Ulric.events[update_rate] = function()
 			local ulric = player.character
 			if not ulric then goto injection end
 
-			local injection_equipment = ulric.grid and ulric.grid.find('ulric-infusion-equipment')
+			local injection_equipment = ulric.grid and ulric.grid.find("ulric-infusion-equipment")
 			if injection_equipment and injection_equipment.energy > injection_equipment.max_energy / 2 then
 				local inventory = ulric.get_main_inventory()
-				if inventory.get_item_count('ulric-infusion') > 0 then
-					inventory.remove{name = 'ulric-infusion', count = 1}
+				if inventory.get_item_count("ulric-infusion") > 0 then
+					inventory.remove {name = "ulric-infusion", count = 1}
 					storage.ulricman_timers[k] = Ulric.transformation_time
 					goto injection
 				end
 			end
 
-			if ulric.name == 'ulric-man' then
-				local character = player.surface.create_entity{
-					name = 'character',
+			if ulric.name == "ulric-man" then
+				local character = player.surface.create_entity {
+					name = "character",
 					force = player.force,
 					position = player.position,
 					create_build_effect_smoke = false,
@@ -74,7 +74,7 @@ Ulric.events[update_rate] = function()
 				player.character = character
 				Caravan.entity_changed_unit_number(ulric, character)
 				ulric.destroy()
-				player.play_sound{path = 'ulric-man-untransform'}
+				player.play_sound {path = "ulric-man-untransform"}
 			end
 
 			storage.ulricman_timers[k] = nil
@@ -109,7 +109,7 @@ Ulric.transfer_character_inventory = function(old, new)
 					local inserted_count = new_inventory.insert(old_stack)
 					if original_count ~= inserted_count then
 						old_stack.count = original_count - inserted_count
-						new.surface.spill_item_stack{position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false}
+						new.surface.spill_item_stack {position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false}
 					end
 				end
 				old_stack.clear()

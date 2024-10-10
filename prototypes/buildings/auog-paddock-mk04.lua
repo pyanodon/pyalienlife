@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "auog-paddock-mk03", amount = 1},
-        {type = "item", name = "science-coating", amount = 15},
-        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "auog-paddock-mk03",     amount = 1},
+        {type = "item", name = "science-coating",       amount = 15},
+        {type = "item", name = "processing-unit",       amount = 30},
         {type = "item", name = "low-density-structure", amount = 30},
-        {type = "item", name = "metallic-glass", amount = 10},
+        {type = "item", name = "metallic-glass",        amount = 10},
     },
     results = {
         {type = "item", name = "auog-paddock-mk04", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "auog-paddock-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "auog-paddock-mk04"},
     fast_replaceable_group = "auog-paddock",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_slots = 10,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"auog"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "auog-paddock-mk01"),
     energy_source = {

@@ -1,10 +1,10 @@
-local TO_GROUND = 'pipe-to-ground'
+local TO_GROUND = "pipe-to-ground"
 local TO_GROUND_CONNECTION = {{
 	position = {0, 0},
 	direction = defines.direction.north
 }}
 
-local VESSEL = 'vessel'
+local VESSEL = "vessel"
 local VESSEL_CONNECTION = {
 	{
 		direction = 0,
@@ -36,7 +36,7 @@ local VESSEL_CONNECTION = {
 	}
 }
 
-local BIOPORT = 'bioport'
+local BIOPORT = "bioport"
 local BIOPORT_CONNECTION = {
 	{
 		direction = defines.direction.north,
@@ -102,7 +102,7 @@ function Biofluid.find_heat_connections(entity)
 		local x = math.floor(connection_x + position.x)
 		local y = math.floor(connection_y + position.y)
 		local offset = Biofluid.heat_connection_facing_offset(entity.direction, connection)
-		if offset then connections[#connections+1] = {x = x, y = y, facing_x = x + offset[1], facing_y = y + offset[2], direction = connection.direction} end
+		if offset then connections[#connections + 1] = {x = x, y = y, facing_x = x + offset[1], facing_y = y + offset[2], direction = connection.direction} end
 	end
 	return connections
 end
@@ -148,7 +148,7 @@ function Biofluid.find_nearby_pipes(entity, connections)
 	for _, connection in pairs(connections) do
 		local network_position = Biofluid.is_looking_at_us(entity, connection)
 		if network_position and network_position.network_id then
-			nearby_pipes[#nearby_pipes+1] = network_position
+			nearby_pipes[#nearby_pipes + 1] = network_position
 			network_ids[network_position.network_id] = true
 		end
 		::continue::
@@ -157,7 +157,7 @@ function Biofluid.find_nearby_pipes(entity, connections)
 	if entity.type == TO_GROUND then
 		local network_position = Biofluid.find_underground_neighbour(entity)
 		if network_position and network_position.network_id then
-			nearby_pipes[#nearby_pipes+1] = network_position
+			nearby_pipes[#nearby_pipes + 1] = network_position
 			network_ids[network_position.network_id] = true
 		end
 	end
@@ -172,7 +172,7 @@ function Biofluid.built_pipe(entity)
 		local neighbor = Biofluid.find_underground_neighbour(entity)
 		if neighbor then
 			local previous_position = entity.position
-			entity.teleport({previous_position.x - 5, previous_position.y - 5}) -- just get it out of the way so we can see what it was previously connected to
+			entity.teleport {previous_position.x - 5, previous_position.y - 5} -- just get it out of the way so we can see what it was previously connected to
 			local previous_neighbor = Biofluid.find_underground_neighbour(neighbor.entity)
 			entity.teleport(previous_position)
 			if previous_neighbor and previous_neighbor.entity ~= entity and previous_neighbor.entity.name == neighbor.entity.name then
@@ -258,12 +258,12 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 	local old = storage.biofluid_networks[old_id]
 
 	if not new or not old then
-		game.print('ERROR: Attempt to join two non-existant biofluid networks. ' .. new_id .. ' ' .. old_id .. '. Please report this bug on our github.')
+		game.print("ERROR: Attempt to join two non-existant biofluid networks. " .. new_id .. " " .. old_id .. ". Please report this bug on our github.")
 		return
 	end
 
 	if new.force_index ~= old.force_index then
-		game.print('ERROR: Attempt to join two biofluid networks with diffrent forces. ' .. new_id .. ' ' .. old_id .. '. Please report this bug on our github.')
+		game.print("ERROR: Attempt to join two biofluid networks with diffrent forces. " .. new_id .. " " .. old_id .. ". Please report this bug on our github.")
 		return
 	end
 
@@ -288,7 +288,7 @@ function Biofluid.join_networks(new_id, old_id, network_positions)
 	end
 	for _, entity in pairs(old.providers) do
 		if entity.valid then
-			new.providers[#new.providers+1] = entity
+			new.providers[#new.providers + 1] = entity
 		end
 	end
 	storage.biofluid_networks[old_id] = nil
@@ -314,7 +314,7 @@ function Biofluid.add_to_network(network_id, entity, connections)
 	local network_positions = Biofluid.network_positions(entity.surface_index)
 
 	if not network or not network_positions then
-		game.print('ERROR: Attempt to add entity to non-existant biofluid network. ' .. network_id .. '. Please report this bug on our github.')
+		game.print("ERROR: Attempt to add entity to non-existant biofluid network. " .. network_id .. ". Please report this bug on our github.")
 		return
 	end
 
@@ -339,7 +339,7 @@ function Biofluid.add_to_network(network_id, entity, connections)
 			storage.biofluid_requesters[unit_number].network_id = network_id
 		end
 	elseif entity_type == Biofluid.PROVIDER then
-		network.providers[#network.providers+1] = entity
+		network.providers[#network.providers + 1] = entity
 	end
 end
 
@@ -371,7 +371,7 @@ function Biofluid.destroyed_pipe(entity)
 	end
 
 	if not network then return end
-	
+
 	Biofluid.remove_from_network(network_id, entity, connections)
 
 	local nearby_pipes = Biofluid.find_nearby_pipes(entity, connections)
@@ -384,7 +384,7 @@ function Biofluid.destroyed_pipe(entity)
 	if entity.type == TO_GROUND then -- edge case: we destroyed an underground pipe in the middle of two existing underground pipes
 		local neighbor = Biofluid.find_underground_neighbour(entity)
 		local position = entity.position
-		entity.teleport({position.x + 5, position.y + 5}) -- just get it out of the way so we can see what it will be connected to after the teleport
+		entity.teleport {position.x + 5, position.y + 5} -- just get it out of the way so we can see what it will be connected to after the teleport
 		if neighbor then
 			Biofluid.update_pipe(neighbor.entity, false)
 		end
@@ -408,7 +408,7 @@ function Biofluid.split_network(network_id, network_positions)
 			if not network_position then goto continue end
 			network_positions[x][y] = nil
 			local entity = network_position.entity
-			if entity.valid then entities[#entities+1] = entity end
+			if entity.valid then entities[#entities + 1] = entity end
 			::continue::
 		end
 	end
@@ -437,7 +437,7 @@ function Biofluid.remove_from_network(network_id, entity, connections)
 		local new_provider_array = {}
 		for _, provider in pairs(network.providers) do
 			if provider.valid and provider ~= entity then
-				new_provider_array[#new_provider_array+1] = provider
+				new_provider_array[#new_provider_array + 1] = provider
 			end
 		end
 		network.providers = new_provider_array

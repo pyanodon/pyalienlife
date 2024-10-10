@@ -15,12 +15,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "control-unit",        amount = 10},
+        {type = "item", name = "wall-shield",         amount = 10},
         {type = "item", name = "cadaveric-arum-mk03", amount = 1},
-        {type = "item", name = "super-steel", amount = 70},
-        {type = "item", name = "blanket", amount = 2},
-        {type = "item", name = "kevlar", amount = 50},
+        {type = "item", name = "super-steel",         amount = 70},
+        {type = "item", name = "blanket",             amount = 2},
+        {type = "item", name = "kevlar",              amount = 50},
     },
     results = {
         {type = "item", name = "cadaveric-arum-mk04", amount = 1}
@@ -43,7 +43,7 @@ ENTITY {
     type = "assembling-machine",
     name = "cadaveric-arum-mk04",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cadaveric-arum-mk04"},
     fast_replaceable_group = "cadaveric-arum",
@@ -70,7 +70,7 @@ ENTITY {
             layers = {
                 {
                     filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 288,
                     height = 295,
                     line_length = 5,
@@ -80,7 +80,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/cadaveric-arum-mask.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 288,
                     height = 295,
                     line_length = 5,
@@ -91,7 +91,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/shadow.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 298,
                     height = 295,
                     line_length = 5,

@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 50},
-        {type = "item", name = "soil", amount = 50},
-        {type = "item", name = "iron-plate", amount = 20},
-        {type = "item", name = "aluminium-plate", amount = 10},
+        {type = "item", name = "stone-brick",        amount = 50},
+        {type = "item", name = "soil",               amount = 50},
+        {type = "item", name = "iron-plate",         amount = 20},
+        {type = "item", name = "aluminium-plate",    amount = 10},
         {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 10},
+        {type = "item", name = "iron-gear-wheel",    amount = 10},
     },
     results = {
         {type = "item", name = "space-moss-farm-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-moss-farm-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/moss-farm-mk01.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-moss-farm-mk01"},
     fast_replaceable_group = "moss-farm",
@@ -77,7 +77,7 @@ ENTITY {
                     animation_speed = 0.4,
                     shift = util.by_pixel(-64, -64)
                 },
-    
+
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/moss-farm/mask-1.png",
                     width = 64,

@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "collector-mk02", amount = 1},
-        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "collector-mk02",        amount = 1},
+        {type = "item", name = "ticocr-alloy",          amount = 20},
         {type = "item", name = "low-density-structure", amount = 20},
-        {type = "item", name = "stainless-steel", amount = 30},
-        {type = "item", name = "processing-unit", amount = 30},
-        {type = "item", name = "electric-engine-unit", amount = 15},
-        {type = "item", name = "super-alloy", amount = 30},
+        {type = "item", name = "stainless-steel",       amount = 30},
+        {type = "item", name = "processing-unit",       amount = 30},
+        {type = "item", name = "electric-engine-unit",  amount = 15},
+        {type = "item", name = "super-alloy",           amount = 30},
     },
     results = {
         {type = "item", name = "collector-mk03", amount = 1}
     }
-}:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("biotech-machines-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
 
 ITEM {
     type = "item",
@@ -141,7 +141,7 @@ ENTITY {
                     animation_speed = 0.2,
                     shift = util.by_pixel(128, 0)
                 },
-    --MASKS
+                --MASKS
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/collector/f1-mask.png",
                     width = 32,
@@ -222,5 +222,5 @@ ENTITY {
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.3},
         apparent_volume = 2.5
     },
-    next_upgrade = 'collector-mk04'
+    next_upgrade = "collector-mk04"
 }

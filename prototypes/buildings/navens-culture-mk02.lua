@@ -5,17 +5,17 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "navens-culture-mk01", amount = 1},
-        {type = "item", name = "nexelit-plate", amount = 20},
-        {type = "item", name = "engine-unit", amount = 3},
-        {type = "item", name = "latex", amount = 25},
-        {type = "item", name = "neuroprocessor", amount = 30},
-        {type = "item", name = "advanced-circuit", amount = 15},
-        {type = "item", name = "lead-plate", amount = 40},
+        {type = "item", name = "nexelit-plate",       amount = 20},
+        {type = "item", name = "engine-unit",         amount = 3},
+        {type = "item", name = "latex",               amount = 25},
+        {type = "item", name = "neuroprocessor",      amount = 30},
+        {type = "item", name = "advanced-circuit",    amount = 15},
+        {type = "item", name = "lead-plate",          amount = 40},
     },
     results = {
         {type = "item", name = "navens-culture-mk02", amount = 1}
     }
-}:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("mycology-mk03"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "navens-culture-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "navens-culture-mk02"},
     fast_replaceable_group = "navens-culture",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 7,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"navens"},
     crafting_speed = 0.02,
     energy_source = {

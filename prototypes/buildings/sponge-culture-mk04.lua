@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "kevlar", amount = 100},
+        {type = "item", name = "kevlar",              amount = 100},
         {type = "item", name = "sponge-culture-mk03", amount = 1},
-        {type = "item", name = "blanket", amount = 5},
-        {type = "item", name = "metallic-glass", amount = 50},
-        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "blanket",             amount = 5},
+        {type = "item", name = "metallic-glass",      amount = 50},
+        {type = "item", name = "control-unit",        amount = 10},
     },
     results = {
         {type = "item", name = "sponge-culture-mk04", amount = 1}
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "sponge-culture-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/sponge-culture-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "sponge-culture-mk04"},
     fast_replaceable_group = "sponge-culture",
@@ -42,7 +42,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = 32,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"sponge"},
     crafting_speed = 0.1,
     energy_source = {
@@ -63,7 +63,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "input",
@@ -72,7 +72,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -80,7 +80,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {5.0, 0.0}, direction = defines.direction.east}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -88,7 +88,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {-5.0, 0.0}, direction = defines.direction.west}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
     graphics_set = {

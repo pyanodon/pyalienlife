@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "metallic-glass", amount = 20},
+        {type = "item", name = "metallic-glass",    amount = 20},
         {type = "item", name = "dhilmos-pool-mk03", amount = 1},
-        {type = "item", name = "super-alloy", amount = 100},
-        {type = "item", name = "boron-carbide", amount = 50},
-        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "super-alloy",       amount = 100},
+        {type = "item", name = "boron-carbide",     amount = 50},
+        {type = "item", name = "control-unit",      amount = 10},
     },
     results = {
         {type = "item", name = "dhilmos-pool-mk04", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "dhilmos-pool-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/dhilmos-pool-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "dhilmos-pool-mk04"},
     fast_replaceable_group = "dhilmos-pool",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"dhilmos"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "dhilmos-pool-mk01"),
     energy_source = {

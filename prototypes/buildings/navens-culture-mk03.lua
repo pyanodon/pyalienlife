@@ -4,18 +4,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "navens-culture-mk02", amount = 1},
-        {type = "item", name = "py-heat-exchanger", amount = 1},
-        {type = "item", name = "nichrome", amount = 25},
-        {type = "item", name = "neuromorphic-chip", amount = 30},
+        {type = "item", name = "navens-culture-mk02",  amount = 1},
+        {type = "item", name = "py-heat-exchanger",    amount = 1},
+        {type = "item", name = "nichrome",             amount = 25},
+        {type = "item", name = "neuromorphic-chip",    amount = 30},
         {type = "item", name = "electric-engine-unit", amount = 2},
-        {type = "item", name = "processing-unit", amount = 35},
-        {type = "item", name = "ticocr-alloy", amount = 20},
+        {type = "item", name = "processing-unit",      amount = 35},
+        {type = "item", name = "ticocr-alloy",         amount = 20},
     },
     results = {
         {type = "item", name = "navens-culture-mk03", amount = 1}
     }
-}:add_unlock("mycology-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("mycology-mk04"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
 
 ITEM {
     type = "item",
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "navens-culture-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "navens-culture-mk03"},
     fast_replaceable_group = "navens-culture",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 10,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"navens"},
     crafting_speed = 0.02,
     energy_source = {

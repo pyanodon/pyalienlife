@@ -7,11 +7,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "spore-collector-mk01", amount = 1},
+        {type = "item", name = "spore-collector-mk01",   amount = 1},
         {type = "item", name = "automated-factory-mk01", amount = 2},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "pipe", amount = 15}
+        {type = "item", name = "steel-plate",            amount = 100},
+        {type = "item", name = "electronic-circuit",     amount = 20},
+        {type = "item", name = "pipe",                   amount = 15}
     },
     results = {
         {type = "item", name = "zipir-reef-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "zipir-reef-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/zipir-reef-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "zipir-reef-mk01"},
     fast_replaceable_group = "zipir-reef",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"zipir"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -70,7 +70,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0,0)
+                    shift = util.by_pixel(0, 0)
                 }
             },
             {
@@ -85,7 +85,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64,0)
+                    shift = util.by_pixel(64, 0)
                 }
             },
             {
@@ -100,7 +100,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(128,0)
+                    shift = util.by_pixel(128, 0)
                 }
             },
             {
@@ -115,7 +115,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(192,0)
+                    shift = util.by_pixel(192, 0)
                 }
             },
             {
@@ -130,30 +130,30 @@ ENTITY {
                     width = 13,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(230,0)
+                    shift = util.by_pixel(230, 0)
                 }
             },
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
-            width = 305,
-            height = 290,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(8,-1),
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
-                width = 305,
-                height = 290,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(8,-1),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
+                    width = 305,
+                    height = 290,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(8, -1),
                 },
-        }
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
+                    width = 305,
+                    height = 290,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(8, -1),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            }
         },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,

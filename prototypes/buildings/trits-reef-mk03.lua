@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "ticocr-alloy", amount = 50},
-        {type = "item", name = "nbti-alloy", amount = 100},
+        {type = "item", name = "ticocr-alloy",         amount = 50},
+        {type = "item", name = "nbti-alloy",           amount = 100},
         {type = "item", name = "electric-engine-unit", amount = 10},
-        {type = "item", name = "stainless-steel", amount = 50},
-        {type = "item", name = "trits-reef-mk02", amount = 1},
-        {type = "item", name = "processing-unit", amount = 50},
+        {type = "item", name = "stainless-steel",      amount = 50},
+        {type = "item", name = "trits-reef-mk02",      amount = 1},
+        {type = "item", name = "processing-unit",      amount = 50},
     },
     results = {
         {type = "item", name = "trits-reef-mk03", amount = 1}
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"trits"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "trits-reef-mk01"),
     energy_source = {
@@ -146,32 +146,32 @@ ENTITY {
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off.png",
-            width = 384,
-            height = 512,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(32, -96)
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off.png",
+                    width = 384,
+                    height = 512,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(32, -96)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off-mask.png",
+                    width = 384,
+                    height = 512,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(32, -96),
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/over.png",
+                    width = 384,
+                    height = 512,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(32, -96),
+                },
             },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/off-mask.png",
-                width = 384,
-                height = 512,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(32, -96),
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/over.png",
-                width = 384,
-                height = 512,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(32, -96),
-            },
-          },
         },
     },
 
@@ -185,7 +185,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {-1.5, 4.5}, direction = defines.direction.south}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "input",
@@ -194,7 +194,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {1.5, 4.5}, direction = defines.direction.south}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -202,7 +202,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {-1.5, -4.5}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -210,7 +210,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {1.5, -4.5}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

@@ -7,13 +7,13 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "bhoddos-culture-mk02", amount = 1},
-        {type = "item", name = "boron-carbide", amount = 30},
-        {type = "item", name = "super-alloy", amount = 30},
-        {type = "item", name = "ticocr-alloy", amount = 40},
-        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "boron-carbide",        amount = 30},
+        {type = "item", name = "super-alloy",          amount = 30},
+        {type = "item", name = "ticocr-alloy",         amount = 40},
+        {type = "item", name = "neuroprocessor",       amount = 20},
         {type = "item", name = "electric-engine-unit", amount = 2},
-        {type = "item", name = "processing-unit", amount = 35},
-        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "processing-unit",      amount = 35},
+        {type = "item", name = "stainless-steel",      amount = 50},
     },
     results = {
         {type = "item", name = "bhoddos-culture-mk03", amount = 1}
@@ -36,7 +36,7 @@ ENTITY {
     type = "assembling-machine",
     name = "bhoddos-culture-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-culture-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "bhoddos-culture-mk03"},
     fast_replaceable_group = "bhoddos-culture",
@@ -47,7 +47,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"bhoddos"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "bhoddos-culture-mk01"),
     energy_source = {

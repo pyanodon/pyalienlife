@@ -4,16 +4,16 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "micro-mine-mk01", amount = 1},
-        {type = "item", name = "duralumin", amount = 20},
+        {type = "item", name = "micro-mine-mk01",  amount = 1},
+        {type = "item", name = "duralumin",        amount = 20},
         {type = "item", name = "advanced-circuit", amount = 15},
-        {type = "item", name = "engine-unit", amount = 10},
-        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "engine-unit",      amount = 10},
+        {type = "item", name = "latex",            amount = 30},
     },
     results = {
         {type = "item", name = "micro-mine-mk02", amount = 1}
     }
-}:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("biotech-machines-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -31,12 +31,12 @@ ENTITY {
     type = "assembling-machine",
     name = "micro-mine-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/micro-mine-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "micro-mine-mk02"},
     fast_replaceable_group = "micro-mine",
     max_health = 100,
-    
+
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},

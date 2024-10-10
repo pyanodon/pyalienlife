@@ -10,7 +10,7 @@ return function(master_tech_name, sub_tech_name)
         local turd_bonuses = storage.turd_bonuses[force.index]
         if turd_bonuses and turd_bonuses[master_tech_name] == sub_tech_name then
             storage.turd_migrations[force.index][sub_tech_name] = game.tick + reset_time_in_ticks
-            force.print{'turd.font', {'turd.migrated-alert', {'technology-name.'..master_tech_name}, {'technology-name.'..sub_tech_name}, reset_time_in_hours}}
+            force.print {"turd.font", {"turd.migrated-alert", {"technology-name." .. master_tech_name}, {"technology-name." .. sub_tech_name}, reset_time_in_hours}}
         end
     end
 end

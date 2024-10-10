@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete", amount = 20},
-        {type = "item", name = "nbti-alloy", amount = 40},
-        {type = "item", name = "iron-stick", amount = 500},
-        {type = "item", name = "latex", amount = 30},
+        {type = "item", name = "concrete",         amount = 20},
+        {type = "item", name = "nbti-alloy",       amount = 40},
+        {type = "item", name = "iron-stick",       amount = 500},
+        {type = "item", name = "latex",            amount = 30},
         {type = "item", name = "advanced-circuit", amount = 50},
-        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "super-steel",      amount = 50},
     },
     results = {
         {type = "item", name = "space-phadai-enclosure-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-phadai-enclosure-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/phadai-enclosure-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-phadai-enclosure-mk01"},
     fast_replaceable_group = "phadai-enclosure",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 5,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"phadai"},
     crafting_speed = 0.04,
     energy_source = {
@@ -58,7 +58,7 @@ ENTITY {
     energy_usage = "450kW",
     graphics_set = {
         working_visualisations = {
-    
+
             {
                 north_position = {2, -0.0},
                 west_position = {2, -0.0},
@@ -187,26 +187,26 @@ ENTITY {
                     animation_speed = 0.4
                 }
             },
-    
+
         },
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off.png",
-                width = 448,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -32)
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off.png",
+                    width = 448,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32)
                 },
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off-mask.png",
-                width = 448,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -32),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off-mask.png",
+                    width = 448,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
             }
         },

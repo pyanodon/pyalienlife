@@ -18,137 +18,137 @@ local IMP_BRAIN = 4
 
 
 py.autorecipes {
-    name = 'rendering-zipir',
-	category = 'slaughterhouse',
+	name = "rendering-zipir",
+	category = "slaughterhouse",
 	--module_limitations = 'zipir',
-	subgroup = 'py-alienlife-zipir',
-	order = 'b',
+	subgroup = "py-alienlife-zipir",
+	order = "b",
 	crafting_speed = 30,
-    mats =
+	mats =
 	{
 		{
 			ingredients =
-				{
-					{name = 'zipir1', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "zipir1", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name='meat', amount = BASE_MEAT},
-					{name='skin', amount = BASE_SKIN},
-					{name='mukmoux-fat', amount = BASE_FAT},
-					{name='guts', amount = BASE_GUTS},
-					{name='arthropod-blood', amount = BASE_BLOOD},
-					{name='brain', amount = BASE_BRAIN},
-				},
+			{
+				{name = "meat",            amount = BASE_MEAT},
+				{name = "skin",            amount = BASE_SKIN},
+				{name = "mukmoux-fat",     amount = BASE_FAT},
+				{name = "guts",            amount = BASE_GUTS},
+				{name = "arthropod-blood", amount = BASE_BLOOD},
+				{name = "brain",           amount = BASE_BRAIN},
+			},
 			crafting_speed = 30,
-			tech = 'zipir',
-			name = 'full-render-zipir',
+			tech = "zipir",
+			name = "full-render-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-zipir.png",
 			icon_size = 64,
 		},
 		--brain zipir rendering
 		{
 			ingredients =
-				{
-					{name = 'zipir1',remove_item = true},
-					{name='brain-zipir', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "zipir1",      remove_item = true},
+				{name = "brain-zipir", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'meat', remove_item = true},
-					{name = 'mukmoux-fat', remove_item = true},
-					{name = 'skin', remove_item = true},
-					{name = 'guts', remove_item = true},
-					{name = 'arthropod-blood', remove_item = true},
-					{name= 'brain', amount = IMP_BRAIN},
-				},
-			tech = 'nanochondria',
-			name = 'ex-bra-zipir',
+			{
+				{name = "meat",            remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "brain",           amount = IMP_BRAIN},
+			},
+			tech = "nanochondria",
+			name = "ex-bra-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-zipir.png",
 			icon_size = 64,
 		},
 		--guts zipir rendering
 		{
 			ingredients =
-				{
-					{name='brain-zipir',remove_item = true},
-					{name='guts-zipir', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "brain-zipir", remove_item = true},
+				{name = "guts-zipir",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'brain', remove_item = true},
-					{name='guts', amount = IMP_GUTS},
-				},
-			tech = 'antitumor',
-			name = 'ex-gut-zipir',
+			{
+				{name = "brain", remove_item = true},
+				{name = "guts",  amount = IMP_GUTS},
+			},
+			tech = "antitumor",
+			name = "ex-gut-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
 			icon_size = 64,
 		},
 		--blood zipir rendering
 		{
 			ingredients =
-				{
-					{name='guts-zipir',remove_item = true},
-					{name='blood-zipir', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "guts-zipir",  remove_item = true},
+				{name = "blood-zipir", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'guts', remove_item = true},
-					{name='arthropod-blood', amount = IMP_BLOOD},
-				},
-			tech = 'recombinant-ery',
-			name = 'ex-blo-zipir',
+			{
+				{name = "guts",            remove_item = true},
+				{name = "arthropod-blood", amount = IMP_BLOOD},
+			},
+			tech = "recombinant-ery",
+			name = "ex-blo-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-zipir.png",
 			icon_size = 64,
 		},
 		--skin zipir rendering
 		{
 			ingredients =
-				{
-					{name='blood-zipir',remove_item = true},
-					{name='skin-zipir', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "blood-zipir", remove_item = true},
+				{name = "skin-zipir",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'arthropod-blood', remove_item = true},
-					{name='skin', amount = IMP_SKIN},
-				},
-			tech = 'reca',
-			name = 'ex-ski-zipir',
+			{
+				{name = "arthropod-blood", remove_item = true},
+				{name = "skin",            amount = IMP_SKIN},
+			},
+			tech = "reca",
+			name = "ex-ski-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-zipir.png",
 			icon_size = 64,
 		},
 		--fat zipir rendering
 		{
 			ingredients =
-				{
-					{name='skin-zipir',remove_item = true},
-					{name='fat-zipir', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "skin-zipir", remove_item = true},
+				{name = "fat-zipir",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'skin', remove_item = true},
-					{name='mukmoux-fat', amount = IMP_FAT},
-				},
-			tech = 'orexigenic',
-			name = 'ex-fat-zipir',
+			{
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", amount = IMP_FAT},
+			},
+			tech = "orexigenic",
+			name = "ex-fat-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
 			icon_size = 64,
 		},
 		--meat zipir rendering
 		{
 			ingredients =
-				{
-					{name='fat-zipir',remove_item = true},
-					{name='meat-zipir', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "fat-zipir",  remove_item = true},
+				{name = "meat-zipir", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'mukmoux-fat', remove_item = true},
-					{name='meat', amount = IMP_MEAT},
-				},
-			tech = 'anabolic-rna',
-			name = 'ex-me-zipir',
+			{
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "meat",        amount = IMP_MEAT},
+			},
+			tech = "anabolic-rna",
+			name = "ex-me-zipir",
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-zipir.png",
 			icon_size = 64,
 		},

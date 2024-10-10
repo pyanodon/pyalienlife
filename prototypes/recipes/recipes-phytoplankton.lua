@@ -1,4 +1,3 @@
-
 --PHYTHOPLANCTON--
 RECIPE {
     type = "recipe",
@@ -8,12 +7,12 @@ RECIPE {
     energy_required = 15,
     ingredients = {
         {type = "fluid", name = "flue-gas", amount = 100, fluidbox_index = 1},
-        {type = "fluid", name = "water", amount = 500, fluidbox_index = 2}
+        {type = "fluid", name = "water",    amount = 500, fluidbox_index = 2}
     },
     results = {
         {type = "fluid", name = "phytoplankton", amount = 20}
     },
     main_product = "phytoplankton",
-    subgroup = 'py-alienlife-plants',
-    order = 'b'
+    subgroup = "py-alienlife-plants",
+    order = "b"
 }:add_unlock("microbiology-mk03")

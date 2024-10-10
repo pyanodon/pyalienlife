@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "divertor",           amount = 10},
         {type = "item", name = "scrondrix-pen-mk03", amount = 1},
-        {type = "item", name = "wall-shield", amount = 10},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "silver-foam", amount = 50},
-        {type = "item", name = "agzn-alloy", amount = 40},
+        {type = "item", name = "wall-shield",        amount = 10},
+        {type = "item", name = "control-unit",       amount = 10},
+        {type = "item", name = "silver-foam",        amount = 50},
+        {type = "item", name = "agzn-alloy",         amount = 40},
     },
     results = {
         {type = "item", name = "scrondrix-pen-mk04", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "scrondrix-pen-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/scrondrix-pen-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "scrondrix-pen-mk04"},
     fast_replaceable_group = "scrondrix-pen",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"scrondrix"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "scrondrix-pen-mk01"),
     energy_source = {
@@ -189,12 +189,12 @@ ENTITY {
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw.png",
-                width = 384,
-                height = 427,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -34)
+                    filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw.png",
+                    width = 384,
+                    height = 427,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -34)
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw-mask.png",
@@ -204,7 +204,7 @@ ENTITY {
                     line_length = 1,
                     shift = util.by_pixel(16, -34),
                     tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-                    },
+                },
             }
         },
     },

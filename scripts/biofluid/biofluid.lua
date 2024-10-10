@@ -1,13 +1,13 @@
-local TO_GROUND = 'pipe-to-ground'
-local VESSEL = 'vessel'
-local BIOPORT = 'bioport'
+local TO_GROUND = "pipe-to-ground"
+local VESSEL = "vessel"
+local BIOPORT = "bioport"
 
 Biofluid = {}
 Biofluid.events = {}
 
-require 'scripts.biofluid.biofluid-prototypes'
-require 'scripts.biofluid.network-builder'
-require 'scripts.biofluid.biofluid-gui'
+require "scripts.biofluid.biofluid-prototypes"
+require "scripts.biofluid.network-builder"
+require "scripts.biofluid.biofluid-gui"
 
 local PICKING_UP = 1
 local DROPPING_OFF = 2
@@ -63,7 +63,7 @@ Biofluid.events.on_built = function(event)
 				chorkok = {stage = 0, id = nil}
 			}
 		}
-	elseif entity.type == 'pipe-to-ground' then
+	elseif entity.type == "pipe-to-ground" then
 		entity.operable = false
 		local underground_data = {entity = entity}
 		storage.biofluid_undergrounds[unit_number] = underground_data
@@ -88,16 +88,16 @@ function Biofluid.update_bioport_animation(bioport_data)
 					animation_data.id = nil
 				end
 			else
-				local new_animation_name = 'bioport-animation-' .. creature_name .. '-' .. math.min(new_stage, 10)
+				local new_animation_name = "bioport-animation-" .. creature_name .. "-" .. math.min(new_stage, 10)
 				if animation_data.id then
 					rendering.set_animation(animation_data.id, new_animation_name)
 				else
-					animation_data.id = rendering.draw_animation{
+					animation_data.id = rendering.draw_animation {
 						animation = new_animation_name,
-						render_layer = 'higher-object-above',
+						render_layer = "higher-object-above",
 						target = entity,
 						surface = entity.surface,
-						animation_speed = creature_name == 'chorkok' and 0.25 or 0.5
+						animation_speed = creature_name == "chorkok" and 0.25 or 0.5
 					}.id
 				end
 			end
@@ -110,8 +110,8 @@ function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 		underground_data.heat_connection.destroy()
 	end
 	local entity = underground_data.entity
-	local heat_connection = entity.surface.create_entity{
-		name = 'vessel-to-ground-heat-connection',
+	local heat_connection = entity.surface.create_entity {
+		name = "vessel-to-ground-heat-connection",
 		force = entity.force_index,
 		position = entity.position
 	}
@@ -129,7 +129,7 @@ Biofluid.events.on_player_rotated_entity = function(event)
 	local entity = event.entity
 	if Biofluid.connectable[entity.name] then
 		Biofluid.rotated_pipe(entity, event.previous_direction)
-		if entity.type == 'pipe-to-ground' then
+		if entity.type == "pipe-to-ground" then
 			local underground_data = storage.biofluid_undergrounds[entity.unit_number]
 			if not underground_data then return end
 			Biofluid.spawn_underground_pipe_heat_connection(underground_data)
@@ -183,7 +183,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	local providers_by_contents = {}
 	network_data.providers_by_contents = providers_by_contents
 	local providers = network_data.providers
-	local min_fluid_reserve = settings.global['py-min_fluid_reserve'].value
+	local min_fluid_reserve = settings.global["py-min_fluid_reserve"].value
 
 	for k, provider in pairs(providers) do
 		if not provider.valid then
@@ -200,8 +200,8 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 
 		local list = providers_by_contents[name] or {}
 		providers_by_contents[name] = list
-		list[#list+1] = provider
-		
+		list[#list + 1] = provider
+
 		::continue::
 	end
 end
@@ -236,20 +236,20 @@ Biofluid.events[143] = function()
 				if target_temperature then
 					local stored_temperature = contents.temperature
 					local operator = Biofluid.equality_operators[unfulfilled_request.temperature_operator or 1]
-					if operator == '=' then
+					if operator == "=" then
 						if not (stored_temperature == target_temperature) then goto continue end
-					elseif operator == '>' then
+					elseif operator == ">" then
 						if not (stored_temperature > target_temperature) then goto continue end
-					elseif operator == '≥' then
+					elseif operator == "≥" then
 						if not (stored_temperature >= target_temperature) then goto continue end
-					elseif operator == '<' then
+					elseif operator == "<" then
 						if not (stored_temperature < target_temperature) then goto continue end
-					elseif operator == '≤' then
+					elseif operator == "≤" then
 						if not (stored_temperature <= target_temperature) then goto continue end
-					elseif operator == '≠' then
+					elseif operator == "≠" then
 						if not (stored_temperature ~= target_temperature) then goto continue end
 					else
-						error('Invalid operator: ' .. operator)
+						error("Invalid operator: " .. operator)
 					end
 				end
 				local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
@@ -282,7 +282,7 @@ Biofluid.events[143] = function()
 end
 
 local function set_target(biorobot_data, target)
-	biorobot_data.entity.commandable.set_command{
+	biorobot_data.entity.commandable.set_command {
 		type = defines.command.go_to_location,
 		destination = target,
 		radius = 0.5,
@@ -304,7 +304,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 	local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
 	local robot_name
 	for robot, delivery_size in pairs(Biofluid.delivery_sizes) do
-		local removed = bioport_input_inventory.remove{name = robot, count = 1}
+		local removed = bioport_input_inventory.remove {name = robot, count = 1}
 		if removed ~= 0 then
 			robot_name = robot
 			delivery_amount = min(delivery_amount, delivery_size)
@@ -316,7 +316,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
 	local bioport_position = bioport.position
 	local position = {bioport_position.x, bioport_position.y - 2.5}
 	local provider_position = provider.position
-	local robot = bioport.surface.create_entity{
+	local robot = bioport.surface.create_entity {
 		name = robot_name,
 		force = bioport.force_index,
 		position = position,
@@ -345,7 +345,7 @@ function Biofluid.eat(bioport_data)
 	if bioport_data.fuel_remaning <= 0 then
 		local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
 		for food, calories in pairs(Biofluid.favorite_foods) do
-			local removed = bioport_input_inventory.remove{name = food, count = 1}
+			local removed = bioport_input_inventory.remove {name = food, count = 1}
 			if removed ~= 0 then
 				bioport_data.fuel_remaning = calories
 				bioport_data.last_eaten_fuel_value = calories
@@ -365,7 +365,7 @@ function Biofluid.eat(bioport_data)
 end
 
 local batch_size = 3
-local special_delivery = {name = 'guano', count = batch_size}
+local special_delivery = {name = "guano", count = batch_size}
 function Biofluid.poop(bioport_data, robot_name)
 	local poop_amount = Biofluid.taco_bell[robot_name]
 	bioport_data.guano = bioport_data.guano + poop_amount
@@ -374,7 +374,7 @@ function Biofluid.poop(bioport_data, robot_name)
 		local entity = bioport_data.entity
 		entity.get_inventory(OUTPUT_INVENTORY).insert(special_delivery)
 		entity.products_finished = entity.products_finished + batch_size
-        entity.force.get_item_production_statistics(entity.surface_index).on_flow('guano', batch_size)
+		entity.force.get_item_production_statistics(entity.surface_index).on_flow("guano", batch_size)
 	end
 end
 
@@ -399,9 +399,9 @@ end
 
 local function make_homeless(biorobot_data)
 	storage.biofluid_robots[biorobot_data.entity.unit_number] = nil
-	rendering.draw_sprite{
+	rendering.draw_sprite {
 		target = biorobot_data.entity,
-		sprite = 'utility.no_storage_space_icon',
+		sprite = "utility.no_storage_space_icon",
 		surface = biorobot_data.entity.surface,
 		x_scale = 0.4,
 		y_scale = 0.4
@@ -411,7 +411,9 @@ end
 local function find_new_home(biorobot_data, network_data)
 	if not network_data then
 		network_data = storage.biofluid_networks[biorobot_data.network_id]
-		if not network_data then make_homeless(biorobot_data); return end
+		if not network_data then
+			make_homeless(biorobot_data); return
+		end
 	end
 	local old_home = biorobot_data.bioport
 	local home
@@ -433,7 +435,9 @@ local function find_new_home(biorobot_data, network_data)
 			end
 		end
 	end
-	if not home then make_homeless(biorobot_data); return end
+	if not home then
+		make_homeless(biorobot_data); return
+	end
 	local position = home.position
 	set_target(biorobot_data, {position.x, position.y - 2.5})
 end
@@ -471,14 +475,22 @@ end
 
 local function pickup(biorobot_data)
 	local provider = biorobot_data.provider
-	if not provider.valid then go_home(biorobot_data); return end
+	if not provider.valid then
+		go_home(biorobot_data); return
+	end
 	local name = biorobot_data.name
 	local contents = provider.fluidbox[1]
-	if not contents or contents.name ~= name then go_home(biorobot_data); return end
+	if not contents or contents.name ~= name then
+		go_home(biorobot_data); return
+	end
 	local delivery_amount = min(contents.amount, biorobot_data.delivery_amount)
-	if delivery_amount == 0 then go_home(biorobot_data); return end
+	if delivery_amount == 0 then
+		go_home(biorobot_data); return
+	end
 	local requester_data = storage.biofluid_requesters[biorobot_data.requester]
-	if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
+	if not requester_data or not requester_data.entity.valid then
+		go_home(biorobot_data); return
+	end
 	local new_amount = contents.amount - delivery_amount
 	if new_amount == 0 then
 		provider.fluidbox[1] = nil
@@ -492,16 +504,16 @@ local function pickup(biorobot_data)
 	biorobot_data.status = DROPPING_OFF
 	if contents then biorobot_data.temperature = contents.temperature end
 	local entity = biorobot_data.entity
-	biorobot_data.alt_mode_shadow = rendering.draw_sprite{
-		sprite = 'utility/entity_info_dark_background',
+	biorobot_data.alt_mode_shadow = rendering.draw_sprite {
+		sprite = "utility/entity_info_dark_background",
 		target = entity,
 		surface = entity.surface,
 		only_in_alt_mode = true,
 		x_scale = 0.5,
 		y_scale = 0.5,
 	}.id
-	biorobot_data.alt_mode_sprite = rendering.draw_sprite{
-		sprite = 'fluid/' .. name,
+	biorobot_data.alt_mode_sprite = rendering.draw_sprite {
+		sprite = "fluid/" .. name,
 		target = entity,
 		surface = entity.surface,
 		only_in_alt_mode = true,
@@ -512,12 +524,16 @@ end
 
 local function dropoff(biorobot_data)
 	local requester_data = storage.biofluid_requesters[biorobot_data.requester]
-	if not requester_data or not requester_data.entity.valid then go_home(biorobot_data); return end
+	if not requester_data or not requester_data.entity.valid then
+		go_home(biorobot_data); return
+	end
 	local requester = requester_data.entity
 	local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
 	local contents = requester.fluidbox[1]
 	if contents then
-		if contents.name ~= name then go_home(biorobot_data); return end
+		if contents.name ~= name then
+			go_home(biorobot_data); return
+		end
 		requester.fluidbox[1] = {
 			name = name,
 			amount = contents.amount + amount,
@@ -539,12 +555,16 @@ end
 
 local function returning(biorobot_data)
 	local bioport_data = storage.biofluid_bioports[biorobot_data.bioport]
-	if not bioport_data then find_new_home(biorobot_data); return end
+	if not bioport_data then
+		find_new_home(biorobot_data); return
+	end
 	local bioport = bioport_data.entity
-	if not bioport.valid then find_new_home(biorobot_data); return end
+	if not bioport.valid then
+		find_new_home(biorobot_data); return
+	end
 	local biorobot = biorobot_data.entity
 	local inventory = bioport.get_inventory(INPUT_INVENTORY)
-	if inventory.insert{name = biorobot.name, count = 1} == 1 then
+	if inventory.insert {name = biorobot.name, count = 1} == 1 then
 		storage.biofluid_robots[biorobot.unit_number] = nil
 		biorobot.destroy()
 		Biofluid.update_bioport_animation(bioport_data)
@@ -556,7 +576,9 @@ end
 Biofluid.events.on_ai_command_completed = function(event)
 	local biorobot_data = storage.biofluid_robots[event.unit_number]
 	if not biorobot_data then return end
-	if event.result ~= defines.behavior_result.success then go_home(biorobot_data); return end
+	if event.result ~= defines.behavior_result.success then
+		go_home(biorobot_data); return
+	end
 
 	if biorobot_data.status == PICKING_UP then
 		pickup(biorobot_data)
@@ -576,7 +598,7 @@ end
 function Biofluid.get_unfulfilled_requests()
 	local relavant_fluids = {}
 	local result = {}
-	local min_fluid_request = settings.global['py-min_fluid_request'].value
+	local min_fluid_request = settings.global["py-min_fluid_request"].value
 
 	for unit_number, requester_data in pairs(storage.biofluid_requesters) do
 		local requester = requester_data.entity
@@ -587,7 +609,7 @@ function Biofluid.get_unfulfilled_requests()
 		local network_id = requester_data.network_id
 		local network = storage.biofluid_networks[network_id]
 		if not network or not next(network.bioports) then
-			py.draw_error_sprite(requester, 'utility.too_far_from_roboport_icon', 71)
+			py.draw_error_sprite(requester, "utility.too_far_from_roboport_icon", 71)
 			goto continue
 		end
 		local fluid_name = requester_data.name
@@ -605,7 +627,7 @@ function Biofluid.get_unfulfilled_requests()
 		end
 		local request_size = goal - already_stored
 		if request_size < min_fluid_request then goto continue end
-		result[#result+1] = {
+		result[#result + 1] = {
 			name = fluid_name,
 			amount = request_size,
 			entity = requester,
@@ -614,7 +636,7 @@ function Biofluid.get_unfulfilled_requests()
 		}
 		if requester_data.care_about_temperature then
 			result[#result].target_temperature = requester_data.target_temperature
-			result[#result].temperature_operator = requester_data.temperature_operator 
+			result[#result].temperature_operator = requester_data.temperature_operator
 		end
 
 		local relavant_fluids_by_network = relavant_fluids[network_id]
@@ -633,9 +655,9 @@ end
 
 function Biofluid.why_isnt_my_bioport_working(bioport_data)
 	local entity = bioport_data.entity
-	if not entity.valid then return 'entity-status.working' end
+	if not entity.valid then return "entity-status.working" end
 	local network = storage.biofluid_networks[bioport_data.network_id]
-	if not network then return 'entity-status.working' end
+	if not network then return "entity-status.working" end
 
 	local has_food = bioport_data.fuel_remaning ~= 0
 	local has_creature = false
@@ -649,20 +671,20 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 		if has_food and has_creature then break end
 	end
 	if not has_food then
-		return 'entity-status.no-food'
+		return "entity-status.no-food"
 	elseif not has_creature then
-		return 'entity-status.no-creature'
+		return "entity-status.no-creature"
 	elseif not next(network.requesters) and not next(network.providers) then
-		return 'entity-status.no-biofluid-network'
-	elseif entity.get_inventory(OUTPUT_INVENTORY).get_item_count('guano') > 97 then
-		return 'entity-status.full-output'
+		return "entity-status.no-biofluid-network"
+	elseif entity.get_inventory(OUTPUT_INVENTORY).get_item_count("guano") > 97 then
+		return "entity-status.full-output"
 	else
-		return 'entity-status.working'
+		return "entity-status.working"
 	end
 end
 
 Biofluid.events.on_entity_settings_pasted = function(event)
-    local source, destination = event.source, event.destination
+	local source, destination = event.source, event.destination
 	local requesters = storage.biofluid_requesters
 	local source_data, destination_data = requesters[source.unit_number], requesters[destination.unit_number]
 	if not source_data or not destination_data then return end
@@ -712,7 +734,7 @@ Biofluid.events.on_destroyed = function(event)
 	if Biofluid.connectable[name] then
 		Biofluid.destroyed_pipe(entity)
 		local unit_number = entity.unit_number
-		if entity.type == 'pipe-to-ground' then
+		if entity.type == "pipe-to-ground" then
 			local underground_data = storage.biofluid_undergrounds[unit_number]
 			if not underground_data then return end
 			local heat_connection = underground_data.heat_connection
@@ -750,29 +772,29 @@ Biofluid.events.on_player_fast_transferred = function(event)
 end
 
 local animations = {
-	[''] = 1,
-	['N'] = 1,
-	['E'] = 2,
-	['S'] = 3,
-	['W'] = 2,
-	['NE'] = 5,
-	['ES'] = 6,
-	['SW'] = 7,
-	['NW'] = 8,
-	['NS'] = 3,
-	['EW'] = 4,
-	['NEW'] = 9,
-	['NES'] = 10,
-	['ESW'] = 11,
-	['NSW'] = 12,
-	['NESW'] = 13
+	[""] = 1,
+	["N"] = 1,
+	["E"] = 2,
+	["S"] = 3,
+	["W"] = 2,
+	["NE"] = 5,
+	["ES"] = 6,
+	["SW"] = 7,
+	["NW"] = 8,
+	["NS"] = 3,
+	["EW"] = 4,
+	["NEW"] = 9,
+	["NES"] = 10,
+	["ESW"] = 11,
+	["NSW"] = 12,
+	["NESW"] = 13
 }
 
 local directions = {
-	[0] = 'N',
-	[2] = 'E',
-	[4] = 'S',
-	[6] = 'W'
+	[0] = "N",
+	[2] = "E",
+	[4] = "S",
+	[6] = "W"
 }
 
 function Biofluid.update_graphics(entity)
@@ -792,7 +814,7 @@ function Biofluid.update_graphics(entity)
 		end
 	elseif entity.name == VESSEL then
 		local connections = Biofluid.find_heat_connections(entity)
-		local animation_index = ''
+		local animation_index = ""
 		for _, connection in pairs(connections) do
 			if Biofluid.is_looking_at_us(entity, connection) then
 				animation_index = animation_index .. directions[connection.direction]
@@ -804,8 +826,8 @@ function Biofluid.update_graphics(entity)
 		if not bioport_data then return end
 		local animation_entity = bioport_data.animation_entity
 		if not animation_entity or not animation_entity.valid then
-			bioport_data.animation_entity = entity.surface.create_entity{
-				name = 'bioport-floor-animation',
+			bioport_data.animation_entity = entity.surface.create_entity {
+				name = "bioport-floor-animation",
 				position = entity.position,
 				force = entity.force_index,
 			}

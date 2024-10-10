@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 50},
-        {type = "item", name = "steel-plate", amount = 50},
-        {type = "item", name = "gasifier", amount = 1},
-        {type = "item", name = "steam-engine", amount = 3},
-        {type = "item", name = "iron-plate", amount = 20},
+        {type = "item", name = "stone-brick",        amount = 50},
+        {type = "item", name = "steel-plate",        amount = 50},
+        {type = "item", name = "gasifier",           amount = 1},
+        {type = "item", name = "steam-engine",       amount = 3},
+        {type = "item", name = "iron-plate",         amount = 20},
         {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 20},
+        {type = "item", name = "iron-gear-wheel",    amount = 20},
     },
     results = {
         {type = "item", name = "spore-collector-mk01", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "spore-collector-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/spore-collector-mk01.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "spore-collector-mk01"},
     fast_replaceable_group = "spore-collector",
@@ -75,7 +75,7 @@ ENTITY {
                     animation_speed = 0.4,
                     shift = util.by_pixel(10, -80)
                 },
-    
+
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
                     width = 243,

@@ -13,26 +13,26 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "glass", amount = 50},
-        {type = "item", name = "incubator-mk01", amount = 1},
+        {type = "item", name = "glass",            amount = 50},
+        {type = "item", name = "incubator-mk01",   amount = 1},
         {type = "item", name = "advanced-circuit", amount = 30},
-        {type = "item", name = "nexelit-plate", amount = 20},
-        {type = "item", name = "engine-unit", amount = 3},
-        {type = "item", name = "plastic-bar", amount = 10},
-        {type = "item", name = "duralumin", amount = 20},
-        {type = "item", name = "latex", amount = 50},
-        {type = "item", name = "neuroprocessor", amount = 15},
+        {type = "item", name = "nexelit-plate",    amount = 20},
+        {type = "item", name = "engine-unit",      amount = 3},
+        {type = "item", name = "plastic-bar",      amount = 10},
+        {type = "item", name = "duralumin",        amount = 20},
+        {type = "item", name = "latex",            amount = 50},
+        {type = "item", name = "neuroprocessor",   amount = 15},
     },
     results = {
         {type = "item", name = "incubator-mk02", amount = 1}
     }
-}:add_unlock("biotech-machines-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("biotech-machines-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
     name = "incubator-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/incubator-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk02",
     order = "a",
@@ -44,7 +44,7 @@ ENTITY {
     type = "assembling-machine",
     name = "incubator-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/incubator-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "incubator-mk02"},
     fast_replaceable_group = "incubator",
@@ -116,7 +116,7 @@ ENTITY {
             }
         },
         animation = {
-            layers ={
+            layers = {
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/incubator/off.png",
                     width = 224,
@@ -133,7 +133,7 @@ ENTITY {
                     tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
                 },
             },
-    },
+        },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {

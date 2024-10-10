@@ -7,14 +7,14 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "prandium-lab-mk03", amount = 1},
-        {type = "item", name = 'processing-unit', amount = 15},
-        {type = "item", name = "super-steel", amount = 40},
-        {type = "item", name = "super-alloy", amount = 30},
+        {type = "item", name = "processing-unit",   amount = 15},
+        {type = "item", name = "super-steel",       amount = 40},
+        {type = "item", name = "super-alloy",       amount = 30},
     },
     results = {
         {type = "item", name = "prandium-lab-mk04", amount = 1}
     }
-}:add_unlock("land-animals-mk04"):replace_ingredient('processing-unit', 'intelligent-unit')
+}:add_unlock("land-animals-mk04"):replace_ingredient("processing-unit", "intelligent-unit")
 
 ITEM {
     type = "item",
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "prandium-lab-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/prandium-lab-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "prandium-lab-mk04"},
     fast_replaceable_group = "prandium-lab",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"cottongut"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "prandium-lab-mk01"),
     energy_source = {

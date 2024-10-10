@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "glass", amount = 35},
-        {type = "item", name = "steel-plate", amount = 50},
-        {type = "item", name = "duralumin", amount = 50},
-        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "glass",              amount = 35},
+        {type = "item", name = "steel-plate",        amount = 50},
+        {type = "item", name = "duralumin",          amount = 50},
+        {type = "item", name = "pipe",               amount = 15},
         {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "plastic-bar", amount = 40},
+        {type = "item", name = "plastic-bar",        amount = 40},
     },
     results = {
         {type = "item", name = "space-yotoi-aloe-orchard-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-yotoi-aloe-orchard-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-yotoi-aloe-orchard-mk01"},
     fast_replaceable_group = "yotoi-aloe-orchard",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = 33,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"yotoi"},
     crafting_speed = 0.06,
     energy_source = {

@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "chelator",
     icon = "__pyalienlifegraphics__/graphics/icons/chelator.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.2, g = 0.301, b = 0.094},

@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "rennea-plantation-mk01", amount = 1},
-        {type = "item", name = "engine-unit", amount = 10},
-        {type = "item", name = "treated-wood", amount = 20},
-        {type = "item", name = "niobium-pipe", amount = 20},
-        {type = "item", name = "advanced-circuit", amount = 50},
-        {type = "item", name = "lead-plate", amount = 30},
-        {type = "item", name = "storage-tank", amount = 4},
+        {type = "item", name = "engine-unit",            amount = 10},
+        {type = "item", name = "treated-wood",           amount = 20},
+        {type = "item", name = "niobium-pipe",           amount = 20},
+        {type = "item", name = "advanced-circuit",       amount = 50},
+        {type = "item", name = "lead-plate",             amount = 30},
+        {type = "item", name = "storage-tank",           amount = 4},
     },
     results = {
         {type = "item", name = "rennea-plantation-mk02", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "rennea-plantation-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/rennea-plantation-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "rennea-plantation-mk02"},
     fast_replaceable_group = "rennea-plantation",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 60,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"rennea"},
     crafting_speed = 0.2,
     energy_source = {

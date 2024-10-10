@@ -7,11 +7,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "electronic-circuit", amount = 25},
-        {type = "item", name = "titanium-plate", amount = 40},
-        {type = "item", name = "concrete", amount = 100},
-        {type = "item", name = "concrete-wall", amount = 100},
-        {type = "item", name = "steel-plate", amount = 30},
-        {type = "item", name = "plastic-bar", amount = 50},
+        {type = "item", name = "titanium-plate",     amount = 40},
+        {type = "item", name = "concrete",           amount = 100},
+        {type = "item", name = "concrete-wall",      amount = 100},
+        {type = "item", name = "steel-plate",        amount = 30},
+        {type = "item", name = "plastic-bar",        amount = 50},
     },
     results = {
         {type = "item", name = "space-xenopen-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-xenopen-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/xenopen-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-xenopen-mk01"},
     fast_replaceable_group = "xenopen",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 9,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"xeno"},
     crafting_speed = 0.04,
     energy_source = {
@@ -129,29 +129,29 @@ ENTITY {
                     animation_speed = 0.4
                 }
             },
-    
+
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics3__/graphics/entity/xenopen/off.png",
-            width = 448,
-            height = 480,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -32)
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/xenopen/off.png",
+                    width = 448,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/xenopen/off-mask.png",
+                    width = 448,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+
             },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/xenopen/off-mask.png",
-                width = 448,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -32),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-    
-          },
         },
     },
 

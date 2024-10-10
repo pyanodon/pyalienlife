@@ -7,10 +7,10 @@ end
 
 Worm.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
-	if entity.name ~= 'pydrive' then return end
+	if entity.name ~= "pydrive" then return end
 
-	storage.worm_skins[entity.unit_number] = entity.surface.create_entity{
-		name = 'pydrive_skin',
+	storage.worm_skins[entity.unit_number] = entity.surface.create_entity {
+		name = "pydrive_skin",
 		position = entity.position,
 		force = entity.force
 	}

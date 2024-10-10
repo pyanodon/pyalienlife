@@ -7,11 +7,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "ez-ranch-mk03", amount = 1},
-        {type = "item", name = "kevlar", amount = 50},
-        {type = "item", name = "super-alloy", amount = 30},
-        {type = "item", name = "super-steel", amount = 60},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "blanket", amount = 1},
+        {type = "item", name = "kevlar",        amount = 50},
+        {type = "item", name = "super-alloy",   amount = 30},
+        {type = "item", name = "super-steel",   amount = 60},
+        {type = "item", name = "control-unit",  amount = 10},
+        {type = "item", name = "blanket",       amount = 1},
     },
     results = {
         {type = "item", name = "ez-ranch-mk04", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "ez-ranch-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "ez-ranch-mk04"},
     fast_replaceable_group = "ez-ranch",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"korlex"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "ez-ranch-mk01"),
     energy_source = {
@@ -217,7 +217,7 @@ ENTITY {
                 {flow_direction = "input-output", position = {0.5, -4.5}, direction = defines.direction.north},
                 {flow_direction = "input-output", position = {-0.5, 4.5}, direction = defines.direction.south},
             },
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
 

@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "duralumin", amount = 35},
-        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "duralumin",         amount = 35},
+        {type = "item", name = "engine-unit",       amount = 5},
         {type = "item", name = "seaweed-crop-mk01", amount = 1},
-        {type = "item", name = "niobium-pipe", amount = 20},
-        {type = "item", name = "advanced-circuit", amount = 20},
-        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "niobium-pipe",      amount = 20},
+        {type = "item", name = "advanced-circuit",  amount = 20},
+        {type = "item", name = "steel-plate",       amount = 40},
     },
     results = {
         {type = "item", name = "seaweed-crop-mk02", amount = 1}
     }
-}:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("botany-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "seaweed-crop-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/seaweed-crop-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "seaweed-crop-mk02"},
     fast_replaceable_group = "seaweed-crop",

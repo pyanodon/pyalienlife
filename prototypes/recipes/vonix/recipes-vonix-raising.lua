@@ -1,63 +1,63 @@
 ------------------EGG MAKER------------------
 
 py.autorecipes {
-    name = 'vonix-cub',
-	category = 'rc',
-	allowed_module_categories = {'vonix'},
+	name = "vonix-cub",
+	category = "rc",
+	allowed_module_categories = {"vonix"},
 	--module_limitations = 'vonix',
-	subgroup = 'py-alienlife-vonix',
-	order = 'c',
+	subgroup = "py-alienlife-vonix",
+	order = "c",
 	main_product = "vonix-eggs",
-    mats =
+	mats =
 	{
 		--py
 		{
 			ingredients =
-				{
-					{name = 'vonix', amount = 1},
-                    {name = 'caged-mukmoux', amount =1},
-					{name = 'caged-auog', amount =1},
-					{name = 'meat', amount =5},
-					{name = 'guts', amount =10},
-					{name = 'arqad-honey-barrel', amount = 2, return_barrel = true},
-				},
+			{
+				{name = "vonix",              amount = 1},
+				{name = "caged-mukmoux",      amount = 1},
+				{name = "caged-auog",         amount = 1},
+				{name = "meat",               amount = 5},
+				{name = "guts",               amount = 10},
+				{name = "arqad-honey-barrel", amount = 2, return_barrel = true},
+			},
 			results =
-				{
-					{name = 'vonix-eggs', amount = 6},
-				},
+			{
+				{name = "vonix-eggs", amount = 6},
+			},
 			crafting_speed = 45,
-			tech = 'vonix'
+			tech = "vonix"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'vonix', add_amount = 2},
-					{name = 'bedding', amount = 3},
-					{name = 'arqad-honey-barrel', add_amount = 2, return_barrel = true},
-				},
+			{
+				{name = "vonix",              add_amount = 2},
+				{name = "bedding",            amount = 3},
+				{name = "arqad-honey-barrel", add_amount = 2, return_barrel = true},
+			},
 			results =
-				{
-					{name = 'vonix-eggs', add_amount = 12},
-				},
+			{
+				{name = "vonix-eggs", add_amount = 12},
+			},
 			crafting_speed = 40,
-			tech = 'vonix-mk02'
+			tech = "vonix-mk02"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name = 'vonix', add_amount = 3},
-					{name = 'arthurian-egg', amount = 5},
-					{name = 'navens', amount =10},
-					{name = 'arqad-honey-barrel', add_amount = 2, return_barrel = true},
-				},
+			{
+				{name = "vonix",              add_amount = 3},
+				{name = "arthurian-egg",      amount = 5},
+				{name = "navens",             amount = 10},
+				{name = "arqad-honey-barrel", add_amount = 2, return_barrel = true},
+			},
 			results =
-				{
-					{name = 'vonix-eggs', add_amount = 18},
-				},
+			{
+				{name = "vonix-eggs", add_amount = 18},
+			},
 			crafting_speed = 30,
-			tech = 'vonix-mk03'
+			tech = "vonix-mk03"
 		},
 	}
 }
@@ -140,86 +140,86 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --
 
 --hatching
 
 RECIPE {
-    type = 'recipe',
-    name = 'vonix-grow-01',
-    category = 'incubator',
-    enabled = false,
-    energy_required = 24,
-    ingredients = {
-        {type = 'item', name = 'vonix-eggs', amount = 12},
-        {type = 'item', name = 'meat', amount = 8},
-        {type = 'fluid', name = 'water', amount = 200},
-    },
-    results = {
-        {type = 'item', name = 'vonix-cub', amount_min = 5, amount_max = 10},
-    },
-    main_product = "vonix-cub",
-    subgroup = 'py-alienlife-vonix',
-    order = 'a',
+	type = "recipe",
+	name = "vonix-grow-01",
+	category = "incubator",
+	enabled = false,
+	energy_required = 24,
+	ingredients = {
+		{type = "item",  name = "vonix-eggs", amount = 12},
+		{type = "item",  name = "meat",       amount = 8},
+		{type = "fluid", name = "water",      amount = 200},
+	},
+	results = {
+		{type = "item", name = "vonix-cub", amount_min = 5, amount_max = 10},
+	},
+	main_product = "vonix-cub",
+	subgroup = "py-alienlife-vonix",
+	order = "a",
 }:add_unlock("vonix")
 
 --Raising
 
 py.autorecipes {
-    name = 'vonix-raising',
-	category = 'vonix',
-	module_limitations = 'vonix',
-	subgroup = 'py-alienlife-vonix',
-	order = 'b',
+	name = "vonix-raising",
+	category = "vonix",
+	module_limitations = "vonix",
+	subgroup = "py-alienlife-vonix",
+	order = "b",
 	main_product = "vonix",
-    mats =
+	mats =
 	{
 		--py
 		{
 			ingredients =
-				{
-					{name = 'vonix-cub', amount = 4},
-                    {name = 'caged-mukmoux', amount = 1},
-					{name = 'meat', amount = 10},
-					{name = 'guts', amount = 10},
-					{name = 'arqad-honey-barrel', amount = 1, return_barrel = true},
-				},
+			{
+				{name = "vonix-cub",          amount = 4},
+				{name = "caged-mukmoux",      amount = 1},
+				{name = "meat",               amount = 10},
+				{name = "guts",               amount = 10},
+				{name = "arqad-honey-barrel", amount = 1, return_barrel = true},
+			},
 			results =
-				{
-					{name = 'vonix', amount_min = 1, amount_max = 4},
-				},
+			{
+				{name = "vonix", amount_min = 1, amount_max = 4},
+			},
 			crafting_speed = 250,
-			tech = 'vonix'
+			tech = "vonix"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'vonix-cub', add_amount = 4},
-					{name = 'bedding', amount = 3},
-					{name = 'caged-auog', amount = 1},
-				},
+			{
+				{name = "vonix-cub",  add_amount = 4},
+				{name = "bedding",    amount = 3},
+				{name = "caged-auog", amount = 1},
+			},
 			results =
-				{
-					{name = 'vonix', amount_min = 3, amount_max = 8},
-				},
+			{
+				{name = "vonix", amount_min = 3, amount_max = 8},
+			},
 			crafting_speed = 200,
-			tech = 'vonix-mk02'
+			tech = "vonix-mk02"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name = 'vonix-cub', add_amount = 4},
-					{name = 'arthurian-egg', amount = 5},
-					{name = 'navens', amount =5},
-				},
+			{
+				{name = "vonix-cub",     add_amount = 4},
+				{name = "arthurian-egg", amount = 5},
+				{name = "navens",        amount = 5},
+			},
 			results =
-				{
-					{name = 'vonix', amount_min = 6, amount_max = 12},
-				},
+			{
+				{name = "vonix", amount_min = 6, amount_max = 12},
+			},
 			crafting_speed = 150,
-			tech = 'vonix-mk03'
+			tech = "vonix-mk03"
 		},
 	}
 }
@@ -445,4 +445,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

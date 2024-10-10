@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "engine-unit", amount = 10},
-        {type = "item", name = "plastic-bar", amount = 20},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "duralumin", amount = 30},
-        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "engine-unit",    amount = 10},
+        {type = "item", name = "plastic-bar",    amount = 20},
+        {type = "item", name = "steel-plate",    amount = 100},
+        {type = "item", name = "duralumin",      amount = 30},
+        {type = "item", name = "glass",          amount = 20},
         {type = "item", name = "titanium-plate", amount = 40},
     },
     results = {
         {type = "item", name = "space-ez-ranch-mk01", amount = 1}
     }
-}:add_unlock("korlex"):add_ingredient({type = "item", name = "small-parts-01", amount = 100})
+}:add_unlock("korlex"):add_ingredient {type = "item", name = "small-parts-01", amount = 100}
 
 ITEM {
     type = "item",
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-ez-ranch-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-ez-ranch-mk01"},
     fast_replaceable_group = "ez-ranch",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 20,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"korlex"},
     crafting_speed = 0.02,
     energy_source = {
@@ -184,7 +184,7 @@ ENTITY {
                     animation_speed = 0.4
                 }
             },
-    
+
         },
         animation = {
             layers = {

@@ -1,34 +1,34 @@
-require 'caravan-gui-shared'
+require "caravan-gui-shared"
 
 local relative_gui_types = {
-    ['electric-pole'] = 'electric_network_gui',
-    ['character'] = 'other_player_gui',
-    ['unit'] = 'script_inventory_gui'
+    ["electric-pole"] = "electric_network_gui",
+    ["character"] = "other_player_gui",
+    ["unit"] = "script_inventory_gui"
 }
 
 local function guess(entity)
     local entity_type = entity.type
-    local relative_gui_type = relative_gui_types[entity_type] or entity_type:gsub('%-', '_') .. '_gui'
+    local relative_gui_type = relative_gui_types[entity_type] or entity_type:gsub("%-", "_") .. "_gui"
     return defines.relative_gui_type[relative_gui_type] or defines.relative_gui_type.generic_on_off_entity_gui
 end
 
 --anchor is optional
 local function instantiate_main_frame(gui, anchor)
     if anchor then
-        return gui.relative.add{
-            type = 'frame',
-            name = 'py_global_caravan_gui',
-            caption = {'caravan-gui.caption'},
-            direction = 'vertical',
+        return gui.relative.add {
+            type = "frame",
+            name = "py_global_caravan_gui",
+            caption = {"caravan-gui.caption"},
+            direction = "vertical",
             anchor = anchor
         }
     end
     if not gui.relative.caravan_flow then return end
-    return gui.relative.caravan_flow.add{
-        type = 'frame',
-        name = 'py_global_caravan_gui',
-        caption = {'caravan-gui.caption'},
-        direction = 'vertical',
+    return gui.relative.caravan_flow.add {
+        type = "frame",
+        name = "py_global_caravan_gui",
+        caption = {"caravan-gui.caption"},
+        direction = "vertical",
     }
 end
 
@@ -57,12 +57,12 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     main_frame.style.minimal_width = 300
     main_frame.tags = {unit_number = entity.unit_number}
 
-    local scroll_pane = main_frame.add{type = 'scroll-pane'}
+    local scroll_pane = main_frame.add {type = "scroll-pane"}
     scroll_pane.style.top_margin = -6
-    
+
     for key, caravan_data in pairs(storage.caravans) do
         if Caravan.has_entity_in_schedule(caravan_data, entity) then
-            scroll_pane.add{type = 'empty-widget'}.style.height = 3
+            scroll_pane.add {type = "empty-widget"}.style.height = 3
             Caravan.add_gui_row(caravan_data, key, scroll_pane)
         end
     end

@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "micro-mine-mk02", amount = 1},
-        {type = "item", name = "nexelit-plate", amount = 60},
-        {type = "item", name = "ticocr-alloy", amount = 20},
-        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "micro-mine-mk02",      amount = 1},
+        {type = "item", name = "nexelit-plate",        amount = 60},
+        {type = "item", name = "ticocr-alloy",         amount = 20},
+        {type = "item", name = "processing-unit",      amount = 30},
         {type = "item", name = "electric-engine-unit", amount = 20},
-        {type = "item", name = "nichrome", amount = 30},
+        {type = "item", name = "nichrome",             amount = 30},
     },
     results = {
         {type = "item", name = "micro-mine-mk03", amount = 1}
     }
-}:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("biotech-machines-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
 
 ITEM {
     type = "item",
@@ -32,12 +32,12 @@ ENTITY {
     type = "assembling-machine",
     name = "micro-mine-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/micro-mine-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "micro-mine-mk03"},
     fast_replaceable_group = "micro-mine",
     max_health = 100,
-    
+
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},

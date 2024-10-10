@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fwf-mk01", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 30},
-        {type = "item", name = "duralumin", amount = 30},
-        {type = "item", name = "latex", amount = 30},
-        {type = "item", name = "plastic-bar", amount = 50},
-        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "fwf-mk01",         amount = 1},
+        {type = "item", name = "titanium-plate",   amount = 30},
+        {type = "item", name = "duralumin",        amount = 30},
+        {type = "item", name = "latex",            amount = 30},
+        {type = "item", name = "plastic-bar",      amount = 50},
+        {type = "item", name = "engine-unit",      amount = 5},
         {type = "item", name = "advanced-circuit", amount = 20},
     },
     results = {
         {type = "item", name = "fwf-mk02", amount = 1}
     }
-}:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("botany-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "fwf-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "fwf-mk02"},
     fast_replaceable_group = "fwf",
@@ -74,7 +74,7 @@ ENTITY {
                     width = 32,
                     height = 544,
                     frame_count = 1,
-                    repeat_count= 135,
+                    repeat_count = 135,
                     animation_speed = 0.4,
                     shift = util.by_pixel(-256, -64)
                 },
@@ -83,7 +83,7 @@ ENTITY {
                     width = 32,
                     height = 544,
                     frame_count = 1,
-                    repeat_count= 135,
+                    repeat_count = 135,
                     animation_speed = 0.4,
                     shift = util.by_pixel(256, -64)
                 },

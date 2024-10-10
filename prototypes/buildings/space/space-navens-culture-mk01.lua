@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "gasifier", amount = 2},
-        {type = "item", name = "glass", amount = 30},
-        {type = "item", name = "nexelit-plate", amount = 20},
-        {type = "item", name = "duralumin", amount = 35},
-        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "gasifier",         amount = 2},
+        {type = "item", name = "glass",            amount = 30},
+        {type = "item", name = "nexelit-plate",    amount = 20},
+        {type = "item", name = "duralumin",        amount = 35},
+        {type = "item", name = "steel-plate",      amount = 50},
         {type = "item", name = "advanced-circuit", amount = 15},
-        {type = "item", name = "tin-plate", amount = 50},
+        {type = "item", name = "tin-plate",        amount = 50},
     },
     results = {
         {type = "item", name = "space-navens-culture-mk01", amount = 1}
     }
-}:add_unlock("navens"):add_ingredient({type = "item", name = "small-parts-01", amount = 30})
+}:add_unlock("navens"):add_ingredient {type = "item", name = "small-parts-01", amount = 30}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-navens-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-navens-culture-mk01"},
     fast_replaceable_group = "navens-culture",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 4,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"navens"},
     crafting_speed = 0.02,
     energy_source = {

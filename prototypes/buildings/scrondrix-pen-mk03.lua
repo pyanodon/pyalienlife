@@ -6,17 +6,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "molybdenum-plate", amount = 100},
-        {type = "item", name = "scrondrix-pen-mk02", amount = 1},
-        {type = "item", name = "ticocr-alloy", amount = 20},
-        {type = "item", name = "processing-unit", amount = 30},
-        {type = "item", name = "nexelit-plate", amount = 50},
+        {type = "item", name = "molybdenum-plate",      amount = 100},
+        {type = "item", name = "scrondrix-pen-mk02",    amount = 1},
+        {type = "item", name = "ticocr-alloy",          amount = 20},
+        {type = "item", name = "processing-unit",       amount = 30},
+        {type = "item", name = "nexelit-plate",         amount = 50},
         {type = "item", name = "low-density-structure", amount = 40},
     },
     results = {
         {type = "item", name = "scrondrix-pen-mk03", amount = 1}
     }
-}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("land-animals-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
 
 ITEM {
     type = "item",
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "scrondrix-pen-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/scrondrix-pen-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "scrondrix-pen-mk03"},
     fast_replaceable_group = "scrondrix-pen",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"scrondrix"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "scrondrix-pen-mk01"),
     energy_source = {
@@ -189,12 +189,12 @@ ENTITY {
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw.png",
-                width = 384,
-                height = 427,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -34)
+                    filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw.png",
+                    width = 384,
+                    height = 427,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -34)
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw-mask.png",
@@ -204,7 +204,7 @@ ENTITY {
                     line_length = 1,
                     shift = util.by_pixel(16, -34),
                     tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-                    },
+                },
             }
         },
     },

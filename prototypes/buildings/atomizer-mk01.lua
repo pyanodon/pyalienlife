@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "duralumin", amount = 10},
-        {type = "item", name = "washer", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 35},
+        {type = "item", name = "duralumin",          amount = 10},
+        {type = "item", name = "washer",             amount = 1},
+        {type = "item", name = "titanium-plate",     amount = 35},
         {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "steam-engine", amount = 5},
-        {type = "item", name = "glass", amount = 50},
-        {type = "item", name = "nickel-plate", amount = 25},
+        {type = "item", name = "steam-engine",       amount = 5},
+        {type = "item", name = "glass",              amount = 50},
+        {type = "item", name = "nickel-plate",       amount = 25},
     },
     results = {
         {type = "item", name = "atomizer-mk01", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "atomizer-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "atomizer-mk01"},
     fast_replaceable_group = "atomizer",
@@ -44,20 +44,20 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_slots = 1,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"atomizer"},
     crafting_speed = 1,
     energy_source =
     {
-      type = "burner",
-      --fuel_categories = {"chemical"},
-      fuel_categories = {"chemical", "biomass"},
-      effectivity = 1,
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-      emissions_per_minute = {
-          pollution = 0.06
-      },
+        type = "burner",
+        --fuel_categories = {"chemical"},
+        fuel_categories = {"chemical", "biomass"},
+        effectivity = 1,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 0.06
+        },
     },
     energy_usage = "800kW",
     graphics_set = {

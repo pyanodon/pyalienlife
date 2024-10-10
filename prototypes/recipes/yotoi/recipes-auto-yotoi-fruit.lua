@@ -1,71 +1,71 @@
 py.autorecipes {
-    name = 'yotoi-fruit',
-	category = 'yotoi',
-	module_limitations = 'yotoi',
-	subgroup = 'py-alienlife-yotoi',
-    order = 'z',
-    mats =
+	name = "yotoi-fruit",
+	category = "yotoi",
+	module_limitations = "yotoi",
+	subgroup = "py-alienlife-yotoi",
+	order = "z",
+	mats =
 	{
 		--logisitic
 		{
 			ingredients =
-				{
-					{name='soil', amount = 4},
-					{name='gravel', amount = 10},
-					{name='limestone', amount = 5},
-					{name='water', amount = 100, fluidbox_index = 1},
-				},
+			{
+				{name = "soil",      amount = 4},
+				{name = "gravel",    amount = 10},
+				{name = "limestone", amount = 5},
+				{name = "water",     amount = 100, fluidbox_index = 1},
+			},
 			results =
-				{
-					{name='yotoi-fruit', amount = 5},
-				},
+			{
+				{name = "yotoi-fruit", amount = 5},
+			},
 			crafting_speed = 100,
-			tech = 'yotoi'
+			tech = "yotoi"
 		},
 		--py
-        {
+		{
 			ingredients =
-				{
-                    {name='fertilizer', amount = 5},
-					{name='ash', amount = 8},
-					{name='biomass', amount = 6},
-				},
+			{
+				{name = "fertilizer", amount = 5},
+				{name = "ash",        amount = 8},
+				{name = "biomass",    amount = 6},
+			},
 			results =
-				{
-					{name='yotoi-fruit', add_amount = 7}
-				},
-				crafting_speed = 70,
-				tech = 'yotoi-mk02'
-        },
+			{
+				{name = "yotoi-fruit", add_amount = 7}
+			},
+			crafting_speed = 70,
+			tech = "yotoi-mk02"
+		},
 		--chem
-        {
+		{
 			ingredients =
-				{
-                    {name='blood-meal', amount = 2, fallback = {name = 'blood-barrel', amount = 4}},
-					{name='carbon-dioxide', amount = 60, fluidbox_index = 2},
-					{name='pesticide-mk01', amount = 1},
-				},
+			{
+				{name = "blood-meal",     amount = 2,  fallback = {name = "blood-barrel", amount = 4}},
+				{name = "carbon-dioxide", amount = 60, fluidbox_index = 2},
+				{name = "pesticide-mk01", amount = 1},
+			},
 			results =
-				{
-					{name='yotoi-fruit', add_amount = 7}
-				},
-				crafting_speed = 50,
-				tech = 'yotoi-mk03'
-        },
+			{
+				{name = "yotoi-fruit", add_amount = 7}
+			},
+			crafting_speed = 50,
+			tech = "yotoi-mk03"
+		},
 		--prod
-        {
+		{
 			ingredients =
-				{
-                    {name='fertilizer', add_amount = 5},
-					{name='small-lamp', amount = 3},
-					{name='pesticide-mk02', amount = 1},
-				},
+			{
+				{name = "fertilizer",     add_amount = 5},
+				{name = "small-lamp",     amount = 3},
+				{name = "pesticide-mk02", amount = 1},
+			},
 			results =
-				{
-					{name='yotoi-fruit', add_amount = 7}
-				},
-				crafting_speed = 20,
-				tech = 'yotoi-mk04'
+			{
+				{name = "yotoi-fruit", add_amount = 7}
+			},
+			crafting_speed = 20,
+			tech = "yotoi-mk04"
 		},
 	}
 }
@@ -136,4 +136,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

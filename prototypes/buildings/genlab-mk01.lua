@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "biofactory-mk01", amount = 1},
-        {type = "item", name = "plastic-bar", amount = 20},
-        {type = "item", name = "py-tank-3000", amount = 2},
-        {type = "item", name = "steel-plate", amount = 15},
+        {type = "item", name = "biofactory-mk01",    amount = 1},
+        {type = "item", name = "plastic-bar",        amount = 20},
+        {type = "item", name = "py-tank-3000",       amount = 2},
+        {type = "item", name = "steel-plate",        amount = 15},
         {type = "item", name = "electronic-circuit", amount = 15},
-        {type = "item", name = "glass", amount = 50},
-        {type = "item", name = "duralumin", amount = 20},
-        {type = "item", name = "titanium-plate", amount = 40},
+        {type = "item", name = "glass",              amount = 50},
+        {type = "item", name = "duralumin",          amount = 20},
+        {type = "item", name = "titanium-plate",     amount = 40},
     },
     results = {
         {type = "item", name = "genlab-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "genlab-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/genlab-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "genlab-mk01"},
     fast_replaceable_group = "genlab",
@@ -119,7 +119,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "input",
@@ -128,7 +128,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "input",
@@ -137,7 +137,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -145,7 +145,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -153,7 +153,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
         {
             production_type = "output",
@@ -161,7 +161,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
 

@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "chloral",
     icon = "__pyalienlifegraphics3__/graphics/icons/chloral.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.558, g = 0.698, b = 0.443},

@@ -6,13 +6,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "iron-plate", amount = 100},
+        {type = "item", name = "iron-plate",         amount = 100},
         {type = "item", name = "electronic-circuit", amount = 15},
-        {type = "item", name = "small-lamp", amount = 8},
-        {type = "item", name = "aluminium-plate", amount = 40},
-        {type = "item", name = "steel-plate", amount = 40},
-        {type = "item", name = "iron-gear-wheel", amount = 30},
-        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "small-lamp",         amount = 8},
+        {type = "item", name = "aluminium-plate",    amount = 40},
+        {type = "item", name = "steel-plate",        amount = 40},
+        {type = "item", name = "iron-gear-wheel",    amount = 30},
+        {type = "item", name = "glass",              amount = 50},
     },
     results = {
         {type = "item", name = "space-prandium-lab-mk01", amount = 1}
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-prandium-lab-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/prandium-lab-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-prandium-lab-mk01"},
     fast_replaceable_group = "prandium-lab",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
     module_slots = 20,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"space-cottongut"},
     crafting_speed = 0.05,
     energy_source = {
@@ -210,7 +210,7 @@ ENTITY {
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 }
             },
-    
+
         },
         animation = {
             layers = {

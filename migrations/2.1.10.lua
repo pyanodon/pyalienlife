@@ -10,7 +10,7 @@ for _, caravan_data in pairs(storage.caravans) do
 		local entity = caravan_data.entity
 		local _, player = next(game.connected_players)
 		player = player or game.players[1]
-		entity.surface.create_entity{
+		entity.surface.create_entity {
 			name = entity.name,
 			position = player.position,
 			force = entity.force_index,
@@ -23,9 +23,9 @@ for _, caravan_data in pairs(storage.caravans) do
 	end
 
 	if caravan_data.is_aerial
-	or not caravan_data.unit_number
-	or not caravan_data.entity
-	or not caravan_data.entity.valid then
+		or not caravan_data.unit_number
+		or not caravan_data.entity
+		or not caravan_data.entity.valid then
 		local inventory = caravan_data.inventory
 		local fuel_inventory = caravan_data.fuel_inventory
 		if exists_and_valid(inventory) then inventory.destroy() end
@@ -42,5 +42,5 @@ if found then
 end
 
 if migrated > 0 then
-	game.print('Failed to migrate ' .. migrated .. ' aerial turbines into the new system. Since I\'m so nice, I teleported all of them to your position. Make sure to mine them and place them back so they actually work.')
+	game.print("Failed to migrate " .. migrated .. " aerial turbines into the new system. Since I\'m so nice, I teleported all of them to your position. Make sure to mine them and place them back so they actually work.")
 end

@@ -7,18 +7,18 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "grods-swamp-mk01", amount = 1},
-        {type = "item", name = "latex", amount = 15},
-        {type = "item", name = "engine-unit", amount = 20},
-        {type = "item", name = "treated-wood", amount = 50},
-        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "latex",            amount = 15},
+        {type = "item", name = "engine-unit",      amount = 20},
+        {type = "item", name = "treated-wood",     amount = 50},
+        {type = "item", name = "niobium-pipe",     amount = 20},
         {type = "item", name = "advanced-circuit", amount = 20},
-        {type = "item", name = "glass", amount = 40},
-        {type = "item", name = "plastic-bar", amount = 30},
+        {type = "item", name = "glass",            amount = 40},
+        {type = "item", name = "plastic-bar",      amount = 30},
     },
     results = {
         {type = "item", name = "grods-swamp-mk02", amount = 1}
     }
-}:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("botany-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -36,7 +36,7 @@ ENTITY {
     type = "assembling-machine",
     name = "grods-swamp-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "grods-swamp-mk02"},
     fast_replaceable_group = "grods-swamp",
@@ -47,7 +47,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"grod"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "grods-swamp-mk01"),
     energy_source = {

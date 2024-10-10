@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "dda",
     icon = "__pyalienlifegraphics3__/graphics/icons/dda.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.541, g = 0.290, b = 0.247},

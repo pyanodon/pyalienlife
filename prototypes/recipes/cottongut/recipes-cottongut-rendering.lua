@@ -20,155 +20,155 @@ local IMP_BRAIN = 5
 
 
 py.autorecipes {
-    name = 'rendering-cottongut',
-	category = 'slaughterhouse',
-	subgroup = 'py-alienlife-cottongut',
-	order = 'b',
+	name = "rendering-cottongut",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-cottongut",
+	order = "b",
 	crafting_speed = 30,
-    mats =
+	mats =
 	{
 		{
 			ingredients =
-				{
-					{name='cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "cottongut", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name='bones', amount = BASE_BONES},
-					{name='meat', amount = BASE_MEAT},
-					{name='skin', amount = BASE_SKIN},
-					{name='guts',  amount = BASE_GUTS},
-					{name='mukmoux-fat',  amount = BASE_FAT},
-					{name='blood', amount = BASE_BLOOD},
-					{name='brain', amount = BASE_BRAIN},
-				},
+			{
+				{name = "bones",       amount = BASE_BONES},
+				{name = "meat",        amount = BASE_MEAT},
+				{name = "skin",        amount = BASE_SKIN},
+				{name = "guts",        amount = BASE_GUTS},
+				{name = "mukmoux-fat", amount = BASE_FAT},
+				{name = "blood",       amount = BASE_BLOOD},
+				{name = "brain",       amount = BASE_BRAIN},
+			},
 			crafting_speed = 30,
-			tech = 'cottongut-mk01',
-			name = 'full-render-cottongut',
+			tech = "cottongut-mk01",
+			name = "full-render-cottongut",
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-cottongut.png",
 			icon_size = 64,
 		},
 		--brain cottongut rendering
 		{
 			ingredients =
-				{
-					{name='cottongut',remove_item = true},
-					{name='brain-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "cottongut",       remove_item = true},
+				{name = "brain-cottongut", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'bones', remove_item = true},
-					{name = 'meat', remove_item = true},
-					{name = 'mukmoux-fat', remove_item = true},
-					{name = 'skin', remove_item = true},
-					{name = 'guts', remove_item = true},
-					{name = 'blood', remove_item = true},
-					{name='brain', amount = IMP_BRAIN},
-				},
-			tech = 'nanochondria',
-			name = 'ex-bra-cot',
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       amount = IMP_BRAIN},
+			},
+			tech = "nanochondria",
+			name = "ex-bra-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
 			icon_size = 64,
 		},
 		--bone cottongut rendering
 		{
 			ingredients =
-				{
-					{name='brain-cottongut',remove_item = true},
-					{name='bone-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "brain-cottongut", remove_item = true},
+				{name = "bone-cottongut",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'brain', remove_item = true},
-					{name='bones', amount = IMP_BONES},
-				},
-			tech = 'bmp',
-			name = 'ex-bon-cot',
+			{
+				{name = "brain", remove_item = true},
+				{name = "bones", amount = IMP_BONES},
+			},
+			tech = "bmp",
+			name = "ex-bon-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
 			icon_size = 64,
 		},
 		--guts cottongut rendering
 		{
 			ingredients =
-				{
-					{name='bone-cottongut',remove_item = true},
-					{name='guts-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "bone-cottongut", remove_item = true},
+				{name = "guts-cottongut", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'bones', remove_item = true},
-					{name='guts', amount = IMP_GUTS},
-				},
-			tech = 'antitumor',
-			name = 'ex-gut-cot',
+			{
+				{name = "bones", remove_item = true},
+				{name = "guts",  amount = IMP_GUTS},
+			},
+			tech = "antitumor",
+			name = "ex-gut-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
 			icon_size = 64,
 		},
 		--blood cottongut rendering
 		{
 			ingredients =
-				{
-					{name='guts-cottongut', remove_item = true},
-					{name='blood-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "guts-cottongut",  remove_item = true},
+				{name = "blood-cottongut", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'guts', remove_item = true},
-					{name='blood', amount = IMP_BLOOD},
-				},
-			tech = 'recombinant-ery',
-			name = 'ex-blo-cot',
+			{
+				{name = "guts",  remove_item = true},
+				{name = "blood", amount = IMP_BLOOD},
+			},
+			tech = "recombinant-ery",
+			name = "ex-blo-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
 			icon_size = 64,
 		},
 		--skin cottongut rendering
 		{
 			ingredients =
-				{
-					{name='blood-cottongut',remove_item = true},
-					{name='skin-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "blood-cottongut", remove_item = true},
+				{name = "skin-cottongut",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'blood', remove_item = true},
-					{name='skin', amount = IMP_SKIN},
-				},
-			tech = 'reca',
-			name = 'ex-ski-cot',
+			{
+				{name = "blood", remove_item = true},
+				{name = "skin",  amount = IMP_SKIN},
+			},
+			tech = "reca",
+			name = "ex-ski-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
 			icon_size = 64,
 		},
 		--fat cottongut rendering
 		{
 			ingredients =
-				{
-					{name='skin-cottongut',remove_item = true},
-					{name='fat-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "skin-cottongut", remove_item = true},
+				{name = "fat-cottongut",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'skin', remove_item = true},
-					{name='mukmoux-fat', amount = IMP_FAT},
-				},
-			tech = 'orexigenic',
-			name = 'ex-fat-cot',
+			{
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", amount = IMP_FAT},
+			},
+			tech = "orexigenic",
+			name = "ex-fat-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
 			icon_size = 64,
 		},
 		--meat cottongut rendering
 		{
 			ingredients =
-				{
-					{name='fat-cottongut',remove_item = true},
-					{name='meat-cottongut', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "fat-cottongut",  remove_item = true},
+				{name = "meat-cottongut", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'mukmoux-fat', remove_item = true},
-					{name='meat', amount = IMP_MEAT},
-				},
-			tech = 'anabolic-rna',
-			name = 'ex-me-cot',
+			{
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "meat",        amount = IMP_MEAT},
+			},
+			tech = "anabolic-rna",
+			name = "ex-me-cot",
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-cottongut.png",
 			icon_size = 64,
 		},

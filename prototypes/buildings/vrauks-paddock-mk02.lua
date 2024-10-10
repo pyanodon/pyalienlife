@@ -7,16 +7,16 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "vrauks-paddock-mk01", amount = 1},
-        {type = "item", name = "plastic-bar", amount = 20},
-        {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "neuroprocessor", amount = 30},
-        {type = "item", name = "latex", amount = 30},
-        {type = "item", name = "niobium-plate", amount = 20},
+        {type = "item", name = "plastic-bar",         amount = 20},
+        {type = "item", name = "advanced-circuit",    amount = 10},
+        {type = "item", name = "neuroprocessor",      amount = 30},
+        {type = "item", name = "latex",               amount = 30},
+        {type = "item", name = "niobium-plate",       amount = 20},
     },
     results = {
         {type = "item", name = "vrauks-paddock-mk02", amount = 1}
     }
-}:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("land-animals-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "vrauks-paddock-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/vrauks-paddock-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "vrauks-paddock-mk02"},
     fast_replaceable_group = "vrauks-paddock",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"vrauks"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "vrauks-paddock-mk01"),
     energy_source = {

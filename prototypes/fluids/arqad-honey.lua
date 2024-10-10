@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "arqad-honey",
     icon = "__pyalienlifegraphics2__/graphics/icons/arqad-honey.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.317, g = 0.094, b = 0.145},

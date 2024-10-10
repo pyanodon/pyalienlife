@@ -10,10 +10,10 @@ TECHNOLOGY {
         count = 350,
         ingredients = {
             {"automation-science-pack", 2},
-            {"logistic-science-pack", 2},
-            {'chemical-science-pack', 1},
-            {'production-science-pack', 1},
-            {"military-science-pack", 1},
+            {"logistic-science-pack",   2},
+            {"chemical-science-pack",   1},
+            {"production-science-pack", 1},
+            {"military-science-pack",   1},
         },
         time = 50
     }

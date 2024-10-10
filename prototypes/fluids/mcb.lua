@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "mcb",
     icon = "__pyalienlifegraphics3__/graphics/icons/mcb.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.313, g = 0.552, b = 0.556},

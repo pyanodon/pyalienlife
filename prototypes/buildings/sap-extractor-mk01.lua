@@ -7,13 +7,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 30},
-        {type = "item", name = "soil", amount = 100},
-        {type = "item", name = "pipe", amount = 15},
-        {type = "item", name = "inserter", amount = 2},
+        {type = "item", name = "stone-brick",        amount = 30},
+        {type = "item", name = "soil",               amount = 100},
+        {type = "item", name = "pipe",               amount = 15},
+        {type = "item", name = "inserter",           amount = 2},
         {type = "item", name = "electronic-circuit", amount = 5},
-        {type = "item", name = "steam-engine", amount = 1},
-        {type = "item", name = "iron-plate", amount = 30},
+        {type = "item", name = "steam-engine",       amount = 1},
+        {type = "item", name = "iron-plate",         amount = 30},
     },
     results = {
         {type = "item", name = "sap-extractor-mk01", amount = 1}
@@ -36,7 +36,7 @@ ENTITY {
     type = "assembling-machine",
     name = "sap-extractor-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/sap-extractor-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "sap-extractor-mk01"},
     fast_replaceable_group = "sap-extractor",
@@ -46,9 +46,9 @@ ENTITY {
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    
+
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"consumption", "speed", 'pollution', 'productivity'},
+    allowed_effects = {"consumption", "speed", "pollution", "productivity"},
     crafting_categories = {"sap"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -105,7 +105,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {0.0, -2.0}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

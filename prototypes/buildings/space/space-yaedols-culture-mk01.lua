@@ -6,13 +6,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete", amount = 200},
-        {type = "item", name = "titanium-plate", amount = 100},
-        {type = "item", name = "storage-tank", amount = 1},
-        {type = "item", name = "duralumin", amount = 50},
-        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "concrete",           amount = 200},
+        {type = "item", name = "titanium-plate",     amount = 100},
+        {type = "item", name = "storage-tank",       amount = 1},
+        {type = "item", name = "duralumin",          amount = 50},
+        {type = "item", name = "glass",              amount = 20},
         {type = "item", name = "electronic-circuit", amount = 100},
-        {type = "item", name = "pump", amount = 5},
+        {type = "item", name = "pump",               amount = 5},
     },
     results = {
         {type = "item", name = "space-yaedols-culture-mk01", amount = 1}
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = 3,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"yaedols"},
     crafting_speed = 0.02,
     energy_source = {
@@ -143,29 +143,29 @@ ENTITY {
                     animation_speed = 0.5
                 }
             },
-    
+
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off.png",
-            width = 352,
-            height = 384,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(0, -16)
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off.png",
+                    width = 352,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off-mask.png",
+                    width = 351,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(0, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+
             },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off-mask.png",
-                width = 351,
-                height = 384,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(0, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-    
-          },
         },
     },
 

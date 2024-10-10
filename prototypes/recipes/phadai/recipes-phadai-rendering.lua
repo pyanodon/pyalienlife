@@ -20,157 +20,157 @@ local IMP_BRAIN = 6
 
 
 py.autorecipes {
-    name = 'rendering',
-	category = 'slaughterhouse',
+	name = "rendering",
+	category = "slaughterhouse",
 	--module_limitations = 'phadai',
-	subgroup = 'py-alienlife-phadai',
-	order = 'b',
+	subgroup = "py-alienlife-phadai",
+	order = "b",
 	crafting_speed = 30,
-    mats =
+	mats =
 	{
 		{
 			ingredients =
-				{
-					{name='caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "caged-phadai", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name='bones', amount = BASE_BONES},
-					{name='meat', amount = BASE_MEAT},
-                    {name='guts', amount = BASE_GUTS},
-                    {name='mukmoux-fat', amount = BASE_FAT},
-					{name='carapace', amount = BASE_SKIN},
-					{name='blood', amount = BASE_BLOOD},
-					{name='cage', amount = INPUT_AMOUNT},
-					{name='brain', amount = BASE_BRAIN},
-				},
+			{
+				{name = "bones",       amount = BASE_BONES},
+				{name = "meat",        amount = BASE_MEAT},
+				{name = "guts",        amount = BASE_GUTS},
+				{name = "mukmoux-fat", amount = BASE_FAT},
+				{name = "carapace",    amount = BASE_SKIN},
+				{name = "blood",       amount = BASE_BLOOD},
+				{name = "cage",        amount = INPUT_AMOUNT},
+				{name = "brain",       amount = BASE_BRAIN},
+			},
 			crafting_speed = 30,
-			tech = 'phadai',
-			name = 'full-render-phadais',
+			tech = "phadai",
+			name = "full-render-phadais",
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phadai.png",
 			icon_size = 64,
 		},
 		--brain phadai rendering
 		{
 			ingredients =
-				{
-					{name='caged-phadai',remove_item = true},
-					{name='brain-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "caged-phadai",       remove_item = true},
+				{name = "brain-caged-phadai", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'bones', remove_item = true},
-					{name = 'meat', remove_item = true},
-					{name = 'mukmoux-fat', remove_item = true},
-					{name = 'carapace', remove_item = true},
-					{name = 'guts', remove_item = true},
-					{name = 'blood', remove_item = true},
-					{name='brain', amount = IMP_BRAIN},
-				},
-			tech = 'nanochondria',
-			name = 'ex-bra-pha',
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "carapace",    remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       amount = IMP_BRAIN},
+			},
+			tech = "nanochondria",
+			name = "ex-bra-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phadai.png",
 			icon_size = 64,
 		},
 		--bone phadai rendering
 		{
 			ingredients =
-				{
-					{name='brain-caged-phadai',remove_item = true},
-					{name='bone-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "brain-caged-phadai", remove_item = true},
+				{name = "bone-caged-phadai",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'brain', remove_item = true},
-					{name='bones', amount = IMP_BONES},
-				},
-			tech = 'bmp',
-			name = 'ex-bon-pha',
+			{
+				{name = "brain", remove_item = true},
+				{name = "bones", amount = IMP_BONES},
+			},
+			tech = "bmp",
+			name = "ex-bon-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phadai.png",
 			icon_size = 64,
 		},
 		--guts phadai rendering
 		{
 			ingredients =
-				{
-					{name='bone-caged-phadai',remove_item = true},
-					{name='guts-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "bone-caged-phadai", remove_item = true},
+				{name = "guts-caged-phadai", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'bones', remove_item = true},
-					{name='guts', amount = IMP_GUTS},
-				},
-			tech = 'antitumor',
-			name = 'ex-gut-pha',
+			{
+				{name = "bones", remove_item = true},
+				{name = "guts",  amount = IMP_GUTS},
+			},
+			tech = "antitumor",
+			name = "ex-gut-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phadai.png",
 			icon_size = 64,
 		},
 		--blood phadai rendering
 		{
 			ingredients =
-				{
-					{name='guts-caged-phadai',remove_item = true},
-					{name='blood-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "guts-caged-phadai",  remove_item = true},
+				{name = "blood-caged-phadai", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'guts', remove_item = true},
-					{name='blood', amount = IMP_BLOOD},
-				},
-			tech = 'recombinant-ery',
-			name = 'ex-blo-pha',
+			{
+				{name = "guts",  remove_item = true},
+				{name = "blood", amount = IMP_BLOOD},
+			},
+			tech = "recombinant-ery",
+			name = "ex-blo-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phadai.png",
 			icon_size = 64,
 		},
 		--meat phadai rendering
 		{
 			ingredients =
-				{
-					{name='blood-caged-phadai',remove_item = true},
-					{name='meat-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "blood-caged-phadai", remove_item = true},
+				{name = "meat-caged-phadai",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'blood', remove_item = true},
-					{name='meat', amount = IMP_MEAT},
-				},
-			tech = 'anabolic-rna',
-			name = 'ex-me-pha',
+			{
+				{name = "blood", remove_item = true},
+				{name = "meat",  amount = IMP_MEAT},
+			},
+			tech = "anabolic-rna",
+			name = "ex-me-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phadai.png",
 			icon_size = 64,
-        },
-        --skin phadai rendering
+		},
+		--skin phadai rendering
 		{
 			ingredients =
-				{
-					{name='meat-caged-phadai',remove_item = true},
-					{name='skin-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "meat-caged-phadai", remove_item = true},
+				{name = "skin-caged-phadai", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'meat', remove_item = true},
-					{name='carapace', amount = IMP_SKIN},
-				},
-			tech = 'reca',
-			name = 'ex-ski-pha',
+			{
+				{name = "meat",     remove_item = true},
+				{name = "carapace", amount = IMP_SKIN},
+			},
+			tech = "reca",
+			name = "ex-ski-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phadai.png",
 			icon_size = 64,
-        },
-        --fat phadai rendering
+		},
+		--fat phadai rendering
 		{
 			ingredients =
-				{
-					{name='skin-caged-phadai',remove_item = true},
-					{name='fat-caged-phadai', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "skin-caged-phadai", remove_item = true},
+				{name = "fat-caged-phadai",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'carapace', remove_item = true},
-					{name='mukmoux-fat', amount = IMP_FAT},
-				},
-			tech = 'orexigenic',
-			name = 'ex-fat-pha',
+			{
+				{name = "carapace",    remove_item = true},
+				{name = "mukmoux-fat", amount = IMP_FAT},
+			},
+			tech = "orexigenic",
+			name = "ex-fat-pha",
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-phadai.png",
 			icon_size = 64,
 		},

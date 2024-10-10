@@ -1,71 +1,71 @@
 ------------------PUP MAKER------------------
 
 py.autorecipes {
-    name = 'korlex-pup',
-	category = 'rc',
-	allowed_module_categories = {'korlex'},
+	name = "korlex-pup",
+	category = "rc",
+	allowed_module_categories = {"korlex"},
 	--module_limitations = 'korlex',
-	subgroup = 'py-alienlife-korlex',
-	order = 'c',
+	subgroup = "py-alienlife-korlex",
+	order = "c",
 	main_product = "korlex-pup",
 	crafting_speed = 20,
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					--{name = 'korlex', amount = 2},
-                    {name='tuuphra-seeds', amount = 10},
-					{name='korlex-food-01', amount = 2},
-					{name='fish-hydrolysate-barrel', amount=5,return_barrel = true},
-					{name='water-barrel', amount=20,return_barrel = true},
-				},
+			{
+				--{name = 'korlex', amount = 2},
+				{name = "tuuphra-seeds",           amount = 10},
+				{name = "korlex-food-01",          amount = 2},
+				{name = "fish-hydrolysate-barrel", amount = 5,  return_barrel = true},
+				{name = "water-barrel",            amount = 20, return_barrel = true},
+			},
 			results =
-				{
-					{name='korlex-pup', amount =3},
-				},
-			tech = 'korlex'
+			{
+				{name = "korlex-pup", amount = 3},
+			},
+			tech = "korlex"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='ash', amount = 20},
-					{name='fish-hydrolysate-barrel',remove_item = true},
-					{name='fish-emulsion-barrel', amount=5,return_barrel = true},
-					{name='bedding', amount = 1},
-				},
+			{
+				{name = "ash",                     amount = 20},
+				{name = "fish-hydrolysate-barrel", remove_item = true},
+				{name = "fish-emulsion-barrel",    amount = 5,        return_barrel = true},
+				{name = "bedding",                 amount = 1},
+			},
 			results =
-				{
-					{name='korlex-pup', add_amount = 3},
-				},
-			tech = 'korlex-mk02'
+			{
+				{name = "korlex-pup", add_amount = 3},
+			},
+			tech = "korlex-mk02"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name='korlex-food-02', amount = 2},
-					{name='ash', add_amount = 20},
-				},
+			{
+				{name = "korlex-food-02", amount = 2},
+				{name = "ash",            add_amount = 20},
+			},
 			results =
-				{
-					{name='korlex-pup', add_amount =3},
-				},
-			tech = 'korlex-mk03'
+			{
+				{name = "korlex-pup", add_amount = 3},
+			},
+			tech = "korlex-mk03"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name='fish', add_amount = 10},
-				},
+			{
+				{name = "fish", add_amount = 10},
+			},
 			results =
-				{
-					{name='korlex-pup', add_amount = 3},
-				},
-			tech = 'korlex-mk04'
+			{
+				{name = "korlex-pup", add_amount = 3},
+			},
+			tech = "korlex-mk04"
 		},
 	}
 }
@@ -181,80 +181,80 @@ py.autorecipes {
 
 	}
 }
-]]--
+]] --
 
 --raising
 py.autorecipes {
-    name = 'korlex',
-	category = 'korlex',
-	module_limitations = 'korlex',
-	subgroup = 'py-alienlife-korlex',
-	order = 'b',
+	name = "korlex",
+	category = "korlex",
+	module_limitations = "korlex",
+	subgroup = "py-alienlife-korlex",
+	order = "b",
 	main_product = "korlex",
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name = 'korlex-pup', amount = 2},
-                    {name='tuuphra', amount =5},
-                    {name='kicalk', amount =1, fallback = { name = 'raw-fiber', amount = 5 }},
-					{name='korlex-food-01', amount =1},
-					{name='water-barrel', amount=8,return_barrel = true},
-				},
+			{
+				{name = "korlex-pup",     amount = 2},
+				{name = "tuuphra",        amount = 5},
+				{name = "kicalk",         amount = 1, fallback = {name = "raw-fiber", amount = 5}},
+				{name = "korlex-food-01", amount = 1},
+				{name = "water-barrel",   amount = 8, return_barrel = true},
+			},
 			results =
-				{
-					{name='korlex', amount = 2},
-				},
+			{
+				{name = "korlex", amount = 2},
+			},
 			crafting_speed = 150,
-			tech = 'korlex'
+			tech = "korlex"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name = 'korlex-pup', add_amount = 2},
-					{name='ash', amount = 10},
-					{name='bedding', amount = 2},
-					{name='fish', amount = 5},
-                    {name='bhoddos', amount =1},
-				},
+			{
+				{name = "korlex-pup", add_amount = 2},
+				{name = "ash",        amount = 10},
+				{name = "bedding",    amount = 2},
+				{name = "fish",       amount = 5},
+				{name = "bhoddos",    amount = 1},
+			},
 			results =
-				{
-					{name='korlex', add_amount = 2},
-				},
+			{
+				{name = "korlex", add_amount = 2},
+			},
 			crafting_speed = 130,
-			tech = 'korlex-mk02'
+			tech = "korlex-mk02"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name = 'korlex-pup', add_amount = 2},
-					{name='korlex-food-02', amount =1},
-					{name='ash', add_amount = 10},
-				},
+			{
+				{name = "korlex-pup",     add_amount = 2},
+				{name = "korlex-food-02", amount = 1},
+				{name = "ash",            add_amount = 10},
+			},
 			results =
-				{
-					{name='korlex', add_amount = 2},
-				},
+			{
+				{name = "korlex", add_amount = 2},
+			},
 			crafting_speed = 110,
-			tech = 'korlex-mk03'
+			tech = "korlex-mk03"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'korlex-pup', add_amount = 2},
-					{name='fish-oil-barrel', amount = 6, return_barrel = true},
-				},
+			{
+				{name = "korlex-pup",      add_amount = 2},
+				{name = "fish-oil-barrel", amount = 6,    return_barrel = true},
+			},
 			results =
-				{
-					{name='korlex', add_amount = 2},
-				},
+			{
+				{name = "korlex", add_amount = 2},
+			},
 			crafting_speed = 90,
-			tech = 'korlex-mk04'
+			tech = "korlex-mk04"
 		},
 	}
 }
@@ -512,4 +512,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

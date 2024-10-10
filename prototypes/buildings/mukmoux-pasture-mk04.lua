@@ -7,10 +7,10 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "mukmoux-pasture-mk03", amount = 1},
-        {type = "item", name = "metallic-glass", amount = 50},
-        {type = "item", name = "science-coating", amount = 20},
-        {type = "item", name = "silver-foam", amount = 30},
-        {type = "item", name = "control-unit", amount = 5}
+        {type = "item", name = "metallic-glass",       amount = 50},
+        {type = "item", name = "science-coating",      amount = 20},
+        {type = "item", name = "silver-foam",          amount = 30},
+        {type = "item", name = "control-unit",         amount = 5}
     },
     results = {
         {type = "item", name = "mukmoux-pasture-mk04", amount = 1}
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-10, -10}, {10, 10}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"mukmoux"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "mukmoux-pasture-mk01"),
     energy_source = {
@@ -497,7 +497,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a=0.4},
+                    tint = {a = 0.4},
                     animation_speed = 0.5
                 }
             },
@@ -512,7 +512,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a=0.4},
+                    tint = {a = 0.4},
                     animation_speed = 0.5
                 }
             },
@@ -527,7 +527,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a=0.4},
+                    tint = {a = 0.4},
                     animation_speed = 0.5
                 }
             },
@@ -542,7 +542,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a=0.4},
+                    tint = {a = 0.4},
                     animation_speed = 0.5
                 }
             },
@@ -557,7 +557,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a=0.4},
+                    tint = {a = 0.4},
                     animation_speed = 0.5
                 }
             },
@@ -572,7 +572,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a=0.4},
+                    tint = {a = 0.4},
                     animation_speed = 0.5
                 }
             },

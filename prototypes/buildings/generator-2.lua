@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stainless-steel", amount = 15},
-        {type = "item", name = "niobium-pipe", amount = 10},
-        {type = "item", name = "nexelit-plate", amount = 25},
+        {type = "item", name = "stainless-steel",  amount = 15},
+        {type = "item", name = "niobium-pipe",     amount = 10},
+        {type = "item", name = "nexelit-plate",    amount = 25},
         {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "dingrits", amount = 1},
-        {type = "item", name = "engine-unit", amount = 5},
-        {type = "item", name = "nbfe-alloy", amount = 20},
-        {type = "item", name = "iron-gear-wheel", amount = 40}
+        {type = "item", name = "dingrits",         amount = 1},
+        {type = "item", name = "engine-unit",      amount = 5},
+        {type = "item", name = "nbfe-alloy",       amount = 20},
+        {type = "item", name = "iron-gear-wheel",  amount = 40}
     },
     results = {
         {type = "item", name = "generator-2", amount = 1}
@@ -48,23 +48,23 @@ ENTITY {
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     energy_source =
-		{
-				type = "electric",
-				usage_priority = "secondary-output",
-		},
-	burner =
-		{
-			type = "burner",
-			fuel_categories = {"dingrits"},
-			effectivity = 3,
-            fuel_inventory_size = 1,
-            burnt_inventory_size = 1,
-			emissions_per_minute = {
-			    pollution = 0
-			},
-		},
-	effectivity = 2,
-	max_power_output = "60MW",
+    {
+        type = "electric",
+        usage_priority = "secondary-output",
+    },
+    burner =
+    {
+        type = "burner",
+        fuel_categories = {"dingrits"},
+        effectivity = 3,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 0
+        },
+    },
+    effectivity = 2,
+    max_power_output = "60MW",
     animation = {
         layers = {
             {
@@ -103,7 +103,7 @@ ENTITY {
                 animation_speed = 0.4,
                 shift = util.by_pixel(80, -16)
             },
-    },
+        },
     },
 
     min_perceived_performance = 0.1,

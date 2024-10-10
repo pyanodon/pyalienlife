@@ -1,4 +1,3 @@
-
 ENTITY {
     type = "resource",
     name = "rennea-flowers",
@@ -13,7 +12,7 @@ ENTITY {
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = 'item', name = "rennea", amount = 1}
+            {type = "item", name = "rennea", amount = 1}
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
@@ -37,7 +36,7 @@ ENTITY {
             }
         }
     },
-	]]--
+	]] --
     stage_counts = {800},
     stages = {
         sheet = {

@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "flutec-pp6",
     icon = "__pyalienlifegraphics__/graphics/icons/flutec-pp6.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.211, g = 0.376, b = 0.513},

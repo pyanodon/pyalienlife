@@ -1,82 +1,82 @@
 ------------------CUB MAKER------------------
 
 py.autorecipes {
-    name = 'ulric-cub',
-	category = 'rc',
-	allowed_module_categories = {'ulric'},
+	name = "ulric-cub",
+	category = "rc",
+	allowed_module_categories = {"ulric"},
 	--module_limitations = 'ulric',
-	subgroup = 'py-alienlife-ulric',
-	order = 'c',
-	main_product = 'ulric-cub',
-    mats =
+	subgroup = "py-alienlife-ulric",
+	order = "c",
+	main_product = "ulric-cub",
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					--{name = 'ulric', amount = 2},
-                    {name='fawogae', amount =3},
-					{name='ulric-food-01', amount =2},
-					{name='water-barrel', amount=15, return_barrel = true},
-				},
+			{
+				--{name = 'ulric', amount = 2},
+				{name = "fawogae",       amount = 3},
+				{name = "ulric-food-01", amount = 2},
+				{name = "water-barrel",  amount = 15, return_barrel = true},
+			},
 			results =
-				{
-					--{name = 'ulric', amount = 2,},
-					{name='ulric-cub', amount = 3},
-					--{name = 'manure', amount = 1}
-				},
+			{
+				--{name = 'ulric', amount = 2,},
+				{name = "ulric-cub", amount = 3},
+				--{name = 'manure', amount = 1}
+			},
 			crafting_speed = 15,
-			tech = 'ulric'
+			tech = "ulric"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name = 'ulric', add_amount = 1},
-                    {name='ralesia-seeds', amount =15},
-					{name='salt', amount = 10},
-					{name='bedding', amount = 1},
-				},
+			{
+				{name = "ulric",         add_amount = 1},
+				{name = "ralesia-seeds", amount = 15},
+				{name = "salt",          amount = 10},
+				{name = "bedding",       amount = 1},
+			},
 			results =
-				{
-					{name='ulric-cub', add_amount = 3},
-					{name = 'ulric', add_amount = 1},
-				},
+			{
+				{name = "ulric-cub", add_amount = 3},
+				{name = "ulric",     add_amount = 1},
+			},
 			crafting_speed = 12,
-			tech = 'ulric-mk02'
+			tech = "ulric-mk02"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name = 'ulric', add_amount = 1},
-					{name='raw-fiber', amount =10},
-					{name='ulric-food-01', remove_item = true},
-					{name='ulric-food-02', amount =2},
-				},
+			{
+				{name = "ulric",         add_amount = 1},
+				{name = "raw-fiber",     amount = 10},
+				{name = "ulric-food-01", remove_item = true},
+				{name = "ulric-food-02", amount = 2},
+			},
 			results =
-				{
-					{name='ulric-cub', add_amount = 3},
-					{name = 'ulric', add_amount = 1},
-				},
+			{
+				{name = "ulric-cub", add_amount = 3},
+				{name = "ulric",     add_amount = 1},
+			},
 			crafting_speed = 10,
-			tech = 'ulric-mk03'
+			tech = "ulric-mk03"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'ulric', add_amount = 1},
-					{name= 'raw-fiber', add_amount = 10},
-				},
+			{
+				{name = "ulric",     add_amount = 1},
+				{name = "raw-fiber", add_amount = 10},
+			},
 			results =
-				{
-					{name='ulric-cub', add_amount = 3},
-					{name = 'ulric', add_amount = 1},
-					--{name = 'manure', add_amount = 1}
-				},
+			{
+				{name = "ulric-cub", add_amount = 3},
+				{name = "ulric",     add_amount = 1},
+				--{name = 'manure', add_amount = 1}
+			},
 			crafting_speed = 8,
-			tech = 'ulric-mk04'
+			tech = "ulric-mk04"
 		},
 	}
 }
@@ -189,111 +189,111 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --
 
 --raising
 
 py.autorecipes {
-    name = 'ulric',
-	category = 'ulric',
-	module_limitations = 'ulric',
-	subgroup = 'py-alienlife-ulric',
-	order = 'b',
-	main_product = 'ulric',
+	name = "ulric",
+	category = "ulric",
+	module_limitations = "ulric",
+	subgroup = "py-alienlife-ulric",
+	order = "b",
+	main_product = "ulric",
 	upgrades =
+	{
+		{
+			tech = "bigger-colon",
+			ingredient_changes =
 			{
-				{
-					tech = 'bigger-colon',
-					ingredient_changes =
-					{
-						{name = 'fiber', amount = 2}
-					},
-					result_changes =
-					{
-						{name = 'manure', add_amount = 3},
-						{name = 'ulric', subtract_percent_amount = 0.1, round_direction = 'up'}
-					},
-				},
-				{
-					tech = 'explosive-diarrhea',
-					ingredient_changes =
-					{
-						{name = 'ethylene-glycol', amount = 50}
-					},
-					result_changes =
-					{
-						{name = 'manure', add_amount = 5},
-						{name = 'ulric', subtract_percent_amount = 0.2, round_direction = 'up'}
-					}
-				},
+				{name = "fiber", amount = 2}
 			},
-    mats =
+			result_changes =
+			{
+				{name = "manure", add_amount = 3},
+				{name = "ulric",  subtract_percent_amount = 0.1, round_direction = "up"}
+			},
+		},
+		{
+			tech = "explosive-diarrhea",
+			ingredient_changes =
+			{
+				{name = "ethylene-glycol", amount = 50}
+			},
+			result_changes =
+			{
+				{name = "manure", add_amount = 5},
+				{name = "ulric",  subtract_percent_amount = 0.2, round_direction = "up"}
+			}
+		},
+	},
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name='ulric-cub', amount = 3},
-					{name='ralesia-seeds', amount = 15},
-					{name='ulric-food-01', amount =1},
-					{name='water-barrel', amount = 5, return_barrel = true},
-				},
+			{
+				{name = "ulric-cub",     amount = 3},
+				{name = "ralesia-seeds", amount = 15},
+				{name = "ulric-food-01", amount = 1},
+				{name = "water-barrel",  amount = 5, return_barrel = true},
+			},
 			results =
-				{
-					{name='ulric', amount = 3},
-					--{name = 'manure', amount = 3}
-				},
+			{
+				{name = "ulric", amount = 3},
+				--{name = 'manure', amount = 3}
+			},
 			crafting_speed = 150,
-			tech = 'ulric'
+			tech = "ulric"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='ulric-cub', add_amount = 3},
-					{name='salt', amount = 5},
-					{name='bedding', amount = 1},
-				},
+			{
+				{name = "ulric-cub", add_amount = 3},
+				{name = "salt",      amount = 5},
+				{name = "bedding",   amount = 1},
+			},
 			results =
-				{
-					{name='ulric', add_amount = 3},
-					--{name = 'manure', add_amount = 3}
-				},
+			{
+				{name = "ulric", add_amount = 3},
+				--{name = 'manure', add_amount = 3}
+			},
 			crafting_speed = 130,
-			tech = 'ulric-mk02'
+			tech = "ulric-mk02"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name='ulric-cub', add_amount = 3},
-					{name='raw-fiber', amount = 5},
-					{name='ulric-food-01', remove_item = true},
-					{name='ulric-food-02', amount =1},
-				},
+			{
+				{name = "ulric-cub",     add_amount = 3},
+				{name = "raw-fiber",     amount = 5},
+				{name = "ulric-food-01", remove_item = true},
+				{name = "ulric-food-02", amount = 1},
+			},
 			results =
-				{
-					{name='ulric', add_amount = 3},
-					--{name = 'manure', add_amount = 3}
-				},
+			{
+				{name = "ulric", add_amount = 3},
+				--{name = 'manure', add_amount = 3}
+			},
 			crafting_speed = 120,
-			tech = 'ulric-mk03'
+			tech = "ulric-mk03"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name='ulric-cub', add_amount = 3},
-					{name='salt', amount =5},
-					{name='raw-fiber', amount = 5},
-				},
+			{
+				{name = "ulric-cub", add_amount = 3},
+				{name = "salt",      amount = 5},
+				{name = "raw-fiber", amount = 5},
+			},
 			results =
-				{
-					{name='ulric', add_amount = 3},
-					--{name = 'manure', add_amount = 3}
-				},
+			{
+				{name = "ulric", add_amount = 3},
+				--{name = 'manure', add_amount = 3}
+			},
 			crafting_speed = 100,
-			tech = 'ulric-mk04'
+			tech = "ulric-mk04"
 		},
 	}
 }
@@ -550,4 +550,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

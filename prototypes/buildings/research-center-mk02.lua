@@ -5,13 +5,13 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "research-center-mk01", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 50},
-        {type = "item", name = "glass", amount = 100},
-        {type = "item", name = "neuroprocessor", amount = 25},
-        {type = "item", name = "engine-unit", amount = 10},
-        {type = "item", name = "nexelit-plate", amount = 50},
-        {type = "item", name = "advanced-circuit", amount = 80},
-        {type = "item", name = "optical-fiber", amount = 100},
+        {type = "item", name = "titanium-plate",       amount = 50},
+        {type = "item", name = "glass",                amount = 100},
+        {type = "item", name = "neuroprocessor",       amount = 25},
+        {type = "item", name = "engine-unit",          amount = 10},
+        {type = "item", name = "nexelit-plate",        amount = 50},
+        {type = "item", name = "advanced-circuit",     amount = 80},
+        {type = "item", name = "optical-fiber",        amount = 100},
     },
     results = {
         {type = "item", name = "research-center-mk02", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "research-center-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/research-center-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "research-center-mk02"},
     fast_replaceable_group = "research-center",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 2,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"research", "research-handcrafting"},
     crafting_speed = 2,
     energy_source = {
@@ -126,7 +126,7 @@ ENTITY {
                     frame_count = 250,
                     line_length = 30,
                     animation_speed = 0.8,
-                    scale= 0.9,
+                    scale = 0.9,
                     draw_as_glow = true,
                 }
             },

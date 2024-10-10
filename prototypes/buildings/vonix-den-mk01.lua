@@ -7,18 +7,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete", amount = 100},
-        {type = "item", name = "nbti-alloy", amount = 100},
-        {type = "item", name = "super-steel", amount = 100},
-        {type = "item", name = "aluminium-mine", amount = 1},
-        {type = "item", name = "glass", amount = 120},
+        {type = "item", name = "concrete",          amount = 100},
+        {type = "item", name = "nbti-alloy",        amount = 100},
+        {type = "item", name = "super-steel",       amount = 100},
+        {type = "item", name = "aluminium-mine",    amount = 1},
+        {type = "item", name = "glass",             amount = 120},
         {type = "item", name = "neuromorphic-chip", amount = 50},
-        {type = "item", name = "processing-unit", amount = 20},
+        {type = "item", name = "processing-unit",   amount = 20},
     },
     results = {
         {type = "item", name = "vonix-den-mk01", amount = 1}
     }
-}:add_unlock("vonix"):add_ingredient({type = "item", name = "small-parts-01", amount = 500})
+}:add_unlock("vonix"):add_ingredient {type = "item", name = "small-parts-01", amount = 500}
 
 ITEM {
     type = "item",
@@ -47,7 +47,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"vonix"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -172,28 +172,28 @@ ENTITY {
                     animation_speed = 0.4
                 }
             },
-    
+
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off.png",
-            width = 352,
-            height = 352,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -16)
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off-mask.png",
-                width = 352,
-                height = 352,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off.png",
+                    width = 352,
+                    height = 352,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16)
                 },
-          },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/vonix-den/off-mask.png",
+                    width = 352,
+                    height = 352,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            },
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

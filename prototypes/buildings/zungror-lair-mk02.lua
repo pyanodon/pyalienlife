@@ -6,13 +6,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "zungror-lair-mk01", amount = 1},
-        {type = "item", name = "ticocr-alloy", amount = 50},
+        {type = "item", name = "zungror-lair-mk01",     amount = 1},
+        {type = "item", name = "ticocr-alloy",          amount = 50},
         {type = "item", name = "low-density-structure", amount = 100},
-        {type = "item", name = "metallic-glass", amount = 100},
-        {type = "item", name = "processing-unit", amount = 50},
-        {type = "item", name = "control-unit", amount = 20},
-        {type = "item", name = "molybdenum-plate", amount = 50},
+        {type = "item", name = "metallic-glass",        amount = 100},
+        {type = "item", name = "processing-unit",       amount = 50},
+        {type = "item", name = "control-unit",          amount = 20},
+        {type = "item", name = "molybdenum-plate",      amount = 50},
     },
     results = {
         {type = "item", name = "zungror-lair-mk02", amount = 1}
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "zungror-lair-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "zungror-lair-mk02"},
     fast_replaceable_group = "zungror-lair",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"zungror"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "zungror-lair-mk01"),
     energy_source = {
@@ -101,7 +101,7 @@ ENTITY {
                     animation_speed = 0.5
                 }
             },
-    
+
         },
         animation = {
             layers = {

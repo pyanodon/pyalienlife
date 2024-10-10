@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "casein-pulp-02",
     icon = "__pyalienlifegraphics__/graphics/icons/casein-pulp-02.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.607, g = 0.568, b = 0.317},

@@ -8,10 +8,10 @@ RECIPE {
     enabled = true,
     ingredients = {
         {type = "item", name = "micro-mine-mk01", amount = 1},
-        {type = "item", name = "stone-brick", amount = 20},
-        {type = "item", name = "iron-plate", amount = 20},
-        {type = "item", name = "copper-plate", amount = 20},
-        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "stone-brick",     amount = 20},
+        {type = "item", name = "iron-plate",      amount = 20},
+        {type = "item", name = "copper-plate",    amount = 20},
+        {type = "item", name = "glass",           amount = 20},
         {type = "item", name = "aluminium-plate", amount = 40},
     },
     results = {
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "vrauks-paddock-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/vrauks-paddock-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "vrauks-paddock-mk01"},
     fast_replaceable_group = "vrauks-paddock",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"vrauks"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {

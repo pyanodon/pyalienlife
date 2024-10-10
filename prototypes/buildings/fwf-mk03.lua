@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fwf-mk02", amount = 1},
-        {type = "item", name = "nexelit-plate", amount = 30},
-        {type = "item", name = "molybdenum-plate", amount = 30},
+        {type = "item", name = "fwf-mk02",              amount = 1},
+        {type = "item", name = "nexelit-plate",         amount = 30},
+        {type = "item", name = "molybdenum-plate",      amount = 30},
         {type = "item", name = "low-density-structure", amount = 30},
-        {type = "item", name = "boron-carbide", amount = 50},
-        {type = "item", name = "electric-engine-unit", amount = 10},
-        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "boron-carbide",         amount = 50},
+        {type = "item", name = "electric-engine-unit",  amount = 10},
+        {type = "item", name = "processing-unit",       amount = 40},
     },
     results = {
         {type = "item", name = "fwf-mk03", amount = 1}
     }
-}:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("botany-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "fwf-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "fwf-mk03"},
     fast_replaceable_group = "fwf",
@@ -74,7 +74,7 @@ ENTITY {
                     width = 32,
                     height = 544,
                     frame_count = 1,
-                    repeat_count= 135,
+                    repeat_count = 135,
                     animation_speed = 0.4,
                     shift = util.by_pixel(-256, -64)
                 },
@@ -83,7 +83,7 @@ ENTITY {
                     width = 32,
                     height = 544,
                     frame_count = 1,
-                    repeat_count= 135,
+                    repeat_count = 135,
                     animation_speed = 0.4,
                     shift = util.by_pixel(256, -64)
                 },
@@ -254,12 +254,12 @@ ENTITY {
             pipe_connections = {{flow_direction = "output", position = {1.0, -7.0}, direction = defines.direction.north}}
         },
     },
-    vehicle_impact_sound = {filename = '__base__/sound/car-metal-impact-1.ogg', volume = 0.65},
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         fade_in_ticks = 60,
         fade_out_ticks = 60,
-        sound = {filename = '__pyalienlifegraphics__/sounds/fwf.ogg', volume = 1.5},
-        idle_sound = {filename = '__pyalienlifegraphics__/sounds/fwf-idle.ogg', volume = 0.5},
+        sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 1.5},
+        idle_sound = {filename = "__pyalienlifegraphics__/sounds/fwf-idle.ogg", volume = 0.5},
         audible_distance_modifier = 1,
     }
 }

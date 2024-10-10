@@ -32,34 +32,34 @@ Mounts.events[239] = function(event)
 end
 
 local mounts = {
-	['crawdad'] = true,
-	['dingrido'] = true,
-	['spidertron'] = true,
-	['phadaisus'] = true,
+	["crawdad"] = true,
+	["dingrido"] = true,
+	["spidertron"] = true,
+	["phadaisus"] = true,
 }
 
 Mounts.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
 	if not entity.valid or not mounts[entity.name] then return end
-	entity.grid.put{
-		name = 'py-mount-generator',
+	entity.grid.put {
+		name = "py-mount-generator",
 		position = {3, 0},
 	}
 	storage.mounts[entity.unit_number] = entity
 end
 
 Mounts.events.on_destroyed = function(event)
-    local entity = event.entity
+	local entity = event.entity
 	local unit_number = entity.unit_number
 	if unit_number then storage.mounts[unit_number] = nil end
 end
 
 Mounts.events.on_player_removed_equipment = function(event)
-	if event.equipment == 'py-mount-generator' then
-		event.grid.put{
-			name = 'py-mount-generator',
+	if event.equipment == "py-mount-generator" then
+		event.grid.put {
+			name = "py-mount-generator",
 			position = {3, 0},
 		}
-		game.players[event.player_index].remove_item{name = 'py-mount-generator', count = 100}
+		game.players[event.player_index].remove_item {name = "py-mount-generator", count = 100}
 	end
 end

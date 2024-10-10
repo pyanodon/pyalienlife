@@ -1,25 +1,25 @@
 RECIPE {
-        type = 'recipe',
-        name = "fish-hydrolysate",
-        category = 'biofactory',
-        enabled = false,
-        energy_required = 5,
-        ingredients = {
-            {type = 'fluid', name = 'water', amount = 100},
-            {type = 'fluid', name = 'sulfuric-acid', amount = 10},
-            {type = 'item', name = 'fish', amount = 10},
-            {type = 'item', name = 'sodium-hydroxide', amount = 4}
-        },
-        results = {
-            {type = 'fluid', name = 'fish-hydrolysate', amount = 50}
-        }
-    }:add_unlock('fertilizer-mk02')
+    type = "recipe",
+    name = "fish-hydrolysate",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+        {type = "fluid", name = "water",            amount = 100},
+        {type = "fluid", name = "sulfuric-acid",    amount = 10},
+        {type = "item",  name = "fish",             amount = 10},
+        {type = "item",  name = "sodium-hydroxide", amount = 4}
+    },
+    results = {
+        {type = "fluid", name = "fish-hydrolysate", amount = 50}
+    }
+}:add_unlock("fertilizer-mk02")
 
 FLUID {
     type = "fluid",
     name = "fish-hydrolysate",
     icon = "__pyalienlifegraphics3__/graphics/icons/fish-hydro.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.321, g = 0.274, b = 0.274},

@@ -1,4 +1,4 @@
-local turd_migrate = require('__pyalienlife__/scripts/turd/turd-migration')
+local turd_migrate = require("__pyalienlife__/scripts/turd/turd-migration")
 
-turd_migrate('moss-upgrade', 'hd-moss')
-turd_migrate('moondrop-upgrade', 'moon')
+turd_migrate("moss-upgrade", "hd-moss")
+turd_migrate("moondrop-upgrade", "moon")

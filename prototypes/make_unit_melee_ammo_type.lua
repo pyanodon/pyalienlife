@@ -11,7 +11,7 @@ _G.make_unit_melee_ammo_type = function(damage_value)
         target_effects =
         {
           type = "damage",
-          damage = { amount = damage_value , type = "physical"}
+          damage = {amount = damage_value, type = "physical"}
         }
       }
     }

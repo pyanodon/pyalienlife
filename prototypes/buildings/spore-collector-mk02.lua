@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "duralumin",            amount = 50},
         {type = "item", name = "spore-collector-mk01", amount = 1},
-        {type = "item", name = "engine-unit", amount = 8},
-        {type = "item", name = "iron-plate", amount = 80},
-        {type = "item", name = "advanced-circuit", amount = 20},
-        {type = "item", name = "neuroprocessor", amount = 30},
+        {type = "item", name = "engine-unit",          amount = 8},
+        {type = "item", name = "iron-plate",           amount = 80},
+        {type = "item", name = "advanced-circuit",     amount = 20},
+        {type = "item", name = "neuroprocessor",       amount = 30},
     },
     results = {
         {type = "item", name = "spore-collector-mk02", amount = 1}
     }
-}:add_unlock("mycology-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 25})
+}:add_unlock("mycology-mk03"):add_ingredient {type = "item", name = "small-parts-02", amount = 25}
 
 ITEM {
     type = "item",
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "spore-collector-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/spore-collector-mk02.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "spore-collector-mk02"},
     fast_replaceable_group = "spore-collector",
@@ -74,7 +74,7 @@ ENTITY {
                     animation_speed = 0.4,
                     shift = util.by_pixel(10, -80)
                 },
-    
+
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
                     width = 243,

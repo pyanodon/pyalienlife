@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "ez-ranch-mk01", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 30},
-        {type = "item", name = "duralumin", amount = 30},
-        {type = "item", name = "latex", amount = 30},
-        {type = "item", name = "plastic-bar", amount = 50},
-        {type = "item", name = "engine-unit", amount = 20},
+        {type = "item", name = "ez-ranch-mk01",    amount = 1},
+        {type = "item", name = "titanium-plate",   amount = 30},
+        {type = "item", name = "duralumin",        amount = 30},
+        {type = "item", name = "latex",            amount = 30},
+        {type = "item", name = "plastic-bar",      amount = 50},
+        {type = "item", name = "engine-unit",      amount = 20},
         {type = "item", name = "advanced-circuit", amount = 20},
     },
     results = {
         {type = "item", name = "ez-ranch-mk02", amount = 1}
     }
-}:add_unlock("land-animals-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 100})
+}:add_unlock("land-animals-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 100}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "ez-ranch-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "ez-ranch-mk02"},
     fast_replaceable_group = "ez-ranch",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"korlex"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "ez-ranch-mk01"),
     energy_source = {
@@ -218,7 +218,7 @@ ENTITY {
                 {flow_direction = "input-output", position = {0.5, -4.5}, direction = defines.direction.north},
                 {flow_direction = "input-output", position = {-0.5, 4.5}, direction = defines.direction.south},
             },
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
 

@@ -1,4 +1,4 @@
-local lib = require('scripts/turd/bhoddos-lib')
+local lib = require("scripts/turd/bhoddos-lib")
 
 Turd.events[123] = function()
     local forces_with_bhoddos_path_1 = lib.forces_with_bhoddos_path_1()
@@ -11,8 +11,8 @@ Turd.events[123] = function()
                     if math.random(probability) == 69 then
                         table.insert(exploded_cultures, culture)
                         culture.destructible = false
-                        culture.surface.create_entity{
-                            name = 'atomic-rocket',
+                        culture.surface.create_entity {
+                            name = "atomic-rocket",
                             position = culture.position,
                             target = culture,
                             speed = 1,
@@ -40,7 +40,7 @@ end
 local radius = 76 / 2
 
 local function draw_circle(entity)
-    storage.bhoddos_circles[entity.unit_number] = rendering.draw_circle{
+    storage.bhoddos_circles[entity.unit_number] = rendering.draw_circle {
         draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = radius,
         target = entity, filled = true, surface = entity.surface
     }.id

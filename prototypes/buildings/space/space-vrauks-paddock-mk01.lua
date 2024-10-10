@@ -7,10 +7,10 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "micro-mine-mk01", amount = 1},
-        {type = "item", name = "plastic-bar", amount = 20},
-        {type = "item", name = "steel-plate", amount = 40},
-        {type = "item", name = "glass", amount = 20},
-        {type = "item", name = "titanium-plate", amount = 40},
+        {type = "item", name = "plastic-bar",     amount = 20},
+        {type = "item", name = "steel-plate",     amount = 40},
+        {type = "item", name = "glass",           amount = 20},
+        {type = "item", name = "titanium-plate",  amount = 40},
     },
     results = {
         {type = "item", name = "space-vrauks-paddock-mk01", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-vrauks-paddock-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/vrauks-paddock-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-vrauks-paddock-mk01"},
     fast_replaceable_group = "vrauks-paddock",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 10,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"vrauks"},
     crafting_speed = 0.1,
     energy_source = {
@@ -141,7 +141,7 @@ ENTITY {
                     animation_speed = 0.4
                 }
             },
-    
+
         },
         animation = {
             layers = {

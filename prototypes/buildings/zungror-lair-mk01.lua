@@ -7,17 +7,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone", amount = 300},
-        {type = "item", name = "concrete", amount = 200},
-        {type = "item", name = "iron-plate", amount = 200},
-        {type = "item", name = "glass", amount = 50},
-        {type = "item", name = "gun-turret", amount = 1},
-        {type = "item", name = "laser-turret", amount = 1},
+        {type = "item", name = "stone",                  amount = 300},
+        {type = "item", name = "concrete",               amount = 200},
+        {type = "item", name = "iron-plate",             amount = 200},
+        {type = "item", name = "glass",                  amount = 50},
+        {type = "item", name = "gun-turret",             amount = 1},
+        {type = "item", name = "laser-turret",           amount = 1},
         {type = "item", name = "automated-factory-mk01", amount = 1},
-        {type = "item", name = "stainless-steel", amount = 100},
-        {type = "item", name = "titanium-plate", amount = 50},
-        {type = "item", name = "latex", amount = 100},
-        {type = "item", name = "advanced-circuit", amount = 200},
+        {type = "item", name = "stainless-steel",        amount = 100},
+        {type = "item", name = "titanium-plate",         amount = 50},
+        {type = "item", name = "latex",                  amount = 100},
+        {type = "item", name = "advanced-circuit",       amount = 200},
     },
     results = {
         {type = "item", name = "zungror-lair-mk01", amount = 1}
@@ -40,7 +40,7 @@ ENTITY {
     type = "assembling-machine",
     name = "zungror-lair-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "zungror-lair-mk01"},
     fast_replaceable_group = "zungror-lair",
@@ -51,7 +51,7 @@ ENTITY {
     selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"zungror"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -106,7 +106,7 @@ ENTITY {
                     animation_speed = 0.5
                 }
             },
-    
+
         },
         animation = {
             layers = {

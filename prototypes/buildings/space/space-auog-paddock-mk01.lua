@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone", amount = 100},
-        {type = "item", name = "soil", amount = 300},
+        {type = "item", name = "stone",      amount = 100},
+        {type = "item", name = "soil",       amount = 300},
         {type = "item", name = "iron-plate", amount = 80},
     },
     results = {
         {type = "item", name = "space-auog-paddock-mk01", amount = 1}
     }
-}:add_unlock("auog"):add_ingredient({type = "item", name = "bolts", amount = 50})
+}:add_unlock("auog"):add_ingredient {type = "item", name = "bolts", amount = 50}
 
 ITEM {
     type = "item",
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-auog-paddock-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-auog-paddock-mk01"},
     fast_replaceable_group = "auog-paddock",
@@ -42,7 +42,7 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_slots = 4,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"auog"},
     crafting_speed = 0.075,
     energy_source = {
@@ -83,7 +83,7 @@ ENTITY {
                     animation_speed = 0.3
                 }
             },
-    
+
         },
         animation = {
             layers = {

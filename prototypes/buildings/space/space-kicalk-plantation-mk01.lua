@@ -16,14 +16,14 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "botanical-nursery", amount = 1},
-        {type = "item", name = "duralumin", amount = 40},
-        {type = "item", name = "glass", amount = 30},
-        {type = "item", name = "steel-plate", amount = 25},
+        {type = "item", name = "duralumin",         amount = 40},
+        {type = "item", name = "glass",             amount = 30},
+        {type = "item", name = "steel-plate",       amount = 25},
     },
     results = {
         {type = "item", name = "space-kicalk-plantation-mk01", amount = 1}
     }
-}:add_unlock('kicalk')
+}:add_unlock("kicalk")
 
 ITEM {
     type = "item",
@@ -41,7 +41,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-kicalk-plantation-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/kicalk-plantation-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-kicalk-plantation-mk01"},
     fast_replaceable_group = "kicalk-plantation",
@@ -52,7 +52,7 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_slots = 25,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"kicalk"},
     crafting_speed = 0.04,
     energy_source = {
@@ -68,7 +68,7 @@ ENTITY {
             layers = {
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 229,
                     height = 235,
                     line_length = 8,
@@ -78,7 +78,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/kicalk-plantation-mask.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 229,
                     height = 235,
                     line_length = 8,
@@ -89,7 +89,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/shadow.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 253,
                     height = 242,
                     line_length = 8,
