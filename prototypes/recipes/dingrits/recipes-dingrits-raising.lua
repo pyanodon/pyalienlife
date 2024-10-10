@@ -1,73 +1,73 @@
 ------------------CUB MAKER------------------
 
 py.autorecipes {
-    name = 'dingrits-cub',
-	category = 'rc',
-	allowed_module_categories = {'dingrits'},
+	name = "dingrits-cub",
+	category = "rc",
+	allowed_module_categories = {"dingrits"},
 	--module_limitations = 'dingrits',
-	subgroup = 'py-alienlife-dingrits',
-	order = 'c',
+	subgroup = "py-alienlife-dingrits",
+	order = "c",
 	main_product = "dingrits-cub",
-    mats =
+	mats =
 	{
 		--chem
 		{
 			ingredients =
-				{
-					--{name = 'dingrits', amount = 2},
-                    {name='caged-scrondrix', amount =3},
-                    {name='yotoi-seeds', amount =30},
-					{name='water-barrel', amount=15,return_barrel = true},
-					{name='bedding', amount = 1},				{name='dingrits-food-01', amount =2},
-				},
+			{
+				--{name = 'dingrits', amount = 2},
+				{name = "caged-scrondrix", amount = 3},
+				{name = "yotoi-seeds",     amount = 30},
+				{name = "water-barrel",    amount = 15, return_barrel = true},
+				{name = "bedding",         amount = 1}, {name = "dingrits-food-01", amount = 2},
+			},
 			results =
-				{
-					{name='dingrits-cub', amount_min = 1, amount_max = 7},
-					{name = 'cage', amount = 3},
-				},
+			{
+				{name = "dingrits-cub", amount_min = 1, amount_max = 7},
+				{name = "cage",         amount = 3},
+			},
 			crafting_speed = 15,
-			tech = 'dingrits'
+			tech = "dingrits"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='yaedols', amount = 5},
-					{name='yotoi-leaves', amount = 10},
-				},
+			{
+				{name = "yaedols",      amount = 5},
+				{name = "yotoi-leaves", amount = 10},
+			},
 			results =
-				{
-					{name='dingrits-cub', amount_min = 2, amount_max = 7},
-				},
+			{
+				{name = "dingrits-cub", amount_min = 2, amount_max = 7},
+			},
 			crafting_speed = 14,
-			tech = 'dingrits-mk02'
+			tech = "dingrits-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name='dingrits-food-02', amount =2},
-					{name='yaedols', add_amount =5},
-				},
+			{
+				{name = "dingrits-food-02", amount = 2},
+				{name = "yaedols",          add_amount = 5},
+			},
 			results =
-				{
-					{name='dingrits-cub', amount_min = 4, amount_max = 7},
-				},
+			{
+				{name = "dingrits-cub", amount_min = 4, amount_max = 7},
+			},
 			crafting_speed = 12,
-			tech = 'dingrits-mk03'
+			tech = "dingrits-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name='yotoi-leaves', add_amount = 10},
-				},
+			{
+				{name = "yotoi-leaves", add_amount = 10},
+			},
 			results =
-				{
-					{name='dingrits-cub', amount = 7},
-				},
+			{
+				{name = "dingrits-cub", amount = 7},
+			},
 			crafting_speed = 10,
-			tech = 'dingrits-mk04'
+			tech = "dingrits-mk04"
 		},
 	}
 }
@@ -180,79 +180,79 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --
 
 py.autorecipes {
-    name = 'dingrits',
-	category = 'dingrits',
-	module_limitations = 'dingrits',
-	subgroup = 'py-alienlife-dingrits',
-	order = 'b',
+	name = "dingrits",
+	category = "dingrits",
+	module_limitations = "dingrits",
+	subgroup = "py-alienlife-dingrits",
+	order = "b",
 	main_product = "dingrits",
-    mats =
+	mats =
 	{
 		--chem
 		{
 			ingredients =
-				{
-					{name = 'dingrits-cub', amount = 3},
-					{name='caged-scrondrix', amount =1},
-					{name='water-barrel', amount=5,return_barrel = true},
-					{name='bedding', amount = 1},
-					{name='dingrits-food-01', amount =1},
-				},
+			{
+				{name = "dingrits-cub",     amount = 3},
+				{name = "caged-scrondrix",  amount = 1},
+				{name = "water-barrel",     amount = 5, return_barrel = true},
+				{name = "bedding",          amount = 1},
+				{name = "dingrits-food-01", amount = 1},
+			},
 			results =
-				{
-					{name='dingrits', amount_min = 1, amount_max =3},
-					{name = 'cage', amount = 1},
-				},
+			{
+				{name = "dingrits", amount_min = 1, amount_max = 3},
+				{name = "cage",     amount = 1},
+			},
 			crafting_speed = 150,
-			tech = 'dingrits'
+			tech = "dingrits"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name = 'dingrits-cub', amount = 5},
-					{name='yaedols', amount = 10},
-					{name='yotoi-leaves', amount = 15},
-				},
+			{
+				{name = "dingrits-cub", amount = 5},
+				{name = "yaedols",      amount = 10},
+				{name = "yotoi-leaves", amount = 15},
+			},
 			results =
-				{
-					{name='dingrits', amount_min = 3, amount_max = 5},
-				},
+			{
+				{name = "dingrits", amount_min = 3, amount_max = 5},
+			},
 			crafting_speed = 130,
-			tech = 'dingrits-mk02'
+			tech = "dingrits-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'dingrits-cub', amount = 10},
-					{name='dingrits-food-02', amount =1},
-					{name='yaedols', add_amount = 10},
+			{
+				{name = "dingrits-cub",     amount = 10},
+				{name = "dingrits-food-02", amount = 1},
+				{name = "yaedols",          add_amount = 10},
 
-				},
+			},
 			results =
-				{
-					{name='dingrits', amount_min = 7, amount_max = 10},
-				},
+			{
+				{name = "dingrits", amount_min = 7, amount_max = 10},
+			},
 			crafting_speed = 110,
-			tech = 'dingrits-mk03'
+			tech = "dingrits-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name = 'dingrits-cub', amount = 15},
-					{name='yotoi-leaves', add_amount = 20},
-				},
+			{
+				{name = "dingrits-cub", amount = 15},
+				{name = "yotoi-leaves", add_amount = 20},
+			},
 			results =
-				{
-					{name='dingrits', amount = 15},
-				},
+			{
+				{name = "dingrits", amount = 15},
+			},
 			crafting_speed = 80,
-			tech = 'dingrits-mk04'
+			tech = "dingrits-mk04"
 		},
 	}
 }
@@ -482,4 +482,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

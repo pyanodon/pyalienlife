@@ -7,12 +7,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete", amount = 200},
+        {type = "item", name = "concrete",              amount = 200},
         {type = "item", name = "paramagnetic-material", amount = 50},
-        {type = "item", name = "super-alloy", amount = 50},
-        {type = "item", name = "graphene-roll", amount = 50},
-        {type = "item", name = "glass", amount = 100},
-        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "super-alloy",           amount = 50},
+        {type = "item", name = "graphene-roll",         amount = 50},
+        {type = "item", name = "glass",                 amount = 100},
+        {type = "item", name = "processing-unit",       amount = 40},
     },
     results = {
         {type = "item", name = "antelope-enclosure-mk01", amount = 1}
@@ -47,7 +47,7 @@ ENTITY {
     --collision_mask = {layers = {ground_tile = true, water_tile = true, layer_14 = true}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"antelope"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -226,7 +226,7 @@ ENTITY {
                     animation_speed = 0.4,
                 }
             },
-    
+
             --gazels
             {
                 north_position = util.by_pixel(-192, -448),
@@ -333,7 +333,7 @@ ENTITY {
                     animation_speed = 0.25,
                 }
             },
-    
+
             {
                 north_position = util.by_pixel(-192, -0),
                 west_position = util.by_pixel(-192, -0),
@@ -394,44 +394,44 @@ ENTITY {
                     animation_speed = 0.25,
                 }
             },
-    
+
         },
         animation = {
             layers = {
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/r.png",
-                width = 544,
-                height = 800,
-                shift = util.by_pixel(0, -128)
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/r.png",
+                    width = 544,
+                    height = 800,
+                    shift = util.by_pixel(0, -128)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/m.png",
+                    width = 544,
+                    height = 800,
+                    shift = util.by_pixel(0, -128),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/ao.png",
+                    width = 608,
+                    height = 832,
+                    shift = util.by_pixel(0, -112)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/l.png",
+                    width = 544,
+                    height = 800,
+                    shift = util.by_pixel(0, -128),
+                    draw_as_light = true,
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/g.png",
+                    width = 544,
+                    height = 800,
+                    shift = util.by_pixel(0, -128),
+                    draw_as_light = true,
+                },
             },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/m.png",
-                width = 544,
-                height = 800,
-                shift = util.by_pixel(0, -128),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/ao.png",
-                width = 608,
-                height = 832,
-                shift = util.by_pixel(0, -112)
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/l.png",
-                width = 544,
-                height = 800,
-                shift = util.by_pixel(0, -128),
-                draw_as_light = true,
-            },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/antelope-enclosure/g.png",
-                width = 544,
-                height = 800,
-                shift = util.by_pixel(0, -128),
-                draw_as_light = true,
-            },
-          },
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

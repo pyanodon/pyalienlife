@@ -6,10 +6,10 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "titanium-plate", amount = 100},
-        {type = "item", name = "stainless-steel", amount = 100},
-        {type = "item", name = "concrete-wall", amount = 50},
-        {type = "item", name = "glass", amount = 30},
+        {type = "item", name = "titanium-plate",   amount = 100},
+        {type = "item", name = "stainless-steel",  amount = 100},
+        {type = "item", name = "concrete-wall",    amount = 50},
+        {type = "item", name = "glass",            amount = 30},
         {type = "item", name = "advanced-circuit", amount = 40},
     },
     results = {
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 1,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"cridren"},
     crafting_speed = 0.01,
     energy_source = {
@@ -127,29 +127,29 @@ ENTITY {
                     animation_speed = 0.3
                 }
             },
-    
+
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off.png",
-            width = 352,
-            height = 352,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -16)
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off.png",
+                    width = 352,
+                    height = 352,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off-mask.png",
+                    width = 352,
+                    height = 352,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+
             },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/cridren-enclosure/off-mask.png",
-                width = 352,
-                height = 352,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-    
-          },
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

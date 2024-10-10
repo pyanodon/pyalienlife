@@ -6,18 +6,18 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "grods-swamp-mk02", amount = 1},
-        {type = "item", name = "molybdenum-plate", amount = 15},
+        {type = "item", name = "grods-swamp-mk02",      amount = 1},
+        {type = "item", name = "molybdenum-plate",      amount = 15},
         {type = "item", name = "low-density-structure", amount = 20},
-        {type = "item", name = "processing-unit", amount = 40},
-        {type = "item", name = "electric-engine-unit", amount = 8},
-        {type = "item", name = "nexelit-plate", amount = 40},
-        {type = "item", name = "nbti-alloy", amount = 30},
+        {type = "item", name = "processing-unit",       amount = 40},
+        {type = "item", name = "electric-engine-unit",  amount = 8},
+        {type = "item", name = "nexelit-plate",         amount = 40},
+        {type = "item", name = "nbti-alloy",            amount = 30},
     },
     results = {
         {type = "item", name = "grods-swamp-mk03", amount = 1}
     }
-}:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("botany-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "grods-swamp-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "grods-swamp-mk03"},
     fast_replaceable_group = "grods-swamp",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"grod"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "grods-swamp-mk01"),
     energy_source = {

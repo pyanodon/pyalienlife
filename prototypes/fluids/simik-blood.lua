@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "simik-blood",
     icon = "__pyalienlifegraphics2__/graphics/icons/simik-blood.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.290, g = 0.388, b = 0.172},

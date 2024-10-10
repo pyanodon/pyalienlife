@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 50},
-        {type = "item", name = "steel-plate", amount = 10},
-        {type = "item", name = "engine-unit", amount = 3},
+        {type = "item", name = "stone-brick",        amount = 50},
+        {type = "item", name = "steel-plate",        amount = 10},
+        {type = "item", name = "engine-unit",        amount = 3},
         {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 20},
+        {type = "item", name = "iron-gear-wheel",    amount = 20},
     },
     results = {
         {type = "item", name = "space-fwf-mk01", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-fwf-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk01.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-fwf-mk01"},
     fast_replaceable_group = "fwf",

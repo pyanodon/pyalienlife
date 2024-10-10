@@ -6,10 +6,10 @@ RECIPE {
     ingredients = {
         {type = "item", name = "micro-mine-mk03", amount = 1},
         {type = "item", name = "science-coating", amount = 30},
-        {type = "item", name = "divertor", amount = 5},
-        {type = "item", name = "control-unit", amount = 30},
-        {type = "item", name = "metallic-glass", amount = 20},
-        {type = "item", name = "boron-carbide", amount = 30},
+        {type = "item", name = "divertor",        amount = 5},
+        {type = "item", name = "control-unit",    amount = 30},
+        {type = "item", name = "metallic-glass",  amount = 20},
+        {type = "item", name = "boron-carbide",   amount = 30},
     },
     results = {
         {type = "item", name = "micro-mine-mk04", amount = 1}
@@ -32,12 +32,12 @@ ENTITY {
     type = "assembling-machine",
     name = "micro-mine-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/micro-mine-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "micro-mine-mk04"},
     fast_replaceable_group = "micro-mine",
     max_health = 100,
-    
+
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},

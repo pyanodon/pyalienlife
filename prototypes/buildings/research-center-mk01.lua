@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "iron-plate", amount = 100},
-        {type = "item", name = "distilator", amount = 1},
-        {type = "item", name = "micro-mine-mk01", amount = 1},
+        {type = "item", name = "iron-plate",         amount = 100},
+        {type = "item", name = "distilator",         amount = 1},
+        {type = "item", name = "micro-mine-mk01",    amount = 1},
         {type = "item", name = "electronic-circuit", amount = 50},
-        {type = "item", name = "glass", amount = 40},
-        {type = "item", name = "copper-cable", amount = 100},
+        {type = "item", name = "glass",              amount = 40},
+        {type = "item", name = "copper-cable",       amount = 100},
     },
     results = {
         {type = "item", name = "research-center-mk01", amount = 1}
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "research-center-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/research-center-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "research-center-mk01"},
     fast_replaceable_group = "research-center",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 1,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"research", "research-handcrafting"},
     crafting_speed = 1,
     energy_source = {
@@ -124,7 +124,7 @@ ENTITY {
                     frame_count = 250,
                     line_length = 30,
                     animation_speed = 0.8,
-                    scale= 0.9,
+                    scale = 0.9,
                     draw_as_glow = true,
                 }
             },

@@ -8,15 +8,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete", amount = 20},
-        {type = "item", name = "gate", amount = 1},
-        {type = "item", name = "nbfe-alloy", amount = 20},
-        {type = "item", name = "sncr-alloy", amount = 20},
+        {type = "item", name = "concrete",          amount = 20},
+        {type = "item", name = "gate",              amount = 1},
+        {type = "item", name = "nbfe-alloy",        amount = 20},
+        {type = "item", name = "sncr-alloy",        amount = 20},
         {type = "item", name = "big-electric-pole", amount = 8},
-        {type = "item", name = "lens", amount = 10},
-        {type = "item", name = "advanced-circuit", amount = 20},
-        {type = "item", name = "pump", amount = 1},
-        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "lens",              amount = 10},
+        {type = "item", name = "advanced-circuit",  amount = 20},
+        {type = "item", name = "pump",              amount = 1},
+        {type = "item", name = "steel-plate",       amount = 50},
     },
     results = {
         {type = "item", name = "simik-den-mk01", amount = 1}
@@ -39,7 +39,7 @@ ENTITY {
     type = "assembling-machine",
     name = "simik-den-mk01",
     icon = "__pyalienlifegraphics2__/graphics/icons/simik-den-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "simik-den-mk01"},
     fast_replaceable_group = "simik-den",
@@ -50,7 +50,7 @@ ENTITY {
     selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"simik"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -239,10 +239,10 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
             pipe_connections = {
-                {flow_direction = "input", position = {0.5, -7.5}, direction = defines.direction.north},
+                {flow_direction = "input", position = {0.5, -7.5},  direction = defines.direction.north},
                 {flow_direction = "input", position = {-0.5, -7.5}, direction = defines.direction.north}
             },
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
 }

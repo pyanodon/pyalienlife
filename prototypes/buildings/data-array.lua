@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate", amount = 50},
-        {type = "item", name = "glass", amount = 40},
-        {type = "item", name = "titanium-plate", amount = 100},
-        {type = "item", name = "duralumin", amount = 50},
+        {type = "item", name = "steel-plate",        amount = 50},
+        {type = "item", name = "glass",              amount = 40},
+        {type = "item", name = "titanium-plate",     amount = 100},
+        {type = "item", name = "duralumin",          amount = 50},
         {type = "item", name = "electronic-circuit", amount = 30},
-        {type = "item", name = "iron-gear-wheel", amount = 50},
+        {type = "item", name = "iron-gear-wheel",    amount = 50},
     },
     results = {
         {type = "item", name = "data-array", amount = 1}
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "data-array",
     icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "data-array"},
     fast_replaceable_group = "data-array",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 5,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"data-array"},
     crafting_speed = 1,
     energy_source = {

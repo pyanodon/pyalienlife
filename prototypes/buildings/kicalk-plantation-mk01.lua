@@ -14,14 +14,14 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "botanical-nursery", amount = 1},
-        {type = "item", name = "duralumin", amount = 40},
-        {type = "item", name = "glass", amount = 30},
-        {type = "item", name = "steel-plate", amount = 25},
+        {type = "item", name = "duralumin",         amount = 40},
+        {type = "item", name = "glass",             amount = 30},
+        {type = "item", name = "steel-plate",       amount = 25},
     },
     results = {
         {type = "item", name = "kicalk-plantation-mk01", amount = 1}
     }
-}:add_unlock('kicalk')
+}:add_unlock("kicalk")
 
 ITEM {
     type = "item",
@@ -39,7 +39,7 @@ ENTITY {
     type = "assembling-machine",
     name = "kicalk-plantation-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/kicalk-plantation-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "kicalk-plantation-mk01"},
     fast_replaceable_group = "kicalk-plantation",
@@ -50,7 +50,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 25,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"kicalk"},
     crafting_speed = 0.08,
     energy_source = {
@@ -66,7 +66,7 @@ ENTITY {
             layers = {
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/left.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 128,
                     height = 448,
                     line_length = 16,
@@ -76,7 +76,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/mid.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 128,
                     height = 448,
                     line_length = 16,
@@ -86,7 +86,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/mid-mask.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 128,
                     height = 448,
                     line_length = 16,
@@ -97,7 +97,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/right.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 128,
                     height = 448,
                     line_length = 16,
@@ -107,7 +107,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/right-mask.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 128,
                     height = 448,
                     line_length = 16,
@@ -118,7 +118,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/far-right.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 32,
                     height = 448,
                     repeat_count = 50,
@@ -129,7 +129,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/glow.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 416,
                     height = 448,
                     repeat_count = 50,
@@ -142,7 +142,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/glow.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 416,
                     height = 448,
                     repeat_count = 50,
@@ -155,7 +155,7 @@ ENTITY {
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/sh.png",
-    				priority = "extra-high",
+                    priority = "extra-high",
                     width = 512,
                     height = 480,
                     repeat_count = 50,
@@ -214,12 +214,12 @@ for _, fluid_box in pairs(data.raw["assembling-machine"]["kicalk-plantation-mk01
     -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
     if type(fluid_box) == "boolean" then
         break
-     end
-     if fluid_box.pipe_covers.south.layers then
-         fluid_box.pipe_covers.south.layers[1].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south.png"
-         fluid_box.pipe_covers.south.layers[2].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south-shadow.png"
-     end
-     -- Move cover up to compensate
-     fluid_box.pipe_picture.south.scale = 0.5
-     fluid_box.pipe_picture.south.shift = {0,-2.33}
+    end
+    if fluid_box.pipe_covers.south.layers then
+        fluid_box.pipe_covers.south.layers[1].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south.png"
+        fluid_box.pipe_covers.south.layers[2].filename = "__pyindustry__/graphics/entity/niobium-pipe/hr-pipe-cover-south-shadow.png"
+    end
+    -- Move cover up to compensate
+    fluid_box.pipe_picture.south.scale = 0.5
+    fluid_box.pipe_picture.south.shift = {0, -2.33}
 end

@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate", amount = 15},
-        {type = "item", name = "pipe", amount = 10},
-        {type = "item", name = "auog", amount = 1},
-        {type = "item", name = "iron-plate", amount = 50},
+        {type = "item", name = "steel-plate",     amount = 15},
+        {type = "item", name = "pipe",            amount = 10},
+        {type = "item", name = "auog",            amount = 1},
+        {type = "item", name = "iron-plate",      amount = 50},
         {type = "item", name = "aluminium-plate", amount = 50},
-        {type = "item", name = "lead-plate", amount = 30},
-        {type = "item", name = "iron-stick", amount = 30},
+        {type = "item", name = "lead-plate",      amount = 30},
+        {type = "item", name = "iron-stick",      amount = 30},
         {type = "item", name = "iron-gear-wheel", amount = 40}
     },
     results = {
@@ -48,97 +48,97 @@ ENTITY {
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     energy_source =
-		{
-				type = "electric",
-				usage_priority = "secondary-output",
-		},
-	burner =
-		{
-			type = "burner",
-			fuel_categories = {"auog"},
-			effectivity = 2,
-            fuel_inventory_size = 1,
-            burnt_inventory_size = 1,
-			emissions_per_minute = {
-			    pollution = 0
-			},
-		},
-	effectivity = 1,
-	max_power_output = "22MW",
+    {
+        type = "electric",
+        usage_priority = "secondary-output",
+    },
+    burner =
+    {
+        type = "burner",
+        fuel_categories = {"auog"},
+        effectivity = 2,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 0
+        },
+    },
+    effectivity = 1,
+    max_power_output = "22MW",
     animation = {
-            layers = {
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a1.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-96, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a2.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-64, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a3.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-32, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a4.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-0, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a5.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(32, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a6.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(64, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a7.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(96, -32)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a8.png",
-                    width = 32,
-                    height = 288,
-                    line_length = 64,
-                    frame_count = 250,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(128, -32)
-                },
+        layers = {
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a1.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-96, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a2.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-64, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a3.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-32, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a4.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(-0, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a5.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(32, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a6.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(64, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a7.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(96, -32)
+            },
+            {
+                filename = "__pyalienlifegraphics__/graphics/entity/generator-1/a8.png",
+                width = 32,
+                height = 288,
+                line_length = 64,
+                frame_count = 250,
+                animation_speed = 0.4,
+                shift = util.by_pixel(128, -32)
+            },
         },
     },
 

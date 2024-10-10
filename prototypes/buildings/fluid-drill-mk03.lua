@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fluid-drill-mk02", amount = 1},
-        {type = "item", name = "small-parts-02", amount = 20},
+        {type = "item", name = "fluid-drill-mk02",     amount = 1},
+        {type = "item", name = "small-parts-02",       amount = 20},
         {type = "item", name = "electric-engine-unit", amount = 4},
-        {type = "item", name = "advanced-circuit", amount = 5},
-        {type = "item", name = "stainless-steel", amount = 40},
-        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "advanced-circuit",     amount = 5},
+        {type = "item", name = "stainless-steel",      amount = 40},
+        {type = "item", name = "niobium-pipe",         amount = 20},
     },
     results = {
         {type = "item", name = "fluid-drill-mk03", amount = 1}
@@ -53,17 +53,17 @@ ENTITY {
         volume = 200,
         pipe_connections = {
             {flow_direction = "input-output", position = {-2.0, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 0}, direction = defines.direction.east},
-            {flow_direction = "input-output", position = {0, 2.0}, direction = defines.direction.south}
+            {flow_direction = "input-output", position = {2.0, 0},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 2.0},  direction = defines.direction.south}
         }
     },
     energy_source =
     {
-      type = "electric",
-      emissions_per_minute = {
-          pollution = 10
-      },
-      usage_priority = "secondary-input"
+        type = "electric",
+        emissions_per_minute = {
+            pollution = 10
+        },
+        usage_priority = "secondary-input"
     },
     energy_usage = "1200kW",
     resource_searching_radius = 3.49,
@@ -126,13 +126,13 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound =
-      {
-        filename = "__base__/sound/electric-mining-drill.ogg",
-        volume = 0.5
-      },
-      audible_distance_modifier = 0.6,
-      fade_in_ticks = 4,
-      fade_out_ticks = 20
+        sound =
+        {
+            filename = "__base__/sound/electric-mining-drill.ogg",
+            volume = 0.5
+        },
+        audible_distance_modifier = 0.6,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
     },
 }

@@ -11,33 +11,33 @@ local BASE_SPECIAL = 100
 
 
 py.autorecipes {
-    name = 'rendering',
-	category = 'slaughterhouse',
+	name = "rendering",
+	category = "slaughterhouse",
 	--module_limitations = 'fish',
-	subgroup = 'py-alienlife-fish',
-	order = 'b',
-    mats =
+	subgroup = "py-alienlife-fish",
+	order = "b",
+	mats =
 	{
 		{
 			ingredients =
-				{
-					{name='fish', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "fish", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name='bones', amount = BASE_BONES},
-					{name='meat', amount = BASE_MEAT},
-					{name='skin', amount = BASE_SKIN},
-					{name='guts', amount = BASE_GUTS},
-					{name='fish-oil', amount = BASE_SPECIAL},
-				},
+			{
+				{name = "bones",    amount = BASE_BONES},
+				{name = "meat",     amount = BASE_MEAT},
+				{name = "skin",     amount = BASE_SKIN},
+				{name = "guts",     amount = BASE_GUTS},
+				{name = "fish-oil", amount = BASE_SPECIAL},
+			},
 			crafting_speed = 30,
-			tech = 'water-animals-mk01',
-			name = 'full-render-fish',
+			tech = "water-animals-mk01",
+			name = "full-render-fish",
 			icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
 			icon_size = 64,
 		},
-    }
+	}
 }
 --[[
 		--oil
@@ -59,4 +59,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

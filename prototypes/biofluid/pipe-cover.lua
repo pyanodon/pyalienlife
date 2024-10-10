@@ -1,8 +1,8 @@
 local sprite = {
-	filename = '__pyalienlifegraphics2__/graphics/entity/bots/pipes/hr-cover.png',
+	filename = "__pyalienlifegraphics2__/graphics/entity/bots/pipes/hr-cover.png",
 	frame_count = 1,
 	height = 64,
-	priority = 'high',
+	priority = "high",
 	scale = 0.5,
 	width = 64
 }

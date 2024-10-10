@@ -7,17 +7,17 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "sap-extractor-mk01", amount = 1},
-        {type = "item", name = "treated-wood", amount = 100},
-        {type = "item", name = "engine-unit", amount = 2},
-        {type = "item", name = "duralumin", amount = 12},
-        {type = "item", name = "fast-inserter", amount = 2},
-        {type = "item", name = "advanced-circuit", amount = 15},
-        {type = "item", name = "steel-plate", amount = 40},
+        {type = "item", name = "treated-wood",       amount = 100},
+        {type = "item", name = "engine-unit",        amount = 2},
+        {type = "item", name = "duralumin",          amount = 12},
+        {type = "item", name = "fast-inserter",      amount = 2},
+        {type = "item", name = "advanced-circuit",   amount = 15},
+        {type = "item", name = "steel-plate",        amount = 40},
     },
     results = {
         {type = "item", name = "sap-extractor-mk02", amount = 1}
     }
-}:add_unlock("botany-mk02"):add_ingredient({type = "item", name = "small-parts-02", amount = 15})
+}:add_unlock("botany-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 15}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "sap-extractor-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/sap-extractor-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "sap-extractor-mk02"},
     fast_replaceable_group = "sap-extractor",
@@ -45,9 +45,9 @@ ENTITY {
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    
+
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"consumption", "speed", 'pollution', 'productivity'},
+    allowed_effects = {"consumption", "speed", "pollution", "productivity"},
     crafting_categories = {"sap"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "sap-extractor-mk01"),
     energy_source = {
@@ -104,7 +104,7 @@ ENTITY {
             volume = 1000,
             base_level = -1,
             pipe_connections = {{flow_direction = "input", position = {0.0, -2.0}, direction = defines.direction.north}},
-            secondary_draw_orders = { north = -1 }
+            secondary_draw_orders = {north = -1}
         },
     },
 

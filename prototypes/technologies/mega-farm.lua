@@ -9,10 +9,10 @@ TECHNOLOGY {
     unit = {
         count = 300,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
             --{'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"chemical-science-pack",   1},
             --{"production-science-pack", 1},
             --{'utility-science-pack', 3},
         },
@@ -33,12 +33,12 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
+            {"military-science-pack",   3},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            {"utility-science-pack",    3},
         },
         time = 45
     }
@@ -55,12 +55,12 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
+            {"military-science-pack",   3},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            {"utility-science-pack",    3},
         },
         time = 45
     }
@@ -77,12 +77,12 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
+            {"military-science-pack",   3},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            {"utility-science-pack",    3},
         },
         time = 45
     }
@@ -99,12 +99,12 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
+            {"military-science-pack",   3},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            {"utility-science-pack",    3},
         },
         time = 45
     }
@@ -121,12 +121,12 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
-            {'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
+            {"military-science-pack",   3},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {'utility-science-pack', 3},
+            {"utility-science-pack",    3},
         },
         time = 45
     }
@@ -143,10 +143,10 @@ TECHNOLOGY {
     unit = {
         count = 200,
         ingredients = {
-            {'automation-science-pack', 4},
-            {'logistic-science-pack', 3},
+            {"automation-science-pack", 4},
+            {"logistic-science-pack",   3},
             --{'military-science-pack', 3},
-            {"chemical-science-pack", 1},
+            {"chemical-science-pack",   1},
             --{"production-science-pack", 1},
             --{'utility-science-pack', 3},
         },

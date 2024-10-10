@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "duralumin", amount = 50},
-        {type = "item", name = "niobium-pipe", amount = 20},
-        {type = "item", name = "lead-plate", amount = 40},
-        {type = "item", name = "engine-unit", amount = 20},
-        {type = "item", name = "advanced-circuit", amount = 30},
+        {type = "item", name = "duralumin",           amount = 50},
+        {type = "item", name = "niobium-pipe",        amount = 20},
+        {type = "item", name = "lead-plate",          amount = 40},
+        {type = "item", name = "engine-unit",         amount = 20},
+        {type = "item", name = "advanced-circuit",    amount = 30},
         {type = "item", name = "slaughterhouse-mk01", amount = 1},
-        {type = "item", name = "latex", amount = 25},
+        {type = "item", name = "latex",               amount = 25},
     },
     results = {
         {type = "item", name = "slaughterhouse-mk02", amount = 1}
@@ -30,10 +30,10 @@ ITEM {
 }
 
 ENTITY {
-    type = 'assembling-machine',
+    type = "assembling-machine",
     name = "slaughterhouse-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk02"},
     fast_replaceable_group = "slaughterhouse",

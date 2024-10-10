@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "agzn-alloy", amount = 20},
-        {type = "item", name = "metallic-glass", amount = 20},
-        {type = "item", name = "ulric-corral-mk03", amount = 1},
-        {type = "item", name = "nenbit-matrix", amount = 50},
-        {type = "item", name = "control-unit", amount = 15},
+        {type = "item", name = "agzn-alloy",            amount = 20},
+        {type = "item", name = "metallic-glass",        amount = 20},
+        {type = "item", name = "ulric-corral-mk03",     amount = 1},
+        {type = "item", name = "nenbit-matrix",         amount = 50},
+        {type = "item", name = "control-unit",          amount = 15},
         {type = "item", name = "low-density-structure", amount = 15},
     },
     results = {
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     module_slots = MODULE_SLOTS,
     match_animation_speed_to_activity = false,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"ulric"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "ulric-corral-mk01"),
     energy_source = {

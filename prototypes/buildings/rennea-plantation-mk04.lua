@@ -5,11 +5,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "rennea-plantation-mk03", amount = 1},
-        {type = "item", name = "science-coating", amount = 15},
-        {type = "item", name = "agzn-alloy", amount = 20},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "nbfe-alloy", amount = 100},
-        {type = "item", name = "wall-shield", amount = 10},
+        {type = "item", name = "science-coating",        amount = 15},
+        {type = "item", name = "agzn-alloy",             amount = 20},
+        {type = "item", name = "control-unit",           amount = 10},
+        {type = "item", name = "nbfe-alloy",             amount = 100},
+        {type = "item", name = "wall-shield",            amount = 10},
     },
     results = {
         {type = "item", name = "rennea-plantation-mk04", amount = 1}
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "rennea-plantation-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/rennea-plantation-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "rennea-plantation-mk04"},
     fast_replaceable_group = "rennea-plantation",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 120,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"rennea"},
     crafting_speed = 0.2,
     energy_source = {

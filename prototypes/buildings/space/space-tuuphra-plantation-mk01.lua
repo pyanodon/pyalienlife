@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 30},
-        {type = "item", name = "limestone", amount = 25},
-        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "stone-brick",        amount = 30},
+        {type = "item", name = "limestone",          amount = 25},
+        {type = "item", name = "pipe",               amount = 15},
         {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "duralumin", amount = 100},
-        {type = "item", name = "tin-plate", amount = 50},
+        {type = "item", name = "duralumin",          amount = 100},
+        {type = "item", name = "tin-plate",          amount = 50},
     },
     results = {
         {type = "item", name = "space-tuuphra-plantation-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-tuuphra-plantation-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-tuuphra-plantation-mk01"},
     fast_replaceable_group = "tuuphra-plantation",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_slots = 5,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"tuuphra"},
     crafting_speed = 0.05,
     energy_source = {

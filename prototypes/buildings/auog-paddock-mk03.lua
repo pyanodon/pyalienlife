@@ -7,15 +7,15 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "auog-paddock-mk02", amount = 1},
-        {type = "item", name = "nbti-alloy", amount = 25},
-        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "nbti-alloy",        amount = 25},
+        {type = "item", name = "advanced-circuit",  amount = 20},
         {type = "item", name = "neuromorphic-chip", amount = 30},
         {type = "item", name = "py-heat-exchanger", amount = 1},
     },
     results = {
         {type = "item", name = "auog-paddock-mk03", amount = 1}
     }
-}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 30})
+}:add_unlock("land-animals-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
 
 ITEM {
     type = "item",
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "auog-paddock-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "auog-paddock-mk03"},
     fast_replaceable_group = "auog-paddock",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_slots = 8,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"auog"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "auog-paddock-mk01"),
     energy_source = {

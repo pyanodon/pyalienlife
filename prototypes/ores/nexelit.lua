@@ -1,12 +1,12 @@
-local resource_autoplace = require 'resource-autoplace'
-data.raw.planet.nauvis.map_gen_settings.autoplace_controls['ore-nexelit'] = {}
+local resource_autoplace = require "resource-autoplace"
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["ore-nexelit"] = {}
 
-data:extend{{
-    type = 'autoplace-control',
-    category = 'resource',
-    name = 'ore-nexelit',
+data:extend {{
+    type = "autoplace-control",
+    category = "resource",
+    name = "ore-nexelit",
     richness = true,
-    order = 'p-bio'
+    order = "p-bio"
 }}
 
 -- data:extend{{
@@ -15,13 +15,13 @@ data:extend{{
 -- }}
 
 ENTITY {
-    type = 'resource',
-    name = 'ore-nexelit',
-    category = 'ore-nexelit',
-    icon = '__pycoalprocessinggraphics__/graphics/icons/mip/nexelit-ore-3.png',
+    type = "resource",
+    name = "ore-nexelit",
+    category = "ore-nexelit",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/mip/nexelit-ore-3.png",
     icon_size = 64,
-    flags = {'placeable-neutral'},
-    order = 'a-b-a',
+    flags = {"placeable-neutral"},
+    order = "a-b-a",
     map_color = {
         r = 0.317,
         g = 0.603,
@@ -30,15 +30,15 @@ ENTITY {
     highlight = true,
     minable = {
         mining_time = 1,
-        results = {{type = "item", name = 'nexelit-ore', amount = 1}}
+        results = {{type = "item", name = "nexelit-ore", amount = 1}}
     },
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
     autoplace = resource_autoplace.resource_autoplace_settings {
-        name = 'ore-nexelit',
-        order = 'b',
+        name = "ore-nexelit",
+        order = "b",
         base_density = 10,
         base_spots_per_km2 = 1.25,
         has_starting_area_placement = false,
@@ -51,8 +51,8 @@ ENTITY {
     stage_counts = {20000, 13000, 10000, 5000, 3000, 1000, 500, 100},
     stages = {
         sheet = {
-            filename = '__pyalienlifegraphics3__/graphics/entity/nexelit/hr-nexelit.png',
-            priority = 'extra-high',
+            filename = "__pyalienlifegraphics3__/graphics/entity/nexelit/hr-nexelit.png",
+            priority = "extra-high",
             width = 128,
             height = 128,
             frame_count = 8,

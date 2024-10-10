@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "niobium-plate", amount = 50},
-        {type = "item", name = "niobium-pipe", amount = 20},
+        {type = "item", name = "steel-plate",        amount = 100},
+        {type = "item", name = "niobium-plate",      amount = 50},
+        {type = "item", name = "niobium-pipe",       amount = 20},
         {type = "item", name = "electronic-circuit", amount = 100},
-        {type = "item", name = "plastic-bar", amount = 60},
-        {type = "item", name = "iron-plate", amount = 4},
+        {type = "item", name = "plastic-bar",        amount = 60},
+        {type = "item", name = "iron-plate",         amount = 4},
     },
     results = {
         {type = "item", name = "space-scrondrix-pen-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-scrondrix-pen-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/scrondrix-pen-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-scrondrix-pen-mk01"},
     fast_replaceable_group = "scrondrix-pen",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = 6,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"scrondrix"},
     crafting_speed = 0.06,
     energy_source = {
@@ -185,17 +185,17 @@ ENTITY {
                     --animation_speed = 0.5
                 }
             },
-    
+
         },
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw.png",
-                width = 384,
-                height = 427,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -34)
+                    filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw.png",
+                    width = 384,
+                    height = 427,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -34)
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/raw-mask.png",

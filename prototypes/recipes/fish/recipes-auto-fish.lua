@@ -1,70 +1,70 @@
 ------------------EGG MAKER------------------
 
 py.autorecipes {
-    name = 'breed-fish-egg',
-	category = 'fish-farm',
-	module_limitations = 'fish',
-	subgroup = 'py-alienlife-fish',
-	order = 'c',
+	name = "breed-fish-egg",
+	category = "fish-farm",
+	module_limitations = "fish",
+	subgroup = "py-alienlife-fish",
+	order = "c",
 	main_product = "fish-egg",
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name = 'fish', amount = 12},
-                    {name='phytoplankton', amount =50, fluidbox_index = 1},
-					{name='water-saline', amount=100, fluidbox_index = 2, return_item = {name = 'waste-water'}},
-				},
+			{
+				{name = "fish",          amount = 12},
+				{name = "phytoplankton", amount = 50,  fluidbox_index = 1},
+				{name = "water-saline",  amount = 100, fluidbox_index = 2, return_item = {name = "waste-water"}},
+			},
 			results =
-				{
-					{name='fish-egg', amount = 25},
-				},
+			{
+				{name = "fish-egg", amount = 25},
+			},
 			crafting_speed = 80,
-			tech = 'fish-mk01'
+			tech = "fish-mk01"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='fish-food-01', amount =1},
-					{name='filtration-media', amount = 2},
-				},
+			{
+				{name = "fish-food-01",     amount = 1},
+				{name = "filtration-media", amount = 2},
+			},
 			results =
-				{
-                    {name='fish-egg', add_amount = 5},
-				},
+			{
+				{name = "fish-egg", add_amount = 5},
+			},
 			crafting_speed = 70,
-			tech = 'fish-mk02'
+			tech = "fish-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'seaweed', amount = 10},
-				},
+			{
+				{name = "seaweed", amount = 10},
+			},
 			results =
-				{
-                    {name='fish-egg', add_amount = 5},
-				},
+			{
+				{name = "fish-egg", add_amount = 5},
+			},
 			crafting_speed = 60,
-			tech = 'fish-mk03'
+			tech = "fish-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name='fish-food-02', amount =1},
-					{name = 'seaweed', add_amount = 10},
+			{
+				{name = "fish-food-02", amount = 1},
+				{name = "seaweed",      add_amount = 10},
 
-				},
+			},
 			results =
-				{
-                    {name='fish-egg', add_amount = 10},
-				},
+			{
+				{name = "fish-egg", add_amount = 10},
+			},
 			crafting_speed = 55,
-			tech = 'fish-mk04'
+			tech = "fish-mk04"
 		},
 	}
 }
@@ -145,77 +145,77 @@ py.autorecipes {
 
 	}
 }
-]]--
+]] --
 
 --Raising--
 
 py.autorecipes {
-    name = 'breed-fish',
-	category = 'fish-farm',
-	module_limitations = 'fish',
-	subgroup = 'py-alienlife-fish',
-	order = 'b',
+	name = "breed-fish",
+	category = "fish-farm",
+	module_limitations = "fish",
+	subgroup = "py-alienlife-fish",
+	order = "b",
 	main_product = "fish",
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name = 'fish-egg', amount = 10},
-                    {name='oxygen', amount =60, fluidbox_index = 1},
-                    {name='small-lamp', amount =3},
-					{name='biomass', amount =10},
-					{name='water-saline', amount=100, fluidbox_index = 2,return_item={name='waste-water', amount=100}},
-				},
+			{
+				{name = "fish-egg",     amount = 10},
+				{name = "oxygen",       amount = 60,  fluidbox_index = 1},
+				{name = "small-lamp",   amount = 3},
+				{name = "biomass",      amount = 10},
+				{name = "water-saline", amount = 100, fluidbox_index = 2, return_item = {name = "waste-water", amount = 100}},
+			},
 			results =
-				{
-					{name='fish', amount = 10},
-				},
+			{
+				{name = "fish", amount = 10},
+			},
 			crafting_speed = 150,
-			tech = 'fish-mk01'
+			tech = "fish-mk01"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='fish-food-01', amount =1},
-					{name='filtration-media', amount = 1},
-				},
+			{
+				{name = "fish-food-01",     amount = 1},
+				{name = "filtration-media", amount = 1},
+			},
 			results =
-				{
-					{name='fish', add_amount = 10},
-				},
+			{
+				{name = "fish", add_amount = 10},
+			},
 			crafting_speed = 130,
-			tech = 'fish-mk02'
+			tech = "fish-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'seaweed', amount = 10},
-					{name='fish-food-02', amount =1},
-				},
+			{
+				{name = "seaweed",      amount = 10},
+				{name = "fish-food-02", amount = 1},
+			},
 			results =
-				{
-					{name='fish', add_amount = 10},
-				},
+			{
+				{name = "fish", add_amount = 10},
+			},
 			crafting_speed = 100,
-			tech = 'fish-mk03'
+			tech = "fish-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name='filtration-media', add_amount = 1},
-					{name = 'seaweed', add_amount = 10},
-				},
+			{
+				{name = "filtration-media", add_amount = 1},
+				{name = "seaweed",          add_amount = 10},
+			},
 			results =
-				{
-					{name='fish', add_amount = 10},
-				},
+			{
+				{name = "fish", add_amount = 10},
+			},
 			crafting_speed = 85,
-			tech = 'fish-mk04'
+			tech = "fish-mk04"
 		},
 	}
 }
@@ -264,4 +264,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

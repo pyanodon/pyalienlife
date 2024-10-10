@@ -5,11 +5,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "tuuphra-plantation-mk02", amount = 1},
-        {type = "item", name = "molybdenum-plate", amount = 15},
-        {type = "item", name = "ticocr-alloy", amount = 50},
-        {type = "item", name = "neuromorphic-chip", amount = 20},
-        {type = "item", name = "processing-unit", amount = 30},
-        {type = "item", name = "electric-engine-unit", amount = 8},
+        {type = "item", name = "molybdenum-plate",        amount = 15},
+        {type = "item", name = "ticocr-alloy",            amount = 50},
+        {type = "item", name = "neuromorphic-chip",       amount = 20},
+        {type = "item", name = "processing-unit",         amount = 30},
+        {type = "item", name = "electric-engine-unit",    amount = 8},
     },
     results = {
         {type = "item", name = "tuuphra-plantation-mk03", amount = 1}
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "tuuphra-plantation-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "tuuphra-plantation-mk03"},
     fast_replaceable_group = "tuuphra-plantation",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_slots = 20,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"tuuphra"},
     crafting_speed = 0.1,
     energy_source = {

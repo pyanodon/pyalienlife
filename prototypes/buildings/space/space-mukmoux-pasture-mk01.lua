@@ -6,10 +6,10 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "soil", amount = 500},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "duralumin", amount = 30},
-        {type = "item", name = "storage-tank", amount = 5},
+        {type = "item", name = "soil",               amount = 500},
+        {type = "item", name = "steel-plate",        amount = 100},
+        {type = "item", name = "duralumin",          amount = 30},
+        {type = "item", name = "storage-tank",       amount = 5},
         {type = "item", name = "electronic-circuit", amount = 10}
     },
     results = {
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     match_animation_speed_to_activity = false,
     module_slots = 8,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"mukmoux"},
     crafting_speed = 0.04,
     energy_source = {
@@ -162,17 +162,17 @@ ENTITY {
                     animation_speed = 0.2
                 }
             },
-    
+
         },
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base.png",
-                width = 480,
-                height = 544,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(0, -32),
+                    filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base.png",
+                    width = 480,
+                    height = 544,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(0, -32),
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/base-mask.png",

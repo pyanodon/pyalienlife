@@ -7,11 +7,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "phagnot-corral-mk03", amount = 1},
-        {type = "item", name = "science-coating", amount = 30},
-        {type = "item", name = "wall-shield", amount = 15},
-        {type = "item", name = "nbfe-alloy", amount = 100},
-        {type = "item", name = "kevlar", amount = 80},
-        {type = "item", name = "control-unit", amount = 40},
+        {type = "item", name = "science-coating",     amount = 30},
+        {type = "item", name = "wall-shield",         amount = 15},
+        {type = "item", name = "nbfe-alloy",          amount = 100},
+        {type = "item", name = "kevlar",              amount = 80},
+        {type = "item", name = "control-unit",        amount = 40},
     },
     results = {
         {type = "item", name = "phagnot-corral-mk04", amount = 1}
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"phagnot"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "phagnot-corral-mk01"),
     energy_source = {
@@ -145,24 +145,24 @@ ENTITY {
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off.png",
-            width = 416,
-            height = 448,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -32)
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off-mask.png",
-                width = 416,
-                height = 448,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -32),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off.png",
+                    width = 416,
+                    height = 448,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32)
                 },
-          },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off-mask.png",
+                    width = 416,
+                    height = 448,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+            },
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

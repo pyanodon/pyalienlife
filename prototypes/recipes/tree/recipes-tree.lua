@@ -1,4 +1,3 @@
-
 -- RECIPE {
 --     type = "recipe",
 --     name = "starter-biomass",
@@ -21,7 +20,7 @@ RECIPE {
     energy_required = 30,
     ingredients = {
         {type = "item", name = "wood-seedling", amount = 3},
-        {type = 'item', name = 'planter-box', amount = 1},
+        {type = "item", name = "planter-box",   amount = 1},
     },
     results = {
         {type = "item", name = "tree-mk01", amount = 1}

@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "arqad-hive-mk03", amount = 1},
-        {type = "item", name = "science-coating", amount = 15},
-        {type = "item", name = "processing-unit", amount = 30},
+        {type = "item", name = "arqad-hive-mk03",       amount = 1},
+        {type = "item", name = "science-coating",       amount = 15},
+        {type = "item", name = "processing-unit",       amount = 30},
         {type = "item", name = "low-density-structure", amount = 30},
-        {type = "item", name = "metallic-glass", amount = 10},
+        {type = "item", name = "metallic-glass",        amount = 10},
     },
     results = {
         {type = "item", name = "arqad-hive-mk04", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "arqad-hive-mk04",
     icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "arqad-hive-mk04"},
     fast_replaceable_group = "arqad-hive",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"arqad"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "arqad-hive-mk01"),
     energy_source = {
@@ -303,7 +303,7 @@ ENTITY {
                     frame_count = 1,
                     shift = util.by_pixel(0, -32),
                     priority = "low",
-    				tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
                 },
                 --DOME
                 {

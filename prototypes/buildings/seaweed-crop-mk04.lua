@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "metallic-glass", amount = 30},
-        {type = "item", name = "seaweed-crop-mk03", amount = 1},
+        {type = "item", name = "metallic-glass",        amount = 30},
+        {type = "item", name = "seaweed-crop-mk03",     amount = 1},
         {type = "item", name = "low-density-structure", amount = 20},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "nenbit-matrix", amount = 50},
+        {type = "item", name = "control-unit",          amount = 10},
+        {type = "item", name = "nenbit-matrix",         amount = 50},
     },
     results = {
         {type = "item", name = "seaweed-crop-mk04", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "seaweed-crop-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/seaweed-crop-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "seaweed-crop-mk04"},
     fast_replaceable_group = "seaweed-crop",

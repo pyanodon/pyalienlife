@@ -15,13 +15,13 @@
     subgroup = "py-alienlife-fluids",
     order = "f"
 }
-]]--
+]] --
 
 FLUID {
     type = "fluid",
     name = "cadaveric-arum-mk02-seed-juice",
     icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-mk02-seed-juice.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.541, g = 0.796, b = 0},
@@ -38,7 +38,7 @@ FLUID {
     type = "fluid",
     name = "cadaveric-arum-mk03-seed-juice",
     icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-mk03-seed-juice.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.541, g = 0.796, b = 0},
@@ -55,7 +55,7 @@ FLUID {
     type = "fluid",
     name = "cadaveric-arum-mk04-seed-juice",
     icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-mk04-seed-juice.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.541, g = 0.796, b = 0},

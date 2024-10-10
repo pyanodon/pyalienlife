@@ -6,7 +6,7 @@ local BASE_MEAT = 3
 local BASE_SKIN = 4
 local BASE_GUTS = 3
 local BASE_BLOOD = 40
-local BASE_SPECIAL = 30	-- venom
+local BASE_SPECIAL = 30 -- venom
 
 local IMP_MEAT = 15
 local IMP_SKIN = 21
@@ -15,112 +15,112 @@ local IMP_BLOOD = 130
 local IMP_SPECIAL = 80
 
 py.autorecipes {
-    name = 'rendering-arqad',
-	category = 'slaughterhouse',
-	subgroup = 'py-alienlife-arqad',
-	order = 'b',
+	name = "rendering-arqad",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-arqad",
+	order = "b",
 	crafting_speed = 30,
-    mats =
+	mats =
 	{
 		{
 			ingredients =
-				{
-					{name = 'arqad', amount = INPUT_AMOUNT}
-				},
+			{
+				{name = "arqad", amount = INPUT_AMOUNT}
+			},
 			results =
-				{
-					{name = 'meat', amount = BASE_MEAT},
-					{name = 'chitin', amount = BASE_SKIN},
-					{name = 'guts', amount = BASE_GUTS},
-					{name = 'arthropod-blood', amount = BASE_BLOOD},
-					{name = 'bee-venom', amount = BASE_SPECIAL}
-				},
+			{
+				{name = "meat",            amount = BASE_MEAT},
+				{name = "chitin",          amount = BASE_SKIN},
+				{name = "guts",            amount = BASE_GUTS},
+				{name = "arthropod-blood", amount = BASE_BLOOD},
+				{name = "bee-venom",       amount = BASE_SPECIAL}
+			},
 			crafting_speed = 30,
-			tech = 'arqad',
-			name = 'full-render-arqads',
+			tech = "arqad",
+			name = "full-render-arqads",
 			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-arqad.png",
 			icon_size = 64,
 		},
 		{
 			ingredients =
-				{
-					{name = 'arqad', remove_item = true},
-					{name = 'guts-arqad', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "arqad",      remove_item = true},
+				{name = "guts-arqad", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'guts', amount = IMP_GUTS},
-					{name = 'meat', remove_item = true},
-					{name = 'chitin', remove_item = true},
-					{name = 'arthropod-blood', remove_item = true},
-					{name = 'bee-venom', remove_item = true},
-				},
-			tech = 'antitumor',
-			name = 'ex-gut-arq',
+			{
+				{name = "guts",            amount = IMP_GUTS},
+				{name = "meat",            remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "bee-venom",       remove_item = true},
+			},
+			tech = "antitumor",
+			name = "ex-gut-arq",
 			icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
 			icon_size = 64,
 		},
 		{
 			ingredients =
-				{
-					{name = 'guts-arqad', remove_item = true},
-					{name = 'meat-arqad', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "guts-arqad", remove_item = true},
+				{name = "meat-arqad", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'guts', remove_item = true},
-					--{name = 'guts', amount = BASE_GUTS},
-					{name = 'meat', amount = IMP_MEAT},
-				},
-			tech = 'anabolic-rna',
-			name = 'ex-me-arq',
+			{
+				{name = "guts", remove_item = true},
+				--{name = 'guts', amount = BASE_GUTS},
+				{name = "meat", amount = IMP_MEAT},
+			},
+			tech = "anabolic-rna",
+			name = "ex-me-arq",
 			icon = "__pyalienlifegraphics3__/graphics/icons/meat-arqad.png",
 			icon_size = 64,
 		},
 		{
 			ingredients =
-				{
-					{name = 'meat-arqad', remove_item = true},
-					{name = 'chitin-arqad', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "meat-arqad",   remove_item = true},
+				{name = "chitin-arqad", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'meat', remove_item = true},
-					{name = 'chitin', amount = IMP_SKIN}
-				},
-			tech = 'reca',
-			name = 'ex-chi-arq',
+			{
+				{name = "meat",   remove_item = true},
+				{name = "chitin", amount = IMP_SKIN}
+			},
+			tech = "reca",
+			name = "ex-chi-arq",
 			icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
 			icon_size = 64,
 		},
 		{
 			ingredients =
-				{
-					{name = 'chitin-arqad', remove_item = true},
-					{name = 'blood-arqad', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "chitin-arqad", remove_item = true},
+				{name = "blood-arqad",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'chitin', remove_item = true},
-					{name = 'arthropod-blood', amount = IMP_BLOOD},
-				},
-			tech = 'recombinant-ery',
-			name = 'ex-blo-arq',
+			{
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", amount = IMP_BLOOD},
+			},
+			tech = "recombinant-ery",
+			name = "ex-blo-arq",
 			icon = "__pyalienlifegraphics3__/graphics/icons/blood-arqad.png",
 			icon_size = 64,
 		},
-				{
+		{
 			ingredients =
-				{
-					--{name = 'blood-arqad', amount = INPUT_AMOUNT},
-				},
+			{
+				--{name = 'blood-arqad', amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'arthropod-blood', remove_item = true},
-					{name = 'bee-venom', amount = IMP_SPECIAL}
-				},
-			tech = 'recombinant-ery',
-			name = 'ex-venom-arq',
+			{
+				{name = "arthropod-blood", remove_item = true},
+				{name = "bee-venom",       amount = IMP_SPECIAL}
+			},
+			tech = "recombinant-ery",
+			name = "ex-venom-arq",
 			icon = "__pyalienlifegraphics3__/graphics/icons/bee-venom.png",
 			icon_size = 64,
 		},

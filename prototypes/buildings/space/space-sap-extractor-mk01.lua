@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 30},
-        {type = "item", name = "soil", amount = 100},
-        {type = "item", name = "pipe", amount = 15},
-        {type = "item", name = "inserter", amount = 2},
+        {type = "item", name = "stone-brick",        amount = 30},
+        {type = "item", name = "soil",               amount = 100},
+        {type = "item", name = "pipe",               amount = 15},
+        {type = "item", name = "inserter",           amount = 2},
         {type = "item", name = "electronic-circuit", amount = 5},
-        {type = "item", name = "iron-plate", amount = 30},
+        {type = "item", name = "iron-plate",         amount = 30},
     },
     results = {
         {type = "item", name = "space-sap-extractor-mk01", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-sap-extractor-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/sap-extractor-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-sap-extractor-mk01"},
     fast_replaceable_group = "sap-extractor",
@@ -44,9 +44,9 @@ ENTITY {
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    
+
     module_slots = 2,
-    allowed_effects = {"consumption", "speed", 'pollution'},
+    allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"sap"},
     crafting_speed = 0.1,
     energy_source = {

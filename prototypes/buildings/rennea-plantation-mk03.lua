@@ -5,17 +5,17 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "rennea-plantation-mk02", amount = 1},
-        {type = "item", name = "nichrome", amount = 15},
-        {type = "item", name = "ticocr-alloy", amount = 20},
-        {type = "item", name = "processing-unit", amount = 50},
-        {type = "item", name = "molybdenum-plate", amount = 40},
-        {type = "item", name = "electric-engine-unit", amount = 12},
-        {type = "item", name = "nexelit-plate", amount = 40},
+        {type = "item", name = "nichrome",               amount = 15},
+        {type = "item", name = "ticocr-alloy",           amount = 20},
+        {type = "item", name = "processing-unit",        amount = 50},
+        {type = "item", name = "molybdenum-plate",       amount = 40},
+        {type = "item", name = "electric-engine-unit",   amount = 12},
+        {type = "item", name = "nexelit-plate",          amount = 40},
     },
     results = {
         {type = "item", name = "rennea-plantation-mk03", amount = 1}
     }
-}:add_unlock("botany-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("botany-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
 
 ITEM {
     type = "item",
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "rennea-plantation-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/rennea-plantation-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "rennea-plantation-mk03"},
     fast_replaceable_group = "rennea-plantation",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = 90,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"rennea"},
     crafting_speed = 0.2,
     energy_source = {

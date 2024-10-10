@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "blanket", amount = 5},
-        {type = "item", name = "wall-shield", amount = 20},
-        {type = "item", name = "nbfe-alloy", amount = 40},
-        {type = "item", name = "super-steel", amount = 100},
-        {type = "item", name = "control-unit", amount = 10},
+        {type = "item", name = "blanket",             amount = 5},
+        {type = "item", name = "wall-shield",         amount = 20},
+        {type = "item", name = "nbfe-alloy",          amount = 40},
+        {type = "item", name = "super-steel",         amount = 100},
+        {type = "item", name = "control-unit",        amount = 10},
         {type = "item", name = "slaughterhouse-mk03", amount = 1},
     },
     results = {
@@ -29,10 +29,10 @@ ITEM {
 }
 
 ENTITY {
-    type = 'assembling-machine',
+    type = "assembling-machine",
     name = "slaughterhouse-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk04"},
     fast_replaceable_group = "slaughterhouse",

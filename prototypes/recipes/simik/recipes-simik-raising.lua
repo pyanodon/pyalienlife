@@ -1,76 +1,76 @@
 ------------------CUB MAKER------------------
 
 py.autorecipes {
-    name = 'simik-cub',
-	category = 'rc',
-	allowed_module_categories = {'simik'},
+	name = "simik-cub",
+	category = "rc",
+	allowed_module_categories = {"simik"},
 	--module_limitations = 'simik',
-	subgroup = 'py-alienlife-simik',
-	order = 'c',
+	subgroup = "py-alienlife-simik",
+	order = "c",
 	main_product = "simik-pup",
 	crafting_speed = 30,
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					--{name = "simik", amount = 4},
-                    {name='stone-wool', amount =3, fallback = "raw-fiber"},
-                    {name='sea-sponge', amount =1},
-					{name='simik-food-01', amount =2},
-					{name='olefin-barrel', amount=5, return_barrel = true},
-					{name= 'molten-iron-barrel', amount = 2, return_barrel = true},
-				},
+			{
+				--{name = "simik", amount = 4},
+				{name = "stone-wool",         amount = 3, fallback = "raw-fiber"},
+				{name = "sea-sponge",         amount = 1},
+				{name = "simik-food-01",      amount = 2},
+				{name = "olefin-barrel",      amount = 5, return_barrel = true},
+				{name = "molten-iron-barrel", amount = 2, return_barrel = true},
+			},
 			results =
-				{
-					--{name = 'simik', amount_min = 1, amount_max = 4},
-					{name='simik-pup', amount = 2},
-				},
-			tech = 'simik-mk01'
+			{
+				--{name = 'simik', amount_min = 1, amount_max = 4},
+				{name = "simik-pup", amount = 2},
+			},
+			tech = "simik-mk01"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='arqad-maggot', amount = 4},
-					{name='stone', amount = 10},
-					{name = 'molten-iron-barrel', remove_item = true},
-					{name = 'molten-steel-barrel', amount = 2, return_barrel = true}
-				},
+			{
+				{name = "arqad-maggot",        amount = 4},
+				{name = "stone",               amount = 10},
+				{name = "molten-iron-barrel",  remove_item = true},
+				{name = "molten-steel-barrel", amount = 2,        return_barrel = true}
+			},
 			results =
-				{
-					{name='simik-pup', add_amount = 2},
-				},
-			tech = 'simik-mk02'
+			{
+				{name = "simik-pup", add_amount = 2},
+			},
+			tech = "simik-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name='simik-food-02', amount =2},
-					{name = 'molten-steel-barrel', remove_item = true},
-					{name = 'molten-stainless-steel-barrel', amount = 2, return_barrel = true}
-				},
+			{
+				{name = "simik-food-02",                 amount = 2},
+				{name = "molten-steel-barrel",           remove_item = true},
+				{name = "molten-stainless-steel-barrel", amount = 2,        return_barrel = true}
+			},
 			results =
-				{
-					{name='simik-pup', add_amount = 4},
-				},
-			tech = 'simik-mk03'
+			{
+				{name = "simik-pup", add_amount = 4},
+			},
+			tech = "simik-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name='stone', add_amount = 10},
-					{name = 'molten-stainless-steel-barrel', remove_item = true},
-					{name = 'molten-super-steel-barrel', amount = 2, return_barrel = true}
-				},
+			{
+				{name = "stone",                         add_amount = 10},
+				{name = "molten-stainless-steel-barrel", remove_item = true},
+				{name = "molten-super-steel-barrel",     amount = 2,        return_barrel = true}
+			},
 			results =
-				{
-					{name='simik-pup', add_amount = 8},
-				},
-			tech = 'simik-mk04'
+			{
+				{name = "simik-pup", add_amount = 8},
+			},
+			tech = "simik-mk04"
 		},
 	}
 }
@@ -182,87 +182,87 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --
 
 --raising
 
 py.autorecipes {
-    name = 'caged-simik',
-	category = 'simik',
-	module_limitations = 'simik',
-	subgroup = 'py-alienlife-simik',
-	order = 'b',
+	name = "caged-simik",
+	category = "simik",
+	module_limitations = "simik",
+	subgroup = "py-alienlife-simik",
+	order = "b",
 	main_product = "simik",
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name = "simik-pup", amount = 5},
-                    {name='stone-wool', amount =3, fallback = "raw-fiber"},
-                    {name='sea-sponge', amount =1},
-					{name='simik-food-01', amount =1},
-					{name = 'iron-plate', amount = 10},
-					{name='olefin-barrel', amount=2, return_barrel = true},
-				},
+			{
+				{name = "simik-pup",     amount = 5},
+				{name = "stone-wool",    amount = 3, fallback = "raw-fiber"},
+				{name = "sea-sponge",    amount = 1},
+				{name = "simik-food-01", amount = 1},
+				{name = "iron-plate",    amount = 10},
+				{name = "olefin-barrel", amount = 2, return_barrel = true},
+			},
 			results =
-				{
-					{name='simik', amount = 5},
-				},
+			{
+				{name = "simik", amount = 5},
+			},
 			crafting_speed = 100,
-			tech = 'simik-mk01'
+			tech = "simik-mk01"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name = "simik-pup", add_amount = 5},
-					{name='arqad-maggot', amount = 2},
-					{name='stone', amount = 5},
-					{name = 'iron-plate', remove_item = true},
-					{name = 'steel-plate', amount = 5}
-				},
+			{
+				{name = "simik-pup",    add_amount = 5},
+				{name = "arqad-maggot", amount = 2},
+				{name = "stone",        amount = 5},
+				{name = "iron-plate",   remove_item = true},
+				{name = "steel-plate",  amount = 5}
+			},
 			results =
-				{
-					{name='simik', add_amount = 5},
-				},
+			{
+				{name = "simik", add_amount = 5},
+			},
 			crafting_speed = 100,
-			tech = 'simik-mk02'
+			tech = "simik-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = "simik-pup", add_amount = 5},
-					{name='simik-food-01',remove_item = true},
-					{name='simik-food-02', amount =1},
-					{name = 'steel-plate', remove_item = true},
-					{name = 'stainless-steel', amount = 5}
-				},
+			{
+				{name = "simik-pup",       add_amount = 5},
+				{name = "simik-food-01",   remove_item = true},
+				{name = "simik-food-02",   amount = 1},
+				{name = "steel-plate",     remove_item = true},
+				{name = "stainless-steel", amount = 5}
+			},
 			results =
-				{
-					{name='simik', add_amount = 5},
-				},
+			{
+				{name = "simik", add_amount = 5},
+			},
 			crafting_speed = 100,
-			tech = 'simik-mk03'
+			tech = "simik-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name = "simik-pup", add_amount = 5},
-					{name='arqad-maggot', add_amount =5},
-					{name='stone', add_amount = 5},
-					{name = 'stainless-steel', remove_item = true},
-					{name = 'super-steel', amount = 5}
-				},
+			{
+				{name = "simik-pup",       add_amount = 5},
+				{name = "arqad-maggot",    add_amount = 5},
+				{name = "stone",           add_amount = 5},
+				{name = "stainless-steel", remove_item = true},
+				{name = "super-steel",     amount = 5}
+			},
 			results =
-				{
-					{name='simik', add_amount = 5},
-				},
+			{
+				{name = "simik", add_amount = 5},
+			},
 			crafting_speed = 100,
-			tech = 'simik-mk04'
+			tech = "simik-mk04"
 		},
 	}
 }
@@ -604,77 +604,77 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --
 
 --poop
 
 py.autorecipes {
-    name = 'simik-poop',
-	category = 'simik',
-	module_limitations = 'simik',
-	subgroup = 'py-alienlife-simik',
-	order = 'b',
+	name = "simik-poop",
+	category = "simik",
+	module_limitations = "simik",
+	subgroup = "py-alienlife-simik",
+	order = "b",
 	main_product = "simik-poop",
-    mats =
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-                    {name='stone-wool', amount =3, fallback = "raw-fiber"},
-					{name='simik-food-01', amount =1},
-					{name = 'stone', amount = 10},
-					{name='olefin-barrel', amount=2, return_barrel = true},
-				},
+			{
+				{name = "stone-wool",    amount = 3, fallback = "raw-fiber"},
+				{name = "simik-food-01", amount = 1},
+				{name = "stone",         amount = 10},
+				{name = "olefin-barrel", amount = 2, return_barrel = true},
+			},
 			results =
-				{
-					{name='simik-poop', amount = 5},
-				},
+			{
+				{name = "simik-poop", amount = 5},
+			},
 			crafting_speed = 80,
-			tech = 'simik-mk01'
+			tech = "simik-mk01"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='arqad-maggot', amount = 2},
-				},
+			{
+				{name = "arqad-maggot", amount = 2},
+			},
 			results =
-				{
-					{name='simik-poop', add_amount = 3},
-				},
+			{
+				{name = "simik-poop", add_amount = 3},
+			},
 			crafting_speed = 80,
-			tech = 'simik-mk02'
+			tech = "simik-mk02"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'simik-food-01', remove_item = true},
-					{name='simik-food-02', amount =1},
-					{name = 'grod-seeds', amount = 5}
-				},
+			{
+				{name = "simik-food-01", remove_item = true},
+				{name = "simik-food-02", amount = 1},
+				{name = "grod-seeds",    amount = 5}
+			},
 			results =
-				{
-					{name='simik-poop', add_amount = 4},
-				},
+			{
+				{name = "simik-poop", add_amount = 4},
+			},
 			crafting_speed = 80,
-			tech = 'simik-mk03'
+			tech = "simik-mk03"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name='arqad-maggot', add_amount =3},
-					{name='stone', add_amount = 5},
-					{name = 'scrondrix', amount = 1}
-				},
+			{
+				{name = "arqad-maggot", add_amount = 3},
+				{name = "stone",        add_amount = 5},
+				{name = "scrondrix",    amount = 1}
+			},
 			results =
-				{
-					{name='simik-poop', add_amount = 10},
-				},
+			{
+				{name = "simik-poop", add_amount = 10},
+			},
 			crafting_speed = 80,
-			tech = 'simik-mk04'
+			tech = "simik-mk04"
 		},
 	}
 }

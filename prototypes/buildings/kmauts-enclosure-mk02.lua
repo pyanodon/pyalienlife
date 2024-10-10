@@ -5,16 +5,16 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "kmauts-enclosure-mk01", amount = 1},
-        {type = "item", name = "gasifier", amount = 1},
-        {type = "item", name = "nexelit-plate", amount = 30},
-        {type = "item", name = "lead-plate", amount = 20},
-        {type = "item", name = "latex", amount = 30},
-        {type = "item", name = "neuroprocessor", amount = 20},
+        {type = "item", name = "gasifier",              amount = 1},
+        {type = "item", name = "nexelit-plate",         amount = 30},
+        {type = "item", name = "lead-plate",            amount = 20},
+        {type = "item", name = "latex",                 amount = 30},
+        {type = "item", name = "neuroprocessor",        amount = 20},
     },
     results = {
         {type = "item", name = "kmauts-enclosure-mk02", amount = 1}
     }
-}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("land-animals-mk03"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "kmauts-enclosure-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/kmauts-enclosure-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "kmauts-enclosure-mk02"},
     fast_replaceable_group = "kmauts-enclosure",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 100,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"kmauts"},
     crafting_speed = .0633,
     energy_source = {
@@ -203,14 +203,14 @@ ENTITY {
                     shift = {0.248, -0.591},
                     priority = "low"
                 },
-    			{
+                {
                     filename = "__pyfusionenergygraphics__/graphics/entity/kmauts-enclosure/layer-2-mask.png",
                     width = 338,
                     height = 357,
                     frame_count = 1,
                     shift = {0.248, -0.591},
                     priority = "low",
-    				tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
                 },
                 --TREE
                 {

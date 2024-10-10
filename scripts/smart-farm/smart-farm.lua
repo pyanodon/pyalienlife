@@ -2,16 +2,16 @@ Smart_Farm = {}
 Smart_Farm.events = {}
 
 local farm_filenames = {
-	'farm-ralesia',
-	'farm-rennea',
-	'farm-tuuphra',
-	'farm-grod',
-	'farm-yotoi',
-	'farm-kicalk',
-	'farm-arum',
-	'farm-yotoi-fruit',
-	'farm-bioreserve',
-	script.active_mods['pyalternativeenergy'] and '__pyalternativeenergy__/scripts/crops/farm-mova'
+	"farm-ralesia",
+	"farm-rennea",
+	"farm-tuuphra",
+	"farm-grod",
+	"farm-yotoi",
+	"farm-kicalk",
+	"farm-arum",
+	"farm-yotoi-fruit",
+	"farm-bioreserve",
+	script.active_mods["pyalternativeenergy"] and "__pyalternativeenergy__/scripts/crops/farm-mova"
 }
 
 local farms = {}
@@ -53,13 +53,13 @@ end
 
 Smart_Farm.events.on_built = function(event)
 	local entity = event.created_entity or event.entity
-    if entity.name ~= 'mega-farm' then return end
+	if entity.name ~= "mega-farm" then return end
 	local surface = entity.surface
 
 	for _, position in pairs(get_fence_positions(entity)) do
-		if not surface.entity_prototype_collides('wood-fence', position, false) then
-			surface.create_entity{
-				name = 'wood-fence',
+		if not surface.entity_prototype_collides("wood-fence", position, false) then
+			surface.create_entity {
+				name = "wood-fence",
 				position = position,
 				force = entity.force
 			}
@@ -72,7 +72,7 @@ Smart_Farm.events.on_built = function(event)
 
 		local previous_tile = surface.get_tile(position)
 		if not previous_tile.valid or previous_tile.prototype.collision_mask.layers.water_tile then goto continue end
-		table.insert(landfill_tiles, {name = 'landfill', position = position})
+		table.insert(landfill_tiles, {name = "landfill", position = position})
 
 		storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
 		if storage.smart_farm_landfill_data[x][y] then
@@ -88,11 +88,11 @@ end
 
 Smart_Farm.events.on_destroyed = function(event)
 	local entity = event.entity
-	if entity.name ~= 'mega-farm' then return end
+	if entity.name ~= "mega-farm" then return end
 	local surface = entity.surface
 
 	for _, position in pairs(get_fence_positions(entity)) do
-		local fence = surface.find_entity('wood-fence', position)
+		local fence = surface.find_entity("wood-fence", position)
 		if fence and fence.force_index == entity.force_index then
 			fence.destroy()
 		end
@@ -125,7 +125,7 @@ end
 ---@param event EventData.on_rocket_launched
 Smart_Farm.events.on_rocket_launched = function(event)
 	local silo = event.rocket_silo --[[@as LuaEntity]]
-	if silo.name ~= 'mega-farm' then return end
+	if silo.name ~= "mega-farm" then return end
 	local surface = silo.surface
 	local position = silo.position
 	position.y = position.y - 15
@@ -134,7 +134,7 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	if not replicator then return end
 	local farm = farms[replicator.name]
 	if not farm then return end
-	
+
 	local output
 	local recipe_name = silo.get_recipe().name
 	for _, recipe in pairs(farm.recipes) do
@@ -145,30 +145,30 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	end
 	if not output then return end
 
-	local is_alien_biomes = script.active_mods['alien-biomes']
+	local is_alien_biomes = script.active_mods["alien-biomes"]
 	for x = -11, 11 do
 		for y = -11, 11 do
 			local ore_location = {position.x + x, position.y + y}
-			if is_alien_biomes or not surface.get_tile(ore_location).collides_with('resource-layer') then
+			if is_alien_biomes or not surface.get_tile(ore_location).collides_with("resource-layer") then
 				local ore = surface.find_entity(farm.crop, ore_location)
 
 				if ore then
 					ore.amount = ore.amount + output
 				else
-					surface.create_entity{
+					surface.create_entity {
 						name = farm.crop,
 						position = ore_location,
 						amount = output,
-						force = 'neutral'
+						force = "neutral"
 					}
 				end
 			end
 		end
 	end
 
-	for _, harvester in pairs(surface.find_entities_filtered{
+	for _, harvester in pairs(surface.find_entities_filtered {
 		area = {{position.x - 12, position.y - 12}, {position.x + 12, position.y + 12}},
-		name = {'harvester', 'collector', 'collector-mk02', 'collector-mk03', 'collector-mk04'}
+		name = {"harvester", "collector", "collector-mk02", "collector-mk03", "collector-mk04"}
 	}) do
 		harvester.update_connections()
 		if harvester.get_control_behavior() or next(harvester.circuit_connected_entities.red) or next(harvester.circuit_connected_entities.green) then

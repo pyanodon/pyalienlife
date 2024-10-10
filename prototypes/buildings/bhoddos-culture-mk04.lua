@@ -7,11 +7,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "bhoddos-culture-mk03", amount = 1},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "wall-shield", amount = 15},
-        {type = "item", name = "nbfe-alloy", amount = 40},
-        {type = "item", name = "silver-foam", amount = 20},
-        {type = "item", name = "divertor", amount = 10},
+        {type = "item", name = "control-unit",         amount = 10},
+        {type = "item", name = "wall-shield",          amount = 15},
+        {type = "item", name = "nbfe-alloy",           amount = 40},
+        {type = "item", name = "silver-foam",          amount = 20},
+        {type = "item", name = "divertor",             amount = 10},
     },
     results = {
         {type = "item", name = "bhoddos-culture-mk04", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "bhoddos-culture-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-culture-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "bhoddos-culture-mk04"},
     fast_replaceable_group = "bhoddos-culture",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"bhoddos"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "bhoddos-culture-mk01"),
     energy_source = {

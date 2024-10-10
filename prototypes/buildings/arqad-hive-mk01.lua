@@ -7,13 +7,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "glass",                  amount = 50},
         {type = "item", name = "automated-factory-mk01", amount = 1},
-        {type = "item", name = "gasifier", amount = 1},
-        {type = "item", name = "aluminium-plate", amount = 30},
-        {type = "item", name = "steel-plate", amount = 40},
-        {type = "item", name = "iron-gear-wheel", amount = 50},
-        {type = "item", name = "pipe", amount = 20},
+        {type = "item", name = "gasifier",               amount = 1},
+        {type = "item", name = "aluminium-plate",        amount = 30},
+        {type = "item", name = "steel-plate",            amount = 40},
+        {type = "item", name = "iron-gear-wheel",        amount = 50},
+        {type = "item", name = "pipe",                   amount = 20},
     },
     results = {
         {type = "item", name = "arqad-hive-mk01", amount = 1}
@@ -36,7 +36,7 @@ ENTITY {
     type = "assembling-machine",
     name = "arqad-hive-mk01",
     icon = "__pyalienlifegraphics3__/graphics/icons/arqad-hive-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "arqad-hive-mk01"},
     fast_replaceable_group = "arqad-hive",
@@ -47,7 +47,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"arqad"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -306,7 +306,7 @@ ENTITY {
                     frame_count = 1,
                     shift = util.by_pixel(0, -32),
                     priority = "low",
-    				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 --DOME
                 {

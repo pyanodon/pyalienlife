@@ -8,12 +8,12 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "ralesia-plantation-mk01", amount = 1},
-        {type = "item", name = "pump", amount = 4},
-        {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "steel-plate", amount = 40},
-        {type = "item", name = "steam-engine", amount = 4},
-        {type = "item", name = "pipe", amount = 10},
-        {type = "item", name = "glass", amount = 100}
+        {type = "item", name = "pump",                    amount = 4},
+        {type = "item", name = "electronic-circuit",      amount = 20},
+        {type = "item", name = "steel-plate",             amount = 40},
+        {type = "item", name = "steam-engine",            amount = 4},
+        {type = "item", name = "pipe",                    amount = 10},
+        {type = "item", name = "glass",                   amount = 100}
     },
     results = {
         {type = "item", name = "xyhiphoe-pool-mk01", amount = 1}
@@ -24,7 +24,7 @@ ITEM {
     type = "item",
     name = "xyhiphoe-pool-mk01",
     icon = "__pyfusionenergygraphics__/graphics/icons/xyhiphoe-pool-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-farm-buildings-mk01",
     order = "d",
@@ -36,7 +36,7 @@ ENTITY {
     type = "assembling-machine",
     name = "xyhiphoe-pool-mk01",
     icon = "__pyfusionenergygraphics__/graphics/icons/xyhiphoe-pool-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "xyhiphoe-pool-mk01"},
     fast_replaceable_group = "xyhiphoe-pool",
@@ -47,7 +47,7 @@ ENTITY {
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"xyhiphoe"},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
@@ -70,7 +70,7 @@ ENTITY {
                     animation_speed = 0.5,
                     shift = {-2.532, -0.966}
                 },
-    			{
+                {
                     filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/left-mask.png",
                     width = 96,
                     height = 318,
@@ -78,7 +78,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.5,
                     shift = {-2.532, -0.966},
-    				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
                     filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/mid.png",
@@ -89,7 +89,7 @@ ENTITY {
                     animation_speed = 0.5,
                     shift = {0.468, -0.966}
                 },
-    			{
+                {
                     filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/mid-mask.png",
                     width = 96,
                     height = 318,
@@ -97,7 +97,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.5,
                     shift = {0.468, -0.966},
-    				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
                 {
                     filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/right.png",
@@ -108,7 +108,7 @@ ENTITY {
                     animation_speed = 0.5,
                     shift = {3.250, -0.966}
                 },
-    			{
+                {
                     filename = "__pyfusionenergygraphics__/graphics/entity/xyhiphoe-pool/right-mask.png",
                     width = 82,
                     height = 318,
@@ -116,7 +116,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.5,
                     shift = {3.250, -0.966},
-    				tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 }
             }
         },

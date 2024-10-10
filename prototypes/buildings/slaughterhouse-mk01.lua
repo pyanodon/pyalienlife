@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 100},
-        {type = "item", name = "pipe", amount = 20},
-        {type = "item", name = "titanium-plate", amount = 40},
-        {type = "item", name = "steam-engine", amount = 10},
+        {type = "item", name = "stone-brick",        amount = 100},
+        {type = "item", name = "pipe",               amount = 20},
+        {type = "item", name = "titanium-plate",     amount = 40},
+        {type = "item", name = "steam-engine",       amount = 10},
         {type = "item", name = "electronic-circuit", amount = 50},
-        {type = "item", name = "iron-gear-wheel", amount = 70},
-        {type = "item", name = "glass", amount = 50},
+        {type = "item", name = "iron-gear-wheel",    amount = 70},
+        {type = "item", name = "glass",              amount = 50},
     },
     results = {
         {type = "item", name = "slaughterhouse-mk01", amount = 1}
@@ -30,10 +30,10 @@ ITEM {
 }
 
 ENTITY {
-    type = 'assembling-machine',
+    type = "assembling-machine",
     name = "slaughterhouse-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk01"},
     fast_replaceable_group = "slaughterhouse",

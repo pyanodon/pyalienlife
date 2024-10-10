@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/zoology.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"vrauks","rendering"},
+    prerequisites = {"vrauks", "rendering"},
     effects = {},
     unit = {
         count = 200,

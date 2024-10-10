@@ -1,4 +1,4 @@
-data:extend{{
+data:extend {{
     type = "collision-layer",
     name = "layer_14" -- this is not the 14th layer btw
 }}
@@ -11,12 +11,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nbti-alloy", amount = 40},
-        {type = "item", name = "small-lamp", amount = 20},
-        {type = "item", name = "concrete", amount = 200},
-        {type = "item", name = "concrete-wall", amount = 50},
+        {type = "item", name = "nbti-alloy",         amount = 40},
+        {type = "item", name = "small-lamp",         amount = 20},
+        {type = "item", name = "concrete",           amount = 200},
+        {type = "item", name = "concrete-wall",      amount = 50},
         {type = "item", name = "electronic-circuit", amount = 50},
-        {type = "item", name = "steel-plate", amount = 50},
+        {type = "item", name = "steel-plate",        amount = 50},
     },
     results = {
         {type = "item", name = "space-dingrits-mk01", amount = 1}
@@ -39,7 +39,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-dingrits-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-pack-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-dingrits-mk01"},
     fast_replaceable_group = "dingrits-pack",
@@ -51,7 +51,7 @@ ENTITY {
     collision_mask = {layers = {ground_tile = true, water_tile = true, layer_14 = true}},
     match_animation_speed_to_activity = false,
     module_slots = 20,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"dingrits"},
     crafting_speed = 0.075,
     energy_source = {
@@ -205,28 +205,28 @@ ENTITY {
                     animation_speed = 0.3
                 }
             },
-    
+
         },
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off.png",
-                width = 480,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -16)
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off.png",
+                    width = 480,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16)
                 },
                 {
-                filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off-mask.png",
-                width = 480,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -16),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    filename = "__pyalienlifegraphics__/graphics/entity/dingrits-pack/off-mask.png",
+                    width = 480,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -16),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
-          },
+            },
         },
     },
 

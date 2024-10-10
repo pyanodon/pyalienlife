@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "research-center-mk03", amount = 1},
-        {type = "item", name = "wall-shield", amount = 30},
-        {type = "item", name = "control-unit", amount = 15},
-        {type = "item", name = "boron-carbide", amount = 25},
+        {type = "item", name = "research-center-mk03",  amount = 1},
+        {type = "item", name = "wall-shield",           amount = 30},
+        {type = "item", name = "control-unit",          amount = 15},
+        {type = "item", name = "boron-carbide",         amount = 25},
         {type = "item", name = "low-density-structure", amount = 20},
-        {type = "item", name = "blanket", amount = 5},
-        {type = "item", name = "nbfe-alloy", amount = 50},
+        {type = "item", name = "blanket",               amount = 5},
+        {type = "item", name = "nbfe-alloy",            amount = 50},
     },
     results = {
         {type = "item", name = "research-center-mk04", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "research-center-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/research-center-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "research-center-mk04"},
     fast_replaceable_group = "research-center",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 4,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"research", "research-handcrafting"},
     crafting_speed = 4,
     energy_source = {
@@ -125,7 +125,7 @@ ENTITY {
                     frame_count = 250,
                     line_length = 30,
                     animation_speed = 0.8,
-                    scale= 0.9,
+                    scale = 0.9,
                     draw_as_glow = true,
                 }
             },

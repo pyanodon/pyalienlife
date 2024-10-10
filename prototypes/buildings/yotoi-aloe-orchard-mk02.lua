@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "yotoi-aloe-orchard-mk01", amount = 1},
-        {type = "item", name = "stainless-steel", amount = 50},
-        {type = "item", name = "engine-unit", amount = 2},
-        {type = "item", name = "niobium-pipe", amount = 15},
-        {type = "item", name = "advanced-circuit", amount = 20},
-        {type = "item", name = "plastic-bar", amount = 40},
-        {type = "item", name = "concrete", amount = 100},
+        {type = "item", name = "stainless-steel",         amount = 50},
+        {type = "item", name = "engine-unit",             amount = 2},
+        {type = "item", name = "niobium-pipe",            amount = 15},
+        {type = "item", name = "advanced-circuit",        amount = 20},
+        {type = "item", name = "plastic-bar",             amount = 40},
+        {type = "item", name = "concrete",                amount = 100},
     },
     results = {
         {type = "item", name = "yotoi-aloe-orchard-mk02", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "yotoi-aloe-orchard-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "yotoi-aloe-orchard-mk02"},
     fast_replaceable_group = "yotoi-aloe-orchard",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = 66,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"yotoi"},
     crafting_speed = 0.12,
     energy_source = {

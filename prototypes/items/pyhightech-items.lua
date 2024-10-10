@@ -26,10 +26,10 @@ ITEM {
     type = "item",
     name = "kicalk-seeds-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",   icon_size = 64},
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-kicalk",
@@ -41,10 +41,10 @@ ITEM {
     type = "item",
     name = "kicalk-seeds-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",   icon_size = 64},
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-kicalk",
@@ -56,10 +56,10 @@ ITEM {
     type = "item",
     name = "kicalk-seeds-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/kicalk-seeds.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",   icon_size = 64},
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-kicalk",
@@ -100,7 +100,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-a",
     stack_size = 50,
-    effect = {pollution = 1,speed = 0.25},
+    effect = {pollution = 1, speed = 0.25},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -120,7 +120,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-b",
     stack_size = 50,
-    effect = {pollution = 1,speed = 0.5},
+    effect = {pollution = 1, speed = 0.5},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -140,7 +140,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-c",
     stack_size = 50,
-    effect = {pollution = 1,speed = 1},
+    effect = {pollution = 1, speed = 1},
     limitation = {},
     limitation_message_key = "kicalk"
 }
@@ -160,20 +160,20 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = 1,speed = 1.5},
+    effect = {pollution = 1, speed = 1.5},
     limitation = {},
     limitation_message_key = "kicalk"
 }
 
-data:extend{{
-    type = 'item',
-    name = 'kicalk-dry',
-    icon = '__pyalienlifegraphics__/graphics/icons/kicalk-dry.png',
+data:extend {{
+    type = "item",
+    name = "kicalk-dry",
+    icon = "__pyalienlifegraphics__/graphics/icons/kicalk-dry.png",
     icon_size = 64,
     flags = {},
-    subgroup = 'py-alienlife-kicalk',
-    order = 'b',
-    stack_size = data.raw.module['kicalk'].stack_size * 2,
+    subgroup = "py-alienlife-kicalk",
+    order = "b",
+    stack_size = data.raw.module["kicalk"].stack_size * 2,
 }}
 
 ITEM {
@@ -213,10 +213,10 @@ ITEM {
     type = "item",
     name = "moondrop-seeds-mk02",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",     icon_size = 64},
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-moon",
@@ -228,10 +228,10 @@ ITEM {
     type = "item",
     name = "moondrop-seeds-mk03",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",     icon_size = 64},
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-moon",
@@ -243,10 +243,10 @@ ITEM {
     type = "item",
     name = "moondrop-seeds-mk04",
     icons =
-        {
-            {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
-            {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
-        },
+    {
+        {icon = "__pyalienlifegraphics__/graphics/icons/moondrop-seeds.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",     icon_size = 64},
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-moon",
@@ -268,7 +268,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = 1,speed = 1},
+    effect = {pollution = 1, speed = 1},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -288,7 +288,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = 1,speed = 2},
+    effect = {pollution = 1, speed = 2},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -308,7 +308,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = 1,speed = 3},
+    effect = {pollution = 1, speed = 3},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -328,7 +328,7 @@ ITEM {
     subgroup = "py-alienlife-moon",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = 1,speed = 4},
+    effect = {pollution = 1, speed = 4},
     limitation = {},
     limitation_message_key = "moondrop"
 }
@@ -447,9 +447,9 @@ ITEM {
     type = "item",
     name = "cadaveric-arum-seeds-mk02",
     icons = {
-		{icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
-		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk02.png', icon_size = 64}
-	},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",            icon_size = 64}
+    },
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
@@ -460,9 +460,9 @@ ITEM {
     type = "item",
     name = "cadaveric-arum-seeds-mk03",
     icons = {
-		{icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
-		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk03.png', icon_size = 64}
-	},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",            icon_size = 64}
+    },
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
@@ -473,9 +473,9 @@ ITEM {
     type = "item",
     name = "cadaveric-arum-seeds-mk04",
     icons = {
-		{icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
-		{icon = '__pyalienlifegraphics__/graphics/icons/over-mk04.png', icon_size = 64}
-	},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum-seeds.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",            icon_size = 64}
+    },
     flags = {},
     subgroup = "py-alienlife-cadaveric",
     order = "x",
@@ -493,10 +493,10 @@ ITEM {
     category = "arum",
     tier = 1,
     flags = {},
-    subgroup = 'py-alienlife-cadaveric',
+    subgroup = "py-alienlife-cadaveric",
     order = "cad-a",
     stack_size = 50,
-    effect = {pollution = 1,speed = 1},
+    effect = {pollution = 1, speed = 1},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -513,10 +513,10 @@ ITEM {
     category = "arum",
     tier = 2,
     flags = {},
-    subgroup = 'py-alienlife-cadaveric',
+    subgroup = "py-alienlife-cadaveric",
     order = "cad-b",
     stack_size = 50,
-    effect = {pollution = 1,speed = 2},
+    effect = {pollution = 1, speed = 2},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -533,10 +533,10 @@ ITEM {
     category = "arum",
     tier = 3,
     flags = {},
-    subgroup = 'py-alienlife-cadaveric',
+    subgroup = "py-alienlife-cadaveric",
     order = "cad-c",
     stack_size = 50,
-    effect = {pollution = 1,speed = 3},
+    effect = {pollution = 1, speed = 3},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -553,10 +553,10 @@ ITEM {
     category = "arum",
     tier = 4,
     flags = {},
-    subgroup = 'py-alienlife-cadaveric',
+    subgroup = "py-alienlife-cadaveric",
     order = "cad-d",
     stack_size = 50,
-    effect = {pollution = 1,speed = 4},
+    effect = {pollution = 1, speed = 4},
     limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
@@ -566,13 +566,13 @@ ITEM {
     name = "antelope",
     icon = "__pyalienlifegraphics__/graphics/icons/antelope.png",
     icon_size = 64,
-	category = "antelope",
-	tier = 1,
+    category = "antelope",
+    tier = 1,
     flags = {},
     subgroup = "py-alienlife-antelope",
     order = "r",
     stack_size = 50,
-	effect = {pollution = 1,speed = 1},
-	limitation = {},
-	limitation_message_key = "antelope"
+    effect = {pollution = 1, speed = 1},
+    limitation = {},
+    limitation_message_key = "antelope"
 }

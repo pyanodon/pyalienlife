@@ -5,11 +5,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "burner-mining-drill", amount = 2},
-        {type = "item", name = "iron-gear-wheel", amount = 30},
-        {type = "item", name = "pipe", amount = 20},
-        {type = "item", name = "inductor1", amount = 10},
-        {type = "item", name = "steel-plate", amount = 5},
-        {type = "item", name = "steam-engine", amount = 1},
+        {type = "item", name = "iron-gear-wheel",     amount = 30},
+        {type = "item", name = "pipe",                amount = 20},
+        {type = "item", name = "inductor1",           amount = 10},
+        {type = "item", name = "steel-plate",         amount = 5},
+        {type = "item", name = "steam-engine",        amount = 1},
     },
     results = {
         {type = "item", name = "fluid-drill-mk01", amount = 1}
@@ -53,8 +53,8 @@ ENTITY {
         volume = 200,
         pipe_connections = {
             {flow_direction = "input-output", position = {-2.0, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 0}, direction = defines.direction.east},
-            {flow_direction = "input-output", position = {0, 2.0}, direction = defines.direction.south}
+            {flow_direction = "input-output", position = {2.0, 0},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 2.0},  direction = defines.direction.south}
         }
     },
     energy_source =
@@ -72,7 +72,7 @@ ENTITY {
             minimum_intensity = 0,
             maximum_intensity = 0,
             light_intensity_to_size_coefficient = 0,
-            color = {0,0,0},
+            color = {0, 0, 0},
         },
         smoke =
         {
@@ -148,13 +148,13 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound =
-      {
-        filename = "__base__/sound/electric-mining-drill.ogg",
-        volume = 0.5
-      },
-      audible_distance_modifier = 0.6,
-      fade_in_ticks = 4,
-      fade_out_ticks = 20
+        sound =
+        {
+            filename = "__base__/sound/electric-mining-drill.ogg",
+            volume = 0.5
+        },
+        audible_distance_modifier = 0.6,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
     },
 }

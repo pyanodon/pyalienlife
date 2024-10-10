@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nexelit-plate", amount = 50},
-        {type = "item", name = "stainless-steel", amount = 30},
+        {type = "item", name = "nexelit-plate",         amount = 50},
+        {type = "item", name = "stainless-steel",       amount = 30},
         {type = "item", name = "low-density-structure", amount = 40},
-        {type = "item", name = "electric-engine-unit", amount = 20},
-        {type = "item", name = "processing-unit", amount = 30},
-        {type = "item", name = "slaughterhouse-mk02", amount = 1},
+        {type = "item", name = "electric-engine-unit",  amount = 20},
+        {type = "item", name = "processing-unit",       amount = 30},
+        {type = "item", name = "slaughterhouse-mk02",   amount = 1},
     },
     results = {
         {type = "item", name = "slaughterhouse-mk03", amount = 1}
@@ -29,10 +29,10 @@ ITEM {
 }
 
 ENTITY {
-    type = 'assembling-machine',
+    type = "assembling-machine",
     name = "slaughterhouse-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk03"},
     fast_replaceable_group = "slaughterhouse",

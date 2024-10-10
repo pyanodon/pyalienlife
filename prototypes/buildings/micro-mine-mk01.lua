@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick", amount = 50},
+        {type = "item", name = "stone-brick",           amount = 50},
         {type = "item", name = "electric-mining-drill", amount = 1},
-        {type = "item", name = "glass", amount = 12},
-        {type = "item", name = "inserter", amount = 5},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 20},
+        {type = "item", name = "glass",                 amount = 12},
+        {type = "item", name = "inserter",              amount = 5},
+        {type = "item", name = "electronic-circuit",    amount = 10},
+        {type = "item", name = "iron-gear-wheel",       amount = 20},
     },
     results = {
         {type = "item", name = "micro-mine-mk01", amount = 1}
@@ -32,12 +32,12 @@ ENTITY {
     type = "assembling-machine",
     name = "micro-mine-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/micro-mine-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "micro-mine-mk01"},
     fast_replaceable_group = "micro-mine",
     max_health = 100,
-    
+
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},

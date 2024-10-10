@@ -5,10 +5,10 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "tuuphra-plantation-mk03", amount = 1},
-        {type = "item", name = "science-coating", amount = 15},
-        {type = "item", name = "super-steel", amount = 100},
-        {type = "item", name = "kevlar", amount = 80},
-        {type = "item", name = "control-unit", amount = 30},
+        {type = "item", name = "science-coating",         amount = 15},
+        {type = "item", name = "super-steel",             amount = 100},
+        {type = "item", name = "kevlar",                  amount = 80},
+        {type = "item", name = "control-unit",            amount = 30},
     },
     results = {
         {type = "item", name = "tuuphra-plantation-mk04", amount = 1}
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "tuuphra-plantation-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "tuuphra-plantation-mk04"},
     fast_replaceable_group = "tuuphra-plantation",
@@ -42,7 +42,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_slots = 40,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"tuuphra"},
     crafting_speed = 0.1,
     energy_source = {

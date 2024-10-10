@@ -1,92 +1,91 @@
-
 py.autorecipes {
-    name = 'korlex-milk',
-	category = 'korlex',
-	module_limitations = 'korlex',
-	subgroup = 'py-alienlife-korlex',
-	order = 'z',
+	name = "korlex-milk",
+	category = "korlex",
+	module_limitations = "korlex",
+	subgroup = "py-alienlife-korlex",
+	order = "z",
 	main_product = "barrel-milk",
 	upgrades =
+	{
 		{
+			tech = "biopolymer-clusters",
+			ingredient_changes =
 			{
-				tech = 'biopolymer-clusters',
-				ingredient_changes =
-				{
-					{name = 'empty-milk-barrel', add_amount = 3},
-					{name = 'biopolymer', amount = 1}
-				},
-				result_changes =
-				{
-					{name = 'barrel-milk', add_amount = 3}
-				},
+				{name = "empty-milk-barrel", add_amount = 3},
+				{name = "biopolymer",        amount = 1}
+			},
+			result_changes =
+			{
+				{name = "barrel-milk", add_amount = 3}
 			},
 		},
-    mats =
+	},
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name='fish', amount =5},
-                    {name='tuuphra', amount =5},
-					{name='korlex-food-01', amount = 1},
-                    {name='empty-barrel-milk', amount = 3},
-					{name='water-barrel', amount=10,return_barrel = true},
-				},
+			{
+				{name = "fish",              amount = 5},
+				{name = "tuuphra",           amount = 5},
+				{name = "korlex-food-01",    amount = 1},
+				{name = "empty-barrel-milk", amount = 3},
+				{name = "water-barrel",      amount = 10, return_barrel = true},
+			},
 			results =
-				{
-					{name = 'barrel-milk', amount = 3},
-				},
+			{
+				{name = "barrel-milk", amount = 3},
+			},
 			crafting_speed = 100,
-			tech = 'korlex',
-			name = 'korlex-milk-1',
+			tech = "korlex",
+			name = "korlex-milk-1",
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name='bhoddos', amount =2},
-                    {name='ash', amount =10},
-                    {name='empty-barrel-milk', add_amount = 3},
-				},
+			{
+				{name = "bhoddos",           amount = 2},
+				{name = "ash",               amount = 10},
+				{name = "empty-barrel-milk", add_amount = 3},
+			},
 			results =
-				{
-					{name='barrel-milk', add_amount = 3}
-				},
-				crafting_speed = 80,
-				tech = 'korlex-mk02',
-				name = 'korlex-milk-2',
+			{
+				{name = "barrel-milk", add_amount = 3}
+			},
+			crafting_speed = 80,
+			tech = "korlex-mk02",
+			name = "korlex-milk-2",
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name='ash', add_amount = 5},
-                    {name='korlex-food-02', amount = 2},
-                    {name='empty-barrel-milk', add_amount = 3},
-				},
+			{
+				{name = "ash",               add_amount = 5},
+				{name = "korlex-food-02",    amount = 2},
+				{name = "empty-barrel-milk", add_amount = 3},
+			},
 			results =
-				{
-					{name='barrel-milk', add_amount = 3}
-				},
-				crafting_speed = 60,
-				tech = 'korlex-mk03',
-				name = 'korlex-milk-3',
+			{
+				{name = "barrel-milk", add_amount = 3}
+			},
+			crafting_speed = 60,
+			tech = "korlex-mk03",
+			name = "korlex-milk-3",
 		},
 		--prod
 		{
 			ingredients =
-				{
-                    {name='fish', add_amount = 5},
-                    {name='empty-barrel-milk', add_amount = 3},
-				},
+			{
+				{name = "fish",              add_amount = 5},
+				{name = "empty-barrel-milk", add_amount = 3},
+			},
 			results =
-				{
-					{name='barrel-milk', add_amount = 3}
-				},
-				crafting_speed = 60,
-				tech = 'korlex-mk04',
-				name = 'korlex-milk-4',
+			{
+				{name = "barrel-milk", add_amount = 3}
+			},
+			crafting_speed = 60,
+			tech = "korlex-mk04",
+			name = "korlex-milk-4",
 		},
 	}
 }

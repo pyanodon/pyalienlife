@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "molybdenum-plate", amount = 50},
+        {type = "item", name = "molybdenum-plate",     amount = 50},
         {type = "item", name = "spore-collector-mk02", amount = 1},
         {type = "item", name = "electric-engine-unit", amount = 15},
-        {type = "item", name = "sc-unit", amount = 10},
-        {type = "item", name = "super-steel", amount = 80},
-        {type = "item", name = "processing-unit", amount = 40},
+        {type = "item", name = "sc-unit",              amount = 10},
+        {type = "item", name = "super-steel",          amount = 80},
+        {type = "item", name = "processing-unit",      amount = 40},
     },
     results = {
         {type = "item", name = "spore-collector-mk03", amount = 1}
     }
-}:add_unlock("mycology-mk04"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
+}:add_unlock("mycology-mk04"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
 
 ITEM {
     type = "item",
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "spore-collector-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/spore-collector-mk03.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "spore-collector-mk03"},
     fast_replaceable_group = "spore-collector",
@@ -74,7 +74,7 @@ ENTITY {
                     animation_speed = 0.4,
                     shift = util.by_pixel(10, -80)
                 },
-    
+
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/spore-collector/mask.png",
                     width = 243,

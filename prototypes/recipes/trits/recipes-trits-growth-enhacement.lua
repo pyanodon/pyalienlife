@@ -1,216 +1,216 @@
 py.autorecipes {
-    name = 'trits-improved',
-	category = 'trits',
+	name = "trits-improved",
+	category = "trits",
 	--module_limitations = 'trits',
-	subgroup = 'py-alienlife-trits',
-	order = 'b',
+	subgroup = "py-alienlife-trits",
+	order = "b",
 	--main_product = 'trits',
-    mats =
+	mats =
 	{
 		--nanochondria
 		{
 			ingredients =
-				{
-					{name = 'nanochondria', amount =1},
-					{name = 'trits', amount = 1},
-				},
+			{
+				{name = "nanochondria", amount = 1},
+				{name = "trits",        amount = 1},
+			},
 			results =
-				{
-					{name = 'brain-trits', amount = 1},
-				},
+			{
+				{name = "brain-trits", amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'nanochondria'
+			tech = "nanochondria"
 		},
 		--nanochondria and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'nanochondria'
+			tech = "nanochondria"
 		},
 		--bmp
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'nanochondria',remove_item = true},
-					{name = 'bmp', amount =1},
-				},
+			{
+				{name = "gh",           remove_item = true},
+				{name = "nanochondria", remove_item = true},
+				{name = "bmp",          amount = 1},
+			},
 			results =
-				{
-					{name = 'brain-trits', remove_item = true},
-					{name = 'bone-trits', amount = 1},
-				},
+			{
+				{name = "brain-trits", remove_item = true},
+				{name = "bone-trits",  amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'bmp'
+			tech = "bmp"
 		},
 
 		--bmp and gh
 		{
 			ingredients =
-				{
-					--{name = 'nanochondria', amount =1},
-					{name = 'gh', amount =1},
-				},
+			{
+				--{name = 'nanochondria', amount =1},
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'bmp'
+			tech = "bmp"
 		},
 		--rna anabolic
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'bmp',remove_item = true},
-					{name = 'anabolic-rna', amount =1},
-				},
+			{
+				{name = "gh",           remove_item = true},
+				{name = "bmp",          remove_item = true},
+				{name = "anabolic-rna", amount = 1},
+			},
 			results =
-				{
-					{name = 'bone-trits', remove_item = true},
-					{name = 'meat-trits', amount = 1},
-				},
+			{
+				{name = "bone-trits", remove_item = true},
+				{name = "meat-trits", amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'anabolic-rna'
+			tech = "anabolic-rna"
 		},
 		--rna anabolic and gh
 		{
 			ingredients =
-				{
-					--{name = 'nanochondria', amount =1},
-					{name = 'gh', amount =1},
-				},
+			{
+				--{name = 'nanochondria', amount =1},
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'anabolic-rna'
+			tech = "anabolic-rna"
 		},
 		--antitumor
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'anabolic-rna',remove_item = true},
-					{name = 'antitumor', amount =1},
-				},
+			{
+				{name = "gh",           remove_item = true},
+				{name = "anabolic-rna", remove_item = true},
+				{name = "antitumor",    amount = 1},
+			},
 			results =
-				{
-					{name = 'meat-trits', remove_item = true},
-					{name = 'guts-trits', amount = 1},
-				},
+			{
+				{name = "meat-trits", remove_item = true},
+				{name = "guts-trits", amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'antitumor'
+			tech = "antitumor"
 		},
 		--antitumor and gh
 		{
 			ingredients =
-				{
-					--{name = 'nanochondria', amount =1},
-					{name = 'gh', amount =1},
-				},
+			{
+				--{name = 'nanochondria', amount =1},
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'antitumor'
+			tech = "antitumor"
 		},
 		--Recombinant Ery
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'antitumor',remove_item = true},
-					{name = 'recombinant-ery', amount =1},
-				},
+			{
+				{name = "gh",              remove_item = true},
+				{name = "antitumor",       remove_item = true},
+				{name = "recombinant-ery", amount = 1},
+			},
 			results =
-				{
-					{name = 'guts-trits', remove_item = true},
-					{name = 'blood-trits', amount = 1},
-				},
+			{
+				{name = "guts-trits",  remove_item = true},
+				{name = "blood-trits", amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'recombinant-ery'
+			tech = "recombinant-ery"
 		},
 		--Recombinant Ery and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'recombinant-ery'
+			tech = "recombinant-ery"
 		},
 		--reca
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'recombinant-ery',remove_item = true},
-					{name = 'reca', amount =1},
-				},
+			{
+				{name = "gh",              remove_item = true},
+				{name = "recombinant-ery", remove_item = true},
+				{name = "reca",            amount = 1},
+			},
 			results =
-				{
-					{name = 'blood-trits', remove_item = true},
-					{name = 'skin-trits', amount = 1},
-				},
+			{
+				{name = "blood-trits", remove_item = true},
+				{name = "skin-trits",  amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'reca'
+			tech = "reca"
 		},
 		--reca and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'reca'
+			tech = "reca"
 		},
 		--orexigenic
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'reca',remove_item = true},
-					{name = 'orexigenic', amount =1},
-				},
+			{
+				{name = "gh",         remove_item = true},
+				{name = "reca",       remove_item = true},
+				{name = "orexigenic", amount = 1},
+			},
 			results =
-				{
-					{name = 'skin-trits', remove_item = true},
-					{name = 'fat-trits', amount = 1},
-				},
+			{
+				{name = "skin-trits", remove_item = true},
+				{name = "fat-trits",  amount = 1},
+			},
 			crafting_speed = 160,
-			tech = 'orexigenic'
+			tech = "orexigenic"
 		},
 		--orexigenic and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 50,
-			tech = 'orexigenic'
+			tech = "orexigenic"
 		},
 	}
 }

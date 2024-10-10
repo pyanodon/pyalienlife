@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "pre-pesticide-01",
     icon = "__pyalienlifegraphics3__/graphics/icons/pre-pesticide-01.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.705, g = 0.447, b = 0.407},

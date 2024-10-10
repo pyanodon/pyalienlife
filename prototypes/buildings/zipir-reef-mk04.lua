@@ -7,10 +7,10 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "zipir-reef-mk03", amount = 1},
-        {type = "item", name = "blanket", amount = 5},
+        {type = "item", name = "blanket",         amount = 5},
         {type = "item", name = "processing-unit", amount = 40},
         {type = "item", name = "science-coating", amount = 15},
-        {type = "item", name = "nenbit-matrix", amount = 30},
+        {type = "item", name = "nenbit-matrix",   amount = 30},
     },
     results = {
         {type = "item", name = "zipir-reef-mk04", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "zipir-reef-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/zipir-reef-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "zipir-reef-mk04"},
     fast_replaceable_group = "zipir-reef",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"zipir"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "zipir-reef-mk01"),
     energy_source = {
@@ -69,7 +69,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(0,0)
+                    shift = util.by_pixel(0, 0)
                 }
             },
             {
@@ -84,7 +84,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(64,0)
+                    shift = util.by_pixel(64, 0)
                 }
             },
             {
@@ -99,7 +99,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(128,0)
+                    shift = util.by_pixel(128, 0)
                 }
             },
             {
@@ -114,7 +114,7 @@ ENTITY {
                     width = 64,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(192,0)
+                    shift = util.by_pixel(192, 0)
                 }
             },
             {
@@ -129,30 +129,30 @@ ENTITY {
                     width = 13,
                     height = 192,
                     animation_speed = 0.5,
-                    shift = util.by_pixel(230,0)
+                    shift = util.by_pixel(230, 0)
                 }
             },
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
-            width = 305,
-            height = 290,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(8,-1),
-            },
-            {
-                filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
-                width = 305,
-                height = 290,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(8,-1),
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off.png",
+                    width = 305,
+                    height = 290,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(8, -1),
                 },
-        }
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/zipir/off-mask.png",
+                    width = 305,
+                    height = 290,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(8, -1),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+            }
         },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,

@@ -13,13 +13,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "glass", amount = 50},
-        {type = "item", name = "steam-engine", amount = 2},
-        {type = "item", name = "gasifier", amount = 1},
-        {type = "item", name = "titanium-plate", amount = 30},
+        {type = "item", name = "glass",           amount = 50},
+        {type = "item", name = "steam-engine",    amount = 2},
+        {type = "item", name = "gasifier",        amount = 1},
+        {type = "item", name = "titanium-plate",  amount = 30},
         --{type = "item", name = "plastic-bar", amount = 30},
         {type = "item", name = "iron-gear-wheel", amount = 30},
-        {type = "item", name = "duralumin", amount = 15},
+        {type = "item", name = "duralumin",       amount = 15},
     },
     results = {
         {type = "item", name = "incubator-mk01", amount = 1}
@@ -30,7 +30,7 @@ ITEM {
     type = "item",
     name = "incubator-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/incubator-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk01",
     order = "a",
@@ -42,7 +42,7 @@ ENTITY {
     type = "assembling-machine",
     name = "incubator-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/incubator-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "incubator-mk01"},
     fast_replaceable_group = "incubator",
@@ -114,7 +114,7 @@ ENTITY {
             }
         },
         animation = {
-            layers ={
+            layers = {
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/incubator/off.png",
                     width = 224,
@@ -131,7 +131,7 @@ ENTITY {
                     tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
                 },
             },
-    },
+        },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {

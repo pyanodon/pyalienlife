@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "nitrogen-mustard",
     icon = "__pyalienlifegraphics__/graphics/icons/nitrogen-mustard.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 15,
     base_flow_rate = 100,
     base_color = {r = 0.819, g = 0.556, b = 0.0},

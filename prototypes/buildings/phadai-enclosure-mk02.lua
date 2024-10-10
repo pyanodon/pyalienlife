@@ -7,17 +7,17 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "phadai-enclosure-mk01", amount = 1},
-        {type = "item", name = "nbti-alloy", amount = 40},
-        {type = "item", name = "engine-unit", amount = 3},
-        {type = "item", name = "neuromorphic-chip", amount = 35},
-        {type = "item", name = "nenbit-matrix", amount = 30},
-        {type = "item", name = "processing-unit", amount = 50},
-        {type = "item", name = "super-steel", amount = 50},
+        {type = "item", name = "nbti-alloy",            amount = 40},
+        {type = "item", name = "engine-unit",           amount = 3},
+        {type = "item", name = "neuromorphic-chip",     amount = 35},
+        {type = "item", name = "nenbit-matrix",         amount = 30},
+        {type = "item", name = "processing-unit",       amount = 50},
+        {type = "item", name = "super-steel",           amount = 50},
     },
     results = {
         {type = "item", name = "phadai-enclosure-mk02", amount = 1}
     }
-}:add_unlock("land-animals-mk03"):add_ingredient({type = "item", name = "small-parts-02", amount = 30})
+}:add_unlock("land-animals-mk03"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
 
 ITEM {
     type = "item",
@@ -35,7 +35,7 @@ ENTITY {
     type = "assembling-machine",
     name = "phadai-enclosure-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/phadai-enclosure-mk02.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "phadai-enclosure-mk02"},
     fast_replaceable_group = "phadai-enclosure",
@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"phadai"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "phadai-enclosure-mk01"),
     energy_source = {
@@ -59,7 +59,7 @@ ENTITY {
     energy_usage = "650kW",
     graphics_set = {
         working_visualisations = {
-    
+
             {
                 north_position = {2, -0.0},
                 west_position = {2, -0.0},
@@ -195,21 +195,21 @@ ENTITY {
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off.png",
-                width = 448,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -32)
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off.png",
+                    width = 448,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32)
                 },
                 {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off-mask.png",
-                width = 448,
-                height = 480,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(16, -32),
-                tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phadai-enclosure/off-mask.png",
+                    width = 448,
+                    height = 480,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
                 },
             }
         },

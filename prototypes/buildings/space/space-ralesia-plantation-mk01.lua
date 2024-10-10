@@ -33,14 +33,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "soil", amount = 300},
-        {type = "item", name = "pipe", amount = 15},
+        {type = "item", name = "soil",               amount = 300},
+        {type = "item", name = "pipe",               amount = 15},
         {type = "item", name = "electronic-circuit", amount = 25},
-        {type = "item", name = "stone", amount = 100},
-        {type = "item", name = "iron-plate", amount = 30},
-        {type = "item", name = "duralumin", amount = 10},
-        {type = "item", name = "treated-wood", amount = 50},
-        {type = "item", name = "small-lamp", amount = 20}
+        {type = "item", name = "stone",              amount = 100},
+        {type = "item", name = "iron-plate",         amount = 30},
+        {type = "item", name = "duralumin",          amount = 10},
+        {type = "item", name = "treated-wood",       amount = 50},
+        {type = "item", name = "small-lamp",         amount = 20}
     },
     results = {
         {type = "item", name = "space-ralesia-plantation-mk01", amount = 1}
@@ -74,7 +74,7 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_slots = 12,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"ralesia"},
     crafting_speed = 0.06,
     energy_source = {

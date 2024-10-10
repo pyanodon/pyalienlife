@@ -6,11 +6,11 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete", amount = 200},
-        {type = "item", name = "titanium-plate", amount = 100},
-        {type = "item", name = "steel-plate", amount = 100},
-        {type = "item", name = "duralumin", amount = 50},
-        {type = "item", name = "glass", amount = 20},
+        {type = "item", name = "concrete",         amount = 200},
+        {type = "item", name = "titanium-plate",   amount = 100},
+        {type = "item", name = "steel-plate",      amount = 100},
+        {type = "item", name = "duralumin",        amount = 50},
+        {type = "item", name = "glass",            amount = 20},
         {type = "item", name = "advanced-circuit", amount = 35},
     },
     results = {
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 8,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"arthurian"},
     crafting_speed = 0.05,
     energy_source = {
@@ -66,7 +66,7 @@ ENTITY {
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/mother.png",
                     frame_count = 40,
-                    scale= 1.2,
+                    scale = 1.2,
                     line_length = 20,
                     width = 65,
                     height = 64,
@@ -144,29 +144,29 @@ ENTITY {
                     animation_speed = 0.5
                 }
             },
-    
+
         },
         animation = {
             layers = {
-            {
-            filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/a1.png",
-            width = 328,
-            height = 346,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(4, -12)
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/a1.png",
+                    width = 328,
+                    height = 346,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(4, -12)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/a1-mask.png",
+                    width = 328,
+                    height = 346,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(4, -12),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+
             },
-            {
-                filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/a1-mask.png",
-                width = 328,
-                height = 346,
-                frame_count = 1,
-                line_length = 1,
-                shift = util.by_pixel(4, -12),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-            },
-    
-          },
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

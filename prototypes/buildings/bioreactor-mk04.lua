@@ -5,11 +5,11 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "bio-reactor-mk03", amount = 1},
-        {type = "item", name = "kevlar", amount = 50},
-        {type = "item", name = "super-alloy", amount = 30},
-        {type = "item", name = "super-steel", amount = 60},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "blanket", amount = 1},
+        {type = "item", name = "kevlar",           amount = 50},
+        {type = "item", name = "super-alloy",      amount = 30},
+        {type = "item", name = "super-steel",      amount = 60},
+        {type = "item", name = "control-unit",     amount = 10},
+        {type = "item", name = "blanket",          amount = 1},
     },
     results = {
         {type = "item", name = "bio-reactor-mk04", amount = 1}
@@ -20,7 +20,7 @@ ITEM {
     type = "item",
     name = "bio-reactor-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/bio-reactor-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk04",
     order = "a",
@@ -32,7 +32,7 @@ ENTITY {
     type = "assembling-machine",
     name = "bio-reactor-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/bio-reactor-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "bio-reactor-mk04"},
     fast_replaceable_group = "bio-reactor",
@@ -43,7 +43,7 @@ ENTITY {
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
     module_slots = 4,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"bio-reactor"},
     crafting_speed = 4,
     energy_source = {
@@ -91,19 +91,19 @@ ENTITY {
         animation = {
             layers = {
                 {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off.png",
-                width = 246,
-                height = 236,
-                frame_count = 1,
-                shift = {0.312, -0.218},
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off.png",
+                    width = 246,
+                    height = 236,
+                    frame_count = 1,
+                    shift = {0.312, -0.218},
                 },
                 {
-                filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off-mask.png",
-                width = 246,
-                height = 236,
-                frame_count = 1,
-                shift = {0.312, -0.218},
-                tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off-mask.png",
+                    width = 246,
+                    height = 236,
+                    frame_count = 1,
+                    shift = {0.312, -0.218},
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
                 },
             },
         },

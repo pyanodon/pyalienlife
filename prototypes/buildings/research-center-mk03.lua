@@ -5,12 +5,12 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "research-center-mk02", amount = 1},
-        {type = "item", name = "ticocr-alloy", amount = 50},
-        {type = "item", name = "nbti-alloy", amount = 100},
-        {type = "item", name = "stainless-steel", amount = 50},
+        {type = "item", name = "ticocr-alloy",         amount = 50},
+        {type = "item", name = "nbti-alloy",           amount = 100},
+        {type = "item", name = "stainless-steel",      amount = 50},
         {type = "item", name = "electric-engine-unit", amount = 20},
-        {type = "item", name = "processing-unit", amount = 50},
-        {type = "item", name = "molybdenum-plate", amount = 100},
+        {type = "item", name = "processing-unit",      amount = 50},
+        {type = "item", name = "molybdenum-plate",     amount = 100},
     },
     results = {
         {type = "item", name = "research-center-mk03", amount = 1}
@@ -33,7 +33,7 @@ ENTITY {
     type = "assembling-machine",
     name = "research-center-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/research-center-mk03.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "research-center-mk03"},
     fast_replaceable_group = "research-center",
@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     match_animation_speed_to_activity = false,
     module_slots = 3,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"research", "research-handcrafting"},
     crafting_speed = 3,
     energy_source = {
@@ -125,7 +125,7 @@ ENTITY {
                     frame_count = 250,
                     line_length = 30,
                     animation_speed = 0.8,
-                    scale= 0.9,
+                    scale = 0.9,
                     draw_as_glow = true,
                 }
             },

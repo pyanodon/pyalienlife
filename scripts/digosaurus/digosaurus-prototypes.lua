@@ -1,31 +1,31 @@
 Digosaurus.favorite_foods = {
-	['guts'] = 1,
-	['meat'] = 2,
-	['workers-food'] = 8,
-	['workers-food-02'] = 16,
-	['workers-food-03'] = 32,
+	["guts"] = 1,
+	["meat"] = 2,
+	["workers-food"] = 8,
+	["workers-food-02"] = 16,
+	["workers-food-03"] = 32,
 }
 
 Digosaurus.minable_categories = {
-	['ore-nexelit'] = true
+	["ore-nexelit"] = true
 }
 
 Digosaurus.valid_creatures = {
-	['digosaurus'] = 1,
-	['digosaurus-turd'] = 1,
-	['thikat'] = 2,
-	['thikat-turd'] = 2,
-	['work-o-dile'] = 3,
-	['work-o-dile-turd'] = 3,
+	["digosaurus"] = 1,
+	["digosaurus-turd"] = 1,
+	["thikat"] = 2,
+	["thikat-turd"] = 2,
+	["work-o-dile"] = 3,
+	["work-o-dile-turd"] = 3,
 }
 
 Digosaurus.mining_proxies = {
-	['digosaurus'] = 'digosaurus-mineable-proxy',
-	['thikat'] = 'thikats-mineable-proxy',
-	['work-o-dile'] = 'work-o-dile-mineable-proxy',
-	['digosaurus-turd'] = 'digosaurus-mineable-proxy',
-	['thikat-turd'] = 'thikats-mineable-proxy',
-	['work-o-dile-turd'] = 'work-o-dile-mineable-proxy',
+	["digosaurus"] = "digosaurus-mineable-proxy",
+	["thikat"] = "thikats-mineable-proxy",
+	["work-o-dile"] = "work-o-dile-mineable-proxy",
+	["digosaurus-turd"] = "digosaurus-mineable-proxy",
+	["thikat-turd"] = "thikats-mineable-proxy",
+	["work-o-dile-turd"] = "work-o-dile-mineable-proxy",
 }
 
 Digosaurus.mining_range = 12.5

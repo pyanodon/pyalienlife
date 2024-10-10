@@ -2,7 +2,7 @@ FLUID {
     type = "fluid",
     name = "autoantigens",
     icon = "__pyalienlifegraphics3__/graphics/icons/autoantigens.png",
-	icon_size = 64,
+    icon_size = 64,
     default_temperature = 10,
     base_flow_rate = 100,
     base_color = {r = 0.754, g = 0.119, b = 0.0},

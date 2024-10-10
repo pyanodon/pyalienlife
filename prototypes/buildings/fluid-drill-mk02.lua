@@ -4,13 +4,13 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fluid-drill-mk01", amount = 1},
+        {type = "item", name = "fluid-drill-mk01",      amount = 1},
         {type = "item", name = "electric-mining-drill", amount = 2},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel", amount = 50},
-        {type = "item", name = "steel-plate", amount = 10},
-        {type = "item", name = "aluminium-plate", amount = 20},
-        {type = "item", name = "engine-unit", amount = 1},
+        {type = "item", name = "electronic-circuit",    amount = 10},
+        {type = "item", name = "iron-gear-wheel",       amount = 50},
+        {type = "item", name = "steel-plate",           amount = 10},
+        {type = "item", name = "aluminium-plate",       amount = 20},
+        {type = "item", name = "engine-unit",           amount = 1},
     },
     results = {
         {type = "item", name = "fluid-drill-mk02", amount = 1}
@@ -54,17 +54,17 @@ ENTITY {
         volume = 200,
         pipe_connections = {
             {flow_direction = "input-output", position = {-2.0, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 0}, direction = defines.direction.east},
-            {flow_direction = "input-output", position = {0, 2.0}, direction = defines.direction.south}
+            {flow_direction = "input-output", position = {2.0, 0},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 2.0},  direction = defines.direction.south}
         }
     },
     energy_source =
     {
-      type = "electric",
-      emissions_per_minute = {
-          pollution = 10
-      },
-      usage_priority = "secondary-input"
+        type = "electric",
+        emissions_per_minute = {
+            pollution = 10
+        },
+        usage_priority = "secondary-input"
     },
     energy_usage = "900kW",
     resource_searching_radius = 3.49,
@@ -127,13 +127,13 @@ ENTITY {
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound =
-      {
-        filename = "__base__/sound/electric-mining-drill.ogg",
-        volume = 0.5
-      },
-      audible_distance_modifier = 0.6,
-      fade_in_ticks = 4,
-      fade_out_ticks = 20
+        sound =
+        {
+            filename = "__base__/sound/electric-mining-drill.ogg",
+            volume = 0.5
+        },
+        audible_distance_modifier = 0.6,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
     },
 }

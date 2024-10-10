@@ -6,12 +6,12 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "vrauks-paddock-mk03", amount = 1},
-        {type = "item", name = "silver-foam", amount = 20},
-        {type = "item", name = "control-unit", amount = 10},
-        {type = "item", name = "agzn-alloy", amount = 30},
+        {type = "item", name = "vrauks-paddock-mk03",   amount = 1},
+        {type = "item", name = "silver-foam",           amount = 20},
+        {type = "item", name = "control-unit",          amount = 10},
+        {type = "item", name = "agzn-alloy",            amount = 30},
         {type = "item", name = "low-density-structure", amount = 30},
-        {type = "item", name = "nenbit-matrix", amount = 40},
+        {type = "item", name = "nenbit-matrix",         amount = 40},
     },
     results = {
         {type = "item", name = "vrauks-paddock-mk04", amount = 1}
@@ -34,7 +34,7 @@ ENTITY {
     type = "assembling-machine",
     name = "vrauks-paddock-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/vrauks-paddock-mk04.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "vrauks-paddock-mk04"},
     fast_replaceable_group = "vrauks-paddock",
@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     crafting_categories = {"vrauks"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "vrauks-paddock-mk01"),
     energy_source = {
