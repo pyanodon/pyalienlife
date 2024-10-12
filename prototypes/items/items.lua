@@ -1188,7 +1188,7 @@ ITEM {
 	stack_size = 100,
 	localised_name = {"item-name.biobattery"},
 	localised_description = {"item-description.biobattery"},
-	placed_as_equipment_result = "biobattery"
+	place_as_equipment_result = "biobattery"
 }
 
 ITEM {

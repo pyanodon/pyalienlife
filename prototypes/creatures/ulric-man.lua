@@ -445,7 +445,7 @@ data:extend
             }
         },
         right_footprint_frames = {10, 21},
-        left_footprint_frames = {5, 16},     --{ 5 },
+        left_footprint_frames = {5, 16}, --{ 5 },
         right_footprint_offset = {0.1, 0},
         left_footprint_offset = {-0.1, 0},
         water_reflection = {
@@ -558,7 +558,7 @@ ITEM {
     subgroup = "py-alienlife-ulric",
     order = "y[symbiosis]-b[ulric-infusion-equipment]",
     stack_size = 10,
-    placed_as_equipment_result = "ulric-infusion-equipment"
+    place_as_equipment_result = "ulric-infusion-equipment"
 }
 
 RECIPE {
