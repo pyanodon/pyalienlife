@@ -10,7 +10,6 @@ RECIPE {
         {type = "item",  name = "earth-generic-sample", amount = 1},
         {type = "item",  name = "cdna",                 amount = 1},
         {type = "item",  name = "alien-sample01",       amount = 2},
-        {type = "item",  name = "red-wire",             amount = 2},
         {type = "fluid", name = "water-saline",         amount = 50},
         {type = "fluid", name = "fetal-serum",          amount = 10},
         {type = "fluid", name = "coal-slurry",          amount = 50},

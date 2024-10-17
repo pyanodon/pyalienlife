@@ -32,7 +32,6 @@ RECIPE {
         {type = "item", name = "glass",            amount = 2},
         {type = "item", name = "small-lamp",       amount = 5},
         {type = "item", name = "advanced-circuit", amount = 50},
-        {type = "item", name = "red-wire",         amount = 20},
     },
     results = {
         {type = "item", name = "navens-codex", amount = 1},

@@ -34,8 +34,6 @@ RECIPE {
         {type = "item", name = "glass",              amount = 5},
         {type = "item", name = "small-lamp",         amount = 5},
         {type = "item", name = "electronic-circuit", amount = 50},
-        {type = "item", name = "green-wire",         amount = 10},
-        {type = "item", name = "red-wire",           amount = 10},
     },
     results = {
         {type = "item", name = "xeno-codex", amount = 1},

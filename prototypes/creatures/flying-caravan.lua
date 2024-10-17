@@ -20,8 +20,6 @@ RECIPE {
 		{type = "item",  name = "mukmoux-fat",       amount = 500},
 		{type = "fluid", name = "hydrogen",          amount = 500},
 		{type = "item",  name = "small-parts-01",    amount = 100},
-		{type = "item",  name = "red-wire",          amount = 10},
-		{type = "item",  name = "green-wire",        amount = 10},
 	},
 	result = "flyavan"
 }:add_unlock("domestication-mk03")

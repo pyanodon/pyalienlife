@@ -34,7 +34,6 @@ RECIPE {
         {type = "item", name = "glass",              amount = 2},
         {type = "item", name = "small-lamp",         amount = 5},
         {type = "item", name = "electronic-circuit", amount = 5},
-        {type = "item", name = "green-wire",         amount = 5},
     },
     results = {
         {type = "item", name = "trits-codex", amount = 1},

@@ -67,7 +67,6 @@ RECIPE {
         {type = "item", name = "glass",           amount = 2},
         {type = "item", name = "small-lamp",      amount = 2},
         {type = "item", name = "processing-unit", amount = 5},
-        {type = "item", name = "green-wire",      amount = 5},
     },
     results = {
         {type = "item", name = "zungror-codex", amount = 1},

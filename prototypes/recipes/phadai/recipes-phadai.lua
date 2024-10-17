@@ -33,7 +33,6 @@ RECIPE {
         {type = "item", name = "glass",            amount = 10},
         {type = "item", name = "small-lamp",       amount = 2},
         {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "green-wire",       amount = 5},
     },
     results = {
         {type = "item", name = "phadai-codex", amount = 2},
