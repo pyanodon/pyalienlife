@@ -1,5 +1,6 @@
 local resource_autoplace = require "resource-autoplace"
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["ore-nexelit"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["ore-nexelit"] = {}
 
 data:extend {{
     type = "autoplace-control",

@@ -218,5 +218,6 @@ RECIPE("nexelit-mine"):remove_unlock("big-mines").hidden = true
 data.raw["resource"]["nexelit-rock"].autoplace = nil
 data.raw["autoplace-control"]["nexelit-rock"] = nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["nexelit-rock"] = nil
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["nexelit-rock"] = nil
 
 data.raw.recipe["coal-fawogae"].ingredients[1].amount = 2
