@@ -300,7 +300,6 @@ local modules = {
         "kmauts",
         "korlex",
         "mukmoux",
-        "numal",
         "phadai",
         "phagnot",
         "scrondrix",
@@ -312,7 +311,6 @@ local modules = {
         "xeno",
         "xyhiphoe",
         "zipir",
-        "zungror"
     },
     ["rc-mk02"] = {
         "arqad",
@@ -324,7 +322,6 @@ local modules = {
         "kmauts",
         "korlex",
         "mukmoux",
-        "numal",
         "phadai",
         "phagnot",
         "scrondrix",
@@ -336,7 +333,6 @@ local modules = {
         "xeno",
         "xyhiphoe",
         "zipir",
-        "zungror"
     },
     ["rc-mk03"] = {
         "arqad",
@@ -348,7 +344,6 @@ local modules = {
         "kmauts",
         "korlex",
         "mukmoux",
-        "numal",
         "phadai",
         "phagnot",
         "scrondrix",
@@ -360,7 +355,6 @@ local modules = {
         "xeno",
         "xyhiphoe",
         "zipir",
-        "zungror"
     },
     ["rc-mk04"] = {
         "arqad",
@@ -372,7 +366,6 @@ local modules = {
         "kmauts",
         "korlex",
         "mukmoux",
-        "numal",
         "phadai",
         "phagnot",
         "scrondrix",
@@ -384,7 +377,6 @@ local modules = {
         "xeno",
         "xyhiphoe",
         "zipir",
-        "zungror"
     },
     ["rennea-plantation-mk01"] = {
         "rennea"
@@ -578,22 +570,22 @@ local modules = {
     ["zipir-reef-mk04"] = {
         "zipir"
     },
-    ["zungror-lair-mk01"] = {
-        "zungror"
-    },
-    ["zungror-lair-mk02"] = {
-        "zungror"
-    },
-    ["zungror-lair-mk03"] = {
-        "zungror"
-    },
-    ["zungror-lair-mk04"] = {
-        "zungror"
-    }
 }
 if mods["pyalternativeenergy"] then
-    table.merge(modules,
+    modules = table.merge(modules,
         {
+            ["zungror-lair-mk01"] = {
+                "zungror"
+            },
+            ["zungror-lair-mk02"] = {
+                "zungror"
+            },
+            ["zungror-lair-mk03"] = {
+                "zungror"
+            },
+            ["zungror-lair-mk04"] = {
+                "zungror"
+            },
             ["numal-reef-mk01"] = {
                 "numal"
             },
@@ -607,6 +599,9 @@ if mods["pyalternativeenergy"] then
                 "numal"
             }
         })
+    for i = 1, 4, 1 do
+        modules["rc-mk0" .. i] = table.merge(modules["rc-mk0" .. i], {"zungror", "numal"})
+    end
 end
 
 for building, module_categories in pairs(modules) do
