@@ -127,7 +127,7 @@ local function build_tech_upgrade(tech_upgrade)
                     icon = tech.icon,
                     icon_size = tech.icon_size,
                     scale = 0.5,
-                    category = "turd",
+                    category = tech_upgrade.module_category or "speed",
                     tier = 1,
                     flags = {"not-stackable"},
                     subgroup = "py-alienlife-turd-modules",
@@ -143,20 +143,6 @@ local function build_tech_upgrade(tech_upgrade)
                     localised_description = {"turd.font", {"turd.module"}},
                     not_voidable = true
                 }
-
-                if not tech_upgrade.module_category and tech_upgrade.affected_entities then
-                    local categories = {}
-                    for _, category in pairs(mk1.crafting_categories) do
-                        categories[category] = true
-                    end
-
-                    module.limitation = {}
-                    for _, recipe in pairs(data.raw.recipe) do
-                        if categories[recipe.category or "crafting"] then
-                            table.insert(module.limitation, recipe.name)
-                        end
-                    end
-                end
 
                 if effective_speed then
                     local adjusted_speed = effect.speed * 100

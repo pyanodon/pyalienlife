@@ -22,7 +22,6 @@ ENTITY {
     collision_mask = {layers = {}},
     subgroup = data.raw.item.beacon.subgroup,
     order = "a",
-    allowed_module_categories = {"vatbrain"},
 }
 
 ENTITY {
@@ -48,5 +47,4 @@ ENTITY {
     collision_mask = {layers = {}},
     subgroup = data.raw.item.beacon.subgroup,
     order = "a",
-    allowed_module_categories = {"turd"},
 }
