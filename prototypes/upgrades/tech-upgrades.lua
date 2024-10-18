@@ -127,7 +127,7 @@ local function build_tech_upgrade(tech_upgrade)
                     icon = tech.icon,
                     icon_size = tech.icon_size,
                     scale = 0.5,
-                    category = tech_upgrade.module_category or "speed",
+                    category = "turd",
                     tier = 1,
                     flags = {"not-stackable"},
                     subgroup = "py-alienlife-turd-modules",

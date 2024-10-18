@@ -180,4 +180,8 @@ data:extend
         type = "module-category",
         name = "sawblade"
     },
+    {
+        type = "module-category",
+        name = "turd"
+    },
 }
