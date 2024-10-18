@@ -460,10 +460,3 @@ end
 
 log(serpent.block(recipe_names))
 ]] --
-
-local sawblade_limitation = data.raw.module["py-sawblade-module-mk01"].limitation
-for _, recipe in pairs(data.raw.recipe) do
-	if recipe.category == "wpu" then
-		table.insert(sawblade_limitation, recipe.name)
-	end
-end
