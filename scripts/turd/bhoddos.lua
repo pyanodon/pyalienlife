@@ -39,8 +39,8 @@ end
 
 local radius = 76 / 2
 
-local function draw_circle(entity)
-    storage.bhoddos_circles[entity.unit_number] = rendering.draw_circle {
+local function draw_circle(entity, player)
+    storage.bhoddos_circles[player] = rendering.draw_circle {
         draw_on_ground = true, color = {r = 100, g = 53.3, b = 0, a = 0.5}, radius = radius,
         target = entity, filled = true, surface = entity.surface
     }.id
@@ -54,16 +54,14 @@ Turd.events.on_selected_entity_changed = function(event)
     end
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local selected = player.selected
-    local previous_selected = event.last_entity
-    local previous_selected_unit_number = previous_selected and previous_selected.unit_number
 
-    if previous_selected_unit_number and circles[previous_selected_unit_number] then
-        local rendering_object = rendering.get_object_by_id(circles[previous_selected_unit_number])
+    if circles[event.player_index] then
+        local rendering_object = rendering.get_object_by_id(circles[event.player_index])
         if rendering_object then rendering_object.destroy() end
-        circles[previous_selected_unit_number] = nil
+        circles[event.player_index] = nil
     end
     if selected and lib.cultures[selected.name] then
-        if lib.forces_with_bhoddos_path_1()[player.force_index] then draw_circle(selected) end
+        if lib.forces_with_bhoddos_path_1()[player.force_index] then draw_circle(selected, event.player_index) end
     end
 end
 
