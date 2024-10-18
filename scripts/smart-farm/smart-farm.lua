@@ -129,8 +129,7 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	local surface = silo.surface
 	local position = silo.position
 	position.y = position.y - 15
-
-	local replicator = event.rocket.get_inventory(defines.inventory.rocket).get_contents()[1]
+	local replicator = event.rocket.cargo_pod.get_inventory(defines.inventory.cargo_unit).get_contents()[1]
 	if not replicator then return end
 	local farm = farms[replicator.name]
 	if not farm then return end
@@ -149,7 +148,7 @@ Smart_Farm.events.on_rocket_launched = function(event)
 	for x = -11, 11 do
 		for y = -11, 11 do
 			local ore_location = {position.x + x, position.y + y}
-			if is_alien_biomes or not surface.get_tile(ore_location).collides_with("resource-layer") then
+			if is_alien_biomes or not surface.get_tile(ore_location).collides_with("resource") then
 				local ore = surface.find_entity(farm.crop, ore_location)
 
 				if ore then
