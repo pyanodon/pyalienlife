@@ -1,7 +1,6 @@
 py.autorecipes {
     name = "navens",
     category = "navens",
-    module_limitations = "navens",
     subgroup = "py-alienlife-navens",
     order = "b",
     mats =

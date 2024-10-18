@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "caged-antelope",
 	category = "antelope",
-	module_limitations = "antelope",
 	subgroup = "py-alienlife-antelope",
 	order = "b",
 	main_product = "caged-antelope",

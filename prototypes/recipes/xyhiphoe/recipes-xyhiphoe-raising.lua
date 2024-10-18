@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "xyhiphoe-cub",
 	category = "rc",
 	allowed_module_categories = {"xyhiphoe"},
-	module_limitations = "xyhiphoe",
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "c",
 	main_product = "xyhiphoe-cub",
@@ -190,7 +189,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "xyhiphoe",
 	category = "xyhiphoe",
-	module_limitations = "xyhiphoe",
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	main_product = "xyhiphoe",

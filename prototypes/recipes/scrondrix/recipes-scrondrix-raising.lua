@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "scrondrix-cub",
 	category = "rc",
 	allowed_module_categories = {"scrondrix"},
-	module_limitations = "scrondrix",
 	subgroup = "py-alienlife-scrondrix",
 	order = "s",
 	main_product = "scrondrix-pup",
@@ -168,7 +167,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "scrondrix",
 	category = "scrondrix",
-	module_limitations = "scrondrix",
 	upgrades =
 	{
 		{

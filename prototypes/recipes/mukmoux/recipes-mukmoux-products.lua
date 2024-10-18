@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "manure",
 	category = "mukmoux",
-	--module_limitations = 'mukmoux',
 	main_product = "manure",
 	subgroup = "py-alienlife-mukmoux",
 	order = "c",

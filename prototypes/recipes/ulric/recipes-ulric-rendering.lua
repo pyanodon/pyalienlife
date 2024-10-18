@@ -22,7 +22,6 @@ local IMP_BRAIN = 4
 py.autorecipes {
 	name = "rendering-ulric",
 	category = "slaughterhouse",
-	--module_limitations = 'ulric',
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	crafting_speed = 30,

@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "rendering-blood-arthurians-2",
 	category = "slaughterhouse",
-	--module_limitations = 'arthurian',
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
 	mats =
@@ -58,7 +57,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-arqad-2",
 	category = "slaughterhouse",
-	--module_limitations = 'arqad',
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	mats =
@@ -114,7 +112,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-auog-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =
@@ -169,7 +166,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-cottongut-2",
 	category = "slaughterhouse",
-	--module_limitations = 'cottongut',
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	mats =
@@ -223,7 +219,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-dhilmos-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	mats =
@@ -280,7 +275,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-dingrits-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	mats =
@@ -335,7 +329,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-kmauts-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	mats =
@@ -391,7 +384,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-korlex-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	mats =
@@ -447,7 +439,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-mukmoux-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	mats =
@@ -502,7 +493,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-phadai-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	mats =
@@ -557,7 +547,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-phagnot-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
 	mats =
@@ -612,7 +601,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-scrondrix-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	mats =
@@ -667,7 +655,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-simik-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	mats =
@@ -722,7 +709,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-trits-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	mats =
@@ -776,7 +762,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-ulric-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	mats =
@@ -831,7 +816,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-vonix-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	mats =
@@ -889,7 +873,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-xenos-2",
 	category = "slaughterhouse",
-	--module_limitations = 'xeno',
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	mats =
@@ -943,7 +926,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-xyhiphoe-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	mats =
@@ -994,7 +976,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-zipir-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	mats =

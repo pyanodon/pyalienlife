@@ -2,7 +2,6 @@ py.autorecipes {
 	name = "carapace",
 	category = "phadai",
 	subgroup = "py-alienlife-phadai",
-	module_limitations = "phadai",
 	main_product = "carapace",
 	mats =
 	{

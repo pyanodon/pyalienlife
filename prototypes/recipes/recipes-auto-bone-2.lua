@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "rendering-bone-arthurians-2",
 	category = "slaughterhouse",
-	--module_limitations = 'arthurian',
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
 	mats =
@@ -58,7 +57,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-auog-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =
@@ -114,7 +112,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-cottongut-2",
 	category = "slaughterhouse",
-	--module_limitations = 'cottongut',
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	mats =
@@ -169,7 +166,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-dingrits-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	mats =
@@ -224,7 +220,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-korlex-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	mats =
@@ -279,7 +274,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-mukmoux-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	mats =
@@ -334,7 +328,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-phadai-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	mats =
@@ -389,7 +382,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-phagnot-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
 	mats =
@@ -444,7 +436,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-scrondrix-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	mats =
@@ -499,7 +490,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-simik-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	mats =
@@ -554,7 +544,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-trits-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	mats =
@@ -608,7 +597,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-ulric-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	mats =
@@ -663,7 +651,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-bone-xeno-2",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	mats =

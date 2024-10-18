@@ -2,7 +2,6 @@ py.autorecipes {
 	name = "filled-comb",
 	category = "arqad",
 	subgroup = "py-alienlife-arqad",
-	module_limitations = "arqad",
 	main_product = "filled-comb",
 	upgrades =
 	{

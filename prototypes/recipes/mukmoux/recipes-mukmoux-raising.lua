@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "mukmoux-calf",
 	category = "rc",
 	allowed_module_categories = {"mukmoux"},
-	--module_limitations = 'mukmoux',
 	main_product = "mukmoux-calf",
 	subgroup = "py-alienlife-mukmoux",
 	order = "c",
@@ -195,7 +194,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "mukmoux",
 	category = "mukmoux",
-	module_limitations = "mukmoux",
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	main_product = "mukmoux",

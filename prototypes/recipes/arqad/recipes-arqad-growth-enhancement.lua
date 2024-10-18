@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "arqad-improve",
 	category = "arqad",
-	--module_limitations = 'arqad',
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	mats =

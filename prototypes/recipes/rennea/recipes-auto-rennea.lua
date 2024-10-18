@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "rennea",
 	category = "rennea",
-	module_limitations = "rennea",
 	subgroup = "py-alienlife-rennea",
 	order = "a",
 	mats =

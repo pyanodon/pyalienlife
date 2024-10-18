@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "cridren",
 	category = "cridren",
-	module_limitations = "cridren",
 	subgroup = "py-alienlife-cridren",
 	order = "a",
 	mats =

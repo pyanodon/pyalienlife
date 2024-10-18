@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "rendering-fat-arthurians",
 	category = "slaughterhouse",
-	--module_limitations = 'arthurian',
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
 	mats =
@@ -40,7 +39,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-auog",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =
@@ -77,7 +75,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-cottongut",
 	category = "slaughterhouse",
-	--module_limitations = 'cottongut',
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	mats =
@@ -113,7 +110,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-dhilmos",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	mats =
@@ -152,7 +148,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-kmauts",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	mats =
@@ -189,7 +184,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-korlex",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	mats =
@@ -226,7 +220,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-mukmoux",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	mats =
@@ -263,7 +256,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-phadai",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	mats =
@@ -300,7 +292,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-scrondrix",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	mats =
@@ -337,7 +328,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-simik",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	mats =
@@ -374,7 +364,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-trits",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	mats =
@@ -410,7 +399,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-ulric",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	mats =
@@ -447,7 +435,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-vonix",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	mats =
@@ -486,7 +473,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-fat-zipir",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	mats =

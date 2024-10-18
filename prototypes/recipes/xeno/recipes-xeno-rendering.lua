@@ -18,7 +18,6 @@ local IMP_BRAIN = 4
 py.autorecipes {
 	name = "rendering-xeno",
 	category = "slaughterhouse",
-	--module_limitations = 'xeno',
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	crafting_speed = 25,

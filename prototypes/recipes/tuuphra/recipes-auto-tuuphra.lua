@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "tuuphra",
 	category = "tuuphra",
-	module_limitations = "tuuphra",
 	subgroup = "py-alienlife-tuuphra",
 	order = "a",
 	mats =

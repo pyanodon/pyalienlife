@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "dhilmos-egg",
 	category = "rc",
 	allowed_module_categories = {"dhilmos"},
-	module_limitations = "dhilmos",
 	subgroup = "py-alienlife-dhilmos",
 	order = "c",
 	main_product = "dhilmos-egg",
@@ -80,7 +79,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "dhilmos-hatching",
 	category = "dhilmos",
-	module_limitations = "dhilmos",
 	subgroup = "py-alienlife-dhilmos",
 	order = "c",
 	main_product = "dhilmos-pup",
@@ -188,7 +186,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "dhilmos",
 	category = "dhilmos",
-	module_limitations = "dhilmos",
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	main_product = "dhilmos",

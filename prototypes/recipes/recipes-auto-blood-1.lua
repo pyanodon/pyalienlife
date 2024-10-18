@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "rendering-blood-arthurians",
 	category = "slaughterhouse",
-	--module_limitations = 'arthurian',
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
 	mats =
@@ -40,7 +39,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-arqad",
 	category = "slaughterhouse",
-	--module_limitations = 'arqad',
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	mats =
@@ -78,7 +76,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-auog",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =
@@ -115,7 +112,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-cottongut",
 	category = "slaughterhouse",
-	--module_limitations = 'cottongut',
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	mats =
@@ -151,7 +147,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-dhilmos",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	mats =
@@ -190,7 +185,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-dingrits",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	mats =
@@ -227,7 +221,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-kmauts",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	mats =
@@ -264,7 +257,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-korlex",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	mats =
@@ -301,7 +293,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-mukmoux",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	mats =
@@ -338,7 +329,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-phadai",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	mats =
@@ -375,7 +365,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-phagnot",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
 	mats =
@@ -412,7 +401,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-scrondrix",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	mats =
@@ -449,7 +437,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-simik",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	mats =
@@ -486,7 +473,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-trits",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	mats =
@@ -522,7 +508,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-ulric",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	mats =
@@ -559,7 +544,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-vonix",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	mats =
@@ -598,7 +582,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-formic-vrauks",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-vrauks",
 	order = "b",
 	mats =
@@ -639,7 +622,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-xenos",
 	category = "slaughterhouse",
-	--module_limitations = 'xeno',
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	mats =
@@ -675,7 +657,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-xyhiphoe",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	mats =
@@ -707,7 +688,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "rendering-blood-zipir",
 	category = "slaughterhouse",
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	mats =

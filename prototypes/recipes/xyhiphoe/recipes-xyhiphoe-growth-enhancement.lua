@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "xyhiphoe-improve",
 	category = "xyhiphoe",
-	--module_limitations = 'xyhiphoe',
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	--main_product = "xyhiphoe",

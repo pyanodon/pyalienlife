@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "vrauks-improved",
 	category = "vrauks",
-	--module_limitations = 'vrauks',
 	subgroup = "py-alienlife-vrauks",
 	order = "b",
 	mats =

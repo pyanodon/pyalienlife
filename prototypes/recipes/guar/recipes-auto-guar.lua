@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "guar",
 	category = "guar",
-	module_limitations = "guar",
 	main_product = "guar",
 	subgroup = "py-alienlife-guar",
 	order = "a",

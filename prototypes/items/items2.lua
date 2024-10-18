@@ -125,8 +125,6 @@ ITEM {
 	stack_size = 100
 }
 
-local alien_life_limitations_simik = {}
-
 ----MODULES----
 
 ITEM {
@@ -143,7 +141,6 @@ ITEM {
 	order = "xa-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "Simik"
 }
 
@@ -162,7 +159,6 @@ ITEM {
 	order = "xa-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "Simik"
 }
 
@@ -181,7 +177,6 @@ ITEM {
 	order = "xa-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "Simik"
 }
 
@@ -200,7 +195,6 @@ ITEM {
 	order = "xa-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "Simik"
 }
 

@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "xeno-egg",
 	category = "rc",
 	allowed_module_categories = {"xeno"},
-	module_limitations = "xeno",
 	subgroup = "py-alienlife-xeno",
 	order = "c",
 	main_product = "xeno-egg",
@@ -157,7 +156,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "caged-xeno",
 	category = "xeno",
-	module_limitations = "xeno",
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	main_product = "caged-xeno",

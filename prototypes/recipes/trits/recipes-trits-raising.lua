@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "trits-cub",
 	category = "rc",
 	allowed_module_categories = {"trits"},
-	module_limitations = "trits",
 	subgroup = "py-alienlife-trits",
 	order = "c",
 	main_product = "trits-pup",
@@ -198,7 +197,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "trits",
 	category = "trits",
-	module_limitations = "trits",
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	main_product = "trits",

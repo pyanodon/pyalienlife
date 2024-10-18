@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "zungror-improved",
 	category = "zungror",
-	--module_limitations = 'zungror',
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	--main_product = "zungror",

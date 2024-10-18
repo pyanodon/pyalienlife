@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "simik-cub",
 	category = "rc",
 	allowed_module_categories = {"simik"},
-	--module_limitations = 'simik',
 	subgroup = "py-alienlife-simik",
 	order = "c",
 	main_product = "simik-pup",
@@ -189,7 +188,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "caged-simik",
 	category = "simik",
-	module_limitations = "simik",
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	main_product = "simik",
@@ -611,7 +609,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "simik-poop",
 	category = "simik",
-	module_limitations = "simik",
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	main_product = "simik-poop",

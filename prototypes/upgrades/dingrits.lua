@@ -11,7 +11,6 @@ if data and not yafc_turd_integration then
             tier = 5,
             order = "d-e",
             effect = {pollution = 1, speed = 4, productivity = 0.01},
-            limitation = {},
             limitation_message_key = "dingrits",
             fuel_category = "dingrits",
             fuel_value = "250MJ",

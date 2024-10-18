@@ -20,7 +20,6 @@ local IMP_BRAIN = 4
 py.autorecipes {
 	name = "rendering-zipir",
 	category = "slaughterhouse",
-	--module_limitations = 'zipir',
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	crafting_speed = 30,

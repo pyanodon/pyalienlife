@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "zungror-cocoon",
 	category = "rc",
 	allowed_module_categories = {"zungror"},
-	-- module_limitations = 'zungror',
 	subgroup = "py-alienlife-zungror",
 	order = "c",
 	main_product = "zungror-cocoon",
@@ -59,45 +58,6 @@ py.autorecipes {
 		},
 	}
 }
-
-
--- data.raw.module["speed-module"].limitation_blacklist = {
--- 	"zungror-cocoon-1",
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["speed-module-2"].limitation_blacklist = {
--- 	"zungror-cocoon-1",
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["speed-module-3"].limitation_blacklist = {
--- 	"zungror-cocoon-1",
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["efficiency-module"].limitation_blacklist = {
--- 	"zungror-cocoon-1",
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["efficiency-module-2"].limitation_blacklist = {
--- 	"zungror-cocoon-1",
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["efficiency-module-3"].limitation_blacklist = {
--- 	"zungror-cocoon-1",
--- 	"auog-pup-breeding-1"
--- }
-
--- data.raw.module["zungror"].limitation = {
--- 	"zungror-cocoon-1"
--- }
--- data.raw.module["zungror-mk02"].limitation = {
--- 	"zungror-cocoon-1"
--- }
--- data.raw.module["zungror-mk03"].limitation = {
--- 	"zungror-cocoon-1"
--- }
--- data.raw.module["zungror-mk04"].limitation = {
--- 	"zungror-cocoon-1"
--- }
 
 --[[
 		-----------------------PHEROMONES-----------------------------
@@ -184,7 +144,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "zungror-raising",
 	category = "zungror",
-	module_limitations = "zungror",
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	main_product = "zungror",

@@ -3,7 +3,6 @@
 -- py.autorecipes {
 --     name = 'rendering-carapace-phadai',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-phadai',
 -- 	order = 'b',
 --     mats =
@@ -41,7 +40,6 @@
 -- py.autorecipes {
 --     name = 'rendering-pelt-dingrits',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-dingrits',
 -- 	order = 'b',
 --     mats =
@@ -81,7 +79,6 @@
 -- py.autorecipes {
 --     name = 'rendering-spikes-dingrits',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-dingrits',
 -- 	order = 'b',
 --     mats =
@@ -121,7 +118,6 @@
 -- py.autorecipes {
 --     name = 'rendering-pineal-scrondrix',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-scrondrix',
 -- 	order = 'b',
 --     mats =
@@ -159,7 +155,6 @@
 -- py.autorecipes {
 --     name = 'rendering-tendon-kmauts',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-kmauts',
 -- 	order = 'b',
 --     mats =
@@ -197,7 +192,6 @@
 -- py.autorecipes {
 --     name = 'rendering-bladder-phagnot',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-phagnot',
 -- 	order = 'b',
 --     mats =
@@ -234,7 +228,6 @@
 -- py.autorecipes {
 --     name = 'rendering-venon-vonix',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-vonix',
 -- 	order = 'b',
 --     mats =
@@ -274,7 +267,6 @@
 -- py.autorecipes {
 --     name = 'rendering-photophore-trits',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-trits',
 -- 	order = 'b',
 --     mats =
@@ -308,7 +300,6 @@
 -- py.autorecipes {
 --     name = 'rendering-shell-xyhiphoe',
 -- 	category = 'slaughterhouse',
--- 	--module_limitations = 'auog',
 -- 	subgroup = 'py-alienlife-xyhiphoe',
 -- 	order = 'b',
 --     mats =

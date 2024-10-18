@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "zipir-eggs",
 	category = "rc",
 	allowed_module_categories = {"zipir"},
-	module_limitations = "zipir",
 	subgroup = "py-alienlife-zipir",
 	order = "c",
 	main_product = "zipir-eggs",
@@ -184,7 +183,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "zipir-a",
 	category = "zipir",
-	module_limitations = "zipir1",
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	main_product = "zipir1",

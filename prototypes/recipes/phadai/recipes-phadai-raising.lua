@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "phadai-pup",
 	category = "rc",
 	allowed_module_categories = {"phadai"},
-	module_limitations = "phadai",
 	subgroup = "py-alienlife-phadai",
 	order = "c",
 	main_product = "phadai-pup",
@@ -231,7 +230,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "phadai",
 	category = "phadai",
-	module_limitations = "phadai",
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	main_product = "phadai",

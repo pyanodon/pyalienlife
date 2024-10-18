@@ -3,7 +3,6 @@ py.autorecipes {
 	category = "fawogae",
 	subgroup = "py-alienlife-fawogae",
 	order = "b",
-	module_limitations = "fawogae",
 	upgrades =
 	{
 		{

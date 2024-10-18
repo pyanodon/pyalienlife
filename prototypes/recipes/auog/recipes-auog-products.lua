@@ -2,7 +2,6 @@
 py.autorecipes {
 	name = "auog-pooping",
 	category = "auog",
-	module_limitations = "auog",
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =

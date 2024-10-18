@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "dhilmos-inproved",
 	category = "dhilmos",
-	--module_limitations = 'dhilmos',
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	--main_product = "dhilmos",

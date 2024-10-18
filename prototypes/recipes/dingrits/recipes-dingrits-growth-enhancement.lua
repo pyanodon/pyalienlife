@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "dingrits-improved",
 	category = "dingrits",
-	--module_limitations = 'dingrits',
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	--main_product = "dingrits",

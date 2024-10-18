@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "breed-fish-egg",
 	category = "fish-farm",
-	module_limitations = "fish",
 	subgroup = "py-alienlife-fish",
 	order = "c",
 	main_product = "fish-egg",
@@ -152,7 +151,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "breed-fish",
 	category = "fish-farm",
-	module_limitations = "fish",
 	subgroup = "py-alienlife-fish",
 	order = "b",
 	main_product = "fish",

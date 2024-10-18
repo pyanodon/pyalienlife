@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "dingrits-cub",
 	category = "rc",
 	allowed_module_categories = {"dingrits"},
-	--module_limitations = 'dingrits',
 	subgroup = "py-alienlife-dingrits",
 	order = "c",
 	main_product = "dingrits-cub",
@@ -185,7 +184,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "dingrits",
 	category = "dingrits",
-	module_limitations = "dingrits",
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	main_product = "dingrits",

@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "kicalk",
 	category = "kicalk",
-	module_limitations = "kicalk",
 	subgroup = "py-alienlife-kicalk",
 	order = "a",
 	mats =

@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "rendering-antelope",
 	category = "slaughterhouse",
-	--module_limitations = 'antelope',
 	subgroup = "py-alienlife-antelope",
 	order = "b",
 	mats =

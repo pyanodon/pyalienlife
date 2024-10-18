@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "manure",
 	category = "ulric",
-	module_limitations = "ulric",
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "manure",

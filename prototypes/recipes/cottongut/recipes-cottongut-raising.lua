@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "cottongut-cub",
 	category = "rc",
 	allowed_module_categories = {"cottongut"},
-	--module_limitations = 'cottongut',
 	subgroup = "py-alienlife-cottongut",
 	order = "c",
 	main_product = "cottongut-pup",
@@ -79,7 +78,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "caged-cottongut",
 	category = "cottongut",
-	module_limitations = "cottongut",
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	main_product = "cottongut",

@@ -22,7 +22,6 @@ local IMP_BRAIN = 4
 py.autorecipes {
 	name = "rendering",
 	category = "slaughterhouse",
-	--module_limitations = 'mukmoux',
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	crafting_speed = 30,

@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "kmauts-cub",
 	category = "rc",
 	allowed_module_categories = {"kmauts"},
-	--module_limitations = 'kmauts',
 	subgroup = "py-alienlife-kmauts",
 	order = "c",
 	main_product = "kmauts-cub",
@@ -141,7 +140,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "kmauts",
 	category = "kmauts",
-	module_limitations = "kmauts",
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	main_product = "kmauts",

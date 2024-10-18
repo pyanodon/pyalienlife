@@ -22,7 +22,6 @@ local IMP_SPECIAL = 2
 py.autorecipes {
 	name = "rendering",
 	category = "slaughterhouse",
-	--module_limitations = 'phagnot',
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
 	crafting_speed = 30,

@@ -173,8 +173,6 @@ if data and not yafc_turd_integration then
         },
     }
 
-    local sawblade_limitation = {}
-
     for i = 1, 4 do
         local MODULE_SLOTS = 3 * i
         local FULL_CRAFTING_SPEED = 1
@@ -194,7 +192,6 @@ if data and not yafc_turd_integration then
                 {icon = "__pyalienlifegraphics__/graphics/icons/sawblade.png"},
                 {icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. i .. ".png"},
             },
-            limitation = sawblade_limitation,
         }
 
         local recipe = RECIPE {

@@ -13,7 +13,6 @@ local BASE_SPECIAL = 100
 py.autorecipes {
 	name = "rendering",
 	category = "slaughterhouse",
-	--module_limitations = 'fish',
 	subgroup = "py-alienlife-fish",
 	order = "b",
 	mats =

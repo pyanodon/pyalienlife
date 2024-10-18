@@ -101,7 +101,6 @@ ITEM {
     order = "k-a",
     stack_size = 50,
     effect = {pollution = 1, speed = 0.25},
-    limitation = {},
     limitation_message_key = "kicalk"
 }
 
@@ -121,7 +120,6 @@ ITEM {
     order = "k-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 0.5},
-    limitation = {},
     limitation_message_key = "kicalk"
 }
 
@@ -141,7 +139,6 @@ ITEM {
     order = "k-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation = {},
     limitation_message_key = "kicalk"
 }
 
@@ -161,7 +158,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 1.5},
-    limitation = {},
     limitation_message_key = "kicalk"
 }
 
@@ -269,7 +265,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation = {},
     limitation_message_key = "moondrop"
 }
 
@@ -289,7 +284,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    limitation = {},
     limitation_message_key = "moondrop"
 }
 
@@ -309,7 +303,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    limitation = {},
     limitation_message_key = "moondrop"
 }
 
@@ -329,7 +322,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    limitation = {},
     limitation_message_key = "moondrop"
 }
 
@@ -497,7 +489,6 @@ ITEM {
     order = "cad-a",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
 
@@ -517,7 +508,6 @@ ITEM {
     order = "cad-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
 
@@ -537,7 +527,6 @@ ITEM {
     order = "cad-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
 
@@ -557,7 +546,6 @@ ITEM {
     order = "cad-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    limitation = {},
     limitation_message_key = "cadaveric-arum"
 }
 
@@ -573,6 +561,5 @@ ITEM {
     order = "r",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation = {},
     limitation_message_key = "antelope"
 }

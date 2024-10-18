@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "arthurian-egg",
 	category = "rc",
 	allowed_module_categories = {"arthurian"},
-	--module_limitations = 'arthurian',
 	main_product = "arthurian-egg",
 	crafting_speed = 20,
 	subgroup = "py-alienlife-arthurian",
@@ -161,7 +160,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "arthurian-incubating",
 	category = "research",
-	module_limitations = "arthurian",
 	subgroup = "py-alienlife-arthurian",
 	order = "c",
 	mats =
@@ -190,7 +188,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "arthurian-maturing",
 	category = "arthurian",
-	module_limitations = "arthurian",
 	main_product = "arthurian",
 	subgroup = "py-alienlife-arthurian",
 	order = "b",

@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "xeno-improved",
 	category = "xeno",
-	--module_limitations = 'xeno',
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	--main_product = "caged-xeno",

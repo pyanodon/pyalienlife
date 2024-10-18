@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "moondrops-a",
 	category = "moon",
-	module_limitations = "moondrop",
 	subgroup = "py-alienlife-moon",
 	order = "a",
 	mats =

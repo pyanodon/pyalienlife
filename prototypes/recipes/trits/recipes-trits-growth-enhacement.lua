@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "trits-improved",
 	category = "trits",
-	--module_limitations = 'trits',
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	--main_product = 'trits',

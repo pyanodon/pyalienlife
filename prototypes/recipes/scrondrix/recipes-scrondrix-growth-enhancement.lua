@@ -3,7 +3,6 @@
 py.autorecipes {
 	name = "scrondrix-improved",
 	category = "scrondrix",
-	module_limitations = "scrondrix",
 	subgroup = "py-alienlife-scrondrix",
 	order = "c",
 	--main_product = 'scrondrix-pup',

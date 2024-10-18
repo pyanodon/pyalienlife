@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "zipir-improved",
 	category = "zipir",
-	module_limitations = "zipir",
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	mats =

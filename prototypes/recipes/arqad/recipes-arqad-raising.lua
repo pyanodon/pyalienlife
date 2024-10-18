@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "arqad-egg",
 	category = "rc",
 	allowed_module_categories = {"arqad"},
-	--module_limitations = 'arqad',
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-egg",
@@ -90,7 +89,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "arqad-maggots",
 	category = "vrauks",
-	module_limitations = "arqad",
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-maggot",
@@ -120,7 +118,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "arqad-egg-nests",
 	category = "arqad",
-	module_limitations = "arqad",
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-egg-nest",
@@ -199,7 +196,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "caged-arqad",
 	category = "arqad",
-	module_limitations = "arqad",
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	main_product = "arqad",
@@ -285,7 +281,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "arqad-queen",
 	category = "arqad",
-	module_limitations = "arqad",
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	main_product = "arqad-queen",

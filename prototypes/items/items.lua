@@ -5364,7 +5364,6 @@ ITEM {
 	order = "t-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5383,7 +5382,6 @@ ITEM {
 	order = "t-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5402,7 +5400,6 @@ ITEM {
 	order = "t-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5421,7 +5418,6 @@ ITEM {
 	order = "t-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "wood"
 }
 
@@ -5523,7 +5519,6 @@ ITEM {
 	order = "s-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5542,7 +5537,6 @@ ITEM {
 	order = "s-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5561,7 +5555,6 @@ ITEM {
 	order = "s-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5580,7 +5573,6 @@ ITEM {
 	order = "s-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "weed"
 }
 
@@ -5604,7 +5596,6 @@ ITEM {
 	order = "m-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5631,7 +5622,6 @@ ITEM {
 	order = "m-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5658,7 +5648,6 @@ ITEM {
 	order = "m-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5685,7 +5674,6 @@ ITEM {
 	order = "m-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "moss"
 }
 
@@ -5703,7 +5691,6 @@ ITEM {
 	order = "m-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {"sap-01"},
 	limitation_message_key = "sap"
 }
 
@@ -5722,7 +5709,6 @@ ITEM {
 	order = "m-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {"sap-01", "sap-mk02"},
 	limitation_message_key = "sap"
 }
 
@@ -5741,7 +5727,6 @@ ITEM {
 	order = "m-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {"sap-01", "sap-mk02", "sap-mk03"},
 	limitation_message_key = "sap"
 }
 
@@ -5760,7 +5745,6 @@ ITEM {
 	order = "m-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {"sap-01", "sap-mk02", "sap-mk03", "sap-mk04"},
 	limitation_message_key = "sap"
 }
 
@@ -5778,7 +5762,6 @@ ITEM {
 	order = "u-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5797,7 +5780,6 @@ ITEM {
 	order = "u-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5816,7 +5798,6 @@ ITEM {
 	order = "u-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5835,7 +5816,6 @@ ITEM {
 	order = "u-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "ulric"
 }
 
@@ -5912,7 +5892,6 @@ ITEM {
 	order = "sa",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.25},
-	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -5931,7 +5910,6 @@ ITEM {
 	order = "sb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2.5},
-	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -5950,7 +5928,6 @@ ITEM {
 	order = "sc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -5969,7 +5946,6 @@ ITEM {
 	order = "sd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 5},
-	limitation = {},
 	limitation_message_key = "sponge"
 }
 
@@ -5987,7 +5963,6 @@ ITEM {
 	order = "ra",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6006,7 +5981,6 @@ ITEM {
 	order = "rb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6025,7 +5999,6 @@ ITEM {
 	order = "rc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6044,7 +6017,6 @@ ITEM {
 	order = "rd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "ralesia"
 }
 
@@ -6101,7 +6073,6 @@ ITEM {
 	order = "m-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6120,7 +6091,6 @@ ITEM {
 	order = "m-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6139,7 +6109,6 @@ ITEM {
 	order = "m-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6158,7 +6127,6 @@ ITEM {
 	order = "m-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2.5},
-	limitation = {},
 	limitation_message_key = "mukmoux"
 }
 
@@ -6176,7 +6144,6 @@ ITEM {
 	order = "aa",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6195,7 +6162,6 @@ ITEM {
 	order = "ab",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6214,7 +6180,6 @@ ITEM {
 	order = "ac",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6233,7 +6198,6 @@ ITEM {
 	order = "ad",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "arthurian"
 }
 
@@ -6251,7 +6215,6 @@ ITEM {
 	order = "ta",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6270,7 +6233,6 @@ ITEM {
 	order = "tb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6289,7 +6251,6 @@ ITEM {
 	order = "tc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6308,7 +6269,6 @@ ITEM {
 	order = "td",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "tuuphra"
 }
 
@@ -6326,7 +6286,6 @@ ITEM {
 	order = "na",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 7.5},
-	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6345,7 +6304,6 @@ ITEM {
 	order = "nb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 10},
-	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6364,7 +6322,6 @@ ITEM {
 	order = "nc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 12.5},
-	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6383,7 +6340,6 @@ ITEM {
 	order = "nd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 15},
-	limitation = {},
 	limitation_message_key = "navens"
 }
 
@@ -6401,7 +6357,6 @@ ITEM {
 	order = "ya",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.3},
-	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6420,7 +6375,6 @@ ITEM {
 	order = "yb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.6},
-	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6439,7 +6393,6 @@ ITEM {
 	order = "yc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.9},
-	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6458,7 +6411,6 @@ ITEM {
 	order = "yd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.2},
-	limitation = {},
 	limitation_message_key = "yotoi"
 }
 
@@ -6476,7 +6428,6 @@ ITEM {
 	order = "da",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6495,7 +6446,6 @@ ITEM {
 	order = "db",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6514,7 +6464,6 @@ ITEM {
 	order = "dc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6533,7 +6482,6 @@ ITEM {
 	order = "dd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2.5},
-	limitation = {},
 	limitation_message_key = "dhilmos"
 }
 
@@ -6551,7 +6499,6 @@ ITEM {
 	order = "sr-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6570,7 +6517,6 @@ ITEM {
 	order = "sr-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6589,7 +6535,6 @@ ITEM {
 	order = "sr-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6608,7 +6553,6 @@ ITEM {
 	order = "sr-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "scrondrix"
 }
 
@@ -6626,7 +6570,6 @@ ITEM {
 	order = "ren-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.16},
-	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6645,7 +6588,6 @@ ITEM {
 	order = "ren-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.32},
-	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6664,7 +6606,6 @@ ITEM {
 	order = "ren-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.63},
-	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6683,7 +6624,6 @@ ITEM {
 	order = "ren-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.25},
-	limitation = {},
 	limitation_message_key = "rennea"
 }
 
@@ -6701,7 +6641,6 @@ ITEM {
 	order = "ph-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6720,7 +6659,6 @@ ITEM {
 	order = "ph-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.25},
-	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6739,7 +6677,6 @@ ITEM {
 	order = "ph-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6758,7 +6695,6 @@ ITEM {
 	order = "ph-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.75},
-	limitation = {},
 	limitation_message_key = "phadai"
 }
 
@@ -6790,7 +6726,6 @@ ITEM {
 	order = "a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
 	fuel_value = "250MJ",
@@ -6812,7 +6747,6 @@ ITEM {
 	order = "a-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
 	fuel_value = "350MJ",
@@ -6834,7 +6768,6 @@ ITEM {
 	order = "a-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
 	fuel_value = "400MJ",
@@ -6856,7 +6789,6 @@ ITEM {
 	order = "a-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
 	fuel_value = "450MJ",
@@ -6947,7 +6879,6 @@ ITEM {
 	order = "fa",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -6979,7 +6910,6 @@ ITEM {
 	order = "fb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7011,7 +6941,6 @@ ITEM {
 	order = "fc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7043,7 +6972,6 @@ ITEM {
 	order = "fd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2.5},
-	limitation = {},
 	limitation_message_key = "fish"
 }
 
@@ -7061,7 +6989,6 @@ ITEM {
 	order = "yaed-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7080,7 +7007,6 @@ ITEM {
 	order = "yaed-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7099,7 +7025,6 @@ ITEM {
 	order = "yaed-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7118,7 +7043,6 @@ ITEM {
 	order = "yaed-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "yaedols"
 }
 
@@ -7136,7 +7060,6 @@ ITEM {
 	order = "d-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "dingrits",
 	fuel_category = "dingrits",
 	fuel_value = "250MJ",
@@ -7158,7 +7081,6 @@ ITEM {
 	order = "d-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "dingrits",
 	fuel_category = "dingrits",
 	fuel_value = "320MJ",
@@ -7180,7 +7102,6 @@ ITEM {
 	order = "d-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "dingrits",
 	fuel_category = "dingrits",
 	fuel_value = "350MJ",
@@ -7202,7 +7123,6 @@ ITEM {
 	order = "d-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "dingrits",
 	fuel_category = "dingrits",
 	fuel_value = "480MJ",
@@ -7284,7 +7204,6 @@ ITEM {
 	order = "k-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = .25},
-	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7303,7 +7222,6 @@ ITEM {
 	order = "k-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = .5},
-	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7322,7 +7240,6 @@ ITEM {
 	order = "k-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = .75},
-	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7341,7 +7258,6 @@ ITEM {
 	order = "k-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "kmauts"
 }
 
@@ -7359,7 +7275,6 @@ ITEM {
 	order = "v-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7378,7 +7293,6 @@ ITEM {
 	order = "v-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7397,7 +7311,6 @@ ITEM {
 	order = "v-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7416,7 +7329,6 @@ ITEM {
 	order = "v-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2.5},
-	limitation = {},
 	limitation_message_key = "vonix"
 }
 
@@ -7434,7 +7346,6 @@ ITEM {
 	order = "ga",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7453,7 +7364,6 @@ ITEM {
 	order = "gb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7472,7 +7382,6 @@ ITEM {
 	order = "gc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7491,7 +7400,6 @@ ITEM {
 	order = "gd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "grod"
 }
 
@@ -7507,7 +7415,6 @@ ITEM {
 	order = "p-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7526,7 +7433,6 @@ ITEM {
 	order = "p-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7545,7 +7451,6 @@ ITEM {
 	order = "p-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7564,7 +7469,6 @@ ITEM {
 	order = "p-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "phagnot"
 }
 
@@ -7582,7 +7486,6 @@ ITEM {
 	order = "b-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7601,7 +7504,6 @@ ITEM {
 	order = "b-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7620,7 +7522,6 @@ ITEM {
 	order = "b-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7639,7 +7540,6 @@ ITEM {
 	order = "b-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "bhoddos"
 }
 
@@ -7657,7 +7557,6 @@ ITEM {
 	order = "x-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7676,7 +7575,6 @@ ITEM {
 	order = "x-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7695,7 +7593,6 @@ ITEM {
 	order = "x-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7714,7 +7611,6 @@ ITEM {
 	order = "x-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "xeno"
 }
 
@@ -7730,7 +7626,6 @@ ITEM {
 	order = "a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "cridren"
 }
 
@@ -7748,7 +7643,6 @@ ITEM {
 	order = "za",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7767,7 +7661,6 @@ ITEM {
 	order = "zb",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7786,7 +7679,6 @@ ITEM {
 	order = "zc",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7805,7 +7697,6 @@ ITEM {
 	order = "zd",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "zipir"
 }
 
@@ -7823,7 +7714,6 @@ ITEM {
 	order = "tr-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -7842,7 +7732,6 @@ ITEM {
 	order = "tr-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -7861,7 +7750,6 @@ ITEM {
 	order = "tr-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -7880,7 +7768,6 @@ ITEM {
 	order = "tr-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2.5},
-	limitation = {},
 	limitation_message_key = "trits"
 }
 
@@ -7898,7 +7785,6 @@ ITEM {
 	order = "v-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -7917,7 +7803,6 @@ ITEM {
 	order = "v-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -7936,7 +7821,6 @@ ITEM {
 	order = "v-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -7955,7 +7839,6 @@ ITEM {
 	order = "v-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "vrauks"
 }
 
@@ -7973,7 +7856,6 @@ ITEM {
 	order = "v-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -7992,7 +7874,6 @@ ITEM {
 	order = "v-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -8011,7 +7892,6 @@ ITEM {
 	order = "v-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -8030,7 +7910,6 @@ ITEM {
 	order = "v-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "xyhiphoe"
 }
 
@@ -8048,7 +7927,6 @@ ITEM {
 	order = "k-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8067,7 +7945,6 @@ ITEM {
 	order = "k-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.25},
-	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8086,7 +7963,6 @@ ITEM {
 	order = "k-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.5},
-	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8105,7 +7981,6 @@ ITEM {
 	order = "k-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "korlex"
 }
 
@@ -8122,7 +7997,6 @@ ITEM {
 	order = "k-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.45},
-	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8140,7 +8014,6 @@ ITEM {
 	order = "k-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 0.95},
-	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8161,7 +8034,6 @@ ITEM {
 	order = "k-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.45},
-	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8182,7 +8054,6 @@ ITEM {
 	order = "k-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1.95},
-	limitation = {},
 	limitation_message_key = "fawogae"
 }
 
@@ -8200,7 +8071,6 @@ ITEM {
 	order = "cg-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8219,7 +8089,6 @@ ITEM {
 	order = "cg-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8238,7 +8107,6 @@ ITEM {
 	order = "cg-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8257,7 +8125,6 @@ ITEM {
 	order = "cg-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "cottongut"
 }
 
@@ -8279,7 +8146,6 @@ ITEM {
 	order = "g-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8298,7 +8164,6 @@ ITEM {
 	order = "g-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8331,7 +8196,6 @@ ITEM {
 	order = "g-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8364,7 +8228,6 @@ ITEM {
 	order = "g-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "guar"
 }
 
@@ -8398,7 +8261,6 @@ ITEM {
 	order = "q-a",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
-	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -8417,7 +8279,6 @@ ITEM {
 	order = "q-b",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
-	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -8436,7 +8297,6 @@ ITEM {
 	order = "q-c",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
-	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -8455,7 +8315,6 @@ ITEM {
 	order = "q-d",
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
-	limitation = {},
 	limitation_message_key = "arqad"
 }
 
@@ -9086,7 +8945,6 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 0.25, consumption = 1, pollution = 0.1},
-	limitation = {"electric-energy-interface"},
 	limitation_message_key = "vatbrain"
 }
 
@@ -9102,7 +8960,6 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 0.5, consumption = 2, pollution = 0.1},
-	limitation = {"electric-energy-interface"},
 	limitation_message_key = "vatbrain"
 }
 
@@ -9118,7 +8975,6 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 0.75, consumption = 3, pollution = 0.1},
-	limitation = {"electric-energy-interface"},
 	limitation_message_key = "vatbrain"
 }
 
@@ -9134,6 +8990,5 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 1, consumption = 4, pollution = 0.1},
-	limitation = {"electric-energy-interface"},
 	limitation_message_key = "vatbrain"
 }

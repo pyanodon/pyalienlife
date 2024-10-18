@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "grod",
 	category = "grod",
-	module_limitations = "grod",
 	main_product = "grod",
 	subgroup = "py-alienlife-grod",
 	order = "a",

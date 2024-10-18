@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "vonix-improved",
 	category = "vonix",
-	--module_limitations = 'vonix',
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	--main_product = "vonix",

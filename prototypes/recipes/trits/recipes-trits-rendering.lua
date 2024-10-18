@@ -24,7 +24,6 @@ local IMP_SPECIAL = 4
 py.autorecipes {
 	name = "rendering",
 	category = "slaughterhouse",
-	--module_limitations = 'trits',
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	crafting_speed = 30,

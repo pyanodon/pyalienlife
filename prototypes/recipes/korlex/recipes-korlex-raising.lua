@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "korlex-pup",
 	category = "rc",
 	allowed_module_categories = {"korlex"},
-	--module_limitations = 'korlex',
 	subgroup = "py-alienlife-korlex",
 	order = "c",
 	main_product = "korlex-pup",
@@ -187,7 +186,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "korlex",
 	category = "korlex",
-	module_limitations = "korlex",
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	main_product = "korlex",

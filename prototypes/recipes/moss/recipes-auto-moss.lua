@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "moss",
 	category = "moss",
-	module_limitations = "moss",
 	subgroup = "py-alienlife-moss",
 	order = "a",
 	upgrades =

@@ -3,7 +3,6 @@ py.autorecipes {
 	name = "auog-pup-breeding",
 	category = "rc",
 	allowed_module_categories = {"auog"},
-	--module_limitations = 'auog',
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =
@@ -109,24 +108,10 @@ py.autorecipes {
 	}
 }
 
--- data.raw.module["auog"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["auog-mk02"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["auog-mk03"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["auog-mk04"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
-
 --Raising auog pups
 py.autorecipes {
 	name = "auog-maturing",
 	category = "auog",
-	module_limitations = "auog",
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	upgrades =

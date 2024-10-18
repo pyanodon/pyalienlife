@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "mukmoux-improved",
 	category = "mukmoux",
-	--module_limitations = 'mukmoux',
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	--main_product = "mukmoux",

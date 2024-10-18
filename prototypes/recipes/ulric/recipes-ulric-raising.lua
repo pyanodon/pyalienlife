@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "ulric-cub",
 	category = "rc",
 	allowed_module_categories = {"ulric"},
-	--module_limitations = 'ulric',
 	subgroup = "py-alienlife-ulric",
 	order = "c",
 	main_product = "ulric-cub",
@@ -196,7 +195,6 @@ py.autorecipes {
 py.autorecipes {
 	name = "ulric",
 	category = "ulric",
-	module_limitations = "ulric",
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "ulric",

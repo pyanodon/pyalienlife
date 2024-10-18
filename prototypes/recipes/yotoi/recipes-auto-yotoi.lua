@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "yotoi",
 	category = "yotoi",
-	module_limitations = "yotoi",
 	subgroup = "py-alienlife-yotoi",
 	order = "a",
 	mats =

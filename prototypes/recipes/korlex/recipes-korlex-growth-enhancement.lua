@@ -1,7 +1,6 @@
 py.autorecipes {
 	name = "korlex-improved",
 	category = "korlex",
-	--module_limitations = 'korlex',
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	--main_product = "korlex",

@@ -2,7 +2,6 @@ py.autorecipes {
 	name = "filled-honeycomb",
 	category = "arqad",
 	subgroup = "py-alienlife-arqad",
-	module_limitations = "arqad",
 	upgrades =
 	{
 		{

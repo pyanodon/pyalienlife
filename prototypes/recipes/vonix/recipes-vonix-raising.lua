@@ -4,7 +4,6 @@ py.autorecipes {
 	name = "vonix-cub",
 	category = "rc",
 	allowed_module_categories = {"vonix"},
-	--module_limitations = 'vonix',
 	subgroup = "py-alienlife-vonix",
 	order = "c",
 	main_product = "vonix-eggs",
@@ -168,7 +167,6 @@ RECIPE {
 py.autorecipes {
 	name = "vonix-raising",
 	category = "vonix",
-	module_limitations = "vonix",
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	main_product = "vonix",
