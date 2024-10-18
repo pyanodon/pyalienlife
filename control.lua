@@ -20,7 +20,6 @@ require "scripts.digosaurus.digosaurus"
 require "scripts.ocula.ocula"
 ---@diagnostic disable-next-line: different-requires
 require "scripts.farming.farming"
-require "scripts.slaughterhouse.slaughterhouse"
 require "scripts.smart-farm.smart-farm"
 require "scripts.worm.worm"
 require "scripts.turd.turd"
@@ -76,7 +75,6 @@ local function init()
     Digosaurus.events.init()
     Oculua.events.on_init()
     Farming.events.on_init()
-    Slaughterhouse.events.on_init()
     Worm.events.on_init()
     Wiki.events.on_init()
     Turd.events.on_init()
@@ -142,14 +140,12 @@ py.on_event(defines.events.on_gui_opened, function(event)
     Caravan.events.on_gui_opened_connected(event)
     Oculua.events.on_gui_opened(event)
     Digosaurus.events.on_gui_opened(event)
-    Slaughterhouse.events.on_gui_opened(event)
     Biofluid.events.on_gui_opened(event)
 end)
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Caravan.events.close_gui(event)
     Digosaurus.events.close_gui(event)
-    Slaughterhouse.events.on_gui_closed(event)
     Biofluid.events.on_gui_closed(event)
 end)
 
@@ -158,7 +154,6 @@ py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launc
 py.on_event(defines.events.on_object_destroyed, function(event)
     Caravan.events.on_object_destroyed(event)
     Farming.events.on_object_destroyed(event)
-    Slaughterhouse.events.on_object_destroyed(event)
     Worm.events.on_object_destroyed(event)
 end)
 
