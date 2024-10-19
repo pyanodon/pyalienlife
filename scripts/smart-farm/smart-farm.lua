@@ -71,6 +71,8 @@ py.on_event(py.events.on_built(), function(event)
 
 		local previous_tile = surface.get_tile(position)
 		if not previous_tile.valid or previous_tile.prototype.collision_mask.layers.water_tile then goto continue end
+		if previous_tile.name == "sut-panel" then goto continue end
+
 		table.insert(landfill_tiles, {name = "landfill", position = position})
 
 		storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
