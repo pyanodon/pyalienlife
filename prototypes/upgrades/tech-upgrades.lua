@@ -137,7 +137,8 @@ local function build_tech_upgrade(tech_upgrade)
                         consumption = effect.consumption or 0,
                         speed = effective_speed or effect.speed or 0,
                         productivity = effect.productivity or 0,
-                        pollution = -1 * (effect.pollution or 0.01)
+                        pollution = -1 * (effect.pollution or 0),
+                        quality = effect.quality or 0
                     },
                     localised_name = {"technology-name." .. tech.name},
                     localised_description = {"turd.font", {"turd.module"}},
