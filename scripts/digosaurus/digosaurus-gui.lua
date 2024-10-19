@@ -53,7 +53,7 @@ function Digosaurus.update_gui(gui)
 	end
 end
 
-Digosaurus.events.on_gui_opened = function(event)
+py.on_event(defines.events.on_gui_opened, function(event)
 	local entity = event.entity
 	if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "dino-dig-site" then return end
 	local player = game.get_player(event.player_index)
@@ -61,8 +61,8 @@ Digosaurus.events.on_gui_opened = function(event)
 
 	-- Since we never really do a search for dig sites this can happen with a weird migration or players doing editor things
 	if not dig_data then
-		log("diggy diggy gui found no diggy diggy data")
-		Digosaurus.events.on_built(event)
+		game.print("diggy diggy gui found no diggy diggy data")
+		game.print("this dig site will not function, please place another")
 		return
 	end
 
@@ -109,12 +109,12 @@ Digosaurus.events.on_gui_opened = function(event)
 	end
 
 	Digosaurus.update_gui(main_frame)
-end
+end)
 
-Digosaurus.events.close_gui = function(event)
+py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
 	local player = game.get_player(event.player_index)
 	if event.gui_type == defines.gui_type.entity then
 		local gui = player.gui.relative.digosaurus_gui
 		if gui then gui.destroy() end
 	end
-end
+end)

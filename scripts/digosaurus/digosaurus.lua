@@ -1,5 +1,4 @@
 Digosaurus = {}
-Digosaurus.events = {}
 
 require "digosaurus-prototypes"
 require "digosaurus-gui"
@@ -141,7 +140,7 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     end
 end)
 
-Digosaurus.events.on_ai_command_completed = function(event)
+py.on_event(defines.events.on_ai_command_completed, function(event)
     local unit_number = event.unit_number
     local digosaur_data = storage.digosaurs[unit_number]
     if not digosaur_data then return end
@@ -192,9 +191,9 @@ Digosaurus.events.on_ai_command_completed = function(event)
             end
         end
     end
-end
+end)
 
-Digosaurus.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
     local entity = event.created_entity or event.entity
     if entity.name ~= "dino-dig-site" then return end
     entity.active = false
@@ -217,9 +216,9 @@ Digosaurus.events.on_built = function(event)
     }
 
     Digosaurus.scan_ores(storage.dig_sites[entity.unit_number])
-end
+end)
 
-Digosaurus.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "dino-dig-site" then return end
 
@@ -248,7 +247,7 @@ Digosaurus.events.on_destroyed = function(event)
 
     dig_data.food_input.destroy()
     dig_data.digosaur_inventory.destroy()
-end
+end)
 
 gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     local player = game.get_player(event.player_index)
@@ -308,7 +307,7 @@ local function swap_to_stack(player, item_name, cursor_stack)
     return false
 end
 
-Digosaurus.events.on_player_cursor_stack_changed = function(event)
+script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local player = game.players[event.player_index]
     if player and player.valid then
         -- valid cursor?
@@ -327,4 +326,4 @@ Digosaurus.events.on_player_cursor_stack_changed = function(event)
             player.cursor_ghost = "dino-dig-site"
         end
     end
-end
+end)

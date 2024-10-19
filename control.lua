@@ -83,7 +83,6 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.on_event(py.events.on_built(), function(event)
-    Digosaurus.events.on_built(event)
     Farming.events.on_built(event)
     Smart_Farm.events.on_built(event)
     Worm.events.on_built(event)
@@ -91,12 +90,7 @@ py.on_event(py.events.on_built(), function(event)
     Mounts.events.on_built(event)
 end)
 
-py.on_event(defines.events.on_ai_command_completed, function(event)
-    Digosaurus.events.on_ai_command_completed(event)
-end)
-
 py.on_event(py.events.on_destroyed(), function(event)
-    Digosaurus.events.on_destroyed(event)
     Turd.events.on_destroyed(event)
     Mounts.events.on_destroyed(event)
     Smart_Farm.events.on_destroyed(event)
@@ -104,14 +98,6 @@ end)
 
 py.on_event(defines.events.on_player_removed_equipment, function(event)
     Mounts.events.on_player_removed_equipment(event)
-end)
-
-py.on_event(defines.events.on_gui_opened, function(event)
-    Digosaurus.events.on_gui_opened(event)
-end)
-
-py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    Digosaurus.events.close_gui(event)
 end)
 
 py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
@@ -145,7 +131,6 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
     end
 end)
 
-script.on_event(defines.events.on_player_cursor_stack_changed, Digosaurus.events.on_player_cursor_stack_changed)
 script.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
 script.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
 script.on_event(defines.events.on_selected_entity_changed, Turd.events.on_selected_entity_changed)
