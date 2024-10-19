@@ -172,7 +172,7 @@ local function transfer_filtered_items(input_inventory, output_inventory, item, 
 end
 
 local function evaluate_signal(entity, signal)
-	local result = entity.get_merged_signal(signal)
+	local result = entity.get_signal(signal, defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green)
 	if result == 0 and entity.type == "container" and signal.type == "item" then
 		return entity.get_inventory(defines.inventory.chest).get_item_count(signal.name)
 	end
