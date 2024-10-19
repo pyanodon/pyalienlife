@@ -1,11 +1,11 @@
 Vatbrain = {}
 Vatbrain.events = {}
 
-Vatbrain.events.on_init = function()
+py.on_event(py.events.on_init(), function()
     storage.vatbrains = storage.vatbrains or {}
-end
+end)
 
-Vatbrain.events.on_built = function(event)
+py.on_event(py.events.on_built(),  function(event)
     local entity = event.created_entity or event.entity
     if not entity.valid or entity.name ~= "vat-brain" then return end
 
@@ -15,9 +15,9 @@ Vatbrain.events.on_built = function(event)
         force = entity.force,
     }
     storage.vatbrains[beacon.unit_number] = {beacon = beacon, vatbrain = entity}
-end
+end)
 
-Vatbrain.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "vat-brain" then return end
 
@@ -26,7 +26,7 @@ Vatbrain.events.on_destroyed = function(event)
         storage.vatbrains[beacon.unit_number] = nil
         beacon.destroy()
     end
-end
+end)
 
 local cartridge_tiers = {
     ["brain-food-01"] = {module = "vatbrain-1", tier = 1},
@@ -34,7 +34,7 @@ local cartridge_tiers = {
     ["brain-food-03"] = {module = "vatbrain-3", tier = 3},
     ["brain-food-04"] = {module = "vatbrain-4", tier = 4},
 }
-Vatbrain.events[41] = function()
+py.register_on_nth_tick(41, "Vatbrain", "pyal", function()
     for _, vatbrain_data in pairs(storage.vatbrains) do
         local vatbrain, beacon = vatbrain_data.vatbrain, vatbrain_data.beacon
         if not vatbrain or not vatbrain.valid or not beacon or not beacon.valid then goto continue end
@@ -56,4 +56,4 @@ Vatbrain.events[41] = function()
         if vatbrain.status == defines.entity_status.working then beacon.active = true end
         ::continue::
     end
-end
+end)
