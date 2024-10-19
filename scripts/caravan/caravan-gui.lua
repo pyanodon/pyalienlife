@@ -252,7 +252,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 	Caravan.build_gui_connected(player, entity)
 end
 
-Caravan.events.on_open_gui = function(event)
+py.on_event(py.events.on_entity_clicked(), function(event)
 	local player = game.get_player(event.player_index)
 	-- If the player has a temporary item in their cursor, we don't let them open the GUI
 	-- This includes the caravan controller, blueprint tool, etc
@@ -272,7 +272,7 @@ Caravan.events.on_open_gui = function(event)
 		end
 	end
 	Caravan.build_gui(player, entity)
-end
+end)
 
 ---Resets the fuel inventory, the fuel bar, and the schedule pane of the caravan GUI to reflect the current state of the caravan.
 ---@param gui LuaGuiElement
@@ -309,7 +309,7 @@ function Caravan.update_gui(gui, weak)
 	end
 end
 
-Caravan.events.close_gui = function(event)
+py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
 	local player = game.get_player(event.player_index)
 
 	if player.gui.relative.py_global_caravan_gui then
@@ -326,7 +326,7 @@ Caravan.events.close_gui = function(event)
 			player.gui.relative.caravan_flow.destroy()
 		end
 	end
-end
+end)
 
 local function get_caravan_gui_in_flow(player)
 	if player.gui.relative.caravan_flow then

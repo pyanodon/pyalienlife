@@ -68,7 +68,7 @@ Caravan.build_gui_connected = function(player, entity, anchor)
     end
 end
 
-Caravan.events.on_gui_opened_connected = function(event)
+py.on_event(defines.events.on_gui_opened, function(event)
     local player = game.get_player(event.player_index)
     local entity = event.entity
     if not entity then return end
@@ -78,4 +78,4 @@ Caravan.events.on_gui_opened_connected = function(event)
         position = defines.relative_gui_position.right
     }
     Caravan.build_gui_connected(player, entity, anchor)
-end
+end)

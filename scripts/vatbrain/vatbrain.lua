@@ -1,5 +1,4 @@
 Vatbrain = {}
-Vatbrain.events = {}
 
 py.on_event(py.events.on_init(), function()
     storage.vatbrains = storage.vatbrains or {}

@@ -1,5 +1,4 @@
 Caravan = {}
-Caravan.events = {}
 
 require "italian-names"
 require "caravan-gui"
@@ -121,11 +120,11 @@ local function remove_fuel_alert(entity)
 	end
 end
 
-Caravan.events.init = function()
+py.on_event(py.events.on_init(), function()
 	storage.caravans = storage.caravans or {}
 	storage.last_opened_caravan = storage.last_opened_caravan or {}
 	storage.make_operable_next_tick = storage.make_operable_next_tick or {}
-end
+end)
 
 ---@param v table
 ---@return boolean
@@ -153,7 +152,8 @@ function Caravan.validity_check(caravan_data)
 	return true
 end
 
-Caravan.events.used_capsule = function(event)
+--- Called whenever the player uses the carrot-on-stick capsule item.
+py.on_event(py.events.on_entity_clicked(), function(event)
 	local player = game.get_player(event.player_index)
 	local cursor_stack = player.cursor_stack
 	if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= "caravan-control" then return end
@@ -192,7 +192,7 @@ Caravan.events.used_capsule = function(event)
 		return
 	end
 	Caravan.build_gui(player, caravan_data.entity)
-end
+end)
 
 ---Is this caravan currently doing anything?
 ---@param caravan_data Caravan
@@ -517,7 +517,7 @@ gui_events[defines.events.on_gui_text_changed]["py_time_passed_text"] = function
 	action.wait_time = tonumber(element.text or 5)
 end
 
-Caravan.events.ai_command_completed = function(event)
+py.on_event(defines.events.on_ai_command_completed, function(event)
 	local unit_number = event.unit_number
 	local caravan_data = storage.caravans[unit_number]
 	if not caravan_data or not Caravan.validity_check(caravan_data) then return end
@@ -566,7 +566,7 @@ Caravan.events.ai_command_completed = function(event)
 			Caravan.update_gui(gui); return
 		end
 	end
-end
+end)
 
 ---Sort function to sort caravans by arrival time. Used to give priority to whichever caravans have been waiting the longest.
 ---@param a Caravan
@@ -575,7 +575,7 @@ local function caravan_sort_function(a, b)
 	return (a.arrival_tick or 0) < (b.arrival_tick or 0)
 end
 
-Caravan.events[60] = function()
+py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 	local guis_to_update = {}
 
 	if not storage.caravan_queue then
@@ -662,7 +662,7 @@ Caravan.events[60] = function()
 		end
 		storage.make_operable_next_tick = {}
 	end
-end
+end)
 
 function Caravan.instantiate_caravan(entity)
 	local existing = storage.caravans[entity.unit_number]
@@ -691,7 +691,7 @@ function Caravan.instantiate_caravan(entity)
 	return caravan_data
 end
 
-Caravan.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	local prototype = prototypes[entity.name]
 	if not prototype then return end
@@ -713,9 +713,9 @@ Caravan.events.on_built = function(event)
 	end
 	script.register_on_object_destroyed(entity)
 	storage.caravan_queue = nil
-end
+end)
 
-Caravan.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
 	local prototype = prototypes[entity.name]
 	if not prototype then return end
@@ -737,9 +737,9 @@ Caravan.events.on_destroyed = function(event)
 		end
 	end
 	storage.caravan_queue = nil
-end
+end)
 
-Caravan.events.on_object_destroyed = function(event)
+py.on_event(defines.events.on_object_destroyed, function(event)
 	local unit_number = event.useful_id
 	local caravan_data = storage.caravans[unit_number]
 
@@ -755,9 +755,9 @@ Caravan.events.on_object_destroyed = function(event)
 
 	local map_tag = caravan_data.map_tag
 	if map_tag and map_tag.valid then map_tag.destroy() end
-end
+end)
 
-Caravan.events.on_entity_settings_pasted = function(event)
+py.on_event(defines.events.on_entity_settings_pasted, function(event)
 	local source, destination = event.source, event.destination
 	local source_data, destination_data = storage.caravans[source.unit_number], storage.caravans[destination.unit_number]
 	if not source_data or not destination_data then return end
@@ -774,7 +774,7 @@ Caravan.events.on_entity_settings_pasted = function(event)
 		local gui = Caravan.get_caravan_gui(player)
 		if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end
 	end
-end
+end)
 
 remote.add_interface("caravans", {
 	get_caravan_count = function()
