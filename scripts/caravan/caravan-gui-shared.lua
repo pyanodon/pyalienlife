@@ -6,7 +6,7 @@ function Caravan.status_img(caravan_data)
         return {"entity-status.working"}, "utility/status_working"
     elseif caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
         return {"entity-status.starved"}, "utility/status_not_working"
-    elseif entity.health ~= entity.prototype.max_health then
+    elseif entity.health ~= entity.max_health then
         return {"entity-status.wounded"}, "utility/status_yellow"
     elseif not Caravan.is_automated(caravan_data) then
         return {"entity-status.idle"}, "utility/status_yellow"
