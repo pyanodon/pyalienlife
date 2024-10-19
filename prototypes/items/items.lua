@@ -323,9 +323,9 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-2.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-3.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-1.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-2.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/seedling-3.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-plants",
@@ -860,13 +860,13 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-items",
@@ -880,11 +880,11 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/manure-02.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-05.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/manure-05.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-items",
@@ -898,12 +898,12 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-03.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-06.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-06.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-items",
@@ -917,12 +917,12 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-06.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-06.png", scale = 0.66}
 	},
 	fuel_category = "dingrit-food",
 	fuel_value = "5MJ",
@@ -940,13 +940,13 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-07.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-items",
@@ -4629,14 +4629,14 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/stopper-02.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-07.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-08.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-07.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/stopper-08.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-latex",
@@ -5582,13 +5582,13 @@ ITEM {
 	icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.66}
 	},
 	category = "moss",
 	tier = 1,
@@ -5607,13 +5607,13 @@ ITEM {
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",    icon_size = 64, scale = 0.5}
 	},
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.66}
 	},
 	category = "moss",
 	tier = 2,
@@ -5633,13 +5633,13 @@ ITEM {
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",    icon_size = 64, scale = 0.5}
 	},
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.66}
 	},
 	category = "moss",
 	tier = 3,
@@ -5659,13 +5659,13 @@ ITEM {
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",    icon_size = 64, scale = 0.5}
 	},
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/moss-07.png", scale = 0.66}
 	},
 	category = "moss",
 	tier = 4,
@@ -6860,13 +6860,13 @@ ITEM {
 	icon = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.66}
 	},
 	category = "fish",
 	tier = 1,
@@ -6891,13 +6891,13 @@ ITEM {
 	},
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.66}
 	},
 	category = "fish",
 	tier = 2,
@@ -6922,13 +6922,13 @@ ITEM {
 	},
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.66}
 	},
 	category = "fish",
 	tier = 3,
@@ -6953,13 +6953,13 @@ ITEM {
 	},
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/fish-07.png", scale = 0.66}
 	},
 	category = "fish",
 	tier = 4,
@@ -8334,7 +8334,7 @@ ITEM {
 	name = "arqad-egg-nest",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}}
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -8348,7 +8348,7 @@ ITEM {
 	name = "arqad-egg-nest-2",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}},
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}},
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
 	},
 	icon_size = 64,
@@ -8363,7 +8363,7 @@ ITEM {
 	name = "arqad-egg-nest-3",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}},
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}},
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
 	},
 	icon_size = 64,
@@ -8378,7 +8378,7 @@ ITEM {
 	name = "arqad-egg-nest-4",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}},
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}},
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
 	},
 	icon_size = 64,
@@ -8447,14 +8447,14 @@ ITEM {
 	icon = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png",
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-arqad",
@@ -8471,14 +8471,14 @@ ITEM {
 	},
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-arqad",
@@ -8495,14 +8495,14 @@ ITEM {
 	},
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-arqad",
@@ -8519,14 +8519,14 @@ ITEM {
 	},
 	icon_size = 64,
 	pictures = {
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.25},
-		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.25}
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-01.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-02.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-03.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-04.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-05.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-06.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-07.png", scale = 0.66},
+		{size = 64, filename = "__pyalienlifegraphics3__/graphics/icons/mip/arqad-maggot-08.png", scale = 0.66}
 	},
 	flags = {},
 	subgroup = "py-alienlife-arqad",
