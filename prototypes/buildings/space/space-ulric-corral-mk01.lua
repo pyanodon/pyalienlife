@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     module_slots = 8,
     match_animation_speed_to_activity = false,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"ulric"},
     crafting_speed = 0.125,
     energy_source = {

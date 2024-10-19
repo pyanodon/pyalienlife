@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"dingrits"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "dingrits-pack-mk01"),
     energy_source = {

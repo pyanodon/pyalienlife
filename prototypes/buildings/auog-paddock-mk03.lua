@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
     module_slots = 8,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"auog"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "auog-paddock-mk01"),
     energy_source = {

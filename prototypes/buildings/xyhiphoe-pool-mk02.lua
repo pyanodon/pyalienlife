@@ -48,7 +48,7 @@ ENTITY {
     selection_box = {{-4.0, -4.0}, {4.0, 4.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"xyhiphoe"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "xyhiphoe-pool-mk01"),
     energy_source = {

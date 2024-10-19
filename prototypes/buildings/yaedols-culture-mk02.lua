@@ -46,7 +46,7 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"yaedols"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "yaedols-culture-mk01"),
     energy_source = {

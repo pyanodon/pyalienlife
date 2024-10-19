@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"zipir"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "zipir-reef-mk01"),
     energy_source = {

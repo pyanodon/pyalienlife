@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-10, -10}, {10, 10}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"mukmoux"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "mukmoux-pasture-mk01"),
     energy_source = {

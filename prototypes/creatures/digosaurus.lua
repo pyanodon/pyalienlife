@@ -249,7 +249,7 @@ ENTITY {
     offset = {0, -16}
   },
   module_slots = 4,
-  allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+  allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
 }
 
 data:extend{{
