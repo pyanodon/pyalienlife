@@ -199,6 +199,7 @@ RECIPE {
   results = {{"nexelit-ore", 4000}},
   category = "dino-dig-site",
   enabled = false,
+  localised_name = {"entity-name.ore-nexelit"},
   hidden = true,
   energy_required = 1
 }:add_unlock {"nexelit-mk01"}
@@ -223,6 +224,7 @@ ENTITY {
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
   energy_usage = "1W",
   crafting_categories = {"dino-dig-site"},
+  allowed_module_categories = {"digosaurus"},
   energy_source = {
     type = "electric",
     usage_priority = "primary-input",
@@ -250,6 +252,10 @@ ENTITY {
   allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 }
 
+data:extend{{
+  type = "module-category",
+  name = "digosaurus"
+}}
 
 ENTITY {
   name = "pipette-dino-dig-site",
