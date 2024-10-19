@@ -86,16 +86,10 @@ py.on_event(py.events.on_built(), function(event)
     Farming.events.on_built(event)
     Smart_Farm.events.on_built(event)
     Worm.events.on_built(event)
-    Mounts.events.on_built(event)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
-    Mounts.events.on_destroyed(event)
     Smart_Farm.events.on_destroyed(event)
-end)
-
-py.on_event(defines.events.on_player_removed_equipment, function(event)
-    Mounts.events.on_player_removed_equipment(event)
 end)
 
 py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
@@ -107,7 +101,6 @@ end)
 
 py.register_on_nth_tick(59, "Farming59", "pyal", Farming.events[59])
 py.register_on_nth_tick(121, "Farming121", "pyal", Farming.events[121])
-py.register_on_nth_tick(239, "Mounts", "pyal", Mounts.events[239])
 py.register_on_nth_tick(397, "Ulric", "pyal", Ulric.events[397])
 
 py.register_on_nth_tick(7, "update-guis", "pyal", function()
