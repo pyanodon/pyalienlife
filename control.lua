@@ -82,18 +82,6 @@ py.on_event(py.events.on_init(), function()
     end
 end)
 
-py.on_event(py.events.on_built(), function(event)
-    Smart_Farm.events.on_built(event)
-end)
-
-py.on_event(py.events.on_destroyed(), function(event)
-    Smart_Farm.events.on_destroyed(event)
-end)
-
-py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
-
-py.register_on_nth_tick(397, "Ulric", "pyal", Ulric.events[397])
-
 py.register_on_nth_tick(7, "update-guis", "pyal", function()
     for _, player in pairs(game.connected_players) do
         local gui = player.gui.relative.digosaurus_gui
@@ -111,8 +99,6 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
         ::continue::
     end
 end)
-
-script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
 
 remote.add_interface("pyal", {
     ---@param func string

@@ -1,5 +1,4 @@
 Ulric = {}
-Ulric.events = {}
 
 Ulric.transformation_time = 60 * 60 * 10 -- ticks
 
@@ -7,7 +6,8 @@ py.on_event(py.events.on_init(), function()
 	storage.ulricman_timers = storage.ulricman_timers or {}
 end)
 
-Ulric.events.used_capsule = function(event)
+
+script.on_event(defines.events.on_player_used_capsule, function(event)
 	if event.item.name ~= "ulric-infusion" then return end
 
 	local player = game.get_player(event.player_index)
@@ -39,10 +39,10 @@ Ulric.events.used_capsule = function(event)
 	player.play_sound {path = "ulric-man-transform"}
 
 	storage.ulricman_timers[player.index] = Ulric.transformation_time
-end
+end)
 
 local update_rate = 397
-Ulric.events[update_rate] = function()
+py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
 	for k, ticks_remaning in pairs(storage.ulricman_timers) do
 		ticks_remaning = ticks_remaning - update_rate
 		storage.ulricman_timers[k] = ticks_remaning
@@ -82,7 +82,7 @@ Ulric.events[update_rate] = function()
 
 		::injection::
 	end
-end
+end)
 
 local inventories = {
 	defines.inventory.character_main,

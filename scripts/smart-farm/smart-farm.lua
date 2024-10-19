@@ -1,5 +1,4 @@
 Smart_Farm = {}
-Smart_Farm.events = {}
 
 local farm_filenames = {
 	"farm-ralesia",
@@ -51,7 +50,7 @@ local function get_landfill_positions(entity)
 	return landfill_positions
 end
 
-Smart_Farm.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	if entity.name ~= "mega-farm" then return end
 	local surface = entity.surface
@@ -84,9 +83,9 @@ Smart_Farm.events.on_built = function(event)
 		::continue::
 	end
 	surface.set_tiles(landfill_tiles)
-end
+end)
 
-Smart_Farm.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
 	if entity.name ~= "mega-farm" then return end
 	local surface = entity.surface
@@ -120,10 +119,10 @@ Smart_Farm.events.on_destroyed = function(event)
 
 	if table_size(tiles_to_reset) == 0 then return end
 	surface.set_tiles(tiles_to_reset, true, false, false, true)
-end
+end)
 
 ---@param event EventData.on_rocket_launched
-Smart_Farm.events.on_rocket_launched = function(event)
+py.on_event(defines.events.on_rocket_launched, function(event)
 	local silo = event.rocket_silo --[[@as LuaEntity]]
 	if silo.name ~= "mega-farm" then return end
 	local surface = silo.surface
@@ -175,4 +174,4 @@ Smart_Farm.events.on_rocket_launched = function(event)
 			harvester.get_control_behavior().circuit_read_resources = true
 		end
 	end
-end
+end)
