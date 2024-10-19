@@ -1,5 +1,5 @@
 Turd = {}
-Turd.events = {}
+
 local tech_upgrades, farm_building_tiers = table.unpack(require "prototypes/upgrades/tech-upgrades")
 local bhoddos_lib = require("bhoddos")
 
@@ -557,10 +557,10 @@ local function on_unresearched(event)
 	end
 end
 
-Turd.events.on_research_finished = on_researched
-Turd.events.on_research_reversed = on_unresearched
+script.on_event(defines.events.on_research_finished, on_researched)
+script.on_event(defines.events.on_research_reversed, on_unresearched)
 
-Turd.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	if not entity.valid or not entity.unit_number then return end
 	local force_index = entity.force_index
@@ -582,9 +582,9 @@ Turd.events.on_built = function(event)
 	if entity.valid and bhoddos_lib.cultures[entity.name] then
 		bhoddos_lib.update_culture_table(entity, "add")
 	end
-end
+end)
 
-Turd.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
 	if not entity.valid or not entity.unit_number then return end
 	local beacon = storage.turd_beaconed_machines[entity.unit_number]
@@ -595,7 +595,7 @@ Turd.events.on_destroyed = function(event)
 	if bhoddos_lib.cultures[entity.name] then
 		bhoddos_lib.update_culture_table(entity, "remove")
 	end
-end
+end)
 
 remote.add_interface("pywiki_turd_page", {
 	create_turd_page = create_turd_page,

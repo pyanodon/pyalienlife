@@ -1,13 +1,14 @@
 local lib = require("scripts/turd/bhoddos-lib")
 
-Turd.events[123] = function()
+local UPDATE_RATE = 423
+py.register_on_nth_tick(UPDATE_RATE, "bhoddos-turd-update", "pyal", function()
     local forces_with_bhoddos_path_1 = lib.forces_with_bhoddos_path_1()
     local exploded_cultures = {}
     for _, force_index in pairs(forces_with_bhoddos_path_1) do
         if storage.turd_bhoddos[force_index] then
             for _, culture in pairs(storage.turd_bhoddos[force_index]) do
                 if culture.valid and culture.active and culture.crafting_progress ~= 0 and culture.crafting_progress ~= 1 then
-                    local probability = math.floor(432000 / 123 + 0.5)
+                    local probability = math.floor(432000 / UPDATE_RATE + 0.5)
                     if math.random(probability) == 69 then
                         table.insert(exploded_cultures, culture)
                         culture.destructible = false
@@ -35,7 +36,7 @@ Turd.events[123] = function()
         end
         script.on_nth_tick(future, nil)
     end)
-end
+end)
 
 local radius = 76 / 2
 
@@ -46,7 +47,7 @@ local function draw_circle(entity, player)
     }.id
 end
 
-Turd.events.on_selected_entity_changed = function(event)
+script.on_event(defines.events.on_selected_entity_changed, function(event)
     local circles = storage.bhoddos_circles
     if not circles then
         circles = {}
@@ -63,6 +64,6 @@ Turd.events.on_selected_entity_changed = function(event)
     if selected and lib.cultures[selected.name] then
         if lib.forces_with_bhoddos_path_1()[player.force_index] then draw_circle(selected, event.player_index) end
     end
-end
+end)
 
 return lib

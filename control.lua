@@ -86,12 +86,10 @@ py.on_event(py.events.on_built(), function(event)
     Farming.events.on_built(event)
     Smart_Farm.events.on_built(event)
     Worm.events.on_built(event)
-    Turd.events.on_built(event)
     Mounts.events.on_built(event)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
-    Turd.events.on_destroyed(event)
     Mounts.events.on_destroyed(event)
     Smart_Farm.events.on_destroyed(event)
 end)
@@ -111,7 +109,6 @@ py.register_on_nth_tick(59, "Farming59", "pyal", Farming.events[59])
 py.register_on_nth_tick(121, "Farming121", "pyal", Farming.events[121])
 py.register_on_nth_tick(239, "Mounts", "pyal", Mounts.events[239])
 py.register_on_nth_tick(397, "Ulric", "pyal", Ulric.events[397])
-py.register_on_nth_tick(123, "Turd", "pyal", Turd.events[123])
 
 py.register_on_nth_tick(7, "update-guis", "pyal", function()
     for _, player in pairs(game.connected_players) do
@@ -131,9 +128,6 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
     end
 end)
 
-script.on_event(defines.events.on_research_finished, Turd.events.on_research_finished)
-script.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
-script.on_event(defines.events.on_selected_entity_changed, Turd.events.on_selected_entity_changed)
 script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
 
 remote.add_interface("pyal", {
