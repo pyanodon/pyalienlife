@@ -132,5 +132,6 @@ return {
                 {type = "unlock-recipe", recipe = "stem-cell-recycle-3"}
             }
         }
-    }
+    },
+    module_category = "bioprinting"
 }
