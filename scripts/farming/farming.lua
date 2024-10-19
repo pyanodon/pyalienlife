@@ -1,5 +1,4 @@
 Farming = {}
-Farming.events = {}
 
 ---@as table<string, string>
 ---Contains key-value pairs of `{farm_name = farm_domain}`
@@ -54,19 +53,19 @@ py.on_event(py.events.on_init(), function()
 	storage.next_farm_index = storage.next_farm_index or 1
 end)
 
-Farming.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	if entity.type == "assembling-machine" then Farming.disable_machine(entity) end
-end
+end)
 
-Farming.events.on_object_destroyed = function(event)
+py.on_event(defines.events.on_object_destroyed, function(event)
 	local unit_number = event.useful_id
 	if not unit_number then return end
 	storage.disabled_farm_buildings[unit_number] = nil
-end
+end)
 
 -- render warning icons
-Farming.events[59] = function(event)
+py.register_on_nth_tick(59, "Farming59", "pyal", function(event)
 	for unit_number, farm in pairs(storage.disabled_farm_buildings) do
 		if not farm.valid then
 			storage.disabled_farm_buildings[unit_number] = nil
@@ -78,10 +77,10 @@ Farming.events[59] = function(event)
 			storage.enabled_farm_buildings[#storage.enabled_farm_buildings + 1] = farm
 		end
 	end
-end
+end)
 
 -- every 2 seconds, check up to 60 farm buildings for empty module inventory
-Farming.events[121] = function()
+py.register_on_nth_tick(121, "Farming121", "pyal", function()
 	if #storage.enabled_farm_buildings == 0 then return end
 	local first_index_checked_this_tick = storage.next_farm_index
 	for i = 1, 60 do
@@ -99,4 +98,4 @@ Farming.events[121] = function()
 		if storage.next_farm_index > #storage.enabled_farm_buildings then storage.next_farm_index = 1 end
 		if storage.next_farm_index == first_index_checked_this_tick then return end
 	end
-end
+end)
