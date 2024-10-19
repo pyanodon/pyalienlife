@@ -8334,7 +8334,7 @@ ITEM {
 	name = "arqad-egg-nest",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}}
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -8348,7 +8348,7 @@ ITEM {
 	name = "arqad-egg-nest-2",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/ulric.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}},
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}},
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
 	},
 	icon_size = 64,
@@ -8363,7 +8363,7 @@ ITEM {
 	name = "arqad-egg-nest-3",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/korlex.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}},
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}},
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
 	},
 	icon_size = 64,
@@ -8378,7 +8378,7 @@ ITEM {
 	name = "arqad-egg-nest-4",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
-		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.66, shift = {-7.5, -7.5}},
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad-egg.png", scale = 0.25, shift = {-7.5, -7.5}},
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
 	},
 	icon_size = 64,
