@@ -1,11 +1,10 @@
 Worm = {}
-Worm.events = {}
 
 py.on_event(py.events.on_init(), function()
 	storage.worm_skins = storage.worm_skins or {}
 end)
 
-Worm.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	if entity.name ~= "pydrive" then return end
 
@@ -15,12 +14,12 @@ Worm.events.on_built = function(event)
 		force = entity.force
 	}
 	script.register_on_object_destroyed(entity)
-end
+end)
 
-Worm.events.on_object_destroyed = function(event)
+py.on_event(defines.events.on_object_destroyed, function(event)
 	local unit_number = event.useful_id
 	local skin = storage.worm_skins[unit_number]
 
 	if not skin or not skin.valid then return end
 	skin.destroy()
-end
+end)

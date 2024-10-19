@@ -85,7 +85,6 @@ end)
 py.on_event(py.events.on_built(), function(event)
     Farming.events.on_built(event)
     Smart_Farm.events.on_built(event)
-    Worm.events.on_built(event)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
@@ -96,7 +95,6 @@ py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launc
 
 py.on_event(defines.events.on_object_destroyed, function(event)
     Farming.events.on_object_destroyed(event)
-    Worm.events.on_object_destroyed(event)
 end)
 
 py.register_on_nth_tick(59, "Farming59", "pyal", Farming.events[59])
