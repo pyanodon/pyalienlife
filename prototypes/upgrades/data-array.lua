@@ -85,5 +85,6 @@ return {
                 {old = "data-array",                     new = "data-array-with-solar", type = "recipe-replacement"},
             }
         }
-    }
+    },
+    module_category = "data-array"
 }
