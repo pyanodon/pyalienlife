@@ -1,5 +1,4 @@
 Oculua = {}
-Oculua.events = {}
 
 Oculua.inventory_size = 1
 Oculua.range = 12
@@ -11,12 +10,12 @@ local RETURNING = 3
 
 local CHEST = defines.inventory.chest
 
-Oculua.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.incoming_oculua_items = storage.incoming_oculua_items or {}
 	storage.should_run_oculua_code = storage.should_run_oculua_code or false
 	storage.oculuas = storage.oculuas or {}
 	storage.ipods = storage.ipods or {}
-end
+end)
 
 function Oculua.set_target(oculua_data, target)
 	local entity = oculua_data.entity
@@ -178,7 +177,7 @@ function Oculua.destroy_altmode_icon(oculua_data)
 	end
 end
 
-Oculua.events[221] = function()
+py.register_on_nth_tick(221, "Oculua221", "pyal", function()
 	if not storage.should_run_oculua_code then return end -- Save on UPS if no ipods are built
 	for _, player in pairs(game.connected_players) do
 		if player.character and player.get_requester_point().enabled and not player.force.find_logistic_network_by_position(player.physical_position, player.surface) then
@@ -210,9 +209,9 @@ Oculua.events[221] = function()
 			}
 		end
 	end
-end
+end)
 
-Oculua.events[43] = function()
+py.register_on_nth_tick(43, "Oculua43", "pyal", function()
 	if not storage.should_run_oculua_code then return end
 	for _, oculua_data in pairs(storage.oculuas) do
 		local map_tag = oculua_data.map_tag
@@ -228,7 +227,7 @@ Oculua.events[43] = function()
 			}
 		})
 	end
-end
+end)
 
 function Oculua.clear_incoming_oculua_items(oculua_data)
 	local item = oculua_data.item
@@ -288,7 +287,7 @@ function Oculua.go_home(oculua_data)
 	Oculua.clear_incoming_oculua_items(oculua_data)
 end
 
-Oculua.events.on_ai_command_completed = function(event)
+py.on_event(defines.events.on_ai_command_completed, function(event)
 	local oculua_data = storage.oculuas[event.unit_number]
 	if not oculua_data then return end
 	local oculua = oculua_data.entity
@@ -349,7 +348,7 @@ Oculua.events.on_ai_command_completed = function(event)
 	else
 		Oculua.go_home(oculua_data)
 	end
-end
+end)
 
 function Oculua.find_nearest_ipod(entity)
 	local ipods = entity.surface.find_entities_filtered {position = entity.position, radius = 100, name = "ipod", force = entity.force, type = "container"}
@@ -381,7 +380,7 @@ function Oculua.fire_laser_beam(oculua_data)
 	}
 end
 
-Oculua.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	if entity.name == "ipod" then
 		local inventory = entity.get_inventory(CHEST)
@@ -397,9 +396,9 @@ Oculua.events.on_built = function(event)
 		}
 		Oculua.go_home(storage.oculuas[entity.unit_number])
 	end
-end
+end)
 
-Oculua.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
 	if entity.name == "ipod" then
 		storage.ipods[entity.unit_number] = nil
@@ -424,10 +423,10 @@ Oculua.events.on_destroyed = function(event)
 		end
 		storage.oculuas[entity.unit_number] = nil
 	end
-end
+end)
 
-Oculua.events.on_gui_opened = function(event)
+py.on_event(defines.events.on_gui_opened, function(event)
 	local entity = event.entity
 	if not entity or entity.name ~= "ipod" then return end
 	Oculua.set_ipod_chest_filters(entity)
-end
+end)
