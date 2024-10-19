@@ -1,9 +1,9 @@
 Worm = {}
 Worm.events = {}
 
-Worm.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.worm_skins = storage.worm_skins or {}
-end
+end)
 
 Worm.events.on_built = function(event)
 	local entity = event.created_entity or event.entity

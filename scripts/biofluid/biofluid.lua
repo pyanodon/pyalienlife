@@ -6,7 +6,6 @@ Biofluid = {}
 Biofluid.events = {}
 
 require "scripts.biofluid.biofluid-prototypes"
-require "scripts.biofluid.network-builder"
 require "scripts.biofluid.biofluid-gui"
 
 local PICKING_UP = 1
@@ -24,14 +23,14 @@ local floor = math.floor
 local atan2 = math.atan2
 local pi = math.pi
 
-Biofluid.events.on_init = function()
+py.on_event(py.events.on_init(), function()
+	storage.network_positions = nil
+	storage.biofluid_undergrounds = nil
 	storage.biofluid_robots = storage.biofluid_robots or {}
 	storage.biofluid_requesters = storage.biofluid_requesters or {}
 	storage.biofluid_bioports = storage.biofluid_bioports or {}
-	storage.biofluid_undergrounds = storage.biofluid_undergrounds or {}
 	storage.biofluid_networks = storage.biofluid_networks or {}
-	storage.network_positions = storage.network_positions or {}
-end
+end)
 
 Biofluid.events.on_built = function(event)
 	local entity = event.created_entity or event.entity

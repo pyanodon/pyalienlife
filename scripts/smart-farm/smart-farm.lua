@@ -20,9 +20,9 @@ for _, filename in pairs(farm_filenames) do
 	farms[farm.seed] = farm
 end
 
-Smart_Farm.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
-end
+end)
 
 local function get_fence_positions(entity)
 	local position = entity.position

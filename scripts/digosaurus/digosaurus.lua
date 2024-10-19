@@ -4,10 +4,10 @@ Digosaurus.events = {}
 require "digosaurus-prototypes"
 require "digosaurus-gui"
 
-Digosaurus.events.init = function(event)
+py.on_event(py.events.on_init(), function(event)
     storage.dig_sites = storage.dig_sites or {}
     storage.digosaurs = storage.digosaurs or {}
-end
+end)
 
 function Digosaurus.validity_check(dig_data)
     if not dig_data then return false end

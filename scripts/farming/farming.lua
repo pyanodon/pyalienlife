@@ -47,13 +47,12 @@ function Farming.disable_machine(entity)
 	py.draw_error_sprite(entity, "no_module_" .. kingdom, 30)
 end
 
-Farming.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.disabled_farm_buildings = storage.disabled_farm_buildings or {}
 	storage.enabled_farm_buildings = storage.enabled_farm_buildings or {}
 	storage.farm_prototypes = farm_buildings
 	storage.next_farm_index = storage.next_farm_index or 1
-end
-Farming.events.on_configuration_changed = Farming.events.on_init
+end)
 
 Farming.events.on_built = function(event)
 	local entity = event.created_entity or event.entity

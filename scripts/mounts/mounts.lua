@@ -3,9 +3,9 @@ Mounts.events = {}
 
 local transfer_efficiency = 2
 
-Mounts.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.mounts = storage.mounts or {}
-end
+end)
 
 Mounts.events[239] = function(event)
 	for id, spider in pairs(storage.mounts) do

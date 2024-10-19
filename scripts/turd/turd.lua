@@ -515,7 +515,7 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
 	end
 end
 
-Turd.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.turd_bonuses = storage.turd_bonuses or {}
 	storage.turd_beaconed_machines = storage.turd_beaconed_machines or {}
 	storage.turd_unlocked_modules = storage.turd_unlocked_modules or {}
@@ -524,7 +524,7 @@ Turd.events.on_init = function()
 	storage.turd_machine_replacements = storage.turd_machine_replacements or {}
 	storage.turd_migrations = storage.turd_migrations or {}
 	storage.turd_bhoddos = storage.turd_bhoddos or {}
-end
+end)
 
 local function starts_with(str, start)
 	return str:sub(1, #start) == start

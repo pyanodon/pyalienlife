@@ -68,22 +68,9 @@ local function pickerdollies()
     end
 end
 
-local function init()
+py.on_event(py.events.on_init(), function()
     discoscience()
     pickerdollies()
-    Digosaurus.events.init()
-    Farming.events.on_init()
-    Worm.events.on_init()
-    Wiki.events.on_init()
-    Turd.events.on_init()
-    Ulric.events.on_init()
-    Biofluid.events.on_init()
-    Mounts.events.on_init()
-    Smart_Farm.events.on_init()
-end
-
-script.on_init(function()
-    init()
     if remote.interfaces["freeplay"] then
         local created_items = remote.call("freeplay", "get_created_items")
         created_items["firearm-magazine"] = 500
@@ -94,7 +81,6 @@ script.on_init(function()
         remote.call("freeplay", "set_ship_items", ship_items)
     end
 end)
-script.on_configuration_changed(init)
 
 py.on_event(py.events.on_built(), function(event)
     Digosaurus.events.on_built(event)

@@ -1,7 +1,7 @@
 Wiki = {}
 Wiki.events = {}
 
-Wiki.events.on_init = function()
+py.on_event(py.events.on_init(), function()
     remote.call("pywiki", "add_section", "alienlife")
 
     remote.call("pywiki", "add_page", {
@@ -78,4 +78,4 @@ Wiki.events.on_init = function()
         remote = {"pywiki_turd_page", "create_turd_page"},
         searchable = {"pywiki_turd_page", "on_search"}
     })
-end
+end)

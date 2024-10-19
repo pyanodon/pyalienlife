@@ -3,9 +3,9 @@ Ulric.events = {}
 
 Ulric.transformation_time = 60 * 60 * 10 -- ticks
 
-Ulric.events.on_init = function()
+py.on_event(py.events.on_init(), function()
 	storage.ulricman_timers = storage.ulricman_timers or {}
-end
+end)
 
 Ulric.events.used_capsule = function(event)
 	if event.item.name ~= "ulric-infusion" then return end
