@@ -1,4 +1,4 @@
-Biofluid.events.on_gui_opened = function(event)
+py.on_event(defines.events.on_gui_opened, function(event)
 	local entity = event.entity
 	if event.gui_type ~= defines.gui_type.entity or not entity then return end
 	local connection_type = Biofluid.connectable[entity.name]
@@ -9,7 +9,7 @@ Biofluid.events.on_gui_opened = function(event)
 	elseif connection_type == Biofluid.REQUESTER then
 		Biofluid.build_requester_gui(entity, player)
 	end
-end
+end)
 
 function Biofluid.update_bioport_gui(player, gui)
 	local unit_number = gui.tags.unit_number
@@ -280,7 +280,7 @@ function Biofluid.build_requester_gui(entity, player)
 	Biofluid.update_requester_gui(player, main_frame)
 end
 
-Biofluid.events.on_gui_closed = function(event)
+py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
 	local player = game.get_player(event.player_index)
 	if event.gui_type == defines.gui_type.entity then
 		local gui = player.gui.relative.bioport_gui
@@ -289,7 +289,7 @@ Biofluid.events.on_gui_closed = function(event)
 		local gui = player.gui.screen.biofluid_requester_gui
 		if gui then gui.destroy() end
 	end
-end
+end)
 
 local function gui_click(event, inventory_index)
 	local player = game.get_player(event.player_index)

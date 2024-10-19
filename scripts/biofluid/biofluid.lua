@@ -3,7 +3,6 @@ local VESSEL = "vessel"
 local BIOPORT = "bioport"
 
 Biofluid = {}
-Biofluid.events = {}
 
 require "scripts.biofluid.biofluid-prototypes"
 require "scripts.biofluid.biofluid-gui"
@@ -32,7 +31,7 @@ py.on_event(py.events.on_init(), function()
 	storage.biofluid_networks = storage.biofluid_networks or {}
 end)
 
-Biofluid.events.on_built = function(event)
+py.on_event(py.events.on_built(), function(event)
 	local entity = event.created_entity or event.entity
 	if not entity.valid then return end
 	local connection_type = Biofluid.connectable[entity.name]
@@ -71,7 +70,7 @@ Biofluid.events.on_built = function(event)
 		entity.operable = false
 	end
 	Biofluid.built_pipe(entity)
-end
+end)
 
 function Biofluid.update_bioport_animation(bioport_data)
 	local entity = bioport_data.entity
@@ -124,7 +123,7 @@ function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 	Biofluid.update_graphics(entity)
 end
 
-Biofluid.events.on_player_rotated_entity = function(event)
+script.on_event(defines.events.on_player_rotated_entity, function(event)
 	local entity = event.entity
 	if Biofluid.connectable[entity.name] then
 		Biofluid.rotated_pipe(entity, event.previous_direction)
@@ -134,7 +133,7 @@ Biofluid.events.on_player_rotated_entity = function(event)
 			Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 		end
 	end
-end
+end)
 
 function Biofluid.render_error_icons()
 	for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
@@ -205,7 +204,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	end
 end
 
-Biofluid.events[143] = function()
+py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
 	Biofluid.render_error_icons()
 
 	local networks = storage.biofluid_networks
@@ -278,7 +277,7 @@ Biofluid.events[143] = function()
 	end
 
 	for _, network_data in pairs(storage.biofluid_networks) do network_data.providers_by_contents = nil end
-end
+end)
 
 local function set_target(biorobot_data, target)
 	biorobot_data.entity.commandable.set_command {
@@ -572,7 +571,7 @@ local function returning(biorobot_data)
 	end
 end
 
-Biofluid.events.on_ai_command_completed = function(event)
+py.on_event(defines.events.on_ai_command_completed, function(event)
 	local biorobot_data = storage.biofluid_robots[event.unit_number]
 	if not biorobot_data then return end
 	if event.result ~= defines.behavior_result.success then
@@ -586,7 +585,7 @@ Biofluid.events.on_ai_command_completed = function(event)
 	elseif biorobot_data.status == RETURNING then
 		returning(biorobot_data)
 	end
-end
+end)
 
 local function requester_sort_function(a, b)
 	local a_priority, b_priority = a.priority, b.priority
@@ -682,7 +681,7 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 	end
 end
 
-Biofluid.events.on_entity_settings_pasted = function(event)
+py.on_event(defines.events.on_entity_settings_pasted, function(event)
 	local source, destination = event.source, event.destination
 	local requesters = storage.biofluid_requesters
 	local source_data, destination_data = requesters[source.unit_number], requesters[destination.unit_number]
@@ -701,9 +700,9 @@ Biofluid.events.on_entity_settings_pasted = function(event)
 			Biofluid.update_requester_gui(player, gui)
 		end
 	end
-end
+end)
 
-Biofluid.events.on_player_setup_blueprint = function(event)
+script.on_event(defines.events.on_player_setup_blueprint, function(event)
 	local player = game.get_player(event.player_index)
 	local blueprint = player.blueprint_to_setup
 	if not blueprint.valid_for_read then blueprint = player.cursor_stack end
@@ -725,9 +724,9 @@ Biofluid.events.on_player_setup_blueprint = function(event)
 			})
 		end
 	end
-end
+end)
 
-Biofluid.events.on_destroyed = function(event)
+py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
 	local name = entity.name
 	if Biofluid.connectable[name] then
@@ -762,13 +761,13 @@ Biofluid.events.on_destroyed = function(event)
 		end
 		storage.biofluid_robots[unit_number] = nil
 	end
-end
+end)
 
-Biofluid.events.on_player_fast_transferred = function(event)
+script.on_event(defines.events.on_player_fast_transferred, function(event)
 	local bioport_data = storage.biofluid_bioports[event.entity.unit_number]
 	if not bioport_data then return end
 	Biofluid.update_bioport_animation(bioport_data)
-end
+end)
 
 local animations = {
 	[""] = 1,

@@ -88,19 +88,16 @@ py.on_event(py.events.on_built(), function(event)
     Smart_Farm.events.on_built(event)
     Worm.events.on_built(event)
     Turd.events.on_built(event)
-    Biofluid.events.on_built(event)
     Mounts.events.on_built(event)
 end)
 
 py.on_event(defines.events.on_ai_command_completed, function(event)
     Digosaurus.events.on_ai_command_completed(event)
-    Biofluid.events.on_ai_command_completed(event)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     Digosaurus.events.on_destroyed(event)
     Turd.events.on_destroyed(event)
-    Biofluid.events.on_destroyed(event)
     Mounts.events.on_destroyed(event)
     Smart_Farm.events.on_destroyed(event)
 end)
@@ -111,12 +108,10 @@ end)
 
 py.on_event(defines.events.on_gui_opened, function(event)
     Digosaurus.events.on_gui_opened(event)
-    Biofluid.events.on_gui_opened(event)
 end)
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     Digosaurus.events.close_gui(event)
-    Biofluid.events.on_gui_closed(event)
 end)
 
 py.on_event(defines.events.on_rocket_launched, Smart_Farm.events.on_rocket_launched)
@@ -126,13 +121,8 @@ py.on_event(defines.events.on_object_destroyed, function(event)
     Worm.events.on_object_destroyed(event)
 end)
 
-py.on_event(defines.events.on_entity_settings_pasted, function(event)
-    Biofluid.events.on_entity_settings_pasted(event)
-end)
-
 py.register_on_nth_tick(59, "Farming59", "pyal", Farming.events[59])
 py.register_on_nth_tick(121, "Farming121", "pyal", Farming.events[121])
-py.register_on_nth_tick(143, "Biofluid", "pyal", Biofluid.events[143])
 py.register_on_nth_tick(239, "Mounts", "pyal", Mounts.events[239])
 py.register_on_nth_tick(397, "Ulric", "pyal", Ulric.events[397])
 py.register_on_nth_tick(123, "Turd", "pyal", Turd.events[123])
@@ -160,9 +150,6 @@ script.on_event(defines.events.on_research_finished, Turd.events.on_research_fin
 script.on_event(defines.events.on_research_reversed, Turd.events.on_research_reversed)
 script.on_event(defines.events.on_selected_entity_changed, Turd.events.on_selected_entity_changed)
 script.on_event(defines.events.on_player_used_capsule, Ulric.events.used_capsule)
-script.on_event(defines.events.on_player_rotated_entity, Biofluid.events.on_player_rotated_entity)
-script.on_event(defines.events.on_player_setup_blueprint, Biofluid.events.on_player_setup_blueprint)
-script.on_event(defines.events.on_player_fast_transferred, Biofluid.events.on_player_fast_transferred)
 
 remote.add_interface("pyal", {
     ---@param func string
