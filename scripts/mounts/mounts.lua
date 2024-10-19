@@ -7,25 +7,26 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.register_on_nth_tick(239, "update-mounts", "pyal", function(event)
-	for id, spider in pairs(storage.mounts) do
-		if spider.valid then
-			local grid = spider.grid
-			for _, equipment in pairs(grid.equipment) do
-				local missing = equipment.max_energy - equipment.energy
-				if missing > 0 then
-					if spider.energy_source.remaining_burning_fuel < missing / transfer_efficiency then
-						equipment.energy = equipment.energy + spider.energy_source.remaining_burning_fuel * transfer_efficiency
-						spider.energy_source.remaining_burning_fuel = 0
-						break
-					else
-						spider.energy_source.remaining_burning_fuel = spider.energy_source.remaining_burning_fuel - missing / transfer_efficiency
-						equipment.energy = equipment.energy + missing
-					end
-				end
-			end
-		else
+	for id, mount in pairs(storage.mounts) do
+		if not mount.valid then
 			storage.mounts[id] = nil
 			return
+		end
+
+		local grid = mount.grid
+		for _, equipment in pairs(grid.equipment) do
+			local missing = equipment.max_energy - equipment.energy
+			if missing > 0 then
+				local burner = mount.burner
+				if burner.remaining_burning_fuel < missing / transfer_efficiency then
+					equipment.energy = equipment.energy + burner.remaining_burning_fuel * transfer_efficiency
+					burner.remaining_burning_fuel = 0
+					break
+				else
+					burner.remaining_burning_fuel = burner.remaining_burning_fuel - missing / transfer_efficiency
+					equipment.energy = equipment.energy + missing
+				end
+			end
 		end
 	end
 end)
