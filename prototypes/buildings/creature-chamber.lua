@@ -85,9 +85,9 @@ for i = 1, 4 do
         icon = icon,
         icon_size = icon_size,
         flags = {},
-        subgroup = "py-alienlife-buildings-mk01",
+        subgroup = "py-alienlife-buildings-mk0" .. i,
         order = "a",
-        place_result = "creature-chamber-mk01",
+        place_result = "creature-chamber-mk0" .. i,
         stack_size = 10
     }
 
@@ -97,7 +97,7 @@ for i = 1, 4 do
         icon = icon,
         icon_size = icon_size,
         flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = "creature-chamber-mk01"},
+        minable = {mining_time = 0.5, result = name},
         fast_replaceable_group = "creature-chamber",
         max_health = 500 * i,
         corpse = "medium-remnants",
@@ -107,14 +107,14 @@ for i = 1, 4 do
         match_animation_speed_to_activity = false,
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-        allowed_module_categories = {"speed", "productivity", "consumption", "pollution", "quality", "creature-chamber"},
+        allowed_module_categories = {"speed", "productivity", "efficiency", "pollution", "quality", "creature-chamber"},
         crafting_categories = {"creature-chamber"},
-        crafting_speed = 1,
+        crafting_speed = i,
         energy_source = {
             type = "electric",
             usage_priority = "secondary-input",
             emissions_per_minute = {
-                pollution = 1
+                pollution = i * 4
             },
         },
         energy_usage = i .. "MW",

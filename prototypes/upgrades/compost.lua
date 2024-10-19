@@ -259,5 +259,6 @@ return {
                 {type = "unlock-recipe", recipe = "worm-manure"},
             }
         }
-    }
+    },
+    module_category = "compost-plant",
 }
