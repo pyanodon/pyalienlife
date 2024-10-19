@@ -175,5 +175,6 @@ return {
             order = "c-a",
             effects = path_3_effects
         }
-    }
+    },
+    module_category = "creature-chamber",
 }
