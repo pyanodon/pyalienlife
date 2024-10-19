@@ -98,7 +98,7 @@ for i = 1, 4 do
         icon = icon,
         icon_size = icon_size,
         flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = "bio-printer-mk0" .. i},
+        minable = {mining_time = 0.5, result = name},
         fast_replaceable_group = "bio-printer",
         max_health = 600 * i,
         corpse = "medium-remnants",

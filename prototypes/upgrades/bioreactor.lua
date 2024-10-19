@@ -156,5 +156,6 @@ return {
                 {recipe = "jacket-bio-oil", type = "unlock-recipe"},
             }
         }
-    }
+    },
+    module_category = "bio-reactor",
 }
