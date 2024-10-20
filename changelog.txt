@@ -5,6 +5,7 @@ Date: in 5 hours
     - fixed some recipes outputting more steam than input water when using productivity modules
     - added an alt-recipe for guano
     - allowed productivity in the nitrous oxide recipe
+    - greatly simplified the deluxe workers food recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.42
 Date: 2024-9-4
