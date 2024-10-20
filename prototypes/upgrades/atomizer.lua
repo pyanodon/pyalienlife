@@ -9,7 +9,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "venom-gland", amount = 10},
         },
         results = {
-            {type = "item", name = "dynemicin", amount = 1},
+            {type = "item", name = "dynemicin", amount = 100},
         },
     }
 
@@ -23,7 +23,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "cognition-osteochain", amount = 2},
         },
         results = {
-            {type = "item", name = "kondo-substrate", amount = 1},
+            {type = "item", name = "kondo-substrate", amount = 100},
         },
     }
 
@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "dimensional-gastricorg", amount = 1},
         },
         results = {
-            {type = "item", name = "inverse-opal", amount = 1},
+            {type = "item", name = "inverse-opal", amount = 100},
         },
     }
 end
