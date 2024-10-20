@@ -33,7 +33,7 @@ if data and not yafc_turd_integration then
             {"caged-xeno", 1},
             {"xeno-egg",   6},
             {"barrel",     6},
-            {"pelt",     10},
+            {"pelt",       10},
         },
         allowed_module_categories = {"xeno"},
     }}
@@ -99,7 +99,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 3.33,          speed = 3.33,             type = "module-effects"},
+                {consumption = 2,             speed = 1,                productivity = 1,           type = "module-effects"},
                 {recipe = "xeno-rc-breeding", type = "unlock-recipe"},
                 {old = "xeno-egg-1",          new = "xeno-egg-1-cheap", type = "recipe-replacement"},
                 {old = "xeno-egg-2",          new = "xeno-egg-2-cheap", type = "recipe-replacement"},
@@ -113,7 +113,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 3.33, productivity = 3.33, speed = -0.75, type = "module-effects"},
+                {consumption = 6.66, productivity = 6.66, speed = -0.95, type = "module-effects"},
             }
         }
     },
