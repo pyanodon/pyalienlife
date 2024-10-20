@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
         name = "artifical-insemination",
         type = "recipe",
         enabled = false,
-        energy_required = 450,
+        energy_required = 150,
         category = "incubator",
         ingredients = {
             {name = "mukmoux",           amount = 1,   type = "item"},
@@ -15,13 +15,13 @@ if data and not yafc_turd_integration then
         },
         results = {
             {name = "mukmoux-calf",      amount_min = 150, amount_max = 250, type = "item"},
-            {name = "quartz-tube",       amount = 1,       type = "item",    probability = 0.5},
-            {name = "immunosupressants", amount = 1,       type = "item",    probability = 0.5},
-            {name = "meat",              amount = 3,       type = "item"},
-            {name = "guts",              amount = 5,       type = "item"},
-            {name = "mukmoux-fat",       amount = 5,       type = "item"},
-            {name = "bones",             amount = 1,       type = "item"},
-            {name = "artificial-blood",  amount = 100,     type = "fluid"},
+            {name = "quartz-tube",       amount = 1,       type = "item",    probability = 0.95},
+            {name = "immunosupressants", amount = 1,       type = "item",    probability = 0.95},
+            {name = "meat",              amount = 30,      type = "item"},
+            {name = "guts",              amount = 150,     type = "item"},
+            {name = "mukmoux-fat",       amount = 150,     type = "item"},
+            {name = "bones",             amount = 50,      type = "item"},
+            {name = "artificial-blood",  amount = 1000,    type = "fluid"},
         },
         main_product = "mukmoux-calf",
         localised_name = {"technology-name.zero-cross"}
@@ -35,8 +35,8 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-microchip"
         recipe:add_ingredient {name = "microchip", amount = 1, type = "item"}
-        recipe:add_result {name = "microchip", amount = 1, type = "item", probability = 0.5}
-        recipe:add_result {name = "fetal-serum", amount = 10, type = "fluid"}
+        recipe:add_result {name = "microchip", amount = 1, type = "item", probability = 0.25}
+        recipe:add_result {name = "fetal-serum", amount = 100, type = "fluid"}
         data:extend {recipe}
     end
 
@@ -55,7 +55,9 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient_amount("mukmoux-food-01", 1)
         recipe:add_ingredient_amount("mukmoux-food-02", 1)
         recipe:multiply_result_amount("mukmoux", 1.5)
-        recipe.energy_required = recipe.energy_required * 1.5
+        recipe:remove_ingredient("fawogae")
+        recipe:remove_ingredient("ralesia-seeds")
+        recipe:remove_ingredient("bedding")
         data:extend {recipe}
     end
 
@@ -68,6 +70,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-with-electronics"
         recipe:add_ingredient {name = electronics[i], amount = 10 * i, type = "item"}
+        recipe:remove_ingredient()
         data:extend {recipe}
     end
 end
@@ -112,6 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {speed = 1,                    productivity = 1,                              type = "module-effects"},
                 {old = "mukmoux-1",            new = "mukmoux-1-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-2",            new = "mukmoux-2-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-3",            new = "mukmoux-3-bip",                         type = "recipe-replacement"},
@@ -128,7 +132,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.25,    type = "module-effects"},
+                {speed = -0.5,           productivity = 2,                 type = "module-effects"},
                 {old = "mukmoux-calf-1", new = "mukmoux-calf-1-microchip", type = "recipe-replacement"},
                 {old = "mukmoux-calf-2", new = "mukmoux-calf-2-microchip", type = "recipe-replacement"},
                 {old = "mukmoux-calf-3", new = "mukmoux-calf-3-microchip", type = "recipe-replacement"},
