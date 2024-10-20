@@ -157,6 +157,9 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 		player.opened = main_frame
 	else
 		player.opened = caravan_data.inventory
+		if player.gui.relative.caravan_flow then
+			player.gui.relative.caravan_flow.destroy()
+		end
 		local flow = player.gui.relative.add {
 			type = "flow", name = "caravan_flow",
 			anchor = {
