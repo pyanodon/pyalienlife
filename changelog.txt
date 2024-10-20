@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.1.43
+Version: 2.2.0
 Date: in 5 hours
   Changes:
     - fixed some recipes outputting more steam than input water when using productivity modules
+    - added an alt-recipe for guano
+    - allowed productivity in the nitrous oxide recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.42
 Date: 2024-9-4

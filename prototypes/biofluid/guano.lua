@@ -103,6 +103,23 @@ FLUID {
 
 RECIPE {
     type = "recipe",
+    name = "free-guano",
+    energy_required = 4,
+    enabled = false,
+    category = "auog",
+    ingredients = {
+        {type = "item", name = "chorkok", amount = 1},
+        {type = "item", name = "workers-food-03", amount = 1},
+
+    },
+    results = {
+        {type = "item",  name = "guano", amount = 50},
+    },
+    allow_productivity = true,
+}:add_unlock {"biofluid-mk03"}
+
+RECIPE {
+    type = "recipe",
     name = "nitrous-oxide",
     energy_required = 4,
     enabled = false,
@@ -115,7 +132,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "nitrous-oxide", amount = 60}
-    }
+    },
+    allow_productivity = true,
 }:add_unlock {"biofluid-mk03"}:add_ingredient {type = "item", name = "urea", amount = 1}
 
 RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "workers-food-03", amount = 3}
