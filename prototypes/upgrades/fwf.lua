@@ -32,15 +32,16 @@
 if data and not yafc_turd_integration then
     local fiber = RECIPE("fiber-01"):copy()
     fiber.name = "fiber-dry-storage"
-    fiber.energy_required = fiber.energy_required * 10
+    fiber.energy_required = fiber.energy_required * 2
     fiber:multiply_result_amount("raw-fiber", 4)
-    fiber:add_result {"biomass", 1}
+    fiber:add_result {"biomass", 6}
     fiber.main_product = "raw-fiber"
     data:extend {fiber}
 
     local fiber = RECIPE("fiber"):copy()
     fiber.name = "fiber-dry-storage-2"
-    fiber:multiply_result_amount("fiber", 2)
+    fiber:multiply_result_amount("fiber", 4)
+    fiber:add_result {"biomass", 6}
     fiber.energy_required = fiber.energy_required * 2
     data:extend {fiber}
 
