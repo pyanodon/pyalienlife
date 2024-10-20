@@ -5,12 +5,12 @@ if data and not yafc_turd_integration then
         RECIPE("caged-xeno-3"):copy(),
         RECIPE("caged-xeno-4"):copy(),
     } do
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
+        recipe.energy_required = math.ceil(recipe.energy_required / 2)
         recipe.name = recipe.name .. "-dna-polymerase"
         if i == 1 or i == 3 then
-            recipe:add_result {name = "dna-polymerase", amount = i, type = "item"}
+            recipe:add_result {name = "dna-polymerase", amount = i * 20, type = "item"}
         else
-            recipe:add_result {name = "chimeric-proteins", amount = i, type = "item"}
+            recipe:add_result {name = "chimeric-proteins", amount = i * 20, type = "item"}
         end
         data:extend {recipe}
     end
@@ -32,7 +32,8 @@ if data and not yafc_turd_integration then
         results = {
             {"caged-xeno", 1},
             {"xeno-egg",   6},
-            {"barrel",     6}
+            {"barrel",     6},
+            {"pelt",     10},
         },
         allowed_module_categories = {"xeno"},
     }}
@@ -46,8 +47,9 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-cheap"
         recipe:remove_ingredient("bones")
         recipe:remove_ingredient("fish")
-        recipe:add_ingredient {"hydrofluoric-acid-barrel", 1}
-        recipe:add_result_amount("barrel", 1)
+        recipe:add_ingredient {"hydrofluoric-acid-barrel", 5}
+        recipe:add_result_amount("barrel", 5)
+        recipe:multiply_result_amount("xeno-egg", 10)
         data:extend {recipe}
     end
 end
@@ -97,7 +99,12 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "xeno-rc-breeding", type = "unlock-recipe"}
+                {consumption = 3.33,          speed = 3.33,             type = "module-effects"},
+                {recipe = "xeno-rc-breeding", type = "unlock-recipe"},
+                {old = "xeno-egg-1",          new = "xeno-egg-1-cheap", type = "recipe-replacement"},
+                {old = "xeno-egg-2",          new = "xeno-egg-2-cheap", type = "recipe-replacement"},
+                {old = "xeno-egg-3",          new = "xeno-egg-3-cheap", type = "recipe-replacement"},
+                {old = "xeno-egg-4",          new = "xeno-egg-4-cheap", type = "recipe-replacement"},
             }
         },
         {
@@ -106,11 +113,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 3.33, type = "module-effects"},
-                {old = "xeno-egg-1", new = "xeno-egg-1-cheap", type = "recipe-replacement"},
-                {old = "xeno-egg-2", new = "xeno-egg-2-cheap", type = "recipe-replacement"},
-                {old = "xeno-egg-3", new = "xeno-egg-3-cheap", type = "recipe-replacement"},
-                {old = "xeno-egg-4", new = "xeno-egg-4-cheap", type = "recipe-replacement"},
+                {consumption = 3.33, productivity = 3.33, speed = -0.75, type = "module-effects"},
             }
         }
     },

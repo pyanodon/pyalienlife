@@ -12,6 +12,7 @@ Date: in 5 hours
     - Greatly buffed all three paths of the moondrop turd.
     - Greatly buffed all three paths of the mukmoux turd.
     - Greatly buffed all three paths of the zungror turd.
+    - Greatly buffed all three paths of the xeno turd.
     - Greatly buffed fawogae path 1.
     - Fawogae path 2 now outputs 250 acid gas instead of 150 acid gas. Energy required is buffed from 8 sec -> 6 sec.
 ---------------------------------------------------------------------------------------------------
