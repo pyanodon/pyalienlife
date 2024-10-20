@@ -96,16 +96,17 @@ function Oculua.process_player(player) -- #TODO fuck quality
 	local logistic_point = player.get_requester_point()
 	if not logistic_point then return end
 	local logistic_network_incoming = logistic_point.targeted_items_deliver
-	local i = 1
-	while true do
+	for i = 1, logistic_point.sections_count do
 		local section = logistic_point.get_section(i)
-		i = i + 1
-		if not section then break end
-		for _, filter in pairs(section.filters) do
-			local item = filter.name
+		for _, filter in pairs(section.filters or {}) do
+			if not filter.value then goto continue end
+			if filter.import_from and filter.import_from.name ~= player.surface.name then goto continue end
+
+			local item = filter.value.name
 
 			if not check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
-			local needed = (filter.count or 0) - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
+			local needed = (filter.min or 0) - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
+			if needed <= 0 then goto continue end
 			if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end
 
 			local network = character.logistic_network
