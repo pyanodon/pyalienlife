@@ -113,7 +113,8 @@ RECIPE {
 
     },
     results = {
-        {type = "item",  name = "guano", amount = 50},
+        {type = "item", name = "guano",   amount = 50},
+        {type = "item", name = "chorkok", amount = 1, probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     allow_productivity = true,
 }:add_unlock {"biofluid-mk03"}
