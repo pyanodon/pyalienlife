@@ -7,6 +7,7 @@ Date: in 5 hours
     - Allowed productivity in the nitrous oxide recipe.
     - Greatly simplified the deluxe workers food recipe.
     - Added a new turd for the wood processing unit.
+    - Greatly buffed all three paths of the fast wood forestry turd.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.42
 Date: 2024-9-4

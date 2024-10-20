@@ -19,6 +19,7 @@ local tech_upgrades = {
 if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
     for _, upgrade in pairs {
         "prototypes/upgrades/fwf",
+        "prototypes/upgrades/wpu",
         "prototypes/upgrades/cadaveric",
         "prototypes/upgrades/moondrop",
         "prototypes/upgrades/micromine",

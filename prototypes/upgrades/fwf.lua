@@ -32,21 +32,21 @@
 if data and not yafc_turd_integration then
     local fiber = RECIPE("fiber-01"):copy()
     fiber.name = "fiber-dry-storage"
-    fiber.energy_required = fiber.energy_required * 3
-    fiber:multiply_result_amount("raw-fiber", 2)
+    fiber.energy_required = fiber.energy_required * 10
+    fiber:multiply_result_amount("raw-fiber", 4)
     fiber:add_result {"biomass", 1}
     fiber.main_product = "raw-fiber"
     data:extend {fiber}
 
     local fiber = RECIPE("fiber"):copy()
     fiber.name = "fiber-dry-storage-2"
-    fiber:add_result_amount("fiber", 1)
-    fiber.energy_required = 6
+    fiber:multiply_result_amount("fiber", 2)
+    fiber.energy_required = fiber.energy_required * 2
     data:extend {fiber}
 
     local wood_fast = RECIPE("log-wood"):copy()
     wood_fast.name = "log-wood-fast"
-    wood_fast:add_result_amount("wood", 1)
+    wood_fast:multiply_result_amount("wood", 2)
     wood_fast.energy_required = 1
     wood_fast.enabled = false
     data:extend {wood_fast}
@@ -113,7 +113,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.30, speed = 0.08,                  type = "module-effects"},
+                {consumption = -0.50, productivity = 0.5, speed = 0.5,                  type = "module-effects"},
                 {old = "fwf-mk01",    new = "fwf-mk01-with-furnace", type = "recipe-replacement"},
                 {old = "log3",        new = "log3-cheap",            type = "recipe-replacement"},
                 {old = "log6",        new = "log6-cheap",            type = "recipe-replacement"}
