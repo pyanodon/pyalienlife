@@ -98,6 +98,7 @@ ENTITY {
   --light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
   --integration_patch_render_layer = "decals",
   --integration_patch = hr_crash_site_lab_ground(),
+  render_layer = "higher-object-under",
   energy_source = {
     type = "electric",
     usage_priority = "secondary-input",
@@ -106,11 +107,11 @@ ENTITY {
     },
     render_no_power_icon = true,
     output_flow_limit = "0W",
-    buffer_capacity = "10MW"
+    buffer_capacity = "250MW"
   },
   localised_name = {"entity-name.pydrive"},
   localised_description = {"entity-description.pydrive"},
-  energy_usage = "10MW",
+  energy_usage = "250MW",
   continuous_animation = true,
   animations =
   {

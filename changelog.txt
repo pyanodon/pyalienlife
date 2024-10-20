@@ -8,6 +8,7 @@ Date: in 5 hours
     - Greatly simplified the deluxe workers food recipe.
     - Added an incompatibility with the mod "omnimatter_permutation" due to breaking the TURD system.
     - Increased the fuel value of auogs. 250MW, 300MW, 350MW, 400MW -> 250MW, 500MW, 750MW, 1000MW.
+    - Increased the energy usage of the logistic station from 10MW -> 250MW.
   TURD:
     - Added a new turd for the wood processing unit.
     - Greatly buffed all three paths of the fast wood forestry turd.
