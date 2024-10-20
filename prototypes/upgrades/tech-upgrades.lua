@@ -116,7 +116,9 @@ local function build_tech_upgrade(tech_upgrade)
                 end
 
                 local effective_speed
-                if tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0 then
+                
+                local is_this_a_speed_module_that_effects_farm_buildings = mk1.crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
+                if is_this_a_speed_module_that_effects_farm_buildings then
                     local desired_mk1_speed = mk1.crafting_speed * (mk1_module_slots + 1)
                     effective_speed = (desired_mk1_speed / mk1.crafting_speed) * effect.speed
                 end
@@ -145,13 +147,20 @@ local function build_tech_upgrade(tech_upgrade)
                     not_voidable = true
                 }
 
+                if not data.raw["module-category"][module.category] then
+                    data:extend {{
+                        type = "module-category",
+                        name = module.category
+                    }}
+                end
+
                 if effective_speed then
                     local adjusted_speed = effect.speed * 100
                     if adjusted_speed >= 0 then adjusted_speed = "+" .. adjusted_speed end
                     py.add_to_description("module", module, {"turd.adjusted-speed", tostring(adjusted_speed)})
                 end
 
-                if tech_upgrade.module_category and effect.speed and effect.speed ~= 0 then
+                if is_this_a_speed_module_that_effects_farm_buildings then
                     for i, entity in pairs(tech_upgrade.affected_entities or {}) do
                         entity = data.raw.furnace[entity] or data.raw["assembling-machine"][entity]
                         local module = table.deepcopy(module)
