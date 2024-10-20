@@ -7,8 +7,15 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-pressured"
         recipe:remove_ingredient("water")
-        recipe:add_ingredient {name = "pressured-water", amount = 1000, type = "fluid", fluidbox_index = 1}
-        recipe:multiply_result_amount("grod", 1.25)
+        recipe:add_ingredient {name = "pressured-water", amount = 2000, type = "fluid", fluidbox_index = 1}
+        recipe:remove_ingredient("soil")
+        recipe:remove_ingredient("urea")
+        recipe:remove_ingredient("pesticide-mk01")
+        recipe:remove_ingredient("pesticide-mk02")
+        recipe:remove_ingredient("fertilizer")
+        recipe:remove_ingredient("coarse")
+        recipe:remove_ingredient("limestone")
+        recipe:remove_ingredient("ash")
         data:extend {recipe}
     end
 
@@ -25,7 +32,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-tailings"
         recipe:add_ingredient_amount("dirty-water-heavy", 100)
-        recipe:multiply_result_amount(result, 3)
+        recipe:multiply_result_amount(result, 8)
         data:extend {recipe}
     end
 
@@ -43,7 +50,7 @@ if data and not yafc_turd_integration then
     local seeds = RECIPE("grod-seeds"):copy()
     seeds.name = "grod-seeds-heavy-water"
     seeds.main_product = "grod-seeds"
-    seeds:add_result {type = "fluid", name = "geothermal-water", amount = 60}
+    seeds:add_result {type = "fluid", name = "flavonoids", amount = 160}
     data:extend {seeds}
 end
 
@@ -108,7 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.5, type = "module-effects"},
+                {consumption = -0.5, productivity = 0.25, speed = -0.5, type = "module-effects"},
                 {old = "grod-seeds", new = "grod-seeds-heavy-water", type = "recipe-replacement"},
                 {old = "grod-1",     new = "grod-1-dry",             type = "recipe-replacement"},
                 {old = "grod-2",     new = "grod-2-dry",             type = "recipe-replacement"},
