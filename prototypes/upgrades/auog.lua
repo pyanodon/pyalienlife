@@ -5,6 +5,11 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-sawdust"
         recipe:add_ingredient {"wood", 6 * i}
+        recipe:remove_ingredient("ash")
+        recipe:remove_ingredient("moss")
+        recipe:remove_ingredient("ralesias")
+        recipe:remove_ingredient("starch")
+        recipe:remove_ingredient("casein")
         recipe:multiply_result_amount("auog-food-0" .. i, 2)
         data:extend {recipe}
     end
@@ -47,6 +52,18 @@ if data and not yafc_turd_integration then
         end
         data:extend {recipe}
     end
+    
+    local buffed_generator = table.deepcopy(data.raw["burner-generator"]["generator-1"])
+    buffed_generator.burner.effectivity = 4
+    buffed_generator.effectivity = 2
+    buffed_generator.max_power_output = "111MW"
+    buffed_generator.localised_description = buffed_generator.localised_description or {"entity-description." .. buffed_generator.name}
+    buffed_generator.placeable_by = {item = buffed_generator.name, count = 1}
+    buffed_generator.localised_name = {"entity-name." .. buffed_generator.name}
+    buffed_generator.subgroup = data.raw.item[buffed_generator.name].subgroup
+    buffed_generator.order = data.raw.item[buffed_generator.name].order
+    buffed_generator.name = buffed_generator.name .. "-turd"
+    data:extend {buffed_generator}
 end
 
 return {
@@ -94,6 +111,7 @@ return {
                 {recipe = "auog-recharge-glowing-mushroom-mk02", type = "unlock-recipe"},
                 {recipe = "auog-recharge-glowing-mushroom-mk03", type = "unlock-recipe"},
                 {recipe = "auog-recharge-glowing-mushroom-mk04", type = "unlock-recipe"},
+                {type = "machine-replacement",                   old = "generator-1",   new = "generator-1-turd"},
             }
         },
         {
@@ -102,7 +120,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 3,           productivity = 0.10,                 type = "module-effects"},
+                {consumption = 3,           productivity = 0.35,                 type = "module-effects"},
                 {old = "auog-paddock-mk01", new = "auog-paddock-mk01-with-dirt", type = "recipe-replacement"},
                 {old = "auog-paddock-mk02", new = "auog-paddock-mk02-with-dirt", type = "recipe-replacement"},
                 {old = "auog-paddock-mk03", new = "auog-paddock-mk03-with-dirt", type = "recipe-replacement"},

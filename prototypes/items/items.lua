@@ -6749,7 +6749,7 @@ ITEM {
 	effect = {pollution = 1, speed = 2},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
-	fuel_value = "350MJ",
+	fuel_value = "500MJ",
 	burnt_result = "used-auog-mk02"
 }
 
@@ -6770,7 +6770,7 @@ ITEM {
 	effect = {pollution = 1, speed = 3},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
-	fuel_value = "400MJ",
+	fuel_value = "750MJ",
 	burnt_result = "used-auog-mk03"
 }
 
@@ -6791,7 +6791,7 @@ ITEM {
 	effect = {pollution = 1, speed = 4},
 	limitation_message_key = "auog",
 	fuel_category = "auog",
-	fuel_value = "450MJ",
+	fuel_value = "1GJ",
 	burnt_result = "used-auog-mk04"
 }
 

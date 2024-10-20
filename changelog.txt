@@ -6,6 +6,9 @@ Date: in 5 hours
     - Added an alt-recipe for guano.
     - Allowed productivity in the nitrous oxide recipe.
     - Greatly simplified the deluxe workers food recipe.
+    - Added an incompatibility with the mod "omnimatter_permutation" due to breaking the TURD system.
+    - Increased the fuel value of auogs. 250MW, 300MW, 350MW, 400MW -> 250MW, 500MW, 750MW, 1000MW.
+  TURD:
     - Added a new turd for the wood processing unit.
     - Greatly buffed all three paths of the fast wood forestry turd.
     - Greatly buffed all three paths of the atomizer turd.
@@ -14,6 +17,7 @@ Date: in 5 hours
     - Greatly buffed all three paths of the zungror turd.
     - Greatly buffed all three paths of the vonix turd.
     - Greatly buffed all three paths of the xeno turd.
+    - Greatly buffed all three paths of the auog turd.
     - Greatly buffed fawogae path 1.
     - Fawogae path 2 now outputs 250 acid gas instead of 150 acid gas. Energy required is buffed from 8 sec -> 6 sec.
 ---------------------------------------------------------------------------------------------------
