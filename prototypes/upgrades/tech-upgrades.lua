@@ -173,6 +173,15 @@ local function build_tech_upgrade(tech_upgrade)
                 else
                     data:extend {module}
                 end
+
+                if is_this_a_speed_module_that_effects_farm_buildings then
+                    for _, recipe in pairs(data.raw.recipe) do
+                        if not recipe.allow_productivity and table.any(mk1.crafting_categories, function(v) return v == recipe.category end) then
+                            recipe.allow_productivity = true
+                            recipe.allowed_module_categories = {tech_upgrade.module_category}
+                        end
+                    end
+                end
             elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
                 py.add_to_description("recipe", data.raw.recipe[effect.recipe], {"turd.font", {"turd.recipe"}})
                 recipes_with_turd_description[effect.recipe] = true
