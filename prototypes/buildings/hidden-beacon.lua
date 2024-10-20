@@ -1,3 +1,11 @@
+local function allowed_module_categories()
+    local allowed_module_categories = {}
+    for _, category in pairs(data.raw["module-category"]) do
+        allowed_module_categories[#allowed_module_categories+1] = category.name
+    end
+    return allowed_module_categories
+end
+
 ENTITY {
     type = "beacon",
     name = "hidden-beacon",
@@ -11,6 +19,7 @@ ENTITY {
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{0, 0}, {0, 0}},
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_module_categories = allowed_module_categories(),
     supply_area_distance = 12,
     energy_source = {type = "void"},
     energy_usage = "1W",
@@ -36,6 +45,7 @@ ENTITY {
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{0, 0}, {0, 0}},
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_module_categories = allowed_module_categories(),
     supply_area_distance = 1,
     energy_source = {type = "void"},
     energy_usage = "1W",

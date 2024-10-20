@@ -338,8 +338,6 @@ require "prototypes/buildings/simik-den-mk03"
 require "prototypes/buildings/simik-den-mk04"
 require "prototypes/buildings/rc"
 
-require "prototypes/buildings/hidden-beacon"
-
 if mods["pyhightech"] then
     require "prototypes/buildings/fluid-drill-mk01"
     require "prototypes/buildings/fluid-drill-mk02"
