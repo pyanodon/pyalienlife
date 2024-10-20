@@ -115,7 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = 1,                    productivity = 1,                              type = "module-effects"},
+                {speed = 0.2,                    productivity = 0.4,                              type = "module-effects"},
                 {old = "mukmoux-1",            new = "mukmoux-1-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-2",            new = "mukmoux-2-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-3",            new = "mukmoux-3-bip",                         type = "recipe-replacement"},
@@ -132,7 +132,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = -0.5,           productivity = 2,                 type = "module-effects"},
+                {speed = -0.5,           productivity = 0.8,                 type = "module-effects"},
                 {old = "mukmoux-calf-1", new = "mukmoux-calf-1-microchip", type = "recipe-replacement"},
                 {old = "mukmoux-calf-2", new = "mukmoux-calf-2-microchip", type = "recipe-replacement"},
                 {old = "mukmoux-calf-3", new = "mukmoux-calf-3-microchip", type = "recipe-replacement"},
