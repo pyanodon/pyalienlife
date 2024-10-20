@@ -25,7 +25,7 @@ require "scripts.worm.worm"
 require "scripts.turd.turd"
 require "scripts.vatbrain.vatbrain"
 require "scripts.ulric.ulric"
-require "scripts.biofluid.biofluid"
+--require "scripts.biofluid.biofluid"
 require "scripts.mounts.mounts"
 
 local function discoscience()

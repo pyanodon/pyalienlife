@@ -127,6 +127,22 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
+    name = "xenogenic-from-chitin",
+    category = "incubator",
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "oxygen", amount = 50},
+        {type = "item",  name = "chitin", amount = 5},
+    },
+    results = {
+        {type = "fluid", name = "xenogenic-cells", amount = 70},
+    },
+    --main_product = "cocoon",
+}:add_unlock("organ-printing")
+
+RECIPE {
+    type = "recipe",
     name = "xenogenic-from-guts",
     category = "incubator",
     enabled = false,
