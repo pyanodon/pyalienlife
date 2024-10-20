@@ -1,3 +1,3 @@
-if global.caravans and global.caravans.outpost_buildings then
-    global.caravans = nil
+if storage.caravans and storage.caravans.outpost_buildings then
+    storage.caravans = nil
 end

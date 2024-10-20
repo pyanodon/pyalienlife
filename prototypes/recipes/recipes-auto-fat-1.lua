@@ -1,34 +1,33 @@
 ------------------ARTHURIANS------------------
 
 py.autorecipes {
-    name = 'rendering-fat-arthurians',
-	category = 'slaughterhouse',
-	--module_limitations = 'arthurian',
-	subgroup = 'py-alienlife-arthurian',
-	order = 'b',
-    mats =
+	name = "rendering-fat-arthurians",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-arthurian",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-arthurian', amount=1},
-				},
+			{
+				{name = "caged-arthurian", amount = 1},
+			},
 			results =
-				{
-					{name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 1},
-				},
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 1},
+			},
 			crafting_speed = 15,
-			tech = 'force-feeding',
-			name = 'Extract arthurian lard-1',
+			tech = "force-feeding",
+			name = "Extract-arthurian-lard-1",
 			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
 			icon_size = 64,
 		},
@@ -38,36 +37,35 @@ py.autorecipes {
 ------------------AUOGS------------------
 
 py.autorecipes {
-    name = 'rendering-fat-auog',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-auog',
-	order = 'b',
-    mats =
+	name = "rendering-fat-auog",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-auog",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-auog', amount=1},
-				},
+			{
+				{name = "caged-auog", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 2},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract auog lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 2},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-auog-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -75,35 +73,34 @@ py.autorecipes {
 ------------------COTTONGUT------------------
 
 py.autorecipes {
-    name = 'rendering-fat-cottongut',
-	category = 'slaughterhouse',
-	--module_limitations = 'cottongut',
-	subgroup = 'py-alienlife-cottongut',
-	order = 'b',
-    mats =
+	name = "rendering-fat-cottongut",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-cottongut",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='cottongut', amount=5},
-				},
+			{
+				{name = "cottongut", amount = 5},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = 1},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract cottongut lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "mukmoux-fat", add_amount = 1},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-cottongut-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -111,38 +108,37 @@ py.autorecipes {
 ------------------DHILMOS------------------
 
 py.autorecipes {
-    name = 'rendering-fat-dhilmos',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-dhilmos',
-	order = 'b',
-    mats =
+	name = "rendering-fat-dhilmos",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-dhilmos",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='dhilmos', amount=1},
-				},
+			{
+				{name = "dhilmos", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = 2},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract dhilmos lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "sulfuric-acid",   remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "blood",           remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "mukmoux-fat",     add_amount = 2},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-dhilmos-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -150,36 +146,35 @@ py.autorecipes {
 ------------------KMAUTS------------------
 
 py.autorecipes {
-    name = 'rendering-fat-kmauts',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-kmauts',
-	order = 'b',
-    mats =
+	name = "rendering-fat-kmauts",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-kmauts",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-kmauts', amount=1},
-				},
+			{
+				{name = "caged-kmauts", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 1},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract kmauts lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 1},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-kmauts-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -187,36 +182,35 @@ py.autorecipes {
 ------------------KORLEX------------------
 
 py.autorecipes {
-    name = 'rendering-fat-korlex',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-korlex',
-	order = 'b',
-    mats =
+	name = "rendering-fat-korlex",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-korlex",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-korlex', amount=1},
-				},
+			{
+				{name = "caged-korlex", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract Korlex lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-Korlex-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -224,36 +218,35 @@ py.autorecipes {
 ------------------MUKMOUX------------------
 
 py.autorecipes {
-    name = 'rendering-fat-mukmoux',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-mukmoux',
-	order = 'b',
-    mats =
+	name = "rendering-fat-mukmoux",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-mukmoux",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-mukmoux', amount=1},
-				},
+			{
+				{name = "caged-mukmoux", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 2},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract Mukmoux lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 2},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-Mukmoux-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -261,36 +254,35 @@ py.autorecipes {
 ------------------PHADAI------------------
 
 py.autorecipes {
-    name = 'rendering-fat-phadai',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-phadai',
-	order = 'b',
-    mats =
+	name = "rendering-fat-phadai",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-phadai",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-phadai', amount=1},
-				},
+			{
+				{name = "caged-phadai", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 1},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract phadai Fat-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 1},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-phadai-Fat-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -298,36 +290,35 @@ py.autorecipes {
 ------------------SCRONDRIX------------------
 
 py.autorecipes {
-    name = 'rendering-fat-scrondrix',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-scrondrix',
-	order = 'b',
-    mats =
+	name = "rendering-fat-scrondrix",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-scrondrix",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-scrondrix', amount=1},
-				},
+			{
+				{name = "caged-scrondrix", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract scrondrix lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-scrondrix-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -335,36 +326,35 @@ py.autorecipes {
 ------------------SIMIKS------------------
 
 py.autorecipes {
-    name = 'rendering-fat-simik',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-simik',
-	order = 'b',
-    mats =
+	name = "rendering-fat-simik",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-simik",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-simik', amount=1},
-				},
+			{
+				{name = "caged-simik", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='simik-blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract simik lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "simik-blood", remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-simik-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -372,35 +362,34 @@ py.autorecipes {
 ------------------TRITS------------------
 
 py.autorecipes {
-    name = 'rendering-fat-trits',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-trits',
-	order = 'b',
-    mats =
+	name = "rendering-fat-trits",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-trits",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='trits', amount=1},
-				},
+			{
+				{name = "trits", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = 5},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract Trits lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "mukmoux-fat", add_amount = 5},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-Trits-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -408,36 +397,35 @@ py.autorecipes {
 ------------------ULRIC------------------
 
 py.autorecipes {
-    name = 'rendering-fat-ulric',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-ulric',
-	order = 'b',
-    mats =
+	name = "rendering-fat-ulric",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-ulric",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='caged-ulric', amount=1},
-				},
+			{
+				{name = "caged-ulric", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='mukmoux-fat', add_amount = 2},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract Ulric lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "mukmoux-fat", add_amount = 2},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-Ulric-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -445,38 +433,37 @@ py.autorecipes {
 ------------------VONIX------------------
 
 py.autorecipes {
-    name = 'rendering-fat-vonix',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-vonix',
-	order = 'b',
-    mats =
+	name = "rendering-fat-vonix",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-vonix",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name='vonix', amount=1},
-				},
+			{
+				{name = "vonix", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = 4},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract Vonix lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "sulfuric-acid",   remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "blood",           remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "mukmoux-fat",     add_amount = 4},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-Vonix-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -484,38 +471,37 @@ py.autorecipes {
 ------------------ZIPIR------------------
 
 py.autorecipes {
-    name = 'rendering-fat-zipir',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-zipir',
-	order = 'b',
-    mats =
+	name = "rendering-fat-zipir",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-zipir",
+	order = "b",
+	mats =
 	{
 		--fat
 		{
 			ingredients =
-				{
-					{name = 'zipir1', amount=1},
-				},
+			{
+				{name = "zipir1", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='mukmoux-fat', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'force-feeding',
-                name = 'Extract zipir lard-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "sulfuric-acid",   remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "blood",           remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "mukmoux-fat",     add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "force-feeding",
+			name = "Extract-zipir-lard-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
+			icon_size = 64,
 		},
 	}
 }

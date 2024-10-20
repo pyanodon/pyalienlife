@@ -33,17 +33,17 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"soil", 300},
-        {"pipe", 15},
-        {"electronic-circuit", 25},
-        {"stone", 100},
-        {"iron-plate", 30},
-        {"duralumin", 10},
-        {"treated-wood", 50},
-        {"small-lamp", 20}
+        {type = "item", name = "soil",               amount = 300},
+        {type = "item", name = "pipe",               amount = 15},
+        {type = "item", name = "electronic-circuit", amount = 25},
+        {type = "item", name = "stone",              amount = 100},
+        {type = "item", name = "iron-plate",         amount = 30},
+        {type = "item", name = "duralumin",          amount = 10},
+        {type = "item", name = "treated-wood",       amount = 50},
+        {type = "item", name = "small-lamp",         amount = 20}
     },
     results = {
-        {"space-ralesia-plantation-mk01", 1}
+        {type = "item", name = "space-ralesia-plantation-mk01", amount = 1}
     }
 }:add_unlock("ralesia")
 
@@ -73,27 +73,29 @@ ENTITY {
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 12
-    },
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    module_slots = 12,
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"ralesia"},
     crafting_speed = 0.06,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = -4,
+        emissions_per_minute = {
+            pollution = -4
+        },
     },
     energy_usage = "400kW",
-    animation = {
-        filename = "__pycoalprocessinggraphics__/graphics/entity/ralesia-plantation/ralesia-plantation.png",
-        width = 224,
-        height = 230,
-        frame_count = 50,
-        line_length = 8,
-        animation_speed = 0.5,
-        run_mode = "forward-then-backward",
-        shift = {0.0, -0.163}
+    graphics_set = {
+        animation = {
+            filename = "__pycoalprocessinggraphics__/graphics/entity/ralesia-plantation/ralesia-plantation.png",
+            width = 224,
+            height = 230,
+            frame_count = 50,
+            line_length = 8,
+            animation_speed = 0.5,
+            run_mode = "forward-then-backward",
+            shift = {0.0, -0.163}
+        },
     },
     fluid_boxes = {
         --1
@@ -101,28 +103,28 @@ ENTITY {
             production_type = "input",
             pipe_picture = py.pipe_pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
             pipe_covers = py.pipe_covers(true, true, true, true),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, 4.0}}}
+            pipe_connections = {{flow_direction = "input", position = {0.0, 3.0}, direction = defines.direction.south}}
         },
         {
             production_type = "input",
             pipe_picture = py.pipe_pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
             pipe_covers = py.pipe_covers(true, true, true, true),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {0.0, -4.0}}}
+            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", {-0.0, 3.837}, {-0.0, -3.837}, {4.0, 0.0}, {-4.0, 0.0}, pipes),
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {4.0, 0.0}}}
+            volume = 100,
+            pipe_connections = {{flow_direction = "output", position = {3.0, 0.0}, direction = defines.direction.east}}
         },
     },
-    off_when_no_fluid_recipe = true,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    fluid_boxes_off_when_no_fluid_recipe = true,
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pycoalprocessinggraphics__/sounds/ralesia-plantation.ogg", volume = 1.2},
         idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/ralesia-plantation.ogg", volume = 0.3},

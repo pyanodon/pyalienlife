@@ -4,17 +4,17 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stainless-steel", 15},
-        {"niobium-pipe", 10},
-        {"nexelit-plate", 25},
-        {"advanced-circuit", 10},
-        {"dingrits", 1},
-        {"engine-unit", 5},
-        {"nbfe-alloy", 20},
-        {"iron-gear-wheel", 40}
+        {type = "item", name = "stainless-steel",  amount = 15},
+        {type = "item", name = "niobium-pipe",     amount = 10},
+        {type = "item", name = "nexelit-plate",    amount = 25},
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "dingrits",         amount = 1},
+        {type = "item", name = "engine-unit",      amount = 5},
+        {type = "item", name = "nbfe-alloy",       amount = 20},
+        {type = "item", name = "iron-gear-wheel",  amount = 40}
     },
     results = {
-        {"generator-2", 1}
+        {type = "item", name = "generator-2", amount = 1}
     }
 }:add_unlock("domestication-mk04")
 
@@ -48,21 +48,23 @@ ENTITY {
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     energy_source =
-		{
-				type = "electric",
-				usage_priority = "secondary-output",
-		},
-	burner =
-		{
-			type = "burner",
-			fuel_category = "dingrits",
-			effectivity = 3,
-            fuel_inventory_size = 1,
-            burnt_inventory_size = 1,
-			emissions_per_minute = 0,
-		},
-	effectivity = 2,
-	max_power_output = "60MW",
+    {
+        type = "electric",
+        usage_priority = "secondary-output",
+    },
+    burner =
+    {
+        type = "burner",
+        fuel_categories = {"dingrits"},
+        effectivity = 3,
+        fuel_inventory_size = 1,
+        burnt_inventory_size = 1,
+        emissions_per_minute = {
+            pollution = 0
+        },
+    },
+    effectivity = 2,
+    max_power_output = "60MW",
     animation = {
         layers = {
             {
@@ -101,12 +103,12 @@ ENTITY {
                 animation_speed = 0.4,
                 shift = util.by_pixel(80, -16)
             },
+        },
     },
-},
 
     min_perceived_performance = 0.1,
     performance_to_sound_speedup = 0.0,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.9},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.3},

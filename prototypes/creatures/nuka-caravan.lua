@@ -1,77 +1,77 @@
-local util = require 'util'
-local sounds = require '__base__.prototypes.entity.sounds'
+local util = require "util"
+local sounds = require "__base__.prototypes.entity.sounds"
 
 RECIPE {
-    type = 'recipe',
-    name = 'nukavan',
+    type = "recipe",
+    name = "nukavan",
     energy_required = 50,
-    category = 'creature-chamber',
+    category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = 'item', name = 'alien-sample01', amount = 5},
-        {type = 'item', name = 'bio-sample', amount = 20},
-        {type = 'item', name = 'auog', amount = 1},
-        {type = 'item', name = 'moss-gen', amount = 15},
-        {type = 'item', name = 'earth-bear-sample', amount = 1},
-        {type = 'fluid', name = 'water-saline', amount = 100},
-        {type = 'item', name = mods.pyalternativeenergy and 'atomic-bomb' or 'explosive-rocket', amount = 1}
+        {type = "item",  name = "alien-sample01",                                                 amount = 5},
+        {type = "item",  name = "bio-sample",                                                     amount = 20},
+        {type = "item",  name = "auog",                                                           amount = 1},
+        {type = "item",  name = "moss-gen",                                                       amount = 15},
+        {type = "item",  name = "earth-bear-sample",                                              amount = 1},
+        {type = "fluid", name = "water-saline",                                                   amount = 100},
+        {type = "item",  name = mods.pyalternativeenergy and "atomic-bomb" or "explosive-rocket", amount = 1}
     },
-    result = 'nukavan'
-}:add_unlock('domestication-mk04')
+    result = "nukavan"
+}:add_unlock("domestication-mk04")
 
 ITEM {
-    type = 'item-with-tags',
-    name = 'nukavan',
-	can_open_gates = true,
-	additional_pastable_entities = {'nukavan', 'nukavan-turd'},
-    icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
+    type = "item-with-tags",
+    name = "nukavan",
+    can_open_gates = true,
+    additional_pastable_entities = {"nukavan", "nukavan-turd"},
+    icon = "__pyalienlifegraphics2__/graphics/icons/nuka-van.png",
     icon_size = 64,
-    subgroup = 'py-alienlife-special-creatures',
-    order = 'a',
-    place_result = 'nukavan',
+    subgroup = "py-alienlife-special-creatures",
+    order = "a",
+    place_result = "nukavan",
     stack_size = 1,
-    flags = {'not-stackable'}
+    flags = {"not-stackable"}
 }
 
 ---@as data.UnitPrototype
 local unit = {
-    type = 'unit',
-    name = 'nukavan',
+    type = "unit",
+    name = "nukavan",
     can_open_gates = true,
-    additional_pastable_entities = {'nukavan', 'nukavan-turd'},
-    icon = '__pyalienlifegraphics2__/graphics/icons/nuka-van.png',
+    additional_pastable_entities = {"nukavan", "nukavan-turd"},
+    icon = "__pyalienlifegraphics2__/graphics/icons/nuka-van.png",
     icon_size = 64,
     ai_settings = {do_separation = false},
-    flags = {'placeable-player', 'placeable-off-grid', 'not-repairable', 'breaths-air', 'building-direction-8-way'},
-    minable = {mining_time = 0.1, result = 'nukavan'},
+    flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
+    minable = {mining_time = 0.1, result = "nukavan"},
     max_health = 6125,
     map_color = {1, 1, 1},
-    order = 'b-b-a',
-    subgroup = 'enemies',
-    collision_mask = {caravan_collision_mask, 'not-colliding-with-itself'},
+    order = "b-b-a",
+    subgroup = "enemies",
+    collision_mask = {layers = {caravan_collision_mask = true}, not_colliding_with_itself = true},
     resistances = {
         {
-            type = 'fire',
+            type = "fire",
             decrease = 0,
             percent = 100
         },
         {
-            type = 'physical',
+            type = "physical",
             decrease = 0,
             percent = 100
         },
         {
-            type = 'impact',
+            type = "impact",
             decrease = 0,
             percent = 100
         },
         {
-            type = 'explosion',
+            type = "explosion",
             decrease = 0,
             percent = 100
         },
         {
-            type = 'acid',
+            type = "acid",
             decrease = 0,
             percent = 100
         }
@@ -81,22 +81,23 @@ local unit = {
     selection_priority = 51,
     selection_box = {{-1, -1}, {1, 1}},
     attack_parameters = {
-        type = 'projectile',
+        type = "projectile",
         range = 0,
         cooldown = 0,
+        ammo_category = "melee",
         ammo_type = _G.make_unit_melee_ammo_type(0),
         --sound = make_biter_roars(0.4),
         animation = {
             layers = {
                 {
                     filenames = {
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png'
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png"
                     },
                     slice = 8,
                     lines_per_file = 8,
@@ -110,13 +111,13 @@ local unit = {
                 },
                 {
                     filenames = {
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png',
-                        '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png'
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png",
+                        "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png"
                     },
                     slice = 8,
                     lines_per_file = 8,
@@ -135,7 +136,7 @@ local unit = {
     vision_distance = 50,
     movement_speed = 0.10,
     distance_per_frame = 0.15,
-    pollution_to_join_attack = 4,
+    absorptions_to_join_attack = {pollution = 4},
     distraction_cooldown = 300,
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
@@ -149,13 +150,13 @@ local unit = {
         layers = {
             {
                 filenames = {
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png'
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-01.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-02.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-03.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-04.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-05.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-06.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/caravan-walk-07.png"
                 },
                 slice = 8,
                 lines_per_file = 8,
@@ -169,13 +170,13 @@ local unit = {
             },
             {
                 filenames = {
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png',
-                    '__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png'
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-01.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-02.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-03.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-04.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-05.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-06.png",
+                    "__pyalienlifegraphics2__/graphics/entity/nukavan/sh-caravan-walk-07.png"
                 },
                 slice = 8,
                 lines_per_file = 8,
@@ -192,4 +193,4 @@ local unit = {
     }
 }
 
-data:extend{unit}
+data:extend {unit}

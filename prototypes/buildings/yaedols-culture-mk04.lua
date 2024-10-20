@@ -6,16 +6,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"py-heat-exchanger", 1},
-        {"nenbit-matrix", 50},
-        {"super-steel", 100},
-        {"control-unit", 10},
-        {"yaedols-culture-mk03", 1},
-        {"metallic-glass", 50},
-        {"science-coating", 20},
+        {type = "item", name = "py-heat-exchanger",    amount = 1},
+        {type = "item", name = "nenbit-matrix",        amount = 50},
+        {type = "item", name = "super-steel",          amount = 100},
+        {type = "item", name = "control-unit",         amount = 10},
+        {type = "item", name = "yaedols-culture-mk03", amount = 1},
+        {type = "item", name = "metallic-glass",       amount = 50},
+        {type = "item", name = "science-coating",      amount = 20},
     },
     results = {
-        {"yaedols-culture-mk04", 1}
+        {type = "item", name = "yaedols-culture-mk04", amount = 1}
     }
 }:add_unlock("mycology-mk05")
 
@@ -45,162 +45,164 @@ ENTITY {
     collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = MODULE_SLOTS
-    },
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    module_slots = MODULE_SLOTS,
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"yaedols"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "yaedols-culture-mk01"),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 3,
+        emissions_per_minute = {
+            pollution = 3
+        },
     },
     energy_usage = "900kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off.png",
-        width = 352,
-        height = 384,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(0, -16)
-        },
-        {
-            filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off-mask.png",
-            width = 351,
-            height = 384,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(0, -16),
-            tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(-144, -16),
+                west_position = util.by_pixel(-144, -16),
+                south_position = util.by_pixel(-144, -16),
+                east_position = util.by_pixel(-144, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a1.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 384,
+                    animation_speed = 0.5
+                }
             },
-      },
+            {
+                north_position = util.by_pixel(-80, -16),
+                west_position = util.by_pixel(-80, -16),
+                south_position = util.by_pixel(-80, -16),
+                east_position = util.by_pixel(-80, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a2.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 384,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(-16, -16),
+                west_position = util.by_pixel(-16, -16),
+                south_position = util.by_pixel(-16, -16),
+                east_position = util.by_pixel(-16, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a3.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 384,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(48, -16),
+                west_position = util.by_pixel(48, -16),
+                south_position = util.by_pixel(48, -16),
+                east_position = util.by_pixel(48, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a4.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 384,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(112, -16),
+                west_position = util.by_pixel(112, -16),
+                south_position = util.by_pixel(112, -16),
+                east_position = util.by_pixel(112, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a5.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 64,
+                    height = 384,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(160, -16),
+                west_position = util.by_pixel(160, -16),
+                south_position = util.by_pixel(160, -16),
+                east_position = util.by_pixel(160, -16),
+                animation = {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a6.png",
+                    frame_count = 150,
+                    line_length = 30,
+                    width = 32,
+                    height = 384,
+                    animation_speed = 0.5
+                }
+            },
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off.png",
+                    width = 352,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(0, -16)
+                },
+                {
+                    filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/off-mask.png",
+                    width = 351,
+                    height = 384,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(0, -16),
+                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                },
+            },
+        },
     },
 
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-144, -16),
-            west_position = util.by_pixel(-144, -16),
-            south_position = util.by_pixel(-144, -16),
-            east_position = util.by_pixel(-144, -16),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a1.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 384,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(-80, -16),
-            west_position = util.by_pixel(-80, -16),
-            south_position = util.by_pixel(-80, -16),
-            east_position = util.by_pixel(-80, -16),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a2.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 384,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(-16, -16),
-            west_position = util.by_pixel(-16, -16),
-            south_position = util.by_pixel(-16, -16),
-            east_position = util.by_pixel(-16, -16),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a3.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 384,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(48, -16),
-            west_position = util.by_pixel(48, -16),
-            south_position = util.by_pixel(48, -16),
-            east_position = util.by_pixel(48, -16),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a4.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 384,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(112, -16),
-            west_position = util.by_pixel(112, -16),
-            south_position = util.by_pixel(112, -16),
-            east_position = util.by_pixel(112, -16),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a5.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 64,
-                height = 384,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(160, -16),
-            west_position = util.by_pixel(160, -16),
-            south_position = util.by_pixel(160, -16),
-            east_position = util.by_pixel(160, -16),
-            animation = {
-                filename = "__pyalienlifegraphics3__/graphics/entity/yaedols-culture/a6.png",
-                frame_count = 150,
-                line_length = 30,
-                width = 32,
-                height = 384,
-                animation_speed = 0.5
-            }
-        },
-    },
 
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
         --1
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {1.0, -6.0}}}
+            pipe_connections = {{flow_direction = "input", position = {1.0, -5.0}, direction = defines.direction.north}}
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_area = 10,
+            volume = 1000,
             base_level = -1,
-            pipe_connections = {{type = "input", position = {-1.0, -6.0}}}
+            pipe_connections = {{flow_direction = "input", position = {-1.0, -5.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {1.0, 6.0}}}
+            volume = 100,
+            pipe_connections = {{flow_direction = "output", position = {1.0, 5.0}, direction = defines.direction.south}}
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            base_level = 1,
-            pipe_connections = {{type = "output", position = {-1.0, 6.0}}}
+            volume = 100,
+            pipe_connections = {{flow_direction = "output", position = {-1.0, 5.0}, direction = defines.direction.south}}
         },
-        off_when_no_fluid_recipe = true
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/yaedols-culture.ogg", volume = 1.2},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/yaedols-culture.ogg", volume = 0.3},

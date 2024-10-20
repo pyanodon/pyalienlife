@@ -9,7 +9,7 @@ TECHNOLOGY {
         count = 100,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1}
+            {"py-science-pack-1",       1}
         },
         time = 50
     }
@@ -27,10 +27,10 @@ TECHNOLOGY {
         count = 150,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
         },
         time = 50
     }
@@ -49,11 +49,11 @@ if mods["pyhightech"] then
             count = 150,
             ingredients = {
                 {"automation-science-pack", 1},
-                {"py-science-pack-1", 1},
-                {"logistic-science-pack", 1},
-                {"py-science-pack-2", 1},
-                {"chemical-science-pack", 1},
-                {'py-science-pack-3', 1}
+                {"py-science-pack-1",       1},
+                {"logistic-science-pack",   1},
+                {"py-science-pack-2",       1},
+                {"chemical-science-pack",   1},
+                {"py-science-pack-3",       1}
             },
             time = 50
         }

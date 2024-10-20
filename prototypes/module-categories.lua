@@ -1,4 +1,4 @@
-data:extend(
+data:extend
 {
     {
         type = "module-category",
@@ -180,4 +180,4 @@ data:extend(
         type = "module-category",
         name = "sawblade"
     },
-})
+}

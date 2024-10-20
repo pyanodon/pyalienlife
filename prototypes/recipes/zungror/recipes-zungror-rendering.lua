@@ -18,138 +18,137 @@ local IMP_BRAIN = 5
 
 
 py.autorecipes {
-    name = 'rendering-zungror',
-	category = 'slaughterhouse',
-	--module_limitations = 'zungror',
-	subgroup = 'py-alienlife-zungror',
-	order = 'b',
+	name = "rendering-zungror",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-zungror",
+	order = "b",
 	crafting_speed = 50,
-    mats =
+	mats =
 	{
 		{
 			ingredients =
-				{
-					{name='caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "caged-zungror", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name='meat', amount = BASE_MEAT},
-					{name='skin', amount = BASE_SKIN},
-					{name='mukmoux-fat', amount = BASE_FAT},
-					{name='guts', amount = BASE_GUTS},
-					{name='arthropod-blood', amount = BASE_BLOOD},
-					{name='brain', amount = BASE_BRAIN},
-					{name='cage', amount = INPUT_AMOUNT}
-				},
+			{
+				{name = "meat",            amount = BASE_MEAT},
+				{name = "skin",            amount = BASE_SKIN},
+				{name = "mukmoux-fat",     amount = BASE_FAT},
+				{name = "guts",            amount = BASE_GUTS},
+				{name = "arthropod-blood", amount = BASE_BLOOD},
+				{name = "brain",           amount = BASE_BRAIN},
+				{name = "cage",            amount = INPUT_AMOUNT}
+			},
 			crafting_speed = 30,
-			tech = 'zungror',
-			name = 'full-render-zun',
+			tech = "zungror",
+			name = "full-render-zun",
 			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-zungror.png",
 			icon_size = 64,
 		},
 		--brain zungror rendering
 		{
 			ingredients =
-				{
-					{name='caged-zungror',remove_item = true},
-					{name='brain-caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "caged-zungror",       remove_item = true},
+				{name = "brain-caged-zungror", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'meat', remove_item = true},
-					{name = 'mukmoux-fat', remove_item = true},
-					{name = 'skin', remove_item = true},
-					{name = 'guts', remove_item = true},
-					{name = 'arthropod-blood', remove_item = true},
-					{name='brain', amount = IMP_BRAIN},
-				},
-			tech = 'nanochondria',
-			name = 'ex-bra-zun',
+			{
+				{name = "meat",            remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "brain",           amount = IMP_BRAIN},
+			},
+			tech = "nanochondria",
+			name = "ex-bra-zun",
 			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-zungror.png",
 			icon_size = 64,
 		},
 		--guts zungror rendering
 		{
 			ingredients =
-				{
-					{name='brain-caged-zungror',remove_item = true},
-					{name='guts-caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "brain-caged-zungror", remove_item = true},
+				{name = "guts-caged-zungror",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'brain', remove_item = true},
-					{name='guts', amount = IMP_GUTS},
-				},
-			tech = 'antitumor',
-			name = 'ex-gut-zun',
+			{
+				{name = "brain", remove_item = true},
+				{name = "guts",  amount = IMP_GUTS},
+			},
+			tech = "antitumor",
+			name = "ex-gut-zun",
 			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-zungror.png",
 			icon_size = 64,
 		},
 		--blood zungror rendering
 		{
 			ingredients =
-				{
-					{name='guts-caged-zungror',remove_item = true},
-					{name='blood-caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "guts-caged-zungror",  remove_item = true},
+				{name = "blood-caged-zungror", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'guts', remove_item = true},
-					{name='arthropod-blood', amount = IMP_BLOOD},
-				},
-			tech = 'recombinant-ery',
-			name = 'ex-blo-zun',
+			{
+				{name = "guts",            remove_item = true},
+				{name = "arthropod-blood", amount = IMP_BLOOD},
+			},
+			tech = "recombinant-ery",
+			name = "ex-blo-zun",
 			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-zungror.png",
 			icon_size = 64,
 		},
 		--skin zungror rendering
 		{
 			ingredients =
-				{
-					{name='blood-caged-zungror',remove_item = true},
-					{name='skin-caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "blood-caged-zungror", remove_item = true},
+				{name = "skin-caged-zungror",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'arthropod-blood', remove_item = true},
-					{name='skin', amount = IMP_SKIN},
-				},
-			tech = 'reca',
-			name = 'ex-ski-zun',
+			{
+				{name = "arthropod-blood", remove_item = true},
+				{name = "skin",            amount = IMP_SKIN},
+			},
+			tech = "reca",
+			name = "ex-ski-zun",
 			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-zungror.png",
 			icon_size = 64,
 		},
 		--fat zungror rendering
 		{
 			ingredients =
-				{
-					{name='skin-caged-zungror',remove_item = true},
-					{name='fat-caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "skin-caged-zungror", remove_item = true},
+				{name = "fat-caged-zungror",  amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'skin', remove_item = true},
-					{name='mukmoux-fat', amount = IMP_FAT},
-				},
-			tech = 'orexigenic',
-			name = 'ex-fat-zun',
+			{
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", amount = IMP_FAT},
+			},
+			tech = "orexigenic",
+			name = "ex-fat-zun",
 			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-zungror.png",
 			icon_size = 64,
 		},
 		--meat zungror rendering
 		{
 			ingredients =
-				{
-					{name='fat-caged-zungror',remove_item = true},
-					{name='meat-caged-zungror', amount = INPUT_AMOUNT},
-				},
+			{
+				{name = "fat-caged-zungror",  remove_item = true},
+				{name = "meat-caged-zungror", amount = INPUT_AMOUNT},
+			},
 			results =
-				{
-					{name = 'mukmoux-fat', remove_item = true},
-					{name='meat', amount = IMP_MEAT},
-				},
-			tech = 'anabolic-rna',
-			name = 'ex-me-zun',
+			{
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "meat",        amount = IMP_MEAT},
+			},
+			tech = "anabolic-rna",
+			name = "ex-me-zun",
 			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-zungror.png",
 			icon_size = 64,
 		},

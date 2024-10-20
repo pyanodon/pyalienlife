@@ -12,8 +12,9 @@ permissions:
 jobs:
   test-pull-request:
     name: PR
-    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1
+    uses: pyanodon/pyanodontests/.github/workflows/pytest.yml@v1.5.0
     with:
       repository: ${{ github.repository }}
       ref: ${{ github.event.pull_request.head.sha }}
+      test_branch: ${{ github.head_ref || github.ref_name }}
     secrets: inherit

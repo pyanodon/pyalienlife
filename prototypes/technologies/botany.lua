@@ -16,40 +16,40 @@ TECHNOLOGY {
 }
 
 TECHNOLOGY {
-    type = 'technology',
-    name = 'botany-mk02',
-    icon = '__pyalienlifegraphics__/graphics/technology/botany-mk02.png',
+    type = "technology",
+    name = "botany-mk02",
+    icon = "__pyalienlifegraphics__/graphics/technology/botany-mk02.png",
     icon_size = 128,
-    order = 'c-a',
-    prerequisites = {'botany-mk01'},
-    dependencies = {'botany-mk01'},
+    order = "c-a",
+    prerequisites = {"botany-mk01"},
+    dependencies = {"botany-mk01"},
     effects = {},
     unit = {
         count = 200,
         ingredients = {
-            {'automation-science-pack', 1},
-            {'logistic-science-pack', 1},
-            {"py-science-pack-2", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
         },
         time = 45
     }
 }
 
 TECHNOLOGY {
-    type = 'technology',
-    name = 'botany-mk03',
-    icon = '__pyalienlifegraphics__/graphics/technology/botany-mk03.png',
+    type = "technology",
+    name = "botany-mk03",
+    icon = "__pyalienlifegraphics__/graphics/technology/botany-mk03.png",
     icon_size = 128,
-    order = 'c-a',
-    prerequisites = {'botany-mk02'},
-    dependencies = {'botany-mk02'},
+    order = "c-a",
+    prerequisites = {"botany-mk02"},
+    dependencies = {"botany-mk02"},
     effects = {},
     unit = {
         count = 250,
         ingredients = {
-            {'automation-science-pack', 1},
-            {'logistic-science-pack', 1},
-            {'chemical-science-pack', 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack",   1},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
         },
         time = 60
@@ -63,17 +63,17 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03"},
-    dependencies = {'botany-mk03'},
+    dependencies = {"botany-mk03"},
     effects = {},
     unit = {
         count = 300,
         ingredients = {
             {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"military-science-pack", 1},
-            {"chemical-science-pack", 1},
+            {"logistic-science-pack",   1},
+            {"military-science-pack",   1},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1},
-            {"utility-science-pack", 1},
+            {"utility-science-pack",    1},
         },
         time = 45
     }

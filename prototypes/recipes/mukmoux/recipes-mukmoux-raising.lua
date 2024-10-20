@@ -1,80 +1,79 @@
 ------------------CALF MAKER------------------
 
 py.autorecipes {
-    name = 'mukmoux-calf',
-	category = 'rc',
-	allowed_module_categories = {'mukmoux'},
-	--module_limitations = 'mukmoux',
-	main_product = 'mukmoux-calf',
-	subgroup = 'py-alienlife-mukmoux',
-	order = 'c',
-    mats =
+	name = "mukmoux-calf",
+	category = "rc",
+	allowed_module_categories = {"mukmoux"},
+	main_product = "mukmoux-calf",
+	subgroup = "py-alienlife-mukmoux",
+	order = "c",
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					--{name = 'mukmoux', amount = 2},
-                    {name='fawogae', amount =30},
-                    {name='ralesia-seeds', amount =30},
-					{name='mukmoux-food-01', amount =2},
-					{name='bedding', amount = 2},
-					{name='water-barrel', amount=15,return_barrel = true},
-				},
+			{
+				--{name = 'mukmoux', amount = 2},
+				{name = "fawogae",         amount = 30},
+				{name = "ralesia-seeds",   amount = 30},
+				{name = "mukmoux-food-01", amount = 2},
+				{name = "bedding",         amount = 2},
+				{name = "water-barrel",    amount = 15, return_barrel = true},
+			},
 			results =
-				{
-					{name='mukmoux-calf', amount =2},
-					--{name = 'mukmoux', amount = 2},
-				},
+			{
+				{name = "mukmoux-calf", amount = 2},
+				--{name = 'mukmoux', amount = 2},
+			},
 			crafting_speed = 10,
-			tech = 'mukmoux'
+			tech = "mukmoux"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name = 'mukmoux', add_amount = 1},
-					{name='salt', amount = 5},
-					{name='raw-fiber', amount = 4},
-				},
+			{
+				{name = "mukmoux",   add_amount = 1},
+				{name = "salt",      amount = 5},
+				{name = "raw-fiber", amount = 4},
+			},
 			results =
-				{
-					{name='mukmoux-calf', add_amount =1},
-					{name = 'mukmoux', add_amount = 1},
-				},
+			{
+				{name = "mukmoux-calf", add_amount = 1},
+				{name = "mukmoux",      add_amount = 1},
+			},
 			crafting_speed = 7,
-			tech = 'mukmoux-mk02'
+			tech = "mukmoux-mk02"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name = 'mukmoux', add_amount = 1},
-					{name='mukmoux-food-02', amount =2},
-					{name='salt', amount = 4},
-				},
+			{
+				{name = "mukmoux",         add_amount = 1},
+				{name = "mukmoux-food-02", amount = 2},
+				{name = "salt",            amount = 4},
+			},
 			results =
-				{
-					{name='mukmoux-calf', add_amount =2},
-					{name = 'mukmoux', add_amount = 1},
-				},
+			{
+				{name = "mukmoux-calf", add_amount = 2},
+				{name = "mukmoux",      add_amount = 1},
+			},
 			crafting_speed = 6,
-			tech = 'mukmoux-mk03'
+			tech = "mukmoux-mk03"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'mukmoux', add_amount = 1},
-					{name='raw-fiber', add_amount = 5},
-				},
+			{
+				{name = "mukmoux",   add_amount = 1},
+				{name = "raw-fiber", add_amount = 5},
+			},
 			results =
-				{
-					{name='mukmoux-calf', add_amount =1},
-					{name = 'mukmoux', add_amount = 1},
-				},
+			{
+				{name = "mukmoux-calf", add_amount = 1},
+				{name = "mukmoux",      add_amount = 1},
+			},
 			crafting_speed = 5,
-			tech = 'mukmoux-mk04'
+			tech = "mukmoux-mk04"
 		},
 	}
 }
@@ -188,106 +187,105 @@ py.autorecipes {
 
 	}
 }
-]]--
+]] --
 
 --raising
 
 py.autorecipes {
-    name = 'mukmoux',
-	category = 'mukmoux',
-	module_limitations = 'mukmoux',
-	subgroup = 'py-alienlife-mukmoux',
-	order = 'b',
+	name = "mukmoux",
+	category = "mukmoux",
+	subgroup = "py-alienlife-mukmoux",
+	order = "b",
 	main_product = "mukmoux",
 	upgrades =
+	{
 		{
+			tech = "bigger-colon",
+			ingredient_changes =
 			{
-				tech = 'bigger-colon',
-				ingredient_changes =
-				{
-					{name = 'fiber', add_amount = 3}
-				},
-				result_changes =
-				{
-					{name = 'manure', add_amount = 5}
-				},
+				{name = "fiber", add_amount = 3}
 			},
+			result_changes =
 			{
-				tech = 'explosive-diarrhea',
-				ingredient_changes =
-				{
-					{name = 'ethylene-glycol', add_amount = 3}
-				},
-				result_changes =
-				{
-					{name = 'manure', add_amount = 10}
-				},
+				{name = "manure", add_amount = 5}
 			},
 		},
-    mats =
+		{
+			tech = "explosive-diarrhea",
+			ingredient_changes =
+			{
+				{name = "ethylene-glycol", add_amount = 3}
+			},
+			result_changes =
+			{
+				{name = "manure", add_amount = 10}
+			},
+		},
+	},
+	mats =
 	{
 		--logistic
 		{
 			ingredients =
-				{
-					{name = 'mukmoux-calf', amount = 3},
-                    {name='fawogae', amount =15},
-                    {name='ralesia-seeds', amount = 15},
-					{name='mukmoux-food-01', amount = 2},
-					{name='water-barrel', amount=6,return_barrel = true},
-				},
+			{
+				{name = "mukmoux-calf",    amount = 3},
+				{name = "fawogae",         amount = 15},
+				{name = "ralesia-seeds",   amount = 15},
+				{name = "mukmoux-food-01", amount = 2},
+				{name = "water-barrel",    amount = 6, return_barrel = true},
+			},
 			results =
-				{
-					{name='mukmoux', amount = 2},
-				},
+			{
+				{name = "mukmoux", amount = 2},
+			},
 			crafting_speed = 75,
-			tech = 'mukmoux'
+			tech = "mukmoux"
 		},
 		--py
 		{
 			ingredients =
-				{
-					{name = 'mukmoux-calf', add_amount = 3},
-					{name='salt', amount = 10},
-					{name='raw-fiber', amount = 5},
-					{name='bedding', amount = 2},
-				},
+			{
+				{name = "mukmoux-calf", add_amount = 3},
+				{name = "salt",         amount = 10},
+				{name = "raw-fiber",    amount = 5},
+				{name = "bedding",      amount = 2},
+			},
 			results =
-				{
-					{name='mukmoux', add_amount = 2},
-				},
+			{
+				{name = "mukmoux", add_amount = 2},
+			},
 			crafting_speed = 60,
-			tech = 'mukmoux-mk02'
+			tech = "mukmoux-mk02"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name = 'mukmoux-calf', add_amount = 3},
-					{name='mukmoux-food-02', amount =1},
-					{name='salt', amount =10},
+			{
+				{name = "mukmoux-calf",    add_amount = 3},
+				{name = "mukmoux-food-02", amount = 1},
+				{name = "salt",            amount = 10},
 
-				},
+			},
 			results =
-				{
-					{name='mukmoux', add_amount = 2},
-				},
+			{
+				{name = "mukmoux", add_amount = 2},
+			},
 			crafting_speed = 45,
-			tech = 'mukmoux-mk03'
+			tech = "mukmoux-mk03"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name = 'mukmoux-calf', add_amount = 3},
-					{name='raw-fiber', add_amount = 5},
-				},
+			{
+				{name = "mukmoux-calf", add_amount = 3},
+				{name = "raw-fiber",    add_amount = 5},
+			},
 			results =
-				{
-					{name='mukmoux', add_amount = 2},
-				},
+			{
+				{name = "mukmoux", add_amount = 2},
+			},
 			crafting_speed = 30,
-			tech = 'mukmoux-mk04'
+			tech = "mukmoux-mk04"
 		},
 	}
 }
@@ -545,4 +543,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

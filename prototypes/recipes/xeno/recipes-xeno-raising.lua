@@ -1,73 +1,72 @@
 ------------------EGG MAKER------------------
 
 py.autorecipes {
-    name = 'xeno-egg',
-	category = 'rc',
-	allowed_module_categories = {'xeno'},
-	module_limitations = 'xeno',
-	subgroup = 'py-alienlife-xeno',
-	order = 'c',
-	main_product = 'xeno-egg',
-    mats =
+	name = "xeno-egg",
+	category = "rc",
+	allowed_module_categories = {"xeno"},
+	subgroup = "py-alienlife-xeno",
+	order = "c",
+	main_product = "xeno-egg",
+	mats =
 	{
 		--py
 		{
 			ingredients =
-				{
-					{name = 'xeno', amount = 1},
-                    {name='caged-mukmoux', amount =2},
-					{name='fish', amount = 25},
-					{name='bones', amount =20},
-					{name='water-barrel', amount=15, return_barrel = true},
-				},
+			{
+				{name = "xeno",          amount = 1},
+				{name = "caged-mukmoux", amount = 2},
+				{name = "fish",          amount = 25},
+				{name = "bones",         amount = 20},
+				{name = "water-barrel",  amount = 15, return_barrel = true},
+			},
 			results =
-				{
-					{name='xeno-egg', amount =3},
-					{name = 'cage', amount = 2}
-				},
+			{
+				{name = "xeno-egg", amount = 3},
+				{name = "cage",     amount = 2}
+			},
 			crafting_speed = 30,
-			tech = 'xeno'
+			tech = "xeno"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name='guts', amount = 10},
-				},
+			{
+				{name = "guts", amount = 10},
+			},
 			results =
-				{
-                    {name='xeno-egg', add_amount = 3},
-				},
+			{
+				{name = "xeno-egg", add_amount = 3},
+			},
 			crafting_speed = 25,
-			tech = 'xeno-mk02'
+			tech = "xeno-mk02"
 		},
 		--ulric
 		{
 			ingredients =
-				{
-					{name='caged-ulric', amount =2},
+			{
+				{name = "caged-ulric", amount = 2},
 
-				},
+			},
 			results =
-				{
-                    {name='xeno-egg', add_amount = 3},
-					{name = 'cage', add_amount = 2}
-				},
+			{
+				{name = "xeno-egg", add_amount = 3},
+				{name = "cage",     add_amount = 2}
+			},
 			crafting_speed = 20,
-			tech = 'xeno-mk03'
+			tech = "xeno-mk03"
 		},
 		--ulric salt fiber
 		{
 			ingredients =
-				{
-					{name='guts', add_amount = 10},
-				},
+			{
+				{name = "guts", add_amount = 10},
+			},
 			results =
-				{
-                    {name='xeno-egg', add_amount = 3},
-				},
+			{
+				{name = "xeno-egg", add_amount = 3},
+			},
 			crafting_speed = 20,
-			tech = 'xeno-mk04'
+			tech = "xeno-mk04"
 		},
 	}
 }
@@ -150,81 +149,80 @@ py.autorecipes {
 
 	}
 }
-]]--
+]] --
 
 --Raising
 
 py.autorecipes {
-    name = 'caged-xeno',
-	category = 'xeno',
-	module_limitations = 'xeno',
-	subgroup = 'py-alienlife-xeno',
-	order = 'b',
+	name = "caged-xeno",
+	category = "xeno",
+	subgroup = "py-alienlife-xeno",
+	order = "b",
 	main_product = "caged-xeno",
-    mats =
+	mats =
 	{
 		--py
 		{
 			ingredients =
-				{
-					{name='xeno-egg', amount = 1},
-					{name='caged-mukmoux', amount = 1},
-					{name='bones', amount = 10},
-					{name='water-barrel', amount=6, return_barrel = true},
-				},
+			{
+				{name = "xeno-egg",      amount = 1},
+				{name = "caged-mukmoux", amount = 1},
+				{name = "bones",         amount = 10},
+				{name = "water-barrel",  amount = 6, return_barrel = true},
+			},
 			results =
-				{
-					{name='caged-xeno', amount = 1},
-				},
+			{
+				{name = "caged-xeno", amount = 1},
+			},
 			crafting_speed = 130,
-			tech = 'xeno'
+			tech = "xeno"
 		},
 		--chem
 		{
 			ingredients =
-				{
-					{name='xeno-egg', add_amount = 1},
-					{name='fish', amount = 8},
-					{name='caged-mukmoux', add_amount = 1},
-					{name='guts', amount = 5},
-				},
+			{
+				{name = "xeno-egg",      add_amount = 1},
+				{name = "fish",          amount = 8},
+				{name = "caged-mukmoux", add_amount = 1},
+				{name = "guts",          amount = 5},
+			},
 			results =
-				{
-					{name='caged-xeno', add_amount = 1},
-				},
+			{
+				{name = "caged-xeno", add_amount = 1},
+			},
 			crafting_speed = 110,
-			tech = 'xeno'
+			tech = "xeno"
 		},
 		--prod
 		{
 			ingredients =
-				{
-					{name='xeno-egg', add_amount = 1},
-					{name='caged-ulric', amount = 1},
-					{name='fish', add_amount = 8},
+			{
+				{name = "xeno-egg",    add_amount = 1},
+				{name = "caged-ulric", amount = 1},
+				{name = "fish",        add_amount = 8},
 
-				},
+			},
 			results =
-				{
-					{name='caged-xeno', add_amount = 1},
-				},
+			{
+				{name = "caged-xeno", add_amount = 1},
+			},
 			crafting_speed = 90,
-			tech = 'xeno'
+			tech = "xeno"
 		},
 		--utility
 		{
 			ingredients =
-				{
-					{name='xeno-egg', add_amount = 1},
-					{name='guts', add_amount = 5},
-					{name='cage', amount = 1},
-				},
+			{
+				{name = "xeno-egg", add_amount = 1},
+				{name = "guts",     add_amount = 5},
+				{name = "cage",     amount = 1},
+			},
 			results =
-				{
-					{name='caged-xeno', add_amount = 1},
-				},
+			{
+				{name = "caged-xeno", add_amount = 1},
+			},
 			crafting_speed = 70,
-			tech = 'xeno'
+			tech = "xeno"
 		},
 	}
 }
@@ -422,4 +420,4 @@ py.autorecipes {
 		},
 	}
 }
-]]--
+]] --

@@ -4,32 +4,32 @@
 
 
 local TRlist =
+{
+	upgrades =
 	{
-		upgrades =
+		{
+			base_recipe = "auog-manure-1",
+			current_lvl = 1,
+			upgrade_1 =
 			{
-				{
-					base_recipe = 'auog-manure-1',
-					current_lvl = 1,
-					upgrade_1 =
-						{
-						recipe = 'auog-manure-1a',
-						tech = 'bigger-colon',
-						unlocked = false,
-						level = 2,
-						},
-					upgrade_2 =
-						{
-						recipe = 'auog-manure-1b',
-						tech = 'explosive-diarrhea',
-						unlocked = false,
-						level = 3,
-						},
-					},
+				recipe = "auog-manure-1a",
+				tech = "bigger-colon",
+				unlocked = false,
+				level = 2,
 			},
-		techs_with_upgrades =
+			upgrade_2 =
 			{
-				['bigger-colon'] = true,
+				recipe = "auog-manure-1b",
+				tech = "explosive-diarrhea",
+				unlocked = false,
+				level = 3,
 			},
-	}
+		},
+	},
+	techs_with_upgrades =
+	{
+		["bigger-colon"] = true,
+	},
+}
 
-return(TRlist)
+return (TRlist)

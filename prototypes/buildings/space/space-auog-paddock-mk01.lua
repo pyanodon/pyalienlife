@@ -6,14 +6,14 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"stone", 100},
-        {"soil", 300},
-        {"iron-plate", 80},
+        {type = "item", name = "stone",      amount = 100},
+        {type = "item", name = "soil",       amount = 300},
+        {type = "item", name = "iron-plate", amount = 80},
     },
     results = {
-        {"space-auog-paddock-mk01", 1}
+        {type = "item", name = "space-auog-paddock-mk01", amount = 1}
     }
-}:add_unlock("auog"):add_ingredient({type = "item", name = "bolts", amount = 50})
+}:add_unlock("auog"):add_ingredient {type = "item", name = "bolts", amount = 50}
 
 ITEM {
     type = "item",
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "space-auog-paddock-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/auog-paddock-mk01.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "space-auog-paddock-mk01"},
     fast_replaceable_group = "auog-paddock",
@@ -41,70 +41,72 @@ ENTITY {
     collision_box = {{-6.6, -6.6}, {6.6, 6.6}},
     selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 4
-    },
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    module_slots = 4,
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"auog"},
     crafting_speed = 0.075,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 2,
+        emissions_per_minute = {
+            pollution = 2
+        },
     },
     energy_usage = "100kW",
-    animation = {
-        layers = {
+    graphics_set = {
+        working_visualisations = {
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off.png",
-                width = 448,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(2, -1)
+                north_position = util.by_pixel(-78, 63),
+                west_position = util.by_pixel(-78, 63),
+                south_position = util.by_pixel(-78, 63),
+                east_position = util.by_pixel(-78, 63),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/left.png",
+                    frame_count = 96,
+                    line_length = 12,
+                    width = 160,
+                    height = 256,
+                    animation_speed = 0.3
+                }
             },
             {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off-mask.png",
-                width = 448,
-                height = 448,
-                frame_count = 1,
-                shift = util.by_pixel(2, -1),
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                north_position = util.by_pixel(82, 63),
+                west_position = util.by_pixel(82, 63),
+                south_position = util.by_pixel(82, 63),
+                east_position = util.by_pixel(82, 63),
+                animation = {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/right.png",
+                    frame_count = 96,
+                    line_length = 12,
+                    width = 160,
+                    height = 256,
+                    animation_speed = 0.3
+                }
             },
-        }
-    },
 
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(-78, 63),
-            west_position = util.by_pixel(-78, 63),
-            south_position = util.by_pixel(-78, 63),
-            east_position = util.by_pixel(-78, 63),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/left.png",
-                frame_count = 96,
-                line_length = 12,
-                width = 160,
-                height = 256,
-                animation_speed = 0.3
+        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off.png",
+                    width = 448,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(2, -1)
+                },
+                {
+                    filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/off-mask.png",
+                    width = 448,
+                    height = 448,
+                    frame_count = 1,
+                    shift = util.by_pixel(2, -1),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
             }
         },
-        {
-            north_position = util.by_pixel(82, 63),
-            west_position = util.by_pixel(82, 63),
-            south_position = util.by_pixel(82, 63),
-            east_position = util.by_pixel(82, 63),
-            animation = {
-                filename = "__pyalienlifegraphics__/graphics/entity/auog-paddock/right.png",
-                frame_count = 96,
-                line_length = 12,
-                width = 160,
-                height = 256,
-                animation_speed = 0.3
-            }
-        },
-
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.5},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 0.3},

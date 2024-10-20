@@ -4,16 +4,16 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/dingrits.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk03","biotech-mk03","genetic-design"},
+    prerequisites = {"land-animals-mk03", "biotech-mk03",},
     effects = {},
     unit = {
         count = 200,
         ingredients = {
             {"automation-science-pack", 4},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 3},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   3},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
         },
         time = 50
     }
@@ -32,11 +32,11 @@ TECHNOLOGY {
         count = 250,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 3},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
-            {"py-science-pack-3", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   3},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
+            {"py-science-pack-3",       1},
         },
         time = 50
     }
@@ -55,13 +55,13 @@ TECHNOLOGY {
         count = 300,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 3},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
-            {"py-science-pack-3", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   3},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
+            {"py-science-pack-3",       1},
             {"production-science-pack", 1},
-            {"py-science-pack-4", 1},
+            {"py-science-pack-4",       1},
         },
         time = 50
     }
@@ -80,15 +80,15 @@ TECHNOLOGY {
         count = 350,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 3},
-            {"military-science-pack", 1},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
-            {"py-science-pack-3", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   3},
+            {"military-science-pack",   1},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
+            {"py-science-pack-3",       1},
             {"production-science-pack", 1},
-            {"py-science-pack-4", 1},
-            {"utility-science-pack", 1},
+            {"py-science-pack-4",       1},
+            {"utility-science-pack",    1},
         },
         time = 50
     }

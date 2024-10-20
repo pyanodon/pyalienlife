@@ -10,9 +10,9 @@ TECHNOLOGY {
         count = 300,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
         },
         time = 50
     }
@@ -24,16 +24,16 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/vatbrain-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"vatbrain-nk01"},
+    prerequisites = {"vatbrain-mk01"},
     dependencies = {"vatbrain-mk01"},
     effects = {},
     unit = {
         count = 350,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"chemical-science-pack",   1},
         },
         time = 50
     }
@@ -52,10 +52,10 @@ TECHNOLOGY {
         count = 400,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
             {"production-science-pack", 1}
         },
         time = 50
@@ -75,13 +75,13 @@ TECHNOLOGY {
         count = 450,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
-            {"py-science-pack-3", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
+            {"py-science-pack-3",       1},
             {"production-science-pack", 1},
-            {"utility-science-pack", 1}
+            {"utility-science-pack",    1}
         },
         time = 50
     }

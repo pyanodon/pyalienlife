@@ -4,15 +4,15 @@ RECIPE {
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {"fluid-drill-mk02", 1},
-        {"small-parts-02", 20},
-        {"electric-engine-unit", 4},
-        {"advanced-circuit", 5},
-        {"stainless-steel", 40},
-        {"niobium-pipe", 20},
+        {type = "item", name = "fluid-drill-mk02",     amount = 1},
+        {type = "item", name = "small-parts-02",       amount = 20},
+        {type = "item", name = "electric-engine-unit", amount = 4},
+        {type = "item", name = "advanced-circuit",     amount = 5},
+        {type = "item", name = "stainless-steel",      amount = 40},
+        {type = "item", name = "niobium-pipe",         amount = 20},
     },
     results = {
-        {"fluid-drill-mk03", 1}
+        {type = "item", name = "fluid-drill-mk03", amount = 1}
     }
 }:add_unlock("machines-mk03")
 
@@ -43,29 +43,27 @@ ENTITY {
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 0
-    },
+    module_slots = 0,
     --allowed_effects = {"consumption", "speed", "pollution"},
     mining_speed = 2,
     input_fluid_box =
     {
         production_type = "input-output",
         pipe_covers = pipecoverspictures(),
-        base_area = 1,
-        height = 2,
-        base_level = -1,
+        volume = 200,
         pipe_connections = {
-            { position = {-3, 0}},
-            { position = {3, 0} },
-            { position = {0, 3} }
+            {flow_direction = "input-output", position = {-2.0, 0}, direction = defines.direction.west},
+            {flow_direction = "input-output", position = {2.0, 0},  direction = defines.direction.east},
+            {flow_direction = "input-output", position = {0, 2.0},  direction = defines.direction.south}
         }
     },
     energy_source =
     {
-      type = "electric",
-      emissions_per_minute = 10,
-      usage_priority = "secondary-input"
+        type = "electric",
+        emissions_per_minute = {
+            pollution = 10
+        },
+        usage_priority = "secondary-input"
     },
     energy_usage = "1200kW",
     resource_searching_radius = 3.49,
@@ -78,61 +76,63 @@ ENTITY {
     circuit_wire_connection_points = circuit_connector_definitions["fluid-drill-mkxx"].points,
     circuit_connector_sprites = circuit_connector_definitions["fluid-drill-mkxx"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    animations = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/raw.png",
-                width = 224,
-                height = 288,
-                priority = "extra-high",
-                line_length = 10,
-                frame_count = 50,
-                animation_speed = 0.15,
-                shift = util.by_pixel(-0, -32),
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/ao.png",
-                width = 224,
-                height = 288,
-                --priority = "extra-high",
-                line_length = 10,
-                frame_count = 50,
-                animation_speed = 0.15,
-                shift = util.by_pixel(-0, -32),
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/mask.png",
-                width = 224,
-                height = 288,
-                priority = "extra-high",
-                line_length = 10,
-                frame_count = 50,
-                animation_speed = 0.15,
-                tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
-                shift = util.by_pixel(-0, -32),
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/sh.png",
-                width = 192,
-                height = 192,
-                draw_as_shadow = true,
-                line_length = 10,
-                frame_count = 50,
-                animation_speed = 0.15,
-                shift = util.by_pixel(16, 0),
-            },
-        }
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/raw.png",
+                    width = 224,
+                    height = 288,
+                    priority = "extra-high",
+                    line_length = 10,
+                    frame_count = 50,
+                    animation_speed = 0.15,
+                    shift = util.by_pixel(-0, -32),
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/ao.png",
+                    width = 224,
+                    height = 288,
+                    --priority = "extra-high",
+                    line_length = 10,
+                    frame_count = 50,
+                    animation_speed = 0.15,
+                    shift = util.by_pixel(-0, -32),
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/mask.png",
+                    width = 224,
+                    height = 288,
+                    priority = "extra-high",
+                    line_length = 10,
+                    frame_count = 50,
+                    animation_speed = 0.15,
+                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
+                    shift = util.by_pixel(-0, -32),
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/fluid-mining-drill/sh.png",
+                    width = 192,
+                    height = 192,
+                    draw_as_shadow = true,
+                    line_length = 10,
+                    frame_count = 50,
+                    animation_speed = 0.15,
+                    shift = util.by_pixel(16, 0),
+                },
+            }
+        },
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound =
     {
-      sound =
-      {
-        filename = "__base__/sound/electric-mining-drill.ogg",
-        volume = 0.5
-      },
-      audible_distance_modifier = 0.6,
-      fade_in_ticks = 4,
-      fade_out_ticks = 20
+        sound =
+        {
+            filename = "__base__/sound/electric-mining-drill.ogg",
+            volume = 0.5
+        },
+        audible_distance_modifier = 0.6,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
     },
 }

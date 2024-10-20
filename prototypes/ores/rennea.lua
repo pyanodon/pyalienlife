@@ -1,4 +1,3 @@
-
 ENTITY {
     type = "resource",
     name = "rennea-flowers",
@@ -13,7 +12,7 @@ ENTITY {
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = 'item', name = "rennea", amount = 1}
+            {type = "item", name = "rennea", amount = 1}
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
@@ -37,25 +36,17 @@ ENTITY {
             }
         }
     },
-	]]--
+	]] --
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/crops/rennea/rennea.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/rennea/hr-rennea.png",
             priority = "extra-high",
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 8,
             variation_count = 1,
-            hr_version = {
-                filename = "__pyalienlifegraphics__/graphics/entity/crops/rennea/hr-rennea.png",
-                priority = "extra-high",
-                width = 128,
-                height = 128,
-                frame_count = 8,
-                variation_count = 1,
-                scale = 0.5
-            }
+            scale = 0.5
         }
     }
 }

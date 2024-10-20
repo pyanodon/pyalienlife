@@ -1,4 +1,3 @@
-
 ENTITY {
     type = "resource",
     name = "yotoi-tree-fruit",
@@ -13,7 +12,7 @@ ENTITY {
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = 'item', name = "yotoi-fruit", amount = 1}
+            {type = "item", name = "yotoi-fruit", amount = 1}
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
@@ -37,27 +36,18 @@ ENTITY {
             }
         }
     },
-	]]--
+	]] --
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/crops/yotoi/yotoi.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/yotoi/hr-yotoi.png",
             priority = "extra-high",
-            width = 64,
-            height = 64,
+            width = 128,
+            height = 128,
             frame_count = 8,
             variation_count = 1,
-            shift = util.by_pixel(0, -0),
-            hr_version = {
-                filename = "__pyalienlifegraphics__/graphics/entity/crops/yotoi/hr-yotoi.png",
-                priority = "extra-high",
-                width = 128,
-                height = 128,
-                frame_count = 8,
-                variation_count = 1,
-                scale = 0.5,
-                shift = util.by_pixel(0, 0),
-            }
+            scale = 0.5,
+            shift = util.by_pixel(0, 0),
         }
     }
 }

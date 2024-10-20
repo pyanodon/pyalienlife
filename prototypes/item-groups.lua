@@ -82,10 +82,10 @@ data:extend {
         order = "ba"
     },
     {
-        type = 'item-subgroup',
-        name = 'py-alienlife-vatbrain',
-        group = 'py-alienlife',
-        order = 'ba-2'
+        type = "item-subgroup",
+        name = "py-alienlife-vatbrain",
+        group = "py-alienlife",
+        order = "ba-2"
     },
     {
         type = "item-subgroup",
@@ -124,7 +124,7 @@ data:extend {
         order = "bf"
     },
 
-    
+
     -- fluids
     {
         type = "item-subgroup",
@@ -449,22 +449,22 @@ data:extend {
         order = "g-eb",
     },
     {
-        type = 'item-subgroup',
-        name = 'py-alienlife-seaweed',
-        group = 'py-alienlife',
-        order = 'g-ec',
+        type = "item-subgroup",
+        name = "py-alienlife-seaweed",
+        group = "py-alienlife",
+        order = "g-ec",
     },
     {
-        type = 'item-subgroup',
-        name = 'py-alienlife-sap',
-        group = 'py-alienlife',
-        order = 'g-ed',
+        type = "item-subgroup",
+        name = "py-alienlife-sap",
+        group = "py-alienlife",
+        order = "g-ed",
     },
     {
-        type = 'item-subgroup',
-        name = 'py-alienlife-tree',
-        group = 'py-alienlife',
-        order = 'g-ed',
+        type = "item-subgroup",
+        name = "py-alienlife-tree",
+        group = "py-alienlife",
+        order = "g-ed",
     },
     {
         type = "item-subgroup",

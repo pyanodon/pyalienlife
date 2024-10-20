@@ -10,7 +10,7 @@ TECHNOLOGY {
         count = 25,
         ingredients = {
             {"automation-science-pack", 3},
-            {"py-science-pack-1", 1}
+            {"py-science-pack-1",       1}
         },
         time = 55
     }

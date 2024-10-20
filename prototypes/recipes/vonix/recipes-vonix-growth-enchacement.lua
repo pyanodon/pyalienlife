@@ -1,186 +1,185 @@
 py.autorecipes {
-    name = 'vonix-improved',
-	category = 'vonix',
-	--module_limitations = 'vonix',
-	subgroup = 'py-alienlife-vonix',
-	order = 'b',
+	name = "vonix-improved",
+	category = "vonix",
+	subgroup = "py-alienlife-vonix",
+	order = "b",
 	--main_product = "vonix",
-    mats =
+	mats =
 	{
 		--nanochondria
 		{
 			ingredients =
-				{
-					{name = 'nanochondria', amount =1},
-					{name = 'vonix', amount = 1},
-				},
+			{
+				{name = "nanochondria", amount = 1},
+				{name = "vonix",        amount = 1},
+			},
 			results =
-				{
-					{name = 'brain-vonix', amount = 1},
-				},
+			{
+				{name = "brain-vonix", amount = 1},
+			},
 			crafting_speed = 180,
-			tech = 'nanochondria'
+			tech = "nanochondria"
 		},
 		--nanochondria and gh
 		{
 			ingredients =
-				{
-					--{name = 'nanochondria', amount =1},
-					{name = 'gh', amount =1},
-				},
+			{
+				--{name = 'nanochondria', amount =1},
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 60,
-			tech = 'nanochondria'
+			tech = "nanochondria"
 		},
 		--rna anabolic
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'nanochondria',remove_item = true},
-					{name = 'anabolic-rna', amount =1},
-				},
+			{
+				{name = "gh",           remove_item = true},
+				{name = "nanochondria", remove_item = true},
+				{name = "anabolic-rna", amount = 1},
+			},
 			results =
-				{
-					{name = 'brain-vonix', remove_item = true},
-					{name = 'meat-vonix', amount = 1},
-				},
+			{
+				{name = "brain-vonix", remove_item = true},
+				{name = "meat-vonix",  amount = 1},
+			},
 			crafting_speed = 180,
-			tech = 'anabolic-rna'
+			tech = "anabolic-rna"
 		},
 		--rna anabolic and gh
 		{
 			ingredients =
-				{
-					--{name = 'nanochondria', amount =1},
-					{name = 'gh', amount =1},
-				},
+			{
+				--{name = 'nanochondria', amount =1},
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 60,
-			tech = 'anabolic-rna'
+			tech = "anabolic-rna"
 		},
 		--antitumor
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'anabolic-rna',remove_item = true},
-					{name = 'antitumor', amount =1},
-				},
+			{
+				{name = "gh",           remove_item = true},
+				{name = "anabolic-rna", remove_item = true},
+				{name = "antitumor",    amount = 1},
+			},
 			results =
-				{
-					{name = 'meat-vonix', remove_item = true},
-					{name = 'guts-vonix', amount = 1},
-				},
+			{
+				{name = "meat-vonix", remove_item = true},
+				{name = "guts-vonix", amount = 1},
+			},
 			crafting_speed = 180,
-			tech = 'antitumor'
+			tech = "antitumor"
 		},
 		--antitumor and gh
 		{
 			ingredients =
-				{
-					--{name = 'nanochondria', amount =1},
-					{name = 'gh', amount =1},
-				},
+			{
+				--{name = 'nanochondria', amount =1},
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 60,
-			tech = 'antitumor'
+			tech = "antitumor"
 		},
 		--Recombinant Ery
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'antitumor',remove_item = true},
-					{name = 'recombinant-ery', amount =1},
-				},
+			{
+				{name = "gh",              remove_item = true},
+				{name = "antitumor",       remove_item = true},
+				{name = "recombinant-ery", amount = 1},
+			},
 			results =
-				{
-					{name = 'guts-vonix', remove_item = true},
-					{name = 'blood-vonix', amount = 1},
-				},
+			{
+				{name = "guts-vonix",  remove_item = true},
+				{name = "blood-vonix", amount = 1},
+			},
 			crafting_speed = 180,
-			tech = 'recombinant-ery'
+			tech = "recombinant-ery"
 		},
 		--Recombinant Ery and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 60,
-			tech = 'recombinant-ery'
+			tech = "recombinant-ery"
 		},
 		--reca
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'recombinant-ery',remove_item = true},
-					{name = 'reca', amount =1},
-				},
+			{
+				{name = "gh",              remove_item = true},
+				{name = "recombinant-ery", remove_item = true},
+				{name = "reca",            amount = 1},
+			},
 			results =
-				{
-					{name = 'blood-vonix', remove_item = true},
-					{name = 'skin-vonix', amount = 1},
-				},
+			{
+				{name = "blood-vonix", remove_item = true},
+				{name = "skin-vonix",  amount = 1},
+			},
 			crafting_speed = 180,
-			tech = 'reca'
+			tech = "reca"
 		},
 		--reca and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 60,
-			tech = 'reca'
+			tech = "reca"
 		},
 		--orexigenic
 		{
 			ingredients =
-				{
-					{name = 'gh',remove_item = true},
-					{name = 'reca',remove_item = true},
-					{name = 'orexigenic', amount =1},
-				},
+			{
+				{name = "gh",         remove_item = true},
+				{name = "reca",       remove_item = true},
+				{name = "orexigenic", amount = 1},
+			},
 			results =
-				{
-					{name = 'skin-vonix', remove_item = true},
-					{name = 'fat-vonix', amount = 1},
-				},
+			{
+				{name = "skin-vonix", remove_item = true},
+				{name = "fat-vonix",  amount = 1},
+			},
 			crafting_speed = 180,
-			tech = 'orexigenic'
+			tech = "orexigenic"
 		},
 		--orexigenic and gh
 		{
 			ingredients =
-				{
-					{name = 'gh', amount =1},
-				},
+			{
+				{name = "gh", amount = 1},
+			},
 			results =
-				{
+			{
 
-				},
+			},
 			crafting_speed = 60,
-			tech = 'orexigenic'
+			tech = "orexigenic"
 		},
 	}
 }

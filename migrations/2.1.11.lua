@@ -1,14 +1,14 @@
 local to_reset = {}
 
 for _, force in pairs(game.forces) do
-	if global.turd_bonuses and global.turd_bonuses[force.index] then
-		if force.technologies['bhoddos-upgrade'] and force.technologies['bhoddos-upgrade'].researched then
-            to_reset[force.index] = 'bhoddos-upgrade'
-		end
-		if global.turd_bonuses[force.index]['moondrop-upgrade'] == 'moon' then
-            to_reset[force.index] = 'moondrop-upgrade'		
-		end
-	end
+    if storage.turd_bonuses and storage.turd_bonuses[force.index] then
+        if force.technologies["bhoddos-upgrade"] and force.technologies["bhoddos-upgrade"].researched then
+            to_reset[force.index] = "bhoddos-upgrade"
+        end
+        if storage.turd_bonuses[force.index]["moondrop-upgrade"] == "moon" then
+            to_reset[force.index] = "moondrop-upgrade"
+        end
+    end
 end
 
 local future = game.tick + 1

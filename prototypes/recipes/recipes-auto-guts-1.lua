@@ -1,34 +1,33 @@
 ------------------ARTHURIANS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-arthurians',
-	category = 'slaughterhouse',
-	--module_limitations = 'arthurian',
-	subgroup = 'py-alienlife-arthurian',
-	order = 'b',
-    mats =
+	name = "rendering-guts-arthurians",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-arthurian",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-arthurian', amount=1},
-				},
+			{
+				{name = "caged-arthurian", amount = 1},
+			},
 			results =
-				{
-					{name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
 			crafting_speed = 15,
-			tech = 'organ-replication',
-			name = 'Extract arthurian guts-1',
+			tech = "organ-replication",
+			name = "Extract-arthurian-guts-1",
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
@@ -38,36 +37,35 @@ py.autorecipes {
 ------------------ARQAD------------------
 
 py.autorecipes {
-    name = 'rendering-guts-arqad',
-	category = 'slaughterhouse',
-	--module_limitations = 'arqad',
-	subgroup = 'py-alienlife-arqad',
-	order = 'b',
-    mats =
+	name = "rendering-guts-arqad",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-arqad",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='arqad', amount=3},
-				},
+			{
+				{name = "arqad", amount = 3},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='bee-venom', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract arqad guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "bee-venom",       remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "guts",            add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-arqad-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -75,36 +73,35 @@ py.autorecipes {
 ------------------AUOGS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-auog',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-auog',
-	order = 'b',
-    mats =
+	name = "rendering-guts-auog",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-auog",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-auog', amount=1},
-				},
+			{
+				{name = "caged-auog", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract auog guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-auog-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -112,35 +109,34 @@ py.autorecipes {
 ------------------COTTONGUT------------------
 
 py.autorecipes {
-    name = 'rendering-guts-cottongut',
-	category = 'slaughterhouse',
-	--module_limitations = 'cottongut',
-	subgroup = 'py-alienlife-cottongut',
-	order = 'b',
-    mats =
+	name = "rendering-guts-cottongut",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-cottongut",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='cottongut', amount=5},
-				},
+			{
+				{name = "cottongut", amount = 5},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract cottongut guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-cottongut-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -148,38 +144,37 @@ py.autorecipes {
 ------------------DHILMOS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-dhilmos',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-dhilmos',
-	order = 'b',
-    mats =
+	name = "rendering-guts-dhilmos",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-dhilmos",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='dhilmos', amount=1},
-				},
+			{
+				{name = "dhilmos", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract dhilmos guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "sulfuric-acid",   remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "blood",           remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "guts",            add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-dhilmos-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -187,36 +182,35 @@ py.autorecipes {
 ------------------DINGRITS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-dingrits',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-dingrits',
-	order = 'b',
-    mats =
+	name = "rendering-guts-dingrits",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-dingrits",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-dingrits', amount=1},
-				},
+			{
+				{name = "caged-dingrits", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract dingrits guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-dingrits-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -224,36 +218,35 @@ py.autorecipes {
 ------------------KMAUTS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-kmauts',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-kmauts',
-	order = 'b',
-    mats =
+	name = "rendering-guts-kmauts",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-kmauts",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-kmauts', amount=1},
-				},
+			{
+				{name = "caged-kmauts", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract kmauts guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-kmauts-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -261,36 +254,35 @@ py.autorecipes {
 ------------------KORLEX------------------
 
 py.autorecipes {
-    name = 'rendering-guts-korlex',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-korlex',
-	order = 'b',
-    mats =
+	name = "rendering-guts-korlex",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-korlex",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-korlex', amount=1},
-				},
+			{
+				{name = "caged-korlex", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 4},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract Korlex guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 4},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-Korlex-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -298,36 +290,35 @@ py.autorecipes {
 ------------------MUKMOUX------------------
 
 py.autorecipes {
-    name = 'rendering-guts-mukmoux',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-mukmoux',
-	order = 'b',
-    mats =
+	name = "rendering-guts-mukmoux",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-mukmoux",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-mukmoux', amount=1},
-				},
+			{
+				{name = "caged-mukmoux", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 4},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract Mukmoux guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 4},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-Mukmoux-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -335,36 +326,35 @@ py.autorecipes {
 ------------------PHADAI------------------
 
 py.autorecipes {
-    name = 'rendering-guts-phadai',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-phadai',
-	order = 'b',
-    mats =
+	name = "rendering-guts-phadai",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-phadai",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-phadai', amount=1},
-				},
+			{
+				{name = "caged-phadai", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract phadai guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-phadai-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -372,36 +362,35 @@ py.autorecipes {
 ------------------PHAGNOT------------------
 
 py.autorecipes {
-    name = 'rendering-guts-phagnot',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-phagnot',
-	order = 'b',
-    mats =
+	name = "rendering-guts-phagnot",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-phagnot",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-phagnot', amount=1},
-				},
+			{
+				{name = "caged-phagnot", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract phagnot guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-phagnot-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -409,36 +398,35 @@ py.autorecipes {
 ------------------SCRONDRIX------------------
 
 py.autorecipes {
-    name = 'rendering-guts-scrondrix',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-scrondrix',
-	order = 'b',
-    mats =
+	name = "rendering-guts-scrondrix",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-scrondrix",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-scrondrix', amount=1},
-				},
+			{
+				{name = "caged-scrondrix", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract scrondrix guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-scrondrix-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -446,36 +434,35 @@ py.autorecipes {
 ------------------SIMIKS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-simik',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-simik',
-	order = 'b',
-    mats =
+	name = "rendering-guts-simik",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-simik",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-simik', amount=1},
-				},
+			{
+				{name = "caged-simik", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='simik-blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 1},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract simik guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "simik-blood", remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 1},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-simik-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -483,35 +470,34 @@ py.autorecipes {
 ------------------TRITS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-trits',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-trits',
-	order = 'b',
-    mats =
+	name = "rendering-guts-trits",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-trits",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='trits', amount=1},
-				},
+			{
+				{name = "trits", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract Trits guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-Trits-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -519,36 +505,35 @@ py.autorecipes {
 ------------------ULRIC------------------
 
 py.autorecipes {
-    name = 'rendering-guts-ulric',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-ulric',
-	order = 'b',
-    mats =
+	name = "rendering-guts-ulric",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-ulric",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-ulric', amount=1},
-				},
+			{
+				{name = "caged-ulric", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract Ulric guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",       remove_item = true},
+				{name = "meat",        remove_item = true},
+				{name = "skin",        remove_item = true},
+				{name = "mukmoux-fat", remove_item = true},
+				{name = "guts",        remove_item = true},
+				{name = "blood",       remove_item = true},
+				{name = "brain",       remove_item = true},
+				{name = "cage",        amount = 1},
+				{name = "guts",        add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-Ulric-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -556,38 +541,37 @@ py.autorecipes {
 ------------------VONIX------------------
 
 py.autorecipes {
-    name = 'rendering-guts-vonix',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-vonix',
-	order = 'b',
-    mats =
+	name = "rendering-guts-vonix",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-vonix",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='vonix', amount=1},
-				},
+			{
+				{name = "vonix", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract Vonix guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "sulfuric-acid",   remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "blood",           remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "guts",            add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-Vonix-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -595,39 +579,38 @@ py.autorecipes {
 ------------------VRAUKS------------------
 
 py.autorecipes {
-    name = 'rendering-guts-vrauks',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-vrauks',
-	order = 'b',
-    mats =
+	name = "rendering-guts-vrauks",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-vrauks",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='caged-vrauks', amount=1},
-				},
+			{
+				{name = "caged-vrauks", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='formic-acid', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='cage', amount=1},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract Vrauks guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",         remove_item = true},
+				{name = "meat",          remove_item = true},
+				{name = "skin",          remove_item = true},
+				{name = "mukmoux-fat",   remove_item = true},
+				{name = "guts",          remove_item = true},
+				{name = "chitin",        remove_item = true},
+				{name = "formic-acid",   remove_item = true},
+				{name = "sulfuric-acid", remove_item = true},
+				{name = "blood",         remove_item = true},
+				{name = "brain",         remove_item = true},
+				{name = "cage",          amount = 1},
+				{name = "guts",          add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-Vrauks-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }
@@ -635,30 +618,29 @@ py.autorecipes {
 ------------------XYHIPHOE------------------
 
 py.autorecipes {
-    name = 'rendering-guts-xyhiphoe',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-xyhiphoe',
-	order = 'b',
-    mats =
+	name = "rendering-guts-xyhiphoe",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-xyhiphoe",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name='xyhiphoe', amount=1},
-				},
+			{
+				{name = "xyhiphoe", amount = 1},
+			},
 			results =
-				{
-					{name='meat', remove_item = true},
-					{name='shell', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='guts', add_amount = 4},
-				},
+			{
+				{name = "meat",            remove_item = true},
+				{name = "shell",           remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "guts",            add_amount = 4},
+			},
 			crafting_speed = 15,
-			tech = 'organ-replication',
-			name = 'Extract xyhiphoe guts-1',
+			tech = "organ-replication",
+			name = "Extract-xyhiphoe-guts-1",
 			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
 			icon_size = 64,
 		},
@@ -667,38 +649,37 @@ py.autorecipes {
 ------------------ZIPIR------------------
 
 py.autorecipes {
-    name = 'rendering-guts-zipir',
-	category = 'slaughterhouse',
-	--module_limitations = 'auog',
-	subgroup = 'py-alienlife-zipir',
-	order = 'b',
-    mats =
+	name = "rendering-guts-zipir",
+	category = "slaughterhouse",
+	subgroup = "py-alienlife-zipir",
+	order = "b",
+	mats =
 	{
 		--guts
 		{
 			ingredients =
-				{
-					{name = 'zipir1', amount=1},
-				},
+			{
+				{name = "zipir1", amount = 1},
+			},
 			results =
-				{
-                    {name='bones', remove_item = true},
-					{name='meat', remove_item = true},
-					{name='skin', remove_item = true},
-					{name='chitin', remove_item = true},
-					{name='arthropod-blood', remove_item = true},
-					{name='sulfuric-acid', remove_item = true},
-					{name='mukmoux-fat', remove_item = true},
-					{name='guts', remove_item = true},
-					{name='blood', remove_item = true},
-					{name='brain', remove_item = true},
-					{name='guts', add_amount = 3},
-				},
-                crafting_speed = 15,
-                tech = 'organ-replication',
-                name = 'Extract zipir guts-1',
-                icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
-                icon_size = 64,
+			{
+				{name = "bones",           remove_item = true},
+				{name = "meat",            remove_item = true},
+				{name = "skin",            remove_item = true},
+				{name = "chitin",          remove_item = true},
+				{name = "arthropod-blood", remove_item = true},
+				{name = "sulfuric-acid",   remove_item = true},
+				{name = "mukmoux-fat",     remove_item = true},
+				{name = "guts",            remove_item = true},
+				{name = "blood",           remove_item = true},
+				{name = "brain",           remove_item = true},
+				{name = "guts",            add_amount = 3},
+			},
+			crafting_speed = 15,
+			tech = "organ-replication",
+			name = "Extract-zipir-guts-1",
+			icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-01.png",
+			icon_size = 64,
 		},
 	}
 }

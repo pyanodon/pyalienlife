@@ -16,7 +16,7 @@ TECHNOLOGY {
     }
 }
 ]]
-TECHNOLOGY("moondrop"):set_fields{icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk01.png"}
+TECHNOLOGY("moondrop"):set_fields {icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk01.png"}
 
 TECHNOLOGY {
     type = "technology",
@@ -24,15 +24,15 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk01","moondrop"},
+    prerequisites = {"botany-mk01", "moondrop"},
     dependencies = {"moondrop"},
     effects = {},
     unit = {
         count = 200,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
         },
         time = 50
     }
@@ -44,16 +44,16 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02","moondrop-mk02","phytomining"},
+    prerequisites = {"botany-mk02", "moondrop-mk02", "phytomining"},
     dependencies = {"moondrop-mk02"},
     effects = {},
     unit = {
         count = 250,
         ingredients = {
             {"automation-science-pack", 2},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
         },
         time = 50
     }
@@ -65,18 +65,18 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02","moondrop-mk03","phytomining-mk02"},
+    prerequisites = {"botany-mk02", "moondrop-mk03", "phytomining-mk02"},
     dependencies = {"moondrop-mk03"},
     effects = {},
     unit = {
         count = 350,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
-            {"py-science-pack-3", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
+            {"py-science-pack-3",       1},
         },
         time = 50
     }
@@ -88,20 +88,20 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/moondrop-mk05.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk03","moondrop-mk04","phytomining-mk03"},
+    prerequisites = {"botany-mk03", "moondrop-mk04", "phytomining-mk03"},
     dependencies = {"moondrop-mk04"},
     effects = {},
     unit = {
         count = 350,
         ingredients = {
             {"automation-science-pack", 1},
-            {"py-science-pack-1", 1},
-            {"logistic-science-pack", 1},
-            {"py-science-pack-2", 1},
-            {"chemical-science-pack", 1},
-            {"py-science-pack-3", 1},
+            {"py-science-pack-1",       1},
+            {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
+            {"py-science-pack-3",       1},
             {"production-science-pack", 1},
-            {"py-science-pack-4", 1},
+            {"py-science-pack-4",       1},
         },
         time = 50
     }

@@ -1,3 +1,3 @@
-if global.vatbrains and global.vatbrains.brains then
-	global.vatbrains = global.vatbrains.brains
+if storage.vatbrains and storage.vatbrains.brains then
+	storage.vatbrains = storage.vatbrains.brains
 end

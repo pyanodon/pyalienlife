@@ -79,8 +79,7 @@ ITEM {
     subgroup = "py-alienlife-zungror",
     order = "xa-a",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 1}},
-    limitation = {},
+    effect = {pollution = 1, speed = 1},
     limitation_message_key = "zungror",
 }
 
@@ -99,8 +98,7 @@ ITEM {
     subgroup = "py-alienlife-zungror",
     order = "xa-b",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 2}},
-    limitation = {},
+    effect = {pollution = 1, speed = 2},
     limitation_message_key = "zungror",
 }
 
@@ -119,8 +117,7 @@ ITEM {
     subgroup = "py-alienlife-zungror",
     order = "xa-c",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 3}},
-    limitation = {},
+    effect = {pollution = 1, speed = 3},
     limitation_message_key = "zungror",
 }
 
@@ -139,8 +136,7 @@ ITEM {
     subgroup = "py-alienlife-zungror",
     order = "xa-d",
     stack_size = 50,
-    effect = {pollution = {bonus = 1},speed = {bonus = 4}},
-    limitation = {},
+    effect = {pollution = 1, speed = 4},
     limitation_message_key = "zungror",
 }
 

@@ -6,15 +6,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"stone-brick", 50},
-        {"titanium-plate", 50},
-        {"steel-plate", 100},
-        {"duralumin", 50},
-        {"glass", 80},
-        {"electronic-circuit", 35},
+        {type = "item", name = "stone-brick",        amount = 50},
+        {type = "item", name = "titanium-plate",     amount = 50},
+        {type = "item", name = "steel-plate",        amount = 100},
+        {type = "item", name = "duralumin",          amount = 50},
+        {type = "item", name = "glass",              amount = 80},
+        {type = "item", name = "electronic-circuit", amount = 35},
     },
     results = {
-        {"space-phagnot-corral-mk01", 1}
+        {type = "item", name = "space-phagnot-corral-mk01", amount = 1}
     }
 }:add_unlock("phagnot")
 
@@ -44,128 +44,130 @@ ENTITY {
     collision_box = {{-5.8, -5.8}, {5.8, 5.8}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 10
-    },
-    allowed_effects = {'speed', 'productivity', 'consumption', 'pollution'},
+    module_slots = 10,
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"phagnot"},
     crafting_speed = 0.05,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = 3,
+        emissions_per_minute = {
+            pollution = 3
+        },
     },
     energy_usage = "300kW",
-    animation = {
-        layers = {
-        {
-        filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off.png",
-        width = 416,
-        height = 448,
-        frame_count = 1,
-        line_length = 1,
-        shift = util.by_pixel(16, -32)
-        },
-        {
-            filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off-mask.png",
-            width = 416,
-            height = 448,
-            frame_count = 1,
-            line_length = 1,
-            shift = util.by_pixel(16, -32),
-            tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+    graphics_set = {
+        working_visualisations = {
+            {
+                north_position = util.by_pixel(136, -63),
+                west_position = util.by_pixel(0, -0),
+                south_position = util.by_pixel(0, -0),
+                east_position = util.by_pixel(0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/mom.png",
+                    frame_count = 68,
+                    line_length = 10,
+                    width = 96,
+                    height = 128,
+                    animation_speed = 0.5
+                }
             },
-        },
+            {
+                north_position = util.by_pixel(-56, -121),
+                west_position = util.by_pixel(0, -0),
+                south_position = util.by_pixel(0, -0),
+                east_position = util.by_pixel(0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/porta.png",
+                    frame_count = 68,
+                    line_length = 10,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(143, -28),
+                west_position = util.by_pixel(0, -0),
+                south_position = util.by_pixel(0, -0),
+                east_position = util.by_pixel(0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/pup.png",
+                    frame_count = 68,
+                    line_length = 10,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.5
+                }
+            },
+            {
+                north_position = util.by_pixel(-98, -27),
+                west_position = util.by_pixel(0, -0),
+                south_position = util.by_pixel(0, -0),
+                east_position = util.by_pixel(0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/sit.png",
+                    frame_count = 68,
+                    line_length = 10,
+                    width = 64,
+                    height = 96,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(-16, 17),
+                west_position = util.by_pixel(0, -0),
+                south_position = util.by_pixel(0, -0),
+                east_position = util.by_pixel(0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/walk-01.png",
+                    frame_count = 130,
+                    line_length = 16,
+                    width = 128,
+                    height = 205,
+                    animation_speed = 0.3
+                }
+            },
+            {
+                north_position = util.by_pixel(100, 17),
+                west_position = util.by_pixel(0, -0),
+                south_position = util.by_pixel(0, -0),
+                east_position = util.by_pixel(0, -0),
+                animation = {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/walk-02.png",
+                    frame_count = 130,
+                    line_length = 16,
+                    width = 105,
+                    height = 205,
+                    animation_speed = 0.3
+                }
+            },
 
-    },
-    working_visualisations = {
-        {
-            north_position = util.by_pixel(136, -63),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/mom.png",
-                frame_count = 68,
-                line_length = 10,
-                width = 96,
-                height = 128,
-                animation_speed = 0.5
-            }
         },
-        {
-            north_position = util.by_pixel(-56, -121),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/porta.png",
-                frame_count = 68,
-                line_length = 10,
-                width = 64,
-                height = 96,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(143, -28),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/pup.png",
-                frame_count = 68,
-                line_length = 10,
-                width = 64,
-                height = 96,
-                animation_speed = 0.5
-            }
-        },
-        {
-            north_position = util.by_pixel(-98, -27),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/sit.png",
-                frame_count = 68,
-                line_length = 10,
-                width = 64,
-                height = 96,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(-16, 17),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/walk-01.png",
-                frame_count = 130,
-                line_length = 16,
-                width = 128,
-                height = 205,
-                animation_speed = 0.3
-            }
-        },
-        {
-            north_position = util.by_pixel(100, 17),
-            west_position = util.by_pixel(0, -0),
-            south_position = util.by_pixel(0, -0),
-            east_position = util.by_pixel(0, -0),
-            animation = {
-                filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/walk-02.png",
-                frame_count = 130,
-                line_length = 16,
-                width = 105,
-                height = 205,
-                animation_speed = 0.3
-            }
-        },
+        animation = {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off.png",
+                    width = 416,
+                    height = 448,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32)
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/phagnot-corral/off-mask.png",
+                    width = 416,
+                    height = 448,
+                    frame_count = 1,
+                    line_length = 1,
+                    shift = util.by_pixel(16, -32),
+                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                },
+            },
 
+        },
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/phagnot-corral.ogg", volume = 1.0},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/phagnot-corral.ogg", volume = 0.3},
