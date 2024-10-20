@@ -7,9 +7,12 @@ if data and not yafc_turd_integration then
         RECIPE("fawogae-with-growth-hormone"):copy(),
     } do
         recipe.name = recipe.name .. "-nitrogen"
-        recipe.ingredients = {{type = "fluid", name = "purest-nitrogen-gas", amount = 200 * i}}
+        recipe:remove_ingredient("water")
+        recipe:remove_ingredient("manure")
+        recipe:remove_ingredient("biomass")
+        recipe:remove_ingredient("urea")
+        recipe:add_ingredient{type = "fluid", name = "purest-nitrogen-gas", amount = 50 * i}
         recipe:multiply_result_amount("fawogae", 1.5)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend {recipe}
     end
 

@@ -89,7 +89,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.35,      speed = -0.25, type = "module-effects"},
+                {productivity = 0.35,      speed = -0.5, type = "module-effects"},
                 {recipe = "methane-co2-with-lamp", type = "unlock-recipe"},
             }
         },
