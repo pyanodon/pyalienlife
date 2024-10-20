@@ -129,7 +129,23 @@ Ulric.transfer_character_inventory = function(old, new)
 		new.cursor_stack.transfer_stack(old.cursor_stack)
 	end
 
-	for i = 1, 1000 do -- no way to find the max # of logistic requests. lets just put a high number like 1000 and pray it works
-		new.set_personal_logistic_slot(i, old.get_personal_logistic_slot(i))
+	-- ensure that the ulricman has the same logistic requests as the old player
+	local old_point = old.get_requester_point()
+	local new_point = new.get_requester_point()
+	new_point.trash_not_requested = old_point.trash_not_requested
+	new_point.enabled = old_point.enabled
+	for _, section in pairs(old_point.sections) do
+		local new_section = new_point.add_section(section.group)
+		new_section.active = section.active
+		new_section.multiplier = section.multiplier
+		new_section.filters = section.filters
+	end
+
+	-- delete empty logistic sections after the copy
+	for i = new_point.sections_count, 1, -1 do
+		local section = new_point.get_section(i)
+		if section.filters_count == 0 then
+			new_point.remove_section(i)
+		end
 	end
 end
