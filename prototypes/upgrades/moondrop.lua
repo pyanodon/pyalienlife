@@ -8,22 +8,28 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-cu"
         recipe:add_ingredient {name = "copper-ore", amount = 10, type = "item"}
-        recipe:multiply_result_amount("moondrop", 1.2)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
+        recipe:multiply_result_amount("moondrop", 2)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.5)
+        recipe:remove_ingredient("hydrogen")
+        recipe:remove_ingredient("biomass")
+        recipe:remove_ingredient("fertilizer")
+        recipe:remove_ingredient("urea")
+        recipe:remove_ingredient("pesticide-mk01")
+        recipe:remove_ingredient("gasoline")
         data:extend {recipe}
     end
 
     data:extend {{
         name = "methane-co2-with-lamp",
-        results = {
-            {type = "fluid", amount = 60, name = "methane"},
-            {type = "fluid", amount = 40, name = "oxygen"},
-            {type = "item",  amount = 1,  name = "small-lamp", probability = 0.75},
-        },
-        energy_required = 8,
+        energy_required = 2,
         ingredients = {
             {type = "item",  amount = 1,   name = "small-lamp"},
             {type = "fluid", amount = 100, name = "water"},
+        },
+        results = {
+            {type = "fluid", amount = 60, name = "methane"},
+            {type = "fluid", amount = 40, name = "oxygen"},
+            {type = "item",  amount = 1,  name = "small-lamp", probability = 0.95},
         },
         category = "moon",
         enabled = false,
@@ -33,8 +39,8 @@ if data and not yafc_turd_integration then
 
     data:extend {{
         name = "moondrop-co2",
-        results = {{type = "fluid", amount = 100, name = "carbon-dioxide", fluidbox_index = 1}},
-        energy_required = 10,
+        results = {{type = "fluid", amount = 200, name = "carbon-dioxide", fluidbox_index = 1}},
+        energy_required = 5,
         ingredients = {},
         category = "moon",
         enabled = false,
@@ -70,11 +76,12 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "moondrop-1", new = "moondrop-1-cu", type = "recipe-replacement"},
-                {old = "moondrop-2", new = "moondrop-2-cu", type = "recipe-replacement"},
-                {old = "moondrop-3", new = "moondrop-3-cu", type = "recipe-replacement"},
-                {old = "moondrop-4", new = "moondrop-4-cu", type = "recipe-replacement"},
-                {old = "moondrop-5", new = "moondrop-5-cu", type = "recipe-replacement"},
+                {productivity = 0.3, type = "module-effects"},
+                {old = "moondrop-1", new = "moondrop-1-cu",  type = "recipe-replacement"},
+                {old = "moondrop-2", new = "moondrop-2-cu",  type = "recipe-replacement"},
+                {old = "moondrop-3", new = "moondrop-3-cu",  type = "recipe-replacement"},
+                {old = "moondrop-4", new = "moondrop-4-cu",  type = "recipe-replacement"},
+                {old = "moondrop-5", new = "moondrop-5-cu",  type = "recipe-replacement"},
             },
         },
         {
@@ -83,6 +90,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {productivity = 0.5,               consumption = 10,      speed = -0.5, type = "module-effects"},
                 {recipe = "methane-co2-with-lamp", type = "unlock-recipe"},
             }
         },
@@ -92,7 +100,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 1,         type = "module-effects"},
+                {consumption = 1,         speed = 1,             type = "module-effects"},
                 {recipe = "moondrop-co2", type = "unlock-recipe"}
             }
         }
