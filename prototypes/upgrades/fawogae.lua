@@ -7,9 +7,8 @@ if data and not yafc_turd_integration then
         RECIPE("fawogae-with-growth-hormone"):copy(),
     } do
         recipe.name = recipe.name .. "-nitrogen"
-        recipe:remove_ingredient("water")
-        recipe:add_ingredient {type = "fluid", name = "purest-nitrogen-gas", amount = 20 + 20 * i}
-        recipe:multiply_result_amount("fawogae", 1.35)
+        recipe.ingredients = {{type = "fluid", name = "purest-nitrogen-gas", amount = 200 * i}}
+        recipe:multiply_result_amount("fawogae", 1.5)
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend {recipe}
     end
@@ -19,14 +18,14 @@ if data and not yafc_turd_integration then
         name = "acid-gas-fawogae",
         enabled = false,
         category = "desulfurization",
-        energy_required = 8,
+        energy_required = 6,
         ingredients = {
             {"fawogae",      2},
             {"sulfur",       2},
             {type = "fluid", name = "oxygen", amount = 50},
         },
         results = {
-            {type = "fluid", name = "acidgas", amount = 150},
+            {type = "fluid", name = "acidgas", amount = 250},
         }
     }}
 
