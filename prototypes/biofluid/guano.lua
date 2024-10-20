@@ -117,6 +117,7 @@ RECIPE {
         {type = "item", name = "chorkok", amount = 1, probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     allow_productivity = true,
+    main_product = "guano"
 }:add_unlock {"biofluid-mk03"}
 
 RECIPE {
