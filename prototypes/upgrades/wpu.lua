@@ -213,8 +213,15 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "nylon", amount = 30},
         },
-
+        allow_productivity = true
     }
+
+    for _, recipe in pairs(data.raw.recipe) do
+        if not recipe.allow_productivity and recipe.category == "wpu" then
+            recipe.allow_productivity = true
+            recipe.allowed_module_categories = {"speed", "efficiency", "quality", "sawblade"}
+        end
+    end
 end
 
 return {
