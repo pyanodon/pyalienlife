@@ -108,13 +108,6 @@ local function build_tech_upgrade(tech_upgrade)
                     mk1_module_slots = mk1.module_slots
                 end
 
-
-                if mk1 and mk1.type ~= "assembling-machine" then
-                    effect.pollution = 0
-                elseif effect.pollution == 0 then
-                    effect.pollution = 0.01 -- prevent use in mines, composter, ect
-                end
-
                 local effective_speed
                 
                 local is_this_a_speed_module_that_effects_farm_buildings = mk1.crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
