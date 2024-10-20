@@ -156,7 +156,7 @@ if data and not yafc_turd_integration then
 
     local phenolic_board_with_laquer = RECIPE(data.raw.recipe["phenolicboard"]):copy("phenolicboard-with-laquer")
     phenolic_board_with_laquer:add_ingredient {type = "item", name = "lacquer-resin", amount = 20}
-    phenolic_board_with_laquer:add_result_amount("phenolicboard", 1)
+    phenolic_board_with_laquer:multiply_result_amount("phenolicboard", 2)
 
     RECIPE {
         type = "recipe",
@@ -197,6 +197,24 @@ if data and not yafc_turd_integration then
         seedling_recipe:add_ingredient {type = "fluid", name = "anthracene-oil", amount = 35}
         data:extend {seedling_recipe}
     end
+
+    RECIPE {
+        name = "biosynthetic-nylon",
+        type = "recipe",
+        category = "wpu",
+        enabled = false,
+        energy_required = 30,
+        ingredients = {
+            {type = "item", name = "lignin", amount = 5},
+            {type = "item", name = "treated-wood", amount = 5},
+            {type = "item", name = "cellulose",    amount = 5},
+            {type = "item", name = "redhot-coke",    amount = 1},
+        },
+        results = {
+            {type = "item", name = "nylon", amount = 30},
+        },
+
+    }
 end
 
 return {
@@ -224,14 +242,15 @@ return {
         }
     },
     sub_techs = {
-        --[[{
-            name = "dry-storage",
-            icon = "__pyalienlifegraphics3__/graphics/technology/dry-storage.png",
+        {
+            name = "biosynthetic-nylon",
+            icon = "__pyalienlifegraphics3__/graphics/technology/biosynthetic-nylon.png",
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {type = "unlock-recipe", recipe = "biosynthetic-nylon"},
             },
-        },--]]
+        },
         {
             name = "sawblades",
             icon = "__pyalienlifegraphics3__/graphics/technology/selective-heads.png",
