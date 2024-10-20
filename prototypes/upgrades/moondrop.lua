@@ -76,7 +76,6 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.3, type = "module-effects"},
                 {old = "moondrop-1", new = "moondrop-1-cu",  type = "recipe-replacement"},
                 {old = "moondrop-2", new = "moondrop-2-cu",  type = "recipe-replacement"},
                 {old = "moondrop-3", new = "moondrop-3-cu",  type = "recipe-replacement"},
@@ -90,7 +89,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.5,               consumption = 10,      speed = -0.5, type = "module-effects"},
+                {productivity = 0.35,      speed = -0.25, type = "module-effects"},
                 {recipe = "methane-co2-with-lamp", type = "unlock-recipe"},
             }
         },
@@ -100,7 +99,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 1,         speed = 1,             type = "module-effects"},
+                {consumption = 2,         speed = 0.5,             type = "module-effects"},
                 {recipe = "moondrop-co2", type = "unlock-recipe"}
             }
         }
