@@ -11,6 +11,7 @@ Date: in 5 hours
     - Increased the energy usage of the logistic station from 10MW -> 250MW.
     - Added a new recipe for chitin -> xenogenenic cells. (https://github.com/pyanodon/pybugreports/issues/582)
     - Fixed a crash related to caravan GUIs (https://github.com/pyanodon/pybugreports/issues/602)
+    - Renamed "Dragon breath" to "Phadaisus breath"
   TURD:
     - Added a new turd for the wood processing unit.
     - Greatly buffed all three paths of the fast wood forestry turd.
