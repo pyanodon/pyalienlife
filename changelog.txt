@@ -3,6 +3,7 @@ Version: 3.0.1
 Date: 2024-10-21
   Changes:
     - Merged ralesia and relesias items to allow quality to work
+    - Merged py-fertilizer and fertilizer items to fix quality errors
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 2024-10-20
