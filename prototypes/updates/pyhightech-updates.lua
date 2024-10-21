@@ -198,7 +198,7 @@ RECIPE {
     type = "recipe",
     name = "inductor1-2",
     category = "crafting",
-    enabled = true,
+    enabled = false,
     energy_required = 0.5,
     ingredients = {
         {type = "item", name = "iron-stick",   amount = 1},
@@ -208,7 +208,7 @@ RECIPE {
         {type = "item", name = "inductor1", amount = 1}
     },
     main_product = "inductor1"
-}
+}:add_unlock("steam-power")
 
 ----KICALK-----
 
