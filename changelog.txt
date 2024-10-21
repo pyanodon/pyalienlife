@@ -2,7 +2,7 @@
 Version: 3.0.5
 Date: 2024-10-21
   Changes:
-    - Restructured the early game tech to make use of trigger techs.
+    - Restructured the early game tech tree to make use of trigger techs.
     - Fixed lamps were not researchable.
     - Fixed the green circuit recipe being unlocked earlier than intended.
 ---------------------------------------------------------------------------------------------------
