@@ -82,7 +82,7 @@ if data and not yafc_turd_integration then
             {{"guar-seeds", 1}, {"guar", 2}},
         },
         {
-            {{"ralesia-seeds", 1}, {"ralesias", 2}},
+            {{"ralesia-seeds", 1}, {"ralesia", 2}},
             {{"rennea-seeds", 1},  {"rennea", 1}},
         },
         {

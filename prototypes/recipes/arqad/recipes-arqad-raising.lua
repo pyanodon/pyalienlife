@@ -31,7 +31,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "ralesias", amount = 15},
+				{name = "ralesia", amount = 15},
 				{name = "arqad",    add_amount = 2},
 			},
 			results =
@@ -207,7 +207,7 @@ py.autorecipes {
 			{
 				{name = "arqad-egg-nest",     amount = 1},
 				{name = "biomass",            amount = 15},
-				{name = "ralesias",           amount = 5},
+				{name = "ralesia",           amount = 5},
 				{name = "natural-gas-barrel", amount = 10, return_barrel = true},
 			},
 			results =

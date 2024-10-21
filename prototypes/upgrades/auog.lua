@@ -7,7 +7,7 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient {"wood", 6 * i}
         recipe:remove_ingredient("ash")
         recipe:remove_ingredient("moss")
-        recipe:remove_ingredient("ralesias")
+        recipe:remove_ingredient("ralesia")
         recipe:remove_ingredient("starch")
         recipe:remove_ingredient("casein")
         recipe:multiply_result_amount("auog-food-0" .. i, 2)

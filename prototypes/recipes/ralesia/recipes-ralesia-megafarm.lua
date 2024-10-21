@@ -13,7 +13,7 @@ RECIPE {
         {type = "item",  name = "stone",    amount = 100},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 2},
+        {type = "item", name = "ralesia", amount = tile_count * 2},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -30,7 +30,7 @@ RECIPE {
         {type = "fluid", name = "hydrogen", amount = 2000},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 3},
+        {type = "item", name = "ralesia", amount = tile_count * 3},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -47,7 +47,7 @@ RECIPE {
         {type = "fluid", name = "hydrogen", amount = 2000},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 4},
+        {type = "item", name = "ralesia", amount = tile_count * 4},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -65,7 +65,7 @@ RECIPE {
         {type = "fluid", name = "hydrogen", amount = 2000},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 5},
+        {type = "item", name = "ralesia", amount = tile_count * 5},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -83,7 +83,7 @@ RECIPE {
         {type = "fluid", name = "syngas", amount = 1500},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 6},
+        {type = "item", name = "ralesia", amount = tile_count * 6},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -102,7 +102,7 @@ RECIPE {
         {type = "item",  name = "lignin", amount = 300},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 7},
+        {type = "item", name = "ralesia", amount = tile_count * 7},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -119,7 +119,7 @@ RECIPE {
         {type = "fluid", name = "syngas",     amount = 1500},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 8},
+        {type = "item", name = "ralesia", amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -139,6 +139,6 @@ RECIPE {
         {type = "item",  name = "gh",         amount = 3},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 11},
+        {type = "item", name = "ralesia", amount = tile_count * 11},
     },
 }:add_unlock("mega-farm-ralesia")

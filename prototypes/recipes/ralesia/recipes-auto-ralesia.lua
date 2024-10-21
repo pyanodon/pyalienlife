@@ -1,5 +1,5 @@
 py.autorecipes {
-	name = "ralesias",
+	name = "ralesia",
 	category = "ralesia",
 	subgroup = "py-alienlife-ralesia",
 	order = "a",
@@ -16,7 +16,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "ralesias", amount = 10},
+				{name = "ralesia", amount = 10},
 			},
 			crafting_speed = 125,
 			tech = "ralesia"
@@ -32,7 +32,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "ralesias", add_amount = 15}
+				{name = "ralesia", add_amount = 15}
 			},
 			crafting_speed = 100,
 			tech = "ralesia-mk02"
@@ -48,7 +48,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "ralesias", add_amount = 25}
+				{name = "ralesia", add_amount = 25}
 			},
 			crafting_speed = 75,
 			tech = "ralesia-mk03"
@@ -64,7 +64,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "ralesias", add_amount = 35}
+				{name = "ralesia", add_amount = 35}
 			},
 			crafting_speed = 50,
 			tech = "ralesia-mk04"

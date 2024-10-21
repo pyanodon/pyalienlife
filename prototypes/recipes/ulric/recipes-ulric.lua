@@ -64,7 +64,7 @@ RECIPE {
     ingredients = {
         {type = "item",  name = "tin-plate",    amount = 2},
         {type = "item",  name = "fawogae",      amount = 5},
-        {type = "item",  name = "ralesias",     amount = 5},
+        {type = "item",  name = "ralesia",     amount = 5},
         {type = "item",  name = "wood-seeds",   amount = 10},
         {type = "item",  name = "native-flora", amount = 10},
         --        {type = 'item', name = 'guar', amount = 3},
@@ -85,7 +85,7 @@ RECIPE {
     ingredients = {
         {type = "item",  name = "tin-plate",    amount = 2},
         {type = "item",  name = "fawogae",      amount = 5},
-        {type = "item",  name = "ralesias",     amount = 5},
+        {type = "item",  name = "ralesia",     amount = 5},
         {type = "item",  name = "wood-seeds",   amount = 10},
         {type = "item",  name = "ash",          amount = 10},
         {type = "item",  name = "native-flora", amount = 15},

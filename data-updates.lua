@@ -180,7 +180,6 @@ for _, recipe in pairs(data.raw.recipe) do
     recipe:replace_ingredient("py-fertilizer", "fertilizer")
     recipe:replace_ingredient("organics", "biomass")
     recipe:replace_result("organics", "biomass")
-    recipe:replace_ingredient("ralesia", "ralesias")
     recipe:replace_ingredient("raw-fish", "fish")
 end
 

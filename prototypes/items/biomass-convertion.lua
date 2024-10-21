@@ -56,7 +56,7 @@ local biomass_convertion =
     ["cadaveric-arum-mk02-a"] = {item_amount = 1, biomass_amount = 5},
     ["cadaveric-arum-mk03-a"] = {item_amount = 1, biomass_amount = 5},
     ["cadaveric-arum-mk04-a"] = {item_amount = 1, biomass_amount = 5},
-    ["ralesias"] = {item_amount = 5, biomass_amount = 2},
+    ["ralesia"] = {item_amount = 5, biomass_amount = 2},
     ["ralesias-mk02"] = {item_amount = 1, biomass_amount = 2},
     ["ralesias-mk03"] = {item_amount = 1, biomass_amount = 2},
     ["ralesias-mk04"] = {item_amount = 1, biomass_amount = 2},

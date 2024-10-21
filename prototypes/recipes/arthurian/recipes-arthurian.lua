@@ -66,7 +66,7 @@ RECIPE {
         {type = "item",  name = "tin-plate",     amount = 2},
         {type = "item",  name = "fawogae",       amount = 5},
         {type = "item",  name = "native-flora",  amount = 15},
-        {type = "item",  name = "ralesias",      amount = 5},
+        {type = "item",  name = "ralesia",      amount = 5},
         {type = "item",  name = "tuuphra-seeds", amount = 1},
         {type = "item",  name = "yotoi-leaves",  amount = 5},
         {type = "item",  name = "meat",          amount = 10},

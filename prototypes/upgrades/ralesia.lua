@@ -44,10 +44,10 @@ if data and not yafc_turd_integration then
 
     local fluidbox_indexs = {2, 2, 1, 1}
     for i, recipe in pairs {
-        RECIPE("ralesias-1"):copy(),
-        RECIPE("ralesias-2"):copy(),
-        RECIPE("ralesias-3"):copy(),
-        RECIPE("ralesias-4"):copy(),
+        RECIPE("ralesia-1"):copy(),
+        RECIPE("ralesia-2"):copy(),
+        RECIPE("ralesia-3"):copy(),
+        RECIPE("ralesia-4"):copy(),
     } do
         recipe.name = recipe.name .. "-hydrogen-burn"
         recipe:remove_ingredient("water")

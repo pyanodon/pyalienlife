@@ -774,7 +774,7 @@ RECIPE {
         {type = "fluid", name = "syngas",     amount = 1500},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 8},
+        {type = "item", name = "ralesia", amount = tile_count * 8},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -793,7 +793,7 @@ RECIPE {
         {type = "fluid", name = "syngas",     amount = 1500},
     },
     results = {
-        {type = "item", name = "ralesias", amount = tile_count * 9},
+        {type = "item", name = "ralesia", amount = tile_count * 9},
     },
 }:add_unlock("mega-farm-ralesia")
 
@@ -1595,7 +1595,6 @@ data.raw["assembling-machine"]["mukmoux-pasture"] = nil
 data.raw["item"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["ralesia"] = nil
-data.raw["item"]["ralesia"] = nil
 data.raw["item"]["py-fertilizer"] = nil
 
 data.raw["recipe"]["fertilizer-2"].results = {{"fertilizer", 15}}

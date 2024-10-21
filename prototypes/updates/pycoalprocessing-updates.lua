@@ -96,7 +96,7 @@ RECIPE("wpu"):replace_ingredient("wood", {type = "item", name = "log", amount = 
 RECIPE("log-wood"):remove_unlock("wood-processing"):set_fields {always_show_made_in = true, enabled = true}.category = "wpu-handcrafting"
 RECIPE("botanical-nursery"):replace_ingredient("wood", {type = "item", name = "planter-box", amount = 10})
 
-RECIPE("ralesia-seeds"):subgroup_order("py-alienlife-ralesia", "a"):replace_ingredient("ralesia", "ralesias").category = "nursery"
+RECIPE("ralesia-seeds"):subgroup_order("py-alienlife-ralesia", "a"):replace_ingredient("ralesia", "ralesia").category = "nursery"
 --RECIPE('chemical-science-pack'):add_ingredient({type = "item", name = "alien-sample-02", amount = 1})
 RECIPE("filtration-media"):add_ingredient {type = "item", name = "micro-fiber", amount = 2}
 RECIPE("flask"):remove_ingredient("wood"):add_ingredient {type = "item", name = "stopper", amount = 4}:remove_ingredient("molten-glass"):add_ingredient {type = "fluid", name = "molten-glass", amount = 100, fluidbox_index = 2}
