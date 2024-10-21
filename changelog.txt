@@ -12,6 +12,7 @@ Date: in 5 hours
     - Added a new recipe for chitin -> xenogenenic cells. (https://github.com/pyanodon/pybugreports/issues/582)
     - Fixed a crash related to caravan GUIs (https://github.com/pyanodon/pybugreports/issues/602)
     - Renamed "Dragon breath" to "Phadaisus breath"
+    - Fixed certian locale strings referencing a "spidertron"? No idea what that is. In this household we build the mecha zungror. (https://github.com/pyanodon/pybugreports/issues/599)
   TURD:
     - Added a new turd for the wood processing unit.
     - Greatly buffed all three paths of the fast wood forestry turd.
