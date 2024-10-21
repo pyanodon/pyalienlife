@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.2.0
-Date: in 5 hours
+Version: 3.0.0
+Date: 2024-10-20
   Changes:
     - Fixed some recipes outputting more steam than input water when using productivity modules.
     - Added an alt-recipe for guano.
