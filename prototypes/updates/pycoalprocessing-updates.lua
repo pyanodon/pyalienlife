@@ -29,7 +29,7 @@ if not mods["pyalternativeenergy"] then
     TECHNOLOGY("energy-3"):add_pack("py-science-pack-2")
 end
 
-TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-3")
+if TECHNOLOGY("railway-mk03") then TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-3") end
 TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
 TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 

@@ -71,6 +71,11 @@ RECIPE {
     }
 }:add_unlock("biotech-machines-mk04")
 
+data:extend{{
+    name = "bio-reactor",
+    type = "module-category",
+}}
+
 for i = 1, 4 do
     local name = "bio-reactor-mk0" .. i
     local icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png"

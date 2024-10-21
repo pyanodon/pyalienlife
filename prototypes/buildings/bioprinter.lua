@@ -75,6 +75,11 @@ RECIPE {
     }
 }:add_unlock("mass-production")
 
+data:extend {{
+    name = "bioprinting",
+    type = "module-category",
+}}
+
 for i = 1, 4 do
     local name = "bio-printer-mk0" .. i
     local icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png"

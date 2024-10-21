@@ -28,6 +28,11 @@ ITEM {
     stack_size = 10
 }
 
+data:extend {{
+    name = "data-array",
+    type = "module-category",
+}}
+
 ENTITY {
     type = "assembling-machine",
     name = "data-array",
