@@ -484,7 +484,6 @@ RECIPE("stone-wool"):add_unlock("zipir")
 RECIPE("stone-wool2"):add_unlock("zipir")
 RECIPE("agzn-alloy"):remove_unlock("alloys-mk04"):add_unlock("alloys-mk03")
 
-RECIPE("fertilizer"):replace_result("py-fertilizer", "fertilizer")
 RECIPE("log7-2"):replace_result("log", "log", 8)
 
 RECIPE("rennea-mk02-seed-seperation"):replace_result("light-oil", "tall-oil")
@@ -1595,7 +1594,6 @@ data.raw["assembling-machine"]["mukmoux-pasture"] = nil
 data.raw["item"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["ralesia"] = nil
-data.raw["item"]["py-fertilizer"] = nil
 
 data.raw["recipe"]["fertilizer-2"].results = {{"fertilizer", 15}}
 RECIPE("fertilizer-2"):add_unlock("biofluid-mk01"):add_ingredient {type = "item", name = "guano", amount = 3}
