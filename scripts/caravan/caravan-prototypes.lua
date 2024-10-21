@@ -41,7 +41,7 @@ local caravan_actions = {
 	}
 }
 
-local prototypes = {
+local caravan_prototypes = {
 	caravan = {
 		inventory_size = 30,
 		opens_player_inventory = true,
@@ -116,12 +116,12 @@ local prototypes = {
 	}
 }
 
-prototypes["caravan-turd"] = prototypes["caravan"]
-prototypes["flyavan-turd"] = prototypes["flyavan"]
-prototypes["nukavan-turd"] = prototypes["nukavan"]
-prototypes["caravan-turd"].placeable_by = "caravan-turd"
-prototypes["flyavan-turd"].placeable_by = "flyavan-turd"
-prototypes["nukavan-turd"].placeable_by = "nukavan-turd"
+caravan_prototypes["caravan-turd"] = caravan_prototypes["caravan"]
+caravan_prototypes["flyavan-turd"] = caravan_prototypes["flyavan"]
+caravan_prototypes["nukavan-turd"] = caravan_prototypes["nukavan"]
+caravan_prototypes["caravan-turd"].placeable_by = "caravan-turd"
+caravan_prototypes["flyavan-turd"].placeable_by = "flyavan-turd"
+caravan_prototypes["nukavan-turd"].placeable_by = "nukavan-turd"
 
 local function get_outpost_inventory(outpost)
 	local type = outpost.type
@@ -131,7 +131,7 @@ local function get_outpost_inventory(outpost)
 		return outpost.get_inventory(defines.inventory.chest)
 	elseif type == "cargo-wagon" then
 		return outpost.get_inventory(defines.inventory.cargo_wagon)
-	elseif prototypes[outpost.name] then
+	elseif caravan_prototypes[outpost.name] then
 		local caravan_data = storage.caravans[outpost.unit_number]
 		return caravan_data.inventory
 	end
@@ -149,7 +149,7 @@ local function transfer_all_items(input_inventory, output_inventory)
 	end
 end
 
-local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items
+local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
 	local inventory_count = input_inventory.get_item_count(item)
 
 	if inventory_count == goal then
@@ -179,6 +179,31 @@ local function evaluate_signal(entity, signal)
 	return result
 end
 
+-- small migration script to ensure we are not transfering deleted items
+-- I have no access to the JSON migrations so invalid items are just deleted
+-- TODO: Use JSON migrations after they are added to base factorio under prototypes
+py.on_event(py.events.on_init(), function()
+	for _, caravan_data in pairs(storage.caravans) do
+		for _, schedule in pairs(caravan_data.schedule) do
+			for _, action in pairs(schedule.actions) do
+				local item = action.elem_value
+				if item and not prototypes.item[item] then
+					local position
+					if caravan_data.entity.valid then
+						position = caravan_data.entity.position
+						position = "[gps=" .. position.x .. ", " .. position.y .. "]"
+					else
+						position = "UNKNOWN POSITION"
+					end
+
+					action.elem_value = nil
+					game.print('CARAVAN MIGRATION: "' .. item .. '" is not a valid item prototype. You will need to manually fix a caravan @ ' .. position)
+				end
+			end
+		end
+	end
+end)
+
 Caravan.actions = {
 	["time-passed"] = function(caravan_data, schedule, action)
 		if action.timer == 1 then
@@ -198,7 +223,7 @@ Caravan.actions = {
 		local fuel = caravan_data.fuel_inventory
 
 		for _, item in pairs(outpost_inventory.get_contents()) do
-			if prototypes[entity.name].favorite_foods[item.name] then
+			if caravan_prototypes[entity.name].favorite_foods[item.name] then
 				local inserted_count = fuel.insert(item)
 				if inserted_count ~= 0 then outpost_inventory.remove(item) end
 			end
@@ -298,4 +323,4 @@ Caravan.free_actions = { -- actions that don't use fuel
 	["circuit-condition"] = true
 }
 
-return prototypes
+return caravan_prototypes
