@@ -11,6 +11,7 @@ Date: in 5 hours
     - Increased the energy usage of the logistic station from 10MW -> 250MW.
     - Added a new recipe for chitin -> xenogenenic cells. (https://github.com/pyanodon/pybugreports/issues/582)
     - Fixed a crash related to caravan GUIs (https://github.com/pyanodon/pybugreports/issues/602)
+    - Fixed that the smart farm would not function when combined with the "Combat mechanics overhaul" mod. (https://github.com/pyanodon/pybugreports/issues/583)
     - Renamed "Dragon breath" to "Phadaisus breath"
     - Fixed certian locale strings referencing a "spidertron"? No idea what that is. In this household we build the mecha zungror. (https://github.com/pyanodon/pybugreports/issues/599)
   TURD:

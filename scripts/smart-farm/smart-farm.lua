@@ -145,7 +145,7 @@ py.on_event(defines.events.on_rocket_launched, function(event)
 	end
 	if not output then return end
 
-	local is_alien_biomes = script.active_mods["alien-biomes"]
+	local is_alien_biomes = script.active_mods["alien-biomes"] or script.active_mods["combat-mechanics-overhaul"]
 	for x = -11, 11 do
 		for y = -11, 11 do
 			local ore_location = {position.x + x, position.y + y}
