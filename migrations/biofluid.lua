@@ -1,3 +1,5 @@
+do return end
+
 require "scripts.biofluid.biofluid"
 require "scripts.biofluid.biofluid-prototypes"
 require "scripts.biofluid.network-builder"
