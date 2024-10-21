@@ -417,7 +417,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "antitumor",
-    category = "research",
+    category = mods.pyhightech and "nano" or "research",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -435,12 +435,12 @@ RECIPE {
     results = {
         {type = "item", name = "antitumor", amount = 250},
     },
-}:add_unlock("antitumor"):replace_ingredient("cytostatics", "superconductor-servomechanims").category = "nano"
+}:add_unlock("antitumor"):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
 RECIPE {
     type = "recipe",
     name = "antitumor-2",
-    category = "research",
+    category = mods.pyhightech and "nano" or "research",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -459,7 +459,7 @@ RECIPE {
     results = {
         {type = "item", name = "antitumor", amount = 290},
     },
-}:add_unlock("antitumor"):replace_ingredient("cytostatics", "superconductor-servomechanims").category = "nano"
+}:add_unlock("antitumor"):replace_ingredient("cytostatics", "superconductor-servomechanims")
 
 RECIPE {
     type = "recipe",

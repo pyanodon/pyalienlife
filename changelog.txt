@@ -3,6 +3,7 @@ Version: 3.0.2
 Date: 2024-10-21
   Changes:
     - Fixed various data-stage crashes when pyAE or pyHT are not installed.
+    - Nonconductive-phazogen is now crafted in the nano-assembler instead of the incubator.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.1
 Date: 2024-10-21

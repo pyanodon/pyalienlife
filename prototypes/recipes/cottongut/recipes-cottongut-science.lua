@@ -46,7 +46,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-blue-seeds",
     enabled = false,
-    category = "incubator",
+    category = mods.pyhightech and "nano" or "incubator",
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "alien-sample-02", amount = 1},
@@ -67,13 +67,13 @@ RECIPE {
     main_product = "negasium",
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-science-mk03"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 1}.category = "nano"
+}:add_unlock("cottongut-science-mk03"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 1}
 
 RECIPE {
     type = "recipe",
     name = "cottongut-science-py-seeds",
     enabled = false,
-    category = "incubator",
+    category = mods.pyhightech and "nano" or "incubator",
     energy_required = 15,
     ingredients = {
         {type = "fluid", name = "simik-blood",   amount = 50},
@@ -102,7 +102,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-prod-seeds",
     enabled = false,
-    category = "incubator",
+    category = mods.pyhightech and "nano" or "incubator",
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "alien-sample-03",   amount = 3},
@@ -127,4 +127,4 @@ RECIPE {
     main_product = "denatured-seismite",
     subgroup = "py-alienlife-items",
     order = "a1"
-}:add_unlock("cottongut-science-mk05"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 20}.category = "nano"
+}:add_unlock("cottongut-science-mk05"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 20}

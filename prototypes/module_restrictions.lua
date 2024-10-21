@@ -1,7 +1,4 @@
 local modules = {
-    ["antelope-enclosure-mk01"] = {
-        "antelope"
-    },
     ["arqad-hive-mk01"] = {
         "arqad"
     },
@@ -49,18 +46,6 @@ local modules = {
     },
     ["bhoddos-culture-mk04"] = {
         "bhoddos"
-    },
-    ["cadaveric-arum-mk01"] = {
-        "arum"
-    },
-    ["cadaveric-arum-mk02"] = {
-        "arum"
-    },
-    ["cadaveric-arum-mk03"] = {
-        "arum"
-    },
-    ["cadaveric-arum-mk04"] = {
-        "arum"
     },
     ["cridren-enclosure-mk01"] = {
         "cridren"
@@ -170,18 +155,6 @@ local modules = {
     ["guar-gum-plantation-mk04"] = {
         "guar"
     },
-    ["kicalk-plantation-mk01"] = {
-        "kicalk"
-    },
-    ["kicalk-plantation-mk02"] = {
-        "kicalk"
-    },
-    ["kicalk-plantation-mk03"] = {
-        "kicalk"
-    },
-    ["kicalk-plantation-mk04"] = {
-        "kicalk"
-    },
     ["kmauts-enclosure-mk01"] = {
         "kmauts"
     },
@@ -193,18 +166,6 @@ local modules = {
     },
     ["kmauts-enclosure-mk04"] = {
         "kmauts"
-    },
-    ["moondrop-greenhouse-mk01"] = {
-        "moondrop"
-    },
-    ["moondrop-greenhouse-mk02"] = {
-        "moondrop"
-    },
-    ["moondrop-greenhouse-mk03"] = {
-        "moondrop"
-    },
-    ["moondrop-greenhouse-mk04"] = {
-        "moondrop"
     },
     ["moss-farm-mk01"] = {
         "moss"
@@ -571,6 +532,55 @@ local modules = {
         "zipir"
     },
 }
+
+if mods["pyhightech"] then
+    modules = table.merge(modules,
+        {
+            ["antelope-enclosure-mk01"] = {
+                "antelope"
+            },
+            ["cadaveric-arum-mk01"] = {
+                "arum"
+            },
+            ["cadaveric-arum-mk02"] = {
+                "arum"
+            },
+            ["cadaveric-arum-mk03"] = {
+                "arum"
+            },
+            ["cadaveric-arum-mk04"] = {
+                "arum"
+            },
+            ["kicalk-plantation-mk01"] = {
+                "kicalk"
+            },
+            ["kicalk-plantation-mk02"] = {
+                "kicalk"
+            },
+            ["kicalk-plantation-mk03"] = {
+                "kicalk"
+            },
+            ["kicalk-plantation-mk04"] = {
+                "kicalk"
+            },
+            ["moondrop-greenhouse-mk01"] = {
+                "moondrop"
+            },
+            ["moondrop-greenhouse-mk02"] = {
+                "moondrop"
+            },
+            ["moondrop-greenhouse-mk03"] = {
+                "moondrop"
+            },
+            ["moondrop-greenhouse-mk04"] = {
+                "moondrop"
+            },
+        })
+    for i = 1, 4, 1 do
+        modules["rc-mk0" .. i] = table.merge(modules["rc-mk0" .. i], {})
+    end
+end
+
 if mods["pyalternativeenergy"] then
     modules = table.merge(modules,
         {
@@ -605,5 +615,8 @@ if mods["pyalternativeenergy"] then
 end
 
 for building, module_categories in pairs(modules) do
+    if not data.raw["assembling-machine"][building] then
+        error("Building " .. building .. " not found")
+    end
     data.raw["assembling-machine"][building].allowed_module_categories = module_categories
 end

@@ -976,7 +976,8 @@ RECIPE {
     results = {
         {type = "item", name = "metallic-glass", amount = 1}
     }
-}:add_unlock("bio-implants"):add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:replace_ingredient("nickel-plate", "powdered-phosphate-rock").category = "nano"
+}:add_unlock("bio-implants"):add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:replace_ingredient("nickel-plate", "powdered-phosphate-rock")
+if mods.pyhightech then data.raw.recipe["metallic-glass"].category = "nano" end
 
 RECIPE {
     type = "recipe",
@@ -1016,8 +1017,8 @@ RECIPE {
     results = {
         {type = "item", name = "nanochondria", amount = 200}
     }
-}:add_unlock("nanochondria"):add_ingredient {type = "item", name = "resilin", amount = 1}:add_ingredient {type = "item", name = "collagen", amount = 5}:replace_ingredient("bacteria-1", "bacteria-2").category = "nano"
-
+}:add_unlock("nanochondria"):add_ingredient {type = "item", name = "resilin", amount = 1}:add_ingredient {type = "item", name = "collagen", amount = 5}:replace_ingredient("bacteria-1", "bacteria-2")
+if mods.pyhightech then data.raw.recipe["nanochondria"].category = "nano" end
 
 RECIPE {
     type = "recipe",
@@ -1799,7 +1800,8 @@ RECIPE {
     results = {
         {type = "item", name = "magnetic-beads", amount = 5},
     },
-}:add_unlock("chitin").category = "nano"
+}:add_unlock("chitin")
+if mods.pyhightech then data.raw.recipe["magnetic-beads"].category = "nano" end
 
 RECIPE {
     type = "recipe",
