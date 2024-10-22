@@ -183,9 +183,9 @@ end
 -- I have no access to the JSON migrations so invalid items are just deleted
 -- TODO: Use JSON migrations after they are added to base factorio under prototypes
 py.on_event(py.events.on_init(), function()
-	for _, caravan_data in pairs(storage.caravans) do
-		for _, schedule in pairs(caravan_data.schedule) do
-			for _, action in pairs(schedule.actions) do
+	for _, caravan_data in pairs(storage.caravans or {}) do
+		for _, schedule in pairs(caravan_data.schedule or {}) do
+			for _, action in pairs(schedule.actions or {}) do
 				local item = action.elem_value
 				if item and not prototypes.item[item] then
 					local position
