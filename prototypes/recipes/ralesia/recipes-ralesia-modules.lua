@@ -6,12 +6,12 @@
 
 RECIPE {
     type = "recipe",
-    name = "ralesias-mk02",
+    name = "ralesia-mk02",
     category = "ralesia",
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "item",  name = "ralesia",      amount = 2},
+        {type = "item",  name = "ralesia",       amount = 2},
         {type = "item",  name = "ralesia-seeds", amount = 10},
         {type = "fluid", name = "hydrogen",      amount = 300,  fluidbox_index = 2},
         {type = "item",  name = "fertilizer",    amount = 10},
@@ -19,10 +19,10 @@ RECIPE {
         {type = "fluid", name = "water",         amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "ralesias-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "ralesia-mk02", amount = 1, probability = 0.005},
         {type = "item", name = "ralesia",      amount = 1, probability = 0.5},
     },
-    main_product = "ralesias-mk02",
+    main_product = "ralesia-mk02",
     icons =
     {
         {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
@@ -45,12 +45,12 @@ RECIPE {
         {type = "item",  name = "fawogae-mk02",       amount = 2},
     },
     results = {
-        {type = "item", name = "ralesias-mk02",      amount = 3},
-        {type = "item", name = "ralesias-mk02",      amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-mk02",       amount = 3},
+        {type = "item", name = "ralesia-mk02",       amount = 2, probability = 0.5},
         {type = "item", name = "ralesia-seeds-mk02", amount = 2, probability = 0.5},
         {type = "item", name = "fawogae-spore-mk02", amount = 2, probability = 0.5},
     },
-    main_product = "ralesias-mk02",
+    main_product = "ralesia-mk02",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png",        icon_size = 64},
@@ -68,7 +68,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "ralesias-mk02", amount = 5},
+        {type = "item", name = "ralesia-mk02", amount = 5},
     },
     results = {
         {type = "item", name = "ralesia-seeds-mk02", amount = 8}
@@ -82,12 +82,12 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "ralesias-mk03",
+    name = "ralesia-mk03",
     category = "ralesia",
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "item",  name = "ralesias-mk02",      amount = 2},
+        {type = "item",  name = "ralesia-mk02",       amount = 2},
         {type = "item",  name = "alien-sample-03",    amount = 1},
         {type = "item",  name = "ralesia-seeds-mk02", amount = 10},
         {type = "fluid", name = "hydrogen",           amount = 300,  fluidbox_index = 2},
@@ -96,11 +96,11 @@ RECIPE {
         {type = "fluid", name = "water",              amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "ralesias-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "ralesia-mk03", amount = 1, probability = 0.004},
         {type = "item", name = "ralesia",      amount = 1, probability = 0.6},
         --{type = 'item', name = 'barrel', amount = 7},
     },
-    main_product = "ralesias-mk03",
+    main_product = "ralesia-mk03",
     icons =
     {
         {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
@@ -123,12 +123,12 @@ RECIPE {
         {type = "item",  name = "fawogae-mk03",       amount = 2},
     },
     results = {
-        {type = "item", name = "ralesias-mk03",      amount = 3},
-        {type = "item", name = "ralesias-mk03",      amount = 1, probability = 0.5},
+        {type = "item", name = "ralesia-mk03",       amount = 3},
+        {type = "item", name = "ralesia-mk03",       amount = 1, probability = 0.5},
         {type = "item", name = "ralesia-seeds-mk03", amount = 2, probability = 0.5},
         {type = "item", name = "fawogae-spore-mk03", amount = 2, probability = 0.5},
     },
-    main_product = "ralesias-mk03",
+    main_product = "ralesia-mk03",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png",        icon_size = 64},
@@ -146,7 +146,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "ralesias-mk03", amount = 5},
+        {type = "item", name = "ralesia-mk03", amount = 5},
     },
     results = {
         {type = "item", name = "ralesia-seeds-mk03", amount = 8}
@@ -160,12 +160,12 @@ RECIPE {
 
 RECIPE {
     type = "recipe",
-    name = "ralesias-mk04",
+    name = "ralesia-mk04",
     category = "ralesia",
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "item",  name = "ralesias-mk03",        amount = 2},
+        {type = "item",  name = "ralesia-mk03",         amount = 2},
         {type = "item",  name = "zinc-finger-proteins", amount = 1},
         {type = "item",  name = "ralesia-seeds-mk03",   amount = 10},
         {type = "fluid", name = "hydrogen",             amount = 300,  fluidbox_index = 2},
@@ -174,10 +174,10 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "ralesias-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "ralesia-mk04", amount = 1, probability = 0.003},
         {type = "item", name = "ralesia",      amount = 1, probability = 0.7},
     },
-    main_product = "ralesias-mk04",
+    main_product = "ralesia-mk04",
     icons =
     {
         {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
@@ -200,12 +200,12 @@ RECIPE {
         {type = "item",  name = "fawogae-mk04",        amount = 2},
     },
     results = {
-        {type = "item", name = "ralesias-mk04",      amount = 3},
-        {type = "item", name = "ralesias-mk04",      amount = 1, probability = 0.25},
+        {type = "item", name = "ralesia-mk04",       amount = 3},
+        {type = "item", name = "ralesia-mk04",       amount = 1, probability = 0.25},
         {type = "item", name = "ralesia-seeds-mk04", amount = 2, probability = 0.5},
         {type = "item", name = "fawogae-spore-mk04", amount = 2, probability = 0.5},
     },
-    main_product = "ralesias-mk04",
+    main_product = "ralesia-mk04",
     icons =
     {
         {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png",        icon_size = 64},
@@ -223,7 +223,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "ralesias-mk04", amount = 5},
+        {type = "item", name = "ralesia-mk04", amount = 5},
     },
     results = {
         {type = "item", name = "ralesia-seeds-mk04", amount = 8}

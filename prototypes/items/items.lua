@@ -5951,7 +5951,7 @@ ITEM {
 
 ITEM {
 	type = "module",
-	name = "ralesias-mk02",
+	name = "ralesia-mk02",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
 		{icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
@@ -5969,7 +5969,7 @@ ITEM {
 
 ITEM {
 	type = "module",
-	name = "ralesias-mk03",
+	name = "ralesia-mk03",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
 		{icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
@@ -5987,7 +5987,7 @@ ITEM {
 
 ITEM {
 	type = "module",
-	name = "ralesias-mk04",
+	name = "ralesia-mk04",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
 		{icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}

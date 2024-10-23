@@ -115,10 +115,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "ralesias-1", new = "ralesias-1-hydrogen-burn", type = "recipe-replacement"},
-                {old = "ralesias-2", new = "ralesias-2-hydrogen-burn", type = "recipe-replacement"},
-                {old = "ralesias-3", new = "ralesias-3-hydrogen-burn", type = "recipe-replacement"},
-                {old = "ralesias-4", new = "ralesias-4-hydrogen-burn", type = "recipe-replacement"},
+                {old = "ralesia-1", new = "ralesia-1-hydrogen-burn", type = "recipe-replacement"},
+                {old = "ralesia-2", new = "ralesia-2-hydrogen-burn", type = "recipe-replacement"},
+                {old = "ralesia-3", new = "ralesia-3-hydrogen-burn", type = "recipe-replacement"},
+                {old = "ralesia-4", new = "ralesia-4-hydrogen-burn", type = "recipe-replacement"},
             }
         }
     },
