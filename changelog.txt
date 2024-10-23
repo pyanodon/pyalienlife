@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.8
-Date: soontm
+Date: 2024-10-23
   Changes:
-    - Fixed reproductive centers not accepting arqad and arthurian modules when pyAE was installed
+    - Fixed reproductive centers not accepting arqad and arthurian modules when pyAE was installed.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.7
 Date: 2024-10-21
