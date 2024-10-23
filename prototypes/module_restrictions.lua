@@ -576,8 +576,11 @@ if mods["pyhightech"] then
                 "moondrop"
             },
         })
+    local new_modules = {}
     for i = 1, 4, 1 do
-        modules["rc-mk0" .. i] = table.merge(modules["rc-mk0" .. i], {})
+        for _, new_module in pairs(new_modules) do
+            table.insert(modules["rc-mk0" .. i], new_module)
+        end
     end
 end
 
@@ -609,8 +612,11 @@ if mods["pyalternativeenergy"] then
                 "numal"
             }
         })
+    local new_modules = {"zungror", "numal"}
     for i = 1, 4, 1 do
-        modules["rc-mk0" .. i] = table.merge(modules["rc-mk0" .. i], {"zungror", "numal"})
+        for _, new_module in pairs(new_modules) do
+            table.insert(modules["rc-mk0" .. i], new_module)
+        end
     end
 end
 
