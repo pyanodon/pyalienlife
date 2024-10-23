@@ -120,15 +120,15 @@ RECIPE("fiberboard"):set_fields {results = {
 }}
 
 --remove space science from satellite
-data.raw.item.satellite.rocket_launch_products = {{
+data.raw.item["py-satellite"].rocket_launch_products = {{
     type = "item",
     name = "destabilized-toxirus",
     amount = 6
 }}
-data.raw.item.satellite.weight = 200e3
+data.raw.item["py-satellite"].weight = 200e3
 
-RECIPE("satellite"):add_ingredient {type = "item", name = "cottongut", amount = 150}
-RECIPE("satellite"):add_ingredient {type = "item", name = "antimatter", amount = 3}
+RECIPE("py-satellite"):add_ingredient {type = "item", name = "cottongut", amount = 150}
+RECIPE("py-satellite"):add_ingredient {type = "item", name = "antimatter", amount = 3}
 
 RECIPE("space-science-pack"):add_ingredient {type = "item", name = "destabilized-toxirus", amount = 1}:add_ingredient {type = "item", name = "strangelets", amount = 5}
 
