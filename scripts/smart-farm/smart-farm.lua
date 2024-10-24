@@ -168,7 +168,7 @@ py.on_event(defines.events.on_rocket_launched, function(event)
 
 	for _, harvester in pairs(surface.find_entities_filtered {
 		area = {{position.x - 12, position.y - 12}, {position.x + 12, position.y + 12}},
-		name = {"harvester", "collector", "collector-mk02", "collector-mk03", "collector-mk04"}
+		name = {"harvester", "flora-collector-mk01", "flora-collector-mk02", "flora-collector-mk03", "flora-collector-mk04"}
 	}) do
 		harvester.update_connections()
 		if harvester.get_control_behavior() or next(harvester.circuit_connected_entities.red) or next(harvester.circuit_connected_entities.green) then

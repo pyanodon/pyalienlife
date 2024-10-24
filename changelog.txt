@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.9
-Date: ???
+Date: 2024-10-24
   Changes:
     - Fixed inconsistent spelling of ralesia.
+    - Renamed the "collector" to "flora collector".
+    - Higher tiers of the flora collector no longer just buff mining speed. Higher tiers now also buff mining radius, resource drain, and number of module slots.
+    - Allowed productivity modules in the flora collector.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.8
 Date: 2024-10-23
