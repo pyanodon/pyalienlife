@@ -561,7 +561,7 @@ script.on_event(defines.events.on_research_finished, on_researched)
 script.on_event(defines.events.on_research_reversed, on_unresearched)
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if not entity.valid or not entity.unit_number then return end
 	local force_index = entity.force_index
 

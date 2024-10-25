@@ -51,7 +51,7 @@ local function get_landfill_positions(entity)
 end
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if entity.name ~= "mega-farm" then return end
 	local surface = entity.surface
 

@@ -5,7 +5,7 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if entity.name ~= "pydrive" then return end
 
 	storage.worm_skins[entity.unit_number] = entity.surface.create_entity {

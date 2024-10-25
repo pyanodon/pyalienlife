@@ -692,7 +692,7 @@ function Caravan.instantiate_caravan(entity)
 end
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	local prototype = prototypes[entity.name]
 	if not prototype then return end
 	if prototype.destructible == false then entity.destructible = false end

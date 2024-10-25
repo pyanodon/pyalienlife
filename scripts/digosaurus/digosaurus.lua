@@ -194,7 +194,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 end)
 
 py.on_event(py.events.on_built(), function(event)
-    local entity = event.created_entity or event.entity
+    local entity = event.entity
     if entity.name ~= "dino-dig-site" then return end
     entity.active = false
     local surface = entity.surface

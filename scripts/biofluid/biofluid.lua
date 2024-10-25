@@ -32,7 +32,7 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if not entity.valid then return end
 	local connection_type = Biofluid.connectable[entity.name]
 	if not connection_type then return end

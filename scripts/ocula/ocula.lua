@@ -382,7 +382,7 @@ function Oculua.fire_laser_beam(oculua_data)
 end
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.created_entity or event.entity
+	local entity = event.entity
 	if entity.name == "ipod" then
 		local inventory = entity.get_inventory(CHEST)
 		Oculua.set_ipod_chest_filters(entity)

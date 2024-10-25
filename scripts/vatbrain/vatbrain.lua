@@ -4,8 +4,8 @@ py.on_event(py.events.on_init(), function()
     storage.vatbrains = storage.vatbrains or {}
 end)
 
-py.on_event(py.events.on_built(),  function(event)
-    local entity = event.created_entity or event.entity
+py.on_event(py.events.on_built(), function(event)
+    local entity = event.entity
     if not entity.valid or entity.name ~= "vat-brain" then return end
 
     local beacon = entity.surface.create_entity {
