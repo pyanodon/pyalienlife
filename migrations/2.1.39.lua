@@ -1,5 +1,6 @@
 local lib = require("scripts/turd/bhoddos-lib")
 storage.turd_bhoddos = {}
+storage.turd_bonuses = storage.turd_bonuses or {}
 
 for _, surface in pairs(game.surfaces) do
     for _, force in pairs(lib.forces_with_bhoddos_path_1()) do
