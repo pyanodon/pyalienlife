@@ -2,7 +2,8 @@
 Version: 3.0.11
 Date: before_gta_6
   Changes:
-    - Fix certain pipe connections disconnecting with squeak through installed.
+    - Fixed certain pipe connections disconnecting with squeak through installed.
+    - Dingridos no longer obliterate trains and offshore pupms.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.10
 Date: 2024-10-27

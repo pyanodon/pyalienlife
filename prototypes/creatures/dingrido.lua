@@ -45,7 +45,7 @@ ITEM {
 data:extend {{
 	type = "car",
 	name = "dingrido",
-	collision_mask = {layers = {dingrido_collision_mask = true, train = true}},
+	collision_mask = {layers = {dingrido_collision_mask = true}},
 	icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
 	icon_size = 64,
 	flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
