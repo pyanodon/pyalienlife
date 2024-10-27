@@ -12,6 +12,7 @@ Date: 2024-10-27
     - Updated Russian translation.
     - Fixed a crashy migration related to bhoddos turd path 1.
     - Removed ash
+    - Fixed caravans deleting items when filling outpost
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.9
 Date: 2024-10-24
