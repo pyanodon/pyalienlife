@@ -91,7 +91,7 @@ ENTITY {
         {
             production_type = "output",
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0, -2.3}, direction = defines.direction.north}},
+            pipe_connections = {{flow_direction = "output", position = {0, -2.0}, direction = defines.direction.north}},
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

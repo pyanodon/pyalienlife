@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.11
+Date: before_gta_6
+  Changes:
+    - Fix certain pipe connections disconnecting with squeak through installed.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.10
 Date: 2024-10-27
   Changes:
-    - Fixed migrating very old saves.
     - Fixed ralesia plantations not being unlocked by their tech.
     - Updated Russian translation.
     - Fixed a crashy migration related to bhoddos turd path 1.
