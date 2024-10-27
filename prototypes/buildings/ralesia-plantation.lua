@@ -25,7 +25,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia-plantation-mk01", amount = 1}
     }
-}:add_unlock("ralesia")
+}
 
 RECIPE {
     type = "recipe",

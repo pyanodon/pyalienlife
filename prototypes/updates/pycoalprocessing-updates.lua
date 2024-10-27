@@ -64,7 +64,6 @@ RECIPE("botanical-nursery-mk02"):remove_unlock("machines-mk03"):add_unlock("bota
 RECIPE("botanical-nursery-mk03"):remove_unlock("machines-mk04"):add_unlock("botany-mk03")
 RECIPE("botanical-nursery-mk04"):remove_unlock("machines-mk05"):add_unlock("botany-mk04")
 RECIPE("hpf"):remove_unlock("coal-processing-1"):set_fields {enabled = true}
-RECIPE("ralesia-plantation-mk01"):remove_unlock("ralesia")
 RECIPE("ulric-corral-mk01"):remove_unlock("coal-processing-1")
 ITEM("botanical-nursery"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk01.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk01", "b")
 ITEM("botanical-nursery-mk02"):set("icon", "__pyalienlifegraphics__/graphics/icons/botanical-nursery-mk02.png"):set_fields {icon_size = 64,}:subgroup_order("py-alienlife-buildings-mk02", "b")

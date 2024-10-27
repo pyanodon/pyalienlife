@@ -2,7 +2,8 @@
 Version: 3.0.10
 Date: no the date is not 2 days ago
   Changes:
-    - Fix migrating very old saves.
+    - Fixed migrating very old saves.
+    - Fixed ralesia plantations not being unlocked by their tech.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.9
 Date: 2024-10-24
