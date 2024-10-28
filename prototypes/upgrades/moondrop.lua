@@ -29,7 +29,7 @@ if data and not yafc_turd_integration then
         results = {
             {type = "fluid", amount = 60, name = "methane"},
             {type = "fluid", amount = 40, name = "oxygen"},
-            {type = "item",  amount = 1,  name = "small-lamp", probability = 0.95},
+            {type = "item",  amount = 1,  name = "small-lamp", probability = 0.95, ignored_by_productivity = 1},
         },
         category = "moon",
         enabled = false,
@@ -76,11 +76,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "moondrop-1", new = "moondrop-1-cu",  type = "recipe-replacement"},
-                {old = "moondrop-2", new = "moondrop-2-cu",  type = "recipe-replacement"},
-                {old = "moondrop-3", new = "moondrop-3-cu",  type = "recipe-replacement"},
-                {old = "moondrop-4", new = "moondrop-4-cu",  type = "recipe-replacement"},
-                {old = "moondrop-5", new = "moondrop-5-cu",  type = "recipe-replacement"},
+                {old = "moondrop-1", new = "moondrop-1-cu", type = "recipe-replacement"},
+                {old = "moondrop-2", new = "moondrop-2-cu", type = "recipe-replacement"},
+                {old = "moondrop-3", new = "moondrop-3-cu", type = "recipe-replacement"},
+                {old = "moondrop-4", new = "moondrop-4-cu", type = "recipe-replacement"},
+                {old = "moondrop-5", new = "moondrop-5-cu", type = "recipe-replacement"},
             },
         },
         {
@@ -89,7 +89,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.35,      speed = -0.5, type = "module-effects"},
+                {productivity = 0.35,              speed = -0.5,          type = "module-effects"},
                 {recipe = "methane-co2-with-lamp", type = "unlock-recipe"},
             }
         },
@@ -99,7 +99,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 2,         speed = 0.5,             type = "module-effects"},
+                {consumption = 2,         speed = 0.5,           type = "module-effects"},
                 {recipe = "moondrop-co2", type = "unlock-recipe"}
             }
         }
