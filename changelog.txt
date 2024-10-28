@@ -2,6 +2,7 @@
 Version: 3.0.11
 Date: before_gta_6
   Changes:
+    - Fixed caravans deleting items when filling outpost or getting food
     - Fixed certain pipe connections disconnecting with squeak through installed.
     - Dingridos no longer obliterate trains and offshore pupms.
     - Fixed moonlight turd making excess lamps.
@@ -14,7 +15,6 @@ Date: 2024-10-27
     - Updated Russian translation.
     - Fixed a crashy migration related to bhoddos turd path 1.
     - Removed ash
-    - Fixed caravans deleting items when filling outpost
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.9
 Date: 2024-10-24
