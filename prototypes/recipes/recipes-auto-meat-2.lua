@@ -968,10 +968,10 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "chitin-xeno", remove_item = true},
-				{name = "caged-xeno",  remove_item = true},
-				{name = "meat-xeno",   amount = 1},
-				{name = "cage",        remove_item = true},
+				{name = "chitin-caged-xeno", remove_item = true},
+				{name = "caged-xeno",        remove_item = true},
+				{name = "meat-caged-xeno",   amount = 1},
+				{name = "cage",              remove_item = true},
 			},
 			results =
 			{

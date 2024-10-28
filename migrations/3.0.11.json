@@ -1,0 +1,24 @@
+{
+    "item": [
+        [
+            "brain-xeno",
+            "brain-caged-xeno"
+        ],
+        [
+            "bone-xeno",
+            "bone-caged-xeno"
+        ],
+        [
+            "meat-xeno",
+            "meat-caged-xeno"
+        ],
+        [
+            "sulfuric-xeno",
+            "sulfuric-caged-xeno"
+        ],
+        [
+            "chitin-xeno",
+            "chitin-caged-xeno"
+        ]
+    ]
+}

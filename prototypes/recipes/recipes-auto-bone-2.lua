@@ -649,7 +649,7 @@ py.autorecipes {
 ------------------XENOS------------------
 
 py.autorecipes {
-	name = "rendering-bone-xeno-2",
+	name = "rendering-bone-caged-xeno-2",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-xeno",
 	order = "b",
@@ -686,10 +686,10 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "chitin-xeno", remove_item = true},
-				{name = "caged-xeno",  remove_item = true},
-				{name = "bone-xeno",   amount = 1},
-				{name = "cage",        remove_item = true},
+				{name = "chitin-caged-xeno", remove_item = true},
+				{name = "caged-xeno",        remove_item = true},
+				{name = "bone-caged-xeno",   amount = 1},
+				{name = "cage",              remove_item = true},
 			},
 			results =
 			{

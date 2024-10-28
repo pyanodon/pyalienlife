@@ -47,8 +47,8 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-xeno", remove_item = true},
-				{name = "brain-xeno", amount = INPUT_AMOUNT},
+				{name = "caged-xeno",       remove_item = true},
+				{name = "brain-caged-xeno", amount = INPUT_AMOUNT},
 			},
 			results =
 			{
@@ -68,8 +68,8 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "brain-xeno", remove_item = true},
-				{name = "bone-xeno",  amount = INPUT_AMOUNT},
+				{name = "brain-caged-xeno", remove_item = true},
+				{name = "bone-caged-xeno",  amount = INPUT_AMOUNT},
 			},
 			results =
 			{
@@ -85,8 +85,8 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "bone-xeno",     remove_item = true},
-				{name = "sulfuric-xeno", amount = 1},
+				{name = "bone-caged-xeno",     remove_item = true},
+				{name = "sulfuric-caged-xeno", amount = 1},
 			},
 			results =
 			{
@@ -102,8 +102,8 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "sulfuric-xeno", remove_item = true},
-				{name = "chitin-xeno",   amount = 1},
+				{name = "sulfuric-caged-xeno", remove_item = true},
+				{name = "chitin-caged-xeno",   amount = 1},
 			},
 			results =
 			{
@@ -119,8 +119,8 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "chitin-xeno", remove_item = true},
-				{name = "meat-xeno",   amount = 1},
+				{name = "chitin-caged-xeno", remove_item = true},
+				{name = "meat-caged-xeno",   amount = 1},
 			},
 			results =
 			{

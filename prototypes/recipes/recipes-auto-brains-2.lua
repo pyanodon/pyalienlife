@@ -781,8 +781,8 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-xeno", remove_item = true},
-				{name = "brain-xeno", amount = 1},
+				{name = "caged-xeno",       remove_item = true},
+				{name = "brain-caged-xeno", amount = 1},
 			},
 			results =
 			{

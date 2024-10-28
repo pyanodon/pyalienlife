@@ -280,7 +280,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-xeno', remove_item = true},
-					{name='brain-xeno', amount = 1},
+					{name='brain-caged-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'nanochondria'
@@ -309,8 +309,8 @@ py.autorecipes {
 				},
 			results =
 				{
-					{name='brain-xeno', remove_item = true},
-					{name='bone-xeno', amount = 1},
+					{name='brain-caged-xeno', remove_item = true},
+					{name='bone-caged-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'bmp'
@@ -340,8 +340,8 @@ py.autorecipes {
 				},
 			results =
 				{
-					{name='bone-xeno', remove_item = true},
-					{name='meat-xeno', amount = 1},
+					{name='bone-caged-xeno', remove_item = true},
+					{name='meat-caged-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'anabolic-rna'
@@ -370,8 +370,8 @@ py.autorecipes {
 				},
 			results =
 				{
-					{name='meat-xeno', remove_item = true},
-					{name='sulfuric-xeno', amount = 1},
+					{name='meat-caged-xeno', remove_item = true},
+					{name='sulfuric-caged-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'recombinant-ery'
@@ -399,8 +399,8 @@ py.autorecipes {
 				},
 			results =
 				{
-					{name='sulfuric-xeno', remove_item = true},
-					{name='chitin-xeno', amount = 1},
+					{name='sulfuric-caged-xeno', remove_item = true},
+					{name='chitin-caged-xeno', amount = 1},
 				},
 			crafting_speed = 80,
 			tech = 'reca'

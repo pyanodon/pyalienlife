@@ -4210,7 +4210,7 @@ ITEM {
 
 ITEM {
 	type = "item",
-	name = "brain-xeno",
+	name = "brain-caged-xeno",
 	icon = "__pyalienlifegraphics__/graphics/icons/brain-xeno.png",
 	icon_size = 64,
 	flags = {},
@@ -4221,7 +4221,7 @@ ITEM {
 
 ITEM {
 	type = "item",
-	name = "bone-xeno",
+	name = "bone-caged-xeno",
 	icon = "__pyalienlifegraphics__/graphics/icons/bone-xeno.png",
 	icon_size = 64,
 	flags = {},
@@ -4232,7 +4232,7 @@ ITEM {
 
 ITEM {
 	type = "item",
-	name = "meat-xeno",
+	name = "meat-caged-xeno",
 	icon = "__pyalienlifegraphics__/graphics/icons/meat-xeno.png",
 	icon_size = 64,
 	flags = {},
@@ -4243,7 +4243,7 @@ ITEM {
 
 ITEM {
 	type = "item",
-	name = "sulfuric-xeno",
+	name = "sulfuric-caged-xeno",
 	icon = "__pyalienlifegraphics__/graphics/icons/sulfuric-xeno.png",
 	icon_size = 64,
 	flags = {},
@@ -4254,7 +4254,7 @@ ITEM {
 
 ITEM {
 	type = "item",
-	name = "chitin-xeno",
+	name = "chitin-caged-xeno",
 	icon = "__pyalienlifegraphics__/graphics/icons/chitin-xeno.png",
 	icon_size = 64,
 	flags = {},

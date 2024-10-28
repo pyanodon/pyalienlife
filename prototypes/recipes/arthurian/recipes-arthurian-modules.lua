@@ -136,6 +136,7 @@ RECIPE {
         {type = "item", name = "arthurian-egg-mk02", amount = 1, probability = 0.4},
         {type = "item", name = "arthurian-egg",      amount = 1, probability = 0.3},
         {type = "item", name = "barrel",             amount = 4},
+        {type = "item", name = "cage",               amount = 1},
     },
     main_product = "arthurian-egg-mk03",
     icons =
@@ -249,6 +250,7 @@ RECIPE {
         {type = "item", name = "arthurian-egg-mk02", amount = 1, probability = 0.35},
         {type = "item", name = "arthurian-egg",      amount = 1, probability = 0.25},
         {type = "item", name = "barrel",             amount = 4},
+        {type = "item", name = "cage",               amount = 1},
     },
     main_product = "arthurian-egg-mk04",
     icons =

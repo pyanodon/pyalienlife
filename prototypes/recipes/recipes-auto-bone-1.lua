@@ -432,7 +432,7 @@ py.autorecipes {
 ------------------XENOS------------------
 
 py.autorecipes {
-	name = "rendering-bone-xeno",
+	name = "rendering-bone-caged-xeno",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-xeno",
 	order = "b",

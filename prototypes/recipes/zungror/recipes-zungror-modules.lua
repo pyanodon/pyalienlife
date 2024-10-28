@@ -92,6 +92,7 @@ RECIPE {
     results = {
         {type = "item", name = "zungror-mk04", amount = 1, probability = 0.003},
         {type = "item", name = "barrel",       amount = 15},
+        {type = "item", name = "cage",         amount = 1},
         {type = "item", name = "zungror",      amount = 1, probability = 0.7},
     },
     main_product = "zungror-mk04",

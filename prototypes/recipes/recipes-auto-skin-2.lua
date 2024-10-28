@@ -1007,10 +1007,10 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "chitin-xeno", remove_item = true},
-				{name = "caged-xeno",  remove_item = true},
-				{name = "cage",        remove_item = true},
-				{name = "chitin-xeno", amount = 1},
+				{name = "chitin-caged-xeno", remove_item = true},
+				{name = "caged-xeno",        remove_item = true},
+				{name = "cage",              remove_item = true},
+				{name = "chitin-caged-xeno", amount = 1},
 			},
 			results =
 			{
