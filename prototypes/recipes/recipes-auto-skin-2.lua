@@ -1069,8 +1069,8 @@ py.autorecipes {
 			tech = "double-skin",
 			name = "Extract-Chitin-from-Improved-xenos-2",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",    scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

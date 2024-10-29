@@ -963,8 +963,8 @@ py.autorecipes {
 			tech = "transgenes",
 			name = "Extract-blood-from-Improved-Xenos-2",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
-				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

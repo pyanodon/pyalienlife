@@ -736,7 +736,7 @@ py.autorecipes {
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-xenos-2",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,

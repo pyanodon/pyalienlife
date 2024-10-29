@@ -1033,7 +1033,7 @@ py.autorecipes {
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Xenos-2",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
