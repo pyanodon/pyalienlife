@@ -59,7 +59,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-vrauks",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat vrauks rendering

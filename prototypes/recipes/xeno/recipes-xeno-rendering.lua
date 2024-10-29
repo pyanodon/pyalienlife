@@ -61,7 +61,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-xeno",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone xeno rendering

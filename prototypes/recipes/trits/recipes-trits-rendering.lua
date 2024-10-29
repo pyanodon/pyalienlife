@@ -71,7 +71,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone trits rendering

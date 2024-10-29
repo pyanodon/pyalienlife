@@ -45,7 +45,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-arthurians-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -99,7 +102,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-auogs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -152,7 +158,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-cottonguts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -205,7 +214,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-dingrits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -257,7 +269,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-kmauts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -309,7 +324,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Korlex-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -363,7 +381,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Mukmouxs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -419,7 +440,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-phadais-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -472,7 +496,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-phagnots-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -527,7 +554,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-scrondrixs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -581,7 +611,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Trits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -634,7 +667,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Ulrics-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -688,7 +724,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Vonixes-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -739,7 +778,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Vrauks-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -797,7 +839,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Xenos-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -849,7 +894,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "metamide5",
 			name = "Extract-brains-from-Improved-Zipir-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

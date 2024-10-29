@@ -68,7 +68,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-ulr",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone ulric rendering

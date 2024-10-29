@@ -70,7 +70,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-din",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone dingrits rendering

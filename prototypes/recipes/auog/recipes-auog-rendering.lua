@@ -68,7 +68,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "nanochondria",
 			name = "ex-bra-auog",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone auog rendering

@@ -67,7 +67,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-cot",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone cottongut rendering

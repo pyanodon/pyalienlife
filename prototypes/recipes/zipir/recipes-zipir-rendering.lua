@@ -63,7 +63,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-zipir",
-			icon = "__pyalienlifegraphics__/graphics/icons/brain-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--guts zipir rendering

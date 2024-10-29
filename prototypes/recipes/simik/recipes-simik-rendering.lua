@@ -72,7 +72,10 @@ py.autorecipes {
 			},
 			tech = "nanochondria",
 			name = "ex-bra-sim",
-			icon = "__pyalienlifegraphics2__/graphics/icons/brain-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--bone simik rendering
