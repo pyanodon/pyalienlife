@@ -143,7 +143,8 @@ local function transfer_all_items(input_inventory, output_inventory)
 		if output_inventory.can_insert(stack) then
 			local inserted_count = output_inventory.insert(stack)
 			if inserted_count ~= 0 then
-				input_inventory.remove({name = stack.name, count = inserted_count})
+				stack.count = inserted_count
+				input_inventory.remove(stack)
 			end
 		end
 	end
@@ -225,7 +226,10 @@ Caravan.actions = {
 		for _, item in pairs(outpost_inventory.get_contents()) do
 			if caravan_prototypes[entity.name].favorite_foods[item.name] then
 				local inserted_count = fuel.insert(item)
-				if inserted_count ~= 0 then outpost_inventory.remove({name = item.name, count = inserted_count}) end
+				if inserted_count ~= 0 then
+					item.count = inserted_count
+					outpost_inventory.remove(item)
+				end
 			end
 		end
 

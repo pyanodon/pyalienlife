@@ -4,6 +4,7 @@ Date: before_gta_6
   Changes:
     - Fixed caravans deleting items when filling outpost or getting food
     - Fixed certain pipe connections disconnecting with squeak through installed.
+    - Fixed that caravans transferring items between the output would delete the quality/durability/health data of the item.
     - Dingridos no longer obliterate trains and offshore pupms.
     - Fixed moonlight turd making excess lamps.
     - Fixed caged animal recipes: upgraded arthurians, cognition osteochain and variable spinneret kiloglider return cages
