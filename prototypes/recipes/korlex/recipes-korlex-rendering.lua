@@ -162,7 +162,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-kor",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat korlex rendering

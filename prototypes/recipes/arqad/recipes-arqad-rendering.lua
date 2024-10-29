@@ -93,7 +93,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-chi-arq",
-			icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
+			icons = {
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		{

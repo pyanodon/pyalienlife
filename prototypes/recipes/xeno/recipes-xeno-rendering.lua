@@ -118,7 +118,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-chi-xeno",
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat xeno rendering

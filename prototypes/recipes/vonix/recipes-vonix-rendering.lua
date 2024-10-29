@@ -129,7 +129,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-von",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat vonix rendering

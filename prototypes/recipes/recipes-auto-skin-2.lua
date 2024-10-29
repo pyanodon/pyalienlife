@@ -46,7 +46,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-arthurians-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -101,7 +104,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-chitin-from-Improved-arqads-2",
-			icon = "__pyalienlifegraphics3__/graphics/icons/chitin-arqad.png",
+			icons = {
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -155,7 +161,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-auogs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -208,7 +217,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-cottonguts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -264,7 +276,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "reca",
 			name = "Extract-pelt-from-Improved-dingrits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -357,7 +372,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Korlex-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -411,7 +429,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Mukmouxs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -466,7 +487,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-phadais-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -520,7 +544,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-phagnots-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -574,7 +601,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-scrondrixs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -628,7 +658,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-simik-2",
-			icon = "__pyalienlifegraphics2__/graphics/icons/skin-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -683,7 +716,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-chitin-from-Improved-simik-2",
-			icon = "__pyalienlifegraphics2__/graphics/icons/chitin-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",      scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -792,7 +828,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Trits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -846,7 +885,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Ulrics-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",       shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -903,7 +945,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Vonixes-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -961,7 +1006,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Vrauks-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",      scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -1020,7 +1068,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-Chitin-from-Improved-xenos-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -1075,7 +1126,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "double-skin",
 			name = "Extract-skin-from-Improved-Zipir-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

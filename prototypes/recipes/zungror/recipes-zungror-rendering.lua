@@ -124,7 +124,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-zun",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-zungror.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat zungror rendering

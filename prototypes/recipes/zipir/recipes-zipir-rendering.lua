@@ -123,7 +123,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-zipir",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat zipir rendering

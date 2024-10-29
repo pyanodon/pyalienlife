@@ -166,7 +166,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-pelt-din",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--USED dingrit rendering

@@ -136,7 +136,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-vrauks",
-			icon = "__pyalienlifegraphics__/graphics/icons/chitin-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",      scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

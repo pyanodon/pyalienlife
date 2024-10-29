@@ -162,7 +162,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-muk",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat mukmoux rendering

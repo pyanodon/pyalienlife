@@ -112,7 +112,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-xyh",
-			icon = "__pyalienlifegraphics__/graphics/icons/shell-xyhiphoe.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/shell.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

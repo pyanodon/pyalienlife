@@ -144,7 +144,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-cot",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat cottongut rendering

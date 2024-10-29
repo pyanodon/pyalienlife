@@ -166,7 +166,10 @@ py.autorecipes {
 			},
 			tech = "reca",
 			name = "ex-ski-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/skin-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat trits rendering
