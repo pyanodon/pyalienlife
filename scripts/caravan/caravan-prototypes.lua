@@ -225,7 +225,7 @@ Caravan.actions = {
 		for _, item in pairs(outpost_inventory.get_contents()) do
 			if caravan_prototypes[entity.name].favorite_foods[item.name] then
 				local inserted_count = fuel.insert(item)
-				if inserted_count ~= 0 then outpost_inventory.remove(item) end
+				if inserted_count ~= 0 then outpost_inventory.remove({name = item.name, count = inserted_count}) end
 			end
 		end
 
