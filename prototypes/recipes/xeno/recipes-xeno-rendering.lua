@@ -98,7 +98,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-xeno",
-			icon = "__pyalienlifegraphics__/graphics/icons/sulfuric-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin xeno rendering

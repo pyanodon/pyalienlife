@@ -92,7 +92,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-xyh",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin xyhiphoe rendering

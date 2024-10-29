@@ -103,7 +103,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-zipir",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin zipir rendering

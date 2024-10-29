@@ -125,7 +125,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-pha",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat phadai rendering

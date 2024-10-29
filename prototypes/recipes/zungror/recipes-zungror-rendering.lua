@@ -104,7 +104,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-zun",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-zungror.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin zungror rendering

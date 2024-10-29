@@ -142,7 +142,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-kor",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin korlex rendering

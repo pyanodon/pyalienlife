@@ -104,7 +104,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-kma",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat kmauts rendering

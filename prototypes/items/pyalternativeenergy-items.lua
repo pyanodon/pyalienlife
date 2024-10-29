@@ -211,7 +211,7 @@ ITEM {
     name = "guts-caged-zungror",
     icons = {
         {icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+        {icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
     },
     icon_size = 64,
     flags = {},
@@ -223,7 +223,10 @@ ITEM {
 ITEM {
     type = "item",
     name = "blood-caged-zungror",
-    icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-zungror.png",
+    icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+    },
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-zungror",

@@ -142,7 +142,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-muk",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",        scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin mukmoux rendering

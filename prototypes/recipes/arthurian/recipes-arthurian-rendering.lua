@@ -128,7 +128,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-art",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",          scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin arthurian rendering

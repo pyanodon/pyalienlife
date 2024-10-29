@@ -124,7 +124,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-cot",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin cottongut rendering

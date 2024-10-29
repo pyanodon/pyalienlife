@@ -130,7 +130,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-scro",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",          scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin scrondrix rendering

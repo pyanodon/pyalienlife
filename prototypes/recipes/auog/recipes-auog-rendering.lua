@@ -147,7 +147,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "recombinant-ery",
 			name = "ex-blo-auog",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin auog rendering

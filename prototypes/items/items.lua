@@ -590,7 +590,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-mukmoux",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-mukmoux.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",        scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-mukmoux",
@@ -748,7 +751,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-arthurian",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-arthurian.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",          scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-arthurian",
@@ -1363,7 +1369,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-ulric",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-ulric.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",      scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-ulric",
@@ -2313,7 +2322,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-dhilmos",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-dhilmos.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-dhilmos",
@@ -2418,7 +2430,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-scrondrix",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-scrondrix.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",          scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-scrondrix",
@@ -2673,7 +2688,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-phadai",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phadai.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-phadai",
@@ -2841,7 +2859,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-auog",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-auog.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-auog",
@@ -3107,7 +3128,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-dingrits",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-dingrits.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",         scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-dingrits",
@@ -3419,7 +3443,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-kmauts",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-kmauts.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-kmauts",
@@ -3588,7 +3615,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-xyhiphoe",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-xyhiphoe.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-xyhiphoe",
@@ -3909,7 +3939,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-phagnot",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phagnot.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",        scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-phagnot",
@@ -4307,7 +4340,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "sulfuric-caged-xeno",
-	icon = "__pyalienlifegraphics__/graphics/icons/sulfuric-xeno.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+		{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-xeno",
@@ -4721,7 +4757,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-vonix",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-vonix.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-vonix",
@@ -4793,7 +4832,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-zipir",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-zipir.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-zipir",
@@ -4890,7 +4932,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-trits",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-trits.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-trits",
@@ -5075,7 +5120,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-korlex",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-korlex.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-korlex",
@@ -5302,7 +5350,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-cottongut",
-	icon = "__pyalienlifegraphics__/graphics/icons/blood-cottongut.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",    scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-cottongut",
@@ -8688,7 +8739,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-arqad",
-	icon = "__pyalienlifegraphics3__/graphics/icons/blood-arqad.png",
+	icons = {
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-arqad",

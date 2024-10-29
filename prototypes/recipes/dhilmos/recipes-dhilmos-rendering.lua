@@ -95,7 +95,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-dhi",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-dhilmos.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--fat dhilmos rendering

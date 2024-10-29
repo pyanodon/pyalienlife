@@ -259,7 +259,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "blood-caged-simik",
-	icon = "__pyalienlifegraphics2__/graphics/icons/blood-caged-simik.png",
+	icons = {
+		{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-simik",

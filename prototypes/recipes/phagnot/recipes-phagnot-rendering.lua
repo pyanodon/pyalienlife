@@ -127,7 +127,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-phag",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",        scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--skin phagnot rendering

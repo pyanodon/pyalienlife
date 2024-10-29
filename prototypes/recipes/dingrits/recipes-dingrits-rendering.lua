@@ -129,7 +129,10 @@ py.autorecipes {
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-din",
-			icon = "__pyalienlifegraphics__/graphics/icons/blood-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",         scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat dingrits rendering
