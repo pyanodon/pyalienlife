@@ -143,7 +143,10 @@ py.autorecipes {
 			},
 			tech = "orexigenic",
 			name = "ex-fat-kma",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

@@ -149,7 +149,10 @@ py.autorecipes {
 			},
 			tech = "orexigenic",
 			name = "ex-fat-von",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat vonix rendering

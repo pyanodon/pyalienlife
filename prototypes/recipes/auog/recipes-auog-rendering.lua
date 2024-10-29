@@ -189,7 +189,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "orexigenic",
 			name = "ex-fat-auog",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--USED auog rendering

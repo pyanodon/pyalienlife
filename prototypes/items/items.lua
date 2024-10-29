@@ -621,7 +621,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-mukmoux",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-mukmoux.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",  scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-mukmoux",
@@ -785,7 +788,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-arthurian",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-arthurian.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-arthurian",
@@ -1406,7 +1412,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-ulric",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-ulric.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-ulric",
@@ -2359,7 +2368,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-dhilmos",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-dhilmos.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-dhilmos",
@@ -2470,7 +2482,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-scrondrix",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-scrondrix.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-scrondrix",
@@ -2742,7 +2757,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-phadai",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-phadai.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-phadai",
@@ -2905,7 +2923,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-auog",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-auog",
@@ -3492,7 +3513,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-kmauts",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-kmauts",
@@ -4801,7 +4825,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-vonix",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-vonix.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-vonix",
@@ -4879,7 +4906,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-zipir",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-zipir",
@@ -4996,7 +5026,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-trits",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-trits.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-trits",
@@ -5193,7 +5226,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-caged-korlex",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-korlex.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-korlex",
@@ -5423,7 +5459,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "fat-cottongut",
-	icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-cottongut",

@@ -46,7 +46,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-arthurians-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -100,7 +103,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-auogs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -153,7 +159,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-lard-from-Improved-cottonguts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -208,7 +217,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-dhilmoss-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-dhilmos.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -262,7 +274,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-kmauts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -316,7 +331,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-Korlex-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -370,7 +388,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-Mukmouxs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -424,7 +445,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-phadais-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -478,7 +502,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-scrondrixs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -532,7 +559,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-simik-2",
-			icon = "__pyalienlifegraphics2__/graphics/icons/fat-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -585,7 +615,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-Trits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -639,7 +672,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-Ulrics-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -696,7 +732,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-Vonixes-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -754,7 +793,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "fto4",
 			name = "Extract-fat-from-Improved-Zipir-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

@@ -143,7 +143,10 @@ py.autorecipes {
 			},
 			tech = "orexigenic",
 			name = "ex-fat-zipir",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat zipir rendering

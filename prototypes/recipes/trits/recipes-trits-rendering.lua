@@ -187,7 +187,10 @@ py.autorecipes {
 			},
 			tech = "orexigenic",
 			name = "ex-fat-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

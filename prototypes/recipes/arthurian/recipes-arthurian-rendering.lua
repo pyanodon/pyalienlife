@@ -170,7 +170,10 @@ py.autorecipes {
 			},
 			tech = "orexigenic",
 			name = "ex-fat-art",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat arthurian rendering

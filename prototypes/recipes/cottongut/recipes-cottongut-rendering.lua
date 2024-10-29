@@ -164,7 +164,10 @@ py.autorecipes {
 			},
 			tech = "orexigenic",
 			name = "ex-fat-cot",
-			icon = "__pyalienlifegraphics__/graphics/icons/fat-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat cottongut rendering
