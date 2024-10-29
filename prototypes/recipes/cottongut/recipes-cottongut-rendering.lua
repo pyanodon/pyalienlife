@@ -87,7 +87,10 @@ py.autorecipes {
 			},
 			tech = "bmp",
 			name = "ex-bon-cot",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--guts cottongut rendering

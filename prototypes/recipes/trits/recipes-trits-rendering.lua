@@ -91,7 +91,10 @@ py.autorecipes {
 			},
 			tech = "bmp",
 			name = "ex-bon-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat trits rendering

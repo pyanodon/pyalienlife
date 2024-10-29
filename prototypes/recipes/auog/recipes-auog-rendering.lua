@@ -90,7 +90,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "bmp",
 			name = "ex-bon-auog",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--meat auog rendering

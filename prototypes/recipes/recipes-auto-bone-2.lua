@@ -46,7 +46,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-arthurians-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -101,7 +104,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-auogs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -155,7 +161,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-cottonguts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -209,7 +218,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-dingrits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -263,7 +275,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-Korlex-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -317,7 +332,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-Mukmouxs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -371,7 +389,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-phadais-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -425,7 +446,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-phagnots-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -479,7 +503,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-scrondrixs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -533,7 +560,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-simik-2",
-			icon = "__pyalienlifegraphics2__/graphics/icons/bone-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -586,7 +616,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-Trits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -640,7 +673,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-Ulrics-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -699,7 +735,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "hardened-bone",
 			name = "Extract-bones-from-Improved-xenos-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/bone-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
