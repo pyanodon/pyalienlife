@@ -111,7 +111,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--guts trits rendering

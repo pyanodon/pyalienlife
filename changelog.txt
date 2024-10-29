@@ -7,6 +7,7 @@ Date: before_gta_6
     - Dingridos no longer obliterate trains and offshore pupms.
     - Fixed moonlight turd making excess lamps.
     - Fixed caged animal recipes: upgraded arthurians, cognition osteochain and variable spinneret kiloglider return cages
+    - Unify improved animal icons
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.10
 Date: 2024-10-27

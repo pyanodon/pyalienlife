@@ -111,7 +111,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "anabolic-rna",
 			name = "ex-me-auog",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--guts auog rendering

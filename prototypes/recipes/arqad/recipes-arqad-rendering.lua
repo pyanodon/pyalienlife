@@ -77,7 +77,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-arq",
-			icon = "__pyalienlifegraphics3__/graphics/icons/meat-arqad.png",
+			icons = {
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		{

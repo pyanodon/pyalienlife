@@ -194,7 +194,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-art",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

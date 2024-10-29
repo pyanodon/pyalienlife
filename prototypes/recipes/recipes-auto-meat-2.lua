@@ -46,7 +46,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-arthurians-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -101,7 +104,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-arqads-2",
-			icon = "__pyalienlifegraphics3__/graphics/icons/meat-arqad.png",
+			icons = {
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -156,7 +162,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-auogs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -211,7 +220,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-cottonguts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -266,7 +278,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-dhilmoss-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-dhilmos.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -320,7 +335,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-dingrits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -374,7 +392,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-kmauts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -429,7 +450,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Korlex-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -483,7 +507,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Mukmouxs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -537,7 +564,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-phadais-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -591,7 +621,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-phagnots-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -645,7 +678,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-scrondrixs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -699,7 +735,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-simik-2",
-			icon = "__pyalienlifegraphics2__/graphics/icons/meat-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -752,7 +791,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Trits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -807,7 +849,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Ulrics-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -864,7 +909,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Vonixes-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -922,7 +970,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Vrauks-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -981,7 +1032,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Xenos-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-xeno.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -1031,7 +1085,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-xyhiphoe-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-xyhiphoe.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -1087,7 +1144,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "myostatin",
 			name = "Extract-meat-from-Improved-Zipir-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

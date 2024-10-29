@@ -55,7 +55,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-xyh",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-xyhiphoe.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--guts xyhiphoe rendering
@@ -114,7 +117,7 @@ py.autorecipes {
 			name = "ex-ski-xyh",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/shell.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/shell.png",   scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

@@ -108,7 +108,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-kor",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--guts korlex rendering

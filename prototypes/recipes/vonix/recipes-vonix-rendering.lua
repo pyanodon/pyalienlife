@@ -169,7 +169,10 @@ py.autorecipes {
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-von",
-			icon = "__pyalienlifegraphics__/graphics/icons/meat-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
