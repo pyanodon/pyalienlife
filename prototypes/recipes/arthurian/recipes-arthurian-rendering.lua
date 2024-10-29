@@ -107,7 +107,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-art",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood arthurian rendering

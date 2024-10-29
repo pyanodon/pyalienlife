@@ -110,7 +110,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-scro",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood scrondrix rendering

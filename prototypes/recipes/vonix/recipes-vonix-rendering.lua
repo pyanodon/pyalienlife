@@ -88,7 +88,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-von",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood vonix rendering

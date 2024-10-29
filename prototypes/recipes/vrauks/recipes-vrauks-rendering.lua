@@ -96,7 +96,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-vrauks",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood vrauks rendering

@@ -57,7 +57,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-arq",
-			icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
+			icons = {
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		{

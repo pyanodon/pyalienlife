@@ -601,7 +601,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-mukmoux",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-mukmoux.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-mukmoux",
@@ -756,7 +759,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-arthurian",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-arthurian.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-arthurian",
@@ -1368,7 +1374,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-ulric",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-ulric.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-ulric",
@@ -2315,7 +2324,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-dhilmos",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-dhilmos.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-dhilmos",
@@ -2417,7 +2429,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-scrondrix",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-scrondrix.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-scrondrix",
@@ -2680,7 +2695,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-phadai",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phadai.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-phadai",
@@ -2834,7 +2852,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-auog",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-auog.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-auog",
@@ -3072,7 +3093,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-dingrits",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-dingrits.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",   scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-dingrits",
@@ -3406,7 +3430,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-kmauts",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-kmauts",
@@ -3572,7 +3599,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-xyhiphoe",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-xyhiphoe",
@@ -3890,7 +3920,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-phagnot",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phagnot.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-phagnot",
@@ -4735,7 +4768,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-vonix",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-vonix.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-vonix",
@@ -4804,7 +4840,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-zipir",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-zipir",
@@ -4862,7 +4901,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-trits",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-trits.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-trits",
@@ -4942,7 +4984,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-vrauks",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-vrauks",
@@ -5041,7 +5086,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-caged-korlex",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-korlex.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-korlex",
@@ -5265,7 +5313,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-cottongut",
-	icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
+	icons = {
+		{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-cottongut",
@@ -8612,7 +8663,10 @@ ITEM {
 ITEM {
 	type = "item",
 	name = "guts-arqad",
-	icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
+	icons = {
+		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+		{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+	},
 	icon_size = 64,
 	flags = {},
 	subgroup = "py-alienlife-arqad",

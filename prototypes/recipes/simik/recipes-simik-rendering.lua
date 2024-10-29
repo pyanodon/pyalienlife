@@ -127,7 +127,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-sim",
-			icon = "__pyalienlifegraphics2__/graphics/icons/guts-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood simik rendering

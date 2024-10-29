@@ -84,7 +84,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-zun",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-zungror.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood zungror rendering

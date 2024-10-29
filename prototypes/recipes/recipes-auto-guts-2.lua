@@ -46,7 +46,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-arthurians-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-arthurian.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -100,7 +103,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-arqads-2",
-			icon = "__pyalienlifegraphics3__/graphics/icons/guts-arqad.png",
+			icons = {
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -154,7 +160,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-auogs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -207,7 +216,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-cottonguts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-cottongut.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -263,7 +275,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-dhilmoss-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-dhilmos.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -317,7 +332,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-dingrits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -371,7 +389,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-kmauts-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -425,7 +446,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Korlex-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-korlex.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -480,7 +504,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Mukmouxs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -534,7 +561,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-phadais-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phadai.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -588,7 +618,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-phagnots-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -642,7 +675,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-scrondrixs-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-scrondrix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -696,7 +732,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-simik-2",
-			icon = "__pyalienlifegraphics2__/graphics/icons/guts-caged-simik.png",
+			icons = {
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -749,7 +788,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Trits-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -803,7 +845,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Ulrics-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-ulric.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -860,7 +905,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Vonixes-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-vonix.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -919,7 +967,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Vrauks-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-vrauks.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -969,7 +1020,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-xyhiphoe-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}
@@ -1025,7 +1079,10 @@ py.autorecipes {
 			crafting_speed = 15,
 			tech = "cavity",
 			name = "Extract-guts-from-Improved-Zipir-2",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 	}

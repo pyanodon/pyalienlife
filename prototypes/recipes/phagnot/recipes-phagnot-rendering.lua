@@ -106,7 +106,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-phag",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-phagnot.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood phagnot rendering

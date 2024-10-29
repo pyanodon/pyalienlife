@@ -125,7 +125,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-trits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood trits rendering

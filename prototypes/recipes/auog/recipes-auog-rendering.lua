@@ -126,7 +126,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "antitumor",
 			name = "ex-gut-auog",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-auog.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood auog rendering

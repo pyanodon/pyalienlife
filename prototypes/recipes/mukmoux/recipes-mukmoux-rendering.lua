@@ -122,7 +122,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-muk",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-mukmoux.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood mukmoux rendering

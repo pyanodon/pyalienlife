@@ -83,7 +83,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-zipir",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-zipir.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood zipir rendering

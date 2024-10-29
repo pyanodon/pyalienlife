@@ -84,7 +84,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-kma",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-kmauts.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood kmauts rendering

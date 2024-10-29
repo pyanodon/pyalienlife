@@ -72,7 +72,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-xyh",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-xyhiphoe.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood xyhiphoe rendering

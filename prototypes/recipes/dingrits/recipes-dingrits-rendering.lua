@@ -109,7 +109,10 @@ py.autorecipes {
 			},
 			tech = "antitumor",
 			name = "ex-gut-din",
-			icon = "__pyalienlifegraphics__/graphics/icons/guts-caged-dingrits.png",
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",   scale = 0.25, shift = {-8, -8}}
+			},
 			icon_size = 64,
 		},
 		--blood dingrits rendering
