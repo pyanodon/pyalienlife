@@ -584,12 +584,15 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "skin",       amount = 20},
+        {type = "item",  name = "skin",       amount = 10},
         {type = "fluid", name = "bacteria-1", amount = 10},
     },
     results = {
-        {type = "fluid", name = "oleochemicals", amount = 50}
-    }
+        {type = "fluid", name = "oleochemicals", amount = 35},
+        {type = "fluid", name = "bacteria-1",    amount = 11, ignored_by_productivity = 10, ignored_by_stats = 10},
+    },
+    main_product = "bacteria-1",
+    allow_productivity = true
 }:add_unlock("biotech-mk03")
 
 RECIPE {
