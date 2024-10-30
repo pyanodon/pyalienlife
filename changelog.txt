@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.14
-Date: ¯\_(ツ)_/¯
+Date: 2024-10-30
   Changes:
     - Fixed improved animal icon scaling
     - Greatly buffed the py3 skin -> olechemicals recipe. This is now an alien bacteria producer instead of an alien bacteria consumer.
