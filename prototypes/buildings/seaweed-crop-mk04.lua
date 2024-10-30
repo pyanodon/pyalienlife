@@ -44,7 +44,7 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"seaweed"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "seaweed-crop-mk01"),
     energy_source = {

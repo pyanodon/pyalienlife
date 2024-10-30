@@ -45,7 +45,7 @@ ENTITY {
     selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
     match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"moss"},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "moss-farm-mk01"),
     energy_source = {
