@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.13
-Date: me when explode
+Date: 2024-10-29
   Changes:
     - Fixed crash related to circuit connected mining drills. (https://www.reddit.com/r/pyanodons/comments/1gdsyao/py_1000hours_save_trying_to_convert_to_20/)
+    - Removed ash
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.12
 Date: 2024-10-29
