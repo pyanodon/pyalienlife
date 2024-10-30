@@ -48,7 +48,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-arthurians-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -163,7 +163,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-auogs-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -219,7 +219,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-cottonguts-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -278,7 +278,7 @@ py.autorecipes {
 			name = "Extract-pelt-from-Improved-dingrits-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -374,7 +374,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-Korlex-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -431,7 +431,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-Mukmouxs-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -489,7 +489,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-phadais-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -546,7 +546,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-phagnots-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -603,7 +603,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-scrondrixs-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -660,7 +660,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-simik-2",
 			icons = {
 				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -830,7 +830,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-Trits-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -887,7 +887,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-Ulrics-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",       shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",       scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -947,7 +947,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-Vonixes-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -1128,7 +1128,7 @@ py.autorecipes {
 			name = "Extract-skin-from-Improved-Zipir-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

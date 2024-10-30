@@ -117,7 +117,7 @@ py.autorecipes {
 			name = "ex-blo-arq",
 			icons = {
 				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

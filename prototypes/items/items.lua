@@ -587,7 +587,7 @@ ITEM {
 	name = "skin-caged-mukmoux",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-mukmoux.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,         shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -760,7 +760,7 @@ ITEM {
 	name = "skin-caged-arthurian",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,           shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -1390,7 +1390,7 @@ ITEM {
 	name = "skin-caged-ulric",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-ulric.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",       shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,       shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -2363,7 +2363,7 @@ ITEM {
 	name = "blood-dhilmos",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -2469,7 +2469,7 @@ ITEM {
 	name = "skin-caged-scrondrix",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,           shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -2764,7 +2764,7 @@ ITEM {
 	name = "skin-caged-phadai",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,        shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -2922,7 +2922,7 @@ ITEM {
 	name = "skin-caged-auog",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,      shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -3250,7 +3250,7 @@ ITEM {
 	name = "skin-caged-dingrits",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,          shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -3535,7 +3535,7 @@ ITEM {
 	name = "blood-caged-kmauts",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -3710,7 +3710,7 @@ ITEM {
 	name = "blood-xyhiphoe",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -4035,7 +4035,7 @@ ITEM {
 	name = "skin-caged-phagnot",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,         shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -4879,7 +4879,7 @@ ITEM {
 	name = "blood-vonix",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -4907,7 +4907,7 @@ ITEM {
 	name = "skin-vonix",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -4963,7 +4963,7 @@ ITEM {
 	name = "blood-zipir",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -4991,7 +4991,7 @@ ITEM {
 	name = "skin-zipir",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -5117,7 +5117,7 @@ ITEM {
 	name = "skin-trits",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -5270,7 +5270,7 @@ ITEM {
 	name = "skin-caged-korlex",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,        shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -5565,7 +5565,7 @@ ITEM {
 	name = "skin-cottongut",
 	icons = {
 		{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25,     shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},
@@ -8921,7 +8921,7 @@ ITEM {
 	name = "blood-arqad",
 	icons = {
 		{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},

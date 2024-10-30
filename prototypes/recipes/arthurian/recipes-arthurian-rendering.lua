@@ -154,7 +154,7 @@ py.autorecipes {
 			name = "ex-ski-art",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

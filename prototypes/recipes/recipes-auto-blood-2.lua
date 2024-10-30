@@ -106,7 +106,7 @@ py.autorecipes {
 			name = "Extract-arthropod-blood-from-Improved-arqads-2",
 			icons = {
 				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -278,7 +278,7 @@ py.autorecipes {
 			name = "Extract-blood-from-Improved-dhilmoss-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -392,7 +392,7 @@ py.autorecipes {
 			name = "Extract-blood-from-Improved-kmauts-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-kmauts.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -909,7 +909,7 @@ py.autorecipes {
 			name = "Extract-Arthropod-blood-from-Improved Vonixes-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -1018,7 +1018,7 @@ py.autorecipes {
 			name = "Extract-blood-from-Improved-xyhiphoe-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -1077,7 +1077,7 @@ py.autorecipes {
 			name = "Extract-Arthropod-blood-from-Improved Zipir-2",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

@@ -256,7 +256,7 @@ ITEM {
 	name = "skin-caged-simik",
 	icons = {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
-		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        shift = {-8, -8}}
+		{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = {-8, -8}}
 	},
 	icon_size = 64,
 	flags = {},

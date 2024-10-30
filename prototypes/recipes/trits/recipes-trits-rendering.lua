@@ -174,7 +174,7 @@ py.autorecipes {
 			name = "ex-ski-trit",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

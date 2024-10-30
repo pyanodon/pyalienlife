@@ -111,7 +111,7 @@ py.autorecipes {
 			name = "ex-blo-von",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -131,7 +131,7 @@ py.autorecipes {
 			name = "ex-ski-von",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
