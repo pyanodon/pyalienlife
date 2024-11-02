@@ -5,7 +5,7 @@ require "caravan-gui"
 require "caravan-global-gui"
 require "caravan-connected-gui"
 require "__core__.lualib.util"
-local prototypes = require "caravan-prototypes"
+local caravan_prototypes = require "caravan-prototypes"
 
 ---@class Caravan
 ---@field arrival_tick number? The gametick that this caravan arrived at its destination. Used to queue most recent caravans first.
@@ -46,7 +46,7 @@ local function goto_entity(caravan_data, entity)
 		type = defines.command.go_to_location,
 		destination_entity = entity,
 		distraction = defines.distraction.none,
-		pathfind_flags = prototypes[caravan.name].pathfinder_flags
+		pathfind_flags = caravan_prototypes[caravan.name].pathfinder_flags
 	}
 	caravan_data.arrival_tick = nil
 end
@@ -60,7 +60,7 @@ local function goto_position(caravan_data, position)
 		type = defines.command.go_to_location,
 		destination = position,
 		distraction = defines.distraction.none,
-		pathfind_flags = prototypes[caravan.name].pathfinder_flags
+		pathfind_flags = caravan_prototypes[caravan.name].pathfinder_flags
 	}
 	caravan_data.arrival_tick = nil
 end
@@ -162,7 +162,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
 	local caravan_data = storage.last_opened_caravan[player.index]
 	if not Caravan.validity_check(caravan_data) then return end
 	local schedule = caravan_data.schedule
-	local prototype = prototypes[caravan_data.entity.name]
+	local prototype = caravan_prototypes[caravan_data.entity.name]
 	local only_outpost = prototype.only_allow_outpost_as_destination
 
 	local entity = player.selected or player.surface.find_entities_filtered {
@@ -212,7 +212,7 @@ local function eat(caravan_data)
 		for _, item in pairs(fuel.get_contents()) do
 			item = item.name
 			fuel.remove {name = item, count = 1}
-			caravan_data.fuel_bar = prototypes[entity.name].favorite_foods[item]
+			caravan_data.fuel_bar = caravan_prototypes[entity.name].favorite_foods[item]
 			caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
 			entity.force.get_item_production_statistics(entity.surface_index).on_flow(item, -1)
 			return true
@@ -338,7 +338,7 @@ gui_events[defines.events.on_gui_click]["py_refocus"] = function(event)
 
 	camera.entity = caravan_data.entity
 	refocus.visible = false
-	camera.zoom = prototypes[caravan_data.entity.name].camera_zoom or 1
+	camera.zoom = caravan_prototypes[caravan_data.entity.name].camera_zoom or 1
 end
 
 ---Starts a caravan pathfinding to its next scheduled entity. Sets the action ID to -1 becuase it cannot do actions while in transit.
@@ -457,7 +457,7 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
 	local cursor_stack = player.cursor_stack
 	if not cursor_stack then return end
 	local fuel_stack = caravan_data.fuel_inventory[tags.i]
-	if cursor_stack.valid_for_read and not prototypes[caravan_data.entity.name].favorite_foods[cursor_stack.name] then return end
+	if cursor_stack.valid_for_read and not caravan_prototypes[caravan_data.entity.name].favorite_foods[cursor_stack.name] then return end
 
 	cursor_stack.swap_stack(fuel_stack)
 	if eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
@@ -482,7 +482,8 @@ gui_events[defines.events.on_gui_text_changed]["py_item_count_text"] = function(
 
 	if action.elem_value then
 		if item_count then
-			item_count = math.min(item_count, prototypes.item[action.elem_value].stack_size * #caravan_data.inventory)
+			local stack_size = prototypes.item[action.elem_value].stack_size
+			item_count = math.min(item_count, stack_size * #caravan_data.inventory)
 		end
 		action.item_count = item_count
 	else
@@ -552,7 +553,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 			distraction = defines.distraction.none,
 			pathfind_flags = {}
 		}
-		local prototype = prototypes[entity.name]
+		local prototype = caravan_prototypes[entity.name]
 		if prototype.requeue_required then
 			storage.caravan_queue = nil
 			caravan_data.arrival_tick = game.tick
@@ -668,7 +669,7 @@ function Caravan.instantiate_caravan(entity)
 	local existing = storage.caravans[entity.unit_number]
 	if existing then return existing end
 
-	local prototype = prototypes[entity.name]
+	local prototype = caravan_prototypes[entity.name]
 	local caravan_data = {
 		unit_number = entity.unit_number,
 		entity = entity,
@@ -693,7 +694,7 @@ end
 
 py.on_event(py.events.on_built(), function(event)
 	local entity = event.entity
-	local prototype = prototypes[entity.name]
+	local prototype = caravan_prototypes[entity.name]
 	if not prototype then return end
 	if prototype.destructible == false then entity.destructible = false end
 
@@ -717,7 +718,7 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
-	local prototype = prototypes[entity.name]
+	local prototype = caravan_prototypes[entity.name]
 	if not prototype then return end
 
 	remove_fuel_alert(event.entity)
