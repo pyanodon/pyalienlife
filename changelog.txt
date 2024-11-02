@@ -5,6 +5,7 @@ Date: only Vatbrains knows when
     - Added Ukrainian translation (incomplete for now as items.cfg is not fully translated yet)
     - The vanilla edible raw-fish item is now hidden in factoriopedia.
     - Fixed crash related to setting certain values in the caravan GUI. https://github.com/pyanodon/pybugreports/issues/648
+    - Fixed the contents of "packed" caravans being deleted in certain cases.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.14
 Date: 2024-10-30
