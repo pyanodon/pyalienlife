@@ -3,6 +3,7 @@ Version: 3.0.15
 Date: only Vatbrains knows when
   Changes:
     - Added Ukrainian translation (incomplete for now as items.cfg is not fully translated yet)
+    - The vanilla edible raw-fish item is now hidden in factoriopedia.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.14
 Date: 2024-10-30
