@@ -6,6 +6,7 @@ Date: only Vatbrains knows when
     - The vanilla edible raw-fish item is now hidden in factoriopedia.
     - Fixed crash related to setting certain values in the caravan GUI. https://github.com/pyanodon/pybugreports/issues/648
     - Fixed the contents of "packed" caravans being deleted in certain cases.
+    - Fixed duplicate text in the packed caravan inventory preview item tooltip.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.14
 Date: 2024-10-30

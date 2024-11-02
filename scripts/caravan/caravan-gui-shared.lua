@@ -19,7 +19,7 @@ local function convert_to_tooltip_row(item)
     local name = item.name
     local count = item.count
     local quality = item.quality or "normal"
-    return {"", "\n[item=" .. name .. ",quality=" .. quality .. "] ", prototypes.item[name].localised_name, " ×", count}
+    return {"", "\n[item=" .. name .. ",quality=" .. quality .. "] ", " ×", count}
 end
 
 function Caravan.get_inventory_tooltip(caravan_data)
