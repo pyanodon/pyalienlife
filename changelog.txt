@@ -7,6 +7,7 @@ Date: 2024-10-2
     - Fixed crash related to setting certain values in the caravan GUI. https://github.com/pyanodon/pybugreports/issues/648
     - Fixed the contents of "packed" caravans being deleted in certain cases.
     - Fixed duplicate text in the packed caravan inventory preview item tooltip.
+    - Fixed minor grammar mistake in the yotoi-fruit-mk02 turd recipe english localised description.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.14
 Date: 2024-10-30
