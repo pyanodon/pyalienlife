@@ -9268,7 +9268,8 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 0.25, consumption = 1, pollution = 0.1},
-	limitation_message_key = "vatbrain"
+	limitation_message_key = "vatbrain",
+	hidden = true
 }
 
 ITEM {
@@ -9283,7 +9284,8 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 0.5, consumption = 2, pollution = 0.1},
-	limitation_message_key = "vatbrain"
+	limitation_message_key = "vatbrain",
+	hidden = true
 }
 
 ITEM {
@@ -9298,7 +9300,8 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 0.75, consumption = 3, pollution = 0.1},
-	limitation_message_key = "vatbrain"
+	limitation_message_key = "vatbrain",
+	hidden = true
 }
 
 ITEM {
@@ -9313,5 +9316,6 @@ ITEM {
 	order = "t-a",
 	stack_size = 1,
 	effect = {productivity = 1, consumption = 4, pollution = 0.1},
-	limitation_message_key = "vatbrain"
+	limitation_message_key = "vatbrain",
+	hidden = true
 }

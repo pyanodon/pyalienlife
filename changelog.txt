@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.16
+Date: right now
+  Changes:
+    - Deleted duplicate vatbrain cartridge item prototypes from factoriopedia.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.15
 Date: 2024-10-2
   Changes:
