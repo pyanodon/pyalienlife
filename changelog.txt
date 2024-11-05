@@ -12,7 +12,6 @@ Date: 2024-11-5
     - Fixed unfriendly usage of YAFC's script_enabled table. Resolves https://github.com/pyanodon/pybugreports/issues/672
     - Fixed softlock due to uncraftable ulric pens. Resolves https://github.com/pyanodon/pybugreports/issues/671
     - Added missing composter recipes for biocrud, rich biocrud, floraspollinin, sorted animal eyes, animal reflectors, dried meat, and biocarnation.
-    - Fixed that the recipe names for composting recipes were unlocalized and hardcoded to english.
     - Removed unused "organics" item from the game files.
     - Fixed that the MK pips for compostable items did not appear in the composter recipe icons.
     - Phytomining biomass items now properly define a biomass fuel_value of 2.5MJ.
