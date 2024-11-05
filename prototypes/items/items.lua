@@ -3316,7 +3316,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3327,7 +3329,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3338,7 +3342,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3349,7 +3355,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3360,7 +3368,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3371,7 +3381,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3382,7 +3394,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3393,7 +3407,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3404,7 +3420,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3415,7 +3433,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3426,7 +3446,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3437,7 +3459,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ITEM {
@@ -3448,7 +3472,9 @@ ITEM {
 	flags = {},
 	subgroup = "py-alienlife-phytomining",
 	order = "h",
-	stack_size = 100
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
 }
 
 ---------------------------------------

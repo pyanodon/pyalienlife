@@ -9,6 +9,7 @@ Date: right now
     - Fixed that the recipe names for composting recipes were unlocalized and hardcoded to english.
     - Removed unused "organics" item from the game files.
     - Fixed that the MK pips for compostable items did not appear in the composter recipe icons.
+    - Phytomining biomass items now properly define a biomass fuel_value of 2.5MJ.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.15
 Date: 2024-10-2
