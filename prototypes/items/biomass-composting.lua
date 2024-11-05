@@ -1,5 +1,4 @@
-local biomass_convertion =
-{
+local biomass_convertion = {
     ["used-comb"] = {item_amount = 2, biomass_amount = 30},
     ["ralesia"] = {item_amount = 10, biomass_amount = 20},
     ["native-flora"] = {item_amount = 10, biomass_amount = 20},
@@ -478,4 +477,69 @@ local biomass_convertion =
     ["ralesia-extract"] = {item_amount = 10, biomass_amount = 5, type = "fluid"},
 }
 
-return (biomass_convertion)
+if mods["pyalternativeenergy"] then
+    biomass_convertion["biocarnation"] = {item_amount = 2, biomass_amount = 25}
+    biomass_convertion["biocrud"] = {item_amount = 4, biomass_amount = 12}
+    biomass_convertion["rich-biocrud"] = {item_amount = 4, biomass_amount = 36}
+    biomass_convertion["floraspollinin"] = {item_amount = 10, biomass_amount = 10}
+    biomass_convertion["animal-eye"] = {item_amount = 10, biomass_amount = 45}
+    biomass_convertion["animal-reflectors"] = {item_amount = 10, biomass_amount = 100}
+    biomass_convertion["bio-ore"] = {item_amount = 10, biomass_amount = 50}
+end
+
+
+local local_name_type
+
+for i, item in pairs(biomass_convertion) do
+    local prototype = data.raw.fluid[i]
+    local local_name_type = "fluid"
+    for item_prototype in pairs(defines.prototypes.item) do
+        local item = (data.raw[item_prototype] or {})[i]
+        if item then
+            prototype = item
+            local_name_type = "item"
+            break
+        end
+    end
+
+    if not prototype then
+        log("WARNING @ biomass_conversion: " .. i .. " is not a valid item or fluid.")
+        goto continue
+    end
+    local type = prototype.type
+    
+    local icons
+    if prototype.icon then
+        icons = {{icon = prototype.icon, icon_size = prototype.icon_size or 64}}
+    elseif prototype.icons ~= nil then
+        icons = table.deepcopy(prototype.icons)
+    end
+
+    table.insert(icons, {icon = "__pyalienlifegraphics__/graphics/icons/biomass.png", scale = 0.25, shift = {-7.5, -7.5}, icon_size = 64})
+
+    RECIPE {
+        type = "recipe",
+        name = "biomass-" .. i,
+        category = "compost",
+        enabled = false,
+        hide_from_player_crafting = true,
+        ignore_for_dependencies = true,
+        hidden_in_factoriopedia = false,
+        hidden = false,
+        energy_required = 3,
+        ingredients = {
+            {type = local_name_type, name = i, amount = item.item_amount},
+        },
+        results = {
+            {type = "item", name = "biomass", amount = item.biomass_amount},
+        },
+        icons = icons,
+        icon_size = prototype.icon_size or 64,
+        subgroup = "py-alienlife-compost",
+        order = i,
+        localised_name = {"", "Compost " .. item.item_amount .. " x ", {local_name_type .. "-name." .. i}}
+    }:add_unlock("compost")
+    py.add_to_description(type, prototype, {"item-description.compost-amount", tostring(math.floor(item.biomass_amount / item.item_amount * 10) / 10)})
+
+    ::continue::
+end

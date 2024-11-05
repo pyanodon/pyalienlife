@@ -1,3 +1,4 @@
+require "prototypes/items/biomass-composting"
 require "prototypes/updates/autoplace-fish"
 require "prototypes/updates/base-updates"
 local collision_mask_util = require "__core__/lualib/collision-mask-util"
@@ -181,6 +182,7 @@ for _, recipe in pairs(data.raw.recipe) do
     recipe:replace_result("organics", "biomass")
     recipe:replace_ingredient("raw-fish", "fish")
 end
+data.raw.item["organics"] = nil
 
 ----------------------------------------------------------------------------------------------------
 -- MODULE LIMITATION SETUP
