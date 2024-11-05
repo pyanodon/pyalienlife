@@ -4,6 +4,7 @@ Date: right now
   Changes:
     - Deleted duplicate vatbrain cartridge item prototypes from factoriopedia.
     - Fixed unfriendly usage of YAFC's script_enabled table. Resolves https://github.com/pyanodon/pybugreports/issues/672
+    - Fixed softlock due to uncraftable ulric pens. Resolves https://github.com/pyanodon/pybugreports/issues/671
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.15
 Date: 2024-10-2

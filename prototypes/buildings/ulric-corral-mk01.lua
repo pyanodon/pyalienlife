@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {type = "item", name = "ulric-corral-mk01", amount = 1}
     }
-}
+}:add_unlock("ulric")
 
 ITEM {
     type = "item",
