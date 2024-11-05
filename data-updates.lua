@@ -287,10 +287,9 @@ for _, recipe in pairs(data.raw.recipe) do
 end
 
 if data.data_crawler then
-    data.script_enabled = {
-        {type = "entity", name = "tar-patch"},
-        {type = "item",   name = "earth-generic-sample"}
-    }
+    data.script_enabled = data.script_enabled or {}
+    table.insert(data.script_enabled, {type = "entity", name = "tar-patch"})
+    table.insert(data.script_enabled, {type = "entity", name = "earth-generic-sample"})
 end
 
 TECHNOLOGY("filtration-mk02"):remove_prereq("lithium-processing")

@@ -3,6 +3,7 @@ Version: 3.0.16
 Date: right now
   Changes:
     - Deleted duplicate vatbrain cartridge item prototypes from factoriopedia.
+    - Fixed unfriendly usage of YAFC's script_enabled table. Resolves https://github.com/pyanodon/pybugreports/issues/672
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.15
 Date: 2024-10-2
