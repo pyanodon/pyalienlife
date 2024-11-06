@@ -2,6 +2,7 @@
 Version: 3.0.17
 Date: ??
   Changes:
+    - Made most crafting machines flippable
     - Fixed that composting recipe names were not properly localised and hardcoded to english.
     - Fixed unknown key errors in several composting recipes.
 ---------------------------------------------------------------------------------------------------

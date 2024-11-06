@@ -104,6 +104,7 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
         selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+        forced_symmetry = "diagonal-pos",
         match_animation_speed_to_activity = false,
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},

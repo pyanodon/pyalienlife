@@ -57,6 +57,7 @@ ENTITY {
     fast_replaceable_group = "vessel",
     collision_box = data.raw["pipe"]["pipe"].collision_box,
     selection_box = data.raw["pipe"]["pipe"].selection_box,
+    forced_symmetry = "diagonal-pos",
     working_sound = nil, -- TODO
     fluid_boxes = {{
         volume = Biofluid.tank_size,
