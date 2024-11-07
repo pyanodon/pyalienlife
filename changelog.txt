@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.18
+Date: ?
+  Changes:
+    - Fixed Caravan task list missing scroll bar. Resolves https://github.com/pyanodon/pybugreports/issues/683
+---------------------------------------------------------------------------------------------------
 Version: 3.0.17
 Date: 2024-11-7
   Changes:
