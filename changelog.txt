@@ -2,9 +2,12 @@
 Version: 3.0.17
 Date: ??
   Changes:
-    - Made most crafting machines flippable
+    - Made most crafting machines flippable.
     - Fixed that composting recipe names were not properly localised and hardcoded to english.
     - Fixed unknown key errors in several composting recipes.
+    - Caravans can now consume jerky. Each jerky = 1 action.
+    - Digosaurus can now consume jerky. Each jerky = 1 ore mined.
+    - [space-age] Fixed a crash related to spoilage products in the caravan fuel slot. Resolves https://github.com/pyanodon/pybugreports/issues/676
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.16
 Date: 2024-11-5

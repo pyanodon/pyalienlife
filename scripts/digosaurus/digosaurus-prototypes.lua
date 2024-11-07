@@ -1,4 +1,5 @@
 Digosaurus.favorite_foods = {
+	["dried-meat"] = 1,
 	["guts"] = 1,
 	["meat"] = 2,
 	["workers-food"] = 8,

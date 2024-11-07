@@ -49,6 +49,7 @@ local caravan_prototypes = {
 		destructible = false,
 		outpost = "outpost",
 		favorite_foods = {
+			["dried-meat"] = 1,
 			["brain"] = 2,
 			["auog-food-01"] = 4,
 			["workers-food"] = 10,
