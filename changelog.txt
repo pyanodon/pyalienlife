@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - Fixed Caravan task list missing scroll bar. Resolves https://github.com/pyanodon/pybugreports/issues/683
     - Fixed naming inconsistencies in the Guar module uplifting recipes. Resolves https://github.com/pyanodon/pybugreports/issues/682
+    - Deleted unused organics -> wood biomass recipes from factoriopedia. Resolves https://github.com/pyanodon/pybugreports/issues/681
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.17
 Date: 2024-11-7
