@@ -246,7 +246,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 	local schedule_frame = content_flow.add {type = "frame", name = "schedule_frame", direction = "vertical", style = "py_nice_frame"}
 	schedule_frame.style.vertically_stretchable = true
 
-	local schedule_pane = schedule_frame.add {type = "scroll-pane", name = "schedule_pane", style = "train_schedule_scroll_pane"}
+	local schedule_pane = schedule_frame.add {type = "scroll-pane", name = "schedule_pane", style = "py_schedule_scroll_pane"}
 	schedule_pane.horizontal_scroll_policy = "never"
 	schedule_pane.vertical_scroll_policy = "auto-and-reserve-space"
 	schedule_pane.style.horizontally_stretchable = true
