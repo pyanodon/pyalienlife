@@ -50,7 +50,7 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
-	local unit_number = entity.unit_number
+	local unit_number = entity.valid and entity.unit_number
 	if unit_number then storage.mounts[unit_number] = nil end
 end)
 

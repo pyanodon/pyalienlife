@@ -41,7 +41,7 @@ local graphic = {
         scale = 0.5
     }}
 }
-local pipe_pos = data.raw["pipe"]["pipe"].collision_box[1][1]
+
 ENTITY {
     name = "requester-tank",
     type = "furnace",
@@ -59,14 +59,24 @@ ENTITY {
     selection_box = data.raw["pipe"]["pipe"].selection_box,
     forced_symmetry = "diagonal-pos",
     working_sound = nil, -- TODO
-    fluid_boxes = {{
-        volume = Biofluid.tank_size,
-        pipe_covers = _G.pipecoverspictures(),
-        pipe_connections = {
-            {flow_direction = "output", position = {0, pipe_pos}, direction = defines.direction.north},
+    fluid_boxes = {
+        {
+            volume = Biofluid.tank_size,
+            pipe_covers = _G.pipecoverspictures(),
+            pipe_connections = {
+                {flow_direction = "output", position = {0, 0}, direction = defines.direction.north, connection_category = "default"},
+            },
+            production_type = "output"
         },
-        production_type = "output"
-    }},
+        {
+            volume = 1,
+            pipe_covers = _G.pipecoverspictures(),
+            pipe_connections = {
+                {flow_direction = "input", position = {0, 0}, direction = defines.direction.south, connection_category = "biofluid"},
+            },
+            production_type = "input"
+        }
+    },
     graphics_set = {
         animation = {
             north = graphic,
@@ -105,7 +115,3 @@ ENTITY {
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
     collision_mask = collision_mask_util.get_default_mask("furnace")
 }
-
-if not mods.pystellarexpedition then
-    data.raw.furnace["requester-tank"].collision_mask.layers.vessel_collision_mask = true
-end

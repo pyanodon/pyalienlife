@@ -171,7 +171,7 @@ function Biofluid.update_requester_gui(player, gui)
 	end
 
 	local status = "entity-status.working"
-	if not next(network.bioports) then status = "entity-status.no-biofluid-network" end
+	if not next(network.biofluid_bioports) then status = "entity-status.no-biofluid-network" end
 	local img = Biofluid.failure_reasons[status]
 	local content_flow = gui.content_frame.content_flow
 	content_flow.status_flow.status_text.caption = {status}
@@ -223,9 +223,9 @@ function Biofluid.build_requester_gui(entity, player)
 	camera.zoom = 2
 
 	local label_flow = content_flow.add {type = "flow", direction = "horizontal"}
-	label_flow.add {type = "label", caption = {"gui-logistic.title-request"}}.style.font = "heading-3"
+	label_flow.add {type = "label", caption = {"gui-logistic.title-request"}}.style.font = "default-semibold"
 	label_flow.add {type = "empty-widget", style = "py_empty_widget"}
-	label_flow.add {type = "label", caption = {"gui.priority"}}.style.font = "heading-3"
+	label_flow.add {type = "label", caption = {"gui.priority"}}.style.font = "default-semibold"
 
 	local config_flow = content_flow.add {type = "flow", direction = "horizontal", name = "config_flow"}
 	config_flow.style.vertical_align = "center"
@@ -257,7 +257,7 @@ function Biofluid.build_requester_gui(entity, player)
 	}.style.height = 35
 
 	content_flow.add {type = "line"}
-	content_flow.add {type = "label", caption = {"gui.temperature-filter"}}.style.font = "heading-3"
+	content_flow.add {type = "label", caption = {"gui.temperature-filter"}}.style.font = "default-semibold"
 
 	local temperature_flow = content_flow.add {type = "flow", direction = "horizontal", name = "temperature_flow"}
 	temperature_flow.style.vertical_align = "center"

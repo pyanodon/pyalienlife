@@ -27,6 +27,7 @@ py.on_event(py.events.on_init(), function()
 	storage.biofluid_undergrounds = nil
 	storage.biofluid_robots = storage.biofluid_robots or {}
 	storage.biofluid_requesters = storage.biofluid_requesters or {}
+	storage.biofluid_providers = storage.biofluid_providers or {}
 	storage.biofluid_bioports = storage.biofluid_bioports or {}
 	storage.biofluid_networks = storage.biofluid_networks or {}
 end)
@@ -63,14 +64,72 @@ py.on_event(py.events.on_built(), function(event)
 		}
 	elseif entity.type == "pipe-to-ground" then
 		entity.operable = false
-		local underground_data = {entity = entity}
-		storage.biofluid_undergrounds[unit_number] = underground_data
-		Biofluid.spawn_underground_pipe_heat_connection(underground_data)
 	elseif connection_type == Biofluid.PROVIDER then
 		entity.operable = false
+		storage.biofluid_providers[unit_number] = {entity = entity}
 	end
-	Biofluid.built_pipe(entity)
+	Biofluid.built_pipe()
 end)
+
+local ENTITY_BIOFLUID_PIPE_INDEXES = {
+	["vessel-to-ground"] = 1,
+	["vessel"] = 1,
+	["bioport"] = 1,
+	["provider-tank"] = 1,
+	["requester-tank"] = 1,
+}
+
+-- https://forums.factorio.com/viewtopic.php?f=7&t=120459
+local function get_fluid_segment_id(entity)
+	local biofluid_pipe_index = ENTITY_BIOFLUID_PIPE_INDEXES[entity.name]
+	if not biofluid_pipe_index then error("Invalid biofluid pipe: " .. entity.name) end
+	local fluidbox = entity.fluidbox
+	for _, connection in pairs(fluidbox.get_connections(biofluid_pipe_index)) do
+		local network_id = connection.get_fluid_segment_id(1)
+		if network_id then return network_id end
+	end
+	return math.random(1, 1000000) -- todo: remove this once the vanilla bug is fixed
+end
+
+function Biofluid.built_pipe()
+	local allocated_fluids_from_providers = {}
+
+	for _, network in pairs(storage.biofluid_networks) do
+		for provider_unit_number, amount in pairs(network.allocated_fluids_from_providers) do
+			allocated_fluids_from_providers[provider_unit_number] = amount + (allocated_fluids_from_providers[provider_unit_number] or 0)
+		end
+	end
+
+	local networks = {}
+	storage.biofluid_networks = networks
+
+	for _, biofluid_connectable_name in pairs{"biofluid_bioports", "biofluid_requesters", "biofluid_providers"} do
+		local biofluid_connectables = storage[biofluid_connectable_name]
+
+		local new_biofluid_connectables = {}
+		for unit_number, biofluid_connectable in pairs(biofluid_connectables) do
+			local entity = biofluid_connectable.entity
+			if not entity.valid then goto continue end
+			new_biofluid_connectables[unit_number] = biofluid_connectable
+			local network_id = get_fluid_segment_id(entity)
+			if not network_id then goto continue end
+			local network = networks[network_id] or {
+				biofluid_bioports = {},
+				biofluid_requesters = {},
+				biofluid_providers = {},
+				allocated_fluids_from_providers = {},
+			}
+			networks[network_id] = network
+			network[biofluid_connectable_name][unit_number] = true
+			if allocated_fluids_from_providers[unit_number] then
+				network.allocated_fluids_from_providers[unit_number] = allocated_fluids_from_providers[unit_number]
+			end
+			biofluid_connectable.network_id = network_id
+			::continue::
+		end
+		storage[biofluid_connectable_name] = new_biofluid_connectables
+	end
+end
 
 function Biofluid.update_bioport_animation(bioport_data)
 	local entity = bioport_data.entity
@@ -102,38 +161,6 @@ function Biofluid.update_bioport_animation(bioport_data)
 		end
 	end
 end
-
-function Biofluid.spawn_underground_pipe_heat_connection(underground_data)
-	if underground_data.heat_connection and underground_data.heat_connection.valid then
-		underground_data.heat_connection.destroy()
-	end
-	local entity = underground_data.entity
-	local heat_connection = entity.surface.create_entity {
-		name = "vessel-to-ground-heat-connection",
-		force = entity.force_index,
-		position = entity.position
-	}
-
-	heat_connection.destructible = false
-	heat_connection.minable = false
-	heat_connection.operable = false
-	heat_connection.active = false
-	heat_connection.rotatable = false
-	underground_data.heat_connection = heat_connection
-	Biofluid.update_graphics(entity)
-end
-
-script.on_event(defines.events.on_player_rotated_entity, function(event)
-	local entity = event.entity
-	if Biofluid.connectable[entity.name] then
-		Biofluid.rotated_pipe(entity, event.previous_direction)
-		if entity.type == "pipe-to-ground" then
-			local underground_data = storage.biofluid_undergrounds[entity.unit_number]
-			if not underground_data then return end
-			Biofluid.spawn_underground_pipe_heat_connection(underground_data)
-		end
-	end
-end)
 
 function Biofluid.render_error_icons()
 	for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
@@ -168,7 +195,7 @@ end
 local function random_order(l)
 	local order = {}
 	local i = 1
-	for _, elem in pairs(l) do
+	for unit_number in pairs(l) do
 		if elem.valid then
 			insert(order, random(1, i), elem)
 			i = i + 1
@@ -180,14 +207,15 @@ end
 local function build_providers_by_contents(network_data, relavant_fluids)
 	local providers_by_contents = {}
 	network_data.providers_by_contents = providers_by_contents
-	local providers = network_data.providers
-	local min_fluid_reserve = settings.global["py-min_fluid_reserve"].value
+	local providers = network_data.biofluid_providers
+	local min_fluid_reserve = 10000
 
-	for k, provider in pairs(providers) do
-		if not provider.valid then
-			providers[k] = nil
-			goto continue
-		end
+	for unit_number in pairs(providers) do
+		local provider_data = storage.biofluid_providers[unit_number]
+		if not provider_data then goto continue end
+		local provider = provider_data.entity
+		if not provider.valid then goto continue end
+
 		local contents = provider.fluidbox[1]
 		if not contents then goto continue end
 		local name = contents.name
@@ -204,76 +232,81 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	end
 end
 
-py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
-	Biofluid.render_error_icons()
+local function process_unfulfilled_requests(unfulfilled_requests, relavant_fluids)
+	local network_id = unfulfilled_request.network_id
+	local network_data = storage.biofluid_networks[network_id]
+	local providers_by_contents = network_data.providers_by_contents
 
+	if not providers_by_contents then
+		build_providers_by_contents(network_data, relavant_fluids[network_id])
+		providers_by_contents = network_data.providers_by_contents
+	end
+
+	local name, amount = unfulfilled_request.name, unfulfilled_request.amount
+	local target_temperature = unfulfilled_request.target_temperature
+	local provider
+
+	local providers = providers_by_contents[name]
+	if not providers then return end
+
+	allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
+	sort(providers, provider_sort_function)
+	for _, p in pairs(providers) do
+		local contents = p.fluidbox[1]
+		if target_temperature then
+			local stored_temperature = contents.temperature
+			local operator = Biofluid.equality_operators[unfulfilled_request.temperature_operator or 1]
+			if operator == "=" then
+				if not (stored_temperature == target_temperature) then goto continue end
+			elseif operator == ">" then
+				if not (stored_temperature > target_temperature) then goto continue end
+			elseif operator == "≥" then
+				if not (stored_temperature >= target_temperature) then goto continue end
+			elseif operator == "<" then
+				if not (stored_temperature < target_temperature) then goto continue end
+			elseif operator == "≤" then
+				if not (stored_temperature <= target_temperature) then goto continue end
+			elseif operator == "≠" then
+				if not (stored_temperature ~= target_temperature) then goto continue end
+			else
+				error("Invalid operator: " .. operator)
+			end
+		end
+		local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
+		provider = p
+		unfulfilled_request.amount = min(amount, can_give)
+		break
+		::continue::
+	end
+
+	if not provider then return end
+
+	local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
+	for _, unit_number in random_order(network_data.biofluid_bioports) do
+		local bioport_data = storage.biofluid_bioports[unit_number]
+		if not bioport_data or not bioport_data.active or not bioport_data.entity.valid then goto continue end
+
+		local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
+		if delivery_amount ~= 0 then
+			local allocated = network_data.allocated_fluids_from_providers
+			allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
+			requester_data.incoming = requester_data.incoming + delivery_amount
+			bioport_data.active = nil
+			break
+		end
+		::continue::
+	end
+end
+
+py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
 	local networks = storage.biofluid_networks
 	if not next(networks) then return end
+	Biofluid.render_error_icons()
+	
 	local unfulfilled_requests, relavant_fluids = Biofluid.get_unfulfilled_requests()
 
 	for _, unfulfilled_request in pairs(unfulfilled_requests) do
-		local network_id = unfulfilled_request.network_id
-		local network_data = storage.biofluid_networks[network_id]
-		local providers_by_contents = network_data.providers_by_contents
-
-		if not providers_by_contents then
-			build_providers_by_contents(network_data, relavant_fluids[network_id])
-			providers_by_contents = network_data.providers_by_contents
-		end
-
-		local name, amount = unfulfilled_request.name, unfulfilled_request.amount
-		local target_temperature = unfulfilled_request.target_temperature
-		local provider
-
-		local providers = providers_by_contents[name]
-		if providers then
-			allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
-			sort(providers, provider_sort_function)
-			for _, p in pairs(providers) do
-				local contents = p.fluidbox[1]
-				if target_temperature then
-					local stored_temperature = contents.temperature
-					local operator = Biofluid.equality_operators[unfulfilled_request.temperature_operator or 1]
-					if operator == "=" then
-						if not (stored_temperature == target_temperature) then goto continue end
-					elseif operator == ">" then
-						if not (stored_temperature > target_temperature) then goto continue end
-					elseif operator == "≥" then
-						if not (stored_temperature >= target_temperature) then goto continue end
-					elseif operator == "<" then
-						if not (stored_temperature < target_temperature) then goto continue end
-					elseif operator == "≤" then
-						if not (stored_temperature <= target_temperature) then goto continue end
-					elseif operator == "≠" then
-						if not (stored_temperature ~= target_temperature) then goto continue end
-					else
-						error("Invalid operator: " .. operator)
-					end
-				end
-				local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
-				provider = p
-				unfulfilled_request.amount = min(amount, can_give)
-				break
-				::continue::
-			end
-		end
-
-		if provider then
-			local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
-			for _, bioport in random_order(network_data.bioports) do
-				local bioport_data = storage.biofluid_bioports[bioport.unit_number]
-				if bioport_data and bioport_data.active then
-					local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
-					if delivery_amount ~= 0 then
-						local allocated = network_data.allocated_fluids_from_providers
-						allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
-						requester_data.incoming = requester_data.incoming + delivery_amount
-						bioport_data.active = nil
-						break
-					end
-				end
-			end
-		end
+		process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
 	end
 
 	for _, network_data in pairs(storage.biofluid_networks) do network_data.providers_by_contents = nil end
@@ -416,22 +449,23 @@ local function find_new_home(biorobot_data, network_data)
 	local old_home = biorobot_data.bioport
 	local home
 	local min_robot_count = 999
-	for unit_number, bioport in pairs(network_data.bioports) do
-		if bioport.valid then
-			local bioport_data = storage.biofluid_bioports[bioport.unit_number]
-			if unit_number ~= old_home and bioport.valid and bioport_data then
-				local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
-				if robot_count < 6 then
-					home = bioport
-					biorobot_data.bioport = unit_number
-					break
-				elseif robot_count < min_robot_count then
-					min_robot_count = robot_count
-					home = bioport
-					biorobot_data.bioport = unit_number
-				end
-			end
+	for unit_number in pairs(network_data.biofluid_bioports) do
+		if unit_number == old_home then goto continue end
+		local bioport_data = storage.biofluid_bioports[unit_number]
+		if not bioport_data then goto continue end
+		local bioport = bioport_data.entity
+		if not bioport.valid then goto continue end
+		local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
+		if robot_count < 6 then
+			home = bioport
+			biorobot_data.bioport = unit_number
+			break
+		elseif robot_count < min_robot_count then
+			min_robot_count = robot_count
+			home = bioport
+			biorobot_data.bioport = unit_number
 		end
+		::continue::
 	end
 	if not home then
 		make_homeless(biorobot_data); return
@@ -452,7 +486,7 @@ local function go_home(biorobot_data)
 	local bioport_data = storage.biofluid_bioports[biorobot_data.bioport]
 	local network_id = bioport_data and bioport_data.network_id or biorobot_data.network_id
 	local network_data = storage.biofluid_networks[network_id]
-	if not bioport_data or not bioport_data.entity or (network_data and random() > 0.9 and table_size(network_data.bioports) > 1) then
+	if not bioport_data or not bioport_data.entity or (network_data and random() > 0.9 and table_size(network_data.biofluid_bioports) > 1) then
 		if network_data then
 			find_new_home(biorobot_data, network_data)
 		else
@@ -596,7 +630,7 @@ end
 function Biofluid.get_unfulfilled_requests()
 	local relavant_fluids = {}
 	local result = {}
-	local min_fluid_request = settings.global["py-min_fluid_request"].value
+	local min_fluid_request = 10000
 
 	for unit_number, requester_data in pairs(storage.biofluid_requesters) do
 		local requester = requester_data.entity
@@ -606,7 +640,7 @@ function Biofluid.get_unfulfilled_requests()
 		end
 		local network_id = requester_data.network_id
 		local network = storage.biofluid_networks[network_id]
-		if not network or not next(network.bioports) then
+		if not network or not next(network.biofluid_bioports) then
 			py.draw_error_sprite(requester, "utility.too_far_from_roboport_icon", 71)
 			goto continue
 		end
@@ -726,20 +760,20 @@ script.on_event(defines.events.on_player_setup_blueprint, function(event)
 	end
 end)
 
+py.on_event(defines.events.on_player_rotated_entity, function(event)
+	local entity = event.entity
+	if not entity.valid then return end
+	local name = entity.name
+	if Biofluid.connectable[name] then Biofluid.built_pipe() end
+end)
+
 py.on_event(py.events.on_destroyed(), function(event)
 	local entity = event.entity
+	if not entity.valid then return end
 	local name = entity.name
 	if Biofluid.connectable[name] then
-		Biofluid.destroyed_pipe(entity)
 		local unit_number = entity.unit_number
-		if entity.type == "pipe-to-ground" then
-			local underground_data = storage.biofluid_undergrounds[unit_number]
-			if not underground_data then return end
-			local heat_connection = underground_data.heat_connection
-			if not heat_connection or not heat_connection.valid then return end
-			heat_connection.destroy()
-			storage.biofluid_undergrounds[unit_number] = nil
-		elseif entity.name == BIOPORT then
+		if entity.name == BIOPORT then
 			local bioport_data = storage.biofluid_bioports[unit_number]
 			if not bioport_data then return end
 			local graphic = bioport_data.animation_entity
@@ -748,6 +782,8 @@ py.on_event(py.events.on_destroyed(), function(event)
 		else
 			storage.biofluid_requesters[unit_number] = nil
 		end
+		entity.destroy()
+		Biofluid.built_pipe()
 	elseif Biofluid.biorobots[name] then
 		local unit_number = entity.unit_number
 		local biorobot_data = storage.biofluid_robots[unit_number]
@@ -796,49 +832,5 @@ local directions = {
 }
 
 function Biofluid.update_graphics(entity)
-	if entity.type == TO_GROUND then
-		local graphics_variation = entity.direction / 2 + 1
-		if graphics_variation == 3 then
-			local connection = Biofluid.find_heat_connections(entity)[1]
-			if Biofluid.is_looking_at_us(entity, connection) then
-				graphics_variation = 5
-			end
-		end
-		local underground_data = storage.biofluid_undergrounds[entity.unit_number]
-		if not underground_data then return end
-		local heat_connection = underground_data.heat_connection
-		if heat_connection and heat_connection.valid then
-			heat_connection.graphics_variation = graphics_variation
-		end
-	elseif entity.name == VESSEL then
-		local connections = Biofluid.find_heat_connections(entity)
-		local animation_index = ""
-		for _, connection in pairs(connections) do
-			if Biofluid.is_looking_at_us(entity, connection) then
-				animation_index = animation_index .. directions[connection.direction]
-			end
-		end
-		entity.graphics_variation = animations[animation_index] or 1
-	elseif entity.name == BIOPORT then
-		local bioport_data = storage.biofluid_bioports[entity.unit_number]
-		if not bioport_data then return end
-		local animation_entity = bioport_data.animation_entity
-		if not animation_entity or not animation_entity.valid then
-			bioport_data.animation_entity = entity.surface.create_entity {
-				name = "bioport-floor-animation",
-				position = entity.position,
-				force = entity.force_index,
-			}
-			animation_entity = bioport_data.animation_entity
-		end
-		local direction = entity.direction
-		if direction == defines.direction.south then
-			local connection = Biofluid.find_heat_connections(entity)[1]
-			if Biofluid.is_looking_at_us(entity, connection) then
-				animation_entity.graphics_variation = 5
-				return
-			end
-		end
-		animation_entity.graphics_variation = entity.direction / 2 + 1
-	end
+	do return end
 end

@@ -51,6 +51,7 @@ local recipe = RECIPE {
     },
     results = {
         {"guano", data.raw.item["guano"].stack_size},
+        {type = "fluid", name = "void", count = 1},
     },
     energy_required = 100,
     category = "biofluid",
@@ -81,7 +82,6 @@ ENTITY {
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     forced_symmetry = "diagonal-pos",
     dying_explosion = "medium-explosion",
-    collision_mask = not mods.pystellarexpedition and {layers = {vessel_collision_mask = true}},
     crafting_speed = 1,
     energy_usage = "1W",
     crafting_categories = {"biofluid"},
@@ -91,8 +91,10 @@ ENTITY {
     fluid_boxes = {
         {
             production_type = "output",
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0, -2.0}, direction = defines.direction.north}},
+            pipe_connections = {{flow_direction = "output", position = {0.0, 2.0}, direction = defines.direction.south, connection_category = "biofluid"}}
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
@@ -289,7 +291,7 @@ for _, direction in pairs {"north", "east", "south", "west"} do
         }
     }
 end
-
+--[[
 local function append_shifted(original, new_layers, shift)
     for _, layer in pairs(table.deepcopy(new_layers)) do
         if not layer.draw_as_light then
@@ -322,7 +324,7 @@ local variants = {
 }
 
 append_shifted(variants[5].layers, {gap, gap_glow}, {0, 2})
-
+--]]
 ENTITY {
     type = "simple-entity-with-owner",
     name = "bioport-floor-animation",

@@ -319,11 +319,6 @@ for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer("obj
                 mask.layers["caravan_collision_mask"] = true
             end
         end
-        if not mods.pystellarexpedition and not vessel_placeable_entities[prototype.type] then
-            if prototype.type == "splitter" or (not mask.layers["floor"] and mask.layers["player"]) then
-                mask.layers["vessel_collision_mask"] = true
-            end
-        end
     end
 end
 
@@ -331,7 +326,6 @@ for _, tile in pairs(data.raw.tile) do
     tile.collision_mask = collision_mask_util.get_mask(tile)
     if tile.collision_mask.layers.water_tile then
         tile.collision_mask.layers.caravan_collision_mask = true
-        if not mods.pystellarexpedition then tile.collision_mask.layers.vessel_collision_mask = true end
         tile.collision_mask.layers.dingrido_collision_mask = true
     end
 end
