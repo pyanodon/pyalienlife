@@ -37,7 +37,7 @@ ENTITY {
     minable = {mining_time = 0.5, result = "micro-mine-mk01"},
     fast_replaceable_group = "micro-mine",
     max_health = 100,
-
+    fixed_recipe = "petri-dish-bacteria",
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
     collision_box = {{-3.2, -3.2}, {3.2, 3.2}},

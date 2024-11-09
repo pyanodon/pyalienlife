@@ -1,0 +1,16 @@
+{
+  "recipe": [
+    [
+      "petri-dish-bacteria-with-agar",
+      "petri-dish-bacteria"
+    ],
+    [
+      "petri-dish-bacteria-with-collagen",
+      "petri-dish-bacteria"
+    ],
+    [
+      "petri-dish-bacteria-with-enzyme",
+      "petri-dish-bacteria"
+    ]
+  ]
+}

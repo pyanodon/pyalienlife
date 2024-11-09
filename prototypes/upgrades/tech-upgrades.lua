@@ -22,7 +22,6 @@ if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then
         "prototypes/upgrades/wpu",
         "prototypes/upgrades/cadaveric",
         "prototypes/upgrades/moondrop",
-        "prototypes/upgrades/micromine",
         "prototypes/upgrades/auog",
         "prototypes/upgrades/arqad",
         "prototypes/upgrades/phadai",
