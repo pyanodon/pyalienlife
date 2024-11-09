@@ -95,7 +95,6 @@ FLUID {
     flow_color = {r = 1, g = 0.5, b = 0.5},
     max_temperature = 100,
     gas_temperature = 15,
-    flow_to_energy_ratio = 0.59,
     subgroup = "py-alienlife-fluids",
     order = "d"
 }
