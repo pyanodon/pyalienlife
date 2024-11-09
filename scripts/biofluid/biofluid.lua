@@ -290,6 +290,7 @@ local function set_target(biorobot_data, target)
 			low_priority = true,
 			allow_paths_through_own_entities = true,
 			allow_destroy_friendly_entities = true,
+			cache = false,
 		},
 		distraction = defines.distraction.none
 	}
@@ -553,7 +554,22 @@ end
 Biofluid.events.on_ai_command_completed = function(event)
 	local biorobot_data = global.biofluid_robots[event.unit_number]
 	if not biorobot_data then return end
-	if event.result ~= defines.behavior_result.success then go_home(biorobot_data); return end
+
+	if event.result ~= defines.behavior_result.success then
+		if biorobot_data.delivery_amount > 0 then
+			local names =
+			{
+				[defines.behavior_result.in_progress] = 'in_progress',
+				[defines.behavior_result.fail] = 'fail',
+				[defines.behavior_result.deleted] = 'deleted',
+			}
+
+			game.print('fluid lost, amount: ' .. biorobot_data.delivery_amount .. ' ' .. names[event.result])
+			game.print(global.biofluid_requesters[biorobot_data.requester].entity.position)
+		end
+		go_home(biorobot_data);
+		return
+	end
 
 	if biorobot_data.status == PICKING_UP then
 		pickup(biorobot_data)
