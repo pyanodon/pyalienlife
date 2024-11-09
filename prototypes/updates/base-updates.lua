@@ -76,7 +76,6 @@ TECHNOLOGY("destroyer"):add_pack("py-science-pack-4")
 
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
-ITEM("raw-fish", "capsule"):set("icon_mipmaps", nil)
 RECIPE("power-armor"):add_ingredient {type = "item", name = "pelt", amount = 1}
 TECHNOLOGY("atomic-bomb"):remove_prereq("kovarex-enrichment-process"):remove_prereq("military-4"):remove_prereq("rocketry"):add_prereq("domestication-mk02"):add_prereq("uranium-mk03")
 RECIPE("atomic-bomb"):add_ingredient {type = "item", name = "titanium-plate", amount = 20}:add_ingredient {type = "item", name = "fuelrod-mk01", amount = 10}:remove_ingredient("yellow-cake"):add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}

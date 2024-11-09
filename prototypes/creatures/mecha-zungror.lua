@@ -1,7 +1,6 @@
 local zungror = data.raw["item-with-entity-data"].spidertron
 zungror.icon = "__pyalienlifegraphics__/graphics/icons/spidertron.png"
 zungror.icon_size = 64
-zungror.icon_mipmaps = nil
 zungror.icon_tintable = zungror.icon
 zungror.icon_tintables = nil
 zungror.icon_tintable_masks = nil

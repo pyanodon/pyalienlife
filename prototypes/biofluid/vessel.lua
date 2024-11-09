@@ -330,7 +330,6 @@ underground_pipe.fast_replaceable_group = "vessel"
 underground_pipe.next_upgrade = nil
 underground_pipe.icon = data.raw.item["vessel-to-ground"].icon
 underground_pipe.icon_size = 64
-underground_pipe.icon_mipmaps = nil
 underground_pipe.fluid_box = {
     volume = 1,
     pipe_connections = {

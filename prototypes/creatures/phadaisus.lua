@@ -262,7 +262,6 @@ local flamethrower = table.deepcopy(data.raw["gun"]["tank-flamethrower"])
 flamethrower.name = "dragon-breath"
 flamethrower.icon = "__pyalienlifegraphics__/graphics/icons/dragon-breath.png"
 flamethrower.icon_size = 64
-flamethrower.icon_mipmaps = nil
 flamethrower.attack_parameters.ammo_category = "dragon-breath"
 flamethrower.attack_parameters.gun_center_shift = {-0.17, -0.2}
 flamethrower.attack_parameters.range = 35

@@ -60,7 +60,6 @@ if data and not yafc_turd_integration then
     biomass_sporopollenin.icons = nil
     biomass_sporopollenin.icon = nil
     biomass_sporopollenin.icon_size = nil
-    biomass_sporopollenin.icon_mipmaps = nil
     data:extend {biomass_sporopollenin}
 end
 
