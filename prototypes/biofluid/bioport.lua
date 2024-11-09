@@ -94,7 +94,7 @@ ENTITY {
             pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 2.0}, direction = defines.direction.south, connection_category = "biofluid"}}
+            pipe_connections = {{flow_direction = "output", position = {0.0, -2.0}, direction = defines.direction.north, connection_category = "biofluid"}}
         },
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},

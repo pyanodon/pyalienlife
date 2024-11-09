@@ -23,8 +23,6 @@ local atan2 = math.atan2
 local pi = math.pi
 
 py.on_event(py.events.on_init(), function()
-	storage.network_positions = nil
-	storage.biofluid_undergrounds = nil
 	storage.biofluid_robots = storage.biofluid_robots or {}
 	storage.biofluid_requesters = storage.biofluid_requesters or {}
 	storage.biofluid_providers = storage.biofluid_providers or {}
@@ -385,7 +383,7 @@ function Biofluid.eat(bioport_data)
 	end
 	local effects = bioport.effects
 	if effects and effects.consumption then
-		bioport_data.fuel_remaning = bioport_data.fuel_remaning - 1 - (effects.consumption.bonus or 0)
+		bioport_data.fuel_remaning = bioport_data.fuel_remaning - 1 - effects.consumption
 	else
 		bioport_data.fuel_remaning = bioport_data.fuel_remaning - 1
 	end
