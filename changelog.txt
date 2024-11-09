@@ -6,6 +6,8 @@ Date: ?
     - Greatly buffed the Heavy-metal ATPases recipe from 2x output to 15x output.
     - Allowed productivity in the Heavy-metal ATPases recipe.
     - Allowed productivity in the various fish products -> fertilizer recipes.
+    - Buffed the fertilizer-5 recipe. ammonium-chloride 20 -> 1, zogna-bacteria 20 -> 10, fine-powdered-biomass 0 -> 2, allowed productivity.
+    - Buffed the fertilizer-2 recipe. guano 3 -> 1, ammonium-chloride 20 -> 2
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.18
 Date: 2024-11-7

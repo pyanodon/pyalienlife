@@ -127,10 +127,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item",  name = "bones",             amount = 6},
-        {type = "item",  name = "manure",            amount = 10},
-        {type = "item",  name = "ammonium-chloride", amount = 20},
-        {type = "fluid", name = "zogna-bacteria",    amount = 20},
+        {type = "item",  name = "bones",                 amount = 6},
+        {type = "item",  name = "manure",                amount = 10},
+        {type = "item",  name = "ammonium-chloride",     amount = 1},
+        {type = "fluid", name = "zogna-bacteria",        amount = 10},
+        {type = "item",  name = "fine-powdered-biomass", amount = 2},
     },
     results = {
         {type = "item", name = "fertilizer", amount = 15}
