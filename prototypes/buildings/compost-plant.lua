@@ -320,7 +320,7 @@ for i = 1, 4 do
         ]]
             --off_when_no_fluid_recipe = true
         },
-        vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+        impact_category = "metal",
         working_sound = {
             sound = {filename = "__pyalienlifegraphics3__/sounds/compost-plant.ogg", volume = 1.2},
             idle_sound = {filename = "__pyalienlifegraphics3__/sounds/compost-plant.ogg", volume = 0.3},

@@ -78,7 +78,7 @@ ENTITY {
     distance = 13,
     offset = {0, -15}
   },
-  vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+  impact_category = "metal-large",
   fluid_boxes = {
     --1
     {

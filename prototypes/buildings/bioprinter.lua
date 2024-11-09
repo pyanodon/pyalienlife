@@ -309,7 +309,7 @@ for i = 1, 4 do
                 }
             },
         },
-        vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+        impact_category = "metal",
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/bio-printer.ogg", volume = 0.9},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/bio-printer.ogg", volume = 0.3},

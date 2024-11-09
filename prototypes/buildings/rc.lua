@@ -286,7 +286,7 @@ for i = 1, 4 do
                 pipe_connections = {{flow_direction = "output", position = {-1.5, 10.5}, direction = defines.direction.south}}
             },
         },
-        vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+        impact_category = "metal",
         working_sound = {
             sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.85},
             idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.85},

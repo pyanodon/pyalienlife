@@ -211,7 +211,7 @@ data:extend {{
 		{filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9},
 	},
 	sound_minimum_speed = 0.15,
-	vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+	impact_category = "metal-large",
 	working_sound = {
 		sound = {
 			filename = "__pyalienlifegraphics__/sounds/dingrit-breath.ogg",

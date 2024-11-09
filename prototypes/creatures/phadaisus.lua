@@ -202,7 +202,7 @@ data:extend {{
 	},
 	sound_minimum_speed = 0.05,
 	sound_scaling_ratio = 0.8,
-	vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact-1.ogg", volume = 0.65},
+	impact_category = "metal-large",
 	working_sound = {
 		sound = {
 			filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",

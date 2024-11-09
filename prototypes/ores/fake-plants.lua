@@ -50,7 +50,7 @@ for _, ore in pairs(data.raw.resource) do
         drawing_box = {{-0.6, -1.8}, {0.6, 0.3}},
         subgroup = "trees",
         order = "a[tree]-c[dry-tree]",
-        vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
+        impact_category = "wood", 
         pictures =
         {
           --dry-tree

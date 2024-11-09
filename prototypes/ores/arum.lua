@@ -57,7 +57,7 @@ data:extend {
     drawing_box = {{-0.6, -1.8}, {0.6, 0.3}},
     subgroup = "trees",
     order = "a[tree]-c[dry-tree]",
-    vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
+    impact_category = "wood", 
     --autoplace = dead_trees_autoplace(0.5),
     pictures =
     {

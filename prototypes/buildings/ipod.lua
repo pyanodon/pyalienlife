@@ -46,7 +46,7 @@ ENTITY {
   inventory_size = 3,
   open_sound = {filename = "__base__/sound/wooden-chest-open.ogg"},
   close_sound = {filename = "__base__/sound/wooden-chest-close.ogg"},
-  vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
+  impact_category = "wood", 
   picture =
   {
     layers =
