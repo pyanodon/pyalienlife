@@ -16,8 +16,9 @@ RECIPE {
         {type = "fluid", name = "diborane",          amount = 100},
     },
     results = {
-        {type = "item", name = "hmas", amount = 2},
+        {type = "item", name = "hmas", amount = 15},
     },
+    allow_productivity = true,
 }:add_unlock("phytomining-mk03")
 
 
