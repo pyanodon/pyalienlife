@@ -14,7 +14,7 @@ if data and not yafc_turd_integration then
             {type = "item",  name = "ash",          amount = 200},
             {type = "fluid", name = "tar",          amount = 160},
             {type = "fluid", name = "black-liquor", amount = 20},
-            {type = "fluid", name = "steam",        amount = 2000, temperature = 150, catalyst_amount = 2000},
+            {type = "fluid", name = "steam",        amount = 2000, temperature = 150, ignored_by_productivity = 2000, ignored_by_stats = 2000},
         },
         main_product = "ash",
         icon = "__pyalienlifegraphics3__/graphics/icons/sap-to-ash.png",

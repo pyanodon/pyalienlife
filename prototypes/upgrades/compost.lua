@@ -63,7 +63,7 @@ if data and not yafc_turd_integration then
             {type = "fluid", name = "hot-air", amount = 30},
         },
         results = {
-            {type = "item", name = "retrovirus", amount = 2, catalyst_amount = 1},
+            {type = "item", name = "retrovirus", amount = 2, ignored_by_productivity = 1, ignored_by_stats = 1},
         },
         energy_required = 5,
         enabled = false,

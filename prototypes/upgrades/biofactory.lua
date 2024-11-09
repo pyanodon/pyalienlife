@@ -14,7 +14,7 @@ if data and not yafc_turd_integration then
         results = {
             {type = "fluid", name = "naphtha",              amount = 650},
             {type = "fluid", name = "condensed-distillate", amount = 50},
-            {type = "item",  name = "arqad-maggot",         amount_min = 10, amount_max = 11, catalyst_amount = 10}
+            {type = "item",  name = "arqad-maggot",         amount_min = 10, amount_max = 11, ignored_by_productivity = 10, ignored_by_stats = 10}
         },
         main_product = "naphtha"
     }

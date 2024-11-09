@@ -21,7 +21,7 @@ RECIPE {
         {type = "fluid", name = "water",  amount = 5}
     },
     results = {
-        {type = "item", name = "manure", amount = 10, catalyst_amount = 8},
+        {type = "item", name = "manure", amount = 10, ignored_by_productivity = 8, ignored_by_stats = 8},
     }
 }:add_unlock {"biofluid-mk01"}
 

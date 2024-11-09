@@ -1447,7 +1447,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 600},
-        {type = "fluid", name = "steam",               amount = 500, temperature = 150, catalyst_amount = 500}
+        {type = "fluid", name = "steam",               amount = 500, temperature = 150, ignored_by_productivity = 500, ignored_by_stats = 500}
     },
     icon = "__pyalienlifegraphics__/graphics/icons/combustion-oleochemical.png",
     icon_size = 32,
@@ -1470,7 +1470,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 650},
-        {type = "fluid", name = "steam",               amount = 500, temperature = 150, catalyst_amount = 500}
+        {type = "fluid", name = "steam",               amount = 500, temperature = 150, ignored_by_productivity = 500, ignored_by_stats = 500}
     },
     icon = "__pyalienlifegraphics__/graphics/icons/combustion-fish-oil.png",
     icon_size = 32,
@@ -1493,7 +1493,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 600},
-        {type = "fluid", name = "steam",               amount = 500, temperature = 150, catalyst_amount = 500}
+        {type = "fluid", name = "steam",               amount = 500, temperature = 150, ignored_by_productivity = 500, ignored_by_stats = 500}
     },
     icon = "__pyalienlifegraphics__/graphics/icons/combustion-lard.png",
     icon_size = 32,
@@ -1517,7 +1517,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "combustion-mixture1", amount = 200, temperature = 680},
-        {type = "fluid", name = "steam",               amount = 500, temperature = 150, catalyst_amount = 500}
+        {type = "fluid", name = "steam",               amount = 500, temperature = 150, ignored_by_productivity = 500, ignored_by_stats = 500}
     },
     icon = "__pyalienlifegraphics__/graphics/icons/combustion-ethanol.png",
     icon_size = 32,
@@ -1540,7 +1540,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "combustion-mixture1", amount = 150, temperature = 600},
-        {type = "fluid", name = "steam",               amount = 500, temperature = 150, catalyst_amount = 500}
+        {type = "fluid", name = "steam",               amount = 500, temperature = 150, ignored_by_productivity = 500, ignored_by_stats = 500}
     },
     icon = "__pyalienlifegraphics__/graphics/icons/combustion-bio-oil.png",
     icon_size = 32,

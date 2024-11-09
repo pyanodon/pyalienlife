@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
             {"iron-chest",           1},
             {"earth-generic-sample", 1}
         },
-        results = {{name = "earth-generic-sample", amount = 2, type = "item", catalyst_amount = 1}},
+        results = {{name = "earth-generic-sample", amount = 2, type = "item", ignored_by_productivity = 1, ignored_by_stats = 1}},
         enabled = false,
         energy_required = 40,
         category = "data-array"
