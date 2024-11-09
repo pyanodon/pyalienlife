@@ -147,6 +147,8 @@ local function transfer_all_items(input_inventory, output_inventory)
 			stack.count = stack.count - inserted_count
 		end
 	end
+	input_inventory.sort_and_merge()
+	output_inventory.sort_and_merge()
 end
 
 local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
@@ -157,6 +159,8 @@ local function transfer_filtered_items(input_inventory, output_inventory, item, 
 	elseif inventory_count > goal then
 		local inserted_count = output_inventory.insert {name = item, count = inventory_count - goal}
 		if inserted_count ~= 0 then input_inventory.remove {name = item, count = inserted_count} end
+		input_inventory.sort_and_merge()
+		output_inventory.sort_and_merge()
 		return inserted_count == inventory_count - goal
 	elseif inventory_count < goal then
 		local removed_count = output_inventory.remove {name = item, count = goal - inventory_count}
@@ -167,6 +171,8 @@ local function transfer_filtered_items(input_inventory, output_inventory, item, 
 				output_inventory.insert {name = item, count = couldnt_fit}; return false
 			end
 		end
+		input_inventory.sort_and_merge()
+		output_inventory.sort_and_merge()
 		return removed_count == goal - inventory_count
 	end
 end

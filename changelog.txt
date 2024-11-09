@@ -11,6 +11,7 @@ Date: ?
     - Deleted the micromine turd.
     - The micromine machine now has a fixed recipe for incubated petri dishes.
     - The "transfer all items" caravan action will now preserve metadata for even more items such as equipment grids, blueprint data, and upgrade planner data.
+    - The "transfer all items" and "wait until N" caravan actions now sort and merge both the output and input inventories after delivery. Resolves https://github.com/pyanodon/pybugreports/issues/670
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.18
 Date: 2024-11-7
