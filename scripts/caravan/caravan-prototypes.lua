@@ -140,13 +140,11 @@ end
 
 local function transfer_all_items(input_inventory, output_inventory)
 	if input_inventory.is_empty() or output_inventory.is_full() then return end
-	for _, stack in pairs(input_inventory.get_contents()) do
-		if output_inventory.can_insert(stack) then
-			local inserted_count = output_inventory.insert(stack)
-			if inserted_count ~= 0 then
-				stack.count = inserted_count
-				input_inventory.remove(stack)
-			end
+	for i = 1, #input_inventory do
+		local stack = input_inventory[i]
+		local inserted_count = output_inventory.insert(stack)
+		if inserted_count ~= 0 then
+			stack.count = stack.count - inserted_count
 		end
 	end
 end

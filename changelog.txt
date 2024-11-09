@@ -10,6 +10,7 @@ Date: ?
     - Buffed the fertilizer-2 recipe. guano 3 -> 1, ammonium-chloride 20 -> 2.
     - Deleted the micromine turd.
     - The micromine machine now has a fixed recipe for incubated petri dishes.
+    - The "transfer all items" caravan action will now preserve metadata for even more items such as equipment grids, blueprint data, and upgrade planner data.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.18
 Date: 2024-11-7
