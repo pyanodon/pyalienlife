@@ -107,7 +107,7 @@ RECIPE("flask"):add_unlock("py-science-pack-mk01").enabled = false
 RECIPE("mukmoux-fat"):remove_unlock("mukmoux")
 RECIPE("log-organics"):remove_unlock("wood-processing-2"):delete()
 RECIPE("organics-from-wood"):remove_unlock("wood-processing"):delete()
-RECIPE("soil-separation"):remove_unlock("separation")
+RECIPE("soil-separation"):remove_unlock("separation"):delete()
 RECIPE("ground-sample01"):remove_unlock("logistic-science-pack"):add_unlock("mycology-mk01")
 RECIPE("oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
 RECIPE("dedicated-oleochemicals"):remove_unlock("mukmoux"):add_unlock("coal-processing-2")
