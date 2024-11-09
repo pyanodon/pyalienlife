@@ -296,7 +296,7 @@ end
 
 TECHNOLOGY("filtration-mk02"):remove_prereq("lithium-processing")
 
-local walkable_types = {
+local caravan_walkable_types = {
     ["tree"] = true,
     ["simple-entity"] = true,
     ["pipe"] = true,
@@ -308,7 +308,7 @@ local walkable_types = {
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer("object")) do
     local mask = collision_mask_util.get_mask(prototype)
     if mask.layers["water_tile"] then
-        if not walkable_types[prototype.type] then
+        if not caravan_walkable_types[prototype.type] then
             if not mask.layers["floor"] and mask.layers["player"] then
                 mask.layers["caravan_collision_mask"] = true
             end
