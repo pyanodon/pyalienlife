@@ -14,6 +14,7 @@ Date: ?
     - The "transfer all items" and "wait until N" caravan actions now sort and merge both the output and input inventories after delivery. Resolves https://github.com/pyanodon/pybugreports/issues/670
     - Deleted duplicate recipe for soil seperation from the pycodex.
     - Fixed a bug in the caravan GUI causing the "play" and "pause" buttons to show different information than the actual internal state.
+    - Fixed that caravans had no collision with most entities in the game.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.18
 Date: 2024-11-7

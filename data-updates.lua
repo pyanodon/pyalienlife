@@ -305,12 +305,6 @@ local walkable_types = {
     ["inserter"] = true
 }
 
-local vessel_placeable_entities = {
-    ["pipe"] = true,
-    ["pipe-to-ground"] = true,
-    ["inserter"] = true
-}
-
 for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer("object")) do
     local mask = collision_mask_util.get_mask(prototype)
     if mask.layers["water_tile"] then
@@ -320,6 +314,7 @@ for _, prototype in pairs(collision_mask_util.collect_prototypes_with_layer("obj
             end
         end
     end
+    prototype.collision_mask = mask
 end
 
 for _, tile in pairs(data.raw.tile) do
@@ -328,11 +323,6 @@ for _, tile in pairs(data.raw.tile) do
         tile.collision_mask.layers.caravan_collision_mask = true
         tile.collision_mask.layers.dingrido_collision_mask = true
     end
-end
-
-if register_cache_file ~= nil then
-    register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
-    register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
 
 -- make players flammable
@@ -355,7 +345,7 @@ local dingrido_nonwalkable_prototypes = {
     "simple-entity",
     "cliff",
     "unit",
-    "turret",
+    "turret", -- this exists in order to allow killing worms
 }
 for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
     for _, entity in pairs(data.raw[prototype]) do
@@ -365,4 +355,9 @@ for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
             entity.collision_mask.layers.dingrido_collision_mask = true
         end
     end
+end
+
+if register_cache_file ~= nil then
+    register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
+    register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
