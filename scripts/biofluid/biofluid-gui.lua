@@ -8,6 +8,8 @@ py.on_event(defines.events.on_gui_opened, function(event)
 		Biofluid.build_bioport_gui(entity, player)
 	elseif connection_type == Biofluid.REQUESTER then
 		Biofluid.build_requester_gui(entity, player)
+	elseif connection_type == Biofluid.PROVIDER then
+		player.opened = nil
 	end
 end)
 
@@ -223,7 +225,7 @@ function Biofluid.build_requester_gui(entity, player)
 	camera.zoom = 2
 
 	local label_flow = content_flow.add {type = "flow", direction = "horizontal"}
-	label_flow.add {type = "label", caption = {"gui-logistic.title-request"}}.style.font = "default-semibold"
+	label_flow.add {type = "label", caption = {"gui-logistic.title-requests"}}.style.font = "default-semibold"
 	label_flow.add {type = "empty-widget", style = "py_empty_widget"}
 	label_flow.add {type = "label", caption = {"gui.priority"}}.style.font = "default-semibold"
 

@@ -65,7 +65,6 @@ py.on_event(py.events.on_built(), function(event)
 	elseif entity.type == "pipe-to-ground" then
 		entity.operable = false
 	elseif connection_type == Biofluid.PROVIDER then
-		entity.operable = false
 		storage.biofluid_providers[unit_number] = {entity = entity}
 	end
 	Biofluid.built_pipe()
@@ -75,7 +74,7 @@ local ENTITY_BIOFLUID_PIPE_INDEXES = {
 	["vessel-to-ground"] = 1,
 	["vessel"] = 1,
 	["bioport"] = 1,
-	["provider-tank"] = 1,
+	["provider-tank"] = 2,
 	["requester-tank"] = 1,
 }
 
@@ -147,7 +146,7 @@ function Biofluid.update_bioport_animation(bioport_data)
 			else
 				local new_animation_name = "bioport-animation-" .. creature_name .. "-" .. math.min(new_stage, 10)
 				if animation_data.id then
-					rendering.set_animation(animation_data.id, new_animation_name)
+					rendering.get_object_by_id(animation_data.id).animation = new_animation_name
 				else
 					animation_data.id = rendering.draw_animation {
 						animation = new_animation_name,
@@ -196,10 +195,8 @@ local function random_order(l)
 	local order = {}
 	local i = 1
 	for unit_number in pairs(l) do
-		if elem.valid then
-			insert(order, random(1, i), elem)
-			i = i + 1
-		end
+		insert(order, random(1, i), unit_number)
+		i = i + 1
 	end
 	return ipairs(order)
 end
@@ -208,8 +205,8 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	local providers_by_contents = {}
 	network_data.providers_by_contents = providers_by_contents
 	local providers = network_data.biofluid_providers
+	
 	local min_fluid_reserve = 10000
-
 	for unit_number in pairs(providers) do
 		local provider_data = storage.biofluid_providers[unit_number]
 		if not provider_data then goto continue end
@@ -232,7 +229,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 	end
 end
 
-local function process_unfulfilled_requests(unfulfilled_requests, relavant_fluids)
+local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
 	local network_id = unfulfilled_request.network_id
 	local network_data = storage.biofluid_networks[network_id]
 	local providers_by_contents = network_data.providers_by_contents
@@ -304,7 +301,7 @@ py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
 	Biofluid.render_error_icons()
 	
 	local unfulfilled_requests, relavant_fluids = Biofluid.get_unfulfilled_requests()
-
+	
 	for _, unfulfilled_request in pairs(unfulfilled_requests) do
 		process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
 	end
@@ -561,18 +558,18 @@ local function dropoff(biorobot_data)
 	end
 	local requester = requester_data.entity
 	local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
-	local contents = requester.fluidbox[1]
+	local contents = requester.fluidbox[2]
 	if contents then
 		if contents.name ~= name then
 			go_home(biorobot_data); return
 		end
-		requester.fluidbox[1] = {
+		requester.fluidbox[2] = {
 			name = name,
 			amount = contents.amount + amount,
 			temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
 		}
 	elseif amount > 0 then
-		requester.fluidbox[1] = {name = name, amount = amount, temperature = temperature}
+		requester.fluidbox[2] = {name = name, amount = amount, temperature = temperature}
 	end
 	go_home(biorobot_data)
 	if biorobot_data.alt_mode_sprite then
@@ -648,7 +645,7 @@ function Biofluid.get_unfulfilled_requests()
 		if not fluid_name then goto continue end
 		local goal = requester_data.amount
 		if goal == 0 then goto continue end
-		local contents = requester.fluidbox[1]
+		local contents = requester.fluidbox[2]
 		local already_stored = requester_data.incoming
 		if not contents then
 			-- pass
@@ -706,7 +703,7 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
 		return "entity-status.no-food"
 	elseif not has_creature then
 		return "entity-status.no-creature"
-	elseif not next(network.requesters) and not next(network.providers) then
+	elseif not next(network.biofluid_requesters) and not next(network.biofluid_providers) then
 		return "entity-status.no-biofluid-network"
 	elseif entity.get_inventory(OUTPUT_INVENTORY).get_item_count("guano") > 97 then
 		return "entity-status.full-output"
