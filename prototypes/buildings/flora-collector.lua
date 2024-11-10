@@ -126,9 +126,8 @@ for i = 1, 4 do
             height = 4
         },
         collision_mask = {layers = {item = true, object = true, water_tile = true}},
-        circuit_wire_connection_points = circuit_connector_definitions["flora-collector-mkxx"].points,
-        circuit_connector_sprites = circuit_connector_definitions["flora-collector-mkxx"].sprites,
-        circuit_wire_max_distance = default_circuit_wire_max_distance,
+        circuit_connector = circuit_connector_definitions["flora-collector-mkxx"],
+        circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
         graphics_set = {
             animation = {
                 layers = {

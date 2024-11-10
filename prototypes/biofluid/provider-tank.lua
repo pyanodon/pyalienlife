@@ -92,25 +92,7 @@ ENTITY {
     energy_source = {type = "void"},
     energy_usage = "1W",
     show_recipe_icon_on_map = false,
-    circuit_wire_connection_points = {
-        {
-            shadow = {red = {0.171875, 0.140625}, green = {0.171875, 0.265625}},
-            wire = {red = {-0.53125, -0.15625}, green = {-0.53125, 0}}
-        },
-        {
-            shadow = {red = {0.890625, 0.703125}, green = {0.75, 0.75}},
-            wire = {red = {0.34375, 0.28125}, green = {0.34375, 0.4375}}
-        },
-        {
-            shadow = {red = {0.15625, 0.0625}, green = {0.09375, 0.125}},
-            wire = {red = {-0.53125, -0.09375}, green = {-0.53125, 0.03125}}
-        },
-        {
-            shadow = {red = {0.796875, 0.703125}, green = {0.625, 0.75}},
-            wire = {red = {0.40625, 0.28125}, green = {0.40625, 0.4375}}
-        }
-    },
-    circuit_connector_sprites = _G.circuit_connector_definitions["inserter"].sprites,
-    circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["py-valves"],
+    circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     collision_mask = collision_mask_util.get_default_mask("furnace")
 }
