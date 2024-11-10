@@ -265,6 +265,7 @@ function Oculua.wander(oculua_data)
 	}
 	oculua_data.target = nil
 	oculua_data.status = WANDERING
+	oculua.minable = true
 	Oculua.clear_incoming_oculua_items(oculua_data)
 end
 
