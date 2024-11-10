@@ -80,7 +80,6 @@ ITEM {
     order = "xa-a",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation_message_key = "zungror",
 }
 
 ITEM {
@@ -99,7 +98,6 @@ ITEM {
     order = "xa-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    limitation_message_key = "zungror",
 }
 
 ITEM {
@@ -118,7 +116,6 @@ ITEM {
     order = "xa-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    limitation_message_key = "zungror",
 }
 
 ITEM {
@@ -137,7 +134,6 @@ ITEM {
     order = "xa-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    limitation_message_key = "zungror",
 }
 
 

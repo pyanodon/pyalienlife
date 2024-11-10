@@ -101,7 +101,6 @@ ITEM {
     order = "k-a",
     stack_size = 50,
     effect = {pollution = 1, speed = 0.25},
-    limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -120,7 +119,6 @@ ITEM {
     order = "k-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 0.5},
-    limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -139,7 +137,6 @@ ITEM {
     order = "k-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation_message_key = "kicalk"
 }
 
 ITEM {
@@ -158,7 +155,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 1.5},
-    limitation_message_key = "kicalk"
 }
 
 data:extend {{
@@ -265,7 +261,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -284,7 +279,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -303,7 +297,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -322,7 +315,6 @@ ITEM {
     order = "k-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    limitation_message_key = "moondrop"
 }
 
 ITEM {
@@ -489,7 +481,6 @@ ITEM {
     order = "cad-a",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -508,7 +499,6 @@ ITEM {
     order = "cad-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -527,7 +517,6 @@ ITEM {
     order = "cad-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -546,7 +535,6 @@ ITEM {
     order = "cad-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    limitation_message_key = "cadaveric-arum"
 }
 
 ITEM {
@@ -561,5 +549,4 @@ ITEM {
     order = "r",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    limitation_message_key = "antelope"
 }

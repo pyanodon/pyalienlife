@@ -29,7 +29,6 @@ ITEM {
   localised_name = {"entity-name.digosaurus"},
   localised_description = {"entity-description.digosaurus"},
   effect = {pollution = 1, speed = 1},
-  limitation_message_key = "digosaurus",
   category = "digosaurus",
   tier = 1,
 }

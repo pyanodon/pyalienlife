@@ -60,7 +60,6 @@ if data and not yafc_turd_integration then
             order = "u[sawblade]-a[mk0" .. i .. "]",
             stack_size = 10,
             effect = {speed = i, productivity = 0.25},
-            limitation_message_key = "sawblade",
             category = "sawblade",
             tier = i,
             icon_size = 64,

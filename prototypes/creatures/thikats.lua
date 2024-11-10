@@ -32,7 +32,6 @@ ITEM {
 	localised_name = {"entity-name.thikat"},
 	localised_description = {"entity-description.thikat"},
 	effect = {pollution = 1, speed = 1},
-	limitation_message_key = "digosaurus",
 	category = "digosaurus",
 	tier = 2,
 }

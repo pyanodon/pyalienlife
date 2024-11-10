@@ -34,7 +34,6 @@ ITEM {
 	localised_name = {"entity-name.work-o-dile"},
 	localised_description = {"entity-description.work-o-dile"},
 	effect = {pollution = 1, speed = 1},
-	limitation_message_key = "digosaurus",
 	category = "digosaurus",
 	tier = 3,
 }
