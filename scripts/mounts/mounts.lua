@@ -14,19 +14,42 @@ py.register_on_nth_tick(239, "update-mounts", "pyal", function(event)
 		end
 
 		local grid = mount.grid
+		local burner = mount.burner
+
 		for _, equipment in pairs(grid.equipment) do
 			local missing = equipment.max_energy - equipment.energy
-			if missing > 0 then
-				local burner = mount.burner
-				if burner.remaining_burning_fuel < missing / transfer_efficiency then
-					equipment.energy = equipment.energy + burner.remaining_burning_fuel * transfer_efficiency
-					burner.remaining_burning_fuel = 0
+			if missing <= 0 then goto dosent_need_energy end
+
+			if burner.remaining_burning_fuel <= 0 then
+				local fuel_inventory = burner.inventory
+				if fuel_inventory.is_empty() then break end
+				
+				for i = 1, #fuel_inventory do
+					local fuel = fuel_inventory[i]
+					if not fuel.valid_for_read then goto invalid_fuel_item end
+					local prototype = fuel.prototype
+					local fuel_value = prototype.fuel_value
+					if not prototype.fuel_value then goto invalid_fuel_item end
+
+					burner.currently_burning = fuel
+					burner.remaining_burning_fuel = fuel_value
+					fuel.count = fuel.count - 1
 					break
-				else
-					burner.remaining_burning_fuel = burner.remaining_burning_fuel - missing / transfer_efficiency
-					equipment.energy = equipment.energy + missing
+					::invalid_fuel_item::
 				end
 			end
+
+			if burner.remaining_burning_fuel <= 0 then break end
+
+			if burner.remaining_burning_fuel < missing / transfer_efficiency then
+				equipment.energy = equipment.energy + burner.remaining_burning_fuel * transfer_efficiency
+				burner.remaining_burning_fuel = 0
+			else
+				burner.remaining_burning_fuel = burner.remaining_burning_fuel - missing / transfer_efficiency
+				equipment.energy = equipment.energy + missing
+			end
+
+			::dosent_need_energy::
 		end
 	end
 end)
