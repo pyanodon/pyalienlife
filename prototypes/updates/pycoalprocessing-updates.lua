@@ -125,7 +125,7 @@ RECIPE("automation-science-pack"):clear_ingredients():add_ingredient {type = "it
 RECIPE("automation-science-pack"):set_fields {energy_required = 5, results = {{type = "item", name = "automation-science-pack", amount = 1}}}
 RECIPE("soil-extractor-mk01"):remove_ingredient("tinned-cable")
 
-RECIPE("py-construction-robot-01"):add_ingredient {type = "fluid", name = "fish-oil", amount = 50}
+RECIPE("py-construction-robot-mk01"):add_ingredient {type = "fluid", name = "fish-oil", amount = 50}
 
 RECIPE("distilator"):add_unlock("coal-processing-1").enabled = false
 RECIPE("coal-gas"):add_unlock("coal-processing-1").enabled = false

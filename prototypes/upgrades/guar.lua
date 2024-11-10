@@ -28,7 +28,7 @@ if data and not yafc_turd_integration then
         data:extend {recipe}
     end
 
-    local bots = {"py-logistic-robot-01", "py-logistic-robot-02", "l-pynobot-mk03", "logistic-robot-ht"}
+    local bots = {"py-logistic-robot-mk01", "py-logistic-robot-mk02", "py-logistic-robot-mk03", "py-logistic-robot-mk04"}
     for i, recipe in pairs {
         RECIPE("guar-gum-plantation"):copy(),
         RECIPE("guar-gum-plantation-mk02"):copy(),
