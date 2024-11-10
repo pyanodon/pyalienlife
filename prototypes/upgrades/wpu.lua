@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
             subgroup = "py-alienlife-tree",
             order = "u[sawblade]-a[mk0" .. i .. "]",
             stack_size = 10,
-            effect = {speed = i, productivity = 0.25},
+            effect = {speed = i, productivity = (1 + i) * 0.025},
             category = "sawblade",
             tier = i,
             icon_size = 64,

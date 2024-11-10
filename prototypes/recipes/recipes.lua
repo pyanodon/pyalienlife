@@ -787,6 +787,7 @@ RECIPE {
     results = {
         {type = "item", name = "bedding", amount = 2},
     },
+    allow_productivity = true,
 }:add_unlock("grod"):add_ingredient {type = "item", name = "raw-fiber", amount = 5}
 
 RECIPE {
@@ -804,6 +805,7 @@ RECIPE {
     results = {
         {type = "item", name = "bedding", amount = 4},
     },
+    allow_productivity = true,
 }:add_unlock("grod-mk02"):add_ingredient {type = "item", name = "raw-fiber", amount = 5}
 
 RECIPE {

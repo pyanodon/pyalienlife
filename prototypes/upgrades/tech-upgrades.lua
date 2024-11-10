@@ -19,7 +19,6 @@ local tech_upgrades = {
 if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
     for _, upgrade in pairs {
         "prototypes/upgrades/fwf",
-        "prototypes/upgrades/wpu",
         "prototypes/upgrades/cadaveric",
         "prototypes/upgrades/moondrop",
         "prototypes/upgrades/auog",
@@ -71,6 +70,14 @@ if (data and mods.pyalternativeenergy) or (script and script.active_mods.pyalter
         "prototypes/upgrades/sap",
         "prototypes/upgrades/bioprinting",
         "prototypes/upgrades/zipir",
+    } do
+        table.insert(tech_upgrades, require(upgrade))
+    end
+end
+
+if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
+    for _, upgrade in pairs {
+        "prototypes/upgrades/wpu", -- wood processing unit must be executed last as this one adjusts module categories of other turds.
     } do
         table.insert(tech_upgrades, require(upgrade))
     end
