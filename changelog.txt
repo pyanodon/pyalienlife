@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.21
+Date: ?
+  Changes:
+    - Standardized productivity allowance in korlex -> fiber and yotoi -> fiber recipes. Resolves https://github.com/pyanodon/pybugreports/issues/570
+---------------------------------------------------------------------------------------------------
 Version: 3.0.20
 Date: 2024-11-9
   Changes:

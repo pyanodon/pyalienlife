@@ -2712,6 +2712,7 @@ RECIPE {
     results = {
         {type = "item", name = "raw-fiber", amount = 3},
     },
+    allow_productivity = true,
 }:add_unlock("yotoi").category = "pulp"
 
 RECIPE {

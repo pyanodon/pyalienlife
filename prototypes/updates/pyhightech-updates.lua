@@ -1360,6 +1360,7 @@ RECIPE {
     results = {
         {type = "item", name = "raw-fiber", amount = 40},
     },
+    allow_productivity = true,
     --main_product = 'casein-pulp-01',
 }:add_unlock("biotech-mk03")
 
