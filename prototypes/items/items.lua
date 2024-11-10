@@ -6998,7 +6998,7 @@ ITEM {
 	subgroup = "py-alienlife-auog",
 	order = "a",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1},,
+	effect = {pollution = 1, speed = 1},
 	fuel_category = "auog",
 	fuel_value = "250MJ",
 	burnt_result = "used-auog"
@@ -7018,7 +7018,7 @@ ITEM {
 	subgroup = "py-alienlife-auog",
 	order = "a-b",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 2},,
+	effect = {pollution = 1, speed = 2},
 	fuel_category = "auog",
 	fuel_value = "500MJ",
 	burnt_result = "used-auog-mk02"
@@ -7038,7 +7038,7 @@ ITEM {
 	subgroup = "py-alienlife-auog",
 	order = "a-c",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 3},,
+	effect = {pollution = 1, speed = 3},
 	fuel_category = "auog",
 	fuel_value = "750MJ",
 	burnt_result = "used-auog-mk03"
@@ -7058,7 +7058,7 @@ ITEM {
 	subgroup = "py-alienlife-auog",
 	order = "a-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 4},,
+	effect = {pollution = 1, speed = 4},
 	fuel_category = "auog",
 	fuel_value = "1GJ",
 	burnt_result = "used-auog-mk04"
@@ -7321,7 +7321,7 @@ ITEM {
 	subgroup = "py-alienlife-dingrits",
 	order = "d-a",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1},,
+	effect = {pollution = 1, speed = 1},
 	fuel_category = "dingrits",
 	fuel_value = "250MJ",
 	burnt_result = "used-dingrit"
@@ -7341,7 +7341,7 @@ ITEM {
 	subgroup = "py-alienlife-dingrits",
 	order = "d-b",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 2},,
+	effect = {pollution = 1, speed = 2},
 	fuel_category = "dingrits",
 	fuel_value = "320MJ",
 	burnt_result = "used-dingrit-mk02"
@@ -7361,7 +7361,7 @@ ITEM {
 	subgroup = "py-alienlife-dingrits",
 	order = "d-c",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 3},,
+	effect = {pollution = 1, speed = 3},
 	fuel_category = "dingrits",
 	fuel_value = "350MJ",
 	burnt_result = "used-dingrit-mk03"
@@ -7381,7 +7381,7 @@ ITEM {
 	subgroup = "py-alienlife-dingrits",
 	order = "d-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 4},,
+	effect = {pollution = 1, speed = 4},
 	fuel_category = "dingrits",
 	fuel_value = "480MJ",
 	burnt_result = "used-dingrit-mk04"
@@ -9153,7 +9153,7 @@ ITEM {
 	subgroup = "py-alienlife-vatbrain",
 	order = "t-a",
 	stack_size = 1,
-	effect = {productivity = 0.25, consumption = 1, pollution = 0.1},,
+	effect = {productivity = 0.25, consumption = 1, pollution = 0.1},
 	hidden = true
 }
 
@@ -9168,7 +9168,7 @@ ITEM {
 	subgroup = "py-alienlife-vatbrain",
 	order = "t-a",
 	stack_size = 1,
-	effect = {productivity = 0.5, consumption = 2, pollution = 0.1},,
+	effect = {productivity = 0.5, consumption = 2, pollution = 0.1},
 	hidden = true
 }
 
@@ -9183,7 +9183,7 @@ ITEM {
 	subgroup = "py-alienlife-vatbrain",
 	order = "t-a",
 	stack_size = 1,
-	effect = {productivity = 0.75, consumption = 3, pollution = 0.1},,
+	effect = {productivity = 0.75, consumption = 3, pollution = 0.1},
 	hidden = true
 }
 
@@ -9198,6 +9198,6 @@ ITEM {
 	subgroup = "py-alienlife-vatbrain",
 	order = "t-a",
 	stack_size = 1,
-	effect = {productivity = 1, consumption = 4, pollution = 0.1},,
+	effect = {productivity = 1, consumption = 4, pollution = 0.1},
 	hidden = true
 }
