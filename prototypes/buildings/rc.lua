@@ -117,7 +117,6 @@ for i = 1, 4 do
         collision_box = {{-10.6, -10.6}, {10.6, 10.6}},
         selection_box = {{-11.0, -11.0}, {11.0, 11.0}},
         forced_symmetry = "diagonal-pos",
-        match_animation_speed_to_activity = false,
         draw_entity_info_icon_background = false,
         entity_info_icon_shift = util.by_pixel(165, 265),
         module_slots = module_slots,

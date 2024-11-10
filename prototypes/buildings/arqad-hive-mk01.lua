@@ -45,7 +45,6 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-5.6, -5.6}, {5.6, 5.6}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
-    match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"arqad"},

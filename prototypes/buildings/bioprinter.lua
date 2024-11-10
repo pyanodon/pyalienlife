@@ -111,7 +111,6 @@ for i = 1, 4 do
         collision_box = {{-4.1, -4.1}, {4.1, 4.1}},
         selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
         forced_symmetry = "diagonal-pos",
-        match_animation_speed_to_activity = false,
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         allowed_module_categories = {"speed", "productivity", "efficiency", "bioprinting"},

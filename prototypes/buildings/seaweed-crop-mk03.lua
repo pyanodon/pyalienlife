@@ -44,7 +44,6 @@ ENTITY {
     collision_box = {{-6.2, -6.2}, {6.2, 6.2}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     forced_symmetry = "diagonal-pos",
-    match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"seaweed"},

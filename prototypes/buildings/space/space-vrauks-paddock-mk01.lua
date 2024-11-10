@@ -42,7 +42,6 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-6.1, -6.1}, {6.1, 6.1}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
-    match_animation_speed_to_activity = false,
     module_slots = 10,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"vrauks"},

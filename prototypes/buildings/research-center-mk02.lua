@@ -44,7 +44,6 @@ ENTITY {
     collision_box = {{-4.7, -4.7}, {4.7, 4.7}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     forced_symmetry = "diagonal-pos",
-    match_animation_speed_to_activity = false,
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"research", "research-handcrafting"},

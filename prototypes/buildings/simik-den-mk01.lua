@@ -49,7 +49,6 @@ ENTITY {
     collision_box = {{-7.6, -7.6}, {7.6, 7.6}},
     selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
     forced_symmetry = "diagonal-pos",
-    match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"simik"},

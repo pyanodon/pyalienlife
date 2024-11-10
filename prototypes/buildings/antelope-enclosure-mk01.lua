@@ -45,7 +45,6 @@ ENTITY {
     collision_box = {{-8.3, -8.3}, {8.3, 8.3}},
     selection_box = {{-8.5, -8.5}, {8.5, 8.5}},
     --collision_mask = {layers = {ground_tile = true, water_tile = true, layer_14 = true}},
-    match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"antelope"},

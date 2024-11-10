@@ -49,7 +49,6 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-8.6, -8.6}, {8.6, 8.6}},
     selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
-    match_animation_speed_to_activity = false,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"zungror"},
