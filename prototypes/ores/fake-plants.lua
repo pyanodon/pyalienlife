@@ -47,7 +47,7 @@ for _, ore in pairs(data.raw.resource) do
         collision_box = {{0, 0}, {0, 0}},
         collision_mask = {layers = {}},
         selection_box = {{0, 0}, {0, 0}},
-        drawing_box = {{-0.6, -1.8}, {0.6, 0.3}},
+        drawing_box_vertical_extension = 1.8,
         subgroup = "trees",
         order = "a[tree]-c[dry-tree]",
         impact_category = "wood", 

@@ -54,7 +54,6 @@ ENTITY {
     },
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
-    drawing_box = {{-3.0, -3.0}, {3.0, 3.0}},
     inventory_size = 100,
     scale_info_icons = true,
     picture = {

@@ -90,7 +90,7 @@ data:extend {{
 	},
 	collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-	drawing_box = {{-1.8, -1.8}, {1.8, 1.8}},
+	drawing_box_vertical_extension = 0.5,
 	effectivity = 0.98,
 	braking_power = "30MW",
 	energy_source = {
