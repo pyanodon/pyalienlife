@@ -92,7 +92,7 @@ function Biofluid.built_pipe()
 	local allocated_fluids_from_providers = {}
 
 	for _, network in pairs(storage.biofluid_networks) do
-		for provider_unit_number, amount in pairs(network.allocated_fluids_from_providers) do
+		for provider_unit_number, amount in pairs(network.allocated_fluids_from_providers or {}) do
 			allocated_fluids_from_providers[provider_unit_number] = amount + (allocated_fluids_from_providers[provider_unit_number] or 0)
 		end
 	end
