@@ -30,6 +30,7 @@ function Oculua.set_target(oculua_data, target)
 		distraction = defines.distraction.none
 	}
 	oculua_data.target = target
+	entity.minable = false
 end
 
 function Oculua.spawn_oculua(ipod_data, player)
@@ -351,8 +352,8 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 	end
 end)
 
-function Oculua.find_nearest_ipod(entity)
-	local ipods = entity.surface.find_entities_filtered {position = entity.position, radius = 100, name = "ipod", force = entity.force, type = "container"}
+function Oculua.find_available_ipod(entity)
+	local ipods = entity.surface.find_entities_filtered {name = "ipod", force = entity.force_index, type = "container"}
 	for _, ipod in pairs(ipods) do
 		local ipod_data = storage.ipods[ipod.unit_number]
 		local inventory = ipod.get_inventory(CHEST)
@@ -389,7 +390,7 @@ py.on_event(py.events.on_built(), function(event)
 		storage.ipods[entity.unit_number] = {entity = entity, inventory = inventory, active_oculua = 0}
 		storage.should_run_oculua_code = true
 	elseif entity.name == "ocula" then
-		local ipod = Oculua.find_nearest_ipod(entity)
+		local ipod = Oculua.find_available_ipod(entity)
 		if not ipod then return end
 		storage.oculuas[entity.unit_number] = {
 			entity = entity,
