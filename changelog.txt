@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.19
-Date: ?
+Date: 2024-11-9
   Changes:
     - Ported the biofluid network into 2.0
     - Greatly buffed the Heavy-metal ATPases recipe from 2x output to 15x output.
