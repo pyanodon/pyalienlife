@@ -69,6 +69,7 @@ ENTITY {
         },
         {
             volume = 1,
+            max_pipeline_extent = 2000000, -- The radius of nauvis
             pipe_covers = _G.pipecoverspictures(),
             pipe_connections = {
                 {flow_direction = "output", position = {0, 0}, direction = defines.direction.south, connection_category = "biofluid"},

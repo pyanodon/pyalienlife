@@ -8,6 +8,7 @@ Date: ?
     - Fixed crawdad not eating a new piece of food to continue to fuel modules even when both slots have stacks of food loaded. Resolves https://github.com/pyanodon/pybugreports/issues/563
     - Crawdad, dingrido, and phadaisus now support automated logistics requests.
     - Bedding recipes now allow productivity modules.
+    - Fixed that the biofluid network vessels were effected by the max extent parameter. Adjusted max extent to 2,000,000 tiles.
   TURD:
     - Nerfed prod % for sawblade modules. MK01: 25% -> 5%, MK02: 25% -> 7%, MK03: 25% -> 10%, MK04: 25% -> 12%.
     - Fixed that mixing kickalk path 1 with wood processing unit path 2 would brick your save and prevent bedding from being craftable.

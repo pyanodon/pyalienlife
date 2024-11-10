@@ -196,6 +196,7 @@ local vessel = table.deepcopy(data.raw["pipe"]["pipe"])
 vessel.icon_draw_specification = {scale = 0}
 vessel.fluid_box = {
     volume = 1,
+    max_pipeline_extent = 2000000, -- The radius of nauvis
     pipe_connections = {
         {direction = defines.direction.north, position = {0, 0}, connection_category = "biofluid"},
         {direction = defines.direction.east,  position = {0, 0}, connection_category = "biofluid"},
@@ -332,6 +333,7 @@ underground_pipe.icon = data.raw.item["vessel-to-ground"].icon
 underground_pipe.icon_size = 64
 underground_pipe.fluid_box = {
     volume = 1,
+    max_pipeline_extent = 2000000, -- The radius of nauvis
     pipe_connections = {
         {
             position = {0, underground_pipe.collision_box[1][2]},
