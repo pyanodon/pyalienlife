@@ -128,6 +128,7 @@ data:extend {{
 	collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
 	drawing_box_vertical_extension = 0.5,
+	trash_inventory_size = 10,
 	effectivity = 1,
 	braking_power = "2MW",
 	energy_source = {

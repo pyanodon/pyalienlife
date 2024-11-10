@@ -236,7 +236,7 @@ data:extend {{
 		},
 		military_target = "spidertron-military-target",
 	},
-	trash_inventory_size = 10,
+	trash_inventory_size = 30,
 	minimap_representation = {
 		filename = "__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk04.png",
 		flags = {"icon"},
