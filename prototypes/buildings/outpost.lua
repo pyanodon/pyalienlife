@@ -3,7 +3,7 @@ local util = require "util"
 RECIPE {
 	type = "recipe",
 	name = "outpost",
-	energy_required = 50,
+	energy_required = 1,
 	category = "crafting",
 	enabled = false,
 	ingredients = {
