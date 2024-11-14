@@ -12,6 +12,7 @@ Date: ?
     - Reduced the time to craft a caravan outpost from 50 seconds -> 1 second.
     - Fixed that the biofluid network vessels were effected by the max extent parameter. Adjusted max extent to 2,000,000 tiles.
     - Changed internal name of py-satellite back to satellite.
+    - Fixed that search on Caravan Manager produces crash. Resolves https://github.com/pyanodon/pybugreports/issues/712
   TURD:
     - Nerfed prod % for sawblade modules. MK01: 25% -> 5%, MK02: 25% -> 7%, MK03: 25% -> 10%, MK04: 25% -> 12%.
     - Fixed that mixing kickalk path 1 with wood processing unit path 2 would brick your save and prevent bedding from being craftable.
