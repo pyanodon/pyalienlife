@@ -1,15 +1,4 @@
 if data and not yafc_turd_integration then
-    for i, recipe in pairs {
-        RECIPE("bio-reactor-mk01"):copy(),
-        RECIPE("bio-reactor-mk02"):copy(),
-        RECIPE("bio-reactor-mk03"):copy(),
-        RECIPE("bio-reactor-mk04"):copy(),
-    } do
-        recipe.name = recipe.name .. "-with-baffles"
-        recipe:add_ingredient {name = "baffles", amount = 10 * i, type = "item"}
-        data:extend {recipe}
-    end
-
     data:extend {
         {
             type = "item",
@@ -90,6 +79,17 @@ if data and not yafc_turd_integration then
             main_product = "bio-oil"
         }
     }
+    
+    for i, recipe in pairs {
+        RECIPE("bio-reactor-mk01"):copy(),
+        RECIPE("bio-reactor-mk02"):copy(),
+        RECIPE("bio-reactor-mk03"):copy(),
+        RECIPE("bio-reactor-mk04"):copy(),
+    } do
+        recipe.name = recipe.name .. "-with-baffles"
+        recipe:add_ingredient {name = "baffles", amount = 10 * i, type = "item"}
+        data:extend {recipe}
+    end
 end
 
 return {
