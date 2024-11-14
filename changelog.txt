@@ -17,6 +17,7 @@ Date: ?
     - Nerfed prod % for sawblade modules. MK01: 25% -> 5%, MK02: 25% -> 7%, MK03: 25% -> 10%, MK04: 25% -> 12%.
     - Fixed that mixing kickalk path 1 with wood processing unit path 2 would brick your save and prevent bedding from being craftable.
     - Allowed free 10 hour resetting of the wood processing unit TURD.
+    - TURD modules and TURD beacons are now hidden in both factoriopedia and the pyAL machine module selection lists.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.20
 Date: 2024-11-9

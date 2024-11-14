@@ -130,6 +130,7 @@ local function build_tech_upgrade(tech_upgrade)
                     icon_size = tech.icon_size,
                     category = tech_upgrade.module_category or error("TURD ERROR: No module category defined for " .. tech.name),
                     tier = 1,
+                    hidden = true, -- does this break helmod?
                     flags = {"not-stackable"},
                     subgroup = "py-alienlife-turd-modules",
                     order = "z",
