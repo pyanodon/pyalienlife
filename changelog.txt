@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.21
-Date: ?
+Date: 2024-11-14
   Changes:
     - Fixed ghosted caravan controls not opening the caravan scheduler. Resolves https://github.com/pyanodon/pybugreports/issues/687
     - Standardized productivity allowance in korlex -> fiber and yotoi -> fiber recipes. Resolves https://github.com/pyanodon/pybugreports/issues/570
