@@ -156,7 +156,13 @@ end
 py.on_event(py.events.on_entity_clicked(), function(event)
 	local player = game.get_player(event.player_index)
 	local cursor_stack = player.cursor_stack
-	if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= "caravan-control" then return end
+	local cursor_ghost = player.cursor_ghost
+
+	if not (cursor_ghost and cursor_ghost.name.name == "caravan-control") then
+		if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= "caravan-control" then 
+			return 
+		end
+	end
 	cursor_stack.clear()
 
 	local caravan_data = storage.last_opened_caravan[player.index]
