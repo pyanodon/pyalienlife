@@ -68,6 +68,14 @@ py.on_event(py.events.on_built(), function(event)
 		name = "py-mount-generator",
 		position = {3, 0},
 	}
+	-- Fixes https://github.com/pyanodon/pybugreports/issues/612
+	if entity.name == "phadaisus" then
+		entity.grid.put {
+			name = "void-belt-immunity-equipment",
+			position = {4, 0}
+		}
+	end
+	game.print(serpent.block(entity.grid.get_contents()))
 	storage.mounts[entity.unit_number] = entity
 end)
 

@@ -58,9 +58,6 @@ data:extend {{
 	corpse = "big-biter-corpse",
 	dying_explosion = "blood-explosion-huge",
 	alert_icon_shift = util.by_pixel(-4, -13),
-	immune_to_tree_impacts = true,
-	has_belt_immunity = true,
-	immune_to_rock_impacts = true,
 	energy_per_hit_point = 0.5,
 	resistances = {
 		{
@@ -335,4 +332,43 @@ data:extend {stream}
 data:extend {{
 	type = "ammo-category",
 	name = "dragon-breath"
+}}
+
+-- A 0x0 belt-immunity to fix https://github.com/pyanodon/pybugreports/issues/612
+data:extend{{
+    type = "belt-immunity-equipment",
+    name = "void-belt-immunity-equipment",
+    sprite =
+    {
+      filename = "__base__/graphics/equipment/belt-immunity-equipment.png",
+      width = 64,
+      height = 64,
+      priority = "medium",
+      scale = 0.5
+    },
+    shape =
+    {
+      width = 0,
+      height = 0,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "100kJ",
+      input_flow_limit = "2W",
+      usage_priority = "primary-input"
+    },
+    energy_consumption = "1W",
+    categories = {"armor"},
+    order = "b-i-c"
+},
+{
+    type = "item",
+    name = "void-belt-immunity-equipment",
+    icon = "__base__/graphics/icons/belt-immunity-equipment.png",
+    place_as_equipment_result = "void-belt-immunity-equipment",
+    subgroup = "utility-equipment",
+    order = "c[belt-immunity]-a[belt-immunity]",
+    stack_size = 20
 }}

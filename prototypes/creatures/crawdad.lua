@@ -14,7 +14,7 @@ data:extend {
 	{
 		name = "py-mount-generator",
 		type = "generator-equipment",
-		power = "1W",
+		power = "5W",
 		shape = {
 			type = "full",
 			width = 4,
