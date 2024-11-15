@@ -8,6 +8,9 @@ if data and not yafc_turd_integration then
         local collision_box = entity.collision_box
         entity.name = name .. "-turd"
         entity.localised_name = {"entity-name." .. name}
+        if i ~= 4 then
+            entity.next_upgrade = "compost-plant-mk0" .. i + 1 .. "-turd"
+        end
         entity.placeable_by = {item = name, count = 1}
         effect_receiver = {
             base_effect = {
