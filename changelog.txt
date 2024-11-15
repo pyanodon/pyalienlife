@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - fungal-substrate-01, fungal-substrate-02, fungal-substrate-03 are now affected by productivity modules.
     - The serine recipe is now effected by productivity modules.
+    - Gave Phadaisus belt immunity
   TURD:
     - Rebalanced the turd reset technology scaling factor from 2^N to 1.5^N.
     - Rebalanced mukmoux turds. Path 1 recipe values adjusted.
