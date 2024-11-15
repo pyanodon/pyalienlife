@@ -7,6 +7,9 @@ if data and not yafc_turd_integration then
         local entity = table.deepcopy(data.raw["furnace"][name])
         local collision_box = entity.collision_box
         entity.name = name .. "-turd"
+        if i ~= 4 then
+            entity.next_upgrade = "compost-plant-mk0" .. i + 1 .. "-turd"
+        end
         entity.localised_name = {"entity-name." .. name}
         entity.placeable_by = {item = name, count = 1}
         effect_receiver = {
