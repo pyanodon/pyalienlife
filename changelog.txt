@@ -4,11 +4,12 @@ Date: ?
   Changes:
     - fungal-substrate-01, fungal-substrate-02, fungal-substrate-03 are now affected by productivity modules.
     - The serine recipe is now effected by productivity modules.
+    - Increased the health of the fish farm 100 -> 500.
     - Fixed sweet tooth turd not allowing for fast upgrade/downgrade
   TURD:
     - Rebalanced the turd reset technology scaling factor from 2^N to 1.5^N.
-    - Rebalanced mukmoux turds. Path 1 recipe values adjusted.
-    - Added a 10 hour grace period for a free mukmoux turd reset.
+    - Rebalanced all 3 mukmoux turds. Added a 10 hour grace period for a free mukmoux turd reset.
+    - Rebalanced all 3 fish turds. Added a 10 hour grace period for a free fish turd reset.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.22
 Date: 2024-11-14
