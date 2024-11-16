@@ -22,6 +22,7 @@ RECIPE {
 	category = "creature-chamber",
 	enabled = false,
 	ingredients = {
+		{type = "item",  name = "cocoon",               amount = 10},
 		{type = "item",  name = "bio-sample",           amount = 10},
 		{type = "item",  name = "moss-gen",             amount = 15},
 		{type = "item",  name = "earth-generic-sample", amount = 1},
