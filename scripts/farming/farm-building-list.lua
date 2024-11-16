@@ -7,6 +7,7 @@ local farm_buildings = {
 	["dhilmos-pool"] = "animal",
 	["dingrits-pack"] = "animal",
 	["fish-farm"] = "animal",
+	["turd-fish-farm"] = "animal",
 	["kmauts-enclosure"] = "animal",
 	["mukmoux-pasture"] = "animal",
 	["phadai-enclosure"] = "animal",

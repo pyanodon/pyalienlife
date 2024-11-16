@@ -1,3 +1,18 @@
+-- path 1: electrify the atomizer and speed bonus
+
+-- arqad proplis -> silver
+-- animal eyes -> nano-cellulose
+-- dingrit fur -> gold solution
+-- pineal gland -> psc
+-- shell -> salt
+-- xeno egg -> acid gas
+
+-- all iron atomizers -> unslimed
+-- all phosphoric rock -> phosphine gas
+-- all copper ore -> copper stage 4 (solid)
+-- all tin -> tin dust
+-- all zinc -> zinc grade 3
+
 if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
@@ -64,10 +79,6 @@ return {
                 {"military-science-pack",   1},
                 {"py-science-pack-2",       1},
                 {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
-                {"production-science-pack", 1},
-                {"py-science-pack-4",       1},
-                {"utility-science-pack",    1},
             },
             time = 45
         }
