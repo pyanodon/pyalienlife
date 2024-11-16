@@ -97,6 +97,7 @@ if data and not yafc_turd_integration then
         entity.subgroup = data.raw.item[name].subgroup
         entity.order = data.raw.item[name].order
         entity.allowed_module_categories = {"sawblade"}
+        if i ~= 4 then entity.next_upgrade = "turd-wpu-mk0" .. (i + 1) end
         table.insert(entity.flags, "not-in-made-in")
         entity.module_slots = MODULE_SLOTS
         entity.allowed_effects = {"speed", "productivity", "pollution"}
