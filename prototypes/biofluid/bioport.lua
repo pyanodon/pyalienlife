@@ -51,7 +51,7 @@ local recipe = RECIPE {
     },
     results = {
         {"guano", data.raw.item["guano"].stack_size},
-        {type = "fluid", name = "void", count = 1},
+        {type = "fluid", name = mods.pyalternativeenergy and "void" or "parameter-0", count = 1},
     },
     energy_required = 100,
     category = "biofluid",
