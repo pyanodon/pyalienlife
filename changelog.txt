@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.23
-Date: ?
+Date: 2024-11-17
   Changes:
     - fungal-substrate-01, fungal-substrate-02, fungal-substrate-03 are now affected by productivity modules.
     - The serine recipe is now effected by productivity modules.
