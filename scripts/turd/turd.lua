@@ -386,7 +386,7 @@ end
 local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assembling_machine_list)
 	local turd_bonuses = storage.turd_bonuses[force.index] or {}
 	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
-	if selection == NOT_SELECTED then return end
+	if selection == NOT_SELECTED then return assembling_machine_list end
 	local sub_tech = tech_upgrade.sub_techs[selection]
 
 	local recipes = force.recipes
@@ -406,6 +406,7 @@ local function apply_turd_bonus(force, master_tech_name, tech_upgrade, assemblin
 			storage.turd_machine_replacements[force.index][effect.old] = effect.new
 		end
 	end
+	return assembling_machine_list
 end
 
 local function reapply_turd_bonuses(force)
@@ -413,7 +414,7 @@ local function reapply_turd_bonuses(force)
 	local assembling_machine_list = find_all_assembling_machines(force)
 
 	for master_tech_name, tech_upgrade in pairs(tech_upgrades) do
-		apply_turd_bonus(force, master_tech_name, tech_upgrade, assembling_machine_list)
+		assembling_machine_list = apply_turd_bonus(force, master_tech_name, tech_upgrade, assembling_machine_list)
 	end
 end
 
@@ -474,6 +475,8 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
 		force.print {"turd.font", {"turd.admin-needed"}}
 		return
 	end
+
+	if element.caption[1] == "turd.unavailable" then return end
 
 	local turd_bonuses = storage.turd_bonuses[force_index] or {}
 	storage.turd_bonuses[force_index] = turd_bonuses
