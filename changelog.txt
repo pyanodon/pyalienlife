@@ -3,6 +3,7 @@ Version: 3.0.24
 Date: ?
   Changes:
     - Fixed digosaurs pywiki page missing [item=dried-meat] → 1 ore info. Resolves https://github.com/pyanodon/pybugreports/issues/725
+    - Change order of oil and steam input for Korlex food.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.23
 Date: 2024-11-17
