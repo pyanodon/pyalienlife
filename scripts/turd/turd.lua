@@ -475,6 +475,8 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
 		return
 	end
 
+	if element.caption[1] == "turd.unavailable" then return end
+
 	local turd_bonuses = storage.turd_bonuses[force_index] or {}
 	storage.turd_bonuses[force_index] = turd_bonuses
 	local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
