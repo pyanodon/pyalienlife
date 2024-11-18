@@ -267,9 +267,7 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
 				error("Invalid operator: " .. operator)
 			end
 		end
-		local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
 		provider = p
-		unfulfilled_request.amount = min(amount, can_give)
 		break
 		::continue::
 	end

@@ -3,6 +3,7 @@ Version: 3.0.24
 Date: ?
   Changes:
     - Fixed digosaurs pywiki page missing [item=dried-meat] → 1 ore info. Resolves https://github.com/pyanodon/pybugreports/issues/725
+    - Fixed Biofluid trips with 0 fluid when provider had less to give or requester asked for less than a certain amount
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.23
 Date: 2024-11-17
