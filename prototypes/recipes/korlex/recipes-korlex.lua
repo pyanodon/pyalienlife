@@ -56,8 +56,8 @@ RECIPE {
         {type = "item",  name = "seaweed",      amount = 10},
         {type = "item",  name = "salt",         amount = 10},
         {type = "item",  name = "fawogae",      amount = 10},
-        {type = "fluid", name = "steam",        amount = 100},
         {type = "fluid", name = "fish-oil",     amount = 100},
+        {type = "fluid", name = "steam",        amount = 100},
     },
     results = {
         {type = "item", name = "korlex-food-01", amount = 3},
