@@ -3,6 +3,7 @@ Version: 3.0.24
 Date: ?
   Changes:
     - Fixed digosaurs pywiki page missing [item=dried-meat] → 1 ore info. Resolves https://github.com/pyanodon/pybugreports/issues/725
+    - Make fluidboxes of liquids consistent among food items.
     - Fixed a crash when clicking on the "Unavaliable" button in the fish TURD while dousing pumps is selected.
     - Fixed a crash migrating TURDs
 ---------------------------------------------------------------------------------------------------

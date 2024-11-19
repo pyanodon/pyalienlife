@@ -70,8 +70,8 @@ RECIPE {
         {type = "item",  name = "tuuphra-seeds", amount = 1},
         {type = "item",  name = "yotoi-leaves",  amount = 5},
         {type = "item",  name = "meat",          amount = 10},
-        {type = "fluid", name = "fish-oil",      amount = 30},
-        {type = "fluid", name = "steam",         amount = 100}
+        {type = "fluid", name = "fish-oil",      amount = 30, fluidbox_index = 1},
+        {type = "fluid", name = "steam",        amount = 100, fluidbox_index = 2},
     },
     results = {
         {type = "item", name = "arthurian-food-01", amount = 3},
@@ -96,8 +96,8 @@ RECIPE {
         {type = "item",  name = "moss",          amount = 10},
         {type = "item",  name = "guts",          amount = 5},
         {type = "item",  name = "starch",        amount = 4},
-        {type = "fluid", name = "fish-oil",      amount = 30},
-        {type = "fluid", name = "steam",         amount = 100}
+        {type = "fluid", name = "fish-oil",      amount = 30, fluidbox_index = 1},
+        {type = "fluid", name = "steam",         amount = 100, fluidbox_index = 2},
     },
     results = {
         {type = "item", name = "arthurian-food-02", amount = 6},
