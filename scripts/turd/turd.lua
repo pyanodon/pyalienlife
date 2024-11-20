@@ -471,11 +471,6 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
 
 	if not force.technologies[master_tech_name].researched then return end
 
-	if not player.admin then
-		force.print {"turd.font", {"turd.admin-needed"}}
-		return
-	end
-
 	if element.caption[1] == "turd.unavailable" then return end
 
 	local turd_bonuses = storage.turd_bonuses[force_index] or {}
