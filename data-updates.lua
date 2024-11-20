@@ -193,47 +193,12 @@ require "prototypes.module_restrictions"
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
---remove steel barrel based milk
-data.raw.item["milk-barrel"] = nil
-RECIPE("milk-barrel"):remove_unlock("fluid-handling")
-data.raw.recipe["milk-barrel"] = nil
+--Fix up the milk barrel recipes with new ingredients and icons
+RECIPE("milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("barrel", "empty-barrel-milk"):set_fields {results = {{type = "item", name = "barrel-milk", amount = 1}}}
+RECIPE("milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png",icon_size = 64}}
+RECIPE("empty-milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("milk-barrel", "barrel-milk"):set_fields {results = {{type = "item",  name = "empty-barrel-milk", amount = 1},{type = "fluid", name = "milk", amount = 50}}}
+RECIPE("empty-milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png",icon_size = 64}}
 
---RECIPES UPDATES
-
---Updating base milk barrel with icons. replacing base recipes with py copies to use the right barrel
-
-RECIPE {
-    type = "recipe",
-    name = "fill-milk-barrel",
-    category = "py-barreling",
-    enabled = false,
-    energy_required = 1,
-    ingredients = {
-        {type = "item",  name = "empty-barrel-milk", amount = 1},
-        {type = "fluid", name = "milk",              amount = 50},
-    },
-    results = {
-        {type = "item", name = "barrel-milk", amount = 1},
-    },
-}:remove_unlock("fluid-handling"):add_unlock("korlex")
-
-RECIPE {
-    type = "recipe",
-    name = "empty-milk-barrel",
-    category = "py-unbarreling",
-    enabled = false,
-    energy_required = 1,
-    ingredients = {
-        {type = "item", name = "barrel-milk", amount = 1},
-    },
-    results = {
-        {type = "item",  name = "empty-barrel-milk", amount = 1},
-        {type = "fluid", name = "milk",              amount = 50},
-    },
-    main_product = "milk",
-    icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png",
-    icon_size = 64,
-}:remove_unlock("fluid-handling"):add_unlock("korlex")
 
 --copy`s of combustion recipes with biomass
 for _, recipe in pairs(data.raw.recipe) do

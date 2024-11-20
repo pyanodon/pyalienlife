@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.25
+Version: 3.0.27
+Date: ????
+  Changes:
+    - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
+---------------------------------------------------------------------------------------------------
+Version: 3.0.26
 Date: 2024-11-20
   Changes:
     - Removed the server administrator requirement when selecting turd upgrades.
