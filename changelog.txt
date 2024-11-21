@@ -3,6 +3,7 @@ Version: 3.0.27
 Date: ????
   Changes:
     - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
+    - Implemented FSM animations for the fast wood forestry.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.26
 Date: 2024-11-20

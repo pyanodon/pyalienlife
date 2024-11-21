@@ -114,7 +114,7 @@ for i = 1, 4 do
         module_slots = MODULE_SLOTS,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"fish-farm"},
-        crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
+        crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "fish-farm-mk01"),
         energy_source = {
             type = "electric",
             usage_priority = "secondary-input",
