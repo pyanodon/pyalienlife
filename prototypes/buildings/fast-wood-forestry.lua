@@ -71,6 +71,157 @@ RECIPE {
     }
 }:add_unlock("botany-mk04")
 
+local function working_visualizations()
+    local working_visualizations = {
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/base.png",
+            width = 544,
+            height = 64,
+            line_length = 4,
+            frame_count = 135,
+            shift = util.by_pixel(0, 240)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/left-fill.png",
+            width = 32,
+            height = 544,
+            frame_count = 1,
+            repeat_count = 135,
+            shift = util.by_pixel(-256, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/right-fill.png",
+            width = 32,
+            height = 544,
+            frame_count = 1,
+            repeat_count = 135,
+            shift = util.by_pixel(256, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/1.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-224, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/2.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-192, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/3.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-160, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/4.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-128, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/5.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-96, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/6.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-64, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/7.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(-32, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/8.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(0, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/9.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(32, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/10.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(64, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/11.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(96, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/12.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(128, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/13.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            run_mode = "backward",
+            shift = util.by_pixel(160, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/14.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(192, -64)
+        },
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/fwf/15.png",
+            width = 32,
+            height = 544,
+            line_length = 45,
+            frame_count = 135,
+            shift = util.by_pixel(224, -64)
+        }
+    }
+    return {{animation = {layers = working_visualizations}}}
+end
+
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 
 for i = 1, 4 do
@@ -123,190 +274,31 @@ for i = 1, 4 do
                     name = "idle",
                     next_active = "active-1",
                     next_inactive = "idle",
-                    frame_sequence = {115},
+                    frame_sequence = {120},
                 },
                 {
                     name = "active-1",
                     next_active = "active-2",
                     next_inactive = "active-2",
-                    frame_sequence = py.range(114, 135),
+                    frame_sequence = py.range(121, 135),
+                    speed = 0.8
                 },
                 {
                     name = "active-2",
+                    next_active = "active-3",
+                    next_inactive = "active-3",
+                    frame_sequence = py.range(1, 49),
+                    speed = 0.8
+                },
+                {
+                    name = "active-3",
                     next_active = "idle",
                     next_inactive = "idle",
-                    frame_sequence = py.range(1, 113),
+                    frame_sequence = py.range(50, 119),
+                    speed = 0.8
                 },
             },
-            working_visualisations = {
-                {
-                    animation = {layers = {
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/base.png",
-                            width = 544,
-                            height = 64,
-                            line_length = 4,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(0, 240)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/left-fill.png",
-                            width = 32,
-                            height = 544,
-                            frame_count = 1,
-                            repeat_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-256, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/right-fill.png",
-                            width = 32,
-                            height = 544,
-                            frame_count = 1,
-                            repeat_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(256, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/1.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-224, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/2.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-192, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/3.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-160, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/4.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-128, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/5.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-96, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/6.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-64, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/7.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(-32, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/8.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(0, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/9.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(32, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/10.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(64, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/11.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(96, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/12.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(128, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/13.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            run_mode = "backward",
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(160, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/14.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(192, -64)
-                        },
-                        {
-                            filename = "__pyalienlifegraphics__/graphics/entity/fwf/15.png",
-                            width = 32,
-                            height = 544,
-                            line_length = 45,
-                            frame_count = 135,
-                            animation_speed = 0.4,
-                            shift = util.by_pixel(224, -64)
-                        },
-                    }},
-                },
-            },
+            working_visualisations = working_visualizations(),
         },
         fluid_boxes_off_when_no_fluid_recipe = true,
         fluid_boxes = {

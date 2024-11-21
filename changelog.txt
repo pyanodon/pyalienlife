@@ -1,11 +1,15 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.27
+Version: 3.0.26
 Date: ????
   Changes:
     - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
-    - Implemented FSM animations for the fast wood forestry.
+    - Fixed incorrect crafting speed for fish farms MK02-MK04.
+    - Fast wood forestry animation improvements:
+    - Animation now uses FSM to ensure no floating robots when the machine stops crafting.
+    - Animation no longer extents past the bounding box.
+    - Animation plays 2x faster.
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.26
+Version: 3.0.25
 Date: 2024-11-20
   Changes:
     - Removed the server administrator requirement when selecting turd upgrades.
