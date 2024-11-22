@@ -91,7 +91,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = "item",  name = "moss-mk02",           amount = 2},
-        {type = "item",  name = "cdna",                amount = 2},
+        {type = "item",  name = "cdna",                amount = 1},
         {type = "item",  name = "moss-gen",            amount = 3},
         {type = "fluid", name = "liquid-manure",       amount = 50},
         {type = "fluid", name = "xenogenic-cells",     amount = 100},
@@ -99,7 +99,7 @@ RECIPE {
         {type = "item",  name = "solidified-sarcorus", amount = 1},
     },
     results = {
-        {type = "item", name = "moss-mk02", amount = 3},
+        {type = "item", name = "moss-mk02", amount = 5, ignored_by_stats = 2, ignored_by_productivity = 0},
     },
     icons =
     {
@@ -121,7 +121,7 @@ RECIPE {
     energy_required = 100,
     ingredients = {
         {type = "item",  name = "moss-mk03",       amount = 2},
-        {type = "item",  name = "cdna",            amount = 2},
+        {type = "item",  name = "cdna",            amount = 1},
         {type = "item",  name = "moss-gen",        amount = 3},
         {type = "fluid", name = "chelator",        amount = 50},
         {type = "fluid", name = "xenogenic-cells", amount = 100},
@@ -129,7 +129,7 @@ RECIPE {
         {type = "item",  name = "paragen",         amount = 1},
     },
     results = {
-        {type = "item", name = "moss-mk03", amount = 3},
+        {type = "item", name = "moss-mk03", amount = 5, ignored_by_stats = 2, ignored_by_productivity = 0},
     },
     icons =
     {
@@ -159,7 +159,7 @@ RECIPE {
         {type = "fluid", name = "rich-gas",              amount = 100},
     },
     results = {
-        {type = "item", name = "moss-mk04", amount = 4},
+        {type = "item", name = "moss-mk04", amount = 5, ignored_by_stats = 2, ignored_by_productivity = 0},
     },
     icons =
     {

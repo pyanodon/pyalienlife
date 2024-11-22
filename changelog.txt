@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
     - Fixed incorrect crafting speed for fish farms MK02-MK04.
+    - Moss MK02-MK04 breeding recipes are now significantly cheaper.
     - Fast wood forestry animation improvements:
     - Animation now uses FSM to ensure no floating robots when the machine stops crafting.
     - Animation no longer extents past the bounding box.
