@@ -6,9 +6,11 @@ Date: ????
     - Fixed incorrect crafting speed for fish farms MK02-MK04.
     - Moss MK02-MK04 breeding recipes are now significantly cheaper.
     - Fast wood forestry animation improvements:
-    - Animation now uses FSM to ensure no floating robots when the machine stops crafting.
-    - Animation no longer extents past the bounding box.
-    - Animation plays 2x faster.
+      Animation now uses FSM to ensure no floating robots when the machine stops crafting.
+      Animation no longer extents past the bounding box.
+      Animation plays 2x faster.
+    - The guar technology has been moved from logistics science to py science pack 2.
+    - The guar MK02 technology has been moved from py science pack 2 to chemical science.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.25
 Date: 2024-11-20

@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/guar-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02"},
+    prerequisites = {"botany-mk02", "py-science-pack-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -12,6 +12,7 @@ TECHNOLOGY {
             {"automation-science-pack", 3},
             {"py-science-pack-1",       1},
             {"logistic-science-pack",   1},
+            {"py-science-pack-2",       1},
         },
         time = 50
     }
@@ -23,8 +24,8 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/guar-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"guar"},
-    dependencies = {"guar"},
+    prerequisites = {"guar", "chemical-science-pack"},
+    dependencies = {"guar", "chemical-science-pack"},
     effects = {},
     unit = {
         count = 250,
@@ -33,6 +34,7 @@ TECHNOLOGY {
             {"py-science-pack-1",       1},
             {"logistic-science-pack",   1},
             {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
         },
         time = 50
     }
