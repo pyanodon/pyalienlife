@@ -11,6 +11,7 @@ Date: ????
       Animation plays 2x faster.
     - The guar technology has been moved from logistics science to py science pack 2.
     - The guar MK02 technology has been moved from py science pack 2 to chemical science.
+    - Changed the recipes for moss module breeding. Resolves https://github.com/pyanodon/pybugreports/issues/745
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.25
 Date: 2024-11-20
