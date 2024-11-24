@@ -15,7 +15,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "bedding",            amount = 1},
         },
         results = {
-            {type = "item", name = "vonix-cub",  amount_min = 700, amount_max = 800},
+            {type = "item", name = "vonix-cub",  amount_min = 14, amount_max = 16},
             {type = "item", name = "vonix-eggs", amount_min = 4,   amount_max = 5},
             {type = "item", name = "vonix",      amount = 1},
             {type = "item", name = "cage",       amount = 2},
@@ -34,8 +34,8 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-cancer"
         local _, barrel_count = recipe:remove_result("barrel")
-        recipe:add_result {"mutant-enzymes-barrel", barrel_count * 20}
-        recipe:multiply_ingredient_amount("arqad-honey-barrel", 20)
+        recipe:add_result {"mutant-enzymes-barrel", barrel_count * 5}
+        recipe:multiply_ingredient_amount("arqad-honey-barrel", 5)
         recipe.icon = "__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png"
         recipe.icon_size = 64
         data:extend {recipe}
@@ -94,7 +94,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 1,       type = "module-effects"},
+                {speed = 1,       type = "module-effects"},
                 {type = "unlock-recipe", recipe = "vonix-direct-raising"}
             },
         },
@@ -115,7 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.5,             speed = 1,                   type = "module-effects"},
+                {productivity = 0.35,             speed = 1,                   type = "module-effects"},
                 {old = "vonix-den-mk01",         new = "vonix-den-mk01-free", type = "recipe-replacement"},
                 {old = "vonix-den-mk02",         new = "vonix-den-mk02-free", type = "recipe-replacement"},
                 {old = "vonix-den-mk03",         new = "vonix-den-mk03-free", type = "recipe-replacement"},

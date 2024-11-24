@@ -22,6 +22,8 @@ Date: ????
   TURD:
     - Rebalanced path 1 and path 3 of the fast wood forestry turd.
     - Rebalanced path 2 and path 3 of the composter turd.
+    - Rebalanced all three paths of the vonix turd.
+    - Migration notice: Changed turds will have a 10-hour grace period to change to a different option.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.25
 Date: 2024-11-20
