@@ -8209,7 +8209,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 0.45},
+	effect = {pollution = 1, speed = 1},
 }
 
 ITEM {
@@ -8225,7 +8225,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 0.95},
+	effect = {pollution = 1, speed = 2},
 }
 
 ITEM {
@@ -8244,7 +8244,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1.45},
+	effect = {pollution = 1, speed = 3},
 }
 
 ITEM {
@@ -8263,7 +8263,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1.95},
+	effect = {pollution = 1, speed = 4},
 }
 
 ITEM {
