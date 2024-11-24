@@ -35,14 +35,10 @@ if data and not yafc_turd_integration then
     fiber.energy_required = fiber.energy_required * 2
     fiber:multiply_result_amount("raw-fiber", 4)
     fiber:add_result {"biomass", 6}
-    fiber.main_product = "raw-fiber"
-    data:extend {fiber}
-
-    local fiber = RECIPE("fiber"):copy()
-    fiber.name = "fiber-dry-storage-2"
-    fiber:multiply_result_amount("fiber", 4)
-    fiber:add_result_amount("biomass", 6)
-    fiber.energy_required = fiber.energy_required * 2
+    fiber:add_result {type = "item", name = "fiber", amount_min = 1, amount_max = 2}
+    fiber.icon = nil
+    fiber.icon_size = nil
+    fiber.main_product = "fiber"
     data:extend {fiber}
 
     local wood_fast = RECIPE("log-wood"):copy()
@@ -62,7 +58,7 @@ if data and not yafc_turd_integration then
         RECIPE("log6"):copy(),
     } do
         recipe.name = recipe.name .. "-cheap"
-        recipe:multiply_ingredient_amount("ash", 1 / 3)
+        recipe:multiply_ingredient_amount("ash", 2)
         data:extend {recipe}
     end
 end
