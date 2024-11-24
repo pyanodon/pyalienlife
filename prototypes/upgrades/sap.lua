@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
         name = "nano-cellulose-sap",
         energy_required = 45,
         enabled = false,
-        category = "sap",
+        category = "sap-mk01",
         ingredients = {
             {type = "item",  name = "bhoddos",           amount = 1},
             {type = "fluid", name = "dirty-water-heavy", amount = 30},

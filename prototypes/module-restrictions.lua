@@ -352,16 +352,16 @@ local modules = {
         "rennea"
     },
     ["sap-extractor-mk01"] = {
-        "sap"
+        "sap-mk01",
     },
     ["sap-extractor-mk02"] = {
-        "sap"
+        "sap-mk02",
     },
     ["sap-extractor-mk03"] = {
-        "sap"
+        "sap-mk03",
     },
     ["sap-extractor-mk04"] = {
-        "sap"
+        "sap-mk04",
     },
     ["scrondrix-pen-mk01"] = {
         "scrondrix"

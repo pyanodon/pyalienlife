@@ -14,7 +14,19 @@ data:extend
     },
     {
         type = "module-category",
-        name = "sap"
+        name = "sap-mk01"
+    },
+    {
+        type = "module-category",
+        name = "sap-mk02"
+    },
+    {
+        type = "module-category",
+        name = "sap-mk03"
+    },
+    {
+        type = "module-category",
+        name = "sap-mk04"
     },
     {
         type = "module-category",

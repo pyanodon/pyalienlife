@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "sap-01",
-    category = "sap",
+    category = "sap-mk01",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk02",
-    category = "sap",
+    category = "sap-mk02",
     --hidden = true,
     enabled = false,
     energy_required = 20,
@@ -120,7 +120,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk03",
-    category = "sap",
+    category = "sap-mk03",
     --hidden = true,
     enabled = false,
     energy_required = 20,
@@ -183,7 +183,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk04",
-    category = "sap",
+    category = "sap-mk04",
     --hidden = true,
     enabled = false,
     energy_required = 20,

@@ -6025,7 +6025,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk01",
 	tier = 1,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6042,7 +6042,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk02",
 	tier = 2,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6059,7 +6059,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk03",
 	tier = 3,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6076,7 +6076,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk04",
 	tier = 4,
 	flags = {},
 	subgroup = "py-alienlife-sap",
