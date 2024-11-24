@@ -16,6 +16,8 @@ Date: ????
     - Fixed Inconsistent Fawogae Plantation crafting speed. Resolves https://github.com/pyanodon/pybugreports/issues/750
     - Fixed floating-point crafting speeds in the sponge culture.
     - Increased the health of the sponge culture 100, 100, 100, 100 -> 300, 600, 900, 1200.
+    - The sap extractor now has an inbuilt loader. Works with belt stacking technologies.
+      Migration notice: Existing versions of this machine will not have the loader output and be marked with the (Legacy) tag. Remove this tag by simply mining the sap extractor and re-building it.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.25
 Date: 2024-11-20

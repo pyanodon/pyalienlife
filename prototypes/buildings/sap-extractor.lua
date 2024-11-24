@@ -178,6 +178,17 @@ for i = 1, 4 do
             sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.6},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.3},
             apparent_volume = 2.5
-        }
+        },
+        vector_to_place_result = {0, 2.5},
     }
+
+    -- https://github.com/pyanodon/pycoalprocessing/commit/cf03a35fa5dec4c74a464d847b4e266394317726
+    if not mods["pystellarexpedition"] then
+        local legacy = table.deepcopy(data.raw["assembling-machine"][name])
+        legacy.vector_to_place_result = nil
+        legacy.name = name .. "-legacy"
+        legacy.hidden = true
+        legacy.localised_name = {"", {"entity-name." .. name}, " (Legacy)"}
+        data:extend {legacy}
+    end
 end
