@@ -14,6 +14,7 @@ Date: ????
     - Changed the recipes for seaweed module breeding. Resolves https://github.com/pyanodon/pybugreports/issues/745
     - Fixed incorrect sap module categories. Resolves https://github.com/pyanodon/pybugreports/issues/734
     - Fixed Inconsistent Fawogae Plantation crafting speed. Resolves https://github.com/pyanodon/pybugreports/issues/750
+    - The sponge culture output fluidboxes are now filtered to saline water and can pass-through. Resolves https://github.com/pyanodon/pybugreports/issues/553
     - Fixed floating-point crafting speeds in the sponge culture.
     - Increased the health of the sponge culture 100, 100, 100, 100 -> 300, 600, 900, 1200.
     - The sap extractor now has an inbuilt loader. Works with belt stacking technologies.

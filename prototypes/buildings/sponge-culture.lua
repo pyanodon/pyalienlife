@@ -120,7 +120,7 @@ for i = 1, 4 do
             },
         },
         energy_usage = (400 * i) .. "kW",
-        fluid_boxes_off_when_no_fluid_recipe = true,
+        fluid_boxes_off_when_no_fluid_recipe = false,
         fluid_boxes = {
             --1
             {
@@ -144,7 +144,8 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "output", position = {5.0, 0.0}, direction = defines.direction.east}},
+                filter = "water-saline",
+                pipe_connections = {{flow_direction = "input-output", position = {5.0, 0.0}, direction = defines.direction.east}},
                 secondary_draw_orders = {north = -1}
             },
             {
@@ -152,7 +153,8 @@ for i = 1, 4 do
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "output", position = {-5.0, 0.0}, direction = defines.direction.west}},
+                filter = "water-saline",
+                pipe_connections = {{flow_direction = "input-output", position = {-5.0, 0.0}, direction = defines.direction.west}},
                 secondary_draw_orders = {north = -1}
             },
         },
