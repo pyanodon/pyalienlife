@@ -6224,7 +6224,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sa",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1.25},
+	effect = {pollution = 1, speed = 1},
 }
 
 ITEM {
@@ -6241,7 +6241,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sb",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 2.5},
+	effect = {pollution = 1, speed = 2},
 }
 
 ITEM {
@@ -6258,7 +6258,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sc",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 4},
+	effect = {pollution = 1, speed = 3},
 }
 
 ITEM {
@@ -6275,7 +6275,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sd",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 5},
+	effect = {pollution = 1, speed = 4},
 }
 
 ITEM {
