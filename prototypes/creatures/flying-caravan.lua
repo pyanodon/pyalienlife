@@ -52,6 +52,7 @@ data:extend
 		order = "b-b-a",
 		subgroup = "enemies",
 		healing_per_tick = 0.1,
+		radar_range = 1,
 		collision_box = {{0, 0}, {0, 0}},
 		render_layer = "air-object",
 		collision_mask = {layers = {}, not_colliding_with_itself = true},
