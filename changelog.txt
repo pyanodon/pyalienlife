@@ -2,6 +2,7 @@
 Version: 3.0.26
 Date: ????
   Changes:
+    - Caravan, aerial caravan, nuclear caravan, ocula now have a 1-chunk built in radar range.
     - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
     - Fixed incorrect crafting speed for fish farms MK02-MK04.
     - Moss MK02-MK04 breeding recipes are now significantly cheaper.
