@@ -124,7 +124,7 @@ if data and not yafc_turd_integration then
             {type = "fluid", name = "coal-gas",       amount = 20},
         },
         icon = "__pyalienlifegraphics__/graphics/icons/biomass-destruction.png",
-        icon_size = 48,
+        icon_size = 64,
         subgroup = "py-alienlife-items",
         allow_productivity = true,
     }}
