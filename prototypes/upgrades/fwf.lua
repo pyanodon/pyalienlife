@@ -91,8 +91,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "fiber-01", new = "fiber-dry-storage",   type = "recipe-replacement"},
-                {old = "fiber",    new = "fiber-dry-storage-2", type = "recipe-replacement"}
+                {old = "fiber-01", new = "fiber-dry-storage",   type = "recipe-replacement"}
             },
         },
         {
