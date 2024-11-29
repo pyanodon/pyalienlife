@@ -49,6 +49,13 @@ table.insert(data.raw["assembling-machine"]["wpu-mk02"].crafting_categories, "wp
 table.insert(data.raw["assembling-machine"]["wpu-mk03"].crafting_categories, "wpu-handcrafting")
 table.insert(data.raw["assembling-machine"]["wpu-mk04"].crafting_categories, "wpu-handcrafting")
 
+if not mods.pystellarexpedition then
+    table.insert(data.raw["assembling-machine"]["wpu-legacy"].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk02-legacy"].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk03-legacy"].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk04-legacy"].crafting_categories, "wpu-handcrafting")
+end
+
 data.raw.lab.lab.module_slots = 0
 data.raw.lab.lab.allowed_effects = {"consumption", "productivity", "pollution"}
 data.raw.lab.lab.allowed_module_categories = {"vatbrain"}
