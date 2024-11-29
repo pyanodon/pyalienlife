@@ -47,13 +47,11 @@ ENTITY {
     },
     collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    energy_source =
-    {
+    energy_source = {
         type = "electric",
         usage_priority = "secondary-output",
     },
-    burner =
-    {
+    burner = {
         type = "burner",
         fuel_categories = {"dingrits"},
         effectivity = 3,

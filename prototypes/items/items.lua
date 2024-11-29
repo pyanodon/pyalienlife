@@ -10,7 +10,7 @@ ITEM {
 	order = "a",
 	stack_size = 100,
 	fuel_category = "auog",
-	fuel_value = "400MJ",
+	fuel_value = "800MJ",
 	burnt_result = "used-auog"
 }
 
@@ -7000,7 +7000,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
 	fuel_category = "auog",
-	fuel_value = "250MJ",
+	fuel_value = "500MJ",
 	burnt_result = "used-auog"
 }
 
@@ -7020,7 +7020,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
 	fuel_category = "auog",
-	fuel_value = "500MJ",
+	fuel_value = "1000MJ",
 	burnt_result = "used-auog-mk02"
 }
 
@@ -7040,7 +7040,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
 	fuel_category = "auog",
-	fuel_value = "750MJ",
+	fuel_value = "1500MJ",
 	burnt_result = "used-auog-mk03"
 }
 
@@ -7060,7 +7060,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
 	fuel_category = "auog",
-	fuel_value = "1GJ",
+	fuel_value = "2000MJ",
 	burnt_result = "used-auog-mk04"
 }
 

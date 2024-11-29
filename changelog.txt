@@ -20,6 +20,7 @@ Date: ????
     - Increased the health of the sponge culture 100, 100, 100, 100 -> 300, 600, 900, 1200.
     - The sap extractor now has an inbuilt loader. Works with belt stacking technologies.
       Migration notice: Existing versions of this machine will not have the loader output and be marked with the (Legacy) tag. Remove this tag by simply mining the sap extractor and re-building it.
+    - The auog generator no longer has +200% effectivity. In return, all auogs have had their fuel value buffed by 2x. (This change only exists to simplify the mathematics.)
   TURD:
     - Rebalanced path 1 and path 3 of the fast wood forestry turd.
     - Rebalanced path 2 and path 3 of the composter turd.
