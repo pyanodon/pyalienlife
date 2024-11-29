@@ -353,12 +353,18 @@ local modules = {
     },
     ["sap-extractor-mk01"] = {
         "sap-mk01",
+        "sap-mk02",
+        "sap-mk03",
+        "sap-mk04",
     },
     ["sap-extractor-mk02"] = {
         "sap-mk02",
+        "sap-mk03",
+        "sap-mk04",
     },
     ["sap-extractor-mk03"] = {
         "sap-mk03",
+        "sap-mk04",
     },
     ["sap-extractor-mk04"] = {
         "sap-mk04",
