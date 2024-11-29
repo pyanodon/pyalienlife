@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.31
+Date: 2024-11-29
+  Changes:
+    - Added FSM animations to the incubator. Resolves https://github.com/pyanodon/pybugreports/issues/753
+    - Improved the pipe connection graphics for the incubator.
+    - Muted the working sounds for the incubator.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.30
 Date: 2024-11-29
   Changes:
