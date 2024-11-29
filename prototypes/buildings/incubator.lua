@@ -1,12 +1,3 @@
-local pipe = {
-    south = {
-        filename = "__pyalienlifegraphics__/graphics/entity/incubator/bottom.png",
-        priority = "extra-high",
-        width = 224,
-        height = 257
-    }
-}
-
 RECIPE {
     type = "recipe",
     name = "incubator-mk01",
