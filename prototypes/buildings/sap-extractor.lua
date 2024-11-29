@@ -179,7 +179,7 @@ for i = 1, 4 do
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.3},
             apparent_volume = 2.5
         },
-        vector_to_place_result = {0, 2.5},
+        vector_to_place_result = {0, 3.0},
     }
 
     -- https://github.com/pyanodon/pycoalprocessing/commit/cf03a35fa5dec4c74a464d847b4e266394317726
