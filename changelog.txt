@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.26
-Date: ????
+Date: 2024-11-29
   Changes:
     - Caravan, aerial caravan, nuclear caravan, ocula now have a 1-chunk built in radar range.
     - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
