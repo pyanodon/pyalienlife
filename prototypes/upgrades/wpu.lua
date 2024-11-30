@@ -238,7 +238,7 @@ return {
         order = "c-a",
         prerequisites = {"integrated-circuits-1"},
         unit = {
-            count = 500,
+            count = 7000,
             ingredients = {
                 {type = "item", name = "automation-science-pack", amount = 1},
                 {type = "item", name = "py-science-pack-1",       amount = 1},

@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.32
+Date: ?
+  Changes:
+    - Greatly increased the science pack requirement for the wood processing unit turd from 500 -> 7000. Resolves https://github.com/pyanodon/pybugreports/issues/758
+---------------------------------------------------------------------------------------------------
 Version: 3.0.31
 Date: 2024-11-29
   Changes:
