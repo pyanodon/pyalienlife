@@ -118,7 +118,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "powdered-biomass", amount = 20},
         },
         results = {
-            {type = "fluid", name = "methanol",       amount = 60},
+            {type = "fluid", name = "coalbed-gas",       amount = 60},
             {type = "fluid", name = "carbon-dioxide", amount = 40},
             {type = "fluid", name = "methane",        amount = 40},
             {type = "fluid", name = "coal-gas",       amount = 20},

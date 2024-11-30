@@ -2,6 +2,7 @@
 Version: 3.0.32
 Date: ?
   Changes:
+    - Composter TURD path 2 no longer generates methanol. Now it instead generates coalbed gas. Resolves https://github.com/pyanodon/pybugreports/issues/757
     - Greatly increased the science pack requirement for the wood processing unit turd from 500 -> 7000. Resolves https://github.com/pyanodon/pybugreports/issues/758
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.31
