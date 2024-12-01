@@ -4,7 +4,7 @@ RECIPE {
     energy_required = 5,
     enabled = true,
     ingredients = {
-        {type = "item", name = "electric-mining-drill", amount = 2},
+        {type = "item", name = "burner-mining-drill",   amount = 2},
         {type = "item", name = "soil-extractor-mk01",   amount = 1},
         {type = "item", name = "electronic-circuit",    amount = 5},
         {type = "item", name = "iron-gear-wheel",       amount = 10},
