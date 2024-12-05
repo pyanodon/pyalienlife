@@ -10,7 +10,7 @@ ITEM {
 	order = "a",
 	stack_size = 100,
 	fuel_category = "auog",
-	fuel_value = "400MJ",
+	fuel_value = "800MJ",
 	burnt_result = "used-auog"
 }
 
@@ -6025,7 +6025,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk01",
 	tier = 1,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6042,7 +6042,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk02",
 	tier = 2,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6059,7 +6059,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk03",
 	tier = 3,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6076,7 +6076,7 @@ ITEM {
 		{icon = "__pyalienlifegraphics2__/graphics/icons/sap-tree.png"}
 	},
 	icon_size = 64,
-	category = "sap",
+	category = "sap-mk04",
 	tier = 4,
 	flags = {},
 	subgroup = "py-alienlife-sap",
@@ -6224,7 +6224,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sa",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1.25},
+	effect = {pollution = 1, speed = 1},
 }
 
 ITEM {
@@ -6241,7 +6241,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sb",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 2.5},
+	effect = {pollution = 1, speed = 2},
 }
 
 ITEM {
@@ -6258,7 +6258,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sc",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 4},
+	effect = {pollution = 1, speed = 3},
 }
 
 ITEM {
@@ -6275,7 +6275,7 @@ ITEM {
 	subgroup = "py-alienlife-sea-sponge",
 	order = "sd",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 5},
+	effect = {pollution = 1, speed = 4},
 }
 
 ITEM {
@@ -7000,7 +7000,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 1},
 	fuel_category = "auog",
-	fuel_value = "250MJ",
+	fuel_value = "500MJ",
 	burnt_result = "used-auog"
 }
 
@@ -7020,7 +7020,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 2},
 	fuel_category = "auog",
-	fuel_value = "500MJ",
+	fuel_value = "1000MJ",
 	burnt_result = "used-auog-mk02"
 }
 
@@ -7040,7 +7040,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 3},
 	fuel_category = "auog",
-	fuel_value = "750MJ",
+	fuel_value = "1500MJ",
 	burnt_result = "used-auog-mk03"
 }
 
@@ -7060,7 +7060,7 @@ ITEM {
 	stack_size = 50,
 	effect = {pollution = 1, speed = 4},
 	fuel_category = "auog",
-	fuel_value = "1GJ",
+	fuel_value = "2000MJ",
 	burnt_result = "used-auog-mk04"
 }
 
@@ -8209,7 +8209,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 0.45},
+	effect = {pollution = 1, speed = 1},
 }
 
 ITEM {
@@ -8225,7 +8225,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 0.95},
+	effect = {pollution = 1, speed = 2},
 }
 
 ITEM {
@@ -8244,7 +8244,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1.45},
+	effect = {pollution = 1, speed = 3},
 }
 
 ITEM {
@@ -8263,7 +8263,7 @@ ITEM {
 	subgroup = "py-alienlife-fawogae",
 	order = "k-d",
 	stack_size = 50,
-	effect = {pollution = 1, speed = 1.95},
+	effect = {pollution = 1, speed = 4},
 }
 
 ITEM {

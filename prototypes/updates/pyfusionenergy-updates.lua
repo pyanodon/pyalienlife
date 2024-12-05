@@ -31,6 +31,7 @@ RECIPE("log7"):add_ingredient {type = "item", name = "wood-seedling", amount = 3
 RECIPE("zogna-bacteria"):add_ingredient {type = "fluid", name = "pressured-air", amount = 50}
 RECIPE("bacteria-1"):remove_unlock("ethanolamine"):add_unlock("kmauts"):subgroup_order("py-alienlife-genetics", "b"):add_ingredient {type = "item", name = "petri-dish", amount = 3}
 RECIPE("serine"):remove_unlock("helium-processing"):add_unlock("kmauts"):subgroup_order("py-alienlife-kmauts", "b"):add_ingredient {type = "item", name = "tendon", amount = 5}:add_ingredient {type = "fluid", name = "zogna-bacteria", amount = 40}:remove_ingredient("kmauts-ration").category = "bio-reactor"
+RECIPE("serine").allow_productivity = true
 ITEM("serine"):subgroup_order("py-alienlife-kmauts", "b")
 ITEM("kmauts-ration"):subgroup_order("py-alienlife-food", "b")
 RECIPE("nenbit-matrix"):add_ingredient {type = "item", name = "nano-cellulose", amount = 3}

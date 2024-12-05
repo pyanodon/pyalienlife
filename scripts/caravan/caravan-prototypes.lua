@@ -32,6 +32,20 @@ local caravan_actions = {
 		"item-count",
 		"inverse-item-count",
 	},
+	["car"] = {
+		"time-passed",
+		"fill-inventory",
+		"empty-inventory",
+		"item-count",
+		"inverse-item-count",
+	},
+	["spider-vehicle"] = {
+		"time-passed",
+		"fill-inventory",
+		"empty-inventory",
+		"item-count",
+		"inverse-item-count",
+	},
 	["electric-pole"] = {
 		"time-passed",
 		"circuit-condition"
@@ -132,6 +146,10 @@ local function get_outpost_inventory(outpost)
 		return outpost.get_inventory(defines.inventory.chest)
 	elseif type == "cargo-wagon" then
 		return outpost.get_inventory(defines.inventory.cargo_wagon)
+	elseif type == "car" then
+		return outpost.get_inventory(defines.inventory.car_trunk)
+	elseif type == "spider-vehicle" then
+		return outpost.get_inventory(defines.inventory.spider_trunk)
 	elseif caravan_prototypes[outpost.name] then
 		local caravan_data = storage.caravans[outpost.unit_number]
 		return caravan_data.inventory

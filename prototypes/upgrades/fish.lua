@@ -1,3 +1,74 @@
+local function new_fluid_boxes()
+    return {
+        --1
+        {
+            production_type = "input",
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
+            secondary_draw_orders = {north = -1}
+        },
+        {
+            production_type = "input",
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
+            secondary_draw_orders = {north = -1}
+        },
+        {
+            production_type = "output",
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "output", position = {5.0, -1.0}, direction = defines.direction.east}},
+            secondary_draw_orders = {north = -1}
+        },
+        {
+            production_type = "output",
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "output", position = {-5.0, 1.0}, direction = defines.direction.west}},
+            secondary_draw_orders = {north = -1}
+        },
+        {
+            production_type = "output",
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "output", position = {-5.0, -1.0}, direction = defines.direction.west}},
+            secondary_draw_orders = {north = -1}
+        },
+        {
+            production_type = "output",
+            pipe_covers = py.pipe_covers(true, true, true, true),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            volume = 1000,
+            pipe_connections = {{flow_direction = "output", position = {5.0, 1.0}, direction = defines.direction.east}},
+            secondary_draw_orders = {north = -1}
+        },
+    }
+end
+
+local function add_new_fish_farm(i)
+    local name = "fish-farm-mk0" .. i
+    local entity = table.deepcopy(data.raw["assembling-machine"][name])
+    entity.name = "turd-" .. name
+    entity.localised_name = {"entity-name." .. name}
+    entity.placeable_by = {item = name, count = 1}
+    entity.localised_description = entity.localised_description or {"entity-description." .. name}
+    entity.subgroup = data.raw.item[name].subgroup
+    entity.order = data.raw.item[name].order
+    if i ~= 4 then entity.next_upgrade = "turd-fish-farm-mk0" .. (i + 1) end
+    entity.allowed_module_categories = {"fish"}
+    entity.energy_usage = (i * 5) .. "MW",
+    table.insert(entity.flags, "not-in-made-in")
+    entity.fluid_boxes = new_fluid_boxes()
+    data:extend {entity}
+end
+
 if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("breed-fish-1"):copy(),
@@ -8,6 +79,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-agressive-selection"
         recipe:add_result_amount("fish", -i)
         recipe:add_result {"fish-food-01", i}
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend {recipe}
     end
 
@@ -27,24 +99,64 @@ if data and not yafc_turd_integration then
         name = "fish-hydrolysate-cooling"
     }}
 
-    for _, recipe in pairs {
+    RECIPE {
+        type = "recipe",
+        name = "cyanic-acid-from-fish-hydrolysate",
+        category = "reformer",
+        enabled = false,
+        energy_required = 5,
+        ingredients = {
+            {type = "fluid", name = "fish-hydrolysate", amount = 100},
+            {type = "fluid", name = "ammonia",          amount = 100},
+            {type = "fluid", name = "water-saline",     amount = 15},
+        },
+        results = {
+            {type = "fluid", name = "cyanic-acid", amount = 100},
+            {type = "fluid", name = "waste-water", amount = 100},
+        },
+        main_product = "cyanic-acid",
+        subgroup = "py-alienlife-fluids",
+        order = "a",
+        allow_productivity = true,
+    }
+
+    for i, recipe in pairs {
         RECIPE("breed-fish-egg-1"):copy(),
         RECIPE("breed-fish-egg-2"):copy(),
         RECIPE("breed-fish-egg-3"):copy(),
         RECIPE("breed-fish-egg-4"):copy(),
     } do
         recipe.name = recipe.name .. "-doused"
-        recipe:remove_result("waste-water")
-        recipe:add_result {type = "fluid", name = "pressured-water", amount = 100}
-        recipe:multiply_result_amount("fish-egg", 1.2)
+        recipe:multiply_result_amount("fish-egg", 0.8)
         for _, ingredient in pairs(recipe.ingredients) do
             if ingredient.name == "water-saline" then
-                ingredient.name = "water"
+                ingredient.name = "pressured-water"
                 break
             end
         end
+        for _, result in pairs(recipe.results) do
+            if result.name == "waste-water" then
+                result.fluidbox_index = 1
+                break
+            end
+        end
+
+        local path_three_dousing_byproducts = {
+            {type = "fluid", name = "fish-oil",         amount = 10 + i * 5, fluidbox_index = 2},
+            {type = "fluid", name = "fish-hydrolysate", amount = 5 + i * 5, fluidbox_index = 3},
+            {type = "item",  name = "fishmeal",         amount = 5},
+            {type = "fluid", name = "fish-emulsion",    amount = 0 + i * 5, fluidbox_index = 4},
+        }
+
+        for j = 1, i do
+            recipe:add_result(path_three_dousing_byproducts[j])
+        end
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend {recipe}
+    end
+
+    for i = 1, 4 do
+        add_new_fish_farm(i)
     end
 end
 
@@ -89,7 +201,8 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "recipe-replacement", old = "fish-hydrolysate", new = "fish-hydrolysate-cooling"}
+                {type = "recipe-replacement", old = "fish-hydrolysate",                    new = "fish-hydrolysate-cooling"},
+                {type = "unlock-recipe",      recipe = "cyanic-acid-from-fish-hydrolysate"},
             }
         },
         {
@@ -98,6 +211,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
+                {type = "machine-replacement", old = "fish-farm-mk01",          new = "turd-fish-farm-mk01"},
+                {type = "machine-replacement", old = "fish-farm-mk02",          new = "turd-fish-farm-mk02"},
+                {type = "machine-replacement", old = "fish-farm-mk03",          new = "turd-fish-farm-mk03"},
+                {type = "machine-replacement", old = "fish-farm-mk04",          new = "turd-fish-farm-mk04"},
                 {old = "breed-fish-egg-1", new = "breed-fish-egg-1-doused", type = "recipe-replacement"},
                 {old = "breed-fish-egg-2", new = "breed-fish-egg-2-doused", type = "recipe-replacement"},
                 {old = "breed-fish-egg-3", new = "breed-fish-egg-3-doused", type = "recipe-replacement"},

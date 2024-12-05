@@ -97,8 +97,8 @@ RECIPE {
         {type = "item",  name = "fawogae",      amount = 10},
         {type = "item",  name = "tuuphra",      amount = 3},
         {type = "item",  name = "starch",       amount = 4},
-        {type = "fluid", name = "steam",        amount = 100},
-        {type = "fluid", name = "blood",        amount = 50},
+        {type = "fluid", name = "steam",        amount = 100, fluidbox_index = 2},
+        {type = "fluid", name = "blood",        amount = 50, fluidbox_index = 1},
     },
     results = {
         {type = "item", name = "zipir-food-02", amount = 6},

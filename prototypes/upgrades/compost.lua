@@ -7,6 +7,9 @@ if data and not yafc_turd_integration then
         local entity = table.deepcopy(data.raw["furnace"][name])
         local collision_box = entity.collision_box
         entity.name = name .. "-turd"
+        if i ~= 4 then
+            entity.next_upgrade = "compost-plant-mk0" .. i + 1 .. "-turd"
+        end
         entity.localised_name = {"entity-name." .. name}
         entity.placeable_by = {item = name, count = 1}
         effect_receiver = {
@@ -107,6 +110,27 @@ if data and not yafc_turd_integration then
 
     data:extend {{
         type = "recipe",
+        name = "biomass-destruction",
+        category = "distilator",
+        enabled = false,
+        energy_required = 5,
+        ingredients = {
+            {type = "item", name = "powdered-biomass", amount = 20},
+        },
+        results = {
+            {type = "fluid", name = "coalbed-gas",       amount = 60},
+            {type = "fluid", name = "carbon-dioxide", amount = 40},
+            {type = "fluid", name = "methane",        amount = 40},
+            {type = "fluid", name = "coal-gas",       amount = 20},
+        },
+        icon = "__pyalienlifegraphics__/graphics/icons/biomass-destruction.png",
+        icon_size = 64,
+        subgroup = "py-alienlife-items",
+        allow_productivity = true,
+    }}
+
+    data:extend {{
+        type = "recipe",
         name = "worm-stone",
         category = "agitator",
         enabled = false,
@@ -167,7 +191,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "guts", amount = 5},
         },
         results = {
-            {type = "item", name = "manure", amount = 1},
+            {type = "item", name = "manure", amount = 2},
         },
         subgroup = "py-alienlife-worm",
         order = "bd"
@@ -241,13 +265,14 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "machine-replacement", old = "compost-plant-mk01", new = "compost-plant-mk01-turd"},
-                {type = "machine-replacement", old = "compost-plant-mk02", new = "compost-plant-mk02-turd"},
-                {type = "machine-replacement", old = "compost-plant-mk03", new = "compost-plant-mk03-turd"},
-                {type = "machine-replacement", old = "compost-plant-mk04", new = "compost-plant-mk04-turd"},
+                {type = "machine-replacement", old = "compost-plant-mk01",    new = "compost-plant-mk01-turd"},
+                {type = "machine-replacement", old = "compost-plant-mk02",    new = "compost-plant-mk02-turd"},
+                {type = "machine-replacement", old = "compost-plant-mk03",    new = "compost-plant-mk03-turd"},
+                {type = "machine-replacement", old = "compost-plant-mk04",    new = "compost-plant-mk04-turd"},
                 {type = "unlock-recipe",       recipe = "cheap-retrovirus"},
-                {recipe = "sweet-syrup",       type = "unlock-recipe",     also_unlocked_by_techs = true},
-                {recipe = "a-molasse",         type = "unlock-recipe",     also_unlocked_by_techs = true},
+                {type = "unlock-recipe",       recipe = "biomass-destruction"},
+                {recipe = "sweet-syrup",       type = "unlock-recipe",        also_unlocked_by_techs = true},
+                {recipe = "a-molasse",         type = "unlock-recipe",        also_unlocked_by_techs = true},
             }
         },
         {

@@ -46,6 +46,7 @@ local unit = {
     minable = {mining_time = 0.1, result = "nukavan"},
     max_health = 6125,
     map_color = {1, 1, 1},
+    radar_range = 1,
     order = "b-b-a",
     subgroup = "enemies",
     collision_mask = {layers = {caravan_collision_mask = true}, not_colliding_with_itself = true},

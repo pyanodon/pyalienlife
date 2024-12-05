@@ -65,7 +65,7 @@ TECHNOLOGY {
     prerequisites = {"turd-partial-respec-" .. (#science_packs - 1 - offset)},
     effects = {},
     unit = {
-        count_formula = "2^(L-" .. (#science_packs - offset) .. ")*2500",
+        count_formula = "1.5^(L-" .. (#science_packs - offset) .. ")*2500",
         ingredients = ingredients,
         time = 1800,
     },

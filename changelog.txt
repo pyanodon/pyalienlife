@@ -1,7 +1,103 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.21
+Version: 3.0.32
 Date: ?
   Changes:
+    - Composter TURD path 2 no longer generates methanol. Now it instead generates coalbed gas. Resolves https://github.com/pyanodon/pybugreports/issues/757
+    - Greatly increased the science pack requirement for the wood processing unit turd from 500 -> 7000. Resolves https://github.com/pyanodon/pybugreports/issues/758
+---------------------------------------------------------------------------------------------------
+Version: 3.0.31
+Date: 2024-11-29
+  Changes:
+    - Added FSM animations to the incubator. Resolves https://github.com/pyanodon/pybugreports/issues/753
+    - Improved the pipe connection graphics for the incubator.
+    - Muted the working sounds for the incubator.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.30
+Date: 2024-11-29
+  Changes:
+    - Fixed explosions in YAFC.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.29
+Date: 2024-11-29
+  Changes:
+    - Fixed MK01 sap extractors not accepting MK02+ sap tree modules.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.28
+Date: 2024-11-29
+  Changes:
+    - Fixed legacy wood processing unit missing the "wpu-handcrafting" crafting category.
+    - Fixed sap extractor loader output would always output to the left side of the belt.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.27
+Date: 2024-11-29
+  Changes:
+    - Fixed sap extractor loader output not working in north or east facing directions.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.26
+Date: 2024-11-29
+  Changes:
+    - Caravan, aerial caravan, nuclear caravan, ocula now have a 1-chunk built in radar range.
+    - Fixed milk barreling recipes did not work. https://github.com/pyanodon/pyalienlife/pull/278
+    - Fixed incorrect crafting speed for fish farms MK02-MK04.
+    - Moss MK02-MK04 breeding recipes are now significantly cheaper.
+    - Fast wood forestry animation improvements:
+      Animation now uses FSM to ensure no floating robots when the machine stops crafting.
+      Animation no longer extents past the bounding box.
+      Animation plays 2x faster.
+    - The guar technology has been moved from logistics science to py science pack 2.
+    - The guar MK02 technology has been moved from py science pack 2 to chemical science.
+    - Changed the recipes for seaweed module breeding. Resolves https://github.com/pyanodon/pybugreports/issues/745
+    - Fixed incorrect sap module categories. Resolves https://github.com/pyanodon/pybugreports/issues/734
+    - Fixed Inconsistent Fawogae Plantation crafting speed. Resolves https://github.com/pyanodon/pybugreports/issues/750
+    - The sponge culture output fluidboxes are now filtered to saline water and can pass-through. Resolves https://github.com/pyanodon/pybugreports/issues/553
+    - Fixed floating-point crafting speeds in the sponge culture.
+    - Increased the health of the sponge culture 100, 100, 100, 100 -> 300, 600, 900, 1200.
+    - The sap extractor now has an inbuilt loader. Works with belt stacking technologies.
+      Migration notice: Existing versions of this machine will not have the loader output and be marked with the (Legacy) tag. Remove this tag by simply mining the sap extractor and re-building it.
+    - The auog generator no longer has +200% effectivity. In return, all auogs have had their fuel value buffed by 2x. (This change only exists to simplify the mathematics.)
+    - The caravan can now transfer items with crawdad, dingrido, tank, car, mecha zungror, and phadaisus.
+  TURD:
+    - Rebalanced path 1 and path 3 of the fast wood forestry turd.
+    - Rebalanced path 2 and path 3 of the composter turd.
+    - Rebalanced all three paths of the vonix turd.
+    - Migration notice: Changed turds will have a 10-hour grace period to change to a different option.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.25
+Date: 2024-11-20
+  Changes:
+    - Removed the server administrator requirement when selecting turd upgrades.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.24
+Date: 2024-11-19
+  Changes:
+    - Fixed digosaurs pywiki page missing [item=dried-meat] → 1 ore info. Resolves https://github.com/pyanodon/pybugreports/issues/725
+    - Make fluidboxes of liquids consistent among food items.
+    - Fixed a crash when clicking on the "Unavaliable" button in the fish TURD while dousing pumps is selected.
+    - Fixed a crash migrating TURDs
+---------------------------------------------------------------------------------------------------
+Version: 3.0.23
+Date: 2024-11-17
+  Changes:
+    - fungal-substrate-01, fungal-substrate-02, fungal-substrate-03 are now affected by productivity modules.
+    - The serine recipe is now effected by productivity modules.
+    - Increased the health of the fish farm 100 -> 500.
+    - Reverted "Removed vrauk cocoons from the caravan recipe."
+    - Fixed sweet tooth turd and sawblades turd not allowing for fast upgrade/downgrade.
+    - Fixed crash when pyAE is missing.
+  TURD:
+    - Rebalanced the turd reset technology scaling factor from 2^N to 1.5^N.
+    - Rebalanced all 3 mukmoux turds. Added a 10 hour grace period for a free mukmoux turd reset.
+    - Rebalanced all 3 fish turds. Added a 10 hour grace period for a free fish turd reset.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.22
+Date: 2024-11-14
+  Changes:
+    - Removed vrauk cocoons from the caravan recipe.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.21
+Date: 2024-11-14
+  Changes:
+    - Fixed ghosted caravan controls not opening the caravan scheduler. Resolves https://github.com/pyanodon/pybugreports/issues/687
     - Standardized productivity allowance in korlex -> fiber and yotoi -> fiber recipes. Resolves https://github.com/pyanodon/pybugreports/issues/570
     - Oculas are no longer minable while in-transit.
     - Placing down an ocula will now cause that ocula to search the entire map for an available eyepod and fly to it. Resolves https://github.com/pyanodon/pybugreports/issues/388
@@ -10,10 +106,15 @@ Date: ?
     - Bedding recipes now allow productivity modules.
     - Reduced the time to craft a caravan outpost from 50 seconds -> 1 second.
     - Fixed that the biofluid network vessels were effected by the max extent parameter. Adjusted max extent to 2,000,000 tiles.
+    - Changed internal name of py-satellite back to satellite.
+    - Fixed that search on Caravan Manager produces crash. Resolves https://github.com/pyanodon/pybugreports/issues/712
+    - Removed the manure requirement from the higher tiers of fawogae recipes.
   TURD:
     - Nerfed prod % for sawblade modules. MK01: 25% -> 5%, MK02: 25% -> 7%, MK03: 25% -> 10%, MK04: 25% -> 12%.
     - Fixed that mixing kickalk path 1 with wood processing unit path 2 would brick your save and prevent bedding from being craftable.
     - Allowed free 10 hour resetting of the wood processing unit TURD.
+    - TURD modules and TURD beacons are now hidden in both factoriopedia and the pyAL machine module selection lists.
+    - Fixed bioreactor turd not requiring the baffles for use in the turd bioreactor recipes. Resolves https://github.com/pyanodon/pybugreports/issues/711
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.20
 Date: 2024-11-9

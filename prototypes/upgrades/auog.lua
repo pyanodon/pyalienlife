@@ -54,7 +54,7 @@ if data and not yafc_turd_integration then
     end
     
     local buffed_generator = table.deepcopy(data.raw["burner-generator"]["generator-1"])
-    buffed_generator.burner.effectivity = 4
+    buffed_generator.burner.effectivity = 2
     buffed_generator.effectivity = 2
     buffed_generator.max_power_output = "111MW"
     buffed_generator.localised_description = buffed_generator.localised_description or {"entity-description." .. buffed_generator.name}

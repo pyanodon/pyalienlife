@@ -1,5 +1,5 @@
 local MODULE_SLOTS = 10
-local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
+local FULL_CRAFTING_SPEED = 0.5 -- crafting speed when full of mk01 modules
 
 ITEM("fawogae-plantation-mk01"):subgroup_order("py-alienlife-farm-buildings-mk01", "d")
 ITEM("fawogae-plantation-mk02"):subgroup_order("py-alienlife-farm-buildings-mk02", "d")
@@ -32,9 +32,9 @@ data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed = py.fa
 data.raw["assembling-machine"]["fawogae-plantation-mk02"].module_slots = MODULE_SLOTS * 2
 
 RECIPE("fawogae-plantation-mk03"):add_unlock("mycology-mk04")
-data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 3, "fawogae-plantation-mk02")
+data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 3, "fawogae-plantation-mk01")
 data.raw["assembling-machine"]["fawogae-plantation-mk03"].module_slots = MODULE_SLOTS * 3
 
 RECIPE("fawogae-plantation-mk04"):add_unlock("mycology-mk05")
-data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 4, "fawogae-plantation-mk03")
+data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 4, "fawogae-plantation-mk01")
 data.raw["assembling-machine"]["fawogae-plantation-mk04"].module_slots = MODULE_SLOTS * 4

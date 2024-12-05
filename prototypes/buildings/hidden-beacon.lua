@@ -38,6 +38,7 @@ ENTITY {
     name = "hidden-beacon-turd",
     icon = "__pyalienlifegraphics3__/graphics/technology/updates/restart.png",
     icon_size = 128,
+    hidden = true, -- does this break helmod?
     flags = {"placeable-player", "hide-alt-info", "not-on-map"},
     max_health = 200,
     corpse = "beacon-remnants",

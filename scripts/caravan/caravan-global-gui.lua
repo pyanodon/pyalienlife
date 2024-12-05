@@ -51,7 +51,8 @@ local function on_search(search_key, gui, player)
             local unit_number = child.tags.unit_number
             local caravan_data = storage.caravans[unit_number]
             if caravan_data then
-                child.visible = search_key == "" or Caravan.get_name(caravan_data):lower():find(search_key, 1, true)
+                local visible = search_key == "" or Caravan.get_name(caravan_data):lower():find(search_key, 1, true)
+                child.visible = not not visible -- cast to boolean becuase factorio 2.0 is picky
             end
         end
     end

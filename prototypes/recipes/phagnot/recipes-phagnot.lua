@@ -92,13 +92,13 @@ RECIPE {
         {type = "item",  name = "yotoi-fruit",   amount = 5},
         {type = "item",  name = "fawogae",       amount = 5},
         {type = "item",  name = "guar",          amount = 5},
-        {type = "fluid", name = "arqad-honey",   amount = 100},
+        {type = "fluid", name = "arqad-honey",   amount = 100, fluidbox_index = 1},
         {type = "item",  name = "native-flora",  amount = 15},
         {type = "item",  name = "tuuphra-seeds", amount = 15},
         {type = "item",  name = "ash",           amount = 10},
         {type = "item",  name = "moss",          amount = 15},
         {type = "item",  name = "seaweed",       amount = 10},
-        {type = "fluid", name = "steam",         amount = 100}
+        {type = "fluid", name = "steam",         amount = 100, fluidbox_index = 2},
     },
     results = {
         {type = "item", name = "phagnot-food-02", amount = 6},

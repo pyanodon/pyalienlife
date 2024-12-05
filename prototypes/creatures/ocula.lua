@@ -43,6 +43,7 @@ data:extend
     minable = {mining_time = 0.2, result = "ocula"},
     max_health = 250,
     order = "b-b-a",
+    radar_range = 1,
     subgroup = "enemies",
     resistances = {},
     healing_per_tick = 0.01,
