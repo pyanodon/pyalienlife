@@ -126,7 +126,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 		local entity = schedule.entity
 		local actions
 		if entity and entity.valid then
-			if entity.name == prototype.outpost then
+			if (entity.name == "outpost") or (entity.name == "outpost-aerial") then
 				actions = prototype.actions.outpost
 			elseif prototype.actions[entity.type] then
 				actions = prototype.actions[entity.type]
