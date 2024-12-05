@@ -156,7 +156,7 @@ RECIPE("seaweed-crop-mk01"):replace_ingredient("electronic-circuit", "inductor1"
 RECIPE("sap-extractor-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("inserter", "burner-inserter")
 RECIPE("repair-pack"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("electric-mining-drill"):add_unlock("electric-mining-drill").enabled = false
-RECIPE("flora-collector-mk01"):replace_ingredient("electronic-circuit", "inductor1"):replace_ingredient("electric-mining-drill", "burner-mining-drill")
+RECIPE("flora-collector-mk01"):replace_ingredient("electronic-circuit", "inductor1")
 RECIPE("eaf-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("impact-crusher-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
 RECIPE("hydroclassifier-mk01"):replace_ingredient("electric-mining-drill", "fluid-drill-mk01")
