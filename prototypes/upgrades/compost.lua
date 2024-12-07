@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
         end
         entity.localised_name = {"entity-name." .. name}
         entity.placeable_by = {item = name, count = 1}
-        effect_receiver = {
+        entity.effect_receiver = {
             base_effect = {
                 productivity = i * 0.05
             }
