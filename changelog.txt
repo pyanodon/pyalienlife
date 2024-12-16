@@ -7,6 +7,8 @@ Date: ?
     - Fix the base productivity on Composter from Composter TURD path 2.
     - All caravans can use all caravan outpost types
     - Fixed picked TURDs appearing to be re-pickable when they were not. Resolves https://github.com/pyanodon/pybugreports/issues/769
+  TURD:
+    - Redid bioreactor turd entirely.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.31
 Date: 2024-11-29
