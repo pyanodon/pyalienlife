@@ -77,7 +77,7 @@ local function update_confirm_button(element, player, researched_technologies)
 			if seconds < 10 then seconds = "0" .. seconds end
 			element.style = "confirm_button_without_tooltip"
 			element.caption = {"turd.unselect-migrate", hours, minutes, seconds}
-		elseif (storage.turd_reset_remaining[force_index] or 0) >= 0 then
+		elseif (storage.turd_reset_remaining[force_index] or 0) > 0 then
 			element.style = "confirm_button_without_tooltip"
 			element.caption = {"turd.unselect"}
 		else
