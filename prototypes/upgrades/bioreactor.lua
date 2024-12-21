@@ -17,11 +17,11 @@ if data and not yafc_turd_integration then
             name = "advanced-bio-reactor"
         }
     }
-    data.raw.item["xeno-egg"].fuel_value = "1MJ"
+    data.raw.item["xeno-egg"].fuel_value = "1.2MJ"
     data.raw.item["xeno-egg"].fuel_category = "bio-reactor-1"
-    data.raw.item["high-flux-core"].fuel_value = "1MJ"
+    data.raw.item["high-flux-core"].fuel_value = "240kJ"
     data.raw.item["high-flux-core"].fuel_category = "bio-reactor-2"
-    data.raw.item["strorix-unknown-sample"].fuel_value = "1MJ"
+    data.raw.item["strorix-unknown-sample"].fuel_value = "1.2MJ"
     data.raw.item["strorix-unknown-sample"].fuel_category = "bio-reactor-3"
 
     for j = 1, 3 do
@@ -33,7 +33,11 @@ if data and not yafc_turd_integration then
                 entity.next_upgrade = "advanced-bio-reactor-mk0" .. i + 1 .. "-turd" .. j
             end
             entity.crafting_speed = entity.crafting_speed * 2
-            entity.module_slots = entity.module_slots * 2
+            local old_module_slots = entity.module_slots
+            entity.module_slots = math.floor(entity.module_slots * 1.7)
+            if entity.module_slots == old_module_slots then
+                entity.module_slots = entity.module_slots + 1
+            end
             entity.crafting_categories = { "advanced-bio-reactor", "bio-reactor" }
 
             entity.localised_name = {"entity-name." .. name}
@@ -50,7 +54,7 @@ if data and not yafc_turd_integration then
                     pollution = 0.06
                 },
             }
-            entity.energy_usage = i .. "kW"
+            entity.energy_usage = "1kW"
             data:extend {entity}
         end
     end
