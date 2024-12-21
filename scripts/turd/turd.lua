@@ -428,10 +428,10 @@ local function unselect_recipes_for_subtech(sub_tech, force, assembling_machine_
 				recipe_replacement(recipe, effect.old and recipes[effect.old], force, assembling_machine_list)
 			end
 		elseif effect.type == "machine-replacement" then
-			assembling_machine_list = machine_replacement(effect.new, effect.old, assembling_machine_list)
 			if storage.turd_machine_replacements[force.index] then
 				storage.turd_machine_replacements[force.index][effect.old] = nil
 			end
+			assembling_machine_list = machine_replacement(effect.new, effect.old, assembling_machine_list)
 		end
 	end
 end

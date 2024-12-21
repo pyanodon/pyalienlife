@@ -6,9 +6,10 @@ Date: ?
     - Greatly increased the science pack requirement for the wood processing unit turd from 500 -> 7000. Resolves https://github.com/pyanodon/pybugreports/issues/758
     - Fix the base productivity on Composter from Composter TURD path 2.
     - All caravans can use all caravan outpost types
-    - Fixed picked TURDs appearing to be re-pickable when they were not. Resolves https://github.com/pyanodon/pybugreports/issues/769
   TURD:
-    - Redid bioreactor turd entirely.
+    - Redid bioreactor TURD entirely.
+    - Fixed a crash when reverting a TURD that changes a machine. Resolves https://github.com/pyanodon/pybugreports/issues/736
+    - Fixed picked TURDs appearing to be re-pickable when they were not. Resolves https://github.com/pyanodon/pybugreports/issues/769
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.31
 Date: 2024-11-29
