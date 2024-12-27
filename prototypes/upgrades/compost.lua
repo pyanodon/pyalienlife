@@ -120,7 +120,6 @@ if data and not yafc_turd_integration then
         results = {
             {type = "fluid", name = "coalbed-gas",       amount = 60},
             {type = "fluid", name = "carbon-dioxide", amount = 40},
-            {type = "fluid", name = "methane",        amount = 40},
             {type = "fluid", name = "coal-gas",       amount = 20},
         },
         icon = "__pyalienlifegraphics__/graphics/icons/biomass-destruction.png",
@@ -128,6 +127,10 @@ if data and not yafc_turd_integration then
         subgroup = "py-alienlife-items",
         allow_productivity = true,
     }}
+
+    if mods["pyhightech"] then
+        RECIPE("biomass-destruction"):add_result { type = "fluid", name = "methane", amount = 40}
+    end
 
     data:extend {{
         type = "recipe",
