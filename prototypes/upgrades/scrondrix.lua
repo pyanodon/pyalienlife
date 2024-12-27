@@ -51,24 +51,19 @@ if data and not yafc_turd_integration then
         data:extend {recipe}
     end
 
-    local brains = RECIPE("ex-bra-scro"):copy()
-    brains.name = "scrondrix-brain-slaughterhouse-ex"
-    brains.localised_name = {"recipe-name.ex-bra-scro"}
-    brains:multiply_result_amount("brain", 16)
-    brains:multiply_result_amount("pineal-gland", 0.25)
-
-    local experimental = RECIPE("Caged-scrondrix-9"):copy()
-    experimental.name = "scrondrix-experimental-treatment"
-    experimental:add_ingredient {name = "arthurian-codex", amount = 1, type = "item"}
-    experimental.results = {
-        {name = "bones",                 amount = 1,     type = "item",  probability = 0.6},
-        {name = "cage",                  amount = 1,     type = "item",  probability = 0.6},
-        {name = "electronic-circuit",    amount_min = 7, amount_max = 8, type = "item"},
-        {name = "brain-caged-scrondrix", amount = 1,     type = "item",  probability = 0.4},
-    }
-    experimental.main_product = "brain-caged-scrondrix"
-
-    data:extend {brains, experimental}
+    data:extend {{
+        type = "recipe",
+        name = "scrondrix-diamonds",
+        enabled = false,
+        category = "scrondrix",
+        energy_required = 60,
+        ingredients = {
+            {"kimberlite-residue",      20}
+        },
+        results = {
+            {name = "processed-rejects", amount = 100},
+        }
+    }}
 end
 
 return {
@@ -140,8 +135,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "ex-bra-scro",       new = "scrondrix-brain-slaughterhouse-ex", type = "recipe-replacement"},
-                {old = "Caged-scrondrix-9", new = "scrondrix-experimental-treatment",  type = "recipe-replacement"},
+                {recipe = "scrondrix-diamonds", type = "unlock-recipe"},
             }
         }
     },
