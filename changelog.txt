@@ -8,6 +8,8 @@ Date: ?
     - All caravans can use all caravan outpost types
   TURD:
     - Redid bioreactor TURD entirely.
+    - Redid scrondrix path 3. No more free brains for you guys. Now affects diamond production.
+    - Redid slaughterhouse TURD entirely.
     - Fixed a crash when reverting a TURD that changes a machine. Resolves https://github.com/pyanodon/pybugreports/issues/736
     - Fixed picked TURDs appearing to be re-pickable when they were not. Resolves https://github.com/pyanodon/pybugreports/issues/769
 ---------------------------------------------------------------------------------------------------
