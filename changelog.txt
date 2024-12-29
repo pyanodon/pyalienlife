@@ -13,6 +13,7 @@ Date: ?
     - Fixed picked TURDs appearing to be re-pickable when they were not. Resolves https://github.com/pyanodon/pybugreports/issues/769
     - Slight buff to moss TURD path 1 (chlorinated water prod bonus 30% -> 40%)
     - Slight buff to sap TURD path 1 (Productivity modules are now allowed on the ash recipe)
+    - Slight buff to seaweed TURD path 1
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.31
 Date: 2024-11-29
