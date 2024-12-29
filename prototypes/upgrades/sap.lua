@@ -18,7 +18,8 @@ if data and not yafc_turd_integration then
         },
         main_product = "ash",
         icon = "__pyalienlifegraphics3__/graphics/icons/sap-to-ash.png",
-        icon_size = 64
+        icon_size = 64,
+        allow_productivity = true,
     }}
 
     for i, machine_recipe in pairs {
