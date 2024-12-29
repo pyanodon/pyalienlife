@@ -1203,3 +1203,73 @@ RECIPE {
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/niobium-ore.png",
     icon_size = 64,
 }:add_unlock("phytomining-mk02").category = "pulp"
+
+RECIPE {
+    type = "recipe",
+    name = "bhodos-ur",
+    category = "bhoddos",
+    enabled = false,
+    energy_required = 200,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam",   amount = 500, minimum_temperature = 3000},
+        {type = "item",  name = "bhoddos",           amount = 10},
+    },
+    results = {
+        {type = "item",  name = "ur-biomass",  amount = 10},
+        {type = "fluid", name = "steam",   amount = 500, temperature = 1000},
+    },
+    main_product = "ur-biomass"
+}:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "bhodos-ur-2",
+    category = "bhoddos",
+    enabled = false,
+    energy_required = 140,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam",   amount = 500, minimum_temperature = 3000, fluidbox_index = 1},
+        {type = "item",  name = "bhoddos",           amount = 10},
+        {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
+    },
+    results = {
+        {type = "item",  name = "ur-biomass",  amount = 20},
+        {type = "fluid", name = "steam",   amount = 500, temperature = 1000},
+    },
+    main_product = "ur-biomass"
+}:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "bhodos-ur-3",
+    category = "bhoddos",
+    enabled = false,
+    energy_required = 80,
+    ingredients = {
+        {type = "fluid", name = "pressured-steam",   amount = 500, minimum_temperature = 3000, fluidbox_index = 1},
+        {type = "item",  name = "bhoddos",           amount = 10},
+        {type = "item",  name = "hmas",              amount = 1},
+        {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
+    },
+    results = {
+        {type = "item",  name = "ur-biomass",  amount = 80},
+        {type = "fluid", name = "steam",   amount = 500, temperature = 1000},
+    },
+    main_product = "ur-biomass"
+}:add_unlock("phytomining-mk03")
+
+RECIPE {
+    type = "recipe",
+    name = "ur-biomass-extraction",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 40,
+    ingredients = {
+        {type = "item",  name = "ur-biomass", amount = 10},
+        {type = "fluid", name = "sulfuric-acid", amount = 100},
+    },
+    results = {
+        {type = "item", name = "uranium-ore", amount = 5},
+    },
+    main_product = "uranium-ore",
+}:add_unlock("phytomining-mk03").category = "pulp"

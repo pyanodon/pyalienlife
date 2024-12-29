@@ -3477,6 +3477,19 @@ ITEM {
 	fuel_category = "biomass"
 }
 
+ITEM {
+	type = "item",
+	name = "ur-biomass",
+	icon = "__pyalienlifegraphics__/graphics/icons/ur-biomass.png",
+	icon_size = 64,
+	flags = {},
+	subgroup = "py-alienlife-phytomining",
+	order = "h",
+	stack_size = 100,
+	fuel_value = "2.5MJ",
+	fuel_category = "biomass"
+}
+
 ---------------------------------------
 
 ITEM {
