@@ -21,6 +21,7 @@ Date: 2024-11-29
     - Added FSM animations to the incubator. Resolves https://github.com/pyanodon/pybugreports/issues/753
     - Improved the pipe connection graphics for the incubator.
     - Muted the working sounds for the incubator.
+    - Moved Underground Vessel for the biofluid network from Biofluid Stage 2 to Biofluid Stage 1
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.30
 Date: 2024-11-29
