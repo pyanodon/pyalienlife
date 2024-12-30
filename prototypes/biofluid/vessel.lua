@@ -25,7 +25,7 @@ RECIPE {
     ingredients = {
         {"vessel",               10},
         {"earth-generic-sample", 1},
-        {"peptidase-m58",        1},
+        {"microcin-j25",         1},
         {"alien-sample-02",      2},
         {"bio-sample",           3},
         {type = "fluid",         name = "water-saline", amount = 40},
@@ -35,7 +35,7 @@ RECIPE {
     results = {
         {"vessel-to-ground", 10}
     }
-}:add_unlock("biofluid-mk02")
+}:add_unlock("biofluid-mk01")
 
 ITEM {
     type = "item",
