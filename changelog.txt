@@ -7,6 +7,7 @@ Date: ?
     - Greatly increased the science pack requirement for the wood processing unit turd from 500 -> 7000. Resolves https://github.com/pyanodon/pybugreports/issues/758
     - Fix the base productivity on Composter from Composter TURD path 2.
     - All caravans can use all caravan outpost types
+    - Xeno raising recipes 1-4 are now properly assigned to the corresponding technologies
   TURD:
     - Redid bioreactor TURD entirely.
     - Fixed a crash when reverting a TURD that changes a machine. Resolves https://github.com/pyanodon/pybugreports/issues/736

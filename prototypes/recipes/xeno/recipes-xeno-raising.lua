@@ -191,7 +191,7 @@ py.autorecipes {
 				{name = "caged-xeno", add_amount = 1},
 			},
 			crafting_speed = 110,
-			tech = "xeno"
+			tech = "xeno-mk02"
 		},
 		--prod
 		{
@@ -207,7 +207,7 @@ py.autorecipes {
 				{name = "caged-xeno", add_amount = 1},
 			},
 			crafting_speed = 90,
-			tech = "xeno"
+			tech = "xeno-mk03"
 		},
 		--utility
 		{
@@ -222,7 +222,7 @@ py.autorecipes {
 				{name = "caged-xeno", add_amount = 1},
 			},
 			crafting_speed = 70,
-			tech = "xeno"
+			tech = "xeno-mk04"
 		},
 	}
 }
