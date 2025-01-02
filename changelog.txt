@@ -8,6 +8,7 @@ Date: ?
     - Fix the base productivity on Composter from Composter TURD path 2.
     - All caravans can use all caravan outpost types
     - Added a bhoddos to uranium ore phytomining recipe
+    - Xeno raising recipes 1-4 are now properly assigned to the corresponding technologies
   TURD:
     - Redid bioreactor TURD entirely.
     - Fixed a crash when reverting a TURD that changes a machine. Resolves https://github.com/pyanodon/pybugreports/issues/736
@@ -22,6 +23,7 @@ Date: 2024-11-29
     - Added FSM animations to the incubator. Resolves https://github.com/pyanodon/pybugreports/issues/753
     - Improved the pipe connection graphics for the incubator.
     - Muted the working sounds for the incubator.
+    - Moved Underground Vessel for the biofluid network from Biofluid Stage 2 to Biofluid Stage 1
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.30
 Date: 2024-11-29
