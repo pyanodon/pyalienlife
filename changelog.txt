@@ -1,8 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
-Date: ?
+Date: 2025-1-2
   Changes:
-    - Composter TURD path 2 no longer generates methanol. Now it instead generates coalbed gas. Resolves https://github.com/pyanodon/pybugreports/issues/757
     - Biomass destruction only generates methane if pyHT installed. Resolves https://github.com/pyanodon/pybugreports/issues/794
     - Greatly increased the science pack requirement for the wood processing unit turd from 500 -> 7000. Resolves https://github.com/pyanodon/pybugreports/issues/758
     - Fix the base productivity on Composter from Composter TURD path 2.
@@ -10,6 +9,7 @@ Date: ?
     - Added a bhoddos to uranium ore phytomining recipe
     - Xeno raising recipes 1-4 are now properly assigned to the corresponding technologies
   TURD:
+    - Composter TURD path 2 no longer generates methanol. Now it instead generates coalbed gas. Resolves https://github.com/pyanodon/pybugreports/issues/757
     - Redid bioreactor TURD entirely.
     - Fixed a crash when reverting a TURD that changes a machine. Resolves https://github.com/pyanodon/pybugreports/issues/736
     - Fixed picked TURDs appearing to be re-pickable when they were not. Resolves https://github.com/pyanodon/pybugreports/issues/769
