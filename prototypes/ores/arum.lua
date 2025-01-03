@@ -40,6 +40,7 @@ data:extend {
   {
     type = "tree",
     name = "arum-fake",
+    hidden = true,
     icon = "__pyalienlifegraphics__/graphics/icons/cadaveric-arum.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
@@ -57,7 +58,7 @@ data:extend {
     drawing_box_vertical_extension = 1.8,
     subgroup = "trees",
     order = "a[tree]-c[dry-tree]",
-    impact_category = "wood", 
+    impact_category = "wood",
     --autoplace = dead_trees_autoplace(0.5),
     pictures =
     {

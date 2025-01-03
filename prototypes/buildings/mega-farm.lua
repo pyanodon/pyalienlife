@@ -333,6 +333,7 @@ ENTITY {
 data:extend {{
   type = "cargo-pod",
   name = "dQw4w9WgXcQ",
+  hidden = true,
   inventory_size = 0,
   spawned_container = "steel-chest"
 }}
@@ -340,6 +341,7 @@ data:extend {{
 ENTITY {
   type = "rocket-silo-rocket",
   name = "mega-farm-invisa-rocket",
+  hidden = true,
   flags = {"not-on-map"},
   collision_mask = {layers = {}, not_colliding_with_itself = true},
   collision_box = {{-2, -7}, {2, 4}},

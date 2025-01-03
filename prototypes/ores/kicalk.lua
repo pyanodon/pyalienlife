@@ -40,6 +40,7 @@ data:extend {
   {
     type = "tree",
     name = "kicalk-tree-fake",
+    hidden = true,
     icon = "__pyalienlifegraphics__/graphics/icons/kicalk.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
