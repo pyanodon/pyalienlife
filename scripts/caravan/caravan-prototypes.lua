@@ -6,7 +6,8 @@ local caravan_actions = {
 		"empty-inventory",
 		"item-count",
 		"inverse-item-count",
-		"circuit-condition"
+		"circuit-condition",
+		"circuit-condition-static"
 	},
 	["character"] = {
 		"time-passed",
@@ -48,7 +49,8 @@ local caravan_actions = {
 	},
 	["electric-pole"] = {
 		"time-passed",
-		"circuit-condition"
+		"circuit-condition",
+		"circuit-condition-static"
 	},
 	["default"] = {
 		"time-passed"
@@ -340,7 +342,20 @@ Caravan.actions = {
 		if not right or not left then return false end
 
 		return evaluate_signal(outpost, right) == evaluate_signal(outpost, left)
+	end,
+
+	["circuit-condition-static"] = function(caravan_data, schedule, action)
+		local outpost = schedule.entity
+		if not outpost or not outpost.valid then return true end
+
+		local right = action.circuit_condition_right
+		local left = action.circuit_condition_left
+		if not right or not left then return false end
+
+		return evaluate_signal(outpost, right) == left
 	end
+	
+	
 }
 
 Caravan.free_actions = { -- actions that don't use fuel

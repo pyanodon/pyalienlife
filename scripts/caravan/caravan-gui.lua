@@ -95,9 +95,21 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 				action_frame.add {type = "label", caption = "="}
 				local circuit_condition_left = action_frame.add {
 					type = "choose-elem-button", name = "py_circuit_condition_left", style = "train_schedule_item_select_button",
-					tags = tags, elem_type = "signal"
+					tags = tags, elem_type = "signal" 
 				}
 				circuit_condition_left.elem_value = action.circuit_condition_left
+			elseif action.type == "circuit-condition-static" then
+				action_frame.add {type = "empty-widget", style = "py_empty_widget"}
+				local circuit_condition_right = action_frame.add {
+					type = "choose-elem-button", name = "py_circuit_condition_right", style = "train_schedule_item_select_button",
+					tags = tags, elem_type = "signal"
+				}
+				circuit_condition_right.elem_value = action.circuit_condition_right
+				action_frame.add {type = "label", caption = "="}
+				local value = action_frame.add {type = "textfield", name = "py_value_condition_left", style = "py_compact_slider_value_textfield", tags = tags, text = action.circuit_condition_left}
+				value.numeric = true
+				value.allow_decimal = false
+				value.allow_negative = true
 			else
 				action_frame.add {type = "empty-widget", style = "py_empty_widget"}
 			end

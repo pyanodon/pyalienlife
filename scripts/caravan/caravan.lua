@@ -517,6 +517,17 @@ gui_events[defines.events.on_gui_elem_changed]["py_circuit_condition_left"] = fu
 	action.circuit_condition_left = element.elem_value
 end
 
+gui_events[defines.events.on_gui_text_changed]["py_value_condition_left"] = function(event)
+	local element = event.element
+	local tags = element.tags
+	local caravan_data = storage.caravans[tags.unit_number]
+	local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+	local value = tonumber(element.text)
+	action.circuit_condition_left = value
+
+end
+
+
 gui_events[defines.events.on_gui_text_changed]["py_time_passed_text"] = function(event)
 	local element = event.element
 	local tags = element.tags
