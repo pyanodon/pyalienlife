@@ -731,7 +731,7 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
 	end
 end)
 
-script.on_event(defines.events.on_player_setup_blueprint, function(event)
+py.on_event(defines.events.on_player_setup_blueprint, function(event)
 	local player = game.get_player(event.player_index)
 	local blueprint = player.blueprint_to_setup
 	if not blueprint.valid_for_read then blueprint = player.cursor_stack end
@@ -794,11 +794,12 @@ py.on_event(py.events.on_destroyed(), function(event)
 	end
 end)
 
-script.on_event(defines.events.on_player_fast_transferred, function(event)
+py.on_event(defines.events.on_player_fast_transferred, function(event)
 	local bioport_data = storage.biofluid_bioports[event.entity.unit_number]
 	if not bioport_data then return end
 	Biofluid.update_bioport_animation(bioport_data)
 end)
+
 
 local animations = {
 	[""] = 1,

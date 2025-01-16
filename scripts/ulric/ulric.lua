@@ -7,7 +7,7 @@ py.on_event(py.events.on_init(), function()
 end)
 
 
-script.on_event(defines.events.on_player_used_capsule, function(event)
+py.on_event(defines.events.on_player_used_capsule, function(event)
 	if event.item.name ~= "ulric-infusion" then return end
 
 	local player = game.get_player(event.player_index)

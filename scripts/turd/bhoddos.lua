@@ -47,7 +47,7 @@ local function draw_circle(entity, player)
     }.id
 end
 
-script.on_event(defines.events.on_selected_entity_changed, function(event)
+py.on_event(defines.events.on_selected_entity_changed, function(event)
     local circles = storage.bhoddos_circles
     if not circles then
         circles = {}

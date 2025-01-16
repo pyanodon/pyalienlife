@@ -555,8 +555,8 @@ local function on_unresearched(event)
 	end
 end
 
-script.on_event(defines.events.on_research_finished, on_researched)
-script.on_event(defines.events.on_research_reversed, on_unresearched)
+py.on_event(defines.events.on_research_finished, on_researched)
+py.on_event(defines.events.on_research_reversed, on_unresearched)
 
 py.on_event(py.events.on_built(), function(event)
 	local entity = event.entity
