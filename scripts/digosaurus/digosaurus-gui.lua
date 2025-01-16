@@ -1,3 +1,40 @@
+function Digosaurus.why_isnt_my_dig_site_working(dig_data)
+    local entity = dig_data.entity
+
+    local status, img, diode
+    if entity.to_be_deconstructed() then
+        status = {"entity-status.marked-for-deconstruction"}
+        img = "utility/status_not_working"
+        diode = defines.entity_status_diode.red
+    elseif table_size(dig_data.scanned_ores) == 0 then
+        status = {"entity-status.no-minable-resources"}
+        img = "utility/status_not_working"
+        diode = defines.entity_status_diode.red
+    elseif dig_data.food_inventory.is_empty() then
+        status = {"entity-status.no-food"}
+        img = "utility/status_not_working"
+        diode = defines.entity_status_diode.red
+    elseif entity.energy == 0 then
+        status = {"entity-status.no-power"}
+        img = "utility/status_not_working"
+        diode = defines.entity_status_diode.red
+    elseif dig_data.digosaur_inventory.is_empty() then
+        status = {"entity-status.no-creature"}
+        img = "utility/status_not_working"
+        diode = defines.entity_status_diode.red
+    elseif entity.energy < entity.electric_buffer_size * 0.9 then
+        status = {"entity-status.low-power"}
+        img = "utility/status_yellow"
+        diode = defines.entity_status_diode.yellow
+    else
+        status = {"entity-status.working"}
+        img = "utility/status_working"
+        diode = defines.entity_status_diode.green
+    end
+
+    return status, img, diode
+end
+
 function Digosaurus.update_gui(gui)
 	local dig_data = storage.dig_sites[gui.tags.unit_number]
 	if not Digosaurus.validity_check(dig_data) then
@@ -9,32 +46,11 @@ function Digosaurus.update_gui(gui)
 
 	content_flow.status_flow.electricity.value = entity.energy / entity.electric_buffer_size
 	content_flow.status_flow.consumption.caption = {"", py.format_energy(entity.energy, "W"), "/", py.format_energy(entity.electric_buffer_size, "W")}
+    if entity.to_be_deconstructed() then
+        content_flow.status_flow.consumption.caption = ""
+    end
 
-	local status, img
-	if entity.to_be_deconstructed() then
-		status = {"entity-status.marked-for-deconstruction"}
-		img = "utility/status_not_working"
-		content_flow.status_flow.consumption.caption = ""
-	elseif table_size(dig_data.scanned_ores) == 0 then
-		status = {"entity-status.no-minable-resources"}
-		img = "utility/status_not_working"
-	elseif dig_data.food_inventory.is_empty() then
-		status = {"entity-status.no-food"}
-		img = "utility/status_not_working"
-	elseif entity.energy == 0 then
-		status = {"entity-status.no-power"}
-		img = "utility/status_not_working"
-	elseif dig_data.digosaur_inventory.is_empty() then
-		status = {"entity-status.no-creature"}
-		img = "utility/status_not_working"
-	elseif entity.energy < entity.electric_buffer_size * 0.9 then
-		status = {"entity-status.low-power"}
-		img = "utility/status_yellow"
-	else
-		status = {"entity-status.working"}
-		img = "utility/status_working"
-	end
-
+	local status, img, _ = Digosaurus.why_isnt_my_dig_site_working(dig_data)
 	content_flow.status_flow.status_text.caption = status
 	content_flow.status_flow.status_sprite.sprite = img
 
