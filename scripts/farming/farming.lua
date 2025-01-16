@@ -79,11 +79,12 @@ py.register_on_nth_tick(59, "Farming59", "pyal", function(event)
 	end
 end)
 
--- every 2 seconds, check up to 60 farm buildings for empty module inventory
+-- every 2 seconds, check 10% of farm buildings for empty module inventory
 py.register_on_nth_tick(121, "Farming121", "pyal", function()
-	if #storage.enabled_farm_buildings == 0 then return end
+    local farm_count = #storage.enabled_farm_buildings
+    if farm_count == 0 then return end
 	local first_index_checked_this_tick = storage.next_farm_index
-	for i = 1, 60 do
+    for i = 1, math.ceil(farm_count / 16) do
 		local farm = storage.enabled_farm_buildings[storage.next_farm_index]
 
 		if not farm or not farm.valid then
