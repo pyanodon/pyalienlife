@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - The desulfurization unit is now unlocked with fawogae turd path 2. Resolves https://github.com/pyanodon/pybugreports/issues/812
     - Caravans now can compare a circuit condition to a static value.
+    - Renamed bioreserve to native flora. Resolves https://github.com/pyanodon/pybugreports/issues/788
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2
