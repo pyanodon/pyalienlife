@@ -37,6 +37,12 @@ Biofluid.failure_reasons = {
 	["entity-status.working"] = "utility/status_working",
 }
 
+Biofluid.diode_colors = {
+    ["utility/status_not_working"] = defines.entity_status_diode.red,
+    ["utility/status_yellow"] = defines.entity_status_diode.yellow,
+    ["utility/status_working"] = defines.entity_status_diode.green,
+}
+
 Biofluid.status_icons = {
 	["entity-status.no-food"] = "utility.fuel_icon",
 	["entity-status.no-creature"] = "no_module_animal",

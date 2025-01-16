@@ -6,6 +6,7 @@ Date: ?
     - Caravans now can compare a circuit condition to a static value.
     - Renamed bioreserve to native flora. Resolves https://github.com/pyanodon/pybugreports/issues/788
     - Adapted all pyAL events to use py.on_event instead of script.on_event
+    - All biofluid entities no longer show "disabled by script" and instead show a custom status with indicator colors.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2

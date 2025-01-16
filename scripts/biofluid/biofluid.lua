@@ -36,6 +36,10 @@ py.on_event(py.events.on_built(), function(event)
 	local connection_type = Biofluid.connectable[entity.name]
 	if not connection_type then return end
 	entity.active = false
+    entity.custom_status = {
+        diode = defines.entity_status_diode.green,
+        label = {"entity-status.working"},
+    }
 	local unit_number = entity.unit_number
 	if connection_type == Biofluid.REQUESTER then
 		local tags = event.tags or {}
@@ -800,6 +804,32 @@ py.on_event(defines.events.on_player_fast_transferred, function(event)
 	Biofluid.update_bioport_animation(bioport_data)
 end)
 
+py.on_event(defines.events.on_selected_entity_changed, function(event)
+    local player = game.get_player(event.player_index)
+    local entity = player.selected
+    if not entity or not entity.valid then return end
+    local entity_name = entity.name
+    local entity_status
+
+    if entity_name == "bioport" then
+        local bioport_data = storage.biofluid_bioports[entity.unit_number]
+        if not bioport_data then return end
+        entity_status = Biofluid.why_isnt_my_bioport_working(bioport_data)
+    elseif entity_name == "requester-tank" then
+        local requester_data = storage.biofluid_requesters[entity.unit_number]
+        if not requester_data then return end
+        local network = storage.biofluid_networks[requester_data.network_id]
+        entity_status = "entity-status.working"
+        if not next(network.biofluid_bioports) then entity_status = "entity-status.no-biofluid-network" end
+    end
+
+    if entity_status then
+        entity.custom_status = {
+            diode = Biofluid.diode_colors[Biofluid.failure_reasons[entity_status]],
+            label = {entity_status},
+        }
+    end
+end)
 
 local animations = {
 	[""] = 1,
