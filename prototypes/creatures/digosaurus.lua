@@ -212,7 +212,7 @@ ENTITY {
   icon = "__pyalienlifegraphics3__/graphics/icons/outpost-mining.png",
   icon_size = 64,
   flags = {"placeable-neutral", "placeable-player", "player-creation", "no-automated-item-insertion"},
-  minable = {mining_time = 2, result = "dino-dig-site"},
+  minable = {mining_time = 0.5, result = "dino-dig-site"},
   max_health = 350,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",
