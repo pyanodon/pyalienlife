@@ -111,6 +111,7 @@ return {
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {speed = 0.1,                 type = "module-effects"},
+                {recipe = "desulfurizator-unit", type = "unlock-recipe"},
                 {recipe = "acid-gas-fawogae", type = "unlock-recipe"},
                 {recipe = "xeno-codex",       type = "unlock-recipe",                 also_unlocked_by_techs = true},
                 {old = "fawogae-sample",      new = "fawogae-sample-with-xeno-codex", type = "recipe-replacement"},

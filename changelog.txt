@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.33
+Date: ?
+  Changes:
+    - The desulfurization unit is now unlocked with fawogae turd path 2. Resolves https://github.com/pyanodon/pybugreports/issues/812
+    - Caravans now can compare a circuit condition to a static value.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2
   Changes:
@@ -8,7 +14,6 @@ Date: 2025-1-2
     - All caravans can use all caravan outpost types
     - Added a bhoddos to uranium ore phytomining recipe
     - Xeno raising recipes 1-4 are now properly assigned to the corresponding technologies
-    - Caravans now can compare a circuit condition to a static value.
   TURD:
     - Composter TURD path 2 no longer generates methanol. Now it instead generates coalbed gas. Resolves https://github.com/pyanodon/pybugreports/issues/757
     - Redid bioreactor TURD entirely.
