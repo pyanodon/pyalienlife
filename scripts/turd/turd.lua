@@ -320,7 +320,7 @@ local function create_hidden_beacon(machine, module_name, item_prototypes)
 		beacon = machine.surface.create_entity {name = "hidden-beacon-turd", position = machine.position, force = machine.force}
 		beacon.destructible = false
 		beacon.operable = false
-		beacon.minable = false
+		beacon.minable_flag = false
 	end
 
 	local inventory = beacon.get_module_inventory()

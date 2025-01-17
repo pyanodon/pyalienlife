@@ -12,6 +12,7 @@ Date: ?
     - Increased the mining time of the dig site from 2s -> 0.5s.
     - The farm building disable code is no longer limited to 1 machine every 2 seconds and now instead does 1/8th of your machines every 2 seconds. Resolves https://github.com/pyanodon/pybugreports/issues/457
     - Renamed "cottongut basic food" to "basic cottongut food".
+    - Replaced deprecated .minable with .minable_flag
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2

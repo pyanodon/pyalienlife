@@ -30,7 +30,7 @@ function Oculua.set_target(oculua_data, target)
 		distraction = defines.distraction.none
 	}
 	oculua_data.target = target
-	entity.minable = false
+	entity.minable_flag = false
 end
 
 function Oculua.spawn_oculua(ipod_data, player)
@@ -265,7 +265,7 @@ function Oculua.wander(oculua_data)
 	}
 	oculua_data.target = nil
 	oculua_data.status = WANDERING
-	oculua.minable = true
+	oculua.minable_flag = true
 	Oculua.clear_incoming_oculua_items(oculua_data)
 end
 
