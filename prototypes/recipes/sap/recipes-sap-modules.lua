@@ -7,11 +7,11 @@ RECIPE {
     name = "sap-01",
     category = "sap-mk01",
     enabled = false,
-    energy_required = 20,
+    energy_required = 80,
     ingredients = {
     },
     results = {
-        {type = "item", name = "saps", amount = 1}
+        {type = "item", name = "saps", amount = 4}
     },
     main_product = "saps"
 }:add_unlock("sap-mk01")
@@ -60,11 +60,11 @@ RECIPE {
     category = "sap-mk02",
     --hidden = true,
     enabled = false,
-    energy_required = 20,
+    energy_required = 80,
     ingredients = {
     },
     results = {
-        {type = "item", name = "saps-mk02", amount = 1}
+        {type = "item", name = "saps-mk02", amount = 4}
     },
     main_product = "saps-mk02"
 }:add_unlock("sap-mk02")
@@ -123,11 +123,11 @@ RECIPE {
     category = "sap-mk03",
     --hidden = true,
     enabled = false,
-    energy_required = 20,
+    energy_required = 80,
     ingredients = {
     },
     results = {
-        {type = "item", name = "saps-mk03", amount = 1}
+        {type = "item", name = "saps-mk03", amount = 4}
     },
     main_product = "saps-mk03"
 }:add_unlock("sap-mk03")
@@ -186,11 +186,11 @@ RECIPE {
     category = "sap-mk04",
     --hidden = true,
     enabled = false,
-    energy_required = 20,
+    energy_required = 80,
     ingredients = {
     },
     results = {
-        {type = "item", name = "saps-mk04", amount = 1}
+        {type = "item", name = "saps-mk04", amount = 4}
     },
     main_product = "saps-mk04"
 }:add_unlock("sap-mk04")
