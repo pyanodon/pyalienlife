@@ -33,7 +33,7 @@ ITEM {
 local animation = {
     layers = {
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-sh.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/bots/gobachov/sh.png",
             priority = "high",
             line_length = 25,
             width = 128,
@@ -45,7 +45,7 @@ local animation = {
             scale = 0.5
         },
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/bots/gobachov/hr-carry.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/bots/gobachov/carry.png",
             priority = "high",
             line_length = 25,
             width = 128,

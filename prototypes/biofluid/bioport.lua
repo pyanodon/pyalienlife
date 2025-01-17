@@ -103,7 +103,7 @@ ENTITY {
         integration_patch = {
             layers = {
                 {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-raw.png",
+                    filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/raw.png",
                     priority = "extra-high",
                     width = 351,
                     height = 365,
@@ -112,7 +112,7 @@ ENTITY {
                     frame_count = 1
                 },
                 {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-glow.png",
+                    filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/glow.png",
                     priority = "extra-high",
                     width = 351,
                     height = 365,
@@ -122,7 +122,7 @@ ENTITY {
                     frame_count = 1
                 },
                 {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/hr-sh.png",
+                    filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/sh.png",
                     priority = "extra-high",
                     draw_as_shadow = true,
                     width = 352,
@@ -255,7 +255,7 @@ for _, direction in pairs {"north", "east", "south", "west"} do
     idle_animation[direction_inversion[direction]] = {
         layers = {
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-" .. direction .. ".png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-" .. direction .. ".png",
                 priority = "high",
                 width = 640 / 5,
                 height = 768 / 6,
@@ -266,7 +266,7 @@ for _, direction in pairs {"north", "east", "south", "west"} do
                 animation_speed = 0.5
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-" .. direction .. "-glow.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-" .. direction .. "-glow.png",
                 priority = "high",
                 width = 640 / 5,
                 height = 768 / 6,
@@ -278,7 +278,7 @@ for _, direction in pairs {"north", "east", "south", "west"} do
                 draw_as_glow = true
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/hr-vessel-port-" .. direction .. "-shadow.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-" .. direction .. "-shadow.png",
                 priority = "high",
                 width = 640 / 5,
                 height = 768 / 6,

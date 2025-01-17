@@ -40,7 +40,7 @@ ENTITY {
     stage_counts = {800, 400, 200},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia/hr-ralesia.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia.png",
             priority = "extra-high",
             width = 128,
             height = 128,

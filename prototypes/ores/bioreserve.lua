@@ -52,7 +52,7 @@ ENTITY {
     stage_counts = {20000, 15000, 11000, 8000, 5000, 3000, 1000, 500, 300, 200, 100},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/hr-rich-1.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/rich-1.png",
             priority = "extra-high",
             width = 128,
             height = 160,

@@ -150,22 +150,22 @@ data:extend {{
 				max_advance = 1,
 				stripes = {
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-01.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-01.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					},
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-02.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-02.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					},
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-03.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-03.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					},
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-04.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-04.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					}
@@ -184,22 +184,22 @@ data:extend {{
 				animation_speed = 1,
 				stripes = {
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-01.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-01.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					},
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-02.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-02.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					},
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-03.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-03.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					},
 					{
-						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/hr-dingrit-sh-04.png",
+						filename = "__pyalienlifegraphics3__/graphics/entity/dingrit/dingrit-sh-04.png",
 						width_in_frames = 16,
 						height_in_frames = 16
 					}

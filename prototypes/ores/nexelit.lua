@@ -52,7 +52,7 @@ ENTITY {
     stage_counts = {20000, 13000, 10000, 5000, 3000, 1000, 500, 100},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics3__/graphics/entity/nexelit/hr-nexelit.png",
+            filename = "__pyalienlifegraphics3__/graphics/entity/nexelit/nexelit.png",
             priority = "extra-high",
             width = 128,
             height = 128,

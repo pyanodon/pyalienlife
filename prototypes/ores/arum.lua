@@ -23,7 +23,7 @@ ENTITY {
   stage_counts = {800},
   stages = {
     sheet = {
-      filename = "__pyalienlifegraphics__/graphics/entity/crops/arum/hr-arum.png",
+      filename = "__pyalienlifegraphics__/graphics/entity/crops/arum.png",
       priority = "extra-high",
       width = 128,
       height = 160,
@@ -60,18 +60,17 @@ data:extend {
     order = "a[tree]-c[dry-tree]",
     impact_category = "wood",
     --autoplace = dead_trees_autoplace(0.5),
-    pictures =
-    {
-      --dry-tree
-      {
-        filename = "__pyalienlifegraphics__/graphics/entity/crops/arum/arum.png",
-        priority = "extra-high",
-        width = 64,
-        height = 80,
-        frame_count = 8,
-        variation_count = 1,
-        shift = util.by_pixel(0, -16),
-      }
+    pictures = {
+        {
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/arum.png",
+            priority = "extra-high",
+            width = 128,
+            height = 160,
+            frame_count = 8,
+            variation_count = 1,
+            scale = 0.5,
+            shift = util.by_pixel(0, -16),
+        }
     }
   }
 }

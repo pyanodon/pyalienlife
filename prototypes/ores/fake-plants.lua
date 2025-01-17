@@ -9,7 +9,7 @@ for _, ore in pairs(data.raw.resource) do
           {
             type = "sprite",
             name = "bio-tree-" .. i,
-            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/hr-rich-1.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/rich-1.png",
             --priority = "extra-high-no-scale",
             width = 128,
             height = 160,

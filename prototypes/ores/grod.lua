@@ -40,7 +40,7 @@ ENTITY {
     stage_counts = {800},
     stages = {
         sheet = {
-            filename = "__pyalienlifegraphics__/graphics/entity/crops/grod/hr-grod.png",
+            filename = "__pyalienlifegraphics__/graphics/entity/crops/grod.png",
             priority = "extra-high",
             width = 128,
             height = 160,

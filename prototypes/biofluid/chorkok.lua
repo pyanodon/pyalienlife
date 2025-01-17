@@ -67,7 +67,7 @@ RECIPE {
 local animation = {
     layers = {
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-sh.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/bots/chorkok/sh.png",
             priority = "high",
             line_length = 25,
             width = 128,
@@ -78,7 +78,7 @@ local animation = {
             direction_count = 16
         },
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/bots/chorkok/hr-carry.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/bots/chorkok/carry.png",
             priority = "high",
             line_length = 25,
             width = 128,

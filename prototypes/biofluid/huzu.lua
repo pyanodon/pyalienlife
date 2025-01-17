@@ -34,7 +34,7 @@ ITEM {
 local animation = {
     layers = {
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/bots/huzu/hr-carry-sh.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/bots/huzu/carry-sh.png",
             priority = "high",
             line_length = 25,
             width = 160,
@@ -46,7 +46,7 @@ local animation = {
             scale = 0.5
         },
         {
-            filename = "__pyalienlifegraphics2__/graphics/entity/bots/huzu/hr-carry.png",
+            filename = "__pyalienlifegraphics2__/graphics/entity/bots/huzu/carry.png",
             priority = "high",
             line_length = 25,
             width = 160,
