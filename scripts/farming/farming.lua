@@ -42,12 +42,14 @@ remote.add_interface("pyfarm", {
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
     local name = entity.name:gsub("%-mk..+", "")
-    return storage.farm_prototypes[name].domain
+    local farm_data = storage.farm_prototypes[name]
+    if farm_data then return farm_data.domain end
 end
 
 function Farming.get_default_module(entity)
     local name = entity.name:gsub("%-mk..+", "")
-    return storage.farm_prototypes[name].default_module
+    local farm_data = storage.farm_prototypes[name]
+    if farm_data then return farm_data.default_module end
 end
 
 function Farming.disable_machine(entity)
