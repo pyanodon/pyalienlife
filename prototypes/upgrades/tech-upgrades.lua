@@ -180,10 +180,13 @@ local function build_tech_upgrade(tech_upgrade)
                     data:extend {module}
                 end
 
-                if is_this_a_speed_module_that_effects_farm_buildings then
+                -- https://github.com/pyanodon/pybugreports/issues/809
+                local crafting_categories = table.invert(mk1.crafting_categories or {})
+                if effect.productivity and effect.productivity ~= 0 then
                     for _, recipe in pairs(data.raw.recipe) do
-                        if not recipe.allow_productivity and table.any(mk1.crafting_categories, function(v) return v == recipe.category end) then
+                        if not recipe.allow_productivity and recipe.category and crafting_categories[recipe.category] then
                             recipe.allow_productivity = true
+                            assert(not recipe.allowed_module_categories, recipe.name)
                             recipe.allowed_module_categories = {tech_upgrade.module_category}
                         end
                     end
