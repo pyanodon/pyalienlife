@@ -46,7 +46,7 @@ py.on_event(py.events.on_built(), function(event)
 		storage.biofluid_requesters[unit_number] = {
 			entity = entity,
 			name = tags.name,
-			amount = tags.amount or 0,
+			amount = tags.amount or 10000,
 			incoming = 0,
 			care_about_temperature = tags.care_about_temperature or false,
 			target_temperature = tags.target_temperature or 15,

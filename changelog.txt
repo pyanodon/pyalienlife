@@ -14,6 +14,7 @@ Date: ?
     - Renamed "cottongut basic food" to "basic cottongut food".
     - Replaced deprecated .minable with .minable_flag
     - Removed all legacy low-res graphic files from pyanodon.
+    - Biofluid requesters now default to request size of 10k instead of 0. Resolves https://github.com/pyanodon/pybugreports/issues/813
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2
