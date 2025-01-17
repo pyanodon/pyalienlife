@@ -6,10 +6,11 @@ Date: ?
     - Caravans now can compare a circuit condition to a static value.
     - Renamed bioreserve to native flora. Resolves https://github.com/pyanodon/pybugreports/issues/788
     - Adapted all pyAL events to use py.on_event instead of script.on_event
-    - All biofluid entities no longer show "disabled by script" and instead show a custom status with indicator colors.
-    - The digosaur dig site no longer show "disabled by script" and instead show a custom status with indicator colors.
+    - All biofluid entities no longer show "disabled by script" and instead shows a custom status with indicator colors.
+    - The digosaur dig site no longer show "disabled by script" and instead shows a custom status with indicator colors.
+    - pyAL farm buildings no longer show "disabled by script" and instead shows a custom status explaining which module it wants.
     - Increased the mining time of the dig site from 2s -> 0.5s.
-    - The farm building disable code is no longer limited to 1 machine every 2 seconds and now instead does 1/16th of your machines every 2 seconds. Resolves https://github.com/pyanodon/pybugreports/issues/457
+    - The farm building disable code is no longer limited to 1 machine every 2 seconds and now instead does 1/8th of your machines every 2 seconds. Resolves https://github.com/pyanodon/pybugreports/issues/457
     - Renamed "cottongut basic food" to "basic cottongut food".
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
