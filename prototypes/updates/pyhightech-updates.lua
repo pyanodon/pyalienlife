@@ -169,7 +169,6 @@ RECIPE("bio-sample01"):add_ingredient {type = "item", name = "urea", amount = 5}
 RECIPE("inserter"):add_unlock("logistics").enabled = false
 RECIPE("underground-belt"):remove_unlock("logistics").enabled = true
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient {type = "item", name = "belt", amount = 1}
-RECIPE("radar"):add_unlock("radars-mk01").enabled = false
 RECIPE("electronics-factory-mk01"):replace_ingredient("fbreactor-mk01", "distilator"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic")
 RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic")
 RECIPE("pulp-mill-mk01"):replace_ingredient("fbreactor-mk01", "distilator")
