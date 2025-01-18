@@ -18,6 +18,7 @@ Date: ?
     - Fixed certain turds (example: arqad 2) not applying their productivity effect. Resolves https://github.com/pyanodon/pybugreports/issues/809
     - Slowed all sap recipes by 4x. Increased their output by 4x. This aids in belt stacking. Resolves https://github.com/pyanodon/pybugreports/issues/790
     - Updated locale for space dingrits chain and ulric infusion. Resolves https://github.com/pyanodon/pybugreports/issues/816
+    - Standardized crafting speeds for the kicalk plantation to no longer result in floating point crafting times.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2

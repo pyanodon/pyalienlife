@@ -100,7 +100,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-a",
     stack_size = 50,
-    effect = {pollution = 1, speed = 0.25},
+    effect = {pollution = 1, speed = 1},
 }
 
 ITEM {
@@ -118,7 +118,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-b",
     stack_size = 50,
-    effect = {pollution = 1, speed = 0.5},
+    effect = {pollution = 1, speed = 2},
 }
 
 ITEM {
@@ -136,7 +136,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-c",
     stack_size = 50,
-    effect = {pollution = 1, speed = 1},
+    effect = {pollution = 1, speed = 3},
 }
 
 ITEM {
@@ -154,7 +154,7 @@ ITEM {
     subgroup = "py-alienlife-kicalk",
     order = "k-d",
     stack_size = 50,
-    effect = {pollution = 1, speed = 1.5},
+    effect = {pollution = 1, speed = 4},
 }
 
 data:extend {{

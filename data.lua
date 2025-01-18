@@ -524,7 +524,7 @@ require "prototypes/recipes/guar/recipes-guar-modules"
 --need to disable guar recipes from pyph see pyph-updates
 
 --Kicalk
---see pyhightech updates for files
+require "prototypes/buildings/kicalk-plantation"
 
 --Kmauts
 require "prototypes/recipes/kmauts/recipes-kmauts"
