@@ -3,93 +3,93 @@ Mounts = {}
 local transfer_efficiency = 2
 
 py.on_event(py.events.on_init(), function()
-	storage.mounts = storage.mounts or {}
+    storage.mounts = storage.mounts or {}
 end)
 
 py.register_on_nth_tick(239, "update-mounts", "pyal", function(event)
-	for id, mount in pairs(storage.mounts) do
-		if not mount.valid then
-			storage.mounts[id] = nil
-			return
-		end
+    for id, mount in pairs(storage.mounts) do
+        if not mount.valid then
+            storage.mounts[id] = nil
+            return
+        end
 
-		local grid = mount.grid
-		local burner = mount.burner
+        local grid = mount.grid
+        local burner = mount.burner
 
-		for _, equipment in pairs(grid.equipment) do
-			local missing = equipment.max_energy - equipment.energy
-			if missing <= 0 then goto dosent_need_energy end
+        for _, equipment in pairs(grid.equipment) do
+            local missing = equipment.max_energy - equipment.energy
+            if missing <= 0 then goto dosent_need_energy end
 
-			if burner.remaining_burning_fuel <= 0 then
-				local fuel_inventory = burner.inventory
-				if fuel_inventory.is_empty() then break end
-				
-				for i = 1, #fuel_inventory do
-					local fuel = fuel_inventory[i]
-					if not fuel.valid_for_read then goto invalid_fuel_item end
-					local prototype = fuel.prototype
-					local fuel_value = prototype.fuel_value
-					if not prototype.fuel_value then goto invalid_fuel_item end
+            if burner.remaining_burning_fuel <= 0 then
+                local fuel_inventory = burner.inventory
+                if fuel_inventory.is_empty() then break end
 
-					burner.currently_burning = fuel
-					burner.remaining_burning_fuel = fuel_value
-					fuel.count = fuel.count - 1
-					break
-					::invalid_fuel_item::
-				end
-			end
+                for i = 1, #fuel_inventory do
+                    local fuel = fuel_inventory[i]
+                    if not fuel.valid_for_read then goto invalid_fuel_item end
+                    local prototype = fuel.prototype
+                    local fuel_value = prototype.fuel_value
+                    if not prototype.fuel_value then goto invalid_fuel_item end
 
-			if burner.remaining_burning_fuel <= 0 then break end
+                    burner.currently_burning = fuel
+                    burner.remaining_burning_fuel = fuel_value
+                    fuel.count = fuel.count - 1
+                    break
+                    ::invalid_fuel_item::
+                end
+            end
 
-			if burner.remaining_burning_fuel < missing / transfer_efficiency then
-				equipment.energy = equipment.energy + burner.remaining_burning_fuel * transfer_efficiency
-				burner.remaining_burning_fuel = 0
-			else
-				burner.remaining_burning_fuel = burner.remaining_burning_fuel - missing / transfer_efficiency
-				equipment.energy = equipment.energy + missing
-			end
+            if burner.remaining_burning_fuel <= 0 then break end
 
-			::dosent_need_energy::
-		end
-	end
+            if burner.remaining_burning_fuel < missing / transfer_efficiency then
+                equipment.energy = equipment.energy + burner.remaining_burning_fuel * transfer_efficiency
+                burner.remaining_burning_fuel = 0
+            else
+                burner.remaining_burning_fuel = burner.remaining_burning_fuel - missing / transfer_efficiency
+                equipment.energy = equipment.energy + missing
+            end
+
+            ::dosent_need_energy::
+        end
+    end
 end)
 
 local mounts = {
-	["crawdad"] = true,
-	["dingrido"] = true,
-	["spidertron"] = true,
-	["phadaisus"] = true,
+    ["crawdad"] = true,
+    ["dingrido"] = true,
+    ["spidertron"] = true,
+    ["phadaisus"] = true,
 }
 
 py.on_event(py.events.on_built(), function(event)
-	local entity = event.entity
-	if not entity.valid or not mounts[entity.name] then return end
-	entity.grid.put {
-		name = "py-mount-generator",
-		position = {3, 0},
-	}
+    local entity = event.entity
+    if not entity.valid or not mounts[entity.name] then return end
+    entity.grid.put {
+        name = "py-mount-generator",
+        position = {3, 0},
+    }
     if entity.name == "phadaisus" then
         entity.grid.put {
             name = "phadaisus-hidden-belt-immunity-equipment",
             position = {0, 0},
         }
     end
-	storage.mounts[entity.unit_number] = entity
+    storage.mounts[entity.unit_number] = entity
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
-	local entity = event.entity
-	local unit_number = entity.valid and entity.unit_number
-	if unit_number then storage.mounts[unit_number] = nil end
+    local entity = event.entity
+    local unit_number = entity.valid and entity.unit_number
+    if unit_number then storage.mounts[unit_number] = nil end
 end)
 
 py.on_event(defines.events.on_player_removed_equipment, function(event)
     local equipment_name = event.equipment
     if equipment_name == "py-mount-generator" then
-		event.grid.put {
+        event.grid.put {
             name = equipment_name,
-			position = {3, 0},
-		}
+            position = {3, 0},
+        }
         game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
     elseif equipment_name == "phadaisus-hidden-belt-immunity-equipment" then
         event.grid.put {
