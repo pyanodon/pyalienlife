@@ -14,6 +14,7 @@ Date: ?
     - Standardized crafting speeds for the kicalk plantation to no longer result in floating point crafting times.
     - Removed hyphens from most item, fluid, entity, and recipe names in order to aid in itemsearch.
     - Allowed productivity in the guano -> gunpowder recipe.
+    - Improved the pipe connection graphics for the seaweed farm. Resolves https://github.com/pyanodon/pybugreports/issues/472
     - Biofluid requesters now default to request size of 10k instead of 0. Resolves https://github.com/pyanodon/pybugreports/issues/813
     - Fixed certain turds (example: arqad 2) not applying their productivity effect. Resolves https://github.com/pyanodon/pybugreports/issues/809
     - Slowed all sap recipes by 4x. Increased their output by 4x. This aids in belt stacking. Resolves https://github.com/pyanodon/pybugreports/issues/790
