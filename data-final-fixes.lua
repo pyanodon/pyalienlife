@@ -451,17 +451,3 @@ for _, equipments in pairs(disallowed_equipment) do
     end
 end
 data.raw["generator-equipment"]["py-mount-generator"].categories = {"py-mount-generator"}
-
--- END MOUNTS
-
---[[ recipe name finder
-local recipe_names = {}
-
-for r, recipe in pairs(data.raw.recipe) do
-	if recipe.category == 'nano' then
-		table.insert(recipe_names, recipe.name)
-	end
-end
-
-log(serpent.block(recipe_names))
-]] --
