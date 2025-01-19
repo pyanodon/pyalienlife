@@ -37,6 +37,7 @@ RECIPE {
         {type = "fluid", name = "water-saline", amount = 100},
         {"guano",        2},
     },
+    allow_productivity = true,
     results = {
         {"gunpowder", 10},
     }
