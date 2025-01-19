@@ -77,7 +77,7 @@ end
 
 if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
     for _, upgrade in pairs {
-        "prototypes/upgrades/wpu", -- wood processing unit must be executed last as this one adjusts module categories of other turds.
+        "prototypes/upgrades/wpu",                                               -- wood processing unit must be executed last as this one adjusts module categories of other turds.
     } do
         table.insert(tech_upgrades, require(upgrade))
     end
@@ -116,7 +116,7 @@ local function build_tech_upgrade(tech_upgrade)
                 end
 
                 local effective_speed
-                
+
                 local is_this_a_speed_module_that_effects_farm_buildings = mk1.crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
                 if is_this_a_speed_module_that_effects_farm_buildings then
                     local desired_mk1_speed = mk1.crafting_speed * (mk1_module_slots + 1)

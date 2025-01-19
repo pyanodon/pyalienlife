@@ -52,7 +52,7 @@ if data and not yafc_turd_integration then
         end
         data:extend {recipe}
     end
-    
+
     local buffed_generator = table.deepcopy(data.raw["burner-generator"]["generator-1"])
     buffed_generator.burner.effectivity = 2
     buffed_generator.effectivity = 2

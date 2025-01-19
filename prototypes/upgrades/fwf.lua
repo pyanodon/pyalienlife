@@ -91,7 +91,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "fiber-01", new = "fiber-dry-storage",   type = "recipe-replacement"}
+                {old = "fiber-01", new = "fiber-dry-storage", type = "recipe-replacement"}
             },
         },
         {
@@ -109,7 +109,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.50, productivity = 0.5, speed = 0.5,                  type = "module-effects"},
+                {consumption = -0.50, productivity = 0.5,            speed = 0.5,                type = "module-effects"},
                 {old = "fwf-mk01",    new = "fwf-mk01-with-furnace", type = "recipe-replacement"},
                 {old = "log3",        new = "log3-cheap",            type = "recipe-replacement"},
                 {old = "log6",        new = "log6-cheap",            type = "recipe-replacement"}

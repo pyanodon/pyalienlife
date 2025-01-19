@@ -1,7 +1,7 @@
 local function allowed_module_categories()
     local allowed_module_categories = {}
     for _, category in pairs(data.raw["module-category"]) do
-        allowed_module_categories[#allowed_module_categories+1] = category.name
+        allowed_module_categories[#allowed_module_categories + 1] = category.name
     end
     return allowed_module_categories
 end

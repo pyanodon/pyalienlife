@@ -16,7 +16,7 @@ if data and not yafc_turd_integration then
         },
         results = {
             {type = "item", name = "vonix-cub",  amount_min = 14, amount_max = 16},
-            {type = "item", name = "vonix-eggs", amount_min = 4,   amount_max = 5},
+            {type = "item", name = "vonix-eggs", amount_min = 4,  amount_max = 5},
             {type = "item", name = "vonix",      amount = 1},
             {type = "item", name = "cage",       amount = 2},
             {type = "item", name = "barrel",     amount = 6},
@@ -94,7 +94,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = 1,       type = "module-effects"},
+                {speed = 1,              type = "module-effects"},
                 {type = "unlock-recipe", recipe = "vonix-direct-raising"}
             },
         },
@@ -115,7 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.35,             speed = 1,                   type = "module-effects"},
+                {productivity = 0.35,            speed = 1,                   type = "module-effects"},
                 {old = "vonix-den-mk01",         new = "vonix-den-mk01-free", type = "recipe-replacement"},
                 {old = "vonix-den-mk02",         new = "vonix-den-mk02-free", type = "recipe-replacement"},
                 {old = "vonix-den-mk03",         new = "vonix-den-mk03-free", type = "recipe-replacement"},

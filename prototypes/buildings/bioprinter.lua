@@ -123,7 +123,7 @@ for i = 1, 4 do
                 pollution = 3 * i
             },
         },
-        energy_usage = (9000 * 2^(i-1)) .. "kW",
+        energy_usage = (9000 * 2 ^ (i - 1)) .. "kW",
         fluid_boxes_off_when_no_fluid_recipe = true,
         fluid_boxes = {
             --1

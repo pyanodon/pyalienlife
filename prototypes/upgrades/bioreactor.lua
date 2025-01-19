@@ -38,7 +38,7 @@ if data and not yafc_turd_integration then
             if entity.module_slots == old_module_slots then
                 entity.module_slots = entity.module_slots + 1
             end
-            entity.crafting_categories = { "advanced-bio-reactor", "bio-reactor" }
+            entity.crafting_categories = {"advanced-bio-reactor", "bio-reactor"}
 
             entity.localised_name = {"entity-name." .. name}
             entity.placeable_by = {item = name, count = 1}
@@ -46,7 +46,7 @@ if data and not yafc_turd_integration then
             table.insert(entity.flags, "not-in-made-in")
             entity.energy_source = {
                 type = "burner",
-                fuel_categories = {"bio-reactor-"..j},
+                fuel_categories = {"bio-reactor-" .. j},
                 effectivity = 1,
                 fuel_inventory_size = 1,
                 burnt_inventory_size = 1,
@@ -64,14 +64,14 @@ if data and not yafc_turd_integration then
             type = "recipe",
             name = "path-1-advanced-recipe",
             ingredients = {
-                {type = "item",  name = "stone-wall",     amount = 1},
-                {type = "item",  name = "poison-capsule", amount = 5},
-                {type = "item",  name = "caged-xeno",     amount = 1},
+                {type = "item", name = "stone-wall",     amount = 1},
+                {type = "item", name = "poison-capsule", amount = 5},
+                {type = "item", name = "caged-xeno",     amount = 1},
             },
             results = {
                 {type = "fluid", name = "hydrogen-peroxide", amount = 75},
                 {type = "fluid", name = "anthraquinone",     amount = 125},
-                {type = "item",  name = "cage",              amount = 1, probability = 0.5},
+                {type = "item",  name = "cage",              amount = 1,  probability = 0.5},
             },
             main_product = "hydrogen-peroxide",
             enabled = false,
@@ -98,9 +98,9 @@ if data and not yafc_turd_integration then
 
     local path3 = RECIPE("chitosan"):copy()
     path3.name = "path-3-advanced-recipe"
-    path3.ingredients[3] = {type = "fluid", name = "blood",   amount = 50}
+    path3.ingredients[3] = {type = "fluid", name = "blood", amount = 50}
     path3.category = "advanced-bio-reactor"
-    data:extend{path3}
+    data:extend {path3}
 end
 
 return {
@@ -140,10 +140,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "machine-replacement", old = "bio-reactor-mk01", new = "advanced-bio-reactor-mk01-turd1"},
-                {type = "machine-replacement", old = "bio-reactor-mk02", new = "advanced-bio-reactor-mk02-turd1"},
-                {type = "machine-replacement", old = "bio-reactor-mk03", new = "advanced-bio-reactor-mk03-turd1"},
-                {type = "machine-replacement", old = "bio-reactor-mk04", new = "advanced-bio-reactor-mk04-turd1"},
+                {type = "machine-replacement", old = "bio-reactor-mk01",         new = "advanced-bio-reactor-mk01-turd1"},
+                {type = "machine-replacement", old = "bio-reactor-mk02",         new = "advanced-bio-reactor-mk02-turd1"},
+                {type = "machine-replacement", old = "bio-reactor-mk03",         new = "advanced-bio-reactor-mk03-turd1"},
+                {type = "machine-replacement", old = "bio-reactor-mk04",         new = "advanced-bio-reactor-mk04-turd1"},
                 {type = "unlock-recipe",       recipe = "path-1-advanced-recipe"},
             },
         },
@@ -153,10 +153,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "machine-replacement", old = "bio-reactor-mk01", new = "advanced-bio-reactor-mk01-turd2"},
-                {type = "machine-replacement", old = "bio-reactor-mk02", new = "advanced-bio-reactor-mk02-turd2"},
-                {type = "machine-replacement", old = "bio-reactor-mk03", new = "advanced-bio-reactor-mk03-turd2"},
-                {type = "machine-replacement", old = "bio-reactor-mk04", new = "advanced-bio-reactor-mk04-turd2"},
+                {type = "machine-replacement", old = "bio-reactor-mk01",         new = "advanced-bio-reactor-mk01-turd2"},
+                {type = "machine-replacement", old = "bio-reactor-mk02",         new = "advanced-bio-reactor-mk02-turd2"},
+                {type = "machine-replacement", old = "bio-reactor-mk03",         new = "advanced-bio-reactor-mk03-turd2"},
+                {type = "machine-replacement", old = "bio-reactor-mk04",         new = "advanced-bio-reactor-mk04-turd2"},
                 {type = "unlock-recipe",       recipe = "path-2-advanced-recipe"},
             }
         },
@@ -166,10 +166,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "machine-replacement", old = "bio-reactor-mk01", new = "advanced-bio-reactor-mk01-turd3"},
-                {type = "machine-replacement", old = "bio-reactor-mk02", new = "advanced-bio-reactor-mk02-turd3"},
-                {type = "machine-replacement", old = "bio-reactor-mk03", new = "advanced-bio-reactor-mk03-turd3"},
-                {type = "machine-replacement", old = "bio-reactor-mk04", new = "advanced-bio-reactor-mk04-turd3"},
+                {type = "machine-replacement", old = "bio-reactor-mk01",         new = "advanced-bio-reactor-mk01-turd3"},
+                {type = "machine-replacement", old = "bio-reactor-mk02",         new = "advanced-bio-reactor-mk02-turd3"},
+                {type = "machine-replacement", old = "bio-reactor-mk03",         new = "advanced-bio-reactor-mk03-turd3"},
+                {type = "machine-replacement", old = "bio-reactor-mk04",         new = "advanced-bio-reactor-mk04-turd3"},
                 {type = "unlock-recipe",       recipe = "path-3-advanced-recipe"},
             }
         }

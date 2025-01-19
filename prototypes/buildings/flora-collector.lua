@@ -4,12 +4,12 @@ RECIPE {
     energy_required = 5,
     enabled = true,
     ingredients = {
-        {type = "item", name = "burner-mining-drill",   amount = 2},
-        {type = "item", name = "soil-extractor-mk01",   amount = 1},
-        {type = "item", name = "electronic-circuit",    amount = 5},
-        {type = "item", name = "iron-gear-wheel",       amount = 10},
-        {type = "item", name = "iron-plate",            amount = 20},
-        {type = "item", name = "steam-engine",          amount = 1},
+        {type = "item", name = "burner-mining-drill", amount = 2},
+        {type = "item", name = "soil-extractor-mk01", amount = 1},
+        {type = "item", name = "electronic-circuit",  amount = 5},
+        {type = "item", name = "iron-gear-wheel",     amount = 10},
+        {type = "item", name = "iron-plate",          amount = 20},
+        {type = "item", name = "steam-engine",        amount = 1},
     },
     results = {
         {type = "item", name = "flora-collector-mk01", amount = 1}
@@ -22,14 +22,14 @@ RECIPE {
     energy_required = 5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "flora-collector-mk01",  amount = 1},
-        {type = "item", name = "glass",            amount = 30},
-        {type = "item", name = "nexelit-plate",    amount = 15},
-        {type = "item", name = "duralumin",        amount = 10},
-        {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "engine-unit",      amount = 1},
-        {type = "item", name = "latex",            amount = 10},
-        {type = "item", name = "neuroprocessor",   amount = 5},
+        {type = "item", name = "flora-collector-mk01", amount = 1},
+        {type = "item", name = "glass",                amount = 30},
+        {type = "item", name = "nexelit-plate",        amount = 15},
+        {type = "item", name = "duralumin",            amount = 10},
+        {type = "item", name = "advanced-circuit",     amount = 10},
+        {type = "item", name = "engine-unit",          amount = 1},
+        {type = "item", name = "latex",                amount = 10},
+        {type = "item", name = "neuroprocessor",       amount = 5},
     },
     results = {
         {type = "item", name = "flora-collector-mk02", amount = 1}

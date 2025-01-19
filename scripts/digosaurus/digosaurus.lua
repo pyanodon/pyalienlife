@@ -254,7 +254,7 @@ py.on_event(defines.events.on_selected_entity_changed, function(event)
     local entity = player.selected
     if not entity or not entity.valid then return end
     if entity.name ~= "dino-dig-site" then return end
-    
+
     local dig_data = storage.dig_sites[entity.unit_number]
     if not dig_data then return end
     local status, _, diode = Digosaurus.why_isnt_my_dig_site_working(dig_data)

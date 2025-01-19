@@ -80,7 +80,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 1,       speed = 0.5,                       type = "module-effects"},
+                {productivity = 1,         speed = 0.5,                        type = "module-effects"},
                 {old = "zungror",          new = "zungror-with-yaedols-codex", type = "recipe-replacement"},
                 {old = "zungror-cocoon-1", new = "zungror-cocoon-1-rich-clay", type = "recipe-replacement"},
                 {old = "zungror-cocoon-2", new = "zungror-cocoon-2-rich-clay", type = "recipe-replacement"},
@@ -93,8 +93,8 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 5,       speed = 5,                       type = "module-effects"},
-                {old = "vsk", new = "vsk-duplicated", type = "recipe-replacement"},
+                {consumption = 5, speed = 5,              type = "module-effects"},
+                {old = "vsk",     new = "vsk-duplicated", type = "recipe-replacement"},
             }
         },
         {

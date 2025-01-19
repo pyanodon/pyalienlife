@@ -205,10 +205,10 @@ if data and not yafc_turd_integration then
         enabled = false,
         energy_required = 30,
         ingredients = {
-            {type = "item", name = "lignin", amount = 5},
+            {type = "item", name = "lignin",       amount = 5},
             {type = "item", name = "treated-wood", amount = 5},
             {type = "item", name = "cellulose",    amount = 5},
-            {type = "item", name = "redhot-coke",    amount = 1},
+            {type = "item", name = "redhot-coke",  amount = 1},
         },
         results = {
             {type = "item", name = "nylon", amount = 30},
@@ -243,7 +243,7 @@ return {
                 {type = "item", name = "automation-science-pack", amount = 1},
                 {type = "item", name = "py-science-pack-1",       amount = 1},
                 {type = "item", name = "logistic-science-pack",   amount = 1},
-                {type = "item", name = "py-science-pack-2", amount = 1},
+                {type = "item", name = "py-science-pack-2",       amount = 1},
             },
             time = 45
         }

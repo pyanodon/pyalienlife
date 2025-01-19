@@ -77,7 +77,7 @@ RECIPE {
     }
 }:add_unlock("water-animals-mk04")
 
-local FULL_CRAFTING_SPEED = 1     -- crafting speed when full of mk01 modules
+local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 
 for i = 1, 4 do
     local name = "fish-farm-mk0" .. i

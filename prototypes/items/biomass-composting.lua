@@ -507,7 +507,7 @@ for i, item in pairs(biomass_convertion) do
         goto continue
     end
     local type = prototype.type
-    
+
     local icons
     if prototype.icon then
         icons = {{icon = prototype.icon, icon_size = prototype.icon_size or 64}}

@@ -1,56 +1,56 @@
 {
-  "entity": [
-    [
-      "cadavericarum-mk01",
-      "cadaveric-arum-mk01"
+    "entity": [
+        [
+            "cadavericarum-mk01",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk02",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk03",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk04",
+            "cadaveric-arum-mk01"
+        ]
     ],
-    [
-      "cadavericarum-mk02",
-      "cadaveric-arum-mk01"
+    "item": [
+        [
+            "cadavericarum-mk01",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk02",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk03",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk04",
+            "cadaveric-arum-mk01"
+        ]
     ],
-    [
-      "cadavericarum-mk03",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk04",
-      "cadaveric-arum-mk01"
+    "recipe": [
+        [
+            "cadavericarum-mk01",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk02",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk03",
+            "cadaveric-arum-mk01"
+        ],
+        [
+            "cadavericarum-mk04",
+            "cadaveric-arum-mk01"
+        ]
     ]
-  ],
-  "item": [
-    [
-      "cadavericarum-mk01",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk02",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk03",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk04",
-      "cadaveric-arum-mk01"
-    ]
-  ],
-  "recipe": [
-    [
-      "cadavericarum-mk01",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk02",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk03",
-      "cadaveric-arum-mk01"
-    ],
-    [
-      "cadavericarum-mk04",
-      "cadaveric-arum-mk01"
-    ]
-  ]
 }

@@ -64,7 +64,7 @@ local function add_new_fish_farm(i)
     if i ~= 4 then entity.next_upgrade = "turd-fish-farm-mk0" .. (i + 1) end
     entity.allowed_module_categories = {"fish"}
     entity.energy_usage = (i * 5) .. "MW",
-    table.insert(entity.flags, "not-in-made-in")
+        table.insert(entity.flags, "not-in-made-in")
     entity.fluid_boxes = new_fluid_boxes()
     data:extend {entity}
 end
@@ -143,9 +143,9 @@ if data and not yafc_turd_integration then
 
         local path_three_dousing_byproducts = {
             {type = "fluid", name = "fish-oil",         amount = 10 + i * 5, fluidbox_index = 2},
-            {type = "fluid", name = "fish-hydrolysate", amount = 5 + i * 5, fluidbox_index = 3},
+            {type = "fluid", name = "fish-hydrolysate", amount = 5 + i * 5,  fluidbox_index = 3},
             {type = "item",  name = "fishmeal",         amount = 5},
-            {type = "fluid", name = "fish-emulsion",    amount = 0 + i * 5, fluidbox_index = 4},
+            {type = "fluid", name = "fish-emulsion",    amount = 0 + i * 5,  fluidbox_index = 4},
         }
 
         for j = 1, i do
@@ -215,10 +215,10 @@ return {
                 {type = "machine-replacement", old = "fish-farm-mk02",          new = "turd-fish-farm-mk02"},
                 {type = "machine-replacement", old = "fish-farm-mk03",          new = "turd-fish-farm-mk03"},
                 {type = "machine-replacement", old = "fish-farm-mk04",          new = "turd-fish-farm-mk04"},
-                {old = "breed-fish-egg-1", new = "breed-fish-egg-1-doused", type = "recipe-replacement"},
-                {old = "breed-fish-egg-2", new = "breed-fish-egg-2-doused", type = "recipe-replacement"},
-                {old = "breed-fish-egg-3", new = "breed-fish-egg-3-doused", type = "recipe-replacement"},
-                {old = "breed-fish-egg-4", new = "breed-fish-egg-4-doused", type = "recipe-replacement"},
+                {old = "breed-fish-egg-1",     new = "breed-fish-egg-1-doused", type = "recipe-replacement"},
+                {old = "breed-fish-egg-2",     new = "breed-fish-egg-2-doused", type = "recipe-replacement"},
+                {old = "breed-fish-egg-3",     new = "breed-fish-egg-3-doused", type = "recipe-replacement"},
+                {old = "breed-fish-egg-4",     new = "breed-fish-egg-4-doused", type = "recipe-replacement"},
             }
         }
     },

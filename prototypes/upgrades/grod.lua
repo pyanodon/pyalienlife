@@ -115,7 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.5, productivity = 0.25, speed = -0.5, type = "module-effects"},
+                {consumption = -0.5, productivity = 0.25,            speed = -0.5,               type = "module-effects"},
                 {old = "grod-seeds", new = "grod-seeds-heavy-water", type = "recipe-replacement"},
                 {old = "grod-1",     new = "grod-1-dry",             type = "recipe-replacement"},
                 {old = "grod-2",     new = "grod-2-dry",             type = "recipe-replacement"},

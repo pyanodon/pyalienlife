@@ -106,7 +106,7 @@ RECIPE {
     enabled = false,
     category = "auog",
     ingredients = {
-        {type = "item", name = "chorkok", amount = 1},
+        {type = "item", name = "chorkok",         amount = 1},
         {type = "item", name = "workers-food-03", amount = 1},
 
     },

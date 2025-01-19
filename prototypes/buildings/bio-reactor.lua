@@ -71,7 +71,7 @@ RECIPE {
     }
 }:add_unlock("biotech-machines-mk04")
 
-data:extend{{
+data:extend {{
     name = "bio-reactor",
     type = "module-category",
 }}

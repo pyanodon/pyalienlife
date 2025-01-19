@@ -78,15 +78,17 @@ RECIPE {
 }:add_unlock("biotech-machines-mk04")
 
 local function working_visualizations()
-    return {{animation = {
-        filename = "__pyalienlifegraphics__/graphics/entity/incubator/main.png",
-        frame_count = 100,
-        width = 140,
-        height = 163,
-        line_length = 14,
-        animation_speed = 0.3,
-        shift = {-0.25, -1.624}
-    }}}
+    return {{
+        animation = {
+            filename = "__pyalienlifegraphics__/graphics/entity/incubator/main.png",
+            frame_count = 100,
+            width = 140,
+            height = 163,
+            line_length = 14,
+            animation_speed = 0.3,
+            shift = {-0.25, -1.624}
+        }
+    }}
 end
 
 for i = 1, 4 do

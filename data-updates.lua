@@ -195,9 +195,9 @@ require "prototypes.module-restrictions"
 
 --Fix up the milk barrel recipes with new ingredients and icons
 RECIPE("milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("barrel", "empty-barrel-milk"):set_fields {results = {{type = "item", name = "barrel-milk", amount = 1}}}
-RECIPE("milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png",icon_size = 64}}
-RECIPE("empty-milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("milk-barrel", "barrel-milk"):set_fields {results = {{type = "item",  name = "empty-barrel-milk", amount = 1},{type = "fluid", name = "milk", amount = 50}}}
-RECIPE("empty-milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png",icon_size = 64}}
+RECIPE("milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png", icon_size = 64}}
+RECIPE("empty-milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("milk-barrel", "barrel-milk"):set_fields {results = {{type = "item", name = "empty-barrel-milk", amount = 1}, {type = "fluid", name = "milk", amount = 50}}}
+RECIPE("empty-milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png", icon_size = 64}}
 
 
 --copy`s of combustion recipes with biomass

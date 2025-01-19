@@ -11,7 +11,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient("manure")
         recipe:remove_ingredient("biomass")
         recipe:remove_ingredient("urea")
-        recipe:add_ingredient{type = "fluid", name = "purest-nitrogen-gas", amount = 50 * i}
+        recipe:add_ingredient {type = "fluid", name = "purest-nitrogen-gas", amount = 50 * i}
         recipe:multiply_result_amount("fawogae", 1.5)
         data:extend {recipe}
     end
@@ -110,14 +110,14 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = 0.1,                 type = "module-effects"},
+                {speed = 0.1,                    type = "module-effects"},
                 {recipe = "desulfurizator-unit", type = "unlock-recipe"},
-                {recipe = "acid-gas-fawogae", type = "unlock-recipe"},
-                {recipe = "xeno-codex",       type = "unlock-recipe",                 also_unlocked_by_techs = true},
-                {old = "fawogae-sample",      new = "fawogae-sample-with-xeno-codex", type = "recipe-replacement"},
-                {old = "fawogae-mk02",        new = "fawogae-mk02-with-xeno-codex",   type = "recipe-replacement"},
-                {old = "fawogae-mk03",        new = "fawogae-mk03-with-xeno-codex",   type = "recipe-replacement"},
-                {old = "fawogae-mk04",        new = "fawogae-mk04-with-xeno-codex",   type = "recipe-replacement"},
+                {recipe = "acid-gas-fawogae",    type = "unlock-recipe"},
+                {recipe = "xeno-codex",          type = "unlock-recipe",                 also_unlocked_by_techs = true},
+                {old = "fawogae-sample",         new = "fawogae-sample-with-xeno-codex", type = "recipe-replacement"},
+                {old = "fawogae-mk02",           new = "fawogae-mk02-with-xeno-codex",   type = "recipe-replacement"},
+                {old = "fawogae-mk03",           new = "fawogae-mk03-with-xeno-codex",   type = "recipe-replacement"},
+                {old = "fawogae-mk04",           new = "fawogae-mk04-with-xeno-codex",   type = "recipe-replacement"},
             }
         },
         {

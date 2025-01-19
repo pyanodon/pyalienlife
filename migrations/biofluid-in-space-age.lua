@@ -15,7 +15,7 @@ for _, network_data in pairs(storage.biofluid_networks) do
         if provider.valid then
             storage.biofluid_providers[provider.unit_number] = {entity = provider}
         end
-    end    
+    end
 end
 
 Biofluid.built_pipe()

@@ -1211,12 +1211,12 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = "fluid", name = "pressured-steam",   amount = 500, minimum_temperature = 3000},
-        {type = "item",  name = "bhoddos",           amount = 10},
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 3000},
+        {type = "item",  name = "bhoddos",         amount = 10},
     },
     results = {
-        {type = "item",  name = "ur-biomass",  amount = 10},
-        {type = "fluid", name = "steam",   amount = 500, temperature = 1000},
+        {type = "item",  name = "ur-biomass", amount = 10},
+        {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass"
 }:add_unlock("phytomining-mk03")
@@ -1228,13 +1228,13 @@ RECIPE {
     enabled = false,
     energy_required = 140,
     ingredients = {
-        {type = "fluid", name = "pressured-steam",   amount = 500, minimum_temperature = 3000, fluidbox_index = 1},
-        {type = "item",  name = "bhoddos",           amount = 10},
-        {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 3000, fluidbox_index = 1},
+        {type = "item",  name = "bhoddos",         amount = 10},
+        {type = "fluid", name = "chelator",        amount = 50,  fluidbox_index = 2},
     },
     results = {
-        {type = "item",  name = "ur-biomass",  amount = 20},
-        {type = "fluid", name = "steam",   amount = 500, temperature = 1000},
+        {type = "item",  name = "ur-biomass", amount = 20},
+        {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass"
 }:add_unlock("phytomining-mk03")
@@ -1246,14 +1246,14 @@ RECIPE {
     enabled = false,
     energy_required = 80,
     ingredients = {
-        {type = "fluid", name = "pressured-steam",   amount = 500, minimum_temperature = 3000, fluidbox_index = 1},
-        {type = "item",  name = "bhoddos",           amount = 10},
-        {type = "item",  name = "hmas",              amount = 1},
-        {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
+        {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 3000, fluidbox_index = 1},
+        {type = "item",  name = "bhoddos",         amount = 10},
+        {type = "item",  name = "hmas",            amount = 1},
+        {type = "fluid", name = "chelator",        amount = 50,  fluidbox_index = 2},
     },
     results = {
-        {type = "item",  name = "ur-biomass",  amount = 80},
-        {type = "fluid", name = "steam",   amount = 500, temperature = 1000},
+        {type = "item",  name = "ur-biomass", amount = 80},
+        {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass"
 }:add_unlock("phytomining-mk03")
@@ -1265,7 +1265,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "item",  name = "ur-biomass", amount = 10},
+        {type = "item",  name = "ur-biomass",    amount = 10},
         {type = "fluid", name = "sulfuric-acid", amount = 100},
     },
     results = {

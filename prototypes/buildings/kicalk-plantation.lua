@@ -267,7 +267,7 @@ for i = 1, 4 do
             apparent_volume = 2.5
         }
     }
-    
+
     -- Swap to niobium pipes
     for _, fluid_box in pairs(data.raw["assembling-machine"][name].fluid_boxes) do
         -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
