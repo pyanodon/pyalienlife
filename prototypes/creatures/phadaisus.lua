@@ -1,5 +1,35 @@
 local util = require "util"
 
+-- https://github.com/pyanodon/pybugreports/issues/612
+data:extend {{
+    type = "belt-immunity-equipment",
+    name = "phadaisus-hidden-belt-immunity-equipment",
+    hidden = true,
+    energy_consumption = "1W",
+    sprite = py.empty_image(),
+    shape = {
+        type = "full",
+        width = 0,
+        height = 0,
+    },
+    energy_source = {
+        type = "electric",
+        usage_priority = "primary-input"
+    },
+    categories = {"armor"},
+    factoriopedia_alternative = "belt-immunity-equipment"
+}}
+
+ITEM {
+    type = "item",
+    name = "phadaisus-hidden-belt-immunity-equipment",
+    hidden = true,
+    icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
+    icon_size = 64,
+    flags = {"only-in-cursor"},
+    stack_size = 1,
+}
+
 RECIPE {
 	type = "recipe",
 	name = "phadaisus",

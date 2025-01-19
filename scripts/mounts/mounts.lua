@@ -68,6 +68,12 @@ py.on_event(py.events.on_built(), function(event)
 		name = "py-mount-generator",
 		position = {3, 0},
 	}
+    if entity.name == "phadaisus" then
+        entity.grid.put {
+            name = "phadaisus-hidden-belt-immunity-equipment",
+            position = {0, 0},
+        }
+    end
 	storage.mounts[entity.unit_number] = entity
 end)
 
@@ -78,11 +84,18 @@ py.on_event(py.events.on_destroyed(), function(event)
 end)
 
 py.on_event(defines.events.on_player_removed_equipment, function(event)
-	if event.equipment == "py-mount-generator" then
+    local equipment_name = event.equipment
+    if equipment_name == "py-mount-generator" then
 		event.grid.put {
-			name = "py-mount-generator",
+            name = equipment_name,
 			position = {3, 0},
 		}
-		game.players[event.player_index].remove_item {name = "py-mount-generator", count = 100}
-	end
+        game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
+    elseif equipment_name == "phadaisus-hidden-belt-immunity-equipment" then
+        event.grid.put {
+            name = equipment_name,
+            position = {0, 0},
+        }
+        game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
+    end
 end)

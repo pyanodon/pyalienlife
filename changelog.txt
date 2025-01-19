@@ -2,24 +2,25 @@
 Version: 3.0.33
 Date: ?
   Changes:
-    - The desulfurization unit is now unlocked with fawogae turd path 2. Resolves https://github.com/pyanodon/pybugreports/issues/812
     - Caravans now can compare a circuit condition to a static value.
-    - Renamed bioreserve to native flora. Resolves https://github.com/pyanodon/pybugreports/issues/788
     - Adapted all pyAL events to use py.on_event instead of script.on_event
     - All biofluid entities no longer show "disabled by script" and instead shows a custom status with indicator colors.
     - The digosaur dig site no longer show "disabled by script" and instead shows a custom status with indicator colors.
     - pyAL farm buildings no longer show "disabled by script" and instead shows a custom status explaining which module it wants.
     - Increased the mining time of the dig site from 2s -> 0.5s.
-    - The farm building disable code is no longer limited to 1 machine every 2 seconds and now instead does 1/8th of your machines every 2 seconds. Resolves https://github.com/pyanodon/pybugreports/issues/457
     - Renamed "cottongut basic food" to "basic cottongut food".
     - Replaced deprecated .minable with .minable_flag
     - Removed all legacy low-res graphic files from pyanodon.
+    - Standardized crafting speeds for the kicalk plantation to no longer result in floating point crafting times.
+    - Removed hyphens from most item, fluid, entity, and recipe names in order to aid in itemsearch.
     - Biofluid requesters now default to request size of 10k instead of 0. Resolves https://github.com/pyanodon/pybugreports/issues/813
     - Fixed certain turds (example: arqad 2) not applying their productivity effect. Resolves https://github.com/pyanodon/pybugreports/issues/809
     - Slowed all sap recipes by 4x. Increased their output by 4x. This aids in belt stacking. Resolves https://github.com/pyanodon/pybugreports/issues/790
     - Updated locale for space dingrits chain and ulric infusion. Resolves https://github.com/pyanodon/pybugreports/issues/816
-    - Standardized crafting speeds for the kicalk plantation to no longer result in floating point crafting times.
-    - Removed hyphens from most item, fluid, entity, and recipe names in order to aid in itemsearch.
+    - The desulfurization unit is now unlocked with fawogae turd path 2. Resolves https://github.com/pyanodon/pybugreports/issues/812
+    - Renamed bioreserve to native flora. Resolves https://github.com/pyanodon/pybugreports/issues/788
+    - Added belt immunity to phadaisus. Only effects newly placed phadaisus. Resolves https://github.com/pyanodon/pybugreports/issues/612
+    - The farm building disable code is no longer limited to 1 machine every 2 seconds and now instead does 1/8th of your machines every 2 seconds. Resolves https://github.com/pyanodon/pybugreports/issues/457
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.32
 Date: 2025-1-2

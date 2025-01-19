@@ -324,7 +324,7 @@ local function swap_to_stack(player, item_name, cursor_stack)
 end
 
 py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-    local player = game.players[event.player_index]
+    local player = game.get_player(event.player_index)
     if player and player.valid then
         -- valid cursor?
         local stack = player.cursor_stack
