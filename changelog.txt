@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.34
+Date: 2024-1-20
+  Changes:
+    - Fixed data array not accepting modules. Resolves https://github.com/pyanodon/pybugreports/issues/824 
+---------------------------------------------------------------------------------------------------
 Version: 3.0.33
 Date: 2024-1-20
   Changes:

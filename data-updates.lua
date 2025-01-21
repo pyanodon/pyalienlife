@@ -170,7 +170,7 @@ end
 -- TURD
 ----------------------------------------------------------------------------------------------------
 
-require "prototypes/upgrades/tech-upgrades"
+require "prototypes/turd"
 require "prototypes/buildings/hidden-beacon"
 
 ----------------------------------------------------------------------------------------------------

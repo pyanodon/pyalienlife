@@ -1,6 +1,6 @@
 Turd = {}
 
-local tech_upgrades, farm_building_tiers = table.unpack(require "prototypes/upgrades/tech-upgrades")
+local tech_upgrades, farm_building_tiers = table.unpack(require "prototypes/turd")
 local bhoddos_lib = require("bhoddos")
 
 local NOT_SELECTED = 333 -- enum
