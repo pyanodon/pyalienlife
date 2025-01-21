@@ -2,7 +2,10 @@
 Version: 3.0.34
 Date: 2024-1-20
   Changes:
-    - Fixed data array not accepting modules. Resolves https://github.com/pyanodon/pybugreports/issues/824 
+    - Fixed data array not accepting modules. Resolves https://github.com/pyanodon/pybugreports/issues/824
+    - Standardized crafting speeds for the ulric corral to no longer result in floating point crafting times.
+    - Removed idle sounds for the ulric corral.
+    - The ulric corral animation now has a fadein/fadeout animation instead of instantly spawning the animals in during the working animation.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.33
 Date: 2024-1-20
