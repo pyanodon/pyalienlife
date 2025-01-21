@@ -46,6 +46,14 @@ data.raw["recipe-category"]["guar"].allowed_module_categories = {"guar"}
 data.raw["recipe-category"]["guar"].modules_required = true
 
 ----RECIPES----
+RECIPE("soot-to-iron"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+RECIPE("soot-to-copper"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+RECIPE("soot-to-aluminium"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+RECIPE("soot-to-zinc"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+RECIPE("soot-to-lead"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+RECIPE("soot-to-silver"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+RECIPE("soot-to-gold"):remove_unlock("oil-sands"):add_unlock("soot-separation")
+
 RECIPE("guar-separation"):remove_unlock("oil-machines-mk02")
 RECIPE("guar-01"):remove_unlock("oil-machines-mk01")
 RECIPE("guar-02"):remove_unlock("coal-processing-2")
