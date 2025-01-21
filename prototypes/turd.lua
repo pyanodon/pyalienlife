@@ -218,7 +218,7 @@ local function build_tech_upgrade(tech_upgrade)
         effects = effects,
         unit = master_tech.unit,
         is_turd = true,
-        localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"turd.tech-2"}}
+        localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"turd.tech-2", tostring(#tech_upgrade.sub_techs)}}
     }
 end
 

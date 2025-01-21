@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.35
+Date: ?
+  Changes:
+    - Updated the locale of the moss turd. Resolves https://github.com/pyanodon/pybugreports/issues/826
+---------------------------------------------------------------------------------------------------
 Version: 3.0.34
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Fixed data array not accepting modules. Resolves https://github.com/pyanodon/pybugreports/issues/824
     - Standardized crafting speeds for the ulric corral to no longer result in floating point crafting times.
@@ -8,7 +13,7 @@ Date: 2024-1-20
     - The ulric corral animation now has a fadein/fadeout animation instead of instantly spawning the animals in during the working animation.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.33
-Date: 2024-1-20
+Date: 2025-1-20
   Changes:
     - Caravans now can compare a circuit condition to a static value.
     - Adapted all pyAL events to use py.on_event instead of script.on_event
