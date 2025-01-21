@@ -232,26 +232,8 @@ data:extend {
     },
     {
         type = "recipe-category",
-        name = "sap-mk01",
-        allowed_module_categories = {"sap-mk01"},
-        modules_required = true
-    },
-    {
-        type = "recipe-category",
-        name = "sap-mk02",
-        allowed_module_categories = {"sap-mk02"},
-        modules_required = true
-    },
-    {
-        type = "recipe-category",
-        name = "sap-mk03",
-        allowed_module_categories = {"sap-mk03"},
-        modules_required = true
-    },
-    {
-        type = "recipe-category",
-        name = "sap-mk04",
-        allowed_module_categories = {"sap-mk04"},
+        name = "sap-extractor",
+        allowed_module_categories = {"sap-mk01", "sap-mk02", "sap-mk03", "sap-mk04"},
         modules_required = true
     },
     {

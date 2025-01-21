@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "sap-01",
-    category = "sap-mk01",
+    category = "sap-extractor",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -13,7 +13,13 @@ RECIPE {
     results = {
         {type = "item", name = "saps", amount = 4}
     },
-    main_product = "saps"
+    main_product = "saps",
+    allowed_module_categories = {
+        "sap-mk01",
+        "sap-mk02",
+        "sap-mk03",
+        "sap-mk04",
+    }
 }:add_unlock("sap-mk01")
 
 
@@ -57,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk02",
-    category = "sap-mk02",
+    category = "sap-extractor",
     --hidden = true,
     enabled = false,
     energy_required = 80,
@@ -66,7 +72,12 @@ RECIPE {
     results = {
         {type = "item", name = "saps-mk02", amount = 4}
     },
-    main_product = "saps-mk02"
+    main_product = "saps-mk02",
+    allowed_module_categories = {
+        "sap-mk02",
+        "sap-mk03",
+        "sap-mk04",
+    }
 }:add_unlock("sap-mk02")
 
 RECIPE {
@@ -120,7 +131,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk03",
-    category = "sap-mk03",
+    category = "sap-extractor",
     --hidden = true,
     enabled = false,
     energy_required = 80,
@@ -129,7 +140,11 @@ RECIPE {
     results = {
         {type = "item", name = "saps-mk03", amount = 4}
     },
-    main_product = "saps-mk03"
+    main_product = "saps-mk03",
+    allowed_module_categories = {
+        "sap-mk03",
+        "sap-mk04",
+    }
 }:add_unlock("sap-mk03")
 
 RECIPE {
@@ -183,7 +198,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk04",
-    category = "sap-mk04",
+    category = "sap-extractor",
     --hidden = true,
     enabled = false,
     energy_required = 80,
@@ -192,7 +207,10 @@ RECIPE {
     results = {
         {type = "item", name = "saps-mk04", amount = 4}
     },
-    main_product = "saps-mk04"
+    main_product = "saps-mk04",
+    allowed_module_categories = {
+        "sap-mk04",
+    }
 }:add_unlock("sap-mk04")
 
 RECIPE {

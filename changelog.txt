@@ -3,6 +3,7 @@ Version: 3.0.35
 Date: ?
   Changes:
     - Updated the locale of the moss turd. Resolves https://github.com/pyanodon/pybugreports/issues/826
+    - Fixed sap MK02 could not be made in a MK1 sap extractor. Resolves https://github.com/pyanodon/pybugreports/issues/828
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20

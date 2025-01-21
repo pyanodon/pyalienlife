@@ -75,13 +75,6 @@ RECIPE {
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 
-local crafting_categories_by_tier = {
-    {"sap-mk01"},
-    {"sap-mk01", "sap-mk02"},
-    {"sap-mk01", "sap-mk02", "sap-mk03"},
-    {"sap-mk01", "sap-mk02", "sap-mk03", "sap-mk04"}
-}
-
 for i = 1, 4 do
     local name = "sap-extractor-mk0" .. i
     local icon = "__pyalienlifegraphics__/graphics/icons//sap-extractor-mk0" .. i .. ".png"
@@ -116,7 +109,7 @@ for i = 1, 4 do
         forced_symmetry = "diagonal-pos",
         module_slots = MODULE_SLOTS,
         allowed_effects = {"consumption", "speed", "pollution", "productivity"},
-        crafting_categories = crafting_categories_by_tier[i],
+        crafting_categories = {"sap-extractor"},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "sap-extractor-mk01"),
         energy_source = {
             type = "electric",
