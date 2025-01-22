@@ -97,10 +97,10 @@ TECHNOLOGY("antitumor"):add_prereq("earnshaw-theorem")
 -- TECHNOLOGY('penrose'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 
-TECHNOLOGY("vacuum-tube-electronics"):set_fields {dependencies = {"sap-mk01"}}
+TECHNOLOGY("electronics"):set_fields {dependencies = {"sap-mk01"}}
 
 if not mods["omnimatter"] then
-    TECHNOLOGY("syngas"):set_fields {dependencies = {"vacuum-tube-electronics"}}
+    TECHNOLOGY("syngas"):set_fields {dependencies = {"electronics"}}
 end
 
 --RECIPES--
@@ -165,11 +165,11 @@ RECIPE("bio-sample01"):add_ingredient {type = "item", name = "urea", amount = 5}
 RECIPE("inserter"):add_unlock("logistics").enabled = false
 RECIPE("underground-belt"):remove_unlock("logistics").enabled = true
 RECIPE("long-handed-inserter"):remove_unlock("automation"):add_unlock("rubber"):add_ingredient {type = "item", name = "belt", amount = 1}
-RECIPE("electronics-factory-mk01"):replace_ingredient("fbreactor-mk01", "distilator"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic")
-RECIPE("inductor1"):remove_unlock("vacuum-tube-electronics"):add_unlock("ceramic")
+RECIPE("electronics-factory-mk01"):replace_ingredient("fbreactor-mk01", "distilator"):remove_unlock("electronics"):add_unlock("ceramic")
+RECIPE("inductor1"):remove_unlock("electronics"):add_unlock("ceramic")
 RECIPE("pulp-mill-mk01"):replace_ingredient("fbreactor-mk01", "distilator")
 RECIPE("pcb-factory-mk01"):replace_ingredient("fbreactor-mk01", "electronics-factory-mk01")
-RECIPE("fbreactor-mk01"):remove_unlock("vacuum-tube-electronics"):add_unlock("melamine")
+RECIPE("fbreactor-mk01"):remove_unlock("electronics"):add_unlock("melamine")
 RECIPE("solid-separator"):replace_ingredient("electronic-circuit", "inductor1")
 
 RECIPE("perfect-samples"):add_ingredient {type = "item", name = "dimensional-gastricorg", amount = 1}
