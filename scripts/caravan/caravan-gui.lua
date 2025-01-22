@@ -15,11 +15,11 @@ local function generate_button_status(caravan_data, schedule_id, action_id)
     return style, sprite
 end
 
----Creates the GUI pane for the caravan's schedule. Tries to lossely follow the vanilla train schedule GUI.
 ---@param gui LuaGuiElement
 ---@param caravan_data Caravan
-function Caravan.build_schedule_gui(gui, caravan_data)
-    for i, schedule in ipairs(caravan_data.schedule) do
+---@param schedule2 CaravanSchedule[]
+function Caravan.build_schedule_list_gui(gui, caravan_data, schedule2)
+    for i, schedule in ipairs(schedule2) do
         local prototype = prototypes[caravan_data.entity.name]
 
         local schedule_flow = gui.add {type = "flow", direction = "vertical"}
@@ -150,7 +150,56 @@ function Caravan.build_schedule_gui(gui, caravan_data)
         py_add_action.style.width = 340
         py_add_action.style.height = 36
     end
+end
+
+---Creates the GUI pane for the caravan's schedule. Tries to lossely follow the vanilla train schedule GUI.
+---@param gui LuaGuiElement
+---@param caravan_data Caravan
+function Caravan.build_schedule_gui(gui, caravan_data)
+    Caravan.build_schedule_list_gui(gui, caravan_data, caravan_data.schedule)
     gui.add {type = "button", name = "py_add_outpost", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
+
+    --- Main interrupts gui
+    local interrupt_flow = gui.add {type = "flow", direction = "vertical"}
+    interrupt_flow.style.horizontal_align = "right"
+    interrupt_flow.style.vertically_stretchable = false
+    interrupt_flow.style.right_margin = -12
+
+    local interrupt_frame = interrupt_flow.add {type = "frame", style = "train_schedule_station_frame"}
+    interrupt_frame.style.horizontally_stretchable = true
+    interrupt_frame.style.vertically_stretchable = true
+    interrupt_frame.style.height = 36
+
+    interrupt_frame.add {type = "label", name = "py_outpost_name", style = "subheader_semibold_label", caption = {"gui-interrupts.interrupt-header"}}
+    gui.add {type = "button", name = "py_add_interrupt", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-interrupt"}}
+
+    for _, interrupt in ipairs(caravan_data.interrupts) do
+        local tags = {unit_number = caravan_data.unit_number, schedule_id = i}
+        local action_frame = gui.add {type = "frame", style = "train_schedule_condition_frame"}
+        action_frame.style.horizontally_stretchable = true
+        action_frame.style.vertically_stretchable = true
+        action_frame.style.height = 36
+        action_frame.style.right_padding = 12
+        action_frame.style.width = 340
+
+        local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
+        playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
+        action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = interrupt.name}
+        action_frame.add {
+            type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
+            tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
+            sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
+        }
+        action_frame.add {
+            type = "sprite-button", name = "py_shuffle_schedule_2", style = "py_schedule_move_button", tags = tags,
+            sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
+        }
+
+        action_frame.add {
+            type = "sprite-button", name = "py_delete_schedule", style = "py_schedule_move_button", tags = tags,
+            sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black"
+        }
+    end
 end
 
 ---Creates a caravan GUI. The caravan GUI consists of a lua inventory, a camera, a fuel inventory, and a schedule pane.
@@ -263,6 +312,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     schedule_pane.vertical_scroll_policy = "auto-and-reserve-space"
     schedule_pane.style.horizontally_stretchable = true
     schedule_pane.style.vertically_stretchable = true
+
     Caravan.update_gui(main_frame)
     Caravan.build_gui_connected(player, entity)
 end

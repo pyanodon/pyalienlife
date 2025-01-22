@@ -20,12 +20,14 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field schedule_id int The index of the schedule that the caravan is currently following. This is used to highlight the grey 'play' button in the GUI. If this == -1, the caravan is idle.
 ---@field action_id int The action index of the schedule that the caravan is currently following. This is used to highlight the grey 'play' button in the GUI. If this == -1, the caravan is idle.
 ---@field unit_number number The unit number of the caravan entity.
+---@field interrupts CaravanInterrupt[]
 
 ---@class CaravanSchedule
 ---@field actions CaravanAction[] The actions that the caravan will perform (in order of this array) when it reaches this schedule. Each element is a table with a type and localised_name.
 ---@field entity LuaEntity? The entity that the caravan will travel to. If this is nil, the caravan will travel to the position.
 ---@field localised_name LocalisedString The name of the schedule. This is displayed in the GUI.
 ---@field position MapPosition The position that the caravan will travel to. Used as a fallback in case of no entity or invalid entity.
+---@field temporary boolean? Whether this stop is temporary
 
 ---@class CaravanAction
 ---@field async? boolean Whether this action should be 'ticked' once and then move on to the next action. If false or nil, the caravan will wait until the action is complete before moving on. Note that some action types ignore this field such as 'time passed'.
@@ -36,6 +38,11 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field item_count int? The amount of items that the caravan will interact with if this is an 'item count' action.
 ---@field localised_name LocalisedString The name of the action. This is displayed in the GUI.
 ---@field type string The type of the action. This is used to determine what the caravan will do when it reaches this action.
+
+---@class CaravanInterrupt
+---@field name string The name of the interrupt
+---@field conditions CaravanAction[]
+---@field schedule CaravanSchedule[]
 
 ---Pathfinds a caravan to follow another entity
 ---@param caravan_data Caravan
@@ -253,6 +260,24 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
     stack.set_stack {name = "caravan-control"}
     storage.last_opened_caravan[player.index] = storage.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
     player.opened = nil
+end
+
+gui_events[defines.events.on_gui_click]["py_add_interrupt"] = function(event)
+    local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local anchor = {gui=defines.relative_gui_type.controller_gui, position=defines.relative_gui_position.right}
+    -- player.gui.relative.clear()
+    -- local frame = player.gui.relative.add {
+    --     type = "frame",
+    --     -- name = "py_globa_caravan_gui",
+    --     caption = {"caravan-gui.caption"},
+    --     direction = "vertical",
+    --     anchor = anchor,
+    -- }
+    -- frame.add{type="label", caption=player.name}
+    -- frame.focus()
+    -- table.insert(caravan_data.interrupts, {name = "adsadsa", })
 end
 
 gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = function(event)
@@ -692,6 +717,7 @@ function Caravan.instantiate_caravan(entity)
         unit_number = entity.unit_number,
         entity = entity,
         schedule = {},
+        interrupts = {},
         schedule_id = -1,
         action_id = -1
     }
