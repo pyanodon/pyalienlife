@@ -6,6 +6,7 @@ Date: ?
     - Fixed sap MK02 could not be made in a MK1 sap extractor. Resolves https://github.com/pyanodon/pybugreports/issues/828
     - Moved soot separation recipes to a dedicated technology. Resolves https://github.com/pyanodon/pybugreports/issues/825
     - Migrated the internal name of the "vacuum-tube-electronics" technology to "electronics". Resolves https://github.com/pyanodon/pybugreports/issues/453
+    - Migrated the internal name of the "railway" technology to "electronics". Resolves https://github.com/pyanodon/pybugreports/issues/453
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20
