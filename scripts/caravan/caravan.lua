@@ -266,17 +266,8 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt"] = function(event)
     local player = game.get_player(event.player_index)
     local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
-    local anchor = {gui=defines.relative_gui_type.controller_gui, position=defines.relative_gui_position.right}
-    -- player.gui.relative.clear()
-    -- local frame = player.gui.relative.add {
-    --     type = "frame",
-    --     -- name = "py_globa_caravan_gui",
-    --     caption = {"caravan-gui.caption"},
-    --     direction = "vertical",
-    --     anchor = anchor,
-    -- }
-    -- frame.add{type="label", caption=player.name}
-    -- frame.focus()
+
+    Caravan.build_interrupt_gui(player)
     -- table.insert(caravan_data.interrupts, {name = "adsadsa", })
 end
 

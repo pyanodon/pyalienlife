@@ -383,6 +383,9 @@ py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surf
     if player.gui.screen.py_global_caravan_gui then
         player.gui.screen.py_global_caravan_gui.destroy()
     end
+    if player.gui.screen.py_edit_interrupt_gui then
+        player.gui.screen.py_edit_interrupt_gui.destroy()
+    end
 
     if event.gui_type == defines.gui_type.script_inventory or event.gui_type == defines.gui_type.custom then
         local gui = Caravan.get_caravan_gui(player)
@@ -402,4 +405,45 @@ end
 function Caravan.get_caravan_gui(player)
     local gui = get_caravan_gui_in_flow(player) or player.gui.screen.caravan_gui
     if gui then return gui end
+end
+
+function Caravan.build_interrupt_gui(player, interrupt_data)
+    if player.gui.screen.py_edit_interrupt_gui then
+        player.gui.screen.py_edit_interrupt_gui.destroy()
+    end
+    local interrupt_window = player.gui.screen.add {
+        type = "frame",
+        name = "py_edit_interrupt_gui",
+      caption = {"caravan-gui.caption"},
+        direction = "vertical",
+    }
+    interrupt_window.auto_center = true
+    interrupt_window.style.width = 448
+    interrupt_window.style.minimal_height = 123
+
+    local window_frame = interrupt_window.add{
+        type = "frame",
+        direction = "horizontal",
+        style = "inside_shallow_frame_with_padding_and_vertical_spacing",
+    }
+    window_frame.style.minimal_height = 123
+    window_frame.style.horizontally_stretchable = true
+    
+    local subheader_frame = window_frame.add {type = "frame", direction = "horizontal", style = "subheader_frame"}
+    subheader_frame.style.height = 36
+    subheader_frame.style.horizontally_stretchable = true
+    subheader_frame.style.margin = -12
+
+    subheader_frame.add {type = "label", caption = "interrupt name", style = "subheader_caption_label"}
+    subheader_frame.add {type = "sprite-button", name = "py_rename_interrupt_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "rename_icon_small_black"}
+    -- subheader_frame.style.padding = -8
+    -- window_flow.add {type = "frame", style = "inside_shallow_frame_with_padding_and_vertical_spacing"}
+    -- local main_flow = window_flow.add {type = "flow", direction = "vertical"}
+    local button_flow = interrupt_window.add {type = "flow", direction = "horizontal", style = "dialog_buttons_horizontal_flow"}
+    button_flow.style.horizontally_stretchable = true
+    button_flow.style.vertically_stretchable = false
+    local empty = button_flow.add {type = "empty-widget"}
+    empty.style.horizontally_stretchable = true
+    empty.style.vertically_stretchable = true
+    local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
 end
