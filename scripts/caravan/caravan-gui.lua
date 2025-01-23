@@ -159,7 +159,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
     Caravan.build_schedule_list_gui(gui, caravan_data, caravan_data.schedule)
     gui.add {type = "button", name = "py_add_outpost", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
 
-    --- Main interrupts gui TODO: separate into its own function
+    --- Main interrupts gui. TODO: separate into its own function
     local interrupt_flow = gui.add {type = "flow", direction = "vertical"}
     interrupt_flow.style.horizontal_align = "right"
     interrupt_flow.style.vertically_stretchable = false
@@ -419,7 +419,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local interrupt_window = player.gui.screen.add {
         type = "frame",
         name = "py_edit_interrupt_gui",
-      caption = {"caravan-gui.caption"},
+        caption = {"caravan-gui.caption"},
         direction = "vertical",
     }
     interrupt_window.auto_center = true
@@ -439,7 +439,9 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     subheader_frame.style.horizontally_stretchable = true
     subheader_frame.style.margin = -12
 
-    subheader_frame.add {type = "label", caption = interrupt_data.name, style = "subheader_caption_label"}
+    subheader_frame.add {type = "label", name = "py_rename_interrupt_label", caption = interrupt_data.name, style = "subheader_caption_label"}
+    local textfield = subheader_frame.add {type = "textfield", name = "py_rename_interrupt_textfield", text = interrupt_data.name, icon_selector = true}
+    textfield.visible = false
     subheader_frame.add {type = "sprite-button", name = "py_rename_interrupt_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "rename_icon_small_black"}
     -- subheader_frame.style.padding = -8
     -- window_flow.add {type = "frame", style = "inside_shallow_frame_with_padding_and_vertical_spacing"}
@@ -453,6 +455,9 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     empty.style.vertically_stretchable = true
     -- empty.ignored_by_interaction = true -- Allows dragging?
     local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
+
+    -- TODO: make everything not assume caravan gui is the one opened
+    -- player.opened = interrupt_window
 end
 
 -- GUI for adding new interrupts to a caravan

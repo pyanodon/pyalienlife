@@ -312,6 +312,43 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_interrupt_list
     storage.gui_elements_by_name["py_add_interrupt_textfield"].text = element.get_item(element.selected_index)
 end
 
+gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local element = event.element
+    
+    local label = element.parent.py_rename_interrupt_label
+    label.visible = not label.visible
+    local textfield = element.parent.py_rename_interrupt_textfield
+    textfield.visible = not textfield.visible
+    if textfield.visible then
+        textfield.focus()
+    else
+        local old_name = label.caption
+        local new_name = textfield.text
+        storage.interrupts[new_name] = storage.interrupts[old_name]
+        storage.interrupts[new_name].name = new_name
+        storage.interrupts[old_name] = nil
+
+        -- Update interrupt in current caravan. TODO: update all caravans
+        for i, interrupt in pairs(caravan_data.interrupts) do
+            if interrupt == old_name then
+                caravan_data.interrupts[i] = new_name
+                interrupt = nil
+                break
+            end
+        end
+        label.caption = new_name
+        Caravan.update_gui(Caravan.get_caravan_gui(player))
+    end
+end
+
+gui_events[defines.events.on_gui_confirmed]["py_edit_interrupt_gui"] = function(event)
+    local element = event.element
+    element.destroy()
+end
+
 gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
