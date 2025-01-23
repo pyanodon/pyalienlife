@@ -17,9 +17,9 @@ end
 
 ---@param gui LuaGuiElement
 ---@param caravan_data Caravan
----@param schedule2 CaravanSchedule[]
-function Caravan.build_schedule_list_gui(gui, caravan_data, schedule2)
-    for i, schedule in ipairs(schedule2) do
+---@param schedules CaravanSchedule[]
+function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
+    for i, schedule in ipairs(schedules) do
         local prototype = prototypes[caravan_data.entity.name]
 
         local schedule_flow = gui.add {type = "flow", direction = "vertical"}
@@ -159,7 +159,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
     Caravan.build_schedule_list_gui(gui, caravan_data, caravan_data.schedule)
     gui.add {type = "button", name = "py_add_outpost", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
 
-    --- Main interrupts gui
+    --- Main interrupts gui TODO: separate into its own function
     local interrupt_flow = gui.add {type = "flow", direction = "vertical"}
     interrupt_flow.style.horizontal_align = "right"
     interrupt_flow.style.vertically_stretchable = false
@@ -170,10 +170,9 @@ function Caravan.build_schedule_gui(gui, caravan_data)
     interrupt_frame.style.vertically_stretchable = true
     interrupt_frame.style.height = 36
 
-    interrupt_frame.add {type = "label", name = "py_outpost_name", style = "subheader_semibold_label", caption = {"gui-interrupts.interrupt-header"}}
-    gui.add {type = "button", name = "py_add_interrupt", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-interrupt"}}
+    interrupt_frame.add {type = "label", style = "subheader_semibold_label", caption = {"gui-interrupts.interrupt-header"}}
 
-    for _, interrupt in ipairs(caravan_data.interrupts) do
+    for _, interrupt in pairs(caravan_data.interrupts) do
         local tags = {unit_number = caravan_data.unit_number, schedule_id = i}
         local action_frame = gui.add {type = "frame", style = "train_schedule_condition_frame"}
         action_frame.style.horizontally_stretchable = true
@@ -184,7 +183,9 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 
         local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
         playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
-        action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = interrupt.name}
+        action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = interrupt}
+        action_frame.add {type = "empty-widget", style = "py_empty_widget"}
+
         action_frame.add {
             type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
             tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
@@ -200,6 +201,8 @@ function Caravan.build_schedule_gui(gui, caravan_data)
             sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black"
         }
     end
+
+    gui.add {type = "button", name = "py_add_interrupt_button", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-interrupt"}}
 end
 
 ---Creates a caravan GUI. The caravan GUI consists of a lua inventory, a camera, a fuel inventory, and a schedule pane.
@@ -341,7 +344,7 @@ end)
 
 ---Resets the fuel inventory, the fuel bar, and the schedule pane of the caravan GUI to reflect the current state of the caravan.
 ---@param gui LuaGuiElement
----@param weak boolean Optimization: If false, don't update the schedule pane.
+---@param weak boolean? Optimization: If false, don't update the schedule pane.
 function Caravan.update_gui(gui, weak)
     local caravan_data = storage.caravans[gui.tags.unit_number]
     if not Caravan.validity_check(caravan_data) then
@@ -407,10 +410,12 @@ function Caravan.get_caravan_gui(player)
     if gui then return gui end
 end
 
-function Caravan.build_interrupt_gui(player, interrupt_data)
+-- GUI for editing the interrupt
+function Caravan.build_interrupt_gui(player, interrupt_name)
     if player.gui.screen.py_edit_interrupt_gui then
         player.gui.screen.py_edit_interrupt_gui.destroy()
     end
+    local interrupt_data = storage.interrupts[interrupt_name]
     local interrupt_window = player.gui.screen.add {
         type = "frame",
         name = "py_edit_interrupt_gui",
@@ -434,7 +439,7 @@ function Caravan.build_interrupt_gui(player, interrupt_data)
     subheader_frame.style.horizontally_stretchable = true
     subheader_frame.style.margin = -12
 
-    subheader_frame.add {type = "label", caption = "interrupt name", style = "subheader_caption_label"}
+    subheader_frame.add {type = "label", caption = interrupt_data.name, style = "subheader_caption_label"}
     subheader_frame.add {type = "sprite-button", name = "py_rename_interrupt_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "rename_icon_small_black"}
     -- subheader_frame.style.padding = -8
     -- window_flow.add {type = "frame", style = "inside_shallow_frame_with_padding_and_vertical_spacing"}
@@ -442,8 +447,41 @@ function Caravan.build_interrupt_gui(player, interrupt_data)
     local button_flow = interrupt_window.add {type = "flow", direction = "horizontal", style = "dialog_buttons_horizontal_flow"}
     button_flow.style.horizontally_stretchable = true
     button_flow.style.vertically_stretchable = false
-    local empty = button_flow.add {type = "empty-widget"}
+    
+    local empty = button_flow.add {type = "empty-widget", style = "draggable_space"}
     empty.style.horizontally_stretchable = true
     empty.style.vertically_stretchable = true
+    -- empty.ignored_by_interaction = true -- Allows dragging?
     local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
+end
+
+-- GUI for adding new interrupts to a caravan
+function Caravan.build_add_interrupt_gui(gui)
+    if gui.py_add_interrupt_frame then return end
+    local main_frame = gui.add {type = "frame", name = "py_add_interrupt_frame", direction = "vertical"}
+
+    local header_flow = main_frame.add {type = "flow", style = "frame_header_flow"}
+    header_flow.add {type = "label", caption = "add interrupt", style = "frame_title"}
+    local empty = header_flow.add {type = "empty-widget"}
+    empty.style.horizontally_stretchable = true
+    header_flow.add {type = "sprite-button", name = "py_add_interrupt_close_button", sprite = "utility/close", style = "frame_action_button"}
+
+    local subheader_frame = main_frame.add {type = "frame", direction = "horizontal", style = "subheader_frame"}
+    subheader_frame.style.horizontally_stretchable = true
+    -- subheader_frame.style.margin = -4
+    local subheader_flow = subheader_frame.add {type = "flow", direction = "horizontal"}
+    local textfield = subheader_flow.add {type = "textfield", name = "py_add_interrupt_textfield", style = "stretchable_textfield", icon_selector = true}
+    subheader_flow.add {type = "sprite-button", name = "py_add_interrupt_confirm_button", style = "item_and_count_select_confirm", sprite = "utility/enter"}
+    textfield.focus()
+
+    local items = {}
+    for name, _ in pairs(storage.interrupts) do
+        table.insert(items, name)
+    end
+    local list_box = main_frame.add {type = "list-box", name = "py_add_interrupt_list_box", items = items}
+    list_box.style.horizontally_stretchable = true
+    list_box.style.minimal_height = 200
+
+    storage.gui_elements_by_name["py_add_interrupt_frame"] = main_frame
+    storage.gui_elements_by_name["py_add_interrupt_textfield"] = textfield
 end

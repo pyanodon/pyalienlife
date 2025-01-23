@@ -20,7 +20,7 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field schedule_id int The index of the schedule that the caravan is currently following. This is used to highlight the grey 'play' button in the GUI. If this == -1, the caravan is idle.
 ---@field action_id int The action index of the schedule that the caravan is currently following. This is used to highlight the grey 'play' button in the GUI. If this == -1, the caravan is idle.
 ---@field unit_number number The unit number of the caravan entity.
----@field interrupts CaravanInterrupt[]
+---@field interrupts string[]
 
 ---@class CaravanSchedule
 ---@field actions CaravanAction[] The actions that the caravan will perform (in order of this array) when it reaches this schedule. Each element is a table with a type and localised_name.
@@ -129,6 +129,9 @@ end
 
 py.on_event(py.events.on_init(), function()
     storage.caravans = storage.caravans or {}
+    storage.interrupts = storage.interrupts or {}
+    -- Table of gui elements indexed by their name. Not necessary, but better than hardcoding the realtive paths
+    storage.gui_elements_by_name = storage.gui_elements_by_name or {}
     storage.last_opened_caravan = storage.last_opened_caravan or {}
     storage.make_operable_next_tick = storage.make_operable_next_tick or {}
 end)
@@ -262,13 +265,51 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
     player.opened = nil
 end
 
-gui_events[defines.events.on_gui_click]["py_add_interrupt"] = function(event)
+-- Opens the GUI for adding a new interrupt to a caravan
+gui_events[defines.events.on_gui_click]["py_add_interrupt_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]  local element = event.element
+
+    Caravan.build_add_interrupt_gui(element.parent)
+    -- Caravan.build_interrupt_gui(player)
+    -- table.insert(caravan_data.interrupts, {name = "adsadsa", })
+end
+
+-- TODO: these 2 functions do the same
+gui_events[defines.events.on_gui_confirmed]["py_add_interrupt_textfield"] = function(event)
     local player = game.get_player(event.player_index)
     local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
+    local element = event.element
+    
+    local name = element.text
+    storage.interrupts[name] = {name = name}
+    storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
+    table.insert(caravan_data.interrupts, name)
+    Caravan.build_interrupt_gui(player, name)
+    Caravan.update_gui(gui)
+end
+gui_events[defines.events.on_gui_click]["py_add_interrupt_confirm_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local element = event.element
+    
+    local name = element.parent.py_add_interrupt_textfield.text
+    storage.interrupts[name] = {name = name}
+    storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
+    table.insert(caravan_data.interrupts, name)
+    Caravan.build_interrupt_gui(player, name)
+    Caravan.update_gui(gui)
+end
 
-    Caravan.build_interrupt_gui(player)
-    -- table.insert(caravan_data.interrupts, {name = "adsadsa", })
+-- Copies selected interrupt's name into the textfield
+gui_events[defines.events.on_gui_selection_state_changed]["py_add_interrupt_list_box"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    
+    storage.gui_elements_by_name["py_add_interrupt_textfield"].text = element.get_item(element.selected_index)
 end
 
 gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = function(event)
