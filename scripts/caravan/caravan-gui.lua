@@ -386,8 +386,8 @@ py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surf
     if player.gui.screen.py_global_caravan_gui then
         player.gui.screen.py_global_caravan_gui.destroy()
     end
-    if player.gui.screen.py_edit_interrupt_gui then
-        player.gui.screen.py_edit_interrupt_gui.destroy()
+    if player.gui.relative.py_edit_interrupt_gui then
+        player.gui.relative.py_edit_interrupt_gui.destroy()
     end
 
     if event.gui_type == defines.gui_type.script_inventory or event.gui_type == defines.gui_type.custom then
@@ -412,17 +412,21 @@ end
 
 -- GUI for editing the interrupt
 function Caravan.build_interrupt_gui(player, interrupt_name)
-    if player.gui.screen.py_edit_interrupt_gui then
-        player.gui.screen.py_edit_interrupt_gui.destroy()
+    if player.gui.relative.py_edit_interrupt_gui then
+        player.gui.relative.py_edit_interrupt_gui.destroy()
     end
     local interrupt_data = storage.interrupts[interrupt_name]
-    local interrupt_window = player.gui.screen.add {
+    local interrupt_window = player.gui.relative.add {
         type = "frame",
         name = "py_edit_interrupt_gui",
         caption = {"caravan-gui.caption"},
         direction = "vertical",
+        -- TODO: make anchor optional
+        anchor = {
+            gui = defines.relative_gui_type.script_inventory_gui,
+            position = defines.relative_gui_position.left,
+        }
     }
-    interrupt_window.auto_center = true
     interrupt_window.style.width = 448
     interrupt_window.style.minimal_height = 123
 
@@ -457,7 +461,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
 
     -- TODO: make everything not assume caravan gui is the one opened
-    -- player.opened = interrupt_window
+    -- player.opened = player.gui.screen.py_edit_interrupt_gui
 end
 
 -- GUI for adding new interrupts to a caravan
