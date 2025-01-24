@@ -272,8 +272,6 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_button"] = function(ev
     local caravan_data = storage.caravans[gui.tags.unit_number]  local element = event.element
 
     Caravan.build_add_interrupt_gui(element.parent)
-    -- Caravan.build_interrupt_gui(player)
-    -- table.insert(caravan_data.interrupts, {name = "adsadsa", })
 end
 
 -- TODO: these 2 functions do the same
@@ -310,6 +308,13 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_interrupt_list
     local element = event.element
     
     storage.gui_elements_by_name["py_add_interrupt_textfield"].text = element.get_item(element.selected_index)
+end
+
+gui_events[defines.events.on_gui_click]["py_edit_interrupt_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    
+    Caravan.build_interrupt_gui(player, element.tags.name)
 end
 
 gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function(event)

@@ -187,6 +187,13 @@ function Caravan.build_schedule_gui(gui, caravan_data)
         action_frame.add {type = "empty-widget", style = "py_empty_widget"}
 
         action_frame.add {
+            type = "sprite-button", name = "py_edit_interrupt_button", style = "train_schedule_action_button",
+            -- tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
+            tags = {name = interrupt},
+            sprite = "utility/rename_icon",
+        }
+
+        action_frame.add {
             type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
             tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
             sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
@@ -202,7 +209,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
         }
     end
 
-    gui.add {type = "button", name = "py_add_interrupt_button", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-interrupt"}}
+    gui.add {type = "button", name = "py_add_interrupt_button", style = "train_schedule_add_station_button", caption = {"gui-train.add-interrupt"}}
 end
 
 ---Creates a caravan GUI. The caravan GUI consists of a lua inventory, a camera, a fuel inventory, and a schedule pane.
@@ -419,7 +426,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local interrupt_window = player.gui.relative.add {
         type = "frame",
         name = "py_edit_interrupt_gui",
-        caption = {"caravan-gui.caption"},
+        caption = {"gui-interrupts.edit-interrupt"},
         direction = "vertical",
         -- TODO: make anchor optional
         anchor = {
@@ -432,7 +439,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
 
     local window_frame = interrupt_window.add{
         type = "frame",
-        direction = "horizontal",
+        direction = "vertical",
         style = "inside_shallow_frame_with_padding_and_vertical_spacing",
     }
     window_frame.style.minimal_height = 123
@@ -441,7 +448,9 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local subheader_frame = window_frame.add {type = "frame", direction = "horizontal", style = "subheader_frame"}
     subheader_frame.style.height = 36
     subheader_frame.style.horizontally_stretchable = true
-    subheader_frame.style.margin = -12
+    subheader_frame.style.top_margin = -12
+    subheader_frame.style.right_margin = -12
+    subheader_frame.style.left_margin = -12
 
     subheader_frame.add {type = "label", name = "py_rename_interrupt_label", caption = interrupt_data.name, style = "subheader_caption_label"}
     local textfield = subheader_frame.add {type = "textfield", name = "py_rename_interrupt_textfield", text = interrupt_data.name, icon_selector = true}
@@ -450,6 +459,19 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     -- subheader_frame.style.padding = -8
     -- window_flow.add {type = "frame", style = "inside_shallow_frame_with_padding_and_vertical_spacing"}
     -- local main_flow = window_flow.add {type = "flow", direction = "vertical"}
+
+    window_frame.add {type = "checkbox", caption = {"gui-interrupts.inside-interrupt"}, state = false}
+    window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, style = "semibold_label"}
+    local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "train_interrupts_scroll_pane"}
+    conditions_scroll_pane.style.minimal_height = 36
+    conditions_scroll_pane.style.horizontal_align = "right"
+    conditions_scroll_pane.style.vertically_stretchable = true
+    window_frame.add {type = "label", caption = {"gui-interrupts.targets"}, style = "semibold_label"}
+    local targets_scroll_pane = window_frame.add {type = "scroll-pane", style = "train_interrupts_scroll_pane"}
+    targets_scroll_pane.style.minimal_height = 36
+    targets_scroll_pane.style.horizontal_align = "right"
+    targets_scroll_pane.style.vertically_stretchable = true
+
     local button_flow = interrupt_window.add {type = "flow", direction = "horizontal", style = "dialog_buttons_horizontal_flow"}
     button_flow.style.horizontally_stretchable = true
     button_flow.style.vertically_stretchable = false
