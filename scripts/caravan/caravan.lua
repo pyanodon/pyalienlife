@@ -282,7 +282,7 @@ gui_events[defines.events.on_gui_confirmed]["py_add_interrupt_textfield"] = func
     local element = event.element
     
     local name = element.text
-    storage.interrupts[name] = {name = name}
+    storage.interrupts[name] = {name = name, conditions = {}, schedule = {}}
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
     table.insert(caravan_data.interrupts, name)
     Caravan.build_interrupt_gui(player, name)
@@ -295,7 +295,7 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_confirm_button"] = fun
     local element = event.element
     
     local name = element.parent.py_add_interrupt_textfield.text
-    storage.interrupts[name] = {name = name}
+    storage.interrupts[name] = {name = name, conditions = {}, schedule = {}}
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
     table.insert(caravan_data.interrupts, name)
     Caravan.build_interrupt_gui(player, name)
