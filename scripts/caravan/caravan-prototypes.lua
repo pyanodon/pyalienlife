@@ -362,7 +362,8 @@ Caravan.free_actions = { -- actions that don't use fuel
     ["time-passed"] = true,
     ["store-food"] = true,
     ["detonate"] = true,
-    ["circuit-condition"] = true
+    ["circuit-condition"] = true,
+    ["circuit-condition-static"] = true
 }
 
 return caravan_prototypes
