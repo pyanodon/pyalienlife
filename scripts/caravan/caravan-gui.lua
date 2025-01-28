@@ -1,4 +1,4 @@
-local prototypes = require "caravan-prototypes"
+local caravan_prototypes = require "caravan-prototypes"
 require "caravan-gui-shared"
 
 ---Given a action index in a caravan GUI, returns the GUI style and sprite for the corresponding button.
@@ -20,7 +20,7 @@ end
 ---@param schedules CaravanSchedule[]
 function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
     for i, schedule in ipairs(schedules) do
-        local prototype = prototypes[caravan_data.entity.name]
+        local prototype = caravan_prototypes[caravan_data.entity.name]
 
         local schedule_flow = gui.add {type = "flow", direction = "vertical"}
         schedule_flow.style.horizontal_align = "right"
@@ -219,7 +219,7 @@ end
 ---@param from_remote_manager boolean Is this GUI opened from the py codex? If so, hide the inventory so that the player cannot teleport items.
 function Caravan.build_gui(player, entity, from_remote_manager)
     local caravan_data = storage.caravans[entity.unit_number]
-    local prototype = prototypes[entity.name]
+    local prototype = caravan_prototypes[entity.name]
 
     local main_frame
     if from_remote_manager then
@@ -306,7 +306,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     if caravan_data.fuel_inventory then
         local fuel_flow = content_flow.add {type = "flow", name = "fuel_flow", direction = "horizontal"}
         fuel_flow.style.vertical_align = "center"
-        local favorite_food_tooltip = py.generate_favorite_food_tooltip(prototypes[entity.name].favorite_foods, "caravan-gui")
+        local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[entity.name].favorite_foods, "caravan-gui")
         for i = 1, #caravan_data.fuel_inventory do
             local fuel_slot = fuel_flow.add {type = "sprite-button", name = "py_fuel_slot_" .. i, style = "inventory_slot", tags = {unit_number = caravan_data.unit_number, i = i}}
             fuel_slot.sprite = "slot_icon_fuel"
@@ -337,7 +337,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         return
     end
     local entity = player.selected
-    if not entity or not prototypes[entity.name] or not player.can_reach_entity(entity) then return end
+    if not entity or not caravan_prototypes[entity.name] or not player.can_reach_entity(entity) then return end
     local caravan_data = Caravan.instantiate_caravan(entity)
     local existing = Caravan.get_caravan_gui(player)
     if existing then
