@@ -4,8 +4,10 @@ local caravan_actions = {
         "store-food",
         "fill-inventory",
         "empty-inventory",
-        "item-count",
-        "inverse-item-count",
+        "load-caravan",
+        "unload-caravan",
+        "load-outpost",
+        "unload-outpost",
         "circuit-condition",
         "circuit-condition-static"
     },
@@ -14,8 +16,8 @@ local caravan_actions = {
         "store-food",
         "fill-inventory",
         "empty-inventory",
-        "item-count",
-        "inverse-item-count",
+        "load-caravan",
+        "load-outpost",
         "empty-autotrash"
     },
     ["unit"] = {
@@ -23,29 +25,29 @@ local caravan_actions = {
         "store-food",
         "fill-inventory",
         "empty-inventory",
-        "item-count",
-        "inverse-item-count",
+        "load-caravan",
+        "load-outpost",
     },
     ["cargo-wagon"] = {
         "time-passed",
         "fill-inventory",
         "empty-inventory",
-        "item-count",
-        "inverse-item-count",
+        "load-caravan",
+        "load-outpost",
     },
     ["car"] = {
         "time-passed",
         "fill-inventory",
         "empty-inventory",
-        "item-count",
-        "inverse-item-count",
+        "load-caravan",
+        "load-outpost",
     },
     ["spider-vehicle"] = {
         "time-passed",
         "fill-inventory",
         "empty-inventory",
-        "item-count",
-        "inverse-item-count",
+        "load-caravan",
+        "load-outpost",
     },
     ["electric-pole"] = {
         "time-passed",
@@ -61,7 +63,7 @@ local caravan_prototypes = {
     caravan = {
         inventory_size = 30,
         opens_player_inventory = true,
-        fuel_size = 1,
+        fuel_size = 2,
         destructible = false,
         outpost = "outpost",
         favorite_foods = {
@@ -87,7 +89,7 @@ local caravan_prototypes = {
     flyavan = {
         inventory_size = 90,
         opens_player_inventory = true,
-        fuel_size = 2,
+        fuel_size = 4,
         destructible = false,
         outpost = "outpost-aerial",
         favorite_foods = {
@@ -110,7 +112,7 @@ local caravan_prototypes = {
     nukavan = {
         inventory_size = 10,
         opens_player_inventory = true,
-        fuel_size = 1,
+        fuel_size = 2,
         outpost = "outpost",
         favorite_foods = {
             ["brain"] = 2,
@@ -197,6 +199,48 @@ local function transfer_filtered_items(input_inventory, output_inventory, item, 
     end
 end
 
+local function transfer_filtered_items_max(input_inventory, output_inventory, item, min, max) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
+    local inventory_count = input_inventory.get_item_count(item)
+
+    if inventory_count >= max then
+        return true
+    else
+        local removed_count = output_inventory.remove {name = item, count = max - inventory_count}
+        local inserted_count = 0
+        if removed_count ~= 0 then
+            inserted_count = input_inventory.insert {name = item, count = removed_count}
+            local couldnt_fit = removed_count - inserted_count
+            if couldnt_fit ~= 0 then
+                output_inventory.insert {name = item, count = couldnt_fit}
+            end
+        end
+        input_inventory.sort_and_merge()
+        output_inventory.sort_and_merge()
+        return inventory_count + inserted_count >= min
+    end
+end
+
+local function transfer_filtered_items_min(input_inventory, output_inventory, item, min, max) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
+    local inventory_count = output_inventory.get_item_count(item)
+
+    if inventory_count <= min then
+        return true
+    else
+        local removed_count = output_inventory.remove {name = item, count = inventory_count - min}
+        local inserted_count = 0
+        if removed_count ~= 0 then
+            inserted_count = input_inventory.insert {name = item, count = removed_count}
+            local couldnt_fit = removed_count - inserted_count
+            if couldnt_fit ~= 0 then
+                output_inventory.insert {name = item, count = couldnt_fit}
+            end
+        end
+        input_inventory.sort_and_merge()
+        output_inventory.sort_and_merge()
+        return inventory_count - inserted_count <= max
+    end
+end
+
 local function evaluate_signal(entity, signal)
     local result = entity.get_signal(signal, defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green)
     if result == 0 and entity.type == "container" and signal.type == "item" then
@@ -258,7 +302,7 @@ Caravan.actions = {
             end
         end
 
-        return true
+        return action.async or fuel.is_full()
     end,
 
     ["fill-inventory"] = function(caravan_data, schedule, action)
@@ -294,30 +338,68 @@ Caravan.actions = {
         return true
     end,
 
-    ["item-count"] = function(caravan_data, schedule, action)
+    ["load-caravan"] = function(caravan_data, schedule, action)
         local chest = schedule.entity
         if not chest or not chest.valid then return false end
         local outpost_inventory = get_outpost_inventory(chest)
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
-        local goal = action.item_count
         local item = action.elem_value
-        if not goal or not item then return false end
-        local result = transfer_filtered_items(caravan_inventory, outpost_inventory, item, goal)
-        return action.async or result
+        local min = action.item_count_min
+        local max = action.item_count_max
+        if not min or not max or not item then return false end
+
+        local result = transfer_filtered_items_max(caravan_inventory, outpost_inventory, item, min, max)
+
+        return result
     end,
 
-    ["inverse-item-count"] = function(caravan_data, schedule, action)
+    ["unload-caravan"] = function(caravan_data, schedule, action)
         local chest = schedule.entity
         if not chest or not chest.valid then return false end
         local outpost_inventory = get_outpost_inventory(chest)
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
-        local goal = action.item_count
         local item = action.elem_value
-        if not goal or not item then return false end
-        local result = transfer_filtered_items(outpost_inventory, caravan_inventory, item, goal)
-        return action.async or result
+        local min = action.item_count_min
+        local max = action.item_count_max
+        if not min or not max or not item then return false end
+        
+        local result = transfer_filtered_items_min(outpost_inventory, caravan_inventory, item, min, max)
+
+        return result
+    end,
+
+    ["load-outpost"] = function(caravan_data, schedule, action)
+        local chest = schedule.entity
+        if not chest or not chest.valid then return false end
+        local outpost_inventory = get_outpost_inventory(chest)
+        if not outpost_inventory then return false end
+        local caravan_inventory = caravan_data.inventory
+        local item = action.elem_value
+        local min = action.item_count_min
+        local max = action.item_count_max
+        if not min or not max or not item then return false end
+
+        local result = transfer_filtered_items_min(caravan_inventory, outpost_inventory, item, min, max)
+
+        return result
+    end,
+
+    ["unload-outpost"] = function(caravan_data, schedule, action)
+        local chest = schedule.entity
+        if not chest or not chest.valid then return false end
+        local outpost_inventory = get_outpost_inventory(chest)
+        if not outpost_inventory then return false end
+        local caravan_inventory = caravan_data.inventory
+        local item = action.elem_value
+        local min = action.item_count_min
+        local max = action.item_count_max
+        if not min or not max or not item then return false end
+
+        local result = transfer_filtered_items_max(outpost_inventory, caravan_inventory, item, min, max)
+
+        return result
     end,
 
     ["detonate"] = function(caravan_data, schedule, action)
@@ -341,7 +423,14 @@ Caravan.actions = {
         local left = action.circuit_condition_left
         if not right or not left then return false end
 
-        return evaluate_signal(outpost, right) == evaluate_signal(outpost, left)
+        right = evaluate_signal(outpost, right)
+        left = evaluate_signal(outpost, left)
+        if     action.operator == 1 then return left > right
+        elseif action.operator == 2 then return left < right
+        elseif action.operator == 3 then return left == right
+        elseif action.operator == 4 then return left >= right
+        elseif action.operator == 5 then return left <= right
+        elseif action.operator == 6 then return left ~= right end
     end,
 
     ["circuit-condition-static"] = function(caravan_data, schedule, action)
@@ -352,7 +441,14 @@ Caravan.actions = {
         local left = action.circuit_condition_left
         if not right or not left then return false end
 
-        return evaluate_signal(outpost, right) == left
+        right = evaluate_signal(outpost, right)
+
+        if     action.operator == 1 then return left > right
+        elseif action.operator == 2 then return left < right
+        elseif action.operator == 3 then return left == right
+        elseif action.operator == 4 then return left >= right
+        elseif action.operator == 5 then return left <= right
+        elseif action.operator == 6 then return left ~= right end
     end
 
 

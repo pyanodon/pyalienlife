@@ -33,9 +33,12 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field async? boolean Whether this action should be 'ticked' once and then move on to the next action. If false or nil, the caravan will wait until the action is complete before moving on. Note that some action types ignore this field such as 'time passed'.
 ---@field circuit_condition_left? string If this action is a circuit condition, this is the left side of the equation. Generated from a choose-elem-button.
 ---@field circuit_condition_right? string If this action is a circuit condition, this is the right side of the equation. Generated from a choose-elem-button.
+---@field operator int? The operator used in a condition (<, =, >)
 ---@field wait_time int? The amount of time that the caravan will wait if this is a 'time passed' action.
 ---@field elem_value string? The item that the caravan will interact with if this is an 'item count' action.
 ---@field item_count int? The amount of items that the caravan will interact with if this is an 'item count' action.
+---@field item_count_min int?
+---@field item_count_max int?
 ---@field localised_name LocalisedString The name of the action. This is displayed in the GUI.
 ---@field type string The type of the action. This is used to determine what the caravan will do when it reaches this action.
 
@@ -396,6 +399,16 @@ gui_events[defines.events.on_gui_click]["py_blocking_caravan"] = function(event)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
+gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_condition_operator"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local tags = element.tags
+    local caravan_data = storage.caravans[tags.unit_number]
+    local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+    action.operator = element.selected_index
+    stop_actions(caravan_data)
+    Caravan.update_gui(Caravan.get_caravan_gui(player))
+end
 
 gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(event)
     local player = game.get_player(event.player_index)
@@ -580,7 +593,7 @@ gui_events[defines.events.on_gui_elem_changed]["py_item_count"] = function(event
     action.elem_value = element.elem_value
 end
 
-gui_events[defines.events.on_gui_text_changed]["py_item_count_text"] = function(event)
+gui_events[defines.events.on_gui_text_changed]["py_item_count_min"] = function(event)
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
@@ -592,9 +605,27 @@ gui_events[defines.events.on_gui_text_changed]["py_item_count_text"] = function(
             local stack_size = prototypes.item[action.elem_value].stack_size
             item_count = math.min(item_count, stack_size * #caravan_data.inventory)
         end
-        action.item_count = item_count
+        action.item_count_min = item_count
     else
-        action.item_count = nil
+        action.item_count_min = nil
+    end
+end
+
+gui_events[defines.events.on_gui_text_changed]["py_item_count_max"] = function(event)
+    local element = event.element
+    local tags = element.tags
+    local caravan_data = storage.caravans[tags.unit_number]
+    local action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+    local item_count = tonumber(element.text)
+
+    if action.elem_value then
+        if item_count then
+            local stack_size = prototypes.item[action.elem_value].stack_size
+            item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+        end
+        action.item_count_max = item_count
+    else
+        action.item_count_max = nil
     end
 end
 
