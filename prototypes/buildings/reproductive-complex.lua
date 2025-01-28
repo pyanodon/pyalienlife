@@ -287,10 +287,9 @@ for i = 1, 4 do
         },
         impact_category = "metal",
         working_sound = {
-            sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.7, max_count = 1},
-            idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.4, max_count = 1},
-            audible_distance_modifier = 1,
-            max_sounds_per_type = 1,
+            sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.7, max_count = 1, audible_distance_modifier = 1,},
+            idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.4, max_count = 1, audible_distance_modifier = 1,},
+            max_sounds_per_prototype = 1,
         }
     }
 end

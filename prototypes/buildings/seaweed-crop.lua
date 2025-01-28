@@ -333,9 +333,8 @@ for i = 1, 4 do
         },
         impact_category = "metal-large",
         working_sound = {
-            sound = {filename = "__pyalienlifegraphics__/sounds/seaweed-crop.ogg", volume = 1.5},
-            idle_sound = {filename = "__pyalienlifegraphics__/sounds/seaweed-crop.ogg", volume = 0.3},
-            audible_distance_modifier = 0.6,
+            sound = {filename = "__pyalienlifegraphics__/sounds/seaweed-crop.ogg", volume = 1.5, audible_distance_modifier = 0.6,},
+            idle_sound = {filename = "__pyalienlifegraphics__/sounds/seaweed-crop.ogg", volume = 0.3, audible_distance_modifier = 0.6,},
         }
     }
 end
