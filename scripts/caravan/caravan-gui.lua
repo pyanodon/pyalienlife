@@ -16,11 +16,12 @@ local function generate_button_status(caravan_data, schedule_id, action_id)
 end
 
 ---@param gui LuaGuiElement
----@param caravan_data Caravan
 ---@param schedules CaravanSchedule[]
-function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
+---@param unit_number int
+---@param caravan_data Caravan?
+function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_data)
     for i, schedule in ipairs(schedules) do
-        local prototype = caravan_prototypes[caravan_data.entity.name]
+        -- local prototype = caravan_prototypes[caravan_data.entity.name]
 
         local schedule_flow = gui.add {type = "flow", direction = "vertical"}
         schedule_flow.style.horizontal_align = "right"
@@ -33,14 +34,16 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
         schedule_frame.style.height = 36
         schedule_frame.style.right_padding = 12
 
-        local tags = {unit_number = caravan_data.unit_number, schedule_id = i}
-        local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
-        playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i)
+        local tags = {unit_number = unit_number, type = "schedule", schedule_id = i}
+        if caravan_data then
+            local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
+            playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i)
+        end
         schedule_frame.add {type = "label", name = "py_outpost_name", style = "clickable_squashable_label", tags = tags, caption = schedule.localised_name}
 
         schedule_frame.add {type = "empty-widget", style = "py_empty_widget", tags = tags}
         schedule_frame.add {type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
-            tags = {unit_number = caravan_data.unit_number, schedule_id = i, up = true},
+            tags = {unit_number = unit_number, type = "schedule", schedule_id = i, up = true},
             sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
         }
         schedule_frame.add {
@@ -53,7 +56,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
         }
 
         for j, action in ipairs(schedule.actions) do
-            local tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j}
+            local tags = {unit_number = unit_number, type = "schedule", schedule_id = i, action_id = j}
 
             local action_frame = schedule_flow.add {type = "frame", style = "train_schedule_condition_frame"}
             -- action_frame.style.horizontally_stretchable = true
@@ -62,8 +65,10 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
             action_frame.style.right_padding = 12
             action_frame.style.width = 356
 
-            local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
-            playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
+            if caravan_data then
+                local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
+                playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
+            end
             action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = action.localised_name}
 
             if action.type == "time-passed" then
@@ -145,7 +150,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
 
             action_frame.add {
                 type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
-                tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
+                tags = {unit_number = unit_number, type = "schedule", schedule_id = i, action_id = j, up = true},
                 sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
             }
             action_frame.add {
@@ -161,6 +166,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, schedules)
 
         local entity = schedule.entity
         local actions
+        local prototype = caravan_prototypes.caravan -- TODO
         if entity and entity.valid then
             if (entity.name == "outpost") or (entity.name == "outpost-aerial") then
                 actions = prototype.actions.outpost
@@ -180,7 +186,7 @@ end
 ---@param gui LuaGuiElement
 ---@param caravan_data Caravan
 function Caravan.build_schedule_gui(gui, caravan_data)
-    Caravan.build_schedule_list_gui(gui, caravan_data, caravan_data.schedule)
+    Caravan.build_schedule_list_gui(gui, caravan_data.schedule, caravan_data.unit_number, caravan_data)
     gui.add {type = "button", name = "py_add_outpost", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
 
     --- Main interrupts gui. TODO: separate into its own function
@@ -196,8 +202,8 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 
     interrupt_frame.add {type = "label", style = "subheader_semibold_label", caption = {"gui-interrupts.interrupt-header"}}
 
-    for _, interrupt in pairs(caravan_data.interrupts) do
-        local tags = {unit_number = caravan_data.unit_number, schedule_id = i}
+    for i, interrupt in pairs(caravan_data.interrupts) do
+        local tags = {unit_number = caravan_data.unit_number, type = "interrupt", schedule_id = i}
         local action_frame = gui.add {type = "frame", style = "train_schedule_condition_frame"}
         action_frame.style.horizontally_stretchable = true
         action_frame.style.vertically_stretchable = true
@@ -220,7 +226,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
 
         action_frame.add {
             type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
-            tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
+            tags = {unit_number = caravan_data.unit_number, type = "interrupt", schedule_id = i, up = true},
             sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
         }
         action_frame.add {
@@ -409,6 +415,17 @@ function Caravan.update_gui(gui, weak)
     end
 end
 
+-- TODO: not rebuild everything, remove player parameter
+---@param gui LuaGuiElement
+-- -@param weak boolean? Optimization: If false, don't update the schedule pane.
+---@param player LuaPlayer
+function Caravan.update_interrupt_gui(gui, player)
+    if not gui then return end
+    local interrupt_data = storage.interrupts[gui.tags.name]
+    gui.destroy()
+    Caravan.build_interrupt_gui(player, interrupt_data.name)
+end
+
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     local player = game.get_player(event.player_index)
 
@@ -442,136 +459,11 @@ function Caravan.get_caravan_gui(player)
     if gui then return gui end
 end
 
--- ---@param gui LuaGuiElement
--- ---@param schedules CaravanSchedule[]
--- function Caravan.build_interrupt_schedule_list_gui(gui, schedules)
---     for i, schedule in ipairs(schedules) do
---         -- local prototype = prototypes[caravan_data.entity.name]
-
---         local schedule_flow = gui.add {type = "flow", direction = "vertical"}
---         schedule_flow.style.horizontal_align = "right"
---         schedule_flow.style.vertically_stretchable = false
---         schedule_flow.style.right_margin = -12
-
---         local schedule_frame = schedule_flow.add {type = "frame", style = "train_schedule_station_frame"}
---         schedule_frame.style.horizontally_stretchable = true
---         schedule_frame.style.vertically_stretchable = true
---         schedule_frame.style.height = 36
---         schedule_frame.style.right_padding = 12
-
---         -- local tags = {unit_number = caravan_data.unit_number, schedule_id = i}
---         local tags
-
---         schedule_frame.add {type = "empty-widget", style = "py_empty_widget", tags = tags}
---         schedule_frame.add {type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
---             tags = {unit_number = caravan_data.unit_number, schedule_id = i, up = true},
---             sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
---         }
---         schedule_frame.add {
---             type = "sprite-button", name = "py_shuffle_schedule_2", style = "py_schedule_move_button", tags = tags,
---             sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
---         }
---         schedule_frame.add {
---             type = "sprite-button", name = "py_delete_schedule", style = "py_schedule_move_button", tags = tags,
---             sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black"
---         }
-
---         for j, action in ipairs(schedule.actions) do
---             -- local tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j}
-
---             local action_frame = schedule_flow.add {type = "frame", style = "train_schedule_condition_frame"}
---             action_frame.style.horizontally_stretchable = true
---             action_frame.style.vertically_stretchable = true
---             action_frame.style.height = 36
---             action_frame.style.right_padding = 12
---             action_frame.style.width = 340
-
---             if action.type == "time-passed" then
---                 action_frame.add {type = "empty-widget", style = "py_empty_widget"}
---                 local textfield = action_frame.add {type = "textfield", name = "py_time_passed_text", style = "py_compact_slider_value_textfield", text = action.wait_time or 5, tags = tags}
---                 textfield.numeric = true
---                 textfield.allow_decimal = false
---                 textfield.allow_negative = false
---                 action_frame.add {type = "label", caption = "s"}.style.left_margin = -5
---             elseif action.type == "load-caravan" or action.type == "load-outpost" then
---                 action_frame.add {type = "empty-widget", style = "py_empty_widget"}
---                 local itemselect = action_frame.add {
---                     type = "choose-elem-button", name = "py_item_count", style = "train_schedule_item_select_button",
---                     tags = tags, elem_type = "item"
---                 }
---                 itemselect.elem_value = action.elem_value
---                 action_frame.add {type = "label", caption = "="}
---                 local textfield = action_frame.add {type = "textfield", name = "py_item_count_text", style = "py_compact_slider_value_textfield", tags = tags, text = action.item_count}
---                 textfield.numeric = true
---                 textfield.allow_decimal = false
---                 textfield.allow_negative = false
---             elseif action.type == "circuit-condition" then
---                 action_frame.add {type = "empty-widget", style = "py_empty_widget"}
---                 local circuit_condition_right = action_frame.add {
---                     type = "choose-elem-button", name = "py_circuit_condition_right", style = "train_schedule_item_select_button",
---                     tags = tags, elem_type = "signal"
---                 }
---                 circuit_condition_right.elem_value = action.circuit_condition_right
---                 action_frame.add {type = "label", caption = "="}
---                 local circuit_condition_left = action_frame.add {
---                     type = "choose-elem-button", name = "py_circuit_condition_left", style = "train_schedule_item_select_button",
---                     tags = tags, elem_type = "signal"
---                 }
---                 circuit_condition_left.elem_value = action.circuit_condition_left
---             elseif action.type == "circuit-condition-static" then
---                 action_frame.add {type = "empty-widget", style = "py_empty_widget"}
---                 local circuit_condition_right = action_frame.add {
---                     type = "choose-elem-button", name = "py_circuit_condition_right", style = "train_schedule_item_select_button",
---                     tags = tags, elem_type = "signal"
---                 }
---                 circuit_condition_right.elem_value = action.circuit_condition_right
---                 action_frame.add {type = "label", caption = "="}
---                 local value = action_frame.add {type = "textfield", name = "py_value_condition_left", style = "py_compact_slider_value_textfield", tags = tags, text = action.circuit_condition_left}
---                 value.numeric = true
---                 value.allow_decimal = false
---                 value.allow_negative = true
---             else
---                 action_frame.add {type = "empty-widget", style = "py_empty_widget"}
---             end
---             if action.type == "load-caravan" or action.type == "load-outpost" or action.type == "fill-inventory" or action.type == "empty-inventory" then
---                 action_frame.add {type = "checkbox", name = "py_blocking_caravan", state = not action.async,
---                     tooltip = {"caravan-gui.wait"},
---                     tags = tags}
---             end
-
---             action_frame.add {
---                 type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
---                 -- tags = {unit_number = caravan_data.unit_number, schedule_id = i, action_id = j, up = true},
---                 sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
---             }
---             action_frame.add {
---                 type = "sprite-button", name = "py_shuffle_schedule_2", style = "py_schedule_move_button", tags = tags,
---                 sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
---             }
-
---             action_frame.add {
---                 type = "sprite-button", name = "py_delete_schedule", style = "py_schedule_move_button", tags = tags,
---                 sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black"
---             }
---         end
-
---         -- local entity = schedule.entity
---         -- local actions
---         -- if entity and entity.valid then
---         --     if (entity.name == "outpost") or (entity.name == "outpost-aerial") then
---         --         actions = prototype.actions.outpost
---         --     elseif prototype.actions[entity.type] then
---         --         actions = prototype.actions[entity.type]
---         --     end
---         -- end
---         -- actions = actions or prototype.actions.default
---         local actions = prototypes["caravan"].actions
---         actions = table.map(actions, function(v) return {"caravan-actions." .. v, v} end)
---         local py_add_action = schedule_flow.add {type = "drop-down", name = "py_add_action", items = actions, tags = tags}
---         py_add_action.style.width = 340
---         py_add_action.style.height = 36
---     end
--- end
+function Caravan.get_interrupt_gui(player)
+    -- if player.gui.relative.caravan_flow then
+        return player.gui.relative.py_edit_interrupt_gui
+    -- end
+end
 
 -- GUI for editing the interrupt
 function Caravan.build_interrupt_gui(player, interrupt_name)
@@ -590,6 +482,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
             position = defines.relative_gui_position.left,
         }
     }
+    interrupt_window.tags = {name = interrupt_name}
     interrupt_window.style.width = 448
     interrupt_window.style.minimal_height = 123
 
@@ -628,8 +521,8 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     targets_scroll_pane.style.horizontal_align = "right"
     targets_scroll_pane.style.vertically_stretchable = true
 
-    Caravan.build_interrupt_schedule_list_gui(targets_scroll_pane, interrupt_data.schedule)
-    targets_scroll_pane.add {type = "button", name = "py_add_outpost", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
+    Caravan.build_schedule_list_gui(targets_scroll_pane, interrupt_data.schedule, interrupt_data.name)
+    targets_scroll_pane.add {type = "button", name = "py_add_outpost", tags = {interrupt = interrupt_name}, style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
 
     local button_flow = interrupt_window.add {type = "flow", direction = "horizontal", style = "dialog_buttons_horizontal_flow"}
     button_flow.style.horizontally_stretchable = true

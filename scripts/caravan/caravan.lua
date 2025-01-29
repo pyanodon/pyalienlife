@@ -136,6 +136,7 @@ py.on_event(py.events.on_init(), function()
     -- Table of gui elements indexed by their name. Not necessary, but better than hardcoding the realtive paths
     storage.gui_elements_by_name = storage.gui_elements_by_name or {}
     storage.last_opened_caravan = storage.last_opened_caravan or {}
+    storage.last_opened_interrupt = storage.last_opened_interrupt or {}
     storage.make_operable_next_tick = storage.make_operable_next_tick or {}
 end)
 
@@ -178,11 +179,18 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
     cursor_stack.clear()
 
-    local caravan_data = storage.last_opened_caravan[player.index]
-    if not Caravan.validity_check(caravan_data) then return end
-    local schedule = caravan_data.schedule
-    local prototype = caravan_prototypes[caravan_data.entity.name]
-    local only_outpost = prototype.only_allow_outpost_as_destination
+    local schedule, prototype, only_outpost
+    local caravan_data = storage.caravans[storage.last_opened_caravan[player.index]]
+    local interrupt_data = storage.interrupts[storage.last_opened_interrupt[player.index]]
+    if caravan_data then
+        if not Caravan.validity_check(caravan_data) then return end
+        schedule = caravan_data.schedule
+        prototype = caravan_prototypes[caravan_data.entity.name]
+        only_outpost = prototype.only_allow_outpost_as_destination
+    end
+    if interrupt_data then
+        schedule = interrupt_data.schedule
+    end
 
     local entity = player.selected or player.surface.find_entities_filtered {
         position = event.cursor_position,
@@ -193,7 +201,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false
         if only_outpost and entity.name ~= prototype.outpost then return end
-        if entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface then return end
+        if caravan_data and entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface then return end
         schedule[#schedule + 1] = {
             localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
             entity = entity,
@@ -210,7 +218,12 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     else
         return
     end
-    Caravan.build_gui(player, caravan_data.entity)
+    if caravan_data then
+        Caravan.build_gui(player, caravan_data.entity)
+    end
+    if interrupt_data then
+        Caravan.build_interrupt_gui(player, interrupt_data.name)
+    end
 end)
 
 ---Is this caravan currently doing anything?
@@ -255,6 +268,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
     local player = game.get_player(event.player_index)
+    local element = event.element
     local stack = player.cursor_stack
     if not stack then return end
     if stack.valid_for_read then
@@ -264,7 +278,8 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
         stack.clear()
     end
     stack.set_stack {name = "caravan-control"}
-    storage.last_opened_caravan[player.index] = storage.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
+    storage.last_opened_interrupt[player.index] = element.tags.interrupt
+    storage.last_opened_caravan[player.index] = Caravan.get_caravan_gui(player).tags.unit_number
     player.opened = nil
 end
 
@@ -361,8 +376,14 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
     local player = game.get_player(event.player_index)
     local element = event.element
     local caravan_data = storage.caravans[element.tags.unit_number]
-    local schedule = caravan_data.schedule[element.tags.schedule_id]
-    local actions = schedule.actions
+    local schedule
+    if caravan_data then
+        schedule = caravan_data.schedule[element.tags.schedule_id]
+    else
+        local interrupt_data = storage.interrupts[Caravan.get_interrupt_gui(player).tags.name]
+        schedule = interrupt_data.schedule
+    end
+    local actions = schedule[element.tags.schedule_id].actions
 
     if element.selected_index == 0 then return end
 
@@ -414,10 +435,24 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local schedule = caravan_data.schedule
-    if tags.action_id then schedule = schedule[tags.schedule_id].actions end
-    local id = tags.action_id or tags.schedule_id
+    local type = tags.type
+    local schedule
+    local id = tags.schedule_id
+    local caravan_data
+
+    if type == "schedule" then
+        caravan_data = storage.caravans[tags.unit_number]
+        if caravan_data then
+            schedule = caravan_data.schedule
+            if tags.action_id then schedule = schedule[tags.schedule_id].actions end
+            id = tags.action_id or tags.schedule_id
+        else
+            schedule = storage.interrupts[tags.unit_number].schedule
+        end
+    elseif type == "interrupt" then
+        caravan_data = storage.caravans[tags.unit_number]
+        schedule = caravan_data.interrupts
+    end
 
     local offset = tags.up and -1 or 1
     local a, b = schedule[id], schedule[id + offset]
@@ -425,8 +460,11 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     schedule[id] = b
     schedule[id + offset] = a
 
-    stop_actions(caravan_data)
+    if caravan_data then
+        stop_actions(caravan_data)
+    end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
+    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
 end
 
 gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
