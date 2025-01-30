@@ -820,7 +820,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                 for _, interrupt in pairs(caravan_data.interrupts) do
                     interrupt = storage.interrupts[interrupt]
                     if not interrupt then goto continue end
-                    if is_interrupted and not interrupt.inside_interrupt then goto continue end
+                    if is_interrupted and not interrupt.inside_interrupt then goto continue end     -- TODO: overwrite current interrupt if inside_interrupt is true
                     -- TODO: replace with actual conditions
                     if true then
                         for i = 1, #interrupt.schedule do
