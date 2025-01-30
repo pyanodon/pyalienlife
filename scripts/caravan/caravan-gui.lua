@@ -28,7 +28,8 @@ function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_da
         schedule_flow.style.vertically_stretchable = false
         schedule_flow.style.right_margin = -12
 
-        local schedule_frame = schedule_flow.add {type = "frame", style = "train_schedule_station_frame"}
+        local style = schedule.temporary and "train_schedule_temporary_station_frame" or "train_schedule_station_frame"
+        local schedule_frame = schedule_flow.add {type = "frame", style = style}
         schedule_frame.style.horizontally_stretchable = true
         schedule_frame.style.vertically_stretchable = true
         schedule_frame.style.height = 36
@@ -39,7 +40,8 @@ function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_da
             local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
             playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i)
         end
-        schedule_frame.add {type = "label", name = "py_outpost_name", style = "clickable_squashable_label", tags = tags, caption = schedule.localised_name}
+        style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
+        schedule_frame.add {type = "label", name = "py_outpost_name", style = style, tags = tags, caption = schedule.localised_name}
 
         schedule_frame.add {type = "empty-widget", style = "py_empty_widget", tags = tags}
         schedule_frame.add {type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",

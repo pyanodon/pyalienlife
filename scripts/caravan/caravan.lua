@@ -46,6 +46,7 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field name string The name of the interrupt
 ---@field conditions CaravanAction[]
 ---@field schedule CaravanSchedule[]
+---@field inside_interrupt boolean? Allow interrupting other interrupts
 
 ---Pathfinds a caravan to follow another entity
 ---@param caravan_data Caravan
@@ -727,10 +728,8 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
         if schedule_num == 1 then
             caravan_data.retry_pathfinder = 3
             return
-        elseif caravan_data.schedule_id == schedule_num then
-            begin_schedule(caravan_data, 1)
         else
-            begin_schedule(caravan_data, caravan_data.schedule_id + 1)
+            begin_schedule(caravan_data, (caravan_data.schedule_id + 1) % schedule_num)
         end
     else
         local entity = caravan_data.entity
@@ -811,8 +810,33 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         elseif result == "error" then
             stop_actions(caravan_data)
             guis_to_update[caravan_data.unit_number] = true
+        -- Advance the schedule
         elseif result then
             if #schedule.actions == caravan_data.action_id then
+                local is_interrupted = false
+                for _, schedule in pairs(caravan_data.schedule) do
+                    if schedule.temporary then is_interrupted = true; break end
+                end
+                for _, interrupt in pairs(caravan_data.interrupts) do
+                    interrupt = storage.interrupts[interrupt]
+                    if not interrupt then goto continue end
+                    if is_interrupted and not interrupt.inside_interrupt then goto continue end
+                    -- TODO: replace with actual conditions
+                    if true then
+                        for i = 1, #interrupt.schedule do
+                            local schedule = interrupt.schedule[i]
+                            schedule.temporary = true
+                            table.insert(caravan_data.schedule, caravan_data.schedule_id + 1, schedule)
+                        end
+                    end
+
+                    ::continue::
+                end
+
+                if schedule.temporary then
+                    table.remove(caravan_data.schedule, caravan_data.schedule_id)
+                    caravan_data.schedule_id = caravan_data.schedule_id - 1
+                end
                 if caravan_data.schedule_id == #caravan_data.schedule then
                     begin_schedule(caravan_data, 1, #caravan_data.schedule == 1)
                 else
