@@ -1,4 +1,4 @@
-local caravan_actions = {
+Caravan.actions_list = {
     ["outpost"] = {
         "time-passed",
         "store-food",
@@ -56,7 +56,37 @@ local caravan_actions = {
     },
     ["default"] = {
         "time-passed"
+    },
+    ["interrupt-condition"] = {
+        "food-count",
+        "time-passed",
+        "circuit-condition",
+        "circuit-condition-static"
     }
+}
+
+Caravan.foods = {
+    all = {
+        "dried-meat",
+        "brain",
+        "auog-food-01",
+        "workers-food",
+        "workers-food-02",
+        "workers-food-03",
+        "gastrocapacitor",
+    },
+    caravan = {
+        ["dried-meat"] = 1,
+        ["brain"] = 2,
+        ["auog-food-01"] = 4,
+        ["workers-food"] = 10,
+        ["workers-food-02"] = 30,
+        ["workers-food-03"] = 50
+    },
+    flyavan = {
+        ["workers-food"] = 5,
+        ["gastrocapacitor"] = 50
+    },
 }
 
 local caravan_prototypes = {
@@ -66,15 +96,8 @@ local caravan_prototypes = {
         fuel_size = 2,
         destructible = false,
         outpost = "outpost",
-        favorite_foods = {
-            ["dried-meat"] = 1,
-            ["brain"] = 2,
-            ["auog-food-01"] = 4,
-            ["workers-food"] = 10,
-            ["workers-food-02"] = 30,
-            ["workers-food-03"] = 50
-        },
-        actions = caravan_actions,
+        favorite_foods = Caravan.foods.caravan,
+        actions = Caravan.action_list,
         camera_zoom = 0.8,
         placeable_by = "caravan",
         map_tag = {
@@ -92,11 +115,8 @@ local caravan_prototypes = {
         fuel_size = 4,
         destructible = false,
         outpost = "outpost-aerial",
-        favorite_foods = {
-            ["workers-food"] = 5,
-            ["gastrocapacitor"] = 50
-        },
-        actions = caravan_actions,
+        favorite_foods = Caravan.foods.flyavan,
+        actions = Caravan.action_list,
         camera_zoom = 0.5,
         placeable_by = "flyavan",
         map_tag = {
@@ -442,6 +462,26 @@ Caravan.actions = {
         if not right or not left then return false end
 
         right = evaluate_signal(outpost, right)
+
+        if     action.operator == 1 then return left > right
+        elseif action.operator == 2 then return left < right
+        elseif action.operator == 3 then return left == right
+        elseif action.operator == 4 then return left >= right
+        elseif action.operator == 5 then return left <= right
+        elseif action.operator == 6 then return left ~= right end
+    end,
+
+    ["food-count"] = function(caravan_data, schedule, action)
+        -- local outpost = schedule.entity
+        -- if not outpost or not outpost.valid then return true end
+        local item = action.elem_value
+
+        local right = action.circuit_condition_left
+        if not right then return false end
+
+        local left = caravan_data.fuel_inventory.get_item_count(item)
+
+        game.print("operator "..action.operator)
 
         if     action.operator == 1 then return left > right
         elseif action.operator == 2 then return left < right
