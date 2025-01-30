@@ -381,9 +381,9 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
         schedule = caravan_data.schedule[element.tags.schedule_id]
     else
         local interrupt_data = storage.interrupts[Caravan.get_interrupt_gui(player).tags.name]
-        schedule = interrupt_data.schedule
+        schedule = interrupt_data.schedule[element.tags.schedule_id]
     end
-    local actions = schedule[element.tags.schedule_id].actions
+    local actions = schedule.actions
 
     if element.selected_index == 0 then return end
 
@@ -392,6 +392,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
         localised_name = element.get_item(element.selected_index)
     }
     Caravan.update_gui(Caravan.get_caravan_gui(player))
+    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
 end
 
 gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
@@ -444,11 +445,11 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
         caravan_data = storage.caravans[tags.unit_number]
         if caravan_data then
             schedule = caravan_data.schedule
-            if tags.action_id then schedule = schedule[tags.schedule_id].actions end
-            id = tags.action_id or tags.schedule_id
         else
             schedule = storage.interrupts[tags.unit_number].schedule
         end
+        if tags.action_id then schedule = schedule[tags.schedule_id].actions end
+        id = tags.action_id or tags.schedule_id
     elseif type == "interrupt" then
         caravan_data = storage.caravans[tags.unit_number]
         schedule = caravan_data.interrupts
