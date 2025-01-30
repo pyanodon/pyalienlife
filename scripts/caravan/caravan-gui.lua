@@ -338,9 +338,12 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     if caravan_data.fuel_inventory then
         local fuel_flow = content_flow.add {type = "flow", name = "fuel_flow", direction = "horizontal"}
         fuel_flow.style.vertical_align = "center"
+        fuel_flow.style.horizontal_spacing = 8
         local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[entity.name].favorite_foods, "caravan-gui")
+        local fuel_slot_flow = fuel_flow.add {type = "flow", name = "fuel_slot_flow", direction = "horizontal"}
+        fuel_slot_flow.style.horizontal_spacing = 0
         for i = 1, #caravan_data.fuel_inventory do
-            local fuel_slot = fuel_flow.add {type = "sprite-button", name = "py_fuel_slot_" .. i, style = "inventory_slot", tags = {unit_number = caravan_data.unit_number, i = i}}
+            local fuel_slot = fuel_slot_flow.add {type = "sprite-button", name = "py_fuel_slot_" .. i, style = "inventory_slot", tags = {unit_number = caravan_data.unit_number, i = i}}
             fuel_slot.sprite = "slot_icon_fuel"
             fuel_slot.tooltip = favorite_food_tooltip
         end
@@ -398,7 +401,7 @@ function Caravan.update_gui(gui, weak)
     if caravan_data.fuel_inventory then
         for i = 1, #caravan_data.fuel_inventory do
             local stack = caravan_data.fuel_inventory[i]
-            local element = content_flow.fuel_flow["py_fuel_slot_" .. i]
+            local element = content_flow.fuel_flow.fuel_slot_flow["py_fuel_slot_" .. i]
             if stack.valid_for_read then
                 element.sprite = "item/" .. stack.name
                 element.number = stack.count
