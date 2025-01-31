@@ -562,7 +562,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
 
     Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name)
     
-    local actions = Caravan.action_list["interrupt-condition"]
+    local actions = Caravan.valid_actions["interrupt-condition"]
     actions = table.map(actions, function(v) return {"caravan-actions." .. v, v} end)
     local py_add_action = conditions_scroll_pane.add {type = "drop-down", name = "py_add_action", items = actions, tags = {interrupt = interrupt_name}}
     py_add_action.style.width = 392

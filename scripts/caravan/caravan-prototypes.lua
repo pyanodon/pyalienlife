@@ -1,61 +1,63 @@
-Caravan.actions_list = {
-    ["outpost"] = {
-        "time-passed",
-        "store-food",
-        "fill-inventory",
-        "empty-inventory",
-        "load-caravan",
-        "unload-caravan",
-        "load-outpost",
-        "unload-outpost",
-        "circuit-condition",
-        "circuit-condition-static"
-    },
-    ["character"] = {
-        "time-passed",
-        "store-food",
-        "fill-inventory",
-        "empty-inventory",
-        "load-caravan",
-        "load-outpost",
-        "empty-autotrash"
-    },
-    ["unit"] = {
-        "time-passed",
-        "store-food",
-        "fill-inventory",
-        "empty-inventory",
-        "load-caravan",
-        "load-outpost",
-    },
-    ["cargo-wagon"] = {
-        "time-passed",
-        "fill-inventory",
-        "empty-inventory",
-        "load-caravan",
-        "load-outpost",
-    },
-    ["car"] = {
-        "time-passed",
-        "fill-inventory",
-        "empty-inventory",
-        "load-caravan",
-        "load-outpost",
-    },
-    ["spider-vehicle"] = {
-        "time-passed",
-        "fill-inventory",
-        "empty-inventory",
-        "load-caravan",
-        "load-outpost",
-    },
-    ["electric-pole"] = {
-        "time-passed",
-        "circuit-condition",
-        "circuit-condition-static"
-    },
-    ["default"] = {
-        "time-passed"
+Caravan.valid_actions = {
+    caravan = {
+        ["outpost"] = {
+            "time-passed",
+            "store-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-outpost",
+            "unload-outpost",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["character"] = {
+            "time-passed",
+            "store-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "load-outpost",
+            "empty-autotrash"
+        },
+        ["unit"] = {
+            "time-passed",
+            "store-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "load-outpost",
+        },
+        ["cargo-wagon"] = {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "load-outpost",
+        },
+        ["car"] = {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "load-outpost",
+        },
+        ["spider-vehicle"] = {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "load-outpost",
+        },
+        ["electric-pole"] = {
+            "time-passed",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["default"] = {
+            "time-passed"
+        },
     },
     ["interrupt-condition"] = {
         "food-count",
@@ -97,7 +99,7 @@ local caravan_prototypes = {
         destructible = false,
         outpost = "outpost",
         favorite_foods = Caravan.foods.caravan,
-        actions = Caravan.action_list,
+        actions = Caravan.valid_actions.caravan,
         camera_zoom = 0.8,
         placeable_by = "caravan",
         map_tag = {
@@ -116,7 +118,7 @@ local caravan_prototypes = {
         destructible = false,
         outpost = "outpost-aerial",
         favorite_foods = Caravan.foods.flyavan,
-        actions = Caravan.action_list,
+        actions = Caravan.valid_actions.caravan,
         camera_zoom = 0.5,
         placeable_by = "flyavan",
         map_tag = {
