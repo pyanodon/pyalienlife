@@ -130,7 +130,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
                 name = "py_caravan_condition_operator", tags = tags,
             }
 
-            local value = action_frame.add {type = "textfield", name = "py_value_condition_left", style = "py_compact_slider_value_textfield", tags = tags, text = action.circuit_condition_left}
+            local value = action_frame.add {type = "textfield", name = "py_value_condition_right", style = "py_compact_slider_value_textfield", tags = tags, text = action.circuit_condition_right}
             value.numeric = true
             value.allow_decimal = false
             value.allow_negative = true

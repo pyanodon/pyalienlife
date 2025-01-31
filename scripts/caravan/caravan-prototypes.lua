@@ -461,7 +461,7 @@ Caravan.actions = {
         local left = action.circuit_condition_left
         if not right or not left then return false end
 
-        right = evaluate_signal(outpost, right)
+        left = evaluate_signal(outpost, left)
 
         if     action.operator == 1 then return left > right
         elseif action.operator == 2 then return left < right
@@ -476,12 +476,10 @@ Caravan.actions = {
         -- if not outpost or not outpost.valid then return true end
         local item = action.elem_value
 
-        local right = action.circuit_condition_left
+        local right = action.circuit_condition_right
         if not right then return false end
 
         local left = caravan_data.fuel_inventory.get_item_count(item)
-
-        game.print("operator "..action.operator)
 
         if     action.operator == 1 then return left > right
         elseif action.operator == 2 then return left < right

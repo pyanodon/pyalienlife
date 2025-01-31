@@ -288,7 +288,8 @@ end
 gui_events[defines.events.on_gui_click]["py_add_interrupt_button"] = function(event)
     local player = game.get_player(event.player_index)
     local gui = Caravan.get_caravan_gui(player)
-    local caravan_data = storage.caravans[gui.tags.unit_number]  local element = event.element
+    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local element = event.element
 
     Caravan.build_add_interrupt_gui(element.parent)
 end
@@ -368,6 +369,7 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
     end
 end
 
+-- TODO
 gui_events[defines.events.on_gui_confirmed]["py_edit_interrupt_gui"] = function(event)
     local element = event.element
     element.destroy()
@@ -721,7 +723,7 @@ gui_events[defines.events.on_gui_elem_changed]["py_circuit_condition_left"] = fu
     action.circuit_condition_left = element.elem_value
 end
 
-gui_events[defines.events.on_gui_text_changed]["py_value_condition_left"] = function(event)
+gui_events[defines.events.on_gui_text_changed]["py_value_condition_right"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
@@ -733,7 +735,7 @@ gui_events[defines.events.on_gui_text_changed]["py_value_condition_left"] = func
         action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.name].conditions[tags.action_id]
     end
     local value = tonumber(element.text)
-    action.circuit_condition_left = value
+    action.circuit_condition_right = value
 end
 
 
