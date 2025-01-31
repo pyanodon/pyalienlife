@@ -3,6 +3,7 @@ Caravan.valid_actions = {
         ["outpost"] = {
             "time-passed",
             "store-food",
+            "store-specific-food",
             "fill-inventory",
             "empty-inventory",
             "load-caravan",
@@ -325,6 +326,22 @@ Caravan.actions = {
         end
 
         return action.async or fuel.is_full()
+    end,
+
+    ["store-specific-food"] = function(caravan_data, schedule, action)
+        local chest = schedule.entity
+        if not chest or not chest.valid then return false end
+        local outpost_inventory = get_outpost_inventory(chest)
+        if not outpost_inventory then return false end
+        local fuel_inventory = caravan_data.fuel_inventory
+        local item = action.elem_value
+        local min = action.item_count_min
+        local max = action.item_count_max
+        if not min or not max or not item then return false end
+
+        local result = transfer_filtered_items_max(fuel_inventory, outpost_inventory, item, min, max)
+
+        return result
     end,
 
     ["fill-inventory"] = function(caravan_data, schedule, action)

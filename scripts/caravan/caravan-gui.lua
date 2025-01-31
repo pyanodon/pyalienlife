@@ -15,11 +15,12 @@ local function generate_button_status(caravan_data, schedule_id, action_id)
     return style, sprite
 end
 
+-- TODO: refactor parameters
 ---@param gui LuaGuiElement
 ---@param actions CaravanAction[]
-function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, i)
+function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, i, type)
     for j, action in ipairs(actions) do
-        local tags = {unit_number = unit_number, type = "schedule", schedule_id = i, action_id = j}
+        local tags = {unit_number = unit_number, type = type or "schedule", schedule_id = i, action_id = j}
 
         local action_frame = gui.add {type = "frame", style = "train_schedule_condition_frame"}
         -- action_frame.style.horizontally_stretchable = true
@@ -49,9 +50,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             }
             itemselect.elem_value = action.elem_value
 
-            local selected_index = action.operator or 3
-            -- action_frame.add {type = "label", caption = "?"}
-
+            --TODO separate style?
             local textfield_min = action_frame.add {
                 type = "textfield",
                 name = "py_item_count_min",
@@ -134,6 +133,42 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             value.numeric = true
             value.allow_decimal = false
             value.allow_negative = true
+        elseif action.type == "store-specific-food" then
+            local itemselect = action_frame.add {
+                type = "choose-elem-button", name = "py_item_count", style = "train_schedule_item_select_button",
+                tags = tags, elem_type = "item",
+                elem_filters = {{filter = "name", name = Caravan.foods.all}}
+            }
+            itemselect.elem_value = action.elem_value
+            
+            --TODO separate style?
+            local textfield_min = action_frame.add {
+                type = "textfield",
+                name = "py_item_count_min",
+                style = "py_compact_slider_value_textfield",
+                tags = tags,
+                text = action.item_count_min,
+                tooltip = {"caravan-gui.minimum-value"},
+            }
+            textfield_min.style.left_padding = 0
+            textfield_min.style.right_padding = 0
+            textfield_min.numeric = true
+            textfield_min.allow_decimal = false
+            textfield_min.allow_negative = false
+            
+            local textfield_max = action_frame.add {
+                type = "textfield",
+                name = "py_item_count_max",
+                style = "py_compact_slider_value_textfield",
+                tags = tags,
+                text = action.item_count_max,
+                tooltip = {"caravan-gui.maximum-value"},
+            }
+            textfield_max.style.left_padding = 0
+            textfield_max.style.right_padding = 0
+            textfield_max.numeric = true
+            textfield_max.allow_decimal = false
+            textfield_max.allow_negative = false
         else
             action_frame.add {type = "empty-widget", style = "py_empty_widget"}
         end
@@ -146,7 +181,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
 
         action_frame.add {
             type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
-            tags = {unit_number = unit_number, type = "schedule", schedule_id = i, action_id = j, up = true},
+            tags = {unit_number = unit_number, type = type or "schedule", schedule_id = i, action_id = j, up = true},
             sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
         }
         action_frame.add {
@@ -560,7 +595,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     conditions_scroll_pane.style.horizontal_align = "right"
     conditions_scroll_pane.style.vertically_stretchable = true
 
-    Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name)
+    Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name, nil, "condition")
     
     local actions = Caravan.valid_actions["interrupt-condition"]
     actions = table.map(actions, function(v) return {"caravan-actions." .. v, v} end)

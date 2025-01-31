@@ -425,6 +425,9 @@ gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
     elseif type == "interrupt" then
         caravan_data = storage.caravans[tags.unit_number]
         schedule = caravan_data.interrupts
+    elseif type == "condition" then
+        schedule = storage.interrupts[tags.unit_number].conditions
+        id = tags.action_id
     end
 
     table.remove(schedule, id)
@@ -433,6 +436,7 @@ gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
         stop_actions(caravan_data)
     end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
+    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
 end
 
 local function get_action(player, tags)
@@ -440,6 +444,8 @@ local function get_action(player, tags)
     if caravan_data then
         -- local caravan_data = storage.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
         return storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions[tags.action_id]
+    elseif tags.schedule_id then
+        return storage.interrupts[Caravan.get_interrupt_gui(player).tags.name].schedule[tags.schedule_id].actions[tags.action_id]
     else
         return storage.interrupts[Caravan.get_interrupt_gui(player).tags.name].conditions[tags.action_id]
     end
@@ -452,7 +458,9 @@ gui_events[defines.events.on_gui_click]["py_blocking_caravan"] = function(event)
     local caravan_data = storage.caravans[tags.unit_number]
     local action = get_action(player, tags)
     action.async = not element.state
-    stop_actions(caravan_data)
+    if caravan_data then
+        stop_actions(caravan_data)
+    end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
@@ -685,7 +693,9 @@ gui_events[defines.events.on_gui_text_changed]["py_item_count_min"] = function(e
     if action.elem_value then
         if item_count then
             local stack_size = prototypes.item[action.elem_value].stack_size
-            item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+            if caravan_data then
+                item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+            end
         end
         action.item_count_min = item_count
     else
@@ -704,7 +714,9 @@ gui_events[defines.events.on_gui_text_changed]["py_item_count_max"] = function(e
     if action.elem_value then
         if item_count then
             local stack_size = prototypes.item[action.elem_value].stack_size
-            item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+            if caravan_data then
+                item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+            end
         end
         action.item_count_max = item_count
     else
