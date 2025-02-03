@@ -655,7 +655,43 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
     local fuel_stack = caravan_data.fuel_inventory[tags.i]
     if cursor_stack.valid_for_read and not caravan_prototypes[caravan_data.entity.name].favorite_foods[cursor_stack.name] then return end
 
-    cursor_stack.swap_stack(fuel_stack)
+    -- Attempts to replicate different stack transfer interactions
+    -- TODO: modifiers (shift/control)
+    if event.button == defines.mouse_button_type.left then
+        if cursor_stack.valid_for_read then
+            if fuel_stack.valid_for_read and cursor_stack.prototype == fuel_stack.prototype then
+                fuel_stack.transfer_stack(cursor_stack)
+            else
+                cursor_stack.swap_stack(fuel_stack)
+            end
+        else
+            cursor_stack.swap_stack(fuel_stack)
+        end
+    elseif event.button == defines.mouse_button_type.right then
+        if not cursor_stack.valid_for_read and fuel_stack.valid_for_read then
+            cursor_stack.set_stack(fuel_stack)
+            cursor_stack.count = math.ceil(fuel_stack.count/2)
+            fuel_stack.count = math.floor(fuel_stack.count/2)
+        elseif cursor_stack.valid_for_read then
+            -- Creates a temporary stack (needed to preserve metadata) by temporarily resizing inventory
+            caravan_data.fuel_inventory.resize(#caravan_data.fuel_inventory + 1)
+            local tmp_stack = caravan_data.fuel_inventory[#caravan_data.fuel_inventory]
+            tmp_stack.set_stack(cursor_stack)
+            tmp_stack.count = 1
+
+            local result
+            if fuel_stack.valid_for_read then
+                result = fuel_stack.transfer_stack(tmp_stack)
+            else
+                result = fuel_stack.set_stack(tmp_stack)
+            end
+            if result then
+                cursor_stack.count = cursor_stack.count - 1
+            end
+            caravan_data.fuel_inventory.resize(#caravan_data.fuel_inventory - 1)
+        end
+    end
+
     if eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
