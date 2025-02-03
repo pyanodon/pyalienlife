@@ -964,7 +964,7 @@ function Caravan.instantiate_caravan(entity)
     end
 
     if prototype.inventory_size then
-        caravan_data.inventory = game.create_inventory(prototype.inventory_size)
+        caravan_data.inventory = game.create_inventory(prototype.inventory_size, entity.localised_name)
     end
 
     storage.caravans[entity.unit_number] = caravan_data
