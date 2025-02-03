@@ -242,15 +242,20 @@ function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_da
 
         local entity = schedule.entity
         local actions
-        local prototype = caravan_prototypes.caravan -- TODO
+        local valid_actions
+        if caravan_data then
+            valid_actions = Caravan.valid_actions[caravan_data.entity.name]
+        else
+            valid_actions = Caravan.valid_actions.all
+        end
         if entity and entity.valid then
             if (entity.name == "outpost") or (entity.name == "outpost-aerial") then
-                actions = prototype.actions.outpost
-            elseif prototype.actions[entity.type] then
-                actions = prototype.actions[entity.type]
+                actions = valid_actions.outpost
+            elseif valid_actions[entity.type] then
+                actions = valid_actions[entity.type]
             end
         end
-        actions = actions or prototype.actions.default
+        actions = actions or valid_actions.default
         actions = table.map(actions, function(v) return {"caravan-actions." .. v, v} end)
         local py_add_action = schedule_flow.add {type = "drop-down", name = "py_add_action", items = actions, tags = tags}
         py_add_action.style.width = 356
