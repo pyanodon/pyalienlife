@@ -523,9 +523,10 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
+    -- TODO: get_schedule() ?
     local schedule = caravan_data.schedule[tags.schedule_id]
     local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
-    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_flow.py_refocus
+    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_frame.status_flow.py_refocus
 
     if schedule.entity and schedule.entity.valid then
         camera.entity = schedule.entity
@@ -543,7 +544,7 @@ gui_events[defines.events.on_gui_click]["py_refocus"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
-    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_flow.py_refocus
+    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_frame.status_flow.py_refocus
 
     camera.entity = caravan_data.entity
     refocus.visible = false

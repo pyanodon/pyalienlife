@@ -394,18 +394,41 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     content_flow.style.margin = {-4, 0, -4, 0}
     content_flow.style.vertical_align = "center"
 
-    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    local status_frame = content_flow.add {type = "frame", name = "status_frame", direction = "horizontal", style = "subheader_frame"}
+    status_frame.style.height = 36
+    status_frame.style.horizontally_stretchable = true
+    status_frame.style.top_margin = -8
+    status_frame.style.right_margin = -12
+    status_frame.style.left_margin = -12
+
+    local status_flow = status_frame.add {type = "flow", name = "status_flow", direction = "horizontal"}
     status_flow.style.vertical_align = "center"
     local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
     status_sprite.resize_to_sprite = false
     status_sprite.style.size = {16, 16}
     status_flow.add {type = "label", name = "status_text"}
     status_flow.add {type = "empty-widget", style = "py_empty_widget"}
-    local refocus = status_flow.add {type = "sprite-button", name = "py_refocus", style = "tool_button", sprite = "utility/import_slot", tooltip = {"caravan-gui.refocus"}, tags = {unit_number = caravan_data.unit_number}}
-    refocus.style.size = {26, 26}
-    refocus.style.top_margin = -2
-    refocus.style.bottom_margin = -4
+
+    local refocus = status_flow.add {
+        type = "sprite-button",
+        name = "py_refocus",
+        style = "tool_button",
+        sprite = "utility/center",
+        tooltip = {"caravan-gui.refocus"},
+        tags = {unit_number = caravan_data.unit_number}
+    }
+    -- refocus.style.size = {26, 26}
     refocus.visible = false
+
+    local open_map_button = status_flow.add {
+        type = "sprite-button",
+        name = "py_open_map_button",
+        style = "tool_button",
+        sprite = "utility/map",
+        tooltip = {"caravan-gui.view-on-map"},
+        tags = {unit_number = caravan_data.unit_number}
+    }
+    -- open_map_button.style.size = {26, 26}
 
     local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
     local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = entity.position, surface_index = entity.surface.index}
@@ -475,8 +498,8 @@ function Caravan.update_gui(gui, weak)
     end
     local content_flow = gui.content_frame.content_flow
     local state, img = Caravan.status_img(caravan_data)
-    content_flow.status_flow.status_text.caption = state
-    content_flow.status_flow.status_sprite.sprite = img
+    content_flow.status_frame.status_flow.status_text.caption = state
+    content_flow.status_frame.status_flow.status_sprite.sprite = img
     if caravan_data.fuel_inventory then
         for i = 1, #caravan_data.fuel_inventory do
             local stack = caravan_data.fuel_inventory[i]
