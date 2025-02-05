@@ -913,7 +913,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                     end
                     if conditions_passed then
                         for i = 1, #interrupt.schedule do
-                            local schedule = interrupt.schedule[i]
+                            local schedule = table.deepcopy(interrupt.schedule[i])
                             schedule.temporary = true
                             table.insert(caravan_data.schedule, caravan_data.schedule_id + 1, schedule)
                         end

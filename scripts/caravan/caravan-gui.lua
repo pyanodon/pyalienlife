@@ -115,11 +115,13 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             value.numeric = true
             value.allow_decimal = false
             value.allow_negative = true
-        elseif action.type == "food-count" then
+        elseif action.type == "food-count" or action.type == "caravan-item-count" or action.type == "oupost-item-count" then
+            local filters
+            if action.type == "food-count" then filters = {{filter = "name", name = Caravan.foods.all}} end
             local itemselect = action_frame.add {
                 type = "choose-elem-button", name = "py_item_count", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "item",
-                elem_filters = {{filter = "name", name = Caravan.foods.all}}
+                elem_filters = filters
             }
             itemselect.elem_value = action.elem_value
             
@@ -224,19 +226,36 @@ function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_da
         style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
         schedule_frame.add {type = "label", name = "py_outpost_name", style = style, tags = tags, caption = schedule.localised_name}
 
+        style = schedule.temporary and "py_schedule_temporary_move_button" or "py_schedule_move_button"
         schedule_frame.add {type = "empty-widget", style = "py_empty_widget", tags = tags}
-        schedule_frame.add {type = "sprite-button", name = "py_shuffle_schedule_1", style = "py_schedule_move_button",
-            tags = {unit_number = unit_number, type = "schedule", schedule_id = i, up = true},
-            sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
-        }
-        schedule_frame.add {
-            type = "sprite-button", name = "py_shuffle_schedule_2", style = "py_schedule_move_button", tags = tags,
-            sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
-        }
-        schedule_frame.add {
-            type = "sprite-button", name = "py_delete_schedule", style = "py_schedule_move_button", tags = tags,
-            sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black"
-        }
+
+        if schedule.temporary then
+            schedule_frame.add {type = "sprite-button", name = "py_shuffle_schedule_1", style = style,
+                tags = {unit_number = unit_number, type = "schedule", schedule_id = i, up = true},
+                sprite = "up-black"
+            }
+            schedule_frame.add {
+                type = "sprite-button", name = "py_shuffle_schedule_2", style = style, tags = tags,
+                sprite = "down-black"
+            }
+            schedule_frame.add {
+                type = "sprite-button", name = "py_delete_schedule", style = style, tags = tags,
+                sprite = "utility/close_black"
+            }
+        else
+            schedule_frame.add {type = "sprite-button", name = "py_shuffle_schedule_1", style = style,
+                tags = {unit_number = unit_number, type = "schedule", schedule_id = i, up = true},
+                sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
+            }
+            schedule_frame.add {
+                type = "sprite-button", name = "py_shuffle_schedule_2", style = style, tags = tags,
+                sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
+            }
+            schedule_frame.add {
+                type = "sprite-button", name = "py_delete_schedule", style = style, tags = tags,
+                sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black"
+            }
+        end
 
         Caravan.build_action_list_gui(schedule_flow, schedule.actions, caravan_data, unit_number, i)
 

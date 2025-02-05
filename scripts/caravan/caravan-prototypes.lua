@@ -63,10 +63,13 @@ Caravan.valid_actions = {
         },
     },
     ["interrupt-condition"] = {
+        "is-inventory-full",
+        "is-inventory-empty",
+        "caravan-item-count",
+        "outpost-item-count",
         "food-count",
-        "time-passed",
         "circuit-condition",
-        "circuit-condition-static"
+        "circuit-condition-static",
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
@@ -498,8 +501,6 @@ Caravan.actions = {
     end,
 
     ["food-count"] = function(caravan_data, schedule, action)
-        -- local outpost = schedule.entity
-        -- if not outpost or not outpost.valid then return true end
         local item = action.elem_value
 
         local right = action.circuit_condition_right
@@ -513,9 +514,49 @@ Caravan.actions = {
         elseif action.operator == 4 then return left >= right
         elseif action.operator == 5 then return left <= right
         elseif action.operator == 6 then return left ~= right end
-    end
+    end,
 
+    ["caravan-item-count"] = function(caravan_data, schedule, action)
+        local item = action.elem_value
 
+        local right = action.circuit_condition_right
+        if not right then return false end
+
+        local left = caravan_data.inventory.get_item_count(item)
+
+        if     action.operator == 1 then return left > right
+        elseif action.operator == 2 then return left < right
+        elseif action.operator == 3 then return left == right
+        elseif action.operator == 4 then return left >= right
+        elseif action.operator == 5 then return left <= right
+        elseif action.operator == 6 then return left ~= right end
+    end,
+
+    ["outpost-item-count"] = function(caravan_data, schedule, action)
+        local outpost = schedule.entity
+        if not outpost or not outpost.valid then return true end
+        local item = action.elem_value
+
+        local right = action.circuit_condition_right
+        if not right then return false end
+
+        local left = get_outpost_inventory(outpost).get_item_count(item)
+
+        if     action.operator == 1 then return left > right
+        elseif action.operator == 2 then return left < right
+        elseif action.operator == 3 then return left == right
+        elseif action.operator == 4 then return left >= right
+        elseif action.operator == 5 then return left <= right
+        elseif action.operator == 6 then return left ~= right end
+    end,
+
+    ["is-inventory-full"] = function (caravan_data, schedule, action)
+        return caravan_data.inventory.is_full()
+    end,
+
+    ["is-inventory-empty"] = function (caravan_data, schedule, action)
+        return caravan_data.inventory.is_empty()
+    end,
 }
 
 Caravan.free_actions = { -- actions that don't use fuel
