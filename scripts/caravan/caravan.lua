@@ -520,7 +520,7 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
         camera.position = schedule.position
     end
     refocus.visible = true
-    camera.zoom = 1
+    camera.zoom = 0.5
 end
 
 gui_events[defines.events.on_gui_click]["py_refocus"] = function(event)

@@ -214,13 +214,23 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
-
+    local position = entity.position
+    local gui = Caravan.get_caravan_gui(player)
+    if gui then
+        local camera = gui.content_frame.content_flow.camera_frame.camera
+        position = camera.position
+        entity = camera.entity
+    end
+    if entity then position = entity.position end
+    
     player.opened = nil
     player.set_controller {
         type = defines.controllers.remote,
-        position = entity.position,
+        position = position,
     }
-    player.centered_on = entity
+    if entity then
+        player.centered_on = entity
+    end
 end
 
 local function title_edit_mode(caption_flow, caravan_data)
