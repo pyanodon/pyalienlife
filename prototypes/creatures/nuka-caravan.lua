@@ -167,7 +167,6 @@ local unit = {
                 frame_count = 26,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0)),
-                scale = _G.scale
             },
             {
                 filenames = {

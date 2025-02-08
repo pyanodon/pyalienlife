@@ -180,7 +180,6 @@ data:extend
                     frame_count = 50,
                     direction_count = 16,
                     shift = util.mul_shift(util.by_pixel(-0, -0)),
-                    scale = _G.scale,
                 },
                 {
                     filenames =

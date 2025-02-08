@@ -172,7 +172,6 @@ data:extend {{
                 frame_count = 30,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0)),
-                scale = _G.scale,
                 flags = {"no-scale"},
             },
             {
@@ -195,7 +194,6 @@ data:extend {{
                 frame_count = 30,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-                scale = _G.scale,
                 flags = {"no-scale"},
             },
             {
