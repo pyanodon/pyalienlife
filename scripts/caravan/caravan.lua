@@ -46,7 +46,7 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field name string The name of the interrupt
 ---@field conditions CaravanAction[]
 ---@field schedule CaravanSchedule[]
----@field inside_interrupt boolean? Allow interrupting other interrupts
+---@field inside_interrupt boolean Allow interrupting other interrupts
 
 ---Pathfinds a caravan to follow another entity
 ---@param caravan_data Caravan
@@ -328,7 +328,12 @@ end
 
 function Caravan.add_interrupt(caravan_data, name, player)
     if not storage.interrupts[name] then
-        storage.interrupts[name] = {name = name, conditions = {}, schedule = {}}
+        storage.interrupts[name] = {
+            name = name,
+            conditions = {},
+            schedule = {},
+            inside_interrupt = false
+        }
     end
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
     table.insert(caravan_data.interrupts, name)
@@ -383,7 +388,7 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
     else
         local old_name = label.caption
         local new_name = textfield.text
-        storage.interrupts[new_name] = storage.interrupts[old_name]
+        storage.interrupts[new_name] = table.deepcopy(storage.interrupts[old_name])
         storage.interrupts[new_name].name = new_name
         storage.interrupts[old_name] = nil
 
@@ -398,6 +403,15 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
         label.caption = new_name
         Caravan.update_gui(Caravan.get_caravan_gui(player))
     end
+end
+gui_events[defines.events.on_gui_confirmed]["py_rename_interrupt_textfield"] = gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"]
+
+gui_events[defines.events.on_gui_checked_state_changed]["py_inside_interrupt"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local interrupt_data = storage.interrupts[element.tags.unit_number]
+
+    interrupt_data.inside_interrupt = element.state
 end
 
 -- TODO
@@ -896,13 +910,27 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         elseif result then
             if #schedule.actions == caravan_data.action_id then
                 local is_interrupted = false
-                for _, schedule in pairs(caravan_data.schedule) do
-                    if schedule.temporary then is_interrupted = true; break end
+                for _, sch in pairs(caravan_data.schedule) do
+                    if sch.temporary then is_interrupted = true; break end
                 end
                 for _, interrupt in pairs(caravan_data.interrupts) do
                     interrupt = storage.interrupts[interrupt]
                     if not interrupt then goto continue end
-                    if is_interrupted and not interrupt.inside_interrupt then goto continue end     -- TODO: overwrite current interrupt if inside_interrupt is true
+                    if is_interrupted then
+                        if interrupt.inside_interrupt then
+                            -- Remove all temporary stops
+                            for idx, sch in pairs(caravan_data.schedule) do
+                                if sch.temporary then
+                                    if idx <= caravan_data.schedule_id then
+                                        caravan_data.schedule_id = caravan_data.schedule_id - 1
+                                    end
+                                    table.remove(caravan_data.schedule, idx)
+                                end
+                            end
+                        else
+                            goto continue
+                        end
+                    end
                     
                     local conditions_passed = true
                     for _, condition in pairs(interrupt.conditions) do
@@ -912,16 +940,19 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                         end
                     end
                     if conditions_passed then
+                        -- Add interrupt to schedule
                         for i = 1, #interrupt.schedule do
-                            local schedule = table.deepcopy(interrupt.schedule[i])
-                            schedule.temporary = true
-                            table.insert(caravan_data.schedule, caravan_data.schedule_id + 1, schedule)
+                            local sch = table.deepcopy(interrupt.schedule[i])
+                            sch.temporary = true
+                            table.insert(caravan_data.schedule, caravan_data.schedule_id + 1, sch)
+                            is_interrupted = true
                         end
                     end
 
                     ::continue::
                 end
 
+                schedule = caravan_data.schedule[caravan_data.schedule_id]  -- I dont know why, but this is necessary
                 if schedule.temporary then
                     table.remove(caravan_data.schedule, caravan_data.schedule_id)
                     caravan_data.schedule_id = caravan_data.schedule_id - 1

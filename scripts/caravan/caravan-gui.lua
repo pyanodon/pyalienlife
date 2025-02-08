@@ -422,6 +422,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 
     local status_flow = status_frame.add {type = "flow", name = "status_flow", direction = "horizontal"}
     status_flow.style.vertical_align = "center"
+    status_flow.style.left_padding = 8
     local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
     status_sprite.resize_to_sprite = false
     status_sprite.style.size = {16, 16}
@@ -635,7 +636,9 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     -- window_flow.add {type = "frame", style = "inside_shallow_frame_with_padding_and_vertical_spacing"}
     -- local main_flow = window_flow.add {type = "flow", direction = "vertical"}
 
-    window_frame.add {type = "checkbox", caption = {"gui-interrupts.inside-interrupt"}, state = false}
+    window_frame.add {type = "checkbox", name = "py_inside_interrupt", caption = {"gui-interrupts.inside-interrupt"},
+        tags = {unit_number = interrupt_data.name}, state = interrupt_data.inside_interrupt
+    }
     window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, style = "semibold_label"}
     local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "train_interrupts_scroll_pane"}
     conditions_scroll_pane.style.minimal_height = 36
