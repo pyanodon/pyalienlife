@@ -62,7 +62,7 @@ data:extend {{
     healing_per_tick = 0.03,
     collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
     selection_priority = 51,
-    selection_box = {{-1.1, -1.1}, {1.1, 1.1}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     attack_parameters = {
         type = "projectile",
         range = 0,
