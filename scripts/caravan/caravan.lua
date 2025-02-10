@@ -448,24 +448,6 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
     Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
 end
 
-gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
-    local player = game.get_player(event.player_index)
-    local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-
-    local schedule = get_schedule(tags)
-
-    local id = tags.action_id or tags.schedule_id
-    table.remove(schedule, id)
-
-    if caravan_data then
-        stop_actions(caravan_data)
-    end
-    Caravan.update_gui(Caravan.get_caravan_gui(player))
-    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
-end
-
 gui_events[defines.events.on_gui_click]["py_blocking_caravan"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
@@ -501,16 +483,34 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local id = tags.schedule_id
+    local id = tags.action_id or tags.schedule_id
     local caravan_data
-
+    
     local schedule = get_schedule(tags)
-
+    
     local offset = tags.up and -1 or 1
     local a, b = schedule[id], schedule[id + offset]
     if not a or not b then return end
     schedule[id] = b
     schedule[id + offset] = a
+    
+    if caravan_data then
+        stop_actions(caravan_data)
+    end
+    Caravan.update_gui(Caravan.get_caravan_gui(player))
+    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
+end
+
+gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local tags = element.tags
+    local caravan_data = storage.caravans[tags.unit_number]
+    local id = tags.action_id or tags.schedule_id
+
+    local schedule = get_schedule(tags)
+
+    table.remove(schedule, id)
 
     if caravan_data then
         stop_actions(caravan_data)
