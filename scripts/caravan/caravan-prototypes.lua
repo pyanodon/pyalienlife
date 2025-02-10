@@ -345,8 +345,8 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local fuel_inventory = caravan_data.fuel_inventory
         local item = action.elem_value
-        local goal = action.item_count
-        if not goal or not item then return false end
+        local goal = action.item_count or 0
+        if not item then return false end
 
         local result = transfer_filtered_items_1(fuel_inventory, outpost_inventory, item, goal)
 
@@ -393,8 +393,8 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local goal = action.item_count
-        if not goal or not item then return false end
+        local goal = action.item_count or 0
+        if not item then return false end
 
         local result = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
 
@@ -408,8 +408,8 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local goal = action.item_count
-        if not goal or not item then return false end
+        local goal = action.item_count or 0
+        if not item then return false end
 
         local result = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
 
@@ -418,13 +418,13 @@ Caravan.actions = {
 
     ["load-outpost"] = function(caravan_data, schedule, action)
         local chest = schedule.entity
-        if not chest or not chest.valid then return false end
+        if not chest.valid then return false end
         local outpost_inventory = get_outpost_inventory(chest)
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local goal = action.item_count
-        if not goal or not item then return false end
+        local goal = action.item_count or 0
+        if not item then return false end
 
         local result = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
 
@@ -433,13 +433,13 @@ Caravan.actions = {
 
     ["unload-outpost"] = function(caravan_data, schedule, action)
         local chest = schedule.entity
-        if not chest or not chest.valid then return false end
+        if not chest.valid then return false end
         local outpost_inventory = get_outpost_inventory(chest)
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local goal = action.item_count
-        if not goal or not item then return false end
+        local goal = action.item_count or 0
+        if not item then return false end
 
         local result = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
 
