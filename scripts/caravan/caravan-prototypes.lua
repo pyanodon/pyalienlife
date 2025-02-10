@@ -232,13 +232,13 @@ local function transfer_filtered_items(input_inventory, output_inventory, item, 
     end
 end
 
-local function transfer_filtered_items_max(input_inventory, output_inventory, item, min, max) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
+local function transfer_filtered_items_1(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
     local inventory_count = input_inventory.get_item_count(item)
 
-    if inventory_count >= max then
+    if inventory_count >= goal then
         return true
     else
-        local removed_count = output_inventory.remove {name = item, count = max - inventory_count}
+        local removed_count = output_inventory.remove {name = item, count = goal - inventory_count}
         local inserted_count = 0
         if removed_count ~= 0 then
             inserted_count = input_inventory.insert {name = item, count = removed_count}
@@ -249,17 +249,17 @@ local function transfer_filtered_items_max(input_inventory, output_inventory, it
         end
         input_inventory.sort_and_merge()
         output_inventory.sort_and_merge()
-        return inventory_count + inserted_count >= min
+        return inventory_count + inserted_count >= goal
     end
 end
 
-local function transfer_filtered_items_min(input_inventory, output_inventory, item, min, max) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
+local function transfer_filtered_items_2(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
     local inventory_count = output_inventory.get_item_count(item)
 
-    if inventory_count <= min then
+    if inventory_count <= goal then
         return true
     else
-        local removed_count = output_inventory.remove {name = item, count = inventory_count - min}
+        local removed_count = output_inventory.remove {name = item, count = inventory_count - goal}
         local inserted_count = 0
         if removed_count ~= 0 then
             inserted_count = input_inventory.insert {name = item, count = removed_count}
@@ -270,7 +270,7 @@ local function transfer_filtered_items_min(input_inventory, output_inventory, it
         end
         input_inventory.sort_and_merge()
         output_inventory.sort_and_merge()
-        return inventory_count - inserted_count <= max
+        return inventory_count - inserted_count <= goal
     end
 end
 
@@ -345,13 +345,12 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local fuel_inventory = caravan_data.fuel_inventory
         local item = action.elem_value
-        local min = action.item_count_min
-        local max = action.item_count_max
-        if not min or not max or not item then return false end
+        local goal = action.item_count
+        if not goal or not item then return false end
 
-        local result = transfer_filtered_items_max(fuel_inventory, outpost_inventory, item, min, max)
+        local result = transfer_filtered_items_1(fuel_inventory, outpost_inventory, item, goal)
 
-        return result
+        return action.async or result
     end,
 
     ["fill-inventory"] = function(caravan_data, schedule, action)
@@ -394,13 +393,12 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local min = action.item_count_min
-        local max = action.item_count_max
-        if not min or not max or not item then return false end
+        local goal = action.item_count
+        if not goal or not item then return false end
 
-        local result = transfer_filtered_items_max(caravan_inventory, outpost_inventory, item, min, max)
+        local result = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
 
-        return result
+        return action.async or result
     end,
 
     ["unload-caravan"] = function(caravan_data, schedule, action)
@@ -410,13 +408,12 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local min = action.item_count_min
-        local max = action.item_count_max
-        if not min or not max or not item then return false end
-        
-        local result = transfer_filtered_items_min(outpost_inventory, caravan_inventory, item, min, max)
+        local goal = action.item_count
+        if not goal or not item then return false end
 
-        return result
+        local result = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
+
+        return action.async or result
     end,
 
     ["load-outpost"] = function(caravan_data, schedule, action)
@@ -426,13 +423,12 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local min = action.item_count_min
-        local max = action.item_count_max
-        if not min or not max or not item then return false end
+        local goal = action.item_count
+        if not goal or not item then return false end
 
-        local result = transfer_filtered_items_min(caravan_inventory, outpost_inventory, item, min, max)
+        local result = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
 
-        return result
+        return action.async or result
     end,
 
     ["unload-outpost"] = function(caravan_data, schedule, action)
@@ -442,13 +438,12 @@ Caravan.actions = {
         if not outpost_inventory then return false end
         local caravan_inventory = caravan_data.inventory
         local item = action.elem_value
-        local min = action.item_count_min
-        local max = action.item_count_max
-        if not min or not max or not item then return false end
+        local goal = action.item_count
+        if not goal or not item then return false end
 
-        local result = transfer_filtered_items_max(outpost_inventory, caravan_inventory, item, min, max)
+        local result = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
 
-        return result
+        return action.async or result
     end,
 
     ["detonate"] = function(caravan_data, schedule, action)

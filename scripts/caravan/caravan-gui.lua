@@ -45,39 +45,24 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
         elseif action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-outpost" or action.type == "unload-outpost" then
             action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local itemselect = action_frame.add {
-                type = "choose-elem-button", name = "py_item_count", style = "train_schedule_item_select_button",
-                tags = tags, elem_type = "item"
+                type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
+                tags = tags, elem_type = "item", elem_filters = filters
             }
             itemselect.elem_value = action.elem_value
 
-            --TODO separate style?
-            local textfield_min = action_frame.add {
+            local textfield = action_frame.add {
                 type = "textfield",
-                name = "py_item_count_min",
+                name = "py_item_count",
                 style = "py_compact_slider_value_textfield",
                 tags = tags,
-                text = action.item_count_min,
-                tooltip = {"caravan-gui.minimum-value"},
+                text = action.item_count or 0,
+                lose_focus_on_confirm = true,
             }
-            textfield_min.style.left_padding = 0
-            textfield_min.style.right_padding = 0
-            textfield_min.numeric = true
-            textfield_min.allow_decimal = false
-            textfield_min.allow_negative = false
-            
-            local textfield_max = action_frame.add {
-                type = "textfield",
-                name = "py_item_count_max",
-                style = "py_compact_slider_value_textfield",
-                tags = tags,
-                text = action.item_count_max,
-                tooltip = {"caravan-gui.maximum-value"},
-            }
-            textfield_max.style.left_padding = 0
-            textfield_max.style.right_padding = 0
-            textfield_max.numeric = true
-            textfield_max.allow_decimal = false
-            textfield_max.allow_negative = false
+            textfield.style.left_padding = 0
+            textfield.style.right_padding = 0
+            textfield.numeric = true
+            textfield.allow_decimal = false
+            textfield.allow_negative = false
         elseif action.type == "circuit-condition" then
             action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local circuit_condition_left = action_frame.add {
@@ -137,48 +122,38 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             value.allow_negative = true
         elseif action.type == "store-specific-food" then
             local itemselect = action_frame.add {
-                type = "choose-elem-button", name = "py_item_count", style = "train_schedule_item_select_button",
+                type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "item",
                 elem_filters = {{filter = "name", name = Caravan.foods.all}}
             }
             itemselect.elem_value = action.elem_value
             
-            --TODO separate style?
-            local textfield_min = action_frame.add {
+            local textfield = action_frame.add {
                 type = "textfield",
-                name = "py_item_count_min",
+                name = "py_food_count",
                 style = "py_compact_slider_value_textfield",
                 tags = tags,
-                text = action.item_count_min,
-                tooltip = {"caravan-gui.minimum-value"},
+                text = action.item_count or 0,
+                lose_focus_on_confirm = true,
             }
-            textfield_min.style.left_padding = 0
-            textfield_min.style.right_padding = 0
-            textfield_min.numeric = true
-            textfield_min.allow_decimal = false
-            textfield_min.allow_negative = false
-            
-            local textfield_max = action_frame.add {
-                type = "textfield",
-                name = "py_item_count_max",
-                style = "py_compact_slider_value_textfield",
-                tags = tags,
-                text = action.item_count_max,
-                tooltip = {"caravan-gui.maximum-value"},
-            }
-            textfield_max.style.left_padding = 0
-            textfield_max.style.right_padding = 0
-            textfield_max.numeric = true
-            textfield_max.allow_decimal = false
-            textfield_max.allow_negative = false
+            textfield.style.left_padding = 0
+            textfield.style.right_padding = 0
+            textfield.numeric = true
+            textfield.allow_decimal = false
+            textfield.allow_negative = false
         else
             action_frame.add {type = "empty-widget", style = "py_empty_widget"}
         end
 
-        if action.type == "fill-inventory" or action.type == "empty-inventory" or action.type == "store-food" then
-            action_frame.add {type = "checkbox", name = "py_blocking_caravan", state = not action.async,
+        if action.type == "fill-inventory" or action.type == "empty-inventory" or action.type == "store-food" or action.type == "store-specific-food"
+            or action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-outpost" or action.type == "unload-outpost" then
+            action_frame.add {
+                type = "checkbox",
+                name = "py_blocking_caravan",
+                state = not action.async,
                 tooltip = {"caravan-gui.wait"},
-                tags = tags}
+                tags = tags
+            }
         end
 
         action_frame.add {

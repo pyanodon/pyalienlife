@@ -710,7 +710,7 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
-gui_events[defines.events.on_gui_elem_changed]["py_item_count"] = function(event)
+gui_events[defines.events.on_gui_elem_changed]["py_item_value"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
@@ -719,7 +719,18 @@ gui_events[defines.events.on_gui_elem_changed]["py_item_count"] = function(event
     action.elem_value = element.elem_value
 end
 
-gui_events[defines.events.on_gui_text_changed]["py_item_count_min"] = function(event)
+gui_events[defines.events.on_gui_text_changed]["py_item_count"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local tags = element.tags
+    local action = get_action(player, tags)
+    local item_count = tonumber(element.text)
+
+    action.item_count = item_count or 0
+end
+gui_events[defines.events.on_gui_text_changed]["py_food_count"] = gui_events[defines.events.on_gui_text_changed]["py_item_count"]
+
+gui_events[defines.events.on_gui_confirmed]["py_item_count"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
@@ -727,20 +738,18 @@ gui_events[defines.events.on_gui_text_changed]["py_item_count_min"] = function(e
     local action = get_action(player, tags)
     local item_count = tonumber(element.text)
 
-    if action.elem_value then
-        if item_count then
-            local stack_size = prototypes.item[action.elem_value].stack_size
-            if caravan_data then
-                item_count = math.min(item_count, stack_size * #caravan_data.inventory)
-            end
+    -- Limit item count to the maximum amount the caravan can fit
+    if action.elem_value and item_count then
+        local stack_size = prototypes.item[action.elem_value].stack_size
+        if caravan_data then
+            item_count = math.min(item_count, stack_size * #caravan_data.inventory)
         end
-        action.item_count_min = item_count
-    else
-        action.item_count_min = nil
     end
+    action.item_count = item_count or 0
+    element.text = tostring(item_count or 0)
 end
 
-gui_events[defines.events.on_gui_text_changed]["py_item_count_max"] = function(event)
+gui_events[defines.events.on_gui_confirmed]["py_food_count"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
@@ -748,18 +757,58 @@ gui_events[defines.events.on_gui_text_changed]["py_item_count_max"] = function(e
     local action = get_action(player, tags)
     local item_count = tonumber(element.text)
 
-    if action.elem_value then
-        if item_count then
-            local stack_size = prototypes.item[action.elem_value].stack_size
-            if caravan_data then
-                item_count = math.min(item_count, stack_size * #caravan_data.inventory)
-            end
+    -- Limit item count to the maximum amount the caravan can fit
+    if action.elem_value and item_count then
+        local stack_size = prototypes.item[action.elem_value].stack_size
+        if caravan_data then
+            item_count = math.min(item_count, stack_size * #caravan_data.fuel_inventory)
         end
-        action.item_count_max = item_count
-    else
-        action.item_count_max = nil
     end
+    action.item_count = item_count or 0
+    element.text = tostring(item_count or 0)
 end
+
+-- gui_events[defines.events.on_gui_text_changed]["py_item_count_min"] = function(event)
+--     local player = game.get_player(event.player_index)
+--     local element = event.element
+--     local tags = element.tags
+--     local caravan_data = storage.caravans[tags.unit_number]
+--     local action = get_action(player, tags)
+--     local item_count = tonumber(element.text)
+
+--     if action.elem_value then
+--         if item_count then
+--             local stack_size = prototypes.item[action.elem_value].stack_size
+--             if caravan_data then
+--                 item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+--             end
+--         end
+--         action.item_count_min = item_count
+--     else
+--         action.item_count_min = nil
+--     end
+-- end
+
+-- gui_events[defines.events.on_gui_text_changed]["py_item_count_max"] = function(event)
+--     local player = game.get_player(event.player_index)
+--     local element = event.element
+--     local tags = element.tags
+--     local caravan_data = storage.caravans[tags.unit_number]
+--     local action = get_action(player, tags)
+--     local item_count = tonumber(element.text)
+
+--     if action.elem_value then
+--         if item_count then
+--             local stack_size = prototypes.item[action.elem_value].stack_size
+--             if caravan_data then
+--                 item_count = math.min(item_count, stack_size * #caravan_data.inventory)
+--             end
+--         end
+--         action.item_count_max = item_count
+--     else
+--         action.item_count_max = nil
+--     end
+-- end
 
 gui_events[defines.events.on_gui_elem_changed]["py_circuit_condition_right"] = function(event)
     local player = game.get_player(event.player_index)
