@@ -10,8 +10,8 @@ Caravan.valid_actions = {
             "empty-inventory",
             "load-caravan",
             "unload-caravan",
-            "load-outpost",
-            "unload-outpost",
+            "load-target",
+            "unload-target",
             "circuit-condition",
             "circuit-condition-static"
         },
@@ -21,7 +21,7 @@ Caravan.valid_actions = {
             "fill-inventory",
             "empty-inventory",
             "load-caravan",
-            "load-outpost",
+            "load-target",
             "empty-autotrash"
         },
         ["unit"] = {
@@ -30,28 +30,28 @@ Caravan.valid_actions = {
             "fill-inventory",
             "empty-inventory",
             "load-caravan",
-            "load-outpost",
+            "load-target",
         },
         ["cargo-wagon"] = {
             "time-passed",
             "fill-inventory",
             "empty-inventory",
             "load-caravan",
-            "load-outpost",
+            "load-target",
         },
         ["car"] = {
             "time-passed",
             "fill-inventory",
             "empty-inventory",
             "load-caravan",
-            "load-outpost",
+            "load-target",
         },
         ["spider-vehicle"] = {
             "time-passed",
             "fill-inventory",
             "empty-inventory",
             "load-caravan",
-            "load-outpost",
+            "load-target",
         },
         ["electric-pole"] = {
             "time-passed",
@@ -307,6 +307,26 @@ py.on_event(py.events.on_init(), function()
     end
 end)
 
+-- A migration script to replace all inventories with ones that have a better title than "Script inventory"
+-- This would have been possible to do in actual migrations, but entity or prototype names aren't stored anywhere
+-- apart from LuaEntity, which is invalid during migrations, so this works as a custom migration
+py.on_event(py.events.on_init(), function()
+    storage.migrations = storage.migrations or {}
+    if storage.migrations.caravan_inventory then return end
+    for _, caravan_data in pairs(storage.caravans or {}) do
+        if caravan_data.entity.valid then
+            local old_inventory = caravan_data.inventory
+            local new_inventory = game.create_inventory(#old_inventory, caravan_data.entity.localised_name)
+            for i = 1, #old_inventory do
+                new_inventory[i].set_stack(old_inventory[i])
+            end
+            caravan_data.inventory = new_inventory
+            old_inventory.destroy()
+        end
+    end
+    storage.migrations.caravan_inventory = true
+end)
+
 Caravan.actions = {
     ["time-passed"] = function(caravan_data, schedule, action)
         if action.timer == 1 then
@@ -416,7 +436,7 @@ Caravan.actions = {
         return action.async or result
     end,
 
-    ["load-outpost"] = function(caravan_data, schedule, action)
+    ["load-target"] = function(caravan_data, schedule, action)
         local chest = schedule.entity
         if not chest.valid then return false end
         local outpost_inventory = get_outpost_inventory(chest)
@@ -431,7 +451,7 @@ Caravan.actions = {
         return action.async or result
     end,
 
-    ["unload-outpost"] = function(caravan_data, schedule, action)
+    ["unload-target"] = function(caravan_data, schedule, action)
         local chest = schedule.entity
         if not chest.valid then return false end
         local outpost_inventory = get_outpost_inventory(chest)

@@ -42,7 +42,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             textfield.allow_decimal = false
             textfield.allow_negative = false
             action_frame.add {type = "label", caption = "s"}.style.left_margin = -5
-        elseif action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-outpost" or action.type == "unload-outpost" then
+        elseif action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-target" or action.type == "unload-target" then
             action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local itemselect = action_frame.add {
                 type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
@@ -146,7 +146,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
         end
 
         if action.type == "fill-inventory" or action.type == "empty-inventory" or action.type == "store-food" or action.type == "store-specific-food"
-            or action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-outpost" or action.type == "unload-outpost" then
+            or action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-target" or action.type == "unload-target" then
             action_frame.add {
                 type = "checkbox",
                 name = "py_blocking_caravan",

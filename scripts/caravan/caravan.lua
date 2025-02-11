@@ -37,8 +37,6 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field wait_time int? The amount of time that the caravan will wait if this is a 'time passed' action.
 ---@field elem_value string? The item that the caravan will interact with if this is an 'item count' action.
 ---@field item_count int? The amount of items that the caravan will interact with if this is an 'item count' action.
----@field item_count_min int?
----@field item_count_max int?
 ---@field localised_name LocalisedString The name of the action. This is displayed in the GUI.
 ---@field type string The type of the action. This is used to determine what the caravan will do when it reaches this action.
 
@@ -949,6 +947,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if caravan_data.action_id == -1 then goto continue end
         local schedule = caravan_data.schedule[caravan_data.schedule_id]
         local action = schedule.actions[caravan_data.action_id]
+        if not action then goto continue end
         local result = Caravan.actions[action.type](caravan_data, schedule, action)
         if result == "nuke" then
             goto continue
