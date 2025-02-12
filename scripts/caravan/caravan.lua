@@ -402,12 +402,14 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
         storage.interrupts[new_name].name = new_name
         storage.interrupts[old_name] = nil
 
-        -- Update interrupt in current caravan. TODO: update all caravans
-        for i, interrupt in pairs(caravan_data.interrupts) do
-            if interrupt == old_name then
-                caravan_data.interrupts[i] = new_name
-                interrupt = nil
-                break
+        -- Update all caravans containing this interrupt
+        for _, caravan in pairs(storage.caravans or {}) do
+            for i, interrupt in pairs(caravan.interrupts or {}) do
+                if interrupt == old_name then
+                    caravan.interrupts[i] = new_name
+                    interrupt = nil
+                    break
+                end
             end
         end
         label.caption = new_name
@@ -419,9 +421,38 @@ gui_events[defines.events.on_gui_confirmed]["py_rename_interrupt_textfield"] = g
 gui_events[defines.events.on_gui_checked_state_changed]["py_inside_interrupt"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local interrupt_data = storage.interrupts[element.tags.unit_number]
+    local interrupt_data = storage.interrupts[element.tags.interrupt_name]
 
     interrupt_data.inside_interrupt = element.state
+end
+
+gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local interrupt_data = storage.interrupts[element.tags.interrupt_name]
+
+    if element.parent.py_delete_interrupt_cancel.visible then
+        for _, caravan in pairs(storage.caravans or {}) do
+            for i, interrupt in pairs(caravan.interrupts or {}) do
+                if interrupt == interrupt_data.name then
+                    table.remove(caravan.interrupts, i)
+                end
+            end
+        end
+        storage.interrupts[element.tags.interrupt_name] = nil
+        Caravan.get_interrupt_gui(player).destroy()
+        Caravan.update_gui(Caravan.get_caravan_gui(player))
+    else
+        element.parent.py_delete_interrupt_cancel.visible = true
+        element.parent.py_delete_interrupt_confirm.visible = true
+    end
+end
+gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+
+    element.parent.py_delete_interrupt_cancel.visible = false
+    element.parent.py_delete_interrupt_confirm.visible = false
 end
 
 -- TODO

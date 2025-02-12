@@ -608,12 +608,20 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local textfield = subheader_frame.add {type = "textfield", name = "py_rename_interrupt_textfield", text = interrupt_data.name, icon_selector = true}
     textfield.visible = false
     subheader_frame.add {type = "sprite-button", name = "py_rename_interrupt_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "rename_icon_small_black"}
+    local empty = subheader_frame.add {type = "empty-widget"}
+    empty.style.horizontally_stretchable = true
+    empty.style.vertically_stretchable = true
+
+    subheader_frame.add {type = "label", visible = false, name = "py_delete_interrupt_confirm", caption = {"caravan-gui.confirm-deletion"}}
+    subheader_frame.add {type = "sprite-button", name = "py_delete_interrupt_button", style = "tool_button_red", sprite = "utility/trash", tooltip = {"caravan-gui.delete-interrupt"}, tags = {interrupt_name = interrupt_data.name}}
+    subheader_frame.add {type = "sprite-button", visible = false, name = "py_delete_interrupt_cancel", style = "tool_button", sprite = "utility/close_black", tooltip = {"caravan-gui.cancel-deletion"}}
+
     -- subheader_frame.style.padding = -8
     -- window_flow.add {type = "frame", style = "inside_shallow_frame_with_padding_and_vertical_spacing"}
     -- local main_flow = window_flow.add {type = "flow", direction = "vertical"}
 
     window_frame.add {type = "checkbox", name = "py_inside_interrupt", caption = {"gui-interrupts.inside-interrupt"},
-        tags = {unit_number = interrupt_data.name}, state = interrupt_data.inside_interrupt, tooltip = {"gui-interrupts.inside-interrupt-tooltip"}
+        tags = {interrupt_name = interrupt_data.name}, state = interrupt_data.inside_interrupt, tooltip = {"gui-interrupts.inside-interrupt-tooltip"}
     }
     window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, tooltip = {"gui-interrupts.conditions-tooltip"}, style = "semibold_label"}
     local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
