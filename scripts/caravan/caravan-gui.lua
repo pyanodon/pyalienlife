@@ -278,7 +278,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
     interrupt_frame.style.vertically_stretchable = true
     interrupt_frame.style.height = 36
 
-    interrupt_frame.add {type = "label", style = "subheader_semibold_label", caption = {"gui-interrupts.interrupt-header"}}
+    interrupt_frame.add {type = "label", style = "subheader_semibold_label", caption = {"gui-interrupts.interrupt-header"}, tooltip = {"caravan-gui.interrupt-header-tooltip"}}
 
     for i, interrupt in pairs(caravan_data.interrupts) do
         local tags = {unit_number = caravan_data.unit_number, type = "interrupt", schedule_id = i}
@@ -613,9 +613,9 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     -- local main_flow = window_flow.add {type = "flow", direction = "vertical"}
 
     window_frame.add {type = "checkbox", name = "py_inside_interrupt", caption = {"gui-interrupts.inside-interrupt"},
-        tags = {unit_number = interrupt_data.name}, state = interrupt_data.inside_interrupt
+        tags = {unit_number = interrupt_data.name}, state = interrupt_data.inside_interrupt, tooltip = {"gui-interrupts.inside-interrupt-tooltip"}
     }
-    window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, style = "semibold_label"}
+    window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, tooltip = {"gui-interrupts.conditions-tooltip"}, style = "semibold_label"}
     local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
     conditions_scroll_pane.horizontal_scroll_policy = "never"
     conditions_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
@@ -634,7 +634,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     py_add_action.style.right_padding = 12
     py_add_action.style.left_margin = 32
 
-    window_frame.add {type = "label", caption = {"gui-interrupts.targets"}, style = "semibold_label"}
+    window_frame.add {type = "label", caption = {"gui-interrupts.targets"}, tooltip = {"gui-interrupts.targets-tooltip"}, style = "semibold_label"}
     local targets_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
     targets_scroll_pane.horizontal_scroll_policy = "never"
     targets_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
