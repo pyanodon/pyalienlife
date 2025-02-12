@@ -523,7 +523,7 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local tags = element.tags
     local schedule = get_schedule(tags)[tags.schedule_id]
     local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
-    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_frame.status_flow.py_refocus
+    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.caption_frame.caption_flow.py_refocus
 
     if schedule.entity and schedule.entity.valid then
         camera.entity = schedule.entity
@@ -541,7 +541,7 @@ gui_events[defines.events.on_gui_click]["py_refocus"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
-    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.status_frame.status_flow.py_refocus
+    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.caption_frame.caption_flow.py_refocus
 
     camera.entity = caravan_data.entity
     refocus.visible = false
@@ -1065,7 +1065,7 @@ function Caravan.instantiate_caravan(entity)
     end
 
     if prototype.inventory_size then
-        caravan_data.inventory = game.create_inventory(prototype.inventory_size, entity.localised_name)
+        caravan_data.inventory = game.create_inventory(prototype.inventory_size, {"caravan-gui.caravan-inventory"})
     end
 
     storage.caravans[entity.unit_number] = caravan_data

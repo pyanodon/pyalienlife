@@ -247,7 +247,6 @@ local function title_edit_mode(caption_flow, caravan_data)
     }
     textfield.focus()
     textfield.select_all()
-    textfield.style.top_margin = -5
     textfield.style.maximal_width = 150
     local button = caption_flow.py_rename_caravan_button
     ---@class SpriteButton.style
@@ -257,8 +256,6 @@ local function title_edit_mode(caption_flow, caravan_data)
     button.hovered_sprite = "utility/check_mark"
     button.clicked_sprite = "utility/check_mark"
     button.style.size = {26, 26}
-    button.style.top_margin = -2
-    button.style.bottom_margin = -4
 end
 
 local function title_display_mode(caption_flow, caravan_data)
@@ -270,15 +267,13 @@ local function title_display_mode(caption_flow, caravan_data)
         type = "label",
         name = "title",
         caption = Caravan.get_name(caravan_data),
-        style = "frame_title",
-        ignored_by_interaction = true,
+        style = "train_stop_subheader",
         index = index
     }
+    title.style.left_padding = 0
     local button = caption_flow.py_rename_caravan_button
-    button.style = "frame_action_button"
-    button.sprite = "rename_icon_small_white"
-    button.hovered_sprite = "rename_icon_small_black"
-    button.clicked_sprite = "rename_icon_small_black"
+    button.style = "mini_button_aligned_to_text_vertically_when_centered"
+    button.sprite = "rename_icon_small_black"
 
     title.style.maximal_width = button.tags.maximal_width or error("No maximal width")
 end

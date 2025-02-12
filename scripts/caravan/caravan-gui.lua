@@ -23,11 +23,12 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
         local tags = {unit_number = unit_number, type = type or "schedule", schedule_id = i, action_id = j}
 
         local action_frame = gui.add {type = "frame", style = "train_schedule_condition_frame"}
-        -- action_frame.style.horizontally_stretchable = true
         -- action_frame.style.vertically_stretchable = true
         action_frame.style.height = 36
         action_frame.style.right_padding = 12
-        action_frame.style.width = 356
+        action_frame.style.width = 0
+        action_frame.style.left_margin = 32
+        -- action_frame.style.horizontally_stretchable = true
 
         if caravan_data then
             local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
@@ -184,7 +185,6 @@ function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_da
         local schedule_flow = gui.add {type = "flow", direction = "vertical"}
         schedule_flow.style.horizontal_align = "right"
         schedule_flow.style.vertically_stretchable = false
-        schedule_flow.style.right_margin = -12
 
         local style = schedule.temporary and "train_schedule_temporary_station_frame" or "train_schedule_station_frame"
         local schedule_frame = schedule_flow.add {type = "frame", style = style}
@@ -252,8 +252,11 @@ function Caravan.build_schedule_list_gui(gui, schedules, unit_number, caravan_da
         actions = actions or valid_actions.default
         actions = table.map(actions, function(v) return {"caravan-actions." .. v, v} end)
         local py_add_action = schedule_flow.add {type = "drop-down", name = "py_add_action", items = actions, tags = tags}
-        py_add_action.style.width = 356
+        -- py_add_action.style.width = 363
         py_add_action.style.height = 36
+        py_add_action.style.horizontally_stretchable = true
+        py_add_action.style.right_padding = 12
+        py_add_action.style.left_margin = 32
     end
 end
 
@@ -284,8 +287,8 @@ function Caravan.build_schedule_gui(gui, caravan_data)
         action_frame.style.vertically_stretchable = true
         action_frame.style.height = 36
         action_frame.style.right_padding = 12
-        action_frame.style.right_margin = -12
-        action_frame.style.width = 340
+        -- action_frame.style.right_margin = -12
+        action_frame.style.width = 0
 
         local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
         playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
@@ -321,7 +324,7 @@ end
 ---Creates a caravan GUI. The caravan GUI consists of a lua inventory, a camera, a fuel inventory, and a schedule pane.
 ---@param player LuaPlayer
 ---@param entity LuaEntity
----@param from_remote_manager boolean Is this GUI opened from the py codex? If so, hide the inventory so that the player cannot teleport items.
+---@param from_remote_manager? boolean Is this GUI opened from the py codex? If so, hide the inventory so that the player cannot teleport items.
 function Caravan.build_gui(player, entity, from_remote_manager)
     local caravan_data = storage.caravans[entity.unit_number]
     local prototype = caravan_prototypes[entity.name]
@@ -329,82 +332,73 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     local main_frame
     if from_remote_manager then
         player.opened = nil
-        main_frame = player.gui.screen.add {type = "frame", name = "caravan_gui", direction = "vertical"}
+        main_frame = player.gui.screen.add {type = "frame", name = "caravan_gui", caption = caravan_data.entity.localised_name, direction = "vertical"}
         main_frame.auto_center = true
         player.opened = main_frame
     else
         player.opened = caravan_data.inventory
-        if player.gui.relative.caravan_flow then
-            player.gui.relative.caravan_flow.destroy()
+        if player.gui.relative.caravan_gui then
+            player.gui.relative.caravan_gui.destroy()
         end
-        local flow = player.gui.relative.add {
-            type = "flow", name = "caravan_flow",
+        -- local flow = player.gui.relative.add {
+        --     type = "flow", name = "caravan_flow",
+        --     anchor = {
+        --         gui = defines.relative_gui_type.script_inventory_gui,
+        --         position = defines.relative_gui_position.right
+        --     },
+
+        -- }
+        -- flow.style.horizontal_spacing = 0
+        main_frame = player.gui.relative.add {
+            type = "frame", name = "caravan_gui", caption = caravan_data.entity.localised_name, direction = "vertical",
             anchor = {
                 gui = defines.relative_gui_type.script_inventory_gui,
                 position = defines.relative_gui_position.right
             },
-
-        }
-        flow.style.horizontal_spacing = 0
-        main_frame = flow.add {
-            type = "frame", name = "caravan_gui", direction = "vertical"
         }
     end
     main_frame.style.width = 448
-    main_frame.style.minimal_height = 710
-    main_frame.style.margin = 0
+    main_frame.style.minimal_height = 867
+    -- main_frame.style.margin = 0
     main_frame.tags = {unit_number = entity.unit_number}
-
-    local caption_flow = main_frame.add {type = "flow", direction = "horizontal"}
-
-    local title = caption_flow.add {
-        name = "title",
-        type = "label",
-        caption = Caravan.get_name(caravan_data),
-        style = "frame_title",
-        ignored_by_interaction = true
-    }
-    title.style.maximal_width = 300
-
-    local rename_button = caption_flow.add {
-        type = "sprite-button",
-        name = "py_rename_caravan_button",
-        style = "frame_action_button",
-        sprite = "rename_icon_small_white",
-        hovered_sprite = "rename_icon_small_black",
-        clicked_sprite = "rename_icon_small_black",
-        tags = {unit_number = entity.unit_number, maximal_width = 300}
-    }
-
-    local caption_spacing = caption_flow.add {type = "empty-widget", style = "draggable_space_header", ignored_by_interaction = true}
-    caption_spacing.style.height = 24
-    caption_spacing.style.right_margin = 4
-    caption_spacing.style.horizontally_stretchable = true
-
+    
     local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
     content_frame.style.vertically_stretchable = true
     local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
     content_flow.style.vertical_spacing = 8
     content_flow.style.margin = {-4, 0, -4, 0}
     content_flow.style.vertical_align = "center"
+    
+    local caption_frame = content_flow.add {type = "frame", name = "caption_frame", direction = "horizontal", style = "subheader_frame"}
+    caption_frame.style.height = 36
+    caption_frame.style.horizontally_stretchable = true
+    caption_frame.style.top_margin = -8
+    caption_frame.style.right_margin = -12
+    caption_frame.style.left_margin = -12
+    caption_frame.style.left_padding = 8
+    
+    local caption_flow = caption_frame.add {type = "flow", name = "caption_flow", direction = "horizontal"}
+    caption_flow.style.vertical_align = "center"
+    
+    local title = caption_flow.add {
+        name = "title",
+        type = "label",
+        caption = Caravan.get_name(caravan_data),
+        style = "train_stop_subheader",
+    }
+    title.style.maximal_width = 300
+    title.style.left_padding = 0
 
-    local status_frame = content_flow.add {type = "frame", name = "status_frame", direction = "horizontal", style = "subheader_frame"}
-    status_frame.style.height = 36
-    status_frame.style.horizontally_stretchable = true
-    status_frame.style.top_margin = -8
-    status_frame.style.right_margin = -12
-    status_frame.style.left_margin = -12
-
-    local status_flow = status_frame.add {type = "flow", name = "status_flow", direction = "horizontal"}
-    status_flow.style.vertical_align = "center"
-    status_flow.style.left_padding = 8
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
-    status_sprite.resize_to_sprite = false
-    status_sprite.style.size = {16, 16}
-    status_flow.add {type = "label", name = "status_text"}
-    status_flow.add {type = "empty-widget", style = "py_empty_widget"}
-
-    local refocus = status_flow.add {
+    local rename_button = caption_flow.add {
+        type = "sprite-button",
+        name = "py_rename_caravan_button",
+        style = "mini_button_aligned_to_text_vertically_when_centered",
+        sprite = "rename_icon_small_black",
+        tags = {unit_number = entity.unit_number, maximal_width = 300}
+    }
+    caption_flow.add {type = "empty-widget", style = "py_empty_widget"}
+    
+    local refocus = caption_flow.add {
         type = "sprite-button",
         name = "py_refocus",
         style = "tool_button",
@@ -415,7 +409,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     -- refocus.style.size = {26, 26}
     refocus.visible = false
 
-    local open_map_button = status_flow.add {
+    local open_map_button = caption_flow.add {
         type = "sprite-button",
         name = "py_open_map_button",
         style = "tool_button",
@@ -424,6 +418,12 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         tags = {unit_number = caravan_data.unit_number}
     }
     -- open_map_button.style.size = {26, 26}
+
+    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
+    status_sprite.resize_to_sprite = false
+    status_sprite.style.size = {16, 16}
+    status_flow.add {type = "label", name = "status_text"}
 
     local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
     local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = entity.position, surface_index = entity.surface.index}
@@ -455,6 +455,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     schedule_pane.vertical_scroll_policy = "auto-and-reserve-space"
     schedule_pane.style.horizontally_stretchable = true
     schedule_pane.style.vertically_stretchable = true
+    schedule_pane.style.right_padding = -12
 
     Caravan.update_gui(main_frame)
     Caravan.build_gui_connected(player, entity)
@@ -493,8 +494,8 @@ function Caravan.update_gui(gui, weak)
     end
     local content_flow = gui.content_frame.content_flow
     local state, img = Caravan.status_img(caravan_data)
-    content_flow.status_frame.status_flow.status_text.caption = state
-    content_flow.status_frame.status_flow.status_sprite.sprite = img
+    content_flow.status_flow.status_text.caption = state
+    content_flow.status_flow.status_sprite.sprite = img
     if caravan_data.fuel_inventory then
         for i = 1, #caravan_data.fuel_inventory do
             local stack = caravan_data.fuel_inventory[i]
@@ -557,7 +558,7 @@ local function get_caravan_gui_in_flow(player)
 end
 
 function Caravan.get_caravan_gui(player)
-    local gui = get_caravan_gui_in_flow(player) or player.gui.screen.caravan_gui
+    local gui = player.gui.relative.caravan_gui or player.gui.screen.caravan_gui
     if gui then return gui end
 end
 
@@ -615,10 +616,13 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
         tags = {unit_number = interrupt_data.name}, state = interrupt_data.inside_interrupt
     }
     window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, style = "semibold_label"}
-    local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "train_interrupts_scroll_pane"}
-    conditions_scroll_pane.style.minimal_height = 36
-    conditions_scroll_pane.style.horizontal_align = "right"
+    local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
+    conditions_scroll_pane.horizontal_scroll_policy = "never"
+    conditions_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
+    conditions_scroll_pane.style.horizontally_stretchable = true
     conditions_scroll_pane.style.vertically_stretchable = true
+    conditions_scroll_pane.style.right_padding = -12
+    conditions_scroll_pane.style.left_padding = -32
 
     Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name, nil, "condition")
     
@@ -627,12 +631,16 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local py_add_action = conditions_scroll_pane.add {type = "drop-down", name = "py_add_action", items = actions, tags = {interrupt = interrupt_name}}
     py_add_action.style.width = 392
     py_add_action.style.height = 36
+    py_add_action.style.right_padding = 12
+    py_add_action.style.left_margin = 32
 
     window_frame.add {type = "label", caption = {"gui-interrupts.targets"}, style = "semibold_label"}
-    local targets_scroll_pane = window_frame.add {type = "scroll-pane", style = "train_interrupts_scroll_pane"}
-    targets_scroll_pane.style.minimal_height = 36
-    targets_scroll_pane.style.horizontal_align = "right"
+    local targets_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
+    targets_scroll_pane.horizontal_scroll_policy = "never"
+    targets_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
+    targets_scroll_pane.style.horizontally_stretchable = true
     targets_scroll_pane.style.vertically_stretchable = true
+    targets_scroll_pane.style.right_padding = -12
 
     Caravan.build_schedule_list_gui(targets_scroll_pane, interrupt_data.schedule, interrupt_data.name)
     targets_scroll_pane.add {type = "button", name = "py_add_outpost", tags = {interrupt = interrupt_name}, style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
@@ -644,7 +652,7 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local empty = button_flow.add {type = "empty-widget", style = "draggable_space"}
     empty.style.horizontally_stretchable = true
     empty.style.vertically_stretchable = true
-    -- empty.ignored_by_interaction = true -- Allows dragging?
+    empty.ignored_by_interaction = true -- TODO?
     local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
 
     -- TODO: make everything not assume caravan gui is the one opened
