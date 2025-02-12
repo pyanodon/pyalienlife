@@ -321,7 +321,7 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_button"] = function(ev
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
 
-    Caravan.build_add_interrupt_gui(element.parent)
+    Caravan.build_add_interrupt_gui(player, element.parent)
 end
 
 function Caravan.add_interrupt(caravan_data, name, player)
@@ -334,6 +334,7 @@ function Caravan.add_interrupt(caravan_data, name, player)
         }
     end
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
+    if not name or name == "" then return end
     table.insert(caravan_data.interrupts, name)
     Caravan.build_interrupt_gui(player, name)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
@@ -341,6 +342,7 @@ end
 
 gui_events[defines.events.on_gui_confirmed]["py_add_interrupt_textfield"] = function(event)
     local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
     
@@ -354,6 +356,14 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_confirm_button"] = fun
     
     local name = event.element.parent.py_add_interrupt_textfield.text
     Caravan.add_interrupt(caravan_data, name, player)
+end
+
+gui_events[defines.events.on_gui_click]["py_add_interrupt_close_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]
+    
+    storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
 end
 
 -- Copies selected interrupt's name into the textfield
@@ -383,9 +393,11 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
     textfield.visible = not textfield.visible
     if textfield.visible then
         textfield.focus()
+        textfield.text = label.caption
     else
         local old_name = label.caption
         local new_name = textfield.text
+        if not new_name or new_name == "" or storage.interrupts[new_name] then return end
         storage.interrupts[new_name] = table.deepcopy(storage.interrupts[old_name])
         storage.interrupts[new_name].name = new_name
         storage.interrupts[old_name] = nil

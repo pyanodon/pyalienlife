@@ -660,15 +660,18 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
 end
 
 -- GUI for adding new interrupts to a caravan
-function Caravan.build_add_interrupt_gui(gui)
+function Caravan.build_add_interrupt_gui(player, gui)
+    local caravan_data = storage.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
     if gui.py_add_interrupt_frame then return end
     local main_frame = gui.add {type = "frame", name = "py_add_interrupt_frame", direction = "vertical"}
+    gui.scroll_to_element(main_frame)
 
     local header_flow = main_frame.add {type = "flow", style = "frame_header_flow"}
-    header_flow.add {type = "label", caption = "add interrupt", style = "frame_title"}
+    header_flow.add {type = "label", caption = {"gui-interrupts.title"}, style = "frame_title"}
     local empty = header_flow.add {type = "empty-widget"}
     empty.style.horizontally_stretchable = true
-    header_flow.add {type = "sprite-button", name = "py_add_interrupt_close_button", sprite = "utility/close", style = "frame_action_button"}
+    local close_button = header_flow.add {type = "sprite-button", name = "py_add_interrupt_close_button", sprite = "utility/close", style = "frame_action_button"}
+    close_button.style.right_margin = 4
 
     local subheader_frame = main_frame.add {type = "frame", direction = "horizontal", style = "subheader_frame"}
     subheader_frame.style.horizontally_stretchable = true
@@ -678,9 +681,13 @@ function Caravan.build_add_interrupt_gui(gui)
     subheader_flow.add {type = "sprite-button", name = "py_add_interrupt_confirm_button", style = "item_and_count_select_confirm", sprite = "utility/enter"}
     textfield.focus()
 
+    local existing_interrupts = {}
+    for _, name in pairs(caravan_data.interrupts) do
+        existing_interrupts[name] = true
+    end
     local items = {}
     for name, _ in pairs(storage.interrupts) do
-        table.insert(items, name)
+        if not existing_interrupts[name] then table.insert(items, name) end
     end
     local list_box = main_frame.add {type = "list-box", name = "py_add_interrupt_list_box", items = items}
     list_box.style.horizontally_stretchable = true
