@@ -290,8 +290,7 @@ function Caravan.build_schedule_gui(gui, caravan_data)
         -- action_frame.style.right_margin = -12
         action_frame.style.width = 0
 
-        local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
-        playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
+        local playbutton = action_frame.add {type = "sprite-button", name = "py_interrupt_play", tags = tags, style = "train_schedule_action_button", sprite = "utility/play"}
         action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = interrupt}
         action_frame.add {type = "empty-widget", style = "py_empty_widget"}
 

@@ -948,6 +948,49 @@ local function caravan_sort_function(a, b)
     return (a.arrival_tick or 0) < (b.arrival_tick or 0)
 end
 
+-- Removes all temporary stop from the caravan schedule
+local function remove_tmp_stops(caravan_data)
+    for idx, sch in pairs(caravan_data.schedule) do
+        if sch.temporary then
+            if idx <= caravan_data.schedule_id then
+                caravan_data.schedule_id = caravan_data.schedule_id - 1
+            end
+            table.remove(caravan_data.schedule, idx)
+        end
+    end
+    if caravan_data.schedule_id < 1 then
+        caravan_data.schedule_id = #caravan_data.schedule or -1
+    end
+end
+
+-- Adds an interrupt to the caravan schedule. Returns index of the first schedule added
+function add_interrupt(caravan_data, interrupt_data)
+    if #interrupt_data.schedule <= 0 then return -1 end
+    for i = 1, #interrupt_data.schedule do
+        local sch = table.deepcopy(interrupt_data.schedule[i])
+        sch.temporary = true
+        local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id or #caravan_data.schedule
+        table.insert(caravan_data.schedule, index + i, sch)
+        is_interrupted = true
+    end
+    return caravan_data.schedule_id > 0 and caravan_data.schedule_id + 1 or #caravan_data.schedule
+end
+
+gui_events[defines.events.on_gui_click]["py_interrupt_play"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local caravan_data = storage.caravans[element.tags.unit_number]
+    local interrupt_data = storage.interrupts[caravan_data.interrupts[element.tags.schedule_id]]
+
+    remove_tmp_stops(caravan_data)
+    local index = add_interrupt(caravan_data, interrupt_data)
+    if index > 0 then
+        begin_schedule(caravan_data, index)
+    end
+
+    Caravan.update_gui(Caravan.get_caravan_gui(player))
+end
+
 py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     local guis_to_update = {}
 
@@ -989,6 +1032,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
         if caravan_data.action_id == -1 then goto continue end
         local schedule = caravan_data.schedule[caravan_data.schedule_id]
+        if not schedule then goto continue end
         local action = schedule.actions[caravan_data.action_id]
         if not action then goto continue end
         local result = Caravan.actions[action.type](caravan_data, schedule, action)
@@ -1007,20 +1051,8 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                 for _, interrupt in pairs(caravan_data.interrupts) do
                     interrupt = storage.interrupts[interrupt]
                     if not interrupt then goto continue end
-                    if is_interrupted then
-                        if interrupt.inside_interrupt then
-                            -- Remove all temporary stops
-                            for idx, sch in pairs(caravan_data.schedule) do
-                                if sch.temporary then
-                                    if idx <= caravan_data.schedule_id then
-                                        caravan_data.schedule_id = caravan_data.schedule_id - 1
-                                    end
-                                    table.remove(caravan_data.schedule, idx)
-                                end
-                            end
-                        else
-                            goto continue
-                        end
+                    if is_interrupted and not interrupt.inside_interrupt then
+                        if interrupt.inside_interrupt then goto continue end
                     end
                     
                     local conditions_passed = true
@@ -1031,12 +1063,10 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                         end
                     end
                     if conditions_passed then
-                        -- Add interrupt to schedule
-                        for i = 1, #interrupt.schedule do
-                            local sch = table.deepcopy(interrupt.schedule[i])
-                            sch.temporary = true
-                            table.insert(caravan_data.schedule, caravan_data.schedule_id + 1, sch)
-                            is_interrupted = true
+                        add_interrupt(caravan_data, interrupt)
+                        if interrupt.inside_interrupt then
+                            remove_tmp_stops(caravan_data)
+                            guis_to_update[caravan_data.unit_number] = true
                         end
                     end
 
@@ -1044,9 +1074,13 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                 end
 
                 schedule = caravan_data.schedule[caravan_data.schedule_id]  -- I dont know why, but this is necessary
+                if not schedule then goto continue end
                 if schedule.temporary then
                     table.remove(caravan_data.schedule, caravan_data.schedule_id)
                     caravan_data.schedule_id = caravan_data.schedule_id - 1
+                    if caravan_data.schedule_id < 1 then
+                        caravan_data.schedule_id = #caravan_data.schedule or -1
+                    end
                 end
                 if caravan_data.schedule_id == #caravan_data.schedule then
                     begin_schedule(caravan_data, 1, #caravan_data.schedule == 1)
