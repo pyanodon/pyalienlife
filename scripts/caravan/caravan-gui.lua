@@ -576,9 +576,9 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     local interrupt_window = player.gui.relative.add {
         type = "frame",
         name = "py_edit_interrupt_gui",
-        caption = {"gui-interrupts.edit-interrupt"},
+        -- caption = {"gui-interrupts.edit-interrupt"},
         direction = "vertical",
-        -- TODO: make anchor optional
+        -- TODO: make anchor optional?
         anchor = {
             gui = defines.relative_gui_type.script_inventory_gui,
             position = defines.relative_gui_position.left,
@@ -587,6 +587,17 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     interrupt_window.tags = {name = interrupt_name}
     interrupt_window.style.width = 448
     interrupt_window.style.minimal_height = 123 -- TODO
+
+    local title_flow = interrupt_window.add {type = "flow", style = "frame_header_flow", direction = "horizontal"}
+    title_flow.style.height = 32
+    local title = title_flow.add {type = "label", caption = {"gui-interrupts.edit-interrupt"}, style = "frame_title"}
+    title.style.bottom_padding = 3
+    title.style.top_margin = -3
+    local empty = title_flow.add {type = "empty-widget", style = "draggable_space_header"}
+    empty.style.horizontally_stretchable = true
+    empty.style.height = 24
+    empty.style.right_margin = 4
+    local close_button = title_flow.add {type = "sprite-button", name = "py_close_interrupt_button", style = "close_button", sprite = "utility/close"}
 
     local window_frame = interrupt_window.add{
         type = "frame",
@@ -652,18 +663,15 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     Caravan.build_schedule_list_gui(targets_scroll_pane, interrupt_data.schedule, interrupt_data.name)
     targets_scroll_pane.add {type = "button", name = "py_add_outpost", tags = {interrupt = interrupt_name}, style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
 
-    local button_flow = interrupt_window.add {type = "flow", direction = "horizontal", style = "dialog_buttons_horizontal_flow"}
-    button_flow.style.horizontally_stretchable = true
-    button_flow.style.vertically_stretchable = false
+    -- local button_flow = interrupt_window.add {type = "flow", direction = "horizontal", style = "dialog_buttons_horizontal_flow"}
+    -- button_flow.style.horizontally_stretchable = true
+    -- button_flow.style.vertically_stretchable = false
     
-    local empty = button_flow.add {type = "empty-widget", style = "draggable_space"}
-    empty.style.horizontally_stretchable = true
-    empty.style.vertically_stretchable = true
-    empty.ignored_by_interaction = true -- TODO?
-    local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
-
-    -- TODO: make everything not assume caravan gui is the one opened
-    -- player.opened = player.gui.screen.py_edit_interrupt_gui
+    -- local empty = button_flow.add {type = "empty-widget", style = "draggable_space"}
+    -- empty.style.horizontally_stretchable = true
+    -- empty.style.vertically_stretchable = true
+    -- empty.ignored_by_interaction = true
+    -- local confirm_button = button_flow.add {type = "button", name = "py_interrupt_confirm", style = "confirm_button", caption = {"gui.confirm"}}
 end
 
 -- GUI for adding new interrupts to a caravan

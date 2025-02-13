@@ -455,10 +455,10 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function
     element.parent.py_delete_interrupt_confirm.visible = false
 end
 
--- TODO
-gui_events[defines.events.on_gui_confirmed]["py_edit_interrupt_gui"] = function(event)
-    local element = event.element
-    element.destroy()
+gui_events[defines.events.on_gui_click]["py_close_interrupt_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local gui = Caravan.get_interrupt_gui(player)
+    gui.destroy()
 end
 
 gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = function(event)
