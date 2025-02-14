@@ -66,7 +66,7 @@ Caravan.valid_actions = {
         "is-inventory-full",
         "is-inventory-empty",
         "caravan-item-count",
-        "outpost-item-count",
+        "target-item-count",
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
@@ -489,12 +489,13 @@ Caravan.actions = {
 
         right = evaluate_signal(outpost, right)
         left = evaluate_signal(outpost, left)
-        if     action.operator == 1 then return left > right
-        elseif action.operator == 2 then return left < right
-        elseif action.operator == 3 then return left == right
-        elseif action.operator == 4 then return left >= right
-        elseif action.operator == 5 then return left <= right
-        elseif action.operator == 6 then return left ~= right end
+        local operator = action.operator or 3
+        if     operator == 1 then return left > right
+        elseif operator == 2 then return left < right
+        elseif operator == 3 then return left == right
+        elseif operator == 4 then return left >= right
+        elseif operator == 5 then return left <= right
+        elseif operator == 6 then return left ~= right end
     end,
 
     ["circuit-condition-static"] = function(caravan_data, schedule, action)
@@ -507,12 +508,13 @@ Caravan.actions = {
 
         left = evaluate_signal(outpost, left)
 
-        if     action.operator == 1 then return left > right
-        elseif action.operator == 2 then return left < right
-        elseif action.operator == 3 then return left == right
-        elseif action.operator == 4 then return left >= right
-        elseif action.operator == 5 then return left <= right
-        elseif action.operator == 6 then return left ~= right end
+        local operator = action.operator or 3
+        if     operator == 1 then return left > right
+        elseif operator == 2 then return left < right
+        elseif operator == 3 then return left == right
+        elseif operator == 4 then return left >= right
+        elseif operator == 5 then return left <= right
+        elseif operator == 6 then return left ~= right end
     end,
 
     ["food-count"] = function(caravan_data, schedule, action)
@@ -523,12 +525,13 @@ Caravan.actions = {
 
         local left = caravan_data.fuel_inventory.get_item_count(item)
 
-        if     action.operator == 1 then return left > right
-        elseif action.operator == 2 then return left < right
-        elseif action.operator == 3 then return left == right
-        elseif action.operator == 4 then return left >= right
-        elseif action.operator == 5 then return left <= right
-        elseif action.operator == 6 then return left ~= right end
+        local operator = action.operator or 3
+        if     operator == 1 then return left > right
+        elseif operator == 2 then return left < right
+        elseif operator == 3 then return left == right
+        elseif operator == 4 then return left >= right
+        elseif operator == 5 then return left <= right
+        elseif operator == 6 then return left ~= right end
     end,
 
     ["caravan-item-count"] = function(caravan_data, schedule, action)
@@ -539,15 +542,16 @@ Caravan.actions = {
 
         local left = caravan_data.inventory.get_item_count(item)
 
-        if     action.operator == 1 then return left > right
-        elseif action.operator == 2 then return left < right
-        elseif action.operator == 3 then return left == right
-        elseif action.operator == 4 then return left >= right
-        elseif action.operator == 5 then return left <= right
-        elseif action.operator == 6 then return left ~= right end
+        local operator = action.operator or 3
+        if     operator == 1 then return left > right
+        elseif operator == 2 then return left < right
+        elseif operator == 3 then return left == right
+        elseif operator == 4 then return left >= right
+        elseif operator == 5 then return left <= right
+        elseif operator == 6 then return left ~= right end
     end,
 
-    ["outpost-item-count"] = function(caravan_data, schedule, action)
+    ["target-item-count"] = function(caravan_data, schedule, action)
         local outpost = schedule.entity
         if not outpost or not outpost.valid then return true end
         local item = action.elem_value
@@ -557,12 +561,13 @@ Caravan.actions = {
 
         local left = get_outpost_inventory(outpost).get_item_count(item)
 
-        if     action.operator == 1 then return left > right
-        elseif action.operator == 2 then return left < right
-        elseif action.operator == 3 then return left == right
-        elseif action.operator == 4 then return left >= right
-        elseif action.operator == 5 then return left <= right
-        elseif action.operator == 6 then return left ~= right end
+        local operator = action.operator or 3
+        if     operator == 1 then return left > right
+        elseif operator == 2 then return left < right
+        elseif operator == 3 then return left == right
+        elseif operator == 4 then return left >= right
+        elseif operator == 5 then return left <= right
+        elseif operator == 6 then return left ~= right end
     end,
 
     ["is-inventory-full"] = function (caravan_data, schedule, action)

@@ -101,7 +101,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             value.numeric = true
             value.allow_decimal = false
             value.allow_negative = true
-        elseif action.type == "food-count" or action.type == "caravan-item-count" or action.type == "oupost-item-count" then
+        elseif action.type == "food-count" or action.type == "caravan-item-count" or action.type == "target-item-count" then
             local filters
             if action.type == "food-count" then filters = {{filter = "name", name = Caravan.foods.all}} end
             local itemselect = action_frame.add {

@@ -1065,9 +1065,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                 for _, interrupt in pairs(caravan_data.interrupts) do
                     interrupt = storage.interrupts[interrupt]
                     if not interrupt then goto continue end
-                    if is_interrupted and not interrupt.inside_interrupt then
-                        if interrupt.inside_interrupt then goto continue end
-                    end
+                    if is_interrupted and not interrupt.inside_interrupt then goto continue end
                     
                     local conditions_passed = true
                     for _, condition in pairs(interrupt.conditions) do
