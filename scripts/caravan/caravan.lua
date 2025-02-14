@@ -973,7 +973,6 @@ function add_interrupt(caravan_data, interrupt_data)
         sch.temporary = true
         local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id + i or #caravan_data.schedule
         table.insert(caravan_data.schedule, index, sch)
-        is_interrupted = true
     end
     return caravan_data.schedule_id > 0 and caravan_data.schedule_id + 1 or #caravan_data.schedule
 end
@@ -1062,7 +1061,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                 for _, sch in pairs(caravan_data.schedule) do
                     if sch.temporary then is_interrupted = true; break end
                 end
-                for _, interrupt in pairs(caravan_data.interrupts) do
+                for _, interrupt in ipairs(caravan_data.interrupts) do
                     interrupt = storage.interrupts[interrupt]
                     if not interrupt then goto continue end
                     if is_interrupted and not interrupt.inside_interrupt then goto continue end
@@ -1080,6 +1079,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                             guis_to_update[caravan_data.unit_number] = true
                         end
                         add_interrupt(caravan_data, interrupt)
+                        is_interrupted = true
                     end
 
                     ::continue::
