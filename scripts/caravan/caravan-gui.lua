@@ -105,7 +105,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             local filters
             if action.type == "food-count" then filters = {{filter = "name", name = Caravan.foods.all}} end
             local itemselect = action_frame.add {
-                type = "choose-elem-button", name = "py_item_count", style = "train_schedule_item_select_button",
+                type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "item",
                 elem_filters = filters
             }

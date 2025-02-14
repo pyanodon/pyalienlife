@@ -963,14 +963,16 @@ local function remove_tmp_stops(caravan_data)
     end
 end
 
--- Adds an interrupt to the caravan schedule. Returns index of the first schedule added
+-- Adds an interrupt's schedule to the caravan schedule. Returns index of the first schedule added
+---@param caravan_data Caravan
+---@param interrupt_data CaravanInterrupt
 function add_interrupt(caravan_data, interrupt_data)
     if #interrupt_data.schedule <= 0 then return -1 end
     for i = 1, #interrupt_data.schedule do
         local sch = table.deepcopy(interrupt_data.schedule[i])
         sch.temporary = true
-        local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id or #caravan_data.schedule
-        table.insert(caravan_data.schedule, index + i, sch)
+        local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id + i or #caravan_data.schedule
+        table.insert(caravan_data.schedule, index, sch)
         is_interrupted = true
     end
     return caravan_data.schedule_id > 0 and caravan_data.schedule_id + 1 or #caravan_data.schedule
@@ -1035,7 +1037,19 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if not schedule then goto continue end
         local action = schedule.actions[caravan_data.action_id]
         if not action then goto continue end
-        local result = Caravan.actions[action.type](caravan_data, schedule, action)
+
+        local result
+        local prototype = caravan_prototypes[entity.name]
+        local target_type = schedule.entity and schedule.entity.name or "default"
+        local is_valid = false
+        for _, valid_action in pairs(prototype.actions[target_type]) do
+           if action.type == valid_action then is_valid = true; break; end
+        end
+        if is_valid then
+            result = Caravan.actions[action.type](caravan_data, schedule, action)
+        else
+            result = true -- Skip invalid action
+        end
         if result == "nuke" then
             goto continue
         elseif result == "error" then
@@ -1063,11 +1077,11 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                         end
                     end
                     if conditions_passed then
-                        add_interrupt(caravan_data, interrupt)
                         if interrupt.inside_interrupt then
                             remove_tmp_stops(caravan_data)
                             guis_to_update[caravan_data.unit_number] = true
                         end
+                        add_interrupt(caravan_data, interrupt)
                     end
 
                     ::continue::
