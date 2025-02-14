@@ -1228,6 +1228,7 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
 
     stop_actions(destination_data)
     destination_data.schedule = table.deepcopy(source_data.schedule)
+    destination_data.interrupts = table.deepcopy(source_data.interrupts)
     for _, player in pairs(game.connected_players) do
         local gui = Caravan.get_caravan_gui(player)
         if gui and gui.tags.unit_number == destination.unit_number then Caravan.update_gui(gui) end
