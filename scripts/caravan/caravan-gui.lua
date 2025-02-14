@@ -441,7 +441,12 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         for i = 1, #caravan_data.fuel_inventory do
             local fuel_slot = fuel_slot_flow.add {type = "sprite-button", name = "py_fuel_slot_" .. i, style = "inventory_slot", tags = {unit_number = caravan_data.unit_number, i = i}}
             fuel_slot.sprite = "slot_icon_fuel"
-            fuel_slot.tooltip = favorite_food_tooltip
+            local item_stack = caravan_data.fuel_inventory[i]
+            if item_stack.valid_for_read then
+                fuel_slot.elem_tooltip = {type = "item", name = item_stack.name}
+            else
+                fuel_slot.tooltip = favorite_food_tooltip
+            end
         end
         fuel_flow.add {type = "progressbar", name = "fuel_bar", style = "burning_progressbar"}.style.horizontally_stretchable = true
     end
@@ -502,9 +507,14 @@ function Caravan.update_gui(gui, weak)
             if stack.valid_for_read then
                 element.sprite = "item/" .. stack.name
                 element.number = stack.count
+                element.elem_tooltip = {type = "item", name = stack.name}
+                element.tooltip = nil
             else
                 element.sprite = "slot_icon_fuel"
                 element.number = nil
+                local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[caravan_data.entity.name].favorite_foods, "caravan-gui")
+                element.tooltip = favorite_food_tooltip
+                element.elem_tooltip = nil
             end
         end
         content_flow.fuel_flow.fuel_bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
