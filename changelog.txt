@@ -7,6 +7,12 @@ Date: ?
     - Moved soot separation recipes to a dedicated technology. Resolves https://github.com/pyanodon/pybugreports/issues/825
     - Migrated the internal name of the "vacuum-tube-electronics" technology to "electronics". Resolves https://github.com/pyanodon/pybugreports/issues/453
     - Migrated the internal name of the "railway-mk01" technology to "railway". Resolves https://github.com/pyanodon/pybugreports/issues/453
+    - Caravans schedules now support interrupts
+    - Increased inventory size of caravans 1 -> 2 and aerial caravans 2 -> 4
+    - Improved many aspects of caravan GUI
+    - Added new actions to caravans
+    - Fixed the graphics of caravans being too small
+    - Increased slection boxes of all caravans to fit better with the graphics
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20
