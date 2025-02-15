@@ -70,6 +70,8 @@ Caravan.valid_actions = {
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
+        "at-outpost",
+        "not-at-outpost",
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
@@ -576,6 +578,14 @@ Caravan.actions = {
 
     ["is-inventory-empty"] = function (caravan_data, schedule, action)
         return caravan_data.inventory.is_empty()
+    end,
+
+    ["at-outpost"] = function (caravan_data, schedule, action)
+        return schedule.entity == action.entity
+    end,
+
+    ["not-at-outpost"] = function (caravan_data, schedule, action)
+        return schedule.entity ~= action.entity
     end,
 }
 

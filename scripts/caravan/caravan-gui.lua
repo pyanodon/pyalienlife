@@ -34,22 +34,22 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
             playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
         end
-        action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = action.localised_name}
+        local label = action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = action.localised_name}
+        action_frame.add {type = "empty-widget", style = "py_empty_widget"}
 
         if action.type == "time-passed" then
-            action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local textfield = action_frame.add {type = "textfield", name = "py_time_passed_text", style = "py_compact_slider_value_textfield", text = action.wait_time or 5, tags = tags}
             textfield.numeric = true
             textfield.allow_decimal = false
             textfield.allow_negative = false
             action_frame.add {type = "label", caption = "s"}.style.left_margin = -5
         elseif action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-target" or action.type == "unload-target" then
-            action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local itemselect = action_frame.add {
                 type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "item", elem_filters = filters
             }
             itemselect.elem_value = action.elem_value
+            action_frame.add {type = "label", caption = "="}
 
             local textfield = action_frame.add {
                 type = "textfield",
@@ -65,7 +65,6 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             textfield.allow_decimal = false
             textfield.allow_negative = false
         elseif action.type == "circuit-condition" then
-            action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local circuit_condition_left = action_frame.add {
                 type = "choose-elem-button", name = "py_circuit_condition_left", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "signal"
@@ -84,7 +83,6 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             }
             circuit_condition_right.elem_value = action.circuit_condition_right
         elseif action.type == "circuit-condition-static" then
-            action_frame.add {type = "empty-widget", style = "py_empty_widget"}
             local circuit_condition_left = action_frame.add {
                 type = "choose-elem-button", name = "py_circuit_condition_left", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "signal"
@@ -128,6 +126,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
                 elem_filters = {{filter = "name", name = Caravan.foods.all}}
             }
             itemselect.elem_value = action.elem_value
+            action_frame.add {type = "label", caption = "="}
             
             local textfield = action_frame.add {
                 type = "textfield",
@@ -142,8 +141,11 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             textfield.numeric = true
             textfield.allow_decimal = false
             textfield.allow_negative = false
-        else
-            action_frame.add {type = "empty-widget", style = "py_empty_widget"}
+        elseif action.type == "at-outpost" or action.type == "not-at-outpost" then
+            action_frame.add {type = "sprite-button", name = "py_add_outpost", tags = {interrupt = unit_number, action_id = j}, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
+            if not action.entity then
+                label.caption = {"caravan-actions."..action.type.."2", {"caravan-gui.not-specified"}}
+            end
         end
 
         if action.type == "fill-inventory" or action.type == "empty-inventory" or action.type == "store-food" or action.type == "store-specific-food"
@@ -527,9 +529,8 @@ function Caravan.update_gui(gui, weak)
     end
 end
 
--- TODO: not rebuild everything, remove player parameter
+-- Since interrupt gui is only updated when a player interacts with it, rebuilding everything shouldn't matter much
 ---@param gui LuaGuiElement
--- -@param weak boolean? Optimization: If false, don't update the schedule pane.
 ---@param player LuaPlayer
 function Caravan.update_interrupt_gui(gui, player)
     if not gui then return end
@@ -588,7 +589,6 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
         name = "py_edit_interrupt_gui",
         -- caption = {"gui-interrupts.edit-interrupt"},
         direction = "vertical",
-        -- TODO: make anchor optional?
         anchor = {
             gui = defines.relative_gui_type.script_inventory_gui,
             position = defines.relative_gui_position.left,
@@ -596,7 +596,6 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
     }
     interrupt_window.tags = {name = interrupt_name}
     interrupt_window.style.width = 448
-    interrupt_window.style.minimal_height = 123 -- TODO
 
     local title_flow = interrupt_window.add {type = "flow", style = "frame_header_flow", direction = "horizontal"}
     title_flow.style.height = 32
@@ -614,7 +613,6 @@ function Caravan.build_interrupt_gui(player, interrupt_name)
         direction = "vertical",
         style = "inside_shallow_frame_with_padding_and_vertical_spacing",
     }
-    window_frame.style.minimal_height = 123 -- TODO
     window_frame.style.horizontally_stretchable = true
     
     local subheader_frame = window_frame.add {type = "frame", direction = "horizontal", style = "subheader_frame"}

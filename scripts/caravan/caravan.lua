@@ -37,6 +37,7 @@ local caravan_prototypes = require "caravan-prototypes"
 ---@field wait_time int? The amount of time that the caravan will wait if this is a 'time passed' action.
 ---@field elem_value string? The item that the caravan will interact with if this is an 'item count' action.
 ---@field item_count int? The amount of items that the caravan will interact with if this is an 'item count' action.
+---@field entity LuaEntity? The target entity if this is an 'at station' action
 ---@field localised_name LocalisedString The name of the action. This is displayed in the GUI.
 ---@field type string The type of the action. This is used to determine what the caravan will do when it reaches this action.
 
@@ -136,6 +137,7 @@ py.on_event(py.events.on_init(), function()
     storage.gui_elements_by_name = storage.gui_elements_by_name or {}
     storage.last_opened_caravan = storage.last_opened_caravan or {}
     storage.last_opened_interrupt = storage.last_opened_interrupt or {}
+    storage.last_opened_action = storage.last_opened_action or {}
     storage.make_operable_next_tick = storage.make_operable_next_tick or {}
 end)
 
@@ -177,7 +179,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         end
     end
     cursor_stack.clear()
-
+    
     local schedule, prototype, only_outpost
     local caravan_data = storage.caravans[storage.last_opened_caravan[player.index]]
     local interrupt_data = storage.interrupts[storage.last_opened_interrupt[player.index]]
@@ -196,26 +198,36 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         limit = 1,
         collision_mask = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}
     }[1]
-    if entity then
-        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
-        entity.operable = false
-        if only_outpost and entity.name ~= prototype.outpost then return end
-        if caravan_data and entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface then return end
-        schedule[#schedule + 1] = {
-            localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
-            entity = entity,
-            position = entity.position,
-            actions = {}
-        }
-    elseif not only_outpost then
-        local position = event.cursor_position
-        schedule[#schedule + 1] = {
-            localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
-            position = position,
-            actions = {}
-        }
+    if storage.last_opened_action[player.index] then
+        if entity then
+            if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
+            entity.operable = false -- Prevents the player from opening the gui of the clicked entity
+            local action_id = storage.last_opened_action[player.index].action_id
+            interrupt_data.conditions[action_id].entity = entity
+            interrupt_data.conditions[action_id].localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+        end
     else
-        return
+        if entity then
+            if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
+            entity.operable = false -- Prevents the player from opening the gui of the clicked entity
+            if only_outpost and entity.name ~= prototype.outpost then return end
+            if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
+            schedule[#schedule + 1] = {
+                localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
+                entity = entity,
+                position = entity.position,
+                actions = {}
+            }
+        elseif not only_outpost then
+            local position = event.cursor_position
+            schedule[#schedule + 1] = {
+                localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
+                position = position,
+                actions = {}
+            }
+        else
+            return
+        end
     end
     if caravan_data then
         Caravan.build_gui(player, caravan_data.entity)
@@ -309,6 +321,10 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
         stack.clear()
     end
     stack.set_stack {name = "caravan-control"}
+    storage.last_opened_action[player.index] = nil
+    if element.tags.action_id then
+        storage.last_opened_action[player.index] = {schedule_id = element.tags.schedule_id, action_id = element.tags.action_id}
+    end
     storage.last_opened_interrupt[player.index] = element.tags.interrupt
     storage.last_opened_caravan[player.index] = Caravan.get_caravan_gui(player).tags.unit_number
     player.opened = nil
@@ -481,9 +497,16 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
 
     if element.selected_index == 0 then return end
 
+    local type = element.get_item(element.selected_index)[2]
+    local localised_name = element.get_item(element.selected_index)
+    if type == "at-outpost" then
+        localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.not-specified"}}
+    elseif type == "not-at-outpost" then
+        localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
+    end
     actions[#actions + 1] = {
-        type = element.get_item(element.selected_index)[2],
-        localised_name = element.get_item(element.selected_index)
+        type = type,
+        localised_name = localised_name
     }
     Caravan.update_gui(Caravan.get_caravan_gui(player))
     Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
@@ -681,7 +704,6 @@ gui_events[defines.events.on_gui_click]["py_action_play"] = function(event)
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
-    -- TODO: start interrupt
     local schedule = caravan_data.schedule[tags.schedule_id]
 
     if caravan_data.schedule_id == tags.schedule_id then
@@ -1068,6 +1090,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
                     
                     local conditions_passed = true
                     for _, condition in pairs(interrupt.conditions) do
+                        if not Caravan.actions[condition.type] then break end
                         if not Caravan.actions[condition.type](caravan_data, schedule, condition) then
                             conditions_passed = false
                             break
