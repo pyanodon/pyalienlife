@@ -2,6 +2,7 @@
 Version: 3.0.35
 Date: ?
   Changes:
+    - Methanol is properly marked as a catalyst in formamide recipe.  Resolves https://github.com/pyanodon/pybugreports/issues/871
     - Higher tier seaweed buildings now have the correct base speed again.  Resolves https://github.com/pyanodon/pybugreports/issues/842
     - Decreased volume for the reproductive complex.
     - Edited working sound aggregation for the reproductive complex such that only 1 smooth jazz plays concurrently.
