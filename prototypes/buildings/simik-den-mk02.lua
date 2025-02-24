@@ -221,9 +221,7 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics2__/sounds/simik-den.ogg", volume = 0.90},
-        idle_sound = {filename = "__pyalienlifegraphics2__/sounds/simik-den.ogg", volume = 0.0},
-        audible_distance_modifier = 0.35,
+        sound = {filename = "__pyalienlifegraphics2__/sounds/simik-den.ogg", volume = 0.90, audible_distance_modifier = 0.35,},
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {

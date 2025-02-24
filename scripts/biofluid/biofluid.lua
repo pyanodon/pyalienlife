@@ -22,11 +22,29 @@ local floor = math.floor
 local atan2 = math.atan2
 local pi = math.pi
 
+---@class BiofluidBioport
+---@field active boolean
+---@field entity LuaEntity
+---@field fuel_remaning int
+---@field guano int
+---@field animation table
+---@field network_id int?
+---@field animation_entity unknown?
+
+---@class BiofluidNetwork
+---@field biofluid_requesters table
+---@field biofluid_providers table
+---@field biofluid_bioports table<any, int>,
+---@field providers_by_contents table<string, table<int, LuaEntity>>,
+---@field allocated_fluids_from_providers table<int, number>,
+
 py.on_event(py.events.on_init(), function()
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
     storage.biofluid_providers = storage.biofluid_providers or {}
+    ---@type BiofluidBioport[]
     storage.biofluid_bioports = storage.biofluid_bioports or {}
+    ---@type BiofluidNetwork[]
     storage.biofluid_networks = storage.biofluid_networks or {}
 end)
 
@@ -203,6 +221,9 @@ local function random_order(l)
     return ipairs(order)
 end
 
+---MELON CHECK THIS
+---@param network_data BiofluidNetwork
+---@param relavant_fluids any
 local function build_providers_by_contents(network_data, relavant_fluids)
     local providers_by_contents = {}
     network_data.providers_by_contents = providers_by_contents

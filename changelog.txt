@@ -2,17 +2,22 @@
 Version: 3.0.35
 Date: ?
   Changes:
+    - Higher tier seaweed buildings now have the correct base speed again.  Resolves https://github.com/pyanodon/pybugreports/issues/842
+    - Decreased volume for the reproductive complex.
+    - Edited working sound aggregation for the reproductive complex such that only 1 smooth jazz plays concurrently.
     - Updated the locale of the moss turd. Resolves https://github.com/pyanodon/pybugreports/issues/826
     - Fixed sap MK02 could not be made in a MK1 sap extractor. Resolves https://github.com/pyanodon/pybugreports/issues/828
     - Moved soot separation recipes to a dedicated technology. Resolves https://github.com/pyanodon/pybugreports/issues/825
     - Migrated the internal name of the "vacuum-tube-electronics" technology to "electronics". Resolves https://github.com/pyanodon/pybugreports/issues/453
     - Migrated the internal name of the "railway-mk01" technology to "railway". Resolves https://github.com/pyanodon/pybugreports/issues/453
-    - Caravans schedules now support interrupts
+    - Fixed crash starting a new game without AE. Resolves https://github.com/pyanodon/pybugreports/issues/831
+    - Fixed crash deleting a silo during rocket launch. Resolves https://github.com/pyanodon/pybugreports/issues/832
+    - Updated Ukrainian translation.
+    - Caravans schedules now support interrupts. Huge thank-you to O5M0 for the amazing PR. https://github.com/pyanodon/pyalienlife/pull/296
     - Increased inventory size of caravans 1 -> 2 and aerial caravans 2 -> 4
-    - Improved many aspects of caravan GUI
-    - Added new actions to caravans
-    - Fixed the graphics of caravans being too small
-    - Increased slection boxes of all caravans to fit better with the graphics
+    - Improved many aspects of caravan GUI.
+    - Added new actions to caravans.
+    - Increased selction boxes of all caravans to fit better with the graphics.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20

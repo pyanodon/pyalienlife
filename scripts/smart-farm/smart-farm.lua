@@ -126,6 +126,7 @@ end)
 ---@param event EventData.on_rocket_launched
 py.on_event(defines.events.on_rocket_launched, function(event)
     local silo = event.rocket_silo --[[@as LuaEntity]]
+    if not silo or not silo.valid then return end -- silo died after launch started
     if silo.name ~= "mega-farm" then return end
     local surface = silo.surface
     local position = silo.position

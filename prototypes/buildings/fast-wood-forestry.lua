@@ -331,7 +331,6 @@ for i = 1, 4 do
             fade_out_ticks = 60,
             sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 1.5},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/fwf-idle.ogg", volume = 0.5},
-            audible_distance_modifier = 1,
         }
     }
 end
