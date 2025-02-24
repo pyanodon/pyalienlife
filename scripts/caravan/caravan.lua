@@ -1063,9 +1063,9 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
         local result
         local prototype = caravan_prototypes[entity.name]
-        local target_type = schedule.entity and schedule.entity.name or "default"
+        local target_type = (schedule.entity and schedule.entity.valid) and schedule.entity.type or "default"
         local is_valid = false
-        for _, valid_action in pairs(prototype.actions[target_type]) do
+        for _, valid_action in pairs(prototype.actions[schedule.entity.type] or prototype.actions) do
            if action.type == valid_action then is_valid = true; break; end
         end
         if is_valid then
