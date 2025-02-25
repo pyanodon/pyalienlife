@@ -896,6 +896,73 @@ gui_events[defines.events.on_gui_text_changed]["py_time_passed_text"] = function
     action.wait_time = tonumber(element.text or 5)
 end
 
+-- Removes all temporary stop from the caravan schedule
+local function remove_tmp_stops(caravan_data)
+    for idx, sch in pairs(caravan_data.schedule) do
+        if sch.temporary then
+            if idx <= caravan_data.schedule_id then
+                caravan_data.schedule_id = caravan_data.schedule_id - 1
+            end
+            table.remove(caravan_data.schedule, idx)
+        end
+    end
+    if caravan_data.schedule_id < 1 then
+        caravan_data.schedule_id = #caravan_data.schedule or -1
+    end
+end
+
+local function advance_caravan_schedule_by_1(caravan_data)
+    local is_interrupted = false
+    for _, sch in pairs(caravan_data.schedule) do
+        if sch.temporary then
+            is_interrupted = true
+            break
+        end
+    end
+
+    game.print('by 1' .. tostring(is_interrupted))
+
+    for _, interrupt in pairs(caravan_data.interrupts) do
+        interrupt = storage.interrupts[interrupt]
+        if not interrupt then goto continue end
+        if is_interrupted and not interrupt.inside_interrupt then goto continue end
+
+        local conditions_passed = true
+        for _, condition in pairs(interrupt.conditions) do
+            if not Caravan.actions[condition.type] then break end
+            if not Caravan.actions[condition.type](caravan_data, schedule, condition) then
+                conditions_passed = false
+                break
+            end
+        end
+        if conditions_passed then
+            game.print('thing found')
+            if interrupt.inside_interrupt then
+                remove_tmp_stops(caravan_data)
+                guis_to_update[caravan_data.unit_number] = true
+            end
+            add_interrupt(caravan_data, interrupt)
+            is_interrupted = true
+        end
+
+        ::continue::
+    end
+
+    schedule = caravan_data.schedule[caravan_data.schedule_id]             -- I dont know why, but this is necessary
+    if not schedule then return end
+
+    if schedule.temporary then
+        table.remove(caravan_data.schedule, caravan_data.schedule_id)
+        if #caravan_data.schedule == 0 then
+            caravan_data.schedule_id = -1
+            return
+        end
+        caravan_data.schedule_id = caravan_data.schedule_id - 1
+    end
+
+    begin_schedule(caravan_data, caravan_data.schedule_id % #caravan_data.schedule + 1, #caravan_data.schedule == 1)
+end
+
 py.on_event(defines.events.on_ai_command_completed, function(event)
     local unit_number = event.unit_number
     local caravan_data = storage.caravans[unit_number]
@@ -919,7 +986,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             caravan_data.retry_pathfinder = 3
             return
         else
-            begin_schedule(caravan_data, caravan_data.schedule_id % schedule_num + 1)
+            advance_caravan_schedule_by_1(caravan_data)
         end
     else
         local entity = caravan_data.entity
@@ -950,21 +1017,6 @@ end)
 ---@param b Caravan
 local function caravan_sort_function(a, b)
     return (a.arrival_tick or 0) < (b.arrival_tick or 0)
-end
-
--- Removes all temporary stop from the caravan schedule
-local function remove_tmp_stops(caravan_data)
-    for idx, sch in pairs(caravan_data.schedule) do
-        if sch.temporary then
-            if idx <= caravan_data.schedule_id then
-                caravan_data.schedule_id = caravan_data.schedule_id - 1
-            end
-            table.remove(caravan_data.schedule, idx)
-        end
-    end
-    if caravan_data.schedule_id < 1 then
-        caravan_data.schedule_id = #caravan_data.schedule or -1
-    end
 end
 
 -- Adds an interrupt's schedule to the caravan schedule. Returns index of the first schedule added
@@ -1061,49 +1113,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         -- Advance the schedule
         elseif result then
             if #schedule.actions == caravan_data.action_id then
-                local is_interrupted = false
-                for _, sch in pairs(caravan_data.schedule) do
-                    if sch.temporary then is_interrupted = true; break end
-                end
-                for _, interrupt in ipairs(caravan_data.interrupts) do
-                    interrupt = storage.interrupts[interrupt]
-                    if not interrupt then goto continue end
-                    if is_interrupted and not interrupt.inside_interrupt then goto continue end
-                    
-                    local conditions_passed = true
-                    for _, condition in pairs(interrupt.conditions) do
-                        if not Caravan.actions[condition.type] then break end
-                        if not Caravan.actions[condition.type](caravan_data, schedule, condition) then
-                            conditions_passed = false
-                            break
-                        end
-                    end
-                    if conditions_passed then
-                        if interrupt.inside_interrupt then
-                            remove_tmp_stops(caravan_data)
-                            guis_to_update[caravan_data.unit_number] = true
-                        end
-                        add_interrupt(caravan_data, interrupt)
-                        is_interrupted = true
-                    end
-
-                    ::continue::
-                end
-
-                schedule = caravan_data.schedule[caravan_data.schedule_id]  -- I dont know why, but this is necessary
-                if not schedule then goto continue end
-                if schedule.temporary then
-                    table.remove(caravan_data.schedule, caravan_data.schedule_id)
-                    caravan_data.schedule_id = caravan_data.schedule_id - 1
-                    if caravan_data.schedule_id < 1 then
-                        caravan_data.schedule_id = #caravan_data.schedule or -1
-                    end
-                end
-                if caravan_data.schedule_id == #caravan_data.schedule then
-                    begin_schedule(caravan_data, 1, #caravan_data.schedule == 1)
-                else
-                    begin_schedule(caravan_data, caravan_data.schedule_id + 1)
-                end
+                advance_caravan_schedule_by_1(caravan_data)
             else
                 begin_action(caravan_data, caravan_data.action_id + 1)
             end
