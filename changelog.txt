@@ -14,6 +14,7 @@ Date: ?
     - Fixed crash starting a new game without AE. Resolves https://github.com/pyanodon/pybugreports/issues/831
     - Fixed crash deleting a silo during rocket launch. Resolves https://github.com/pyanodon/pybugreports/issues/832
     - Updated Ukrainian translation.
+    - Fixed floating-point crafting speeds for the arqad apiary. Resolves https://github.com/pyanodon/pybugreports/issues/862
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20
