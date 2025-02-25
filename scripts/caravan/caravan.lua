@@ -919,7 +919,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             caravan_data.retry_pathfinder = 3
             return
         else
-            begin_schedule(caravan_data, (caravan_data.schedule_id + 1) % schedule_num)
+            begin_schedule(caravan_data, caravan_data.schedule_id % schedule_num + 1)
         end
     else
         local entity = caravan_data.entity
