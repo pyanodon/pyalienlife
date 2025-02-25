@@ -2,6 +2,7 @@
 Version: 3.0.35
 Date: ?
   Changes:
+    - Methanol is properly marked as a catalyst in formamide recipe.  Resolves https://github.com/pyanodon/pybugreports/issues/871
     - Higher tier seaweed buildings now have the correct base speed again.  Resolves https://github.com/pyanodon/pybugreports/issues/842
     - Decreased volume for the reproductive complex.
     - Edited working sound aggregation for the reproductive complex such that only 1 smooth jazz plays concurrently.
@@ -13,6 +14,7 @@ Date: ?
     - Fixed crash starting a new game without AE. Resolves https://github.com/pyanodon/pybugreports/issues/831
     - Fixed crash deleting a silo during rocket launch. Resolves https://github.com/pyanodon/pybugreports/issues/832
     - Updated Ukrainian translation.
+    - Fixed floating-point crafting speeds for the arqad apiary. Resolves https://github.com/pyanodon/pybugreports/issues/862
     - Caravans schedules now support interrupts. Huge thank-you to O5M0 for the amazing PR. https://github.com/pyanodon/pyalienlife/pull/296
     - Increased inventory size of caravans 1 -> 2 and aerial caravans 2 -> 4
     - Improved many aspects of caravan GUI.
