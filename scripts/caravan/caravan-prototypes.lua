@@ -1,5 +1,13 @@
 require "__core__.lualib.util"
 
+---@enum CaravanActionListType
+Caravan.action_list_types = {
+    standard_schedule = 1,
+    interrupt_schedule = 2,
+    interrupt_condition = 3,
+    interrupt_targets = 4,
+}
+
 Caravan.valid_actions = {
     caravan = {
         ["outpost"] = {
@@ -88,9 +96,6 @@ Caravan.valid_actions = {
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
 Caravan.valid_actions.nukavan["default"] = {"detonate"}
-
-Caravan.valid_actions.all = table.deepcopy(Caravan.valid_actions.caravan)
-table.insert(Caravan.valid_actions.all["default"], "detonate")
 
 Caravan.foods = {
     all = {

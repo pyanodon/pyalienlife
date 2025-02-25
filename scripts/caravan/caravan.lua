@@ -131,6 +131,7 @@ local function remove_fuel_alert(entity)
 end
 
 py.on_event(py.events.on_init(), function()
+    ---@type Table<integer, Caravan>
     storage.caravans = storage.caravans or {}
     storage.interrupts = storage.interrupts or {}
     -- Table of gui elements indexed by their name. Not necessary, but better than hardcoding the realtive paths
@@ -231,11 +232,12 @@ py.on_event(py.events.on_entity_clicked(), function(event)
             return
         end
     end
+
     if caravan_data then
         Caravan.build_gui(player, caravan_data.entity)
-    end
-    if interrupt_data then
-        Caravan.build_interrupt_gui(player, interrupt_data.name)
+        if interrupt_data then
+            Caravan.build_interrupt_gui(player, caravan_data, interrupt_data.name)
+        end
     end
 end)
 
@@ -279,35 +281,54 @@ local function stop_actions(caravan_data)
     wander(caravan_data)
 end
 
-local function get_action(player, tags)
-    local caravan_data = storage.caravans[tags.unit_number]
-    if caravan_data then
-        -- local caravan_data = storage.caravans[Caravan.get_caravan_gui(player).tags.unit_number]
-        return storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions[tags.action_id]
-    elseif tags.schedule_id then
-        return storage.interrupts[Caravan.get_interrupt_gui(player).tags.name].schedule[tags.schedule_id].actions[tags.action_id]
+---Returns a table repersenting a caravan's action.
+---@param player LuaPlayer
+---@param element LuaGuiElement
+local function get_action_from_button(player, element)
+    local tags = element.tags
+    local action_list_type = tags.action_list_type
+
+    local action
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        action = storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions[tags.action_id]
+    elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
+        error()
+    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
+        action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name].conditions[tags.action_id]
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name].schedule[tags.schedule_id].actions[tags.action_id]
     else
-        return storage.interrupts[Caravan.get_interrupt_gui(player).tags.name].conditions[tags.action_id]
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
+
+    if not action then
+        error("Could not find action with action_list_type " .. action_list_type .. ". GUI tags: " .. serpent.line(tags))
+    end
+    return action
 end
 
-local function get_schedule(tags)
-    if tags.type == "schedule" then
-        caravan_data = storage.caravans[tags.unit_number]
-        if caravan_data then
-            schedule = caravan_data.schedule
-        else
-            schedule = storage.interrupts[tags.unit_number].schedule
-        end
+---Returns a table repersenting a caravan's schedule.
+---@param element LuaGuiElement
+local function get_schedule(element)
+    local tags = element.tags
+    local action_list_type = tags.action_list_type
+    
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        local caravan_data = storage.caravans[tags.unit_number]
+        local schedule = caravan_data.schedule
         if tags.action_id then schedule = schedule[tags.schedule_id].actions end
         return schedule
-    elseif tags.type == "interrupt" then
-        caravan_data = storage.caravans[tags.unit_number]
+    elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
+        local caravan_data = storage.caravans[tags.unit_number]
         return caravan_data.interrupts
-    elseif tags.type == "condition" then
+    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
         return storage.interrupts[tags.unit_number].conditions
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        local schedule = storage.interrupts[tags.interrupt_name].schedule
+        if tags.action_id then schedule = schedule[tags.schedule_id].actions end
+        return schedule
     else
-        error("invalid type")
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
 end
 
@@ -327,7 +348,7 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
     if element.tags.action_id then
         storage.last_opened_action[player.index] = {schedule_id = element.tags.schedule_id, action_id = element.tags.action_id}
     end
-    storage.last_opened_interrupt[player.index] = element.tags.interrupt
+    storage.last_opened_interrupt[player.index] = element.tags.interrupt_name
     storage.last_opened_caravan[player.index] = Caravan.get_caravan_gui(player).tags.unit_number
     player.opened = nil
 end
@@ -354,7 +375,7 @@ function Caravan.add_interrupt(caravan_data, name, player)
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
     if not name or name == "" then return end
     table.insert(caravan_data.interrupts, name)
-    Caravan.build_interrupt_gui(player, name)
+    Caravan.build_interrupt_gui(player, caravan_data, name)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
@@ -394,9 +415,10 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_button"] = function(event)
     local player = game.get_player(event.player_index)
-    local element = event.element
-    
-    Caravan.build_interrupt_gui(player, element.tags.name)
+    local gui = event.element
+    local caravan_data = storage.caravans[gui.tags.unit_number]
+    assert(gui.tags.interrupt_name, gui.name)
+    Caravan.build_interrupt_gui(player, caravan_data, gui.tags.interrupt_name)
 end
 
 gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function(event)
@@ -431,7 +453,17 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
             end
         end
         label.caption = new_name
-        Caravan.update_gui(Caravan.get_caravan_gui(player))
+
+        for _, player in pairs(game.players) do
+            local interrupt_gui = Caravan.get_interrupt_gui(player)
+            if interrupt_gui and interrupt_gui.tags.interrupt_name == old_name then
+                local tags = interrupt_gui.tags
+                tags.interrupt_name = new_name
+                interrupt_gui.tags = tags
+            end
+            local caravan_gui = Caravan.get_caravan_gui(player)
+            if caravan_gui then Caravan.update_gui(caravan_gui) end
+        end
     end
 end
 gui_events[defines.events.on_gui_confirmed]["py_rename_interrupt_textfield"] = gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"]
@@ -482,19 +514,27 @@ end
 gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local caravan_data = storage.caravans[element.tags.unit_number]
+    local tags = element.tags
+    local caravan_data = storage.caravans[tags.unit_number]
+    
+    local action_list_type = tags.action_list_type
     local schedule
     local actions
-    if caravan_data then
-        schedule = caravan_data.schedule[element.tags.schedule_id]
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        schedule = caravan_data.schedule[tags.schedule_id]
         actions = schedule.actions
-    elseif element.tags.schedule_id then
-        local interrupt_data = storage.interrupts[Caravan.get_interrupt_gui(player).tags.name]
-        schedule = interrupt_data.schedule[element.tags.schedule_id]
+    elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
+        error("This should never happen. The list of added interrupts does not have actions. " .. element.name .. serpent.line(element.tags))
+    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
+        local interrupt_data = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name]
+        actions = interrupt_data.conditions
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        assert(tags.schedule_id, element.name)
+        local interrupt_data = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name]
+        schedule = interrupt_data.schedule[tags.schedule_id]
         actions = schedule.actions
     else
-        local interrupt_data = storage.interrupts[Caravan.get_interrupt_gui(player).tags.name]
-        actions = interrupt_data.conditions
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
 
     if element.selected_index == 0 then return end
@@ -511,16 +551,15 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
         localised_name = localised_name
     }
     Caravan.update_gui(Caravan.get_caravan_gui(player))
-    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
+    Caravan.update_interrupt_gui(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_blocking_caravan"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
+    local action = get_action_from_button(player, element)
     action.async = not element.state
+    local caravan_data = storage.caravans[element.tags.unit_number]
     if caravan_data then
         stop_actions(caravan_data)
     end
@@ -552,7 +591,7 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     local id = tags.action_id or tags.schedule_id
     local caravan_data
     
-    local schedule = get_schedule(tags)
+    local schedule = get_schedule(element)
     
     local offset = tags.up and -1 or 1
     local a, b = schedule[id], schedule[id + offset]
@@ -564,7 +603,7 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
         stop_actions(caravan_data)
     end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
-    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
+    Caravan.update_interrupt_gui(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
@@ -574,7 +613,7 @@ gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
     local caravan_data = storage.caravans[tags.unit_number]
     local id = tags.action_id or tags.schedule_id
 
-    local schedule = get_schedule(tags)
+    local schedule = get_schedule(element)
 
     table.remove(schedule, id)
 
@@ -582,14 +621,14 @@ gui_events[defines.events.on_gui_click]["py_delete_schedule"] = function(event)
         stop_actions(caravan_data)
     end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
-    Caravan.update_interrupt_gui(Caravan.get_interrupt_gui(player), player)
+    Caravan.update_interrupt_gui(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local schedule = get_schedule(tags)[tags.schedule_id]
+    local schedule = get_schedule(element)[tags.schedule_id]
     local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
     local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.caption_frame.caption_flow.py_refocus
 
@@ -778,17 +817,14 @@ end
 gui_events[defines.events.on_gui_elem_changed]["py_item_value"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local action = get_action(player, tags)
-
+    local action = get_action_from_button(player, element)
     action.elem_value = element.elem_value
 end
 
 gui_events[defines.events.on_gui_text_changed]["py_item_count"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local action = get_action(player, tags)
+    local action = get_action_from_button(player, element)
     local item_count = tonumber(element.text)
 
     action.item_count = item_count or 0
@@ -798,14 +834,13 @@ gui_events[defines.events.on_gui_text_changed]["py_food_count"] = gui_events[def
 gui_events[defines.events.on_gui_confirmed]["py_item_count"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
+    local action = get_action_from_button(player, element)
     local item_count = tonumber(element.text)
 
     -- Limit item count to the maximum amount the caravan can fit
     if action.elem_value and item_count then
         local stack_size = prototypes.item[action.elem_value].stack_size
+        local caravan_data = storage.caravans[element.tags.unit_number]
         if caravan_data then
             item_count = math.min(item_count, stack_size * #caravan_data.inventory)
         end
@@ -817,14 +852,13 @@ end
 gui_events[defines.events.on_gui_confirmed]["py_food_count"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
+    local action = get_action_from_button(player, element)
     local item_count = tonumber(element.text)
 
     -- Limit item count to the maximum amount the caravan can fit
     if action.elem_value and item_count then
         local stack_size = prototypes.item[action.elem_value].stack_size
+        local caravan_data = storage.caravans[element.tags.unit_number]
         if caravan_data then
             item_count = math.min(item_count, stack_size * #caravan_data.fuel_inventory)
         end
@@ -833,86 +867,32 @@ gui_events[defines.events.on_gui_confirmed]["py_food_count"] = function(event)
     element.text = tostring(item_count or 0)
 end
 
--- gui_events[defines.events.on_gui_text_changed]["py_item_count_min"] = function(event)
---     local player = game.get_player(event.player_index)
---     local element = event.element
---     local tags = element.tags
---     local caravan_data = storage.caravans[tags.unit_number]
---     local action = get_action(player, tags)
---     local item_count = tonumber(element.text)
-
---     if action.elem_value then
---         if item_count then
---             local stack_size = prototypes.item[action.elem_value].stack_size
---             if caravan_data then
---                 item_count = math.min(item_count, stack_size * #caravan_data.inventory)
---             end
---         end
---         action.item_count_min = item_count
---     else
---         action.item_count_min = nil
---     end
--- end
-
--- gui_events[defines.events.on_gui_text_changed]["py_item_count_max"] = function(event)
---     local player = game.get_player(event.player_index)
---     local element = event.element
---     local tags = element.tags
---     local caravan_data = storage.caravans[tags.unit_number]
---     local action = get_action(player, tags)
---     local item_count = tonumber(element.text)
-
---     if action.elem_value then
---         if item_count then
---             local stack_size = prototypes.item[action.elem_value].stack_size
---             if caravan_data then
---                 item_count = math.min(item_count, stack_size * #caravan_data.inventory)
---             end
---         end
---         action.item_count_max = item_count
---     else
---         action.item_count_max = nil
---     end
--- end
-
 gui_events[defines.events.on_gui_elem_changed]["py_circuit_condition_right"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
-
+    local action = get_action_from_button(player, element)
     action.circuit_condition_right = element.elem_value
 end
 
 gui_events[defines.events.on_gui_elem_changed]["py_circuit_condition_left"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
-
+    local action = get_action_from_button(player, element)
     action.circuit_condition_left = element.elem_value
 end
 
 gui_events[defines.events.on_gui_text_changed]["py_value_condition_right"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
-    local value = tonumber(element.text)
-    action.circuit_condition_right = value
+    local action = get_action_from_button(player, element)
+    action.circuit_condition_right = tonumber(element.text)
 end
 
 
 gui_events[defines.events.on_gui_text_changed]["py_time_passed_text"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local action = get_action(player, tags)
-
+    local action = get_action_from_button(player, element)
     action.wait_time = tonumber(element.text or 5)
 end
 
@@ -1065,7 +1045,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         local prototype = caravan_prototypes[entity.name]
         local target_type = (schedule.entity and schedule.entity.valid) and schedule.entity.type or "default"
         local is_valid = false
-        for _, valid_action in pairs(prototype.actions[schedule.entity.type] or prototype.actions) do
+        for _, valid_action in pairs(prototype.actions[target_type] or prototype.actions) do
            if action.type == valid_action then is_valid = true; break; end
         end
         if is_valid then
