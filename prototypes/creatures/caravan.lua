@@ -62,7 +62,7 @@ data:extend {{
     healing_per_tick = 0.03,
     collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
     selection_priority = 51,
-    selection_box = {{-1.1, -1.1}, {1.1, 1.1}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     attack_parameters = {
         type = "projectile",
         range = 0,
@@ -172,7 +172,6 @@ data:extend {{
                 frame_count = 30,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0)),
-                scale = _G.scale,
                 flags = {"no-scale"},
             },
             {
@@ -195,7 +194,6 @@ data:extend {{
                 frame_count = 30,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-                scale = _G.scale,
                 flags = {"no-scale"},
             },
             {
