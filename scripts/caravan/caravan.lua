@@ -745,11 +745,16 @@ gui_events[defines.events.on_gui_click]["py_schedule_play"] = function(event)
             begin_schedule(caravan_data, tags.schedule_id)
         end
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        remove_tmp_stops(caravan_data)
-        local interrupt_data = storage.interrupts[tags.interrupt_name]
-        local index = add_interrupt(caravan_data, interrupt_data)
-        if index > 0 then
-            begin_schedule(caravan_data, index)
+        if element.sprite == "utility/stop" then
+            remove_tmp_stops(caravan_data)
+            stop_actions(caravan_data)
+        else
+            remove_tmp_stops(caravan_data)
+            local interrupt_data = storage.interrupts[tags.interrupt_name]
+            local index = add_interrupt(caravan_data, interrupt_data)
+            if index > 0 then
+                begin_schedule(caravan_data, index)
+            end
         end
     else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
@@ -780,11 +785,16 @@ gui_events[defines.events.on_gui_click]["py_action_play"] = function(event)
             begin_schedule(caravan_data, tags.schedule_id)
         end
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        remove_tmp_stops(caravan_data)
-        local interrupt_data = storage.interrupts[tags.interrupt_name]
-        local index = add_interrupt(caravan_data, interrupt_data)
-        if index > 0 then
-            begin_schedule(caravan_data, index)
+        if element.sprite == "utility/stop" then
+            remove_tmp_stops(caravan_data)
+            stop_actions(caravan_data)
+        else
+            remove_tmp_stops(caravan_data)
+            local interrupt_data = storage.interrupts[tags.interrupt_name]
+            local index = add_interrupt(caravan_data, interrupt_data)
+            if index > 0 then
+                begin_schedule(caravan_data, index)
+            end
         end
     else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
@@ -928,16 +938,24 @@ end
 
 -- Removes all temporary stop from the caravan schedule
 remove_tmp_stops = function(caravan_data)
+    local new_schedule = {}
+
     for idx, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
+            if idx == caravan_data.schedule_id then
+                caravan_data.action_id = -1
+            end
             if idx <= caravan_data.schedule_id then
                 caravan_data.schedule_id = caravan_data.schedule_id - 1
             end
-            table.remove(caravan_data.schedule, idx)
+        else
+            new_schedule[#new_schedule + 1] = sch
         end
     end
+    caravan_data.schedule = new_schedule
+
     if caravan_data.schedule_id < 1 then
-        caravan_data.schedule_id = #caravan_data.schedule or -1
+        stop_actions(caravan_data)
     end
 end
 
