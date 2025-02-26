@@ -3,16 +3,50 @@ require "caravan-gui-shared"
 
 ---Given a action index in a caravan GUI, returns the GUI style and sprite for the corresponding button.
 ---@param caravan_data Caravan
+---@param action_list_type CaravanActionListType
 ---@param schedule_id int
 ---@param action_id int
-local function generate_button_status(caravan_data, schedule_id, action_id)
+---@param interrupt_name string?
+local function generate_button_status(caravan_data, action_list_type, schedule_id, action_id, interrupt_name)
+    assert(action_list_type)
     local style = "train_schedule_action_button"
     local sprite = "utility/play"
-    if caravan_data.schedule_id == schedule_id and (not action_id or action_id == caravan_data.action_id) then
-        style = "py_clicked_train_schedule_action_button"
-        sprite = "utility/stop"
+
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        if caravan_data.schedule_id == schedule_id and (not action_id or action_id == caravan_data.action_id) then
+            style = "py_clicked_train_schedule_action_button"
+            sprite = "utility/stop"
+        end
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        local schedule = caravan_data.schedule[caravan_data.schedule_id]
+        if schedule and schedule.temporary and schedule.temporary.interrupt_name == interrupt_name then
+            if schedule.temporary.schedule_id == schedule_id then
+                if not action_id or action_id == caravan_data.action_id then
+                    style = "py_clicked_train_schedule_action_button"
+                    sprite = "utility/stop"
+                end
+            end
+        end
     end
+
     return style, sprite
+end
+
+function Caravan.update_interrupt_gui_button_status(caravan_data)
+    local action_list_type = Caravan.action_list_types.interrupt_targets
+    for _, player in pairs(game.connected_players) do
+        local interrupt_gui = Caravan.get_interrupt_gui(player)
+        if interrupt_gui and interrupt_gui.tags.unit_number == caravan_data.unit_number then
+            local targets_gui = interrupt_gui.window_frame.targets_scroll_pane
+            local tags = targets_gui.py_add_outpost.tags
+            targets_gui.clear()
+            local interrupt_name = interrupt_gui.tags.interrupt_name
+            local interrupt_data = storage.interrupts[interrupt_name]
+            assert(interrupt_data, "Missing interrupt_data " .. interrupt_name)
+            Caravan.build_schedule_list_gui(targets_gui, caravan_data, interrupt_data)
+            targets_gui.add {type = "button", name = "py_add_outpost", tags = tags, style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
+        end
+    end
 end
 
 -- TODO: refactor parameters
@@ -36,7 +70,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
 
         if caravan_data then
             local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
-            playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i, j)
+            playbutton.style, playbutton.sprite = generate_button_status(caravan_data, action_list_type, i, j, interrupt_name)
         end
         local label = action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = action.localised_name}
         action_frame.add {type = "empty-widget", style = "py_empty_widget"}
@@ -201,7 +235,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
     for i, schedule in ipairs(schedule) do
         tags.schedule_id = i
 
-        local schedule_flow = gui.add {type = "flow", direction = "vertical"}
+        local schedule_flow = gui.add {type = "flow", direction = "vertical", name }
         schedule_flow.style.horizontal_align = "right"
         schedule_flow.style.vertically_stretchable = false
 
@@ -213,7 +247,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
         schedule_frame.style.right_padding = 12
         
         local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
-        playbutton.style, playbutton.sprite = generate_button_status(caravan_data, i)
+        playbutton.style, playbutton.sprite = generate_button_status(caravan_data, tags.action_list_type, i, nil, tags.interrupt_name)
         style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
         schedule_frame.add {type = "label", name = "py_outpost_name", style = style, tags = tags, caption = schedule.localised_name}
 
@@ -542,7 +576,6 @@ function Caravan.update_gui(gui, weak)
     end
 end
 
--- Since interrupt gui is only updated when a player interacts with it, rebuilding everything shouldn't matter much
 ---@param gui LuaGuiElement
 ---@param player LuaPlayer
 function Caravan.update_interrupt_gui(player)
@@ -625,6 +658,7 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
     local close_button = title_flow.add {type = "sprite-button", name = "py_close_interrupt_button", style = "close_button", sprite = "utility/close"}
 
     local window_frame = interrupt_window.add{
+        name = "window_frame",
         type = "frame",
         direction = "vertical",
         style = "inside_shallow_frame_with_padding_and_vertical_spacing",
@@ -675,7 +709,7 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
     py_add_action.style.left_margin = 32
 
     window_frame.add {type = "label", caption = {"gui-interrupts.targets"}, tooltip = {"gui-interrupts.targets-tooltip"}, style = "semibold_label"}
-    local targets_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
+    local targets_scroll_pane = window_frame.add {name = "targets_scroll_pane", type = "scroll-pane", style = "py_schedule_scroll_pane"}
     targets_scroll_pane.horizontal_scroll_policy = "never"
     targets_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
     targets_scroll_pane.style.horizontally_stretchable = true

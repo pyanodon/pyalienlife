@@ -279,6 +279,7 @@ local function stop_actions(caravan_data)
     caravan_data.stored_energy = nil
     caravan_data.arrival_tick = nil
     wander(caravan_data)
+    Caravan.update_interrupt_gui_button_status(caravan_data)
 end
 
 ---Returns a table repersenting a caravan's action.
@@ -700,6 +701,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
     end
 
     caravan_data.last_scheduled_tick = game.tick
+    Caravan.update_interrupt_gui_button_status(caravan_data)
 end
 
 ---Begins the action with the specified ID inside the caravan's current schedule.
@@ -723,6 +725,7 @@ local function begin_action(caravan_data, action_id)
     end
 
     if caravan_data.fuel_inventory and not Caravan.free_actions[action.type] then eat(caravan_data) end
+    Caravan.update_interrupt_gui_button_status(caravan_data)
 end
 
 gui_events[defines.events.on_gui_click]["py_schedule_play"] = function(event)
@@ -920,8 +923,6 @@ local function advance_caravan_schedule_by_1(caravan_data)
         end
     end
 
-    game.print('by 1' .. tostring(is_interrupted))
-
     for _, interrupt in pairs(caravan_data.interrupts) do
         interrupt = storage.interrupts[interrupt]
         if not interrupt then goto continue end
@@ -936,7 +937,6 @@ local function advance_caravan_schedule_by_1(caravan_data)
             end
         end
         if conditions_passed then
-            game.print('thing found')
             if interrupt.inside_interrupt then
                 remove_tmp_stops(caravan_data)
                 guis_to_update[caravan_data.unit_number] = true
@@ -1026,7 +1026,7 @@ function add_interrupt(caravan_data, interrupt_data)
     if #interrupt_data.schedule <= 0 then return -1 end
     for i = 1, #interrupt_data.schedule do
         local sch = table.deepcopy(interrupt_data.schedule[i])
-        sch.temporary = true
+        sch.temporary = {interrupt_name = interrupt_data.name, schedule_id = i}
         local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id + i or #caravan_data.schedule
         table.insert(caravan_data.schedule, index, sch)
     end
