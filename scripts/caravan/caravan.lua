@@ -7,6 +7,9 @@ require "caravan-connected-gui"
 require "__core__.lualib.util"
 local caravan_prototypes = require "caravan-prototypes"
 
+-- function stubs
+local remove_tmp_stops = 0
+
 ---@class Caravan
 ---@field arrival_tick number? The gametick that this caravan arrived at its destination. Used to queue most recent caravans first.
 ---@field entity LuaEntity? The associated LuaEntity of the caravan.
@@ -733,11 +736,23 @@ gui_events[defines.events.on_gui_click]["py_schedule_play"] = function(event)
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
+    local action_list_type = tags.action_list_type
 
-    if caravan_data.schedule_id == tags.schedule_id then
-        stop_actions(caravan_data)
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        if caravan_data.schedule_id == tags.schedule_id then
+            stop_actions(caravan_data)
+        else
+            begin_schedule(caravan_data, tags.schedule_id)
+        end
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        remove_tmp_stops(caravan_data)
+        local interrupt_data = storage.interrupts[tags.interrupt_name]
+        local index = add_interrupt(caravan_data, interrupt_data)
+        if index > 0 then
+            begin_schedule(caravan_data, index)
+        end
     else
-        begin_schedule(caravan_data, tags.schedule_id)
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
 
     Caravan.update_gui(Caravan.get_caravan_gui(player))
@@ -749,18 +764,30 @@ gui_events[defines.events.on_gui_click]["py_action_play"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local schedule = caravan_data.schedule[tags.schedule_id]
+    local action_list_type = tags.action_list_type
 
-    if caravan_data.schedule_id == tags.schedule_id then
-        if caravan_data.action_id == tags.action_id then
-            stop_actions(caravan_data)
-        else
-            local position; if schedule.entity then position = schedule.entity.position else position = schedule.position end
-            if py.distance_squared(position, caravan_data.entity.position) < 1000 then
-                begin_action(caravan_data, tags.action_id)
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        if caravan_data.schedule_id == tags.schedule_id then
+            if caravan_data.action_id == tags.action_id then
+                stop_actions(caravan_data)
+            else
+                local position; if schedule.entity then position = schedule.entity.position else position = schedule.position end
+                if py.distance_squared(position, caravan_data.entity.position) < 1000 then
+                    begin_action(caravan_data, tags.action_id)
+                end
             end
+        else
+            begin_schedule(caravan_data, tags.schedule_id)
+        end
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        remove_tmp_stops(caravan_data)
+        local interrupt_data = storage.interrupts[tags.interrupt_name]
+        local index = add_interrupt(caravan_data, interrupt_data)
+        if index > 0 then
+            begin_schedule(caravan_data, index)
         end
     else
-        begin_schedule(caravan_data, tags.schedule_id)
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
 
     Caravan.update_gui(Caravan.get_caravan_gui(player))
@@ -900,7 +927,7 @@ gui_events[defines.events.on_gui_text_changed]["py_time_passed_text"] = function
 end
 
 -- Removes all temporary stop from the caravan schedule
-local function remove_tmp_stops(caravan_data)
+remove_tmp_stops = function(caravan_data)
     for idx, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
             if idx <= caravan_data.schedule_id then
