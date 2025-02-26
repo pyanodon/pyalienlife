@@ -183,7 +183,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         end
     end
     cursor_stack.clear()
-    
+
     local schedule, prototype, only_outpost
     local caravan_data = storage.caravans[storage.last_opened_caravan[player.index]]
     local interrupt_data = storage.interrupts[storage.last_opened_interrupt[player.index]]
@@ -316,7 +316,7 @@ end
 local function get_schedule(element)
     local tags = element.tags
     local action_list_type = tags.action_list_type
-    
+
     if action_list_type == Caravan.action_list_types.standard_schedule then
         local caravan_data = storage.caravans[tags.unit_number]
         local schedule = caravan_data.schedule
@@ -388,7 +388,7 @@ gui_events[defines.events.on_gui_confirmed]["py_add_interrupt_textfield"] = func
     local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
-    
+
     local name = element.text
     Caravan.add_interrupt(caravan_data, name, player)
 end
@@ -396,7 +396,7 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_confirm_button"] = fun
     local player = game.get_player(event.player_index)
     local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
-    
+
     local name = event.element.parent.py_add_interrupt_textfield.text
     Caravan.add_interrupt(caravan_data, name, player)
 end
@@ -405,7 +405,7 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_close_button"] = funct
     local player = game.get_player(event.player_index)
     local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
-    
+
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
 end
 
@@ -413,7 +413,7 @@ end
 gui_events[defines.events.on_gui_selection_state_changed]["py_add_interrupt_list_box"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
-    
+
     storage.gui_elements_by_name["py_add_interrupt_textfield"].text = element.get_item(element.selected_index)
 end
 
@@ -430,7 +430,7 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
     local gui = Caravan.get_caravan_gui(player)
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
-    
+
     local label = element.parent.py_rename_interrupt_label
     label.visible = not label.visible
     local textfield = element.parent.py_rename_interrupt_textfield
@@ -520,7 +520,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
-    
+
     local action_list_type = tags.action_list_type
     local schedule
     local actions
@@ -594,15 +594,15 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     local tags = element.tags
     local id = tags.action_id or tags.schedule_id
     local caravan_data
-    
+
     local schedule = get_schedule(element)
-    
+
     local offset = tags.up and -1 or 1
     local a, b = schedule[id], schedule[id + offset]
     if not a or not b then return end
     schedule[id] = b
     schedule[id + offset] = a
-    
+
     if caravan_data then
         stop_actions(caravan_data)
     end
@@ -828,8 +828,8 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
     elseif event.button == defines.mouse_button_type.right then
         if not cursor_stack.valid_for_read and fuel_stack.valid_for_read then
             cursor_stack.set_stack(fuel_stack)
-            cursor_stack.count = math.ceil(fuel_stack.count/2)
-            fuel_stack.count = math.floor(fuel_stack.count/2)
+            cursor_stack.count = math.ceil(fuel_stack.count / 2)
+            fuel_stack.count = math.floor(fuel_stack.count / 2)
         elseif cursor_stack.valid_for_read then
             -- Creates a temporary stack (needed to preserve metadata) by temporarily resizing inventory
             caravan_data.fuel_inventory.resize(#caravan_data.fuel_inventory + 1)
@@ -993,7 +993,7 @@ local function advance_caravan_schedule_by_1(caravan_data)
         ::continue::
     end
 
-    schedule = caravan_data.schedule[caravan_data.schedule_id]             -- I dont know why, but this is necessary
+    schedule = caravan_data.schedule[caravan_data.schedule_id] -- I dont know why, but this is necessary
     if not schedule then return end
 
     if schedule.temporary then
@@ -1145,7 +1145,9 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         local target_type = (schedule.entity and schedule.entity.valid) and schedule.entity.type or "default"
         local is_valid = false
         for _, valid_action in pairs(prototype.actions[target_type] or prototype.actions) do
-           if action.type == valid_action then is_valid = true; break; end
+            if action.type == valid_action then
+                is_valid = true; break;
+            end
         end
         if is_valid then
             result = Caravan.actions[action.type](caravan_data, schedule, action)
@@ -1157,7 +1159,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         elseif result == "error" then
             stop_actions(caravan_data)
             guis_to_update[caravan_data.unit_number] = true
-        -- Advance the schedule
+            -- Advance the schedule
         elseif result then
             if #schedule.actions == caravan_data.action_id then
                 advance_caravan_schedule_by_1(caravan_data)

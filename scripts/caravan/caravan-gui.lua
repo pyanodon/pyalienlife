@@ -108,7 +108,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
                 tags = tags, elem_type = "signal"
             }
             circuit_condition_left.elem_value = action.circuit_condition_left
-            
+
             local selected_index = action.operator or 3
             action_frame.add {
                 type = "drop-down", items = {">", "<", "=", "≥", "≤", "≠"}, selected_index = selected_index, style = "train_schedule_circuit_condition_comparator_dropdown",
@@ -126,7 +126,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
                 tags = tags, elem_type = "signal"
             }
             circuit_condition_left.elem_value = action.circuit_condition_left
-            
+
             local selected_index = action.operator or 3
             action_frame.add {
                 type = "drop-down", items = {">", "<", "=", "≥", "≤", "≠"}, selected_index = selected_index, style = "train_schedule_circuit_condition_comparator_dropdown",
@@ -146,7 +146,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
                 elem_filters = filters
             }
             itemselect.elem_value = action.elem_value
-            
+
             local selected_index = action.operator or 3
             action_frame.add {
                 type = "drop-down", items = {">", "<", "=", "≥", "≤", "≠"}, selected_index = selected_index, style = "train_schedule_circuit_condition_comparator_dropdown",
@@ -165,7 +165,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             }
             itemselect.elem_value = action.elem_value
             action_frame.add {type = "label", caption = "="}
-            
+
             local textfield = action_frame.add {
                 type = "textfield",
                 name = "py_food_count",
@@ -182,7 +182,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
         elseif action.type == "at-outpost" or action.type == "not-at-outpost" then
             action_frame.add {type = "sprite-button", name = "py_add_outpost", tags = {interrupt = unit_number, action_id = j}, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
             if not action.entity then
-                label.caption = {"caravan-actions."..action.type.."2", {"caravan-gui.not-specified"}}
+                label.caption = {"caravan-actions." .. action.type .. "2", {"caravan-gui.not-specified"}}
             end
         end
 
@@ -222,8 +222,8 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
     local unit_number = caravan_data.unit_number
     local prototype = caravan_prototypes[caravan_data.entity.name]
     if interrupt_data then assert(interrupt_data.schedule) end
-    local schedule = interrupt_data and interrupt_data.schedule or caravan_data.schedule   
-    
+    local schedule = interrupt_data and interrupt_data.schedule or caravan_data.schedule
+
     local tags = {unit_number = unit_number, action_list_type = action_list_type}
     if interrupt_data then
         tags.action_list_type = Caravan.action_list_types.interrupt_targets
@@ -235,7 +235,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
     for i, schedule in ipairs(schedule) do
         tags.schedule_id = i
 
-        local schedule_flow = gui.add {type = "flow", direction = "vertical", name }
+        local schedule_flow = gui.add {type = "flow", direction = "vertical", name}
         schedule_flow.style.horizontal_align = "right"
         schedule_flow.style.vertically_stretchable = false
 
@@ -245,7 +245,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
         schedule_frame.style.vertically_stretchable = true
         schedule_frame.style.height = 36
         schedule_frame.style.right_padding = 12
-        
+
         local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
         playbutton.style, playbutton.sprite = generate_button_status(caravan_data, tags.action_list_type, i, nil, tags.interrupt_name)
         style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
@@ -409,14 +409,14 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     main_frame.style.width = 448
     main_frame.style.minimal_height = 700
     main_frame.tags = {unit_number = entity.unit_number}
-    
+
     local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
     content_frame.style.vertically_stretchable = true
     local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
     content_flow.style.vertical_spacing = 8
     content_flow.style.margin = {-4, 0, -4, 0}
     content_flow.style.vertical_align = "center"
-    
+
     local caption_frame = content_flow.add {type = "frame", name = "caption_frame", direction = "horizontal", style = "subheader_frame"}
     caption_frame.style.height = 36
     caption_frame.style.horizontally_stretchable = true
@@ -424,10 +424,10 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     caption_frame.style.right_margin = -12
     caption_frame.style.left_margin = -12
     caption_frame.style.left_padding = 8
-    
+
     local caption_flow = caption_frame.add {type = "flow", name = "caption_flow", direction = "horizontal"}
     caption_flow.style.vertical_align = "center"
-    
+
     local title = caption_flow.add {
         name = "title",
         type = "label",
@@ -445,7 +445,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         tags = {unit_number = entity.unit_number, maximal_width = 300}
     }
     caption_flow.add {type = "empty-widget", style = "py_empty_widget"}
-    
+
     local refocus = caption_flow.add {
         type = "sprite-button",
         name = "py_refocus",
@@ -657,14 +657,14 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
     empty.style.right_margin = 4
     local close_button = title_flow.add {type = "sprite-button", name = "py_close_interrupt_button", style = "close_button", sprite = "utility/close"}
 
-    local window_frame = interrupt_window.add{
+    local window_frame = interrupt_window.add {
         name = "window_frame",
         type = "frame",
         direction = "vertical",
         style = "inside_shallow_frame_with_padding_and_vertical_spacing",
     }
     window_frame.style.horizontally_stretchable = true
-    
+
     local subheader_frame = window_frame.add {type = "frame", direction = "horizontal", style = "subheader_frame"}
     subheader_frame.style.height = 36
     subheader_frame.style.horizontally_stretchable = true
@@ -697,7 +697,7 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
     conditions_scroll_pane.style.left_padding = -32
 
     Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name, nil, Caravan.action_list_types.interrupt_condition)
-    
+
     tags.action_list_type = Caravan.action_list_types.interrupt_condition
 
     local actions = Caravan.valid_actions["interrupt-condition"]
