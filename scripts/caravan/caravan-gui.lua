@@ -364,15 +364,6 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         if player.gui.relative.caravan_gui then
             player.gui.relative.caravan_gui.destroy()
         end
-        -- local flow = player.gui.relative.add {
-        --     type = "flow", name = "caravan_flow",
-        --     anchor = {
-        --         gui = defines.relative_gui_type.script_inventory_gui,
-        --         position = defines.relative_gui_position.right
-        --     },
-
-        -- }
-        -- flow.style.horizontal_spacing = 0
         main_frame = player.gui.relative.add {
             type = "frame", name = "caravan_gui", caption = caravan_data.entity.localised_name, direction = "vertical",
             anchor = {
@@ -382,8 +373,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         }
     end
     main_frame.style.width = 448
-    main_frame.style.minimal_height = 867
-    -- main_frame.style.margin = 0
+    main_frame.style.minimal_height = 700
     main_frame.tags = {unit_number = entity.unit_number}
     
     local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
