@@ -348,7 +348,7 @@ end)
 
 Caravan.actions = {
     ["time-passed"] = function(caravan_data, schedule, action)
-        if action.timer == 1 then
+        if not action.timer or action.timer == 1 then
             action.timer = nil
             return true
         end
