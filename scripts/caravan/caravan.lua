@@ -1069,13 +1069,15 @@ end
 ---@param interrupt_data CaravanInterrupt
 function add_interrupt(caravan_data, interrupt_data)
     if #interrupt_data.schedule <= 0 then return -1 end
+    local first_inserted_location = nil
     for i = 1, #interrupt_data.schedule do
         local sch = table.deepcopy(interrupt_data.schedule[i])
         sch.temporary = {interrupt_name = interrupt_data.name, schedule_id = i}
         local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id + i or #caravan_data.schedule
+        first_inserted_location = first_inserted_location or index
         table.insert(caravan_data.schedule, index, sch)
     end
-    return caravan_data.schedule_id > 0 and caravan_data.schedule_id + 1 or #caravan_data.schedule
+    return caravan_data.schedule_id > 0 and caravan_data.schedule_id + 1 or first_inserted_location or #caravan_data.schedule
 end
 
 gui_events[defines.events.on_gui_click]["py_interrupt_play"] = function(event)
