@@ -170,7 +170,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_lis
                 elem_filters = {{filter = "name", name = Caravan.foods.all}}
             }
             itemselect.elem_value = action.elem_value
-            action_frame.add {type = "label", caption = "="}
+            action_frame.add {type = "label", caption = "≥"}
 
             local textfield = action_frame.add {
                 type = "textfield",

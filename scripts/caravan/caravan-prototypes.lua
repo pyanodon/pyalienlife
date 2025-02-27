@@ -368,6 +368,10 @@ Caravan.actions = {
         local goal = action.item_count or 0
         if not item then return false end
 
+        if not caravan_prototypes[caravan_data.entity.name].favorite_foods[item] then
+            return true
+        end
+
         local result = transfer_filtered_items_1(fuel_inventory, outpost_inventory, item, goal)
 
         return action.async or result
