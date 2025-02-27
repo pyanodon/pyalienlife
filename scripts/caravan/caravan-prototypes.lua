@@ -293,12 +293,9 @@ local function transfer_filtered_items_2(input_inventory, output_inventory, item
     end
 end
 
+local circuit_red, circuit_green = defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green
 local function evaluate_signal(entity, signal)
-    local result = entity.get_signal(signal, defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green)
-    if result == 0 and entity.type == "container" and signal.type == "item" then
-        return entity.get_inventory(defines.inventory.chest).get_item_count(signal.name)
-    end
-    return result
+    return entity.get_signal(signal, circuit_red, circuit_green)
 end
 
 -- small migration script to ensure we are not transfering deleted items

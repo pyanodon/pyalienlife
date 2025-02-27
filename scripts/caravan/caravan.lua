@@ -1170,7 +1170,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if not action then goto continue end
 
         local result
-        if Caravan.get_valid_actions_for_entity(caravan_data, entity)[action.type] then
+        if Caravan.get_valid_actions_for_entity(caravan_data, schedule.entity)[action.type] then
             result = Caravan.actions[action.type](caravan_data, schedule, action)
         else
             result = true -- Skip invalid action
