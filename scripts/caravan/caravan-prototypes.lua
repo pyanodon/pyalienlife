@@ -580,13 +580,15 @@ Caravan.actions = {
 
     ["target-item-count"] = function(caravan_data, schedule, action)
         local outpost = schedule.entity
-        if not outpost or not outpost.valid then return true end
+        if not outpost or not outpost.valid then return false end
         local item = action.elem_value
 
         local right = action.circuit_condition_right
         if not right then return false end
 
-        local left = get_outpost_inventory(outpost).get_item_count(item)
+        local outpost_inventory = get_outpost_inventory(outpost)
+        if not outpost_inventory then return false end
+        local left = outpost_inventory.get_item_count(item)
 
         local operator = action.operator or 3
         if operator == 1 then

@@ -578,12 +578,17 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_condition_
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
+    local action_list_type = tags.action_list_type
+
     local action
-    if caravan_data then
+    if action_list_type == Caravan.action_list_types.standard_schedule then
         action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
+    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
+        action = storage.interrupts[tags.interrupt_name].conditions[tags.action_id]
     else
-        action = storage.interrupts[tags.unit_number].conditions[tags.action_id]
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
+
     action.operator = element.selected_index
     if caravan_data then
         stop_actions(caravan_data)
@@ -982,7 +987,7 @@ local function advance_caravan_schedule_by_1(caravan_data)
         local conditions_passed = true
         for _, condition in pairs(interrupt.conditions) do
             if not Caravan.actions[condition.type] then break end
-            if not Caravan.actions[condition.type](caravan_data, schedule, condition) then
+            if not Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition) then
                 conditions_passed = false
                 break
             end
