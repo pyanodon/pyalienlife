@@ -480,14 +480,18 @@ Caravan.actions = {
 
     ["circuit-condition"] = function(caravan_data, schedule, action)
         local outpost = schedule.entity
-        if not outpost or not outpost.valid then return true end
 
         local right = action.circuit_condition_right
         local left = action.circuit_condition_left
         if not right or not left then return false end
 
-        right = evaluate_signal(outpost, right)
-        left = evaluate_signal(outpost, left)
+        if not outpost or not outpost.valid then
+            right, left = 0, 0
+        else
+            right = evaluate_signal(outpost, right)
+            left = evaluate_signal(outpost, left)
+        end
+
         local operator = action.operator or 3
         if operator == 1 then
             return left > right
@@ -506,13 +510,16 @@ Caravan.actions = {
 
     ["circuit-condition-static"] = function(caravan_data, schedule, action)
         local outpost = schedule.entity
-        if not outpost or not outpost.valid then return true end
 
         local right = action.circuit_condition_right
         local left = action.circuit_condition_left
         if not right or not left then return false end
 
-        left = evaluate_signal(outpost, left)
+        if not outpost or not outpost.valid then
+            left = 0
+        else
+            left = evaluate_signal(outpost, left)
+        end
 
         local operator = action.operator or 3
         if operator == 1 then
