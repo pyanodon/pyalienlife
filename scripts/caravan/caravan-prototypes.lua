@@ -295,7 +295,11 @@ end
 
 local circuit_red, circuit_green = defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green
 local function evaluate_signal(entity, signal)
-    return entity.get_signal(signal, circuit_red, circuit_green)
+    local result = entity.get_signal(signal, circuit_red, circuit_green)
+    if result == 0 and prototypes.item[signal.name] then
+        return entity.get_item_count(signal)
+    end
+    return result
 end
 
 -- small migration script to ensure we are not transfering deleted items

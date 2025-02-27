@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.38
+Date: 2025-2-27
+  Changes:
+    - Fixed that the "circuit-condition-static" could incorrectly count the number of signals on an outpost.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.37
 Date: 2025-2-27
   Changes:
