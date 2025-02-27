@@ -10,7 +10,7 @@ Caravan.action_list_types = {
 
 Caravan.valid_actions = {
     caravan = {
-        ["outpost"] = {
+        ["outpost"] = table.invert{
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -23,7 +23,7 @@ Caravan.valid_actions = {
             "circuit-condition",
             "circuit-condition-static"
         },
-        ["character"] = {
+        ["character"] = table.invert{
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -35,7 +35,7 @@ Caravan.valid_actions = {
             "unload-target",
             "empty-autotrash"
         },
-        ["unit"] = {
+        ["unit"] = table.invert{
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -46,7 +46,7 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["cargo-wagon"] = {
+        ["cargo-wagon"] = table.invert{
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -55,7 +55,7 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["car"] = {
+        ["car"] = table.invert{
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -64,7 +64,7 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["spider-vehicle"] = {
+        ["spider-vehicle"] = table.invert{
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -73,12 +73,12 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["electric-pole"] = {
+        ["electric-pole"] = table.invert{
             "time-passed",
             "circuit-condition",
             "circuit-condition-static"
         },
-        ["default"] = {
+        ["default"] = table.invert{
             "time-passed"
         },
     },
