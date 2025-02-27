@@ -1109,6 +1109,20 @@ gui_events[defines.events.on_gui_click]["py_interrupt_play"] = function(event)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
+function Caravan.get_valid_actions_for_entity(caravan_data, entity)
+    local prototype = caravan_prototypes[caravan_data.entity.name]
+    local all_actions = prototype.actions
+    local valid_actions
+    if entity and entity.valid then
+        if entity.name == "outpost" or entity.name == "outpost-aerial" then
+            valid_actions = all_actions.outpost
+        else
+            valid_actions = all_actions[entity.type]
+        end
+    end
+    return valid_actions or all_actions.default or error()
+end
+
 py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     local guis_to_update = {}
 
@@ -1155,15 +1169,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if not action then goto continue end
 
         local result
-        local prototype = caravan_prototypes[entity.name]
-        local target_type = (schedule.entity and schedule.entity.valid) and schedule.entity.type or "default"
-        local is_valid = false
-        for _, valid_action in pairs(prototype.actions[target_type] or prototype.actions) do
-            if action.type == valid_action then
-                is_valid = true; break;
-            end
-        end
-        if is_valid then
+        if table.find(Caravan.get_valid_actions_for_entity(caravan_data, entity), action.type) then
             result = Caravan.actions[action.type](caravan_data, schedule, action)
         else
             result = true -- Skip invalid action
