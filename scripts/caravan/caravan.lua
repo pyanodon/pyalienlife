@@ -202,38 +202,37 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         limit = 1,
         collision_mask = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}
     }[1]
+
     if storage.last_opened_action[player.index] then
-        if entity then
+        if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-            if (entity.name == "outpost") or (entity.name == "outpost-aerial") then
+            if entity.name == "outpost" or entity.name == "outpost-aerial" then
                 local action_id = storage.last_opened_action[player.index].action_id
                 interrupt_data.conditions[action_id].entity = entity
                 interrupt_data.conditions[action_id].localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
             end
         end
+    elseif entity then
+        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
+        entity.operable = false -- Prevents the player from opening the gui of the clicked entity
+        if only_outpost and entity.name ~= prototype.outpost then return end
+        if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
+        schedule[#schedule + 1] = {
+            localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
+            entity = entity,
+            position = entity.position,
+            actions = {}
+        }
+    elseif not only_outpost then
+        local position = event.cursor_position
+        schedule[#schedule + 1] = {
+            localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
+            position = position,
+            actions = {}
+        }
     else
-        if entity then
-            if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
-            entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-            if only_outpost and entity.name ~= prototype.outpost then return end
-            if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
-            schedule[#schedule + 1] = {
-                localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
-                entity = entity,
-                position = entity.position,
-                actions = {}
-            }
-        elseif not only_outpost then
-            local position = event.cursor_position
-            schedule[#schedule + 1] = {
-                localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
-                position = position,
-                actions = {}
-            }
-        else
-            return
-        end
+        return
     end
 
     if caravan_data then
@@ -326,7 +325,7 @@ local function get_schedule(element)
         local caravan_data = storage.caravans[tags.unit_number]
         return caravan_data.interrupts
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        return storage.interrupts[tags.unit_number].conditions
+        return storage.interrupts[tags.interrupt_name].conditions
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
         local schedule = storage.interrupts[tags.interrupt_name].schedule
         if tags.action_id then schedule = schedule[tags.schedule_id].actions end
@@ -353,7 +352,9 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
         storage.last_opened_action[player.index] = {schedule_id = element.tags.schedule_id, action_id = element.tags.action_id}
     end
     storage.last_opened_interrupt[player.index] = element.tags.interrupt_name
-    storage.last_opened_caravan[player.index] = Caravan.get_caravan_gui(player).tags.unit_number
+    local unit_number = Caravan.get_caravan_gui(player).tags.unit_number
+    assert(unit_number)
+    storage.last_opened_caravan[player.index] = unit_number
     player.opened = nil
 end
 

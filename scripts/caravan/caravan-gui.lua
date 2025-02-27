@@ -53,10 +53,10 @@ end
 ---@param gui LuaGuiElement
 ---@param actions CaravanAction[]
 ---@param caravan_data Caravan
----@param unit_number integer
 ---@param i integer
 ---@param action_list_type CaravanActionListType
-function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, i, action_list_type, interrupt_name)
+function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_list_type, interrupt_name)
+    local unit_number = caravan_data.unit_number
     for j, action in ipairs(actions) do
         local tags = {unit_number = unit_number, action_list_type = action_list_type, schedule_id = i, action_id = j, interrupt_name = interrupt_name}
 
@@ -68,10 +68,11 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
         action_frame.style.left_margin = 32
         -- action_frame.style.horizontally_stretchable = true
 
-        if caravan_data then
+        if action_list_type ~= Caravan.action_list_types.interrupt_condition then
             local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
             playbutton.style, playbutton.sprite = generate_button_status(caravan_data, action_list_type, i, j, interrupt_name)
         end
+
         local label = action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = action.localised_name}
         action_frame.add {type = "empty-widget", style = "py_empty_widget"}
 
@@ -180,7 +181,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, unit_number, 
             textfield.allow_decimal = false
             textfield.allow_negative = false
         elseif action.type == "at-outpost" or action.type == "not-at-outpost" then
-            action_frame.add {type = "sprite-button", name = "py_add_outpost", tags = {interrupt = unit_number, action_id = j}, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
+            action_frame.add {type = "sprite-button", name = "py_add_outpost", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
             if not action.entity then
                 label.caption = {"caravan-actions." .. action.type .. "2", {"caravan-gui.not-specified"}}
             end
@@ -288,7 +289,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
             }
         end
 
-        Caravan.build_action_list_gui(schedule_flow, schedule.actions, caravan_data, unit_number, i, tags.action_list_type, tags.interrupt_name)
+        Caravan.build_action_list_gui(schedule_flow, schedule.actions, caravan_data, i, tags.action_list_type, tags.interrupt_name)
 
         local entity = schedule.entity
         local actions
@@ -699,7 +700,14 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
     conditions_scroll_pane.style.right_padding = -8
     conditions_scroll_pane.style.left_padding = -28
 
-    Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name, nil, Caravan.action_list_types.interrupt_condition)
+    Caravan.build_action_list_gui(
+        conditions_scroll_pane,
+        interrupt_data.conditions,
+        caravan_data,
+        nil,
+        Caravan.action_list_types.interrupt_condition,
+        interrupt_data.name
+    )
 
     tags.action_list_type = Caravan.action_list_types.interrupt_condition
 
