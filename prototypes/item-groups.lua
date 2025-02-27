@@ -366,6 +366,12 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-yotoi-fruit-smartfarm",
+        group = "py-alienlife",
+        order = "f-cc",
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-tuuphra",
         group = "py-alienlife",
         order = "f-d",

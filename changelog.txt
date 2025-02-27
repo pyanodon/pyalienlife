@@ -22,6 +22,7 @@ Date: ?
     - Increased selction boxes of all caravans to fit better with the graphics.
     - Fixed seaweed crop generating pollution. Resolves https://github.com/pyanodon/pybugreports/issues/837
     - Fixed kicalk turd path 1 eating barrels. Resolves https://github.com/pyanodon/pybugreports/issues/841
+    - Fixed missing tiers of yotoi fruit smartfarm. Resolves https://github.com/pyanodon/pybugreports/issues/878
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20

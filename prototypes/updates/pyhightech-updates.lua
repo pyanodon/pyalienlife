@@ -923,6 +923,7 @@ RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-9",
     category = "yotoi-farm",
+    subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
