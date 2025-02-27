@@ -80,7 +80,7 @@ local unit = {
     healing_per_tick = 0.01,
     collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
     selection_priority = 51,
-    selection_box = {{-1, -1}, {1, 1}},
+    selection_box = {{-1, -1.5}, {1, 1.5}},
     attack_parameters = {
         type = "projectile",
         range = 0,
@@ -167,7 +167,6 @@ local unit = {
                 frame_count = 26,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0)),
-                scale = _G.scale
             },
             {
                 filenames = {

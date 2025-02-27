@@ -214,13 +214,23 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
+    local position = entity.position
+    local gui = Caravan.get_caravan_gui(player)
+    if gui then
+        local camera = gui.content_frame.content_flow.camera_frame.camera
+        position = camera.position
+        entity = camera.entity
+    end
+    if entity then position = entity.position end
 
     player.opened = nil
     player.set_controller {
         type = defines.controllers.remote,
-        position = entity.position,
+        position = position,
     }
-    player.centered_on = entity
+    if entity then
+        player.centered_on = entity
+    end
 end
 
 local function title_edit_mode(caption_flow, caravan_data)
@@ -237,7 +247,6 @@ local function title_edit_mode(caption_flow, caravan_data)
     }
     textfield.focus()
     textfield.select_all()
-    textfield.style.top_margin = -5
     textfield.style.maximal_width = 150
     local button = caption_flow.py_rename_caravan_button
     ---@class SpriteButton.style
@@ -247,8 +256,6 @@ local function title_edit_mode(caption_flow, caravan_data)
     button.hovered_sprite = "utility/check_mark"
     button.clicked_sprite = "utility/check_mark"
     button.style.size = {26, 26}
-    button.style.top_margin = -2
-    button.style.bottom_margin = -4
 end
 
 local function title_display_mode(caption_flow, caravan_data)
@@ -260,15 +267,13 @@ local function title_display_mode(caption_flow, caravan_data)
         type = "label",
         name = "title",
         caption = Caravan.get_name(caravan_data),
-        style = "frame_title",
-        ignored_by_interaction = true,
+        style = "train_stop_subheader",
         index = index
     }
+    title.style.left_padding = 0
     local button = caption_flow.py_rename_caravan_button
-    button.style = "frame_action_button"
-    button.sprite = "rename_icon_small_white"
-    button.hovered_sprite = "rename_icon_small_black"
-    button.clicked_sprite = "rename_icon_small_black"
+    button.style = "mini_button_aligned_to_text_vertically_when_centered"
+    button.sprite = "rename_icon_small_black"
 
     title.style.maximal_width = button.tags.maximal_width or error("No maximal width")
 end

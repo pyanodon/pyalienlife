@@ -15,6 +15,11 @@ Date: ?
     - Fixed crash deleting a silo during rocket launch. Resolves https://github.com/pyanodon/pybugreports/issues/832
     - Updated Ukrainian translation.
     - Fixed floating-point crafting speeds for the arqad apiary. Resolves https://github.com/pyanodon/pybugreports/issues/862
+    - Caravans schedules now support interrupts. Huge thank-you to O5M0 for the amazing PR. https://github.com/pyanodon/pyalienlife/pull/296
+    - Increased inventory size of caravans 1 -> 2 and aerial caravans 2 -> 4
+    - Improved many aspects of caravan GUI.
+    - Added new actions to caravans.
+    - Increased selction boxes of all caravans to fit better with the graphics.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20

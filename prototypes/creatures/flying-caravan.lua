@@ -56,7 +56,7 @@ data:extend
         collision_box = {{0, 0}, {0, 0}},
         render_layer = "air-object",
         collision_mask = {layers = {}, not_colliding_with_itself = true},
-        selection_box = {{-1.5, -3}, {1.5, 3}},
+        selection_box = {{-1.5, -4.5}, {1.5, 4.5}},
         selection_priority = 51,
         attack_parameters =
         {
@@ -180,7 +180,6 @@ data:extend
                     frame_count = 50,
                     direction_count = 16,
                     shift = util.mul_shift(util.by_pixel(-0, -0)),
-                    scale = _G.scale,
                 },
                 {
                     filenames =

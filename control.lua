@@ -90,7 +90,7 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
         end
         gui = Caravan.get_caravan_gui(player)
         if gui then
-            Caravan.update_gui(gui, true, player); goto continue
+            Caravan.update_gui(gui, true); goto continue
         end
         gui = player.gui.relative.bioport_gui
         if gui then
