@@ -290,6 +290,7 @@ end
 local function get_action_from_button(player, element)
     local tags = element.tags
     local action_list_type = tags.action_list_type
+    local interrupt = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name]
 
     local action
     if action_list_type == Caravan.action_list_types.standard_schedule then
@@ -297,9 +298,9 @@ local function get_action_from_button(player, element)
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name].conditions[tags.action_id]
+        action = interrupt.conditions[tags.action_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name].schedule[tags.schedule_id].actions[tags.action_id]
+        action = interrupt.schedule[tags.schedule_id].actions[tags.action_id]
     else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
@@ -497,13 +498,19 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function
             end
         end
         storage.interrupts[element.tags.interrupt_name] = nil
-        Caravan.get_interrupt_gui(player).destroy()
-        Caravan.update_gui(Caravan.get_caravan_gui(player))
+        for _, player in pairs(game.players) do
+            local gui = Caravan.get_interrupt_gui(player)
+            if gui.tags.interrupt_name == element.tags.interrupt_name then
+                gui.destroy()
+                Caravan.update_gui(Caravan.get_caravan_gui(player))
+            end
+        end
     else
         element.parent.py_delete_interrupt_cancel.visible = true
         element.parent.py_delete_interrupt_confirm.visible = true
     end
 end
+
 gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
