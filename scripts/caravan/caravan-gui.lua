@@ -37,7 +37,7 @@ function Caravan.update_interrupt_gui_button_status(caravan_data)
     for _, player in pairs(game.connected_players) do
         local interrupt_gui = Caravan.get_interrupt_gui(player)
         if interrupt_gui and interrupt_gui.tags.unit_number == caravan_data.unit_number then
-            local targets_gui = interrupt_gui.window_frame.targets_scroll_pane
+            local targets_gui = interrupt_gui.window_frame.targets_scroll_pane_frame.targets_scroll_pane
             local tags = targets_gui.py_add_outpost.tags
             targets_gui.clear()
             local interrupt_name = interrupt_gui.tags.interrupt_name
@@ -688,13 +688,16 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
         tags = tags, state = interrupt_data.inside_interrupt, tooltip = {"gui-interrupts.inside-interrupt-tooltip"}
     }
     window_frame.add {type = "label", caption = {"gui-interrupts.conditions"}, tooltip = {"gui-interrupts.conditions-tooltip"}, style = "semibold_label"}
-    local conditions_scroll_pane = window_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
+
+    local conditions_scroll_pane_frame = window_frame.add {type = "frame", name = "conditions_scroll_pane_frame", direction = "vertical", style = "py_nice_frame"}
+    conditions_scroll_pane_frame.style.vertically_stretchable = true
+    local conditions_scroll_pane = conditions_scroll_pane_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
     conditions_scroll_pane.horizontal_scroll_policy = "never"
     conditions_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
     conditions_scroll_pane.style.horizontally_stretchable = true
     conditions_scroll_pane.style.vertically_stretchable = true
-    conditions_scroll_pane.style.right_padding = -12
-    conditions_scroll_pane.style.left_padding = -32
+    conditions_scroll_pane.style.right_padding = -8
+    conditions_scroll_pane.style.left_padding = -28
 
     Caravan.build_action_list_gui(conditions_scroll_pane, interrupt_data.conditions, nil, interrupt_data.name, nil, Caravan.action_list_types.interrupt_condition)
 
@@ -709,12 +712,15 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
     py_add_action.style.left_margin = 32
 
     window_frame.add {type = "label", caption = {"gui-interrupts.targets"}, tooltip = {"gui-interrupts.targets-tooltip"}, style = "semibold_label"}
-    local targets_scroll_pane = window_frame.add {name = "targets_scroll_pane", type = "scroll-pane", style = "py_schedule_scroll_pane"}
+
+    local targets_scroll_pane_frame = window_frame.add {type = "frame", name = "targets_scroll_pane_frame", direction = "vertical", style = "py_nice_frame"}
+    targets_scroll_pane_frame.style.vertically_stretchable = true
+    local targets_scroll_pane = targets_scroll_pane_frame.add {name = "targets_scroll_pane", type = "scroll-pane", style = "py_schedule_scroll_pane"}
     targets_scroll_pane.horizontal_scroll_policy = "never"
     targets_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
     targets_scroll_pane.style.horizontally_stretchable = true
     targets_scroll_pane.style.vertically_stretchable = true
-    targets_scroll_pane.style.right_padding = -12
+    targets_scroll_pane.style.right_padding = -8
 
     Caravan.build_schedule_list_gui(targets_scroll_pane, caravan_data, interrupt_data)
     targets_scroll_pane.add {type = "button", name = "py_add_outpost", tags = tags, style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}}
