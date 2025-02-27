@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.35
-Date: ?
+Date: 2025-2-26
   Changes:
     - Methanol is properly marked as a catalyst in formamide recipe.  Resolves https://github.com/pyanodon/pybugreports/issues/871
     - Higher tier seaweed buildings now have the correct base speed again.  Resolves https://github.com/pyanodon/pybugreports/issues/842
