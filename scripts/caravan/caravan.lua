@@ -1037,7 +1037,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if #schedule.actions == 0 then
         local schedule_num = #caravan_data.schedule
-        if schedule_num == 1 then
+        if schedule_num == 1 and not caravan_data.schedule[1].temporary then
             caravan_data.retry_pathfinder = 3
             return
         else
