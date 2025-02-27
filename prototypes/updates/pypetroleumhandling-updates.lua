@@ -44,6 +44,8 @@ TECHNOLOGY("plastics"):set_fields {prerequisites = {}}
 
 data.raw["recipe-category"]["guar"].allowed_module_categories = {"guar"}
 data.raw["recipe-category"]["guar"].modules_required = true
+data.raw.item["guar-seeds"].subgroup = "py-alienlife-guar"
+data.raw.item["guar-seeds"].order = "g-bg"
 
 ----RECIPES----
 RECIPE("soot-to-iron"):remove_unlock("oil-sands"):add_unlock("soot-separation")
