@@ -1119,6 +1119,8 @@ gui_events[defines.events.on_gui_click]["py_interrupt_play"] = function(event)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
+---@param caravan_data Caravan
+---@param entity LuaEntity
 function Caravan.get_valid_actions_for_entity(caravan_data, entity)
     local prototype = caravan_prototypes[caravan_data.entity.name]
     local all_actions = prototype.actions
@@ -1177,9 +1179,10 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if not schedule then goto continue end
         local action = schedule.actions[caravan_data.action_id]
         if not action then goto continue end
+        local target_entity = schedule.entity
 
         local result
-        if Caravan.get_valid_actions_for_entity(caravan_data, entity)[action.type] then
+        if Caravan.get_valid_actions_for_entity(caravan_data, target_entity)[action.type] then
             result = Caravan.actions[action.type](caravan_data, schedule, action)
         else
             result = true -- Skip invalid action
