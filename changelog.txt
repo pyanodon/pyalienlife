@@ -23,6 +23,7 @@ Date: ?
     - Fixed seaweed crop generating pollution. Resolves https://github.com/pyanodon/pybugreports/issues/837
     - Fixed kicalk turd path 1 eating barrels. Resolves https://github.com/pyanodon/pybugreports/issues/841
     - Fixed missing tiers of yotoi fruit smartfarm. Resolves https://github.com/pyanodon/pybugreports/issues/878
+    - Fixed that arum and kicalk could not be farmed using smart farms. Resolves https://github.com/pyanodon/pybugreports/issues/875
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.34
 Date: 2025-1-20
