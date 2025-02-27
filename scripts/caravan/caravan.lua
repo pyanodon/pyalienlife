@@ -1083,7 +1083,7 @@ function add_interrupt(caravan_data, interrupt_data)
     for i = 1, #interrupt_data.schedule do
         local sch = table.deepcopy(interrupt_data.schedule[i])
         sch.temporary = {interrupt_name = interrupt_data.name, schedule_id = i}
-        local index = caravan_data.schedule_id > 0 and caravan_data.schedule_id + i or #caravan_data.schedule
+        local index = math.max(0, caravan_data.schedule_id) + i
         first_inserted_location = first_inserted_location or index
         table.insert(caravan_data.schedule, index, sch)
     end
