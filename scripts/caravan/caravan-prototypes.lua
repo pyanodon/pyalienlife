@@ -214,15 +214,18 @@ end
 
 local function transfer_all_items(input_inventory, output_inventory)
     if input_inventory.is_empty() or output_inventory.is_full() then return end
+    local inserted_total = 0
     for i = 1, #input_inventory do
         local stack = input_inventory[i]
         local inserted_count = output_inventory.insert(stack)
         if inserted_count ~= 0 then
             stack.count = stack.count - inserted_count
+            inserted_total = inserted_total + inserted_count
         end
     end
     input_inventory.sort_and_merge()
     output_inventory.sort_and_merge()
+    return inserted_total
 end
 
 local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
@@ -268,7 +271,7 @@ local function transfer_filtered_items_1(input_inventory, output_inventory, item
         end
         input_inventory.sort_and_merge()
         output_inventory.sort_and_merge()
-        return inventory_count + inserted_count >= goal
+        return inventory_count + inserted_count >= goal, inserted_count
     end
 end
 
@@ -289,7 +292,7 @@ local function transfer_filtered_items_2(input_inventory, output_inventory, item
         end
         input_inventory.sort_and_merge()
         output_inventory.sort_and_merge()
-        return inventory_count - inserted_count <= goal
+        return inventory_count - inserted_count <= goal, inserted_count
     end
 end
 
@@ -379,8 +382,12 @@ Caravan.actions = {
         if not outpost_inventory then return true end
         local inventory = caravan_data.inventory
 
-        transfer_all_items(outpost_inventory, inventory)
-        return action.async or inventory.is_full()
+        local amount = transfer_all_items(outpost_inventory, inventory)
+        local completed = action.async or inventory.is_full()
+        if amount and amount > 0 and completed then
+            Caravan.eat(caravan_data)
+        end
+        return completed
     end,
 
     ["empty-inventory"] = function(caravan_data, schedule, action)
@@ -390,8 +397,12 @@ Caravan.actions = {
         if not outpost_inventory then return true end
         local inventory = caravan_data.inventory
 
-        transfer_all_items(inventory, outpost_inventory)
-        return action.async or inventory.is_empty()
+        local amount = transfer_all_items(inventory, outpost_inventory)
+        local completed = action.async or inventory.is_empty()
+        if amount and amount > 0 and completed then
+            Caravan.eat(caravan_data)
+        end
+        return completed
     end,
 
     ["empty-autotrash"] = function(caravan_data, schedule, action)
@@ -401,7 +412,10 @@ Caravan.actions = {
         if not autotrash_inventory then return true end
         local inventory = caravan_data.inventory
 
-        transfer_all_items(autotrash_inventory, inventory)
+        local amount = transfer_all_items(autotrash_inventory, inventory)
+        if amount and amount > 0 then
+            Caravan.eat(caravan_data)
+        end
         return true
     end,
 
@@ -415,7 +429,10 @@ Caravan.actions = {
         local goal = action.item_count or 0
         if not item then return false end
 
-        local result = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
+        local result, amount = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
+        if amount and amount > 0 then
+            Caravan.eat(caravan_data)
+        end
 
         return action.async or result
     end,
@@ -430,7 +447,10 @@ Caravan.actions = {
         local goal = action.item_count or 0
         if not item then return false end
 
-        local result = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
+        local result, amount = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
+        if amount and amount > 0 then
+            Caravan.eat(caravan_data)
+        end
 
         return action.async or result
     end,
@@ -445,7 +465,10 @@ Caravan.actions = {
         local goal = action.item_count or 0
         if not item then return false end
 
-        local result = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
+        local result, amount = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
+        if amount and amount > 0 then
+            Caravan.eat(caravan_data)
+        end
 
         return action.async or result
     end,
@@ -460,7 +483,10 @@ Caravan.actions = {
         local goal = action.item_count or 0
         if not item then return false end
 
-        local result = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
+        local result, amount = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
+        if amount and amount > 0 then
+            Caravan.eat(caravan_data)
+        end
 
         return action.async or result
     end,

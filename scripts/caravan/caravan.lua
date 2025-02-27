@@ -255,7 +255,7 @@ end
 ---If this function returns false, the caravan is starved and all actions stop.
 ---@param caravan_data Caravan
 ---@return boolean
-local function eat(caravan_data)
+function Caravan.eat(caravan_data)
     local entity = caravan_data.entity
     if caravan_data.fuel_bar == 0 then
         local fuel = caravan_data.fuel_inventory
@@ -687,7 +687,7 @@ end
 local function begin_schedule(caravan_data, schedule_id, skip_eating)
     if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
         if caravan_data.schedule_id ~= schedule_id then
-            if not skip_eating and not eat(caravan_data) then
+            if not skip_eating and not Caravan.eat(caravan_data) then
                 stop_actions(caravan_data); return
             end
         end
@@ -699,7 +699,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
     local entity = caravan_data.entity
     local schedule = caravan_data.schedule[schedule_id]
     if caravan_data.fuel_inventory then
-        if not skip_eating and not eat(caravan_data) then
+        if not skip_eating and not Caravan.eat(caravan_data) then
             stop_actions(caravan_data); return
         end
     end
@@ -747,7 +747,6 @@ local function begin_action(caravan_data, action_id)
         action.timer = action.wait_time or 5
     end
 
-    if caravan_data.fuel_inventory and not Caravan.free_actions[action.type] then eat(caravan_data) end
     Caravan.update_interrupt_gui_button_status(caravan_data)
 end
 
@@ -870,7 +869,7 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
         end
     end
 
-    if eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
+    if Caravan.eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
