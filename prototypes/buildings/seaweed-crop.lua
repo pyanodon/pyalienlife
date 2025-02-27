@@ -111,7 +111,7 @@ for i = 1, 4 do
             type = "electric",
             usage_priority = "secondary-input",
             emissions_per_minute = {
-                pollution = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "seaweed-crop-mk01"),
+                pollution = -10 * i,
             },
         },
         energy_usage = (450 * i) .. "kW",
