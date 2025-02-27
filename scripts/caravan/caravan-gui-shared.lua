@@ -119,12 +119,11 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local rename_button = caption_flow.add {
         type = "sprite-button",
         name = "py_rename_caravan_button",
-        style = "frame_action_button",
-        sprite = "rename_icon_small_white",
-        hovered_sprite = "rename_icon_small_black",
-        clicked_sprite = "rename_icon_small_black",
+        style = "mini_button_aligned_to_text_vertically_when_centered",
+        sprite = "utility/rename_icon",
         tags = {unit_number = key, maximal_width = 150}
     }
+    rename_button.style.top_margin = 6
 
     button_flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 
@@ -132,10 +131,8 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local view_inventory_button = button_flow.add {
         type = "sprite-button",
         name = "py_view_inventory_button",
-        style = "frame_action_button",
-        sprite = "utility/expand_dots",
-        hovered_sprite = "utility/expand_dots",
-        clicked_sprite = "utility/expand_dots",
+        style = "tool_button",
+        sprite = "utility/center",
         tooltip = tooltip,
         tags = {unit_number = caravan_data.unit_number}
     }
@@ -143,8 +140,8 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local open_caravan_button = button_flow.add {
         type = "sprite-button",
         name = "py_click_caravan",
-        style = "frame_action_button",
-        sprite = "utility/logistic_network_panel_white",
+        style = "tool_button",
+        sprite = "utility/logistic_network_panel_black",
         hovered_sprite = "utility/logistic_network_panel_black",
         clicked_sprite = "utility/logistic_network_panel_black",
         tooltip = {"caravan-gui.open", entity.prototype.localised_name},
@@ -154,16 +151,14 @@ function Caravan.add_gui_row(caravan_data, key, table)
     local open_map_button = button_flow.add {
         type = "sprite-button",
         name = "py_open_map_button",
-        style = "frame_action_button",
-        sprite = "utility/search",
-        hovered_sprite = "utility/search_icon",
-        clicked_sprite = "utility/search_icon",
+        style = "tool_button",
+        sprite = "utility/map",
         tooltip = {"caravan-gui.view-on-map"},
         tags = {unit_number = caravan_data.unit_number}
     }
 
-    for _, button in pairs {rename_button, open_caravan_button, view_inventory_button, open_map_button} do
-        button.style.size = {26, 26}
+    for _, button in pairs {open_caravan_button, view_inventory_button, open_map_button} do
+        button.style.size = {30, 30}
         button.style.top_margin = -2
         button.style.bottom_margin = -4
     end
@@ -274,6 +269,7 @@ local function title_display_mode(caption_flow, caravan_data)
     local button = caption_flow.py_rename_caravan_button
     button.style = "mini_button_aligned_to_text_vertically_when_centered"
     button.sprite = "rename_icon_small_black"
+    button.style.top_margin = 6
 
     title.style.maximal_width = button.tags.maximal_width or error("No maximal width")
 end
