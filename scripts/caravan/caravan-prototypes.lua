@@ -508,6 +508,11 @@ Caravan.actions = {
     ["circuit-condition-static"] = function(caravan_data, schedule, action)
         local outpost = schedule.entity
 
+        -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
+        if type(action.circuit_condition_left) == "number" then
+            action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
+        end
+
         local right = action.circuit_condition_right
         local left = action.circuit_condition_left
         if not right or not left then return false end
