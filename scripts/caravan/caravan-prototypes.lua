@@ -296,10 +296,11 @@ local function transfer_filtered_items_2(input_inventory, output_inventory, item
     end
 end
 
+local circuit_red, circuit_green = defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green
 local function evaluate_signal(entity, signal)
-    local result = entity.get_signal(signal, defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green)
-    if result == 0 and entity.type == "container" and signal.type == "item" then
-        return entity.get_inventory(defines.inventory.chest).get_item_count(signal.name)
+    local result = entity.get_signal(signal, circuit_red, circuit_green)
+    if result == 0 and prototypes.item[signal.name] then
+        return entity.get_item_count(signal)
     end
     return result
 end
@@ -369,6 +370,10 @@ Caravan.actions = {
         local item = action.elem_value
         local goal = action.item_count or 0
         if not item then return false end
+
+        if not caravan_prototypes[caravan_data.entity.name].favorite_foods[item] then
+            return true
+        end
 
         local result = transfer_filtered_items_1(fuel_inventory, outpost_inventory, item, goal)
 
@@ -536,6 +541,11 @@ Caravan.actions = {
 
     ["circuit-condition-static"] = function(caravan_data, schedule, action)
         local outpost = schedule.entity
+
+        -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
+        if type(action.circuit_condition_left) == "number" then
+            action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
+        end
 
         local right = action.circuit_condition_right
         local left = action.circuit_condition_left
