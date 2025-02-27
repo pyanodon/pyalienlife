@@ -364,7 +364,9 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_button"] = function(ev
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
 
-    Caravan.build_add_interrupt_gui(player, element.parent)
+    stop_actions(caravan_data)
+    Caravan.update_gui(gui)
+    Caravan.build_add_interrupt_gui(player, gui.content_frame.content_flow.schedule_frame.schedule_pane)
 end
 
 function Caravan.add_interrupt(caravan_data, name, player)
