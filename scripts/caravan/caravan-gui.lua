@@ -122,6 +122,11 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_lis
             }
             circuit_condition_right.elem_value = action.circuit_condition_right
         elseif action.type == "circuit-condition-static" then
+            -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
+            if type(action.circuit_condition_left) == "number" then
+                action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
+            end
+
             local circuit_condition_left = action_frame.add {
                 type = "choose-elem-button", name = "py_circuit_condition_left", style = "train_schedule_item_select_button",
                 tags = tags, elem_type = "signal"

@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - Standardized button GUI styling across all caravan GUIs
     - Fixed crash when checking "Allow interrupting other interrupts" on a caravan in some cases. Resolves https://github.com/pyanodon/pybugreports/issues/879
+    - Fixed migration issue when migrating saves with the "circuit condition static" caravan condition. Resolves https://github.com/pyanodon/pybugreports/issues/880
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.35
 Date: 2025-2-26
