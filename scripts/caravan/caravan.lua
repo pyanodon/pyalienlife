@@ -226,6 +226,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         }
     elseif not only_outpost then
         local position = event.cursor_position
+        if player.surface ~= caravan_data.entity.surface then return end
         schedule[#schedule + 1] = {
             localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
             position = position,
@@ -646,17 +647,20 @@ end
 
 gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
     local tags = element.tags
     local schedule = get_schedule(element)[tags.schedule_id]
-    local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
-    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.caption_frame.caption_flow.py_refocus
+    local camera = gui.content_frame.content_flow.camera_frame.camera
+    local refocus = gui.content_frame.content_flow.caption_frame.caption_flow.py_refocus
 
     if schedule.entity and schedule.entity.valid then
         camera.entity = schedule.entity
     else
         camera.entity = nil
         camera.position = schedule.position
+        camera.surface_index = caravan_data.entity.surface_index
     end
     refocus.visible = true
     camera.zoom = 0.5
