@@ -984,7 +984,6 @@ local function advance_caravan_schedule_by_1(caravan_data)
         if conditions_passed then
             if interrupt.inside_interrupt then
                 remove_tmp_stops(caravan_data)
-                guis_to_update[caravan_data.unit_number] = true
             end
             add_interrupt(caravan_data, interrupt)
             is_interrupted = true
@@ -1068,7 +1067,7 @@ end
 ---@param caravan_data Caravan
 ---@param interrupt_data CaravanInterrupt
 function add_interrupt(caravan_data, interrupt_data)
-    if #interrupt_data.schedule <= 0 then return -1 end
+    if #interrupt_data.schedule <= 0 then return caravan_data.schedule_id end
     local first_inserted_location = nil
     for i = 1, #interrupt_data.schedule do
         local sch = table.deepcopy(interrupt_data.schedule[i])
@@ -1077,7 +1076,11 @@ function add_interrupt(caravan_data, interrupt_data)
         first_inserted_location = first_inserted_location or index
         table.insert(caravan_data.schedule, index, sch)
     end
-    return caravan_data.schedule_id > 0 and caravan_data.schedule_id + 1 or first_inserted_location or #caravan_data.schedule
+
+    -- Whenever an interrupt is added, the caravan should always immediately execute that action.
+    -- Return the schedule_id of that interrupt.
+    local new_schedule_id_to_execute = first_inserted_location or #caravan_data.schedule
+    return new_schedule_id_to_execute == 0 and -1 or new_schedule_id_to_execute
 end
 
 gui_events[defines.events.on_gui_click]["py_interrupt_play"] = function(event)
