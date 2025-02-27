@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.36
-Date: ?
+Date: 2025-2-27
   Changes:
     - Standardized button GUI styling across all caravan GUIs
     - Fixed crash when checking "Allow interrupting other interrupts" on a caravan in some cases. Resolves https://github.com/pyanodon/pybugreports/issues/879
