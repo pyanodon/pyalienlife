@@ -470,6 +470,7 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
                 local tags = interrupt_gui.tags
                 tags.interrupt_name = new_name
                 interrupt_gui.tags = tags
+                Caravan.update_interrupt_gui(player)
             end
             local caravan_gui = Caravan.get_caravan_gui(player)
             if caravan_gui then Caravan.update_gui(caravan_gui) end

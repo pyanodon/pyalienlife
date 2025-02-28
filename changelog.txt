@@ -1,8 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.36
+Version: 3.0.39
 Date: ?
   Changes:
+    - Fixed being able to store invalid food items using the store specific food action.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.38
+Date: 2025-2-27
+  Changes:
+    - Fixed that the "circuit-condition-static" could incorrectly count the number of signals on an outpost.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.37
+Date: 2025-2-27
+  Changes:
+    - Resolve migration issue with the "circuit-condition-static" action.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.36
+Date: 2025-2-27
+  Changes:
     - Standardized button GUI styling across all caravan GUIs
+    - Fixed crash when checking "Allow interrupting other interrupts" on a caravan in some cases. Resolves https://github.com/pyanodon/pybugreports/issues/879
+    - Fixed migration issue when migrating saves with the "circuit condition static" caravan condition. Resolves https://github.com/pyanodon/pybugreports/issues/880
+    - Fixed that the "circuit condition with static value" caravan action would never actually check the condition and just return true.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.35
 Date: 2025-2-26
