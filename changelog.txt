@@ -2,7 +2,16 @@
 Version: 3.0.39
 Date: ?
   Changes:
+    - Caravan actions now only consume food if items were transferred
+    - Updated codex page for caravans
     - Fixed being able to store invalid food items using the store specific food action.
+    - Fixed possible crashes when deleting interrupts in multiplayer
+    - Fixed interrupts not always triggering when they're supposed to
+    - Fixed being able to add destinations on a different surface
+    - Fixed "Open on map" button not always opening the correct surface
+    - Fixed that caravans did not correctlt check whether an action was valid
+    - Fixed action list gui having incorrect width
+    - Fixed some caravan locale being missing
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.38
 Date: 2025-2-27
