@@ -61,12 +61,11 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_lis
         local tags = {unit_number = unit_number, action_list_type = action_list_type, schedule_id = i, action_id = j, interrupt_name = interrupt_name}
 
         local action_frame = gui.add {type = "frame", style = "train_schedule_condition_frame"}
-        -- action_frame.style.vertically_stretchable = true
         action_frame.style.height = 36
         action_frame.style.right_padding = 12
-        action_frame.style.width = 0
         action_frame.style.left_margin = 32
-        -- action_frame.style.horizontally_stretchable = true
+        -- Factorio mod gui is overcomplicated, hardcoded values is the only solution i found that actually works
+        action_frame.style.width = interrupt_name and 392 or 392 - 28
 
         if action_list_type ~= Caravan.action_list_types.interrupt_condition then
             local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
@@ -74,7 +73,8 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_lis
         end
 
         local label = action_frame.add {type = "label", style = "squashable_label_with_left_padding", caption = action.localised_name}
-        action_frame.add {type = "empty-widget", style = "py_empty_widget"}
+        local empty = action_frame.add {type = "empty-widget", style = "py_empty_widget"}
+        empty.style.horizontally_stretchable = true
 
         if action.type == "time-passed" then
             local textfield = action_frame.add {type = "textfield", name = "py_time_passed_text", style = "py_compact_slider_value_textfield", text = action.wait_time or 5, tags = tags}

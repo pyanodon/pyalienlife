@@ -30,7 +30,7 @@ local remove_tmp_stops = 0
 ---@field entity LuaEntity? The entity that the caravan will travel to. If this is nil, the caravan will travel to the position.
 ---@field localised_name LocalisedString The name of the schedule. This is displayed in the GUI.
 ---@field position MapPosition The position that the caravan will travel to. Used as a fallback in case of no entity or invalid entity.
----@field temporary boolean? Whether this stop is temporary
+---@field temporary table? Whether this stop is temporary
 
 ---@class CaravanAction
 ---@field async? boolean Whether this action should be 'ticked' once and then move on to the next action. If false or nil, the caravan will wait until the action is complete before moving on. Note that some action types ignore this field such as 'time passed'.
@@ -134,7 +134,7 @@ local function remove_fuel_alert(entity)
 end
 
 py.on_event(py.events.on_init(), function()
-    ---@type Table<integer, Caravan>
+    ---@type table<integer, Caravan>
     storage.caravans = storage.caravans or {}
     storage.interrupts = storage.interrupts or {}
     -- Table of gui elements indexed by their name. Not necessary, but better than hardcoding the realtive paths
@@ -226,6 +226,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         }
     elseif not only_outpost then
         local position = event.cursor_position
+        if player.surface ~= caravan_data.entity.surface then return end
         schedule[#schedule + 1] = {
             localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
             position = position,
@@ -254,7 +255,7 @@ end
 ---If this function returns false, the caravan is starved and all actions stop.
 ---@param caravan_data Caravan
 ---@return boolean
-local function eat(caravan_data)
+function Caravan.eat(caravan_data)
     local entity = caravan_data.entity
     if caravan_data.fuel_bar == 0 then
         local fuel = caravan_data.fuel_inventory
@@ -297,9 +298,11 @@ local function get_action_from_button(player, element)
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name].conditions[tags.action_id]
+        local interrupt = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name]
+        action = interrupt.conditions[tags.action_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        action = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name].schedule[tags.schedule_id].actions[tags.action_id]
+        local interrupt = storage.interrupts[Caravan.get_interrupt_gui(player).tags.interrupt_name]
+        action = interrupt.schedule[tags.schedule_id].actions[tags.action_id]
     else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
@@ -498,13 +501,19 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function
             end
         end
         storage.interrupts[element.tags.interrupt_name] = nil
-        Caravan.get_interrupt_gui(player).destroy()
-        Caravan.update_gui(Caravan.get_caravan_gui(player))
+        for _, player in pairs(game.players) do
+            local gui = Caravan.get_interrupt_gui(player)
+            if gui.tags.interrupt_name == element.tags.interrupt_name then
+                gui.destroy()
+                Caravan.update_gui(Caravan.get_caravan_gui(player))
+            end
+        end
     else
         element.parent.py_delete_interrupt_cancel.visible = true
         element.parent.py_delete_interrupt_confirm.visible = true
     end
 end
+
 gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
@@ -639,17 +648,20 @@ end
 
 gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local player = game.get_player(event.player_index)
+    local gui = Caravan.get_caravan_gui(player)
+    local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
     local tags = element.tags
     local schedule = get_schedule(element)[tags.schedule_id]
-    local camera = Caravan.get_caravan_gui(player).content_frame.content_flow.camera_frame.camera
-    local refocus = Caravan.get_caravan_gui(player).content_frame.content_flow.caption_frame.caption_flow.py_refocus
+    local camera = gui.content_frame.content_flow.camera_frame.camera
+    local refocus = gui.content_frame.content_flow.caption_frame.caption_flow.py_refocus
 
     if schedule.entity and schedule.entity.valid then
         camera.entity = schedule.entity
     else
         camera.entity = nil
         camera.position = schedule.position
+        camera.surface_index = caravan_data.entity.surface_index
     end
     refocus.visible = true
     camera.zoom = 0.5
@@ -676,7 +688,7 @@ end
 local function begin_schedule(caravan_data, schedule_id, skip_eating)
     if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
         if caravan_data.schedule_id ~= schedule_id then
-            if not skip_eating and not eat(caravan_data) then
+            if not skip_eating and not Caravan.eat(caravan_data) then
                 stop_actions(caravan_data); return
             end
         end
@@ -688,7 +700,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
     local entity = caravan_data.entity
     local schedule = caravan_data.schedule[schedule_id]
     if caravan_data.fuel_inventory then
-        if not skip_eating and not eat(caravan_data) then
+        if not skip_eating and not Caravan.eat(caravan_data) then
             stop_actions(caravan_data); return
         end
     end
@@ -736,7 +748,6 @@ local function begin_action(caravan_data, action_id)
         action.timer = action.wait_time or 5
     end
 
-    if caravan_data.fuel_inventory and not Caravan.free_actions[action.type] then eat(caravan_data) end
     Caravan.update_interrupt_gui_button_status(caravan_data)
 end
 
@@ -859,7 +870,7 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
         end
     end
 
-    if eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
+    if Caravan.eat(caravan_data) then caravan_data.fuel_bar = caravan_data.fuel_bar + 1 end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
@@ -968,13 +979,24 @@ remove_tmp_stops = function(caravan_data)
     end
 end
 
+---@param caravan_data Caravan
 local function advance_caravan_schedule_by_1(caravan_data)
+    local schedule = caravan_data.schedule[caravan_data.schedule_id]
+    assert(schedule)
+
+    if schedule.temporary then
+        table.remove(caravan_data.schedule, caravan_data.schedule_id)
+        if #caravan_data.schedule == 0 then
+            caravan_data.schedule_id = -1
+        else
+            caravan_data.schedule_id = caravan_data.schedule_id - 1
+        end
+    end
+
     local is_interrupted = false
-    local existing_interrupt_name
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
             is_interrupted = true
-            existing_interrupt_name = sch.temporary.interrupt_name
             break
         end
     end
@@ -983,7 +1005,6 @@ local function advance_caravan_schedule_by_1(caravan_data)
         interrupt = storage.interrupts[interrupt]
         if not interrupt then goto continue end
         if is_interrupted and not interrupt.inside_interrupt then goto continue end
-        if is_interrupted and interrupt.inside_interrupt and existing_interrupt_name == interrupt.name then goto continue end
 
         local conditions_passed = true
         for _, condition in pairs(interrupt.conditions) do
@@ -1002,18 +1023,6 @@ local function advance_caravan_schedule_by_1(caravan_data)
         end
 
         ::continue::
-    end
-
-    schedule = caravan_data.schedule[caravan_data.schedule_id] -- I dont know why, but this is necessary
-    if not schedule then return end
-
-    if schedule.temporary then
-        table.remove(caravan_data.schedule, caravan_data.schedule_id)
-        if #caravan_data.schedule == 0 then
-            caravan_data.schedule_id = -1
-            return
-        end
-        caravan_data.schedule_id = caravan_data.schedule_id - 1
     end
 
     begin_schedule(caravan_data, caravan_data.schedule_id % #caravan_data.schedule + 1, #caravan_data.schedule == 1)
@@ -1110,6 +1119,8 @@ gui_events[defines.events.on_gui_click]["py_interrupt_play"] = function(event)
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
 
+---@param caravan_data Caravan
+---@param entity LuaEntity
 function Caravan.get_valid_actions_for_entity(caravan_data, entity)
     local prototype = caravan_prototypes[caravan_data.entity.name]
     local all_actions = prototype.actions
@@ -1168,9 +1179,10 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if not schedule then goto continue end
         local action = schedule.actions[caravan_data.action_id]
         if not action then goto continue end
+        local target_entity = schedule.entity
 
         local result
-        if Caravan.get_valid_actions_for_entity(caravan_data, schedule.entity)[action.type] then
+        if Caravan.get_valid_actions_for_entity(caravan_data, target_entity)[action.type] then
             result = Caravan.actions[action.type](caravan_data, schedule, action)
         else
             result = true -- Skip invalid action

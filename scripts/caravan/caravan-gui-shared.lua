@@ -222,6 +222,7 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     player.set_controller {
         type = defines.controllers.remote,
         position = position,
+        surface = caravan_data.entity.surface
     }
     if entity then
         player.centered_on = entity
