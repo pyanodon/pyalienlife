@@ -12,6 +12,7 @@ Date: ?
     - Fixed that caravans did not correctlt check whether an action was valid
     - Fixed action list gui having incorrect width
     - Fixed some caravan locale being missing
+    - Fixed fluid mining drills not working when connected to pipelines with low fluid level
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.38
 Date: 2025-2-27
