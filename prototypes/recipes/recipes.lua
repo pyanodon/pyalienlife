@@ -2456,7 +2456,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "fine-powdered-biomass", amount = 18},
-        {type = "item", name = "powdered-biomass",      amount = 6, probability = 0.2},
+        {type = "item", name = "powdered-biomass",      amount = 6, probability = 0.2, ignored_by_productivity = 6},
         {type = "item", name = "biomass",               amount = 6, probability = 0.1},
     },
     main_product = "fine-powdered-biomass",

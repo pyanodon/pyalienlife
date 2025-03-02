@@ -42,11 +42,11 @@ if data and not yafc_turd_integration then
         ingredients = {
             {type = "item",  name = "bhoddos",           amount = 1},
             {type = "fluid", name = "dirty-water-heavy", amount = 30},
-            {type = "item",  name = "bulk-inserter",     amount = 1},
+            {type = "item",  name = "bulk-inserter",     amount = 1, ignored_by_stats = 1},
         },
         results = {
             {type = "item", name = "resveratrol",   amount_min = 1, amount_max = 3},
-            {type = "item", name = "bulk-inserter", amount = 1,     probability = 0.999},
+            {type = "item", name = "bulk-inserter", amount = 1,     probability = 0.999, ignored_by_stats = 1, ignored_by_productivity = 1},
         },
         main_product = "resveratrol"
     }}

@@ -22,7 +22,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "tuuphra",      amount = 1, probability = 0.5},
+        {type = "item", name = "tuuphra",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "tuuphra-mk02",
@@ -43,7 +43,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = "item",  name = "tuuphra-mk02",  amount = 1},
+        {type = "item",  name = "tuuphra-mk02",  amount = 1,   ignored_by_stats = 1},
         {type = "fluid", name = "sulfuric-acid", amount = 300, fluidbox_index = 3},
         {type = "item",  name = "lime",          amount = 50},
         {type = "item",  name = "fertilizer",    amount = 30},
@@ -51,7 +51,7 @@ RECIPE {
         {type = "fluid", name = "liquid-manure", amount = 200, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "tuuphra-mk02", amount_min = 3, amount_max = 10},
+        {type = "item", name = "tuuphra-mk02", amount_min = 3, amount_max = 10, ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     --main_product = "tuuphra-mk02",
     icons =
@@ -85,7 +85,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "tuuphra",      amount = 1, probability = 0.8},
-        {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.01},
+        {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.01, ignored_by_productivity = 1},
         {type = "item", name = "tuuphra-mk03", amount = 1, probability = 0.004},
     },
     --main_product = "tuuphra-mk03",
@@ -106,7 +106,7 @@ RECIPE {
     enabled = false,
     energy_required = 300,
     ingredients = {
-        {type = "item",  name = "tuuphra-mk03",     amount = 1},
+        {type = "item",  name = "tuuphra-mk03",     amount = 1,   ignored_by_stats = 1},
         {type = "fluid", name = "sulfuric-acid",    amount = 300, fluidbox_index = 3},
         {type = "item",  name = "sporopollenin",    amount = 50},
         {type = "item",  name = "seeds-extract-01", amount = 50},
@@ -115,7 +115,7 @@ RECIPE {
         {type = "fluid", name = "liquid-manure",    amount = 200, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "tuuphra-mk03", amount_min = 5, amount_max = 10},
+        {type = "item", name = "tuuphra-mk03", amount_min = 5, amount_max = 10, ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     --main_product = "tuuphra-mk03",
     icons =
@@ -149,7 +149,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra",      amount = 1, probability = 0.8},
         {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.15},
-        {type = "item", name = "tuuphra-mk03", amount = 1, probability = 0.01},
+        {type = "item", name = "tuuphra-mk03", amount = 1, probability = 0.01, ignored_by_productivity = 1},
         {type = "item", name = "tuuphra-mk04", amount = 1, probability = 0.003},
     },
     --main_product = "tuuphra-mk04",
@@ -170,7 +170,7 @@ RECIPE {
     enabled = false,
     energy_required = 400,
     ingredients = {
-        {type = "item",  name = "tuuphra-mk04",         amount = 1},
+        {type = "item",  name = "tuuphra-mk04",         amount = 1,   ignored_by_stats = 1},
         {type = "fluid", name = "autoantigens",         amount = 300, fluidbox_index = 3},
         {type = "item",  name = "subdermal-chemosnare", amount = 4},
         {type = "item",  name = "seeds-extract-01",     amount = 50},
@@ -179,7 +179,7 @@ RECIPE {
         {type = "fluid", name = "liquid-manure",        amount = 200, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "tuuphra-mk04", amount_min = 7, amount_max = 10},
+        {type = "item", name = "tuuphra-mk04", amount_min = 7, amount_max = 10, ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     --main_product = "tuuphra-mk04",
     icons =

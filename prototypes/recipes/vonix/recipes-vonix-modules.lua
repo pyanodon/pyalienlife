@@ -22,7 +22,7 @@ RECIPE {
     results = {
         {type = "item", name = "vonix-mk02", amount = 1, probability = 0.005},
         {type = "item", name = "barrel",     amount = 15},
-        {type = "item", name = "vonix",      amount = 1, probability = 0.5},
+        {type = "item", name = "vonix",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     --main_product = "vonix-mk02",
     icons =
@@ -56,7 +56,7 @@ RECIPE {
     results = {
         {type = "item", name = "vonix-mk03", amount = 1, probability = 0.004},
         {type = "item", name = "barrel",     amount = 15},
-        {type = "item", name = "vonix-mk02", amount = 1, probability = 0.6},
+        {type = "item", name = "vonix-mk02", amount = 1, probability = 0.6,  ignored_by_productivity = 1},
     },
     --main_product = "vonix-mk03",
     icons =
@@ -90,7 +90,7 @@ RECIPE {
     results = {
         {type = "item", name = "vonix-mk04", amount = 1, probability = 0.003},
         {type = "item", name = "barrel",     amount = 15},
-        {type = "item", name = "vonix-mk03", amount = 1, probability = 0.7},
+        {type = "item", name = "vonix-mk03", amount = 1, probability = 0.7,  ignored_by_productivity = 1},
     },
     --main_product = "vonix-mk04",
     icons =
@@ -112,7 +112,7 @@ RECIPE {
     enabled = false,
     energy_required = 120,
     ingredients = {
-        {type = "item",  name = "vonix-mk02",        amount = 2},
+        {type = "item",  name = "vonix-mk02",        amount = 2,  ignored_by_stats = 2},
         {type = "item",  name = "vonix-codex-mk02",  amount = 1},
         {type = "item",  name = "bio-scafold",       amount = 5},
         {type = "item",  name = "animal-sample-01",  amount = 2},
@@ -125,7 +125,7 @@ RECIPE {
         {type = "item",  name = "microcin-j25",      amount = 1},
     },
     results = {
-        {type = "item", name = "vonix-mk02", amount = 3},
+        {type = "item", name = "vonix-mk02", amount = 3, ignored_by_stats = 2, ignored_by_productivity = 2},
     },
     icons =
     {
@@ -161,7 +161,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = "item",  name = "vonix-mk03",        amount = 2},
+        {type = "item",  name = "vonix-mk03",        amount = 2, ignored_by_stats = 2},
         {type = "item",  name = "vonix-codex-mk03",  amount = 1},
         {type = "item",  name = "bio-scafold",       amount = 8},
         {type = "item",  name = "cdna",              amount = 2},
@@ -173,7 +173,7 @@ RECIPE {
         {type = "fluid", name = "fetal-serum",       amount = 50},
     },
     results = {
-        {type = "item", name = "vonix-mk03", amount = 3},
+        {type = "item", name = "vonix-mk03", amount = 3, ignored_by_stats = 2, ignored_by_productivity = 2},
     },
     icons =
     {

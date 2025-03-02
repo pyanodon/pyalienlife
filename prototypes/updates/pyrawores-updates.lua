@@ -147,13 +147,13 @@ RECIPE {
     ingredients = {
         {type = "fluid", name = "chlorine",    amount = 100},
         {type = "fluid", name = "hydrogen",    amount = 100},
-        {type = "item",  name = "quartz-tube", amount = 1},
+        {type = "item",  name = "quartz-tube", amount = 1,  ignored_by_stats = 1},
         {type = "item",  name = "small-lamp",  amount = 1}
     },
     results = {
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
-        {type = "item",  name = "small-lamp",        amount = 1,  probability = 0.9},
-        {type = "item",  name = "quartz-tube",       amount = 1},
+        {type = "item",  name = "small-lamp",        amount = 1,  probability = 0.9,    ignored_by_productivity = 1},
+        {type = "item",  name = "quartz-tube",       amount = 1,  ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     main_product = "hydrogen-chloride",
     icon = "__pyraworesgraphics__/graphics/icons/hydrogen-chloride.png",

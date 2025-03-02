@@ -39,8 +39,8 @@ local effects = {laser = {}, music = {}, lard = {}}
 
 if data and not yafc_turd_integration then
     local things_to_add = {
-        laser = {ingredients = {{type = "item", name = "laser-turret", amount = 1}}, results = {{type = "item", name = "laser-turret", amount = 1, probability = 0.999}}},
-        music = {ingredients = {{type = "item", name = "programmable-speaker", amount = 1}}, results = {{type = "item", name = "programmable-speaker", amount = 1, probability = 0.99}}},
+        laser = {ingredients = {{type = "item", name = "laser-turret", amount = 1, ignored_by_stats = 1}}, results = {{type = "item", name = "laser-turret", amount = 1, probability = 0.999, ignored_by_stats = 1, ignored_by_productivity = 1}}},
+        music = {ingredients = {{type = "item", name = "programmable-speaker", amount = 1, ignored_by_stats = 1}}, results = {{type = "item", name = "programmable-speaker", amount = 1, probability = 0.99, ignored_by_stats = 1, ignored_by_productivity = 1}}},
         lard = {ingredients = {{type = "fluid", name = "grease", amount = 3}}, results = {}}
     }
 

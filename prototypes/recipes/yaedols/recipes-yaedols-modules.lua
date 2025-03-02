@@ -19,7 +19,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "yaedols-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "yaedols",      amount = 1, probability = 0.5},
+        {type = "item", name = "yaedols",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk02",

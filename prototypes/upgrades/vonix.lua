@@ -5,7 +5,7 @@ if data and not yafc_turd_integration then
         enabled = false,
         subgroup = "py-alienlife-vonix",
         ingredients = {
-            {type = "item", name = "vonix",              amount = 2},
+            {type = "item", name = "vonix",              amount = 2, ignored_by_stats = 1},
             {type = "item", name = "meat",               amount = 5},
             {type = "item", name = "guts",               amount = 10},
             {type = "item", name = "caged-mukmoux",      amount = 1},
@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "vonix-cub",  amount_min = 14, amount_max = 16},
             {type = "item", name = "vonix-eggs", amount_min = 4,  amount_max = 5},
-            {type = "item", name = "vonix",      amount = 1},
+            {type = "item", name = "vonix",      amount = 1,      ignored_by_stats = 1, ignored_by_productivity = 1},
             {type = "item", name = "cage",       amount = 2},
             {type = "item", name = "barrel",     amount = 6},
         },

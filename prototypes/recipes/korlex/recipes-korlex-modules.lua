@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {type = "item", name = "korlex-mk02", amount = 1, probability = 0.005},
         {type = "item", name = "barrel",      amount = 6},
-        {type = "item", name = "korlex",      amount = 1, probability = 0.5},
+        {type = "item", name = "korlex",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "korlex-mk02",
     icons =
@@ -58,7 +58,7 @@ RECIPE {
     results = {
         {type = "item", name = "korlex-mk03", amount = 1, probability = 0.004},
         {type = "item", name = "barrel",      amount = 6},
-        {type = "item", name = "korlex",      amount = 1, probability = 0.6},
+        {type = "item", name = "korlex",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
     },
     --main_product = "korlex-mk03",
     icons =
@@ -93,7 +93,7 @@ RECIPE {
     results = {
         {type = "item", name = "korlex-mk04", amount = 1, probability = 0.003},
         {type = "item", name = "barrel",      amount = 6},
-        {type = "item", name = "korlex",      amount = 1, probability = 0.7},
+        {type = "item", name = "korlex",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
     },
     --main_product = "korlex-mk04",
     icons =
@@ -115,7 +115,7 @@ RECIPE {
     enabled = false,
     energy_required = 120,
     ingredients = {
-        {type = "item",  name = "korlex-mk02",       amount = 4},
+        {type = "item",  name = "korlex-mk02",       amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "korlex-codex-mk02", amount = 1},
         {type = "item",  name = "animal-sample-01",  amount = 1},
         {type = "item",  name = "cdna",              amount = 2},
@@ -124,7 +124,7 @@ RECIPE {
         {type = "item",  name = "bio-scafold",       amount = 5},
     },
     results = {
-        {type = "item", name = "korlex-mk02", amount = 5},
+        {type = "item", name = "korlex-mk02", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -160,7 +160,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = "item",  name = "korlex-mk03",       amount = 4},
+        {type = "item",  name = "korlex-mk03",       amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "korlex-codex-mk03", amount = 1},
         {type = "item",  name = "alien-sample-03",   amount = 1},
         {type = "item",  name = "propeptides",       amount = 1},
@@ -171,7 +171,7 @@ RECIPE {
         {type = "item",  name = "bio-scafold",       amount = 8},
     },
     results = {
-        {type = "item", name = "korlex-mk03", amount = 5},
+        {type = "item", name = "korlex-mk03", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -208,7 +208,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = "item",  name = "korlex-mk04",            amount = 4},
+        {type = "item",  name = "korlex-mk04",            amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "korlex-codex-mk04",      amount = 1},
         {type = "item",  name = "cdna",                   amount = 2},
         {type = "item",  name = "mmp",                    amount = 1},
@@ -219,7 +219,7 @@ RECIPE {
         {type = "fluid", name = "gta",                    amount = 50},
     },
     results = {
-        {type = "item", name = "korlex-mk04", amount = 5},
+        {type = "item", name = "korlex-mk04", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {

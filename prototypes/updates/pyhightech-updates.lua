@@ -1410,7 +1410,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "nisi",           amount = 1},
-        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5},
+        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5, ignored_by_productivity = 2},
     },
     main_product = "nisi",
 }:add_unlock("basic-electronics").category = "gas-separator"

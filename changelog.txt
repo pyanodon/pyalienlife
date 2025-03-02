@@ -13,6 +13,7 @@ Date: ?
     - Fixed action list gui having incorrect width
     - Fixed some caravan locale being missing
     - Fixed fluid mining drills not working when connected to pipelines with low fluid level
+    - Fixed some recipes not having defined catalysts
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.38
 Date: 2025-2-27

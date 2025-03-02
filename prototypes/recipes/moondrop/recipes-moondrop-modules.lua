@@ -20,7 +20,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "moondrop-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "moondrop",      amount = 1, probability = 0.5},
+        {type = "item", name = "moondrop",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk02",
@@ -68,10 +68,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "moondrop-mk02", amount = 4},
+        {type = "item", name = "moondrop-mk02", amount = 4, ignored_by_stats = 2},
     },
     results = {
-        {type = "item", name = "moondrop-mk02",       amount = 2},
+        {type = "item", name = "moondrop-mk02",       amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2},
         {type = "item", name = "moondrop-seeds-mk02", amount = 2},
         {type = "item", name = "moondrop-seeds-mk02", amount = 2, probability = 0.5},
         {type = "item", name = "moondrop",            amount = 2, probability = 0.5},
@@ -148,10 +148,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "moondrop-mk03", amount = 4},
+        {type = "item", name = "moondrop-mk03", amount = 4, ignored_by_stats = 2},
     },
     results = {
-        {type = "item", name = "moondrop-mk03",       amount = 2},
+        {type = "item", name = "moondrop-mk03",       amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2},
         {type = "item", name = "moondrop-seeds-mk03", amount = 2},
         {type = "item", name = "moondrop-seeds-mk03", amount = 1, probability = 0.5},
         {type = "item", name = "moondrop-mk02",       amount = 2, probability = 0.5},
@@ -228,10 +228,10 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "moondrop-mk04", amount = 4},
+        {type = "item", name = "moondrop-mk04", amount = 4, ignored_by_stats = 2},
     },
     results = {
-        {type = "item", name = "moondrop-mk04",       amount = 2},
+        {type = "item", name = "moondrop-mk04",       amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2},
         {type = "item", name = "moondrop-seeds-mk04", amount = 2},
         {type = "item", name = "moondrop-seeds-mk04", amount = 1, probability = 0.25},
         {type = "item", name = "moondrop-mk03",       amount = 2, probability = 0.5},

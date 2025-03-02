@@ -27,11 +27,11 @@ if data and not yafc_turd_integration then
         ingredients = {
             {type = "item",  name = "biomass",       amount = 1},
             {type = "item",  name = "dried-meat",    amount = 8},
-            {type = "fluid", name = "phytoplankton", amount = 40},
+            {type = "fluid", name = "phytoplankton", amount = 40, ignored_by_stats = 40},
             {type = "fluid", name = "water-saline",  amount = 10}
         },
         results = {
-            {type = "fluid", name = "phytoplankton", amount = 45, fluidbox_index = 1},
+            {type = "fluid", name = "phytoplankton", amount = 45, fluidbox_index = 1, ignored_by_stats = 40, ignored_by_productivity = 40},
             {type = "fluid", name = "outlet-gas-04", amount = 80, fluidbox_index = 2},
             {type = "item",  name = "carbon-black",  amount = 20},
             {type = "item",  name = "kerogen",       amount = 10},

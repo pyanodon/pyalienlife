@@ -18,7 +18,7 @@ RECIPE {
     results = {
         {type = "item",  name = "sea-sponge-mk02", amount = 1, probability = 0.005},
         {type = "fluid", name = "water-saline",    amount = 50},
-        {type = "item",  name = "sea-sponge",      amount = 1, probability = 0.5},
+        {type = "item",  name = "sea-sponge",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "sea-sponge-mk02",
     icons =
