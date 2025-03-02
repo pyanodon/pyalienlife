@@ -2,19 +2,20 @@
 Version: 3.0.39
 Date: ?
   Changes:
-    - Caravan actions now only consume food if items were transferred
-    - Updated codex page for caravans
+    - Caravan actions now only consume food if items were transferred.
+    - Updated codex page for caravans.
     - Fixed being able to store invalid food items using the store specific food action.
-    - Fixed possible crashes when deleting interrupts in multiplayer
-    - Fixed interrupts not always triggering when they're supposed to
-    - Fixed being able to add destinations on a different surface
-    - Fixed "Open on map" button not always opening the correct surface
-    - Fixed that caravans did not correctlt check whether an action was valid
-    - Fixed action list gui having incorrect width
-    - Fixed some caravan locale being missing
-    - Fixed fluid mining drills not working when connected to pipelines with low fluid level
-    - Fixed some recipes not having defined catalysts
-    - Adjusted crafting speeds for kmauts, navens, renneas, tuuphras and yotoi aloes to be more round
+    - Fixed possible crashes when deleting interrupts in multiplayer.
+    - Fixed interrupts not always triggering when they're supposed to.
+    - Fixed being able to add destinations on a different surface.
+    - Fixed "Open on map" button not always opening the correct surface.
+    - Fixed that caravans did not correctlt check whether an action was valid.
+    - Fixed action list gui having incorrect width.
+    - Fixed some caravan locale being missing.
+    - Fixed fluid mining drills not working when connected to pipelines with low fluid level.
+    - Fixed some recipes not having defined catalysts.
+    - Adjusted crafting speeds for kmauts, navens, renneas, tuuphras and yotoi aloes to be more round.
+    - Shrunk the sprite size of the fast wood forestry by 1 tile so that you could now see what is built behind it.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.38
 Date: 2025-2-27
