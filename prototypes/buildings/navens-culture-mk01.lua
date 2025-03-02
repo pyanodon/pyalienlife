@@ -1,3 +1,5 @@
+local MODULE_SLOTS = 4
+
 RECIPE {
     type = "recipe",
     name = "navens-culture-mk01",
@@ -44,10 +46,10 @@ ENTITY {
     collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
     forced_symmetry = "diagonal-pos",
-    module_slots = 4,
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"navens"},
-    crafting_speed = 0.02,
+    crafting_speed = py.farm_speed(MODULE_SLOTS, .6, 7.5),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

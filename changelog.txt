@@ -14,6 +14,7 @@ Date: ?
     - Fixed some caravan locale being missing
     - Fixed fluid mining drills not working when connected to pipelines with low fluid level
     - Fixed some recipes not having defined catalysts
+    - Adjusted crafting speeds for kmauts, navens, renneas, tuuphras and yotoi aloes to be more round
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.38
 Date: 2025-2-27

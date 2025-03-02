@@ -15,7 +15,7 @@
         "pyrawores >= 3.0.0",
         "pypetroleumhandling >= 3.0.0",
         "? pyhightech >= 3.0.0",
-        "~ pypostprocessing >= 3.0.18",
+        "~ pypostprocessing >= 3.0.25",
         "! wret-beacon-rebalance-mod",
         "! BigBags",
         "! ResearchFog",

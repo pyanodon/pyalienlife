@@ -6897,7 +6897,7 @@ ITEM {
     subgroup = "py-alienlife-rennea",
     order = "ren-c",
     stack_size = 50,
-    effect = {pollution = 1, speed = 0.63},
+    effect = {pollution = 1, speed = 0.64},
 }
 
 ITEM {
@@ -6914,7 +6914,7 @@ ITEM {
     subgroup = "py-alienlife-rennea",
     order = "ren-d",
     stack_size = 50,
-    effect = {pollution = 1, speed = 1.25},
+    effect = {pollution = 1, speed = 1.28},
 }
 
 ITEM {

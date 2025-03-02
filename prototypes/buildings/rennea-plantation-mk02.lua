@@ -1,3 +1,5 @@
+local MODULE_SLOTS = 60
+
 RECIPE {
     type = "recipe",
     name = "rennea-plantation-mk02",
@@ -43,10 +45,10 @@ ENTITY {
     collision_box = {{-6.2, -6.2}, {6.2, 6.2}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     forced_symmetry = "diagonal-pos",
-    module_slots = 60,
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"rennea"},
-    crafting_speed = 0.2,
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "rennea-plantation-mk01", .16, .32),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
