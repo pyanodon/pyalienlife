@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.39
-Date: ?
+Date: 2025-3-3
   Changes:
     - Caravan actions now only consume food if items were transferred.
     - Updated codex page for caravans.
