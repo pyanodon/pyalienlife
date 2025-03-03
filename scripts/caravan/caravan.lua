@@ -210,7 +210,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
             if entity.name == "outpost" or entity.name == "outpost-aerial" then
                 local action_id = storage.last_opened_action[player.index].action_id
                 interrupt_data.conditions[action_id].entity = entity
-                interrupt_data.conditions[action_id].localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+                interrupt_data.conditions[action_id].localised_name = ""
             end
         end
     elseif entity then

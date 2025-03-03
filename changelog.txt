@@ -10,6 +10,7 @@ Date: ?
     - Fixed being able to add destinations on a different surface.
     - Fixed "Open on map" button not always opening the correct surface.
     - Fixed that caravans did not correctlt check whether an action was valid.
+    - Fixed wrong GUI key for the "not at outpost" caravan interrupt condition.
     - Fixed action list gui having incorrect width.
     - Fixed some caravan locale being missing.
     - Fixed fluid mining drills not working when connected to pipelines with low fluid level.
