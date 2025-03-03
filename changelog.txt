@@ -18,6 +18,7 @@ Date: ?
     - Shrunk the sprite size of the fast wood forestry by 1 tile so that you could now see what is built behind it.
     - Fixed incorrect names for cadaveric farm item recipes. Resolves https://github.com/pyanodon/pybugreports/issues/892
     - Fixed that kickalk and arum smart farms did not function. Resolves https://github.com/pyanodon/pybugreports/issues/890
+    - Fixed incorrect fluid box locations for the pyphoon bay. Resolves https://github.com/pyanodon/pybugreports/issues/885
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.38
 Date: 2025-2-27
