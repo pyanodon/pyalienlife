@@ -993,10 +993,12 @@ local function advance_caravan_schedule_by_1(caravan_data)
         end
     end
 
+    local existing_interrupt_name    
     local is_interrupted = false
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
             is_interrupted = true
+            existing_interrupt_name = sch.temporary.interrupt_name
             break
         end
     end
@@ -1004,7 +1006,10 @@ local function advance_caravan_schedule_by_1(caravan_data)
     for _, interrupt in pairs(caravan_data.interrupts) do
         interrupt = storage.interrupts[interrupt]
         if not interrupt then goto continue end
-        if is_interrupted and not interrupt.inside_interrupt then goto continue end
+
+        local b = interrupt.inside_interrupt
+        if is_interrupted and not b then goto continue end
+        if is_interrupted and b and existing_interrupt_name == interrupt.name then goto continue end
 
         local conditions_passed = true
         for _, condition in pairs(interrupt.conditions) do
