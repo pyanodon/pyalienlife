@@ -50,8 +50,8 @@ if data and not yafc_turd_integration then
         RECIPE("dingrits-4"):copy(),
     } do
         recipe.name = recipe.name .. "-training"
-        recipe:add_result {type = "item", amount = 1, probability = 0.8, name = "dingrits-food-01"}
-        if i > 2 then recipe:add_result {type = "item", amount = 1, probability = 0.8, name = "dingrits-food-02"} end
+        recipe:add_result {type = "item", amount = 1, probability = 0.8, name = "dingrits-food-01", ignored_by_productivity = 1}
+        if i > 2 then recipe:add_result {type = "item", amount = 1, probability = 0.8, name = "dingrits-food-02", ignored_by_productivity = 1} end
         data:extend {recipe}
     end
 end

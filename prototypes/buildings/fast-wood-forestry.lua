@@ -84,139 +84,139 @@ local function working_visualizations()
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/left-fill.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             frame_count = 1,
             repeat_count = 135,
-            shift = util.by_pixel(-256, -64)
+            shift = util.by_pixel(-256, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/right-fill.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             frame_count = 1,
             repeat_count = 135,
-            shift = util.by_pixel(256, -64)
+            shift = util.by_pixel(256, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/1.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-224, -64)
+            shift = util.by_pixel(-224, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/2.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-192, -64)
+            shift = util.by_pixel(-192, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/3.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-160, -64)
+            shift = util.by_pixel(-160, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/4.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-128, -64)
+            shift = util.by_pixel(-128, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/5.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-96, -64)
+            shift = util.by_pixel(-96, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/6.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-64, -64)
+            shift = util.by_pixel(-64, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/7.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(-32, -64)
+            shift = util.by_pixel(-32, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/8.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(0, -64)
+            shift = util.by_pixel(0, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/9.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(32, -64)
+            shift = util.by_pixel(32, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/10.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(64, -64)
+            shift = util.by_pixel(64, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/11.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(96, -64)
+            shift = util.by_pixel(96, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/12.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(128, -64)
+            shift = util.by_pixel(128, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/13.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
             run_mode = "backward",
-            shift = util.by_pixel(160, -64)
+            shift = util.by_pixel(160, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/14.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(192, -64)
+            shift = util.by_pixel(192, -64 + 16)
         },
         {
             filename = "__pyalienlifegraphics__/graphics/entity/fwf/15.png",
             width = 32,
-            height = 544,
+            height = 544 - 32,
             line_length = 45,
             frame_count = 135,
-            shift = util.by_pixel(224, -64)
+            shift = util.by_pixel(224, -64 + 16)
         }
     }
     return {{animation = {layers = working_visualizations}}}

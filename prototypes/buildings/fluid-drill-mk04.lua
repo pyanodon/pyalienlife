@@ -48,7 +48,6 @@ ENTITY {
     mining_speed = 3,
     input_fluid_box =
     {
-        production_type = "input-output",
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {

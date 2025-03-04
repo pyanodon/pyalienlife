@@ -20,7 +20,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "ralesia-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "ralesia",      amount = 1, probability = 0.5},
+        {type = "item", name = "ralesia",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "ralesia-mk02",
     icons =
@@ -47,7 +47,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia-mk02",       amount = 3},
         {type = "item", name = "ralesia-mk02",       amount = 2, probability = 0.5},
-        {type = "item", name = "ralesia-seeds-mk02", amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-seeds-mk02", amount = 2, probability = 0.5, ignored_by_productivity = 2},
         {type = "item", name = "fawogae-spore-mk02", amount = 2, probability = 0.5},
     },
     main_product = "ralesia-mk02",
@@ -125,7 +125,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia-mk03",       amount = 3},
         {type = "item", name = "ralesia-mk03",       amount = 1, probability = 0.5},
-        {type = "item", name = "ralesia-seeds-mk03", amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-seeds-mk03", amount = 2, probability = 0.5, ignored_by_productivity = 2},
         {type = "item", name = "fawogae-spore-mk03", amount = 2, probability = 0.5},
     },
     main_product = "ralesia-mk03",
@@ -202,7 +202,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia-mk04",       amount = 3},
         {type = "item", name = "ralesia-mk04",       amount = 1, probability = 0.25},
-        {type = "item", name = "ralesia-seeds-mk04", amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-seeds-mk04", amount = 2, probability = 0.5, ignored_by_productivity = 2},
         {type = "item", name = "fawogae-spore-mk04", amount = 2, probability = 0.5},
     },
     main_product = "ralesia-mk04",

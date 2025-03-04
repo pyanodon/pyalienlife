@@ -1,3 +1,5 @@
+local MODULE_SLOTS = 33
+
 RECIPE {
     type = "recipe",
     name = "yotoi-aloe-orchard-mk01",
@@ -43,10 +45,10 @@ ENTITY {
     collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     forced_symmetry = "diagonal-pos",
-    module_slots = 33,
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"yotoi"},
-    crafting_speed = 0.12,
+    crafting_speed = py.farm_speed(MODULE_SLOTS, 1.3, .3),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

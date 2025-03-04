@@ -21,7 +21,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "fawogae-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "fawogae",      amount = 1, probability = 0.5},
+        {type = "item", name = "fawogae",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "fawogae-mk02",

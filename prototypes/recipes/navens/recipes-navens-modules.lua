@@ -20,7 +20,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "navens-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "navens",      amount = 1, probability = 0.5},
+        {type = "item", name = "navens",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "navens-mk02",
     icons =

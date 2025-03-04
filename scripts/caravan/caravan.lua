@@ -210,7 +210,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
             if entity.name == "outpost" or entity.name == "outpost-aerial" then
                 local action_id = storage.last_opened_action[player.index].action_id
                 interrupt_data.conditions[action_id].entity = entity
-                interrupt_data.conditions[action_id].localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+                interrupt_data.conditions[action_id].localised_name = ""
             end
         end
     elseif entity then
@@ -993,6 +993,7 @@ local function advance_caravan_schedule_by_1(caravan_data)
         end
     end
 
+    local existing_interrupt_name    
     local is_interrupted = false
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
@@ -1004,7 +1005,10 @@ local function advance_caravan_schedule_by_1(caravan_data)
     for _, interrupt in pairs(caravan_data.interrupts) do
         interrupt = storage.interrupts[interrupt]
         if not interrupt then goto continue end
-        if is_interrupted and not interrupt.inside_interrupt then goto continue end
+
+        local b = interrupt.inside_interrupt
+        if is_interrupted and not b then goto continue end
+        if is_interrupted and b and existing_interrupt_name == interrupt.name then goto continue end
 
         local conditions_passed = true
         for _, condition in pairs(interrupt.conditions) do

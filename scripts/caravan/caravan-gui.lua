@@ -187,8 +187,13 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_lis
             textfield.allow_negative = false
         elseif action.type == "at-outpost" or action.type == "not-at-outpost" then
             action_frame.add {type = "sprite-button", name = "py_add_outpost", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
-            if not action.entity then
-                label.caption = {"caravan-actions." .. action.type .. "2", {"caravan-gui.not-specified"}}
+            
+            local locale_key = "caravan-actions." .. action.type .. "2"
+            local entity = action.entity
+            if entity and entity.valid then
+                label.caption = {locale_key, {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+            else
+                label.caption = {locale_key, {"caravan-gui.not-specified"}}
             end
         end
 

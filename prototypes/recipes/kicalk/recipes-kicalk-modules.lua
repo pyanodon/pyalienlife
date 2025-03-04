@@ -22,7 +22,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk-mk02",       amount = 1, probability = 0.005},
         {type = "item", name = "kicalk-seeds-mk02", amount = 1, probability = 0.02},
-        {type = "item", name = "kicalk",            amount = 1, probability = 0.5},
+        {type = "item", name = "kicalk",            amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "kicalk-seeds-mk02",
     icons =
@@ -52,7 +52,7 @@ RECIPE {
         {type = "item", name = "kicalk-mk02",       amount = 4},
         {type = "item", name = "kicalk-mk02",       amount = 2, probability = 0.5},
         {type = "item", name = "kicalk-seeds",      amount = 3, probability = 0.5},
-        {type = "item", name = "kicalk-seeds-mk02", amount = 2, probability = 0.25},
+        {type = "item", name = "kicalk-seeds-mk02", amount = 2, probability = 0.25, ignored_by_productivity = 2},
     },
     main_product = "kicalk-seeds-mk02",
     icons =
@@ -134,7 +134,7 @@ RECIPE {
         {type = "item", name = "kicalk-mk02",       amount = 2, probability = 0.2},
         {type = "item", name = "kicalk-seeds",      amount = 3, probability = 0.4},
         {type = "item", name = "kicalk-seeds-mk02", amount = 3, probability = 0.2},
-        {type = "item", name = "kicalk-seeds-mk03", amount = 2, probability = 0.05},
+        {type = "item", name = "kicalk-seeds-mk03", amount = 2, probability = 0.05, ignored_by_productivity = 2},
     },
     --main_product = "kicalk-mk03",
     icons =

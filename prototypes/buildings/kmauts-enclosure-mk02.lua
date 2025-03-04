@@ -1,3 +1,5 @@
+local MODULE_SLOTS = 100
+
 RECIPE {
     type = "recipe",
     name = "kmauts-enclosure-mk02",
@@ -41,10 +43,10 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-4.6, -4.6}, {4.6, 4.6}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
-    module_slots = 100,
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"kmauts"},
-    crafting_speed = .0633,
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "kmauts-enclosure-mk01", .25),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

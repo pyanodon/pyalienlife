@@ -23,7 +23,7 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux-mk02", amount = 1, probability = 0.005},
         {type = "item", name = "barrel",       amount = 6},
-        {type = "item", name = "mukmoux",      amount = 1, probability = 0.5},
+        {type = "item", name = "mukmoux",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     --main_product = "mukmoux-mk02",
     icons =
@@ -58,7 +58,7 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux-mk03", amount = 1, probability = 0.004},
         {type = "item", name = "barrel",       amount = 6},
-        {type = "item", name = "mukmoux",      amount = 1, probability = 0.6},
+        {type = "item", name = "mukmoux",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
     },
     --main_product = "mukmoux-mk03",
     icons =
@@ -93,7 +93,7 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux-mk04", amount = 1, probability = 0.003},
         {type = "item", name = "barrel",       amount = 6},
-        {type = "item", name = "mukmoux",      amount = 1, probability = 0.7},
+        {type = "item", name = "mukmoux",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
     },
     --main_product = "mukmoux-mk04",
     icons =
@@ -116,7 +116,7 @@ RECIPE {
     enabled = false,
     energy_required = 120,
     ingredients = {
-        {type = "item",  name = "mukmoux-mk02",           amount = 2},
+        {type = "item",  name = "mukmoux-mk02",           amount = 2,  ignored_by_stats = 2},
         {type = "item",  name = "mukmoux-codex-mk02",     amount = 1},
         {type = "item",  name = "animal-sample-01",       amount = 1},
         {type = "item",  name = "cdna",                   amount = 2},
@@ -126,7 +126,7 @@ RECIPE {
         {type = "item",  name = "bio-sample",             amount = 1},
     },
     results = {
-        {type = "item", name = "mukmoux-mk02", amount = 3},
+        {type = "item", name = "mukmoux-mk02", amount = 3, ignored_by_stats = 2, ignored_by_productivity = 2},
     },
     icons =
     {
@@ -162,7 +162,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = "item",  name = "mukmoux-mk03",       amount = 3},
+        {type = "item",  name = "mukmoux-mk03",       amount = 3,  ignored_by_stats = 3},
         {type = "item",  name = "mukmoux-codex-mk03", amount = 1},
         {type = "item",  name = "alien-sample-03",    amount = 1},
         {type = "item",  name = "cdna",               amount = 2},
@@ -174,7 +174,7 @@ RECIPE {
         {type = "item",  name = "negasium",           amount = 1},
     },
     results = {
-        {type = "item", name = "mukmoux-mk03", amount = 4},
+        {type = "item", name = "mukmoux-mk03", amount = 4, ignored_by_stats = 3, ignored_by_productivity = 3},
     },
     icons =
     {
@@ -211,7 +211,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = "item",  name = "mukmoux-mk04",       amount = 4},
+        {type = "item",  name = "mukmoux-mk04",       amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "mukmoux-codex-mk04", amount = 1},
         {type = "item",  name = "cdna",               amount = 2},
         {type = "item",  name = "bio-scafold",        amount = 8},
@@ -221,7 +221,7 @@ RECIPE {
         {type = "fluid", name = "gta",                amount = 50},
     },
     results = {
-        {type = "item", name = "mukmoux-mk04", amount = 5},
+        {type = "item", name = "mukmoux-mk04", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {

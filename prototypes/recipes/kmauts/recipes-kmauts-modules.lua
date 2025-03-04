@@ -22,7 +22,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "kmauts-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "kmauts",      amount = 1, probability = 0.5},
+        {type = "item", name = "kmauts",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         {type = "item", name = "barrel",      amount = 4},
         {type = "item", name = "cage",        amount = 1},
     },
@@ -58,7 +58,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "kmauts-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "kmauts",      amount = 1, probability = 0.6},
+        {type = "item", name = "kmauts",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
         {type = "item", name = "barrel",      amount = 4},
         {type = "item", name = "cage",        amount = 1},
     },
@@ -94,7 +94,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "kmauts-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "kmauts",      amount = 1, probability = 0.6},
+        {type = "item", name = "kmauts",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
         {type = "item", name = "barrel",      amount = 4},
         {type = "item", name = "cage",        amount = 1},
     },
@@ -118,7 +118,7 @@ RECIPE {
     enabled = false,
     energy_required = 120,
     ingredients = {
-        {type = "item",  name = "kmauts-mk02",       amount = 4},
+        {type = "item",  name = "kmauts-mk02",       amount = 4, ignored_by_stats = 4},
         {type = "item",  name = "kmauts-codex-mk02", amount = 1},
         {type = "item",  name = "bio-scafold",       amount = 5},
         {type = "item",  name = "animal-sample-01",  amount = 2},
@@ -130,7 +130,7 @@ RECIPE {
         {type = "item",  name = "agar",              amount = 2},
     },
     results = {
-        {type = "item", name = "kmauts-mk02", amount = 5},
+        {type = "item", name = "kmauts-mk02", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -166,7 +166,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = "item",  name = "kmauts-mk03",       amount = 4},
+        {type = "item",  name = "kmauts-mk03",       amount = 4, ignored_by_stats = 4},
         {type = "item",  name = "kmauts-codex-mk03", amount = 1},
         {type = "item",  name = "bio-scafold",       amount = 8},
         {type = "item",  name = "cdna",              amount = 2},
@@ -178,7 +178,7 @@ RECIPE {
         {type = "fluid", name = "oxygen",            amount = 50},
     },
     results = {
-        {type = "item", name = "kmauts-mk03", amount = 5},
+        {type = "item", name = "kmauts-mk03", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -215,7 +215,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = "item",  name = "kmauts-mk04",          amount = 4},
+        {type = "item",  name = "kmauts-mk04",          amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "kmauts-codex-mk04",    amount = 1},
         {type = "item",  name = "cdna",                 amount = 2},
         {type = "item",  name = "bio-scafold",          amount = 8},
@@ -227,7 +227,7 @@ RECIPE {
         {type = "fluid", name = "gta",                  amount = 50},
     },
     results = {
-        {type = "item", name = "kmauts-mk04", amount = 5},
+        {type = "item", name = "kmauts-mk04", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {

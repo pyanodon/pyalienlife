@@ -43,7 +43,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "vrauks-mk02",    amount = 1},
+        {type = "item", name = "vrauks-mk02",    amount = 1, ignored_by_stats = 1},
         {type = "item", name = "cocoon-mk02",    amount = 8},
         {type = "item", name = "vrauks-food-01", amount = 4},
         --{type = 'item', name = 'bedding', amount = 2},
@@ -53,8 +53,7 @@ RECIPE {
         {type = "item", name = "water-barrel",   amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk02", amount = 1, probability = 0.95},
-        {type = "item", name = "vrauks-mk02", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk02", amount = 1, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk02",
@@ -141,7 +140,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "item", name = "vrauks-mk03",     amount = 1},
+        {type = "item", name = "vrauks-mk03",     amount = 1, ignored_by_stats = 1},
         {type = "item", name = "cocoon-mk03",     amount = 1},
         {type = "item", name = "vrauks-food-02",  amount = 3},
         {type = "item", name = "alien-sample-02", amount = 1},
@@ -152,8 +151,7 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk03", amount = 1, probability = 0.95},
-        {type = "item", name = "vrauks-mk03", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk03", amount = 1, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk03",
@@ -240,7 +238,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "item", name = "vrauks-mk04",     amount = 1},
+        {type = "item", name = "vrauks-mk04",     amount = 1, ignored_by_stats = 1},
         {type = "item", name = "cocoon-mk04",     amount = 1},
         {type = "item", name = "vrauks-food-02",  amount = 3},
         {type = "item", name = "alien-sample-03", amount = 1},
@@ -251,8 +249,7 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk04", amount = 1, probability = 0.95},
-        {type = "item", name = "vrauks-mk04", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk04", amount = 0, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk04",

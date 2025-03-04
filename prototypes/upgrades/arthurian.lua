@@ -64,12 +64,12 @@ if data and not yafc_turd_integration then
         energy_required = 70,
         ingredients = {
             {name = "arthurian-pup", amount = 4, type = "item"},
-            {name = "arthurian",     amount = 1, type = "item"},
+            {name = "arthurian",     amount = 1, type = "item", ignored_by_stats = 1},
             {name = "water-barrel",  amount = 6, type = "item"},
             {name = "bedding",       amount = 2, type = "item"},
         },
         results = {
-            {name = "arthurian",    amount = 4, type = "item"},
+            {name = "arthurian",    amount = 4, type = "item", ignored_by_stats = 1, ignored_by_productivity = 1},
             {name = "agar",         amount = 5, type = "item"},
             {name = "blood-barrel", amount = 3, type = "item"},
             {name = "barrel",       amount = 3, type = "item"},

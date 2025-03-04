@@ -20,7 +20,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "grod-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "grod",      amount = 1, probability = 0.5},
+        {type = "item", name = "grod",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "grod-mk02",
     icons =

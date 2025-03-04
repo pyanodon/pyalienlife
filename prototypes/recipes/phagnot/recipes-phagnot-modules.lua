@@ -22,7 +22,7 @@ RECIPE {
     results = {
         {type = "item", name = "phagnot-mk02", amount = 1, probability = 0.005},
         {type = "item", name = "barrel",       amount = 5},
-        {type = "item", name = "phagnot",      amount = 1, probability = 0.5},
+        {type = "item", name = "phagnot",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
     },
     --main_product = "phagnot-mk02",
     icons =
@@ -53,7 +53,7 @@ RECIPE {
         {type = "item", name = "phagnot-cub-mk02", amount = 1,     probability = 0.5},
         {type = "item", name = "barrel",           amount = 5},
         {type = "item", name = "phagnot-cub",      amount = 1,     probability = 0.5},
-        {type = "item", name = "phagnot-mk02",     amount_min = 0, amount_max = 2}
+        {type = "item", name = "phagnot-mk02",     amount_min = 0, amount_max = 2,   ignored_by_productivity = 2}
     },
     main_product = "phagnot-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png",
@@ -131,7 +131,7 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "phagnot-mk03",     amount_min = 0, amount_max = 2},
+        {type = "item", name = "phagnot-mk03",     amount_min = 0, amount_max = 2,    ignored_by_productivity = 2},
         {type = "item", name = "phagnot-cub-mk03", amount = 1},
         {type = "item", name = "phagnot-cub-mk03", amount = 1,     probability = 0.5},
         {type = "item", name = "phagnot-cub-mk02", amount = 1,     probability = 0.25},
@@ -215,7 +215,7 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 5},
     },
     results = {
-        {type = "item", name = "phagnot-mk04",     amount_min = 0, amount_max = 2},
+        {type = "item", name = "phagnot-mk04",     amount_min = 0, amount_max = 2,    ignored_by_productivity = 2},
         {type = "item", name = "phagnot-cub-mk04", amount = 1},
         {type = "item", name = "phagnot-cub-mk04", amount = 1,     probability = 0.5},
         {type = "item", name = "phagnot-cub-mk03", amount = 1,     probability = 0.4},

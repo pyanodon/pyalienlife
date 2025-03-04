@@ -1,3 +1,5 @@
+local MODULE_SLOTS = 40
+
 RECIPE {
     type = "recipe",
     name = "tuuphra-plantation-mk04",
@@ -41,10 +43,10 @@ ENTITY {
     collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     forced_symmetry = "diagonal-pos",
-    module_slots = 40,
+    module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"tuuphra"},
-    crafting_speed = 0.1,
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "tuuphra-plantation-mk01", 1, 4),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

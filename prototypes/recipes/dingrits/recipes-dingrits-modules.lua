@@ -21,7 +21,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "dingrits-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "dingrits",      amount = 1, probability = 0.5},
+        {type = "item", name = "dingrits",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         {type = "item", name = "barrel",        amount = 5},
         {type = "item", name = "cage",          amount = 1},
     },
@@ -56,7 +56,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "dingrits-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "dingrits",      amount = 1, probability = 0.6},
+        {type = "item", name = "dingrits",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
         {type = "item", name = "barrel",        amount = 5},
         {type = "item", name = "cage",          amount = 1},
     },
@@ -91,7 +91,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "dingrits-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "dingrits",      amount = 1, probability = 0.7},
+        {type = "item", name = "dingrits",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
         {type = "item", name = "barrel",        amount = 5},
         {type = "item", name = "cage",          amount = 1},
     },
@@ -115,7 +115,7 @@ RECIPE {
     enabled = false,
     energy_required = 120,
     ingredients = {
-        {type = "item",  name = "dingrits-mk02",       amount = 4},
+        {type = "item",  name = "dingrits-mk02",       amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "dingrits-codex-mk02", amount = 1},
         {type = "item",  name = "bio-scafold",         amount = 5},
         {type = "item",  name = "animal-sample-01",    amount = 2},
@@ -127,7 +127,7 @@ RECIPE {
         {type = "item",  name = "moss-gen",            amount = 1},
     },
     results = {
-        {type = "item", name = "dingrits-mk02", amount = 5},
+        {type = "item", name = "dingrits-mk02", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -163,7 +163,7 @@ RECIPE {
     enabled = false,
     energy_required = 150,
     ingredients = {
-        {type = "item",  name = "dingrits-mk03",       amount = 4},
+        {type = "item",  name = "dingrits-mk03",       amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "dingrits-codex-mk03", amount = 1},
         {type = "item",  name = "bio-scafold",         amount = 8},
         {type = "item",  name = "cdna",                amount = 2},
@@ -175,7 +175,7 @@ RECIPE {
         {type = "fluid", name = "arqad-honey",         amount = 50},
     },
     results = {
-        {type = "item", name = "dingrits-mk03", amount = 5},
+        {type = "item", name = "dingrits-mk03", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -212,7 +212,7 @@ RECIPE {
     enabled = false,
     energy_required = 200,
     ingredients = {
-        {type = "item",  name = "dingrits-mk04",          amount = 4},
+        {type = "item",  name = "dingrits-mk04",          amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "dingrits-codex-mk04",    amount = 1},
         {type = "item",  name = "cdna",                   amount = 2},
         {type = "item",  name = "bio-scafold",            amount = 8},
@@ -224,7 +224,7 @@ RECIPE {
         {type = "fluid", name = "tholins",                amount = 50},
     },
     results = {
-        {type = "item", name = "dingrits-mk04", amount = 5},
+        {type = "item", name = "dingrits-mk04", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {

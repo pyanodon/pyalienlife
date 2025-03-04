@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
                     if amount >= 5 then
                         replacement:multiply_ingredient_amount(name, 0.1)
                     else
-                        replacement:add_result {type = "item", name = name, amount = amount, probability = 0.8}
+                        replacement:add_result {type = "item", name = name, amount = amount, probability = 0.8, ignored_by_productivity = amount}
                     end
                 end
                 to_add[#to_add + 1] = replacement

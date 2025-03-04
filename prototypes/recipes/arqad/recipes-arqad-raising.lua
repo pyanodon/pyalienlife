@@ -23,7 +23,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "arqad-egg",   amount = 10},
-				{name = "arqad-queen", amount = 1, probability = 0.999},
+				{name = "arqad-queen", amount = 1, probability = 0.999, ignored_by_productivity = 1},
 			},
 			tech = "arqad"
 		},
@@ -32,7 +32,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "ralesia", amount = 15},
-				{name = "arqad",    add_amount = 2},
+				{name = "arqad",   add_amount = 2},
 			},
 			results =
 			{
@@ -207,7 +207,7 @@ py.autorecipes {
 			{
 				{name = "arqad-egg-nest",     amount = 1},
 				{name = "biomass",            amount = 15},
-				{name = "ralesia",           amount = 5},
+				{name = "ralesia",            amount = 5},
 				{name = "natural-gas-barrel", amount = 10, return_barrel = true},
 			},
 			results =

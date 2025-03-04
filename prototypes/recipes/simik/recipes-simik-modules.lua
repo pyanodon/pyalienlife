@@ -19,7 +19,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "simik-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "simik",      amount = 1, probability = 0.5},
+        {type = "item", name = "simik",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "simik-mk02",
@@ -51,7 +51,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "simik-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "simik-mk02", amount = 1, probability = 0.6},
+        {type = "item", name = "simik-mk02", amount = 1, probability = 0.6,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "simik-mk03",
@@ -85,7 +85,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "simik-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "simik-mk03", amount = 1, probability = 0.7},
+        {type = "item", name = "simik-mk03", amount = 1, probability = 0.7,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "simik-mk04",
@@ -108,7 +108,7 @@ RECIPE {
     enabled = false,
     energy_required = 250,
     ingredients = {
-        {type = "item",  name = "simik-mk02",             amount = 3},
+        {type = "item",  name = "simik-mk02",             amount = 3,  ignored_by_stats = 3},
         {type = "item",  name = "simik-codex-mk02",       amount = 1},
         {type = "item",  name = "bio-scafold",            amount = 5},
         {type = "item",  name = "strorix-unknown-sample", amount = 3},
@@ -121,7 +121,7 @@ RECIPE {
         {type = "item",  name = "dna-polymerase",         amount = 1},
     },
     results = {
-        {type = "item", name = "simik-mk02", amount = 4},
+        {type = "item", name = "simik-mk02", amount = 4, ignored_by_stats = 3, ignored_by_productivity = 3},
     },
     icons =
     {
@@ -157,7 +157,7 @@ RECIPE {
     enabled = false,
     energy_required = 250,
     ingredients = {
-        {type = "item",  name = "simik-mk03",             amount = 4},
+        {type = "item",  name = "simik-mk03",             amount = 4, ignored_by_stats = 4},
         {type = "item",  name = "simik-codex-mk03",       amount = 1},
         {type = "item",  name = "bio-scafold",            amount = 8},
         {type = "item",  name = "cdna",                   amount = 2},
@@ -170,7 +170,7 @@ RECIPE {
         {type = "fluid", name = "mutant-enzymes",         amount = 50},
     },
     results = {
-        {type = "item", name = "simik-mk03", amount = 5},
+        {type = "item", name = "simik-mk03", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
@@ -207,7 +207,7 @@ RECIPE {
     enabled = false,
     energy_required = 350,
     ingredients = {
-        {type = "item",  name = "simik-mk04",             amount = 4},
+        {type = "item",  name = "simik-mk04",             amount = 4,  ignored_by_stats = 4},
         {type = "item",  name = "simik-codex-mk04",       amount = 1},
         {type = "item",  name = "cdna",                   amount = 2},
         {type = "item",  name = "strorix-unknown-sample", amount = 3},
@@ -218,7 +218,7 @@ RECIPE {
         {type = "fluid", name = "rich-gas",               amount = 500},
     },
     results = {
-        {type = "item", name = "simik-mk04", amount = 5},
+        {type = "item", name = "simik-mk04", amount = 5, ignored_by_stats = 4, ignored_by_productivity = 4},
     },
     icons =
     {
