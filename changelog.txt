@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.40
-Date: ???
+Date: 2025-3-4
   Changes:
     - Fixed some caravan actions consuming food multiple times per action. Resolves https://github.com/pyanodon/pybugreports/issues/897
     - Fixed caravan gui not closing when caravan is out of reach.
