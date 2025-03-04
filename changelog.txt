@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.40
+Date: ???
+  Changes:
+    - Fixed some caravan actions consuming food multiple times per action
+    - Fixed caravan gui not closing when caravan is out of reach
+    - Fixed being able to interact with food slots when caravan is out of reach
+---------------------------------------------------------------------------------------------------
 Version: 3.0.39
 Date: 2025-3-3
   Changes:
