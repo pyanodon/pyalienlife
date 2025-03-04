@@ -98,7 +98,7 @@ local no_fuel_map_tag = {
 ---@param entity LuaEntity
 local function add_fuel_alert(entity)
     local target_force = entity.force_index
-    for _, player in pairs(game.players) do
+    for _, player in pairs(game.connected_players) do
         if player.valid and player.force_index == target_force then
             -- You could use train alerts which have the wrong notification string but *do* stack
             -- player.add_alert(entity, defines.alert_type.train_out_of_fuel)
@@ -121,7 +121,7 @@ local function remove_fuel_alert(entity)
     end
 
     local target_force = entity.force_index
-    for _, player in pairs(game.players) do
+    for _, player in pairs(game.connected_players) do
         if player.valid and player.force_index == target_force then
             -- You could use train alerts which have the wrong notification string but *do* stack
             -- player.remove_alert({prototype = prototype, type = defines.alert_type.train_out_of_fuel})
@@ -1144,7 +1144,7 @@ end
 py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     local guis_to_update = {}
 
-    for _, player in pairs(game.players) do
+    for _, player in pairs(game.connected_players) do
         local gui = Caravan.get_caravan_gui(player)
         if gui then
             local caravan_data = storage.caravans[gui.tags.unit_number]
