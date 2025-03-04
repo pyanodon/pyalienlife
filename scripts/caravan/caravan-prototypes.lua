@@ -435,11 +435,12 @@ Caravan.actions = {
         if not item then return false end
 
         local result, amount = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
-        if amount and amount > 0 then
+        local completed = action.async or result
+        if amount and amount > 0 and completed then
             Caravan.eat(caravan_data)
         end
 
-        return action.async or result
+        return completed
     end,
 
     ["unload-caravan"] = function(caravan_data, schedule, action)
@@ -453,11 +454,12 @@ Caravan.actions = {
         if not item then return false end
 
         local result, amount = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
-        if amount and amount > 0 then
+        local completed = action.async or result
+        if amount and amount > 0 and completed then
             Caravan.eat(caravan_data)
         end
 
-        return action.async or result
+        return completed
     end,
 
     ["load-target"] = function(caravan_data, schedule, action)
@@ -471,11 +473,12 @@ Caravan.actions = {
         if not item then return false end
 
         local result, amount = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
-        if amount and amount > 0 then
+        local completed = action.async or result
+        if amount and amount > 0 and completed then
             Caravan.eat(caravan_data)
         end
 
-        return action.async or result
+        return completed
     end,
 
     ["unload-target"] = function(caravan_data, schedule, action)
@@ -489,11 +492,12 @@ Caravan.actions = {
         if not item then return false end
 
         local result, amount = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
-        if amount and amount > 0 then
+        local completed = action.async or result
+        if amount and amount > 0 and completed then
             Caravan.eat(caravan_data)
         end
 
-        return action.async or result
+        return completed
     end,
 
     ["detonate"] = function(caravan_data, schedule, action)

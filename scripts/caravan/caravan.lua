@@ -832,6 +832,8 @@ gui_events[defines.events.on_gui_click]["py_fuel_slot_."] = function(event)
     if not cursor_stack then return end
     local fuel_stack = caravan_data.fuel_inventory[tags.i]
     if cursor_stack.valid_for_read and not caravan_prototypes[caravan_data.entity.name].favorite_foods[cursor_stack.name] then return end
+    local character = player.character
+    if character and character.valid and not character.can_reach_entity(caravan_data.entity) then return end
 
     -- Attempts to replicate different stack transfer interactions
     -- TODO: modifiers (shift/control)
@@ -998,7 +1000,6 @@ local function advance_caravan_schedule_by_1(caravan_data)
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
             is_interrupted = true
-            existing_interrupt_name = sch.temporary.interrupt_name
             break
         end
     end
@@ -1142,6 +1143,16 @@ end
 
 py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     local guis_to_update = {}
+
+    for _, player in pairs(game.players) do
+        local gui = Caravan.get_caravan_gui(player)
+        if gui then
+            local caravan_data = storage.caravans[gui.tags.unit_number]
+            if not player.can_reach_entity(caravan_data.entity) then
+                player.opened = nil
+            end
+        end
+    end
 
     if not storage.caravan_queue then
         local queue = {}
