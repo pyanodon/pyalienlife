@@ -1144,16 +1144,6 @@ end
 py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     local guis_to_update = {}
 
-    for _, player in pairs(game.connected_players) do
-        local gui = Caravan.get_caravan_gui(player)
-        if gui then
-            local caravan_data = storage.caravans[gui.tags.unit_number]
-            if not player.can_reach_entity(caravan_data.entity) then
-                player.opened = nil
-            end
-        end
-    end
-
     if not storage.caravan_queue then
         local queue = {}
         for _, caravan_data in pairs(storage.caravans) do

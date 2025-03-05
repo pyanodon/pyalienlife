@@ -3,6 +3,7 @@ Version: 3.0.41
 Date: ???
   Changes:
     - Made "Open caravan" button in outposts and codex put player in remote view. Resolves https://github.com/pyanodon/pybugreports/issues/900
+    - Reverted the change that made caravan gui close when caravan is out of reach.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.40
 Date: 2025-3-4
