@@ -191,6 +191,10 @@ gui_events[defines.events.on_gui_click]["py_click_caravan"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     if Caravan.validity_check(caravan_data) then
+        -- Put player in remote controller so he can't move items from/into caravan
+        player.set_controller{
+            type = defines.controllers.remote,
+        }
         Caravan.build_gui(player, caravan_data.entity)
     end
 end
