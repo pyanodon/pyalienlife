@@ -13,7 +13,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "arqad-propolis", amount = 5}, --FUTURE USE IN PESTICIDE PRODUCTION--
-        {type = "item", name = "barrel",         amount = 6},
+        {type = "item", name = "barrel",         amount = 6, ignored_by_productivity = 6},
     },
     main_product = "arqad-propolis",
 }:add_unlock("cardial-hypopharynx")
@@ -58,6 +58,7 @@ RECIPE {
     category = "arqad",
     enabled = false,
     energy_required = 60,
+    allow_productivity = false,
     ingredients = {
         {type = "item", name = "rennea",               amount = 2},
         {type = "item", name = "active-carbon",        amount = 1},

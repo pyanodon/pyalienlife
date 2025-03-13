@@ -3,6 +3,9 @@ Version: 3.0.42
 Date: ???
   Changes:
     - Add missing migration for new soot
+    - Disallowed productivity from wax barrel recipes
+    - Disallowed productivity from arqad jelly barrel recipes
+    - Fixed CAGS turd creating barrels from nothing via productivity. Resolves https://github.com/pyanodon/pybugreports/issues/902
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7
