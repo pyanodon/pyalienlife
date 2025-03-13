@@ -173,6 +173,7 @@ RECIPE {
     category = "arqad",
     enabled = false,
     energy_required = 50,
+    allow_productivity = false,
     ingredients = {
         {type = "item", name = "sugar",  amount = 5},
         {type = "item", name = "barrel", amount = 1},
@@ -189,6 +190,7 @@ RECIPE {
     category = "arqad",
     enabled = false,
     energy_required = 50,
+    allow_productivity = false,
     ingredients = {
         {type = "item", name = "arqad-honey-barrel", amount = 1},
     },
@@ -224,6 +226,7 @@ RECIPE {
     category = "arqad",
     enabled = false,
     energy_required = 100,
+    allow_productivity = false,
     ingredients = {
         {type = "item", name = "rennea",               amount = 1},
         {type = "item", name = "active-carbon",        amount = 1},
@@ -251,7 +254,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "arqad-propolis", amount = 2}, --FUTURE USE IN PESTICIDE PRODUCTION--
-        {type = "item", name = "barrel",         amount = 4},
+        {type = "item", name = "barrel",         amount = 4, ignored_by_productivity = 4},
     },
     main_product = "arqad-propolis",
 }:add_unlock("arqad-mk02")
