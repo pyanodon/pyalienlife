@@ -986,32 +986,26 @@ local function advance_caravan_schedule_by_1(caravan_data)
     local schedule = caravan_data.schedule[caravan_data.schedule_id]
     assert(schedule)
 
-    if schedule.temporary then
-        table.remove(caravan_data.schedule, caravan_data.schedule_id)
-        if #caravan_data.schedule == 0 then
-            caravan_data.schedule_id = -1
-        else
-            caravan_data.schedule_id = caravan_data.schedule_id - 1
-        end
-    end
-
     local existing_interrupt_name    
     local is_interrupted = false
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
-            is_interrupted = true
-            existing_interrupt_name = sch.temporary.interrupt_name
-            break
+            if sch ~= schedule then  -- It is about to be deleted, so dont count it
+                is_interrupted = true
+                existing_interrupt_name = sch.temporary.interrupt_name
+                break
+            end
         end
     end
 
-    for _, interrupt in pairs(caravan_data.interrupts) do
+    local passed_index
+    for idx, interrupt in pairs(caravan_data.interrupts) do
         interrupt = storage.interrupts[interrupt]
         if not interrupt then goto continue end
 
-        local b = interrupt.inside_interrupt
-        if is_interrupted and not b then goto continue end
-        if is_interrupted and b and existing_interrupt_name == interrupt.name then goto continue end
+        local inside = interrupt.inside_interrupt
+        if is_interrupted and not inside then goto continue end
+        if is_interrupted and inside and existing_interrupt_name == interrupt.name then goto continue end
 
         local conditions_passed = true
         for _, condition in pairs(interrupt.conditions) do
@@ -1022,14 +1016,26 @@ local function advance_caravan_schedule_by_1(caravan_data)
             end
         end
         if conditions_passed then
-            if interrupt.inside_interrupt then
-                remove_tmp_stops(caravan_data)
-            end
-            add_interrupt(caravan_data, interrupt)
-            is_interrupted = true
+            passed_index = idx
+            is_interrupted = true   -- Pretend the interrupt succeded but dont add it to the schedule yet
         end
 
         ::continue::
+    end
+
+    if passed_index then
+        local interrupt = storage.interrupts[caravan_data.interrupts[passed_index]]
+        remove_tmp_stops(caravan_data)
+        add_interrupt(caravan_data, interrupt)
+    else
+        if schedule.temporary then
+            table.remove(caravan_data.schedule, caravan_data.schedule_id)
+            if #caravan_data.schedule == 0 then
+                caravan_data.schedule_id = -1
+            else
+                caravan_data.schedule_id = caravan_data.schedule_id - 1
+            end
+        end
     end
 
     begin_schedule(caravan_data, caravan_data.schedule_id % #caravan_data.schedule + 1, #caravan_data.schedule == 1)
