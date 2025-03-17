@@ -503,9 +503,11 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function
         storage.interrupts[element.tags.interrupt_name] = nil
         for _, player in pairs(game.players) do
             local gui = Caravan.get_interrupt_gui(player)
-            if gui.tags.interrupt_name == element.tags.interrupt_name then
-                gui.destroy()
-                Caravan.update_gui(Caravan.get_caravan_gui(player))
+            if gui then
+                if gui.tags.interrupt_name == element.tags.interrupt_name then
+                    gui.destroy()
+                    Caravan.update_gui(Caravan.get_caravan_gui(player))
+                end
             end
         end
     else
