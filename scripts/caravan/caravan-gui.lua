@@ -58,6 +58,7 @@ end
 function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_name)
     local unit_number = caravan_data.unit_number
     local action_list_type = gui.tags.action_list_type
+    assert(action_list_type)
     for j, action in ipairs(actions) do
         local tags = {unit_number = unit_number, action_list_type = action_list_type, schedule_id = i, action_id = j, interrupt_name = interrupt_name}
 
