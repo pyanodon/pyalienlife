@@ -1000,6 +1000,7 @@ local function advance_caravan_schedule_by_1(caravan_data)
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
             is_interrupted = true
+            existing_interrupt_name = sch.temporary.interrupt_name
             break
         end
     end
