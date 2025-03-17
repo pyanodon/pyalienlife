@@ -3,6 +3,8 @@ Version: 3.0.42
 Date: ???
   Changes:
     - Add missing migration for new soot
+    - Fixed actions being incorrect size in interrupt target gui
+    - Fixed caravan status indicator being slightly misaligned
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7

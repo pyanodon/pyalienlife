@@ -477,9 +477,8 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     -- open_map_button.style.size = {26, 26}
 
     local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
-    status_sprite.resize_to_sprite = false
-    status_sprite.style.size = {16, 16}
+    status_flow.style.vertical_align = "center"
+    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite", style = "status_image"}
     status_flow.add {type = "label", name = "status_text"}
 
     local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
