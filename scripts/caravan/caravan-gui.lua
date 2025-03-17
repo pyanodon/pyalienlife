@@ -54,9 +54,10 @@ end
 ---@param actions CaravanAction[]
 ---@param caravan_data Caravan
 ---@param i integer
----@param action_list_type CaravanActionListType
-function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_list_type, interrupt_name)
+---@param interrupt_name string
+function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_name)
     local unit_number = caravan_data.unit_number
+    local action_list_type = gui.tags.action_list_type
     for j, action in ipairs(actions) do
         local tags = {unit_number = unit_number, action_list_type = action_list_type, schedule_id = i, action_id = j, interrupt_name = interrupt_name}
 
@@ -64,8 +65,13 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, action_lis
         action_frame.style.height = 36
         action_frame.style.right_padding = 12
         action_frame.style.left_margin = 32
+
         -- Factorio mod gui is overcomplicated, hardcoded values is the only solution i found that actually works
-        action_frame.style.width = interrupt_name and 392 or 392 - 28
+        if action_list_type == Caravan.action_list_types.standard_schedule or action_list_type == Caravan.action_list_types.interrupt_targets then
+            action_frame.style.width = 392 - 28
+        else
+            action_frame.style.width = 392
+        end
 
         if action_list_type ~= Caravan.action_list_types.interrupt_condition then
             local playbutton = action_frame.add {type = "sprite-button", name = "py_action_play", tags = tags}
@@ -234,6 +240,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
     local prototype = caravan_prototypes[caravan_data.entity.name]
     if interrupt_data then assert(interrupt_data.schedule) end
     local schedule = interrupt_data and interrupt_data.schedule or caravan_data.schedule
+    local action_list_type = gui.tags.action_list_type
 
     local tags = {unit_number = unit_number, action_list_type = action_list_type}
     if interrupt_data then
@@ -246,7 +253,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
     for i, schedule in ipairs(schedule) do
         tags.schedule_id = i
 
-        local schedule_flow = gui.add {type = "flow", direction = "vertical", name}
+        local schedule_flow = gui.add {type = "flow", direction = "vertical", tags = {action_list_type = action_list_type}}
         schedule_flow.style.horizontal_align = "right"
         schedule_flow.style.vertically_stretchable = false
 
@@ -299,7 +306,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
             }
         end
 
-        Caravan.build_action_list_gui(schedule_flow, schedule.actions, caravan_data, i, tags.action_list_type, tags.interrupt_name)
+        Caravan.build_action_list_gui(schedule_flow, schedule.actions, caravan_data, i, tags.interrupt_name)
 
         local entity = schedule.entity
         local valid_actions = Caravan.get_valid_actions_for_entity(caravan_data, entity)
@@ -505,7 +512,9 @@ function Caravan.build_gui(player, entity, from_remote_manager)
     local schedule_frame = content_flow.add {type = "frame", name = "schedule_frame", direction = "vertical", style = "py_nice_frame"}
     schedule_frame.style.vertically_stretchable = true
 
-    local schedule_pane = schedule_frame.add {type = "scroll-pane", name = "schedule_pane", style = "py_schedule_scroll_pane"}
+    local schedule_pane = schedule_frame.add {type = "scroll-pane", name = "schedule_pane", style = "py_schedule_scroll_pane",
+        tags = {action_list_type = Caravan.action_list_types.standard_schedule}
+    }
     schedule_pane.horizontal_scroll_policy = "never"
     schedule_pane.vertical_scroll_policy = "auto-and-reserve-space"
     schedule_pane.style.horizontally_stretchable = true
@@ -693,7 +702,9 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
 
     local conditions_scroll_pane_frame = window_frame.add {type = "frame", name = "conditions_scroll_pane_frame", direction = "vertical", style = "py_nice_frame"}
     conditions_scroll_pane_frame.style.vertically_stretchable = true
-    local conditions_scroll_pane = conditions_scroll_pane_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane"}
+    local conditions_scroll_pane = conditions_scroll_pane_frame.add {type = "scroll-pane", style = "py_schedule_scroll_pane",
+        tags = {action_list_type = Caravan.action_list_types.interrupt_condition}
+    }
     conditions_scroll_pane.horizontal_scroll_policy = "never"
     conditions_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
     conditions_scroll_pane.style.horizontally_stretchable = true
@@ -706,7 +717,6 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
         interrupt_data.conditions,
         caravan_data,
         nil,
-        Caravan.action_list_types.interrupt_condition,
         interrupt_data.name
     )
 
@@ -724,7 +734,9 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
 
     local targets_scroll_pane_frame = window_frame.add {type = "frame", name = "targets_scroll_pane_frame", direction = "vertical", style = "py_nice_frame"}
     targets_scroll_pane_frame.style.vertically_stretchable = true
-    local targets_scroll_pane = targets_scroll_pane_frame.add {name = "targets_scroll_pane", type = "scroll-pane", style = "py_schedule_scroll_pane"}
+    local targets_scroll_pane = targets_scroll_pane_frame.add {name = "targets_scroll_pane", type = "scroll-pane", style = "py_schedule_scroll_pane",
+        tags = {action_list_type = Caravan.action_list_types.interrupt_targets}
+    }
     targets_scroll_pane.horizontal_scroll_policy = "never"
     targets_scroll_pane.vertical_scroll_policy = "auto-and-reserve-space"
     targets_scroll_pane.style.horizontally_stretchable = true
