@@ -11,6 +11,7 @@ Date: ???
     - Fixed a crash when adding schedule to nuclear caravans. Resolves https://github.com/pyanodon/pybugreports/issues/924
     - Fixed that alpha Dingrits couldn't be used in recipes. Resolves https://github.com/pyanodon/pybugreports/issues/929
     - Fixed Vrauks mk04 recipe. Resolves https://github.com/pyanodon/pybugreports/issues/931
+    - Add fluid caravans, creatures capable of transporting fluids between two outposts.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7

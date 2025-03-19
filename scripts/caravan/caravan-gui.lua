@@ -1,6 +1,13 @@
 local caravan_prototypes = require "caravan-prototypes"
 require "caravan-gui-shared"
 
+local function contains(t, e)
+  for i = 1,#t do
+    if t[i] == e then return true end
+  end
+  return false
+end
+
 ---Given a action index in a caravan GUI, returns the GUI style and sprite for the corresponding button.
 ---@param caravan_data Caravan
 ---@param action_list_type CaravanActionListType
@@ -170,6 +177,24 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_
             value.numeric = true
             value.allow_decimal = false
             value.allow_negative = true
+        elseif action.type == "caravan-fluid-count" or action.type == "target-fluid-count" then
+            local itemselect = action_frame.add {
+                type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
+                tags = tags, elem_type = "fluid",
+                elem_filters = filters
+            }
+            itemselect.elem_value = action.elem_value
+
+            local selected_index = action.operator or 3
+            action_frame.add {
+                type = "drop-down", items = {">", "<", "=", "≥", "≤", "≠"}, selected_index = selected_index, style = "train_schedule_circuit_condition_comparator_dropdown",
+                name = "py_caravan_condition_operator", tags = tags,
+            }
+
+            local value = action_frame.add {type = "textfield", name = "py_value_condition_right", style = "py_compact_slider_value_textfield", tags = tags, text = action.circuit_condition_right}
+            value.numeric = true
+            value.allow_decimal = false
+            value.allow_negative = true
         elseif action.type == "store-specific-food" then
             local itemselect = action_frame.add {
                 type = "choose-elem-button", name = "py_item_value", style = "train_schedule_item_select_button",
@@ -204,8 +229,8 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_
             end
         end
 
-        if action.type == "fill-inventory" or action.type == "empty-inventory" or action.type == "store-food" or action.type == "store-specific-food"
-            or action.type == "load-caravan" or action.type == "unload-caravan" or action.type == "load-target" or action.type == "unload-target" then
+        local possibly_blocking_actions = {"fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank"}
+        if contains(possibly_blocking_actions, action.type) then
             action_frame.add {
                 type = "checkbox",
                 name = "py_blocking_caravan",
@@ -509,6 +534,20 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         fuel_flow.add {type = "progressbar", name = "fuel_bar", style = "burning_progressbar"}.style.horizontally_stretchable = true
     end
 
+    if caravan_data.entity.name == "fluidavan" then
+        local fluid_contents_flow = content_flow.add {type = "flow", name = "fluid_contents_flow", direction = "vertical"}
+        fluid_contents_flow.visible = false
+        local label = fluid_contents_flow.add {type = "label", caption = {"caravan-gui.caravan-fluid-contents"}, style = "semibold_label"}
+        local fluid_flow = fluid_contents_flow.add {type = "flow", name = "fluid_flow", direction = "horizontal"}
+        fluid_flow.style.vertical_align = "center"
+        fluid_flow.style.horizontal_spacing = 8
+        fluid_flow.add {type = "sprite-button", name = "fluid_sprite_button", style = "transparent_slot"}
+        fluid_flow.add {type = "label", name = "fluid_name", style = "semibold_label"}
+        fluid_flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
+        fluid_flow.add {type = "label", name = "fluid_amount"}
+        fluid_flow.add {type = "sprite-button", name = "py_flush_caravan_contents", style = "tool_button_red", sprite = "utility/trash"}
+    end
+
     local schedule_frame = content_flow.add {type = "frame", name = "schedule_frame", direction = "vertical", style = "py_nice_frame"}
     schedule_frame.style.vertically_stretchable = true
 
@@ -578,6 +617,35 @@ function Caravan.update_gui(gui, weak)
             end
         end
         content_flow.fuel_flow.fuel_bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
+    end
+
+    if caravan_data.entity.name == "fluidavan" then
+        local fluid = caravan_data.fluid
+        content_flow.fluid_contents_flow.visible = fluid ~= nil
+        if fluid then
+            local fluid_flow = content_flow.fluid_contents_flow.fluid_flow
+            local numeric_amount = fluid.amount
+            local text_amount
+            if numeric_amount < 1000 then
+                text_amount = numeric_amount
+            else
+                local rounded_fluid_amount = 1000 * (math.floor(numeric_amount / 1000 + 0.5))
+                text_amount = tostring(rounded_fluid_amount / 1000) .. "k"
+            end
+            local localised_fluid_name = "fluid-name." .. fluid.name
+            fluid_flow.py_flush_caravan_contents.tooltip = {"caravan-gui.flush-contents", {localised_fluid_name}}
+            fluid_flow.fluid_amount.caption = text_amount
+            fluid_flow.fluid_amount.tooltip = tostring(numeric_amount)
+            local default_temperature = prototypes.fluid[fluid.name].default_temperature
+            if fluid.temperature > default_temperature then
+                fluid_flow.fluid_name.caption = {"", {localised_fluid_name}, " (", math.floor(fluid.temperature), " °C)"}
+            else
+                fluid_flow.fluid_name.caption = {localised_fluid_name}
+            end
+
+            fluid_flow.fluid_sprite_button.sprite = "fluid/" .. fluid.name
+            fluid_flow.fluid_sprite_button.elem_tooltip = {type = "fluid", name = fluid.name}
+        end
     end
 
     if not weak then
@@ -722,7 +790,7 @@ function Caravan.build_interrupt_gui(player, caravan_data, interrupt_name)
 
     tags.action_list_type = Caravan.action_list_types.interrupt_condition
 
-    local actions = Caravan.valid_actions["interrupt-condition"]
+    local actions = Caravan.valid_actions[caravan_data.entity.name]["interrupt-condition"]
     actions = table.map(actions, function(v) return {"caravan-actions." .. v, v} end)
     local py_add_action = conditions_scroll_pane.add {type = "drop-down", name = "py_add_action", items = actions, tags = tags}
     py_add_action.style.width = 392
