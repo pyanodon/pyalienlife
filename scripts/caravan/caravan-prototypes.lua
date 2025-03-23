@@ -95,7 +95,7 @@ Caravan.valid_actions = {
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
-Caravan.valid_actions.nukavan["default"] = {"detonate"}
+Caravan.valid_actions.nukavan["default"] = table.invert{"detonate"}
 
 Caravan.foods = {
     all = {
@@ -173,9 +173,7 @@ local caravan_prototypes = {
             ["workers-food-02"] = 30,
             ["workers-food-03"] = 50
         },
-        actions = {
-            ["default"] = {"detonate"}
-        },
+        actions = Caravan.valid_actions.nukavan,
         placeable_by = "nukavan",
         map_tag = {
             type = "virtual",
