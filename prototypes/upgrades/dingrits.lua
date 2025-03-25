@@ -22,6 +22,7 @@ if data and not yafc_turd_integration then
             energy_required = 36000,
             ingredients = {{"dingrits-mk04", 1}},
             results = {{name = "dingrits-alpha", probability = 0.5, type = "item", amount = 1}},
+            allow_productivity = true,
             category = "dingrits"
         }
     }

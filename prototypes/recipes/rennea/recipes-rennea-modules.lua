@@ -56,6 +56,7 @@ RECIPE {
         {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png",      scale = 0.25, shift = {-7.5, -7.5}},
     },
     icon_size = 64,
+    allow_productivity = true,
     subgroup = "py-alienlife-rennea",
     order = "za"
 }:add_unlock("rennea-mk02")
@@ -195,6 +196,7 @@ RECIPE {
         {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png",      scale = 0.25, shift = {-7.5, -7.5}},
     },
     icon_size = 64,
+    allow_productivity = true,
     subgroup = "py-alienlife-rennea",
     order = "za"
 }:add_unlock("rennea-mk03")
@@ -334,6 +336,7 @@ RECIPE {
         {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png",      scale = 0.25, shift = {-7.5, -7.5}},
     },
     icon_size = 64,
+    allow_productivity = true,
     subgroup = "py-alienlife-rennea",
     order = "za"
 }:add_unlock("rennea-mk04")

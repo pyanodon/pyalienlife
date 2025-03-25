@@ -9,6 +9,7 @@ Date: ???
     - Fixed caravans incorrectly evaluating some interrupt conditions. Resolves https://github.com/pyanodon/pybugreports/issues/914 and https://github.com/pyanodon/pybugreports/issues/905
     - Fixed a crash when deleting interrupts in multiplayer. Resolves https://github.com/pyanodon/pybugreports/issues/909
     - Fixed a crash when adding schedule to nuclear caravans. Resolves https://github.com/pyanodon/pybugreports/issues/924
+    - Fixed that alpha Dingrits couldn't be used in recipes. Resolves https://github.com/pyanodon/pybugreports/issues/929
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7
