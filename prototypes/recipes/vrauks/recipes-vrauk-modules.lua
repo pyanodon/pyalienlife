@@ -249,7 +249,7 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk04", amount = 0, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk04", amount = 1, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk04",
