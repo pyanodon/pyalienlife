@@ -207,7 +207,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-            if entity.name == "outpost" or entity.name == "outpost-aerial" then
+            if entity.name == "outpost" or entity.name == "fluid-outpost" or entity.name == "outpost-aerial" then
                 local action_id = storage.last_opened_action[player.index].action_id
                 interrupt_data.conditions[action_id].entity = entity
                 interrupt_data.conditions[action_id].localised_name = ""
@@ -514,6 +514,17 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function
         element.parent.py_delete_interrupt_cancel.visible = true
         element.parent.py_delete_interrupt_confirm.visible = true
     end
+end
+
+gui_events[defines.events.on_gui_click]["py_flush_caravan_contents"] = function(event)
+    local player = game.get_player(event.player_index)
+    local caravan_gui = Caravan.get_caravan_gui(player)
+    local unit_number = caravan_gui.tags.unit_number
+
+    local caravan = storage.caravans[unit_number]
+    caravan.fluid = nil
+    destroy_altmode_icon(caravan)
+    Caravan.update_gui(caravan_gui)
 end
 
 gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function(event)
@@ -1143,6 +1154,8 @@ function Caravan.get_valid_actions_for_entity(caravan_data, entity)
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
             valid_actions = all_actions.outpost
+        elseif entity.name == "fluid-outpost" then
+            valid_actions = all_actions["fluid-outpost"]
         else
             valid_actions = all_actions[entity.type]
         end
@@ -1233,7 +1246,9 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     if next(guis_to_update) then
         for _, player in pairs(game.connected_players) do
             local gui = Caravan.get_caravan_gui(player)
-            if gui and guis_to_update[gui.tags.unit_number] then Caravan.update_gui(gui) end
+            if gui and guis_to_update[gui.tags.unit_number] then
+               Caravan.update_gui(gui)
+            end
         end
     end
 

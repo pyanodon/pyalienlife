@@ -81,18 +81,53 @@ Caravan.valid_actions = {
         ["default"] = table.invert{
             "time-passed"
         },
+        ["interrupt-condition"] = {
+            "is-inventory-full",
+            "is-inventory-empty",
+            "caravan-item-count",
+            "target-item-count",
+            "food-count",
+            "circuit-condition",
+            "circuit-condition-static",
+            "at-outpost",
+            "not-at-outpost",
+        }
     },
-    ["interrupt-condition"] = {
-        "is-inventory-full",
-        "is-inventory-empty",
-        "caravan-item-count",
-        "target-item-count",
-        "food-count",
-        "circuit-condition",
-        "circuit-condition-static",
-        "at-outpost",
-        "not-at-outpost",
-    }
+    fluidavan = {
+        ["outpost"] = table.invert{
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["fluid-outpost"] = table.invert{
+            "time-passed",
+            "fill-tank",
+            "empty-tank",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["electric-pole"] = table.invert{
+            "time-passed",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["default"] = table.invert{
+            "time-passed"
+        },
+        ["interrupt-condition"] = {
+            "is-tank-full",
+            "is-tank-empty",
+            "caravan-fluid-count",
+            "target-fluid-count",
+            "food-count",
+            "circuit-condition",
+            "circuit-condition-static",
+            "at-outpost",
+            "not-at-outpost",
+        }
+    },
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
 Caravan.valid_actions.nukavan["default"] = table.invert{"detonate"}
@@ -132,6 +167,27 @@ local caravan_prototypes = {
         actions = Caravan.valid_actions.caravan,
         camera_zoom = 0.8,
         placeable_by = "caravan",
+        map_tag = {
+            type = "virtual",
+            name = "caravan-map-tag-mk01"
+        },
+        requeue_required = true,
+        pathfinder_flags = {
+            cache = false
+        }
+    },
+    fluidavan = {
+        opens_player_inventory = true,
+        -- Only way I found to open the player inventory, in order to store food in the fluidavan
+        inventory_size = 0,
+        max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
+        fuel_size = 2,
+        destructible = false,
+        outpost = "fluid-outpost",
+        favorite_foods = Caravan.foods.caravan,
+        actions = Caravan.valid_actions.fluidavan,
+        camera_zoom = 0.8,
+        placeable_by = "fluidavan",
         map_tag = {
             type = "virtual",
             name = "caravan-map-tag-mk01"
@@ -185,12 +241,14 @@ local caravan_prototypes = {
     }
 }
 
-caravan_prototypes["caravan-turd"] = caravan_prototypes["caravan"]
-caravan_prototypes["flyavan-turd"] = caravan_prototypes["flyavan"]
-caravan_prototypes["nukavan-turd"] = caravan_prototypes["nukavan"]
-caravan_prototypes["caravan-turd"].placeable_by = "caravan-turd"
-caravan_prototypes["flyavan-turd"].placeable_by = "flyavan-turd"
-caravan_prototypes["nukavan-turd"].placeable_by = "nukavan-turd"
+caravan_prototypes["caravan-turd"]   = caravan_prototypes["caravan"]
+caravan_prototypes["fluidavan-turd"] = caravan_prototypes["fluidavan"]
+caravan_prototypes["flyavan-turd"]   = caravan_prototypes["flyavan"]
+caravan_prototypes["nukavan-turd"]   = caravan_prototypes["nukavan"]
+caravan_prototypes["caravan-turd"].placeable_by   = "caravan-turd"
+caravan_prototypes["fluidavan-turd"].placeable_by = "fluidavan-turd"
+caravan_prototypes["flyavan-turd"].placeable_by   = "flyavan-turd"
+caravan_prototypes["nukavan-turd"].placeable_by   = "nukavan-turd"
 
 local function get_outpost_inventory(outpost)
     local type = outpost.type
@@ -303,6 +361,44 @@ local function evaluate_signal(entity, signal)
     return result
 end
 
+local target_offset = {0, -0.3}
+function render_altmode_icon(caravan_data)
+    caravan_data.alt_mode_light = rendering.draw_sprite {
+        sprite = "utility/entity_info_dark_background",
+        target = caravan_data.entity,
+        target_offset = target_offset,
+        surface = caravan_data.entity.surface,
+        only_in_alt_mode = true,
+        x_scale = 0.9,
+        y_scale = 0.9
+    }.id
+    caravan_data.alt_mode = rendering.draw_sprite {
+        sprite = "fluid/" .. caravan_data.fluid.name,
+        target = caravan_data.entity,
+        target_offset = target_offset,
+        surface = caravan_data.entity.surface,
+        only_in_alt_mode = true,
+        x_scale = 1.2,
+        y_scale = 1.2
+    }.id
+end
+
+function destroy_altmode_icon(caravan_data)
+    if caravan_data.fluid == nil then
+        if caravan_data.alt_mode then
+            local alt_mode = rendering.get_object_by_id(caravan_data.alt_mode)
+            if alt_mode then alt_mode.destroy() end
+            caravan_data.alt_mode = nil
+        end
+        if caravan_data.alt_mode_light then
+            local alt_mode_light = rendering.get_object_by_id(caravan_data.alt_mode_light)
+            if alt_mode_light then alt_mode_light.destroy() end
+            caravan_data.alt_mode_light = nil
+        end
+    end
+end
+
+
 -- small migration script to ensure we are not transfering deleted items
 -- I have no access to the JSON migrations so invalid items are just deleted
 -- TODO: Use JSON migrations after they are added to base factorio under prototypes
@@ -376,6 +472,67 @@ Caravan.actions = {
         local result = transfer_filtered_items_1(fuel_inventory, outpost_inventory, item, goal)
 
         return action.async or result
+    end,
+
+    ["fill-tank"] = function(caravan_data, schedule, action)
+        local storage_tank = schedule.entity
+        if not storage_tank or not storage_tank.valid then return true end
+        local output = caravan_data.fluid or {amount = 0, temperature = 15, name = ""}
+        local input = storage_tank.get_fluid(1)
+        local max_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume - output.amount
+        local caravan_was_empty = output.amount == 0
+
+        if max_output_volume == 0 then return true end
+        if input == nil then return action.async end
+
+        local amount_to_transfer = storage_tank.remove_fluid({name = input.name, amount = max_output_volume})
+
+        output.temperature = math.floor((output.amount * output.temperature + amount_to_transfer * input.temperature) / (output.amount + amount_to_transfer))
+        output.amount = output.amount + amount_to_transfer
+        output.name = input.name
+        if output.amount == 0 then
+            caravan_data.fluid = nil
+        else
+            caravan_data.fluid = output
+        end
+
+        if caravan_data.alt_mode == nil and caravan_data.fluid then
+            render_altmode_icon(caravan_data)
+        end
+
+        local completed = action.async or output.amount >= max_output_volume
+        if amount_to_transfer > 0 and completed then
+            Caravan.eat(caravan_data)
+        end
+        return completed
+    end,
+
+    ["empty-tank"] = function(caravan_data, schedule, action)
+        local storage_tank = schedule.entity
+        if not storage_tank or not storage_tank.valid then return true end
+        local input = caravan_data.fluid
+        local output = storage_tank.get_fluid(1)
+
+        if input == nil then return true end
+
+        local amount_transfered = storage_tank.insert_fluid(input)
+
+        input.amount = input.amount - amount_transfered
+        if input.amount == 0 then
+            caravan_data.fluid = nil
+        else
+            caravan_data.fluid = input
+        end
+
+        if caravan_data.alt_mode and caravan_data.fluid == nil then
+            destroy_altmode_icon(caravan_data)
+        end
+
+        local completed = action.async or input.amount == 0
+        if amount_transfered > 0 and completed then
+            Caravan.eat(caravan_data)
+        end
+        return completed
     end,
 
     ["fill-inventory"] = function(caravan_data, schedule, action)
@@ -657,6 +814,67 @@ Caravan.actions = {
 
     ["is-inventory-empty"] = function(caravan_data, schedule, action)
         return caravan_data.inventory.is_empty()
+    end,
+
+    ["is-tank-full"] = function(caravan_data, schedule, action)
+        return caravan_data.fluid and caravan_data.fluid.amount >= caravan_prototypes[caravan_data.entity.name].max_volume
+    end,
+
+    ["is-tank-empty"] = function(caravan_data, schedule, action)
+        return caravan_data.fluid == nil
+    end,
+
+    ["caravan-fluid-count"] = function(caravan_data, schedule, action)
+        local fluid_name = action.elem_value
+
+        local right = action.circuit_condition_right
+        if not right then return false end
+
+        if not caravan_data.fluid or caravan_data.fluid.name ~= fluid_name then return false end
+        local left = caravan_data.fluid.amount
+
+        local operator = action.operator or 3
+        if operator == 1 then
+            return left > right
+        elseif operator == 2 then
+            return left < right
+        elseif operator == 3 then
+            return left == right
+        elseif operator == 4 then
+            return left >= right
+        elseif operator == 5 then
+            return left <= right
+        elseif operator == 6 then
+            return left ~= right
+        end
+    end,
+
+    ["target-fluid-count"] = function(caravan_data, schedule, action)
+        local outpost = schedule.entity
+        if not outpost or not outpost.valid or outpost.fluids_count == 0 then return false end
+        local fluid_name = action.elem_value
+
+        local right = action.circuit_condition_right
+        if not right then return false end
+
+        local outpost_fluid = outpost.get_fluid(1)
+        if not outpost_fluid or outpost_fluid.name ~= fluid_name then return false end
+        local left = outpost_fluid.amount
+
+        local operator = action.operator or 3
+        if operator == 1 then
+            return left > right
+        elseif operator == 2 then
+            return left < right
+        elseif operator == 3 then
+            return left == right
+        elseif operator == 4 then
+            return left >= right
+        elseif operator == 5 then
+            return left <= right
+        elseif operator == 6 then
+            return left ~= right
+        end
     end,
 
     ["at-outpost"] = function(caravan_data, schedule, action)
