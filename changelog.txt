@@ -8,6 +8,8 @@ Date: ???
     - Fixed incorrect self-interrupt behaviour.
     - Dingrit food MK02 is now unlocked at dingrits stage 2 instead of dingrits stage 3.
     - Fixed reseting tired dingrits mk01 would give dingrits mk02.
+    - Increased the fuel value of alpha dingrits from 250MJ -> 1.5GJ.
+    - Changed alpha dingrits burnt result from tired dingrits MK01 to dingrits MK04.
     - Fixed caravans incorrectly evaluating some interrupt conditions. Resolves https://github.com/pyanodon/pybugreports/issues/914 and https://github.com/pyanodon/pybugreports/issues/905
     - Fixed a crash when deleting interrupts in multiplayer. Resolves https://github.com/pyanodon/pybugreports/issues/909
     - Fixed a crash when adding schedule to nuclear caravans. Resolves https://github.com/pyanodon/pybugreports/issues/924

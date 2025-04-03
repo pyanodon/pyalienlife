@@ -12,8 +12,8 @@ if data and not yafc_turd_integration then
             order = "d-e",
             effect = {pollution = 1, speed = 4, productivity = 0.01},
             fuel_category = "dingrits",
-            fuel_value = "250MJ",
-            burnt_result = "used-dingrit"
+            fuel_value = "1.5GW",
+            burnt_result = "dingrits-mk04"
         },
         {
             type = "recipe",
