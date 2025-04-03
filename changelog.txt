@@ -16,6 +16,7 @@ Date: ???
     - Slightly buffed the auog yield from auog maturing MK02. Resolves https://github.com/pyanodon/pybugreports/issues/935
     - Fixed oculas not respecting disabled logistic sections. Resolves https://github.com/pyanodon/pybugreports/issues/919
     - Fixed nexelit ore not appearing in remote view search. Resolves https://github.com/pyanodon/pybugreports/issues/906
+    - Fixed barrel loops involving the arqad C.A.G.S. turd. Resolves https://github.com/pyanodon/pybugreports/issues/902
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7
