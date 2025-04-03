@@ -102,7 +102,7 @@ RECIPE {
     results = {
         {type = "item", name = "dingrits-food-02", amount = 6},
     },
-}:add_unlock("dingrits-mk03")
+}:add_unlock("dingrits-mk02")
 
 ---breeding---
 

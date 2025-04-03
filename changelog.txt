@@ -6,6 +6,8 @@ Date: ???
     - Fixed actions being incorrect size in interrupt target gui
     - Fixed caravan status indicator being slightly misaligned
     - Fixed incorrect self-interrupt behaviour.
+    - Dingrit food MK02 is now unlocked at dingrits stage 2 instead of dingrits stage 3.
+    - Fixed reseting tired dingrits mk01 would give dingrits mk02.
     - Fixed caravans incorrectly evaluating some interrupt conditions. Resolves https://github.com/pyanodon/pybugreports/issues/914 and https://github.com/pyanodon/pybugreports/issues/905
     - Fixed a crash when deleting interrupts in multiplayer. Resolves https://github.com/pyanodon/pybugreports/issues/909
     - Fixed a crash when adding schedule to nuclear caravans. Resolves https://github.com/pyanodon/pybugreports/issues/924
@@ -17,6 +19,7 @@ Date: ???
     - Fixed oculas not respecting disabled logistic sections. Resolves https://github.com/pyanodon/pybugreports/issues/919
     - Fixed nexelit ore not appearing in remote view search. Resolves https://github.com/pyanodon/pybugreports/issues/906
     - Fixed barrel loops involving the arqad C.A.G.S. turd. Resolves https://github.com/pyanodon/pybugreports/issues/902
+    - Added new pyphoon bay recipes that allow resting of dingrits MK02, dingrits MK03, dingrits MK04, simik MK02, simik MK03, and , simik MK04. Resolves https://github.com/pyanodon/pybugreports/issues/874
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7
