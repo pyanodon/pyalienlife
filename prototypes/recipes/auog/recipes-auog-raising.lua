@@ -171,7 +171,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "auog", remove_item = true},
-				{name = "auog", amount_min = 2,    amount_max = 8},
+				{name = "auog", amount_min = 3,    amount_max = 8},
 			},
 			crafting_speed = 130,
 			tech = "auog",
