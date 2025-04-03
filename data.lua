@@ -694,20 +694,6 @@ end
 
 require "prototypes/recipes/recipes-atomizer"
 require "prototypes/recipes/recipes-auto-acessories"
---require 'prototypes/recipes/recipes-auto-blood-1'
---require 'prototypes/recipes/recipes-auto-blood-2'
---require 'prototypes/recipes/recipes-auto-bone-1'
---require 'prototypes/recipes/recipes-auto-bone-2'
---require 'prototypes/recipes/recipes-auto-brains'
---require 'prototypes/recipes/recipes-auto-brains-2'
---require 'prototypes/recipes/recipes-auto-fat-1'
---require 'prototypes/recipes/recipes-auto-fat-2'
---require 'prototypes/recipes/recipes-auto-guts-1'
---require 'prototypes/recipes/recipes-auto-guts-2'
---require 'prototypes/recipes/recipes-auto-meat-1'
---require 'prototypes/recipes/recipes-auto-meat-2'
---require 'prototypes/recipes/recipes-auto-skin-1'
---require 'prototypes/recipes/recipes-auto-skin-2'
 require "prototypes/recipes/recipes-bioprinting"
 require "prototypes/recipes/recipes-bladder"
 require "prototypes/recipes/recipes-mo"
