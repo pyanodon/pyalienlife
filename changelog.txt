@@ -14,6 +14,7 @@ Date: ???
     - Fixed keratin output appearing in incorrect improved simik rendering recipes. Resolves https://github.com/pyanodon/pybugreports/issues/915
     - The fish farm can now pass-thru fluids. Only on the outputs. Resolves https://github.com/pyanodon/pybugreports/issues/908
     - Slightly buffed the auog yield from auog maturing MK02. Resolves https://github.com/pyanodon/pybugreports/issues/935
+    - Fixed oculas not respecting disabled logistic sections. Resolves https://github.com/pyanodon/pybugreports/issues/919
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7
