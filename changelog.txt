@@ -2,7 +2,7 @@
 Version: 3.0.42
 Date: ???
   Changes:
-    - Add missing migration for new soot
+    - Add missing migration for new soot separation technology.
     - Fixed actions being incorrect size in interrupt target gui
     - Fixed caravan status indicator being slightly misaligned
     - Fixed incorrect self-interrupt behaviour.
@@ -10,6 +10,7 @@ Date: ???
     - Fixed reseting tired dingrits mk01 would give dingrits mk02.
     - Increased the fuel value of alpha dingrits from 250MJ -> 1.5GJ.
     - Changed alpha dingrits burnt result from tired dingrits MK01 to dingrits MK04.
+    - Fixed constant "new recipe notification" for TURD recipes. Resolves https://github.com/pyanodon/pybugreports/issues/510
     - Fixed caravans incorrectly evaluating some interrupt conditions. Resolves https://github.com/pyanodon/pybugreports/issues/914 and https://github.com/pyanodon/pybugreports/issues/905
     - Fixed a crash when deleting interrupts in multiplayer. Resolves https://github.com/pyanodon/pybugreports/issues/909
     - Fixed a crash when adding schedule to nuclear caravans. Resolves https://github.com/pyanodon/pybugreports/issues/924

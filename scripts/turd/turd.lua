@@ -513,6 +513,28 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
     end
 end
 
+local function clear_new_turd_recipe_notifications()
+    local recipe_prototypes = prototypes.recipe
+    for _, player in pairs(game.players) do
+        for _, tech_upgrade in pairs(tech_upgrades) do
+            for _, sub_tech in pairs(tech_upgrade.sub_techs) do
+                defunctionize_effect_table(sub_tech)
+                for _, effect in pairs(sub_tech.effects) do
+                    if effect.type == "unlock-recipe" then
+                        if recipe_prototypes[effect.recipe] then
+                            player.clear_recipe_notification(effect.recipe)
+                        end
+                    elseif effect.type == "recipe-replacement" then
+                        if recipe_prototypes[effect.new] then
+                            player.clear_recipe_notification(effect.new)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
 py.on_event(py.events.on_init(), function()
     storage.turd_bonuses = storage.turd_bonuses or {}
     storage.turd_beaconed_machines = storage.turd_beaconed_machines or {}
@@ -522,6 +544,7 @@ py.on_event(py.events.on_init(), function()
     storage.turd_machine_replacements = storage.turd_machine_replacements or {}
     storage.turd_migrations = storage.turd_migrations or {}
     storage.turd_bhoddos = storage.turd_bhoddos or {}
+    clear_new_turd_recipe_notifications()
 end)
 
 local function starts_with(str, start)
