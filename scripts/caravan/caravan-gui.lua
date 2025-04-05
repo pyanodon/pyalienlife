@@ -37,6 +37,34 @@ local function generate_button_status(caravan_data, action_list_type, schedule_i
     return style, sprite
 end
 
+---Given a schedule index in a caravan GUI, returns the GUI style and tooltip for the corresponding schedule label
+---@param caravan_data Caravan
+---@param action_list_type CaravanActionListType
+---@param schedule_id int
+---@param interrupt_name string?
+local function generate_schedule_label_status(caravan_data, action_list_type, schedule_id, interrupt_name)
+    assert(action_list_type)
+    local style
+    local tooltip = nil
+    local schedule
+
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        schedule = caravan_data.schedule[schedule_id]
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        schedule = storage.interrupts[interrupt_name].schedule[schedule_id]
+    end
+    if schedule then
+        if schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
+            style = "train_schedule_unavailable_stop_label"
+            tooltip = {"caravan-gui.destination-unavailable"}
+        else
+            style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
+        end
+    end
+    
+    return style, tooltip
+end
+
 function Caravan.update_interrupt_gui_button_status(caravan_data)
     local action_list_type = Caravan.action_list_types.interrupt_targets
     for _, player in pairs(game.connected_players) do
@@ -274,8 +302,8 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
         local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
         ---@diagnostic disable-next-line: param-type-mismatch
         playbutton.style, playbutton.sprite = generate_button_status(caravan_data, tags.action_list_type, i, nil, tags.interrupt_name)
-        style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
-        schedule_frame.add {type = "label", name = "py_outpost_name", style = style, tags = tags, caption = schedule.localised_name}
+        local label = schedule_frame.add {type = "label", name = "py_outpost_name", tags = tags, caption = schedule.localised_name}
+        label.style, label.tooltip = generate_schedule_label_status(caravan_data, tags.action_list_type, i, tags.interrupt_name)
 
         style = schedule.temporary and "py_schedule_temporary_move_button" or "py_schedule_move_button"
         schedule_frame.add {type = "empty-widget", style = "py_empty_widget", tags = tags}
