@@ -11,16 +11,14 @@ local function generate_button_status(caravan_data, action_list_type, schedule_i
     assert(action_list_type)
     local style = "train_schedule_action_button"
     local sprite = "utility/play"
-    local schedule
 
     if action_list_type == Caravan.action_list_types.standard_schedule then
         if caravan_data.schedule_id == schedule_id and (not action_id or action_id == caravan_data.action_id) then
-            schedule = caravan_data.schedule[caravan_data.schedule_id]
             style = "py_clicked_train_schedule_action_button"
             sprite = "utility/stop"
         end
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        schedule = caravan_data.schedule[caravan_data.schedule_id]
+        local schedule = caravan_data.schedule[caravan_data.schedule_id]
         if schedule and schedule.temporary and schedule.temporary.interrupt_name == interrupt_name then
             if schedule.temporary.schedule_id == schedule_id then
                 if not action_id or action_id == caravan_data.action_id then
@@ -30,8 +28,12 @@ local function generate_button_status(caravan_data, action_list_type, schedule_i
             end
         end
     end
-    if schedule and schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
-        sprite = "utility/close_fat"
+    if schedule_id then
+        local interrupt = storage.interrupts[interrupt_name] 
+        local schedule = interrupt and interrupt.schedule[schedule_id] or caravan_data.schedule[schedule_id]
+        if schedule and schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
+            sprite = "utility/close_fat"
+        end
     end
     
     return style, sprite
