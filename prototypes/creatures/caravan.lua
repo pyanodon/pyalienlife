@@ -273,4 +273,22 @@ data:extend {
         icon_size = 64,
         localised_name = {"virtual-signal-name.no-fuel"}
     },
+    {
+        type = "virtual-signal",
+        name = "py-no-food",
+        icon = "__core__/graphics/icons/alerts/food-icon-red.png",
+        subgroup = "virtual-signal",
+        icon_size = 64,
+        hidden = true,
+        localised_name = {"virtual-signal-name.no-food"}
+    },
+    {
+        type = "virtual-signal",
+        name = "py-destination-destroyed",
+        icon = "__core__/graphics/icons/alerts/no-path-icon.png",
+        subgroup = "virtual-signal",
+        icon_size = 64,
+        hidden = true,
+        localised_name = {"virtual-signal-name.destination-destroyed"}
+    },
 }
