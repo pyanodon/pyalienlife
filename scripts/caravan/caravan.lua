@@ -142,9 +142,7 @@ py.on_event(py.events.on_init(), function()
     storage.interrupts = storage.interrupts or {}
     -- Table of gui elements indexed by their name. Not necessary, but better than hardcoding the realtive paths
     storage.gui_elements_by_name = storage.gui_elements_by_name or {}
-    storage.last_opened_caravan = storage.last_opened_caravan or {}
-    storage.last_opened_interrupt = storage.last_opened_interrupt or {}
-    storage.last_opened_action = storage.last_opened_action or {}
+    storage.last_opened = storage.last_opened or {}
     storage.make_operable_next_tick = storage.make_operable_next_tick or {}
 end)
 
@@ -188,8 +186,9 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     cursor_stack.clear()
 
     local schedule, prototype, only_outpost
-    local caravan_data = storage.caravans[storage.last_opened_caravan[player.index]]
-    local interrupt_data = storage.interrupts[storage.last_opened_interrupt[player.index]]
+    local last_opened = storage.last_opened[player.index]
+    local caravan_data = storage.caravans[last_opened.caravan]
+    local interrupt_data = storage.interrupts[last_opened.interrupt]
     if caravan_data then
         if not Caravan.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule
@@ -206,16 +205,27 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         collision_mask = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}
     }[1]
 
-    if storage.last_opened_action[player.index] then
+    if last_opened.action_id then
+        -- Last opened is an interrupt condition
         if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
             if entity.name == "outpost" or entity.name == "outpost-aerial" then
-                local action_id = storage.last_opened_action[player.index].action_id
+                local action_id = last_opened.action_id
                 interrupt_data.conditions[action_id].entity = entity
                 interrupt_data.conditions[action_id].localised_name = ""
             end
         end
+    elseif last_opened.schedule_id then
+        -- Last opened is a schedule to reassign
+        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
+        entity.operable = false -- Prevents the player from opening the gui of the clicked entity
+        if only_outpost and entity.name ~= prototype.outpost then return end
+        if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
+        local sch = schedule[last_opened.schedule_id]
+        sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
+        sch.entity = entity
+        sch.position = entity.position
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
@@ -341,9 +351,10 @@ local function get_schedule(element)
     end
 end
 
-gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
-    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
-    local element = event.element
+-- Closes the gui, gives player the carrot-on-stick item and sets storage.last_opened to the provided value
+---@param player LuaPlayer
+---@param last_opened table
+local function select_destination(player, last_opened)
     local stack = player.cursor_stack
     if not stack then return end
     if stack.valid_for_read then
@@ -353,15 +364,24 @@ gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
         stack.clear()
     end
     stack.set_stack {name = "caravan-control"}
-    storage.last_opened_action[player.index] = nil
-    if element.tags.action_id then
-        storage.last_opened_action[player.index] = {schedule_id = element.tags.schedule_id, action_id = element.tags.action_id}
-    end
-    storage.last_opened_interrupt[player.index] = element.tags.interrupt_name
+    player.opened = nil
+    storage.last_opened[player.index] = last_opened
+end
+
+gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
+    local element = event.element
+    local last_opened = {}
+
     local unit_number = Caravan.get_caravan_gui(player).tags.unit_number
     assert(unit_number)
-    storage.last_opened_caravan[player.index] = unit_number
-    player.opened = nil
+    last_opened.caravan = unit_number
+    last_opened.interrupt = element.tags.interrupt_name
+    if element.tags.action_id then
+        last_opened.schedule_id = element.tags.schedule_id
+        last_opened.action_id = element.tags.action_id
+    end
+    select_destination(player, last_opened)
 end
 
 -- Opens the GUI for adding a new interrupt to a caravan
@@ -661,8 +681,17 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local camera = gui.content_frame.content_flow.camera_frame.camera
     local refocus = gui.content_frame.content_flow.caption_frame.caption_flow.py_refocus
 
-    if schedule.entity and schedule.entity.valid then
-        camera.entity = schedule.entity
+    if schedule.entity then
+        if schedule.entity.valid then
+            camera.entity = schedule.entity
+        else
+            local last_opened = {}
+            last_opened.caravan = caravan_data.unit_number
+            last_opened.interrupt = element.tags.interrupt_name
+            last_opened.schedule_id = element.tags.schedule_id
+            select_destination(player, last_opened)
+            return
+        end
     else
         camera.entity = nil
         camera.position = schedule.position
