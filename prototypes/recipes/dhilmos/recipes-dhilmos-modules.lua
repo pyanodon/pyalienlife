@@ -132,6 +132,7 @@ RECIPE {
         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
     },
+    allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     icon_size = 64,
     subgroup = "py-alienlife-dhilmos",
     order = "za"
@@ -150,6 +151,7 @@ RECIPE {
     results = {
         {type = "item", name = "dhilmos-codex-mk02", amount = 1},
     },
+    allowed_module_categories = {"data-array", "speed", "efficiency", "quality"},
 }:add_unlock("dhilmos-mk02")
 
 --MK03 REPLICATOR---
@@ -179,6 +181,7 @@ RECIPE {
         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
     },
+    allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     icon_size = 64,
     subgroup = "py-alienlife-dhilmos",
     order = "za"
@@ -198,6 +201,7 @@ RECIPE {
     results = {
         {type = "item", name = "dhilmos-codex-mk03", amount = 1},
     },
+    allowed_module_categories = {"data-array", "speed", "efficiency", "quality"},
 }:add_unlock("dhilmos-mk03")
 
 --MK04 REPLICATOR---
@@ -228,6 +232,7 @@ RECIPE {
         {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
     },
+    allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     icon_size = 64,
     subgroup = "py-alienlife-dhilmos",
     order = "za"
@@ -246,4 +251,5 @@ RECIPE {
     results = {
         {type = "item", name = "dhilmos-codex-mk04", amount = 1},
     },
+    allowed_module_categories = {"data-array", "speed", "efficiency", "quality"},
 }:add_unlock("dhilmos-mk04")

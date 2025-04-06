@@ -100,7 +100,7 @@ RECIPE {
         {type = "item",  name = "native-flora", amount = 10},
         {type = "item",  name = "yaedols",      amount = 2},
         {type = "item",  name = "starch",       amount = 4},
-        {type = "fluid", name = "olefin",       amount = 50, fluidbox_index = 2},
+        {type = "fluid", name = "olefin",       amount = 50,  fluidbox_index = 2},
         {type = "fluid", name = "blood",        amount = 100, fluidbox_index = 1},
     },
     results = {

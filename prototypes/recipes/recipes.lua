@@ -1204,6 +1204,7 @@ RECIPE {
     results = {
         {type = "item", name = "neuromorphic-chip", amount = 1},
     },
+    allowed_module_categories = {"data-array", "speed", "efficiency", "quality"},
 }:add_unlock("neuro-electronics-mk02")
 
 RECIPE {
