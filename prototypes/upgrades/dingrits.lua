@@ -20,7 +20,7 @@ if data and not yafc_turd_integration then
             name = "dingrits-alpha",
             enabled = false,
             energy_required = 36000,
-            ingredients = {{"dingrits-mk04", 1}},
+            ingredients = {{type = "item", name = "dingrits-mk04", amount = 1}},
             results = {{name = "dingrits-alpha", probability = 0.5, type = "item", amount = 1}},
             allow_productivity = true,
             category = "dingrits"

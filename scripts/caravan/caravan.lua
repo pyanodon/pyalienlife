@@ -988,11 +988,11 @@ local function advance_caravan_schedule_by_1(caravan_data)
     local schedule = caravan_data.schedule[caravan_data.schedule_id]
     assert(schedule)
 
-    local existing_interrupt_name    
+    local existing_interrupt_name
     local is_interrupted = false
     for _, sch in pairs(caravan_data.schedule) do
         if sch.temporary then
-            if sch ~= schedule then  -- It is about to be deleted, so dont count it
+            if sch ~= schedule then -- It is about to be deleted, so dont count it
                 is_interrupted = true
                 existing_interrupt_name = sch.temporary.interrupt_name
                 break
@@ -1019,7 +1019,7 @@ local function advance_caravan_schedule_by_1(caravan_data)
         end
         if conditions_passed then
             passed_index = idx
-            is_interrupted = true   -- Pretend the interrupt succeded but dont add it to the schedule yet
+            is_interrupted = true -- Pretend the interrupt succeded but dont add it to the schedule yet
         end
 
         ::continue::

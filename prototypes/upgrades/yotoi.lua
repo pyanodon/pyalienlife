@@ -33,7 +33,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             enabled = false,
             energy_required = 40,
-            result = "nutrient",
+            results = {{type = "item", name = "nutrient", amount = 1}},
             name = "nutrient",
             category = "electronic",
             ingredients = {

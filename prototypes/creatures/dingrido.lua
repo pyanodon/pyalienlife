@@ -26,7 +26,7 @@ RECIPE {
         {type = "fluid", name = "fetal-serum",       amount = 100},
         {type = "fluid", name = "artificial-blood",  amount = 200}
     },
-    result = "dingrido"
+    results = {{type = "item", name = "dingrido", amount = 1}}
 }:add_unlock("mounts-mk02")
 
 ITEM {

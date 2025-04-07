@@ -7,13 +7,13 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {mods.pyalternativeenergy and "nuclear-reactor" or "gasifier", 1},
-        {type = "item",                                                name = "glass",              amount = 30},
-        {type = "item",                                                name = "nexelit-plate",      amount = 20},
-        {type = "item",                                                name = "duralumin",          amount = 35},
-        {type = "item",                                                name = "steel-plate",        amount = 50},
-        {type = "item",                                                name = "electronic-circuit", amount = 15},
-        {type = "item",                                                name = "tin-plate",          amount = 50},
+        {type = "item", name = mods.pyalternativeenergy and "nuclear-reactor" or "gasifier", amount = 1},
+        {type = "item", name = "glass",                                                      amount = 30},
+        {type = "item", name = "nexelit-plate",                                              amount = 20},
+        {type = "item", name = "duralumin",                                                  amount = 35},
+        {type = "item", name = "steel-plate",                                                amount = 50},
+        {type = "item", name = "electronic-circuit",                                         amount = 15},
+        {type = "item", name = "tin-plate",                                                  amount = 50},
     },
     results = {
         {type = "item", name = "bhoddos-culture-mk01", amount = 1}

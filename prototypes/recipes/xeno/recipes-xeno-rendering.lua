@@ -103,7 +103,7 @@ py.autorecipes {
 			name = "ex-blo-xeno",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
-				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -123,7 +123,7 @@ py.autorecipes {
 			name = "ex-chi-xeno",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",    scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

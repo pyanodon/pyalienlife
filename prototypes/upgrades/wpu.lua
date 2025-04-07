@@ -77,8 +77,8 @@ if data and not yafc_turd_integration then
             energy_required = 10,
             main_product = "py-sawblade-module-mk0" .. i,
             results = {
-                {"py-sawblade-module-mk0" .. i, 1},
-                {type = "item",                 name = "iron-oxide", amount = 5},
+                {type = "item", name = "py-sawblade-module-mk0" .. i, amount = 1},
+                {type = "item", name = "iron-oxide",                  amount = 5},
             },
             category = "crafting-with-fluid",
         }

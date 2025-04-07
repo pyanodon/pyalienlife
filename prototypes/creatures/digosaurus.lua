@@ -14,7 +14,7 @@ RECIPE {
         {type = "item",  name = "titanium-plate",       amount = 50},
         {type = "fluid", name = "water-saline",         amount = 1000},
     },
-    result = "digosaurus"
+    results = {{type = "item", name = "digosaurus", amount = 1}}
 }:add_unlock {"nexelit-mk01"}
 
 ITEM {
@@ -195,7 +195,7 @@ RECIPE {
     type = "recipe",
     name = "digosaurus-hidden-recipe",
     ingredients = {},
-    results = {{"nexelit-ore", 4000}},
+    results = {{type = "item", name = "nexelit-ore", amount = 4000}},
     category = "dino-dig-site",
     enabled = false,
     localised_name = {"entity-name.ore-nexelit"},

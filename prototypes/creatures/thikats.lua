@@ -17,7 +17,7 @@ RECIPE {
         {type = "item",  name = "cdna",                 amount = 3},
         {type = "fluid", name = "fetal-serum",          amount = 300},
     },
-    result = "thikat"
+    results = {{type = "item", name = "thikat", amount = 1}}
 }:add_unlock {"nexelit-mk02"}
 
 ITEM {

@@ -5,11 +5,11 @@ RECIPE {
     enabled = true,
     ingredients =
     {
-        {"engine-unit",        20},
-        {"electronic-circuit", 10},
-        {"steel-plate",        30}
+        {type = "item", name = "engine-unit",        amount = 20},
+        {type = "item", name = "electronic-circuit", amount = 10},
+        {type = "item", name = "steel-plate",        amount = 30}
     },
-    result = "land-bot"
+    results = {{type = "item", name = "land-bot", amount = 1}}
 } --:add_unlock("domestication")
 
 ITEM {

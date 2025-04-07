@@ -65,7 +65,7 @@ RECIPE {
         {type = "fluid", name = "blood",                amount = 300},
         {type = "fluid", name = "water-saline",         amount = 500}
     },
-    result = "crawdad"
+    results = {{type = "item", name = "crawdad", amount = 1}}
 }:add_unlock("mounts-mk01")
 
 ITEM {

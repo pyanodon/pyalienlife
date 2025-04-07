@@ -85,7 +85,7 @@ local function check_for_basic_item(item)
     return not items_with_metadata[item]
 end
 
-function Oculua.process_player(player) -- #TODO fuck quality
+function Oculua.process_player(player)  -- #TODO fuck quality
     local inventory = player.character.get_main_inventory().get_contents()
     for _, item in ipairs(inventory) do -- ipairs cause lua is a very good language and lets you write horrible code
         if type(item) == "table" then inventory[item.name] = item.count end

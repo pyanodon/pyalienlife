@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     local recipe = RECIPE("navens-sample"):copy()
     recipe.name = "navens-sample-with-vonix-gen"
-    recipe:add_ingredient {"vonix-codex", 5}
+    recipe:add_ingredient {type = "item", name = "vonix-codex", amount = 5}
     data:extend {recipe}
 
     data:extend {{
@@ -34,11 +34,11 @@ if data and not yafc_turd_integration then
             name = "full-render-navens-abomination",
             category = "slaughterhouse",
             subgroup = "py-alienlife-auog",
-            ingredients = {{"navens-abomination", 1}},
+            ingredients = {{type = "item", name = "navens-abomination", amount = 1}},
             results = {
                 {name = "navens",            type = "item",  amount_min = 13, amount_max = 16},
                 {name = "dirty-water-light", type = "fluid", amount = 10},
-                {"guts",                     1}
+                {type = "item",              name = "guts",  amount = 1}
             },
             enabled = false,
             icon = "__pyalienlifegraphics__/graphics/icons/rendering-abomination.png",
@@ -61,7 +61,7 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient {name = victims[i], amount = 1, type = "item"}
         recipe:remove_ingredient("guts")
         recipe.main_product = "navens-abomination"
-        recipe.results = {{"navens-abomination", profit[i]}}
+        recipe.results = {{type = "item", name = "navens-abomination", amount = profit[i]}}
         recipe.energy_required = recipe.energy_required * 1.5
         data:extend {recipe}
     end

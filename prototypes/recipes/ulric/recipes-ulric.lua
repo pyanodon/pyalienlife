@@ -64,7 +64,7 @@ RECIPE {
     ingredients = {
         {type = "item",  name = "tin-plate",    amount = 2},
         {type = "item",  name = "fawogae",      amount = 5},
-        {type = "item",  name = "ralesia",     amount = 5},
+        {type = "item",  name = "ralesia",      amount = 5},
         {type = "item",  name = "wood-seeds",   amount = 10},
         {type = "item",  name = "native-flora", amount = 10},
         --        {type = 'item', name = 'guar', amount = 3},
@@ -85,12 +85,12 @@ RECIPE {
     ingredients = {
         {type = "item",  name = "tin-plate",    amount = 2},
         {type = "item",  name = "fawogae",      amount = 5},
-        {type = "item",  name = "ralesia",     amount = 5},
+        {type = "item",  name = "ralesia",      amount = 5},
         {type = "item",  name = "wood-seeds",   amount = 10},
         {type = "item",  name = "ash",          amount = 10},
         {type = "item",  name = "native-flora", amount = 15},
         {type = "item",  name = "guar-gum",     amount = 1},
-        {type = "fluid", name = "arqad-honey",  amount = 50, fluidbox_index = 1},
+        {type = "fluid", name = "arqad-honey",  amount = 50,  fluidbox_index = 1},
         {type = "item",  name = "seaweed",      amount = 10},
         {type = "item",  name = "starch",       amount = 4},
         {type = "fluid", name = "steam",        amount = 100, fluidbox_index = 2},

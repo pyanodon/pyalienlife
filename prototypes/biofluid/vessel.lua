@@ -23,17 +23,17 @@ RECIPE {
     enabled = false,
     category = "creature-chamber",
     ingredients = {
-        {"vessel",               10},
-        {"earth-generic-sample", 1},
-        {"microcin-j25",         1},
-        {"alien-sample-02",      2},
-        {"bio-sample",           3},
-        {type = "fluid",         name = "water-saline", amount = 40},
-        {type = "fluid",         name = "fetal-serum",  amount = 10},
-        {type = "fluid",         name = "coal-slurry",  amount = 40},
+        {type = "item",  name = "vessel",               amount = 10},
+        {type = "item",  name = "earth-generic-sample", amount = 1},
+        {type = "item",  name = "microcin-j25",         amount = 1},
+        {type = "item",  name = "alien-sample-02",      amount = 2},
+        {type = "item",  name = "bio-sample",           amount = 3},
+        {type = "fluid", name = "water-saline",         amount = 40},
+        {type = "fluid", name = "fetal-serum",          amount = 10},
+        {type = "fluid", name = "coal-slurry",          amount = 40},
     },
     results = {
-        {"vessel-to-ground", 10}
+        {type = "item", name = "vessel-to-ground", amount = 10}
     }
 }:add_unlock("biofluid-mk01")
 

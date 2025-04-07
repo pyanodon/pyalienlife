@@ -109,7 +109,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
         icon_size = sub_tech.icon_size,
         category = tech_upgrade.module_category or error("TURD ERROR: No module category defined for " .. sub_tech.name),
         tier = 1,
-        hidden = true,             -- does this break helmod?
+        hidden = true, -- does this break helmod?
         flags = {"not-stackable"},
         subgroup = "py-alienlife-turd-modules",
         order = "z",

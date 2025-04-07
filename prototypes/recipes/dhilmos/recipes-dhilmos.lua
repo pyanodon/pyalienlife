@@ -147,7 +147,7 @@ RECIPE {
         {type = "item",  name = "skin",         amount = 3},
         {type = "item",  name = "bones",        amount = 3},
         {type = "fluid", name = "steam",        amount = 100, fluidbox_index = 2},
-        {type = "fluid", name = "blood",        amount = 50, fluidbox_index = 1},
+        {type = "fluid", name = "blood",        amount = 50,  fluidbox_index = 1},
     },
     results = {
         {type = "item", name = "dhilmos-food-02", amount = 6},

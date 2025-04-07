@@ -108,9 +108,9 @@ py.autorecipes {
 			},
 			results =
 			{
-                {name = "bones",   remove_item = true},
-                {name = "keratin", remove_item = true},
-				{name = "meat",  amount = IMP_MEAT},
+				{name = "bones",   remove_item = true},
+				{name = "keratin", remove_item = true},
+				{name = "meat",    amount = IMP_MEAT},
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-sim",

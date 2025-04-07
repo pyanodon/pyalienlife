@@ -19,8 +19,7 @@ if data and not yafc_turd_integration then
                 {name = "water",     type = "fluid", amount = 25},
                 {name = "hot-air",   type = "fluid", amount = 25},
             },
-            result = "paper-towel",
-            result_count = 4
+            results = {{type = "item", name = "paper-towel", amount = 4}},
         }
     }
 

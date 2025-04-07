@@ -1596,7 +1596,7 @@ data.raw["item"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["ralesia"] = nil
 
-data.raw["recipe"]["fertilizer-2"].results = {{"fertilizer", 15}}
+data.raw["recipe"]["fertilizer-2"].results = {{type = "item", name = "fertilizer", amount = 15}}
 RECIPE("fertilizer-2"):add_unlock("biofluid-mk01"):add_ingredient {type = "item", name = "guano", amount = 2}:add_ingredient_amount("ammonium-chloride", -18)
 
 py.allow_productivity {"cellulose-01"}

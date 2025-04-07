@@ -59,18 +59,18 @@ if data and not yafc_turd_integration then
             enabled = false,
             category = "wpu",
             ingredients = {
-                i == 1 and {"sap-tree", 1} or {"sap-tree-mk0" .. i, 1}
+                i == 1 and {type = "item", name = "sap-tree", amount = 1} or {type = "item", name = "sap-tree-mk0" .. i, amount = 1}
             },
             results = i == 1 and {
                 {type = "item", name = "saps",      amount_min = 25, amount_max = 30},
                 {type = "item", name = "sap-seeds", amount = 1},
-                {"biomass",     2}
+                {type = "item", name = "biomass",   amount = 2}
             } or {
                 {type = "item", name = "saps",               amount_min = 26 * i, amount_max = 31 * i},
                 {type = "item", name = "saps-mk0" .. i,      amount_min = 5,      amount_max = 10},
                 {type = "item", name = "sap-seeds-mk0" .. i, amount = 2},
-                {"fertilizer",  9},
-                {"biomass",     4}
+                {type = "item", name = "fertilizer",         amount = 9},
+                {type = "item", name = "biomass",            amount = 4}
             },
             icons = {
                 {icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. i .. ".png"},

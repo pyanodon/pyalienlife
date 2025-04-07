@@ -85,9 +85,7 @@ if data and not yafc_turd_integration then
 
         recipe.name = name
         recipe.energy_required = recipe.energy_required * 4
-        recipe.results = nil
-        recipe.result = name
-        recipe.result_count = 1
+        recipe.results = {{type = "item", name = name, amount = 1}}
 
         item.name = name
         if item.place_result then item.place_result = name end

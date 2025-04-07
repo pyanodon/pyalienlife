@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
                 {name = "niobium-plate", amount = 1,   type = "item"},
                 {name = "flue-gas",      amount = 250, type = "fluid"},
             },
-            results = {{"saddle", 20}}
+            results = {{type = "item", name = "saddle", amount = 20}}
         },
         {
             type = "recipe",
@@ -32,7 +32,7 @@ if data and not yafc_turd_integration then
                 {name = "nichrome",    amount = 1, type = "item"},
                 {name = "micro-fiber", amount = 1, type = "item"},
             },
-            results = {{"saddle", 40}}
+            results = {{type = "item", name = "saddle", amount = 40}}
         },
         {
             type = "recipe",

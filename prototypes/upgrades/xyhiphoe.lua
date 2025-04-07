@@ -11,14 +11,14 @@ if data and not yafc_turd_integration then
         if i == 4 then
             recipe:add_result_amount("xyhiphoe", 1)
         else
-            recipe:add_result {"xyhiphoe", 1}
+            recipe:add_result {type = "item", name = "xyhiphoe", amount = 1}
         end
 
         local _, phyto_barrel_count = recipe:remove_ingredient("phytoplankton")
         phyto_barrel_count = math.ceil(phyto_barrel_count / 50)
         if phyto_barrel_count > 0 then
-            recipe:add_ingredient {"phytoplankton-barrel", phyto_barrel_count}
-            recipe:add_result {"barrel", phyto_barrel_count}
+            recipe:add_ingredient {type = "item", name = "phytoplankton-barrel", amount = phyto_barrel_count}
+            recipe:add_result {type = "item", name = "barrel", amount = phyto_barrel_count}
         end
 
         recipe:add_ingredient {name = "liquid-nitrogen", amount = 5, type = "fluid", fluidbox_index = 1}
@@ -35,14 +35,14 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "xyhiphoe-single",
         ingredients = {
-            {"fish-food-01", 1},
-            {"xyhiphoe-cub", 1},
+            {type = "item",  name = "fish-food-01",    amount = 1},
+            {type = "item",  name = "xyhiphoe-cub",    amount = 1},
             {type = "fluid", name = "phytoplankton",   amount = 50},
             {type = "fluid", name = "pressured-water", amount = 1000},
         },
         results = {
             {type = "fluid", name = "waste-water", amount = 100},
-            {"xyhiphoe",     1}
+            {type = "item",  name = "xyhiphoe",    amount = 1}
         },
         main_product = "xyhiphoe",
         enabled = false,

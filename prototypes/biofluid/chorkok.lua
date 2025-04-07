@@ -44,7 +44,7 @@ RECIPE {
         {type = "item", name = "bat-codex",            amount = 1},
     },
     results = {
-        {"earth-bat-sample", 1}
+        {type = "item", name = "earth-bat-sample", amount = 1}
     }
 }:add_unlock {"biofluid-mk03"}
 

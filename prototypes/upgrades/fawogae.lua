@@ -23,9 +23,9 @@ if data and not yafc_turd_integration then
         category = "desulfurization",
         energy_required = 6,
         ingredients = {
-            {"fawogae",      2},
-            {"sulfur",       2},
-            {type = "fluid", name = "oxygen", amount = 50},
+            {type = "item",  name = "fawogae", amount = 2},
+            {type = "item",  name = "sulfur",  amount = 2},
+            {type = "fluid", name = "oxygen",  amount = 50},
         },
         results = {
             {type = "fluid", name = "acidgas", amount = 250},
@@ -39,7 +39,7 @@ if data and not yafc_turd_integration then
         RECIPE("fawogae-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-xeno-codex"
-        recipe:add_ingredient {"xeno-codex", 1}
+        recipe:add_ingredient {type = "item", name = "xeno-codex", amount = 1}
         data:extend {recipe}
     end
 
@@ -48,7 +48,7 @@ if data and not yafc_turd_integration then
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
     coal_fawogae.ingredients[1].amount = 10
     coal_fawogae:remove_result("raw-coal")
-    coal_fawogae:add_result {"active-carbon", 3}
+    coal_fawogae:add_result {type = "item", name = "active-carbon", amount = 3}
     coal_fawogae.icons = nil
     coal_fawogae.icon = nil
     coal_fawogae.main_product = "active-carbon"

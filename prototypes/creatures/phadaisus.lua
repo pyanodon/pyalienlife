@@ -59,7 +59,7 @@ RECIPE {
         {type = "fluid", name = "artificial-blood",                                                     amount = 400},
         {type = "fluid", name = "gta",                                                                  amount = 500}
     },
-    result = "phadaisus"
+    results = {{type = "item", name = "phadaisus", amount = 1}}
 }:add_unlock("mounts-mk04")
 
 ITEM {

@@ -9,8 +9,8 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-dry"
         local amount = recipe.results[1].amount
         recipe:remove_result("kicalk")
-        recipe:add_result{type = "item", name = "kicalk-dry", amount = math.floor(amount / 2)}
-        recipe:add_result{type = "item", name = "kicalk",     amount = math.ceil(amount * 0.35)}
+        recipe:add_result {type = "item", name = "kicalk-dry", amount = math.floor(amount / 2)}
+        recipe:add_result {type = "item", name = "kicalk", amount = math.ceil(amount * 0.35)}
         recipe.main_product = "kicalk-dry"
         recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend {recipe}

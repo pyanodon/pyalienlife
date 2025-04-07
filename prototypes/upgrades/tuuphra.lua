@@ -51,7 +51,7 @@ if data and not yafc_turd_integration then
                 {type = "fluid", name = "liquid-nitrogen", amount = 20},
                 {type = "fluid", name = "methanol",        amount = 30},
             },
-            results = {{"fungicide", 50}},
+            results = {{type = "item", name = "fungicide", amount = 50}},
             energy_required = 250
         }
     }
@@ -63,7 +63,7 @@ if data and not yafc_turd_integration then
         RECIPE("tuuphra-4"):copy(),
     } do
         recipe.name = recipe.name .. "-fungicide"
-        recipe:add_ingredient {"fungicide", 1}
+        recipe:add_ingredient {type = "item", name = "fungicide", amount = 1}
         recipe:add_result_amount("tuuphra", 1)
         recipe:remove_ingredient("pesticide-mk01")
         recipe:remove_ingredient("pesticide-mk02")
@@ -75,7 +75,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "tuuphra-grease",
         energy_required = 2,
-        ingredients = {{"tuuphra", 1}},
+        ingredients = {{type = "item", name = "tuuphra", amount = 1}},
         results = {
             {type = "item",  name = "starch", amount = 1, probability = 0.4},
             {type = "fluid", name = "grease", amount = 16}

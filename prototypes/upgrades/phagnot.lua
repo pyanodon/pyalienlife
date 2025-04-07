@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
             enabled = false,
             energy_required = 10,
             category = "gas-refinery",
-            ingredients = {{"gas-bladder", 1}},
+            ingredients = {{type = "item", name = "gas-bladder", amount = 1}},
             results = {{type = "fluid", name = "deuterium", amount = 5}}
         },
         {
@@ -15,7 +15,7 @@ if data and not yafc_turd_integration then
             enabled = false,
             energy_required = 10,
             category = "gas-refinery",
-            ingredients = {{"gas-bladder", 1}},
+            ingredients = {{type = "item", name = "gas-bladder", amount = 1}},
             results = {{type = "fluid", name = "dry-gas-stream", amount = 5}}
         }
     }

@@ -45,13 +45,13 @@ local recipe = RECIPE {
     allow_inserter_overload = false,
     hidden = true,
     ingredients = {
-        {"gobachov", data.raw.item["gobachov"].stack_size},
-        {"huzu",     data.raw.item["huzu"].stack_size},
-        {"chorkok",  data.raw.item["chorkok"].stack_size},
+        {type = "item", name = "gobachov", amount = data.raw.item["gobachov"].stack_size},
+        {type = "item", name = "huzu",     amount = data.raw.item["huzu"].stack_size},
+        {type = "item", name = "chorkok",  amount = data.raw.item["chorkok"].stack_size},
     },
     results = {
-        {"guano",        data.raw.item["guano"].stack_size},
-        {type = "fluid", name = mods.pyalternativeenergy and "void" or "parameter-0", count = 1},
+        {type = "item",  name = "guano",                                              amount = data.raw.item["guano"].stack_size},
+        {type = "fluid", name = mods.pyalternativeenergy and "void" or "parameter-0", amount = 1},
     },
     energy_required = 100,
     category = "biofluid",

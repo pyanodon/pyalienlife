@@ -89,7 +89,7 @@ if data and not yafc_turd_integration then
                 {type = "item",  name = "nano-cellulose",     amount = 1},
                 {type = "fluid", name = "clean-organic-pulp", amount = 100},
             },
-            result = "nems",
+            results = {{type = "item", name = "nems", amount = 1}},
             enabled = false,
             category = "advanced-bio-reactor",
             energy_required = 10,

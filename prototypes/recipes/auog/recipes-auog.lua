@@ -64,7 +64,7 @@ RECIPE {
     ingredients = {
         {type = "item",  name = "plastic-bar",  amount = 2},
         {type = "item",  name = "native-flora", amount = 5},
-        {type = "item",  name = "ralesia",     amount = 5},
+        {type = "item",  name = "ralesia",      amount = 5},
         {type = "item",  name = "seaweed",      amount = 3},
         {type = "item",  name = "moss",         amount = 5},
         -- {type = 'item', name = 'starch', amount = 4},
@@ -85,7 +85,7 @@ RECIPE {
         {type = "item",  name = "plastic-bar",  amount = 2},
         {type = "item",  name = "fawogae",      amount = 5},
         {type = "item",  name = "native-flora", amount = 10},
-        {type = "item",  name = "ralesia",     amount = 5},
+        {type = "item",  name = "ralesia",      amount = 5},
         {type = "item",  name = "casein",       amount = 10},
         {type = "item",  name = "wood-seeds",   amount = 1},
         {type = "item",  name = "ash",          amount = 10},

@@ -1,10 +1,10 @@
 Farming = {}
 
 local function validate_farm_building_list(farm_buildings, throw)
-    local modules = prototypes.get_item_filtered({{filter = "type", type = "module"}})
+    local modules = prototypes.get_item_filtered {{filter = "type", type = "module"}}
     ---@as table<string, table<string, boolean>> two level table containing buildings indexed by their base (mk-less) name
     local buildings = {}
-    local crafting_machines = prototypes.get_entity_filtered({{filter = "crafting-machine"}})
+    local crafting_machines = prototypes.get_entity_filtered {{filter = "crafting-machine"}}
     -- This early search and sort lets us avoid o^n searching below
     for building_name in pairs(crafting_machines) do
         local basename = building_name:gsub("%-mk..+", "")

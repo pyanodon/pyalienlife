@@ -8,9 +8,9 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "item",  name = "sand",           amount = 500},
-        {type = "fluid", name = "water",          amount = 10000},
-        {type = "item",  name = "limestone",      amount = 150},
+        {type = "item",  name = "sand",      amount = 500},
+        {type = "fluid", name = "water",     amount = 10000},
+        {type = "item",  name = "limestone", amount = 150},
     },
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 1},

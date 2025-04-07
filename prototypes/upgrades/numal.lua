@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         category = "jig",
         energy_required = 50,
         ingredients = {
-            {"aeroorgan",    1},
+            {type = "item",  name = "aeroorgan",   amount = 1},
             {type = "fluid", name = "sb-low-conc", amount = 20},
         },
         results = {
@@ -69,7 +69,7 @@ if data and not yafc_turd_integration then
     local recipe = RECIPE("ex-gut-num"):copy()
     recipe.name = "ex-gut-num-neodymium"
     recipe.localised_name = {"recipe-name.ex-gut-num"}
-    recipe:add_ingredient {"neodymium-nitrate", 4}
+    recipe:add_ingredient {type = "item", name = "neodymium-nitrate", amount = 4}
     recipe:multiply_result_amount("numal-ink", 2)
     data:extend {recipe}
 end

@@ -61,9 +61,9 @@ if data and not yafc_turd_integration then
         name = "cheap-retrovirus",
         category = "incubator",
         ingredients = {
-            {"retrovirus",   1},
-            {"biomass",      2},
-            {type = "fluid", name = "hot-air", amount = 30},
+            {type = "item",  name = "retrovirus", amount = 1},
+            {type = "item",  name = "biomass",    amount = 2},
+            {type = "fluid", name = "hot-air",    amount = 30},
         },
         results = {
             {type = "item", name = "retrovirus", amount = 2, ignored_by_productivity = 1, ignored_by_stats = 1},

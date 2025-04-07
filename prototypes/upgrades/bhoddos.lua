@@ -39,7 +39,7 @@ if data and not yafc_turd_integration then
         spore.name = spore.name .. "-upgraded"
         spore.main_product = "bhoddos-spore"
         spore.ingredients = {
-            {"rich-dust", 1}
+            {type = "item", name = "rich-dust", amount = 1}
         }
         spore:multiply_result_amount("bhoddos-spore", 10)
         data:extend {spore}

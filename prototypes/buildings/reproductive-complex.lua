@@ -25,19 +25,19 @@ RECIPE {
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {"rc-mk01",          1},
-        {"advanced-circuit", 20},
-        {"nexelit-plate",    50},
-        {"stainless-steel",  60},
-        {"glass",            50},
-        {"concrete",         100},
-        {"engine-unit",      3},
-        {"small-parts-02",   150},
-        -- {"eva", 100},
-        {"neuroprocessor",   20},
+        {type = "item", name = "rc-mk01",          amount = 1},
+        {type = "item", name = "advanced-circuit", amount = 20},
+        {type = "item", name = "nexelit-plate",    amount = 50},
+        {type = "item", name = "stainless-steel",  amount = 60},
+        {type = "item", name = "glass",            amount = 50},
+        {type = "item", name = "concrete",         amount = 100},
+        {type = "item", name = "engine-unit",      amount = 3},
+        {type = "item", name = "small-parts-02",   amount = 150},
+        -- {type = "item", name = "eva", amount = 100},
+        {type = "item", name = "neuroprocessor",   amount = 20},
     },
     results = {
-        {"rc-mk02", 1}
+        {type = "item", name = "rc-mk02", amount = 1}
     }
 }:add_unlock("biotech-machines-mk02")
 
@@ -47,19 +47,19 @@ RECIPE {
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {"rc-mk02",              1},
-        {"electric-engine-unit", 6},
-        {"niobium-plate",        50},
-        {"processing-unit",      20},
-        {"kevlar",               100},
-        {"super-steel",          100},
-        {"molybdenum-plate",     100},
-        {"ticocr-alloy",         50},
-        {"nbti-alloy",           100},
-        {"small-parts-03",       100},
+        {type = "item", name = "rc-mk02",              amount = 1},
+        {type = "item", name = "electric-engine-unit", amount = 6},
+        {type = "item", name = "niobium-plate",        amount = 50},
+        {type = "item", name = "processing-unit",      amount = 20},
+        {type = "item", name = "kevlar",               amount = 100},
+        {type = "item", name = "super-steel",          amount = 100},
+        {type = "item", name = "molybdenum-plate",     amount = 100},
+        {type = "item", name = "ticocr-alloy",         amount = 50},
+        {type = "item", name = "nbti-alloy",           amount = 100},
+        {type = "item", name = "small-parts-03",       amount = 100},
     },
     results = {
-        {"rc-mk03", 1}
+        {type = "item", name = "rc-mk03", amount = 1}
     }
 }:add_unlock("biotech-machines-mk03")
 
@@ -69,19 +69,19 @@ RECIPE {
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {"rc-mk03",               1},
-        {"science-coating",       40},
-        {"wall-shield",           20},
-        {"nbfe-alloy",            100},
-        {"super-alloy",           200},
-        {"control-unit",          40},
-        {"nenbit-matrix",         50},
-        {"silver-foam",           30},
-        {"metallic-glass",        30},
-        {"low-density-structure", 100},
+        {type = "item", name = "rc-mk03",               amount = 1},
+        {type = "item", name = "science-coating",       amount = 40},
+        {type = "item", name = "wall-shield",           amount = 20},
+        {type = "item", name = "nbfe-alloy",            amount = 100},
+        {type = "item", name = "super-alloy",           amount = 200},
+        {type = "item", name = "control-unit",          amount = 40},
+        {type = "item", name = "nenbit-matrix",         amount = 50},
+        {type = "item", name = "silver-foam",           amount = 30},
+        {type = "item", name = "metallic-glass",        amount = 30},
+        {type = "item", name = "low-density-structure", amount = 100},
     },
     results = {
-        {"rc-mk04", 1}
+        {type = "item", name = "rc-mk04", amount = 1}
     }
 }:add_unlock("biotech-machines-mk04")
 

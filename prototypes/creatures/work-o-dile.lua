@@ -19,7 +19,7 @@ RECIPE {
         {type = "item",  name = "cdna",                 amount = 5},
         {type = "item",  name = "anabolic-rna",         amount = 1},
     },
-    result = "work-o-dile"
+    results = {{type = "item", name = "work-o-dile", amount = 1}}
 }:add_unlock {"nexelit-mk03"}
 
 ITEM {
