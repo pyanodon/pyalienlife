@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.42
-Date: ???
+Date: 2025-4-12
   Changes:
     - Add missing migration for new soot separation technology.
     - Fixed actions being incorrect size in interrupt target gui
