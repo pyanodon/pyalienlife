@@ -711,6 +711,8 @@ require "prototypes/ores/yotoi"
 require "prototypes/ores/yotoi-fruit"
 require "prototypes/ores/bioreserve"
 require "prototypes/ores/nexelit"
+require "prototypes/ores/kicalk"
+require "prototypes/ores/arum"
 
 --(( BACKGROUND ))--
 data.raw["utility-constants"].default.recipe_step_limit = 2000;

@@ -79,10 +79,6 @@ if not mods["pyalternativeenergy"] then
     --TECHNOLOGY('electric-energy-accumulators'):add_pack('py-science-pack-2')
 end
 
---(( ORES ))--
-require "prototypes/ores/kicalk"
-require "prototypes/ores/arum"
-
 --(( MODIFICATIONS ))--
 --TECHNOLOGY--
 TECHNOLOGY("nano-tech"):add_prereq("microbiology-mk03")
