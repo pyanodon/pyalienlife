@@ -78,7 +78,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-agressive-selection"
         recipe:add_result_amount("fish", -i)
-        recipe:add_result {"fish-food-01", i}
+        recipe:add_result {type = "item", name = "fish-food-01", amount = i}
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend {recipe}
     end

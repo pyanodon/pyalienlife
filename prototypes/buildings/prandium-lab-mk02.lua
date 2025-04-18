@@ -16,7 +16,7 @@ RECIPE {
     results = {
         {type = "item", name = "prandium-lab-mk02", amount = 1}
     }
-}:add_unlock("land-animals-mk02"):add_ingredient("small-parts-02")
+}:add_unlock("land-animals-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 1}
 
 ITEM {
     type = "item",

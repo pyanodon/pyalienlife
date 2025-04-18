@@ -17,7 +17,7 @@ RECIPE {
     results = {
         {type = "item", name = "zungror-lair-mk04", amount = 1}
     }
-}:add_unlock("land-animals-mk05"):add_ingredient {"bose-einstein-superfluid", 100}:add_ingredient {type = "item", name = "harmonic-absorber", amount = 10}:add_ingredient {type = "item", name = "var-josephson-junction", amount = 10}
+}:add_unlock("land-animals-mk05"):add_ingredient {type = "item", name = "bose-einstein-superfluid", amount = 100}:add_ingredient {type = "item", name = "harmonic-absorber", amount = 10}:add_ingredient {type = "item", name = "var-josephson-junction", amount = 10}
 
 ITEM {
     type = "item",

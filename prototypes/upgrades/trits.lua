@@ -29,7 +29,7 @@ if data and not yafc_turd_integration then
         RECIPE("trits-reef-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-nexelit"
-        recipe:add_ingredient {"high-grade-nexelit", i * 100}
+        recipe:add_ingredient {type = "item", name = "high-grade-nexelit", amount = i * 100}
         data:extend {recipe}
     end
 end

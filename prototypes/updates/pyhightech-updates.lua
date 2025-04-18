@@ -489,8 +489,8 @@ RECIPE("rennea-mk03-seed-seperation"):replace_result("tar", "black-liquor")
 RECIPE("rennea-mk04-seed-seperation"):replace_result("tar", "black-liquor")
 
 RECIPE("methane-py-fertilizer"):add_unlock("moondrop-mk02")
-RECIPE("methane-py-fertilizer"):add_ingredient("moondrop-seeds")
-RECIPE("methane-co2"):add_ingredient("moondrop-seeds")
+RECIPE("methane-py-fertilizer"):add_ingredient {type = "item", name = "moondrop-seeds", amount = 1}
+RECIPE("methane-co2"):add_ingredient {type = "item", name = "moondrop-seeds", amount = 1}
 
 RECIPE("plastic-from-casein"):add_ingredient {type = "fluid", name = "methanal", amount = 100}:remove_unlock("korlex"):add_unlock("plastics-mk02")
 RECIPE("charcoal-briquette"):replace_ingredient("raw-fiber", "fiber")

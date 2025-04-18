@@ -50,7 +50,7 @@ if data and not yafc_turd_integration then
         recipe:add_result {name = "warmer-stone-brick", amount = 2, type = "item"}
         recipe:add_result_amount("arthurian-egg", i)
         local _, barrels = recipe:remove_result("barrel")
-        recipe:add_result {"hot-air-barrel", barrels}
+        recipe:add_result {type = "item", name = "hot-air-barrel", amount = barrels}
         recipe.energy_required = recipe.energy_required / 2
         recipe.main_product = "warmer-stone-brick"
         recipe:remove_ingredient("bedding")

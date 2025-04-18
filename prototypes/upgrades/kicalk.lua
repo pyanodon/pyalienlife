@@ -78,22 +78,22 @@ if data and not yafc_turd_integration then
 
     local other_species = {
         {
-            {{"guar-seeds", 1}, {"guar", 2}},
+            {{type = "item", name = "guar-seeds", amount = 1}, {type = "item", name = "guar", amount = 2}},
         },
         {
-            {{"ralesia-seeds", 1}, {"ralesia", 2}},
-            {{"rennea-seeds", 1},  {"rennea", 1}},
+            {{type = "item", name = "ralesia-seeds", amount = 1}, {type = "item", name = "ralesia", amount = 2}},
+            {{type = "item", name = "rennea-seeds", amount = 1},  {type = "item", name = "rennea", amount = 1}},
         },
         {
-            {{"tuuphra-seeds", 2}, {"tuuphra", 4}},
-            {{"grod-seeds", 2},    {"grod", 3}},
+            {{type = "item", name = "tuuphra-seeds", amount = 2}, {type = "item", name = "tuuphra", amount = 4}},
+            {{type = "item", name = "grod-seeds", amount = 2},    {type = "item", name = "grod", amount = 3}},
         },
         {
-            {{"yotoi-seeds", 1},          {"yotoi", 4}},
-            {{"cadaveric-arum-seeds", 3}, {"cadaveric-arum", 2}},
+            {{type = "item", name = "yotoi-seeds", amount = 1},          {type = "item", name = "yotoi", amount = 4}},
+            {{type = "item", name = "cadaveric-arum-seeds", amount = 3}, {type = "item", name = "cadaveric-arum", amount = 2}},
         },
         {
-            {{"cridren-seeds", 3}, {"cridren", 3}},
+            {{type = "item", name = "cridren-seeds", amount = 3}, {type = "item", name = "cridren", amount = 3}},
         }
     }
 
@@ -112,7 +112,7 @@ if data and not yafc_turd_integration then
             recipe.main_product = other[2].name
         end
         if i == 5 then
-            recipe:add_ingredient {"ulric-cub", 1}
+            recipe:add_ingredient {type = "item", name = "ulric-cub", amount = 1}
         end
         recipe:multiply_result_amount("kicalk", 1.35)
         data:extend {recipe}

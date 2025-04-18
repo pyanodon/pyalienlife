@@ -28,9 +28,9 @@ if data and not yafc_turd_integration then
     data:extend {buffed_fiber}
 
     for isotope, recipe in pairs {
-        [{"pu-239", 2}] = RECIPE("zungror-raising-1"):copy(),
-        [{"pu-240", 2}] = RECIPE("zungror-raising-2"):copy(),
-        [{"pu-238", 2}] = RECIPE("zungror-raising-3"):copy(),
+        [{type = "item", name = "pu-239", amount = 2}] = RECIPE("zungror-raising-1"):copy(),
+        [{type = "item", name = "pu-240", amount = 2}] = RECIPE("zungror-raising-2"):copy(),
+        [{type = "item", name = "pu-238", amount = 2}] = RECIPE("zungror-raising-3"):copy(),
     } do
         recipe.name = recipe.name .. "-with-funny-rock"
         recipe:add_ingredient(isotope)

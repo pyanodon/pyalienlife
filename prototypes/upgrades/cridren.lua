@@ -66,7 +66,7 @@ if data and not yafc_turd_integration then
         RECIPE("cridren-enclosure-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-mufflers"
-        recipe:add_ingredient {mufflers[i], i * 35}
+        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}
         data:extend {recipe}
     end
 end

@@ -24,7 +24,7 @@ if data and not yafc_turd_integration then
     }
 
     local recipe = RECIPE("ralesia-seeds"):copy()
-    recipe:add_ingredient {"paper-towel", 1}
+    recipe:add_ingredient {type = "item", name = "paper-towel", amount = 1}
     recipe.energy_required = 3
     recipe:multiply_result_amount("ralesia-seeds", 2)
     recipe.name = "ralesia-seeds-paper-towel"

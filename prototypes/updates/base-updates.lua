@@ -99,6 +99,6 @@ RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-sa
 
 ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
 
-RECIPE("car"):add_ingredient("light-armor")
+RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}
 
 RECIPE("barrel").allow_productivity = false

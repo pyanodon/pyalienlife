@@ -15,7 +15,7 @@ if data and not yafc_turd_integration then
         if i > 4 and i < 8 then recipe.localised_name = {"recipe-name." .. recipe.name} end
         recipe.name = recipe.name .. "-boron"
         local _, removed = recipe:remove_ingredient("water-barrel")
-        recipe:add_ingredient {"boric-acid-barrel", removed}
+        recipe:add_ingredient {type = "item", name = "boric-acid-barrel", amount = removed}
         if i > 4 and i < 8 then
             recipe.results[1].probability = recipe.results[1].probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75

@@ -37,8 +37,8 @@ if data and not yafc_turd_integration then
         RECIPE("korlex-4"):copy(),
     } do
         recipe.name = recipe.name .. "-slowed"
-        recipe:add_ingredient {"barrel-milk", i}
-        recipe:add_result {"empty-barrel-milk", i}
+        recipe:add_ingredient {type = "item", name = "barrel-milk", amount = i}
+        recipe:add_result {type = "item", name = "empty-barrel-milk", amount = i}
         recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
         data:extend {recipe}
     end
