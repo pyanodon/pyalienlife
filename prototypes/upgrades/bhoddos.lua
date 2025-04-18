@@ -34,7 +34,6 @@ if data and not yafc_turd_integration then
 
     for i, spore in pairs {
         RECIPE("bhoddos-spore"):copy(),
-        RECIPE("bhoddos-spore-3"):copy(),
     } do
         spore.name = spore.name .. "-upgraded"
         spore.main_product = "bhoddos-spore"

@@ -1,0 +1,32 @@
+{
+    "recipe": [
+        [
+            "bhoddos-spore-3",
+            "bhoddos-spore"
+        ],
+        [
+            "yaedols-spores-3",
+            "yaedols-spores"
+        ],
+        [
+            "yaedols-spores-2",
+            "yaedols-spores"
+        ],
+        [
+            "navens-spore-3",
+            "navens-spore"
+        ],
+        [
+            "navens-spore-2",
+            "navens-spore"
+        ],
+        [
+            "fawogae-spore-3",
+            "fawogae-spore"
+        ],
+        [
+            "fawogae-spore-2",
+            "fawogae-spore"
+        ]
+    ]
+}

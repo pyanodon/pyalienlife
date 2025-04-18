@@ -15,31 +15,31 @@ RECIPE {
     },
 }:add_unlock("fawogae-mk01")
 
-RECIPE {
-    type = "recipe",
-    name = "fawogae-spore-2",
-    category = "spore",
-    enabled = false,
-    energy_required = 7,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "fawogae-spore", amount = 1},
-    },
-}:add_unlock("microfilters")
+-- RECIPE {
+--     type = "recipe",
+--     name = "fawogae-spore-2",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 7,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "fawogae-spore", amount = 1},
+--     },
+-- }:add_unlock("microfilters")
 
-RECIPE {
-    type = "recipe",
-    name = "fawogae-spore-3",
-    category = "spore",
-    enabled = false,
-    energy_required = 6,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "fawogae-spore", amount = 1},
-    },
-}:add_unlock("microfilters-mk02")
+-- RECIPE {
+--     type = "recipe",
+--     name = "fawogae-spore-3",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 6,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "fawogae-spore", amount = 1},
+--     },
+-- }:add_unlock("microfilters-mk02")
 
 ---IMPROVED SPORES---
 

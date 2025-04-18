@@ -1,8 +1,6 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs {
         RECIPE("yaedols-spores"):copy(),
-        RECIPE("yaedols-spores-2"):copy(),
-        RECIPE("yaedols-spores-3"):copy(),
         RECIPE("yaedols-spore-mk02"):copy(),
         RECIPE("yaedols-spore-mk03"):copy(),
         RECIPE("yaedols-spore-mk04"):copy(),

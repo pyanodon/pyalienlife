@@ -68,8 +68,6 @@ if data and not yafc_turd_integration then
 
     for i, recipe in pairs {
         RECIPE("navens-spore"):copy(),
-        RECIPE("navens-spore-2"):copy(),
-        RECIPE("navens-spore-3"):copy(),
         RECIPE("navens-spore-mk02"):copy(),
         RECIPE("navens-spore-mk03"):copy(),
         RECIPE("navens-spore-mk04"):copy(),

@@ -68,15 +68,15 @@ RECIPE {
     },
 }:add_unlock("microfilters")
 ]] --
-RECIPE {
-    type = "recipe",
-    name = "bhoddos-spore-3",
-    category = "spore",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "bhoddos-spore", amount = 1},
-    },
-}:add_unlock("microfilters-mk02")
+-- RECIPE {
+--     type = "recipe",
+--     name = "bhoddos-spore-3",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "bhoddos-spore", amount = 1},
+--     },
+-- }:add_unlock("microfilters-mk02")
