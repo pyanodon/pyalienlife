@@ -3,6 +3,7 @@ Version: 3.0.43
 Date: tba
   Changes:
     - Changed spore collectors to use research productivity instead of 3 different recipes
+    - Made bhoddos breeding less random
   Internal:
     - remove shorthands in recipe declarations
 ---------------------------------------------------------------------------------------------------

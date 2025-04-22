@@ -74,7 +74,7 @@ RECIPE {
         {type = "fluid", name = "liquid-manure",       amount = 50},
     },
     results = {
-        {type = "item", name = "bhoddos-spore-mk02", amount = 8, probability = 0.8},
+        {type = "item", name = "bhoddos-spore-mk02", amount = 6, extra_count_fraction = 0.4},
     },
     --main_product = "bhoddos-mk02",
     icons =
@@ -160,7 +160,7 @@ RECIPE {
         {type = "fluid", name = "bacteria-1",          amount = 75},
     },
     results = {
-        {type = "item", name = "bhoddos-spore-mk03", amount = 9, probability = 0.7},
+        {type = "item", name = "bhoddos-spore-mk03", amount = 6, extra_count_fraction = 0.3},
     },
     --main_product = "bhoddos-mk02",
     icons =
@@ -247,7 +247,7 @@ RECIPE {
         {type = "fluid", name = "bacteria-1",          amount = 100},
     },
     results = {
-        {type = "item", name = "bhoddos-spore-mk04", amount = 9, probability = 0.75},
+        {type = "item", name = "bhoddos-spore-mk04", amount = 6, extra_count_fraction = 0.75},
     },
     --main_product = "bhoddos-mk02",
     icons =
