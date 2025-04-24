@@ -6,6 +6,7 @@ Date: tba
     - Made bhoddos breeding less random
     - The pyHT urea recipe is now marked as hidden.
     - Added a new recycling recipe for extra cages. Resolves https://github.com/pyanodon/pybugreports/issues/965
+    - Fixed fish TURD fish farms not having passthru pipe connections. Resolves https://github.com/pyanodon/pybugreports/issues/955
   Internal:
     - remove shorthands in recipe declarations
 ---------------------------------------------------------------------------------------------------
