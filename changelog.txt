@@ -7,6 +7,7 @@ Date: tba
     - The pyHT urea recipe is now marked as hidden.
     - Added a new recycling recipe for extra cages. Resolves https://github.com/pyanodon/pybugreports/issues/965
     - Fixed fish TURD fish farms not having passthru pipe connections. Resolves https://github.com/pyanodon/pybugreports/issues/955
+    - Fix crash with caravan interupt migrations. Resolves https://github.com/pyanodon/pybugreports/issues/909
   Internal:
     - remove shorthands in recipe declarations
 ---------------------------------------------------------------------------------------------------

@@ -57,6 +57,7 @@ end
 ---@param interrupt_name string
 function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_name)
     local unit_number = caravan_data.unit_number
+    gui.tags.action_list_type = gui.tags.action_list_type or Caravan.action_list_types.interrupt_targets -- https://github.com/pyanodon/pybugreports/issues/909 REMOVE IN PYSEX
     local action_list_type = gui.tags.action_list_type
     assert(action_list_type)
     for j, action in ipairs(actions) do
