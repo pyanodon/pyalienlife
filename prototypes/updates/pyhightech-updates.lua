@@ -81,15 +81,15 @@ end
 
 --(( MODIFICATIONS ))--
 --TECHNOLOGY--
-TECHNOLOGY("nano-tech"):add_prereq("microbiology-mk03")
---TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
+TECHNOLOGY("quantum-processor"):add_prereq("microbiology-mk03")
+--TECHNOLOGY('bio-implants'):add_prereq('quantum-processor')
 TECHNOLOGY("advanced-circuit"):add_prereq("chitin")
 TECHNOLOGY("antitumor"):add_prereq("earnshaw-theorem")
 -- TECHNOLOGY('advanced-circuit'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('aerogel'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('graphene'):add_pack('py-science-pack-3')
--- TECHNOLOGY('nano-tech'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('quantum-processor'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('penrose'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 

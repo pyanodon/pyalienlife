@@ -161,6 +161,10 @@ end
 
 if mods.pystellarexpedition then
     require "__pystellarexpedition__.prototypes.updates.base-updates"
+    require "__pystellarexpedition__.prototypes.updates.space-age-updates"
+    require "__pystellarexpedition__.prototypes.updates.pycoalprocessing-updates"
+    require "__pystellarexpedition__.prototypes.updates.pyrawores-updates"
+    require "__pystellarexpedition__.prototypes.updates.pypetroleumhandling-updates"
     require "__pystellarexpedition__.prototypes.updates.pyalternativeenergy-updates"
     require "__pystellarexpedition__.prototypes.updates.pyhightech-updates"
     require "__pystellarexpedition__.prototypes.updates.pyalienlife-updates"
