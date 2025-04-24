@@ -56,7 +56,7 @@ data.raw["recipe-category"]["arum"].allowed_module_categories = {"arum"}
 data.raw["recipe-category"]["arum"].modules_required = true
 data.raw["recipe-category"]["moon"].allowed_module_categories = {"moondrop"}
 data.raw["recipe-category"]["moon"].modules_required = true
-
+data.raw.recipe.urea.hidden = true
 
 TECHNOLOGY("melamine"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 TECHNOLOGY("fiberboard"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
