@@ -5,6 +5,7 @@ Date: tba
     - Changed spore collectors to use research productivity instead of 3 different recipes
     - Made bhoddos breeding less random
     - The pyHT urea recipe is now marked as hidden.
+    - Added a new recycling recipe for extra cages. Resolves https://github.com/pyanodon/pybugreports/issues/965
   Internal:
     - remove shorthands in recipe declarations
 ---------------------------------------------------------------------------------------------------

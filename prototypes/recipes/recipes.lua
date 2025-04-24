@@ -183,6 +183,35 @@ RECIPE {
     },
 }:add_unlock("land-animals-mk01")
 
+if mods.pyalternativeenergy then
+    RECIPE {
+        type = "recipe",
+        name = "cage-recycle-into-titanium",
+        category = "crafting",
+        enabled = false,
+        energy_required = 4,
+        ingredients = {
+            {type = "item", name = "cage",           amount = 1},
+        },
+        results = {
+            {type = "item", name = "iron-stick",     amount = 15, probability = 0.25},
+            {type = "item", name = "solder",     amount = 2,  probability = 0.25},
+            (not mods.pystellarexpedition) and {type = "item", name = "titanium-plate", amount = 5, probability = 0.25} or nil,
+        },
+        icons = {
+            {
+                icon = "__pyalternativeenergygraphics__/graphics/icons/reprocessing.png"
+            },
+            {
+                icon = data.raw.item.cage.icon,
+                scale = 0.4
+            },
+        },
+        localised_name = {"recipe-name.cage-recycle-into-titanium"},
+        auto_recycle = false,
+    }:add_unlock((not mods.pystellarexpedition) and "titanium-mk03" or "land-animals-mk02")
+end
+
 RECIPE {
     type = "recipe",
     name = "neuroprocessor",
