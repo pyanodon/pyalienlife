@@ -63,8 +63,8 @@ local function add_new_fish_farm(i)
     entity.order = data.raw.item[name].order
     if i ~= 4 then entity.next_upgrade = "turd-fish-farm-mk0" .. (i + 1) end
     entity.allowed_module_categories = {"fish"}
-    entity.energy_usage = (i * 5) .. "MW",
-        table.insert(entity.flags, "not-in-made-in")
+    entity.energy_usage = (i * 5) .. "MW"
+    table.insert(entity.flags, "not-in-made-in")
     entity.fluid_boxes = new_fluid_boxes()
     data:extend {entity}
 end
