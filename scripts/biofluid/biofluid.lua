@@ -358,14 +358,11 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
     end
 
     if not provider then return end
-
 	
     local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
 	
     for _, unit_number in order_by_distance(requester_data.entity, network_data.biofluid_bioports) do
 
-		game.print(unit_number)
-	
         local bioport_data = storage.biofluid_bioports[unit_number]
         if not bioport_data or not bioport_data.active or not bioport_data.entity.valid then goto continue end
 
