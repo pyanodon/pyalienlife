@@ -4,8 +4,8 @@ require "caravan-gui-shared"
 ---Given a action index in a caravan GUI, returns the GUI style and sprite for the corresponding button.
 ---@param caravan_data Caravan
 ---@param action_list_type CaravanActionListType
----@param schedule_id int
----@param action_id int
+---@param schedule_id int?
+---@param action_id int?
 ---@param interrupt_name string?
 local function generate_button_status(caravan_data, action_list_type, schedule_id, action_id, interrupt_name)
     assert(action_list_type)
@@ -53,12 +53,12 @@ end
 ---@param gui LuaGuiElement
 ---@param actions CaravanAction[]
 ---@param caravan_data Caravan
----@param i integer
+---@param i integer?
 ---@param interrupt_name string
 function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_name)
     local unit_number = caravan_data.unit_number
     gui.tags.action_list_type = gui.tags.action_list_type or Caravan.action_list_types.interrupt_targets -- https://github.com/pyanodon/pybugreports/issues/909 REMOVE IN PYSEX
-    local action_list_type = gui.tags.action_list_type
+    local action_list_type = gui.tags.action_list_type --[[@as CaravanActionListType]]
     assert(action_list_type)
     for j, action in ipairs(actions) do
         local tags = {unit_number = unit_number, action_list_type = action_list_type, schedule_id = i, action_id = j, interrupt_name = interrupt_name}
@@ -85,7 +85,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_
         empty.style.horizontally_stretchable = true
 
         if action.type == "time-passed" then
-            local textfield = action_frame.add {type = "textfield", name = "py_time_passed_text", style = "py_compact_slider_value_textfield", text = action.wait_time or 5, tags = tags}
+            local textfield = action_frame.add {type = "textfield", name = "py_time_passed_text", style = "py_compact_slider_value_textfield", text = tostring(action.wait_time or 5), tags = tags}
             textfield.numeric = true
             textfield.allow_decimal = false
             textfield.allow_negative = false
@@ -103,7 +103,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_
                 name = "py_item_count",
                 style = "py_compact_slider_value_textfield",
                 tags = tags,
-                text = action.item_count or 0,
+                text = tostring(action.item_count or 0),
                 lose_focus_on_confirm = true,
             }
             textfield.style.left_padding = 0
@@ -185,7 +185,7 @@ function Caravan.build_action_list_gui(gui, actions, caravan_data, i, interrupt_
                 name = "py_food_count",
                 style = "py_compact_slider_value_textfield",
                 tags = tags,
-                text = action.item_count or 0,
+                text = tostring(action.item_count or 0),
                 lose_focus_on_confirm = true,
             }
             textfield.style.left_padding = 0
@@ -267,6 +267,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
         schedule_frame.style.right_padding = 12
 
         local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
+        ---@diagnostic disable-next-line: param-type-mismatch
         playbutton.style, playbutton.sprite = generate_button_status(caravan_data, tags.action_list_type, i, nil, tags.interrupt_name)
         style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
         schedule_frame.add {type = "label", name = "py_outpost_name", style = style, tags = tags, caption = schedule.localised_name}
@@ -310,7 +311,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
 
         Caravan.build_action_list_gui(schedule_flow, schedule.actions, caravan_data, i, tags.interrupt_name)
 
-        local entity = schedule.entity
+        local entity = schedule.entity --[[@as LuaEntity]]
         local valid_actions = Caravan.get_valid_actions_for_entity(caravan_data, entity)
         valid_actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
         local py_add_action = schedule_flow.add {type = "drop-down", name = "py_add_action", items = valid_actions, tags = tags}
@@ -527,7 +528,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 end
 
 py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     -- If the player has a temporary item in their cursor, we don't let them open the GUI
     -- This includes the caravan controller, blueprint tool, etc
     local stack = player.cursor_stack
@@ -588,7 +589,6 @@ function Caravan.update_gui(gui, weak)
     end
 end
 
----@param gui LuaGuiElement
 ---@param player LuaPlayer
 function Caravan.update_interrupt_gui(player)
     local gui = Caravan.get_interrupt_gui(player)
@@ -600,7 +600,7 @@ function Caravan.update_interrupt_gui(player)
 end
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
 
     if player.gui.relative.py_global_caravan_gui then
         player.gui.relative.py_global_caravan_gui.destroy()

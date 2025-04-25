@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-parameter
 local util = require "util"
 local sounds = require "__base__.prototypes.entity.sounds"
 

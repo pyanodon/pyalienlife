@@ -240,10 +240,10 @@ return {
         unit = {
             count = 7000,
             ingredients = {
-                {type = "item", name = "automation-science-pack", amount = 1},
-                {type = "item", name = "py-science-pack-1",       amount = 1},
-                {type = "item", name = "logistic-science-pack",   amount = 1},
-                {type = "item", name = "py-science-pack-2",       amount = 1},
+                {"automation-science-pack", 1},
+                {"py-science-pack-1",       1},
+                {"logistic-science-pack",   1},
+                {"py-science-pack-2",       1},
             },
             time = 45
         }

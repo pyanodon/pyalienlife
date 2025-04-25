@@ -240,7 +240,9 @@ data:extend {{
             volume = 0.6
         }
     },
+    ---@diagnostic disable-next-line: assign-type-mismatch
     sound_minimum_speed = 0.05,
+    ---@diagnostic disable-next-line: assign-type-mismatch
     sound_scaling_ratio = 0.8,
     impact_category = "metal-large",
     working_sound = {
