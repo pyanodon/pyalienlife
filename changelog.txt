@@ -10,7 +10,7 @@ Date: tba
     - Fix crash with caravan interupt migrations. Resolves https://github.com/pyanodon/pybugreports/issues/909
   Internal:
     - remove shorthands in recipe declarations
-    - Biofluid overhaul with the following fixes and improvements:
+    - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
       - Biofluid bots are no longer given jobs to deliver 0 units of fluid.
       - When picking a Bioport to service a request, the system now tries them from closest first to farthest last.
       - Fixed a problem where Provider tanks would become permanently disabled when their contents were erroneously reserved.
