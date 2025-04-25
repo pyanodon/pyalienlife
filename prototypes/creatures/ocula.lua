@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-parameter
 local util = require "util"
 
 RECIPE {

@@ -32,6 +32,7 @@ ITEM {
 }
 
 data:extend {{
+    ---@diagnostic disable-next-line: assign-type-mismatch
     scale_info_icons = true,
     name = "outpost-aerial",
     type = "container",

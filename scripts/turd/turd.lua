@@ -71,8 +71,8 @@ local function update_confirm_button(element, player, researched_technologies)
         if has_turd_migration(force_index, selected_upgrade) then
             local ticks_remaining = storage.turd_migrations[force_index][selected_upgrade] - game.tick
             local hours = math.floor(ticks_remaining / 216000)
-            local minutes = math.floor(ticks_remaining / 3600) % 60
-            local seconds = math.floor(ticks_remaining / 60) % 60
+            local minutes = tostring(math.floor(ticks_remaining / 3600) % 60)
+            local seconds = tostring(math.floor(ticks_remaining / 60) % 60)
             if minutes < 10 then minutes = "0" .. minutes end
             if seconds < 10 then seconds = "0" .. seconds end
             element.style = "confirm_button_without_tooltip"
@@ -246,7 +246,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_select_view"] = fu
 end
 
 gui_events[defines.events.on_gui_click]["py_open_turd_techtree"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local master_tech_name = event.element.parent.parent.tags.name
     player.opened = nil
     player.open_technology_gui(master_tech_name)
@@ -255,7 +255,7 @@ end
 gui_events[defines.events.on_gui_click]["py_minimize_turd"] = function(event)
     local frame = event.element.parent.parent
     local gui = frame.parent
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local tech_name = frame.tags.name
     local selected_upgrade = storage.turd_bonuses[player.force_index][tech_name] or NOT_SELECTED
     local is_researched = player.force.technologies[tech_name].researched
@@ -463,7 +463,7 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
     local master_tech_name = element.tags.master_tech_name
     local sub_tech_name = element.tags.sub_tech_name
     local sub_tech_flow = element.parent.parent.parent
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local force = player.force
     local force_index = force.index
     local header_flow = sub_tech_flow.parent.header_flow

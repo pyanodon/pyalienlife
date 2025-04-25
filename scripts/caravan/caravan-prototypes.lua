@@ -1,4 +1,4 @@
-require "__core__.lualib.util"
+require "util"
 
 ---@enum CaravanActionListType
 Caravan.action_list_types = {
@@ -351,6 +351,7 @@ Caravan.actions = {
                 local inserted_count = fuel.insert(item)
                 if inserted_count ~= 0 then
                     item.count = inserted_count
+                    ---@diagnostic disable-next-line: param-type-mismatch
                     outpost_inventory.remove(item)
                 end
             end
