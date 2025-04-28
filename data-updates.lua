@@ -332,6 +332,6 @@ if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
 
-if mods.autotech then
+if mods["dependency-graph-lib"] then
     data.raw.item["iron-chest"].autotech_startup = true
 end
