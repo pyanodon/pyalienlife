@@ -77,8 +77,6 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {speed = 0.1,                productivity = 0.2,                       type = "module-effects"},
                 {old = "yaedols-spores",     new = "yaedols-spores-coke-oven-gas",     type = "recipe-replacement"},
-                {old = "yaedols-spores-2",   new = "yaedols-spores-2-coke-oven-gas",   type = "recipe-replacement"},
-                {old = "yaedols-spores-3",   new = "yaedols-spores-3-coke-oven-gas",   type = "recipe-replacement"},
                 {old = "yaedols-spore-mk02", new = "yaedols-spore-mk02-coke-oven-gas", type = "recipe-replacement"},
                 {old = "yaedols-spore-mk03", new = "yaedols-spore-mk03-coke-oven-gas", type = "recipe-replacement"},
                 {old = "yaedols-spore-mk04", new = "yaedols-spore-mk04-coke-oven-gas", type = "recipe-replacement"},

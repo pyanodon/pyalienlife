@@ -122,8 +122,6 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 5,           productivity = 0.2,                      type = "module-effects"},
                 {old = "navens-spore",      new = "navens-spore-sterilization",      type = "recipe-replacement"},
-                {old = "navens-spore-2",    new = "navens-spore-2-sterilization",    type = "recipe-replacement"},
-                {old = "navens-spore-3",    new = "navens-spore-3-sterilization",    type = "recipe-replacement"},
                 {old = "navens-spore-mk02", new = "navens-spore-mk02-sterilization", type = "recipe-replacement"},
                 {old = "navens-spore-mk03", new = "navens-spore-mk03-sterilization", type = "recipe-replacement"},
                 {old = "navens-spore-mk04", new = "navens-spore-mk04-sterilization", type = "recipe-replacement"},

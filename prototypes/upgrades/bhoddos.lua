@@ -119,10 +119,9 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "bhoddos-spore",       new = "bhoddos-spore-upgraded",   type = "recipe-replacement"},
-                {old = "bhoddos-spore-3",     new = "bhoddos-spore-3-upgraded", type = "recipe-replacement"},
-                {type = "recipe-replacement", old = "sporopollenin",            new = "sporopollenin-gills"},
-                {type = "recipe-replacement", old = "biomass-sporopollenin",    new = "biomass-sporopollenin-nerfed"}
+                {old = "bhoddos-spore",       new = "bhoddos-spore-upgraded", type = "recipe-replacement"},
+                {type = "recipe-replacement", old = "sporopollenin",          new = "sporopollenin-gills"},
+                {type = "recipe-replacement", old = "biomass-sporopollenin",  new = "biomass-sporopollenin-nerfed"}
             }
         }
     },
