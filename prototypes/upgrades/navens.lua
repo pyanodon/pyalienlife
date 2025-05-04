@@ -76,6 +76,24 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient {type = "fluid", name = "phosphorus-tricloride", amount = 1}
         data:extend {recipe}
     end
+    table.insert(
+        data.raw.technology["microfilters"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "navens-spore-sterilization",
+            change = 0.4,
+            hidden = true,
+        }
+    )
+    table.insert(
+        data.raw.technology["microfilters-mk02"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "navens-spore-sterilization",
+            change = 0.6,
+            hidden = true,
+        }
+    )
 end
 
 return {
