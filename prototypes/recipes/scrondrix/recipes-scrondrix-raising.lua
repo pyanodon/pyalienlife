@@ -27,7 +27,6 @@ py.autorecipes {
 			},
 			tech = "scrondrix",
 			crafting_speed = 12,
-			name = "Scrondrix-cub-1",
 		},
 		--py
 		{
@@ -43,7 +42,6 @@ py.autorecipes {
 			},
 			crafting_speed = 10,
 			tech = "scrondrix-mk02",
-			name = "Scrondrix-cub-2",
 		},
 		--prod
 		{
@@ -58,7 +56,6 @@ py.autorecipes {
 			},
 			crafting_speed = 9,
 			tech = "scrondrix-mk03",
-			name = "Scrondrix-cub-3",
 		},
 		--prod
 		{
@@ -72,7 +69,6 @@ py.autorecipes {
 			},
 			crafting_speed = 8,
 			tech = "scrondrix-mk04",
-			name = "Scrondrix-cub-4",
 		},
 	}
 }
@@ -217,7 +213,6 @@ py.autorecipes {
 			},
 			crafting_speed = 150,
 			tech = "scrondrix",
-			name = "Scrondrix-1",
 		},
 		--py
 		--salt
@@ -233,7 +228,6 @@ py.autorecipes {
 			},
 			crafting_speed = 130,
 			tech = "scrondrix-mk02",
-			name = "Scrondrix-2",
 		},
 		--prod
 		--fiber
@@ -249,7 +243,6 @@ py.autorecipes {
 			},
 			crafting_speed = 90,
 			tech = "scrondrix-mk03",
-			name = "Scrondrix-3",
 		},
 		--prod
 		--navens
@@ -265,7 +258,6 @@ py.autorecipes {
 			},
 			crafting_speed = 90,
 			tech = "scrondrix-mk04",
-			name = "Scrondrix-4",
 		},
 	}
 }

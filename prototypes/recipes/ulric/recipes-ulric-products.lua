@@ -1,7 +1,7 @@
 --pooping--
 
 py.autorecipes {
-	name = "manure",
+	name = "ulric-manure",
 	category = "ulric",
 	subgroup = "py-alienlife-ulric",
 	order = "b",

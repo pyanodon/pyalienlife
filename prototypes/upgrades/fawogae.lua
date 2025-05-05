@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("fawogae-1"):copy(),
-        RECIPE("fawogae-with-manure"):copy(),
-        RECIPE("fawogae-with-improved-substrate"):copy(),
-        RECIPE("fawogae-with-special-substrate"):copy(),
-        RECIPE("fawogae-with-growth-hormone"):copy(),
+        RECIPE("fawogae-2"):copy(),
+        RECIPE("fawogae-3"):copy(),
+        RECIPE("fawogae-4"):copy(),
+        RECIPE("fawogae-5"):copy(),
     } do
         recipe.name = recipe.name .. "-nitrogen"
         recipe:remove_ingredient("water")
@@ -97,11 +97,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "fawogae-1",                       new = "fawogae-1-nitrogen",                       type = "recipe-replacement"},
-                {old = "fawogae-with-manure",             new = "fawogae-with-manure-nitrogen",             type = "recipe-replacement"},
-                {old = "fawogae-with-improved-substrate", new = "fawogae-with-improved-substrate-nitrogen", type = "recipe-replacement"},
-                {old = "fawogae-with-special-substrate",  new = "fawogae-with-special-substrate-nitrogen",  type = "recipe-replacement"},
-                {old = "fawogae-with-growth-hormone",     new = "fawogae-with-growth-hormone-nitrogen",     type = "recipe-replacement"},
+                {old = "fawogae-1", new = "fawogae-1-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-2", new = "fawogae-2-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-3", new = "fawogae-3-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-4", new = "fawogae-4-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-5", new = "fawogae-5-nitrogen", type = "recipe-replacement"},
             }
         },
         {

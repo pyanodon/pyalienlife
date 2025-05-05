@@ -18,7 +18,6 @@ py.autorecipes {
 				{name = "moondrop", amount = 4},
 			},
 			crafting_speed = 140,
-			name = "moondrop-1",
 			tech = "moondrop"
 		},
 		--red
@@ -34,7 +33,6 @@ py.autorecipes {
 				{name = "moondrop", add_amount = 4}
 			},
 			crafting_speed = 120,
-			name = "moondrop-2",
 			tech = "moondrop-mk02"
 		},
 		--py
@@ -51,7 +49,6 @@ py.autorecipes {
 				{name = "moondrop", add_amount = 8}
 			},
 			crafting_speed = 100,
-			name = "moondrop-3",
 			tech = "moondrop-mk03"
 		},
 		--chem
@@ -70,7 +67,6 @@ py.autorecipes {
 				{name = "moondrop", add_amount = 16}
 			},
 			crafting_speed = 80,
-			name = "moondrop-4",
 			tech = "moondrop-mk04"
 		},
 		--prod
@@ -89,7 +85,6 @@ py.autorecipes {
 				{name = "moondrop", add_amount = 32}
 			},
 			crafting_speed = 60,
-			name = "moondrop-5",
 			tech = "moondrop-mk05"
 		},
 	}

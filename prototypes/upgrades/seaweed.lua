@@ -11,7 +11,7 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs {
-        RECIPE("seaweed"):copy(),
+        RECIPE("seaweed-1"):copy(),
         RECIPE("seaweed-2"):copy(),
         RECIPE("seaweed-3"):copy(),
         RECIPE("seaweed-4"):copy(),
@@ -112,7 +112,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "seaweed",   new = "seaweed-dry",   type = "recipe-replacement"},
+                {old = "seaweed-1", new = "seaweed-1-dry", type = "recipe-replacement"},
                 {old = "seaweed-2", new = "seaweed-2-dry", type = "recipe-replacement"},
                 {old = "seaweed-3", new = "seaweed-3-dry", type = "recipe-replacement"},
                 {old = "seaweed-4", new = "seaweed-4-dry", type = "recipe-replacement"},

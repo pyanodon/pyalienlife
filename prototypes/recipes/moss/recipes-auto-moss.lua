@@ -32,7 +32,6 @@ py.autorecipes {
 				{name = "moss", amount = 8},
 			},
 			crafting_speed = 100,
-			name = "Moss-1",
 			tech = "moss-mk01"
 		},
 		--red
@@ -46,7 +45,6 @@ py.autorecipes {
 				{name = "moss", add_amount = 8}
 			},
 			crafting_speed = 80,
-			name = "Moss-2",
 			tech = "moss-mk01"
 		},
 		--py
@@ -60,7 +58,6 @@ py.autorecipes {
 				{name = "moss", add_amount = 8}
 			},
 			crafting_speed = 60,
-			name = "Moss-3",
 			tech = "moss-mk02"
 		},
 		--chem
@@ -75,7 +72,6 @@ py.autorecipes {
 				{name = "moss", add_amount = 8}
 			},
 			crafting_speed = 40,
-			name = "Moss-4",
 			tech = "moss-mk03"
 		},
 		--prod
@@ -89,7 +85,6 @@ py.autorecipes {
 				{name = "moss", add_amount = 8}
 			},
 			crafting_speed = 20,
-			name = "Moss-5",
 			tech = "moss-mk04"
 		},
 	}

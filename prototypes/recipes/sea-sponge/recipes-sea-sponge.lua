@@ -57,41 +57,44 @@ RECIPE {
 ----food----
 
 ---breeding---
-RECIPE {
-    type = "recipe",
-    name = "sea-sponge-1",
+py.autorecipes {
+    name = "sea-sponge",
     category = "sponge",
-    enabled = false,
-    energy_required = 70,
-    ingredients = {
-        {type = "item",  name = "sea-sponge-sprouts", amount = 1},
-        {type = "fluid", name = "dirty-water-light",  amount = 100},
-        {type = "fluid", name = "zogna-bacteria",     amount = 40},
-    },
-    results = {
-        {type = "item",  name = "sea-sponge",   amount = 1},
-        {type = "fluid", name = "water-saline", amount = 100},
-    },
     main_product = "sea-sponge",
-}:add_unlock("water-invertebrates-mk01")
-
-RECIPE {
-    type = "recipe",
-    name = "sea-sponge-2",
-    category = "sponge",
-    enabled = false,
-    energy_required = 40,
-    ingredients = {
-        {type = "item",  name = "sea-sponge-sprouts", amount = 1},
-        {type = "fluid", name = "phytoplankton",      amount = 40},
-        {type = "fluid", name = "zogna-bacteria",     amount = 40},
-    },
-    results = {
-        {type = "item",  name = "sea-sponge",   amount = 3},
-        {type = "fluid", name = "water-saline", amount = 50},
-    },
-    main_product = "sea-sponge",
-}:add_unlock("water-invertebrates-mk02")
+    number_icons = true,
+    mats =
+    {
+        {
+            ingredients =
+            {
+                {type = "item",  name = "sea-sponge-sprouts", amount = 1},
+                {type = "fluid", name = "dirty-water-light",  amount = 100},
+                {type = "fluid", name = "zogna-bacteria",     amount = 40},
+            },
+            results =
+            {
+                {type = "item",  name = "sea-sponge",   amount = 1},
+                {type = "fluid", name = "water-saline", amount = 100},
+            },
+            crafting_speed = 70,
+            tech = "water-invertebrates-mk01",
+        },
+        {
+            ingredients =
+            {
+                {type = "fluid", name = "dirty-water-light", remove_item = true},
+                {type = "fluid", name = "phytoplankton",     amount = 40},
+            },
+            results =
+            {
+                {type = "item",  name = "sea-sponge",   amount = 1},
+                {type = "fluid", name = "water-saline", amount = 100},
+            },
+            crafting_speed = 40,
+            tech = "water-invertebrates-mk02",
+        },
+    }
+}
 
 ----adverse products----
 

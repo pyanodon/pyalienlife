@@ -1,7 +1,7 @@
 --MANURE
 
 py.autorecipes {
-	name = "manure",
+	name = "mukmoux-manure",
 	category = "mukmoux",
 	main_product = "manure",
 	subgroup = "py-alienlife-mukmoux",
