@@ -60,7 +60,8 @@ Biofluid.bioport_slot_indexes = {
     ["chorkok"] = 6
 }
 
-Biofluid.tank_size = 20000
+Biofluid.tank_size = 100000
+Biofluid.max_request_size = 100000
 
 Biofluid.delivery_sizes = {
     ["chorkok"] = 20000,
