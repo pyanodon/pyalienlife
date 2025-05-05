@@ -132,7 +132,7 @@ return {
                 {old = "mukmoux-2",            new = "mukmoux-2-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-3",            new = "mukmoux-3-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-4",            new = "mukmoux-4-bip",                         type = "recipe-replacement"},
-                {old = "mukmoux-manure-1",     new = "manure-1-mukmoux-turd",                 type = "recipe-replacement"},
+                {old = "mukmoux-manure-1",     new = "mukmoux-manure-1-mukmoux-turd",         type = "recipe-replacement"},
                 {old = "mukmoux-manure-2",     new = "mukmoux-manure-2-mukmoux-turd",         type = "recipe-replacement"},
                 {old = "mukmoux-manure-3",     new = "mukmoux-manure-3-mukmoux-turd",         type = "recipe-replacement"},
                 {old = "mukmoux-manure-4",     new = "mukmoux-manure-4-mukmoux-turd",         type = "recipe-replacement"},
