@@ -1,8 +1,9 @@
 py.autorecipes {
-	name = "carapace",
+	name = "Phadai-Dance-Dance-Revolution",
 	category = "phadai",
 	subgroup = "py-alienlife-phadai",
 	main_product = "carapace",
+	number_icons = true,
 	mats =
 	{
 		--chem

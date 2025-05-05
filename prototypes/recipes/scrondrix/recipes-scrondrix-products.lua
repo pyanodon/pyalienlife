@@ -4,6 +4,7 @@ py.autorecipes {
 	name = "manure",
 	category = "scrondrix",
 	main_product = "manure",
+	number_icons = true,
 	mats =
 	{
 		--chem

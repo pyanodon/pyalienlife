@@ -7,6 +7,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-kmauts",
 	order = "c",
 	main_product = "kmauts-cub",
+	number_icons = true,
 	mats =
 	{
 		{
@@ -143,6 +144,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	main_product = "kmauts",
+	number_icons = true,
 	mats =
 	{
 		--logistic

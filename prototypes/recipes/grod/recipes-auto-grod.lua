@@ -4,6 +4,7 @@ py.autorecipes {
 	main_product = "grod",
 	subgroup = "py-alienlife-grod",
 	order = "a",
+	number_icons = true,
 	mats =
 	{
 		--logistic

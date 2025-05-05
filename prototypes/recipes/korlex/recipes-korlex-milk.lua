@@ -4,6 +4,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-korlex",
 	order = "z",
 	main_product = "barrel-milk",
+	number_icons = true,
 	upgrades =
 	{
 		{

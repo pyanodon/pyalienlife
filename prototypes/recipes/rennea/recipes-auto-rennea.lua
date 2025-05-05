@@ -3,6 +3,7 @@ py.autorecipes {
 	category = "rennea",
 	subgroup = "py-alienlife-rennea",
 	order = "a",
+	number_icons = true,
 	mats =
 	{
 		--py

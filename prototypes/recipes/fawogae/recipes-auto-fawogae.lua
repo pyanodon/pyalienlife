@@ -3,6 +3,7 @@ py.autorecipes {
 	category = "fawogae",
 	subgroup = "py-alienlife-fawogae",
 	order = "b",
+	number_icons = true,
 	upgrades =
 	{
 		{

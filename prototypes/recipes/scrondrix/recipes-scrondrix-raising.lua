@@ -1,12 +1,13 @@
 ------------------CUB MAKER------------------
 
 py.autorecipes {
-	name = "scrondrix-cub",
+	name = "Scrondrix-cub",
 	category = "rc",
 	allowed_module_categories = {"scrondrix"},
 	subgroup = "py-alienlife-scrondrix",
 	order = "s",
 	main_product = "scrondrix-pup",
+	number_icons = true,
 	mats =
 	{
 		--chem
@@ -165,8 +166,9 @@ py.autorecipes {
 --raising
 
 py.autorecipes {
-	name = "scrondrix",
+	name = "Scrondrix",
 	category = "scrondrix",
+	number_icons = true,
 	upgrades =
 	{
 		{

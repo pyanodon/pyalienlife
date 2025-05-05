@@ -7,6 +7,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-zungror",
 	order = "c",
 	main_product = "zungror-cocoon",
+	number_icons = true,
 	mats =
 	{
 		--py
@@ -147,6 +148,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	main_product = "zungror",
+	number_icons = true,
 	mats =
 	{
 		--py

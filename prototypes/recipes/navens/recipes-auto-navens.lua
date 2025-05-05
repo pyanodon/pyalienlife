@@ -3,6 +3,7 @@ py.autorecipes {
     category = "navens",
     subgroup = "py-alienlife-navens",
     order = "b",
+    number_icons = true,
     mats =
     {
         --logistic

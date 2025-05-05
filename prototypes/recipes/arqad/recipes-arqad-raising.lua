@@ -8,6 +8,7 @@ py.autorecipes {
 	order = "c",
 	main_product = "arqad-egg",
 	crafting_speed = 20,
+	number_icons = true,
 	mats =
 	{
 		--base
@@ -92,6 +93,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-maggot",
+	number_icons = true,
 	mats =
 	{
 		--base
@@ -121,6 +123,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-egg-nest",
+	number_icons = true,
 	mats =
 	{
 		--base
@@ -199,6 +202,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	main_product = "arqad",
+	number_icons = true,
 	mats =
 	{
 		--base

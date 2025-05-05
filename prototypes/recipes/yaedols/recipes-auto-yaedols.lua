@@ -2,6 +2,7 @@ py.autorecipes {
     name = "yaedols",
     category = "yaedols",
     main_product = "yaedols",
+    number_icons = true,
     mats =
     {
         --logistic

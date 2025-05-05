@@ -6,6 +6,7 @@ py.autorecipes {
 	main_product = "manure",
 	subgroup = "py-alienlife-mukmoux",
 	order = "c",
+	number_icons = true,
 	mats =
 	{
 		--logistic

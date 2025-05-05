@@ -8,6 +8,7 @@ py.autorecipes {
 	crafting_speed = 20,
 	subgroup = "py-alienlife-arthurian",
 	order = "c",
+	number_icons = true,
 	mats =
 	{
 		--base
@@ -191,6 +192,7 @@ py.autorecipes {
 	main_product = "arthurian",
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
+	number_icons = true,
 	mats =
 	{
 		--base

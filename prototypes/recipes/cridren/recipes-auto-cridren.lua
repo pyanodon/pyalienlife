@@ -3,6 +3,7 @@ py.autorecipes {
 	category = "cridren",
 	subgroup = "py-alienlife-cridren",
 	order = "a",
+	number_icons = true,
 	mats =
 	{
 		--chem

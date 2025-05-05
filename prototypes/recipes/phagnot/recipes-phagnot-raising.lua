@@ -7,6 +7,7 @@ py.autorecipes {
 	main_product = "phagnot-cub",
 	subgroup = "py-alienlife-phagnot",
 	order = "c",
+	number_icons = true,
 	mats =
 	{
 		--logistic
@@ -195,6 +196,7 @@ py.autorecipes {
 	main_product = "phagnot",
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
+	number_icons = true,
 	upgrades =
 	{
 		{

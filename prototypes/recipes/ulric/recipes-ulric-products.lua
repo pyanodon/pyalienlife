@@ -6,6 +6,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "manure",
+	number_icons = true,
 	mats =
 	{
 		--logistic
