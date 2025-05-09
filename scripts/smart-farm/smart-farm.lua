@@ -173,7 +173,9 @@ py.on_event(defines.events.on_rocket_launched, function(event)
     }) do
         harvester.update_connections()
         local control_behavior = harvester.get_or_create_control_behavior()
-        control_behavior.circuit_read_resources = false
-        control_behavior.circuit_read_resources = true
+        if control_behavior.circuit_read_resources then
+          control_behavior.circuit_read_resources = false
+          control_behavior.circuit_read_resources = true
+        end
     end
 end)
