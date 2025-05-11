@@ -1,0 +1,89 @@
+
+-- update biofluid tank sizes
+for _, surface in pairs(game.surfaces) do
+    local tanks = surface.find_entities_filtered{name = "provider-tank"}
+    for _, tank in ipairs(tanks) do
+        if tank.valid then
+            local position = tank.position
+            local direction = tank.direction
+            local force = tank.force
+			local fluids = {}
+			
+			local fluidcount = #tank.fluidbox
+			
+			local unit_number = tank.unit_number
+			
+			local settings = storage.biofluid_providers[unit_number]
+			storage.biofluid_providers[unit_number] = nil
+			
+			for i=1,fluidcount do
+				fluids[i] = tank.fluidbox[i]
+			end
+			
+            tank.destroy()
+            local new_tank = surface.create_entity{
+                name = "provider-tank",
+                position = position,
+                direction = direction,
+                force = force
+            }
+			
+			settings.entity = new_tank	
+			storage.biofluid_providers[new_tank.unit_number] = settings
+			
+            if new_tank and fluidcount > 0 then
+				for i=1,fluidcount do
+					new_tank.fluidbox[i] = fluids[i]
+				end
+            end
+			
+        end
+    end
+end
+
+
+
+for _, surface in pairs(game.surfaces) do
+    local tanks = surface.find_entities_filtered{name = "requester-tank"}
+    for _, tank in ipairs(tanks) do
+        if tank.valid then
+            local position = tank.position
+            local direction = tank.direction
+            local force = tank.force
+			local fluids = {}
+			
+			local fluidcount = #tank.fluidbox
+			
+			local unit_number = tank.unit_number
+			
+			for i=1,fluidcount do
+				fluids[i] = tank.fluidbox[i]
+			end
+			
+			local settings = storage.biofluid_requesters[unit_number]
+			storage.biofluid_requesters[unit_number] = nil
+			
+            tank.destroy()
+            local new_tank = surface.create_entity{
+                name = "requester-tank",
+                position = position,
+                direction = direction,
+                force = force
+            }
+			
+			settings.entity = new_tank
+			storage.biofluid_requesters[new_tank.unit_number] = settings
+			
+            if new_tank and fluidcount > 0 then
+				for i=1,fluidcount do
+					new_tank.fluidbox[i] = fluids[i]
+				end
+            end
+			
+        end
+    end
+end
+
+
+Biofluid.built_pipe()
+
