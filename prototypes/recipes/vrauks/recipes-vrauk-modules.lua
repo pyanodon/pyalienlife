@@ -74,7 +74,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "vrauks-mk02",    amount = 2},
+        {type = "item", name = "vrauks-mk02",    amount = 2, ignored_by_stats = 2},
         {type = "item", name = "vrauks-food-01", amount = 4},
         --{type = 'item', name = 'bedding', amount = 2},
         {type = "item", name = "saps",           amount = 8},
@@ -172,7 +172,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "vrauks-mk03",    amount = 2},
+        {type = "item", name = "vrauks-mk03",    amount = 2, ignored_by_stats = 2},
         {type = "item", name = "vrauks-food-01", amount = 4},
         {type = "item", name = "bedding",        amount = 2},
         {type = "item", name = "saps",           amount = 8},
@@ -270,7 +270,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "item", name = "vrauks-mk04",    amount = 2},
+        {type = "item", name = "vrauks-mk04",    amount = 2, ignored_by_stats = 2},
         {type = "item", name = "vrauks-food-01", amount = 4},
         {type = "item", name = "bedding",        amount = 2},
         {type = "item", name = "saps",           amount = 8},
