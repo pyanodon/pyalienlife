@@ -11,6 +11,7 @@ Date: tba
     - Farm recipe icons are now numbered.
     - Fixed harvesters placed on a smart farm changing circuit conditions when the smart farm creates new crops. Resolves https://github.com/pyanodon/pybugreports/issues/988
     - Fixed mk2+ vrauk breeding stats. Resolves https://github.com/pyanodon/pybugreports/issues/997
+    - Fixed icons and z-ordering for logistic station. Resolves https://github.com/pyanodon/pybugreports/issues/994
   Internal:
     - remove shorthands in recipe declarations
 ---------------------------------------------------------------------------------------------------
