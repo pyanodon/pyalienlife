@@ -66,6 +66,7 @@ ENTITY {
     },
     inventory_type = "with_filters_and_bar",
     gui_mode = "all",
+    icon_draw_specification = {scale = 6.0, scale_for_many = 9.0, render_layer = "entity-info-icon"},
     circuit_connector = {
         points = {
             shadow = {
@@ -96,10 +97,6 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{0, 0}, {0, 0}},
-    --light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
-    --integration_patch_render_layer = "decals",
-    --integration_patch = hr_crash_site_lab_ground(),
-    render_layer = "higher-object-under",
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
