@@ -974,7 +974,7 @@ RECIPE {
     main_product = "ore-lead",
     icon = "__pyraworesgraphics__/graphics/icons/mip/ore-lead.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -993,7 +993,7 @@ RECIPE {
     main_product = "ore-tin",
     icon = "__pyraworesgraphics__/graphics/icons/mip/ore-tin.png",
     icon_size = 64,
-}:add_unlock("phytomining").category = "pulp"
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1012,7 +1012,7 @@ RECIPE {
     main_product = "ore-aluminium",
     icon = "__pyraworesgraphics__/graphics/icons/mip/ore-aluminium.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1031,7 +1031,7 @@ RECIPE {
     main_product = "lead-refined-dust-03",
     icon = "__pyraworesgraphics__/graphics/icons/lead-refined-dust-03.png",
     icon_size = 32,
-}:add_unlock("phytomining-mk03").category = "pulp"
+}:add_unlock("phytomining-mk03"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1050,7 +1050,7 @@ RECIPE {
     main_product = "gold-concentrate",
     icon = "__pyraworesgraphics__/graphics/icons/gold-concentrate.png",
     icon_size = 32,
-}:add_unlock("phytomining-mk03").category = "pulp"
+}:add_unlock("phytomining-mk03"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1069,7 +1069,7 @@ RECIPE {
     main_product = "ore-zinc",
     icon = "__pyraworesgraphics__/graphics/icons/mip/ore-zinc.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1088,7 +1088,7 @@ RECIPE {
     main_product = "copper-ore",
     icon = "__base__/graphics/icons/copper-ore.png",
     icon_size = 64,
-}:add_unlock("phytomining").category = "pulp"
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1107,7 +1107,7 @@ RECIPE {
     main_product = "cobalt-extract",
     icon = "__pyalienlifegraphics__/graphics/icons/cobalt-extract.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1126,7 +1126,7 @@ RECIPE {
     main_product = "salt",
     icon = "__pyraworesgraphics__/graphics/icons/salt.png",
     icon_size = 32,
-}:add_unlock("phytomining").category = "pulp"
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1145,7 +1145,7 @@ RECIPE {
     main_product = "ore-titanium",
     icon = "__pyraworesgraphics__/graphics/icons/mip/ore-titanium.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1164,7 +1164,7 @@ RECIPE {
     main_product = "iron-ore",
     icon = "__base__/graphics/icons/iron-ore.png",
     icon_size = 64,
-}:add_unlock("phytomining").category = "pulp"
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1183,7 +1183,7 @@ RECIPE {
     main_product = "ore-nickel",
     icon = "__pyraworesgraphics__/graphics/icons/mip/ore-nickel.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1202,7 +1202,7 @@ RECIPE {
     main_product = "niobium-ore",
     icon = "__pycoalprocessinggraphics__/graphics/icons/mip/niobium-ore.png",
     icon_size = 64,
-}:add_unlock("phytomining-mk02").category = "pulp"
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1272,4 +1272,4 @@ RECIPE {
         {type = "item", name = "uranium-ore", amount = 5},
     },
     main_product = "uranium-ore",
-}:add_unlock("phytomining-mk03").category = "pulp"
+}:add_unlock("phytomining-mk03"):change_category("pulp")
