@@ -53,7 +53,8 @@ RECIPE {
         {type = "item", name = "water-barrel",   amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk02", amount = 1, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk02", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk02", amount = 1, probability = 0.95},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk02",
@@ -151,7 +152,8 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk03", amount = 1, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk03", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk03", amount = 1, probability = 0.95},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk03",
@@ -249,7 +251,8 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "vrauks-mk04", amount = 1, extra_count_fraction = 0.95, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk04", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "vrauks-mk04", amount = 1, probability = 0.95},
         {type = "item", name = "barrel",      amount = 5},
     },
     main_product = "vrauks-mk04",
