@@ -15,6 +15,7 @@ Date: tba
     - Changed vrauk mk2+ recipe to show probabilities properly again.
     - Fixed missing recipe subgroup for titanium cage recycling.
     - Fixed productivity modules could be inserted into compost plants but the modules had no effect. Resolves https://github.com/pyanodon/pybugreports/issues/1004
+    - Added a player reach distance check when removing food from dig site. Resolves https://github.com/pyanodon/pybugreports/issues/1003
   Biofluid:
     - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
     - Biofluid bots are no longer given jobs to deliver 0 units of fluid.

@@ -274,6 +274,11 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     if not cursor_stack then return end
 
     if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
+    
+    if py.distance_squared(player.position, dig_data.entity.position) > 1000 then
+        player.play_sound {path = "utility/cannot_build"}
+        return
+    end
 
     cursor_stack.swap_stack(dig_data.food_inventory[tags.i])
     Digosaurus.update_gui(player.gui.relative.digosaurus_gui)
