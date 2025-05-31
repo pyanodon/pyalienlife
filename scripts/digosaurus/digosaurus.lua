@@ -275,7 +275,7 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
 
     if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
     
-    if py.distance_squared(player.position, dig_data.entity.position) > 1000 then
+    if py.distance_squared(player.position, dig_data.entity.position) > player.reach_distance ^ 2 then
         player.play_sound {path = "utility/cannot_build"}
         return
     end
