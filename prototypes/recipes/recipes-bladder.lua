@@ -10,7 +10,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "acetylene", amount = 40}
     }
-}:add_unlock("phagnot-mk02").category = "gas-refinery"
+}:add_unlock("phagnot-mk02"):change_category("gas-refinery")
 
 if mods["pyhightech"] then
     RECIPE {
@@ -25,7 +25,7 @@ if mods["pyhightech"] then
         results = {
             {type = "fluid", name = "phosphine-gas", amount = 30}
         }
-    }:add_unlock("phagnot-mk02").category = "gas-refinery"
+    }:add_unlock("phagnot-mk02"):change_category("gas-refinery")
 end
 
 RECIPE {
@@ -40,7 +40,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "rich-gas", amount = 30}
     }
-}:add_unlock("phagnot-mk04").category = "gas-refinery"
+}:add_unlock("phagnot-mk04"):change_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
@@ -54,7 +54,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "helium", amount = 10}
     }
-}:add_unlock("phagnot-mk04").category = "gas-refinery"
+}:add_unlock("phagnot-mk04"):change_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
@@ -68,7 +68,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "carbon-dioxide", amount = 50}
     }
-}:add_unlock("phagnot").category = "gas-refinery"
+}:add_unlock("phagnot"):change_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
@@ -82,7 +82,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "chlorine", amount = 50}
     }
-}:add_unlock("phagnot-mk03").category = "gas-refinery"
+}:add_unlock("phagnot-mk03"):change_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
@@ -96,7 +96,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "hydrogen", amount = 200}
     }
-}:add_unlock("phagnot-mk03").category = "gas-refinery"
+}:add_unlock("phagnot-mk03"):change_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
@@ -110,4 +110,4 @@ RECIPE {
     results = {
         {type = "fluid", name = "hot-air", amount = 300}
     }
-}:add_unlock("phagnot-mk03").category = "gas-refinery"
+}:add_unlock("phagnot-mk03"):change_category("gas-refinery")
