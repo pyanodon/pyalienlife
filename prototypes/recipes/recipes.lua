@@ -209,6 +209,8 @@ if mods.pyalternativeenergy then
         },
         localised_name = {"recipe-name.cage-recycle-into-titanium"},
         auto_recycle = false,
+        subgroup = "py-alienlife-items",
+        order = "aa",
     }:add_unlock((not mods.pystellarexpedition) and "titanium-mk03" or "land-animals-mk02")
 end
 

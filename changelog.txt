@@ -13,6 +13,7 @@ Date: tba
     - Fixed mk2+ vrauk breeding stats. Resolves https://github.com/pyanodon/pybugreports/issues/997
     - Fixed icons and z-ordering for logistic station. Resolves https://github.com/pyanodon/pybugreports/issues/994
     - Changed vrauk mk2+ recipe to show probabilities properly again.
+    - Fixed missing recipe subgroup for titanium cage recycling.
   Biofluid:
     - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
     - Biofluid bots are no longer given jobs to deliver 0 units of fluid.
