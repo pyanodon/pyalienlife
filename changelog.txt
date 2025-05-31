@@ -15,6 +15,14 @@ Date: tba
     - Changed vrauk mk2+ recipe to show probabilities properly again.
   Internal:
     - remove shorthands in recipe declarations
+    - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
+      - Biofluid bots are no longer given jobs to deliver 0 units of fluid.
+      - When picking a Bioport to service a request, the system now tries them from closest first to farthest last.
+      - Fixed a problem where Provider tanks would become permanently disabled when their contents were erroneously reserved.
+      - Full Provider tanks are considered to have infinite fluid available, allowing a well-supplied tank to service many more bots.
+      - Increased the tank size of both Provider and Requestor tanks from 20k to 100k, allowing for much greater throughput on a single route.
+      - Fixed a graphical problem where the glow layer was improperly rendering on runs of vertical vessels.
+      - Fixed a graphical problem where south-facing vessel-to-ground did not join correctly to adjacent vessels.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.42
 Date: 2025-4-12
