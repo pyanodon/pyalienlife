@@ -1436,7 +1436,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "auog", amount = 10},
+        {type = "item", name = "auog", amount = 60},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1458,7 +1458,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "ulric", amount = 10},
+        {type = "item", name = "ulric", amount = 50},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1480,7 +1480,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "mukmoux", amount = 10},
+        {type = "item", name = "mukmoux", amount = 30},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1524,7 +1524,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "cottongut", amount = 20},
+        {type = "item", name = "cottongut", amount = 80},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1546,7 +1546,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "vrauks", amount = 10},
+        {type = "item", name = "vrauks", amount = 100},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1568,7 +1568,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "arthurian", amount = 10},
+        {type = "item", name = "arthurian", amount = 15},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1590,7 +1590,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "dhilmos", amount = 12},
+        {type = "item", name = "dhilmos", amount = 20},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1612,7 +1612,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "scrondrix", amount = 5},
+        {type = "item", name = "scrondrix", amount = 10},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1656,7 +1656,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "dingrits", amount = 10},
+        {type = "item", name = "dingrits", amount = 15},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1722,7 +1722,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "phagnot", amount = 10},
+        {type = "item", name = "phagnot", amount = 20},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1744,7 +1744,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "zipir1", amount = 10},
+        {type = "item", name = "zipir1", amount = 30},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1766,7 +1766,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "trits", amount = 5},
+        {type = "item", name = "trits", amount = 8},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")
@@ -1788,7 +1788,7 @@ RECIPE {
         {type = "item",  name = "bioartificial-guts",     amount = 1},
     },
     results = {
-        {type = "item", name = "xyhiphoe", amount = 10},
+        {type = "item", name = "xyhiphoe", amount = 25},
     },
     --main_product = "psc",
 }:add_unlock("mass-production")

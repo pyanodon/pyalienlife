@@ -20,6 +20,7 @@ Date: tba
     - Buffed all three paths of simik turd path 2.
     - Increased sulfuric acid from xeno rendering by a factor of 10X.
     - Decreased alien bacteria requirements in yaedols cultivation MK04 by a factor of 4.
+    - Greatly boosted the output for the "mass creature production" technology at utility science.
   Biofluid:
     - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
     - Biofluid bots are no longer given jobs to deliver 0 units of fluid.
