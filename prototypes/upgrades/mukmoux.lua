@@ -66,6 +66,8 @@ if data and not yafc_turd_integration then
     } do
         poop_recipe.name = poop_recipe.name .. "-mukmoux-turd"
         poop_recipe:multiply_result_amount("manure", 2)
+        poop_recipe:add_result_amount("manure-bacteria-barrel", -1)
+        poop_recipe:add_result_amount("barrel", 1)
         for _, ingredient in pairs(poop_recipe.ingredients) do
             if ingredient.name == "mukmoux-food-01" or ingredient.name == "mukmoux-food-02" or ingredient.name == "bedding" then
                 poop_recipe:add_result {name = ingredient.name, amount_min = 0, amount_max = ingredient.amount, type = "item"}
