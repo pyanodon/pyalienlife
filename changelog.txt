@@ -18,6 +18,7 @@ Date: tba
     - Added a player reach distance check when removing food from dig site. Resolves https://github.com/pyanodon/pybugreports/issues/1003
     - Fixed MK02-MK04 fish and arqad maggots not rendering the pip levels. Resolves https://github.com/pyanodon/pybugreports/issues/999
     - Buffed all three paths of simik turd path 2.
+    - Increased sulfuric acid from xeno rendering by a factor of 10X.
   Biofluid:
     - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
     - Biofluid bots are no longer given jobs to deliver 0 units of fluid.
