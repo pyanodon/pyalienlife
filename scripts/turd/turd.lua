@@ -71,12 +71,12 @@ local function update_confirm_button(element, player, researched_technologies)
         if has_turd_migration(force_index, selected_upgrade) then
             local ticks_remaining = storage.turd_migrations[force_index][selected_upgrade] - game.tick
             local hours = math.floor(ticks_remaining / 216000)
-            local minutes = tostring(math.floor(ticks_remaining / 3600) % 60)
-            local seconds = tostring(math.floor(ticks_remaining / 60) % 60)
+            local minutes = math.floor(ticks_remaining / 3600) % 60
+            local seconds = math.floor(ticks_remaining / 60) % 60
             if minutes < 10 then minutes = "0" .. minutes end
             if seconds < 10 then seconds = "0" .. seconds end
             element.style = "confirm_button_without_tooltip"
-            element.caption = {"turd.unselect-migrate", hours, minutes, seconds}
+            element.caption = {"turd.unselect-migrate", tostring(hours), tostring(minutes), tostring(seconds)}
         elseif (storage.turd_reset_remaining[force_index] or 0) > 0 then
             element.style = "confirm_button_without_tooltip"
             element.caption = {"turd.unselect"}
