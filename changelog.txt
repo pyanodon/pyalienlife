@@ -2,7 +2,7 @@
 Version: ???
 Date: ???
   Changes:
-    - Bonemeal recipe changed to use bioreactor if pyhightech isn't enabled.
+    - Bonemeal recipe changed to use bioreactor if pyhightech isn't enabled (resolves https://github.com/pyanodon/pybugreports/issues/1048).
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.44
 Date: 2025-6-1
