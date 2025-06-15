@@ -14,6 +14,7 @@
         "~ pyalienlifegraphics3 >= 3.0.0",
         "pyrawores >= 3.0.0",
         "pypetroleumhandling >= 3.0.0",
+        "pycoalprocessing >= 3.0.36",
         "? pyhightech >= 3.0.0",
         "~ pypostprocessing >= 3.0.28",
         "! wret-beacon-rebalance-mod",
