@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "pydrive",
+    name = "wyrmhole",
     enabled = false,
     ingredients =
     {
@@ -17,29 +17,29 @@ RECIPE {
         {type = "item", name = "automated-factory-mk03", amount = 1},
     },
     results = {
-        {type = "item", name = "pydrive", amount = 1}
+        {type = "item", name = "wyrmhole", amount = 1}
     }
 }:add_unlock("domestication-mk05")
 
 ITEM {
     type = "item",
-    name = "pydrive",
+    name = "wyrmhole",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
     order = "a",
-    place_result = "pydrive",
+    place_result = "wyrmhole",
     stack_size = 10
 }
 
 ENTITY {
     type = "linked-container",
-    name = "pydrive",
+    name = "wyrmhole",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 2, result = "pydrive"},
+    minable = {mining_time = 2, result = "wyrmhole"},
     max_health = 350,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -84,7 +84,7 @@ ENTITY {
 
 ENTITY {
     type = "electric-energy-interface",
-    name = "pydrive_skin",
+    name = "wyrmhole-skin",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     hidden = true,
@@ -107,8 +107,8 @@ ENTITY {
         output_flow_limit = "0W",
         buffer_capacity = "250MW"
     },
-    localised_name = {"entity-name.pydrive"},
-    localised_description = {"entity-description.pydrive"},
+    localised_name = {"entity-name.wyrmhole"},
+    localised_description = {"entity-description.wyrmhole"},
     energy_usage = "250MW",
     continuous_animation = true,
     animations =

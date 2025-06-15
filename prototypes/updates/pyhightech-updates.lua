@@ -375,7 +375,7 @@ RECIPE("rc-mk04"):add_ingredient {type = "item", name = "intelligent-unit", amou
 
 
 RECIPE("simik-den-mk02"):add_ingredient {type = "item", name = "re-tin", amount = 10}:add_ingredient {type = "item", name = "cooling-system", amount = 10}
-RECIPE("pydrive"):replace_ingredient("processing-unit", "intelligent-unit"):add_ingredient {type = "item", name = "superconductor-servomechanims", amount = 20}:add_ingredient {type = "item", name = "strangelets", amount = 10}
+RECIPE("wyrmhole"):replace_ingredient("processing-unit", "intelligent-unit"):add_ingredient {type = "item", name = "superconductor-servomechanims", amount = 20}:add_ingredient {type = "item", name = "strangelets", amount = 10}
 
 ----RECIPES----
 RECIPE("fungal-substrate-02"):add_ingredient {type = "item", name = "urea", amount = 3}

@@ -326,7 +326,7 @@ if mods["pyalternativeenergy"] then
     require "prototypes/buildings/zungror-lair-mk04"
 end
 
-require "prototypes/buildings/py-drive"
+require "prototypes/buildings/wyrmhole"
 
 --(( FLUIDS ))--
 require "prototypes/fluids/zogna-bacteria"
