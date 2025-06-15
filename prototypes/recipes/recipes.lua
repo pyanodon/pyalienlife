@@ -1805,7 +1805,7 @@ RECIPE {
     main_product = "crude-oil",
 }:add_unlock("light-oil-mk01")
 
-RECIPE {
+local bonemeal_recipe = RECIPE {
     type = "recipe",
     name = "bone-to-bonemeal-2",
     category = "biofactory",
@@ -1819,7 +1819,12 @@ RECIPE {
         {type = "item", name = "bonemeal", amount = 5},
     },
     --main_product = "crude-oil",
-}:add_unlock("logistic-science-pack"):change_category("fbreactor")
+}
+if mods.pyhightech then
+    bonemeal_recipe:add_unlock("logistic-science-pack"):change_category("fbreactor")
+else
+    bonemeal_recipe:add_unlock("logistic-science-pack"):change_category("bio-reactor")
+end
 
 RECIPE {
     type = "recipe",
