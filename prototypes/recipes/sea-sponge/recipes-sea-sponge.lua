@@ -87,8 +87,8 @@ py.autorecipes {
             },
             results =
             {
-                {type = "item",  name = "sea-sponge",   amount = 1},
-                {type = "fluid", name = "water-saline", amount = 100},
+                {type = "item",  name = "sea-sponge",   add_amount = 2},
+                {type = "fluid", name = "water-saline", subtract_amount = 50},
             },
             crafting_speed = 40,
             tech = "water-invertebrates-mk02",

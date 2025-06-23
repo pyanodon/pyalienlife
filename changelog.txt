@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
-Version: ???
+Version: 3.0.45
 Date: ???
   Changes:
     - Respects flipped buildings when replacing building with TURD version.
     - Bonemeal recipe changed to use bioreactor if pyhightech isn't enabled (resolves https://github.com/pyanodon/pybugreports/issues/1048).
     - Renamed "Logistic Station" to "Wyrmhole".
     - Changed the internal name for Wyrmholes from "pydrive" to "wyrmhole".
+    - Fixed improved sponge recipe outputting too few sponges.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.44
 Date: 2025-6-1
