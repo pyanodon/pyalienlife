@@ -8,6 +8,7 @@ Date: ???
     - Renamed "Logistic Station" to "Wyrmhole".
     - Changed the internal name for Wyrmholes from "pydrive" to "wyrmhole".
     - Fixed improved sponge recipe outputting too few sponges.
+    - Fixed underground vessel occasionally not connecting to normal vessel with Squeak Through.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.44
 Date: 2025-6-1
