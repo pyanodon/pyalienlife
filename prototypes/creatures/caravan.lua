@@ -54,6 +54,7 @@ data:extend {{
     radar_range = 1,
     icon = "__pyalienlifegraphics2__/graphics/icons/caravan.png",
     icon_size = 64,
+    alert_icon_scale = 1,
     flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
     minable = {mining_time = 0.1, result = "caravan"},
     max_health = 3125,

@@ -33,6 +33,7 @@ local remove_tmp_stops = function(_) error("function stub") end
 ---@field localised_name LocalisedString The name of the schedule. This is displayed in the GUI.
 ---@field position MapPosition The position that the caravan will travel to. Used as a fallback in case of no entity or invalid entity.
 ---@field temporary table? Whether this stop is temporary
+---@field player_index int? The player index of the character this schedule points to, if any.
 
 ---@class CaravanAction
 ---@field async? boolean Whether this action should be 'ticked' once and then move on to the next action. If false or nil, the caravan will wait until the action is complete before moving on. Note that some action types ignore this field such as 'time passed'.
@@ -91,15 +92,11 @@ local function wander(caravan_data)
     }
 end
 
-local no_fuel_map_tag = {
-    type = "virtual",
-    name = "no-fuel"
-}
-
 ---Function to render a red 'fuel alert' similar to the locomotive out of fuel alert.
 ---This renders on the player GUI in the same slot as the locomotive alert or 'entities damaged' alert.
 ---@param entity LuaEntity
-local function add_fuel_alert(entity)
+---@param alert CaravanAlert
+local function add_alert(entity, alert)
     local target_force = entity.force_index
     for _, player in pairs(game.connected_players) do
         if player.valid and player.force_index == target_force then
@@ -107,8 +104,8 @@ local function add_fuel_alert(entity)
             -- player.add_alert(entity, defines.alert_type.train_out_of_fuel)
             player.add_custom_alert(
                 entity,
-                no_fuel_map_tag,
-                {"virtual-signal-name.no-fuel"},
+                alert.signal,
+                alert.message,
                 true
             )
         end
@@ -117,7 +114,7 @@ end
 
 ---Function to remove the red 'fuel alert' from the player GUI.
 ---@param entity LuaEntity
-local function remove_fuel_alert(entity)
+local function remove_alert(entity)
     if not entity.valid then
         -- it'll disappear after a few seconds anyway
         return
@@ -216,25 +213,22 @@ py.on_event(py.events.on_entity_clicked(), function(event)
                 interrupt_data.conditions[action_id].localised_name = ""
             end
         end
-    elseif last_opened.schedule_id then
-        -- Last opened is a schedule to reassign
-        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
-        entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-        if only_outpost and entity.name ~= prototype.outpost then return end
-        if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
-        local sch = schedule[last_opened.schedule_id]
-        sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
-        sch.entity = entity
-        sch.position = entity.position
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
         if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
+        local player_index = nil
+        local localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
+        if entity.type == "character" then
+            player_index = entity.player.index
+            localised_name = {"caravan-gui.player-name", entity.player.name}
+        end
         schedule[#schedule + 1] = {
-            localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)},
+            localised_name = localised_name,
             entity = entity,
             position = entity.position,
+            player_index = player_index,
             actions = {}
         }
     elseif not only_outpost then
@@ -243,6 +237,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         schedule[#schedule + 1] = {
             localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
             position = position,
+            player_index = nil,
             actions = {}
         }
     else
@@ -273,11 +268,11 @@ function Caravan.eat(caravan_data)
     if caravan_data.fuel_bar == 0 then
         local fuel = caravan_data.fuel_inventory
         for _, item in pairs(fuel.get_contents()) do
-            item_name = item.name
-            fuel.remove {name = item_name, count = 1}
-            caravan_data.fuel_bar = caravan_prototypes[entity.name].favorite_foods[item_name]
+            item = item.name
+            fuel.remove {name = item, count = 1}
+            caravan_data.fuel_bar = caravan_prototypes[entity.name].favorite_foods[item]
             caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
-            entity.force.get_item_production_statistics(entity.surface_index).on_flow(item_name, -1)
+            entity.force.get_item_production_statistics(entity.surface_index).on_flow(item, -1)
             return true
         end
         return false
@@ -363,16 +358,12 @@ local function select_destination(player, last_opened)
         end
         stack.clear()
     end
-    stack.set_stack {name = "caravan-control"}
-    player.opened = nil
-    storage.last_opened[player.index] = last_opened
-end
-
-gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
-    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
-    local element = event.element
-    local last_opened = {}
-
+    stack.set_stack {name = "caravan-control"}  
+    storage.last_opened_action[player.index] = nil
+    if element.tags.action_id then
+        storage.last_opened_action[player.index] = {schedule_id = element.tags.schedule_id, action_id = element.tags.action_id}
+    end
+    storage.last_opened_interrupt[player.index] = element.tags.interrupt_name
     local unit_number = Caravan.get_caravan_gui(player).tags.unit_number
     assert(unit_number)
     last_opened.caravan = unit_number
@@ -731,10 +722,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
         return
     end
 
-    local entity = caravan_data.entity --[[@as LuaEntity]]
-    if not entity or not entity.valid then
-        stop_actions(caravan_data); return
-    end
+    local entity = caravan_data.entity
     local schedule = caravan_data.schedule[schedule_id]
     if caravan_data.fuel_inventory then
         if not skip_eating and not Caravan.eat(caravan_data) then
@@ -752,9 +740,9 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
         if schedule_entity.valid and schedule_entity.surface == entity.surface then
             goto_entity(caravan_data, schedule.entity)
         else
-            add_alert(entity, Caravan.alerts.destination_destroyed)
-            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 30)
-            caravan_data.retry_pathfinder = 1
+            game.print {"caravan-warnings.no-destination", entity.name, math.floor(entity.position.x * 10) / 10, math.floor(entity.position.y * 10) / 10}
+            table.remove(caravan_data.schedule, schedule_id)
+            stop_actions(caravan_data)
             return
         end
     else
@@ -1205,11 +1193,8 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
         if needs_fuel then
-            -- 300 ticks/5 seconds is how long these alerts last
-            if game.tick % 300 == 0 then
-                add_fuel_alert(entity)
-            end
-            py.draw_error_sprite(entity, "utility.fuel_icon", 30)
+            add_alert(entity, Caravan.alerts.no_fuel)
+            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 30)
             goto continue
         end
 
@@ -1337,7 +1322,7 @@ py.on_event(py.events.on_destroyed(), function(event)
     local prototype = caravan_prototypes[entity.name]
     if not prototype then return end
 
-    remove_fuel_alert(event.entity)
+    remove_alert(event.entity)
 
     local buffer = event.buffer
     if buffer then
@@ -1407,6 +1392,7 @@ remote.add_interface("caravans", {
 })
 
 ---This is called whenever an entity is swapped out for an identical entity. For example ulric man steroids transforming the player character into a different entity.
+---TODO: potentially not needed anymore since caravan now binds to player, not just character
 ---@param old LuaEntity
 ---@param new LuaEntity
 function Caravan.entity_changed_unit_number(old, new)
