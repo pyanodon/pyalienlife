@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.45
-Date: ???
+Version: 3.0.46
+Date: 2025-6-29
   Changes:
     - Fixed locale file having poorly worded sentence in laser-cutting turd.
     - Respects flipped buildings when replacing building with TURD version.
@@ -9,6 +9,11 @@ Date: ???
     - Changed the internal name for Wyrmholes from "pydrive" to "wyrmhole".
     - Fixed improved sponge recipe outputting too few sponges.
     - Fixed a very old migration.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.45
+Date: 2025-6-2
+  Changes:
+    - Crash fixes.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.44
 Date: 2025-6-1
