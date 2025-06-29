@@ -1,13 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.45
+Version: 3.0.47
 Date: ???
   Changes:
+    - Vatbrain got buffer by 1 tile!
     - Fixed vatbrain range to be accurate to what is shown to the player.
+    - Fixed Wyrmholes not having worms. Resolves https://github.com/pyanodon/pybugreports/issues/1082
+---------------------------------------------------------------------------------------------------
+Version: 3.0.46
+Date: 2025-6-29
+  Changes:
+    - Fixed locale file having poorly worded sentence in laser-cutting turd.
     - Respects flipped buildings when replacing building with TURD version.
     - Bonemeal recipe changed to use bioreactor if pyhightech isn't enabled (resolves https://github.com/pyanodon/pybugreports/issues/1048).
     - Renamed "Logistic Station" to "Wyrmhole".
     - Changed the internal name for Wyrmholes from "pydrive" to "wyrmhole".
     - Fixed improved sponge recipe outputting too few sponges.
+    - Fixed a very old migration.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.45
+Date: 2025-6-2
+  Changes:
+    - Crash fixes.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.44
 Date: 2025-6-1
