@@ -111,6 +111,7 @@ ENTITY {
     localised_description = {"entity-description.wyrmhole"},
     energy_usage = "250MW",
     continuous_animation = true,
+    render_layer = "cargo-hatch",
     animations =
     {
         layers =

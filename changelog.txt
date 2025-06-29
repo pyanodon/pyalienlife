@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.47
+Date: ???
+  Changes:
+    - Fixed Wyrmholes not having worms. Resolves https://github.com/pyanodon/pybugreports/issues/1082
+---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
   Changes:
