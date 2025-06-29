@@ -8,6 +8,7 @@ Date: ???
     - Renamed "Logistic Station" to "Wyrmhole".
     - Changed the internal name for Wyrmholes from "pydrive" to "wyrmhole".
     - Fixed improved sponge recipe outputting too few sponges.
+    - Fixed a very old migration.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.44
 Date: 2025-6-1
