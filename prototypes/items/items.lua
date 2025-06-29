@@ -6244,8 +6244,8 @@ ITEM {
     type = "module",
     name = "sea-sponge-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
     category = "sponge",
@@ -6261,8 +6261,8 @@ ITEM {
     type = "module",
     name = "sea-sponge-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
     category = "sponge",
@@ -6278,8 +6278,8 @@ ITEM {
     type = "module",
     name = "sea-sponge-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge.png"}
     },
     icon_size = 64,
     category = "sponge",
@@ -6295,8 +6295,8 @@ ITEM {
     type = "module",
     name = "ralesia-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
     category = "ralesia",
@@ -6312,8 +6312,8 @@ ITEM {
     type = "module",
     name = "ralesia-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
     category = "ralesia",
@@ -6329,8 +6329,8 @@ ITEM {
     type = "module",
     name = "ralesia-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/ralesia.png"}
     },
     icon_size = 64,
     category = "ralesia",
@@ -6346,8 +6346,8 @@ ITEM {
     type = "item",
     name = "ralesia-seeds-mk02",
     icons = {
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",          icon_size = 64},
-        {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
     },
     flags = {},
     subgroup = "py-alienlife-ralesia",
@@ -6359,8 +6359,8 @@ ITEM {
     type = "item",
     name = "ralesia-seeds-mk03",
     icons = {
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",          icon_size = 64},
-        {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
     },
     flags = {},
     subgroup = "py-alienlife-ralesia",
@@ -6372,8 +6372,8 @@ ITEM {
     type = "item",
     name = "ralesia-seeds-mk04",
     icons = {
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",          icon_size = 64},
-        {icon = "__pycoalprocessinggraphics__/graphics/icons/ralesia-seeds.png", icon_size = 32}
     },
     flags = {},
     subgroup = "py-alienlife-ralesia",
@@ -6401,8 +6401,8 @@ ITEM {
     type = "module",
     name = "mukmoux-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
     },
     icon_size = 64,
     category = "mukmoux",
@@ -6418,8 +6418,8 @@ ITEM {
     type = "module",
     name = "mukmoux-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
     },
     icon_size = 64,
     category = "mukmoux",
@@ -6435,8 +6435,8 @@ ITEM {
     type = "module",
     name = "mukmoux-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png"}
     },
     icon_size = 64,
     category = "mukmoux",
@@ -6468,8 +6468,8 @@ ITEM {
     type = "module",
     name = "arthurian-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"}
     },
     icon_size = 64,
     category = "arthurian",
@@ -6485,8 +6485,8 @@ ITEM {
     type = "module",
     name = "arthurian-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"}
     },
     icon_size = 64,
     category = "arthurian",
@@ -6502,8 +6502,8 @@ ITEM {
     type = "module",
     name = "arthurian-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png"}
     },
     icon_size = 64,
     category = "arthurian",
@@ -6535,8 +6535,8 @@ ITEM {
     type = "module",
     name = "tuuphra-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
     },
     icon_size = 64,
     category = "tuuphra",
@@ -6552,8 +6552,8 @@ ITEM {
     type = "module",
     name = "tuuphra-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
     },
     icon_size = 64,
     category = "tuuphra",
@@ -6569,8 +6569,8 @@ ITEM {
     type = "module",
     name = "tuuphra-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/tuuphra.png"}
     },
     icon_size = 64,
     category = "tuuphra",
@@ -6602,8 +6602,8 @@ ITEM {
     type = "module",
     name = "navens-mk02",
     icons = {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
+,        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
     },
     icon_size = 64,
     category = "navens",
@@ -6619,8 +6619,8 @@ ITEM {
     type = "module",
     name = "navens-mk03",
     icons = {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
+,        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
     },
     icon_size = 64,
     category = "navens",
@@ -6636,8 +6636,8 @@ ITEM {
     type = "module",
     name = "navens-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/navens.png"}
     },
     icon_size = 64,
     category = "navens",
@@ -6669,8 +6669,8 @@ ITEM {
     type = "module",
     name = "yotoi-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
     },
     icon_size = 64,
     category = "yotoi",
@@ -6686,8 +6686,8 @@ ITEM {
     type = "module",
     name = "yotoi-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
     },
     icon_size = 64,
     category = "yotoi",
@@ -6703,8 +6703,8 @@ ITEM {
     type = "module",
     name = "yotoi-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/yotoi.png"}
     },
     icon_size = 64,
     category = "yotoi",
@@ -6736,8 +6736,8 @@ ITEM {
     type = "module",
     name = "dhilmos-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
     },
     icon_size = 64,
     category = "dhilmos",
@@ -6753,8 +6753,8 @@ ITEM {
     type = "module",
     name = "dhilmos-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
     },
     icon_size = 64,
     category = "dhilmos",
@@ -6770,8 +6770,8 @@ ITEM {
     type = "module",
     name = "dhilmos-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png"}
     },
     icon_size = 64,
     category = "dhilmos",
@@ -6803,8 +6803,8 @@ ITEM {
     type = "module",
     name = "scrondrix-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
     category = "scrondrix",
@@ -6820,8 +6820,8 @@ ITEM {
     type = "module",
     name = "scrondrix-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
     category = "scrondrix",
@@ -6837,8 +6837,8 @@ ITEM {
     type = "module",
     name = "scrondrix-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
     category = "scrondrix",
@@ -6870,8 +6870,8 @@ ITEM {
     type = "module",
     name = "rennea-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
     category = "rennea",
@@ -6887,8 +6887,8 @@ ITEM {
     type = "module",
     name = "rennea-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
     category = "rennea",
@@ -6904,8 +6904,8 @@ ITEM {
     type = "module",
     name = "rennea-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/rennea.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
     category = "rennea",
@@ -6937,8 +6937,8 @@ ITEM {
     type = "module",
     name = "phadai-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
     category = "phadai",
@@ -6954,8 +6954,8 @@ ITEM {
     type = "module",
     name = "phadai-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
     category = "phadai",
@@ -6971,8 +6971,8 @@ ITEM {
     type = "module",
     name = "phadai-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/phadai.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
     category = "phadai",
@@ -7021,8 +7021,8 @@ ITEM {
     type = "module",
     name = "auog-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"}
     },
     icon_size = 64,
     category = "auog",
@@ -7041,8 +7041,8 @@ ITEM {
     type = "module",
     name = "auog-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"}
     },
     icon_size = 64,
     category = "auog",
@@ -7061,8 +7061,8 @@ ITEM {
     type = "module",
     name = "auog-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/auog.png"}
     },
     icon_size = 64,
     category = "auog",
@@ -7274,8 +7274,8 @@ ITEM {
     type = "module",
     name = "yaedols-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
     category = "yaedols",
@@ -7291,8 +7291,8 @@ ITEM {
     type = "module",
     name = "yaedols-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
     category = "yaedols",
@@ -7308,8 +7308,8 @@ ITEM {
     type = "module",
     name = "yaedols-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/yaedols.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
     category = "yaedols",
@@ -7344,8 +7344,8 @@ ITEM {
     type = "module",
     name = "dingrits-mk02",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
     },
     icon_size = 64,
     category = "dingrits",
@@ -7364,8 +7364,8 @@ ITEM {
     type = "module",
     name = "dingrits-mk03",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
     },
     icon_size = 64,
     category = "dingrits",
@@ -7384,8 +7384,8 @@ ITEM {
     type = "module",
     name = "dingrits-mk04",
     icons = {
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
         {icon = "__pyalienlifegraphics__/graphics/icons/dingrits.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
     },
     icon_size = 64,
     category = "dingrits",

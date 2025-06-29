@@ -2,6 +2,7 @@
 Version: 3.0.47
 Date: ???
   Changes:
+    - Seasponge and a ton of other alien life modules have proper shadow now.
     - Vatbrain range got swoler by 1 tile in the north AND east directions!
     - Fixed vatbrain range to be accurate to what is shown to the player.
     - Fixed Wyrmholes not having worms. Resolves https://github.com/pyanodon/pybugreports/issues/1082
