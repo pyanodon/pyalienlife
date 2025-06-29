@@ -2,7 +2,7 @@
 Version: 3.0.47
 Date: ???
   Changes:
-    - Vatbrain got buffer by 1 tile!
+    - Ngl vatbrain got swoler by 1 tile in the north AND east directions, you're welcome guys, I know I'm the best!
     - Fixed vatbrain range to be accurate to what is shown to the player.
     - Fixed Wyrmholes not having worms. Resolves https://github.com/pyanodon/pybugreports/issues/1082
 ---------------------------------------------------------------------------------------------------
