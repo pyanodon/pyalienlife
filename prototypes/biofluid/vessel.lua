@@ -301,7 +301,7 @@ underground_pipe.fluid_box = {
       {
         { 
 			direction = defines.direction.north, 
-			position = {0, underground_pipe.collision_box[1][2]},
+			position = {0, 0},
 			connection_category = "biofluid"
 		},
         {

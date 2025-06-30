@@ -2,6 +2,7 @@
 Version: 3.0.47
 Date: ???
   Changes:
+    - Fixed underground vessel occasionally not connecting to normal vessel with Squeak Through.
     - Fixed some Ukrainian locale strings.
     - Fixed typo: Xenogeneic cells -> Xenogenic cells
     - Seasponge and a ton of other alien life modules have proper shadow now.
