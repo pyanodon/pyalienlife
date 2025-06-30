@@ -9,7 +9,7 @@ if storage.farms then
     -- Farming.events.on_init()
     storage.disabled_farm_buildings = storage.disabled_farm_buildings or {}
     storage.enabled_farm_buildings = storage.enabled_farm_buildings or {}
-    storage.farm_prototypes = farm_buildings
+    storage.farm_prototypes = require "__pyalienlife__/scripts/farming/farm-building-list"
     storage.next_farm_index = storage.next_farm_index or 1
 
     for _, surface in pairs(game.surfaces) do
