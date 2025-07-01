@@ -56,7 +56,7 @@ ENTITY {
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     inventory_size = 100,
     scale_info_icons = true,
-    picture = {
+    integration_patch = {
         filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",
         priority = "low",
         width = 512,
@@ -64,6 +64,7 @@ ENTITY {
         --scale = 0.5,
         shift = util.by_pixel(16, -48),
     },
+    integration_patch_render_layer = "object-under",
     inventory_type = "with_filters_and_bar",
     gui_mode = "all",
     icon_draw_specification = {scale = 6.0, scale_for_many = 9.0, render_layer = "entity-info-icon"},
@@ -111,7 +112,6 @@ ENTITY {
     localised_description = {"entity-description.wyrmhole"},
     energy_usage = "250MW",
     continuous_animation = true,
-    render_layer = "cargo-hatch",
     animations =
     {
         layers =
