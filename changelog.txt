@@ -9,6 +9,7 @@ Date: ???
     - Vatbrain range got swoler by 1 tile in the north AND east directions!
     - Fixed vatbrain range to be accurate to what is shown to the player.
     - Fixed Wyrmholes not having worms (thanks, O5MO!). Resolves https://github.com/pyanodon/pybugreports/issues/1082 and https://github.com/pyanodon/pybugreports/issues/994
+    - Fixed a typo in sweetened biomass TURD recipe description
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
