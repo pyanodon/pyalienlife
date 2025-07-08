@@ -10,6 +10,13 @@ Date: ???
     - Fixed vatbrain range to be accurate to what is shown to the player.
     - Fixed Wyrmholes not having worms (thanks, O5MO!). Resolves https://github.com/pyanodon/pybugreports/issues/1082 and https://github.com/pyanodon/pybugreports/issues/994
     - Fixed a typo in sweetened biomass TURD recipe description
+    - Fixed caravans not displaying alerts when out of food
+    - Destroying caravan's destination no longer removes the schedule and instead shows a new alert prompting the user to select a new destination
+    - Updated food slot and food alert graphics
+    - Made caravans update reference to player's character if it changes. Resolves https://github.com/pyanodon/pybugreports/issues/917
+    - Fixed caravans treating interrupt with no conditions as having conditions fulfilled. Resolves https://github.com/pyanodon/pybugreports/issues/1092
+    - Fixed caravans unnecessarily going idle when changing "wait for condition" checkbox. Resolves https://github.com/pyanodon/pybugreports/issues/984
+    - Fixed caravans not updating the action in progress when reordering schedule. Resolves https://github.com/pyanodon/pybugreports/issues/1078
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
