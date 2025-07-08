@@ -1060,6 +1060,7 @@ local function advance_caravan_schedule_by_1(caravan_data)
         if is_interrupted and inside and existing_interrupt_name == interrupt.name then goto continue end
 
         local conditions_passed = true
+        if table_size(interrupt.conditions) == 0 then conditions_passed = false end
         for _, condition in pairs(interrupt.conditions) do
             if not Caravan.actions[condition.type] then break end
             if not Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition) then
