@@ -516,7 +516,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 
     local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
     status_flow.style.vertical_align = "center"
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite", style = "status_image"}
+    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite", style = "status_image", resize_to_sprite = false}
     status_flow.add {type = "label", name = "status_text"}
 
     local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
