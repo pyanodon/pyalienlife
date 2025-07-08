@@ -655,7 +655,7 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     local element = event.element
     local tags = element.tags
     local id = tags.action_id or tags.schedule_id
-    local caravan_data
+    local caravan_data = storage.caravans[tags.unit_number]
 
     local schedule = get_schedule(element)
 
@@ -664,10 +664,30 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     if not a or not b then return end
     schedule[id] = b
     schedule[id + offset] = a
-
     if caravan_data then
-        stop_actions(caravan_data)
+        if caravan_data.schedule_id == -1 or caravan_data.action_id == -1 then
+            stop_actions(caravan_data)
+        else
+            if tags.action_id then
+                local move
+                if caravan_data.action_id == id then
+                    move = offset
+                else
+                    move = -offset
+                end
+                caravan_data.action_id = caravan_data.action_id + move
+            else
+                local move
+                if caravan_data.schedule_id == id then
+                    move = offset
+                else
+                    move = -offset
+                end
+                caravan_data.schedule_id = caravan_data.schedule_id + move
+            end
+        end
     end
+
     Caravan.update_gui(Caravan.get_caravan_gui(player))
     Caravan.update_interrupt_gui(player)
 end
