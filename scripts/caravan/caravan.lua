@@ -213,6 +213,16 @@ py.on_event(py.events.on_entity_clicked(), function(event)
                 interrupt_data.conditions[action_id].localised_name = ""
             end
         end
+    elseif last_opened.schedule_id then
+        -- Last opened is a schedule to reassign
+        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
+        entity.operable = false -- Prevents the player from opening the gui of the clicked entity
+        if only_outpost and entity.name ~= prototype.outpost then return end
+        if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
+        local sch = schedule[last_opened.schedule_id]
+        sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
+        sch.entity = entity
+        sch.position = entity.position
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
@@ -349,7 +359,8 @@ end
 -- Closes the gui, gives player the carrot-on-stick item and sets storage.last_opened to the provided value
 ---@param player LuaPlayer
 ---@param last_opened table
-local function select_destination(player, last_opened)
+---@param camera_position MapPosition?
+local function select_destination(player, last_opened, camera_position)
     local stack = player.cursor_stack
     if not stack then return end
     if stack.valid_for_read then
@@ -358,12 +369,24 @@ local function select_destination(player, last_opened)
         end
         stack.clear()
     end
-    stack.set_stack {name = "caravan-control"}  
-    storage.last_opened_action[player.index] = nil
-    if element.tags.action_id then
-        storage.last_opened_action[player.index] = {schedule_id = element.tags.schedule_id, action_id = element.tags.action_id}
+    stack.set_stack {name = "caravan-control"}
+    player.opened = nil
+    if camera_position then
+        local zoom = player.zoom
+        player.set_controller{
+            type = defines.controllers.remote,
+            position = camera_position,
+        }
+        player.zoom = zoom
     end
-    storage.last_opened_interrupt[player.index] = element.tags.interrupt_name
+    storage.last_opened[player.index] = last_opened
+end
+
+gui_events[defines.events.on_gui_click]["py_add_outpost"] = function(event)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
+    local element = event.element
+    local last_opened = {}
+    
     local unit_number = Caravan.get_caravan_gui(player).tags.unit_number
     assert(unit_number)
     last_opened.caravan = unit_number
@@ -680,7 +703,7 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
             last_opened.caravan = caravan_data.unit_number
             last_opened.interrupt = element.tags.interrupt_name
             last_opened.schedule_id = element.tags.schedule_id
-            select_destination(player, last_opened)
+            select_destination(player, last_opened, schedule.position)
             return
         end
     else
@@ -824,7 +847,8 @@ gui_events[defines.events.on_gui_click]["py_action_play"] = function(event)
             if caravan_data.action_id == tags.action_id then
                 stop_actions(caravan_data)
             else
-                local position; if schedule.entity then position = schedule.entity.position else position = schedule.position end
+                local position
+                if schedule.entity and schedule.entity.valid then position = schedule.entity.position else position = schedule.position end
                 if py.distance_squared(position, caravan_data.entity.position) < 1000 then
                     begin_action(caravan_data, tags.action_id)
                 end
