@@ -615,9 +615,14 @@ gui_events[defines.events.on_gui_click]["py_blocking_caravan"] = function(event)
     local element = event.element
     local action = get_action_from_button(player, element)
     action.async = not element.state
-    local caravan_data = storage.caravans[element.tags.unit_number]
+    local tags = element.tags
+    local caravan_data = storage.caravans[tags.unit_number]
     if caravan_data then
-        stop_actions(caravan_data)
+        if tags.action_list_type == Caravan.action_list_types.standard_schedule then
+            if tags.schedule_id == caravan_data.schedule_id then
+                stop_actions(caravan_data)
+            end
+        end
     end
     Caravan.update_gui(Caravan.get_caravan_gui(player))
 end
