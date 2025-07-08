@@ -723,6 +723,9 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
     end
 
     local entity = caravan_data.entity
+    if not entity or not entity.valid then
+        stop_actions(caravan_data); return
+    end
     local schedule = caravan_data.schedule[schedule_id]
     if caravan_data.fuel_inventory then
         if not skip_eating and not Caravan.eat(caravan_data) then
@@ -740,9 +743,9 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
         if schedule_entity.valid and schedule_entity.surface == entity.surface then
             goto_entity(caravan_data, schedule.entity)
         else
-            game.print {"caravan-warnings.no-destination", entity.name, math.floor(entity.position.x * 10) / 10, math.floor(entity.position.y * 10) / 10}
-            table.remove(caravan_data.schedule, schedule_id)
-            stop_actions(caravan_data)
+            add_alert(entity, Caravan.alerts.destination_destroyed)
+            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 30)
+            caravan_data.retry_pathfinder = 1
             return
         end
     else
