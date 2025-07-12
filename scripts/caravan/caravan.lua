@@ -204,6 +204,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         end
     end
     cursor_stack.clear()
+    cursor_ghost = nil
 
     local schedule, prototype, only_outpost
     local last_opened = storage.last_opened[player.index]
