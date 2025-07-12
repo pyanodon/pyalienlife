@@ -112,7 +112,7 @@ local function add_alert(entity, alert)
     end
 end
 
----Function to remove the red 'fuel alert' from the player GUI.
+---Function to remove the alert from the player GUI.
 ---@param entity LuaEntity
 local function remove_alert(entity)
     if not entity.valid then
@@ -168,6 +168,29 @@ function Caravan.validity_check(caravan_data)
     end
     return true
 end
+
+-- Reopen the last closed caravan gui when player no longer holds carrot-on-stick item
+-- regardless of whether or not it was used
+py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
+    local last_opened = storage.last_opened[event.player_index]
+    if not last_opened then return end
+    local player = game.get_player(event.player_index) ---@as LuaPlayer
+    -- If the item is in hand, don't open the gui
+    local stack = player.cursor_stack
+    if stack and stack.valid_for_read and stack.name == "caravan-control" then return end
+    local ghost = player.cursor_ghost
+    if ghost and ghost.name.name == "caravan-control" then return end
+
+    if last_opened.caravan then
+        local caravan_data = storage.caravans[last_opened.caravan]
+        Caravan.build_gui(player, caravan_data.entity)
+        if last_opened.interrupt then
+            Caravan.build_interrupt_gui(player, caravan_data, last_opened.interrupt.name)
+        end
+    end
+
+    storage.last_opened[event.player_index] = nil
+end)
 
 --- Called whenever the player uses the carrot-on-stick capsule item.
 py.on_event(py.events.on_entity_clicked(), function(event)
@@ -252,13 +275,6 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         }
     else
         return
-    end
-
-    if caravan_data then
-        Caravan.build_gui(player, caravan_data.entity)
-        if interrupt_data then
-            Caravan.build_interrupt_gui(player, caravan_data, interrupt_data.name)
-        end
     end
 end)
 
@@ -665,10 +681,10 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
     schedule[id] = b
     schedule[id + offset] = a
     if caravan_data then
-        if caravan_data.schedule_id == -1 or caravan_data.action_id == -1 then
-            stop_actions(caravan_data)
-        else
-            if tags.action_id then
+        if tags.action_id then
+            if caravan_data.schedule_id == tags.schedule_id and caravan_data.action_id ~= -1 then
+                stop_actions(caravan_data)
+            elseif caravan_data.schedule_id == tags.schedule_id and caravan_data.action_id ~= -1 then
                 local move
                 if caravan_data.action_id == id then
                     move = offset
@@ -676,7 +692,9 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
                     move = -offset
                 end
                 caravan_data.action_id = caravan_data.action_id + move
-            else
+            end
+        else
+            if caravan_data.schedule_id ~= -1 then
                 local move
                 if caravan_data.schedule_id == id then
                     move = offset
@@ -684,6 +702,8 @@ gui_events[defines.events.on_gui_click]["py_shuffle_schedule_."] = function(even
                     move = -offset
                 end
                 caravan_data.schedule_id = caravan_data.schedule_id + move
+            else
+                stop_actions(caravan_data)
             end
         end
     end
@@ -793,6 +813,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
         else
             add_alert(entity, Caravan.alerts.destination_destroyed)
             py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 30)
+            wander(caravan_data)
             caravan_data.retry_pathfinder = 1
             return
         end
