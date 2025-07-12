@@ -28,8 +28,43 @@ local function generate_button_status(caravan_data, action_list_type, schedule_i
             end
         end
     end
-
+    if schedule_id then
+        local interrupt = storage.interrupts[interrupt_name] 
+        local schedule = interrupt and interrupt.schedule[schedule_id] or caravan_data.schedule[schedule_id]
+        if schedule and schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
+            sprite = "utility/close_fat"
+        end
+    end
+    
     return style, sprite
+end
+
+---Given a schedule index in a caravan GUI, returns the GUI style and tooltip for the corresponding schedule label
+---@param caravan_data Caravan
+---@param action_list_type CaravanActionListType
+---@param schedule_id int
+---@param interrupt_name string?
+local function generate_schedule_label_status(caravan_data, action_list_type, schedule_id, interrupt_name)
+    assert(action_list_type)
+    local style
+    local tooltip = nil
+    local schedule
+
+    if action_list_type == Caravan.action_list_types.standard_schedule then
+        schedule = caravan_data.schedule[schedule_id]
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+        schedule = storage.interrupts[interrupt_name].schedule[schedule_id]
+    end
+    if schedule then
+        if schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
+            style = "train_schedule_unavailable_stop_label"
+            tooltip = {"caravan-gui.destination-unavailable"}
+        else
+            style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
+        end
+    end
+    
+    return style, tooltip
 end
 
 function Caravan.update_interrupt_gui_button_status(caravan_data)
@@ -269,8 +304,8 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
         local playbutton = schedule_frame.add {type = "sprite-button", name = "py_schedule_play", tags = tags}
         ---@diagnostic disable-next-line: param-type-mismatch
         playbutton.style, playbutton.sprite = generate_button_status(caravan_data, tags.action_list_type, i, nil, tags.interrupt_name)
-        style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
-        schedule_frame.add {type = "label", name = "py_outpost_name", style = style, tags = tags, caption = schedule.localised_name}
+        local label = schedule_frame.add {type = "label", name = "py_outpost_name", tags = tags, caption = schedule.localised_name}
+        label.style, label.tooltip = generate_schedule_label_status(caravan_data, tags.action_list_type, i, tags.interrupt_name)
 
         style = schedule.temporary and "py_schedule_temporary_move_button" or "py_schedule_move_button"
         schedule_frame.add {type = "empty-widget", style = "py_empty_widget", tags = tags}
@@ -313,6 +348,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
 
         local entity = schedule.entity --[[@as LuaEntity]]
         local valid_actions = Caravan.get_valid_actions_for_entity(caravan_data, entity)
+        -- The element's localised name holds the data
         valid_actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
         local py_add_action = schedule_flow.add {type = "drop-down", name = "py_add_action", items = valid_actions, tags = tags}
         -- py_add_action.style.width = 363
@@ -481,7 +517,7 @@ function Caravan.build_gui(player, entity, from_remote_manager)
 
     local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
     status_flow.style.vertical_align = "center"
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite", style = "status_image"}
+    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite", style = "status_image", resize_to_sprite = false}
     status_flow.add {type = "label", name = "status_text"}
 
     local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
@@ -500,7 +536,8 @@ function Caravan.build_gui(player, entity, from_remote_manager)
         fuel_slot_flow.style.horizontal_spacing = 0
         for i = 1, #caravan_data.fuel_inventory do
             local fuel_slot = fuel_slot_flow.add {type = "sprite-button", name = "py_fuel_slot_" .. i, style = "inventory_slot", tags = {unit_number = caravan_data.unit_number, i = i}}
-            fuel_slot.sprite = "slot_icon_fuel"
+            fuel_slot.sprite = "slot_icon_food"
+            fuel_slot.hovered_sprite = "slot_icon_food_black"
             local item_stack = caravan_data.fuel_inventory[i]
             if item_stack.valid_for_read then
                 fuel_slot.elem_tooltip = {type = "item", name = item_stack.name}
@@ -568,11 +605,13 @@ function Caravan.update_gui(gui, weak)
             local element = content_flow.fuel_flow.fuel_slot_flow["py_fuel_slot_" .. i]
             if stack.valid_for_read then
                 element.sprite = "item/" .. stack.name
+                element.hovered_sprite = "item/" .. stack.name
                 element.number = stack.count
                 element.elem_tooltip = {type = "item", name = stack.name}
                 element.tooltip = nil
             else
-                element.sprite = "slot_icon_fuel"
+                element.sprite = "slot_icon_food"
+                element.hovered_sprite = "slot_icon_food_black"
                 element.number = nil
                 local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[caravan_data.entity.name].favorite_foods, "caravan-gui")
                 element.tooltip = favorite_food_tooltip

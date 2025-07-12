@@ -54,6 +54,7 @@ data:extend {{
     radar_range = 1,
     icon = "__pyalienlifegraphics2__/graphics/icons/caravan.png",
     icon_size = 64,
+    alert_icon_scale = 1,
     flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
     minable = {mining_time = 0.1, result = "caravan"},
     max_health = 3125,
@@ -272,5 +273,23 @@ data:extend {
         subgroup = "virtual-signal",
         icon_size = 64,
         localised_name = {"virtual-signal-name.no-fuel"}
+    },
+    {
+        type = "virtual-signal",
+        name = "py-no-food",
+        icon = "__core__/graphics/icons/alerts/food-icon-red.png",
+        subgroup = "virtual-signal",
+        icon_size = 64,
+        hidden = true,
+        localised_name = {"virtual-signal-name.no-food"}
+    },
+    {
+        type = "virtual-signal",
+        name = "py-destination-destroyed",
+        icon = "__core__/graphics/icons/alerts/no-path-icon.png",
+        subgroup = "virtual-signal",
+        icon_size = 64,
+        hidden = true,
+        localised_name = {"virtual-signal-name.destination-destroyed"}
     },
 }

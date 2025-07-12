@@ -47,6 +47,7 @@ data:extend
         map_color = {1, 1, 1},
         icon = "__pyalienlifegraphics2__/graphics/icons/flyavan.png",
         icon_size = 64,
+        alert_icon_scale = 1,
         flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
         minable = {mining_time = 0.1, result = "flyavan"},
         max_health = 2200,
