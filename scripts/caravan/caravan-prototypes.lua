@@ -22,7 +22,7 @@ Caravan.alerts = {
             type = "virtual",
             name = "py-destination-destroyed"
         },
-        message = {"?", {"caravan-warnings.destination_destroyed"}, {"virtual-signal-name.destination_destroyed"}, {"gui-alert-tooltip.train-no-path"}}
+        message = {"?", {"caravan-warnings.destination-destroyed"}, {"virtual-signal-name.destination_destroyed"}, {"gui-alert-tooltip.train-no-path"}}
     },
 }
 
