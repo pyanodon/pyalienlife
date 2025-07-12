@@ -348,6 +348,7 @@ function Caravan.build_schedule_list_gui(gui, caravan_data, interrupt_data)
 
         local entity = schedule.entity --[[@as LuaEntity]]
         local valid_actions = Caravan.get_valid_actions_for_entity(caravan_data, entity)
+        -- The element's localised name holds the data
         valid_actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
         local py_add_action = schedule_flow.add {type = "drop-down", name = "py_add_action", items = valid_actions, tags = tags}
         -- py_add_action.style.width = 363

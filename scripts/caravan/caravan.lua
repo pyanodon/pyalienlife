@@ -613,7 +613,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_add_action"] = fun
     if element.selected_index == 0 then return end
 
     local type = element.get_item(element.selected_index)[2]
-    local localised_name = element.get_item(element.selected_index)
+    local localised_name = {"?", {"caravan-actions-short."..type}, {"caravan-actions."..type}}
     if type == "at-outpost" then
         localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "not-at-outpost" then
