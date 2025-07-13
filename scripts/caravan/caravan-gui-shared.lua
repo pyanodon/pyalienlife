@@ -186,15 +186,17 @@ function Caravan.add_gui_row(caravan_data, key, table)
 end
 
 gui_events[defines.events.on_gui_click]["py_click_caravan"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) ---@as LuaPlayer
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     if Caravan.validity_check(caravan_data) then
         -- Put player in remote controller so he can't move items from/into caravan
+        local zoom = player.zoom
         player.set_controller {
             type = defines.controllers.remote,
         }
+        player.zoom = zoom
         Caravan.build_gui(player, caravan_data.entity)
     end
 end
@@ -274,7 +276,8 @@ local function title_display_mode(caption_flow, caravan_data)
     local button = caption_flow.py_rename_caravan_button
     button.style = "mini_button_aligned_to_text_vertically_when_centered"
     button.sprite = "rename_icon_small_black"
-    button.style.top_margin = 6
+    button.hovered_sprite = "rename_icon_small_black"
+    button.clicked_sprite = "rename_icon_small_black"
 
     title.style.maximal_width = button.tags.maximal_width or error("No maximal width")
 end
