@@ -347,6 +347,9 @@ local function machine_replacement(old, new, assembling_machine_list)
     for _, machine in pairs(assembling_machine_list) do
         if machine.name == old then
             local position = machine.position
+            local recipe
+            local crafting_progress
+            local bonus_progress
             if machine.type == "assembling-machine" then
                 local recipe = machine.get_recipe()
                 local crafting_progress = machine.crafting_progress
