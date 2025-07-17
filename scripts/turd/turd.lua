@@ -347,9 +347,14 @@ local function machine_replacement(old, new, assembling_machine_list)
     for _, machine in pairs(assembling_machine_list) do
         if machine.name == old then
             local position = machine.position
-            local crafting_progress = machine.crafting_progress
-            local bonus_progress = machine.bonus_progress
-            local recipe = machine.get_recipe()
+            local recipe
+            local crafting_progress
+            local bonus_progress
+            if machine.type == "assembling-machine" or machine.type == "furnace" then
+                recipe = machine.get_recipe()
+                crafting_progress = machine.crafting_progress
+                bonus_progress = machine.bonus_progress
+            end
             local force_index = machine.force_index
             local surface = machine.surface
             local items_to_place_this = machine.prototype.items_to_place_this
@@ -360,10 +365,12 @@ local function machine_replacement(old, new, assembling_machine_list)
                 temp_inventory.remove(item_to_place)
             end
             local new_machine = surface.create_entity {name = new, position = position, force = force_index, raise_built = true}
-            if new_machine.type == "assembling-machine" then new_machine.set_recipe(recipe) end
+            if new_machine.type == "assembling-machine" or machine.type == "furnace" then
+                new_machine.crafting_progress = crafting_progress
+                new_machine.bonus_progress = bonus_progress
+                new_machine.set_recipe(recipe)
+            end
             handle_removed_items(surface, force, new_machine, temp_inventory.get_contents())
-            new_machine.crafting_progress = crafting_progress
-            new_machine.bonus_progress = bonus_progress
             new_machine.direction = direction
             new_machine.mirroring = mirrored
             temp_inventory.clear()
