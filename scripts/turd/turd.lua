@@ -460,20 +460,30 @@ gui_events[defines.events.on_gui_click]["py_turd_randomize_button"] = function(e
     gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] {element = confirm_button, player_index = event.player_index}
 end
 
-gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(event)
-    local element = event.element
-    local master_tech_name = element.tags.master_tech_name
-    local sub_tech_name = element.tags.sub_tech_name
-    local sub_tech_flow = element.parent.parent.parent
-    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
+local new_turd = function(event)
+    local skip_gui = event.skip_gui
+
+    local element
+    local sub_tech_flow
+    local header_flow
+    local randomize_button
+    if not skip_gui then
+        element = event.element
+        sub_tech_flow = element.parent.parent.parent
+        header_flow = sub_tech_flow.parent.header_flow
+        randomize_button = header_flow.py_turd_randomize_button
+    end
+    local master_tech_name = event.master_tech_name or element.tags.master_tech_name
+    local sub_tech_name = event.sub_tech_name or element.tags.sub_tech_name
+    local player = event.player or game.get_player(event.player_index) --[[@as LuaPlayer]]
     local force = player.force
     local force_index = force.index
-    local header_flow = sub_tech_flow.parent.header_flow
-    local randomize_button = header_flow.py_turd_randomize_button
 
     if not force.technologies[master_tech_name].researched then return end
 
-    if element.caption[1] == "turd.unavailable" then return end
+    if not skip_gui then
+        if element.caption[1] == "turd.unavailable" then return end
+    end
 
     local turd_bonuses = storage.turd_bonuses[force_index] or {}
     storage.turd_bonuses[force_index] = turd_bonuses
@@ -482,7 +492,9 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
         force.print {"turd.font", {"turd.selected-alert", {"technology-name." .. master_tech_name}, {"technology-name." .. sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
         turd_bonuses[master_tech_name] = sub_tech_name
         apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
-        randomize_button.visible = false
+        if not skip_gui then
+            randomize_button.visible = false
+        end
     else
         storage.turd_reset_remaining[force_index] = storage.turd_reset_remaining[force_index] or 0
         if storage.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then
@@ -500,20 +512,25 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
         reapply_turd_bonuses(force)
 
         local resets_left = storage.turd_reset_remaining[force_index]
-        local reset_label = sub_tech_flow.parent.parent.textbox_frame.py_resets_left
-        if resets_left == 0 and reset_label then
-            reset_label.destroy()
-        elseif resets_left > 0 and reset_label then
-            reset_label.caption = {"turd.resets-left", resets_left}
+        if not skip_gui then
+            local reset_label = sub_tech_flow.parent.parent.textbox_frame.py_resets_left
+            if resets_left == 0 and reset_label then
+                reset_label.destroy()
+            elseif resets_left > 0 and reset_label then
+                reset_label.caption = {"turd.resets-left", resets_left}
+            end
+            randomize_button.visible = true
         end
-        randomize_button.visible = true
     end
 
-    for _, sub_tech in pairs(sub_tech_flow.children) do
-        local confirm_button = sub_tech.info_flow.py_turd_confirm_button
-        update_confirm_button(confirm_button, player)
+    if not skip_gui then
+        for _, sub_tech in pairs(sub_tech_flow.children) do
+            local confirm_button = sub_tech.info_flow.py_turd_confirm_button
+            update_confirm_button(confirm_button, player)
+        end
     end
 end
+gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = new_turd
 
 local function clear_new_turd_recipe_notifications()
     local recipe_prototypes = prototypes.recipe
@@ -623,5 +640,6 @@ end)
 remote.add_interface("pywiki_turd_page", {
     create_turd_page = create_turd_page,
     on_search = on_search,
-    reapply_turd_bonuses = reapply_turd_bonuses
+    reapply_turd_bonuses = reapply_turd_bonuses,
+    new_turd = new_turd
 })
