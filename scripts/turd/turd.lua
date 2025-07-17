@@ -600,7 +600,7 @@ end
 py.on_event(defines.events.on_research_finished, on_researched)
 py.on_event(defines.events.on_research_reversed, on_unresearched)
 
-py.on_event(py.events.on_built(), function(event)
+local on_turd_built = function(event)
     local entity = event.entity
     if not entity.valid or not entity.unit_number then return end
     local force_index = entity.force_index
@@ -622,7 +622,9 @@ py.on_event(py.events.on_built(), function(event)
     if entity.valid and bhoddos_lib.cultures[entity.name] then
         bhoddos_lib.update_culture_table(entity, "add")
     end
-end)
+end
+
+py.on_event(py.events.on_built(), on_turd_built)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
@@ -641,5 +643,6 @@ remote.add_interface("pywiki_turd_page", {
     create_turd_page = create_turd_page,
     on_search = on_search,
     reapply_turd_bonuses = reapply_turd_bonuses,
-    new_turd = new_turd
+    new_turd = new_turd,
+    on_turd_built = on_turd_built
 })
