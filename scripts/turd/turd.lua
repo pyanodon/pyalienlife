@@ -350,7 +350,7 @@ local function machine_replacement(old, new, assembling_machine_list)
             local recipe
             local crafting_progress
             local bonus_progress
-            if machine.type == "assembling-machine" then
+            if machine.type == "assembling-machine" or machine.type == "furnace" then
                 recipe = machine.get_recipe()
                 crafting_progress = machine.crafting_progress
                 bonus_progress = machine.bonus_progress
@@ -365,7 +365,7 @@ local function machine_replacement(old, new, assembling_machine_list)
                 temp_inventory.remove(item_to_place)
             end
             local new_machine = surface.create_entity {name = new, position = position, force = force_index, raise_built = true}
-            if new_machine.type == "assembling-machine" then
+            if new_machine.type == "assembling-machine" or machine.type == "furnace" then
                 new_machine.crafting_progress = crafting_progress
                 new_machine.bonus_progress = bonus_progress
                 new_machine.set_recipe(recipe)
