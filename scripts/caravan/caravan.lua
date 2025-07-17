@@ -656,7 +656,9 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_condition_
         action = caravan_data.schedule[tags.schedule_id].actions[tags.action_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
         action = storage.interrupts[tags.interrupt_name].conditions[tags.action_id]
-    else
+    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+		action = storage.interrupts[tags.interrupt_name].schedule[tags.schedule_id].actions[tags.action_id]
+	else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
     end
 
