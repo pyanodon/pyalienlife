@@ -351,9 +351,9 @@ local function machine_replacement(old, new, assembling_machine_list)
             local crafting_progress
             local bonus_progress
             if machine.type == "assembling-machine" then
-                local recipe = machine.get_recipe()
-                local crafting_progress = machine.crafting_progress
-                local bonus_progress = machine.bonus_progress
+                recipe = machine.get_recipe()
+                crafting_progress = machine.crafting_progress
+                bonus_progress = machine.bonus_progress
             end
             local force_index = machine.force_index
             local surface = machine.surface
