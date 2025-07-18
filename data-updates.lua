@@ -203,7 +203,8 @@ RECIPE("milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):repla
 RECIPE("milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png", icon_size = 64}}
 RECIPE("empty-milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("milk-barrel", "barrel-milk"):set_fields {results = {{type = "item", name = "empty-barrel-milk", amount = 1}, {type = "fluid", name = "milk", amount = 50}}}
 RECIPE("empty-milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png", icon_size = 64}}
-
+--Fix the sweet syrup unbarreling recipe to return correct temperature fluid
+RECIPE("empty-sweet-syrup-barrel"):set_fields {results = {{type = "item", name = "barrel", amount = 1}, {type = "fluid", name = "sweet-syrup", amount = 50, temperature = 10}}}
 
 --copy`s of combustion recipes with biomass
 for _, recipe in pairs(data.raw.recipe) do
