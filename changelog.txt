@@ -18,6 +18,7 @@ Date: ???
     - Fixed caravans unnecessarily going idle when changing "wait for condition" checkbox. Resolves https://github.com/pyanodon/pybugreports/issues/984
     - Fixed caravans not updating the action in progress when reordering schedule. Resolves https://github.com/pyanodon/pybugreports/issues/1078
     - Added short names for some actions
+    - Fixed sweet syrup unbarreling returning the wrong temperature syrup. Resolves https://github.com/pyanodon/pybugreports/issues/1055
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
