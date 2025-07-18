@@ -428,14 +428,15 @@ gui_events[defines.events.on_gui_click]["py_add_interrupt_button"] = function(ev
 end
 
 function Caravan.add_interrupt(caravan_data, name, player)
-    if not storage.interrupts[name] then
-        storage.interrupts[name] = {
-            name = name,
-            conditions = {},
-            schedule = {},
-            inside_interrupt = false
-        }
+    while storage.interrupts[name] do
+        name = name .. "_"
     end
+    storage.interrupts[name] = {
+        name = name,
+        conditions = {},
+        schedule = {},
+        inside_interrupt = false
+    }
     storage.gui_elements_by_name["py_add_interrupt_frame"].destroy()
     if not name or name == "" then return end
     table.insert(caravan_data.interrupts, name)
@@ -501,10 +502,15 @@ gui_events[defines.events.on_gui_click]["py_rename_interrupt_button"] = function
     else
         local old_name = label.caption
         local new_name = textfield.text
-        if not new_name or new_name == "" or storage.interrupts[new_name] then return end
-        storage.interrupts[new_name] = table.deepcopy(storage.interrupts[old_name])
-        storage.interrupts[new_name].name = new_name
+        if not new_name or new_name == "" or new_name == old_name then return end
+
+        local interrupt = table.deepcopy(storage.interrupts[old_name])
         storage.interrupts[old_name] = nil
+        while storage.interrupts[new_name] do
+            new_name = new_name .. "_"
+        end
+        interrupt.name = new_name
+        storage.interrupts[new_name] = interrupt
 
         -- Update all caravans containing this interrupt
         for _, caravan in pairs(storage.caravans or {}) do
