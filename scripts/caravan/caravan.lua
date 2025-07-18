@@ -185,7 +185,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
         local caravan_data = storage.caravans[last_opened.caravan]
         Caravan.build_gui(player, caravan_data.entity)
         if last_opened.interrupt then
-            Caravan.build_interrupt_gui(player, caravan_data, last_opened.interrupt.name)
+            Caravan.build_interrupt_gui(player, caravan_data, last_opened.interrupt)
         end
     end
 
