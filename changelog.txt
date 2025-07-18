@@ -17,6 +17,7 @@ Date: ???
     - Fixed caravans treating interrupt with no conditions as having conditions fulfilled. Resolves https://github.com/pyanodon/pybugreports/issues/1092
     - Fixed caravans unnecessarily going idle when changing "wait for condition" checkbox. Resolves https://github.com/pyanodon/pybugreports/issues/984
     - Fixed caravans not updating the action in progress when reordering schedule. Resolves https://github.com/pyanodon/pybugreports/issues/1078
+    - Fixed setting the equality for caravan interrupt circuit conditions causing a crash. Resolves https://github.com/pyanodon/pybugreports/issues/1101
     - Added short names for some actions
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
