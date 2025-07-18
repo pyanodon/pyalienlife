@@ -17,8 +17,10 @@ Date: ???
     - Fixed caravans treating interrupt with no conditions as having conditions fulfilled. Resolves https://github.com/pyanodon/pybugreports/issues/1092
     - Fixed caravans unnecessarily going idle when changing "wait for condition" checkbox. Resolves https://github.com/pyanodon/pybugreports/issues/984
     - Fixed caravans not updating the action in progress when reordering schedule. Resolves https://github.com/pyanodon/pybugreports/issues/1078
+    - Fixed setting the equality for caravan interrupt circuit conditions causing a crash. Resolves https://github.com/pyanodon/pybugreports/issues/1101
     - Added short names for some actions
     - Prevented having 2 caravan interrupts with the same name. Resolves https://github.com/pyanodon/pybugreports/issues/1102
+    - Fixed sweet syrup unbarreling returning the wrong temperature syrup. Resolves https://github.com/pyanodon/pybugreports/issues/1055
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
