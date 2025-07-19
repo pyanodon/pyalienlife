@@ -3,13 +3,10 @@ local P = {}
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local MainFrameComponents = require "main_frame"
 
--- TODO things to implement
---
--- Fuel progress bar, nb of actions left. This can wait until the logic is plugged back though
---
 -- Things implemented
 --
 -- Add fuel inventory handling
+-- Fuel progress bar, nb of actions left. This can wait until the logic is plugged back though
 --
 -- Item stacks
 -- Item order (already done by inventory)
@@ -36,6 +33,7 @@ local MainFrameComponents = require "main_frame"
 -- These are limited by the modding API :/
 -- drag: waiting for an answer on https://forums.factorio.com/viewtopic.php?t=128019
 
+-- default_empty_slot is used to show the fuel_inventory gas pump icon
 local function build_inventory_slot(inventory, table, slot_index, tags, default_empty_slot)
     local item_stack = inventory[slot_index]
     local slot_name = table.name .. "_slot_" .. slot_index
@@ -52,12 +50,14 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
     local elem_tooltip
     local hovered_sprite
     local number
+    local quality
 
     if player and player.hand_location and player.hand_location.inventory == defines.inventory.character_main and player.hand_location.slot == slot_index then
         sprite = "utility/hand"
         hovered_sprite = "utility/hand"
     elseif item_stack.valid_for_read then
-        elem_tooltip = {type = "item", name = item_stack.name}
+        elem_tooltip = {type = "item-with-quality", name = item_stack.name, quality = item_stack.quality.name}
+        quality = item_stack.quality
         local prototype = prototypes.item[item_stack.name]
         if prototype.stack_size > 1 then
             number = item_stack.count
@@ -74,6 +74,7 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
     button.number = number
     button.tooltip = tooltip
     button.elem_tooltip = elem_tooltip
+    button.quality = quality
     return button
 end
 
@@ -202,7 +203,7 @@ local function set_cursor_stack_to_slot(player, target_inventory, index, stack_p
 
         local nb_transferred = math.min(prototype.stack_size - target_slot.count, input_stack.count)
         if nb_transferred == 0 then return end
-        target_slot.transfer_stack({name = player.cursor_stack.name, count = nb_transferred})
+        target_slot.transfer_stack({name = player.cursor_stack.name, count = nb_transferred, quality = player.cursor_stack.quality})
         player.cursor_stack.count = player.cursor_stack.count - nb_transferred
     else
         -- set_stack fails when target_slot is an incompatible filter slot, or where player.hand_location is
@@ -223,7 +224,7 @@ local function transfer_stack(source_stack, target_inventory, stack_proj)
     if nb_transferred == source_stack.count then
         source_stack.clear()
     else
-        source_stack.set_stack({name = source_stack.name, count = source_stack.count - nb_transferred})
+        source_stack.set_stack({name = source_stack.name, count = source_stack.count - nb_transferred, quality = source_stack.quality})
     end
 
     return nb_transferred
@@ -266,9 +267,9 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local is_rmb = event.button == defines.mouse_button_type.right
     local is_lmb = event.button == defines.mouse_button_type.left
 
-    local half_stack_proj = function(s) return {name = s.name, count = math.floor((s.count / 2) + 0.5)} end
+    local half_stack_proj = function(s) return {name = s.name, count = math.floor((s.count / 2) + 0.5), quality = s.quality} end
     local id_proj = function(s) return s end
-    local one_item_proj = function(s) return {name = s.name, count = 1} end
+    local one_item_proj = function(s) return {name = s.name, count = 1, quality = s.quality} end
 
     if is_control and is_shift then return end
 
