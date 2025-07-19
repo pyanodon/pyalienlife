@@ -19,13 +19,12 @@ if data and not yafc_turd_integration then
                 {name = "water",     type = "fluid", amount = 25},
                 {name = "hot-air",   type = "fluid", amount = 25},
             },
-            result = "paper-towel",
-            result_count = 4
+            results = {{type = "item", name = "paper-towel", amount = 4}},
         }
     }
 
     local recipe = RECIPE("ralesia-seeds"):copy()
-    recipe:add_ingredient {"paper-towel", 1}
+    recipe:add_ingredient {type = "item", name = "paper-towel", amount = 1}
     recipe.energy_required = 3
     recipe:multiply_result_amount("ralesia-seeds", 2)
     recipe.name = "ralesia-seeds-paper-towel"

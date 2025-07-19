@@ -7,6 +7,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-phadai",
 	order = "c",
 	main_product = "phadai-pup",
+	number_icons = true,
 	mats =
 	{
 		{
@@ -233,6 +234,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	main_product = "phadai",
+	number_icons = true,
 	mats =
 	{
 		--chem

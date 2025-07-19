@@ -1,6 +1,6 @@
 RECIPE {
     type = "recipe",
-    name = "pydrive",
+    name = "wyrmhole",
     enabled = false,
     ingredients =
     {
@@ -17,29 +17,29 @@ RECIPE {
         {type = "item", name = "automated-factory-mk03", amount = 1},
     },
     results = {
-        {type = "item", name = "pydrive", amount = 1}
+        {type = "item", name = "wyrmhole", amount = 1}
     }
 }:add_unlock("domestication-mk05")
 
 ITEM {
     type = "item",
-    name = "pydrive",
+    name = "wyrmhole",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-others",
     order = "a",
-    place_result = "pydrive",
+    place_result = "wyrmhole",
     stack_size = 10
 }
 
 ENTITY {
     type = "linked-container",
-    name = "pydrive",
+    name = "wyrmhole",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 2, result = "pydrive"},
+    minable = {mining_time = 2, result = "wyrmhole"},
     max_health = 350,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -56,7 +56,7 @@ ENTITY {
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     inventory_size = 100,
     scale_info_icons = true,
-    picture = {
+    integration_patch = {
         filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",
         priority = "low",
         width = 512,
@@ -64,8 +64,10 @@ ENTITY {
         --scale = 0.5,
         shift = util.by_pixel(16, -48),
     },
+    integration_patch_render_layer = "object-under",
     inventory_type = "with_filters_and_bar",
     gui_mode = "all",
+    icon_draw_specification = {scale = 6.0, scale_for_many = 9.0, render_layer = "entity-info-icon"},
     circuit_connector = {
         points = {
             shadow = {
@@ -83,7 +85,7 @@ ENTITY {
 
 ENTITY {
     type = "electric-energy-interface",
-    name = "pydrive_skin",
+    name = "wyrmhole-skin",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     hidden = true,
@@ -96,10 +98,6 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{0, 0}, {0, 0}},
-    --light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
-    --integration_patch_render_layer = "decals",
-    --integration_patch = hr_crash_site_lab_ground(),
-    render_layer = "higher-object-under",
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -110,8 +108,8 @@ ENTITY {
         output_flow_limit = "0W",
         buffer_capacity = "250MW"
     },
-    localised_name = {"entity-name.pydrive"},
-    localised_description = {"entity-description.pydrive"},
+    localised_name = {"entity-name.wyrmhole"},
+    localised_description = {"entity-description.wyrmhole"},
     energy_usage = "250MW",
     continuous_animation = true,
     animations =

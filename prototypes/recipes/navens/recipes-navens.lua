@@ -49,33 +49,33 @@ RECIPE {
     results = {
         {type = "item", name = "navens-spore", amount = 1},
     },
-}:add_unlock("navens")
+}:add_unlock("navens"):add_unlock("microfilters")
 
-RECIPE {
-    type = "recipe",
-    name = "navens-spore-2",
-    category = "spore",
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "navens-spore", amount = 1},
-    },
-}:add_unlock("microfilters")
+-- RECIPE {
+--     type = "recipe",
+--     name = "navens-spore-2",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 15,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "navens-spore", amount = 1},
+--     },
+-- }:add_unlock("microfilters")
 
-RECIPE {
-    type = "recipe",
-    name = "navens-spore-3",
-    category = "spore",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "navens-spore", amount = 1},
-    },
-}:add_unlock("microfilters-mk02")
+-- RECIPE {
+--     type = "recipe",
+--     name = "navens-spore-3",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "navens-spore", amount = 1},
+--     },
+-- }:add_unlock("microfilters-mk02")
 
 ---breeding---
 

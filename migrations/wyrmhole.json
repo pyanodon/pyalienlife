@@ -1,0 +1,24 @@
+{
+    "recipe": [
+        [
+            "pydrive",
+            "wyrmhole"
+        ]
+    ],
+    "item": [
+        [
+            "pydrive",
+            "wyrmhole"
+        ]
+    ],
+    "entity": [
+        [
+            "pydrive",
+            "wyrmhole"
+        ],
+        [
+            "pydrive_skin",
+            "wyrmhole-skin"
+        ]
+    ]
+}

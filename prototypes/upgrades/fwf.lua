@@ -34,7 +34,7 @@ if data and not yafc_turd_integration then
     fiber.name = "fiber-dry-storage"
     fiber.energy_required = fiber.energy_required * 2
     fiber:multiply_result_amount("raw-fiber", 4)
-    fiber:add_result {"biomass", 6}
+    fiber:add_result {type = "item", name = "biomass", amount = 6}
     fiber:add_result {type = "item", name = "fiber", amount_min = 1, amount_max = 2}
     fiber.icon = nil
     fiber.icon_size = nil

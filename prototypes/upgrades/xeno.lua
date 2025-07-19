@@ -23,17 +23,17 @@ if data and not yafc_turd_integration then
         category = "rc",
         main_product = "caged-xeno",
         ingredients = {
-            {"water-barrel",   6},
-            {"bones",          8},
-            {"guts",           7},
-            {"caged-dingrits", 1},
-            {"bedding",        3},
+            {type = "item", name = "water-barrel",   amount = 6},
+            {type = "item", name = "bones",          amount = 8},
+            {type = "item", name = "guts",           amount = 7},
+            {type = "item", name = "caged-dingrits", amount = 1},
+            {type = "item", name = "bedding",        amount = 3},
         },
         results = {
-            {"caged-xeno", 1},
-            {"xeno-egg",   6},
-            {"barrel",     6},
-            {"pelt",       10},
+            {type = "item", name = "caged-xeno", amount = 1},
+            {type = "item", name = "xeno-egg",   amount = 6},
+            {type = "item", name = "barrel",     amount = 6},
+            {type = "item", name = "pelt",       amount = 10},
         },
         allowed_module_categories = {"xeno"},
     }}
@@ -47,7 +47,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-cheap"
         recipe:remove_ingredient("bones")
         recipe:remove_ingredient("fish")
-        recipe:add_ingredient {"hydrofluoric-acid-barrel", 5}
+        recipe:add_ingredient {type = "item", name = "hydrofluoric-acid-barrel", amount = 5}
         recipe:add_result_amount("barrel", 5)
         recipe:multiply_result_amount("xeno-egg", 10)
         data:extend {recipe}

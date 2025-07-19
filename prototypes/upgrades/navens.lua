@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     local recipe = RECIPE("navens-sample"):copy()
     recipe.name = "navens-sample-with-vonix-gen"
-    recipe:add_ingredient {"vonix-codex", 5}
+    recipe:add_ingredient {type = "item", name = "vonix-codex", amount = 5}
     data:extend {recipe}
 
     data:extend {{
@@ -34,11 +34,11 @@ if data and not yafc_turd_integration then
             name = "full-render-navens-abomination",
             category = "slaughterhouse",
             subgroup = "py-alienlife-auog",
-            ingredients = {{"navens-abomination", 1}},
+            ingredients = {{type = "item", name = "navens-abomination", amount = 1}},
             results = {
                 {name = "navens",            type = "item",  amount_min = 13, amount_max = 16},
                 {name = "dirty-water-light", type = "fluid", amount = 10},
-                {"guts",                     1}
+                {type = "item",              name = "guts",  amount = 1}
             },
             enabled = false,
             icon = "__pyalienlifegraphics__/graphics/icons/rendering-abomination.png",
@@ -61,15 +61,13 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient {name = victims[i], amount = 1, type = "item"}
         recipe:remove_ingredient("guts")
         recipe.main_product = "navens-abomination"
-        recipe.results = {{"navens-abomination", profit[i]}}
+        recipe.results = {{type = "item", name = "navens-abomination", amount = profit[i]}}
         recipe.energy_required = recipe.energy_required * 1.5
         data:extend {recipe}
     end
 
     for i, recipe in pairs {
         RECIPE("navens-spore"):copy(),
-        RECIPE("navens-spore-2"):copy(),
-        RECIPE("navens-spore-3"):copy(),
         RECIPE("navens-spore-mk02"):copy(),
         RECIPE("navens-spore-mk03"):copy(),
         RECIPE("navens-spore-mk04"):copy(),
@@ -78,6 +76,24 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient {type = "fluid", name = "phosphorus-tricloride", amount = 1}
         data:extend {recipe}
     end
+    table.insert(
+        data.raw.technology["microfilters"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "navens-spore-sterilization",
+            change = 0.4,
+            hidden = true,
+        }
+    )
+    table.insert(
+        data.raw.technology["microfilters-mk02"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "navens-spore-sterilization",
+            change = 0.6,
+            hidden = true,
+        }
+    )
 end
 
 return {
@@ -124,8 +140,6 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {consumption = 5,           productivity = 0.2,                      type = "module-effects"},
                 {old = "navens-spore",      new = "navens-spore-sterilization",      type = "recipe-replacement"},
-                {old = "navens-spore-2",    new = "navens-spore-2-sterilization",    type = "recipe-replacement"},
-                {old = "navens-spore-3",    new = "navens-spore-3-sterilization",    type = "recipe-replacement"},
                 {old = "navens-spore-mk02", new = "navens-spore-mk02-sterilization", type = "recipe-replacement"},
                 {old = "navens-spore-mk03", new = "navens-spore-mk03-sterilization", type = "recipe-replacement"},
                 {old = "navens-spore-mk04", new = "navens-spore-mk04-sterilization", type = "recipe-replacement"},

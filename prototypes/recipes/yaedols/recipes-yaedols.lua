@@ -53,30 +53,30 @@ RECIPE {
     },
 }:add_unlock("yaedols")
 
-RECIPE {
-    type = "recipe",
-    name = "yaedols-spores-2",
-    category = "spore",
-    enabled = false,
-    energy_required = 15,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "yaedols-spores", amount = 1},
-    },
-}:add_unlock("microfilters")
+-- RECIPE {
+--     type = "recipe",
+--     name = "yaedols-spores-2",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 15,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "yaedols-spores", amount = 1},
+--     },
+-- }:add_unlock("microfilters")
 
-RECIPE {
-    type = "recipe",
-    name = "yaedols-spores-3",
-    category = "spore",
-    enabled = false,
-    energy_required = 10,
-    ingredients = {
-    },
-    results = {
-        {type = "item", name = "yaedols-spores", amount = 1},
-    },
-}:add_unlock("microfilters-mk02")
+-- RECIPE {
+--     type = "recipe",
+--     name = "yaedols-spores-3",
+--     category = "spore",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients = {
+--     },
+--     results = {
+--         {type = "item", name = "yaedols-spores", amount = 1},
+--     },
+-- }:add_unlock("microfilters-mk02")
 
 ---breeding---

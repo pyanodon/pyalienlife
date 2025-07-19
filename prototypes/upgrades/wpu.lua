@@ -77,8 +77,8 @@ if data and not yafc_turd_integration then
             energy_required = 10,
             main_product = "py-sawblade-module-mk0" .. i,
             results = {
-                {"py-sawblade-module-mk0" .. i, 1},
-                {type = "item",                 name = "iron-oxide", amount = 5},
+                {type = "item", name = "py-sawblade-module-mk0" .. i, amount = 1},
+                {type = "item", name = "iron-oxide",                  amount = 5},
             },
             category = "crafting-with-fluid",
         }
@@ -240,10 +240,10 @@ return {
         unit = {
             count = 7000,
             ingredients = {
-                {type = "item", name = "automation-science-pack", amount = 1},
-                {type = "item", name = "py-science-pack-1",       amount = 1},
-                {type = "item", name = "logistic-science-pack",   amount = 1},
-                {type = "item", name = "py-science-pack-2",       amount = 1},
+                {"automation-science-pack", 1},
+                {"py-science-pack-1",       1},
+                {"logistic-science-pack",   1},
+                {"py-science-pack-2",       1},
             },
             time = 45
         }

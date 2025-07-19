@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-parameter
 local movement_triggers = require "__base__.prototypes.entity.movement-triggers"
 
 local idle = {

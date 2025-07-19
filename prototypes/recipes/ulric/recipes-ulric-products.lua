@@ -1,11 +1,12 @@
 --pooping--
 
 py.autorecipes {
-	name = "manure",
+	name = "ulric-manure",
 	category = "ulric",
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "manure",
+	number_icons = true,
 	mats =
 	{
 		--logistic

@@ -12,15 +12,15 @@ if data and not yafc_turd_integration then
             order = "d-e",
             effect = {pollution = 1, speed = 4, productivity = 0.01},
             fuel_category = "dingrits",
-            fuel_value = "250MJ",
-            burnt_result = "used-dingrit"
+            fuel_value = "1.5GW",
+            burnt_result = "dingrits-mk04"
         },
         {
             type = "recipe",
             name = "dingrits-alpha",
             enabled = false,
             energy_required = 36000,
-            ingredients = {{"dingrits-mk04", 1}},
+            ingredients = {{type = "item", name = "dingrits-mk04", amount = 1}},
             results = {{name = "dingrits-alpha", probability = 0.5, type = "item", amount = 1}},
             allow_productivity = true,
             category = "dingrits"

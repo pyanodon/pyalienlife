@@ -34,12 +34,11 @@ if data and not yafc_turd_integration then
 
     for i, spore in pairs {
         RECIPE("bhoddos-spore"):copy(),
-        RECIPE("bhoddos-spore-3"):copy(),
     } do
         spore.name = spore.name .. "-upgraded"
         spore.main_product = "bhoddos-spore"
         spore.ingredients = {
-            {"rich-dust", 1}
+            {type = "item", name = "rich-dust", amount = 1}
         }
         spore:multiply_result_amount("bhoddos-spore", 10)
         data:extend {spore}
@@ -61,6 +60,15 @@ if data and not yafc_turd_integration then
     biomass_sporopollenin.icon = nil
     biomass_sporopollenin.icon_size = nil
     data:extend {biomass_sporopollenin}
+    table.insert(
+        data.raw.technology["microfilters-mk02"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "bhoddos-spore-upgraded",
+            change = 1,
+            hidden = true,
+        }
+    )
 end
 
 return {
@@ -120,10 +128,9 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "bhoddos-spore",       new = "bhoddos-spore-upgraded",   type = "recipe-replacement"},
-                {old = "bhoddos-spore-3",     new = "bhoddos-spore-3-upgraded", type = "recipe-replacement"},
-                {type = "recipe-replacement", old = "sporopollenin",            new = "sporopollenin-gills"},
-                {type = "recipe-replacement", old = "biomass-sporopollenin",    new = "biomass-sporopollenin-nerfed"}
+                {old = "bhoddos-spore",       new = "bhoddos-spore-upgraded", type = "recipe-replacement"},
+                {type = "recipe-replacement", old = "sporopollenin",          new = "sporopollenin-gills"},
+                {type = "recipe-replacement", old = "biomass-sporopollenin",  new = "biomass-sporopollenin-nerfed"}
             }
         }
     },

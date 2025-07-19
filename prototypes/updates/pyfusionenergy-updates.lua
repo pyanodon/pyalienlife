@@ -13,7 +13,7 @@ ITEM("plankton-farm"):subgroup_order("py-alienlife-buildings-mk01", "p")
 ITEM("plankton-farm-mk02"):subgroup_order("py-alienlife-buildings-mk02", "p")
 ITEM("plankton-farm-mk03"):subgroup_order("py-alienlife-buildings-mk03", "p")
 ITEM("plankton-farm-mk04"):subgroup_order("py-alienlife-buildings-mk04", "p")
-RECIPE("genlab-mk01"):remove_unlock("ethanolamine"):remove_unlock("nano-tech")
+RECIPE("genlab-mk01"):remove_unlock("ethanolamine"):remove_unlock("quantum-processor")
 RECIPE("ralesia-plantation-mk03"):add_ingredient {type = "item", name = "super-alloy", amount = 10}:add_ingredient {type = "item", name = "boron-carbide", amount = 20}
 RECIPE("ralesia-plantation-mk04"):add_ingredient {type = "item", name = "nbti-alloy", amount = 15}:add_ingredient {type = "item", name = "wall-shield", amount = 8}:add_ingredient {type = "item", name = "science-coating", amount = 1}
 RECIPE("xyhiphoe-pool-mk01"):remove_unlock("xyhiphoe")

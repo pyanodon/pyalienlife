@@ -1,9 +1,10 @@
 --MANURE
 
 py.autorecipes {
-	name = "manure",
+	name = "Scrondrix-Manure",
 	category = "scrondrix",
 	main_product = "manure",
+	number_icons = true,
 	mats =
 	{
 		--chem
@@ -21,7 +22,6 @@ py.autorecipes {
 			},
 			crafting_speed = 150,
 			tech = "scrondrix",
-			name = "Scrondrix-Manure-1",
 		},
 		--py
 		--salt
@@ -37,7 +37,6 @@ py.autorecipes {
 			},
 			crafting_speed = 130,
 			tech = "scrondrix-mk02",
-			name = "Scrondrix-Manure-2",
 		},
 		--prod
 		--fiber
@@ -53,7 +52,6 @@ py.autorecipes {
 			},
 			crafting_speed = 90,
 			tech = "scrondrix-mk03",
-			name = "Scrondrix-Manure-3",
 		},
 		--prod
 		--navens
@@ -69,7 +67,6 @@ py.autorecipes {
 			},
 			crafting_speed = 90,
 			tech = "scrondrix-mk04",
-			name = "Scrondrix-Manure-4",
 		},
 	}
 }

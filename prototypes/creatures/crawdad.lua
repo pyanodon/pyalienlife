@@ -65,7 +65,7 @@ RECIPE {
         {type = "fluid", name = "blood",                amount = 300},
         {type = "fluid", name = "water-saline",         amount = 500}
     },
-    result = "crawdad"
+    results = {{type = "item", name = "crawdad", amount = 1}}
 }:add_unlock("mounts-mk01")
 
 ITEM {
@@ -240,7 +240,9 @@ data:extend {{
             volume = 0.6
         }
     },
+    ---@diagnostic disable-next-line: assign-type-mismatch
     sound_minimum_speed = 0.05,
+    ---@diagnostic disable-next-line: assign-type-mismatch
     sound_scaling_ratio = 0.8,
     impact_category = "metal-large",
     working_sound = {

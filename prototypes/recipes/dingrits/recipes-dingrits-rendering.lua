@@ -196,7 +196,7 @@ py.autorecipes {
 				{name = "brain",         amount = BASE_BRAIN},
 				{name = "cage",          remove_item = true},
 			},
-			tech = "domestication-mk04",
+			tech = "domestication-mk03",
 			name = "ex-used-dingrits",
 			icon = "__pyalienlifegraphics__/graphics/icons/used-dingrit.png",
 			icon_size = 64,

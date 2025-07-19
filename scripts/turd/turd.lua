@@ -76,7 +76,7 @@ local function update_confirm_button(element, player, researched_technologies)
             if minutes < 10 then minutes = "0" .. minutes end
             if seconds < 10 then seconds = "0" .. seconds end
             element.style = "confirm_button_without_tooltip"
-            element.caption = {"turd.unselect-migrate", hours, minutes, seconds}
+            element.caption = {"turd.unselect-migrate", tostring(hours), tostring(minutes), tostring(seconds)}
         elseif (storage.turd_reset_remaining[force_index] or 0) > 0 then
             element.style = "confirm_button_without_tooltip"
             element.caption = {"turd.unselect"}
@@ -246,7 +246,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_select_view"] = fu
 end
 
 gui_events[defines.events.on_gui_click]["py_open_turd_techtree"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local master_tech_name = event.element.parent.parent.tags.name
     player.opened = nil
     player.open_technology_gui(master_tech_name)
@@ -255,7 +255,7 @@ end
 gui_events[defines.events.on_gui_click]["py_minimize_turd"] = function(event)
     local frame = event.element.parent.parent
     local gui = frame.parent
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local tech_name = frame.tags.name
     local selected_upgrade = storage.turd_bonuses[player.force_index][tech_name] or NOT_SELECTED
     local is_researched = player.force.technologies[tech_name].researched
@@ -347,23 +347,32 @@ local function machine_replacement(old, new, assembling_machine_list)
     for _, machine in pairs(assembling_machine_list) do
         if machine.name == old then
             local position = machine.position
-            local crafting_progress = machine.crafting_progress
-            local bonus_progress = machine.bonus_progress
-            local recipe = machine.get_recipe()
+            local recipe
+            local crafting_progress
+            local bonus_progress
+            if machine.type == "assembling-machine" then
+                recipe = machine.get_recipe()
+                crafting_progress = machine.crafting_progress
+                bonus_progress = machine.bonus_progress
+            end
             local force_index = machine.force_index
             local surface = machine.surface
             local items_to_place_this = machine.prototype.items_to_place_this
             local direction = machine.direction
+            local mirrored = machine.mirroring
             machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
             for _, item_to_place in pairs(items_to_place_this) do
                 temp_inventory.remove(item_to_place)
             end
             local new_machine = surface.create_entity {name = new, position = position, force = force_index, raise_built = true}
-            if new_machine.type == "assembling-machine" then new_machine.set_recipe(recipe) end
+            if new_machine.type == "assembling-machine" then
+                new_machine.crafting_progress = crafting_progress
+                new_machine.bonus_progress = bonus_progress
+                new_machine.set_recipe(recipe)
+            end
             handle_removed_items(surface, force, new_machine, temp_inventory.get_contents())
-            new_machine.crafting_progress = crafting_progress
-            new_machine.bonus_progress = bonus_progress
             new_machine.direction = direction
+            new_machine.mirroring = mirrored
             temp_inventory.clear()
             machine = new_machine
         end
@@ -463,7 +472,7 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
     local master_tech_name = element.tags.master_tech_name
     local sub_tech_name = element.tags.sub_tech_name
     local sub_tech_flow = element.parent.parent.parent
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local force = player.force
     local force_index = force.index
     local header_flow = sub_tech_flow.parent.header_flow
@@ -513,6 +522,28 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
     end
 end
 
+local function clear_new_turd_recipe_notifications()
+    local recipe_prototypes = prototypes.recipe
+    for _, player in pairs(game.players) do
+        for _, tech_upgrade in pairs(tech_upgrades) do
+            for _, sub_tech in pairs(tech_upgrade.sub_techs) do
+                defunctionize_effect_table(sub_tech)
+                for _, effect in pairs(sub_tech.effects) do
+                    if effect.type == "unlock-recipe" then
+                        if recipe_prototypes[effect.recipe] then
+                            player.clear_recipe_notification(effect.recipe)
+                        end
+                    elseif effect.type == "recipe-replacement" then
+                        if recipe_prototypes[effect.new] then
+                            player.clear_recipe_notification(effect.new)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
 py.on_event(py.events.on_init(), function()
     storage.turd_bonuses = storage.turd_bonuses or {}
     storage.turd_beaconed_machines = storage.turd_beaconed_machines or {}
@@ -522,6 +553,7 @@ py.on_event(py.events.on_init(), function()
     storage.turd_machine_replacements = storage.turd_machine_replacements or {}
     storage.turd_migrations = storage.turd_migrations or {}
     storage.turd_bhoddos = storage.turd_bhoddos or {}
+    clear_new_turd_recipe_notifications()
 end)
 
 local function starts_with(str, start)

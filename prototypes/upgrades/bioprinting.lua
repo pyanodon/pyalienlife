@@ -6,7 +6,7 @@ if data and not yafc_turd_integration then
         RECIPE("bio-scafold-4"):copy(),
     } do
         recipe.name = recipe.name .. "-with-lamp"
-        recipe:add_ingredient {"small-lamp", 1}
+        recipe:add_ingredient {type = "item", name = "small-lamp", amount = 1}
         recipe:multiply_result_amount("bio-scafold", 2)
         data:extend {recipe}
     end
@@ -30,10 +30,10 @@ if data and not yafc_turd_integration then
             category = "atomizer",
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
-                {"bones",         3},
-                {"chitin",        3},
-                {"mukmoux-fat",   5},
-                {name = "oxygen", amount = 150, type = "fluid"}
+                {type = "item",   name = "bones",       amount = 3},
+                {type = "item",   name = "chitin",      amount = 3},
+                {type = "item",   name = "mukmoux-fat", amount = 5},
+                {name = "oxygen", amount = 150,         type = "fluid"}
             },
             energy_required = 5
         },
@@ -44,10 +44,10 @@ if data and not yafc_turd_integration then
             category = "atomizer",
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
-                {"bonemeal",      3},
-                {"skin",          5},
-                {"brain",         2},
-                {name = "oxygen", amount = 150, type = "fluid"}
+                {type = "item",   name = "bonemeal", amount = 3},
+                {type = "item",   name = "skin",     amount = 5},
+                {type = "item",   name = "brain",    amount = 2},
+                {name = "oxygen", amount = 150,      type = "fluid"}
             },
             energy_required = 5
         },
@@ -58,8 +58,8 @@ if data and not yafc_turd_integration then
             category = "atomizer",
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
-                {"guts",          6},
-                {"meat",          4},
+                {type = "item",   name = "guts",  amount = 6},
+                {type = "item",   name = "meat",  amount = 4},
                 {type = "fluid",  name = "blood", amount = 40},
                 {name = "oxygen", amount = 150,   type = "fluid"}
             },

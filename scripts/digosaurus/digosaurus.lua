@@ -250,7 +250,7 @@ py.on_event(py.events.on_destroyed(), function(event)
 end)
 
 py.on_event(defines.events.on_selected_entity_changed, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local entity = player.selected
     if not entity or not entity.valid then return end
     if entity.name ~= "dino-dig-site" then return end
@@ -266,7 +266,7 @@ py.on_event(defines.events.on_selected_entity_changed, function(event)
 end)
 
 gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local element = event.element
     local tags = element.tags
     local dig_data = storage.dig_sites[tags.unit_number]
@@ -274,6 +274,11 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     if not cursor_stack then return end
 
     if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
+    
+    if py.distance_squared(player.position, dig_data.entity.position) > player.reach_distance ^ 2 then
+        player.play_sound {path = "utility/cannot_build"}
+        return
+    end
 
     cursor_stack.swap_stack(dig_data.food_inventory[tags.i])
     Digosaurus.update_gui(player.gui.relative.digosaurus_gui)

@@ -3,8 +3,8 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "earth-generic-sample-duplication",
         ingredients = {
-            {"iron-chest",           1},
-            {"earth-generic-sample", 1}
+            {type = "item", name = "iron-chest",           amount = 1},
+            {type = "item", name = "earth-generic-sample", amount = 1}
         },
         results = {{name = "earth-generic-sample", amount = 2, type = "item", ignored_by_productivity = 1, ignored_by_stats = 1}},
         enabled = false,
@@ -16,12 +16,12 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "solar-panel-equipment-cheap",
         ingredients = {
-            {"plastic-bar",         10},
-            {"zinc-plate",          10},
-            {"capacitor1",          10},
-            {"glass",               10},
-            {"small-electric-pole", 1},
-            {"water-barrel",        1},
+            {type = "item", name = "plastic-bar",         amount = 10},
+            {type = "item", name = "zinc-plate",          amount = 10},
+            {type = "item", name = "capacitor1",          amount = 10},
+            {type = "item", name = "glass",               amount = 10},
+            {type = "item", name = "small-electric-pole", amount = 1},
+            {type = "item", name = "water-barrel",        amount = 1},
         },
         results = {{name = "solar-panel-mk01", amount = 1, type = "item"}},
         enabled = false,

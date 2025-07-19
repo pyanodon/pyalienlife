@@ -161,6 +161,11 @@ end
 
 if mods.pystellarexpedition then
     require "__pystellarexpedition__.prototypes.updates.base-updates"
+    require "__pystellarexpedition__.prototypes.updates.space-age-updates"
+    require "__pystellarexpedition__.prototypes.updates.maraxsis-updates"
+    require "__pystellarexpedition__.prototypes.updates.pycoalprocessing-updates"
+    require "__pystellarexpedition__.prototypes.updates.pyrawores-updates"
+    require "__pystellarexpedition__.prototypes.updates.pypetroleumhandling-updates"
     require "__pystellarexpedition__.prototypes.updates.pyalternativeenergy-updates"
     require "__pystellarexpedition__.prototypes.updates.pyhightech-updates"
     require "__pystellarexpedition__.prototypes.updates.pyalienlife-updates"
@@ -198,7 +203,8 @@ RECIPE("milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):repla
 RECIPE("milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png", icon_size = 64}}
 RECIPE("empty-milk-barrel"):remove_unlock("fluid-handling"):add_unlock("korlex"):replace_ingredient("milk-barrel", "barrel-milk"):set_fields {results = {{type = "item", name = "empty-barrel-milk", amount = 1}, {type = "fluid", name = "milk", amount = 50}}}
 RECIPE("empty-milk-barrel").icons = {{icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk-recipe.png", icon_size = 64}}
-
+--Fix the sweet syrup unbarreling recipe to return correct temperature fluid
+RECIPE("empty-sweet-syrup-barrel"):set_fields {results = {{type = "item", name = "barrel", amount = 1}, {type = "fluid", name = "sweet-syrup", amount = 50, temperature = 10}}}
 
 --copy`s of combustion recipes with biomass
 for _, recipe in pairs(data.raw.recipe) do
@@ -325,4 +331,8 @@ end
 if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
+end
+
+if mods["dependency-graph-lib"] then
+    data.raw.item["iron-chest"].autotech_startup = true
 end

@@ -85,7 +85,7 @@ local function check_for_basic_item(item)
     return not items_with_metadata[item]
 end
 
-function Oculua.process_player(player) -- #TODO fuck quality
+function Oculua.process_player(player)  -- #TODO fuck quality
     local inventory = player.character.get_main_inventory().get_contents()
     for _, item in ipairs(inventory) do -- ipairs cause lua is a very good language and lets you write horrible code
         if type(item) == "table" then inventory[item.name] = item.count end
@@ -99,6 +99,8 @@ function Oculua.process_player(player) -- #TODO fuck quality
     local logistic_network_incoming = logistic_point.targeted_items_deliver
     for i = 1, logistic_point.sections_count do
         local section = logistic_point.get_section(i)
+        if not section.active then goto inactive_section end -- https://github.com/pyanodon/pybugreports/issues/919
+
         for _, filter in pairs(section.filters or {}) do
             if not filter.value then goto continue end
             if filter.import_from and filter.import_from.name ~= player.surface.name then goto continue end
@@ -141,6 +143,7 @@ function Oculua.process_player(player) -- #TODO fuck quality
 
             ::continue::
         end
+        ::inactive_section::
     end
 end
 

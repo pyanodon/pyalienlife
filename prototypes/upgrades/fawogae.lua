@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("fawogae-1"):copy(),
-        RECIPE("fawogae-with-manure"):copy(),
-        RECIPE("fawogae-with-improved-substrate"):copy(),
-        RECIPE("fawogae-with-special-substrate"):copy(),
-        RECIPE("fawogae-with-growth-hormone"):copy(),
+        RECIPE("fawogae-2"):copy(),
+        RECIPE("fawogae-3"):copy(),
+        RECIPE("fawogae-4"):copy(),
+        RECIPE("fawogae-5"):copy(),
     } do
         recipe.name = recipe.name .. "-nitrogen"
         recipe:remove_ingredient("water")
@@ -23,9 +23,9 @@ if data and not yafc_turd_integration then
         category = "desulfurization",
         energy_required = 6,
         ingredients = {
-            {"fawogae",      2},
-            {"sulfur",       2},
-            {type = "fluid", name = "oxygen", amount = 50},
+            {type = "item",  name = "fawogae", amount = 2},
+            {type = "item",  name = "sulfur",  amount = 2},
+            {type = "fluid", name = "oxygen",  amount = 50},
         },
         results = {
             {type = "fluid", name = "acidgas", amount = 250},
@@ -39,7 +39,7 @@ if data and not yafc_turd_integration then
         RECIPE("fawogae-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-xeno-codex"
-        recipe:add_ingredient {"xeno-codex", 1}
+        recipe:add_ingredient {type = "item", name = "xeno-codex", amount = 1}
         data:extend {recipe}
     end
 
@@ -48,7 +48,7 @@ if data and not yafc_turd_integration then
     coal_fawogae.energy_required = coal_fawogae.energy_required * 4
     coal_fawogae.ingredients[1].amount = 10
     coal_fawogae:remove_result("raw-coal")
-    coal_fawogae:add_result {"active-carbon", 3}
+    coal_fawogae:add_result {type = "item", name = "active-carbon", amount = 3}
     coal_fawogae.icons = nil
     coal_fawogae.icon = nil
     coal_fawogae.main_product = "active-carbon"
@@ -97,11 +97,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "fawogae-1",                       new = "fawogae-1-nitrogen",                       type = "recipe-replacement"},
-                {old = "fawogae-with-manure",             new = "fawogae-with-manure-nitrogen",             type = "recipe-replacement"},
-                {old = "fawogae-with-improved-substrate", new = "fawogae-with-improved-substrate-nitrogen", type = "recipe-replacement"},
-                {old = "fawogae-with-special-substrate",  new = "fawogae-with-special-substrate-nitrogen",  type = "recipe-replacement"},
-                {old = "fawogae-with-growth-hormone",     new = "fawogae-with-growth-hormone-nitrogen",     type = "recipe-replacement"},
+                {old = "fawogae-1", new = "fawogae-1-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-2", new = "fawogae-2-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-3", new = "fawogae-3-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-4", new = "fawogae-4-nitrogen", type = "recipe-replacement"},
+                {old = "fawogae-5", new = "fawogae-5-nitrogen", type = "recipe-replacement"},
             }
         },
         {

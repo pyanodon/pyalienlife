@@ -6,8 +6,8 @@ if data and not yafc_turd_integration then
         RECIPE("guar-4"):copy(),
     } do
         recipe.name = recipe.name .. "-guarpulse"
-        recipe:add_ingredient {"fungicide", 1}
-        recipe:add_result {"zinc-nanocomplex", 2 ^ (i - 1)}
+        recipe:add_ingredient {type = "item", name = "fungicide", amount = 1}
+        recipe:add_result {type = "item", name = "zinc-nanocomplex", amount = 2 ^ (i - 1)}
         recipe.main_product = "zinc-nanocomplex"
         data:extend {recipe}
     end

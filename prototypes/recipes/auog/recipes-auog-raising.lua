@@ -5,6 +5,7 @@ py.autorecipes {
 	allowed_module_categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
+	number_icons = true,
 	mats =
 	{
 		--base
@@ -114,6 +115,7 @@ py.autorecipes {
 	category = "auog",
 	subgroup = "py-alienlife-auog",
 	order = "b",
+	number_icons = true,
 	upgrades =
 	{
 		{
@@ -171,7 +173,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "auog", remove_item = true},
-				{name = "auog", amount_min = 2,    amount_max = 8},
+				{name = "auog", amount_min = 3,    amount_max = 8},
 			},
 			crafting_speed = 130,
 			tech = "auog",

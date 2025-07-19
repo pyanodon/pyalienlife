@@ -5,15 +5,15 @@ if data and not yafc_turd_integration then
         enabled = false,
         category = "cridren",
         ingredients = {
-            {"caged-phadai", 1},
-            {"silver-plate", 2},
-            {"water-barrel", 20},
+            {type = "item", name = "caged-phadai", amount = 1},
+            {type = "item", name = "silver-plate", amount = 2},
+            {type = "item", name = "water-barrel", amount = 20},
         },
         results = {
-            {"cage",                         1},
-            {"ethylene-chlorohydrin-barrel", 20},
-            {"bones",                        2},
-            {"cridren-seeds",                1},
+            {type = "item", name = "cage",                         amount = 1},
+            {type = "item", name = "ethylene-chlorohydrin-barrel", amount = 20},
+            {type = "item", name = "bones",                        amount = 2},
+            {type = "item", name = "cridren-seeds",                amount = 1},
         },
         energy_required = 40,
         main_product = "ethylene-chlorohydrin-barrel",
@@ -27,15 +27,15 @@ if data and not yafc_turd_integration then
         enabled = false,
         category = "cridren",
         ingredients = {
-            {"caged-vrauks",            1},
-            {"geothermal-water-barrel", 20},
-            {"p2s5",                    1}
+            {type = "item", name = "caged-vrauks",            amount = 1},
+            {type = "item", name = "geothermal-water-barrel", amount = 20},
+            {type = "item", name = "p2s5",                    amount = 1}
         },
         results = {
-            {"chitin",                        3},
-            {"organic-acid-anhydride-barrel", 20},
-            {"cage",                          1},
-            {"cridren-seeds",                 1},
+            {type = "item", name = "chitin",                        amount = 3},
+            {type = "item", name = "organic-acid-anhydride-barrel", amount = 20},
+            {type = "item", name = "cage",                          amount = 1},
+            {type = "item", name = "cridren-seeds",                 amount = 1},
         },
         energy_required = 40,
         main_product = "organic-acid-anhydride-barrel",
@@ -66,7 +66,7 @@ if data and not yafc_turd_integration then
         RECIPE("cridren-enclosure-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-mufflers"
-        recipe:add_ingredient {mufflers[i], i * 35}
+        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}
         data:extend {recipe}
     end
 end

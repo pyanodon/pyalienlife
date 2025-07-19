@@ -33,16 +33,16 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"ralesia-plantation-mk01", 1},
-        {"plastic-bar",             50},
-        {"engine-unit",             2},
-        {"pump",                    4},
-        {"advanced-circuit",        15},
-        {"latex",                   50},
-        {"neuroprocessor",          15},
+        {type = "item", name = "ralesia-plantation-mk01", amount = 1},
+        {type = "item", name = "plastic-bar",             amount = 50},
+        {type = "item", name = "engine-unit",             amount = 2},
+        {type = "item", name = "pump",                    amount = 4},
+        {type = "item", name = "advanced-circuit",        amount = 15},
+        {type = "item", name = "latex",                   amount = 50},
+        {type = "item", name = "neuroprocessor",          amount = 15},
     },
     results = {
-        {"ralesia-plantation-mk02", 1}
+        {type = "item", name = "ralesia-plantation-mk02", amount = 1}
     }
 }:add_unlock("botany-mk02")
 
@@ -52,14 +52,14 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"ralesia-plantation-mk02", 1},
-        {"molybdenum-plate",        40},
-        {"electric-engine-unit",    10},
-        {"processing-unit",         15},
-        {"neuromorphic-chip",       10},
+        {type = "item", name = "ralesia-plantation-mk02", amount = 1},
+        {type = "item", name = "molybdenum-plate",        amount = 40},
+        {type = "item", name = "electric-engine-unit",    amount = 10},
+        {type = "item", name = "processing-unit",         amount = 15},
+        {type = "item", name = "neuromorphic-chip",       amount = 10},
     },
     results = {
-        {"ralesia-plantation-mk03", 1}
+        {type = "item", name = "ralesia-plantation-mk03", amount = 1}
     }
 }:add_unlock("botany-mk03")
 
@@ -69,15 +69,15 @@ RECIPE {
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {"ralesia-plantation-mk03", 1},
-        {"blanket",                 5},
-        {"silver-foam",             15},
-        {"metallic-glass",          30},
-        {"control-unit",            15},
-        {"low-density-structure",   20},
+        {type = "item", name = "ralesia-plantation-mk03", amount = 1},
+        {type = "item", name = "blanket",                 amount = 5},
+        {type = "item", name = "silver-foam",             amount = 15},
+        {type = "item", name = "metallic-glass",          amount = 30},
+        {type = "item", name = "control-unit",            amount = 15},
+        {type = "item", name = "low-density-structure",   amount = 20},
     },
     results = {
-        {"ralesia-plantation-mk04", 1}
+        {type = "item", name = "ralesia-plantation-mk04", amount = 1}
     }
 }:add_unlock("botany-mk04")
 

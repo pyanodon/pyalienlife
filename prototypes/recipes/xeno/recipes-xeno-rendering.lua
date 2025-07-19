@@ -5,15 +5,14 @@ local INPUT_AMOUNT = 1
 local BASE_BONES = 3
 local BASE_MEAT = 4
 local BASE_SKIN = 4   -- chitin
-local BASE_BLOOD = 80 -- sulfuric-acid
+local BASE_BLOOD = 800 -- sulfuric-acid
 local BASE_BRAIN = 1
 
 local IMP_BONES = 11
 local IMP_MEAT = 10
 local IMP_SKIN = 23
-local IMP_BLOOD = 200
+local IMP_BLOOD = 2000
 local IMP_BRAIN = 4
-
 
 py.autorecipes {
 	name = "rendering-xeno",
@@ -103,7 +102,7 @@ py.autorecipes {
 			name = "ex-blo-xeno",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
-				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -123,7 +122,7 @@ py.autorecipes {
 			name = "ex-chi-xeno",
 			icons = {
 				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",    scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

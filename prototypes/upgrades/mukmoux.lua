@@ -59,13 +59,15 @@ if data and not yafc_turd_integration then
     end
 
     for _, poop_recipe in pairs {
-        RECIPE("manure-1"):copy(),
-        RECIPE("manure-2"):copy(),
-        RECIPE("manure-3"):copy(),
-        RECIPE("manure-4"):copy(),
+        RECIPE("mukmoux-manure-1"):copy(),
+        RECIPE("mukmoux-manure-2"):copy(),
+        RECIPE("mukmoux-manure-3"):copy(),
+        RECIPE("mukmoux-manure-4"):copy(),
     } do
         poop_recipe.name = poop_recipe.name .. "-mukmoux-turd"
         poop_recipe:multiply_result_amount("manure", 2)
+        poop_recipe:add_result_amount("manure-bacteria-barrel", -1)
+        poop_recipe:add_result_amount("barrel", 1)
         for _, ingredient in pairs(poop_recipe.ingredients) do
             if ingredient.name == "mukmoux-food-01" or ingredient.name == "mukmoux-food-02" or ingredient.name == "bedding" then
                 poop_recipe:add_result {name = ingredient.name, amount_min = 0, amount_max = ingredient.amount, type = "item"}
@@ -132,10 +134,10 @@ return {
                 {old = "mukmoux-2",            new = "mukmoux-2-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-3",            new = "mukmoux-3-bip",                         type = "recipe-replacement"},
                 {old = "mukmoux-4",            new = "mukmoux-4-bip",                         type = "recipe-replacement"},
-                {old = "manure-1",             new = "manure-1-mukmoux-turd",                 type = "recipe-replacement"},
-                {old = "manure-2",             new = "manure-2-mukmoux-turd",                 type = "recipe-replacement"},
-                {old = "manure-3",             new = "manure-3-mukmoux-turd",                 type = "recipe-replacement"},
-                {old = "manure-4",             new = "manure-4-mukmoux-turd",                 type = "recipe-replacement"},
+                {old = "mukmoux-manure-1",     new = "mukmoux-manure-1-mukmoux-turd",         type = "recipe-replacement"},
+                {old = "mukmoux-manure-2",     new = "mukmoux-manure-2-mukmoux-turd",         type = "recipe-replacement"},
+                {old = "mukmoux-manure-3",     new = "mukmoux-manure-3-mukmoux-turd",         type = "recipe-replacement"},
+                {old = "mukmoux-manure-4",     new = "mukmoux-manure-4-mukmoux-turd",         type = "recipe-replacement"},
                 {old = "mukmoux-pasture-mk01", new = "mukmoux-pasture-mk01-with-electronics", type = "recipe-replacement"},
                 {old = "mukmoux-pasture-mk02", new = "mukmoux-pasture-mk02-with-electronics", type = "recipe-replacement"},
                 {old = "mukmoux-pasture-mk03", new = "mukmoux-pasture-mk03-with-electronics", type = "recipe-replacement"},

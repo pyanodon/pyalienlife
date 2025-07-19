@@ -1,17 +1,107 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.42
+Version: 3.0.47
 Date: ???
   Changes:
-    - Add missing migration for new soot
+    - Fixed underground vessel occasionally not connecting to normal vessel with Squeak Through.
+    - Fixed some Ukrainian locale strings.
+    - Fixed typo: Xenogeneic cells -> Xenogenic cells
+    - Seasponge and a ton of other alien life modules have proper shadow now.
+    - Vatbrain range got swoler by 1 tile in the north AND east directions!
+    - Fixed vatbrain range to be accurate to what is shown to the player.
+    - Fixed Wyrmholes not having worms (thanks, O5MO!). Resolves https://github.com/pyanodon/pybugreports/issues/1082 and https://github.com/pyanodon/pybugreports/issues/994
+    - Fixed a typo in sweetened biomass TURD recipe description
+    - Fixed caravans not displaying alerts when out of food
+    - Destroying caravan's destination no longer removes the schedule and instead shows a new alert prompting the user to select a new destination
+    - Updated food slot and food alert graphics
+    - Made caravans update reference to player's character if it changes. Resolves https://github.com/pyanodon/pybugreports/issues/917
+    - Fixed caravans treating interrupt with no conditions as having conditions fulfilled. Resolves https://github.com/pyanodon/pybugreports/issues/1092
+    - Fixed caravans unnecessarily going idle when changing "wait for condition" checkbox. Resolves https://github.com/pyanodon/pybugreports/issues/984
+    - Fixed caravans not updating the action in progress when reordering schedule. Resolves https://github.com/pyanodon/pybugreports/issues/1078
+    - Fixed setting the equality for caravan interrupt circuit conditions causing a crash. Resolves https://github.com/pyanodon/pybugreports/issues/1101
+    - Added short names for some actions
+    - Prevented having 2 caravan interrupts with the same name. Resolves https://github.com/pyanodon/pybugreports/issues/1102
+    - Fixed sweet syrup unbarreling returning the wrong temperature syrup. Resolves https://github.com/pyanodon/pybugreports/issues/1055
+    - Add fluid caravans, creatures capable of transporting fluids between two outposts.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.46
+Date: 2025-6-29
+  Changes:
+    - Fixed locale file having poorly worded sentence in laser-cutting turd.
+    - Respects flipped buildings when replacing building with TURD version.
+    - Bonemeal recipe changed to use bioreactor if pyhightech isn't enabled (resolves https://github.com/pyanodon/pybugreports/issues/1048).
+    - Renamed "Logistic Station" to "Wyrmhole".
+    - Changed the internal name for Wyrmholes from "pydrive" to "wyrmhole".
+    - Fixed improved sponge recipe outputting too few sponges.
+    - Fixed a very old migration.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.45
+Date: 2025-6-2
+  Changes:
+    - Crash fixes.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.44
+Date: 2025-6-1
+  Changes:
+    - Fixed migration crash involving simik turd path 2.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.43
+Date: 2025-6-1
+  Changes:
+    - Changed spore collectors to use research productivity instead of 3 different recipes
+    - Made bhoddos breeding less random
+    - The pyHT urea recipe is now marked as hidden.
+    - Added a new recycling recipe for extra cages. Resolves https://github.com/pyanodon/pybugreports/issues/965
+    - Fixed fish TURD fish farms not having passthru pipe connections. Resolves https://github.com/pyanodon/pybugreports/issues/955
+    - Fix crash with caravan interupt migrations. Resolves https://github.com/pyanodon/pybugreports/issues/909
+    - Farm recipe icons are now numbered.
+    - Fixed harvesters placed on a smart farm changing circuit conditions when the smart farm creates new crops. Resolves https://github.com/pyanodon/pybugreports/issues/988
+    - Fixed mk2+ vrauk breeding stats. Resolves https://github.com/pyanodon/pybugreports/issues/997
+    - Fixed icons and z-ordering for logistic station. Resolves https://github.com/pyanodon/pybugreports/issues/994
+    - Changed vrauk mk2+ recipe to show probabilities properly again.
+    - Fixed missing recipe subgroup for titanium cage recycling.
+    - Fixed productivity modules could be inserted into compost plants but the modules had no effect. Resolves https://github.com/pyanodon/pybugreports/issues/1004
+    - Added a player reach distance check when removing food from dig site. Resolves https://github.com/pyanodon/pybugreports/issues/1003
+    - Fixed MK02-MK04 fish and arqad maggots not rendering the pip levels. Resolves https://github.com/pyanodon/pybugreports/issues/999
+    - Buffed all three paths of simik turd path 2.
+    - Increased sulfuric acid from xeno rendering by a factor of 10X.
+    - Decreased alien bacteria requirements in yaedols cultivation MK04 by a factor of 4.
+    - Greatly boosted the output for the "mass creature production" technology at utility science.
+    - Mukmoux manure recipes now generate manure bacteria as a byproduct.
+  Biofluid:
+    - Biofluid overhaul with the following fixes and improvements (Resolves https://github.com/pyanodon/pybugreports/issues/973):
+    - Biofluid bots are no longer given jobs to deliver 0 units of fluid.
+    - When picking a Bioport to service a request, the system now tries them from closest first to farthest last.
+    - Fixed a problem where Provider tanks would become permanently disabled when their contents were erroneously reserved.
+    - Full Provider tanks are considered to have infinite fluid available, allowing a well-supplied tank to service many more bots.
+    - Increased the tank size of both Provider and Requestor tanks from 20k to 100k, allowing for much greater throughput on a single route.
+    - Fixed a graphical problem where the glow layer was improperly rendering on runs of vertical vessels.
+    - Fixed a graphical problem where south-facing vessel-to-ground did not join correctly to adjacent vessels.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.42
+Date: 2025-4-12
+  Changes:
+    - Add missing migration for new soot separation technology.
     - Fixed actions being incorrect size in interrupt target gui
     - Fixed caravan status indicator being slightly misaligned
-    - Fixed incorrect self-interrupt behaviour due to accidentally deleted code
+    - Fixed incorrect self-interrupt behaviour.
+    - Dingrit food MK02 is now unlocked at dingrits stage 2 instead of dingrits stage 3.
+    - Fixed reseting tired dingrits mk01 would give dingrits mk02.
+    - Increased the fuel value of alpha dingrits from 250MJ -> 1.5GJ.
+    - Changed alpha dingrits burnt result from tired dingrits MK01 to dingrits MK04.
+    - Fixed constant "new recipe notification" for TURD recipes. Resolves https://github.com/pyanodon/pybugreports/issues/510
     - Fixed caravans incorrectly evaluating some interrupt conditions. Resolves https://github.com/pyanodon/pybugreports/issues/914 and https://github.com/pyanodon/pybugreports/issues/905
     - Fixed a crash when deleting interrupts in multiplayer. Resolves https://github.com/pyanodon/pybugreports/issues/909
     - Fixed a crash when adding schedule to nuclear caravans. Resolves https://github.com/pyanodon/pybugreports/issues/924
     - Fixed that alpha Dingrits couldn't be used in recipes. Resolves https://github.com/pyanodon/pybugreports/issues/929
     - Fixed Vrauks mk04 recipe. Resolves https://github.com/pyanodon/pybugreports/issues/931
-    - Add fluid caravans, creatures capable of transporting fluids between two outposts.
+    - Fixed keratin output appearing in incorrect improved simik rendering recipes. Resolves https://github.com/pyanodon/pybugreports/issues/915
+    - The fish farm can now pass-thru fluids. Only on the outputs. Resolves https://github.com/pyanodon/pybugreports/issues/908
+    - Slightly buffed the auog yield from auog maturing MK02. Resolves https://github.com/pyanodon/pybugreports/issues/935
+    - Fixed oculas not respecting disabled logistic sections. Resolves https://github.com/pyanodon/pybugreports/issues/919
+    - Fixed nexelit ore not appearing in remote view search. Resolves https://github.com/pyanodon/pybugreports/issues/906
+    - Fixed barrel loops involving the arqad C.A.G.S. turd. Resolves https://github.com/pyanodon/pybugreports/issues/902
+    - Added new pyphoon bay recipes that allow resting of dingrits MK02, dingrits MK03, dingrits MK04, simik MK02, simik MK03, and , simik MK04. Resolves https://github.com/pyanodon/pybugreports/issues/874
+    - Removed productivity from a bunch of bioprinting and data array recipes to match 1.1.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.41
 Date: 2025-3-7

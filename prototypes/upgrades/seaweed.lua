@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for recipe, ingredient in pairs {
-        [RECIPE("seaweed-crop-mk01"):copy()] = {"decider-combinator", 10},
-        [RECIPE("seaweed-crop-mk02"):copy()] = {"arithmetic-combinator", 20},
-        [RECIPE("seaweed-crop-mk03"):copy()] = {"decider-combinator", 30},
-        [RECIPE("seaweed-crop-mk04"):copy()] = {"arithmetic-combinator", 40},
+        [RECIPE("seaweed-crop-mk01"):copy()] = {type = "item", name = "decider-combinator", amount = 10},
+        [RECIPE("seaweed-crop-mk02"):copy()] = {type = "item", name = "arithmetic-combinator", amount = 20},
+        [RECIPE("seaweed-crop-mk03"):copy()] = {type = "item", name = "decider-combinator", amount = 30},
+        [RECIPE("seaweed-crop-mk04"):copy()] = {type = "item", name = "arithmetic-combinator", amount = 40},
     } do
         recipe.name = recipe.name .. "-with-ai"
         recipe:add_ingredient(ingredient)
@@ -11,7 +11,7 @@ if data and not yafc_turd_integration then
     end
 
     for _, recipe in pairs {
-        RECIPE("seaweed"):copy(),
+        RECIPE("seaweed-1"):copy(),
         RECIPE("seaweed-2"):copy(),
         RECIPE("seaweed-3"):copy(),
         RECIPE("seaweed-4"):copy(),
@@ -32,8 +32,8 @@ if data and not yafc_turd_integration then
             {type = "item",  name = "carbon-dust",  amount = 2},
         },
         results = {
-            {"calcium-carbide", 16},
-            {type = "fluid",    name = "oxygen", amount = 100},
+            {type = "item",  name = "calcium-carbide", amount = 16},
+            {type = "fluid", name = "oxygen",          amount = 100},
         },
         enabled = false,
         type = "recipe",
@@ -112,7 +112,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "seaweed",   new = "seaweed-dry",   type = "recipe-replacement"},
+                {old = "seaweed-1", new = "seaweed-1-dry", type = "recipe-replacement"},
                 {old = "seaweed-2", new = "seaweed-2-dry", type = "recipe-replacement"},
                 {old = "seaweed-3", new = "seaweed-3-dry", type = "recipe-replacement"},
                 {old = "seaweed-4", new = "seaweed-4-dry", type = "recipe-replacement"},

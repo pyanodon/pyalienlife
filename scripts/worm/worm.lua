@@ -6,10 +6,10 @@ end)
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
-    if entity.name ~= "pydrive" then return end
+    if entity.name ~= "wyrmhole" then return end
 
     storage.worm_skins[entity.unit_number] = entity.surface.create_entity {
-        name = "pydrive_skin",
+        name = "wyrmhole-skin",
         position = entity.position,
         force = entity.force
     }

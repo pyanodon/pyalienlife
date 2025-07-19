@@ -7,6 +7,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-xeno",
 	order = "c",
 	main_product = "xeno-egg",
+	number_icons = true,
 	mats =
 	{
 		--py
@@ -159,6 +160,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	main_product = "caged-xeno",
+	number_icons = true,
 	mats =
 	{
 		--py

@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = "item", name = "arqad-mk02", probability = 0.005, amount = 1},
         {type = "item", name = "arqad",      probability = 0.8,   amount = 1},
-        {type = "item", name = "barrel",     amount = 7},
+        {type = "item", name = "barrel",     amount = 7,          ignored_by_productivity = 7, ignored_by_stats = 7},
     },
     --main_product = "arqad-mk02",
     icons =
@@ -75,7 +75,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "arqad-egg-2",       amount = 20},
-        {type = "item", name = "empty-barrel-milk", amount = 1},
+        {type = "item", name = "empty-barrel-milk", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     main_product = "arqad-egg-2",
     icons =
@@ -158,7 +158,7 @@ RECIPE {
         {type = "item", name = "arqad-mk03", probability = 0.005, amount = 1},
         {type = "item", name = "arqad-mk02", probability = 0.4,   amount = 1},
         {type = "item", name = "arqad",      probability = 0.4,   amount = 1},
-        {type = "item", name = "barrel",     amount = 14},
+        {type = "item", name = "barrel",     amount = 14,         ignored_by_productivity = 14, ignored_by_stats = 14},
     },
     --main_product = "arqad-mk03",
     icons =
@@ -296,7 +296,7 @@ RECIPE {
         {type = "item", name = "arqad-mk03", probability = 0.3,   amount = 1},
         {type = "item", name = "arqad-mk02", probability = 0.3,   amount = 1},
         {type = "item", name = "arqad",      probability = 0.2,   amount = 1},
-        {type = "item", name = "barrel",     amount = 28},
+        {type = "item", name = "barrel",     amount = 28,         ignored_by_productivity = 28, ignored_by_stats = 28},
     },
     --main_product = "arqad-mk04",
     icons =
@@ -350,7 +350,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "arqad-egg-4",       amount = 20},
-        {type = "item", name = "empty-barrel-milk", amount = 5},
+        {type = "item", name = "empty-barrel-milk", amount = 5, ignored_by_productivity = 5, ignored_by_stats = 5},
     },
     main_product = "arqad-egg-4",
     icons =

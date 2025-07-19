@@ -1,8 +1,9 @@
 py.autorecipes {
-	name = "filled-comb",
+	name = "arqad-filled-comb",
 	category = "arqad",
 	subgroup = "py-alienlife-arqad",
 	main_product = "filled-comb",
+	number_icons = true,
 	upgrades =
 	{
 		{
@@ -45,7 +46,6 @@ py.autorecipes {
 			},
 			crafting_speed = 80,
 			tech = "arqad",
-			name = "arqad-filled-comb-1"
 		},
 		--py
 		{
@@ -61,7 +61,6 @@ py.autorecipes {
 			},
 			crafting_speed = 50,
 			tech = "arqad-mk02",
-			name = "arqad-filled-comb-2",
 		},
 		--prod
 		{
@@ -77,7 +76,6 @@ py.autorecipes {
 			},
 			crafting_speed = 45,
 			tech = "arqad-mk03",
-			name = "arqad-filled-comb-3",
 		},
 		--utility
 		{
@@ -94,7 +92,6 @@ py.autorecipes {
 			},
 			crafting_speed = 25,
 			tech = "arqad-mk04",
-			name = "arqad-filled-comb-4",
 		},
 	}
 }

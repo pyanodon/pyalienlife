@@ -4,6 +4,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-korlex",
 	order = "z",
 	main_product = "barrel-milk",
+	number_icons = true,
 	upgrades =
 	{
 		{
@@ -37,7 +38,6 @@ py.autorecipes {
 			},
 			crafting_speed = 100,
 			tech = "korlex",
-			name = "korlex-milk-1",
 		},
 		--py
 		{
@@ -53,7 +53,6 @@ py.autorecipes {
 			},
 			crafting_speed = 80,
 			tech = "korlex-mk02",
-			name = "korlex-milk-2",
 		},
 		--chem
 		{
@@ -69,7 +68,6 @@ py.autorecipes {
 			},
 			crafting_speed = 60,
 			tech = "korlex-mk03",
-			name = "korlex-milk-3",
 		},
 		--prod
 		{
@@ -84,7 +82,6 @@ py.autorecipes {
 			},
 			crafting_speed = 60,
 			tech = "korlex-mk04",
-			name = "korlex-milk-4",
 		},
 	}
 }

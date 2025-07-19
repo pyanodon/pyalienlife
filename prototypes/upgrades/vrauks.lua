@@ -26,7 +26,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. "-with-lamp"
-        recipe:add_result {"small-lamp", i * 32}
+        recipe:add_result {type = "item", name = "small-lamp", amount = i * 32}
         data:extend {recipe}
     end
 

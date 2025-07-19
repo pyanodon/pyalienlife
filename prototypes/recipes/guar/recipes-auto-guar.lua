@@ -4,6 +4,7 @@ py.autorecipes {
 	main_product = "guar",
 	subgroup = "py-alienlife-guar",
 	order = "a",
+	number_icons = true,
 	mats =
 	{
 		--logistic

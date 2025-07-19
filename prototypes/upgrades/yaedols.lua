@@ -1,8 +1,6 @@
 if data and not yafc_turd_integration then
     for _, recipe in pairs {
         RECIPE("yaedols-spores"):copy(),
-        RECIPE("yaedols-spores-2"):copy(),
-        RECIPE("yaedols-spores-3"):copy(),
         RECIPE("yaedols-spore-mk02"):copy(),
         RECIPE("yaedols-spore-mk03"):copy(),
         RECIPE("yaedols-spore-mk04"):copy(),
@@ -45,6 +43,24 @@ if data and not yafc_turd_integration then
     spore.main_product = "yaedols-spores"
     spore.name = "yaedols-spore-4"
     data:extend {spore}
+    table.insert(
+        data.raw.technology["microfilters"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "yaedols-spores-coke-oven-gas",
+            change = 0.4,
+            hidden = true,
+        }
+    )
+    table.insert(
+        data.raw.technology["microfilters-mk02"].effects,
+        {
+            type = "change-recipe-productivity",
+            recipe = "yaedols-spores-coke-oven-gas",
+            change = 0.6,
+            hidden = true,
+        }
+    )
 end
 
 return {
@@ -79,8 +95,6 @@ return {
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
                 {speed = 0.1,                productivity = 0.2,                       type = "module-effects"},
                 {old = "yaedols-spores",     new = "yaedols-spores-coke-oven-gas",     type = "recipe-replacement"},
-                {old = "yaedols-spores-2",   new = "yaedols-spores-2-coke-oven-gas",   type = "recipe-replacement"},
-                {old = "yaedols-spores-3",   new = "yaedols-spores-3-coke-oven-gas",   type = "recipe-replacement"},
                 {old = "yaedols-spore-mk02", new = "yaedols-spore-mk02-coke-oven-gas", type = "recipe-replacement"},
                 {old = "yaedols-spore-mk03", new = "yaedols-spore-mk03-coke-oven-gas", type = "recipe-replacement"},
                 {old = "yaedols-spore-mk04", new = "yaedols-spore-mk04-coke-oven-gas", type = "recipe-replacement"},

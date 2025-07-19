@@ -3,6 +3,7 @@ py.autorecipes {
 	category = "fawogae",
 	subgroup = "py-alienlife-fawogae",
 	order = "b",
+	number_icons = true,
 	upgrades =
 	{
 		{
@@ -44,7 +45,6 @@ py.autorecipes {
 				{name = "fawogae", amount = 15}
 			},
 			crafting_speed = 80,
-			name = "fawogae-with-manure",
 			tech = "fawogae-mk02"
 		},
 		--green
@@ -61,7 +61,6 @@ py.autorecipes {
 				{name = "fawogae", amount = 30}
 			},
 			crafting_speed = 60,
-			name = "fawogae-with-improved-substrate",
 			tech = "fawogae-mk03"
 		},
 		--blue
@@ -78,7 +77,6 @@ py.autorecipes {
 				{name = "fawogae", amount = 60}
 			},
 			crafting_speed = 40,
-			name = "fawogae-with-special-substrate",
 			tech = "fawogae-mk04"
 		},
 		--GH
@@ -95,7 +93,6 @@ py.autorecipes {
 				{name = "fawogae", amount = 120}
 			},
 			crafting_speed = 20,
-			name = "fawogae-with-growth-hormone",
 			tech = "fawogae-mk05"
 		},
 	}

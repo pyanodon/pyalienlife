@@ -326,7 +326,7 @@ if mods["pyalternativeenergy"] then
     require "prototypes/buildings/zungror-lair-mk04"
 end
 
-require "prototypes/buildings/py-drive"
+require "prototypes/buildings/wyrmhole"
 
 --(( FLUIDS ))--
 require "prototypes/fluids/zogna-bacteria"
@@ -697,20 +697,6 @@ end
 
 require "prototypes/recipes/recipes-atomizer"
 require "prototypes/recipes/recipes-auto-acessories"
---require 'prototypes/recipes/recipes-auto-blood-1'
---require 'prototypes/recipes/recipes-auto-blood-2'
---require 'prototypes/recipes/recipes-auto-bone-1'
---require 'prototypes/recipes/recipes-auto-bone-2'
---require 'prototypes/recipes/recipes-auto-brains'
---require 'prototypes/recipes/recipes-auto-brains-2'
---require 'prototypes/recipes/recipes-auto-fat-1'
---require 'prototypes/recipes/recipes-auto-fat-2'
---require 'prototypes/recipes/recipes-auto-guts-1'
---require 'prototypes/recipes/recipes-auto-guts-2'
---require 'prototypes/recipes/recipes-auto-meat-1'
---require 'prototypes/recipes/recipes-auto-meat-2'
---require 'prototypes/recipes/recipes-auto-skin-1'
---require 'prototypes/recipes/recipes-auto-skin-2'
 require "prototypes/recipes/recipes-bioprinting"
 require "prototypes/recipes/recipes-bladder"
 require "prototypes/recipes/recipes-mo"
@@ -728,6 +714,10 @@ require "prototypes/ores/yotoi"
 require "prototypes/ores/yotoi-fruit"
 require "prototypes/ores/bioreserve"
 require "prototypes/ores/nexelit"
+if mods.pyhightech then
+    require "prototypes/ores/kicalk"
+    require "prototypes/ores/arum"
+end
 
 --(( BACKGROUND ))--
 data.raw["utility-constants"].default.recipe_step_limit = 2000;

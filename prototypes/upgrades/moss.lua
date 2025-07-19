@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
         ingredients = {
             {type = "fluid", name = "pressured-water", amount = 50},
             {type = "fluid", name = "chlorine",        amount = 10},
-            {"plastic-bar",  1}
+            {type = "item",  name = "plastic-bar",     amount = 1}
         },
         results = {
             {type = "item", name = "chlorinated-water", amount = 1},

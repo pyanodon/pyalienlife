@@ -35,7 +35,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-double-intake"
         recipe:remove_ingredient("water-saline")
-        recipe:add_ingredient {"salt", 2}
+        recipe:add_ingredient {type = "item", name = "salt", amount = 2}
         recipe:add_ingredient {type = "fluid", name = "water", amount = 400}
         recipe:multiply_result_amount("waste-water", 4)
         data:extend {recipe}

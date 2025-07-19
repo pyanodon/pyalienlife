@@ -7,6 +7,7 @@ py.autorecipes {
 	main_product = "mukmoux-calf",
 	subgroup = "py-alienlife-mukmoux",
 	order = "c",
+	number_icons = true,
 	mats =
 	{
 		--logistic
@@ -197,6 +198,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	main_product = "mukmoux",
+	number_icons = true,
 	upgrades =
 	{
 		{

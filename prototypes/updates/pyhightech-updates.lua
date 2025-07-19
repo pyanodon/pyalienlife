@@ -56,7 +56,7 @@ data.raw["recipe-category"]["arum"].allowed_module_categories = {"arum"}
 data.raw["recipe-category"]["arum"].modules_required = true
 data.raw["recipe-category"]["moon"].allowed_module_categories = {"moondrop"}
 data.raw["recipe-category"]["moon"].modules_required = true
-
+data.raw.recipe.urea.hidden = true
 
 TECHNOLOGY("melamine"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 TECHNOLOGY("fiberboard"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
@@ -79,21 +79,17 @@ if not mods["pyalternativeenergy"] then
     --TECHNOLOGY('electric-energy-accumulators'):add_pack('py-science-pack-2')
 end
 
---(( ORES ))--
-require "prototypes/ores/kicalk"
-require "prototypes/ores/arum"
-
 --(( MODIFICATIONS ))--
 --TECHNOLOGY--
-TECHNOLOGY("nano-tech"):add_prereq("microbiology-mk03")
---TECHNOLOGY('bio-implants'):add_prereq('nano-tech')
+TECHNOLOGY("quantum-processor"):add_prereq("microbiology-mk03")
+--TECHNOLOGY('bio-implants'):add_prereq('quantum-processor')
 TECHNOLOGY("advanced-circuit"):add_prereq("chitin")
 TECHNOLOGY("antitumor"):add_prereq("earnshaw-theorem")
 -- TECHNOLOGY('advanced-circuit'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('aerogel'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('earnshaw-theorem'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('graphene'):add_pack('py-science-pack-3')
--- TECHNOLOGY('nano-tech'):add_pack('py-science-pack-3')
+-- TECHNOLOGY('quantum-processor'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('penrose'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 
@@ -379,7 +375,7 @@ RECIPE("rc-mk04"):add_ingredient {type = "item", name = "intelligent-unit", amou
 
 
 RECIPE("simik-den-mk02"):add_ingredient {type = "item", name = "re-tin", amount = 10}:add_ingredient {type = "item", name = "cooling-system", amount = 10}
-RECIPE("pydrive"):replace_ingredient("processing-unit", "intelligent-unit"):add_ingredient {type = "item", name = "superconductor-servomechanims", amount = 20}:add_ingredient {type = "item", name = "strangelets", amount = 10}
+RECIPE("wyrmhole"):replace_ingredient("processing-unit", "intelligent-unit"):add_ingredient {type = "item", name = "superconductor-servomechanims", amount = 20}:add_ingredient {type = "item", name = "strangelets", amount = 10}
 
 ----RECIPES----
 RECIPE("fungal-substrate-02"):add_ingredient {type = "item", name = "urea", amount = 3}
@@ -493,8 +489,8 @@ RECIPE("rennea-mk03-seed-seperation"):replace_result("tar", "black-liquor")
 RECIPE("rennea-mk04-seed-seperation"):replace_result("tar", "black-liquor")
 
 RECIPE("methane-py-fertilizer"):add_unlock("moondrop-mk02")
-RECIPE("methane-py-fertilizer"):add_ingredient("moondrop-seeds")
-RECIPE("methane-co2"):add_ingredient("moondrop-seeds")
+RECIPE("methane-py-fertilizer"):add_ingredient {type = "item", name = "moondrop-seeds", amount = 1}
+RECIPE("methane-co2"):add_ingredient {type = "item", name = "moondrop-seeds", amount = 1}
 
 RECIPE("plastic-from-casein"):add_ingredient {type = "fluid", name = "methanal", amount = 100}:remove_unlock("korlex"):add_unlock("plastics-mk02")
 RECIPE("charcoal-briquette"):replace_ingredient("raw-fiber", "fiber")
@@ -1596,7 +1592,7 @@ data.raw["item"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["mukmoux-pasture"] = nil
 data.raw["recipe"]["ralesia"] = nil
 
-data.raw["recipe"]["fertilizer-2"].results = {{"fertilizer", 15}}
+data.raw["recipe"]["fertilizer-2"].results = {{type = "item", name = "fertilizer", amount = 15}}
 RECIPE("fertilizer-2"):add_unlock("biofluid-mk01"):add_ingredient {type = "item", name = "guano", amount = 2}:add_ingredient_amount("ammonium-chloride", -18)
 
 py.allow_productivity {"cellulose-01"}

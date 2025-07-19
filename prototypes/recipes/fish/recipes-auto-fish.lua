@@ -6,6 +6,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-fish",
 	order = "c",
 	main_product = "fish-egg",
+	number_icons = true,
 	mats =
 	{
 		--logistic
@@ -154,6 +155,7 @@ py.autorecipes {
 	subgroup = "py-alienlife-fish",
 	order = "b",
 	main_product = "fish",
+	number_icons = true,
 	mats =
 	{
 		--logistic

@@ -45,7 +45,7 @@ local function pickerdollies()
         remote.call("PickerDollies", "add_blacklist_name", "outpost", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost-aerial", true)
         remote.call("PickerDollies", "add_blacklist_name", "mega-farm", true)
-        remote.call("PickerDollies", "add_blacklist_name", "pydrive", true)
+        remote.call("PickerDollies", "add_blacklist_name", "wyrmhole", true)
         remote.call("PickerDollies", "add_blacklist_name", "ipod", true)
         remote.call("PickerDollies", "add_blacklist_name", "vat-brain", true)
         remote.call("PickerDollies", "add_blacklist_name", "dino-dig-site", true)
@@ -100,11 +100,11 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
     end
 end)
 
-remote.add_interface("pyal", {
-    ---@param func string
-    execute_on_nth_tick = function(func)
+py.on_event(defines.events.on_tick, function(event)
+    local func_list = remote.call("on_nth_tick", "query", "pyal", event.tick)
+    for _, func in pairs(func_list) do
         py.mod_nth_tick_funcs[func]()
     end
-})
+end)
 
 py.finalize_events()

@@ -17,7 +17,7 @@ RECIPE {
         {type = "item", name = "zipir-reef-mk01",      amount = 1},
         {type = "item", name = "neuroprocessor",       amount = 10},
     },
-    result = "outpost-aerial"
+    results = {{type = "item", name = "outpost-aerial", amount = 1}}
 }:add_unlock("domestication-mk03")
 
 ITEM {
@@ -32,6 +32,7 @@ ITEM {
 }
 
 data:extend {{
+    ---@diagnostic disable-next-line: assign-type-mismatch
     scale_info_icons = true,
     name = "outpost-aerial",
     type = "container",

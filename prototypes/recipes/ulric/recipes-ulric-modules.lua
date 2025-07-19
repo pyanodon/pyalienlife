@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = "item", name = "ulric-mk02", amount = 1, probability = 0.005},
         {type = "item", name = "barrel",     amount = 7, ignored_by_productivity = 7, ignored_by_stats = 7},
-        {type = "item", name = "ulric",      amount = 1, probability = 0.5,  ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "ulric",      amount = 1, probability = 0.5,           ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -191,7 +191,7 @@ RECIPE {
     results = {
         {type = "item", name = "ulric-mk03", amount = 1, probability = 0.004},
         {type = "item", name = "barrel",     amount = 7, ignored_by_productivity = 7, ignored_by_stats = 7},
-        {type = "item", name = "ulric-mk02", amount = 1, probability = 0.6,  ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "ulric-mk02", amount = 1, probability = 0.6,           ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     --main_product = "ulric-mk03",
     icons =
@@ -343,7 +343,7 @@ RECIPE {
     results = {
         {type = "item", name = "ulric-mk04", amount = 1, probability = 0.003},
         {type = "item", name = "barrel",     amount = 7, ignored_by_productivity = 7, ignored_by_stats = 7},
-        {type = "item", name = "ulric-mk03", amount = 1, probability = 0.7,  ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "ulric-mk03", amount = 1, probability = 0.7,           ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     --main_product = "ulric-mk04",
     icons =

@@ -53,9 +53,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "moondrop",       amount = 2,     ignored_by_productivity = 2, ignored_by_stats = 2},
-        {type = "item", name = "moondrop",       amount_min = 1, amount_max = 3,     probability = 0.10, ignored_by_productivity = 3, ignored_by_stats = 3},
+        {type = "item", name = "moondrop",       amount_min = 1, amount_max = 3,              probability = 0.10,  ignored_by_productivity = 3, ignored_by_stats = 3},
         {type = "item", name = "moondrop-seeds", amount = 7},
-        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3,     probability = 0.25}
+        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3,              probability = 0.25}
     },
     main_product = "moondrop-seeds",
 }:add_unlock("moondrop")

@@ -22,7 +22,7 @@ local function new_fluid_boxes()
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {5.0, -1.0}, direction = defines.direction.east}},
+            pipe_connections = {{flow_direction = "input-output", position = {5.0, -1.0}, direction = defines.direction.east}},
             secondary_draw_orders = {north = -1}
         },
         {
@@ -30,7 +30,7 @@ local function new_fluid_boxes()
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-5.0, 1.0}, direction = defines.direction.west}},
+            pipe_connections = {{flow_direction = "input-output", position = {-5.0, 1.0}, direction = defines.direction.west}},
             secondary_draw_orders = {north = -1}
         },
         {
@@ -38,7 +38,7 @@ local function new_fluid_boxes()
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-5.0, -1.0}, direction = defines.direction.west}},
+            pipe_connections = {{flow_direction = "input-output", position = {-5.0, -1.0}, direction = defines.direction.west}},
             secondary_draw_orders = {north = -1}
         },
         {
@@ -46,7 +46,7 @@ local function new_fluid_boxes()
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {5.0, 1.0}, direction = defines.direction.east}},
+            pipe_connections = {{flow_direction = "input-output", position = {5.0, 1.0}, direction = defines.direction.east}},
             secondary_draw_orders = {north = -1}
         },
     }
@@ -63,8 +63,8 @@ local function add_new_fish_farm(i)
     entity.order = data.raw.item[name].order
     if i ~= 4 then entity.next_upgrade = "turd-fish-farm-mk0" .. (i + 1) end
     entity.allowed_module_categories = {"fish"}
-    entity.energy_usage = (i * 5) .. "MW",
-        table.insert(entity.flags, "not-in-made-in")
+    entity.energy_usage = (i * 5) .. "MW"
+    table.insert(entity.flags, "not-in-made-in")
     entity.fluid_boxes = new_fluid_boxes()
     data:extend {entity}
 end
@@ -78,7 +78,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-agressive-selection"
         recipe:add_result_amount("fish", -i)
-        recipe:add_result {"fish-food-01", i}
+        recipe:add_result {type = "item", name = "fish-food-01", amount = i}
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend {recipe}
     end

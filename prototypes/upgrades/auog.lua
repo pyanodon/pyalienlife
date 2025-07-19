@@ -4,7 +4,7 @@ if data and not yafc_turd_integration then
         RECIPE("auog-food-02"):copy(),
     } do
         recipe.name = recipe.name .. "-sawdust"
-        recipe:add_ingredient {"wood", 6 * i}
+        recipe:add_ingredient {type = "item", name = "wood", amount = 6 * i}
         recipe:remove_ingredient("ash")
         recipe:remove_ingredient("moss")
         recipe:remove_ingredient("ralesia")
@@ -30,8 +30,8 @@ if data and not yafc_turd_integration then
             type = "recipe",
             energy_required = 5,
             ingredients = {
-                {"yaedols",                                      1},
-                {i == 1 and "used-auog" or "used-auog-mk0" .. i, 1}
+                {type = "item", name = "yaedols",                                      amount = 1},
+                {type = "item", name = i == 1 and "used-auog" or "used-auog-mk0" .. i, amount = 1}
             },
             results = results,
             main_product = i == 1 and "auog" or "auog-mk0" .. i,
@@ -40,10 +40,10 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, dirt in pairs {
-        [RECIPE("auog-paddock-mk01"):copy()] = {{"soil", 13}, {"sand", 7}, {"stone", 5}},
-        [RECIPE("auog-paddock-mk02"):copy()] = {{"coarse", 8}, {"limestone", 12}, {"rich-clay", 5}},
-        [RECIPE("auog-paddock-mk03"):copy()] = {{"iron-oxide", 6}, {"coal-dust", 3}, {"gravel", 11}},
-        [RECIPE("auog-paddock-mk04"):copy()] = {{"oil-sand", 10}, {"rare-earth-ore", 2}, {"biomass", 5}},
+        [RECIPE("auog-paddock-mk01"):copy()] = {{type = "item", name = "soil", amount = 13}, {type = "item", name = "sand", amount = 7}, {type = "item", name = "stone", amount = 5}},
+        [RECIPE("auog-paddock-mk02"):copy()] = {{type = "item", name = "coarse", amount = 8}, {type = "item", name = "limestone", amount = 12}, {type = "item", name = "rich-clay", amount = 5}},
+        [RECIPE("auog-paddock-mk03"):copy()] = {{type = "item", name = "iron-oxide", amount = 6}, {type = "item", name = "coal-dust", amount = 3}, {type = "item", name = "gravel", amount = 11}},
+        [RECIPE("auog-paddock-mk04"):copy()] = {{type = "item", name = "oil-sand", amount = 10}, {type = "item", name = "rare-earth-ore", amount = 2}, {type = "item", name = "biomass", amount = 5}},
     } do
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. "-with-dirt"

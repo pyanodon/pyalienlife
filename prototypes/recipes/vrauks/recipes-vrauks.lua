@@ -70,7 +70,7 @@ RECIPE {
         {type = "item",  name = "moss",          amount = 10},
         {type = "item",  name = "guts",          amount = 2},
         {type = "item",  name = "starch",        amount = 4},
-        {type = "fluid", name = "fish-oil",      amount = 30, fluidbox_index = 1},
+        {type = "fluid", name = "fish-oil",      amount = 30,  fluidbox_index = 1},
         {type = "fluid", name = "steam",         amount = 100, fluidbox_index = 2},
     },
     results = {

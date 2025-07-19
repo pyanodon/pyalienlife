@@ -3,6 +3,7 @@ py.autorecipes {
 	category = "tuuphra",
 	subgroup = "py-alienlife-tuuphra",
 	order = "a",
+	number_icons = true,
 	mats =
 	{
 		--logistic

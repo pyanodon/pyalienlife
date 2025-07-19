@@ -14,7 +14,7 @@ if data and not yafc_turd_integration then
         RECIPE("yotoi-4"):copy(),
     } do
         recipe.name = recipe.name .. "-free-leaves"
-        recipe:add_ingredient {"burner-inserter", 1}
+        recipe:add_ingredient {type = "item", name = "burner-inserter", amount = 1}
         recipe:add_result {name = "yotoi-leaves", amount = i * 4, type = "item"}
         recipe.main_product = "yotoi-leaves"
         data:extend {recipe}
@@ -33,7 +33,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             enabled = false,
             energy_required = 40,
-            result = "nutrient",
+            results = {{type = "item", name = "nutrient", amount = 1}},
             name = "nutrient",
             category = "electronic",
             ingredients = {
@@ -60,7 +60,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-nutrient"
         local _, amount = recipe:remove_ingredient("fertilizer")
-        recipe:add_result {"fertilizer", amount}
+        recipe:add_result {type = "item", name = "fertilizer", amount = amount}
         recipe:add_result_amount("yotoi", 1)
         recipe:add_result_amount("yotoi-fruit", 1)
         recipe.main_product = "fertilizer"
@@ -74,7 +74,7 @@ if data and not yafc_turd_integration then
         RECIPE("yotoi-aloe-orchard-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-nutrient"
-        recipe:add_ingredient {"nutrient", 2 ^ (i - 1)}
+        recipe:add_ingredient {type = "item", name = "nutrient", amount = 2 ^ (i - 1)}
         data:extend {recipe}
     end
 end

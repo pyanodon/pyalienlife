@@ -66,17 +66,17 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "cags",
-            result = "cags",
+            results = {{type = "item", name = "cags", amount = 1}},
             ingredients = {
-                {"steel-plate",   10},
-                {"niobium-plate", 10},
-                {"cellulose",     10},
-                {"latex",         10},
-                {"plastic-bar",   10},
-                {"melamine",      10},
-                {"glass",         10},
-                {"silver-plate",  10},
-                {type = "fluid",  name = "creamy-latex", amount = 10},
+                {type = "item",  name = "steel-plate",   amount = 10},
+                {type = "item",  name = "niobium-plate", amount = 10},
+                {type = "item",  name = "cellulose",     amount = 10},
+                {type = "item",  name = "latex",         amount = 10},
+                {type = "item",  name = "plastic-bar",   amount = 10},
+                {type = "item",  name = "melamine",      amount = 10},
+                {type = "item",  name = "glass",         amount = 10},
+                {type = "item",  name = "silver-plate",  amount = 10},
+                {type = "fluid", name = "creamy-latex",  amount = 10},
             },
             category = "crafting-with-fluid",
             energy_required = 10,
@@ -96,7 +96,7 @@ if data and not yafc_turd_integration then
                     {name = "arqad-hive-mk0" .. i, amount = 1,      type = "item"},
                     {name = "hydrangeaceae",       amount = 1,      type = "item"}
                 },
-                results = {{"arqad-hive-mk0" .. i .. "-with-cags", 1}},
+                results = {{type = "item", name = "arqad-hive-mk0" .. i .. "-with-cags", amount = 1}},
                 enabled = false
             }}
             data:extend {{
@@ -105,7 +105,7 @@ if data and not yafc_turd_integration then
                 energy_required = 0.5,
                 category = "crafting",
                 ingredients = {
-                    {"arqad-hive-mk0" .. i .. "-with-cags", 1}
+                    {type = "item", name = "arqad-hive-mk0" .. i .. "-with-cags", amount = 1}
                 },
                 results = {
                     {name = "cags",                amount = 10 * i, type = "item"},
@@ -132,7 +132,7 @@ if data and not yafc_turd_integration then
     local ez_queen = RECIPE("arqad"):copy()
     ez_queen.name = "ez-queen"
     ez_queen:remove_result("arqad")
-    ez_queen:add_result {"arqad-queen", 1}
+    ez_queen:add_result {type = "item", name = "arqad-queen", amount = 1}
     ez_queen.energy_required = ez_queen.energy_required * 2
     ez_queen.main_product = "arqad-queen"
     data:extend {ez_queen}

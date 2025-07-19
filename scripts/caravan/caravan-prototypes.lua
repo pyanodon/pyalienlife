@@ -1,4 +1,4 @@
-require "__core__.lualib.util"
+require "util"
 
 ---@enum CaravanActionListType
 Caravan.action_list_types = {
@@ -8,9 +8,27 @@ Caravan.action_list_types = {
     interrupt_targets = 4,
 }
 
+---@enum CaravanAlert
+Caravan.alerts = {
+    no_fuel = {
+        signal = {
+            type = "virtual",
+            name = "py-no-food"
+        },
+        message = {"?", {"caravan-warnings.no-food"}, {"virtual-signal-name.no-food"}, {"virtual-signal-name.no-fuel"}}
+    },
+    destination_destroyed = {
+        signal = {
+            type = "virtual",
+            name = "py-destination-destroyed"
+        },
+        message = {"?", {"caravan-warnings.destination-destroyed"}, {"virtual-signal-name.destination_destroyed"}, {"gui-alert-tooltip.train-no-path"}}
+    },
+}
+
 Caravan.valid_actions = {
     caravan = {
-        ["outpost"] = table.invert{
+        ["outpost"] = table.invert {
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -23,7 +41,7 @@ Caravan.valid_actions = {
             "circuit-condition",
             "circuit-condition-static"
         },
-        ["character"] = table.invert{
+        ["character"] = table.invert {
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -35,7 +53,7 @@ Caravan.valid_actions = {
             "unload-target",
             "empty-autotrash"
         },
-        ["unit"] = table.invert{
+        ["unit"] = table.invert {
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -46,7 +64,7 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["cargo-wagon"] = table.invert{
+        ["cargo-wagon"] = table.invert {
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -55,7 +73,7 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["car"] = table.invert{
+        ["car"] = table.invert {
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -64,7 +82,7 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["spider-vehicle"] = table.invert{
+        ["spider-vehicle"] = table.invert {
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -73,12 +91,12 @@ Caravan.valid_actions = {
             "load-target",
             "unload-target",
         },
-        ["electric-pole"] = table.invert{
+        ["electric-pole"] = table.invert {
             "time-passed",
             "circuit-condition",
             "circuit-condition-static"
         },
-        ["default"] = table.invert{
+        ["default"] = table.invert {
             "time-passed"
         },
         ["interrupt-condition"] = {
@@ -130,7 +148,7 @@ Caravan.valid_actions = {
     },
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
-Caravan.valid_actions.nukavan["default"] = table.invert{"detonate"}
+Caravan.valid_actions.nukavan["default"] = table.invert {"detonate"}
 
 Caravan.foods = {
     all = {
@@ -447,6 +465,7 @@ Caravan.actions = {
                 local inserted_count = fuel.insert(item)
                 if inserted_count ~= 0 then
                     item.count = inserted_count
+                    ---@diagnostic disable-next-line: param-type-mismatch
                     outpost_inventory.remove(item)
                 end
             end

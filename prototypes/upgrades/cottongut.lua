@@ -21,16 +21,16 @@ if data and not yafc_turd_integration then
         energy_required = 10,
         category = "crafting-with-fluid",
         ingredients = {
-            {"bones",         10},
-            {"moondrop",      1},
-            {"cottongut-pup", 1},
-            {"tin-plate",     2},
-            {type = "fluid",  name = "subcritical-water", amount = 50},
-            {"seaweed",       10},
-            {"wood-seeds",    2},
-            {"native-flora",  15}
+            {type = "item",  name = "bones",             amount = 10},
+            {type = "item",  name = "moondrop",          amount = 1},
+            {type = "item",  name = "cottongut-pup",     amount = 1},
+            {type = "item",  name = "tin-plate",         amount = 2},
+            {type = "fluid", name = "subcritical-water", amount = 50},
+            {type = "item",  name = "seaweed",           amount = 10},
+            {type = "item",  name = "wood-seeds",        amount = 2},
+            {type = "item",  name = "native-flora",      amount = 15}
         },
-        results = {{"cottongut-food-03", 8}}
+        results = {{type = "item", name = "cottongut-food-03", amount = 8}}
     }}
 
     for _, recipe in pairs {
