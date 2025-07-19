@@ -12,6 +12,7 @@ function P.build_main_frame(parent)
     frame.style.maximal_height = 1290
     if storage.edit_interrupt_gui_last_location then
         frame.location = storage.edit_interrupt_gui_last_location 
+        storage.edit_interrupt_gui_last_location = nil
     end
 
     return frame

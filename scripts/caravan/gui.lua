@@ -15,6 +15,7 @@ function P.build(player, caravan_data)
     local main_frame = CaravanGuiComponents.build_main_frame(player.gui.screen, "caravan_new_gui", caravan_data)
     if storage.caravan_gui_last_location then
         main_frame.location = storage.caravan_gui_last_location
+        storage.caravan_gui_last_location = nil
     else
         main_frame.auto_center = true
     end
