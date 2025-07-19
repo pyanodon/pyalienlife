@@ -71,9 +71,9 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     if contains(possibly_blocking_actions, action.type) then
         flow.add {type = "checkbox", name = "py_caravan_action_blocking_checkbox", state = not action.async, tooltip = {"caravan-gui.wait"}, tags = tags}
     end
-    flow.add {type = "sprite-button", name = "py_caravan_action_move_up_button", style = "train_schedule_delete_button", sprite = "up-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_action_move_down_button", style = "train_schedule_delete_button", sprite = "down-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_action_delete_button", style = "train_schedule_delete_button", sprite = "utility/close_black", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_action_move_up_button", style = "train_schedule_delete_button", sprite = "up-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_action_move_down_button", style = "train_schedule_delete_button", sprite = "down-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_action_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}
 end
 
 -- TODO build_action / _frame / _flow ?

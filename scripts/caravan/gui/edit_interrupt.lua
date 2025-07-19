@@ -119,9 +119,9 @@ function P.build_target_destination_frame(parent, schedule_id)
 
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 
-    flow.add {type = "sprite-button", name = "py_edit_interrupt_target_move_up_button", style = "train_schedule_delete_button", sprite = "up-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_edit_interrupt_target_move_down_button", style = "train_schedule_delete_button", sprite = "down-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_edit_interrupt_target_delete_button", style = "train_schedule_delete_button", sprite = "utility/close_black", tags = tags}
+    flow.add {type = "sprite-button", name = "py_edit_interrupt_target_move_up_button", style = "train_schedule_delete_button", sprite = "up-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_edit_interrupt_target_move_down_button", style = "train_schedule_delete_button", sprite = "down-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_edit_interrupt_target_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}
     return frame
 end
 

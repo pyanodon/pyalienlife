@@ -42,9 +42,9 @@ function P.build_condition_flow(parent, condition, action_id, tags)
     end
 
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
-    flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_move_up_button", style = "train_schedule_delete_button", sprite = "up-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_move_down_button", style = "train_schedule_delete_button", sprite = "down-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_delete_button", style = "train_schedule_delete_button", sprite = "utility/close_black", tags = tags}
+    flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_move_up_button", style = "train_schedule_delete_button", sprite = "up-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_move_down_button", style = "train_schedule_delete_button", sprite = "down-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}
 end
 
 -- TODO build_action / _frame / _flow ?

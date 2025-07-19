@@ -33,9 +33,9 @@ function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
 
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 
-    flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "train_schedule_delete_button", sprite = "up-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "train_schedule_delete_button", sprite = "down-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_destination_delete_button", style = "train_schedule_delete_button", sprite = "utility/close_black", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "train_schedule_delete_button", sprite = "up-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "train_schedule_delete_button", sprite = "down-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_destination_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}
     return frame
 end
 
@@ -119,9 +119,9 @@ function P.build_interrupt_frame(parent, caravan_interrupt_index, caravan_data)
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 
     flow.add {type = "sprite-button", name = "py_caravan_interrupt_edit_button", style = "train_schedule_action_button", sprite = "utility/rename_icon", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_interrupt_move_up_button", style = "train_schedule_delete_button", sprite = "up-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_interrupt_move_down_button", style = "train_schedule_delete_button", sprite = "down-black", tags = tags}
-    flow.add {type = "sprite-button", name = "py_caravan_interrupt_delete_button", style = "train_schedule_delete_button", sprite = "utility/close_black", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_interrupt_move_up_button", style = "train_schedule_delete_button", sprite = "up-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_interrupt_move_down_button", style = "train_schedule_delete_button", sprite = "down-white", tags = tags}
+    flow.add {type = "sprite-button", name = "py_caravan_interrupt_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}
 end
 
 function P.build_interrupt_list(parent, caravan_data)

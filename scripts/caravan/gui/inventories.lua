@@ -55,7 +55,7 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
 
     if player and player.hand_location and player.hand_location.inventory == defines.inventory.character_main and player.hand_location.slot == slot_index then
         sprite = "utility/hand"
-        hovered_sprite = "utility/hand_black"
+        hovered_sprite = "utility/hand"
     elseif item_stack.valid_for_read then
         elem_tooltip = {type = "item", name = item_stack.name}
         local prototype = prototypes.item[item_stack.name]
