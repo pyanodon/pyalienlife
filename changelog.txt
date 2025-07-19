@@ -21,6 +21,7 @@ Date: ???
     - Added short names for some actions
     - Prevented having 2 caravan interrupts with the same name. Resolves https://github.com/pyanodon/pybugreports/issues/1102
     - Fixed sweet syrup unbarreling returning the wrong temperature syrup. Resolves https://github.com/pyanodon/pybugreports/issues/1055
+    - Add fluid caravans, creatures capable of transporting fluids between two outposts.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
