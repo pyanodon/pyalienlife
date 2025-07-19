@@ -15,4 +15,6 @@ py.on_event(py.events.on_init(), function()
     storage.last_opened = storage.last_opened or {}
     storage.make_operable_next_tick = storage.make_operable_next_tick or {}
     storage.edited_interrupt = storage.edited_interrupt or nil
+    storage.caravan_gui_last_location = nil
+    storage.edit_interrupt_gui_last_location = nil
 end)

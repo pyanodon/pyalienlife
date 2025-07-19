@@ -24,6 +24,9 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = f
     local unit_number = element.tags.unit_number
     assert(unit_number)
     storage.last_opened_caravan[player.index] = unit_number
+    if player.gui.screen.caravan_new_gui then 
+        storage.caravan_gui_last_location = player.gui.screen.caravan_new_gui.location
+    end
     player.opened = nil
 end
 

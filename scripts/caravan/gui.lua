@@ -13,7 +13,11 @@ end
 
 function P.build(player, caravan_data)
     local main_frame = CaravanGuiComponents.build_main_frame(player.gui.screen, "caravan_new_gui", caravan_data)
-    main_frame.auto_center = true
+    if storage.caravan_gui_last_location then
+        main_frame.location = storage.caravan_gui_last_location
+    else
+        main_frame.auto_center = true
+    end
     player.opened = main_frame
     -- TODO put back once groups are implemented
     -- CaravanGuiComponents.build_subheader_frame(main_frame.entity_frame)
@@ -69,6 +73,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
     local gui = event.element
 
     -- only close the main GUI if no other "pop-ups" are on the screen
+    -- TODO close edit_interrupt_gui here when ESC is pressed
     local slider_frame = CaravanGuiComponents.get_slider_frame(player) 
     local add_interrupt_frame = player.gui.screen.add_interrupt_gui
     -- Ideally, it should rely on a 'focused' attribute, but it doesn't exist.

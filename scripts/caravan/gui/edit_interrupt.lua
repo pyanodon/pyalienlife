@@ -10,6 +10,9 @@ function P.build_main_frame(parent)
     local frame =  parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla edit_interrupt frame
     frame.style.maximal_height = 1290
+    if storage.edit_interrupt_gui_last_location then
+        frame.location = storage.edit_interrupt_gui_last_location 
+    end
 
     return frame
 end

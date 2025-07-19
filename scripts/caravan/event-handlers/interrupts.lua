@@ -191,7 +191,11 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_add_target_button"] =
     storage.last_opened_caravan[player.index] = unit_number
     -- destroy the GUI before triggering on_gui_closed, to keep the storage.edited_interrupt alive
     if player.gui.screen.edit_interrupt_gui then
+        storage.edit_interrupt_gui_last_location = player.gui.screen.edit_interrupt_gui.location
         player.gui.screen.edit_interrupt_gui.destroy()
+    end
+    if player.gui.screen.caravan_new_gui then 
+        storage.caravan_gui_last_location = player.gui.screen.caravan_new_gui.location
     end
     player.opened = nil
 end
