@@ -39,7 +39,7 @@ RECIPE {
 		{type = "item", name = "cdna", amount = 4},
 	},
   results = {
-    { type = "item", name = "crane-mk02", amount = 1 }
+    { type = "item", name = "crane-mk02", amount = 2 }
   }
 }
 
@@ -49,7 +49,7 @@ RECIPE {
   energy_required = 1,
   ingredients = { },
   results = {
-    { type = "item", name = "crane-mk03", amount = 1 }
+    { type = "item", name = "crane-mk03", amount = 3 }
   }
 }
 
