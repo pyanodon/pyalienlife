@@ -1,6 +1,7 @@
 RECIPE {
   type = "recipe",
   name = "crane-mk01",
+  category = "creature-chamber",
   energy_required = 1,
   ingredients = {
 		{type = "item", name = "brain", amount = 1},
@@ -22,8 +23,21 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "crane-mk02",
+  category = "creature-chamber",
   energy_required = 1,
-  ingredients = { },
+  ingredients = {
+		{type = "item", name = "crane-mk01", amount = 1},
+		{type = "item", name = "neuroprocessor", amount = 2},
+		{type = "item", name = "mechanical-parts-02", amount = 2},
+		{type = "item", name = "small-parts-02", amount = 12},
+		{type = "item", name = "stainless-steel", amount = 8},
+		{type = "fluid", name = "fetal-serum", amount = 100},
+		{type = "fluid", name = "artificial-blood", amount = 150},
+		{type = "item", name = "meat", amount = 15},
+		{type = "item", name = "skin", amount = 8},
+		{type = "item", name = "alien-sample-02", amount = 1},
+		{type = "item", name = "cdna", amount = 4},
+	},
   results = {
     { type = "item", name = "crane-mk02", amount = 1 }
   }
