@@ -307,7 +307,7 @@ underground_pipe.fluid_box = {
         {
           connection_type = "underground",
           direction = defines.direction.south,
-          position = {0, underground_pipe.collision_box[2][2]},
+          position = {0, 0},
           max_underground_distance = 48,
 		  connection_category = "biofluid"
         }
