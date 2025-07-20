@@ -73,5 +73,6 @@ for i = 1, 3 do
 	  selection_box = {{-1.4, -0.9}, {1.4, 0.9}},
 	  uses_inserter_stack_size_bonus = false,
 	  stack_size_bonus = 147,
+	  max_belt_stack_size = 8,
 	}
 end
