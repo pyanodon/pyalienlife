@@ -89,4 +89,8 @@ for i = 1, 3 do
 	  stack_size_bonus = 147,
 	  max_belt_stack_size = 8,
 	}
+
+  if feature_flags.space_travel == true then
+    data.raw.inserter[name].max_belt_stack_size = 10000
+  end
 end
