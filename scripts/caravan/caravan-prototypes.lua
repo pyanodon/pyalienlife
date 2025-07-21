@@ -570,7 +570,7 @@ Caravan.actions = {
         end
 
         local right = action.circuit_condition_right
-        local left = action.circuit_condition_left
+        local left = action.item_count
         if not right or not left then return false end
 
         if not outpost or not outpost.valid then
@@ -598,7 +598,7 @@ Caravan.actions = {
     ["food-count"] = function(caravan_data, schedule, action)
         local item = action.elem_value
 
-        local right = action.circuit_condition_right
+        local right = action.item_count
         if not right then return false end
 
         local left = caravan_data.fuel_inventory.get_item_count(item)
@@ -622,7 +622,7 @@ Caravan.actions = {
     ["caravan-item-count"] = function(caravan_data, schedule, action)
         local item = action.elem_value
 
-        local right = action.circuit_condition_right
+        local right = action.item_count
         if not right then return false end
 
         local left = caravan_data.inventory.get_item_count(item)
@@ -648,7 +648,7 @@ Caravan.actions = {
         if not outpost or not outpost.valid then return false end
         local item = action.elem_value
 
-        local right = action.circuit_condition_right
+        local right = action.item_count
         if not right then return false end
 
         local outpost_inventory = get_outpost_inventory(outpost)
