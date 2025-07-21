@@ -25,11 +25,10 @@ end
 function P.build_main_frame(parent, name, caravan_data)
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
     -- enough to show the full cargo tab with starting inventory, without scroll bars
-    main_frame.style.height = 915
+    main_frame.style.height = 950
 
     P.build_title_bar_flow(main_frame, caravan_data)
 
-    -- TODO move that in main build function? need to unroll some functions there
     main_frame.add {type = "frame", direction = "vertical", name = "entity_frame", style = "entity_frame"}
 
     return main_frame
@@ -82,7 +81,7 @@ function P.build_tabbed_pane_frame(parent)
 end
 
 function P.update_status_flow(player)
-    local gui = player.gui.screen.caravan_new_gui
+    local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
     local caravan_data = storage.caravans[gui.tags.unit_number]
