@@ -244,6 +244,7 @@ local function transfer_all_items(input_inventory, output_inventory)
     return inserted_total
 end
 
+-- TODO all of those can be replaced with code inside gui/inventories.lua
 local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
     local inventory_count = input_inventory.get_item_count(item)
 
