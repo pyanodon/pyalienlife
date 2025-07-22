@@ -11,7 +11,9 @@ end
 --ADAPTATIONS
 
 for _, drill in pairs(data.raw["mining-drill"]) do
-    if drill.module_slots and drill.module_slots ~= 0 then
+    if drill.allowed_effects then
+        --Do not adjust drills that already have had their allowed effects set
+    elseif drill.module_slots and drill.module_slots ~= 0 then
         drill.allowed_effects = {"consumption", "speed", "productivity"}
     else
         drill.allowed_effects = {"consumption", "productivity"}
