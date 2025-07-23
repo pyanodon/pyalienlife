@@ -206,6 +206,7 @@ RECIPE {
 ENTITY {
     type = "assembling-machine",
     name = "dino-dig-site",
+    trash_inventory_size = 1,
     crafting_speed = 1,
     fixed_recipe = "digosaurus-hidden-recipe",
     gui_title_key = "digosaurus-gui.empty",
