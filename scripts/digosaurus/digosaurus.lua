@@ -101,7 +101,7 @@ function Digosaurus.eat(food_inventory, food_inventory_contents, entity)
     end
 end
 
-local time_to_live = 60
+local time_to_live = 61
 local blink_interval = time_to_live/2
 py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     for _, dig_data in pairs(storage.dig_sites) do

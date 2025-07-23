@@ -821,7 +821,7 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
             goto_entity(caravan_data, schedule.entity)
         else
             add_alert(entity, Caravan.alerts.destination_destroyed)
-            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 60, 30)
+            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 61, 30)
             wander(caravan_data)
             caravan_data.retry_pathfinder = 1
             return
@@ -1277,7 +1277,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
         if needs_fuel then
             add_alert(entity, Caravan.alerts.no_fuel)
-            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 60, 30)
+            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 61, 30)
             goto continue
         end
 

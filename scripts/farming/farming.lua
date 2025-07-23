@@ -102,7 +102,7 @@ function Farming.disable_machine(entity)
         entity.crafting_progress = 0.0001
         entity.bonus_progress = 0
     end
-    py.draw_error_sprite(entity, "no_module_" .. kingdom, 60, 30)
+    py.draw_error_sprite(entity, "no_module_" .. kingdom, 61, 30)
 end
 
 function Farming.enable_machine(entity)
@@ -137,7 +137,7 @@ py.register_on_nth_tick(59, "Farming59", "pyal", function(event)
         if not farm.valid then
             storage.disabled_farm_buildings[unit_number] = nil
         elseif farm.get_module_inventory().is_empty() then
-            py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 60, 30)
+            py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 61, 30)
         else
             Farming.enable_machine(farm)
         end
