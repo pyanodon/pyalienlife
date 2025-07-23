@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         category = "sap-extractor",
         ingredients = {
             {type = "item",  name = "bhoddos",           amount = 1},
-            {type = "fluid", name = "dirty-water-heavy", amount = 30},
+            {type = "fluid", name = "tailings", amount = 30},
             {type = "item",  name = "bulk-inserter",     amount = 1, ignored_by_stats = 1},
         },
         results = {

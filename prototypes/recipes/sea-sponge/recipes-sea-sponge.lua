@@ -68,7 +68,7 @@ py.autorecipes {
             ingredients =
             {
                 {type = "item",  name = "sea-sponge-sprouts", amount = 1},
-                {type = "fluid", name = "dirty-water-light",  amount = 100},
+                {type = "fluid", name = "muddy-sludge",  amount = 100},
                 {type = "fluid", name = "zogna-bacteria",     amount = 40},
             },
             results =
@@ -82,7 +82,7 @@ py.autorecipes {
         {
             ingredients =
             {
-                {type = "fluid", name = "dirty-water-light", remove_item = true},
+                {type = "fluid", name = "muddy-sludge", remove_item = true},
                 {type = "fluid", name = "phytoplankton",     amount = 40},
             },
             results =

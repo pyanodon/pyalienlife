@@ -24,7 +24,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "dirty-water-light", amount = 100},
+				{name = "muddy-sludge", amount = 100},
 				{name = "carbon-dioxide",    amount = 100},
 			},
 			results =

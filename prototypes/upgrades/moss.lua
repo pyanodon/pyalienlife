@@ -52,7 +52,7 @@ if data and not yafc_turd_integration then
         RECIPE("Moss-5"):copy(),
     } do
         recipe.name = recipe.name .. "-without-sludge-for-real"
-        recipe:remove_ingredient("dirty-water-light")
+        recipe:remove_ingredient("muddy-sludge")
         data:extend {recipe}
     end
 
@@ -65,7 +65,7 @@ if data and not yafc_turd_integration then
             ingredients = {
                 {type = "fluid", name = "refsyngas",         amount = 50},
                 {type = "item",  name = "moss",              amount = 1},
-                {type = "fluid", name = "dirty-water-light", amount = 50},
+                {type = "fluid", name = "muddy-sludge", amount = 50},
             },
             results = {
                 {type = "fluid", name = "syngas", amount = 100}
