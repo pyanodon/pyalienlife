@@ -1,3 +1,7 @@
+Version: 3.0.48
+Date: ???
+  Changes:
+    - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20

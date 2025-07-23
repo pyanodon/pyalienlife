@@ -101,7 +101,8 @@ function Digosaurus.eat(food_inventory, food_inventory_contents, entity)
     end
 end
 
-local time_to_live = 30
+local time_to_live = 60
+local blink_interval = time_to_live/2
 py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     for _, dig_data in pairs(storage.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
@@ -109,15 +110,15 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
         local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then
-            py.draw_error_sprite(entity, "utility.warning_icon", time_to_live)
+            py.draw_error_sprite(entity, "utility.warning_icon", time_to_live, blink_interval)
         elseif not Digosaurus.has_food(food_inventory_contents) then
-            py.draw_error_sprite(entity, "utility.fuel_icon", time_to_live)
+            py.draw_error_sprite(entity, "utility.fuel_icon", time_to_live, blink_interval)
         elseif entity.energy == 0 then
-            py.draw_error_sprite(entity, "utility.electricity_icon_unplugged", time_to_live)
+            py.draw_error_sprite(entity, "utility.electricity_icon_unplugged", time_to_live, blink_interval)
         elseif dig_data.digosaur_inventory.is_empty() then
-            py.draw_error_sprite(entity, "no_module_animal", time_to_live)
+            py.draw_error_sprite(entity, "no_module_animal", time_to_live, blink_interval)
         elseif entity.energy < entity.electric_buffer_size * 0.9 then
-            py.draw_error_sprite(entity, "utility.electricity_icon", time_to_live)
+            py.draw_error_sprite(entity, "utility.electricity_icon", time_to_live, blink_interval)
         else
             if dig_data.inventory.get_item_count() > 1000 then
                 goto continue -- only mine until 1000 ores
