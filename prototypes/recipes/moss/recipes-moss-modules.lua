@@ -12,7 +12,7 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200},
+        {type = "fluid", name = "muddy-sludge", amount = 200},
         {type = "item",  name = "sodium-alginate",   amount = 1},
         {type = "item",  name = "moss",              amount = 5},
         {type = "item",  name = "wood",              amount = 5},
@@ -38,7 +38,7 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = "fluid", name = "dirty-water-heavy", amount = 200},
+        {type = "fluid", name = "tailings", amount = 200},
         {type = "item",  name = "fertilizer",        amount = 10},
         {type = "item",  name = "moss-mk02",         amount = 5},
         {type = "item",  name = "tuuphra-seeds",     amount = 5},

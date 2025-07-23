@@ -26,7 +26,7 @@ RECIPE {
         {type = "item",  name = "molybdenum-oxide", amount = 10},
         {type = "item",  name = "fertilizer",       amount = 1},
         {type = "item",  name = "seaweed-mk02",     amount = 5},
-        mods.pyalternativeenergy and {type = "fluid", name = "dirty-water-heavy", amount = 75, fluidbox_index = 1} or nil,
+        mods.pyalternativeenergy and {type = "fluid", name = "tailings", amount = 75, fluidbox_index = 1} or nil,
     },
     results = {{type = "item", name = "seaweed-mk03", amount = 1}}
 }:add_unlock("seaweed-mk03")
