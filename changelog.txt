@@ -25,6 +25,7 @@ Date: 2025-7-20
     - Added short names for some actions
     - Prevented having 2 caravan interrupts with the same name. Resolves https://github.com/pyanodon/pybugreports/issues/1102
     - Fixed sweet syrup unbarreling returning the wrong temperature syrup. Resolves https://github.com/pyanodon/pybugreports/issues/1055
+    - Fixed underground vessel not connecting when placed with click-dragging. Resolves https://github.com/pyanodon/pybugreports/issues/1043
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29
