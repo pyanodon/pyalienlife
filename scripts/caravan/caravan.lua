@@ -788,6 +788,11 @@ end
 ---@param schedule_id int
 ---@param skip_eating boolean?
 local function begin_schedule(caravan_data, schedule_id, skip_eating)
+    local schedule = caravan_data.schedule[schedule_id]
+    if not schedule or (schedule.entity and not schedule.entity.valid) then
+        stop_actions(caravan_data); return
+    end
+
     if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
         if caravan_data.schedule_id ~= schedule_id then
             if not skip_eating and not Caravan.eat(caravan_data) then
@@ -803,14 +808,11 @@ local function begin_schedule(caravan_data, schedule_id, skip_eating)
     if not entity or not entity.valid then
         stop_actions(caravan_data); return
     end
-    local schedule = caravan_data.schedule[schedule_id]
+
     if caravan_data.fuel_inventory then
         if not skip_eating and not Caravan.eat(caravan_data) then
             stop_actions(caravan_data); return
         end
-    end
-    if not schedule then
-        stop_actions(caravan_data); return
     end
 
     caravan_data.schedule_id = schedule_id
