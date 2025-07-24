@@ -161,15 +161,36 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         end
     elseif last_opened.schedule_id then
         -- Last opened is a schedule to reassign
+        local sch = schedule[last_opened.schedule_id]
+
+        if not entity or not entity.valid then
+            if only_outpost then return end
+            if not caravan_data or player.surface ~= caravan_data.entity.surface then return end
+
+            local position = event.cursor_position
+            sch.localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)}
+            sch.entity = nil
+            sch.position = position
+            sch.player_index = nil
+            --CaravanImpl.clear_invalid_actions_from_schedule(sch) #TODO
+            return
+        end
+
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
         if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
-        local sch = schedule[last_opened.schedule_id]
 
-        sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
         sch.entity = entity
         sch.position = entity.position
+        if entity.type == "character" then
+            sch.player_index = entity.player.index
+            sch.localised_name = {"caravan-gui.player-name", entity.player.name}
+        else
+            sch.player_index = nil
+            sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
+        end
+        --CaravanImpl.clear_invalid_actions_from_schedule(sch) #TODO
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
