@@ -4,7 +4,7 @@ local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local comparator = require "action_widgets/comparator"
 
-function P.build_condition_flow(parent, condition, action_id, tags)
+function P.build_condition_flow(parent, condition, tags)
     local flow = parent.add {type = "flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
 
@@ -42,12 +42,11 @@ function P.build_condition_flow(parent, condition, action_id, tags)
     flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}
 end
 
-function P.build_condition(parent, condition, action_id, tags)
+function P.build_condition(parent, condition, tags)
     local frame = parent.add {type = "frame", style = "train_schedule_station_frame"}
 
     frame.style.horizontally_stretchable = true
-    frame.style.left_margin = 32
-    P.build_condition_flow(frame, condition, action_id, tags)
+    P.build_condition_flow(frame, condition, tags)
 end
 
 return P

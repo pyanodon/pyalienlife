@@ -61,9 +61,10 @@ function P.build_checkbox(parent)
 end
 
 function P.build_conditions_list(parent)
-    for i = 1, #storage.edited_interrupt.conditions do
-        local tags = {action_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
-        ActionGui.build_action(parent, nil, storage.edited_interrupt.conditions[i], tags)
+    local conditions = storage.edited_interrupt.conditions
+    for i = 1, #conditions do
+        local tags = {condition_id = i}
+        InterruptConditionsGui.build_condition(parent, conditions[i], tags)
     end
 
     local conditions = Caravan.valid_actions["interrupt-condition"]
