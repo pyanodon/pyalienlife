@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
+    - Fixed caravan GUI crash after clicking the ground while in the "Destination is unavailable. Click here to reassign it." state. Resolves https://github.com/pyanodon/pybugreports/issues/1113
+    - Fixed re-assigning to the player whilst in the "Destination is unavailable. Click here to reassign it." state would only keep track of the player entity, and not the player controller. (relevant if the player dies or turns into a horse-man)
     - Fixed a potential crash in interrupts migrations
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
