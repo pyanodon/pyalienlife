@@ -11,7 +11,7 @@ for _, caravan_data in pairs(storage.caravans) do
     end
 end
 
-for _, interrupt_data in pairs(storage.interrupts) do
+for _, interrupt_data in pairs(storage.interrupts or {}) do
     for _, schedule in pairs(interrupt_data.schedule) do
         for _, action in pairs(schedule.actions) do
             local type = action.type
