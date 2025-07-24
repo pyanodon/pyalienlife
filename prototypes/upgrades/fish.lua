@@ -59,6 +59,20 @@ local function add_new_fish_farm(i)
     entity.localised_name = {"entity-name." .. name}
     entity.placeable_by = {item = name, count = 1}
     entity.localised_description = entity.localised_description or {"entity-description." .. name}
+    entity.icons = {
+        {
+            icon = entity.icon,
+            icon_size = entity.icon_size
+        },
+        {
+            icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+            shift = {14, -6},
+            scale = 0.35,
+            floating = true
+        }
+    }
+    entity.icon = nil
+    entity.icon_size = nil
     entity.subgroup = data.raw.item[name].subgroup
     entity.order = data.raw.item[name].order
     if i ~= 4 then entity.next_upgrade = "turd-fish-farm-mk0" .. (i + 1) end

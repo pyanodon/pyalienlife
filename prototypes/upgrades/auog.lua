@@ -60,6 +60,20 @@ if data and not yafc_turd_integration then
     buffed_generator.localised_description = buffed_generator.localised_description or {"entity-description." .. buffed_generator.name}
     buffed_generator.placeable_by = {item = buffed_generator.name, count = 1}
     buffed_generator.localised_name = {"entity-name." .. buffed_generator.name}
+    buffed_generator.icons = {
+        {
+            icon = buffed_generator.icon,
+            icon_size = buffed_generator.icon_size
+        },
+        {
+            icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+            shift = {14, -6},
+            scale = 0.35,
+            floating = true
+        }
+    }
+    buffed_generator.icon = nil
+    buffed_generator.icon_size = nil
     buffed_generator.subgroup = data.raw.item[buffed_generator.name].subgroup
     buffed_generator.order = data.raw.item[buffed_generator.name].order
     buffed_generator.name = buffed_generator.name .. "-turd"
