@@ -602,7 +602,11 @@ py.on_event(py.events.on_built(), function(event)
         end
     end
 
-    if storage.turd_machine_replacements[force_index] then
+    -- improperly placed turd building, replace with normal one
+    -- if entity.name == "entity-ghost" and entity.ghost_name:sub(1,5) == "turd-" and storage.turd_machine_replacements[force_index][entity.name]
+
+    -- else
+      if storage.turd_machine_replacements[force_index] then
         local new = storage.turd_machine_replacements[force_index][entity.name]
         if new then
             machine_replacement(entity.name, new, {entity})
