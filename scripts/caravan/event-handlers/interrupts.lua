@@ -269,3 +269,37 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = fu
     end
     storage.edited_interrupt = nil
 end
+
+gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_up_button"] = function(event)
+    local conditions = storage.edited_interrupt.conditions
+
+    local i = event.element.tags.condition_id
+
+    if i == 1 then return end
+
+    conditions[i - 1], conditions[i] = conditions[i], conditions[i - 1]
+
+    local player = game.get_player(event.player_index)
+    EditInterruptGui.update_conditions_pane(player)
+end
+
+gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_down_button"] = function(event)
+    local conditions = storage.edited_interrupt.conditions
+
+    local i = event.element.tags.condition_id
+
+    if i == #conditions then return end
+
+    conditions[i + 1], conditions[i] = conditions[i], conditions[i + 1]
+
+    local player = game.get_player(event.player_index)
+    EditInterruptGui.update_conditions_pane(player)
+end
+
+gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_delete_button"] = function(event)
+    local conditions = storage.edited_interrupt.conditions
+    table.remove(conditions, event.element.tags.condition_id)
+
+    local player = game.get_player(event.player_index)
+    EditInterruptGui.update_conditions_pane(player)
+end
