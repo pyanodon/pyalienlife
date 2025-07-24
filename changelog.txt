@@ -4,7 +4,9 @@ Date: ???
   Changes:
     - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
-    - Fixed a potential crash in interrupts migrations
+    - Fixed a potential crash in interrupts migrations.
+    - Caravan GUI has been remade. Should now be more responsive and nicer to use. https://github.com/pyanodon/pyalienlife/pull/329
+    - Fixed mining a entity in a caravan's schedule did not update the caravan GUI with "Destination is unavailable. Click here to reassign it.".
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20

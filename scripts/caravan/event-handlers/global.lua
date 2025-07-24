@@ -354,17 +354,29 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
     for _, player in pairs(game.connected_players) do
         local gui = CaravanGui.get_gui(player)
-        if gui then
-            if next(guis_to_update) and guis_to_update[gui.tags.unit_number] then
+        if not gui then goto continue end
+
+        if next(guis_to_update) and guis_to_update[gui.tags.unit_number] then
+            CaravanGui.update_gui(player)
+            goto continue
+        end
+
+        local caravan_data = storage.caravans[gui.tags.unit_number]
+        if player.can_reach_entity(caravan_data.entity) ~= CaravanGui.cargo_tab_enabled(player) then
+            CaravanGui.update_gui(player)
+            goto continue
+        end
+
+        for _, schedule in pairs(caravan_data.schedule) do
+            if schedule.entity and not schedule.entity.valid then
                 CaravanGui.update_gui(player)
-            else
-                local caravan_data = storage.caravans[gui.tags.unit_number]
-                if player.can_reach_entity(caravan_data.entity) ~= CaravanGui.cargo_tab_enabled(player) then
-                    CaravanGui.update_gui(player)
-                end
+                goto continue
             end
         end
+
+        ::continue::
     end
+    
     if next(storage.make_operable_next_tick) then
         for _, entity in pairs(storage.make_operable_next_tick) do
             if entity.valid then entity.operable = true end
