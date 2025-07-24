@@ -95,14 +95,9 @@ py.on_event(defines.events.on_gui_closed, function(event)
     local caravan_rename_textfield = gui.entity_frame.subheader_frame.contents_flow.py_caravan_rename_textfield
     local renaming_caravan = caravan_rename_textfield.visible
 
-    local should_close_gui = not (slider_frame ~= nil or add_interrupt_frame ~= nil or edit_interrupt_frame or renaming_caravan)
+    local should_close_gui = not (slider_frame ~= nil or add_interrupt_frame ~= nil or edit_interrupt_frame ~= nil or renaming_caravan)
     
     if should_close_gui then
-        local edit_interrupt_gui = player.gui.screen.edit_interrupt_gui
-        if edit_interrupt_gui then
-            edit_interrupt_gui.destroy()
-            storage.edited_interrupt = nil
-        end
         gui.destroy()
     else
         if slider_frame then
@@ -116,6 +111,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
             end
         elseif edit_interrupt_frame then
             edit_interrupt_frame.destroy()
+            storage.edited_interrupt = nil
         elseif renaming_caravan then
             local label = caravan_rename_textfield.parent.name_label
             label.visible = true

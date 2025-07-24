@@ -11,10 +11,6 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = f
     local unit_number = CaravanGui.get_gui(player).tags.unit_number
     assert(unit_number)
     last_opened.caravan = unit_number
-    if element.tags.action_id then
-        last_opened.schedule_id = element.tags.schedule_id
-        last_opened.action_id = element.tags.action_id
-    end
     CaravanImpl.select_destination(player, last_opened)
 end
 
