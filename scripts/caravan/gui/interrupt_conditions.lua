@@ -31,11 +31,13 @@ function P.build_condition_flow(parent, condition, tags)
                 condition.circuit_condition_left, condition.circuit_condition_right = condition.circuit_condition_right, condition.circuit_condition_left
             end
             comparator.build_static_comparator_widgets(flow, condition, tags, "signal")
-        elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count"}, condition.type) then
+        elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count", "caravan-fluid-count", "target-fluid-count"}, condition.type) then
             local filters
             local elem_type = "item"
             if condition.type == "food-count" then
                 filters = {{filter = "name", name = Caravan.foods.all}}
+            elseif condition.type == "caravan-fluid-count" or condition.type == "target-fluid-count" then
+                elem_type = "fluid"
             end
             comparator.build_static_comparator_widgets(flow, condition, tags, elem_type, filters)
         end

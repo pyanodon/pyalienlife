@@ -116,6 +116,42 @@ local function evaluate_signal(entity, signal)
     return result
 end
 
+local target_offset = {0, -0.3}
+function P.render_altmode_icon(caravan_data)
+    caravan_data.alt_mode_light = rendering.draw_sprite {
+        sprite = "utility/entity_info_dark_background",
+        target = caravan_data.entity,
+        target_offset = target_offset,
+        surface = caravan_data.entity.surface,
+        only_in_alt_mode = true,
+        x_scale = 0.9,
+        y_scale = 0.9
+    }.id
+    caravan_data.alt_mode = rendering.draw_sprite {
+        sprite = "fluid/" .. caravan_data.fluid.name,
+        target = caravan_data.entity,
+        target_offset = target_offset,
+        surface = caravan_data.entity.surface,
+        only_in_alt_mode = true,
+        x_scale = 1.2,
+        y_scale = 1.2
+    }.id
+end
+
+function P.destroy_altmode_icon(caravan_data)
+    if caravan_data.fluid == nil then
+        if caravan_data.alt_mode then
+            local alt_mode = rendering.get_object_by_id(caravan_data.alt_mode)
+            if alt_mode then alt_mode.destroy() end
+            caravan_data.alt_mode = nil
+        end
+        if caravan_data.alt_mode_light then
+            local alt_mode_light = rendering.get_object_by_id(caravan_data.alt_mode_light)
+            if alt_mode_light then alt_mode_light.destroy() end
+            caravan_data.alt_mode_light = nil
+        end
+    end
+end
 
 function P.wait(caravan_data, schedule, action)
     if not action.timer or action.timer == 1 then
@@ -463,6 +499,132 @@ function P.not_at_outpost(caravan_data, schedule, action)
     return not P.at_outpost(caravan_data, schedule, action)
 end
 
+function P.fill_tank(caravan_data, schedule, action)
+    local storage_tank = schedule.entity
+    if not storage_tank or not storage_tank.valid then return true end
+    local output = caravan_data.fluid or {amount = 0, temperature = 15, name = ""}
+    local input = storage_tank.get_fluid(1)
+
+    local total_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume
+    local max_output_volume = total_output_volume - output.amount
+    local caravan_was_empty = output.amount == 0
+
+    if max_output_volume == 0 then return true end
+    if input == nil then return action.async end
+
+    local amount_to_transfer = storage_tank.remove_fluid({name = input.name, amount = max_output_volume})
+
+    output.temperature = math.floor((output.amount * output.temperature + amount_to_transfer * input.temperature) / (output.amount + amount_to_transfer))
+    output.amount = output.amount + amount_to_transfer
+    output.name = input.name
+    if output.amount == 0 then
+        caravan_data.fluid = nil
+    else
+        caravan_data.fluid = output
+    end
+
+    if caravan_data.alt_mode == nil and caravan_data.fluid then
+        P.render_altmode_icon(caravan_data)
+    end
+
+    local completed = action.async or output.amount >= total_output_volume
+    if amount_to_transfer > 0 and completed then
+        P.eat(caravan_data)
+    end
+    return completed
+end
+
+function P.empty_tank(caravan_data, schedule, action)
+    local storage_tank = schedule.entity
+    if not storage_tank or not storage_tank.valid then return true end
+    local input = caravan_data.fluid
+    local output = storage_tank.get_fluid(1)
+
+    if input == nil then return true end
+
+    local amount_transfered = storage_tank.insert_fluid(input)
+
+    input.amount = input.amount - amount_transfered
+    if input.amount == 0 then
+        caravan_data.fluid = nil
+    else
+        caravan_data.fluid = input
+    end
+
+    if caravan_data.alt_mode and caravan_data.fluid == nil then
+        P.destroy_altmode_icon(caravan_data)
+    end
+
+    local completed = action.async or input.amount == 0
+    if amount_transfered > 0 and completed then
+        P.eat(caravan_data)
+    end
+    return completed
+end
+
+function P.is_tank_full(caravan_data, schedule, action)
+    return caravan_data.fluid and caravan_data.fluid.amount >= caravan_prototypes[caravan_data.entity.name].max_volume
+end
+
+function P.is_tank_empty(caravan_data, schedule, action)
+    return caravan_data.fluid == nil
+end
+
+function P.caravan_fluid_count(caravan_data, schedule, action)
+    local fluid_name = action.elem_value
+
+    local right = action.circuit_condition_right
+    if not right then return false end
+
+    if not caravan_data.fluid or caravan_data.fluid.name ~= fluid_name then return false end
+    local left = caravan_data.fluid.amount
+
+    local operator = action.operator or 3
+    if operator == 1 then
+        return left > right
+    elseif operator == 2 then
+        return left < right
+    elseif operator == 3 then
+        return left == right
+    elseif operator == 4 then
+        return left >= right
+    elseif operator == 5 then
+        return left <= right
+    elseif operator == 6 then
+        return left ~= right
+    end
+end
+
+function P.target_fluid_count(caravan_data, schedule, action)
+    if not schedule then return false end
+
+    local outpost = schedule.entity
+    if not outpost or not outpost.valid or outpost.fluids_count == 0 then return false end
+    local fluid_name = action.elem_value
+
+    local right = action.circuit_condition_right
+    if not right then return false end
+
+    local outpost_fluid = outpost.get_fluid(1)
+    if not outpost_fluid or outpost_fluid.name ~= fluid_name then return false end
+    local left = outpost_fluid.amount
+
+    local operator = action.operator or 3
+    if operator == 1 then
+        return left > right
+    elseif operator == 2 then
+        return left < right
+    elseif operator == 3 then
+        return left == right
+    elseif operator == 4 then
+        return left >= right
+    elseif operator == 5 then
+        return left <= right
+    elseif operator == 6 then
+        return left ~= right
+    end
+end
+
 Caravan.actions = {
     ["time-passed"] = P.wait,
     ["store-food"] = P.store_food,
@@ -484,6 +646,12 @@ Caravan.actions = {
     ["is-inventory-empty"] = P.is_inventory_empty,
     ["at-outpost"] = P.at_outpost,
     ["not-at-outpost"] = P.not_at_outpost,
+    ["fill-tank"] = P.fill_tank,
+    ["empty-tank"] = P.empty_tank,
+    ["caravan-fluid-count"] = P.caravan_fluid_count,
+    ["target-fluid-count"] = P.target_fluid_count,
+    ["is-tank-full"] = P.is_tank_full,
+    ["is-tank-empty"] = P.is_tank_empty,
 }
 
 Caravan.free_actions = { -- actions that don't use fuel
