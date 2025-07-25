@@ -53,11 +53,10 @@ function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
 
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 
-    -- sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
     if temporary then
-        flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "py_schedule_temporary_move_button", sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black", tags = tags}
-        flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "py_schedule_temporary_move_button", sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black", tags = tags}
-        flow.add {type = "sprite-button", name = "py_caravan_destination_delete_button", style = "py_schedule_temporary_move_button", sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black", tags = tags}
+        flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "py_schedule_temporary_move_button", sprite = "up-black", tags = tags}
+        flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "py_schedule_temporary_move_button", sprite = "down-black", tags = tags}
+        flow.add {type = "sprite-button", name = "py_caravan_destination_delete_button", style = "py_schedule_temporary_move_button", sprite = "utility/close_black", tags = tags}
     else
         flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "py_schedule_move_button", sprite = "up-white", tags = tags}
         flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "py_schedule_move_button", sprite = "down-white", tags = tags}
