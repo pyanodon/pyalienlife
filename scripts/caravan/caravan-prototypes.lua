@@ -26,6 +26,87 @@ Caravan.alerts = {
     },
 }
 
+Caravan.all_actions = {
+        ["outpost"] = table.invert {
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["fluid-outpost"] = table.invert{
+            "time-passed",
+            "fill-tank",
+            "empty-tank",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["character"] = table.invert {
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+            "empty-autotrash"
+        },
+        ["unit"] = table.invert {
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["cargo-wagon"] = table.invert {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["car"] = table.invert {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["spider-vehicle"] = table.invert {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["electric-pole"] = table.invert {
+            "time-passed",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["default"] = table.invert {
+            "time-passed"
+        }
+}
+
 Caravan.valid_actions = {
     caravan = {
         ["outpost"] = table.invert {
