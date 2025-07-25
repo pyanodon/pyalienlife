@@ -92,20 +92,6 @@ if data and not yafc_turd_integration then
         local entity = table.deepcopy(data.raw["assembling-machine"][name])
         entity.name = "turd-" .. name
         entity.localised_name = {"entity-name." .. name}
-        entity.icons = {
-            {
-                icon = entity.icon,
-                icon_size = entity.icon_size
-            },
-            {
-                icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                shift = {14, -6},
-                scale = 0.35,
-                floating = true
-            }
-        }
-        entity.icon = nil
-        entity.icon_size = nil
         entity.placeable_by = {item = name, count = 1}
         entity.localised_description = entity.localised_description or {"entity-description." .. name}
         entity.subgroup = data.raw.item[name].subgroup

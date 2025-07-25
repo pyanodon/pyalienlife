@@ -18,20 +18,6 @@ if data and not yafc_turd_integration then
             }
         }
         entity.localised_description = entity.localised_description or {"entity-description." .. name}
-        entity.icons = {
-            {
-                icon = entity.icon,
-                icon_size = entity.icon_size
-            },
-            {
-                icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                shift = {14, -6},
-                scale = 0.35,
-                floating = true
-            }
-        }
-        entity.icon = nil
-        entity.icon_size = nil
         table.insert(entity.flags, "not-in-made-in")
         entity.energy_source = {
             type = "fluid",
