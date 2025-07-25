@@ -98,13 +98,41 @@ Caravan.valid_actions = {
         },
         ["default"] = table.invert {
             "time-passed"
+        }
+    },
+    fluidavan = {
+        ["outpost"] = table.invert{
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "circuit-condition",
+            "circuit-condition-static"
         },
+        ["fluid-outpost"] = table.invert{
+            "time-passed",
+            "fill-tank",
+            "empty-tank",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["electric-pole"] = table.invert{
+            "time-passed",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["default"] = table.invert{
+            "time-passed"
+        }
     },
     ["interrupt-condition"] = {
         "is-inventory-full",
         "is-inventory-empty",
         "caravan-item-count",
         "target-item-count",
+        "is-tank-full",
+        "is-tank-empty",
+        "caravan-fluid-count",
+        "target-fluid-count",
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
@@ -159,6 +187,27 @@ local caravan_prototypes = {
             cache = false
         }
     },
+    fluidavan = {
+        opens_player_inventory = true,
+        -- Only way I found to open the player inventory, in order to store food in the fluidavan
+        inventory_size = 0,
+        max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
+        fuel_size = 2,
+        destructible = false,
+        outpost = "fluid-outpost",
+        favorite_foods = Caravan.foods.caravan,
+        actions = Caravan.valid_actions.fluidavan,
+        camera_zoom = 0.8,
+        placeable_by = "fluidavan",
+        map_tag = {
+            type = "virtual",
+            name = "caravan-map-tag-mk01"
+        },
+        requeue_required = true,
+        pathfinder_flags = {
+            cache = false
+        }
+    },
     flyavan = {
         inventory_size = 90,
         opens_player_inventory = true,
@@ -203,12 +252,14 @@ local caravan_prototypes = {
     }
 }
 
-caravan_prototypes["caravan-turd"] = caravan_prototypes["caravan"]
-caravan_prototypes["flyavan-turd"] = caravan_prototypes["flyavan"]
-caravan_prototypes["nukavan-turd"] = caravan_prototypes["nukavan"]
-caravan_prototypes["caravan-turd"].placeable_by = "caravan-turd"
-caravan_prototypes["flyavan-turd"].placeable_by = "flyavan-turd"
-caravan_prototypes["nukavan-turd"].placeable_by = "nukavan-turd"
+caravan_prototypes["caravan-turd"]   = caravan_prototypes["caravan"]
+caravan_prototypes["fluidavan-turd"] = caravan_prototypes["fluidavan"]
+caravan_prototypes["flyavan-turd"]   = caravan_prototypes["flyavan"]
+caravan_prototypes["nukavan-turd"]   = caravan_prototypes["nukavan"]
+caravan_prototypes["caravan-turd"].placeable_by   = "caravan-turd"
+caravan_prototypes["fluidavan-turd"].placeable_by = "fluidavan-turd"
+caravan_prototypes["flyavan-turd"].placeable_by   = "flyavan-turd"
+caravan_prototypes["nukavan-turd"].placeable_by   = "nukavan-turd"
 
 -- small migration script to ensure we are not transfering deleted items
 -- I have no access to the JSON migrations so invalid items are just deleted
