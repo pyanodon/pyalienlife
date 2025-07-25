@@ -22,6 +22,22 @@ function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     return valid_actions or all_actions.default or error()
 end
 
+function P.get_all_actions_for_entity(entity)
+    local all_actions = Caravan.all_actions
+    local valid_actions
+    if entity and entity.valid then
+        if entity.name == "outpost" or entity.name == "outpost-aerial" then
+            valid_actions = all_actions.outpost
+        elseif entity.name == "fluid-outpost" then
+            valid_actions = all_actions["fluid-outpost"]
+        else
+            valid_actions = all_actions[entity.type]
+        end
+    end
+
+    return valid_actions or all_actions.default or error()
+end
+
 function P.get_name(caravan_data)
     local name = caravan_data.name
     if name and name ~= "" then return name end

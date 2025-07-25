@@ -126,7 +126,8 @@ function P.build_action_list(parent, schedule_id)
         ActionGui.build_action(parent, nil, actions[i], tags)
     end
 
-    local valid_actions = Utils.get_valid_actions_for_entity("caravan", storage.edited_interrupt.schedule[schedule_id].entity)
+    local entity = storage.edited_interrupt.schedule[schedule_id].entity
+    local valid_actions = Utils.get_all_actions_for_entity(entity)
     local actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
 
     table.insert(actions, "+ Add action")
