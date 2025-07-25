@@ -50,7 +50,7 @@ function P.get_action_from_button(element)
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
         local interrupt = storage.edited_interrupt
-        action = interrupt.conditions[tags.action_id]
+        action = interrupt.conditions[tags.condition_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
         local interrupt = storage.edited_interrupt
         action = interrupt.schedule[tags.schedule_id].actions[tags.action_id]

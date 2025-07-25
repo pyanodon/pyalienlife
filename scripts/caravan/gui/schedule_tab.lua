@@ -53,11 +53,10 @@ function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
 
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 
-    -- sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
     if temporary then
-        flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "py_schedule_temporary_move_button", sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black", tags = tags}
-        flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "py_schedule_temporary_move_button", sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black", tags = tags}
-        flow.add {type = "sprite-button", name = "py_caravan_destination_delete_button", style = "py_schedule_temporary_move_button", sprite = "utility/close", hovered_sprite = "utility/close_black", clicked_sprite = "utility/close_black", tags = tags}
+        flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "py_schedule_temporary_move_button", sprite = "up-black", tags = tags}
+        flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "py_schedule_temporary_move_button", sprite = "down-black", tags = tags}
+        flow.add {type = "sprite-button", name = "py_caravan_destination_delete_button", style = "py_schedule_temporary_move_button", sprite = "utility/close_black", tags = tags}
     else
         flow.add {type = "sprite-button", name = "py_caravan_destination_move_up_button", style = "py_schedule_move_button", sprite = "up-white", tags = tags}
         flow.add {type = "sprite-button", name = "py_caravan_destination_move_down_button", style = "py_schedule_move_button", sprite = "down-white", tags = tags}
@@ -133,12 +132,14 @@ end
 
 function P.build_schedule_flow(parent, caravan_data)
     local flow = parent.add {type = "flow", name = "schedule_flow", direction = "vertical"}
-    flow.style.vertically_stretchable = false
+    flow.style.vertically_stretchable = true
     P.build_schedule_list(flow, caravan_data) 
     P.build_interrupt_list(flow, caravan_data)
 
-    -- without this empty widget, clicks on the empty space at the bottom won't raise on_gui_click
-    flow.add {type = "empty-widget"}.style.vertically_stretchable = true
+    -- without this invisible frame, clicks on the empty space at the bottom won't raise on_gui_click
+    local invisible_frame = flow.add {type = "frame", style = "invisible_frame"}
+    invisible_frame.style.vertically_stretchable = true
+    invisible_frame.style.horizontally_stretchable = true
     return flow
 end
 
