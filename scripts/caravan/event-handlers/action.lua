@@ -30,12 +30,14 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_move_up_button"] = fu
 
     actions[i - 1], actions[i] = actions[i], actions[i - 1]
 
-    if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
-        CaravanImpl.stop_actions(caravan_data)
-    elseif caravan_data.action_id == i then
-        caravan_data.action_id = i - 1
-    elseif caravan_data.action_id == i - 1 then
-        caravan_data.action_id = i
+    if caravan_data then
+        if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
+            CaravanImpl.stop_actions(caravan_data)
+        elseif caravan_data.action_id == i then
+            caravan_data.action_id = i - 1
+        elseif caravan_data.action_id == i - 1 then
+            caravan_data.action_id = i
+        end
     end
 
     update_action_gui(player, event.element.tags)
@@ -52,12 +54,14 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_move_down_button"] = 
 
     actions[i + 1], actions[i] = actions[i], actions[i + 1]
 
-    if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
-        CaravanImpl.stop_actions(caravan_data)
-    elseif caravan_data.action_id == i then
-        caravan_data.action_id = i + 1
-    elseif caravan_data.action_id == i + 1 then
-        caravan_data.action_id = i
+    if caravan_data then
+        if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
+            CaravanImpl.stop_actions(caravan_data)
+        elseif caravan_data.action_id == i then
+            caravan_data.action_id = i + 1
+        elseif caravan_data.action_id == i + 1 then
+            caravan_data.action_id = i
+        end
     end
 
     update_action_gui(player, event.element.tags)
@@ -70,7 +74,9 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_delete_button"] = fun
 
     table.remove(actions, event.element.tags.action_id)
 
-    CaravanImpl.stop_actions(caravan_data)
+    if caravan_data then
+        CaravanImpl.stop_actions(caravan_data)
+    end
     update_action_gui(player, event.element.tags)
 end
 
