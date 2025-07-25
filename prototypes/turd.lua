@@ -206,21 +206,23 @@ local function build_tech_upgrade(tech_upgrade)
                 py.add_to_description("recipe", data.raw.recipe[effect.new], {"turd.font", {"turd.recipe-replacement"}})
                 local recipe = data.raw.recipe[effect.new]
                 if recipe then
-                    local main_product = data.raw.item[recipe.main_product or #recipe.results == 1 and recipe.results[1].name] or {}
-                    if main_product.place_result then
-                        recipe.icons = (recipe.icon or main_product.icon) and {{
-                          icon = recipe.icon or main_product.icon,
-                          icon_size = recipe.icon_size or main_product.icon_size
-                        }} or recipe.icons or main_product.icons
-                        recipe.icons[#recipe.icons+1] = {
-                            icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                            shift = {14, -6},
-                            scale = 0.35,
-                            floating = true
-                        }
-                        recipe.icon = nil
-                        recipe.icon_size = nil
-                    end
+                    local main_product = recipe.main_product or #recipe.results == 1 and recipe.results[1].name
+                    main_product = data.raw.item[main_product] or data.raw.module[main_product] or data.raw.fluid[main_product] or data.raw["spider-vehicle"][main_product] or data.raw.unit[main_product] or data.raw.car[main_product] or data.raw.capsule[main_product] or data.raw.tool[main_product]
+                    recipe.icons = recipe.icon and {{
+                        icon = recipe.icon,
+                        icon_size = recipe.icon_size
+                    }} or recipe.icons or main_product.icon and {{
+                        icon = main_product.icon,
+                        icon_size = main_product.icon_size
+                    }} or main_product.icons
+                    recipe.icons[#recipe.icons+1] = {
+                        icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+                        shift = {14, -6},
+                        scale = 0.35,
+                        floating = true
+                    }
+                    recipe.icon = nil
+                    recipe.icon_size = nil
                 end
             elseif effect.type == "machine-replacement" then
                 local machine = data.raw["assembling-machine"][effect.new] or data.raw.furnace[effect.new] or data.raw["burner-generator"][effect.new]

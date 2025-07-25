@@ -6,7 +6,7 @@ Date: ???
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
     - Fixed a potential crash in interrupts migrations
     - Added a TURD sign to the icons of TURD buildings so they're easier to differentiate in a GUI. Resolves https://github.com/pyanodon/pybugreports/issues/1107
-    - Added a TURD sign to the icons of TURD building recipes (i.e. arquad path 2) so they're easier to differentiate in a GUI
+    - Added a TURD sign to the icons of TURD recipes so they're easier to differentiate in a GUI
     - Fixed a potential crash in interrupts migrations.
     - Caravan GUI has been remade. Should now be more responsive and nicer to use. https://github.com/pyanodon/pyalienlife/pull/329
     - Fixed mining a entity in a caravan's schedule did not update the caravan GUI with "Destination is unavailable. Click here to reassign it.".
