@@ -30,14 +30,14 @@ function P.build_condition_flow(parent, condition, tags)
             if type(condition.circuit_condition_left) == "number" then
                 condition.circuit_condition_left, condition.circuit_condition_right = condition.circuit_condition_right, condition.circuit_condition_left
             end
-
-            comparator.build_circuit_static_comparator_widgets(flow, condition, tags)
+            comparator.build_static_comparator_widgets(flow, condition, tags, "signal")
         elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count"}, condition.type) then
             local filters
+            local elem_type = "item"
             if condition.type == "food-count" then
                 filters = {{filter = "name", name = Caravan.foods.all}}
             end
-            comparator.build_item_static_comparator_widgets(flow, condition, tags, filters)
+            comparator.build_static_comparator_widgets(flow, condition, tags, elem_type, filters)
         end
     end
 
