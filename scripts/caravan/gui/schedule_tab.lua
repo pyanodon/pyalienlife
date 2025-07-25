@@ -133,12 +133,14 @@ end
 
 function P.build_schedule_flow(parent, caravan_data)
     local flow = parent.add {type = "flow", name = "schedule_flow", direction = "vertical"}
-    flow.style.vertically_stretchable = false
+    flow.style.vertically_stretchable = true
     P.build_schedule_list(flow, caravan_data) 
     P.build_interrupt_list(flow, caravan_data)
 
-    -- without this empty widget, clicks on the empty space at the bottom won't raise on_gui_click
-    flow.add {type = "empty-widget"}.style.vertically_stretchable = true
+    -- without this invisible frame, clicks on the empty space at the bottom won't raise on_gui_click
+    local invisible_frame = flow.add {type = "frame", style = "invisible_frame"}
+    invisible_frame.style.vertically_stretchable = true
+    invisible_frame.style.horizontally_stretchable = true
     return flow
 end
 
