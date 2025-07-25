@@ -88,10 +88,6 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
         if gui then
             Digosaurus.update_gui(gui); goto continue
         end
-        gui = Caravan.get_caravan_gui(player)
-        if gui then
-            Caravan.update_gui(gui, true); goto continue
-        end
         gui = player.gui.relative.bioport_gui
         if gui then
             Biofluid.update_bioport_gui(player, gui); goto continue

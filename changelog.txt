@@ -6,6 +6,12 @@ Date: ???
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
     - Fixed a potential crash in interrupts migrations
     - Added a TURD sign to the icons of TURD buildings so they're easier to differentiate in a GUI. Resolves https://github.com/pyanodon/pybugreports/issues/1107
+    - Fixed a potential crash in interrupts migrations.
+    - Caravan GUI has been remade. Should now be more responsive and nicer to use. https://github.com/pyanodon/pyalienlife/pull/329
+    - Fixed mining a entity in a caravan's schedule did not update the caravan GUI with "Destination is unavailable. Click here to reassign it.".
+    - Fixed caravan GUI crash after clicking the ground while in the "Destination is unavailable. Click here to reassign it." state. Resolves https://github.com/pyanodon/pybugreports/issues/1113
+    - Fixed re-assigning to the player whilst in the "Destination is unavailable. Click here to reassign it." state would only keep track of the player entity, and not the player controller. (relevant if the player dies or turns into a horse-man)
+    - Fixed TURD recipes becoming locked after another mod triggers reset_technology_effects
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20
