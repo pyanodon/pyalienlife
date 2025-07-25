@@ -12,6 +12,9 @@ Date: ???
     - Fixed caravan GUI crash after clicking the ground while in the "Destination is unavailable. Click here to reassign it." state. Resolves https://github.com/pyanodon/pybugreports/issues/1113
     - Fixed re-assigning to the player whilst in the "Destination is unavailable. Click here to reassign it." state would only keep track of the player entity, and not the player controller. (relevant if the player dies or turns into a horse-man)
     - Fixed TURD recipes becoming locked after another mod triggers reset_technology_effects
+    - Fixed selecting a TURD that changes entities not changing ghosts to the new entity
+    - Fixed that you could place a TURD entity without having the TURD selected
+    - Fixed that you could place a normal entity when you have an entity-replacing TURD selected
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20
