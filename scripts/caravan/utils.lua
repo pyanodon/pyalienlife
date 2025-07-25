@@ -245,4 +245,24 @@ function P.rename_interrupt(interrupt, new_name)
     end
 end
 
+function P.format_numeric_value(v)
+    local s = tostring(v)
+    local len = string.len(s)
+
+    local units = {"", "k", "M", "G"}
+
+    local remainder = len % 3
+    local nb_fractional_digits = remainder == 0 and 3 or remainder
+    local res = s:sub(1, nb_fractional_digits)
+
+    if len > 1 and nb_fractional_digits == 1 then
+        local i = nb_fractional_digits + 1
+        res = res .. "." .. s:sub(i, i)
+    end
+
+    local nb_thousands = math.floor((len - 1) / 3)
+
+    return res .. units[1 + nb_thousands]
+end
+
 return P
