@@ -24,6 +24,7 @@ Date: ???
     - Fixed many caravan interrupts quirks. They now behave like train interrupts.
     - Added and/or buttons to caravan's interrupt conditions
     - Clicking on a caravan while trying to place a building will no longer open the caravan GUI (just like vanilla GUIs).
+    - Add fluid caravans, creatures capable of transporting fluids between two fluid outposts.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20
