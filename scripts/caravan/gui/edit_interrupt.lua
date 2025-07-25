@@ -63,7 +63,7 @@ end
 function P.build_conditions_list(parent)
     local conditions = storage.edited_interrupt.conditions
     for i = 1, #conditions do
-        local tags = {condition_id = i}
+        local tags = {condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
         InterruptConditionsGui.build_condition(parent, conditions[i], tags)
     end
 
