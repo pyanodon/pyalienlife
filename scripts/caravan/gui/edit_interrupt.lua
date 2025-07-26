@@ -63,7 +63,7 @@ end
 function P.build_conditions_list(parent)
     local conditions = storage.edited_interrupt.conditions
     for i = 1, #conditions do
-        local tags = {condition_id = i}
+        local tags = {condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
         InterruptConditionsGui.build_condition(parent, conditions[i], tags)
     end
 
@@ -216,5 +216,25 @@ function P.update_targets_pane(player)
     targets_pane.targets_flow.destroy()
     P.build_targets_flow(targets_pane)
 end
+
+py.on_event(defines.events.on_gui_click, function (event)
+    if not event.element.valid then return end
+    -- do not destroy the frame right after creating it
+    if event.element.name == "py_caravan_interrupt_edit_button" then return end
+
+    local player = game.get_player(event.player_index)
+
+    local gui = player.gui.screen.edit_interrupt_gui
+    if not gui then return end
+
+    if not Utils.is_child_of(event.element, gui, 8) then
+        local slider_frame = player.gui.screen.py_caravan_action_number_selection_frame
+        -- do not close the GUI when the user adds an action, that pops the number selection slider
+        if not slider_frame or not Utils.is_child_of(event.element, slider_frame, 3) then
+            storage.edited_interrupt = nil
+            gui.destroy()
+        end
+    end
+end)
 
 return P

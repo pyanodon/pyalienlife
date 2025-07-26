@@ -2,6 +2,8 @@ local number_selection = require "number_selection"
 
 local P = {}
 
+-- TODO this should not be global, but passed around. It implies a significant refactoring,
+-- the goal would be to differentiate actions and interrupt conditions in event handlers
 local prefix = "py_caravan_action_comparator"
 
 function P.build_circuit_comparator_widgets(parent, action, tags, elem_filters)
