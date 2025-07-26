@@ -16,6 +16,7 @@ Date: ???
     - Fixed selecting a TURD that changes entities not changing ghosts to the new entity
     - Fixed that you could place a TURD entity without having the TURD selected
     - Fixed that you could place a normal entity when you have an entity-replacing TURD selected
+    - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20
