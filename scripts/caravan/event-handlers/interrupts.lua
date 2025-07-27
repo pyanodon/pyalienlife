@@ -73,14 +73,7 @@ local function remove_interrupt_if_no_references(name)
         end
     end
 
-    -- table.remove doesn't work on a non numerically-indexed table...
-    local copy = {}
-    for k, v in pairs(storage.interrupts) do
-        if k ~= name then
-            copy[k] = v
-        end
-    end
-    storage.interrupts = copy
+    storage.interrupts[name] = nil
 end
 
 gui_events[defines.events.on_gui_confirmed]["py_caravan_add_interrupt_input_textfield"] = on_add_interrupt_confirmed
