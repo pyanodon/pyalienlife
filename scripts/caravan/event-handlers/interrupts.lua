@@ -205,6 +205,18 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_add_target_button"] =
     CaravanImpl.select_destination(player, last_opened)
 end
 
+gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outpost_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    local last_opened = {}
+
+    local unit_number = CaravanGui.get_gui(player).tags.unit_number
+    assert(unit_number)
+    last_opened.caravan = unit_number
+    last_opened.action_id = element.tags.condition_id
+    CaravanImpl.select_destination(player, last_opened)
+end
+
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_move_up_button"] = function(event)
     local i = event.element.tags.schedule_id
 

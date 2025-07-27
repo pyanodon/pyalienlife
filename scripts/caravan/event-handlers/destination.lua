@@ -11,6 +11,17 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = f
     local unit_number = CaravanGui.get_gui(player).tags.unit_number
     assert(unit_number)
     last_opened.caravan = unit_number
+    -- edge case: when having the edit_interrupt GUI open, clicking on the Add destination button in the caravan GUI
+    -- should close the edit_interrupt GUI. But the on_gui_click event handler responsible for that is called AFTER
+    -- the event handler for 'Add destination'. The latter closes both GUIs, and reopens them afterwards.
+    -- This results in the destination being added to the interrupt, not the regular schedule.
+    -- As this is the only button that behaves like that, I think it's fine to have an ad-hoc check here.
+    --
+    -- If it comes up again, we can add a flag in last_opened instead
+    if player.gui.screen.edit_interrupt_gui then
+        player.gui.screen.edit_interrupt_gui.destroy()
+        storage.edited_interrupt = nil
+    end
     CaravanImpl.select_destination(player, last_opened)
 end
 
