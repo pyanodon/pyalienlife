@@ -211,10 +211,10 @@ local function build_tech_upgrade(tech_upgrade)
                     recipe.icons = recipe.icon and {{
                         icon = recipe.icon,
                         icon_size = recipe.icon_size
-                    }} or recipe.icons or main_product.icon and {{
+                    }} or (recipe.icons and table.deepcopy(recipe.icons)) or main_product.icon and {{
                         icon = main_product.icon,
                         icon_size = main_product.icon_size
-                    }} or main_product.icons
+                    }} or (main_product.icons and table.deepcopy(main_product.icons))
                     recipe.icons[#recipe.icons+1] = {
                         icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
                         shift = {14, -6},
