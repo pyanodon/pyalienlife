@@ -46,12 +46,7 @@ local function on_search(search_key, gui, player)
         if sub_tech_flow then
             local tech_upgrade = tech_upgrades[element.tags.name]
             local name = tech_upgrade.master_tech.name:lower()
-            player.request_translation(player.force.technologies[name].localised_name)
-            translated_name = ""
-            if(storage.technology_locale[player.index] and storage.technology_locale[player.index][player.force.technologies[name].localised_name[1]]) then
-                translated_name = storage.technology_locale[player.index][player.force.technologies[name].localised_name[1]]:lower()
-            end
-            element.visible = not not (check_viewable(element, player, researched_technologies) and (name:find(search_key, 1, true) or translated_name:find(search_key, 1, true)))
+            element.visible = not not (check_viewable(element, player, researched_technologies) and name:find(search_key, 1, true))
         end
     end
 end
@@ -569,20 +564,7 @@ py.on_event(py.events.on_init(), function()
     storage.turd_machine_replacements = storage.turd_machine_replacements or {}
     storage.turd_migrations = storage.turd_migrations or {}
     storage.turd_bhoddos = storage.turd_bhoddos or {}
-    storage.technology_locale = storage.technology_locale or {}
-
     clear_new_turd_recipe_notifications()
-end)
-
-script.on_configuration_changed(function()
-    storage.technology_locale = storage.technology_locale or {}
-end)
-
---whenever a technology name is translated, save the translation
-py.on_event(defines.events.on_string_translated, function(event)
-    storage.technology_locale = storage.technology_locale or {}
-    storage.technology_locale[event.player_index] = storage.technology_locale[event.player_index] or {}
-    storage.technology_locale[event.player_index][event.localised_string[1]] = event.result
 end)
 
 local function starts_with(str, start)
