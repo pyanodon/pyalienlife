@@ -581,8 +581,10 @@ end)
 --whenever a technology name is translated, save the translation
 py.on_event(defines.events.on_string_translated, function(event)
     storage.technology_locale = storage.technology_locale or {}
-    storage.technology_locale[event.player_index] = storage.technology_locale[event.player_index] or {}
-    storage.technology_locale[event.player_index][event.localised_string[1]] = event.result
+    if(event and event.player_index and event.localised_string) then
+        storage.technology_locale[event.player_index] = storage.technology_locale[event.player_index] or {}
+        storage.technology_locale[event.player_index][event.localised_string[1]] = event.result
+    end
 end)
 
 local function starts_with(str, start)
