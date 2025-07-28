@@ -574,10 +574,6 @@ py.on_event(py.events.on_init(), function()
     clear_new_turd_recipe_notifications()
 end)
 
-script.on_configuration_changed(function()
-    storage.technology_locale = storage.technology_locale or {}
-end)
-
 --whenever a technology name is translated, save the translation
 py.on_event(defines.events.on_string_translated, function(event)
     storage.technology_locale = storage.technology_locale or {}
