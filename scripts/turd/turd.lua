@@ -608,6 +608,11 @@ py.on_event(py.events.on_init(), function()
     storage.technology_locale.temp = {}
 end)
 
+-- If we don't handle this, a force.reset_technology_effects() will lock all TURD recipes until a technology is researched
+py.on_event(defines.events.on_technology_effects_reset, function(event)
+    reapply_turd_bonuses(event.force)
+end)
+
 local function starts_with(str, start)
     return str:sub(1, #start) == start
 end
