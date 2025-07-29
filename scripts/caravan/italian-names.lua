@@ -2,7 +2,7 @@
 -- https://en.wikipedia.org/wiki/Category:Italian_masculine_given_names
 -- https://en.wikipedia.org/wiki/Category:Italian_feminine_given_names
 
-local names = {
+local P = {
     "Achille",
     "Adamo",
     "Adelmo",
@@ -624,11 +624,4 @@ local names = {
     "Zita"
 }
 
-function Caravan.get_name(caravan_data)
-    local name = caravan_data.name
-    if name and name ~= "" then return name end
-    local random_name = caravan_data.random_name or names[math.random(1, #names)]
-    caravan_data.random_name = random_name
-    caravan_data.name = random_name
-    return random_name
-end
+return P

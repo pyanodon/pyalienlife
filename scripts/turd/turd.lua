@@ -1,6 +1,7 @@
 Turd = {}
 
-local tech_upgrades, farm_building_tiers = table.unpack(require "prototypes/turd")
+local tech_upgrades, farm_building_tiers, turd_machines = table.unpack(require "prototypes/turd")
+local just_built_new_machine = false
 local bhoddos_lib = require("bhoddos")
 
 local NOT_SELECTED = 333 -- enum
@@ -28,6 +29,38 @@ local function check_viewable(element, player, researched_technologies)
     end
 end
 
+
+--- Translates all TURD upgrade names for use in the search function
+local function translate_upgrades(player)
+    storage.technology_locale[player.locale] = {}
+    for _, tech_upgrade in pairs(tech_upgrades) do
+        local name = tech_upgrade.master_tech.name
+        local localised_name = player.force.technologies[name].localised_name
+        local id = player.request_translation(localised_name)
+        --store the event identifier and the prototype translated for later use
+        storage.technology_locale.temp[id] = name
+    end
+end
+
+--whenever a technology name is translated, save the translation
+py.on_event(defines.events.on_string_translated, function(event)
+    if event.translated then
+        --get the prototype name linked with this event
+        local name = storage.technology_locale.temp[event.id]
+        local player = game.get_player(event.player_index)
+        if name and player then
+            local locale = player.locale
+            --save the translation with the prototype as the key
+            storage.technology_locale[locale][name] = event.result
+            --if no more translations remain clear the temp memory
+            local k = next(storage.technology_locale.temp, event.id)
+            if k == nil then
+                storage.technology_locale.temp = {}
+            end
+        end
+    end
+end)
+
 local function on_search(search_key, gui, player)
     local researched_technologies = player.force.technologies
     if search_key == "" then
@@ -45,7 +78,13 @@ local function on_search(search_key, gui, player)
         if sub_tech_flow then
             local tech_upgrade = tech_upgrades[element.tags.name]
             local name = tech_upgrade.master_tech.name:lower()
-            element.visible = not not (check_viewable(element, player, researched_technologies) and name:find(search_key, 1, true))
+            local translated_name = ""
+            if(storage.technology_locale[player.locale]) then 
+                translated_name = (storage.technology_locale[player.locale][name] or ""):lower()
+            else
+                translate_upgrades(player)
+            end
+            element.visible = not not (check_viewable(element, player, researched_technologies) and (name:find(search_key, 1, true) or translated_name:find(search_key, 1, true)))
         end
     end
 end
@@ -345,26 +384,40 @@ local function machine_replacement(old, new, assembling_machine_list)
     local temp_inventory = game.create_inventory(9999)
     local new_machine_list = {}
     for _, machine in pairs(assembling_machine_list) do
-        if machine.name == old then
-            local position = machine.position
-            local crafting_progress = machine.crafting_progress
-            local bonus_progress = machine.bonus_progress
-            local recipe = machine.get_recipe()
-            local force_index = machine.force_index
+        if machine.name == old or machine.name == "entity-ghost" and machine.ghost_name == old then
+            local parameters = {
+              name = machine.name == "entity-ghost" and "entity-ghost" or new,
+              ghost_name = machine.name == "entity-ghost" and new or nil,
+              position = machine.position,
+              direction = machine.direction,
+              quality = machine.quality,
+              force = machine.force_index,
+              raise_built = true
+            }
+            local recipe
+            local crafting_progress
+            local bonus_progress
+            if machine.type == "assembling-machine" then
+                recipe = machine.get_recipe()
+                crafting_progress = machine.crafting_progress
+                bonus_progress = machine.bonus_progress
+            end
             local surface = machine.surface
             local items_to_place_this = machine.prototype.items_to_place_this
-            local direction = machine.direction
             local mirrored = machine.mirroring
             machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
-            for _, item_to_place in pairs(items_to_place_this) do
+            for _, item_to_place in pairs(items_to_place_this or {}) do
                 temp_inventory.remove(item_to_place)
             end
-            local new_machine = surface.create_entity {name = new, position = position, force = force_index, raise_built = true}
-            if new_machine.type == "assembling-machine" then new_machine.set_recipe(recipe) end
-            handle_removed_items(surface, force, new_machine, temp_inventory.get_contents())
-            new_machine.crafting_progress = crafting_progress
-            new_machine.bonus_progress = bonus_progress
-            new_machine.direction = direction
+            just_built_new_machine = true
+            local new_machine = surface.create_entity(parameters)
+            just_built_new_machine = false
+            if new_machine.type == "assembling-machine" then
+                new_machine.crafting_progress = crafting_progress
+                new_machine.bonus_progress = bonus_progress
+                new_machine.set_recipe(recipe)
+            end
+            handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
             new_machine.mirroring = mirrored
             temp_inventory.clear()
             machine = new_machine
@@ -375,11 +428,14 @@ local function machine_replacement(old, new, assembling_machine_list)
     return new_machine_list
 end
 
-local function find_all_assembling_machines(force)
+local function find_all_assembling_machines(force, include_ghosts)
     local assembling_machine_list = {}
     for _, surface in pairs(game.surfaces) do
         for _, machine in pairs(surface.find_entities_filtered {type = {"assembling-machine", "furnace"}, force = force}) do
             assembling_machine_list[#assembling_machine_list + 1] = machine
+        end
+        for _, ghost in pairs(surface.find_entities_filtered {type = "entity-ghost", ghost_type = {"assembling-machine", "furnace"}, force = force}) do
+            assembling_machine_list[#assembling_machine_list+1] = ghost
         end
     end
     return assembling_machine_list
@@ -546,7 +602,15 @@ py.on_event(py.events.on_init(), function()
     storage.turd_machine_replacements = storage.turd_machine_replacements or {}
     storage.turd_migrations = storage.turd_migrations or {}
     storage.turd_bhoddos = storage.turd_bhoddos or {}
-    clear_new_turd_recipe_notifications()
+
+    --on init create the local variable, on migration reset the translations to recalculate them later
+    storage.technology_locale = {}
+    storage.technology_locale.temp = {}
+end)
+
+-- If we don't handle this, a force.reset_technology_effects() will lock all TURD recipes until a technology is researched
+py.on_event(defines.events.on_technology_effects_reset, function(event)
+    reapply_turd_bonuses(event.force)
 end)
 
 local function starts_with(str, start)
@@ -585,8 +649,9 @@ py.on_event(defines.events.on_research_reversed, on_unresearched)
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
-    if not entity.valid or not entity.unit_number then return end
+    if just_built_new_machine or not entity.valid or not entity.unit_number then return end
     local force_index = entity.force_index
+    local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
 
     if storage.turd_unlocked_modules[force_index] then
         local module_name = storage.turd_unlocked_modules[force_index][entity.name]
@@ -595,11 +660,10 @@ py.on_event(py.events.on_built(), function(event)
         end
     end
 
-    if storage.turd_machine_replacements[force_index] then
-        local new = storage.turd_machine_replacements[force_index][entity.name]
-        if new then
-            machine_replacement(entity.name, new, {entity})
-        end
+    if storage.turd_machine_replacements[force_index] and storage.turd_machine_replacements[force_index][name] then
+        machine_replacement(name, storage.turd_machine_replacements[force_index][name], {entity})
+    elseif turd_machines[name] then -- is a turd building, should be normal
+        machine_replacement(name, turd_machines[name], {entity})
     end
 
     if entity.valid and bhoddos_lib.cultures[entity.name] then

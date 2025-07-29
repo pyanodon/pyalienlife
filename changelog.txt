@@ -1,6 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.47
+Version: 3.0.48
 Date: ???
+  Changes:
+    - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
+    - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
+    - Fixed a potential crash in interrupts migrations
+    - Added a TURD sign to the icons of TURD buildings so they're easier to differentiate in a GUI. Resolves https://github.com/pyanodon/pybugreports/issues/1107
+    - Added a TURD sign to the icons of TURD recipes so they're easier to differentiate in a GUI
+    - Fixed a potential crash in interrupts migrations.
+    - Caravan GUI has been remade. Should now be more responsive and nicer to use. https://github.com/pyanodon/pyalienlife/pull/329
+    - Fixed mining a entity in a caravan's schedule did not update the caravan GUI with "Destination is unavailable. Click here to reassign it.".
+    - Fixed caravan GUI crash after clicking the ground while in the "Destination is unavailable. Click here to reassign it." state. Resolves https://github.com/pyanodon/pybugreports/issues/1113
+    - Fixed re-assigning to the player whilst in the "Destination is unavailable. Click here to reassign it." state would only keep track of the player entity, and not the player controller. (relevant if the player dies or turns into a horse-man)
+    - Fixed TURD recipes becoming locked after another mod triggers reset_technology_effects
+    - Fixed selecting a TURD that changes entities not changing ghosts to the new entity
+    - Fixed that you could place a TURD entity without having the TURD selected
+    - Fixed that you could place a normal entity when you have an entity-replacing TURD selected
+    - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
+    - TURD selection seach now respects locale. Resolves https://github.com/pyanodon/pybugreports/issues/669
+---------------------------------------------------------------------------------------------------
+Version: 3.0.47
+Date: 2025-7-20
   Changes:
     - Fixed underground vessel occasionally not connecting to normal vessel with Squeak Through.
     - Fixed some Ukrainian locale strings.
@@ -10,6 +30,18 @@ Date: ???
     - Fixed vatbrain range to be accurate to what is shown to the player.
     - Fixed Wyrmholes not having worms (thanks, O5MO!). Resolves https://github.com/pyanodon/pybugreports/issues/1082 and https://github.com/pyanodon/pybugreports/issues/994
     - Fixed a typo in sweetened biomass TURD recipe description
+    - Fixed caravans not displaying alerts when out of food
+    - Destroying caravan's destination no longer removes the schedule and instead shows a new alert prompting the user to select a new destination
+    - Updated food slot and food alert graphics
+    - Made caravans update reference to player's character if it changes. Resolves https://github.com/pyanodon/pybugreports/issues/917
+    - Fixed caravans treating interrupt with no conditions as having conditions fulfilled. Resolves https://github.com/pyanodon/pybugreports/issues/1092
+    - Fixed caravans unnecessarily going idle when changing "wait for condition" checkbox. Resolves https://github.com/pyanodon/pybugreports/issues/984
+    - Fixed caravans not updating the action in progress when reordering schedule. Resolves https://github.com/pyanodon/pybugreports/issues/1078
+    - Fixed setting the equality for caravan interrupt circuit conditions causing a crash. Resolves https://github.com/pyanodon/pybugreports/issues/1101
+    - Added short names for some actions
+    - Prevented having 2 caravan interrupts with the same name. Resolves https://github.com/pyanodon/pybugreports/issues/1102
+    - Fixed sweet syrup unbarreling returning the wrong temperature syrup. Resolves https://github.com/pyanodon/pybugreports/issues/1055
+    - Fixed underground vessel not connecting when placed with click-dragging. Resolves https://github.com/pyanodon/pybugreports/issues/1043
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.46
 Date: 2025-6-29

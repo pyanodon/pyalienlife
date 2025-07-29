@@ -7,7 +7,7 @@ RECIPE {
     ingredients = {
         {type = "item",  name = "planter-box",        amount = 1},
         {type = "item",  name = "wood-seedling-mk02", amount = 3},
-        {type = "fluid", name = "dirty-water-light",  amount = 200},
+        {type = "fluid", name = "muddy-sludge",  amount = 200},
     },
     results = {
         {type = "item", name = "tree-mk02", amount = 1},
@@ -24,7 +24,7 @@ RECIPE {
         {type = "item",  name = "planter-box",        amount = 1},
         {type = "item",  name = "wood-seedling-mk03", amount = 3},
         {type = "item",  name = "sodium-alginate",    amount = 1},
-        {type = "fluid", name = "dirty-water-light",  amount = 200},
+        {type = "fluid", name = "muddy-sludge",  amount = 200},
     },
     results = {
         {type = "item", name = "tree-mk03", amount = 1},
@@ -41,7 +41,7 @@ RECIPE {
         {type = "item",  name = "planter-box",        amount = 1},
         {type = "item",  name = "wood-seedling-mk04", amount = 3},
         {type = "item",  name = "sodium-alginate",    amount = 1},
-        {type = "fluid", name = "dirty-water-light",  amount = 200},
+        {type = "fluid", name = "muddy-sludge",  amount = 200},
     },
     results = {
         {type = "item", name = "tree-mk04", amount = 1},
@@ -110,7 +110,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item",  name = "tree-mk01",         amount = 1},
-        {type = "fluid", name = "dirty-water-heavy", amount = 200},
+        {type = "fluid", name = "tailings", amount = 200},
         {type = "item",  name = "moss-gen",          amount = 3},
     },
     results = {
@@ -132,7 +132,7 @@ RECIPE {
     energy_required = 20,
     ingredients = {
         {type = "item",  name = "tree-mk02",         amount = 1},
-        {type = "fluid", name = "dirty-water-heavy", amount = 200},
+        {type = "fluid", name = "tailings", amount = 200},
         {type = "fluid", name = "anthracene-oil",    amount = 200},
         {type = "item",  name = "moss-gen",          amount = 5},
         {type = "item",  name = "cdna",              amount = 3},
