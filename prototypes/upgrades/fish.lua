@@ -55,13 +55,13 @@ end
 local function add_new_fish_farm(i)
     local name = "fish-farm-mk0" .. i
     local entity = table.deepcopy(data.raw["assembling-machine"][name])
-    entity.name = "turd-" .. name
+    entity.name = name .. "-turd"
     entity.localised_name = {"entity-name." .. name}
     entity.placeable_by = {item = name, count = 1}
     entity.localised_description = entity.localised_description or {"entity-description." .. name}
     entity.subgroup = data.raw.item[name].subgroup
     entity.order = data.raw.item[name].order
-    if i ~= 4 then entity.next_upgrade = "turd-fish-farm-mk0" .. (i + 1) end
+    if i ~= 4 then entity.next_upgrade = "fish-farm-mk0" .. (i + 1) .. "-turd" end
     entity.allowed_module_categories = {"fish"}
     entity.energy_usage = (i * 5) .. "MW"
     table.insert(entity.flags, "not-in-made-in")
@@ -211,10 +211,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "machine-replacement", old = "fish-farm-mk01",          new = "turd-fish-farm-mk01"},
-                {type = "machine-replacement", old = "fish-farm-mk02",          new = "turd-fish-farm-mk02"},
-                {type = "machine-replacement", old = "fish-farm-mk03",          new = "turd-fish-farm-mk03"},
-                {type = "machine-replacement", old = "fish-farm-mk04",          new = "turd-fish-farm-mk04"},
+                {type = "machine-replacement", old = "fish-farm-mk01",          new = "fish-farm-mk01-turd"},
+                {type = "machine-replacement", old = "fish-farm-mk02",          new = "fish-farm-mk02-turd"},
+                {type = "machine-replacement", old = "fish-farm-mk03",          new = "fish-farm-mk03-turd"},
+                {type = "machine-replacement", old = "fish-farm-mk04",          new = "fish-farm-mk04-turd"},
                 {old = "breed-fish-egg-1",     new = "breed-fish-egg-1-doused", type = "recipe-replacement"},
                 {old = "breed-fish-egg-2",     new = "breed-fish-egg-2-doused", type = "recipe-replacement"},
                 {old = "breed-fish-egg-3",     new = "breed-fish-egg-3-doused", type = "recipe-replacement"},

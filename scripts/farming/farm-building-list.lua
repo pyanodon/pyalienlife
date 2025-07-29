@@ -7,7 +7,7 @@ local farm_buildings = {
     ["dhilmos-pool"] = {default_module = "dhilmos", domain = "animal"},
     ["dingrits-pack"] = {default_module = "dingrits", domain = "animal"},
     ["fish-farm"] = {default_module = "fish", domain = "animal"},
-    ["turd-fish-farm"] = {default_module = "fish", domain = "animal"},
+    ["fish-farm-turd"] = {default_module = "fish", domain = "animal"},
     ["kmauts-enclosure"] = {default_module = "kmauts", domain = "animal"},
     ["mukmoux-pasture"] = {default_module = "mukmoux", domain = "animal"},
     ["phadai-enclosure"] = {default_module = "phadai", domain = "animal"},
