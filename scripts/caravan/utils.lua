@@ -22,6 +22,22 @@ function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     return valid_actions or all_actions.default or error()
 end
 
+function P.get_all_actions_for_entity(entity)
+    local all_actions = Caravan.all_actions
+    local valid_actions
+    if entity and entity.valid then
+        if entity.name == "outpost" or entity.name == "outpost-aerial" then
+            valid_actions = all_actions.outpost
+        elseif entity.name == "fluid-outpost" then
+            valid_actions = all_actions["fluid-outpost"]
+        else
+            valid_actions = all_actions[entity.type]
+        end
+    end
+
+    return valid_actions or all_actions.default or error()
+end
+
 function P.get_name(caravan_data)
     local name = caravan_data.name
     if name and name ~= "" then return name end
@@ -210,6 +226,26 @@ function P.contains(t, e)
     if t[i] == e then return true end
   end
   return false
+end
+
+function P.format_numeric_value(v)
+    local s = tostring(v)
+    local len = string.len(s)
+
+    local units = {"", "k", "M", "G"}
+
+    local remainder = len % 3
+    local nb_fractional_digits = remainder == 0 and 3 or remainder
+    local res = s:sub(1, nb_fractional_digits)
+
+    if len > 1 and nb_fractional_digits == 1 then
+        local i = nb_fractional_digits + 1
+        res = res .. "." .. s:sub(i, i)
+    end
+
+    local nb_thousands = math.floor((len - 1) / 3)
+
+    return res .. units[1 + nb_thousands]
 end
 
 return P
