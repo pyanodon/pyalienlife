@@ -32,8 +32,8 @@ end
 
 --- Translates all TURD upgrade names for use in the search function
 local function translate_upgrades(player)
+    storage.technology_locale[player.locale] = {}
     for _, tech_upgrade in pairs(tech_upgrades) do
-        storage.technology_locale[player.locale] = {}
         local name = tech_upgrade.master_tech.name
         local localised_name = player.force.technologies[name].localised_name
         local id = player.request_translation(localised_name)
