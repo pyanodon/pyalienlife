@@ -110,8 +110,8 @@ for i = 1, 4 do
 	  name = name,
 	  icon = icon,
 	  icon_size = icon_size,
-	  extension_speed = 0.005*(2^i),
-	  rotation_speed = 0.005*(2^i),
+	  extension_speed = 0.005*(1.2^i),
+	  rotation_speed = 0.005*(1.2^i),
 	  pickup_position = {0, 1.5},
 	  insert_position = {0, -1.6},
 	  energy_source = {
@@ -119,15 +119,16 @@ for i = 1, 4 do
   		usage_priority = "secondary-input",
   		drain = 500*i .. "kW",
 	  },
-	  energy_per_movement = 500*i .. "kW",
-	  energy_per_rotation = 500*i .. "kW",
+	  energy_per_movement = 1*i .. "MW",
+	  energy_per_rotation = 1*i .. "MW",
 	  collision_box = {{-1.4, -0.9}, {1.4, 0.9}},
 	  selection_box = {{-1.4, -0.9}, {1.4, 0.9}},
 	  uses_inserter_stack_size_bonus = false,
+	  grab_less_to_match_belt_stack = true,
+	  wait_for_full_hand = true,
+	  filter_count = 1 + i,
 	  stack_size_bonus = 149 + (25 * (i - 1)),
-	  max_belt_stack_size = 8,
 	}
-
   if feature_flags.belt_stacking then
     data.raw.inserter[name].max_belt_stack_size = 10000
   end
