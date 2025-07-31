@@ -18,6 +18,7 @@ Date: ???
     - Fixed that you could place a normal entity when you have an entity-replacing TURD selected
     - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
     - TURD selection seach now respects locale. Resolves https://github.com/pyanodon/pybugreports/issues/669
+    - Added a new interrupt, 'outpost-item-count', which allows you to choose the target outpost from which to read the item count, similar to 'target-item-count'
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20

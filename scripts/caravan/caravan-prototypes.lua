@@ -110,6 +110,7 @@ Caravan.valid_actions = {
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
+        "outpost-item-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
