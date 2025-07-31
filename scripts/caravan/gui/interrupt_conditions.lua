@@ -25,7 +25,6 @@ function P.build_condition_flow(parent, condition, tags)
        
         local locale_key = "caravan-actions." .. condition.type .. "2"
         local entity = condition.entity
-        local filters
         local caption
         
         if entity and entity.valid then

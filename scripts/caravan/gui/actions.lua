@@ -56,7 +56,6 @@ function P.build_action_flow(parent, caravan_data, action, tags)
 
         local locale_key = "caravan-actions." .. action.type .. "2"
         local entity = action.entity
-        local filters
 
         if entity and entity.valid then
             label.caption = {locale_key, {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
