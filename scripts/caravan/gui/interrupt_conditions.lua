@@ -33,7 +33,7 @@ function P.build_condition_flow(parent, condition, tags)
             caption = {locale_key, {"caravan-gui.not-specified"}}
         end
         flow.add {type = "label", caption = caption}
-        comparator.build_item_static_comparator_widgets(flow, condition, tags, nil)
+        comparator.build_item_static_comparator_widgets(flow, condition, tags)
     else
         flow.add {type = "label", style = "squashable_label_with_left_padding", caption = condition.localised_name}
         if condition.type == "circuit-condition" then
