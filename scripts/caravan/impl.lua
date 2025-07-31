@@ -878,6 +878,10 @@ function P.not_at_outpost(caravan_data, schedule, action)
     return not P.at_outpost(caravan_data, schedule, action)
 end
 
+function P.outpost_item_count(caravan_data, schedule, action)
+    return P.target_item_count(caravan_data, action, action)
+end
+
 Caravan.actions = {
     ["time-passed"] = P.wait,
     ["store-food"] = P.store_food,
@@ -899,6 +903,7 @@ Caravan.actions = {
     ["is-inventory-empty"] = P.is_inventory_empty,
     ["at-outpost"] = P.at_outpost,
     ["not-at-outpost"] = P.not_at_outpost,
+    ["outpost-item-count"] = P.outpost_item_count,
 }
 
 Caravan.free_actions = { -- actions that don't use fuel
