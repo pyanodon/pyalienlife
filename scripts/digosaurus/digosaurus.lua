@@ -123,6 +123,8 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
         if not Digosaurus.validity_check(dig_data) then goto continue end
         remove_nonfood_items_from_food_inventory(dig_data)
         local entity = dig_data.entity
+        if entity.disabled_by_control_behavior then goto continue end
+
         local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then

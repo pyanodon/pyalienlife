@@ -18,6 +18,7 @@ Date: ???
     - Fixed that you could place a normal entity when you have an entity-replacing TURD selected
     - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
     - TURD selection seach now respects locale. Resolves https://github.com/pyanodon/pybugreports/issues/669
+    - Fixed dig sites not respecting control behavior (circuit enable/disable)
     - Fixed that caravan food would allow 1 more action per food item than intended.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
