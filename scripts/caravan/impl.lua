@@ -96,6 +96,112 @@ function P.remove_alert(entity)
     end
 end
 
+function P.evaluate_conditions(caravan_data, conditions)
+    if #conditions == 0 then return false end
+
+    for _, condition in pairs(conditions) do
+        if not Caravan.actions[condition.type] then return false end
+        if not Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition) then return false end
+    end
+    return true
+end
+
+function P.find_interrupt_to_trigger(caravan_data)
+    local current_schedule = caravan_data.schedule[caravan_data.schedule_id]
+
+    -- current schedule_id is the "soon-to-be-previous" schedule_id, do not count it
+    local temporary_schedule = table.find(caravan_data.schedule, function (sch, idx) return idx ~= caravan_data.schedule_id and sch.temporary ~= nil end)
+
+    for _, interrupt_name in pairs(caravan_data.interrupts) do
+        local interrupt = storage.interrupts[interrupt_name]
+        -- TODO shouldn't we assert? Is it a check for multiplayer shenanigans?
+        if interrupt then
+            if not current_schedule or temporary_schedule == nil or interrupt.inside_interrupt then
+                if P.evaluate_conditions(caravan_data, interrupt.conditions) then
+                    return interrupt
+                end
+            end
+        end
+    end
+    return nil
+end
+
+-- If the schedule_id points to a temporary stop, the adjusted schedule_id will point to the previous permanent stop.
+-- If schedule_id is -1 or if all stops were temporary, -1 is returned.
+local function adjust_schedule_id(old_schedule, new_schedule, removed_index, old_schedule_id)
+    if not removed_index or old_schedule_id == -1 then return old_schedule_id end
+    if #new_schedule == 0 then return -1 end
+
+    local nb_removed = #old_schedule - #new_schedule
+
+    if old_schedule_id < removed_index then return old_schedule_id end
+
+    -- schedule_id was a temporary stop
+    if old_schedule_id <= removed_index + nb_removed - 1 then
+        local adjusted_schedule_id = removed_index - 1
+        if adjusted_schedule_id == 0 then
+            adjusted_schedule_id = #new_schedule
+        end
+        return adjusted_schedule_id
+    end
+    return old_schedule_id - nb_removed
+end
+
+-- Returns a copy of the caravan schedule without temporary stops, and the adjusted schedule_id
+function P.remove_temporary_stops(caravan_data)
+    local removed_index
+    local fn = function (s, idx) if s.temporary and removed_index == nil then removed_index = idx end return s.temporary == nil end
+    local new_schedule = table.filter(caravan_data.schedule, fn)
+
+    return new_schedule, adjust_schedule_id(caravan_data.schedule, new_schedule, removed_index, caravan_data.schedule_id)
+end
+
+function P.insert_temporary_stops_into_schedule(schedule, interrupt, insert_index)
+    local ret = table.deepcopy(schedule)
+
+    for i = 1, #interrupt.schedule do
+        local sch = table.deepcopy(interrupt.schedule[i])
+        sch.temporary = {interrupt_name = interrupt.name, schedule_id = i}
+        table.insert(ret, insert_index + i - 1, sch)
+    end
+    return ret
+end
+
+function P.trigger_interrupt_in_regular_schedule(caravan_data, interrupt)
+    local new_schedule, adjusted_schedule_id = P.remove_temporary_stops(caravan_data)
+    local insert_index
+    -- all stops were temporary, or completed temporary destination was at the top of the schedule
+    if adjusted_schedule_id == -1 or adjusted_schedule_id > caravan_data.schedule_id then
+        insert_index = 1
+        -- When a temporary train stop keeps triggering, it moves from the bottom to the top.
+        -- Don't know if that's intended or a bug, but let's do the same thing.
+    elseif caravan_data.schedule[caravan_data.schedule_id].temporary and caravan_data.schedule_id == #caravan_data.schedule then
+        insert_index = 1
+    else
+        insert_index = adjusted_schedule_id + 1
+    end
+    caravan_data.schedule = P.insert_temporary_stops_into_schedule(new_schedule, interrupt, insert_index)
+    caravan_data.schedule_id = insert_index
+end
+
+function P.advance_caravan_schedule_by_1(caravan_data)
+    assert(#caravan_data.schedule > 0)
+    assert(caravan_data.schedule_id ~= -1)
+
+    local interrupt = P.find_interrupt_to_trigger(caravan_data)
+
+    if interrupt and #interrupt.schedule > 0 then
+        P.trigger_interrupt_in_regular_schedule(caravan_data, interrupt)
+    else
+        if caravan_data.schedule[caravan_data.schedule_id].temporary then
+            table.remove(caravan_data.schedule, caravan_data.schedule_id)
+        else
+            caravan_data.schedule_id = caravan_data.schedule_id + 1
+        end
+        caravan_data.schedule_id = math.max(1, caravan_data.schedule_id % (#caravan_data.schedule + 1))
+    end
+end
+
 ---Starts a caravan pathfinding to its next scheduled entity. Sets the action ID to -1 becuase it cannot do actions while in transit.
 ---This is called whenever it finishes all its actions on the previous schedule or it is started manually via the GUI.
 ---@param caravan_data Caravan
@@ -169,109 +275,6 @@ function P.begin_action(caravan_data, action_id)
     if action.type == "time-passed" then
         action.timer = action.wait_time or 5
     end
-end
-
--- Removes all temporary stop from the caravan schedule
-function P.remove_tmp_stops(caravan_data)
-    local new_schedule = {}
-
-    for idx, sch in pairs(caravan_data.schedule) do
-        if sch.temporary then
-            if idx == caravan_data.schedule_id then
-                caravan_data.action_id = -1
-            end
-            if idx <= caravan_data.schedule_id then
-                caravan_data.schedule_id = caravan_data.schedule_id - 1
-            end
-        else
-            new_schedule[#new_schedule + 1] = sch
-        end
-    end
-    caravan_data.schedule = new_schedule
-
-    if caravan_data.schedule_id < 1 then
-        P.stop_actions(caravan_data)
-    end
-end
-
--- Adds an interrupt's schedule to the caravan schedule. Returns index of the first schedule added
----@param caravan_data Caravan
----@param interrupt_data CaravanInterrupt
-function P.add_interrupt(caravan_data, interrupt_data)
-    if #interrupt_data.schedule <= 0 then return caravan_data.schedule_id end
-    local first_inserted_location = nil
-    for i = 1, #interrupt_data.schedule do
-        local sch = table.deepcopy(interrupt_data.schedule[i])
-        sch.temporary = {interrupt_name = interrupt_data.name, schedule_id = i}
-        local index = math.max(0, caravan_data.schedule_id) + i
-        first_inserted_location = first_inserted_location or index
-        table.insert(caravan_data.schedule, index, sch)
-    end
-
-    -- Whenever an interrupt is added, the caravan should always immediately execute that action.
-    -- Return the schedule_id of that interrupt.
-    local new_schedule_id_to_execute = first_inserted_location or #caravan_data.schedule
-    return new_schedule_id_to_execute == 0 and -1 or new_schedule_id_to_execute
-end
-
----@param caravan_data Caravan
-function P.advance_caravan_schedule_by_1(caravan_data)
-    local schedule = caravan_data.schedule[caravan_data.schedule_id]
-    assert(schedule)
-
-    local existing_interrupt_name    
-    local is_interrupted = false
-    for _, sch in pairs(caravan_data.schedule) do
-        if sch.temporary then
-            if sch ~= schedule then  -- It is about to be deleted, so dont count it
-                is_interrupted = true
-                existing_interrupt_name = sch.temporary.interrupt_name
-                break
-            end
-        end
-    end
-
-    local passed_index
-    for idx, interrupt in pairs(caravan_data.interrupts) do
-        interrupt = storage.interrupts[interrupt]
-        if not interrupt then goto continue end
-
-        local inside = interrupt.inside_interrupt
-        if is_interrupted and not inside then goto continue end
-        if is_interrupted and inside and existing_interrupt_name == interrupt.name then goto continue end
-
-        local conditions_passed = true
-        for _, condition in pairs(interrupt.conditions) do
-            if not Caravan.actions[condition.type] then break end
-            if not Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition) then
-                conditions_passed = false
-                break
-            end
-        end
-        if conditions_passed then
-            passed_index = idx
-            is_interrupted = true   -- Pretend the interrupt succeded but dont add it to the schedule yet
-        end
-
-        ::continue::
-    end
-
-    if passed_index then
-        local interrupt = storage.interrupts[caravan_data.interrupts[passed_index]]
-        P.remove_tmp_stops(caravan_data)
-        P.add_interrupt(caravan_data, interrupt)
-    else
-        if schedule.temporary then
-            table.remove(caravan_data.schedule, caravan_data.schedule_id)
-            if #caravan_data.schedule == 0 then
-                caravan_data.schedule_id = -1
-            else
-                caravan_data.schedule_id = caravan_data.schedule_id - 1
-            end
-        end
-    end
-
-    P.begin_schedule(caravan_data, caravan_data.schedule_id % #caravan_data.schedule + 1, #caravan_data.schedule == 1)
 end
 
 ---Is this caravan currently doing anything?
@@ -872,7 +875,7 @@ function P.is_inventory_empty(caravan_data, schedule, action)
 end
 
 function P.at_outpost(caravan_data, schedule, action)
-    return schedule.entity == action.entity
+    return schedule and schedule.entity == action.entity
 end
 
 function P.not_at_outpost(caravan_data, schedule, action)
