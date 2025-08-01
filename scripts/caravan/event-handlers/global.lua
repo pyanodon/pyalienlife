@@ -325,8 +325,6 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
             if caravan_data.retry_pathfinder == 0 then
                 CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
-            end
-            if caravan_data.retry_pathfinder == 0 then
                 caravan_data.retry_pathfinder = nil
             end
             goto continue
@@ -354,6 +352,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         elseif result then
             if #schedule.actions == caravan_data.action_id then
                 CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
+                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, #caravan_data.schedule == 1)
             else
                 CaravanImpl.begin_action(caravan_data, caravan_data.action_id + 1)
             end

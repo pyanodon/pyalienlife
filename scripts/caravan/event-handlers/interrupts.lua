@@ -124,13 +124,26 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_play_button"] = fu
     local caravan_data = storage.caravans[unit_number]
     local i = event.element.tags.caravan_interrupt_index
 
-    local interrupt_data = storage.interrupts[caravan_data.interrupts[i]]
+    local interrupt = storage.interrupts[caravan_data.interrupts[i]]
+    if not interrupt or #interrupt.schedule == 0 then return end
 
-    CaravanImpl.remove_tmp_stops(caravan_data)
-    local index = CaravanImpl.add_interrupt(caravan_data, interrupt_data)
-    if index > 0 then
-        CaravanImpl.begin_schedule(caravan_data, index)
+    local new_schedule, adjusted_schedule_id = CaravanImpl.remove_temporary_stops(caravan_data)
+    local insert_index
+
+    if adjusted_schedule_id == -1 then
+        -- that's how trains behave
+        insert_index = #new_schedule == 0 and 1 or 2
+    else
+        -- completed temporary destination was at the top of the schedule
+        if adjusted_schedule_id > caravan_data.schedule_id then
+            insert_index = 1
+        else
+            insert_index = adjusted_schedule_id + 1
+        end
     end
+    caravan_data.schedule = CaravanImpl.insert_temporary_stops_into_schedule(new_schedule, interrupt, insert_index)
+    caravan_data.schedule_id = insert_index
+    CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id)
 
     CaravanGuiComponents.update_schedule_pane(player)
 end
