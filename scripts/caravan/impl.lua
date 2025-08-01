@@ -281,7 +281,7 @@ function P.is_automated(caravan_data)
     return caravan_data.schedule_id and caravan_data.schedule_id >= 0
 end
 
----Reduces the fuel bar of the caravan by 1. If the fuel bar is empty, it will instead attempt to eat fuel from the fuel inventory.
+---Reduces the fuel bar of the caravan by 1. If the fuel bar is empty, it will also attempt to refill it using fuel from the fuel inventory.
 ---If this function returns false, the caravan is starved and all actions stop.
 ---@param caravan_data Caravan
 ---@return boolean
@@ -295,6 +295,7 @@ function P.eat(caravan_data)
             caravan_data.fuel_bar = caravan_prototypes[entity.name].favorite_foods[item]
             caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
             entity.force.get_item_production_statistics(entity.surface_index).on_flow(item, -1)
+            caravan_data.fuel_bar = caravan_data.fuel_bar - 1
             return true
         end
         return false
