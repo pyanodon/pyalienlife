@@ -116,10 +116,6 @@ local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, n
 
     local flow = build_inventory_flow(parent, fuel_inventory, name, tags, {sprite = "slot_icon_food", tooltip = favorite_food_tooltip})
     local bar = flow.add {type = "progressbar", style = "burning_progressbar"}
-    -- FIXME with 2 auog's food, I have 11 actions total, instead of 8
-    -- for some reason the fuel bar is full when the caravan is idle
-    -- beginning the schedule burns the full bar, but doesn't start burning a food
-    -- it's broken on master too, let's fix it later
     bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
     bar.style.horizontally_stretchable = true
     bar.style.right_margin = 8
