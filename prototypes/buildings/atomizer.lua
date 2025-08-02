@@ -115,7 +115,7 @@ for tier = 1, 4 do
         energy_source =
         {
             type = "burner",
-            fuel_categories = tier == 1 and {"chemical", "biomass"} or {"chemical", "biomass", "jerry"},--ADD JERRY FOR MK234,
+            fuel_categories = {"chemical", "biomass", tier ~= 1 and "jerry" or nil}, --ADD JERRY FOR MK234,
             effectivity = 1,
             fuel_inventory_size = 1,
             burnt_inventory_size = 1,
