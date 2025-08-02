@@ -72,7 +72,11 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_delete_button"] 
     local caravan_data = storage.caravans[unit_number]
     table.remove(caravan_data.schedule, event.element.tags.schedule_id)
 
-    CaravanImpl.stop_actions(caravan_data)
+    if event.element.tags.schedule_id == caravan_data.schedule_id then
+        caravan_data.retry_pathfinder = 1
+    elseif event.element.tags.schedule_id < caravan_data.schedule_id then
+        caravan_data.schedule_id = caravan_data.schedule_id - 1
+    end
     local player = game.get_player(event.player_index)
     CaravanGuiComponents.update_schedule_pane(player)
 end
@@ -85,17 +89,19 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_play_stop_button
     local schedule = caravan_data.schedule[tags.schedule_id]
 
     if caravan_data.schedule_id == tags.schedule_id then
-        if caravan_data.action_id == tags.action_id then
-            CaravanImpl.stop_actions(caravan_data)
-        else
-            local position
-            if schedule.entity and schedule.entity.valid then position = schedule.entity.position else position = schedule.position end
-            if py.distance_squared(position, caravan_data.entity.position) < 1000 then
-                CaravanImpl.begin_action(caravan_data, tags.action_id)
+        CaravanImpl.stop_actions(caravan_data)
+    else
+        if caravan_data.schedule_id == -1 then
+            local interrupt = CaravanImpl.find_interrupt_to_trigger(caravan_data)
+
+            if interrupt then
+                local new_schedule = CaravanImpl.remove_temporary_stops(caravan_data)
+
+                caravan_data.schedule = CaravanImpl.insert_temporary_stops_into_schedule(new_schedule, interrupt, tags.schedule_id)
             end
         end
-    else
-        CaravanImpl.begin_schedule(caravan_data, tags.schedule_id)
+        caravan_data.schedule_id = tags.schedule_id
+        CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id)
     end
 
     CaravanGui.update_gui(player)
