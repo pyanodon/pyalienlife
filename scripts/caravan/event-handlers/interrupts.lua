@@ -43,7 +43,7 @@ local function on_edit_interrupt_confirmed(event)
     local label = event.element.parent.name_label
     local textfield = event.element.parent.py_edit_interrupt_textfield
 
-    if storage.interrupts[textfield.text] ~= nil then return end
+    if textfield.text ~= storage.edited_interrupt.name and storage.interrupts[textfield.text] ~= nil then return end
 
     textfield.visible = not textfield.visible
     label.visible = not label.visible
@@ -258,7 +258,7 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = fu
 
     -- edge case: need to check the rename textfield when 'Save interrupt' is pressed instead of enter
     local textfield = event.element.parent.parent.inside_frame.subheader_frame.contents_flow.py_edit_interrupt_textfield
-    if string.len(textfield.text) ~= 0 then
+    if string.len(textfield.text) ~= 0 and textfield.text ~= storage.edited_interrupt.name then
         if storage.interrupts[textfield.text] ~= nil then return end
 
         local interrupt = storage.interrupts[storage.edited_interrupt.name]
