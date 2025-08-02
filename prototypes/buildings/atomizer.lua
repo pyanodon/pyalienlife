@@ -62,14 +62,14 @@ RECIPE {
     enabled = false,
     ingredients = {
         {type = "item", name = "atomizer-mk03", amount = 1},
-        {type = "item", name = "intelligent-unit",  amount = 10},
+        {type = "item", name = "control-unit",  amount = 10},
         {type = "item", name = "super-steel",   amount = 40},
         {type = "item", name = "super-alloy",   amount = 30},
     },
     results = {
         {type = "item", name = "atomizer-mk04", amount = 1}
     }
-}:add_unlock("biotech-machines-mk04")
+}:add_unlock("biotech-machines-mk04"):replace_ingredient("control-unit", "intelligent-unit")
 
 local base_craft_speed = 1
 local module_slots_per_tier = 1
