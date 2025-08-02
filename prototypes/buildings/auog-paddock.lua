@@ -105,7 +105,7 @@ for tier = 1, 4 do
         module_slots = module_slots,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"auog"},
-        crafting_speed = (tier == 1) and (py.farm_speed(module_slots, base_craft_speed)) or (py.farm_speed_derived(module_slots, base_name .. 1)),
+        crafting_speed = (tier == 1) and py.farm_speed(module_slots, base_craft_speed) or py.farm_speed_derived(module_slots, base_name .. 1),
         energy_source = {
             type = "electric",
             usage_priority = "secondary-input",
