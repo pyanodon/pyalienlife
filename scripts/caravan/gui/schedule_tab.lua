@@ -154,6 +154,9 @@ end
 function P.build_schedule_tab(parent, caravan_data)
     local schedule_tab = parent.add {type = "tab", name = "schedule_tab", caption = "Schedule"}
     local schedule_pane = P.build_schedule_pane(parent, caravan_data)
+    schedule_pane.style.right_margin = 12
+    schedule_pane.style.left_margin = 12
+    schedule_pane.style.bottom_margin = 8
     parent.add_tab(schedule_tab, schedule_pane)
     return schedule_tab
 end
