@@ -5,14 +5,47 @@ local ImplGui = require "gui"
 
 local P = {}
 
-function P.evaluate_conditions(caravan_data, conditions)
-    if #conditions == 0 then return false end
+local function get_condition_groups(interrupt)
+    local groups = {}
+    local current_group = {}
 
-    for _, condition in pairs(conditions) do
-        if not Caravan.actions[condition.type] then return false end
-        if not Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition) then return false end
+    local operators = interrupt.conditions_operators
+    local conditions = interrupt.conditions
+
+    local or_indices = table.filter(table.map(operators, function (o, idx) return o == 0 and idx or -1 end), function (i) return i ~= -1 end)
+
+    if #or_indices == 0 then
+        table.insert(groups, table.deepcopy(conditions))
+    else
+        local j = 1
+        for i = 1, #conditions do
+            table.insert(current_group, table.deepcopy(conditions[i]))
+            if or_indices[j] == i then
+                table.insert(groups, table.deepcopy(current_group))
+                current_group = {}
+                j = j + 1
+            end
+        end
+        if #current_group > 0 then
+            table.insert(groups, table.deepcopy(current_group))
+        end
     end
-    return true
+    return groups
+end
+
+local function evaluate_condition(caravan_data, condition)
+    if not Caravan.actions[condition.type] then return false end
+    return Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition)
+end
+
+local function evaluate_condition_group(caravan_data, condition_group)
+    return table.all(condition_group, function (c) return evaluate_condition(caravan_data, c) end)
+end
+
+function P.evaluate_conditions(caravan_data, interrupt)
+    local condition_groups = get_condition_groups(interrupt)
+
+    return table.any(condition_groups, function (cg) return evaluate_condition_group(caravan_data, cg) end)
 end
 
 function P.find_interrupt_to_trigger(caravan_data)
@@ -25,8 +58,9 @@ function P.find_interrupt_to_trigger(caravan_data)
         local interrupt = storage.interrupts[interrupt_name]
         -- TODO shouldn't we assert? Is it a check for multiplayer shenanigans?
         if interrupt then
+
             if not current_schedule or temporary_schedule == nil or interrupt.inside_interrupt then
-                if P.evaluate_conditions(caravan_data, interrupt.conditions) then
+                if P.evaluate_conditions(caravan_data, interrupt) then
                     return interrupt
                 end
             end
