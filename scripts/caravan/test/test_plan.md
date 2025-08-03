@@ -352,3 +352,23 @@ Expected behaviour:
 - Caravan goes to 'Case4-InterruptStop1'
 - 'Case4-InterruptStop1' is deleted from the schedule
 - Caravan is idle
+
+Case 5, 1 interrupt with AND/OR conditions
+=============================================
+
+Scenario a
+----------
+
+- Click play on 'Case5-Stop1'
+
+Expected behaviour:
+
+- Caravan goes to 'Case5-Stop1'
+- 'Case5-InterruptStop1' is inserted between 'Case5-Stop1' and 'Case5-Stop2'
+- Caravan goes to 'Case5-InterruptStop1'
+- 'Case5-InterruptStop1' is deleted from the schedule.
+- Caravan goes to 'Case5-Stop2'
+- 'Case5-InterruptStop1' is inserted at the bottom of the schedule.
+- Caravan goes to 'Case5-InterruptStop1'
+- 'Case5-InterruptStop1' is deleted from the schedule.
+- Repeat above steps

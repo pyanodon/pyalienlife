@@ -7,6 +7,7 @@ local comparator = require "action_widgets/comparator"
 function P.build_condition_flow(parent, condition, tags)
     local flow = parent.add {type = "flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
+    flow.style.horizontal_spacing = 8
 
     if Utils.contains({"at-outpost", "not-at-outpost"}, condition.type) then
         flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
@@ -51,6 +52,23 @@ function P.build_condition(parent, condition, tags)
 
     frame.style.horizontally_stretchable = true
     P.build_condition_flow(frame, condition, tags)
+end
+
+function P.build_condition_operator(parent, operator, indent, tags)
+    local style = "train_schedule_comparison_type_frame"
+
+    if indent then
+        if operator == 0 then
+            style = "train_schedule_comparison_type_frame_extra_indented"
+        else
+            style = "train_schedule_comparison_type_frame_indented"
+        end
+    end
+
+    local frame = parent.add {type = "frame", style = style}
+    local button = frame.add {type = "button", name = "py_edit_interrupt_condition_operator_button_" .. tostring(tags.condition_operator_id), style = "train_schedule_comparison_type_button", tags = tags}
+
+    button.caption = operator == 1 and "AND" or "OR"
 end
 
 return P

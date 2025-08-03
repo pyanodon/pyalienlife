@@ -196,5 +196,4 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_edit_button"] = fu
     edit_interrupt_frame.location = event.cursor_display_location
 end
 
-
 return P

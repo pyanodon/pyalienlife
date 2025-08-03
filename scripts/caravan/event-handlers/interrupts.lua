@@ -22,6 +22,7 @@ local function on_add_interrupt_confirmed(event)
         storage.interrupts[name] = {
             name = name,
             conditions = {},
+            conditions_operators = {},
             schedule = {},
             inside_interrupt = false
         }
@@ -175,6 +176,9 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_edit_interrupt_add
         localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
     end
     table.insert(storage.edited_interrupt.conditions, {type = type, localised_name = localised_name})
+    if #storage.edited_interrupt.conditions > 1 then
+        table.insert(storage.edited_interrupt.conditions_operators, 1)
+    end
 
     EditInterruptGui.update_conditions_pane(player)
 end
@@ -290,12 +294,16 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_up_button"] = function(event)
     local conditions = storage.edited_interrupt.conditions
+    local conditions_operators = storage.edited_interrupt.conditions_operators
 
     local i = event.element.tags.condition_id
 
     if i == 1 then return end
 
     conditions[i - 1], conditions[i] = conditions[i], conditions[i - 1]
+    if #conditions_operators > 1 then
+        conditions_operators[i - 2], conditions_operators[i - 1] = conditions_operators[i - 1], conditions_operators[i - 2]
+    end
 
     local player = game.get_player(event.player_index)
     EditInterruptGui.update_conditions_pane(player)
@@ -303,12 +311,16 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_down_button"] = function(event)
     local conditions = storage.edited_interrupt.conditions
+    local conditions_operators = storage.edited_interrupt.conditions_operators
 
     local i = event.element.tags.condition_id
 
     if i == #conditions then return end
 
     conditions[i + 1], conditions[i] = conditions[i], conditions[i + 1]
+    if #conditions_operators > 1 then
+        conditions_operators[i], conditions_operators[i - 1] = conditions_operators[i - 1], conditions_operators[i]
+    end
 
     local player = game.get_player(event.player_index)
     EditInterruptGui.update_conditions_pane(player)
@@ -316,7 +328,23 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_delete_button"] = function(event)
     local conditions = storage.edited_interrupt.conditions
-    table.remove(conditions, event.element.tags.condition_id)
+    local operators = storage.edited_interrupt.conditions_operators
+    local condition_id = event.element.tags.condition_id
+
+    if #conditions > 1 then
+        table.remove(operators, math.max(1, condition_id - 1))
+    end
+    table.remove(conditions, condition_id)
+
+    local player = game.get_player(event.player_index)
+    EditInterruptGui.update_conditions_pane(player)
+end
+
+gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_operator_button_."] = function(event)
+    local operators = storage.edited_interrupt.conditions_operators
+    local operator_id = event.element.tags.condition_operator_id
+
+    operators[operator_id] = operators[operator_id] == 1 and 0 or 1
 
     local player = game.get_player(event.player_index)
     EditInterruptGui.update_conditions_pane(player)
