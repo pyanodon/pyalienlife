@@ -212,4 +212,21 @@ function P.contains(t, e)
   return false
 end
 
+function P.rename_interrupt(interrupt, new_name)
+    local old_name = interrupt.name
+    storage.interrupts[old_name] = nil
+    interrupt.name = new_name
+    storage.interrupts[new_name] = interrupt
+
+    -- far from ideal, it would be better to index caravan interrupts by ID instead of names
+    for _, caravan_data in pairs(storage.caravans) do
+        for i = 1, #caravan_data.interrupts do
+            if caravan_data.interrupts[i] == old_name then
+                caravan_data.interrupts[i] = new_name
+                break
+            end
+        end
+    end
+end
+
 return P

@@ -54,7 +54,7 @@ local function on_edit_interrupt_confirmed(event)
     else
         local new_name = textfield.text
         local interrupt = storage.interrupts[label.caption]
-        CaravanImpl.rename_interrupt(interrupt, new_name)
+        CaravanUtils.rename_interrupt(interrupt, new_name)
         label.caption = new_name
         storage.edited_interrupt.name = new_name
 
@@ -275,7 +275,7 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = fu
         if storage.interrupts[textfield.text] ~= nil then return end
 
         local interrupt = storage.interrupts[storage.edited_interrupt.name]
-        CaravanImpl.rename_interrupt(interrupt, textfield.text)
+        CaravanUtils.rename_interrupt(interrupt, textfield.text)
         storage.edited_interrupt.name = textfield.text
         CaravanGuiComponents.update_schedule_pane(player)
     end
