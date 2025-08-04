@@ -129,7 +129,7 @@ function P.convert_to_tooltip_row(item)
     return {"", "\n[item=" .. name .. ",quality=" .. quality .. "] ", " ×", count}
 end
 
-function P.get_inventory_tooltip(caravan_data)
+local function get_caravan_inventory_tooltip(caravan_data)
     local inventory = caravan_data.inventory
     ---@type (table | string)[]
     local inventory_contents = {"", "\n[img=utility/trash_white] ", {"caravan-gui.the-inventory-is-empty"}}
@@ -151,6 +151,22 @@ function P.get_inventory_tooltip(caravan_data)
         end
     end
     return {"", "[font=default-semibold]", inventory_contents, "[/font]"}
+end
+
+local function get_fluidavan_inventory_tooltip(caravan_data)
+    if caravan_data.fluid then
+        return {"", "\n[fluid=" .. caravan_data.fluid.name .. "] ", " ×", caravan_data.fluid.amount}
+    else
+        return {"", "\n[img=utility/fluid_icon] ", {"caravan-gui.tank-is-empty"}}
+    end
+end
+
+function P.get_inventory_tooltip(caravan_data)
+    game.print(caravan_data.entity.name)
+    if caravan_data.entity.name == "fluidavan" then
+        return get_fluidavan_inventory_tooltip(caravan_data)
+    end
+    return get_caravan_inventory_tooltip(caravan_data)
 end
 
 function P.get_summary_tooltip(caravan_data)
