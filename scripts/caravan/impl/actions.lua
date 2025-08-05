@@ -1,5 +1,7 @@
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
+local ImplControl = require "control"
+
 local P = {}
 
 local function get_outpost_inventory(outpost)
@@ -175,7 +177,7 @@ function P.fill_inventory(caravan_data, schedule, action)
     local amount = transfer_all_items(outpost_inventory, inventory)
     local completed = action.async or inventory.is_full()
     if amount and amount > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
     return completed
 end
@@ -190,7 +192,7 @@ function P.empty_inventory(caravan_data, schedule, action)
     local amount = transfer_all_items(inventory, outpost_inventory)
     local completed = action.async or inventory.is_empty()
     if amount and amount > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
     return completed
 end
@@ -204,7 +206,7 @@ function P.empty_autotrash(caravan_data, schedule, action)
 
     local amount = transfer_all_items(autotrash_inventory, inventory)
     if amount and amount > 0 then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
     return true
 end
@@ -222,7 +224,7 @@ function P.load_caravan(caravan_data, schedule, action)
     local result, amount = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
     local completed = action.async or result
     if amount and amount > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
 
     return completed
@@ -241,7 +243,7 @@ function P.unload_caravan(caravan_data, schedule, action)
     local result, amount = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
     local completed = action.async or result
     if amount and amount > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
 
     return completed
@@ -260,7 +262,7 @@ function P.load_target(caravan_data, schedule, action)
     local result, amount = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
     local completed = action.async or result
     if amount and amount > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
 
     return completed
@@ -279,7 +281,7 @@ function P.unload_target(caravan_data, schedule, action)
     local result, amount = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
     local completed = action.async or result
     if amount and amount > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
 
     return completed
