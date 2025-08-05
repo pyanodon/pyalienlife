@@ -54,6 +54,8 @@ function P.update_cargo_pane(player)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
+    if player.controller_type ~= defines.controllers.character then return end
+
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local cargo_pane = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_pane 
 

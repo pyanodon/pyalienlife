@@ -727,6 +727,8 @@ function P.detonate(caravan_data, schedule, action)
 end
 
 function P.circuit_condition(caravan_data, schedule, action)
+    if not schedule then return false end
+
     local outpost = schedule.entity
 
     local right = action.circuit_condition_right
@@ -757,6 +759,8 @@ function P.circuit_condition(caravan_data, schedule, action)
 end
 
 function P.circuit_condition_static(caravan_data, schedule, action)
+    if not schedule then return false end
+
     local outpost = schedule.entity
 
     -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
@@ -839,6 +843,8 @@ function P.caravan_item_count(caravan_data, schedule, action)
 end
 
 function P.target_item_count(caravan_data, schedule, action)
+    if not schedule then return false end
+
     local outpost = schedule.entity
     if not outpost or not outpost.valid then return false end
     local item = action.elem_value
@@ -875,7 +881,8 @@ function P.is_inventory_empty(caravan_data, schedule, action)
 end
 
 function P.at_outpost(caravan_data, schedule, action)
-    return schedule and schedule.entity == action.entity
+    -- Trains will first go to the destination, and evaluate whether or not it is at the station AFTER a wait condition is fulfilled.
+    return schedule and schedule.entity == action.entity and caravan_data.action_id == #schedule.actions
 end
 
 function P.not_at_outpost(caravan_data, schedule, action)

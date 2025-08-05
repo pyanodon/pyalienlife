@@ -1,6 +1,7 @@
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
+local number_selection = require "action_widgets/number_selection"
 
 local P = {}
  
@@ -95,6 +96,24 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_close_button"] = function(event)
     local player = game.get_player(event.player_index)
+
+    local slider_frame = number_selection.get_slider_frame(player)
+    local add_interrupt_frame = player.gui.screen.add_interrupt_gui
+    local edit_interrupt_frame = player.gui.screen.edit_interrupt_gui
+
+    if slider_frame then
+        slider_frame.destroy()
+    end
+    if add_interrupt_frame then
+        add_interrupt_frame.destroy()
+    end
+    if edit_interrupt_frame then
+        edit_interrupt_frame.destroy()
+    end
+    if player.gui.screen.caravan_gui then
+        player.gui.screen.caravan_gui.destroy()
+    end
+
     player.opened = nil
 end
 

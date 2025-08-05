@@ -188,6 +188,20 @@ Expected behaviour:
 
 - 'Case1-InterruptStop1' moves at the bottom of the schedule, executes once, moves to the top of the schedule and stays stuck.
 
+Scenario q:
+-----------
+
+Linked to https://github.com/pyanodon/pyalienlife/pull/378
+
+- Edit interrupt 'Case1-Interrupt1'
+- Replace the condition by 'Target item count', with default values.
+- Click play on 'Case1-Stop1'
+
+Expected behaviour:
+
+- Caravan cycles between 'Case1-Stop1' and 'Case1-Stop2'. The interrupt is never triggered.
+- The game doesn't crash
+
 Case 2, finite interrupt with one destination:
 ==============================================
 
