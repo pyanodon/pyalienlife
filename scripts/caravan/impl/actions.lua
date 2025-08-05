@@ -529,7 +529,7 @@ function P.fill_tank(caravan_data, schedule, action)
 
     local completed = action.async or output.amount >= total_output_volume
     if amount_to_transfer > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
     return completed
 end
@@ -557,7 +557,7 @@ function P.empty_tank(caravan_data, schedule, action)
 
     local completed = action.async or input.amount == 0
     if amount_transfered > 0 and completed then
-        P.eat(caravan_data)
+        ImplControl.eat(caravan_data)
     end
     return completed
 end
