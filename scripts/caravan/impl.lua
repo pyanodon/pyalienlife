@@ -881,7 +881,8 @@ function P.is_inventory_empty(caravan_data, schedule, action)
 end
 
 function P.at_outpost(caravan_data, schedule, action)
-    return schedule and schedule.entity == action.entity
+    -- Trains will first go to the destination, and evaluate whether or not it is at the station AFTER a wait condition is fulfilled.
+    return schedule and schedule.entity == action.entity and caravan_data.action_id == #schedule.actions
 end
 
 function P.not_at_outpost(caravan_data, schedule, action)
