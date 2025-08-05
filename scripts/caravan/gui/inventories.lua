@@ -380,6 +380,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
     local player = game.get_player(event.player_index)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
+    if player.controller_type ~= defines.controllers.character then return end
 
     if player.cursor_stack.count > 0 then return end
     player.hand_location = nil

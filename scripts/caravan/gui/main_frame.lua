@@ -25,11 +25,12 @@ end
 function P.build_main_frame(parent, name, caravan_data)
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
     -- enough to show the full cargo tab with starting inventory, without scroll bars
-    main_frame.style.height = 950
+    main_frame.style.height = 980
 
     P.build_title_bar_flow(main_frame, caravan_data)
 
-    main_frame.add {type = "frame", direction = "vertical", name = "entity_frame", style = "entity_frame"}
+    local entity_frame = main_frame.add {type = "frame", direction = "vertical", name = "entity_frame", style = "entity_frame"}
+    entity_frame.style.horizontally_stretchable = true
 
     return main_frame
 end

@@ -21,6 +21,7 @@ end
 
 function P.build_cargo_flow(parent, player, caravan_data)
     local flow = parent.add {type = "flow", direction = "vertical", name = "cargo_flow"}
+    flow.style.vertical_spacing = 8
     flow.add {type = "label", caption = "Food"}
     inv.build_fuel_inventory(flow, caravan_data)
     flow.add {type = "line", style = "inside_shallow_frame_with_padding_line"}.style.horizontally_stretchable = true
@@ -35,6 +36,7 @@ function P.build_cargo_tab(parent, player, caravan_data)
     local cargo_tab = parent.add {type = "tab", name = "cargo_tab", caption = "Cargo"}
     local pane = parent.add {type = "scroll-pane", name = "cargo_pane", style = "scroll_pane_under_subheader"}
     pane.style.horizontally_stretchable = true
+    pane.style.left_padding = 12
     pane.vertical_scroll_policy = "auto"
     pane.horizontal_scroll_policy = "never"
 

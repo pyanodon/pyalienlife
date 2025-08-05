@@ -20,6 +20,7 @@ Date: ???
     - TURD selection seach now respects locale. Resolves https://github.com/pyanodon/pybugreports/issues/669
     - Fixed dig sites not respecting control behavior (circuit enable/disable)
     - Fixed that caravan food would allow 1 more action per food item than intended.
+    - Fixed many caravan interrupts quirks. They now behave like train interrupts.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20
