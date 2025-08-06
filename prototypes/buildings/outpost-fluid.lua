@@ -2,7 +2,7 @@ local util = require "util"
 
 RECIPE {
     type = "recipe",
-    name = "fluid-outpost",
+    name = "outpost-fluid",
     energy_required = 1,
     category = "crafting",
     enabled = false,
@@ -13,24 +13,24 @@ RECIPE {
         {type = "item", name = "glass",          amount = 5},
         {type = "item", name = "py-tank-4000",   amount = 1}
     },
-    results = {{type = "item", name = "fluid-outpost", amount = 1}}
+    results = {{type = "item", name = "outpost-fluid", amount = 1}}
 }:add_unlock("zoology")
 
 ITEM {
     type = "item",
-    name = "fluid-outpost",
+    name = "outpost-fluid",
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-outpost.png",
     icon_size = 64,
     subgroup = "py-alienlife-buildings-others",
     order = "b-a",
-    place_result = "fluid-outpost",
+    place_result = "outpost-fluid",
     stack_size = 10
 }
 
 data:extend {{
     inventory_type = "with_filters_and_bar",
     scale_info_icons = true,
-    name = "fluid-outpost",
+    name = "outpost-fluid",
     type = "storage-tank",
     circuit_connector = table.deepcopy(data.raw["storage-tank"]["storage-tank"].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
@@ -92,7 +92,7 @@ data:extend {{
     max_health = 600,
     minable = {
         mining_time = 0.2,
-        result = "fluid-outpost"
+        result = "outpost-fluid"
     },
     open_sound = {
         filename = "__base__/sound/metallic-chest-open.ogg",

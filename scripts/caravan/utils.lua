@@ -12,8 +12,8 @@ function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
             valid_actions = all_actions.outpost
-        elseif entity.name == "fluid-outpost" then
-            valid_actions = all_actions["fluid-outpost"]
+        elseif entity.name == "outpost-fluid" then
+            valid_actions = all_actions["outpost-fluid"]
         else
             valid_actions = all_actions[entity.type]
         end
@@ -28,8 +28,8 @@ function P.get_all_actions_for_entity(entity)
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
             valid_actions = all_actions.outpost
-        elseif entity.name == "fluid-outpost" then
-            valid_actions = all_actions["fluid-outpost"]
+        elseif entity.name == "outpost-fluid" then
+            valid_actions = all_actions["outpost-fluid"]
         else
             valid_actions = all_actions[entity.type]
         end
