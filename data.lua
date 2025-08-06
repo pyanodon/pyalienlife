@@ -400,7 +400,7 @@ if settings.startup["py-enable-fluid-caravans"].value then
 end
 data.raw.unit["flyavan"].affected_by_tiles = false
 data.raw.unit["nukavan"].affected_by_tiles = false
-require "prototypes/buildings/fluid-outpost"
+require "prototypes/buildings/outpost-fluid"
 require "prototypes/buildings/outpost"
 require "prototypes/buildings/outpost-aerial"
 require "prototypes/creatures/digosaurus"

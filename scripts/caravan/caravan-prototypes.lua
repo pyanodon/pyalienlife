@@ -40,7 +40,7 @@ Caravan.all_actions = {
             "circuit-condition",
             "circuit-condition-static"
         },
-        ["fluid-outpost"] = table.invert{
+        ["outpost-fluid"] = table.invert{
             "time-passed",
             "fill-tank",
             "empty-tank",
@@ -189,7 +189,7 @@ Caravan.valid_actions = {
             "circuit-condition",
             "circuit-condition-static"
         },
-        ["fluid-outpost"] = table.invert{
+        ["outpost-fluid"] = table.invert{
             "time-passed",
             "fill-tank",
             "empty-tank",
@@ -273,7 +273,7 @@ local caravan_prototypes = {
         max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
         fuel_size = 2,
         destructible = false,
-        outpost = "fluid-outpost",
+        outpost = "outpost-fluid",
         favorite_foods = Caravan.foods.caravan,
         actions = Caravan.valid_actions.fluidavan,
         camera_zoom = 0.8,
