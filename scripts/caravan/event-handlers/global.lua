@@ -227,8 +227,10 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     -- If the player has a temporary item in their cursor, we don't let them open the GUI
     -- This includes the caravan controller, blueprint tool, etc
+    -- Also if the player has a buildable item in their cursor, we don't open the GUI (This mimics vanilla GUI behavior)
     local stack = player.cursor_stack
-    if stack and stack.valid_for_read and stack.prototype.has_flag("only-in-cursor") then
+    if stack and stack.valid_for_read
+       and (stack.prototype.has_flag("only-in-cursor") or stack.prototype.place_result ~= nil) then
         return
     end
     local entity = player.selected
