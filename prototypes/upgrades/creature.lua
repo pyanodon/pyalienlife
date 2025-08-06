@@ -8,11 +8,8 @@ local units = {
     "caravan",
     "flyavan",
     "nukavan",
+    "fluidavan"
 }
-
-if settings.startup["py-enable-fluid-caravans"].value then
-    table.insert(units, "fluidavan")
-end
 
 local path_3_effects = {}
 for _, unit_name in pairs(units) do

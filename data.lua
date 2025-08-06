@@ -393,11 +393,9 @@ end
 require "prototypes/creatures/caravan"
 require "prototypes/creatures/flying-caravan"
 require "prototypes/creatures/nuka-caravan"
+require "prototypes/creatures/fluid-caravan"
 data.raw.unit["caravan"].affected_by_tiles = false
-if settings.startup["py-enable-fluid-caravans"].value then
-    require "prototypes/creatures/fluid-caravan"
-    data.raw.unit["fluidavan"].affected_by_tiles = false
-end
+data.raw.unit["fluidavan"].affected_by_tiles = false
 data.raw.unit["flyavan"].affected_by_tiles = false
 data.raw.unit["nukavan"].affected_by_tiles = false
 require "prototypes/buildings/outpost-fluid"
