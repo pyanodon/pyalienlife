@@ -105,7 +105,7 @@ RECIPE("chemical-plant-mk01"):remove_unlock("filtration"):add_unlock("electric-e
 RECIPE("compressor-mk01"):remove_unlock("nitrogen-mk02")
 
 RECIPE("mukmoux-fat-salt"):remove_unlock("mukmoux")
-RECIPE("bonemeal-salt"):remove_unlock("ulric")
+RECIPE("bonemeal-salt"):remove_unlock("ulric"):set_fields {hidden = true}
 RECIPE("fertilizer-2"):remove_unlock("basic-electronics")
 RECIPE("molten-stainless-steel"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
 RECIPE("full-molten-stainless-steel-3"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
