@@ -483,11 +483,11 @@ function P.target_item_count(caravan_data, schedule, action)
 end
 
 function P.is_inventory_full(caravan_data, schedule, action)
-    return caravan_data.inventory.is_full()
+    return (caravan_data.inventory and caravan_data.inventory.is_full()) or P.is_tank_full(caravan_data, schedule, action)
 end
 
 function P.is_inventory_empty(caravan_data, schedule, action)
-    return caravan_data.inventory.is_empty()
+    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or P.is_tank_empty(caravan_data, schedule, action)
 end
 
 function P.at_outpost(caravan_data, schedule, action)
@@ -573,11 +573,16 @@ end
 function P.caravan_fluid_count(caravan_data, schedule, action)
     local fluid_name = action.elem_value
 
-    local right = action.circuit_condition_right
-    if not right then return false end
+    if not fluid_name then return false end
 
-    if not caravan_data.fluid or caravan_data.fluid.name ~= fluid_name then return false end
-    local left = caravan_data.fluid.amount
+    local right = action.item_count or 0
+
+    local left
+    if not caravan_data.fluid or caravan_data.fluid.name ~= fluid_name then
+        left = 0
+    else
+        left = caravan_data.fluid.amount
+    end
 
     local operator = action.operator or 3
     if operator == 1 then
@@ -602,12 +607,16 @@ function P.target_fluid_count(caravan_data, schedule, action)
     if not outpost or not outpost.valid or outpost.fluids_count == 0 then return false end
     local fluid_name = action.elem_value
 
-    local right = action.circuit_condition_right
+    local right = action.item_count or 0
     if not right then return false end
 
+    local left
     local outpost_fluid = outpost.get_fluid(1)
-    if not outpost_fluid or outpost_fluid.name ~= fluid_name then return false end
-    local left = outpost_fluid.amount
+    if not outpost_fluid or outpost_fluid.name ~= fluid_name then
+        left = 0
+    else
+        left = outpost_fluid.amount
+    end
 
     local operator = action.operator or 3
     if operator == 1 then
