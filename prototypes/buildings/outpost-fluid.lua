@@ -80,13 +80,73 @@ data:extend {{
     fluid_box = {
         -- don't hardcode so that volume gets adjusted when "realistic" setting is on.
         volume = data.raw["storage-tank"]["py-tank-4000"].fluid_box.volume,
+        pipe_picture = {
+            north = {
+                layers = {
+                    {
+                        filename = "__base__/graphics/entity/pipe/pipe-ending-down.png",
+                        height = 128,
+                        width = 128,
+                        scale = 0.5,
+                        shift = {0, 0.9},
+                        priority = "extra-high",
+                    },
+                },
+            },
+            east = {
+                layers = {
+                    {
+                        filename = "__base__/graphics/entity/pipe/pipe-ending-right.png",
+                        height = 128,
+                        width = 128,
+                        scale = 0.5,
+                        shift = {-1, 0},
+                        priority = "extra-high",
+                    },
+                },
+            },
+            south = {
+                layers = {
+                    {
+                        filename = "__base__/graphics/entity/pipe/pipe-ending-up.png",
+                        height = 128,
+                        width = 128,
+                        scale = 0.5,
+                        shift = {0, -1.4},
+                        priority = "extra-high",
+                    },
+                    {
+                        filename = "__base__/graphics/entity/pipe/pipe-ending-up.png",
+                        height = 128,
+                        width = 128,
+                        scale = 0.5,
+                        shift = {0, -0.75},
+                        priority = "extra-high",
+                    },
+                },
+            },
+            west = {
+                layers = {
+                    {
+                        filename = "__base__/graphics/entity/pipe/pipe-ending-left.png",
+                        height = 128,
+                        width = 128,
+                        scale = 0.5,
+                        shift = {1, 0},
+                        priority = "extra-high",
+                    },
+                },
+            },
+            
+        },
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
             {
                 position = {0.5, 2.5},
                 direction = defines.direction.south
             },
-        }
+        },
+        secondary_draw_order = -1,
     },
     window_bounding_box = {{-0.0, 0.0}, {0.0, 0.0}},
     max_health = 600,
@@ -101,7 +161,7 @@ data:extend {{
     pictures = {
         picture = {
          layers = {{
-                filename = "__pyalienlifegraphics2__/graphics/entity/outpost/off.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/outpost/off-fluid.png",
                 height = 224,
                 width = 224,
                 priority = "extra-high",

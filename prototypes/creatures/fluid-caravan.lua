@@ -94,7 +94,7 @@ data:extend {{
                         "__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08-mask.png"
                     },
                     slice = 8,
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = {r = 0.1, g = 0.1, b = 1.0, a = 1.0},
                     lines_per_file = 8,
                     line_length = 8,
                     width = 256,
@@ -175,7 +175,7 @@ data:extend {{
                     "__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08-mask.png"
                 },
                 slice = 8,
-                tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                tint = {r = 0.1, g = 0.1, b = 1.0, a = 1.0},
                 lines_per_file = 8,
                 line_length = 8,
                 width = 256,
