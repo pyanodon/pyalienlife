@@ -270,8 +270,6 @@ local caravan_prototypes = {
     },
     fluidavan = {
         opens_player_inventory = true,
-        -- Only way I found to open the player inventory, in order to store food in the fluidavan
-        inventory_size = 0,
         max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
         fuel_size = 2,
         destructible = false,
