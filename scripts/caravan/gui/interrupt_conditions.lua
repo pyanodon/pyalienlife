@@ -20,7 +20,7 @@ function P.build_condition_flow(parent, condition, tags)
             caption = {locale_key, {"caravan-gui.not-specified"}}
         end
         flow.add {type = "label", caption = caption}
-    elseif Utils.contains({"outpost-item-count"}, condition.type) then
+    elseif condition.type == "outpost-item-count" then
         flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
        
         local locale_key = "caravan-actions." .. condition.type .. "2"

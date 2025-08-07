@@ -51,7 +51,7 @@ function P.build_action_flow(parent, caravan_data, action, tags)
             filters = {{filter = "name", name = Caravan.foods.all}}
         end
         comparator.build_item_static_comparator_widgets(flow, action, tags, filters)
-    elseif Utils.contains({"outpost-item-count"}, action.type) then
+    elseif action.type == "outpost-item-count" then
         flow.add {type = "sprite-button", name = "py_caravan_action_add_outpost", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
 
         local locale_key = "caravan-actions." .. action.type .. "2"
