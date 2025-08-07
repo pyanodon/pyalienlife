@@ -130,6 +130,8 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destinatio
         localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "not-at-outpost" then
         localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
+    elseif type == "outpost-item-count" then
+        localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
     end
     table.insert(caravan_data.schedule[schedule_id].actions, {type = type, localised_name = localised_name})
 

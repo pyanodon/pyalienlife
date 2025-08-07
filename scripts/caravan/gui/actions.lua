@@ -51,6 +51,18 @@ function P.build_action_flow(parent, caravan_data, action, tags)
             filters = {{filter = "name", name = Caravan.foods.all}}
         end
         comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
+    elseif action.type == "outpost-item-count" then
+        flow.add {type = "sprite-button", name = "py_caravan_action_add_outpost", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
+
+        local locale_key = "caravan-actions." .. action.type .. "2"
+        local entity = action.entity
+
+        if entity and entity.valid then
+            label.caption = {locale_key, {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+        else
+            label.caption = {locale_key, {"caravan-gui.not-specified"}}
+        end
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
     elseif action.type == "store-specific-food" then
         local filters = {{filter = "name", name = Caravan.foods.all}}
 
