@@ -2,6 +2,8 @@
 Version: 3.0.48
 Date: ???
   Changes:
+    - New recipe to convert bonemeal into geothermal water
+    - Fish and WPU now use `-turd` instead of `turd-``
     - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
     - Fixed a potential crash in interrupts migrations
@@ -19,6 +21,12 @@ Date: ???
     - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
     - TURD selection seach now respects locale. Resolves https://github.com/pyanodon/pybugreports/issues/669
     - Added a new interrupt, 'outpost-item-count', which allows you to choose the target outpost from which to read the item count, similar to 'target-item-count'
+    - Fixed dig sites not respecting control behavior (circuit enable/disable)
+    - Fixed that caravan food would allow 1 more action per food item than intended.
+    - Fixed many caravan interrupts quirks. They now behave like train interrupts.
+    - Added and/or buttons to caravan's interrupt conditions
+    - Clicking on a caravan while trying to place a building will no longer open the caravan GUI (just like vanilla GUIs).
+    - Add fluid caravans, creatures capable of transporting fluids between two fluid outposts.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20

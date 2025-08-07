@@ -60,13 +60,25 @@ function P.build_checkbox(parent)
     return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = storage.edited_interrupt.inside_interrupt, caption = "Allow interrupting other interrupts", tooltip = "By default, an interrupt cannot trigger while another interrupt is being executed. This option disables this behavior, allowing the interrupt to trigger while another interrupt is in progress."}
 end
 
-function P.build_conditions_list(parent)
-    local conditions = storage.edited_interrupt.conditions
-    for i = 1, #conditions do
-        local tags = {condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
-        InterruptConditionsGui.build_condition(parent, conditions[i], tags)
-    end
+function P.build_conditions_operators_list(parent)
+    local flow = parent.add {type = "flow", direction = "vertical"}
+    flow.style.vertically_stretchable = true
+    flow.style.width = 100
+    flow.style.horizontal_align = "right"
+    flow.style.vertical_spacing = 4
+    flow.style.top_margin = 40 
 
+    local operators = storage.edited_interrupt.conditions_operators
+
+    local has_both_operators = #operators > 0 and table.any(operators, function (o) return o ~= operators[1] end)
+
+    for i = 1, #operators do
+        local tags = {condition_operator_id = i}
+        InterruptConditionsGui.build_condition_operator(flow, operators[i], has_both_operators, tags)
+    end
+end
+
+function P.build_add_interrupt_condition_dropdown(parent)
     local conditions = Caravan.valid_actions["interrupt-condition"]
     conditions = table.map(conditions, function(v) return {"caravan-actions." .. v, v} end)
 
@@ -78,9 +90,23 @@ function P.build_conditions_list(parent)
     drop_down.style.horizontally_stretchable = true
 end
 
+function P.build_conditions_list(parent)
+    local conditions = storage.edited_interrupt.conditions
+    if #conditions == 0 then return end
+
+    local conditions_and_operators_flow = parent.add {type = "flow", direction = "horizontal"}
+    P.build_conditions_operators_list(conditions_and_operators_flow)
+    local conditions_flow = conditions_and_operators_flow.add {type = "flow", direction = "vertical"}
+    for i = 1, #conditions do
+        local tags = {condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
+        InterruptConditionsGui.build_condition(conditions_flow, conditions[i], tags)
+    end
+end
+
 function P.build_conditions_flow(parent)
     local flow = parent.add {type = "flow", name = "conditions_flow", direction = "vertical"}
     P.build_conditions_list(flow)
+    P.build_add_interrupt_condition_dropdown(flow)
 end
 
 function P.build_conditions_pane(parent)
@@ -100,7 +126,8 @@ function P.build_action_list(parent, schedule_id)
         ActionGui.build_action(parent, nil, actions[i], tags)
     end
 
-    local valid_actions = Utils.get_valid_actions_for_entity("caravan", storage.edited_interrupt.schedule[schedule_id].entity)
+    local entity = storage.edited_interrupt.schedule[schedule_id].entity
+    local valid_actions = Utils.get_all_actions_for_entity(entity)
     local actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
 
     table.insert(actions, "+ Add action")
@@ -227,7 +254,7 @@ py.on_event(defines.events.on_gui_click, function (event)
     local gui = player.gui.screen.edit_interrupt_gui
     if not gui then return end
 
-    if not Utils.is_child_of(event.element, gui, 8) then
+    if not Utils.is_child_of(event.element, gui, 9) then
         local slider_frame = player.gui.screen.py_caravan_action_number_selection_frame
         -- do not close the GUI when the user adds an action, that pops the number selection slider
         if not slider_frame or not Utils.is_child_of(event.element, slider_frame, 3) then

@@ -87,21 +87,21 @@ if data and not yafc_turd_integration then
             recipe:add_ingredient(ingredient)
         end
 
-        local name = "wpu" .. ((i == 1) and "" or ("-mk0" .. i))
+        local name = "wpu-mk0" .. i
         data.raw["assembling-machine"][name].allowed_effects = {"consumption", "speed", "productivity"}
         local entity = table.deepcopy(data.raw["assembling-machine"][name])
-        entity.name = "turd-" .. name
+        entity.name = name .. "-turd"
         entity.localised_name = {"entity-name." .. name}
         entity.placeable_by = {item = name, count = 1}
         entity.localised_description = entity.localised_description or {"entity-description." .. name}
         entity.subgroup = data.raw.item[name].subgroup
         entity.order = data.raw.item[name].order
         entity.allowed_module_categories = {"sawblade"}
-        if i ~= 4 then entity.next_upgrade = "turd-wpu-mk0" .. (i + 1) end
+        if i ~= 4 then entity.next_upgrade = "wpu-mk0" .. (i + 1) .. "-turd" end
         table.insert(entity.flags, "not-in-made-in")
         entity.module_slots = MODULE_SLOTS
         entity.allowed_effects = {"speed", "productivity", "pollution"}
-        entity.crafting_speed = i == 1 and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "turd-wpu")
+        entity.crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "wpu-turd")
         data:extend {entity}
     end
 
@@ -226,7 +226,7 @@ end
 
 return {
     affected_entities = { -- the entities that should be effected by this tech upgrade
-        "wpu",
+        "wpu-mk01",
         "wpu-mk02",
         "wpu-mk03",
         "wpu-mk04",
@@ -268,10 +268,10 @@ return {
                 {type = "unlock-recipe",       recipe = "py-sawblade-module-mk02"},
                 {type = "unlock-recipe",       recipe = "py-sawblade-module-mk03"},
                 {type = "unlock-recipe",       recipe = "py-sawblade-module-mk04"},
-                {type = "machine-replacement", old = "wpu",                       new = "turd-wpu"},
-                {type = "machine-replacement", old = "wpu-mk02",                  new = "turd-wpu-mk02"},
-                {type = "machine-replacement", old = "wpu-mk03",                  new = "turd-wpu-mk03"},
-                {type = "machine-replacement", old = "wpu-mk04",                  new = "turd-wpu-mk04"},
+                {type = "machine-replacement", old = "wpu-mk01",                       new = "wpu-mk01-turd"},
+                {type = "machine-replacement", old = "wpu-mk02",                  new = "wpu-mk02-turd"},
+                {type = "machine-replacement", old = "wpu-mk03",                  new = "wpu-mk03-turd"},
+                {type = "machine-replacement", old = "wpu-mk04",                  new = "wpu-mk04-turd"},
             },
         },
         {
