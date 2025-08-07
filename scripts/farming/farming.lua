@@ -177,16 +177,15 @@ py.on_event(defines.events.on_object_destroyed, function(event)
             first_signal = { name = active and "signal-everything" or "signal-anything", type = "virtual" }
         }
 
-        -- update warning icon
+        -- update warning icon and crafting progress
         if not active then
             metadata.warning = py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 0, 30)
+            if farm.is_crafting() then
+                farm.crafting_progress = 0.0001
+                farm.bonus_progress = 0
+            end
         else -- building is working, remove warning
             metadata.warning.destroy()
-        end
-
-        if farm.is_crafting() then
-            farm.crafting_progress = 0.0001
-            farm.bonus_progress = 0
         end
 
     elseif storage.farm_buildings[event.useful_id] then
