@@ -2,6 +2,7 @@
 Version: 3.0.48
 Date: ???
   Changes:
+    - New recipe to convert bonemeal into geothermal water
     - Fish and WPU now use `-turd` instead of `turd-``
     - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
