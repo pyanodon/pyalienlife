@@ -8,7 +8,9 @@ local units = {
     "caravan",
     "flyavan",
     "nukavan",
+    "fluidavan"
 }
+
 local path_3_effects = {}
 for _, unit_name in pairs(units) do
     path_3_effects[#path_3_effects + 1] = {type = "recipe-replacement", old = unit_name, new = unit_name .. "-turd"}
@@ -104,7 +106,7 @@ if data and not yafc_turd_integration then
             results = {{type = "item", name = name, amount = 1}},
         }
 
-        if unit_name == "caravan" or unit_name == "flyavan" or unit_name == "nukavan" then
+        if unit_name == "caravan" or unit_name == "fluidavan" or unit_name == "flyavan" or unit_name == "nukavan" then
             convert_recipe.localised_description = {"recipe-description.will-delete-metadata-warning"}
         end
 

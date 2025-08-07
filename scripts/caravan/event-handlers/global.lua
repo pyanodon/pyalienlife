@@ -153,7 +153,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-            if entity.name == "outpost" or entity.name == "fluid-outpost" or entity.name == "outpost-aerial" then
+            if entity.name == "outpost" or entity.name == "outpost-fluid" or entity.name == "outpost-aerial" then
                 local action_id = last_opened.action_id
                 interrupt_data.conditions[action_id].entity = entity
                 interrupt_data.conditions[action_id].localised_name = ""
@@ -227,8 +227,10 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     -- If the player has a temporary item in their cursor, we don't let them open the GUI
     -- This includes the caravan controller, blueprint tool, etc
+    -- Also if the player has a buildable item in their cursor, we don't open the GUI (This mimics vanilla GUI behavior)
     local stack = player.cursor_stack
-    if stack and stack.valid_for_read and stack.prototype.has_flag("only-in-cursor") then
+    if stack and stack.valid_for_read
+       and (stack.prototype.has_flag("only-in-cursor") or stack.prototype.place_result ~= nil) then
         return
     end
     local entity = player.selected
@@ -325,8 +327,6 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
             if caravan_data.retry_pathfinder == 0 then
                 CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
-            end
-            if caravan_data.retry_pathfinder == 0 then
                 caravan_data.retry_pathfinder = nil
             end
             goto continue
@@ -354,6 +354,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         elseif result then
             if #schedule.actions == caravan_data.action_id then
                 CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
+                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, #caravan_data.schedule == 1)
             else
                 CaravanImpl.begin_action(caravan_data, caravan_data.action_id + 1)
             end
