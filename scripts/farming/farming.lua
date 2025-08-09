@@ -164,7 +164,7 @@ py.on_event(defines.events.on_object_destroyed, function(event)
         register_sacrifice(manager, farm)
 
         local active = not farm.get_module_inventory().is_empty()
-        if active == farm.active then return end -- no change
+        if active ~= farm.disabled_by_script then return end -- no change
 
         farm.active = active
         farm.custom_status = not active and {
