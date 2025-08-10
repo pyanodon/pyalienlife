@@ -25,8 +25,12 @@ end
 
 function P.build_main_frame(parent, name, caravan_data)
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
-    -- enough to show the full cargo tab with starting inventory, without scroll bars
-    main_frame.style.height = 980
+    if caravan_data.entity.name == "fluidavan" then
+        main_frame.style.natural_height = 910
+    else
+        -- enough to show the full cargo tab with starting inventory, without scroll bars
+        main_frame.style.natural_height = 980
+    end
 
     P.build_title_bar_flow(main_frame, caravan_data)
 

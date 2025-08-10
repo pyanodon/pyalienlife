@@ -339,7 +339,9 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
 
     handle_slot_click(event, caravan_data, inventory, caravan_data.inventory, pred)
 
-    P.update_caravan_inventory(player, caravan_data)
+    if caravan_data.entity.name ~= "fluidavan" then
+        P.update_caravan_inventory(player, caravan_data)
+    end
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_caravan_inventory_slot_."] = function(event)

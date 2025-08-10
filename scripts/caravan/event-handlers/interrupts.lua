@@ -189,10 +189,10 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_edit_interrupt_tar
     local element = event.element
 
     local schedule = storage.edited_interrupt.schedule[element.tags.schedule_id]
-    local valid_conditions = table.invert(CaravanUtils.get_valid_actions_for_entity("caravan", schedule.entity))
+    local valid_actions = table.invert(CaravanUtils.get_all_actions_for_entity(schedule.entity))
 
     -- off-by-one index is used to show "+ Add action" text
-    if element.selected_index == 0 or element.selected_index > #valid_conditions then return end
+    if element.selected_index == 0 or element.selected_index > #valid_actions then return end
 
     local type = element.get_item(element.selected_index)[2]
 
