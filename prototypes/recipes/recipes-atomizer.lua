@@ -637,7 +637,6 @@ if mods.pyalternativeenergy then
         name = "chitin-to-geothermal-water-new",
         category = "atomizer",
         enabled = false,
-        hidden = true,
         energy_required = 10,
         ingredients = {
             {type = "item", name = "chitin", amount = 2},

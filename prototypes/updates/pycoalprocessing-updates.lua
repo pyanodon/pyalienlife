@@ -62,7 +62,7 @@ data.raw.lab.lab.allowed_module_categories = {"vatbrain"}
 
 --RECIPES--
 RECIPE("ralesia"):remove_unlock("ralesia")
-RECIPE("bonemeal"):remove_unlock("ulric")
+RECIPE("bonemeal"):remove_unlock("ulric"):set_fields {hidden = true}
 RECIPE("coal-fawogae"):remove_unlock("coal-processing-1"):add_unlock("fawogae-mk01")
 
 RECIPE("automated-factory-mk01"):remove_unlock("fast-inserter"):add_unlock("automation-2")

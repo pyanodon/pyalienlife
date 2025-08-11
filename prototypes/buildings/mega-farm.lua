@@ -335,7 +335,8 @@ data:extend {{
     name = "dQw4w9WgXcQ",
     hidden = true,
     inventory_size = 0,
-    spawned_container = "steel-chest"
+    spawned_container = "steel-chest",
+    collision_mask = {layers = {}},
 }}
 
 ENTITY {
