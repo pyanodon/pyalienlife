@@ -619,7 +619,7 @@ if mods.pyalternativeenergy then
     -- DEPRECATE: probably deprecate this in next major py update
     RECIPE {
         type = "recipe",
-        name = "chitin-to-geothermal-water-new",
+        name = "chitin-to-geothermal-water",
         category = "atomizer",
         enabled = false,
         hidden = true,
@@ -634,7 +634,7 @@ if mods.pyalternativeenergy then
     
     RECIPE {
         type = "recipe",
-        name = "chitin-to-geothermal-water",
+        name = "chitin-to-geothermal-water-new",
         category = "atomizer",
         enabled = false,
         energy_required = 10,
