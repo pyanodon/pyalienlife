@@ -666,12 +666,12 @@ if mods.pyalternativeenergy then
         name = "heat-geothermal-water-to-3000",
         category = "rhe",
         enabled = false,
-        energy_required = 27, -- I chose this number for fun :)
+        energy_required = 10, -- I chose this number for fun :)
         ingredients = {
-            {type = "fluid", name = "geothermal-water", amount = 60, temperature = 15}
+            {type = "fluid", name = "geothermal-water", amount = 240, temperature = 15}
         },
         results = {
-            {type = "fluid", name = "geothermal-water", amount = 55, temperature = 3000}
+            {type = "fluid", name = "geothermal-water", amount = 220, temperature = 3000}
         },
         main_product = "geothermal-water"
     }:add_unlock("molecular-decohesion")
