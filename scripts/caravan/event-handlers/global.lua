@@ -220,7 +220,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     local cursor_ghost = player.cursor_ghost
     local cursor_contents
     if cursor_stack and cursor_stack.valid_for_read then
-        cursor_contents = cursor_stack
+        cursor_contents = cursor_stack.prototype
     elseif cursor_ghost then
         cursor_contents = cursor_ghost.name -- `name` is actually an item prototype!
     end
@@ -234,7 +234,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         -- If the player has a temporary item in their cursor, we don't let them open the GUI
         -- This includes the caravan controller, blueprint tool, etc
         -- Also if the player has a buildable item in their cursor, we don't open the GUI (This mimics vanilla GUI behavior)
-        if cursor_contents.prototype.has_flag("only-in-cursor") or cursor_contents.prototype.place_result ~= nil then
+        if cursor_contents.has_flag("only-in-cursor") or cursor_contents.place_result ~= nil then
             return
         end
     end
