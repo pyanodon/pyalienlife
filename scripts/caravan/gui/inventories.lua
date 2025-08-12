@@ -268,6 +268,7 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local player = game.get_player(event.player_index)
     -- spectators, begone
     if not player.cursor_stack then return end
+    if not inventory or not target_inventory then return end -- fluidavan
     local has_items_in_cursor = player.cursor_stack.count > 0
 
     local is_ctrl = event.control
