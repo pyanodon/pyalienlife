@@ -21,6 +21,20 @@ function P.build_condition_flow(parent, condition, tags)
             caption = {locale_key, {"caravan-gui.not-specified"}}
         end
         flow.add {type = "label", caption = caption}
+    elseif condition.type == "outpost-item-count" then
+        flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
+       
+        local locale_key = "caravan-actions." .. condition.type .. "2"
+        local entity = condition.entity
+        local caption
+        
+        if entity and entity.valid then
+            caption = {locale_key, {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+        else
+            caption = {locale_key, {"caravan-gui.not-specified"}}
+        end
+        flow.add {type = "label", caption = caption}
+        comparator.build_item_static_comparator_widgets(flow, condition, tags)
     else
         flow.add {type = "label", style = "squashable_label_with_left_padding", caption = condition.localised_name}
         if condition.type == "circuit-condition" then
