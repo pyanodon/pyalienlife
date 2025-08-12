@@ -36,7 +36,7 @@ local farm_buildings = {
     ["sap-extractor"] = {default_module = "sap-tree", domain = "plant"},
     ["seaweed-crop"] = {default_module = "seaweed", domain = "plant"},
     ["sponge-culture"] = {default_module = "sea-sponge", domain = "plant"},
-    ["turd-wpu"] = {default_module = "py-sawblade-module-mk01", domain = "plant"},
+    ["wpu-turd"] = {default_module = "py-sawblade-module-mk01", domain = "plant"},
     ["tuuphra-plantation"] = {default_module = "tuuphra", domain = "plant"},
     ["yotoi-aloe-orchard"] = {default_module = "yotoi", domain = "plant"},
     ["bhoddos-culture"] = {default_module = "bhoddos", domain = "fungi"},
