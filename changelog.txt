@@ -3,6 +3,9 @@ Version: 3.0.49
 Date: ASAP
   Changes:
     - Fixed crash with WPU TURD.
+    - Fixed crash setting caravan stations in interrupts.
+    - Fixed crash clicking inventory with a fluid caravan open.
+    - Fixed crash clicking a caravan with a caravan remote (carrot).
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.48
 Date: 2025-8-12
