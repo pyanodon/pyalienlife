@@ -115,18 +115,8 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
 end)
 
 --- Called whenever the player uses the carrot-on-stick capsule item.
-py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)
-    local cursor_stack = player.cursor_stack
-    local cursor_ghost = player.cursor_ghost
-
-    if not (cursor_ghost and cursor_ghost.name.name == "caravan-control") then
-        if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= "caravan-control" then
-            return
-        end
-    end
-    cursor_stack.clear()
-    cursor_ghost = nil
+local function on_carrot_used(player)
+    player.clear_cursor()
 
     local schedule, prototype, only_outpost
     local last_opened = storage.last_opened[player.index]
@@ -221,18 +211,34 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     else
         return
     end
-end)
+end
 
 py.on_event(py.events.on_entity_clicked(), function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
-    -- If the player has a temporary item in their cursor, we don't let them open the GUI
-    -- This includes the caravan controller, blueprint tool, etc
-    -- Also if the player has a buildable item in their cursor, we don't open the GUI (This mimics vanilla GUI behavior)
-    local stack = player.cursor_stack
-    if stack and stack.valid_for_read
-       and (stack.prototype.has_flag("only-in-cursor") or stack.prototype.place_result ~= nil) then
-        return
+
+    local cursor_stack = player.cursor_stack
+    local cursor_ghost = player.cursor_ghost
+    local cursor_contents
+    if cursor_stack and cursor_stack.valid_for_read then
+        cursor_contents = cursor_stack
+    elseif cursor_ghost then
+        cursor_contents = cursor_ghost.name -- `name` is actually an item prototype!
     end
+
+    if cursor_contents then
+        -- If we're setting the caravan destination
+        if cursor_contents.name == "caravan-control" then
+            on_carrot_used(player)
+            return
+        end
+        -- If the player has a temporary item in their cursor, we don't let them open the GUI
+        -- This includes the caravan controller, blueprint tool, etc
+        -- Also if the player has a buildable item in their cursor, we don't open the GUI (This mimics vanilla GUI behavior)
+        if cursor_contents.prototype.has_flag("only-in-cursor") or cursor_contents.prototype.place_result ~= nil then
+            return
+        end
+    end
+
     local entity = player.selected
     if not entity or not caravan_prototypes[entity.name] or not player.can_reach_entity(entity) then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
