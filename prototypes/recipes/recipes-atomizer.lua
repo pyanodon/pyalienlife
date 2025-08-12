@@ -616,13 +616,13 @@ RECIPE {
 }:add_unlock("molecular-decohesion-mk03")
 
 if mods.pyalternativeenergy then
-    -- DEPRECATE: probably deprecate this in next major py update
+    -- DEPRECATE: probably deprecate this in next major py update in favor of chain in breaking changes branch
     RECIPE {
         type = "recipe",
         name = "chitin-to-geothermal-water",
         category = "atomizer",
         enabled = false,
-        hidden = true,
+        hidden = false,
         energy_required = 10,
         ingredients = {
             {type = "item", name = "chitin", amount = 2},
@@ -630,49 +630,5 @@ if mods.pyalternativeenergy then
         results = {
             {type = "fluid", name = "geothermal-water", amount = 50, temperature = 3000},
         },
-    }:add_unlock("molecular-decohesion")
-    
-    RECIPE {
-        type = "recipe",
-        name = "chitin-to-geothermal-water-new",
-        category = "atomizer",
-        enabled = false,
-        energy_required = 10,
-        ingredients = {
-            {type = "item", name = "chitin", amount = 2},
-        },
-        results = {
-            {type = "fluid", name = "geothermal-water", amount = 50, temperature = 15},
-        },
-    }:add_unlock("molecular-decohesion")
-
-    RECIPE {
-        type = "recipe",
-        name = "bonemeal-to-geothermal-water",
-        category = "atomizer",
-        enabled = false,
-        energy_requred = 10,
-        ingredients = {
-            {type = "item", name = "bonemeal", amount = 5},
-        },
-        results = {
-            {type = "fluid", name = "geothermal-water", amount = 60, temperature = 15}
-        },
-        main_product = "geothermal-water"
-    }:add_unlock("molecular-decohesion")
-
-    RECIPE {
-        type = "recipe",
-        name = "heat-geothermal-water-to-3000",
-        category = "rhe",
-        enabled = false,
-        energy_required = 10, -- I chose this number for fun :)
-        ingredients = {
-            {type = "fluid", name = "geothermal-water", amount = 240, temperature = 15}
-        },
-        results = {
-            {type = "fluid", name = "geothermal-water", amount = 220, temperature = 3000}
-        },
-        main_product = "geothermal-water"
     }:add_unlock("molecular-decohesion")
 end

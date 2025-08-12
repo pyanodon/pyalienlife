@@ -32,11 +32,5 @@
       "turd-wpu-mk04",
       "wpu-mk04-turd"
     ]
-  ],
-  "recipe": [
-    [
-      "chitin-to-geothermal-water",
-      "chitin-to-geothermal-water-new"
-    ]
   ]
 }
