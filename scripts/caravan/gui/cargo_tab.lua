@@ -44,7 +44,7 @@ function P.build_fluid_flow(parent, caravan_data)
 
         flow.add {type = "label", style = "clickable_squashable_label", caption = label_caption}
         flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
-        flow.add {type = "label", caption = Utils.format_numeric_value(fluid.amount), tooltip = tostring(fluid.amount)}
+        flow.add {type = "label", caption = util.format_number(fluid.amount, true), tooltip = tostring(fluid.amount)}
         flow.add {type = "sprite-button", name = "py_caravan_flush_button", style = "tool_button_red", sprite = "utility/trash", tooltip = {"caravan-gui.flush-contents", prototype.localised_name}}
     else
         flow.style.horizontally_stretchable = true

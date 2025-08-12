@@ -6,6 +6,7 @@ Date: ASAP
     - Fixed crash setting caravan stations in interrupts.
     - Fixed crash clicking inventory with a fluid caravan open.
     - Fixed crash clicking a caravan with a caravan remote (carrot).
+    - Fixed crash clicking partially-full fluid caravan.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.48
 Date: 2025-8-12
