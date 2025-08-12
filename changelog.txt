@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.48
-Date: ???
+Date: 2025-8-12
   Changes:
     - New recipe to convert bonemeal into geothermal water
     - Fish and WPU now use `-turd` instead of `turd-``
