@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 4.0.0
+Date: ???
+  Changes:
+    - Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
+    - New recipe to convert bonemeal into geothermal water.
+    - New recipe for heating geothermal water.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.58
 Date: ???
   Changes:
