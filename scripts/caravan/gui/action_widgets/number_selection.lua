@@ -14,7 +14,7 @@ function L.time_format_value(v) return v .. " s" end
 function L.count_slider_maximum_value() return 50000 end
 function L.count_slider_default_value() return 0 end
 function L.count_slider_value_step() return 10 end
-L.count_format_value = Utils.format_numeric_value
+L.count_format_value = function(v) return util.format_number(v, true) end
 
 local function destroy_slider_frame(event)
     local player = game.get_player(event.player_index)
