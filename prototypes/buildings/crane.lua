@@ -1,7 +1,13 @@
+if not settings.startup["enable-cranes"].value then
+  return
+end
+
 RECIPE {
   type = "recipe",
   name = "crane-mk01",
   category = "creature-chamber",
+  subgroup = "inserter",
+  order = "i[crane-mk01]",
   energy_required = 1,
   ingredients = {
 		{type = "item", name = "brain", amount = 1},
@@ -24,6 +30,8 @@ RECIPE {
   type = "recipe",
   name = "crane-mk02",
   category = "creature-chamber",
+  subgroup = "inserter",
+  order = "i[crane-mk02]",
   energy_required = 1,
   ingredients = {
 		{type = "item", name = "crane-mk01", amount = 2},
@@ -46,6 +54,8 @@ RECIPE {
   type = "recipe",
   name = "crane-mk03",
   category = "creature-chamber",
+  subgroup = "inserter",
+  order = "i[crane-mk03]",
   energy_required = 1,
   ingredients = {
     {type = "item", name = "crane-mk02", amount = 3},
@@ -69,6 +79,8 @@ RECIPE {
   type = "recipe",
   name = "crane-mk04",
   category = "creature-chamber",
+  subgroup = "inserter",
+  order = "i[crane-mk04]",
   energy_required = 1,
   ingredients = {
     {type = "item", name = "crane-mk03", amount = 4},
@@ -98,6 +110,8 @@ for i = 1, 4 do
 	  type = "item",
 	  name = name,
 	  icons = icon,
+	  subgroup = "inserter",
+	  order = "i[" .. name .. "]",
 	  stack_size = 10,
 	  place_result = name,
 	}
@@ -106,6 +120,8 @@ for i = 1, 4 do
 	  type = "inserter",
 	  name = name,
 	  icons = icon,
+	  subgroup = "inserter",
+	  order = "i[" .. name .. "]",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	  extension_speed = 0.005*(1.2^i),
 	  rotation_speed = 0.005*(1.2^i),
