@@ -115,7 +115,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
 end)
 
 --- Called whenever the player uses the carrot-on-stick capsule item.
-local function on_carrot_used(player)
+local function on_carrot_used(player, cursor_position)
     player.clear_cursor()
 
     local schedule, prototype, only_outpost
@@ -133,7 +133,7 @@ local function on_carrot_used(player)
     end
 
     local entity = player.selected or player.surface.find_entities_filtered {
-        position = event.cursor_position,
+        position = cursor_position,
         limit = 1,
         collision_mask = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}
     }[1]
@@ -157,7 +157,7 @@ local function on_carrot_used(player)
             if only_outpost then return end
             if not caravan_data or player.surface ~= caravan_data.entity.surface then return end
 
-            local position = event.cursor_position
+            local position = cursor_position
             sch.localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)}
             sch.entity = nil
             sch.position = position
@@ -200,7 +200,7 @@ local function on_carrot_used(player)
             actions = {}
         }
     elseif not only_outpost then
-        local position = event.cursor_position
+        local position = cursor_position
         if player.surface ~= caravan_data.entity.surface then return end
         schedule[#schedule + 1] = {
             localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
@@ -228,7 +228,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     if cursor_contents then
         -- If we're setting the caravan destination
         if cursor_contents.name == "caravan-control" then
-            on_carrot_used(player)
+            on_carrot_used(player, event.cursor_position)
             return
         end
         -- If the player has a temporary item in their cursor, we don't let them open the GUI
