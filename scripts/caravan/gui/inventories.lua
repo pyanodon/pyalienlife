@@ -74,7 +74,7 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
     end
 
     tags.slot_index = slot_index
-    local button = table.add {type = "sprite-button", name = slot_name, style = button_style, tags = tags}
+    local button = table.add {type = "sprite-button", name = slot_name, style = button_style, tags = tags, enabled = table.enabled}
     button.sprite = sprite
     button.number = number
     button.tooltip = tooltip
@@ -84,7 +84,8 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
 end
 
 local function build_inventory_table(parent, inventory, name, tags, default_empty_slot)
-    local inventory_table = parent.add {type = "table", name = name, column_count = 10}
+    local enabled = parent.parent.parent.enabled -- pane<-flow<-flow (disabled)
+    local inventory_table = parent.add {type = "table", name = name, column_count = 10, enabled = enabled}
     inventory_table.style.horizontal_spacing = 0
     inventory_table.style.vertical_spacing = 0
 
@@ -125,19 +126,19 @@ function P.build_character_inventory(parent, player, caravan_data)
     local inventory = player.character.get_inventory(defines.inventory.character_main)
 
     local name = "py_caravan_player_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame"}
+    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_caravan_inventory(parent, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame"}
+    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_fuel_inventory(parent, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame"}
+    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
     build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
 end
 
