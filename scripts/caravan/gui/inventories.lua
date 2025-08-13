@@ -116,10 +116,6 @@ local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, n
 
     local flow = build_inventory_flow(parent, fuel_inventory, name, tags, {sprite = "slot_icon_food", tooltip = favorite_food_tooltip})
     local bar = flow.add {type = "progressbar", style = "burning_progressbar"}
-    -- FIXME with 2 auog's food, I have 11 actions total, instead of 8
-    -- for some reason the fuel bar is full when the caravan is idle
-    -- beginning the schedule burns the full bar, but doesn't start burning a food
-    -- it's broken on master too, let's fix it later
     bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
     bar.style.horizontally_stretchable = true
     bar.style.right_margin = 8
@@ -272,6 +268,7 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local player = game.get_player(event.player_index)
     -- spectators, begone
     if not player.cursor_stack then return end
+    if not inventory or not target_inventory then return end -- fluidavan
     local has_items_in_cursor = player.cursor_stack.count > 0
 
     local is_ctrl = event.control
@@ -343,7 +340,9 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
 
     handle_slot_click(event, caravan_data, inventory, caravan_data.inventory, pred)
 
-    P.update_caravan_inventory(player, caravan_data)
+    if caravan_data.entity.name ~= "fluidavan" then
+        P.update_caravan_inventory(player, caravan_data)
+    end
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_caravan_inventory_slot_."] = function(event)
@@ -384,6 +383,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
     local player = game.get_player(event.player_index)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
+    if player.controller_type ~= defines.controllers.character then return end
 
     if player.cursor_stack.count > 0 then return end
     player.hand_location = nil

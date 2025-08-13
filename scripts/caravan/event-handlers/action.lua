@@ -160,7 +160,7 @@ gui_events[defines.events.on_gui_elem_changed]["py_caravan_action_comparator_lef
 
     if tags.elem_type == "signal" then
         action.circuit_condition_left = event.element.elem_value
-    elseif tags.elem_type == "item" then
+    elseif tags.elem_type == "item" or tags.elem_type == "fluid" then
         action.elem_value = event.element.elem_value
     end
 end

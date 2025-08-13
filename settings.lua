@@ -1,1 +1,1 @@
-do return end
+-- PyAL currently has no settings

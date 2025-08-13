@@ -616,11 +616,13 @@ RECIPE {
 }:add_unlock("molecular-decohesion-mk03")
 
 if mods.pyalternativeenergy then
+    -- DEPRECATE: probably deprecate this in next major py update in favor of chain in breaking changes branch
     RECIPE {
         type = "recipe",
         name = "chitin-to-geothermal-water",
         category = "atomizer",
         enabled = false,
+        hidden = false,
         energy_required = 10,
         ingredients = {
             {type = "item", name = "chitin", amount = 2},

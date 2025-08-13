@@ -154,6 +154,9 @@ end
 function P.build_schedule_tab(parent, caravan_data)
     local schedule_tab = parent.add {type = "tab", name = "schedule_tab", caption = "Schedule"}
     local schedule_pane = P.build_schedule_pane(parent, caravan_data)
+    schedule_pane.style.right_margin = 12
+    schedule_pane.style.left_margin = 12
+    schedule_pane.style.bottom_margin = 8
     parent.add_tab(schedule_tab, schedule_pane)
     return schedule_tab
 end
@@ -192,6 +195,5 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_edit_button"] = fu
     local edit_interrupt_frame = EditInterruptGui.build(player.gui.screen, storage.interrupts[caravan_data.interrupts[event.element.tags.caravan_interrupt_index]])
     edit_interrupt_frame.location = event.cursor_display_location
 end
-
 
 return P

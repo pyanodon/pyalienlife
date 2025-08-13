@@ -12,8 +12,24 @@ function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
             valid_actions = all_actions.outpost
-        elseif entity.name == "fluid-outpost" then
-            valid_actions = all_actions["fluid-outpost"]
+        elseif entity.name == "outpost-fluid" then
+            valid_actions = all_actions["outpost-fluid"]
+        else
+            valid_actions = all_actions[entity.type]
+        end
+    end
+
+    return valid_actions or all_actions.default or error()
+end
+
+function P.get_all_actions_for_entity(entity)
+    local all_actions = Caravan.all_actions
+    local valid_actions
+    if entity and entity.valid then
+        if entity.name == "outpost" or entity.name == "outpost-aerial" then
+            valid_actions = all_actions.outpost
+        elseif entity.name == "outpost-fluid" then
+            valid_actions = all_actions["outpost-fluid"]
         else
             valid_actions = all_actions[entity.type]
         end
@@ -113,7 +129,7 @@ function P.convert_to_tooltip_row(item)
     return {"", "\n[item=" .. name .. ",quality=" .. quality .. "] ", " ×", count}
 end
 
-function P.get_inventory_tooltip(caravan_data)
+local function get_caravan_inventory_tooltip(caravan_data)
     local inventory = caravan_data.inventory
     ---@type (table | string)[]
     local inventory_contents = {"", "\n[img=utility/trash_white] ", {"caravan-gui.the-inventory-is-empty"}}
@@ -135,6 +151,22 @@ function P.get_inventory_tooltip(caravan_data)
         end
     end
     return {"", "[font=default-semibold]", inventory_contents, "[/font]"}
+end
+
+local function get_fluidavan_inventory_tooltip(caravan_data)
+    if caravan_data.fluid then
+        return {"", "\n[fluid=" .. caravan_data.fluid.name .. "] ", " ×", caravan_data.fluid.amount}
+    else
+        return {"", "\n[img=utility/fluid_icon] ", {"caravan-gui.tank-is-empty"}}
+    end
+end
+
+function P.get_inventory_tooltip(caravan_data)
+    game.print(caravan_data.entity.name)
+    if caravan_data.entity.name == "fluidavan" then
+        return get_fluidavan_inventory_tooltip(caravan_data)
+    end
+    return get_caravan_inventory_tooltip(caravan_data)
 end
 
 function P.get_summary_tooltip(caravan_data)
@@ -210,6 +242,23 @@ function P.contains(t, e)
     if t[i] == e then return true end
   end
   return false
+end
+
+function P.rename_interrupt(interrupt, new_name)
+    local old_name = interrupt.name
+    storage.interrupts[old_name] = nil
+    interrupt.name = new_name
+    storage.interrupts[new_name] = interrupt
+
+    -- far from ideal, it would be better to index caravan interrupts by ID instead of names
+    for _, caravan_data in pairs(storage.caravans) do
+        for i = 1, #caravan_data.interrupts do
+            if caravan_data.interrupts[i] == old_name then
+                caravan_data.interrupts[i] = new_name
+                break
+            end
+        end
+    end
 end
 
 return P

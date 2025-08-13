@@ -14,25 +14,7 @@ function L.time_format_value(v) return v .. " s" end
 function L.count_slider_maximum_value() return 50000 end
 function L.count_slider_default_value() return 0 end
 function L.count_slider_value_step() return 10 end
-function L.count_format_value(v)
-    local s = tostring(v)
-    local len = string.len(s)
-
-    local units = {"", "k", "M", "G"}
-
-    local remainder = len % 3
-    local nb_fractional_digits = remainder == 0 and 3 or remainder
-    local res = s:sub(1, nb_fractional_digits)
-
-    if len > 1 and nb_fractional_digits == 1 then
-        local i = nb_fractional_digits + 1
-        res = res .. "." .. s:sub(i, i) 
-    end
-
-    local nb_thousands = math.floor((len - 1) / 3)
-
-    return res .. units[1 + nb_thousands]
-end
+L.count_format_value = function(v) return util.format_number(v, true) end
 
 local function destroy_slider_frame(event)
     local player = game.get_player(event.player_index)

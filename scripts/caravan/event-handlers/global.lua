@@ -115,18 +115,8 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
 end)
 
 --- Called whenever the player uses the carrot-on-stick capsule item.
-py.on_event(py.events.on_entity_clicked(), function(event)
-    local player = game.get_player(event.player_index)
-    local cursor_stack = player.cursor_stack
-    local cursor_ghost = player.cursor_ghost
-
-    if not (cursor_ghost and cursor_ghost.name.name == "caravan-control") then
-        if not cursor_stack or not cursor_stack.valid_for_read or cursor_stack.name ~= "caravan-control" then
-            return
-        end
-    end
-    cursor_stack.clear()
-    cursor_ghost = nil
+local function on_carrot_used(player, cursor_position)
+    player.clear_cursor()
 
     local schedule, prototype, only_outpost
     local last_opened = storage.last_opened[player.index]
@@ -143,7 +133,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     local entity = player.selected or player.surface.find_entities_filtered {
-        position = event.cursor_position,
+        position = cursor_position,
         limit = 1,
         collision_mask = {object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true}
     }[1]
@@ -153,7 +143,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
         if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-            if entity.name == "outpost" or entity.name == "fluid-outpost" or entity.name == "outpost-aerial" then
+            if entity.name == "outpost" or entity.name == "outpost-fluid" or entity.name == "outpost-aerial" then
                 local action_id = last_opened.action_id
                 interrupt_data.conditions[action_id].entity = entity
                 interrupt_data.conditions[action_id].localised_name = ""
@@ -167,7 +157,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
             if only_outpost then return end
             if not caravan_data or player.surface ~= caravan_data.entity.surface then return end
 
-            local position = event.cursor_position
+            local position = cursor_position
             sch.localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)}
             sch.entity = nil
             sch.position = position
@@ -210,7 +200,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
             actions = {}
         }
     elseif not only_outpost then
-        local position = event.cursor_position
+        local position = cursor_position
         if player.surface ~= caravan_data.entity.surface then return end
         schedule[#schedule + 1] = {
             localised_name = {"caravan-gui.map-position", math.floor(position.x), math.floor(position.y)},
@@ -221,16 +211,34 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     else
         return
     end
-end)
+end
 
 py.on_event(py.events.on_entity_clicked(), function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
-    -- If the player has a temporary item in their cursor, we don't let them open the GUI
-    -- This includes the caravan controller, blueprint tool, etc
-    local stack = player.cursor_stack
-    if stack and stack.valid_for_read and stack.prototype.has_flag("only-in-cursor") then
-        return
+
+    local cursor_stack = player.cursor_stack
+    local cursor_ghost = player.cursor_ghost
+    local cursor_contents
+    if cursor_stack and cursor_stack.valid_for_read then
+        cursor_contents = cursor_stack.prototype
+    elseif cursor_ghost then
+        cursor_contents = cursor_ghost.name -- `name` is actually an item prototype!
     end
+
+    if cursor_contents then
+        -- If we're setting the caravan destination
+        if cursor_contents.name == "caravan-control" then
+            on_carrot_used(player, event.cursor_position)
+            return
+        end
+        -- If the player has a temporary item in their cursor, we don't let them open the GUI
+        -- This includes the caravan controller, blueprint tool, etc
+        -- Also if the player has a buildable item in their cursor, we don't open the GUI (This mimics vanilla GUI behavior)
+        if cursor_contents.has_flag("only-in-cursor") or cursor_contents.place_result ~= nil then
+            return
+        end
+    end
+
     local entity = player.selected
     if not entity or not caravan_prototypes[entity.name] or not player.can_reach_entity(entity) then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
@@ -325,8 +333,6 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
             if caravan_data.retry_pathfinder == 0 then
                 CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
-            end
-            if caravan_data.retry_pathfinder == 0 then
                 caravan_data.retry_pathfinder = nil
             end
             goto continue
@@ -354,6 +360,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         elseif result then
             if #schedule.actions == caravan_data.action_id then
                 CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
+                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, #caravan_data.schedule == 1)
             else
                 CaravanImpl.begin_action(caravan_data, caravan_data.action_id + 1)
             end

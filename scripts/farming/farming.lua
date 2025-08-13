@@ -7,7 +7,10 @@ local function validate_farm_building_list(farm_buildings, throw)
     local crafting_machines = prototypes.get_entity_filtered {{filter = "crafting-machine"}}
     -- This early search and sort lets us avoid o^n searching below
     for building_name in pairs(crafting_machines) do
-        local basename = building_name:gsub("%-mk..+", "")
+        -- TODO: Find a method that avoids two searches?
+        local is_turd = not not building_name:find("%-turd")
+        -- keep suffix if necessary while allowing other building suffixes
+        local basename = building_name:gsub("%-mk..+", is_turd and "-turd" or "")
         if farm_buildings[basename] then
             buildings[basename] = buildings[basename] or {}
             buildings[basename][building_name] = true
@@ -69,13 +72,15 @@ remote.add_interface("pyfarm", {
 
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
-    local name = entity.name:gsub("%-mk..+", "")
+    local is_turd = not not entity.name:find("%-turd")
+    local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
     local farm_data = storage.farm_prototypes[name]
     if farm_data then return farm_data.domain end
 end
 
 function Farming.get_default_module(entity)
-    local name = entity.name:gsub("%-mk..+", "")
+    local is_turd = not not entity.name:find("%-turd")
+    local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
     local farm_data = storage.farm_prototypes[name]
     if farm_data then return farm_data.default_module end
 end
