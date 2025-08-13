@@ -77,7 +77,7 @@ RECIPE {
     {type = "item", name = "skin", amount = 50},
     {type = "item", name = "hydraulic-system-mk02", amount = 1},
     {type = "item", name = "biopolymer", amount = 20},
-	{type = "item", name = "reca", amount = 10},
+    {type = "item", name = "reca", amount = 10},
     {type = "item", name = "super-alloy", amount = 60},
     {type = "item", name = "electronics-mk04", amount = 1},
     {type = "item", name = "recombinant-ery", amount = 35},
@@ -89,14 +89,15 @@ RECIPE {
 
 for i = 1, 4 do
 	local name = "crane-mk0" .. i
-	local icon = "__pyalienlifegraphics__/graphics/icons/meat.png"
-	local icon_size = 32
+	local icon = {
+	  {icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[i]},
+	  {icon = "__pyalienlifegraphics__/graphics/icons/meat.png", scale = .5, shift = {16, 16}}
+  }
 
 	ITEM {
 	  type = "item",
 	  name = name,
-	  icon = icon,
-	  icon_size = icon_size,
+	  icons = icon,
 	  stack_size = 10,
 	  place_result = name,
 	}
@@ -104,8 +105,8 @@ for i = 1, 4 do
 	ENTITY {
 	  type = "inserter",
 	  name = name,
-	  icon = icon,
-	  icon_size = icon_size,
+	  icons = icon,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	  extension_speed = 0.005*(1.2^i),
 	  rotation_speed = 0.005*(1.2^i),
 	  pickup_position = {0, 1.5},
@@ -125,40 +126,45 @@ for i = 1, 4 do
 	  wait_for_full_hand = true,
 	  filter_count = 1 + i,
 	  stack_size_bonus = 149 + (25 * (i - 1)),
+	  allow_copy_past = true,
     hand_base_picture =
     {
-      filename = "__pyalienlifegraphics3__/graphics/entity/crane/hand-base.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/crane/hand-base-greyscale.png",
       priority = "extra-high",
       width = 72,
       height = 164,
-      scale = 0.25
+      scale = 0.3,
+      tint = py.tints[i]
     },
     hand_closed_picture =
     {
-      filename = "__pyalienlifegraphics3__/graphics/entity/crane/hand-closed.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/crane/hand-closed-greyscale.png",
       priority = "extra-high",
       width = 72,
       height = 164,
-      scale = 0.25
+      scale = 0.3,
+      tint = py.tints[i]
     },
     hand_open_picture =
     {
-      filename = "__pyalienlifegraphics3__/graphics/entity/crane/hand-open.png",
+      filename = "__pyalienlifegraphics3__/graphics/entity/crane/hand-open-greyscale.png",
       priority = "extra-high",
       width = 72,
       height = 164,
-      scale = 0.25
+      scale = 0.3,
+      tint = py.tints[i]
     },
     platform_picture =
     {
       sheet =
       {
-        filename = "__base__/graphics/entity/inserter/inserter-platform.png",
+        filename = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-platform-greyscale.png",
         priority = "extra-high",
         width = 105,
         height = 79,
         shift = util.by_pixel(1.5, 7.5-1),
-        scale = 0.5
+        scale = 0.75,
+        tint = py.tints[i]
       }
     },
 	}

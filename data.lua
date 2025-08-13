@@ -305,7 +305,9 @@ require "prototypes/buildings/simik-den-mk02"
 require "prototypes/buildings/simik-den-mk03"
 require "prototypes/buildings/simik-den-mk04"
 require "prototypes/buildings/reproductive-complex"
-require "prototypes/buildings/crane"
+if settings.startup["enable-cranes"].value then
+    require "prototypes/buildings/crane"
+end
 
 if mods["pyhightech"] then
     require "prototypes/buildings/fluid-drill-mk01"
