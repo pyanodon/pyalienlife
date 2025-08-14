@@ -123,7 +123,7 @@ local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, n
 end
 
 function P.build_character_inventory(parent, player, caravan_data)
-    local inventory = player.character.get_inventory(defines.inventory.character_main)
+    local inventory = player.get_main_inventory()
 
     local name = "py_caravan_player_inventory"
     local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
