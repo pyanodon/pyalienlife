@@ -148,7 +148,7 @@ function P.update_character_inventory(player, caravan_data)
     local parent = elem.parent
     elem.destroy()
 
-    local inventory = player.get_inventory(defines.inventory.character_main)
+    local inventory = player.get_main_inventory()
     inventory.sort_and_merge()
 
     build_inventory_flow(parent, inventory, name, {unit_number = caravan_data.unit_number})
@@ -173,7 +173,7 @@ function P.update_fuel_inventory(player, caravan_data)
 end
 
 local function is_character_inventory(inventory)
-    return inventory.index and inventory.index == defines.inventory.character_main
+    return inventory.player_owner ~= nil
 end
 
 local function set_stack_to_cursor(player, inventory, index, stack_proj)
@@ -335,7 +335,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local inventory = player.get_inventory(defines.inventory.character_main)
+    local inventory = player.get_main_inventory()
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     local pred = function (s) return true end
 
@@ -348,7 +348,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_caravan_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local inventory = player.get_inventory(defines.inventory.character_main)
+    local inventory = player.get_main_inventory()
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     local pred = function (s) return true end
 
@@ -358,7 +358,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local main_inventory = player.get_inventory(defines.inventory.character_main)
+    local main_inventory = player.get_main_inventory()
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local pred = function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
