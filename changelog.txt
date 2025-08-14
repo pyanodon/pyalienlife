@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.54
+Date: Hopefully more than a day from the previous release
+  Changes:
+    - Removed debug chat message when opening caravan manager
+---------------------------------------------------------------------------------------------------
+Version: 3.0.53
+Date: 2025-8-13
+  Changes:
+    - Fixed crane subgroups
+---------------------------------------------------------------------------------------------------
+Version: 3.0.52
+Date: 2025-8-13
+  Changes:
+    - Added new cranes that can be enabled in the startup settings.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.51
 Date: 2025-8-12
   Changes:

@@ -162,7 +162,6 @@ local function get_fluidavan_inventory_tooltip(caravan_data)
 end
 
 function P.get_inventory_tooltip(caravan_data)
-    game.print(caravan_data.entity.name)
     if caravan_data.entity.name == "fluidavan" then
         return get_fluidavan_inventory_tooltip(caravan_data)
     end
