@@ -3,7 +3,11 @@ Version: 3.0.54
 Date: Hopefully more than a day from the previous release
   Changes:
     - Removed debug chat message when opening caravan manager
-    - Fixed item-count conditions on caravan interrupts being '0' when previously set
+    - Caravans: fixed item-count conditions on caravan interrupts being '0' when previously set
+    - Caravans: fixed dropdown constantly closing when setting caravan actions in remote view
+    - Caravans: fixed cargo tab being inaccessible in remote view
+    - Caravans: fixed crash picking up caravans as a non-character
+    - Caravans: fixed crash in on_player_main_inventory_changed
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.53
 Date: 2025-8-13
