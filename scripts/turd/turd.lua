@@ -328,8 +328,16 @@ gui_events[defines.events.on_gui_click]["py_minimize_turd"] = function(event)
 end
 
 local function handle_removed_items(surface, force, machine, removed_items)
+    --get the output inventory
+    local output = machine.get_output_inventory()
     for _, item in pairs(removed_items) do
+        --insert items into main inventory
         item.count = item.count - machine.insert(item)
+        --if items left inesert into output inventory
+        if item.count ~= 0 and output then
+            item.count = item.count - output.insert(item)
+        end
+        --if items left drop on ground
         if item.count ~= 0 then
             surface.spill_item_stack {position = machine.position, stack = item, enable_looted = true, force = force, allow_belts = false}
         end
