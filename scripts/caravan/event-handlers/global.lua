@@ -240,7 +240,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     local entity = player.selected
-    if not entity or not caravan_prototypes[entity.name] or not player.can_reach_entity(entity) then return end
+    if not entity or not caravan_prototypes[entity.name]--[[ or not player.can_reach_entity(entity) ]]then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
     local existing = CaravanGui.get_gui(player)
     if existing then
@@ -390,10 +390,6 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         end
 
         local caravan_data = storage.caravans[gui.tags.unit_number]
-        if player.can_reach_entity(caravan_data.entity) ~= CaravanGui.cargo_tab_enabled(player) then
-            CaravanGui.update_gui(player)
-            goto continue
-        end
 
         for _, schedule in pairs(caravan_data.schedule) do
             if schedule.entity and not schedule.entity.valid then

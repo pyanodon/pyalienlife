@@ -74,7 +74,7 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
     end
 
     tags.slot_index = slot_index
-    local button = table.add {type = "sprite-button", name = slot_name, style = button_style, tags = tags}
+    local button = table.add {type = "sprite-button", name = slot_name, style = button_style, tags = tags, enabled = table.enabled}
     button.sprite = sprite
     button.number = number
     button.tooltip = tooltip
@@ -84,7 +84,8 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
 end
 
 local function build_inventory_table(parent, inventory, name, tags, default_empty_slot)
-    local inventory_table = parent.add {type = "table", name = name, column_count = 10}
+    local enabled = parent.parent.parent.enabled -- pane<-flow<-flow (disabled)
+    local inventory_table = parent.add {type = "table", name = name, column_count = 10, enabled = enabled}
     inventory_table.style.horizontal_spacing = 0
     inventory_table.style.vertical_spacing = 0
 
@@ -121,23 +122,30 @@ local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, n
     bar.style.right_margin = 8
 end
 
+local function get_inventory(player)
+    return player.get_main_inventory() or player.character and player.character.get_main_inventory()
+end
+
 function P.build_character_inventory(parent, player, caravan_data)
-    local inventory = player.character.get_inventory(defines.inventory.character_main)
+    local inventory = get_inventory(player)
+    if (inventory == nil) then
+        log("what the fuck man")
+    end
 
     local name = "py_caravan_player_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame"}
+    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_caravan_inventory(parent, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame"}
+    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_fuel_inventory(parent, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame"}
+    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
     build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
 end
 
@@ -147,7 +155,7 @@ function P.update_character_inventory(player, caravan_data)
     local parent = elem.parent
     elem.destroy()
 
-    local inventory = player.get_inventory(defines.inventory.character_main)
+    local inventory = get_inventory(player)
     inventory.sort_and_merge()
 
     build_inventory_flow(parent, inventory, name, {unit_number = caravan_data.unit_number})
@@ -172,7 +180,7 @@ function P.update_fuel_inventory(player, caravan_data)
 end
 
 local function is_character_inventory(inventory)
-    return inventory.index and inventory.index == defines.inventory.character_main
+    return inventory.player_owner ~= nil
 end
 
 local function set_stack_to_cursor(player, inventory, index, stack_proj)
@@ -334,7 +342,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local inventory = player.get_inventory(defines.inventory.character_main)
+    local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     local pred = function (s) return true end
 
@@ -347,7 +355,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_caravan_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local inventory = player.get_inventory(defines.inventory.character_main)
+    local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     local pred = function (s) return true end
 
@@ -357,7 +365,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local main_inventory = player.get_inventory(defines.inventory.character_main)
+    local main_inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local pred = function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
