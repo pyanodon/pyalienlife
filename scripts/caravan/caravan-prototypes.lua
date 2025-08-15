@@ -344,22 +344,70 @@ caravan_prototypes["nukavan-turd"].placeable_by   = "nukavan-turd"
 -- small migration script to ensure we are not transfering deleted items
 -- I have no access to the JSON migrations so invalid items are just deleted
 -- TODO: Use JSON migrations after they are added to base factorio under prototypes
-py.on_event(py.events.on_init(), function()
+local function error_caravan(caravan_data, invalid_prototype_name, invalid_prototype_type)
+    local position
+    if type(caravan_data) == "table" then
+        if caravan_data.entity.valid then
+            position = caravan_data.entity.position
+            position = "[gps=" .. position.x .. ", " .. position.y .. "]"
+        else
+            position = "UNKNOWN POSITION"
+        end
+        game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix a caravan @ %s", invalid_prototype_name, invalid_prototype_type, position))
+    else
+        game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix the \"%s\" interrupt", invalid_prototype_name, invalid_prototype_type, caravan_data))
+    end
+end
+local function migrate_action(action, caravan_data, migrations)
+    local item = action.elem_value
+    if not item then return end
+    item = migrations["item"] and migrations["item"][item] or item
+    if prototypes["item"][item] then
+        action.elem_value = item
+        return
+    end
+    -- No prototype and no migration
+    action.elem_value = nil
+    error_caravan(caravan_data, item, "item")
+end
+local function migrate_condition(condition, caravan_data, migrations)
+    local name = condition.name
+    local type = condition.type or "item"
+    if type == "virtual" then type = "virtual-signal" end -- prototype type name
+    name = migrations[type] and migrations[type][name] or name
+    type = type:gsub("%-", "_") -- table indexed with underscores
+    if prototypes[type][condition.name] then
+        condition.name = name
+        return
+    end
+    -- rip
+    error_caravan(caravan_data, condition.name, type)
+    condition.name = "signal-question-mark"
+    condition.type = "virtual"
+end
+py.on_event(py.events.on_init(), function(changes)
+    -- runtime changes, don't care
+    if not changes then
+        return
+    end
+    local migrations = changes.migrations
     for _, caravan_data in pairs(storage.caravans or {}) do
         for _, schedule in pairs(caravan_data.schedule or {}) do
             for _, action in pairs(schedule.actions or {}) do
-                local item = action.elem_value
-                if item and not prototypes.item[item] then
-                    local position
-                    if caravan_data.entity.valid then
-                        position = caravan_data.entity.position
-                        position = "[gps=" .. position.x .. ", " .. position.y .. "]"
-                    else
-                        position = "UNKNOWN POSITION"
+                migrate_action(action, caravan_data, migrations)
+                for _, condition in pairs({action.circuit_condition_left, action.circuit_condition_right}) do
+                    if type(condition) == "table" and condition.name then
+                        migrate_condition(condition, caravan_data, migrations)
                     end
-
-                    action.elem_value = nil
-                    game.print('CARAVAN MIGRATION: "' .. item .. '" is not a valid item prototype. You will need to manually fix a caravan @ ' .. position)
+                end
+            end
+        end
+    end
+    for interrupt_name, interrupt_data in pairs(storage.interrupts or {}) do
+        for _, conditions in pairs(interrupt_data.conditions or {}) do
+            for _, condition in pairs({conditions.circuit_condition_left, conditions.circuit_condition_right}) do
+                if type(condition) == "table" and condition.name then
+                    migrate_condition(condition, interrupt_name, migrations)
                 end
             end
         end
