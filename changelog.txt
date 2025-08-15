@@ -3,6 +3,7 @@ Version: 3.0.54
 Date: Hopefully more than a day from the previous release
   Changes:
     - Removed debug chat message when opening caravan manager
+    - Fixed item-count conditions on caravan interrupts being '0' when previously set
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.53
 Date: 2025-8-13
