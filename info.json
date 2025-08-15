@@ -1,6 +1,6 @@
 {
     "name": "pyalienlife",
-    "version": "3.0.51",
+    "version": "3.0.53",
     "factorio_version": "2.0",
     "title": "Pyanodons AlienLife",
     "author": "Pyanodon, Nexela, Kingarthur, notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple, przemo1232",
@@ -11,7 +11,7 @@
         "base >= 2.0.48",
         "~ pyalienlifegraphics >= 3.0.9",
         "~ pyalienlifegraphics2 >= 3.0.2",
-        "~ pyalienlifegraphics3 >= 3.0.0",
+        "~ pyalienlifegraphics3 >= 3.0.4",
         "pyrawores >= 3.0.0",
         "pypetroleumhandling >= 3.0.0",
         "pycoalprocessing >= 3.0.36",
