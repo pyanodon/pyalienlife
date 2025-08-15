@@ -5,6 +5,7 @@ Date: Hopefully more than a day from the previous release
     - Fixed bio-crane power usage when active.
     - Fixed speed of Wood Processing Units MK 2+ with sawblades TURD.
     - Fixed TURD buildings spilling on upgrade when they shouldn't.
+    - Fixed error in sprite loader with certain mod sets.
     - Updated RU locale (thanks, Astorin!).
     - Caravans: removed debug chat message when opening caravan manager.
     - Caravans: fixed item-count conditions on caravan interrupts being '0' when previously set.
