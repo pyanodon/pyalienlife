@@ -14,6 +14,7 @@ Date: Hopefully more than a day from the previous release
     - Caravans: fixed crash in on_player_main_inventory_changed.
     - Caravans: fixed crash migrating now-removed signals.
     - Caravans: fixed crash using carrot with a GUI open.
+    - Caravans: fixed the static circuit comparisons would always fail.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.53
 Date: 2025-8-13
