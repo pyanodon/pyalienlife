@@ -122,8 +122,15 @@ local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, n
     bar.style.right_margin = 8
 end
 
+local function get_inventory(player)
+    return player.get_main_inventory() or player.character and player.character.get_main_inventory()
+end
+
 function P.build_character_inventory(parent, player, caravan_data)
-    local inventory = player.get_main_inventory()
+    local inventory = get_inventory(player)
+    if (inventory == nil) then
+        log("what the fuck man")
+    end
 
     local name = "py_caravan_player_inventory"
     local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
@@ -148,7 +155,7 @@ function P.update_character_inventory(player, caravan_data)
     local parent = elem.parent
     elem.destroy()
 
-    local inventory = player.get_main_inventory()
+    local inventory = get_inventory(player)
     inventory.sort_and_merge()
 
     build_inventory_flow(parent, inventory, name, {unit_number = caravan_data.unit_number})
@@ -335,7 +342,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local inventory = player.get_main_inventory()
+    local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     local pred = function (s) return true end
 
@@ -348,7 +355,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_caravan_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local inventory = player.get_main_inventory()
+    local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     local pred = function (s) return true end
 
@@ -358,7 +365,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = function(event)
     local player = game.get_player(event.player_index)
-    local main_inventory = player.get_main_inventory()
+    local main_inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local pred = function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
