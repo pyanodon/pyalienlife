@@ -35,11 +35,6 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     elseif action.type == "circuit-condition" then
         comparator.build_circuit_comparator_widgets(flow, action, tags)
     elseif action.type == "circuit-condition-static" then
-        -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
-        if type(action.circuit_condition_left) == "number" then
-            action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
-        end
-
         comparator.build_static_comparator_widgets(flow, action, tags, "signal")
     elseif Utils.contains({"load-caravan", "unload-caravan", "load-target", "unload-target"}, action.type) then
         -- don't know why we restrict comparison here, shouldn't it be a regular dropdown?
