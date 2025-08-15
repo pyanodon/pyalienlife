@@ -2,6 +2,7 @@
 Version: 3.0.54
 Date: Hopefully more than a day from the previous release
   Changes:
+    - Fixed bio-crane power usage when active.
     - Fixed speed of Wood Processing Units MK 2+ with sawblades TURD.
     - Caravans: removed debug chat message when opening caravan manager
     - Caravans: fixed item-count conditions on caravan interrupts being '0' when previously set
