@@ -2,6 +2,22 @@ Ulric = {}
 
 Ulric.transformation_time = 60 * 60 * 10 -- ticks
 
+---This is called whenever an entity is swapped out for an identical entity. For example ulric man steroids transforming the player character into a different entity.
+---@param old LuaEntity
+---@param new LuaEntity
+function entity_changed_unit_number(old, new)
+    if not old.valid then error("Don\'t call this with an invalid entity") end
+    for _, caravan_data in pairs(storage.caravans) do
+        for _, schedule in pairs(caravan_data.schedule) do
+            if schedule.entity == old then
+                schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}
+                schedule.entity = new
+                schedule.position = new.position
+            end
+        end
+    end
+end
+
 py.on_event(py.events.on_init(), function()
     storage.ulricman_timers = storage.ulricman_timers or {}
 end)
@@ -34,7 +50,7 @@ py.on_event(defines.events.on_player_used_capsule, function(event)
 
     Ulric.transfer_character_inventory(character, ulric)
     player.character = ulric
-    Caravan.entity_changed_unit_number(character, ulric)
+    entity_changed_unit_number(character, ulric)
     character.destroy()
     player.play_sound {path = "ulric-man-transform"}
 
@@ -72,7 +88,7 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
 
                 Ulric.transfer_character_inventory(ulric, character)
                 player.character = character
-                Caravan.entity_changed_unit_number(ulric, character)
+                entity_changed_unit_number(ulric, character)
                 ulric.destroy()
                 player.play_sound {path = "ulric-man-untransform"}
             end
@@ -132,20 +148,23 @@ Ulric.transfer_character_inventory = function(old, new)
     -- ensure that the ulricman has the same logistic requests as the old player
     local old_point = old.get_requester_point()
     local new_point = new.get_requester_point()
-    new_point.trash_not_requested = old_point.trash_not_requested
-    new_point.enabled = old_point.enabled
-    for _, section in pairs(old_point.sections) do
-        local new_section = new_point.add_section(section.group)
-        new_section.active = section.active
-        new_section.multiplier = section.multiplier
-        new_section.filters = section.filters
-    end
+    if old_point and new_point then
+        new_point.trash_not_requested = old_point.trash_not_requested
+        new_point.enabled = old_point.enabled
+        
+        for _, section in pairs(old_point.sections) do
+            local new_section = new_point.add_section(section.group)
+            new_section.active = section.active
+            new_section.multiplier = section.multiplier
+            new_section.filters = section.filters
+        end
 
-    -- delete empty logistic sections after the copy
-    for i = new_point.sections_count, 1, -1 do
-        local section = new_point.get_section(i)
-        if section.filters_count == 0 then
-            new_point.remove_section(i)
+        -- delete empty logistic sections after the copy
+        for i = new_point.sections_count, 1, -1 do
+            local section = new_point.get_section(i)
+            if section.filters_count == 0 then
+                new_point.remove_section(i)
+            end
         end
     end
 end
