@@ -275,7 +275,7 @@ end
 --checks to see if any caravan has this entity in it's schedule
 function has_any_caravan(entity)
     for _, caravan_data in pairs(storage.caravans) do
-        if Caravan.has_entity_in_schedule(caravan_data, entity) then return true end
+        if has_entity_in_schedule(caravan_data, entity) then return true end
     end
     return false
 end
