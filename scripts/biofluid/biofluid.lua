@@ -38,7 +38,17 @@ local pi = math.pi
 ---@field providers_by_contents table<string, table<int, LuaEntity>>,
 ---@field allocated_fluids_from_providers table<int, number>,
 
-py.on_event(py.events.on_init(), function()
+local function migrate_network_data(fluids)
+    if not fluids then return end
+    for _, key in pairs({"biofluid_robots", "biofluid_requesters"}) do
+        for _, entry in pairs(storage[key]) do
+            entry.name = fluids[entry.name] or entry.name -- if it exists in the table, swap over
+            -- TODO: support deleting fluids completely
+        end
+    end
+end
+
+py.on_event(py.events.on_init(), function(changes)
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
     storage.biofluid_providers = storage.biofluid_providers or {}
@@ -46,6 +56,9 @@ py.on_event(py.events.on_init(), function()
     storage.biofluid_bioports = storage.biofluid_bioports or {}
     ---@type BiofluidNetwork[]
     storage.biofluid_networks = storage.biofluid_networks or {}
+    if changes and changes.migrations then
+        migrate_network_data(changes.migrations.fluid)
+    end
 end)
 
 
