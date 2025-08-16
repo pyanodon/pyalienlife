@@ -14,7 +14,6 @@ Digosaurus.minable_categories = {
 Digosaurus.valid_creatures = {
     ["digosaurus"] = 1,
     ["digosaurus-turd"] = 1,
-    ["digosaurus-prime"] = 1, -- compat for pyveganism
     ["thikat"] = 2,
     ["thikat-turd"] = 2,
     ["work-o-dile"] = 3,
@@ -23,7 +22,6 @@ Digosaurus.valid_creatures = {
 
 Digosaurus.mining_proxies = {
     ["digosaurus"] = "digosaurus-mineable-proxy",
-    ["digosaurus-prime"] = "digosaurus-prime-mineable-proxy", -- compat for pyveganism
     ["thikat"] = "thikats-mineable-proxy",
     ["work-o-dile"] = "work-o-dile-mineable-proxy",
     ["digosaurus-turd"] = "digosaurus-mineable-proxy",
