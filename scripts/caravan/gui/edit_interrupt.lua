@@ -51,7 +51,7 @@ function P.build_subheader_frame(parent)
     local flow = frame.add {type = "flow", name = "contents_flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
     flow.add {type = "label", name = "name_label", caption = storage.edited_interrupt.name, style = "subheader_caption_label"}
-    flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false}
+    flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false, text = storage.edited_interrupt.name}
     flow.add {type = "sprite-button", name = "py_edit_interrupt_rename_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "utility/rename_icon"}
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
 end
