@@ -103,7 +103,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local ghost = player.cursor_ghost
     if ghost and ghost.name.name == "caravan-control" then return end
 
-    if last_opened.caravan then
+    if last_opened.caravan and not CaravanGui.get_gui(player) then
         local caravan_data = storage.caravans[last_opened.caravan]
         CaravanGui.build(player, caravan_data)
         if storage.edited_interrupt then
