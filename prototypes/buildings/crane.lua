@@ -102,8 +102,8 @@ RECIPE {
 for i = 1, 4 do
 	local name = "crane-mk0" .. i
 	local icon = {
-	  {icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[i]},
-	  {icon = "__pyalienlifegraphics__/graphics/icons/meat.png", scale = .5, shift = {16, 16}}
+	  {icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[i], icon_size = 64},
+	  {icon = "__pyalienlifegraphics__/graphics/icons/meat.png", scale = .5, shift = {16, 16}, icon_size = 32}
   }
 
 	ITEM {

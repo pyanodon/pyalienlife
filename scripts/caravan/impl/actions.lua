@@ -375,7 +375,8 @@ function P.circuit_condition_static(caravan_data, schedule, action)
 
     local left = action.circuit_condition_left
     local right = action.item_count
-    if not right or not left then return false end
+
+    if not left or right == nil then return false end
 
     if not outpost or not outpost.valid then
         left = 0
@@ -403,7 +404,7 @@ function P.food_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local left = caravan_data.fuel_inventory.get_item_count(item)
 
@@ -427,7 +428,7 @@ function P.caravan_item_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local left = caravan_data.inventory.get_item_count(item)
 
@@ -455,7 +456,7 @@ function P.target_item_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local outpost_inventory = get_outpost_inventory(outpost)
     if not outpost_inventory then return false end
@@ -483,7 +484,7 @@ function P.outpost_item_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local outpost_inventory = get_outpost_inventory(outpost)
     if not outpost_inventory then return false end
@@ -631,7 +632,7 @@ function P.target_fluid_count(caravan_data, schedule, action)
     local fluid_name = action.elem_value
 
     local right = action.item_count or 0
-    if not right then return false end
+    if right == nil then return false end
 
     local left
     local outpost_fluid = outpost.get_fluid(1)
