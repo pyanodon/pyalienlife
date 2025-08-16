@@ -3,6 +3,21 @@ Digosaurus = {}
 require "digosaurus-prototypes"
 require "digosaurus-gui"
 
+function new_digosaur(name, bonus, proxy_name)
+    Digosaurus.valid_creatures[name] = bonus
+    Digosaurus.mining_proxies[name] = proxy_name
+end
+
+function remove_digosaur(name)
+    Digosaurus.valid_creatures[name] = nil
+    Digosaurus.mining_proxies[name] = nil
+end
+
+remote.add_interface("py_digosaurs", {
+    new_digosaur = new_digosaur,
+    remove_digosaur = remove_digosaur,
+})
+
 py.on_event(py.events.on_init(), function(event)
     storage.dig_sites = storage.dig_sites or {}
     storage.digosaurs = storage.digosaurs or {}
