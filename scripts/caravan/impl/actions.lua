@@ -373,9 +373,10 @@ function P.circuit_condition_static(caravan_data, schedule, action)
 
     local outpost = schedule.entity
 
-    local right = action.circuit_condition_right
-    local left = action.item_count
-    if not right or left == nil then return false end
+    local left = action.circuit_condition_left
+    local right = action.item_count
+
+    if not left or right == nil then return false end
 
     if not outpost or not outpost.valid then
         left = 0
