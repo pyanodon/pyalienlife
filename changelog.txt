@@ -18,6 +18,7 @@ Date: Hopefully more than a day from the previous release
     - Caravans: fixed crash using carrot with a GUI open.
     - Caravans: fixed the static circuit comparisons would always fail.
     - Caravans: fixed that editing an existing interrupt wouldn't allow changing the name.
+    - Caravans: fixed crash when selecting TURD fluidavan.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.53
 Date: 2025-8-13

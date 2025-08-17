@@ -25,7 +25,7 @@ end
 
 function P.build_main_frame(parent, name, caravan_data)
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
-    if caravan_data.entity.name == "fluidavan" then
+    if caravan_data.entity.name:find("^fluidavan") then
         main_frame.style.natural_height = 910
     else
         -- enough to show the full cargo tab with starting inventory, without scroll bars
