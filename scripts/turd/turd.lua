@@ -417,7 +417,9 @@ local function machine_replacement(old, new, assembling_machine_list)
             for _, item_to_place in pairs(items_to_place_this or {}) do
                 temp_inventory.remove(item_to_place)
             end
+            just_built_new_machine = true
             local new_machine = surface.create_entity(parameters)
+            just_built_new_machine = false
             if new_machine.type == "assembling-machine" then
                 new_machine.crafting_progress = crafting_progress
                 new_machine.bonus_progress = bonus_progress
