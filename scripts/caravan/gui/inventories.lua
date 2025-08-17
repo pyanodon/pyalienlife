@@ -348,7 +348,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
 
     handle_slot_click(event, caravan_data, inventory, caravan_data.inventory, pred)
 
-    if caravan_data.entity.name ~= "fluidavan" then
+    if not caravan_data.entity.name:find("^fluidavan") then
         P.update_caravan_inventory(player, caravan_data)
     end
 end

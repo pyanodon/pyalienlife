@@ -162,7 +162,7 @@ local function get_fluidavan_inventory_tooltip(caravan_data)
 end
 
 function P.get_inventory_tooltip(caravan_data)
-    if caravan_data.entity.name == "fluidavan" then
+    if caravan_data.entity.name:find("^fluidavan") then
         return get_fluidavan_inventory_tooltip(caravan_data)
     end
     return get_caravan_inventory_tooltip(caravan_data)

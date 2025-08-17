@@ -511,7 +511,7 @@ function P.is_inventory_full(caravan_data, schedule, action)
 end
 
 function P.is_inventory_empty(caravan_data, schedule, action)
-    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or (caravan_data.entity.name == "fluidavan" and P.is_tank_empty(caravan_data, schedule, action))
+    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or (caravan_data.entity.name:find("^fluidavan") and P.is_tank_empty(caravan_data, schedule, action))
 end
 
 function P.at_outpost(caravan_data, schedule, action)
