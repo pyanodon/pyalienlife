@@ -41,14 +41,15 @@ local pi = math.pi
 local function migrate_network_data(fluids)
     local num_migrated = 0
     local fluids_deleted = {}
+    local fluids_deleted_full = {}
     local MAX_MESSAGE_SIZE = 30
 
     if not fluids then return end
-    for k, key in pairs({"biofluid_robots", "biofluid_requesters"}) do
-        for _, entry in pairs(storage[key]) do
+    for _, biofluid_entity_type in pairs{"biofluid_robots", "biofluid_requesters"} do
+        for k, entry in pairs(storage[biofluid_entity_type]) do
             if fluids[entry.name] == "" then
                 -- This fluid has been deleted from factorio.
-                if key == "biofluid_requesters" then
+                if biofluid_entity_type == "biofluid_requesters" then
                     -- Remove the filter from the requester tank.
                     entry.name = nil
                 else
@@ -66,6 +67,7 @@ local function migrate_network_data(fluids)
                     if num_migrated <= MAX_MESSAGE_SIZE then
                         fluids_deleted[entity.gps_tag] = entry.name
                     end
+                    fluids_deleted_full[entity.gps_tag] = entry.name
 
                     entity.destroy()
                 end
@@ -77,9 +79,13 @@ local function migrate_network_data(fluids)
 
     if num_migrated ~= 0 then
         local fluids_deleted = serpent.block(fluids_deleted):gsub("\"] = \"", " used to be => \""):gsub("%[\"", "biofluid robot at ")
+        local fluids_deleted_full = serpent.block(fluids_deleted_full):gsub("\"] = \"", " used to be => \""):gsub("%[\"", "biofluid robot at ")
+
         game.print {"messages.warning-biofluid-migration", num_migrated, fluids_deleted}
         if num_migrated > MAX_MESSAGE_SIZE then
-            game.print("\t... " .. (num_migrated - MAX_MESSAGE_SIZE) .. " more not shown.")
+            game.print("\t... " .. (num_migrated - MAX_MESSAGE_SIZE) .. " more not shown. Check factorio-current.log for full list.")
+            log "FULL LIST: "
+            log {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_full}
         end
     end
 end
