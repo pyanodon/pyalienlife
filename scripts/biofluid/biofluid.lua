@@ -39,11 +39,53 @@ local pi = math.pi
 ---@field allocated_fluids_from_providers table<int, number>,
 
 local function migrate_network_data(fluids)
+    local num_migrated = 0
+    local fluids_deleted = {}
+    local fluids_deleted_full = {}
+    local MAX_MESSAGE_SIZE = 30
+
     if not fluids then return end
-    for _, key in pairs({"biofluid_robots", "biofluid_requesters"}) do
-        for _, entry in pairs(storage[key]) do
-            entry.name = fluids[entry.name] or entry.name -- if it exists in the table, swap over
-            -- TODO: support deleting fluids completely
+    for _, biofluid_entity_type in pairs{"biofluid_robots", "biofluid_requesters"} do
+        for k, entry in pairs(storage[biofluid_entity_type]) do
+            if fluids[entry.name] == "" then
+                -- This fluid has been deleted from factorio.
+                if biofluid_entity_type == "biofluid_requesters" then
+                    -- Remove the filter from the requester tank.
+                    entry.name = nil
+                else
+                    -- Delete the in-flight robot and drop the robot item on the ground.
+                    local entity = entry.entity
+                    entity.surface.spill_item_stack {
+                        position = entity.position,
+                        force = entity.force_index,
+                        stack = {name = entity.name, count = 1},
+                        marked_for_deconstruction = true
+                    }
+                    storage.biofluid_robots[k] = nil
+                    num_migrated = num_migrated + 1
+
+                    if num_migrated <= MAX_MESSAGE_SIZE then
+                        fluids_deleted[entity.gps_tag] = entry.name
+                    end
+                    fluids_deleted_full[entity.gps_tag] = entry.name
+
+                    entity.destroy()
+                end
+            else
+                entry.name = fluids[entry.name] or entry.name -- if it exists in the table, swap over
+            end
+        end
+    end
+
+    if num_migrated ~= 0 then
+        local fluids_deleted = serpent.block(fluids_deleted):gsub("\"] = \"", " used to be => \""):gsub("%[\"", "biofluid robot at ")
+        local fluids_deleted_full = serpent.block(fluids_deleted_full):gsub("\"] = \"", " used to be => \""):gsub("%[\"", "biofluid robot at ")
+
+        game.print {"messages.warning-biofluid-migration", num_migrated, fluids_deleted}
+        if num_migrated > MAX_MESSAGE_SIZE then
+            game.print("\t... " .. (num_migrated - MAX_MESSAGE_SIZE) .. " more not shown. Check factorio-current.log for full list.")
+            log "FULL LIST: "
+            log {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_full}
         end
     end
 end
@@ -60,8 +102,6 @@ py.on_event(py.events.on_init(), function(changes)
         migrate_network_data(changes.migrations.fluid)
     end
 end)
-
-
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
