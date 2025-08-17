@@ -101,7 +101,7 @@ if data and not yafc_turd_integration then
         table.insert(entity.flags, "not-in-made-in")
         entity.module_slots = MODULE_SLOTS
         entity.allowed_effects = {"speed", "productivity", "pollution"}
-        entity.crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "wpu-turd")
+        entity.crafting_speed = i == 1 and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "wpu-mk01-turd")
         data:extend {entity}
     end
 

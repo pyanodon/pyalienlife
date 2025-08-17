@@ -17,7 +17,7 @@ function P.build_inventory(parent, label, inventory_size)
     inventory_table.style.vertical_spacing = 0
 
     for i = 1, inventory_size do
-        inventory_table.add {type = "sprite-button", style = "inventory_slot"}
+        inventory_table.add {type = "sprite-button", style = "inventory_slot", enabled = parent.enabled}
     end
 end
 
@@ -54,14 +54,14 @@ function P.build_fluid_flow(parent, caravan_data)
     end
 end
 
-function P.build_cargo_flow(parent, player, caravan_data)
-    local flow = parent.add {type = "flow", direction = "vertical", name = "cargo_flow"}
+function P.build_cargo_flow(parent, player, caravan_data, enabled)
+    local flow = parent.add {type = "flow", direction = "vertical", name = "cargo_flow", enabled = enabled}
     flow.style.vertical_spacing = 8
     flow.add {type = "label", caption = "Food"}
     inv.build_fuel_inventory(flow, caravan_data)
     flow.add {type = "line", style = "inside_shallow_frame_with_padding_line"}.style.horizontally_stretchable = true
 
-    if caravan_data.entity.name == "fluidavan" then
+    if caravan_data.entity.name:find("^fluidavan") then
         flow.add {type = "label", caption = "Fluid tank"}
         P.build_fluid_flow(flow, caravan_data)
     else
@@ -73,7 +73,7 @@ function P.build_cargo_flow(parent, player, caravan_data)
     inv.build_character_inventory(flow, player, caravan_data)
 end
 
-function P.build_cargo_tab(parent, player, caravan_data)
+function P.build_cargo_tab(parent, player, caravan_data, enabled)
     local cargo_tab = parent.add {type = "tab", name = "cargo_tab", caption = "Cargo"}
     local pane = parent.add {type = "scroll-pane", name = "cargo_pane", style = "scroll_pane_under_subheader"}
     pane.style.horizontally_stretchable = true
@@ -81,11 +81,8 @@ function P.build_cargo_tab(parent, player, caravan_data)
     pane.vertical_scroll_policy = "auto"
     pane.horizontal_scroll_policy = "never"
 
-    if player.controller_type == defines.controllers.character then
-        P.build_cargo_flow(pane, player, caravan_data)
-    else
-        pane.add {type = "empty-widget"}.style.vertically_stretchable = true
-    end
+
+    P.build_cargo_flow(pane, player, caravan_data, enabled)
 
     parent.add_tab(cargo_tab, pane)
     return cargo_tab
@@ -95,13 +92,12 @@ function P.update_cargo_pane(player)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
-    if player.controller_type ~= defines.controllers.character then return end
-
     local caravan_data = storage.caravans[gui.tags.unit_number]
-    local cargo_pane = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_pane 
+    local cargo_pane = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_pane
+    local enabled = cargo_pane.cargo_flow.enabled
 
     cargo_pane.cargo_flow.destroy()
-    P.build_cargo_flow(cargo_pane, player, caravan_data)
+    P.build_cargo_flow(cargo_pane, player, caravan_data, enabled)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_flush_button"] = function(event)

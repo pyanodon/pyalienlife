@@ -6,15 +6,21 @@ local AddInterruptGui = require "gui/add_interrupt"
 local P = {}
 CaravanGui = P
 
+local interactable_controllers = {
+    [defines.controllers.character] = true,
+    [defines.controllers.god] = true,
+    [defines.controllers.editor] = true
+}
+
 local function can_view_cargo_tab(player, caravan_data)
-    if player.controller_type == defines.controllers.character then
+    if interactable_controllers[player.controller_type] then
         return player.can_reach_entity(caravan_data.entity)
     end
     return false
 end
 
 local function disabled_cargo_tab_tooltip(player)
-    if player.controller_type == defines.controllers.character then
+    if interactable_controllers[player.controller_type] then
         return "Caravan is out of reach."
     elseif player.controller_type == defines.controllers.remote then
         return "Cannot interact with cargo in remote view."
@@ -44,11 +50,7 @@ function P.build(player, caravan_data)
     local tabbed_pane = tab_frame.tabbed_pane
 
     local schedule_tab = CaravanGuiComponents.build_schedule_tab(tabbed_pane, caravan_data)
-    local cargo_tab = CaravanGuiComponents.build_cargo_tab(tabbed_pane, player, caravan_data)
-    if not can_view_cargo_tab(player, caravan_data) then
-        cargo_tab.enabled = false
-        cargo_tab.tooltip = disabled_cargo_tab_tooltip(player)
-    end
+    local cargo_tab = CaravanGuiComponents.build_cargo_tab(tabbed_pane, player, caravan_data, can_view_cargo_tab(player, caravan_data))
     return main_frame
 end
 
@@ -63,22 +65,7 @@ function P.update_gui(player)
     local can_reach_caravan = player.can_reach_entity(caravan_data.entity)
     local cargo_tab = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_tab
 
-    cargo_tab.enabled = can_view_cargo_tab(player, caravan_data)
-
-    if cargo_tab.enabled then
-        cargo_tab.tooltip = nil
-        CaravanGuiComponents.update_cargo_pane(player)
-    else
-        cargo_tab.tooltip = disabled_cargo_tab_tooltip(player)
-        gui.entity_frame.tabbed_pane_frame.tabbed_pane.selected_tab_index = 1
-    end
-end
-
-function P.cargo_tab_enabled(player)
-    local gui = P.get_gui(player)
-    if not gui then return false end
-
-    return gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_tab.enabled
+    CaravanGuiComponents.update_cargo_pane(player)
 end
 
 -- TODO what about on_player_changed_surface?

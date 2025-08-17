@@ -102,8 +102,8 @@ RECIPE {
 for i = 1, 4 do
 	local name = "crane-mk0" .. i
 	local icon = {
-	  {icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[i]},
-	  {icon = "__pyalienlifegraphics__/graphics/icons/meat.png", scale = .5, shift = {16, 16}}
+	  {icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[i], icon_size = 64},
+	  {icon = "__pyalienlifegraphics__/graphics/icons/meat.png", scale = .5, shift = {16, 16}, icon_size = 32}
   }
 
 	ITEM {
@@ -133,8 +133,8 @@ for i = 1, 4 do
   		usage_priority = "secondary-input",
   		drain = 500*i .. "kW",
 	  },
-	  energy_per_movement = 1*i .. "MW",
-	  energy_per_rotation = 1*i .. "MW",
+	  energy_per_movement = 1*i .. "MJ",
+	  energy_per_rotation = 1*i .. "MJ",
 	  collision_box = {{-1.4, -0.9}, {1.4, 0.9}},
 	  selection_box = {{-1.4, -0.9}, {1.4, 0.9}},
 	  uses_inserter_stack_size_bonus = false,

@@ -373,14 +373,10 @@ function P.circuit_condition_static(caravan_data, schedule, action)
 
     local outpost = schedule.entity
 
-    -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
-    if type(action.circuit_condition_left) == "number" then
-        action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
-    end
+    local left = action.circuit_condition_left
+    local right = action.item_count
 
-    local right = action.circuit_condition_right
-    local left = action.item_count
-    if not right or not left then return false end
+    if not left or right == nil then return false end
 
     if not outpost or not outpost.valid then
         left = 0
@@ -408,7 +404,7 @@ function P.food_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local left = caravan_data.fuel_inventory.get_item_count(item)
 
@@ -432,7 +428,7 @@ function P.caravan_item_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local left = caravan_data.inventory.get_item_count(item)
 
@@ -460,7 +456,7 @@ function P.target_item_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local outpost_inventory = get_outpost_inventory(outpost)
     if not outpost_inventory then return false end
@@ -488,7 +484,7 @@ function P.outpost_item_count(caravan_data, schedule, action)
     local item = action.elem_value
 
     local right = action.item_count
-    if not right then return false end
+    if right == nil then return false end
 
     local outpost_inventory = get_outpost_inventory(outpost)
     if not outpost_inventory then return false end
@@ -515,7 +511,7 @@ function P.is_inventory_full(caravan_data, schedule, action)
 end
 
 function P.is_inventory_empty(caravan_data, schedule, action)
-    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or P.is_tank_empty(caravan_data, schedule, action)
+    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or (caravan_data.entity.name:find("^fluidavan") and P.is_tank_empty(caravan_data, schedule, action))
 end
 
 function P.at_outpost(caravan_data, schedule, action)
@@ -636,7 +632,7 @@ function P.target_fluid_count(caravan_data, schedule, action)
     local fluid_name = action.elem_value
 
     local right = action.item_count or 0
-    if not right then return false end
+    if right == nil then return false end
 
     local left
     local outpost_fluid = outpost.get_fluid(1)

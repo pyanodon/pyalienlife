@@ -40,10 +40,6 @@ function P.build_condition_flow(parent, condition, tags)
         if condition.type == "circuit-condition" then
             comparator.build_circuit_comparator_widgets(flow, condition, tags)
         elseif condition.type == "circuit-condition-static" then
-            -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
-            if type(condition.circuit_condition_left) == "number" then
-                condition.circuit_condition_left, condition.circuit_condition_right = condition.circuit_condition_right, condition.circuit_condition_left
-            end
             comparator.build_static_comparator_widgets(flow, condition, tags, "signal")
         elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count", "caravan-fluid-count", "target-fluid-count"}, condition.type) then
             local filters
