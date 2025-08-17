@@ -8,6 +8,7 @@ Date: Hopefully more than a day from the previous release
     - Fixed error in sprite loader with certain mod sets.
     - Updated RU locale (thanks, Astorin!).
     - Fix crash migrating fluids in biofluid system.
+    - Increased Auog paddock MK 02/03/04 speeds slightly to round up when full of matching MK Auog modules.
     - Caravans: removed debug chat message when opening caravan manager.
     - Caravans: fixed item-count conditions on caravan interrupts being '0' when previously set.
     - Caravans: fixed dropdown constantly closing when setting caravan actions in remote view.
