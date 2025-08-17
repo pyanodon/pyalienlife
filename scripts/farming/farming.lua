@@ -7,7 +7,10 @@ local function validate_farm_building_list(farm_buildings, throw)
     local crafting_machines = prototypes.get_entity_filtered {{filter = "crafting-machine"}}
     -- This early search and sort lets us avoid o^n searching below
     for building_name in pairs(crafting_machines) do
-        local basename = building_name:gsub("%-mk..+", "")
+        -- TODO: Find a method that avoids two searches?
+        local is_turd = not not building_name:find("%-turd")
+        -- keep suffix if necessary while allowing other building suffixes
+        local basename = building_name:gsub("%-mk..+", is_turd and "-turd" or "")
         if farm_buildings[basename] then
             buildings[basename] = buildings[basename] or {}
             buildings[basename][building_name] = true
@@ -69,13 +72,15 @@ remote.add_interface("pyfarm", {
 
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
-    local name = entity.name:gsub("%-mk..+", "")
+    local is_turd = not not entity.name:find("%-turd")
+    local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
     local farm_data = storage.farm_prototypes[name]
     if farm_data then return farm_data.domain end
 end
 
 function Farming.get_default_module(entity)
-    local name = entity.name:gsub("%-mk..+", "")
+    local is_turd = not not entity.name:find("%-turd")
+    local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
     local farm_data = storage.farm_prototypes[name]
     if farm_data then return farm_data.default_module end
 end
@@ -102,7 +107,7 @@ function Farming.disable_machine(entity)
         entity.crafting_progress = 0.0001
         entity.bonus_progress = 0
     end
-    py.draw_error_sprite(entity, "no_module_" .. kingdom, 30)
+    py.draw_error_sprite(entity, "no_module_" .. kingdom, 61, 30)
 end
 
 function Farming.enable_machine(entity)
@@ -137,7 +142,7 @@ py.register_on_nth_tick(59, "Farming59", "pyal", function(event)
         if not farm.valid then
             storage.disabled_farm_buildings[unit_number] = nil
         elseif farm.get_module_inventory().is_empty() then
-            py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 30)
+            py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 61, 30)
         else
             Farming.enable_machine(farm)
         end

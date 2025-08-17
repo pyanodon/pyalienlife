@@ -173,7 +173,7 @@ ENTITY {
                     width = 384,
                     height = 448,
                     frame_count = 1,
-                    util.by_pixel(-0, -0),
+                    shift = util.by_pixel(-0, -0),
                     priority = "medium"
                 }
             },
@@ -188,7 +188,7 @@ ENTITY {
                     width = 384,
                     height = 448,
                     frame_count = 1,
-                    util.by_pixel(-0, -0),
+                    shift = util.by_pixel(-0, -0),
                     priority = "extra-high"
                 }
             },
@@ -202,7 +202,7 @@ ENTITY {
                     width = 384,
                     height = 448,
                     frame_count = 1,
-                    util.by_pixel(-0, -0),
+                    shift = util.by_pixel(-0, -0),
                     priority = "extra-high",
                     tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
                 }

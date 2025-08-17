@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
             ingredients = {{type = "item", name = "navens-abomination", amount = 1}},
             results = {
                 {name = "navens",            type = "item",  amount_min = 13, amount_max = 16},
-                {name = "dirty-water-light", type = "fluid", amount = 10},
+                {name = "muddy-sludge", type = "fluid", amount = 10},
                 {type = "item",              name = "guts",  amount = 1}
             },
             enabled = false,

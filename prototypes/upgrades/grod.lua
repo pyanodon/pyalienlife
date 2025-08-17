@@ -31,7 +31,7 @@ if data and not yafc_turd_integration then
         [RECIPE("grod-sn-3"):copy()] = "sn-biomass",
     } do
         recipe.name = recipe.name .. "-tailings"
-        recipe:add_ingredient_amount("dirty-water-heavy", 100)
+        recipe:add_ingredient_amount("tailings", 100)
         recipe:multiply_result_amount(result, 8)
         data:extend {recipe}
     end

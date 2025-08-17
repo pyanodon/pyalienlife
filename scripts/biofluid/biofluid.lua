@@ -38,7 +38,17 @@ local pi = math.pi
 ---@field providers_by_contents table<string, table<int, LuaEntity>>,
 ---@field allocated_fluids_from_providers table<int, number>,
 
-py.on_event(py.events.on_init(), function()
+local function migrate_network_data(fluids)
+    if not fluids then return end
+    for _, key in pairs({"biofluid_robots", "biofluid_requesters"}) do
+        for _, entry in pairs(storage[key]) do
+            entry.name = fluids[entry.name] or entry.name -- if it exists in the table, swap over
+            -- TODO: support deleting fluids completely
+        end
+    end
+end
+
+py.on_event(py.events.on_init(), function(changes)
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
     storage.biofluid_providers = storage.biofluid_providers or {}
@@ -46,6 +56,9 @@ py.on_event(py.events.on_init(), function()
     storage.biofluid_bioports = storage.biofluid_bioports or {}
     ---@type BiofluidNetwork[]
     storage.biofluid_networks = storage.biofluid_networks or {}
+    if changes and changes.migrations then
+        migrate_network_data(changes.migrations.fluid)
+    end
 end)
 
 
@@ -195,7 +208,7 @@ function Biofluid.render_error_icons()
         local failure_reason = Biofluid.why_isnt_my_bioport_working(bioport_data)
         local status_icon = Biofluid.status_icons[failure_reason]
         if status_icon then
-            py.draw_error_sprite(entity, status_icon, 71)
+            py.draw_error_sprite(entity, status_icon, 143, 71)
             bioport_data.active = nil
         else
             bioport_data.active = true
@@ -726,7 +739,7 @@ function Biofluid.get_unfulfilled_requests()
         local network_id = requester_data.network_id
         local network = storage.biofluid_networks[network_id]
         if not network or not next(network.biofluid_bioports) then
-            py.draw_error_sprite(requester, "utility.too_far_from_roboport_icon", 71)
+            py.draw_error_sprite(requester, "utility.too_far_from_roboport_icon", 143, 71)
             goto continue
         end
         local fluid_name = requester_data.name

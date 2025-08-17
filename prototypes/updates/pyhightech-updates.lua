@@ -382,9 +382,9 @@ RECIPE("fungal-substrate-02"):add_ingredient {type = "item", name = "urea", amou
 RECIPE("alien-sample-03"):replace_ingredient("plastic-bar", "graphene-roll")
 RECIPE("log7-2"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):add_unlock("wood-processing-3").category = "fwf"
 --RECIPE('urea'):replace_ingredient('fawogae', 'seaweed'):subgroup_order('py-alienlife-items', 'a')
-RECIPE("bonemeal2"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a")
-RECIPE("bonemeal3"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a")
-RECIPE("bonemeal4"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a")
+RECIPE("bonemeal2"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
+RECIPE("bonemeal3"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
+RECIPE("bonemeal4"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
 RECIPE("cobalt-extract"):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE("neuroprocessor"):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient {type = "item", name = "resistor1", amount = 5}:add_ingredient {type = "item", name = "capacitor1", amount = 5}:add_ingredient {type = "item", name = "inductor1", amount = 10}
 RECIPE("empty-neuromorphic-chip"):add_ingredient {type = "item", name = "bakelite", amount = 5}:add_ingredient {type = "item", name = "micro-fiber", amount = 4}:add_ingredient {type = "item", name = "capacitor2", amount = 5}:add_ingredient {type = "item", name = "melamine", amount = 10}:add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:add_ingredient {type = "item", name = "nylon-parts", amount = 10} --:add_ingredient({type = 'item', name = 'diamagnetic-material', amount = 4})
@@ -1170,7 +1170,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200, fluidbox_index = 2},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 2},
         {type = "item",  name = "cadaveric-arum",    amount = 1},
     },
     results = {
@@ -1189,7 +1189,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200, fluidbox_index = 2},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 2},
         {type = "item",  name = "cadaveric-arum",    amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 3},
     },
@@ -1209,7 +1209,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200, fluidbox_index = 2},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 2},
         {type = "item",  name = "hmas",              amount = 1},
         {type = "item",  name = "cadaveric-arum",    amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 3},
@@ -1230,7 +1230,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "kicalk",            amount = 1},
     },
     results = {
@@ -1249,7 +1249,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "kicalk",            amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
     },
@@ -1269,7 +1269,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "dirty-water-light", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "kicalk",            amount = 1},
         {type = "item",  name = "hmas",              amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
