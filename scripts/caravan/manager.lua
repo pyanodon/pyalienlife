@@ -196,6 +196,19 @@ gui_events[defines.events.on_gui_confirmed]["py_rename_caravan_textfield"] = fun
     title_display_mode(element.parent, caravan_data)
 end
 
+---checks to see if either any caravan or a specific caravan has this entity in its schedule
+---@param entity LuaEntity
+---@param caravan_data  table?
+---@return boolean result whether the given entity has any caravans with it as a destination
+function entity_has_caravan(entity, caravan_data)
+    -- Check one or many depending on if a source caravan is specified
+    local caravan_list = caravan_data and {caravan_data} or storage.caravans
+    for _, caravan in pairs(caravan_list) do
+        if has_entity_in_schedule(caravan, entity) then return true end
+    end
+    return false
+end
+
 local function has_any_caravan_at_all()
     for _, caravan in pairs(storage.caravans) do
         if Impl.validity_check(caravan) then return true end
@@ -254,48 +267,25 @@ local function on_search(search_key, gui, player)
     end
 end
 
-remote.add_interface("pywiki_caravan_manager", {
-    create_gui = create_gui,
-    on_search = on_search,
-})
-
-local relative_gui_types = {
-    ["electric-pole"] = "electric_network_gui",
-    ["character"] = "other_player_gui",
-    ["unit"] = "script_inventory_gui"
-}
-
-
-local function guess(entity)
-    local entity_type = entity.type
-    local relative_gui_type = relative_gui_types[entity_type] or entity_type:gsub("%-", "_") .. "_gui"
-    return defines.relative_gui_type[relative_gui_type] or defines.relative_gui_type.generic_on_off_entity_gui
-end
-
---checks to see if any caravan has this entity in it's schedule
-function has_any_caravan(entity)
-    for _, caravan_data in pairs(storage.caravans) do
-        if has_entity_in_schedule(caravan_data, entity) then return true end
-    end
-    return false
-end
-
---checks to see if the given caravan has the given entity in it's schedule
+---Checks to see if the given caravan has the given entity in its schedule
+---@param caravan_data any
+---@param entity any
+---@return boolean
 function has_entity_in_schedule(caravan_data, entity)
-    if not Impl.validity_check(caravan_data) then return end
-    if not caravan_data.schedule then return end
+    if not Impl.validity_check(caravan_data) then return false end
+    if not caravan_data.schedule then return false end
     for _, schedule in pairs(caravan_data.schedule) do
         if schedule.entity == entity then return true end
     end
     return false
 end
 
---creates the main from of the remote view gui
-local function instantiate_main_frame(gui, anchor)
+--creates the relative frame from of the remote view gui
+local function instantiate_relative_frame(gui, anchor)
     if anchor then
         return gui.relative.add {
             type = "frame",
-            name = "py_global_caravan_gui",
+            name = "relative_caravan_gui",
             caption = {"caravan-gui.caption"},
             direction = "vertical",
             anchor = anchor
@@ -305,7 +295,7 @@ local function instantiate_main_frame(gui, anchor)
         gui.relative.caravan_flow.clear()
     return gui.relative.caravan_flow.add {
         type = "frame",
-        name = "py_global_caravan_gui",
+        name = "relative_caravan_gui",
         caption = {"caravan-gui.caption"},
         direction = "vertical",
     }
@@ -314,8 +304,8 @@ end
 --attempts to add a remote view for caravans connected to the given outpost
 local function build_gui_connected(player, entity, anchor)
     if not entity then return end
-    if not has_any_caravan(entity) then return end
-    local main_frame = instantiate_main_frame(player.gui, anchor)
+    if not entity_has_caravan(entity) then return end
+    local main_frame = instantiate_relative_frame(player.gui, anchor)
     if not main_frame then return end
     main_frame.style.minimal_width = 300
     main_frame.tags = {unit_number = entity.unit_number}
@@ -334,20 +324,23 @@ end
 py.on_event(defines.events.on_gui_opened, function(event)
     local player = game.get_player(event.player_index)
     local entity = event.entity
-    if not entity then return end
-    if player.gui.relative.connected_caravan_gui then return end
-    local anchor = {
-        gui = guess(entity),
-        position = defines.relative_gui_position.right
-    }
-    build_gui_connected(player, entity, anchor)
+    if not entity or CaravanGui.get_relative_gui(player) then return end
+    build_gui_connected(player, entity, {
+        gui = CaravanGui.guess_gui_type(entity),
+        position = defines.relative_gui_position.left
+    })
 end)
 
---removes the remote caravan view when closing an outpost
-py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
-
-    if player.gui.relative.py_global_caravan_gui then
-        player.gui.relative.py_global_caravan_gui.destroy()
+-- The list will be invalidated when a player changes surface, destroy it
+py.on_event(defines.events.on_player_changed_surface, function(event)
+    local player = game.get_player(event.player_index)
+    local gui = CaravanGui.get_relative_gui(player)
+    if gui then
+        gui.destroy()
     end
 end)
+
+remote.add_interface("pywiki_caravan_manager", {
+    create_gui = create_gui,
+    on_search = on_search,
+})
