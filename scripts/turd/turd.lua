@@ -420,15 +420,17 @@ local function machine_replacement(old, new, assembling_machine_list)
             just_built_new_machine = true
             local new_machine = surface.create_entity(parameters)
             just_built_new_machine = false
-            if new_machine.type == "assembling-machine" then
-                new_machine.crafting_progress = crafting_progress
-                new_machine.bonus_progress = bonus_progress
-                new_machine.set_recipe(recipe)
+            if new_machine then --check for nil in case of placement restriction
+                if new_machine.type == "assembling-machine" then
+                    new_machine.crafting_progress = crafting_progress
+                    new_machine.bonus_progress = bonus_progress
+                    new_machine.set_recipe(recipe)
+                end
+                handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
+                new_machine.mirroring = mirrored
+                temp_inventory.clear()
+                machine = new_machine
             end
-            handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
-            new_machine.mirroring = mirrored
-            temp_inventory.clear()
-            machine = new_machine
         end
         new_machine_list[#new_machine_list + 1] = machine
     end
@@ -711,10 +713,19 @@ py.on_event(py.events.on_destroyed(), function(event)
     end
 end)
 
+---@param force_index integer the force requesting this information
+---@param entity_name string the entity get the replacement for
+---@return string? replacement_entity the name of the entity that replaces the given entity
+local get_machine_replacement = function(force_index, entity_name)
+    if not storage.turd_machine_replacements[force_index] then return end
+    return storage.turd_machine_replacements[force_index][entity_name]
+end
+
 remote.add_interface("pywiki_turd_page", {
     create_turd_page = create_turd_page,
     on_search = on_search,
     reapply_turd_bonuses = reapply_turd_bonuses,
     new_turd = new_turd,
-    on_turd_built = on_turd_built
+    on_turd_built = on_turd_built,
+    get_machine_replacement = get_machine_replacement
 })

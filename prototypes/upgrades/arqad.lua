@@ -3,16 +3,16 @@ local is_pyse = (data and mods["pystellarexpedition"]) or (script and script.act
 local cags_effects
 if is_pyse then
     cags_effects = {
-        {recipe = "hydrangeaceae",                     type = "unlock-recipe"},
-        {recipe = "cags",                              type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk01-with-cags",         type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk02-with-cags",         type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk03-with-cags",         type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk04-with-cags",         type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk01-with-cags-recycle", type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk02-with-cags-recycle", type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk03-with-cags-recycle", type = "unlock-recipe"},
-        {recipe = "arqad-hive-mk04-with-cags-recycle", type = "unlock-recipe"},
+        {recipe = "hydrangeaceae", type = "unlock-recipe"},
+        {recipe = "cags",          type = "unlock-recipe"},
+        {old = "arqad-hive-mk01",  new = "arqad-hive-mk01-with-cags", type = "recipe-replacement"},
+        {old = "arqad-hive-mk02",  new = "arqad-hive-mk02-with-cags", type = "recipe-replacement"},
+        {old = "arqad-hive-mk03",  new = "arqad-hive-mk03-with-cags", type = "recipe-replacement"},
+        {old = "arqad-hive-mk04",  new = "arqad-hive-mk04-with-cags", type = "recipe-replacement"},
+        {old = "arqad-hive-mk01",  new = "arqad-hive-mk01-with-cags", type = "machine-replacement"},
+        {old = "arqad-hive-mk02",  new = "arqad-hive-mk02-with-cags", type = "machine-replacement"},
+        {old = "arqad-hive-mk03",  new = "arqad-hive-mk03-with-cags", type = "machine-replacement"},
+        {old = "arqad-hive-mk04",  new = "arqad-hive-mk04-with-cags", type = "machine-replacement"},
     }
 else
     cags_effects = {
@@ -85,36 +85,16 @@ if data and not yafc_turd_integration then
     }
 
     if is_pyse then
-        for i = 1, 4 do
-            data:extend {{
-                type = "recipe",
-                name = "arqad-hive-mk0" .. i .. "-with-cags",
-                energy_required = 0.5,
-                category = "crafting",
-                ingredients = {
-                    {name = "cags",                amount = 10 * i, type = "item"},
-                    {name = "arqad-hive-mk0" .. i, amount = 1,      type = "item"},
-                    {name = "hydrangeaceae",       amount = 1,      type = "item"}
-                },
-                results = {{type = "item", name = "arqad-hive-mk0" .. i .. "-with-cags", amount = 1}},
-                enabled = false
-            }}
-            data:extend {{
-                type = "recipe",
-                name = "arqad-hive-mk0" .. i .. "-with-cags-recycle",
-                energy_required = 0.5,
-                category = "crafting",
-                ingredients = {
-                    {type = "item", name = "arqad-hive-mk0" .. i .. "-with-cags", amount = 1}
-                },
-                results = {
-                    {name = "cags",                amount = 10 * i, type = "item"},
-                    {name = "arqad-hive-mk0" .. i, amount = 1,      type = "item"},
-                    {name = "hydrangeaceae",       amount = 1,      type = "item"}
-                },
-                main_product = "hydrangeaceae",
-                enabled = false
-            }}
+        for i, machine_recipe in pairs {
+            RECIPE("arqad-hive-mk01"):copy(),
+            RECIPE("arqad-hive-mk02"):copy(),
+            RECIPE("arqad-hive-mk03"):copy(),
+            RECIPE("arqad-hive-mk04"):copy(),
+        } do
+            machine_recipe.name = machine_recipe.name .. "-with-cags"
+            machine_recipe:add_ingredient {name = "cags", amount = 10 * i, type = "item"}
+            machine_recipe:add_ingredient {name = "hydrangeaceae", amount = 1, type = "item"}
+            data:extend {machine_recipe}
         end
     else
         for i, machine_recipe in pairs {
