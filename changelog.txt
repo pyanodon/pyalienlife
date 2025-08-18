@@ -1,3 +1,7 @@
+Version: 3.0.55
+Date: ???
+  Changes:
+    - Added get machine replacement interface function
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.54
 Date: 2025-08-17
