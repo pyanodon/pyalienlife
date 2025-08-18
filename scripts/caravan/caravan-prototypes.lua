@@ -358,32 +358,38 @@ local function error_caravan(caravan_data, invalid_prototype_name, invalid_proto
         game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix the \"%s\" interrupt", invalid_prototype_name, invalid_prototype_type, caravan_data))
     end
 end
-local function migrate_action(action, caravan_data, migrations)
-    local item = action.elem_value
-    if not item then return end
-    item = migrations["item"] and migrations["item"][item] or item
-    if prototypes["item"][item] then
-        action.elem_value = item
-        return
+local function migrate_proto(name, type_name, migrations)
+    if not name then return nil end
+    type_name = type_name or "item"
+    if type_name == "virtual" then type_name = "virtual-signal" end -- for circuit conditions
+    local new_name = migrations[type_name] and migrations[type_name][name] or name -- may also be "" if prototype was deleted
+    -- global prototype table is indexed with underscores :/
+    type_name = type_name:gsub("%-", "_")
+    if prototypes[type_name][new_name] then
+        return new_name
     end
-    -- No prototype and no migration
-    action.elem_value = nil
-    error_caravan(caravan_data, item, "item")
+    return nil
 end
-local function migrate_condition(condition, caravan_data, migrations)
-    local name = condition.name
-    local type = condition.type or "item"
-    if type == "virtual" then type = "virtual-signal" end -- prototype type name
-    name = migrations[type] and migrations[type][name] or name
-    type = type:gsub("%-", "_") -- table indexed with underscores
-    if prototypes[type][condition.name] then
-        condition.name = name
+local function migrate_action(action, caravan_data, migrations)
+    local prev_value = action.elem_value
+    if prev_value == nil then
         return
     end
-    -- rip
-    error_caravan(caravan_data, condition.name, type)
-    condition.name = "signal-question-mark"
-    condition.type = "virtual"
+    action.elem_value = migrate_proto(prev_value, "item", migrations)
+    if not action.elem_value then
+        error_caravan(caravan_data, prev_value, "item")
+    end
+end
+local function migrate_circuit_condition(condition, caravan_data, migrations)
+    local prev_name = condition.name
+    local condition_type = condition.type or "item"
+    condition.name = migrate_proto(prev_name, condition_type, migrations)
+    if not condition.name then
+        -- rip
+        error_caravan(caravan_data, prev_name, condition_type)
+        condition.name = "signal-question-mark"
+        condition.type = "virtual"
+    end
 end
 py.on_event(py.events.on_init(), function(changes)
     -- runtime changes, don't care
@@ -392,22 +398,38 @@ py.on_event(py.events.on_init(), function(changes)
     end
     local migrations = changes.migrations
     for _, caravan_data in pairs(storage.caravans or {}) do
+        if caravan_data.fluid then
+            local fluid_name = caravan_data.fluid.name
+            caravan_data.fluid.name = migrate_proto(fluid_name, "fluid", migrations)
+            if not caravan_data.fluid.name then
+                error_caravan(caravan_data, fluid_name, "fluid")
+                caravan_data.fluid = nil
+            end
+        end
         for _, schedule in pairs(caravan_data.schedule or {}) do
             for _, action in pairs(schedule.actions or {}) do
                 migrate_action(action, caravan_data, migrations)
                 for _, condition in pairs({action.circuit_condition_left, action.circuit_condition_right}) do
                     if type(condition) == "table" and condition.name then
-                        migrate_condition(condition, caravan_data, migrations)
+                        migrate_circuit_condition(condition, caravan_data, migrations)
                     end
                 end
             end
         end
     end
     for interrupt_name, interrupt_data in pairs(storage.interrupts or {}) do
-        for _, conditions in pairs(interrupt_data.conditions or {}) do
-            for _, condition in pairs({conditions.circuit_condition_left, conditions.circuit_condition_right}) do
-                if type(condition) == "table" and condition.name then
-                    migrate_condition(condition, interrupt_name, migrations)
+        for _, condition in pairs(interrupt_data.conditions or {}) do
+            local elem_value = condition.elem_value
+            if elem_value ~= nil then
+                local elem_type = condition.type:find("fluid") and "fluid" or "item"
+                condition.elem_value = migrate_proto(elem_value, elem_type, migrations)
+                if condition.elem_value == nil then
+                    error_caravan(interrupt_name, elem_value, elem_type)
+                end
+            end
+            for _, circuit_condition in pairs({condition.circuit_condition_left, condition.circuit_condition_right}) do
+                if type(circuit_condition) == "table" and circuit_condition.name then
+                    migrate_circuit_condition(circuit_condition, interrupt_name, migrations)
                 end
             end
         end
