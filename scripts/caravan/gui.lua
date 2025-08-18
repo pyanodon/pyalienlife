@@ -19,6 +19,7 @@ local function can_view_cargo_tab(player, caravan_data)
     return false
 end
 
+
 local function disabled_cargo_tab_tooltip(player)
     if interactable_controllers[player.controller_type] then
         return "Caravan is out of reach."
@@ -28,8 +29,28 @@ local function disabled_cargo_tab_tooltip(player)
     return "Cannot interact with cargo in " .. tostring(player.controller_type) .. " mode."
 end
 
+local relative_gui_types = {
+    ["electric-pole"] = defines.relative_gui_type.electric_network_gui,
+    ["character"] = defines.relative_gui_type.other_player_gui,
+    ["unit"] = defines.relative_gui_type.script_inventory_gui
+}
+
+---Guesses the GUI type that a given entity shows when opened
+---@param entity LuaEntity
+---@return defines.relative_gui_type result
+function P.guess_gui_type(entity)
+    local entity_type = entity.type
+    local relative_type = relative_gui_types[entity_type] or defines.relative_gui_type[entity_type:gsub("%-", "_") .. "_gui"]
+    return relative_type or defines.relative_gui_type.generic_on_off_entity_gui
+end
+
 function P.get_gui(player)
     local gui = player.gui.screen.caravan_gui
+    if gui then return gui end
+end
+
+function P.get_relative_gui(player)
+    local gui = player.gui.relative.relative_caravan_gui
     if gui then return gui end
 end
 
@@ -68,14 +89,23 @@ function P.update_gui(player)
     CaravanGuiComponents.update_cargo_pane(player)
 end
 
--- TODO what about on_player_changed_surface?
 py.on_event(defines.events.on_gui_closed, function(event)
-    if not event.element or event.element.name ~= "caravan_gui" then return end
+    if not event.element then return end
     local player = game.get_player(event.player_index)
     local gui = event.element
 
+    -- First, if it's just a UI element closing where we should close the relative GUI, do that and exit
+    -- We could make this check more complicated like seeing what UI element triggered this action
+    local relative_gui = P.get_relative_gui(player)
+    if relative_gui then
+        relative_gui.destroy()
+        return
+    end
+    -- Otherwise, handle the rest
+    if gui.name ~= "caravan_gui" then return end
+
     -- only close the main GUI if no other "pop-ups" are on the screen
-    local slider_frame = CaravanGuiComponents.get_slider_frame(player) 
+    local slider_frame = CaravanGuiComponents.get_slider_frame(player)
     local add_interrupt_frame = player.gui.screen.add_interrupt_gui
     local edit_interrupt_frame = player.gui.screen.edit_interrupt_gui
     -- Ideally, it should rely on a 'focused' attribute, but it doesn't exist.
@@ -83,7 +113,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
     local renaming_caravan = caravan_rename_textfield.visible
 
     local should_close_gui = not (slider_frame ~= nil or add_interrupt_frame ~= nil or edit_interrupt_frame ~= nil or renaming_caravan)
-    
+
     if should_close_gui then
         gui.destroy()
     else
