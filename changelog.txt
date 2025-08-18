@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.55
+Date: 2025-08-18
+  Changes:
+    - Added new api for digosaurus `remote.call("py_digosaurs", "new_digosaur", "digosaur_name", mining_bonus, "digosaur_mining_proxy")`
+    - Added new api for digosaurus `remote.call("py_digosaurs", "remove_digosaur", "digosaur_name")`
+---------------------------------------------------------------------------------------------------
 Version: 3.0.54
 Date: 2025-08-17
   Changes:
@@ -20,8 +26,6 @@ Date: 2025-08-17
     - Caravans: fixed the static circuit comparisons would always fail.
     - Caravans: fixed that editing an existing interrupt wouldn't allow changing the name.
     - Caravans: fixed crash when selecting TURD fluidavan.
-    - Added new api for digosaurus `remote.call("py_digosaurs", "new_digosaur", "digosaur_name", mining_bonus, "digosaur_mining_proxy")`
-    - Added new api for digosaurus `remote.call("py_digosaurs", "remove_digosaur", "digosaur_name")`
     - Removed debug chat message when opening caravan manager
     - Caravans: fixed that food couldn't be manually transferred to a fluidavan.
     - Fixed crashed when clicking a bioport when omnicompression was installed.
