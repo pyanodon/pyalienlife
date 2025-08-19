@@ -334,7 +334,9 @@ end
 py.on_event(defines.events.on_gui_opened, function(event)
     local player = game.get_player(event.player_index)
     local entity = event.entity
-    if not entity or CaravanGui.get_relative_gui(player) then return end
+    if not entity then return end
+    local old_gui = CaravanGui.get_relative_gui(player)
+    if old_gui then old_gui.destroy() end
     build_gui_connected(player, entity, {
         gui = CaravanGui.guess_gui_type(entity),
         position = defines.relative_gui_position.left
