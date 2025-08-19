@@ -177,7 +177,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_edit_interrupt_add
     elseif type == "outpost-item-count" then
         localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
     end
-    table.insert(storage.edited_interrupt.conditions, {type = type, localised_name = localised_name})
+    table.insert(storage.edited_interrupt.conditions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
     if #storage.edited_interrupt.conditions > 1 then
         table.insert(storage.edited_interrupt.conditions_operators, 1)
     end
@@ -206,7 +206,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_edit_interrupt_tar
     elseif type == "outpost-item-count" then
         localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
     end
-    table.insert(schedule.actions, {type = type, localised_name = localised_name})
+    table.insert(schedule.actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
 
     EditInterruptGui.update_targets_pane(player)
 end

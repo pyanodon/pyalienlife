@@ -1,7 +1,9 @@
-Version: 3.0.55
+---------------------------------------------------------------------------------------------------
+Version: 3.0.56
 Date: ???
   Changes:
     - Added get machine replacement interface function
+    - Caravans: fixed conditions/actions with `0` again
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.55
 Date: 2025-08-18

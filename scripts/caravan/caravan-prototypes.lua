@@ -225,6 +225,22 @@ Caravan.valid_actions = {
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
 Caravan.valid_actions.nukavan["default"] = table.invert {"detonate"}
 
+Caravan.actions_with_item_count = table.invert{
+    "time-passed", -- as wait_time
+    "store-specific-food",
+    "load-caravan",
+    "unload-caravan",
+    "load-target",
+    "unload-target",
+    "circuit-condition-static",
+    "food-count",
+    "caravan-item-count",
+    "target-item-count",
+    "outpost-item-count",
+    "caravan-fluid-count",
+    "target-fluid-count",
+}
+
 Caravan.foods = {
     all = {
         "dried-meat",
