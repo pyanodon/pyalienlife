@@ -133,7 +133,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destinatio
     elseif type == "outpost-item-count" then
         localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
     end
-    table.insert(caravan_data.schedule[schedule_id].actions, {type = type, localised_name = localised_name})
+    table.insert(caravan_data.schedule[schedule_id].actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
 
     CaravanGuiComponents.update_schedule_pane(player)
 end

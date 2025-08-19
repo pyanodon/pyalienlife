@@ -243,6 +243,22 @@ function P.contains(t, e)
   return false
 end
 
+-- takes an action and ensures item_count is set, if relevant. An action can be a condition as well.
+function P.ensure_item_count(action)
+    if not action or not action.type then
+        return action
+    end
+    if not Caravan.actions_with_item_count[action] then
+        return action
+    end
+    if action.type == "time-passed" then
+        action.wait_time = action.wait_time or 5
+    else
+        action.item_count = action.item_count or 0
+    end
+    return action
+end
+
 function P.rename_interrupt(interrupt, new_name)
     local old_name = interrupt.name
     storage.interrupts[old_name] = nil
