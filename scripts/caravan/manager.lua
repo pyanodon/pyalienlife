@@ -105,6 +105,11 @@ gui_events[defines.events.on_gui_click]["py_click_caravan"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
 
+    local old_gui = CaravanGui.get_gui(player)
+    if old_gui then
+        old_gui.destroy()
+    end
+
     CaravanGui.build(player, caravan_data)
 end
 
