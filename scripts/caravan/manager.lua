@@ -4,15 +4,20 @@ local CaravanGui = require "gui"
 local Utils = require "utils"
 local Impl = require "impl"
 
-local function add_gui_row(caravan_data, key, table)
+local function add_gui_row(caravan_data, key, table, inner)
     local entity = caravan_data.entity
     local prototype = caravan_prototypes[entity.name]
 
-    table = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}}
+    table = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}, style = inner and "inside_shallow_frame" or nil}
 
     local button_flow = table.add {type = "flow", direction = "horizontal"}
     button_flow.style.vertical_align = "top"
     button_flow.style.height = 30
+    if inner then
+        button_flow.style.left_margin = 5
+        button_flow.style.right_margin = 5
+        button_flow.style.top_margin = 5
+    end
 
     local caption_flow = button_flow.add {type = "flow", direction = "horizontal"}
 
@@ -316,7 +321,7 @@ local function build_gui_connected(player, entity, anchor)
     for key, caravan_data in pairs(storage.caravans) do
         if has_entity_in_schedule(caravan_data, entity) then
             scroll_pane.add {type = "empty-widget"}.style.height = 3
-            add_gui_row(caravan_data, key, scroll_pane)
+            add_gui_row(caravan_data, key, scroll_pane, true)
         end
     end
 end
