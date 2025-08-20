@@ -128,6 +128,12 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
     local position = entity.position
+    local gui = CaravanGui.get_gui(player)
+    if gui then
+        local camera = gui.entity_frame.camera_frame.camera
+        position = camera.position
+        entity = camera.entity
+    end
     if entity then position = entity.position end
 
     player.opened = nil
