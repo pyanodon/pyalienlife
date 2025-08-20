@@ -90,19 +90,15 @@ function P.update_gui(player)
 end
 
 py.on_event(defines.events.on_gui_closed, function(event)
-    if not event.element then return end
     local player = game.get_player(event.player_index)
     local gui = event.element
 
-    -- First, if it's just a UI element closing where we should close the relative GUI, do that and exit
-    -- We could make this check more complicated like seeing what UI element triggered this action
-    local relative_gui = P.get_relative_gui(player)
-    if relative_gui then
-        relative_gui.destroy()
+    if not gui then -- not modded UI, the only thing we care to do is check for the relative frame
+        local relative_gui = P.get_relative_gui(player)
+        if relative_gui then relative_gui.destroy() end
         return
     end
-    -- Otherwise, handle the rest
-    if gui.name ~= "caravan_gui" then return end
+    if gui.name ~= "caravan_gui" then return end -- also not our UI, nothing to do
 
     -- only close the main GUI if no other "pop-ups" are on the screen
     local slider_frame = CaravanGuiComponents.get_slider_frame(player)
@@ -134,6 +130,8 @@ py.on_event(defines.events.on_gui_closed, function(event)
             label.visible = true
             caravan_rename_textfield.visible = false
         end
+        --TODO: this throws out the paradigm of `.opened = nil` mostly-guaranteeing a UI close
+        --This can error in cases like the entity click handler if we don't *also* find and destroy the UI in the caller :/
         player.opened = player.gui.screen.caravan_gui
     end
 end)

@@ -103,7 +103,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local ghost = player.cursor_ghost
     if ghost and ghost.name.name == "caravan-control" then return end
 
-    if last_opened.caravan and not CaravanGui.get_gui(player) then
+    if last_opened.caravan then
         local caravan_data = storage.caravans[last_opened.caravan]
         CaravanGui.build(player, caravan_data)
         if storage.edited_interrupt then
@@ -244,13 +244,27 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
     local existing = CaravanGui.get_gui(player)
     if existing then
+        -- xref: on_gui_closed
+        local is_in_modal = (
+            CaravanGuiComponents.get_slider_frame(player) ~= nil
+            or  player.gui.screen.add_interrupt_gui ~= nil
+            or player.gui.screen.edit_interrupt_gui ~= nil
+            or (existing.entity_frame.subheader_frame.contents_flow.py_caravan_rename_textfield or {}).visible == true
+        )
+        -- Don't switch UIs if the player is editing something
+        if is_in_modal then
+            return
+        end
         if existing.tags.unit_number == caravan_data.unit_number then
             return
         else
             player.opened = nil
         end
     end
-    CaravanGui.build(player, caravan_data)
+    -- made invalid above by closing
+    if not existing or not existing.valid then
+        CaravanGui.build(player, caravan_data)
+    end
 end)
 
 py.on_event(defines.events.on_ai_command_completed, function(event)
