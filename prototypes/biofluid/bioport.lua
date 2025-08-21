@@ -338,6 +338,7 @@ ENTITY {
     collision_box = data.raw["assembling-machine"]["bioport"].collision_box,
     collision_mask = {layers = {}},
     render_layer = "lower-object-above-shadow",
-    animations = variants,
+    -- animations = variants, -- TODO caught as undefined global, replaced by nil
+    animations = nil,
     selectable_in_game = false,
 }
