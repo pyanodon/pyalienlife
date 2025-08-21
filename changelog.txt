@@ -3,6 +3,7 @@ Version: 3.0.57
 Date: ?
   Changes:
     - When selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
+    - Reduce actual vatbrain radius to match visible vatbrain radius. See https://github.com/pyanodon/pybugreports/issues/1062
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.56
 Date: 2025-08-19
