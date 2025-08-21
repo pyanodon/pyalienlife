@@ -9,7 +9,7 @@ end
 
 ---@return table<int, int>
 lib.forces_with_bhoddos_path_1 = function()
-    forces = {}
+    local forces = {}
     for _, force in pairs(game.forces) do
         local force_index = force.index
         if has_picked_bhoddos_path_1(force_index) then
