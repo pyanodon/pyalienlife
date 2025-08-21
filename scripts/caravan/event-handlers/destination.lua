@@ -150,7 +150,8 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local refocus = gui.entity_frame.subheader_frame.contents_flow.py_refocus
 
     if schedule.entity then
-        if schedule.entity.valid then
+        -- allow reassign if invalid or right-clicked
+        if schedule.entity.valid and event.button ~= defines.mouse_button_type.right then
             camera.entity = schedule.entity
         else
             local last_opened = {}
@@ -176,7 +177,8 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = funct
     local tags = element.tags
     local schedule = storage.edited_interrupt.schedule[tags.schedule_id]
 
-    if schedule.entity and not schedule.entity.valid then
+    -- allow reassign if invalid or right-clicked
+    if schedule.entity and (event.button == defines.mouse_button_type.right or not schedule.entity.valid) then
         local last_opened = {}
         last_opened.caravan = caravan_data.unit_number
         last_opened.schedule_id = element.tags.schedule_id
