@@ -425,10 +425,6 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
             end
             -- save relevant properties
             if crafting_machines[old_type] then
-                crafting_progress = old_machine.crafting_progress
-                bonus_progress = old_machine.bonus_progress
-                result_quality = not is_ghost and old_machine.result_quality or nil -- doesn't work on ghosts
-                products_finished = old_machine.products_finished
                 if old_type == "assembling-machine" then
                     recipe = old_machine.get_recipe()
                     recipe_locked = old_machine.recipe_locked
@@ -436,6 +432,10 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
                     use_transitional_requests = old_machine.use_transitional_requests
                     rocket_parts = old_machine.rocket_parts
                 end
+                crafting_progress = old_machine.crafting_progress
+                bonus_progress = old_machine.bonus_progress
+                result_quality = not is_ghost and old_machine.result_quality or nil -- doesn't work on ghosts
+                products_finished = old_machine.products_finished
             end
             -- if we can't fast replace, we pull out items and then discard the placement item as we only want to transfer the craft ingredients/outputs/trash
             if not parameters.fast_replace then
@@ -451,28 +451,29 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
             just_built_new_machine = false
             -- can be nil if surface restrictions, for example
             if new_machine then
-                if not parameters.fast_replace then
-                    local new_machine_type = is_ghost and new_machine.ghost_type or new_machine.type
-                    -- Restore properties
-                    new_machine.mirroring = mirroring
-                    if crafting_machines[new_machine_type] then
-                        if not is_ghost then
-                            new_machine.crafting_progress = crafting_progress
-                            new_machine.bonus_progress = bonus_progress
-                        end
-                        if result_quality ~= nil then -- errors with `nil`
-                            new_machine.result_quality = result_quality
-                        end
-                        new_machine.products_finished = products_finished
-                        if new_machine_type == "assembling-machine" then
-                            new_machine.set_recipe(recipe)
-                            new_machine.recipe_locked = recipe_locked
-                        elseif new_machine_type == "rocket-silo" then
-                            new_machine.use_transitional_requests = use_transitional_requests
-                            new_machine.rocket_parts = rocket_parts
-                        end
+                local new_machine_type = is_ghost and new_machine.ghost_type or new_machine.type
+                -- We could ignore some of these with fast_replace but the game isn't super consistent about what properties transfer
+                -- So, it's easier just to reapply everything
+                new_machine.mirroring = mirroring
+                if crafting_machines[new_machine_type] then
+                    if new_machine_type == "assembling-machine" then
+                        new_machine.set_recipe(recipe)
+                        new_machine.recipe_locked = recipe_locked
+                    elseif new_machine_type == "rocket-silo" then
+                        new_machine.use_transitional_requests = use_transitional_requests
+                        new_machine.rocket_parts = rocket_parts
                     end
-                    -- shove everything back in
+                    if not is_ghost then -- errors on ghosts
+                        new_machine.crafting_progress = crafting_progress
+                        new_machine.bonus_progress = bonus_progress
+                    end
+                    if result_quality ~= nil then -- errors with `nil`
+                        new_machine.result_quality = result_quality
+                    end
+                    new_machine.products_finished = products_finished
+                end
+                -- shove everything back in if not fast replaced
+                if not parameters.fast_replace then
                     handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
                     temp_inventory.clear()
                 end
