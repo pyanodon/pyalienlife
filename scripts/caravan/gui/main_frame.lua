@@ -24,6 +24,11 @@ function P.build_title_bar_flow(parent, caravan_data)
 end
 
 function P.build_main_frame(parent, name, caravan_data)
+    local existing = parent["caravan_gui"]
+    if existing then
+        existing.destroy()
+    end
+ 
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
     if caravan_data.entity.name:find("^fluidavan") then
         main_frame.style.natural_height = 910
