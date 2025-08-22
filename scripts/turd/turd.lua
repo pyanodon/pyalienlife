@@ -553,6 +553,7 @@ local new_turd = function(event)
 
     local turd_bonuses = storage.turd_bonuses[force_index] or {}
     storage.turd_bonuses[force_index] = turd_bonuses
+    storage.turd_unlocked_modules[force_index] = storage.turd_unlocked_modules[force_index] or {}
     local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
     if selection == NOT_SELECTED then
         force.print {"turd.font", {"turd.selected-alert", {"technology-name." .. master_tech_name}, {"technology-name." .. sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
