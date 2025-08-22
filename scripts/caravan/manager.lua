@@ -320,12 +320,12 @@ local function build_gui_connected(player, entity, anchor)
     main_frame.style.minimal_width = 300
     main_frame.tags = {unit_number = entity.unit_number}
 
-    local scroll_pane = main_frame.add {type = "scroll-pane"}
+    local scroll_pane = main_frame.add {type = "scroll-pane", style = "list_box_scroll_pane", vertical_scroll_policy = "auto"}
+    scroll_pane.style.horizontally_stretchable = true
     scroll_pane.style.top_margin = -6
 
     for key, caravan_data in pairs(storage.caravans) do
         if has_entity_in_schedule(caravan_data, entity) then
-            scroll_pane.add {type = "empty-widget"}.style.height = 3
             add_gui_row(caravan_data, key, scroll_pane, true)
         end
     end

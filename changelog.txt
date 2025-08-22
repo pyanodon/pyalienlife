@@ -4,6 +4,7 @@ Date: ?
   Changes:
     - Caravans: when selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
     - Caravans: fixed that ESC/E wouldn't close a caravan menu when opened from a caravan outpost.
+    - Caravans: fixed scroll pane overlapping buttons in outpost's caravan view
     - Caravans: allow re-assigning destinations via right-click
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.56
