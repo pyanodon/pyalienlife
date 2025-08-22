@@ -13,14 +13,11 @@ local function label_info(interrupt, schedule_id)
     return nil, nil
 end
 
-function P.build_main_frame(parent)
+function P.build_main_frame(parent, fallback_location)
     local frame =  parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla edit_interrupt frame
     frame.style.maximal_height = 1290
-    if storage.edit_interrupt_gui_last_location then
-        frame.location = storage.edit_interrupt_gui_last_location 
-        storage.edit_interrupt_gui_last_location = nil
-    end
+    Utils.restore_gui_location(frame, fallback_location)
 
     return frame
 end
@@ -199,10 +196,14 @@ function P.build_bottom_bar_flow(parent)
     flow.add {type = "button", name = "py_edit_interrupt_confirm_button", style = "confirm_button", caption = "Save interrupt"}
 end
 
-function P.build(parent, interrupt_data)
+---@param parent LuaGuiElement
+---@param interrupt_data table
+---@param cursor_location GuiLocation
+---@return LuaGuiElement
+function P.build(parent, interrupt_data, cursor_location)
     storage.edited_interrupt = table.deepcopy(interrupt_data)
 
-    local main_frame = P.build_main_frame(parent)
+    local main_frame = P.build_main_frame(parent, cursor_location)
 
     P.build_title_bar_flow(main_frame)
 
@@ -263,5 +264,8 @@ py.on_event(defines.events.on_gui_click, function (event)
         end
     end
 end)
+
+-- store window location when moved
+gui_events[defines.events.on_gui_location_changed]["edit_interrupt_gui"] = function(event) Utils.store_gui_location(event.element) end
 
 return P

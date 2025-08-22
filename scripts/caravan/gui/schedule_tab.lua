@@ -180,8 +180,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_add_button"] = fun
     if player.gui.screen.add_interrupt_gui then
         player.gui.screen.add_interrupt_gui.destroy()
     end
-    local add_interrupt_frame = AddInterruptGui.build(player.gui.screen, caravan_data)
-    add_interrupt_frame.location = event.cursor_display_location
+    local add_interrupt_frame = AddInterruptGui.build(player.gui.screen, caravan_data, event.cursor_display_location)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_interrupt_edit_button"] = function(event)
@@ -192,8 +191,11 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_edit_button"] = fu
     if player.gui.screen.edit_interrupt_gui then
         player.gui.screen.edit_interrupt_gui.destroy()
     end
-    local edit_interrupt_frame = EditInterruptGui.build(player.gui.screen, storage.interrupts[caravan_data.interrupts[event.element.tags.caravan_interrupt_index]])
-    edit_interrupt_frame.location = event.cursor_display_location
+    local edit_interrupt_frame = EditInterruptGui.build(player.gui.screen, storage.interrupts[caravan_data.interrupts[event.element.tags.caravan_interrupt_index]], event.cursor_display_location)
 end
+
+
+
+
 
 return P

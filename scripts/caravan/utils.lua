@@ -276,4 +276,27 @@ function P.rename_interrupt(interrupt, new_name)
     end
 end
 
+--TODO: ensure this is the right location for these
+function P.store_gui_location(element)
+    local player_index = element.player_index
+    local locations = storage.gui_locations[player_index]
+    if locations then
+        locations[element.name] = element.location
+    else
+        storage.gui_locations[player_index] = {
+            [element.name] = element.location
+        }
+    end
+end
+
+---Restores the given GUI element to the stored GUI location (position)
+---@param element LuaGuiElement
+---@param fallback_location GuiLocation?
+function P.restore_gui_location(element, fallback_location)
+    local location = (storage.gui_locations[element.player_index] or {})[element.name] or fallback_location
+    if location then
+        element.location = location
+    end
+end
+
 return P

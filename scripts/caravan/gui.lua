@@ -56,9 +56,11 @@ end
 
 function P.build(player, caravan_data)
     local main_frame = CaravanGuiComponents.build_main_frame(player.gui.screen, "caravan_gui", caravan_data)
-    if storage.caravan_gui_last_location then
-        main_frame.location = storage.caravan_gui_last_location
-        storage.caravan_gui_last_location = nil
+    local gui_locations = (storage.gui_locations[player.index] or {})
+    -- only loads position if it is "un-hiding" (re-creating) after selecting something with the carrot
+    if gui_locations.caravan_gui then
+        main_frame.location = gui_locations.caravan_gui
+        gui_locations.caravan_gui = nil
     else
         main_frame.auto_center = true
     end
