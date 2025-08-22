@@ -121,4 +121,13 @@ gui_events[defines.events.on_gui_click]["py_caravan_close_button"] = function(ev
     player.opened = nil
 end
 
+-- store tab index on swap
+gui_events[defines.events.on_gui_selected_tab_changed]["tabbed_pane"] = function(event)
+    local player = game.get_player(event.player_index)
+    local tab_pane = event.element
+
+    if not tab_pane then return end
+    storage.last_opened_tab[event.player_index] = tab_pane.selected_tab_index
+end
+
 return P
