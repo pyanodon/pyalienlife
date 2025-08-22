@@ -198,7 +198,7 @@ end
 
 ---@param parent LuaGuiElement
 ---@param interrupt_data table
----@param cursor_location GuiLocation
+---@param cursor_location GuiLocation?
 ---@return LuaGuiElement
 function P.build(parent, interrupt_data, cursor_location)
     storage.edited_interrupt = table.deepcopy(interrupt_data)
