@@ -105,7 +105,9 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
 
     if last_opened.caravan then
         local caravan_data = storage.caravans[last_opened.caravan]
-        CaravanGui.build(player, caravan_data)
+        if not CaravanGui.get_gui(player) then --The UI can already exist if someone clicks multiple times in a tick
+            CaravanGui.build(player, caravan_data)
+        end
         if storage.edited_interrupt then
             EditInterruptGui.build(player.gui.screen, storage.edited_interrupt)
         end

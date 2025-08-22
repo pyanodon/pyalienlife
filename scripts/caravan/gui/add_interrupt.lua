@@ -84,7 +84,7 @@ end
 
 ---@param parent LuaGuiElement
 ---@param caravan_data table
----@param cursor_location GuiLocation
+---@param cursor_location GuiLocation?
 ---@return LuaGuiElement
 function P.build(parent, caravan_data, cursor_location)
     local tags = {unit_number = caravan_data.unit_number}
