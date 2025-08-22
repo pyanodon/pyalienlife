@@ -6,6 +6,9 @@ Date: ?
     - Caravans: fixed that ESC/E wouldn't close a caravan menu when opened from a caravan outpost.
     - Caravans: fixed scroll pane overlapping buttons in outpost's caravan view
     - Caravans: allow re-assigning destinations via right-click
+    - Caravans: remember last opened tab (schedule or cargo)
+    - Caravans: remember interrupt window position
+    - Caravans: fix crash clicking a caravan twice in the same tick
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.56
 Date: 2025-08-19
