@@ -399,6 +399,7 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
         local old_type = is_ghost and old_machine.ghost_type or old_machine.type
         if old_name == old_machine_name then
             -- this could be a table but we're checking the new machine type below as well just in case we do some very strange TURD replacements
+            local surface = old_machine.surface
             local mirroring = old_machine.mirroring -- universal
             local crafting_progress, bonus_progress, result_quality, products_finished -- CraftingMachine specific
             local recipe, recipe_locked -- AssemblingMachine specific
@@ -411,8 +412,17 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
                 direction = old_machine.direction,
                 quality = old_machine.quality,
                 force = old_machine.force_index,
-                raise_built = true
+                raise_built = true,
             }
+            -- we can skip a bunch of manual work in this case
+            if surface.can_fast_replace({
+                name = new_machine_name,
+                position = parameters.position,
+                direction = parameters.direction,
+                force = parameters.force
+            }) then
+                parameters.fast_replace = true
+            end
             -- save relevant properties
             if crafting_machines[old_type] then
                 crafting_progress = old_machine.crafting_progress
@@ -427,13 +437,13 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
                     rocket_parts = old_machine.rocket_parts
                 end
             end
-            -- pull out items and then discard the placement item as we only want the craft ingredients/outputs/trash
-            local surface = old_machine.surface
-            local items_to_place_this = old_machine.prototype.items_to_place_this
-            local mirrored = old_machine.mirroring
-            old_machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
-            for _, item_to_place in pairs(items_to_place_this or {}) do
-                temp_inventory.remove(item_to_place)
+            -- if we can't fast replace, we pull out items and then discard the placement item as we only want to transfer the craft ingredients/outputs/trash
+            if not parameters.fast_replace then
+                local items_to_place_this = old_machine.prototype.items_to_place_this
+                old_machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
+                for _, item_to_place in pairs(items_to_place_this or {}) do
+                    temp_inventory.remove(item_to_place)
+                end
             end
             -- global here prevents the function we're currently in from being immediately called on the new machine
             just_built_new_machine = true
@@ -441,30 +451,31 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
             just_built_new_machine = false
             -- can be nil if surface restrictions, for example
             if new_machine then
-                local new_machine_type = is_ghost and new_machine.ghost_type or new_machine.type
-                -- Restore properties
-                new_machine.mirroring = mirroring
-                if crafting_machines[new_machine_type] then
-                    if not is_ghost then
-                        new_machine.crafting_progress = crafting_progress
-                        new_machine.bonus_progress = bonus_progress
+                if not parameters.fast_replace then
+                    local new_machine_type = is_ghost and new_machine.ghost_type or new_machine.type
+                    -- Restore properties
+                    new_machine.mirroring = mirroring
+                    if crafting_machines[new_machine_type] then
+                        if not is_ghost then
+                            new_machine.crafting_progress = crafting_progress
+                            new_machine.bonus_progress = bonus_progress
+                        end
+                        if result_quality ~= nil then -- errors with `nil`
+                            new_machine.result_quality = result_quality
+                        end
+                        new_machine.products_finished = products_finished
+                        if new_machine_type == "assembling-machine" then
+                            new_machine.set_recipe(recipe)
+                            new_machine.recipe_locked = recipe_locked
+                        elseif new_machine_type == "rocket-silo" then
+                            new_machine.use_transitional_requests = use_transitional_requests
+                            new_machine.rocket_parts = rocket_parts
+                        end
                     end
-                    if result_quality ~= nil then -- errors with `nil`
-                        new_machine.result_quality = result_quality
-                    end
-                    new_machine.products_finished = products_finished
-                    if new_machine_type == "assembling-machine" then
-                        new_machine.set_recipe(recipe)
-                        new_machine.recipe_locked = recipe_locked
-                    elseif new_machine_type == "rocket-silo" then
-                        new_machine.use_transitional_requests = use_transitional_requests
-                        new_machine.rocket_parts = rocket_parts
-                    end
+                    -- shove everything back in
+                    handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
+                    temp_inventory.clear()
                 end
-                -- shove everything back in
-                handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
-                new_machine.mirroring = mirrored
-                temp_inventory.clear()
                 -- for storing back in the result table
                 old_machine = new_machine
             end
