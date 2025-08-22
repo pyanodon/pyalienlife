@@ -72,6 +72,10 @@ function P.build(player, caravan_data)
 
     local schedule_tab = CaravanGuiComponents.build_schedule_tab(tabbed_pane, caravan_data)
     local cargo_tab = CaravanGuiComponents.build_cargo_tab(tabbed_pane, player, caravan_data, can_view_cargo_tab(player, caravan_data))
+    -- set to the player's last opened tab
+    if storage.last_opened_tab[player.index] then
+        tabbed_pane.selected_tab_index = storage.last_opened_tab[player.index]
+    end
     return main_frame
 end
 
