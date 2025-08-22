@@ -4,12 +4,13 @@ local P = {}
 
 local clicked_list_buttons = {}
 
-function P.build_main_frame(parent)
+function P.build_main_frame(parent, fallback_location)
     local frame =  parent.add {type = "frame", name = "add_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla add_interrupt frame
     frame.style.natural_height = 288
     frame.style.maximal_height = 1290
     frame.style.width = 392
+    Utils.restore_gui_location(frame, fallback_location)
 
     return frame
 end
@@ -81,10 +82,14 @@ function P.build_interrupt_list(parent, caravan_data, interrupts, tags)
     flow.add {type = "empty-widget"}.style.vertically_stretchable = true
 end
 
-function P.build(parent, caravan_data)
+---@param parent LuaGuiElement
+---@param caravan_data table
+---@param cursor_location GuiLocation
+---@return LuaGuiElement
+function P.build(parent, caravan_data, cursor_location)
     local tags = {unit_number = caravan_data.unit_number}
 
-    local main_frame = P.build_main_frame(parent)
+    local main_frame = P.build_main_frame(parent, cursor_location)
 
     P.build_title_bar_flow(main_frame, tags)
 
@@ -173,5 +178,8 @@ py.on_event(defines.events.on_gui_click, function (event)
         gui.destroy()
     end
 end)
+
+-- store window location when moved
+gui_events[defines.events.on_gui_location_changed]["add_interrupt_gui"] = function(event) Utils.store_gui_location(event.element) end
 
 return P

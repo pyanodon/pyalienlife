@@ -1,4 +1,5 @@
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
+local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local P = {}
 
@@ -143,11 +144,11 @@ function P.select_destination(player, last_opened, camera_position)
     end
     stack.set_stack {name = "caravan-control"}
 
+    -- store the location so the window reappears where it was last left    
     if player.gui.screen.caravan_gui then
-        storage.caravan_gui_last_location = player.gui.screen.caravan_gui.location
+        Utils.store_gui_location(player.gui.screen.caravan_gui)
     end
     if player.gui.screen.edit_interrupt_gui then
-        storage.edit_interrupt_gui_last_location = player.gui.screen.edit_interrupt_gui.location
         -- destroy the edit interrupt GUI before triggering on_gui_closed, to keep the storage.edited_interrupt alive
         player.gui.screen.edit_interrupt_gui.destroy()
     end
