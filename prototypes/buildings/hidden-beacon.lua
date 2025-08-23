@@ -20,7 +20,7 @@ ENTITY {
     selection_box = {{0, 0}, {0, 0}},
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     allowed_module_categories = allowed_module_categories(),
-    supply_area_distance = 12,
+    supply_area_distance = 11,
     energy_source = {type = "void"},
     energy_usage = "1W",
     distribution_effectivity = 1,

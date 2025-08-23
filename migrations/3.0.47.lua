@@ -1,5 +1,4 @@
 -- Update actions to support short format
-
 for _, caravan_data in pairs(storage.caravans) do
     for _, schedule in pairs(caravan_data.schedule) do
         for _, action in pairs(schedule.actions) do
@@ -21,3 +20,5 @@ for _, interrupt_data in pairs(storage.interrupts or {}) do
         end
     end
 end
+-- this will flag that the save wasn't updated to 25x25 vatbrains and we don't need to do special checks in 3.0.57.lua
+storage.skip_vatbrain_check = true
