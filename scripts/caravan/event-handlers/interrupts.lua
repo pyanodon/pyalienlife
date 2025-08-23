@@ -37,7 +37,7 @@ local function on_add_interrupt_confirmed(event)
     end
     CaravanScheduleGui.update_schedule_pane(player)
     local edit_interrupt_gui = EditInterruptGui.build(player.gui.screen, storage.interrupts[name])
-    edit_interrupt_gui.location = window_location
+    CaravanUtils.restore_gui_location(edit_interrupt_gui, window_location)
 end
 
 local function on_edit_interrupt_confirmed(event)
