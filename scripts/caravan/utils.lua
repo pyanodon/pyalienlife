@@ -296,6 +296,7 @@ function P.restore_gui_location(element, fallback_location)
     local location = (storage.gui_locations[element.player_index] or {})[element.name] or fallback_location
     if location then
         element.location = location
+        P.store_gui_location(element)
     end
 end
 
