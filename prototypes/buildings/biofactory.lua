@@ -17,161 +17,6 @@ RECIPE {
     }
 }:add_unlock("plastics")
 
-ITEM {
-    type = "item",
-    name = "biofactory-mk01",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk01.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
-    order = "a",
-    place_result = "biofactory-mk01",
-    stack_size = 10
-}
-
-ENTITY {
-    type = "assembling-machine",
-    name = "biofactory-mk01",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk01.png",
-    icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "biofactory-mk01"},
-    fast_replaceable_group = "biofactory",
-    max_health = 100,
-    corpse = "medium-remnants",
-    dying_explosion = "big-explosion",
-    collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    forced_symmetry = "diagonal-pos",
-    module_slots = 1,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"biofactory"},
-    crafting_speed = 1,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = {
-            pollution = 2
-        },
-    },
-    energy_usage = "400kW",
-    fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-        --1
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-    },
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
-                    priority = "high",
-                    width = 256,
-                    height = 32,
-                    line_length = 8,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(16, 96)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-                },
-            }
-        },
-    },
-    impact_category = "metal-large",
-    working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 1.3},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 0.3},
-        apparent_volume = 2.5
-    }
-}
 RECIPE {
     type = "recipe",
     name = "biofactory-mk02",
@@ -192,161 +37,6 @@ RECIPE {
     }
 }:add_unlock("biotech-machines-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 50}
 
-ITEM {
-    type = "item",
-    name = "biofactory-mk02",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk02.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-buildings-mk02",
-    order = "a",
-    place_result = "biofactory-mk02",
-    stack_size = 10
-}
-
-ENTITY {
-    type = "assembling-machine",
-    name = "biofactory-mk02",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk02.png",
-    icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "biofactory-mk02"},
-    fast_replaceable_group = "biofactory",
-    max_health = 100,
-    corpse = "medium-remnants",
-    dying_explosion = "big-explosion",
-    collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    forced_symmetry = "diagonal-pos",
-    module_slots = 2,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"biofactory"},
-    crafting_speed = 2,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = {
-            pollution = 2
-        },
-    },
-    energy_usage = "400kW",
-    fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-        --1
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-    },
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
-                    priority = "high",
-                    width = 256,
-                    height = 32,
-                    line_length = 8,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(16, 96)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
-                },
-            }
-        },
-    },
-    impact_category = "metal-large",
-    working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 1.3},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 0.3},
-        apparent_volume = 2.5
-    }
-}
 RECIPE {
     type = "recipe",
     name = "biofactory-mk03",
@@ -366,161 +56,6 @@ RECIPE {
     }
 }:add_unlock("biotech-machines-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
 
-ITEM {
-    type = "item",
-    name = "biofactory-mk03",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk03.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-buildings-mk03",
-    order = "a",
-    place_result = "biofactory-mk03",
-    stack_size = 10
-}
-
-ENTITY {
-    type = "assembling-machine",
-    name = "biofactory-mk03",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk03.png",
-    icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "biofactory-mk03"},
-    fast_replaceable_group = "biofactory",
-    max_health = 100,
-    corpse = "medium-remnants",
-    dying_explosion = "big-explosion",
-    collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    forced_symmetry = "diagonal-pos",
-    module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"biofactory"},
-    crafting_speed = 3,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = {
-            pollution = 2
-        },
-    },
-    energy_usage = "600kW",
-    fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-        --1
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-    },
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
-                    priority = "high",
-                    width = 256,
-                    height = 32,
-                    line_length = 8,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(16, 96)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
-                },
-            }
-        },
-    },
-    impact_category = "metal-large",
-    working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 1.3},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 0.3},
-        apparent_volume = 2.5
-    }
-}
 RECIPE {
     type = "recipe",
     name = "biofactory-mk04",
@@ -539,158 +74,170 @@ RECIPE {
     }
 }:add_unlock("biotech-machines-mk04")
 
-ITEM {
-    type = "item",
-    name = "biofactory-mk04",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk04.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-alienlife-buildings-mk04",
-    order = "a",
-    place_result = "biofactory-mk04",
-    stack_size = 10
-}
+local base_craft_speed = 1
+local module_slots_per_tier = 1
+local base_name = "biofactory-mk0"
+local base_subgroup = "py-alienlife-buildings-mk0"
+local energy_tiers = {"400kW", "400kW", "600kW", "800kW"}
 
-ENTITY {
-    type = "assembling-machine",
-    name = "biofactory-mk04",
-    icon = "__pyalienlifegraphics__/graphics/icons/biofactory-mk04.png",
-    icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "biofactory-mk04"},
-    fast_replaceable_group = "biofactory",
-    max_health = 100,
-    corpse = "medium-remnants",
-    dying_explosion = "big-explosion",
-    collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    forced_symmetry = "diagonal-pos",
-    module_slots = 4,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"biofactory"},
-    crafting_speed = 4,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = {
-            pollution = 2
-        },
-    },
-    energy_usage = "800kW",
-    fluid_boxes_off_when_no_fluid_recipe = true,
-    fluid_boxes = {
-        --1
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "input",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-        {
-            production_type = "output",
-            pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
-        },
-    },
-    graphics_set = {
-        animation = {
-            layers = {
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
-                    priority = "high",
-                    width = 256,
-                    height = 32,
-                    line_length = 8,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(16, 96)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(-48, -31),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31)
-                },
-                {
-                    filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
-                    priority = "high",
-                    width = 128,
-                    height = 227,
-                    line_length = 15,
-                    frame_count = 100,
-                    animation_speed = 0.4,
-                    shift = util.by_pixel(80, -31),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
-                },
-            }
-        },
-    },
-    impact_category = "metal-large",
-    working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 1.3},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 0.3},
-        apparent_volume = 2.5
+for tier = 1, 4 do
+    local name = base_name .. tier
+    local module_slots = module_slots_per_tier * tier
+    local craft_speed = base_craft_speed * tier
+
+    ITEM {
+        type = "item",
+        name = name,
+        icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png",
+        icon_size = 64,
+        flags = {},
+        subgroup = base_subgroup .. tier,
+        order = "a",
+        place_result = name,
+        stack_size = 10
     }
-}
+
+    ENTITY {
+        type = "assembling-machine",
+        name = name,
+        icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png",
+        icon_size = 64,
+        flags = {"placeable-neutral", "player-creation"},
+        minable = {mining_time = 0.5, result = name},
+        fast_replaceable_group = "biofactory",
+        max_health = 100,
+        corpse = "medium-remnants",
+        dying_explosion = "big-explosion",
+        collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
+        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        forced_symmetry = "diagonal-pos",
+        module_slots = module_slots,
+        allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
+        crafting_categories = {"biofactory"},
+        crafting_speed = craft_speed,
+        energy_source = {
+            type = "electric",
+            usage_priority = "secondary-input",
+            emissions_per_minute = {
+                pollution = 2
+            },
+        },
+        energy_usage = energy_tiers[tier],
+        fluid_boxes_off_when_no_fluid_recipe = true,
+        fluid_boxes = {
+            --1
+            {
+                production_type = "input",
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                volume = 1000,
+                pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
+                secondary_draw_orders = {north = -1}
+            },
+            {
+                production_type = "input",
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                volume = 1000,
+                pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
+                secondary_draw_orders = {north = -1}
+            },
+            {
+                production_type = "input",
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                volume = 1000,
+                pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
+                secondary_draw_orders = {north = -1}
+            },
+            {
+                production_type = "output",
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                volume = 1000,
+                pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
+                secondary_draw_orders = {north = -1}
+            },
+            {
+                production_type = "output",
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                volume = 1000,
+                pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
+                secondary_draw_orders = {north = -1}
+            },
+            {
+                production_type = "output",
+                pipe_covers = py.pipe_covers(false, true, true, true),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                volume = 1000,
+                pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
+                secondary_draw_orders = {north = -1}
+            },
+        },
+        graphics_set = {
+            animation = {
+                layers = {
+                    {
+                        filename = "__pyalienlifegraphics__/graphics/entity/biofactory/base.png",
+                        priority = "high",
+                        width = 256,
+                        height = 32,
+                        line_length = 8,
+                        frame_count = 100,
+                        animation_speed = 0.4,
+                        shift = util.by_pixel(16, 96)
+                    },
+                    {
+                        filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1.png",
+                        priority = "high",
+                        width = 128,
+                        height = 227,
+                        line_length = 15,
+                        frame_count = 100,
+                        animation_speed = 0.4,
+                        shift = util.by_pixel(-48, -31)
+                    },
+                    {
+                        filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a1-mask.png",
+                        priority = "high",
+                        width = 128,
+                        height = 227,
+                        line_length = 15,
+                        frame_count = 100,
+                        animation_speed = 0.4,
+                        shift = util.by_pixel(-48, -31),
+                        tint = py.tints[tier]
+                    },
+                    {
+                        filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2.png",
+                        priority = "high",
+                        width = 128,
+                        height = 227,
+                        line_length = 15,
+                        frame_count = 100,
+                        animation_speed = 0.4,
+                        shift = util.by_pixel(80, -31)
+                    },
+                    {
+                        filename = "__pyalienlifegraphics__/graphics/entity/biofactory/a2-mask.png",
+                        priority = "high",
+                        width = 128,
+                        height = 227,
+                        line_length = 15,
+                        frame_count = 100,
+                        animation_speed = 0.4,
+                        shift = util.by_pixel(80, -31),
+                        tint = py.tints[tier]
+                    },
+                }
+            },
+        },
+        impact_category = "metal-large",
+        working_sound = {
+            sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 1.3},
+            idle_sound = {filename = "__pyalienlifegraphics__/sounds/biofactory.ogg", volume = 0.3},
+            apparent_volume = 2.5
+        }
+    }
+end
