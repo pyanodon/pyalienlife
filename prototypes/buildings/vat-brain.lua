@@ -149,7 +149,7 @@ ENTITY {
             width = 1,
             height = 1
         },
-        distance = 12.5,
+        distance = 11.5,
         offset = {0, 0}
     },
     impact_category = "metal-large",
