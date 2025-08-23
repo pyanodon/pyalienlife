@@ -5,7 +5,6 @@ local SECONDS = 60
 local migrated_storage = {}
 
 local function search_area(surface, position, square_width)
-    if storage.skip_vatbrain_check then return {} end
     local radius = square_width / 2
     local top_left = {position.x - radius, position.y - radius}
     local bottom_right = {position.x + radius, position.y + radius}
@@ -25,7 +24,7 @@ for _, unit_number in pairs(storage.vatbrains) do
         local surface = vatbrain.surface
         -- Store the old beacon list for reference below
         local old_receivers = {}
-        for _, recipient in pairs(search_area(surface, beacon.position, 25)) do
+        for _, recipient in pairs(search_area(surface, beacon.position, storage.skip_vatbrain_check and 23 or 25)) do
             if recipient.valid then
                 old_receivers[recipient.unit_number] = recipient
             end
