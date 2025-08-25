@@ -34,3 +34,14 @@ circuit_connector_definitions["harvester"] = circuit_connector_definitions.creat
             {variation = 25, main_offset = util.by_pixel(106, -12), shadow_offset = util.by_pixel(100, 0), show_shadow = false}
         }
     )
+
+circuit_connector_definitions["biocranes"] = circuit_connector_definitions.create_vector
+    (
+        inserter_connector_template,
+        {
+            {variation = 2, main_offset = util.by_pixel(-1, 1),      shadow_offset = util.by_pixel(-1, 1),      show_shadow = true},
+            {variation = 3, main_offset = util.by_pixel(-1, -1),     shadow_offset = util.by_pixel(-1, -1),     show_shadow = true},
+            {variation = 0, main_offset = util.by_pixel(-1.2, -5.5), shadow_offset = util.by_pixel(-1.2, -5.5), show_shadow = true},
+            {variation = 1, main_offset = util.by_pixel(1, -1),      shadow_offset = util.by_pixel(1, -1),      show_shadow = true}
+        }
+    )
