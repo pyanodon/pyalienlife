@@ -10,8 +10,6 @@ function P.build_condition_flow(parent, condition, tags)
     flow.style.horizontal_spacing = 8
 
     if Utils.contains({"at-outpost", "not-at-outpost"}, condition.type) then
-        flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
-
         local locale_key = "caravan-actions." .. condition.type .. "2"
         local entity = condition.entity
         local caption
@@ -20,20 +18,19 @@ function P.build_condition_flow(parent, condition, tags)
         else
             caption = {locale_key, {"caravan-gui.not-specified"}}
         end
-        flow.add {type = "label", caption = caption}
+        flow.add {type = "label", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "clickable_squashable_label", caption = caption, tooltip = {"caravan-gui.reassign-hint", caption}}.style.left_padding = 4
+        flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     elseif condition.type == "outpost-item-count" then
-        flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
-       
         local locale_key = "caravan-actions." .. condition.type .. "2"
         local entity = condition.entity
         local caption
-        
+
         if entity and entity.valid then
-            caption = {locale_key, {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+            caption = {"caravan-actions-short.outpost-item-count", entity.position.x, entity.position.y}
         else
             caption = {locale_key, {"caravan-gui.not-specified"}}
         end
-        flow.add {type = "label", caption = caption}
+        flow.add {type = "label", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "clickable_squashable_label", caption = caption, tooltip = {"caravan-gui.reassign-hint", caption}}.style.left_padding = 4
         comparator.build_static_comparator_widgets(flow, condition, tags, "item")
     else
         flow.add {type = "label", style = "squashable_label_with_left_padding", caption = condition.localised_name}
@@ -50,10 +47,12 @@ function P.build_condition_flow(parent, condition, tags)
                 elem_type = "fluid"
             end
             comparator.build_static_comparator_widgets(flow, condition, tags, elem_type, filters)
+        else
+            -- Add padding because no comparator doing so
+            flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
         end
     end
 
-    flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_move_up_button", style = "train_schedule_delete_button", sprite = "up-white", tags = tags}
     flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_move_down_button", style = "train_schedule_delete_button", sprite = "down-white", tags = tags}
     flow.add {type = "sprite-button", name = "py_edit_interrupt_condition_delete_button", style = "train_schedule_delete_button", sprite = "utility/close", tags = tags}

@@ -108,6 +108,9 @@ end
 
 function P.build_conditions_pane(parent)
     local pane = parent.add {type = "scroll-pane", name = "conditions_pane", style = "train_interrupts_scroll_pane"}
+    -- This is 400 maximum width by default (inherited from style), we need it a bit wider
+    pane.style.width = 500
+    pane.style.natural_width = 500
 
     pane.style.vertically_stretchable = false
     P.build_conditions_flow(pane)
@@ -177,6 +180,9 @@ end
 
 function P.build_targets_pane(parent)
     local pane = parent.add {type = "scroll-pane", name = "targets_pane", style = "train_interrupts_scroll_pane"}
+    -- This is 400 maximum width by default (inherited from style), we need it a bit wider
+    pane.style.width = 500
+    pane.style.natural_width = 500
 
     pane.style.vertically_stretchable = false
     P.build_targets_flow(pane)
