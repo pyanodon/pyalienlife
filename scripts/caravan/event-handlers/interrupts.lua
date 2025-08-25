@@ -228,14 +228,27 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outpost_button"] = function(event)
     local player = game.get_player(event.player_index)
+    local gui = CaravanGui.get_gui(player)
     local element = event.element
     local last_opened = {}
 
-    local unit_number = CaravanGui.get_gui(player).tags.unit_number
+    local unit_number = gui.tags.unit_number
     assert(unit_number)
     last_opened.caravan = unit_number
     last_opened.action_id = element.tags.condition_id
-    CaravanImpl.select_destination(player, last_opened)
+
+    local target = storage.edited_interrupt.conditions[last_opened.action_id].entity
+    local camera = gui.entity_frame.camera_frame.camera
+
+    -- allow reassign if invalid or right-clicked
+    if target and target.valid and event.button ~= defines.mouse_button_type.right then
+        camera.entity = target
+        -- make refocus button visible
+        gui.entity_frame.subheader_frame.contents_flow.py_refocus.visible = true
+        camera.zoom = 0.5
+    else
+        CaravanImpl.select_destination(player, last_opened)
+    end
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_move_up_button"] = function(event)
