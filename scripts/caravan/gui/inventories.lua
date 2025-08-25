@@ -290,7 +290,7 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local id_proj = function(s) return s end
     local one_item_proj = function(s) return {name = s.name, count = 1, quality = s.quality} end
 
-    if is_control and is_shift then return end
+    if is_ctrl and is_shift then return end
 
     local slot_index = event.element.tags.slot_index
     
