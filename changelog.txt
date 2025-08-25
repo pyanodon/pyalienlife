@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.58
+Date: ???
+  Changes:
+    - Caravans: now allows copy-paste between different types (regular, flying, fluid).
+---------------------------------------------------------------------------------------------------
 Version: 3.0.57
-Date: ?
+Date: 2025-08-23
   Changes:
     - Made seaweed float (around)
     - When selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
