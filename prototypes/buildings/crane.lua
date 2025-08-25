@@ -150,15 +150,7 @@ for i = 1, 4 do
         next_upgrade = next,
         fast_replaceable_group = "biocranes",
         max_health = 100 * i,
-        circuit_connector = circuit_connector_definitions.create_vector
-            (inserter_connector_template,
-                {
-                    {variation = 2, main_offset = util.by_pixel(-1, 1),      shadow_offset = util.by_pixel(-1, 1),      show_shadow = true},
-                    {variation = 3, main_offset = util.by_pixel(-1, -1),     shadow_offset = util.by_pixel(-1, -1),     show_shadow = true},
-                    {variation = 0, main_offset = util.by_pixel(-1.2, -5.5), shadow_offset = util.by_pixel(-1.2, -5.5), show_shadow = true},
-                    {variation = 1, main_offset = util.by_pixel(1, -1),      shadow_offset = util.by_pixel(1, -1),      show_shadow = true}
-                }
-            ),
+        circuit_connector = circuit_connector_definitions["biocranes"],
         default_stack_control_input_signal = data.raw.inserter["bulk-inserter"].default_stack_control_input_signal,
         circuit_wire_max_distance = 9,
         hand_base_picture =
