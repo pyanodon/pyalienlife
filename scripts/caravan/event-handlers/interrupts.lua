@@ -245,7 +245,7 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outp
         camera.entity = target
         -- make refocus button visible
         gui.entity_frame.subheader_frame.contents_flow.py_refocus.visible = true
-        camera.zoom = 0.5
+        camera.zoom = 0.25
     else
         CaravanImpl.select_destination(player, last_opened)
     end
