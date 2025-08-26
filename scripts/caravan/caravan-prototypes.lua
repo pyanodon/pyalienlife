@@ -26,6 +26,87 @@ Caravan.alerts = {
     },
 }
 
+Caravan.all_actions = {
+        ["outpost"] = table.invert {
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["outpost-fluid"] = table.invert{
+            "time-passed",
+            "fill-tank",
+            "empty-tank",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["character"] = table.invert {
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+            "empty-autotrash"
+        },
+        ["unit"] = table.invert {
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["cargo-wagon"] = table.invert {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["car"] = table.invert {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["spider-vehicle"] = table.invert {
+            "time-passed",
+            "fill-inventory",
+            "empty-inventory",
+            "load-caravan",
+            "unload-caravan",
+            "load-target",
+            "unload-target",
+        },
+        ["electric-pole"] = table.invert {
+            "time-passed",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["default"] = table.invert {
+            "time-passed"
+        }
+}
+
 Caravan.valid_actions = {
     caravan = {
         ["outpost"] = table.invert {
@@ -98,22 +179,67 @@ Caravan.valid_actions = {
         },
         ["default"] = table.invert {
             "time-passed"
+        }
+    },
+    fluidavan = {
+        ["outpost"] = table.invert{
+            "time-passed",
+            "store-food",
+            "store-specific-food",
+            "circuit-condition",
+            "circuit-condition-static"
         },
+        ["outpost-fluid"] = table.invert{
+            "time-passed",
+            "fill-tank",
+            "empty-tank",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["electric-pole"] = table.invert{
+            "time-passed",
+            "circuit-condition",
+            "circuit-condition-static"
+        },
+        ["default"] = table.invert{
+            "time-passed"
+        }
     },
     ["interrupt-condition"] = {
         "is-inventory-full",
         "is-inventory-empty",
         "caravan-item-count",
         "target-item-count",
+        "is-tank-full",
+        "is-tank-empty",
+        "caravan-fluid-count",
+        "target-fluid-count",
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
+        "outpost-item-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
 Caravan.valid_actions.nukavan["default"] = table.invert {"detonate"}
+
+Caravan.actions_with_item_count = table.invert{
+    "time-passed", -- as wait_time
+    "store-specific-food",
+    "load-caravan",
+    "unload-caravan",
+    "load-target",
+    "unload-target",
+    "circuit-condition-static",
+    "food-count",
+    "caravan-item-count",
+    "target-item-count",
+    "outpost-item-count",
+    "caravan-fluid-count",
+    "target-fluid-count",
+}
 
 Caravan.foods = {
     all = {
@@ -150,6 +276,25 @@ local caravan_prototypes = {
         actions = Caravan.valid_actions.caravan,
         camera_zoom = 0.8,
         placeable_by = "caravan",
+        map_tag = {
+            type = "virtual",
+            name = "caravan-map-tag-mk01"
+        },
+        requeue_required = true,
+        pathfinder_flags = {
+            cache = false
+        }
+    },
+    fluidavan = {
+        opens_player_inventory = true,
+        max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
+        fuel_size = 2,
+        destructible = false,
+        outpost = "outpost-fluid",
+        favorite_foods = Caravan.foods.caravan,
+        actions = Caravan.valid_actions.fluidavan,
+        camera_zoom = 0.8,
+        placeable_by = "fluidavan",
         map_tag = {
             type = "virtual",
             name = "caravan-map-tag-mk01"
@@ -203,497 +348,108 @@ local caravan_prototypes = {
     }
 }
 
-caravan_prototypes["caravan-turd"] = caravan_prototypes["caravan"]
-caravan_prototypes["flyavan-turd"] = caravan_prototypes["flyavan"]
-caravan_prototypes["nukavan-turd"] = caravan_prototypes["nukavan"]
-caravan_prototypes["caravan-turd"].placeable_by = "caravan-turd"
-caravan_prototypes["flyavan-turd"].placeable_by = "flyavan-turd"
-caravan_prototypes["nukavan-turd"].placeable_by = "nukavan-turd"
-
-local function get_outpost_inventory(outpost)
-    local type = outpost.type
-    if type == "character" then
-        return outpost.get_main_inventory()
-    elseif type == "container" then
-        return outpost.get_inventory(defines.inventory.chest)
-    elseif type == "cargo-wagon" then
-        return outpost.get_inventory(defines.inventory.cargo_wagon)
-    elseif type == "car" then
-        return outpost.get_inventory(defines.inventory.car_trunk)
-    elseif type == "spider-vehicle" then
-        return outpost.get_inventory(defines.inventory.spider_trunk)
-    elseif caravan_prototypes[outpost.name] then
-        local caravan_data = storage.caravans[outpost.unit_number]
-        return caravan_data.inventory
-    end
-end
-
-local function transfer_all_items(input_inventory, output_inventory)
-    if input_inventory.is_empty() or output_inventory.is_full() then return end
-    local inserted_total = 0
-    for i = 1, #input_inventory do
-        local stack = input_inventory[i]
-        local inserted_count = output_inventory.insert(stack)
-        if inserted_count ~= 0 then
-            stack.count = stack.count - inserted_count
-            inserted_total = inserted_total + inserted_count
-        end
-    end
-    input_inventory.sort_and_merge()
-    output_inventory.sort_and_merge()
-    return inserted_total
-end
-
-local function transfer_filtered_items(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
-    local inventory_count = input_inventory.get_item_count(item)
-
-    if inventory_count == goal then
-        return true
-    elseif inventory_count > goal then
-        local inserted_count = output_inventory.insert {name = item, count = inventory_count - goal}
-        if inserted_count ~= 0 then input_inventory.remove {name = item, count = inserted_count} end
-        input_inventory.sort_and_merge()
-        output_inventory.sort_and_merge()
-        return inserted_count == inventory_count - goal
-    elseif inventory_count < goal then
-        local removed_count = output_inventory.remove {name = item, count = goal - inventory_count}
-        if removed_count ~= 0 then
-            local inserted_count = input_inventory.insert {name = item, count = removed_count}
-            local couldnt_fit = removed_count - inserted_count
-            if couldnt_fit ~= 0 then
-                output_inventory.insert {name = item, count = couldnt_fit}; return false
-            end
-        end
-        input_inventory.sort_and_merge()
-        output_inventory.sort_and_merge()
-        return removed_count == goal - inventory_count
-    end
-end
-
-local function transfer_filtered_items_1(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
-    local inventory_count = input_inventory.get_item_count(item)
-
-    if inventory_count >= goal then
-        return true
-    else
-        local removed_count = output_inventory.remove {name = item, count = goal - inventory_count}
-        local inserted_count = 0
-        if removed_count ~= 0 then
-            inserted_count = input_inventory.insert {name = item, count = removed_count}
-            local couldnt_fit = removed_count - inserted_count
-            if couldnt_fit ~= 0 then
-                output_inventory.insert {name = item, count = couldnt_fit}
-            end
-        end
-        input_inventory.sort_and_merge()
-        output_inventory.sort_and_merge()
-        return inventory_count + inserted_count >= goal, inserted_count
-    end
-end
-
-local function transfer_filtered_items_2(input_inventory, output_inventory, item, goal) -- TODO: make it work with complex items. currently it wipes data on for example equipment grids
-    local inventory_count = output_inventory.get_item_count(item)
-
-    if inventory_count <= goal then
-        return true
-    else
-        local removed_count = output_inventory.remove {name = item, count = inventory_count - goal}
-        local inserted_count = 0
-        if removed_count ~= 0 then
-            inserted_count = input_inventory.insert {name = item, count = removed_count}
-            local couldnt_fit = removed_count - inserted_count
-            if couldnt_fit ~= 0 then
-                output_inventory.insert {name = item, count = couldnt_fit}
-            end
-        end
-        input_inventory.sort_and_merge()
-        output_inventory.sort_and_merge()
-        return inventory_count - inserted_count <= goal, inserted_count
-    end
-end
-
-local circuit_red, circuit_green = defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green
-local function evaluate_signal(entity, signal)
-    local result = entity.get_signal(signal, circuit_red, circuit_green)
-    if result == 0 and prototypes.item[signal.name] then
-        return entity.get_item_count(signal)
-    end
-    return result
-end
+caravan_prototypes["caravan-turd"]   = caravan_prototypes["caravan"]
+caravan_prototypes["fluidavan-turd"] = caravan_prototypes["fluidavan"]
+caravan_prototypes["flyavan-turd"]   = caravan_prototypes["flyavan"]
+caravan_prototypes["nukavan-turd"]   = caravan_prototypes["nukavan"]
+caravan_prototypes["caravan-turd"].placeable_by   = "caravan-turd"
+caravan_prototypes["fluidavan-turd"].placeable_by = "fluidavan-turd"
+caravan_prototypes["flyavan-turd"].placeable_by   = "flyavan-turd"
+caravan_prototypes["nukavan-turd"].placeable_by   = "nukavan-turd"
 
 -- small migration script to ensure we are not transfering deleted items
 -- I have no access to the JSON migrations so invalid items are just deleted
 -- TODO: Use JSON migrations after they are added to base factorio under prototypes
-py.on_event(py.events.on_init(), function()
+local function error_caravan(caravan_data, invalid_prototype_name, invalid_prototype_type)
+    local position
+    if type(caravan_data) == "table" then
+        if caravan_data.entity.valid then
+            position = caravan_data.entity.position
+            position = "[gps=" .. position.x .. ", " .. position.y .. "]"
+        else
+            position = "UNKNOWN POSITION"
+        end
+        game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix a caravan @ %s", invalid_prototype_name, invalid_prototype_type, position))
+    else
+        game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix the \"%s\" interrupt", invalid_prototype_name, invalid_prototype_type, caravan_data))
+    end
+end
+local function migrate_proto(name, type_name, migrations)
+    if not name then return nil end
+    type_name = type_name or "item"
+    if type_name == "virtual" then type_name = "virtual-signal" end -- for circuit conditions
+    local new_name = migrations[type_name] and migrations[type_name][name] or name -- may also be "" if prototype was deleted
+    -- global prototype table is indexed with underscores :/
+    type_name = type_name:gsub("%-", "_")
+    if prototypes[type_name][new_name] then
+        return new_name
+    end
+    return nil
+end
+local function migrate_action(action, caravan_data, migrations)
+    local prev_value = action.elem_value
+    if prev_value == nil then
+        return
+    end
+    action.elem_value = migrate_proto(prev_value, "item", migrations)
+    if not action.elem_value then
+        error_caravan(caravan_data, prev_value, "item")
+    end
+end
+local function migrate_circuit_condition(condition, caravan_data, migrations)
+    local prev_name = condition.name
+    local condition_type = condition.type or "item"
+    condition.name = migrate_proto(prev_name, condition_type, migrations)
+    if not condition.name then
+        -- rip
+        error_caravan(caravan_data, prev_name, condition_type)
+        condition.name = "signal-question-mark"
+        condition.type = "virtual"
+    end
+end
+py.on_event(py.events.on_init(), function(changes)
+    -- runtime changes, don't care
+    if not changes then
+        return
+    end
+    local migrations = changes.migrations
     for _, caravan_data in pairs(storage.caravans or {}) do
+        if caravan_data.fluid then
+            local fluid_name = caravan_data.fluid.name
+            caravan_data.fluid.name = migrate_proto(fluid_name, "fluid", migrations)
+            if not caravan_data.fluid.name then
+                error_caravan(caravan_data, fluid_name, "fluid")
+                caravan_data.fluid = nil
+            end
+        end
         for _, schedule in pairs(caravan_data.schedule or {}) do
             for _, action in pairs(schedule.actions or {}) do
-                local item = action.elem_value
-                if item and not prototypes.item[item] then
-                    local position
-                    if caravan_data.entity.valid then
-                        position = caravan_data.entity.position
-                        position = "[gps=" .. position.x .. ", " .. position.y .. "]"
-                    else
-                        position = "UNKNOWN POSITION"
+                migrate_action(action, caravan_data, migrations)
+                for _, condition in pairs({action.circuit_condition_left, action.circuit_condition_right}) do
+                    if type(condition) == "table" and condition.name then
+                        migrate_circuit_condition(condition, caravan_data, migrations)
                     end
-
-                    action.elem_value = nil
-                    game.print('CARAVAN MIGRATION: "' .. item .. '" is not a valid item prototype. You will need to manually fix a caravan @ ' .. position)
+                end
+            end
+        end
+    end
+    for interrupt_name, interrupt_data in pairs(storage.interrupts or {}) do
+        for _, condition in pairs(interrupt_data.conditions or {}) do
+            local elem_value = condition.elem_value
+            if elem_value ~= nil then
+                local elem_type = condition.type:find("fluid") and "fluid" or "item"
+                condition.elem_value = migrate_proto(elem_value, elem_type, migrations)
+                if condition.elem_value == nil then
+                    error_caravan(interrupt_name, elem_value, elem_type)
+                end
+            end
+            for _, circuit_condition in pairs({condition.circuit_condition_left, condition.circuit_condition_right}) do
+                if type(circuit_condition) == "table" and circuit_condition.name then
+                    migrate_circuit_condition(circuit_condition, interrupt_name, migrations)
                 end
             end
         end
     end
 end)
-
-Caravan.actions = {
-    ["time-passed"] = function(caravan_data, schedule, action)
-        if not action.timer or action.timer == 1 then
-            action.timer = nil
-            return true
-        end
-        action.timer = action.timer - 1
-        return false
-    end,
-
-    ["store-food"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest or not chest.valid then return true end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return true end
-        local entity = caravan_data.entity
-        local fuel = caravan_data.fuel_inventory
-
-        for _, item in pairs(outpost_inventory.get_contents()) do
-            if caravan_prototypes[entity.name].favorite_foods[item.name] then
-                local inserted_count = fuel.insert(item)
-                if inserted_count ~= 0 then
-                    item.count = inserted_count
-                    ---@diagnostic disable-next-line: param-type-mismatch
-                    outpost_inventory.remove(item)
-                end
-            end
-        end
-
-        return action.async or fuel.is_full()
-    end,
-
-    ["store-specific-food"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest or not chest.valid then return false end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return false end
-        local fuel_inventory = caravan_data.fuel_inventory
-        local item = action.elem_value
-        local goal = action.item_count or 0
-        if not item then return false end
-
-        if not caravan_prototypes[caravan_data.entity.name].favorite_foods[item] then
-            return true
-        end
-
-        local result = transfer_filtered_items_1(fuel_inventory, outpost_inventory, item, goal)
-
-        return action.async or result
-    end,
-
-    ["fill-inventory"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest or not chest.valid then return true end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return true end
-        local inventory = caravan_data.inventory
-
-        local amount = transfer_all_items(outpost_inventory, inventory)
-        local completed = action.async or inventory.is_full()
-        if amount and amount > 0 and completed then
-            Caravan.eat(caravan_data)
-        end
-        return completed
-    end,
-
-    ["empty-inventory"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest or not chest.valid then return true end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return true end
-        local inventory = caravan_data.inventory
-
-        local amount = transfer_all_items(inventory, outpost_inventory)
-        local completed = action.async or inventory.is_empty()
-        if amount and amount > 0 and completed then
-            Caravan.eat(caravan_data)
-        end
-        return completed
-    end,
-
-    ["empty-autotrash"] = function(caravan_data, schedule, action)
-        local character = schedule.entity
-        if not character or not character.valid then return true end
-        local autotrash_inventory = character.get_inventory(defines.inventory.character_trash)
-        if not autotrash_inventory then return true end
-        local inventory = caravan_data.inventory
-
-        local amount = transfer_all_items(autotrash_inventory, inventory)
-        if amount and amount > 0 then
-            Caravan.eat(caravan_data)
-        end
-        return true
-    end,
-
-    ["load-caravan"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest or not chest.valid then return false end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return false end
-        local caravan_inventory = caravan_data.inventory
-        local item = action.elem_value
-        local goal = action.item_count or 0
-        if not item then return false end
-
-        local result, amount = transfer_filtered_items_1(caravan_inventory, outpost_inventory, item, goal)
-        local completed = action.async or result
-        if amount and amount > 0 and completed then
-            Caravan.eat(caravan_data)
-        end
-
-        return completed
-    end,
-
-    ["unload-caravan"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest or not chest.valid then return false end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return false end
-        local caravan_inventory = caravan_data.inventory
-        local item = action.elem_value
-        local goal = action.item_count or 0
-        if not item then return false end
-
-        local result, amount = transfer_filtered_items_2(outpost_inventory, caravan_inventory, item, goal)
-        local completed = action.async or result
-        if amount and amount > 0 and completed then
-            Caravan.eat(caravan_data)
-        end
-
-        return completed
-    end,
-
-    ["load-target"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest.valid then return false end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return false end
-        local caravan_inventory = caravan_data.inventory
-        local item = action.elem_value
-        local goal = action.item_count or 0
-        if not item then return false end
-
-        local result, amount = transfer_filtered_items_2(caravan_inventory, outpost_inventory, item, goal)
-        local completed = action.async or result
-        if amount and amount > 0 and completed then
-            Caravan.eat(caravan_data)
-        end
-
-        return completed
-    end,
-
-    ["unload-target"] = function(caravan_data, schedule, action)
-        local chest = schedule.entity
-        if not chest.valid then return false end
-        local outpost_inventory = get_outpost_inventory(chest)
-        if not outpost_inventory then return false end
-        local caravan_inventory = caravan_data.inventory
-        local item = action.elem_value
-        local goal = action.item_count or 0
-        if not item then return false end
-
-        local result, amount = transfer_filtered_items_1(outpost_inventory, caravan_inventory, item, goal)
-        local completed = action.async or result
-        if amount and amount > 0 and completed then
-            Caravan.eat(caravan_data)
-        end
-
-        return completed
-    end,
-
-    ["detonate"] = function(caravan_data, schedule, action)
-        local entity = caravan_data.entity
-        entity.surface.create_entity {
-            name = "atomic-rocket",
-            position = entity.position,
-            target = entity,
-            speed = 1,
-            max_range = 0.1
-        }
-        entity.die("enemy", entity)
-        return "nuke"
-    end,
-
-    ["circuit-condition"] = function(caravan_data, schedule, action)
-        local outpost = schedule.entity
-
-        local right = action.circuit_condition_right
-        local left = action.circuit_condition_left
-        if not right or not left then return false end
-
-        if not outpost or not outpost.valid then
-            right, left = 0, 0
-        else
-            right = evaluate_signal(outpost, right)
-            left = evaluate_signal(outpost, left)
-        end
-
-        local operator = action.operator or 3
-        if operator == 1 then
-            return left > right
-        elseif operator == 2 then
-            return left < right
-        elseif operator == 3 then
-            return left == right
-        elseif operator == 4 then
-            return left >= right
-        elseif operator == 5 then
-            return left <= right
-        elseif operator == 6 then
-            return left ~= right
-        end
-    end,
-
-    ["circuit-condition-static"] = function(caravan_data, schedule, action)
-        local outpost = schedule.entity
-
-        -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
-        if type(action.circuit_condition_left) == "number" then
-            action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
-        end
-
-        local right = action.circuit_condition_right
-        local left = action.circuit_condition_left
-        if not right or not left then return false end
-
-        if not outpost or not outpost.valid then
-            left = 0
-        else
-            left = evaluate_signal(outpost, left)
-        end
-
-        local operator = action.operator or 3
-        if operator == 1 then
-            return left > right
-        elseif operator == 2 then
-            return left < right
-        elseif operator == 3 then
-            return left == right
-        elseif operator == 4 then
-            return left >= right
-        elseif operator == 5 then
-            return left <= right
-        elseif operator == 6 then
-            return left ~= right
-        end
-    end,
-
-    ["food-count"] = function(caravan_data, schedule, action)
-        local item = action.elem_value
-
-        local right = action.circuit_condition_right
-        if not right then return false end
-
-        local left = caravan_data.fuel_inventory.get_item_count(item)
-
-        local operator = action.operator or 3
-        if operator == 1 then
-            return left > right
-        elseif operator == 2 then
-            return left < right
-        elseif operator == 3 then
-            return left == right
-        elseif operator == 4 then
-            return left >= right
-        elseif operator == 5 then
-            return left <= right
-        elseif operator == 6 then
-            return left ~= right
-        end
-    end,
-
-    ["caravan-item-count"] = function(caravan_data, schedule, action)
-        local item = action.elem_value
-
-        local right = action.circuit_condition_right
-        if not right then return false end
-
-        local left = caravan_data.inventory.get_item_count(item)
-
-        local operator = action.operator or 3
-        if operator == 1 then
-            return left > right
-        elseif operator == 2 then
-            return left < right
-        elseif operator == 3 then
-            return left == right
-        elseif operator == 4 then
-            return left >= right
-        elseif operator == 5 then
-            return left <= right
-        elseif operator == 6 then
-            return left ~= right
-        end
-    end,
-
-    ["target-item-count"] = function(caravan_data, schedule, action)
-        local outpost = schedule.entity
-        if not outpost or not outpost.valid then return false end
-        local item = action.elem_value
-
-        local right = action.circuit_condition_right
-        if not right then return false end
-
-        local outpost_inventory = get_outpost_inventory(outpost)
-        if not outpost_inventory then return false end
-        local left = outpost_inventory.get_item_count(item)
-
-        local operator = action.operator or 3
-        if operator == 1 then
-            return left > right
-        elseif operator == 2 then
-            return left < right
-        elseif operator == 3 then
-            return left == right
-        elseif operator == 4 then
-            return left >= right
-        elseif operator == 5 then
-            return left <= right
-        elseif operator == 6 then
-            return left ~= right
-        end
-    end,
-
-    ["is-inventory-full"] = function(caravan_data, schedule, action)
-        return caravan_data.inventory.is_full()
-    end,
-
-    ["is-inventory-empty"] = function(caravan_data, schedule, action)
-        return caravan_data.inventory.is_empty()
-    end,
-
-    ["at-outpost"] = function(caravan_data, schedule, action)
-        return schedule.entity == action.entity
-    end,
-
-    ["not-at-outpost"] = function(caravan_data, schedule, action)
-        return schedule.entity ~= action.entity
-    end,
-}
-
-Caravan.free_actions = { -- actions that don't use fuel
-    ["time-passed"] = true,
-    ["store-food"] = true,
-    ["store-specific-food"] = true,
-    ["detonate"] = true,
-    ["circuit-condition"] = true,
-    ["circuit-condition-static"] = true
-}
 
 return caravan_prototypes

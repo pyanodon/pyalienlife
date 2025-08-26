@@ -26,6 +26,10 @@ function Digosaurus.why_isnt_my_dig_site_working(dig_data)
         status = {"entity-status.low-power"}
         img = "utility/status_yellow"
         diode = defines.entity_status_diode.yellow
+    elseif entity.disabled_by_control_behavior then
+        status = {"entity-status.disabled-by-control-behavior"}
+        img = "utility/status_not_working"
+        diode = defines.entity_status_diode.red
     else
         status = {"entity-status.working"}
         img = "utility/status_working"

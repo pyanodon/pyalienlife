@@ -3,7 +3,7 @@ data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings.seawe
 
 data:extend {
     {
-        type = "tree",
+        type = "fish",
         name = "seaweed",
         icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
         icon_size = 64,

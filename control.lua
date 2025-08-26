@@ -42,7 +42,10 @@ local function pickerdollies()
     if remote.interfaces["PickerDollies"] then
         remote.call("PickerDollies", "add_blacklist_name", "caravan", true)
         remote.call("PickerDollies", "add_blacklist_name", "flyavan", true)
+        remote.call("PickerDollies", "add_blacklist_name", "nukavan", true)
+        remote.call("PickerDollies", "add_blacklist_name", "fluidavan", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost", true)
+        remote.call("PickerDollies", "add_blacklist_name", "outpost-fluid", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost-aerial", true)
         remote.call("PickerDollies", "add_blacklist_name", "mega-farm", true)
         remote.call("PickerDollies", "add_blacklist_name", "wyrmhole", true)
@@ -87,10 +90,6 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
         local gui = player.gui.relative.digosaurus_gui
         if gui then
             Digosaurus.update_gui(gui); goto continue
-        end
-        gui = Caravan.get_caravan_gui(player)
-        if gui then
-            Caravan.update_gui(gui, true); goto continue
         end
         gui = player.gui.relative.bioport_gui
         if gui then

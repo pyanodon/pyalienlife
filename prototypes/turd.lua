@@ -204,6 +204,43 @@ local function build_tech_upgrade(tech_upgrade)
                 recipes_with_turd_description[effect.recipe] = true
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
                 py.add_to_description("recipe", data.raw.recipe[effect.new], {"turd.font", {"turd.recipe-replacement"}})
+                local recipe = data.raw.recipe[effect.new]
+                local icon_base = recipe and recipe:get_icons()
+                if icon_base then
+                    -- Combine the base icon with our overlay
+                    recipe.icons = util.combine_icons(icon_base, {{
+                        icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+                        shift = {10, -10},
+                        scale = 0.35
+                    }}, {}, 40)
+                    -- this property isn't transferred by combine_icons and allows the overlay to sit outside the render area of the base icon
+                    recipe.icons[#recipe.icons].floating = true
+                    recipe.icon = nil
+                    recipe.icon_size = nil
+                end
+            elseif effect.type == "machine-replacement" then
+                local machine
+                for _, prototype_category in py.iter_prototype_categories("entity") do
+                    machine = prototype_category[effect.new]
+                    if machine then break end
+                end
+                -- can be nil if all categories are somehow missing it
+                if machine then
+                    local icon_base = machine.icons or {{
+                        icon = machine.icon,
+                        icon_size = machine.icon_size
+                    }}
+                    machine.icons = util.combine_icons(icon_base, {{
+                        icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
+                        shift = {10, -10},
+                        scale = 0.35
+                    }}, {}, 40)
+                    machine.icons[#machine.icons].floating = true
+                    machine.icon = nil
+                    machine.icon_size = nil
+                else
+                    error(string.format("No entity found with name %s", effect.new))
+                end
             end
         end
     end
@@ -227,10 +264,16 @@ if data and not yafc_turd_integration then
 else
     local indexed_tech_upgrades = {}
     local farm_building_tiers = {}
+    local turd_machines = {}
     for _, upgrade in pairs(tech_upgrades) do
         local indexed_sub_techs = {}
         for _, sub_tech in pairs(upgrade.sub_techs) do
             indexed_sub_techs[sub_tech.name] = sub_tech
+            for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
+                if effect.type == "machine-replacement" then
+                    turd_machines[effect.new] = effect.old
+                end
+            end
         end
         upgrade.sub_techs = indexed_sub_techs
 
@@ -244,5 +287,5 @@ else
         upgrade.affected_entities = indexed_affected_entities
     end
 
-    return {indexed_tech_upgrades, farm_building_tiers}
+    return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
 end

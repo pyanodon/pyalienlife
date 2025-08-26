@@ -4,7 +4,7 @@ on:
   pull_request_target:
     branches:
     - master
-    - Frozen
+    - breaking-changes
 
 permissions:
   contents: read

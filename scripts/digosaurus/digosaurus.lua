@@ -3,6 +3,21 @@ Digosaurus = {}
 require "digosaurus-prototypes"
 require "digosaurus-gui"
 
+function new_digosaur(name, bonus, proxy_name)
+    Digosaurus.valid_creatures[name] = bonus
+    Digosaurus.mining_proxies[name] = proxy_name
+end
+
+function remove_digosaur(name)
+    Digosaurus.valid_creatures[name] = nil
+    Digosaurus.mining_proxies[name] = nil
+end
+
+remote.add_interface("py_digosaurs", {
+    new_digosaur = new_digosaur,
+    remove_digosaur = remove_digosaur,
+})
+
 py.on_event(py.events.on_init(), function(event)
     storage.dig_sites = storage.dig_sites or {}
     storage.digosaurs = storage.digosaurs or {}
@@ -123,6 +138,8 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
         if not Digosaurus.validity_check(dig_data) then goto continue end
         remove_nonfood_items_from_food_inventory(dig_data)
         local entity = dig_data.entity
+        if entity.disabled_by_control_behavior then goto continue end
+
         local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then

@@ -86,6 +86,7 @@ function Biofluid.update_bioport_gui(player, gui)
 
     if i == 1 then fuel_flow["py_biofluid_food_1"].visible = true end
 
+    entity.set_recipe("bioport-hidden-recipe", "normal")
     local slot = entity.get_inventory(defines.inventory.assembling_machine_output)[1]
     local element = fuel_flow["py_guano_output"]
     element.number = slot.valid_for_read and slot.count or 0

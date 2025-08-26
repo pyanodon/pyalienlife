@@ -1,0 +1,36 @@
+{
+  "entity": [
+    [
+      "turd-fish-farm-mk01",
+      "fish-farm-mk01-turd"
+    ],
+    [
+      "turd-fish-farm-mk02",
+      "fish-farm-mk01-turd"
+    ],
+    [
+      "turd-fish-farm-mk03",
+      "fish-farm-mk01-turd"
+    ],
+    [
+      "turd-fish-farm-mk04",
+      "fish-farm-mk01-turd"
+    ],
+    [
+      "turd-wpu",
+      "wpu-mk01-turd"
+    ],
+    [
+      "turd-wpu-mk02",
+      "wpu-mk02-turd"
+    ],
+    [
+      "turd-wpu-mk03",
+      "wpu-mk03-turd"
+    ],
+    [
+      "turd-wpu-mk04",
+      "wpu-mk04-turd"
+    ]
+  ]
+}
