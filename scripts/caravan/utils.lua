@@ -248,7 +248,7 @@ function P.ensure_item_count(action)
     if not action or not action.type then
         return action
     end
-    if not Caravan.actions_with_item_count[action] then
+    if not Caravan.actions_with_item_count[action.type] then
         return action
     end
     if action.type == "time-passed" then
