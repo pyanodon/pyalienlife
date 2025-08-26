@@ -9,6 +9,7 @@ Date: ???
     - Caravans: fixed that interrupts could be renamed to "" (empty string)
     - Caravans: clarified fluid-related condition names
     - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
+    - Caravans: fixed being able to put anything in fluid caravan fuel slots
     - Caravans: restores controller type and camera position when using/dropping the carrot
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
