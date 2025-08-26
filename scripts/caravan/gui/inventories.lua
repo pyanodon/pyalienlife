@@ -317,6 +317,10 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
         end
     elseif is_rmb and not (is_ctrl or is_alt or is_shift) then
         if has_items_in_cursor and is_supported_pred(player.cursor_stack) then
+            -- disallow right-click with different item
+            if inventory[slot_index].valid_for_read and inventory[slot_index].name ~= player.cursor_stack.name then
+                return
+            end
             set_cursor_stack_to_slot(player, inventory, slot_index, one_item_proj)
         else
             set_stack_to_cursor(player, inventory, slot_index, half_stack_proj)
