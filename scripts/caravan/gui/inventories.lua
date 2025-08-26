@@ -348,15 +348,17 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     local player = game.get_player(event.player_index)
     local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
-    local is_fluid = caravan_data.entity.name:find("^fluidavan")
-    local pred = function (s) return true end
+    -- make these two conditional on type
+    local is_solid = not caravan_data.entity.name:find("^fluidavan")
+    local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
+    local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
-    handle_slot_click(event, caravan_data, inventory, is_fluid and caravan_data.fuel_inventory or caravan_data.inventory, pred)
+    handle_slot_click(event, caravan_data, inventory, target_inv, pred)
 
-    if is_fluid then
-        P.update_fuel_inventory(player, caravan_data)
-    else
+    if is_solid then
         P.update_caravan_inventory(player, caravan_data)
+    else
+        P.update_fuel_inventory(player, caravan_data)
     end
 end
 
