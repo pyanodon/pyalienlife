@@ -45,7 +45,7 @@ local function migrate_network_data(fluids)
     local MAX_MESSAGE_SIZE = 30
 
     if not fluids then return end
-    for _, biofluid_entity_type in pairs { "biofluid_robots", "biofluid_requesters" } do
+    for _, biofluid_entity_type in pairs {"biofluid_robots", "biofluid_requesters"} do
         for k, entry in pairs(storage[biofluid_entity_type]) do
             if fluids[entry.name] == "" then
                 -- This fluid has been deleted from factorio.
@@ -58,9 +58,9 @@ local function migrate_network_data(fluids)
                     entity.surface.spill_item_stack {
                         position = entity.position,
                         force = entity.force_index,
-                        stack = { name = entity.name, count = 1 },
+                        stack = {name = entity.name, count = 1},
                         marked_for_deconstruction = true
-                    }
+                   }
                     storage.biofluid_robots[k] = nil
                     num_migrated = num_migrated + 1
 
@@ -83,12 +83,12 @@ local function migrate_network_data(fluids)
         local fluids_deleted_full = serpent.block(fluids_deleted_full):gsub("\"] = \"", " used to be => \""):gsub("%[\"",
             "biofluid robot at ")
 
-        game.print { "messages.warning-biofluid-migration", num_migrated, fluids_deleted }
+        game.print {"messages.warning-biofluid-migration", num_migrated, fluids_deleted}
         if num_migrated > MAX_MESSAGE_SIZE then
             game.print("\t... " ..
                 (num_migrated - MAX_MESSAGE_SIZE) .. " more not shown. Check factorio-current.log for full list.")
             log "FULL LIST: "
-            log { "messages.warning-biofluid-migration", num_migrated, fluids_deleted_full }
+            log {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_full}
         end
     end
 end
@@ -114,8 +114,8 @@ py.on_event(py.events.on_built(), function(event)
     entity.active = false
     entity.custom_status = {
         diode = defines.entity_status_diode.green,
-        label = { "entity-status.working" },
-    }
+        label = {"entity-status.working"},
+   }
     local unit_number = entity.unit_number
     if connection_type == Biofluid.REQUESTER then
         local tags = event.tags or {}
@@ -128,7 +128,7 @@ py.on_event(py.events.on_built(), function(event)
             target_temperature = tags.target_temperature or 15,
             temperature_operator = tags.temperature_operator or 1,
             priority = tags.priority or 0
-        }
+       }
     elseif connection_type == Biofluid.ROBOPORT then
         storage.biofluid_bioports[unit_number] = {
             entity = entity,
@@ -136,18 +136,18 @@ py.on_event(py.events.on_built(), function(event)
             active = false,
             guano = 0,
             animation = {
-                gobachov = { stage = 0, id = nil },
-                chorkok = { stage = 0, id = nil }
-            }
-        }
+                gobachov = {stage = 0, id = nil},
+                chorkok = {stage = 0, id = nil}
+           }
+       }
     elseif entity.type == "pipe-to-ground" then
         entity.operable = false
     elseif connection_type == Biofluid.PROVIDER then
         local tags = event.tags or {}
-        storage.biofluid_providers[unit_number] = { 
+        storage.biofluid_providers[unit_number] = {
             entity = entity, 
             priority = tags.priority or 0 
-        }
+       }
     end
 
     ::continue::
@@ -187,7 +187,7 @@ function Biofluid.built_pipe()
     local networks = {}
     storage.biofluid_networks = networks
 
-    for _, biofluid_connectable_name in pairs { "biofluid_bioports", "biofluid_requesters", "biofluid_providers" } do
+    for _, biofluid_connectable_name in pairs {"biofluid_bioports", "biofluid_requesters", "biofluid_providers"} do
         local biofluid_connectables = storage[biofluid_connectable_name]
 
         local new_biofluid_connectables = {}
@@ -202,7 +202,7 @@ function Biofluid.built_pipe()
                 biofluid_requesters = {},
                 biofluid_providers = {},
                 allocated_fluids_from_providers = {},
-            }
+           }
             networks[network_id] = network
             network[biofluid_connectable_name][unit_number] = true
             if allocated_fluids_from_providers[unit_number] then
@@ -239,7 +239,7 @@ function Biofluid.update_bioport_animation(bioport_data)
                         target = entity,
                         surface = entity.surface,
                         animation_speed = creature_name == "chorkok" and 0.25 or 0.5
-                    }.id
+                   }.id
                 end
             end
         end
@@ -474,9 +474,9 @@ local function set_target(biorobot_data, target)
             low_priority = true,
             allow_paths_through_own_entities = true,
             allow_destroy_friendly_entities = true,
-        },
+       },
         distraction = defines.distraction.none
-    }
+   }
 end
 
 function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
@@ -487,7 +487,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
     local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
     local robot_name
     for robot, delivery_size in pairs(Biofluid.delivery_sizes) do
-        local removed = bioport_input_inventory.remove { name = robot, count = 1 }
+        local removed = bioport_input_inventory.remove {name = robot, count = 1}
         if removed ~= 0 then
             robot_name = robot
             delivery_amount = min(delivery_amount, delivery_size)
@@ -497,7 +497,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
     if not robot_name then return 0 end
     Biofluid.poop(bioport_data, robot_name)
     local bioport_position = bioport.position
-    local position = { bioport_position.x, bioport_position.y - 2.5 }
+    local position = {bioport_position.x, bioport_position.y - 2.5}
     local provider_position = provider.position
     local robot = bioport.surface.create_entity {
         name = robot_name,
@@ -505,7 +505,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
         position = position,
         create_build_effect_smoke = false,
         direction = floor((atan2(position[2] - provider_position.y, position[1] - provider_position.x) / pi - 0.5) / 2 % 1 * 8)
-    }
+   }
     local biorobot_data = {
         entity = robot,
         status = PICKING_UP,
@@ -516,7 +516,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
         delivery_amount = delivery_amount,
         name = unfulfilled_request.name,
         network_id = bioport_data.network_id
-    }
+   }
     set_target(biorobot_data, provider.position)
     storage.biofluid_robots[robot.unit_number] = biorobot_data
     Biofluid.update_bioport_animation(bioport_data)
@@ -528,7 +528,7 @@ function Biofluid.eat(bioport_data)
     if bioport_data.fuel_remaning <= 0 then
         local bioport_input_inventory = bioport.get_inventory(INPUT_INVENTORY)
         for food, calories in pairs(Biofluid.favorite_foods) do
-            local removed = bioport_input_inventory.remove { name = food, count = 1 }
+            local removed = bioport_input_inventory.remove {name = food, count = 1}
             if removed ~= 0 then
                 bioport_data.fuel_remaning = calories
                 bioport_data.last_eaten_fuel_value = calories
@@ -548,7 +548,7 @@ function Biofluid.eat(bioport_data)
 end
 
 local batch_size = 3
-local special_delivery = { name = "guano", count = batch_size }
+local special_delivery = {name = "guano", count = batch_size}
 function Biofluid.poop(bioport_data, robot_name)
     local poop_amount = Biofluid.taco_bell[robot_name]
     bioport_data.guano = bioport_data.guano + poop_amount
@@ -588,7 +588,7 @@ local function make_homeless(biorobot_data)
         surface = biorobot_data.entity.surface,
         x_scale = 0.4,
         y_scale = 0.4
-    }
+   }
 end
 
 local function find_new_home(biorobot_data, network_data)
@@ -623,7 +623,7 @@ local function find_new_home(biorobot_data, network_data)
         make_homeless(biorobot_data); return
     end
     local position = home.position
-    set_target(biorobot_data, { position.x, position.y - 2.5 })
+    set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 local function go_home(biorobot_data)
@@ -647,7 +647,7 @@ local function go_home(biorobot_data)
         return
     end
     local position = bioport_data.entity.position
-    set_target(biorobot_data, { position.x, position.y - 2.5 })
+    set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 local function combine_tempatures(first_count, first_tempature, second_count, second_tempature)
@@ -679,7 +679,7 @@ local function pickup(biorobot_data)
     if new_amount == 0 then
         provider.fluidbox[1] = nil
     else
-        provider.fluidbox[1] = { name = name, amount = new_amount, temperature = contents.temperature }
+        provider.fluidbox[1] = {name = name, amount = new_amount, temperature = contents.temperature}
     end
     set_target(biorobot_data, requester_data.entity.position)
     reset_provider_allocations(biorobot_data)
@@ -695,7 +695,7 @@ local function pickup(biorobot_data)
         only_in_alt_mode = true,
         x_scale = 0.5,
         y_scale = 0.5,
-    }.id
+   }.id
     biorobot_data.alt_mode_sprite = rendering.draw_sprite {
         sprite = "fluid/" .. name,
         target = entity,
@@ -703,7 +703,7 @@ local function pickup(biorobot_data)
         only_in_alt_mode = true,
         x_scale = 0.8,
         y_scale = 0.8,
-    }.id
+   }.id
 end
 
 local function dropoff(biorobot_data)
@@ -722,9 +722,9 @@ local function dropoff(biorobot_data)
             name = name,
             amount = contents.amount + amount,
             temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
-        }
+       }
     elseif amount > 0 then
-        requester.fluidbox[2] = { name = name, amount = amount, temperature = temperature }
+        requester.fluidbox[2] = {name = name, amount = amount, temperature = temperature}
     end
     go_home(biorobot_data)
     if biorobot_data.alt_mode_sprite then
@@ -748,7 +748,7 @@ local function returning(biorobot_data)
     end
     local biorobot = biorobot_data.entity
     local inventory = bioport.get_inventory(INPUT_INVENTORY)
-    if inventory.insert { name = biorobot.name, count = 1 } == 1 then
+    if inventory.insert {name = biorobot.name, count = 1} == 1 then
         storage.biofluid_robots[biorobot.unit_number] = nil
         biorobot.destroy()
         Biofluid.update_bioport_animation(bioport_data)
@@ -817,7 +817,7 @@ function Biofluid.get_unfulfilled_requests()
             entity = requester,
             priority = requester_data.priority,
             network_id = network_id
-        }
+       }
         if requester_data.care_about_temperature then
             result[#result].target_temperature = requester_data.target_temperature
             result[#result].temperature_operator = requester_data.temperature_operator
@@ -907,7 +907,7 @@ py.on_event(defines.events.on_player_setup_blueprint, function(event)
                 target_temperature = requester_data.target_temperature,
                 temperature_operator = requester_data.temperature_operator,
                 priority = requester_data.priority
-            })
+           })
         end
     end
 end)
@@ -979,8 +979,8 @@ py.on_event(defines.events.on_selected_entity_changed, function(event)
     if entity_status then
         entity.custom_status = {
             diode = Biofluid.diode_colors[Biofluid.failure_reasons[entity_status]],
-            label = { entity_status },
-        }
+            label = {entity_status},
+       }
     end
 end)
 
