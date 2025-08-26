@@ -154,6 +154,8 @@ function P.select_destination(player, last_opened, camera_position)
     end
 
     player.opened = nil
+    last_opened.controller_type = player.controller_type
+    last_opened.camera_position = player.position
     if camera_position then
         local zoom = player.zoom
         player.set_controller{
