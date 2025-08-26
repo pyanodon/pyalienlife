@@ -9,7 +9,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
     elseif connection_type == Biofluid.REQUESTER then
         Biofluid.build_requester_gui(entity, player)
     elseif connection_type == Biofluid.PROVIDER then
-        player.opened = nil
+        Biofluid.build_provider_gui(entity, player)
     end
 end)
 
@@ -32,7 +32,7 @@ function Biofluid.update_bioport_gui(player, gui)
     local status = Biofluid.why_isnt_my_bioport_working(bioport_data)
     local img = Biofluid.failure_reasons[status]
     local content_flow = gui.content_frame.content_flow
-    content_flow.status_flow.status_text.caption = {status}
+    content_flow.status_flow.status_text.caption = { status }
     content_flow.status_flow.status_sprite.sprite = img
 
     local fuel_flow = content_flow.fuel_flow
@@ -101,7 +101,7 @@ end
 function Biofluid.build_bioport_gui(entity, player)
     if player.gui.relative.bioport_gui then player.gui.relative.bioport_gui.destroy() end
     local main_frame = player.gui.relative.add {
-        type = "frame", name = "bioport_gui", caption = entity.prototype.localised_name, direction = "vertical", tags = {unit_number = entity.unit_number},
+        type = "frame", name = "bioport_gui", caption = entity.prototype.localised_name, direction = "vertical", tags = { unit_number = entity.unit_number },
         anchor = {
             gui = defines.relative_gui_type.assembling_machine_gui,
             position = defines.relative_gui_position.right
@@ -111,46 +111,46 @@ function Biofluid.build_bioport_gui(entity, player)
     main_frame.style.vertically_stretchable = false
     main_frame.style.vertically_squashable = true
 
-    local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
+    local content_frame = main_frame.add { type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding" }
     content_frame.style.vertically_stretchable = true
-    local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
+    local content_flow = content_frame.add { type = "flow", name = "content_flow", direction = "vertical" }
     content_flow.style.vertical_spacing = 8
-    content_flow.style.margin = {-4, 0, -4, 0}
+    content_flow.style.margin = { -4, 0, -4, 0 }
     content_flow.style.vertical_align = "center"
 
-    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    local status_flow = content_flow.add { type = "flow", name = "status_flow", direction = "horizontal" }
     status_flow.style.vertical_align = "center"
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
+    local status_sprite = status_flow.add { type = "sprite", name = "status_sprite" }
     status_sprite.resize_to_sprite = false
-    status_sprite.style.size = {16, 16}
-    status_flow.add {type = "label", name = "status_text"}
-    status_flow.add {type = "empty-widget", style = "py_empty_widget"}
+    status_sprite.style.size = { 16, 16 }
+    status_flow.add { type = "label", name = "status_text" }
+    status_flow.add { type = "empty-widget", style = "py_empty_widget" }
 
-    local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
-    local camera = camera_frame.add {type = "camera", name = "camera", position = {entity.position.x, entity.position.y - 1}, style = "py_caravan_camera", surface_index = entity.surface.index}
+    local camera_frame = content_flow.add { type = "frame", name = "camera_frame", style = "py_nice_frame" }
+    local camera = camera_frame.add { type = "camera", name = "camera", position = { entity.position.x, entity.position.y - 1 }, style = "py_caravan_camera", surface_index = entity.surface.index }
     camera.visible = true
     camera.style.height = 155
 
-    local fuel_flow = content_flow.add {type = "flow", name = "fuel_flow", direction = "horizontal"}
+    local fuel_flow = content_flow.add { type = "flow", name = "fuel_flow", direction = "horizontal" }
     fuel_flow.style.vertical_align = "center"
     local favorite_food_tooltip = py.generate_favorite_food_tooltip(Biofluid.favorite_foods, "biofluid-gui")
     for i = 1, Biofluid.fuel_size do
-        local fuel_slot = fuel_flow.add {type = "sprite-button", name = "py_biofluid_food_" .. i, style = "inventory_slot", tags = {unit_number = entity.unit_number, i = i}}
+        local fuel_slot = fuel_flow.add { type = "sprite-button", name = "py_biofluid_food_" .. i, style = "inventory_slot", tags = { unit_number = entity.unit_number, i = i } }
         fuel_slot.sprite = "slot_icon_fuel"
         fuel_slot.tooltip = favorite_food_tooltip
     end
-    local bar_flow = fuel_flow.add {type = "flow", name = "bar_flow", direction = "vertical"}
-    bar_flow.add {type = "progressbar", name = "fuel_bar", style = "burning_progressbar"}.style.horizontally_stretchable = true
-    bar_flow.add {type = "progressbar", name = "guano_bar", style = "bonus_progressbar"}.style.horizontally_stretchable = true
-    fuel_flow.add {type = "sprite-button", name = "py_guano_output", style = "inventory_slot", tags = {unit_number = entity.unit_number, slot_index = 1}, sprite = "item/guano"}
+    local bar_flow = fuel_flow.add { type = "flow", name = "bar_flow", direction = "vertical" }
+    bar_flow.add { type = "progressbar", name = "fuel_bar", style = "burning_progressbar" }.style.horizontally_stretchable = true
+    bar_flow.add { type = "progressbar", name = "guano_bar", style = "bonus_progressbar" }.style.horizontally_stretchable = true
+    fuel_flow.add { type = "sprite-button", name = "py_guano_output", style = "inventory_slot", tags = { unit_number = entity.unit_number, slot_index = 1 }, sprite = "item/guano" }
 
-    content_flow.add {type = "line"}
+    content_flow.add { type = "line" }
 
-    local module_flow = content_flow.add {type = "flow", name = "module_flow", direction = "horizontal"}
+    local module_flow = content_flow.add { type = "flow", name = "module_flow", direction = "horizontal" }
     module_flow.style.vertical_align = "center"
     local allowed_module_tooltip = py.generate_allowed_module_tooltip(Biofluid.biorobots)
     for i = 1, Biofluid.module_size do
-        local module_slot = module_flow.add {type = "sprite-button", name = "py_biofluid_module_" .. i, style = "inventory_slot", tags = {unit_number = entity.unit_number, i = i}}
+        local module_slot = module_flow.add { type = "sprite-button", name = "py_biofluid_module_" .. i, style = "inventory_slot", tags = { unit_number = entity.unit_number, i = i } }
         module_slot.sprite = "utility/empty_module_slot"
         module_slot.tooltip = allowed_module_tooltip
     end
@@ -177,7 +177,7 @@ function Biofluid.update_requester_gui(player, gui)
     if not next(network.biofluid_bioports) then status = "entity-status.no-biofluid-network" end
     local img = Biofluid.failure_reasons[status]
     local content_flow = gui.content_frame.content_flow
-    content_flow.status_flow.status_text.caption = {status}
+    content_flow.status_flow.status_text.caption = { status }
     content_flow.status_flow.status_sprite.sprite = img
 
     local config_flow = content_flow.config_flow
@@ -197,57 +197,57 @@ end
 function Biofluid.build_requester_gui(entity, player)
     if player.gui.screen.biofluid_requester_gui then player.gui.screen.biofluid_requester_gui.destroy() end
     local unit_number = entity.unit_number
-    local main_frame = player.gui.screen.add {type = "frame", name = "biofluid_requester_gui", caption = entity.prototype.localised_name, direction = "vertical"}
+    local main_frame = player.gui.screen.add { type = "frame", name = "biofluid_requester_gui", caption = entity.prototype.localised_name, direction = "vertical" }
     main_frame.auto_center = true
     player.opened = main_frame
     main_frame.style.width = 436
-    local tags = {unit_number = unit_number}
+    local tags = { unit_number = unit_number }
     main_frame.tags = tags
 
-    local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
+    local content_frame = main_frame.add { type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding" }
     content_frame.style.vertically_stretchable = true
-    local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
+    local content_flow = content_frame.add { type = "flow", name = "content_flow", direction = "vertical" }
     content_flow.style.vertical_spacing = 8
-    content_flow.style.margin = {-4, 0, -4, 0}
+    content_flow.style.margin = { -4, 0, -4, 0 }
     content_flow.style.vertical_align = "center"
 
-    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    local status_flow = content_flow.add { type = "flow", name = "status_flow", direction = "horizontal" }
     status_flow.style.vertical_align = "center"
-    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
+    local status_sprite = status_flow.add { type = "sprite", name = "status_sprite" }
     status_sprite.resize_to_sprite = false
-    status_sprite.style.size = {16, 16}
-    status_flow.add {type = "label", name = "status_text"}
-    status_flow.add {type = "empty-widget", style = "py_empty_widget"}
+    status_sprite.style.size = { 16, 16 }
+    status_flow.add { type = "label", name = "status_text" }
+    status_flow.add { type = "empty-widget", style = "py_empty_widget" }
 
-    local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
-    local camera = camera_frame.add {type = "camera", name = "camera", position = entity.position, style = "py_caravan_camera", surface_index = entity.surface.index}
+    local camera_frame = content_flow.add { type = "frame", name = "camera_frame", style = "py_nice_frame" }
+    local camera = camera_frame.add { type = "camera", name = "camera", position = entity.position, style = "py_caravan_camera", surface_index = entity.surface.index }
     camera.visible = true
     camera.style.height = 155
     camera.zoom = 2
 
-    local label_flow = content_flow.add {type = "flow", direction = "horizontal"}
-    label_flow.add {type = "label", caption = {"gui-logistic.title-requests"}}.style.font = "default-semibold"
-    label_flow.add {type = "empty-widget", style = "py_empty_widget"}
-    label_flow.add {type = "label", caption = {"gui.priority"}}.style.font = "default-semibold"
+    local label_flow = content_flow.add { type = "flow", direction = "horizontal" }
+    label_flow.add { type = "label", caption = { "gui-logistic.title-requests" } }.style.font = "default-semibold"
+    label_flow.add { type = "empty-widget", style = "py_empty_widget" }
+    label_flow.add { type = "label", caption = { "gui.priority" } }.style.font = "default-semibold"
 
-    local config_flow = content_flow.add {type = "flow", direction = "horizontal", name = "config_flow"}
+    local config_flow = content_flow.add { type = "flow", direction = "horizontal", name = "config_flow" }
     config_flow.style.vertical_align = "center"
-    config_flow.add {type = "choose-elem-button", name = "py_request_type", elem_type = "fluid", tags = tags}
-    config_flow.add {type = "label", caption = "×"}.style.font = "heading-2"
-    local request_amount = config_flow.add {type = "textfield", name = "py_request_amount", tags = tags}
+    config_flow.add { type = "choose-elem-button", name = "py_request_type", elem_type = "fluid", tags = tags }
+    config_flow.add { type = "label", caption = "×" }.style.font = "heading-2"
+    local request_amount = config_flow.add { type = "textfield", name = "py_request_amount", tags = tags }
     request_amount.numeric = true
     request_amount.allow_decimal = false
     request_amount.allow_negative = false
     request_amount.style.width = 55
 
-    config_flow.add {type = "empty-widget", style = "py_empty_widget"}
+    config_flow.add { type = "empty-widget", style = "py_empty_widget" }
 
     config_flow.add {
         type = "sprite-button", name = "py_change_priority_1", style = "py_schedule_move_button",
-        tags = {unit_number = unit_number, up = false},
+        tags = { unit_number = unit_number, up = false },
         sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
     }.style.height = 35
-    local priority = config_flow.add {type = "textfield", name = "py_requester_priority_input", tags = tags}
+    local priority = config_flow.add { type = "textfield", name = "py_requester_priority_input", tags = tags }
     priority.numeric = true
     priority.allow_decimal = false
     priority.allow_negative = false
@@ -255,25 +255,25 @@ function Biofluid.build_requester_gui(entity, player)
     priority.style.height = 35
     config_flow.add {
         type = "sprite-button", name = "py_change_priority_2", style = "py_schedule_move_button",
-        tags = {unit_number = unit_number, up = true},
+        tags = { unit_number = unit_number, up = true },
         sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
     }.style.height = 35
 
-    content_flow.add {type = "line"}
-    content_flow.add {type = "label", caption = {"gui.temperature-filter"}}.style.font = "default-semibold"
+    content_flow.add { type = "line" }
+    content_flow.add { type = "label", caption = { "gui.temperature-filter" } }.style.font = "default-semibold"
 
-    local temperature_flow = content_flow.add {type = "flow", direction = "horizontal", name = "temperature_flow"}
+    local temperature_flow = content_flow.add { type = "flow", direction = "horizontal", name = "temperature_flow" }
     temperature_flow.style.vertical_align = "center"
-    temperature_flow.add {type = "switch", allow_none_state = false, left_label_caption = {"gui-constant.off"}, right_label_caption = {"gui-constant.on"}, name = "py_biofluid_temperature_switch", tags = tags}
+    temperature_flow.add { type = "switch", allow_none_state = false, left_label_caption = { "gui-constant.off" }, right_label_caption = { "gui-constant.on" }, name = "py_biofluid_temperature_switch", tags = tags }
 
-    temperature_flow.add {type = "empty-widget", style = "py_empty_widget"}
+    temperature_flow.add { type = "empty-widget", style = "py_empty_widget" }
 
-    temperature_flow.add {type = "label", caption = "°C"}.style.font = "heading-2"
+    temperature_flow.add { type = "label", caption = "°C" }.style.font = "heading-2"
 
-    local equality_operator = temperature_flow.add {type = "drop-down", name = "py_biofluid_temperature_equality_operator", items = Biofluid.equality_operators, tags = tags, style = "circuit_condition_comparator_dropdown"}
+    local equality_operator = temperature_flow.add { type = "drop-down", name = "py_biofluid_temperature_equality_operator", items = Biofluid.equality_operators, tags = tags, style = "circuit_condition_comparator_dropdown" }
     equality_operator.style.left_margin = 10
 
-    local temperature = temperature_flow.add {type = "textfield", name = "py_biofluid_temperature", tags = tags}
+    local temperature = temperature_flow.add { type = "textfield", name = "py_biofluid_temperature", tags = tags }
     temperature.numeric = true
     temperature.style.width = 55
     temperature.enabled = false
@@ -283,14 +283,99 @@ function Biofluid.build_requester_gui(entity, player)
     Biofluid.update_requester_gui(player, main_frame)
 end
 
-py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
+function Biofluid.build_provider_gui(entity, player)
+    if player.gui.screen.biofluid_provider_gui then player.gui.screen.biofluid_provider_gui.destroy() end
+    local unit_number = entity.unit_number
+
+    local main_frame = player.gui.screen.add { type = "frame", name = "biofluid_provider_gui", caption = entity.prototype.localised_name, direction = "vertical" }
+    main_frame.auto_center = true
+    player.opened = main_frame
+    main_frame.style.width = 436
+    local tags = { unit_number = unit_number }
+    main_frame.tags = tags
+
+    local content_frame = main_frame.add { type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding" }
+    content_frame.style.vertically_stretchable = true
+    local content_flow = content_frame.add { type = "flow", name = "content_flow", direction = "vertical" }
+    content_flow.style.vertical_spacing = 8
+    content_flow.style.margin = { -4, 0, -4, 0 }
+    content_flow.style.vertical_align = "center"
+
+    local status_flow = content_flow.add { type = "flow", name = "status_flow", direction = "horizontal" }
+    status_flow.style.vertical_align = "center"
+    local status_sprite = status_flow.add { type = "sprite", name = "status_sprite" }
+    status_sprite.resize_to_sprite = false
+    status_sprite.style.size = { 16, 16 }
+    status_flow.add { type = "label", name = "status_text" }
+    status_flow.add { type = "empty-widget", style = "py_empty_widget" }
+
+    local camera_frame = content_flow.add { type = "frame", name = "camera_frame", style = "py_nice_frame" }
+    local camera = camera_frame.add { type = "camera", name = "camera", position = entity.position, style = "py_caravan_camera", surface_index = entity.surface.index }
+    camera.visible = true
+    camera.style.height = 155
+    camera.zoom = 2
+
+    local label_flow = content_flow.add { type = "flow", direction = "horizontal" }
+    label_flow.add { type = "label", caption = { "gui.priority" } }.style.font = "default-semibold"
+
+    local config_flow = content_flow.add { type = "flow", direction = "horizontal", name = "config_flow" }
+    config_flow.add {
+        type = "sprite-button", name = "py_change_priority_1", style = "py_schedule_move_button",
+        tags = { unit_number = unit_number, up = false },
+        sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
+    }.style.height = 35
+    local priority = config_flow.add { type = "textfield", name = "py_provider_priority_input", tags = tags }
+    priority.numeric = true
+    priority.allow_decimal = false
+    priority.allow_negative = false
+    priority.style.width = 55
+    priority.style.height = 35
+    config_flow.add {
+        type = "sprite-button", name = "py_change_priority_2", style = "py_schedule_move_button",
+        tags = { unit_number = unit_number, up = true },
+        sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
+    }.style.height = 35
+
+    Biofluid.update_provider_gui(player, main_frame)
+end
+
+function Biofluid.update_provider_gui(player, gui)
+    local unit_number = gui.tags.unit_number
+    local provider_data = storage.biofluid_providers[unit_number]
+    if not provider_data then
+        player.opened = nil; return
+    end
+    local entity = provider_data.entity
+    if not entity or not entity.valid then
+        player.opened = nil; return
+    end
+    local network = storage.biofluid_networks[provider_data.network_id]
+    if not network then
+        player.opened = nil; return
+    end
+
+    local status = "entity-status.working"
+    if not next(network.biofluid_bioports) then status = "entity-status.no-biofluid-network" end
+    local img = Biofluid.failure_reasons[status]
+    local content_flow = gui.content_frame.content_flow
+    content_flow.status_flow.status_text.caption = { status }
+    content_flow.status_flow.status_sprite.sprite = img
+
+    local config_flow = content_flow.config_flow
+    config_flow.py_provider_priority_input.text = tostring(provider_data.priority)
+end
+
+py.on_event({ defines.events.on_gui_closed, defines.events.on_player_changed_surface }, function(event)
     local player = game.get_player(event.player_index)
     if event.gui_type == defines.gui_type.entity then
         local gui = player.gui.relative.bioport_gui
         if gui then gui.destroy() end
     elseif event.gui_type == defines.gui_type.custom then
-        local gui = player.gui.screen.biofluid_requester_gui
-        if gui then gui.destroy() end
+        local requester_gui = player.gui.screen.biofluid_requester_gui
+        if requester_gui then requester_gui.destroy() end
+
+        local provider_gui = player.gui.screen.biofluid_provider_gui
+        if provider_gui then provider_gui.destroy() end
     end
 end)
 
@@ -320,9 +405,18 @@ local function gui_click(event, inventory_index)
     Biofluid.update_bioport_gui(player, player.gui.relative.bioport_gui)
 end
 
-gui_events[defines.events.on_gui_click]["py_biofluid_food_."] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end
-gui_events[defines.events.on_gui_click]["py_biofluid_module_."] = function(event) gui_click(event, defines.inventory.assembling_machine_input) end
-gui_events[defines.events.on_gui_click]["py_guano_output"] = function(event) gui_click(event, defines.inventory.assembling_machine_output) end
+gui_events[defines.events.on_gui_click]["py_biofluid_food_."] = function(event)
+    gui_click(event,
+        defines.inventory.assembling_machine_input)
+end
+gui_events[defines.events.on_gui_click]["py_biofluid_module_."] = function(event)
+    gui_click(event,
+        defines.inventory.assembling_machine_input)
+end
+gui_events[defines.events.on_gui_click]["py_guano_output"] = function(event)
+    gui_click(event,
+        defines.inventory.assembling_machine_output)
+end
 
 gui_events[defines.events.on_gui_elem_changed]["py_request_type"] = function(event)
     local element = event.element
@@ -348,11 +442,18 @@ end
 gui_events[defines.events.on_gui_click]["py_change_priority_."] = function(event)
     local element = event.element
     local unit_number = element.tags.unit_number
+
     local requester_data = storage.biofluid_requesters[unit_number]
-    if not requester_data then return end
-    local change = element.tags.up and 1 or -1
-    requester_data.priority = requester_data.priority + change
-    element.parent.py_requester_priority_input.text = tostring(requester_data.priority)
+    local provider_data = storage.biofluid_providers[unit_number]
+    if requester_data then 
+        local change = element.tags.up and 1 or -1
+        requester_data.priority = requester_data.priority + change
+        element.parent.py_requester_priority_input.text = tostring(requester_data.priority)
+    elseif provider_data then
+        local change = element.tags.up and 1 or -1
+        provider_data.priority = provider_data.priority + change
+        element.parent.py_provider_priority_input.text = tostring(provider_data.priority)
+    end
 end
 
 gui_events[defines.events.on_gui_text_changed]["py_requester_priority_input"] = function(event)
@@ -361,6 +462,14 @@ gui_events[defines.events.on_gui_text_changed]["py_requester_priority_input"] = 
     local requester_data = storage.biofluid_requesters[unit_number]
     if not requester_data then return end
     requester_data.priority = tonumber(element.text) or 0
+end
+
+gui_events[defines.events.on_gui_text_changed]["py_provider_priority_input"] = function(event)
+    local element = event.element
+    local unit_number = element.tags.unit_number
+    local provider_data = storage.biofluid_providers[unit_number]
+    if not provider_data then return end
+    provider_data.priority = tonumber(element.text) or 0
 end
 
 gui_events[defines.events.on_gui_switch_state_changed]["py_biofluid_temperature_switch"] = function(event)
