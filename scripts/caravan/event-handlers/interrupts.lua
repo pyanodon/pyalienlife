@@ -44,6 +44,7 @@ local function on_edit_interrupt_confirmed(event)
     local label = event.element.parent.name_label
     local textfield = event.element.parent.py_edit_interrupt_textfield
 
+    if textfield.text == "" then return end
     if textfield.text ~= storage.edited_interrupt.name and storage.interrupts[textfield.text] ~= nil then return end
 
     textfield.visible = not textfield.visible
