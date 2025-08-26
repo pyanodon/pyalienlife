@@ -76,7 +76,7 @@ function P.build_camera_frame(parent, caravan_data)
     camera.entity = caravan_data.entity
     camera.visible = true
     local prototype = caravan_prototypes[caravan_data.entity.name]
-    camera.zoom = prototype.camera_zoom or 1
+    camera.zoom = prototype.camera_zoom or 0.5
 end
 
 function P.build_tabbed_pane_frame(parent)

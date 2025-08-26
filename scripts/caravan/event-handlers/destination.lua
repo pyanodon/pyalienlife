@@ -166,7 +166,7 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
         camera.surface_index = caravan_data.entity.surface_index
     end
     refocus.visible = true
-    camera.zoom = 0.5
+    camera.zoom = 0.25
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = function(event)
