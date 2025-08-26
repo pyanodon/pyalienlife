@@ -7,6 +7,7 @@ Date: ???
     - Caravans: reduced default zoom for preview pane
     - Caravans: fixed that interrupts could be renamed to "" (empty string)
     - Caravans: clarified fluid-related condition names
+    - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
