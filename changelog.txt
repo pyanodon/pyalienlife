@@ -3,6 +3,10 @@ Version: 3.0.58
 Date: ???
   Changes:
     - Caravans: now allows copy-paste between different types (regular, flying, fluid).
+    - Caravans: fixed condition item_count being nil sometimes
+    - Caravans: reduced default zoom for preview pane
+    - Caravans: fixed that interrupts could be renamed to "" (empty string)
+    - Caravans: clarified fluid-related condition names
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
