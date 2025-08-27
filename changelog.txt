@@ -11,6 +11,7 @@ Date: ???
     - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
     - Caravans: fixed being able to put anything in fluid caravan fuel slots
     - Caravans: restores controller type and camera position when using/dropping the carrot
+    - Caravans: add hint for re-assigning interrupt target via right-click
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
