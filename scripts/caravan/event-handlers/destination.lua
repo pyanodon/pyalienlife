@@ -166,7 +166,7 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
         camera.surface_index = caravan_data.entity.surface_index
     end
     refocus.visible = true
-    camera.zoom = 0.5
+    camera.zoom = 0.25
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = function(event)
@@ -178,7 +178,7 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = funct
     local schedule = storage.edited_interrupt.schedule[tags.schedule_id]
 
     -- allow reassign if invalid or right-clicked
-    if schedule.entity and (event.button == defines.mouse_button_type.right or not schedule.entity.valid) then
+    if not schedule.entity or not schedule.entity.valid or event.button == defines.mouse_button_type.right then
         local last_opened = {}
         last_opened.caravan = caravan_data.unit_number
         last_opened.schedule_id = element.tags.schedule_id

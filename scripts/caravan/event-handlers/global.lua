@@ -91,6 +91,17 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
     end
 end)
 
+--- restores the player's camera type and position
+local function restore_controller(player, last_opened)
+    if not last_opened or not last_opened.controller_type then return end
+    if last_opened.controller_type == defines.controllers.character and (not player.character or not player.character.valid) then return end
+    player.set_controller{
+        type = last_opened.controller_type,
+        character = player.character,
+        position = last_opened.camera_position
+    }
+end
+
 -- Reopen the last closed caravan gui when player no longer holds carrot-on-stick item
 -- regardless of whether or not it was used
 py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
@@ -102,7 +113,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     if stack and stack.valid_for_read and stack.name == "caravan-control" then return end
     local ghost = player.cursor_ghost
     if ghost and ghost.name.name == "caravan-control" then return end
-
+    restore_controller(player, last_opened)
     if last_opened.caravan then
         local caravan_data = storage.caravans[last_opened.caravan]
         if not CaravanGui.get_gui(player) then --The UI can already exist if someone clicks multiple times in a tick

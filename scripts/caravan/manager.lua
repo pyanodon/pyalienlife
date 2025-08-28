@@ -82,7 +82,7 @@ local function add_gui_row(caravan_data, key, table, inner)
     camera.entity = entity
     camera.visible = true
     camera.style.height = 155
-    camera.zoom = (prototype.camera_zoom or 1) / 2
+    camera.zoom = (prototype.camera_zoom or 0.5) / 2
 
     local status_flow = table.add {type = "flow", direction = "horizontal"}
     status_flow.style.height = 0

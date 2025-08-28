@@ -46,5 +46,5 @@ gui_events[defines.events.on_gui_click]["py_refocus"] = function(event)
 
     camera.entity = caravan_data.entity
     refocus.visible = false
-    camera.zoom = caravan_prototypes[caravan_data.entity.name].camera_zoom or 1
+    camera.zoom = caravan_prototypes[caravan_data.entity.name].camera_zoom or 0.5
 end

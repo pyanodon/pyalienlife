@@ -4,9 +4,22 @@ Date: ???
   Changes:
     - [BREAKING] Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
     - New recipe for heating geothermal water.
+Version: 3.0.58
+Date: ???
+  Changes:
+    - Caravans: allow copy-paste between different types (regular, flying, fluid).
+    - Caravans: made edit interrupt GUI wider
+    - Caravans: fixed condition item_count being nil sometimes
+    - Caravans: reduced default zoom for preview pane
+    - Caravans: fixed that interrupts could be renamed to "" (empty string)
+    - Caravans: clarified fluid-related condition names
+    - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
+    - Caravans: fixed being able to put anything in fluid caravan fuel slots
+    - Caravans: restores controller type and camera position when using/dropping the carrot
+    - Caravans: add hint for re-assigning interrupt target via right-click
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
-Date: ?
+Date: 2025-08-23
   Changes:
     - Made seaweed float (around)
     - When selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
