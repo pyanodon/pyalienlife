@@ -107,6 +107,7 @@ end
 
 function P.build_time_selection_button(parent, action, tags)
     tags.elem_type = "time"
+    parent.add {type = "empty-widget"}.style.horizontally_stretchable = true
     local btn = parent.add {type = "button", name = prefix .. "_button", style = "train_schedule_condition_time_selection_button", tags = tags}
     btn.style.width = 44
     btn.style.right_padding = 0
