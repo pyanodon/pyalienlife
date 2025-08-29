@@ -72,9 +72,10 @@ function P.build_action_flow(parent, caravan_data, action, tags)
         else
             label.caption = {locale_key, {"caravan-gui.not-specified"}}
         end
+    else
+        flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     end
 
-    flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     if Utils.contains(possibly_blocking_actions, action.type) then
         flow.add {type = "checkbox", name = "py_caravan_action_blocking_checkbox", state = not action.async, tooltip = {"caravan-gui.wait"}, tags = tags}
     end
