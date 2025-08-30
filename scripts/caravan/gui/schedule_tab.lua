@@ -94,7 +94,7 @@ function P.build_schedule_list(parent, caravan_data)
         P.build_action_list(flow, i, caravan_data)
     end
 
-    parent.add {type = "button", name = "py_caravan_destination_add_button", style = "train_schedule_add_station_button", caption = "+ Add outpost", tags = {unit_number = caravan_data.unit_number}}
+    parent.add {type = "button", name = "py_caravan_destination_add_button", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}, tags = {unit_number = caravan_data.unit_number}}
 end
 
 function P.build_interrupt_frame(parent, caravan_interrupt_index, caravan_data)
@@ -121,13 +121,13 @@ function P.build_interrupt_list(parent, caravan_data)
     local frame = parent.add {type = "frame", direction = "horizontal", style = "train_schedule_station_frame"}
     frame.style.horizontally_stretchable = true
 
-    frame.add {type = "label", style = "subheader_semibold_label", caption = "Interrupts", tooltip = "Interrupts are conditions that can be added to schedules. Their configuration is shared globally between all caravans."}
+    frame.add {type = "label", style = "subheader_semibold_label", caption = {"caravan-gui.interrupt-header-label"}, tooltip = {"caravan-gui.interrupt-header-tooltip"}}
     for i = 1, #caravan_data.interrupts do
         local flow = parent.add {type = "flow", direction = "vertical"}
 
         P.build_interrupt_frame(flow, i, caravan_data)
     end
-    parent.add {type = "button", name = "py_caravan_interrupt_add_button", style = "train_schedule_add_station_button", caption = "+ Add interrupt", tags = {unit_number = caravan_data.unit_number}}
+    parent.add {type = "button", name = "py_caravan_interrupt_add_button", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-interrupt"}, tags = {unit_number = caravan_data.unit_number}}
 end
 
 function P.build_schedule_flow(parent, caravan_data)

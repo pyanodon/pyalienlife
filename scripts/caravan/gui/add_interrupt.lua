@@ -18,7 +18,7 @@ end
 function P.build_title_bar_flow(parent, tags)
     local flow = parent.add {type = "flow", name = "title_bar_flow", direction = "horizontal", style = "frame_header_flow"}
 
-    flow.add {type = "label", caption = "Add interrupt", style = "frame_title"}
+    flow.add {type = "label", caption = {"caravan-gui.add-interrupt-frame-title"}, style = "frame_title"}
 
     local drag_handler = flow.add {type = "empty-widget", style = "draggable_space_header"}
     drag_handler.style.horizontally_stretchable = true
@@ -48,7 +48,7 @@ function P.build_no_interrupts_frame(parent)
     local flow = frame.add {type = "flow"}
     flow.style.horizontally_stretchable = true
     flow.style.horizontal_align = "center"
-    flow.add {type = "label", caption = "No interrupts found.", style = "bold_label"}
+    flow.add {type = "label", caption = {"caravan-gui.no-interrupts-found"}, style = "bold_label"}
 
     return frame
 end
@@ -75,7 +75,7 @@ function P.build_interrupt_list(parent, caravan_data, interrupts, tags)
             local btn = flow.add {type = "button", style = "list_box_item", tags = tags}
             btn.caption = disabled[i].name
             btn.enabled = false
-            btn.tooltip = "This interrupt is already present in the schedule."
+            btn.tooltip = {"caravan-gui.interrupt-already-present"}
             btn.style.horizontally_stretchable = true
         end
     end
