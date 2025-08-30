@@ -367,7 +367,7 @@ local function error_caravan(caravan_data, invalid_prototype_name, invalid_proto
             position = caravan_data.entity.position
             position = "[gps=" .. position.x .. ", " .. position.y .. "]"
         else
-            position = "UNKNOWN POSITION"
+            return
         end
         game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix a caravan @ %s", invalid_prototype_name, invalid_prototype_type, position))
     else

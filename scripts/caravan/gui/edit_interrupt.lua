@@ -17,7 +17,7 @@ end
 function P.build_title_bar_flow(parent)
     local flow = parent.add {type = "flow", name = "title_bar_flow", direction = "horizontal", style = "frame_header_flow"}
 
-    flow.add {type = "label", caption = "Edit interrupt", style = "frame_title"}
+    flow.add {type = "label", caption = {"caravan-gui.edit-interrupt-frame-title"}, style = "frame_title"}
 
     local drag_handler = flow.add {type = "empty-widget", style = "draggable_space_header"}
     drag_handler.style.horizontally_stretchable = true
@@ -62,7 +62,7 @@ function P.build_subheader_frame(parent)
 end
 
 function P.build_checkbox(parent)
-    return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = storage.edited_interrupt.inside_interrupt, caption = "Allow interrupting other interrupts", tooltip = "By default, an interrupt cannot trigger while another interrupt is being executed. This option disables this behavior, allowing the interrupt to trigger while another interrupt is in progress."}
+    return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = storage.edited_interrupt.inside_interrupt, caption = {"caravan-gui.allow-interrupt-interrupt"}, tooltip = {"caravan-gui.allow-interrupt-interrupt-tooltip"}}
 end
 
 function P.build_conditions_operators_list(parent)
@@ -185,7 +185,7 @@ function P.build_targets_list(parent)
         P.build_action_list(flow, i)
     end
 
-    parent.add {type = "button", name = "py_edit_interrupt_add_target_button", caption = "+ Add interrupt station", style = "train_schedule_add_interrupt_station_button"}
+    parent.add {type = "button", name = "py_edit_interrupt_add_target_button", caption = {"caravan-gui.add-interrupt-station"}, style = "train_schedule_add_interrupt_station_button"}
 end
 
 function P.build_targets_flow(parent)
@@ -214,7 +214,7 @@ function P.build_bottom_bar_flow(parent)
     drag_handler.style.height = 32
     drag_handler.drag_target = parent
 
-    flow.add {type = "button", name = "py_edit_interrupt_confirm_button", style = "confirm_button", caption = "Save interrupt"}
+    flow.add {type = "button", name = "py_edit_interrupt_confirm_button", style = "confirm_button", caption = {"caravan-gui.save-interrupt"}}
 end
 
 ---@param parent LuaGuiElement
@@ -233,11 +233,11 @@ function P.build(parent, interrupt_data, cursor_location)
     P.build_subheader_frame(inside_frame)
     P.build_checkbox(inside_frame)
 
-    inside_frame.add {type = "label", style = "semibold_label", caption = "Conditions", tooltip = "When the conditions are met, the interrupt will activate and append all the targets to the schedule as temporary stops."}
+    inside_frame.add {type = "label", style = "semibold_label", caption = {"caravan-gui.interrupt-conditions-label"}, tooltip = {"caravan-gui.interrupt-conditions-tooltip"}}
 
     P.build_conditions_pane(inside_frame)
 
-    inside_frame.add {type = "label", style = "semibold_label", caption = "Targets", tooltip = "The target stops of this interrupt."}
+    inside_frame.add {type = "label", style = "semibold_label", caption = {"caravan-gui.interrupt-targets-label"}, tooltip = {"caravan-gui.interrupt-targets-tooltip"}}
 
     P.build_targets_pane(inside_frame)
     P.build_bottom_bar_flow(main_frame)
