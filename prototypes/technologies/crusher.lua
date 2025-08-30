@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "crusher-2",
     icon = "__pycoalprocessinggraphics__/graphics/technology/crusher.png",
@@ -9,9 +9,9 @@ TECHNOLOGY {
     unit = {
         count = 25,
         ingredients = {
-            {"automation-science-pack", 3},
-            {"py-science-pack-1",       1}
+            { "automation-science-pack", 3 },
+            { "py-science-pack-1",       1 }
         },
         time = 55
     }
-}
+})

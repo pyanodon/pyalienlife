@@ -5,7 +5,7 @@ for _, ore in pairs(data.raw.resource) do
             local y = 0
             for i = 1, 704 do
                 --log(i)
-                data:extend {
+                data:extend({
                     {
                         type = "sprite",
                         name = "bio-tree-" .. i,
@@ -18,7 +18,7 @@ for _, ore in pairs(data.raw.resource) do
                         --flags = {"gui-icon"},
                         --scale = 0.5
                     }
-                }
+                })
                 x = x + 128
                 if x == 8192 then
                     x = 0
@@ -27,13 +27,13 @@ for _, ore in pairs(data.raw.resource) do
             end
         end
 
-        data:extend {
+        data:extend({
             {
                 type = "tree",
                 name = ore.name .. "-fake",
                 icon = ore.icon,
                 icon_size = 64,
-                flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
+                flags = { "placeable-neutral", "placeable-off-grid", "breaths-air" },
                 minable =
                 {
                     count = 4,
@@ -42,11 +42,11 @@ for _, ore in pairs(data.raw.resource) do
                     result = "wood"
                 },
                 selectable_in_game = false,
-                emissions_per_second = {pollution = -0.001},
+                emissions_per_second = { pollution = -0.001 },
                 max_health = 20,
-                collision_box = {{0, 0}, {0, 0}},
-                collision_mask = {layers = {}},
-                selection_box = {{0, 0}, {0, 0}},
+                collision_box = { { 0, 0 }, { 0, 0 } },
+                collision_mask = { layers = {} },
+                selection_box = { { 0, 0 }, { 0, 0 } },
                 drawing_box_vertical_extension = 1.8,
                 subgroup = "trees",
                 order = "a[tree]-c[dry-tree]",
@@ -66,6 +66,6 @@ for _, ore in pairs(data.raw.resource) do
                     }
                 }
             }
-        }
+        })
     end
 end

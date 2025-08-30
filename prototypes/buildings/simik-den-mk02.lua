@@ -1,24 +1,24 @@
 local MODULE_SLOTS = 10
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "simik-den-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "simik-den-mk01", amount = 1},
-        {type = "item", name = "nbti-alloy",     amount = 30},
-        {type = "item", name = "engine-unit",    amount = 2},
-        {type = "item", name = "nexelit-plate",  amount = 10},
-        {type = "item", name = "latex",          amount = 20},
-        {type = "item", name = "neuroprocessor", amount = 30},
+        { type = "item", name = "simik-den-mk01", amount = 1 },
+        { type = "item", name = "nbti-alloy",     amount = 30 },
+        { type = "item", name = "engine-unit",    amount = 2 },
+        { type = "item", name = "nexelit-plate",  amount = 10 },
+        { type = "item", name = "latex",          amount = 20 },
+        { type = "item", name = "neuroprocessor", amount = 30 },
     },
     results = {
-        {type = "item", name = "simik-den-mk02", amount = 1}
+        { type = "item", name = "simik-den-mk02", amount = 1 }
     }
-}:add_unlock("land-animals-mk03")
+}):add_unlock("land-animals-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "simik-den-mk02",
     icon = "__pyalienlifegraphics2__/graphics/icons/simik-den-mk02.png",
@@ -28,25 +28,25 @@ ITEM {
     order = "d",
     place_result = "simik-den-mk02",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "simik-den-mk02",
     icon = "__pyalienlifegraphics2__/graphics/icons/simik-den-mk02.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "simik-den-mk02"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "simik-den-mk02" },
     fast_replaceable_group = "simik-den",
     max_health = 400,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-7.6, -7.6}, {7.6, 7.6}},
-    selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
+    collision_box = { { -7.6, -7.6 }, { 7.6, 7.6 } },
+    selection_box = { { -8.0, -8.0 }, { 8.0, 8.0 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"simik"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "simik" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "simik-den-mk01"),
     energy_source = {
         type = "electric",
@@ -214,14 +214,14 @@ ENTITY {
                     frame_count = 1,
                     shift = util.by_pixel(0, 0),
                     priority = "low",
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
             }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics2__/sounds/simik-den.ogg", volume = 0.90, audible_distance_modifier = 0.35,},
+        sound = { filename = "__pyalienlifegraphics2__/sounds/simik-den.ogg", volume = 0.90, audible_distance_modifier = 0.35, },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
@@ -229,13 +229,13 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
             pipe_connections = {
-                {flow_direction = "input", position = {0.5, -7.5},  direction = defines.direction.north},
-                {flow_direction = "input", position = {-0.5, -7.5}, direction = defines.direction.north}
+                { flow_direction = "input", position = { 0.5, -7.5 }, direction = defines.direction.north },
+                { flow_direction = "input", position = { -0.5, -7.5 }, direction = defines.direction.north }
             },
-            secondary_draw_orders = {north = -1}
+            secondary_draw_orders = { north = -1 }
         },
     },
-}
+})

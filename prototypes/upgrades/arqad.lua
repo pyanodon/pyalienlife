@@ -1,60 +1,60 @@
-local is_pyse = (data and mods["pystellarexpedition"]) or (script and script.active_mods["pystellarexpedition"])
+local is_pyse = (data and mods[ "pystellarexpedition" ]) or (script and script.active_mods[ "pystellarexpedition" ])
 
 local cags_effects
 if is_pyse then
     cags_effects = {
-        {recipe = "hydrangeaceae", type = "unlock-recipe"},
-        {recipe = "cags",          type = "unlock-recipe"},
-        {old = "arqad-hive-mk01",  new = "arqad-hive-mk01-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk02",  new = "arqad-hive-mk02-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk03",  new = "arqad-hive-mk03-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk04",  new = "arqad-hive-mk04-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk01",  new = "arqad-hive-mk01-with-cags", type = "machine-replacement"},
-        {old = "arqad-hive-mk02",  new = "arqad-hive-mk02-with-cags", type = "machine-replacement"},
-        {old = "arqad-hive-mk03",  new = "arqad-hive-mk03-with-cags", type = "machine-replacement"},
-        {old = "arqad-hive-mk04",  new = "arqad-hive-mk04-with-cags", type = "machine-replacement"},
+        { recipe = "hydrangeaceae", type = "unlock-recipe" },
+        { recipe = "cags",          type = "unlock-recipe" },
+        { old = "arqad-hive-mk01",  new = "arqad-hive-mk01-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk02",  new = "arqad-hive-mk02-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk03",  new = "arqad-hive-mk03-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk04",  new = "arqad-hive-mk04-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk01",  new = "arqad-hive-mk01-with-cags", type = "machine-replacement" },
+        { old = "arqad-hive-mk02",  new = "arqad-hive-mk02-with-cags", type = "machine-replacement" },
+        { old = "arqad-hive-mk03",  new = "arqad-hive-mk03-with-cags", type = "machine-replacement" },
+        { old = "arqad-hive-mk04",  new = "arqad-hive-mk04-with-cags", type = "machine-replacement" },
     }
 else
     cags_effects = {
-        {productivity = 0.05,     type = "module-effects"},
-        {recipe = "cags",         type = "unlock-recipe"},
-        {old = "arqad-hive-mk01", new = "arqad-hive-mk01-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk02", new = "arqad-hive-mk02-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk03", new = "arqad-hive-mk03-with-cags", type = "recipe-replacement"},
-        {old = "arqad-hive-mk04", new = "arqad-hive-mk04-with-cags", type = "recipe-replacement"},
+        { productivity = 0.05,     type = "module-effects" },
+        { recipe = "cags",         type = "unlock-recipe" },
+        { old = "arqad-hive-mk01", new = "arqad-hive-mk01-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk02", new = "arqad-hive-mk02-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk03", new = "arqad-hive-mk03-with-cags", type = "recipe-replacement" },
+        { old = "arqad-hive-mk04", new = "arqad-hive-mk04-with-cags", type = "recipe-replacement" },
     }
 end
 
 if data and not yafc_turd_integration then
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("arqad-egg-1"):copy(),
         RECIPE("arqad-egg-2"):copy(),
         RECIPE("arqad-egg-3"):copy(),
         RECIPE("arqad-egg-4"):copy(),
         RECIPE("arqad-egg-5"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-cold"
-        recipe:add_ingredient {type = "fluid", name = "purest-nitrogen-gas", amount = 100}
+        recipe:add_ingredient({ type = "fluid", name = "purest-nitrogen-gas", amount = 100 })
         for _, result in pairs(recipe.results) do
             if result.name == "arqad-queen" then
                 result.probability = 0.995
                 break
             end
         end
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    for recipe, result_name in pairs {
-        [RECIPE("wax"):copy()] = "wax",
-        [RECIPE("wax-to-lube"):copy()] = "lubricant",
-        [RECIPE("honey-comb"):copy()] = "arqad-honey",
-    } do
+    for recipe, result_name in pairs({
+        [ RECIPE("wax"):copy() ] = "wax",
+        [ RECIPE("wax-to-lube"):copy() ] = "lubricant",
+        [ RECIPE("honey-comb"):copy() ] = "arqad-honey",
+    }) do
         recipe.name = recipe.name .. "-buffed"
         recipe:multiply_result_amount(result_name, 3)
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    data:extend {
+    data:extend({
         {
             type = "item",
             name = "cags",
@@ -66,56 +66,56 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "cags",
-            results = {{type = "item", name = "cags", amount = 1}},
+            results = { { type = "item", name = "cags", amount = 1 } },
             ingredients = {
-                {type = "item",  name = "steel-plate",   amount = 10},
-                {type = "item",  name = "niobium-plate", amount = 10},
-                {type = "item",  name = "cellulose",     amount = 10},
-                {type = "item",  name = "latex",         amount = 10},
-                {type = "item",  name = "plastic-bar",   amount = 10},
-                {type = "item",  name = "melamine",      amount = 10},
-                {type = "item",  name = "glass",         amount = 10},
-                {type = "item",  name = "silver-plate",  amount = 10},
-                {type = "fluid", name = "creamy-latex",  amount = 10},
+                { type = "item",  name = "steel-plate",   amount = 10 },
+                { type = "item",  name = "niobium-plate", amount = 10 },
+                { type = "item",  name = "cellulose",     amount = 10 },
+                { type = "item",  name = "latex",         amount = 10 },
+                { type = "item",  name = "plastic-bar",   amount = 10 },
+                { type = "item",  name = "melamine",      amount = 10 },
+                { type = "item",  name = "glass",         amount = 10 },
+                { type = "item",  name = "silver-plate",  amount = 10 },
+                { type = "fluid", name = "creamy-latex",  amount = 10 },
             },
             category = "crafting-with-fluid",
             energy_required = 10,
             enabled = false
         }
-    }
+    })
 
     if is_pyse then
-        for i, machine_recipe in pairs {
+        for i, machine_recipe in pairs({
             RECIPE("arqad-hive-mk01"):copy(),
             RECIPE("arqad-hive-mk02"):copy(),
             RECIPE("arqad-hive-mk03"):copy(),
             RECIPE("arqad-hive-mk04"):copy(),
-        } do
+        }) do
             machine_recipe.name = machine_recipe.name .. "-with-cags"
-            machine_recipe:add_ingredient {name = "cags", amount = 10 * i, type = "item"}
-            machine_recipe:add_ingredient {name = "hydrangeaceae", amount = 1, type = "item"}
-            data:extend {machine_recipe}
+            machine_recipe:add_ingredient({ name = "cags", amount = 10 * i, type = "item" })
+            machine_recipe:add_ingredient({ name = "hydrangeaceae", amount = 1, type = "item" })
+            data:extend({ machine_recipe })
         end
     else
-        for i, machine_recipe in pairs {
+        for i, machine_recipe in pairs({
             RECIPE("arqad-hive-mk01"):copy(),
             RECIPE("arqad-hive-mk02"):copy(),
             RECIPE("arqad-hive-mk03"):copy(),
             RECIPE("arqad-hive-mk04"):copy(),
-        } do
+        }) do
             machine_recipe.name = machine_recipe.name .. "-with-cags"
-            machine_recipe:add_ingredient {name = "cags", amount = 10 * i, type = "item"}
-            data:extend {machine_recipe}
+            machine_recipe:add_ingredient({ name = "cags", amount = 10 * i, type = "item" })
+            data:extend({ machine_recipe })
         end
     end
 
     local ez_queen = RECIPE("arqad"):copy()
     ez_queen.name = "ez-queen"
     ez_queen:remove_result("arqad")
-    ez_queen:add_result {type = "item", name = "arqad-queen", amount = 1}
+    ez_queen:add_result({ type = "item", name = "arqad-queen", amount = 1 })
     ez_queen.energy_required = ez_queen.energy_required * 2
     ez_queen.main_product = "arqad-queen"
-    data:extend {ez_queen}
+    data:extend({ ez_queen })
 end
 
 return {
@@ -130,12 +130,12 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-arqad.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"arqad", "nitrogen-mk01"},
+        prerequisites = { "arqad", "nitrogen-mk01" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
             },
             time = 45
         }
@@ -147,14 +147,14 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "arqad-egg-1", new = "arqad-egg-1-cold",   type = "recipe-replacement"},
-                {old = "arqad-egg-2", new = "arqad-egg-2-cold",   type = "recipe-replacement"},
-                {old = "arqad-egg-3", new = "arqad-egg-3-cold",   type = "recipe-replacement"},
-                {old = "arqad-egg-4", new = "arqad-egg-4-cold",   type = "recipe-replacement"},
-                {old = "arqad-egg-5", new = "arqad-egg-5-cold",   type = "recipe-replacement"},
-                {old = "wax",         new = "wax-buffed",         type = "recipe-replacement"},
-                {old = "wax-to-lube", new = "wax-to-lube-buffed", type = "recipe-replacement"},
-                {old = "honey-comb",  new = "honey-comb-buffed",  type = "recipe-replacement"},
+                { old = "arqad-egg-1", new = "arqad-egg-1-cold",   type = "recipe-replacement" },
+                { old = "arqad-egg-2", new = "arqad-egg-2-cold",   type = "recipe-replacement" },
+                { old = "arqad-egg-3", new = "arqad-egg-3-cold",   type = "recipe-replacement" },
+                { old = "arqad-egg-4", new = "arqad-egg-4-cold",   type = "recipe-replacement" },
+                { old = "arqad-egg-5", new = "arqad-egg-5-cold",   type = "recipe-replacement" },
+                { old = "wax",         new = "wax-buffed",         type = "recipe-replacement" },
+                { old = "wax-to-lube", new = "wax-to-lube-buffed", type = "recipe-replacement" },
+                { old = "honey-comb",  new = "honey-comb-buffed",  type = "recipe-replacement" },
             },
         },
         {
@@ -170,7 +170,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "ez-queen", type = "unlock-recipe"}
+                { recipe = "ez-queen", type = "unlock-recipe" }
             }
         }
     },

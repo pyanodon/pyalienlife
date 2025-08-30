@@ -1,22 +1,22 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "data-array",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate",        amount = 50},
-        {type = "item", name = "glass",              amount = 40},
-        {type = "item", name = "titanium-plate",     amount = 100},
-        {type = "item", name = "duralumin",          amount = 50},
-        {type = "item", name = "electronic-circuit", amount = 30},
-        {type = "item", name = "iron-gear-wheel",    amount = 50},
+        { type = "item", name = "steel-plate",        amount = 50 },
+        { type = "item", name = "glass",              amount = 40 },
+        { type = "item", name = "titanium-plate",     amount = 100 },
+        { type = "item", name = "duralumin",          amount = 50 },
+        { type = "item", name = "electronic-circuit", amount = 30 },
+        { type = "item", name = "iron-gear-wheel",    amount = 50 },
     },
     results = {
-        {type = "item", name = "data-array", amount = 1}
+        { type = "item", name = "data-array", amount = 1 }
     }
-}:add_unlock("xenobiology")
+}):add_unlock("xenobiology")
 
-ITEM {
+ITEM({
     type = "item",
     name = "data-array",
     icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
@@ -26,30 +26,30 @@ ITEM {
     order = "c",
     place_result = "data-array",
     stack_size = 10
-}
+})
 
-data:extend {{
+data:extend({ {
     name = "data-array",
     type = "module-category",
-}}
+} })
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "data-array",
     icon = "__pyalienlifegraphics__/graphics/icons/data-array.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "data-array"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "data-array" },
     fast_replaceable_group = "data-array",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     module_slots = 5,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    allowed_module_categories = {"speed", "productivity", "efficiency", "data-array"},
-    crafting_categories = {"data-array"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    allowed_module_categories = { "speed", "productivity", "efficiency", "data-array" },
+    crafting_categories = { "data-array" },
     crafting_speed = 1,
     energy_source = {
         type = "electric",
@@ -121,8 +121,8 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/data-array.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/data-array.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/data-array.ogg", volume = 0.9 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/data-array.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

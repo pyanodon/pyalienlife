@@ -1,83 +1,83 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "auog-paddock-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone",      amount = 100},
-        {type = "item", name = "soil",       amount = 300},
-        {type = "item", name = "iron-plate", amount = 80},
-        {type = "item", name = "bolts",      amount = 50}
+        { type = "item", name = "stone",      amount = 100 },
+        { type = "item", name = "soil",       amount = 300 },
+        { type = "item", name = "iron-plate", amount = 80 },
+        { type = "item", name = "bolts",      amount = 50 }
     },
     results = {
-        {type = "item", name = "auog-paddock-mk01", amount = 1}
+        { type = "item", name = "auog-paddock-mk01", amount = 1 }
     }
-}:add_unlock("auog")
+}):add_unlock("auog")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "auog-paddock-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "auog-paddock-mk01",  amount = 1},
-        {type = "item", name = "titanium-plate",     amount = 35},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "duralumin",          amount = 50},
-        {type = "item", name = "small-parts-02",     amount = 30}
+        { type = "item", name = "auog-paddock-mk01",  amount = 1 },
+        { type = "item", name = "titanium-plate",     amount = 35 },
+        { type = "item", name = "electronic-circuit", amount = 10 },
+        { type = "item", name = "duralumin",          amount = 50 },
+        { type = "item", name = "small-parts-02",     amount = 30 }
     },
     results = {
-        {type = "item", name = "auog-paddock-mk02", amount = 1}
+        { type = "item", name = "auog-paddock-mk02", amount = 1 }
     }
-}:add_unlock("land-animals-mk02")
+}):add_unlock("land-animals-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "auog-paddock-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "auog-paddock-mk02", amount = 1},
-        {type = "item", name = "nbti-alloy",        amount = 25},
-        {type = "item", name = "advanced-circuit",  amount = 20},
-        {type = "item", name = "neuromorphic-chip", amount = 30},
-        {type = "item", name = "py-heat-exchanger", amount = 1},
-        {type = "item", name = "small-parts-03",    amount = 30}
+        { type = "item", name = "auog-paddock-mk02", amount = 1 },
+        { type = "item", name = "nbti-alloy",        amount = 25 },
+        { type = "item", name = "advanced-circuit",  amount = 20 },
+        { type = "item", name = "neuromorphic-chip", amount = 30 },
+        { type = "item", name = "py-heat-exchanger", amount = 1 },
+        { type = "item", name = "small-parts-03",    amount = 30 }
     },
     results = {
-        {type = "item", name = "auog-paddock-mk03", amount = 1}
+        { type = "item", name = "auog-paddock-mk03", amount = 1 }
     }
-}:add_unlock("land-animals-mk03")
+}):add_unlock("land-animals-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "auog-paddock-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "auog-paddock-mk03",     amount = 1},
-        {type = "item", name = "science-coating",       amount = 15},
-        {type = "item", name = "processing-unit",       amount = 30},
-        {type = "item", name = "low-density-structure", amount = 30},
-        {type = "item", name = "metallic-glass",        amount = 10},
+        { type = "item", name = "auog-paddock-mk03",     amount = 1 },
+        { type = "item", name = "science-coating",       amount = 15 },
+        { type = "item", name = "processing-unit",       amount = 30 },
+        { type = "item", name = "low-density-structure", amount = 30 },
+        { type = "item", name = "metallic-glass",        amount = 10 },
     },
     results = {
-        {type = "item", name = "auog-paddock-mk04", amount = 1}
+        { type = "item", name = "auog-paddock-mk04", amount = 1 }
     }
-}:add_unlock("land-animals-mk04")
+}):add_unlock("land-animals-mk04")
 
 local base_craft_speed = 2 -- crafting speed for mk01 full of mk01 modules
 local module_slots_per_tier = 2
 local module_slots_base = 2
 local base_name = "auog-paddock-mk0"
 local base_subgroup = "py-alienlife-farm-buildings-mk0"
-local energy_tiers = {"500kW", "200kW", "300kW", "500kW"}
+local energy_tiers = { "500kW", "200kW", "300kW", "500kW" }
 
 for tier = 1, 4 do
     local name = base_name .. tier
     local module_slots = module_slots_base + module_slots_per_tier * tier
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png",
@@ -87,24 +87,24 @@ for tier = 1, 4 do
         order = "d",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png",
         icon_size = 64,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.5, result = name },
         fast_replaceable_group = "auog-paddock",
         max_health = 100,
         corpse = "medium-remnants",
         dying_explosion = "big-explosion",
-        collision_box = {{-6.6, -6.6}, {6.6, 6.6}},
-        selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
+        collision_box = { { -6.6, -6.6 }, { 6.6, 6.6 } },
+        selection_box = { { -7.0, -7.0 }, { 7.0, 7.0 } },
         module_slots = module_slots,
-        allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-        crafting_categories = {"auog"},
+        allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+        crafting_categories = { "auog" },
         crafting_speed = (tier == 1) and py.farm_speed(module_slots, base_craft_speed) or py.farm_speed_derived(module_slots, base_name .. 1, 1, tier),
         energy_source = {
             type = "electric",
@@ -113,7 +113,7 @@ for tier = 1, 4 do
                 pollution = 2
             },
         },
-        energy_usage = energy_tiers[tier],
+        energy_usage = energy_tiers[ tier ],
         graphics_set = {
             working_visualisations = {
                 {
@@ -160,7 +160,7 @@ for tier = 1, 4 do
                         height = 448,
                         frame_count = 1,
                         shift = util.by_pixel(2, -1),
-                        tint = py.tints[tier]
+                        tint = py.tints[ tier ]
                     },
                 }
             },
@@ -168,9 +168,9 @@ for tier = 1, 4 do
 
         impact_category = "metal-large",
         working_sound = {
-            sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.5},
-            idle_sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 0.3},
+            sound = { filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.5 },
+            idle_sound = { filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 0.3 },
             apparent_volume = 2.5
         }
-    }
+    })
 end

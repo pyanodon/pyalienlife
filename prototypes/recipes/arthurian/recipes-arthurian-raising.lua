@@ -1,9 +1,9 @@
 ------------------EGG MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "arthurian-egg",
 	category = "rc",
-	allowed_module_categories = {"arthurian"},
+	allowed_module_categories = { "arthurian" },
 	main_product = "arthurian-egg",
 	crafting_speed = 20,
 	subgroup = "py-alienlife-arthurian",
@@ -16,15 +16,15 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'arthurian', amount = 2},
-				{name = "cottongut",    amount = 2},
-				{name = "cocoon",       amount = 1},
-				{name = "water-barrel", amount = 5, return_barrel = true},
-				{name = "bedding",      amount = 2},
+				{ name = "cottongut",    amount = 2 },
+				{ name = "cocoon",       amount = 1 },
+				{ name = "water-barrel", amount = 5, return_barrel = true },
+				{ name = "bedding",      amount = 2 },
 			},
 			results =
 			{
 				--{name = 'arthurian', amount = 2},
-				{name = "arthurian-egg", amount = 3},
+				{ name = "arthurian-egg", amount = 3 },
 			},
 			tech = "arthurian"
 		},
@@ -32,11 +32,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-food-01", amount = 1},
+				{ name = "arthurian-food-01", amount = 1 },
 			},
 			results =
 			{
-				{name = "arthurian-egg", add_amount = 1},
+				{ name = "arthurian-egg", add_amount = 1 },
 			},
 			tech = "arthurian-mk02"
 		},
@@ -44,11 +44,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "raw-fiber", amount = 5},
+				{ name = "raw-fiber", amount = 5 },
 			},
 			results =
 			{
-				{name = "arthurian-egg", add_amount = 1},
+				{ name = "arthurian-egg", add_amount = 1 },
 			},
 			tech = "arthurian-mk03"
 		},
@@ -56,16 +56,16 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-food-02", amount = 1},
+				{ name = "arthurian-food-02", amount = 1 },
 			},
 			results =
 			{
-				{name = "arthurian-egg", add_amount = 1},
+				{ name = "arthurian-egg", add_amount = 1 },
 			},
 			tech = "arthurian-mk04"
 		},
 	}
-}
+})
 
 --[[
 		-----------------------PHEROMONES-----------------------------
@@ -154,7 +154,7 @@ py.autorecipes {
 
 --incubatting
 
-py.autorecipes {
+py.autorecipes({
 	name = "arthurian-incubating",
 	category = "research",
 	subgroup = "py-alienlife-arthurian",
@@ -164,25 +164,25 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-egg",           amount = 5},
-				{name = "automation-science-pack", amount = 1},
-				{name = "logistic-science-pack",   amount = 1},
-				{name = "chemical-science-pack",   amount = 1},
+				{ name = "arthurian-egg",           amount = 5 },
+				{ name = "automation-science-pack", amount = 1 },
+				{ name = "logistic-science-pack",   amount = 1 },
+				{ name = "chemical-science-pack",   amount = 1 },
 			},
 			results =
 			{
-				{name = "arthurian-pup", amount = 5},
+				{ name = "arthurian-pup", amount = 5 },
 			},
 			crafting_speed = 100,
 			name = "arthurian-egg-incubation-01",
 			tech = "arthurian"
 		},
 	}
-}
+})
 
 --maturing
 
-py.autorecipes {
+py.autorecipes({
 	name = "arthurian-maturing",
 	category = "arthurian",
 	main_product = "arthurian",
@@ -195,13 +195,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-pup", amount = 1},
-				{name = "cottongut",     amount = 4},
-				{name = "water-barrel",  amount = 4, return_barrel = true},
+				{ name = "arthurian-pup", amount = 1 },
+				{ name = "cottongut",     amount = 4 },
+				{ name = "water-barrel",  amount = 4, return_barrel = true },
 			},
 			results =
 			{
-				{name = "arthurian", amount = 1},
+				{ name = "arthurian", amount = 1 },
 			},
 			crafting_speed = 130,
 			tech = "arthurian"
@@ -210,13 +210,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-pup",     add_amount = 1},
-				{name = "arthurian-food-01", amount = 1},
-				{name = "bedding",           amount = 2},
+				{ name = "arthurian-pup",     add_amount = 1 },
+				{ name = "arthurian-food-01", amount = 1 },
+				{ name = "bedding",           amount = 2 },
 			},
 			results =
 			{
-				{name = "arthurian", add_amount = 1},
+				{ name = "arthurian", add_amount = 1 },
 			},
 			crafting_speed = 100,
 			tech = "arthurian-mk02"
@@ -225,13 +225,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-pup",     add_amount = 2},
-				{name = "raw-fiber",         amount = 5},
-				{name = "arthurian-food-02", amount = 1},
+				{ name = "arthurian-pup",     add_amount = 2 },
+				{ name = "raw-fiber",         amount = 5 },
+				{ name = "arthurian-food-02", amount = 1 },
 			},
 			results =
 			{
-				{name = "arthurian", add_amount = 2},
+				{ name = "arthurian", add_amount = 2 },
 			},
 			crafting_speed = 70,
 			tech = "arthurian-mk03"
@@ -240,16 +240,16 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arthurian-pup", add_amount = 4},
-				{name = "bedding",       add_amount = 2},
-				{name = "raw-fiber",     add_amount = 5},
+				{ name = "arthurian-pup", add_amount = 4 },
+				{ name = "bedding",       add_amount = 2 },
+				{ name = "raw-fiber",     add_amount = 5 },
 			},
 			results =
 			{
-				{name = "arthurian", add_amount = 4},
+				{ name = "arthurian", add_amount = 4 },
 			},
 			crafting_speed = 85,
 			tech = "arthurian-mk04"
 		},
 	}
-}
+})

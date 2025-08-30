@@ -1,24 +1,24 @@
 local MODULE_SLOTS = 40
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "phagnot-corral-mk04",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "phagnot-corral-mk03", amount = 1},
-        {type = "item", name = "science-coating",     amount = 30},
-        {type = "item", name = "wall-shield",         amount = 15},
-        {type = "item", name = "nbfe-alloy",          amount = 100},
-        {type = "item", name = "kevlar",              amount = 80},
-        {type = "item", name = "control-unit",        amount = 40},
+        { type = "item", name = "phagnot-corral-mk03", amount = 1 },
+        { type = "item", name = "science-coating",     amount = 30 },
+        { type = "item", name = "wall-shield",         amount = 15 },
+        { type = "item", name = "nbfe-alloy",          amount = 100 },
+        { type = "item", name = "kevlar",              amount = 80 },
+        { type = "item", name = "control-unit",        amount = 40 },
     },
     results = {
-        {type = "item", name = "phagnot-corral-mk04", amount = 1}
+        { type = "item", name = "phagnot-corral-mk04", amount = 1 }
     }
-}:add_unlock("land-animals-mk04")
+}):add_unlock("land-animals-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "phagnot-corral-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/phagnot-corral-mk04.png",
@@ -28,24 +28,24 @@ ITEM {
     order = "d",
     place_result = "phagnot-corral-mk04",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "phagnot-corral-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/phagnot-corral-mk04.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "phagnot-corral-mk04"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "phagnot-corral-mk04" },
     fast_replaceable_group = "phagnot-corral",
     max_health = 70,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.8, -5.8}, {5.8, 5.8}},
-    selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
+    collision_box = { { -5.8, -5.8 }, { 5.8, 5.8 } },
+    selection_box = { { -6.0, -6.0 }, { 6.0, 6.0 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"phagnot"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "phagnot" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "phagnot-corral-mk01"),
     energy_source = {
         type = "electric",
@@ -159,15 +159,15 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -32),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 1.0, a = 1.0 }
                 },
             },
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/phagnot-corral.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/phagnot-corral.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/phagnot-corral.ogg", volume = 1.0 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/phagnot-corral.ogg", volume = 0.3 },
         apparent_volume = 0.45
     }
-}
+})

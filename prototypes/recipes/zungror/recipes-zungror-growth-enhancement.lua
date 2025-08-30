@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "zungror-improved",
 	category = "zungror",
 	subgroup = "py-alienlife-zungror",
@@ -10,13 +10,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-zungror", amount = 2},
-				{name = "nanochondria",  amount = 1},
-				{name = "antiviral",     amount = 1},
+				{ name = "caged-zungror", amount = 2 },
+				{ name = "nanochondria",  amount = 1 },
+				{ name = "antiviral",     amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-zungror", amount = 2},
+				{ name = "brain-caged-zungror", amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "nanochondria"
@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -39,14 +39,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "nanochondria", remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-zungror", remove_item = true},
-				{name = "meat-caged-zungror",  amount = 2},
+				{ name = "brain-caged-zungror", remove_item = true },
+				{ name = "meat-caged-zungror",  amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "anabolic-rna"
@@ -56,7 +56,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -69,14 +69,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 2},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 2 },
 			},
 			results =
 			{
-				{name = "meat-caged-zungror", remove_item = true},
-				{name = "guts-caged-zungror", amount = 2},
+				{ name = "meat-caged-zungror", remove_item = true },
+				{ name = "guts-caged-zungror", amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "antitumor"
@@ -86,7 +86,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -99,14 +99,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-caged-zungror",  remove_item = true},
-				{name = "blood-caged-zungror", amount = 2},
+				{ name = "guts-caged-zungror",  remove_item = true },
+				{ name = "blood-caged-zungror", amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "recombinant-ery"
@@ -115,7 +115,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -128,14 +128,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-caged-zungror", remove_item = true},
-				{name = "skin-caged-zungror",  amount = 2},
+				{ name = "blood-caged-zungror", remove_item = true },
+				{ name = "skin-caged-zungror",  amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "reca"
@@ -144,7 +144,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -157,14 +157,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",         remove_item = true},
-				{name = "reca",       remove_item = true},
-				{name = "orexigenic", amount = 1},
+				{ name = "gh",         remove_item = true },
+				{ name = "reca",       remove_item = true },
+				{ name = "orexigenic", amount = 1 },
 			},
 			results =
 			{
-				{name = "skin-caged-zungror", remove_item = true},
-				{name = "fat-caged-zungror",  amount = 2},
+				{ name = "skin-caged-zungror", remove_item = true },
+				{ name = "fat-caged-zungror",  amount = 2 },
 			},
 			crafting_speed = 180,
 			tech = "orexigenic"
@@ -173,7 +173,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -183,4 +183,4 @@ py.autorecipes {
 			tech = "orexigenic"
 		},
 	}
-}
+})

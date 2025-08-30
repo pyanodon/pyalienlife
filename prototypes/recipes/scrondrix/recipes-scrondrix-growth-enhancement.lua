@@ -1,6 +1,6 @@
 ------------------SPECIAL MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "scrondrix-improved",
 	category = "scrondrix",
 	subgroup = "py-alienlife-scrondrix",
@@ -12,13 +12,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-scrondrix", amount = 1},
-				{name = "gh",              amount = 1},
-				{name = "nanochondria",    amount = 1},
+				{ name = "caged-scrondrix", amount = 1 },
+				{ name = "gh",              amount = 1 },
+				{ name = "nanochondria",    amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-scrondrix", amount = 1},
+				{ name = "brain-caged-scrondrix", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "nanochondria",
@@ -45,13 +45,13 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='gh',remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "bmp",          amount = 1},
+				{ name = "nanochondria", remove_item = true },
+				{ name = "bmp",          amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-scrondrix", remove_item = true},
-				{name = "bone-caged-scrondrix",  amount = 1},
+				{ name = "brain-caged-scrondrix", remove_item = true },
+				{ name = "bone-caged-scrondrix",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "bmp",
@@ -79,13 +79,13 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='gh',remove_item = true},
-				{name = "bmp",          remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "bmp",          remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "bone-caged-scrondrix", remove_item = true},
-				{name = "meat-caged-scrondrix", amount = 1},
+				{ name = "bone-caged-scrondrix", remove_item = true },
+				{ name = "meat-caged-scrondrix", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "anabolic-rna",
@@ -113,13 +113,13 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='gh',remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-caged-scrondrix", remove_item = true},
-				{name = "guts-caged-scrondrix", amount = 1},
+				{ name = "meat-caged-scrondrix", remove_item = true },
+				{ name = "guts-caged-scrondrix", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "antitumor",
@@ -147,13 +147,13 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='gh',remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-caged-scrondrix",  remove_item = true},
-				{name = "blood-caged-scrondrix", amount = 1},
+				{ name = "guts-caged-scrondrix",  remove_item = true },
+				{ name = "blood-caged-scrondrix", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "recombinant-ery",
@@ -179,13 +179,13 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='gh',remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-caged-scrondrix", remove_item = true},
-				{name = "skin-caged-scrondrix",  amount = 1},
+				{ name = "blood-caged-scrondrix", remove_item = true },
+				{ name = "skin-caged-scrondrix",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "reca",
@@ -211,13 +211,13 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='gh',remove_item = true},
-				{name = "reca",       remove_item = true},
-				{name = "orexigenic", amount = 1},
+				{ name = "reca",       remove_item = true },
+				{ name = "orexigenic", amount = 1 },
 			},
 			results =
 			{
-				{name = "skin-caged-scrondrix", remove_item = true},
-				{name = "fat-caged-scrondrix",  amount = 1},
+				{ name = "skin-caged-scrondrix", remove_item = true },
+				{ name = "fat-caged-scrondrix",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "orexigenic",
@@ -239,4 +239,4 @@ py.autorecipes {
 			name = 'Caged-scrondrix-22',
 		},]]
 	}
-}
+})

@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "fawogae",
 	category = "fawogae",
 	subgroup = "py-alienlife-fawogae",
@@ -10,11 +10,11 @@ py.autorecipes {
 			tech = "plankton",
 			ingredient_changes =
 			{
-				{name = "phytoplankton", add_amount = 25}
+				{ name = "phytoplankton", add_amount = 25 }
 			},
 			result_changes =
 			{
-				{name = "fawogae", multiply_amount = 1.5, round_direction = "up"}
+				{ name = "fawogae", multiply_amount = 1.5, round_direction = "up" }
 			},
 		}
 	},
@@ -24,11 +24,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fawogae-spore", amount = 3},
+				{ name = "fawogae-spore", amount = 3 },
 			},
 			results =
 			{
-				{name = "fawogae", amount = 7}
+				{ name = "fawogae", amount = 7 }
 			},
 			crafting_speed = 100,
 			tech = "fawogae-mk01"
@@ -37,12 +37,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "water",            amount = 100},
-				{name = "fungal-substrate", amount = 1},
+				{ name = "water",            amount = 100 },
+				{ name = "fungal-substrate", amount = 1 },
 			},
 			results =
 			{
-				{name = "fawogae", amount = 15}
+				{ name = "fawogae", amount = 15 }
 			},
 			crafting_speed = 80,
 			tech = "fawogae-mk02"
@@ -51,14 +51,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fungal-substrate",    remove_item = true},
-				{name = "fungal-substrate-02", amount = 3},
-				{name = "fertilizer",          add_amount = 3},
-				{name = "biomass",             amount = 3},
+				{ name = "fungal-substrate",    remove_item = true },
+				{ name = "fungal-substrate-02", amount = 3 },
+				{ name = "fertilizer",          add_amount = 3 },
+				{ name = "biomass",             amount = 3 },
 			},
 			results =
 			{
-				{name = "fawogae", amount = 30}
+				{ name = "fawogae", amount = 30 }
 			},
 			crafting_speed = 60,
 			tech = "fawogae-mk03"
@@ -67,14 +67,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fungal-substrate-02", remove_item = true},
-				{name = "fungal-substrate-03", amount = 5},
-				{name = "fertilizer",          add_amount = 4},
-				{name = "biomass",             add_amount = 7},
+				{ name = "fungal-substrate-02", remove_item = true },
+				{ name = "fungal-substrate-03", amount = 5 },
+				{ name = "fertilizer",          add_amount = 4 },
+				{ name = "biomass",             add_amount = 7 },
 			},
 			results =
 			{
-				{name = "fawogae", amount = 60}
+				{ name = "fawogae", amount = 60 }
 			},
 			crafting_speed = 40,
 			tech = "fawogae-mk04"
@@ -83,17 +83,17 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",         amount = 1},
-				{name = "urea",       amount = 10,    fallback = "manure"},
-				{name = "fertilizer", add_amount = 5},
-				{name = "biomass",    add_amount = 15},
+				{ name = "gh",         amount = 1 },
+				{ name = "urea",       amount = 10,    fallback = "manure" },
+				{ name = "fertilizer", add_amount = 5 },
+				{ name = "biomass",    add_amount = 15 },
 			},
 			results =
 			{
-				{name = "fawogae", amount = 120}
+				{ name = "fawogae", amount = 120 }
 			},
 			crafting_speed = 20,
 			tech = "fawogae-mk05"
 		},
 	}
-}
+})

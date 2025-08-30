@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "arqad-improve",
 	category = "arqad",
 	subgroup = "py-alienlife-arqad",
@@ -9,12 +9,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arqad",        amount = 1},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "arqad",        amount = 1 },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-arqad", amount = 1},
+				{ name = "meat-arqad", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "anabolic-rna"
@@ -24,7 +24,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria',amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -37,14 +37,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-arqad", remove_item = true},
-				{name = "guts-arqad", amount = 1},
+				{ name = "meat-arqad", remove_item = true },
+				{ name = "guts-arqad", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "antitumor"
@@ -54,7 +54,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria',amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -67,14 +67,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-arqad",  remove_item = true},
-				{name = "blood-arqad", amount = 1},
+				{ name = "guts-arqad",  remove_item = true },
+				{ name = "blood-arqad", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "recombinant-ery"
@@ -83,7 +83,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -96,14 +96,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-arqad",  remove_item = true},
-				{name = "chitin-arqad", amount = 1},
+				{ name = "blood-arqad",  remove_item = true },
+				{ name = "chitin-arqad", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "reca"
@@ -112,7 +112,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -122,4 +122,4 @@ py.autorecipes {
 			tech = "reca"
 		},
 	}
-}
+})

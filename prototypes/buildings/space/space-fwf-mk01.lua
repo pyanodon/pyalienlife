@@ -1,23 +1,23 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-fwf-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick",        amount = 50},
-        {type = "item", name = "steel-plate",        amount = 10},
-        {type = "item", name = "engine-unit",        amount = 3},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel",    amount = 20},
+        { type = "item", name = "stone-brick",        amount = 50 },
+        { type = "item", name = "steel-plate",        amount = 10 },
+        { type = "item", name = "engine-unit",        amount = 3 },
+        { type = "item", name = "electronic-circuit", amount = 10 },
+        { type = "item", name = "iron-gear-wheel",    amount = 20 },
     },
     results = {
-        {type = "item", name = "space-fwf-mk01", amount = 1}
+        { type = "item", name = "space-fwf-mk01", amount = 1 }
     }
-}:add_unlock("botany-mk01")
+}):add_unlock("botany-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-fwf-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk01.png",
@@ -27,24 +27,24 @@ ITEM {
     order = "e",
     place_result = "space-fwf-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-fwf-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/fwf-mk01.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-fwf-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-fwf-mk01" },
     fast_replaceable_group = "fwf",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.1, -5.1 }, { 5.1, 5.1 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = 25,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"fwf"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "fwf" },
     crafting_speed = 0.05,
     energy_source = {
         type = "electric",
@@ -130,29 +130,29 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 1.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -1.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 1.0, -5.0 }, direction = defines.direction.north } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.80},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.80 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

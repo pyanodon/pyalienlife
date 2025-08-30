@@ -1,25 +1,25 @@
 local MODULE_SLOTS = 21
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "grods-swamp-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "grods-swamp-mk02",      amount = 1},
-        {type = "item", name = "molybdenum-plate",      amount = 15},
-        {type = "item", name = "low-density-structure", amount = 20},
-        {type = "item", name = "processing-unit",       amount = 40},
-        {type = "item", name = "electric-engine-unit",  amount = 8},
-        {type = "item", name = "nexelit-plate",         amount = 40},
-        {type = "item", name = "nbti-alloy",            amount = 30},
+        { type = "item", name = "grods-swamp-mk02",      amount = 1 },
+        { type = "item", name = "molybdenum-plate",      amount = 15 },
+        { type = "item", name = "low-density-structure", amount = 20 },
+        { type = "item", name = "processing-unit",       amount = 40 },
+        { type = "item", name = "electric-engine-unit",  amount = 8 },
+        { type = "item", name = "nexelit-plate",         amount = 40 },
+        { type = "item", name = "nbti-alloy",            amount = 30 },
     },
     results = {
-        {type = "item", name = "grods-swamp-mk03", amount = 1}
+        { type = "item", name = "grods-swamp-mk03", amount = 1 }
     }
-}:add_unlock("botany-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
+}):add_unlock("botany-mk03"):add_ingredient({ type = "item", name = "small-parts-03", amount = 30 })
 
-ITEM {
+ITEM({
     type = "item",
     name = "grods-swamp-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk03.png",
@@ -29,25 +29,25 @@ ITEM {
     order = "e",
     place_result = "grods-swamp-mk03",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "grods-swamp-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "grods-swamp-mk03"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "grods-swamp-mk03" },
     fast_replaceable_group = "grods-swamp",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"grod"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "grod" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "grods-swamp-mk01"),
     energy_source = {
         type = "electric",
@@ -119,7 +119,7 @@ ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
             }
         },
@@ -132,43 +132,43 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 2.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -2.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 1.55},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 1.55 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 0.3 },
         apparent_volume = 1.2
     }
-}
+})

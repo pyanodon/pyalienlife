@@ -13,7 +13,7 @@ local IMP_GUTS = 11
 local IMP_BLOOD = 300
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-xyhiphoe",
@@ -24,14 +24,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "xyhiphoe", amount = INPUT_AMOUNT},
+				{ name = "xyhiphoe", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "meat",            amount = BASE_MEAT},
-				{name = "shell",           amount = BASE_SKIN},
-				{name = "guts",            amount = BASE_GUTS},
-				{name = "arthropod-blood", amount = BASE_BLOOD},
+				{ name = "meat",            amount = BASE_MEAT },
+				{ name = "shell",           amount = BASE_SKIN },
+				{ name = "guts",            amount = BASE_GUTS },
+				{ name = "arthropod-blood", amount = BASE_BLOOD },
 			},
 			crafting_speed = 30,
 			tech = "water-invertebrates-mk01",
@@ -43,21 +43,21 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "xyhiphoe",      remove_item = true},
-				{name = "meat-xyhiphoe", amount = INPUT_AMOUNT},
+				{ name = "xyhiphoe",      remove_item = true },
+				{ name = "meat-xyhiphoe", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "shell",           remove_item = true},
-				{name = "guts",            remove_item = true},
-				{name = "arthropod-blood", remove_item = true},
-				{name = "meat",            amount = IMP_MEAT},
+				{ name = "shell",           remove_item = true },
+				{ name = "guts",            remove_item = true },
+				{ name = "arthropod-blood", remove_item = true },
+				{ name = "meat",            amount = IMP_MEAT },
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-xyh",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -65,19 +65,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "meat-xyhiphoe", remove_item = true},
-				{name = "guts-xyhiphoe", amount = INPUT_AMOUNT},
+				{ name = "meat-xyhiphoe", remove_item = true },
+				{ name = "guts-xyhiphoe", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "meat", remove_item = true},
-				{name = "guts", amount = IMP_GUTS},
+				{ name = "meat", remove_item = true },
+				{ name = "guts", amount = IMP_GUTS },
 			},
 			tech = "antitumor",
 			name = "ex-gut-xyh",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -85,19 +85,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "guts-xyhiphoe",  remove_item = true},
-				{name = "blood-xyhiphoe", amount = INPUT_AMOUNT},
+				{ name = "guts-xyhiphoe",  remove_item = true },
+				{ name = "blood-xyhiphoe", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "guts",            remove_item = true},
-				{name = "arthropod-blood", amount = IMP_BLOOD},
+				{ name = "guts",            remove_item = true },
+				{ name = "arthropod-blood", amount = IMP_BLOOD },
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-xyh",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -105,21 +105,21 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-xyhiphoe", remove_item = true},
-				{name = "shell-xyhiphoe", amount = INPUT_AMOUNT},
+				{ name = "blood-xyhiphoe", remove_item = true },
+				{ name = "shell-xyhiphoe", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "arthropod-blood", remove_item = true},
-				{name = "shell",           amount = IMP_SKIN},
+				{ name = "arthropod-blood", remove_item = true },
+				{ name = "shell",           amount = IMP_SKIN },
 			},
 			tech = "reca",
 			name = "ex-ski-xyh",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/shell.png",   scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/shell.png",   scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
 	}
-}
+})

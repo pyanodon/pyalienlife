@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "vonix-improved",
 	category = "vonix",
 	subgroup = "py-alienlife-vonix",
@@ -10,12 +10,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "nanochondria", amount = 1},
-				{name = "vonix",        amount = 1},
+				{ name = "nanochondria", amount = 1 },
+				{ name = "vonix",        amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-vonix", amount = 1},
+				{ name = "brain-vonix", amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "nanochondria"
@@ -25,7 +25,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -38,14 +38,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "nanochondria", remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-vonix", remove_item = true},
-				{name = "meat-vonix",  amount = 1},
+				{ name = "brain-vonix", remove_item = true },
+				{ name = "meat-vonix",  amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "anabolic-rna"
@@ -55,7 +55,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -68,14 +68,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-vonix", remove_item = true},
-				{name = "guts-vonix", amount = 1},
+				{ name = "meat-vonix", remove_item = true },
+				{ name = "guts-vonix", amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "antitumor"
@@ -85,7 +85,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -98,14 +98,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-vonix",  remove_item = true},
-				{name = "blood-vonix", amount = 1},
+				{ name = "guts-vonix",  remove_item = true },
+				{ name = "blood-vonix", amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "recombinant-ery"
@@ -114,7 +114,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -127,14 +127,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-vonix", remove_item = true},
-				{name = "skin-vonix",  amount = 1},
+				{ name = "blood-vonix", remove_item = true },
+				{ name = "skin-vonix",  amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "reca"
@@ -143,7 +143,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -156,14 +156,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",         remove_item = true},
-				{name = "reca",       remove_item = true},
-				{name = "orexigenic", amount = 1},
+				{ name = "gh",         remove_item = true },
+				{ name = "reca",       remove_item = true },
+				{ name = "orexigenic", amount = 1 },
 			},
 			results =
 			{
-				{name = "skin-vonix", remove_item = true},
-				{name = "fat-vonix",  amount = 1},
+				{ name = "skin-vonix", remove_item = true },
+				{ name = "fat-vonix",  amount = 1 },
 			},
 			crafting_speed = 180,
 			tech = "orexigenic"
@@ -172,7 +172,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -182,4 +182,4 @@ py.autorecipes {
 			tech = "orexigenic"
 		},
 	}
-}
+})

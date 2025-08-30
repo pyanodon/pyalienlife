@@ -1,24 +1,24 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-sap-extractor-mk01",
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {type = "item", name = "stone-brick",        amount = 30},
-        {type = "item", name = "soil",               amount = 100},
-        {type = "item", name = "pipe",               amount = 15},
-        {type = "item", name = "inserter",           amount = 2},
-        {type = "item", name = "electronic-circuit", amount = 5},
-        {type = "item", name = "iron-plate",         amount = 30},
+        { type = "item", name = "stone-brick",        amount = 30 },
+        { type = "item", name = "soil",               amount = 100 },
+        { type = "item", name = "pipe",               amount = 15 },
+        { type = "item", name = "inserter",           amount = 2 },
+        { type = "item", name = "electronic-circuit", amount = 5 },
+        { type = "item", name = "iron-plate",         amount = 30 },
     },
     results = {
-        {type = "item", name = "space-sap-extractor-mk01", amount = 1}
+        { type = "item", name = "space-sap-extractor-mk01", amount = 1 }
     }
-}
+})
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-sap-extractor-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/sap-extractor-mk01.png",
@@ -28,25 +28,25 @@ ITEM {
     order = "e",
     place_result = "space-sap-extractor-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-sap-extractor-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/sap-extractor-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-sap-extractor-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-sap-extractor-mk01" },
     fast_replaceable_group = "sap-extractor",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = { { -2.4, -2.4 }, { 2.4, 2.4 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
 
     module_slots = 2,
-    allowed_effects = {"consumption", "speed", "pollution"},
-    crafting_categories = {"sap"},
+    allowed_effects = { "consumption", "speed", "pollution" },
+    crafting_categories = { "sap" },
     crafting_speed = 0.1,
     energy_source = {
         type = "electric",
@@ -76,7 +76,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.3,
                     shift = util.by_pixel(0, -10),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/sap-extractor/shadow.png",
@@ -94,8 +94,8 @@ ENTITY {
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.6},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.6 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

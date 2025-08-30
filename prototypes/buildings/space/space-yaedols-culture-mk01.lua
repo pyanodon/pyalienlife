@@ -1,25 +1,25 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-yaedols-culture-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",           amount = 200},
-        {type = "item", name = "titanium-plate",     amount = 100},
-        {type = "item", name = "storage-tank",       amount = 1},
-        {type = "item", name = "duralumin",          amount = 50},
-        {type = "item", name = "glass",              amount = 20},
-        {type = "item", name = "electronic-circuit", amount = 100},
-        {type = "item", name = "pump",               amount = 5},
+        { type = "item", name = "concrete",           amount = 200 },
+        { type = "item", name = "titanium-plate",     amount = 100 },
+        { type = "item", name = "storage-tank",       amount = 1 },
+        { type = "item", name = "duralumin",          amount = 50 },
+        { type = "item", name = "glass",              amount = 20 },
+        { type = "item", name = "electronic-circuit", amount = 100 },
+        { type = "item", name = "pump",               amount = 5 },
     },
     results = {
-        {type = "item", name = "space-yaedols-culture-mk01", amount = 1}
+        { type = "item", name = "space-yaedols-culture-mk01", amount = 1 }
     }
-}:add_unlock("yaedols")
+}):add_unlock("yaedols")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-yaedols-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/yaedols-culture-mk01.png",
@@ -29,24 +29,24 @@ ITEM {
     order = "b",
     place_result = "space-yaedols-culture-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-yaedols-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/yaedols-culture-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-yaedols-culture-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-yaedols-culture-mk01" },
     fast_replaceable_group = "yaedols-culture",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.3, -5.3 }, { 5.3, 5.3 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"yaedols"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "yaedols" },
     crafting_speed = 0.02,
     energy_source = {
         type = "electric",
@@ -161,7 +161,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(0, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
 
             },
@@ -175,36 +175,36 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 1.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -1.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 1.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-1.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -1.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/yaedols-culture.ogg", volume = 1.2},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/yaedols-culture.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/yaedols-culture.ogg", volume = 1.2 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/yaedols-culture.ogg", volume = 0.3 },
         apparent_volume = 0.45
     }
-}
+})

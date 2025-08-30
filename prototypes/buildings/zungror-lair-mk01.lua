@@ -1,30 +1,30 @@
 local MODULE_SLOTS = 1
 local FULL_CRAFTING_SPEED = .5 -- crafting speed when full of mk01 modules
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "zungror-lair-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone",                  amount = 300},
-        {type = "item", name = "concrete",               amount = 200},
-        {type = "item", name = "iron-plate",             amount = 200},
-        {type = "item", name = "glass",                  amount = 50},
-        {type = "item", name = "gun-turret",             amount = 1},
-        {type = "item", name = "laser-turret",           amount = 1},
-        {type = "item", name = "automated-factory-mk01", amount = 1},
-        {type = "item", name = "stainless-steel",        amount = 100},
-        {type = "item", name = "titanium-plate",         amount = 50},
-        {type = "item", name = "latex",                  amount = 100},
-        {type = "item", name = "advanced-circuit",       amount = 200},
+        { type = "item", name = "stone",                  amount = 300 },
+        { type = "item", name = "concrete",               amount = 200 },
+        { type = "item", name = "iron-plate",             amount = 200 },
+        { type = "item", name = "glass",                  amount = 50 },
+        { type = "item", name = "gun-turret",             amount = 1 },
+        { type = "item", name = "laser-turret",           amount = 1 },
+        { type = "item", name = "automated-factory-mk01", amount = 1 },
+        { type = "item", name = "stainless-steel",        amount = 100 },
+        { type = "item", name = "titanium-plate",         amount = 50 },
+        { type = "item", name = "latex",                  amount = 100 },
+        { type = "item", name = "advanced-circuit",       amount = 200 },
     },
     results = {
-        {type = "item", name = "zungror-lair-mk01", amount = 1}
+        { type = "item", name = "zungror-lair-mk01", amount = 1 }
     }
-}:add_unlock("zungror")
+}):add_unlock("zungror")
 
-ITEM {
+ITEM({
     type = "item",
     name = "zungror-lair-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk01.png",
@@ -34,24 +34,24 @@ ITEM {
     order = "d",
     place_result = "zungror-lair-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "zungror-lair-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/zungror-lair-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "zungror-lair-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "zungror-lair-mk01" },
     fast_replaceable_group = "zungror-lair",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-8.6, -8.6}, {8.6, 8.6}},
-    selection_box = {{-9.0, -9.0}, {9.0, 9.0}},
+    collision_box = { { -8.6, -8.6 }, { 8.6, 8.6 } },
+    selection_box = { { -9.0, -9.0 }, { 9.0, 9.0 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"zungror"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "zungror" },
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -237,7 +237,7 @@ ENTITY {
                     frame_count = 1,
                     repeat_count = 80,
                     animation_speed = 0.25,
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                     shift = util.by_pixel(16, -48)
                 },
             }
@@ -245,8 +245,8 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics3__/sounds/zungror-lair.ogg", volume = 0.6},
-        idle_sound = {filename = "__pyalienlifegraphics3__/sounds/zungror-lair.ogg", volume = 0.25},
+        sound = { filename = "__pyalienlifegraphics3__/sounds/zungror-lair.ogg", volume = 0.6 },
+        idle_sound = { filename = "__pyalienlifegraphics3__/sounds/zungror-lair.ogg", volume = 0.25 },
         apparent_volume = 2.5
     }
-}
+})

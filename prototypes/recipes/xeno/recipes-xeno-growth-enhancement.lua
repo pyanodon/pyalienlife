@@ -1,6 +1,6 @@
 --Raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "xeno-improved",
 	category = "xeno",
 	subgroup = "py-alienlife-xeno",
@@ -12,13 +12,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-xeno",   amount = 1},
-				{name = "nanochondria", amount = 1},
-				{name = "antiviral",    amount = 1},
+				{ name = "caged-xeno",   amount = 1 },
+				{ name = "nanochondria", amount = 1 },
+				{ name = "antiviral",    amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-xeno", amount = 1},
+				{ name = "brain-caged-xeno", amount = 1 },
 				--{name='cage', amount=1},
 			},
 			crafting_speed = 80,
@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -42,14 +42,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "bmp",          amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "nanochondria", remove_item = true },
+				{ name = "bmp",          amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-xeno", remove_item = true},
-				{name = "bone-caged-xeno",  amount = 1},
+				{ name = "brain-caged-xeno", remove_item = true },
+				{ name = "bone-caged-xeno",  amount = 1 },
 			},
 			crafting_speed = 80,
 			tech = "bmp"
@@ -60,7 +60,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -73,14 +73,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "bmp",          remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "bmp",          remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "bone-caged-xeno", remove_item = true},
-				{name = "meat-caged-xeno", amount = 1},
+				{ name = "bone-caged-xeno", remove_item = true },
+				{ name = "meat-caged-xeno", amount = 1 },
 			},
 			crafting_speed = 80,
 			tech = "anabolic-rna"
@@ -90,7 +90,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -103,14 +103,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "anabolic-rna",    remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "anabolic-rna",    remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-caged-xeno",     remove_item = true},
-				{name = "sulfuric-caged-xeno", amount = 1},
+				{ name = "meat-caged-xeno",     remove_item = true },
+				{ name = "sulfuric-caged-xeno", amount = 1 },
 			},
 			crafting_speed = 80,
 			tech = "recombinant-ery"
@@ -119,7 +119,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -132,14 +132,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "sulfuric-caged-xeno", remove_item = true},
-				{name = "chitin-caged-xeno",   amount = 1},
+				{ name = "sulfuric-caged-xeno", remove_item = true },
+				{ name = "chitin-caged-xeno",   amount = 1 },
 			},
 			crafting_speed = 80,
 			tech = "reca"
@@ -148,7 +148,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -158,4 +158,4 @@ py.autorecipes {
 			tech = "reca"
 		},
 	}
-}
+})

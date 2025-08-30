@@ -1,26 +1,26 @@
 local MODULE_SLOTS = 1
 local FULL_CRAFTING_SPEED = .6 -- crafting speed when full of mk01 modules
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "vonix-den-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",          amount = 100},
-        {type = "item", name = "nbti-alloy",        amount = 100},
-        {type = "item", name = "super-steel",       amount = 100},
-        {type = "item", name = "aluminium-mine",    amount = 1},
-        {type = "item", name = "glass",             amount = 120},
-        {type = "item", name = "neuromorphic-chip", amount = 50},
-        {type = "item", name = "processing-unit",   amount = 20},
+        { type = "item", name = "concrete",          amount = 100 },
+        { type = "item", name = "nbti-alloy",        amount = 100 },
+        { type = "item", name = "super-steel",       amount = 100 },
+        { type = "item", name = "aluminium-mine",    amount = 1 },
+        { type = "item", name = "glass",             amount = 120 },
+        { type = "item", name = "neuromorphic-chip", amount = 50 },
+        { type = "item", name = "processing-unit",   amount = 20 },
     },
     results = {
-        {type = "item", name = "vonix-den-mk01", amount = 1}
+        { type = "item", name = "vonix-den-mk01", amount = 1 }
     }
-}:add_unlock("vonix"):add_ingredient {type = "item", name = "small-parts-01", amount = 500}
+}):add_unlock("vonix"):add_ingredient({ type = "item", name = "small-parts-01", amount = 500 })
 
-ITEM {
+ITEM({
     type = "item",
     name = "vonix-den-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/vonix-den-mk01.png",
@@ -30,24 +30,24 @@ ITEM {
     order = "f",
     place_result = "vonix-den-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "vonix-den-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/vonix-den-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "vonix-den-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "vonix-den-mk01" },
     fast_replaceable_group = "vonix-den",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"vonix"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "vonix" },
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -190,15 +190,15 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             },
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/vonix-den.ogg", volume = 0.8},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/vonix-den.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/vonix-den.ogg", volume = 0.8 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/vonix-den.ogg", volume = 0.3 },
         apparent_volume = 0.45
     }
-}
+})

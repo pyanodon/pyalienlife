@@ -1,29 +1,29 @@
-data:extend {{
+data:extend({ {
     type = "collision-layer",
     name = "layer_14" -- this is not the 14th layer btw
-}}
+} })
 
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-dingrits-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nbti-alloy",         amount = 40},
-        {type = "item", name = "small-lamp",         amount = 20},
-        {type = "item", name = "concrete",           amount = 200},
-        {type = "item", name = "concrete-wall",      amount = 50},
-        {type = "item", name = "electronic-circuit", amount = 50},
-        {type = "item", name = "steel-plate",        amount = 50},
+        { type = "item", name = "nbti-alloy",         amount = 40 },
+        { type = "item", name = "small-lamp",         amount = 20 },
+        { type = "item", name = "concrete",           amount = 200 },
+        { type = "item", name = "concrete-wall",      amount = 50 },
+        { type = "item", name = "electronic-circuit", amount = 50 },
+        { type = "item", name = "steel-plate",        amount = 50 },
     },
     results = {
-        {type = "item", name = "space-dingrits-mk01", amount = 1}
+        { type = "item", name = "space-dingrits-mk01", amount = 1 }
     }
-}:add_unlock("dingrits")
+}):add_unlock("dingrits")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-dingrits-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-pack-mk01.png",
@@ -33,25 +33,25 @@ ITEM {
     order = "d",
     place_result = "space-dingrits-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-dingrits-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-pack-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-dingrits-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-dingrits-mk01" },
     fast_replaceable_group = "dingrits-pack",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-6.8, -6.8}, {6.8, 6.8}},
-    selection_box = {{-7.0, -7.0}, {7.0, 7.0}},
-    collision_mask = {layers = {ground_tile = true, water_tile = true, layer_14 = true}},
+    collision_box = { { -6.8, -6.8 }, { 6.8, 6.8 } },
+    selection_box = { { -7.0, -7.0 }, { 7.0, 7.0 } },
+    collision_mask = { layers = { ground_tile = true, water_tile = true, layer_14 = true } },
     module_slots = 20,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"dingrits"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "dingrits" },
     crafting_speed = 0.075,
     energy_source = {
         type = "electric",
@@ -223,7 +223,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             },
         },
@@ -232,8 +232,8 @@ ENTITY {
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.62},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.62 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.3 },
         apparent_volume = 1.2
     }
-}
+})

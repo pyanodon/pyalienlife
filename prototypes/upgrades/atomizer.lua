@@ -14,47 +14,47 @@
 -- all zinc -> zinc grade 3
 
 if data and not yafc_turd_integration then
-    RECIPE {
+    RECIPE({
         type = "recipe",
         name = "venom-gland-to-dynemicin",
         category = "atomizer",
         enabled = false,
         energy_required = 90,
         ingredients = {
-            {type = "item", name = "venom-gland", amount = 10},
+            { type = "item", name = "venom-gland", amount = 10 },
         },
         results = {
-            {type = "item", name = "dynemicin", amount = 100},
+            { type = "item", name = "dynemicin", amount = 100 },
         },
-    }
+    })
 
-    RECIPE {
+    RECIPE({
         type = "recipe",
         name = "cognition-osteochain-to-kondo-substrate",
         category = "atomizer",
         enabled = false,
         energy_required = 90,
         ingredients = {
-            {type = "item", name = "cognition-osteochain", amount = 2},
+            { type = "item", name = "cognition-osteochain", amount = 2 },
         },
         results = {
-            {type = "item", name = "kondo-substrate", amount = 100},
+            { type = "item", name = "kondo-substrate", amount = 100 },
         },
-    }
+    })
 
-    RECIPE {
+    RECIPE({
         type = "recipe",
         name = "dimensional-gastricorg-to-inverse-opal",
         category = "atomizer",
         enabled = false,
         energy_required = 90,
         ingredients = {
-            {type = "item", name = "dimensional-gastricorg", amount = 1},
+            { type = "item", name = "dimensional-gastricorg", amount = 1 },
         },
         results = {
-            {type = "item", name = "inverse-opal", amount = 100},
+            { type = "item", name = "inverse-opal", amount = 100 },
         },
-    }
+    })
 end
 
 return {
@@ -69,16 +69,16 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-atomizer.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"molecular-decohesion-mk04", "biotech-machines-mk04"},
+        prerequisites = { "molecular-decohesion-mk04", "biotech-machines-mk04" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"military-science-pack",   1},
-                {"py-science-pack-2",       1},
-                {"chemical-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "military-science-pack",   1 },
+                { "py-science-pack-2",       1 },
+                { "chemical-science-pack",   1 },
             },
             time = 45
         }
@@ -90,7 +90,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "venom-gland-to-dynemicin", type = "unlock-recipe"}
+                { recipe = "venom-gland-to-dynemicin", type = "unlock-recipe" }
             },
         },
         {
@@ -99,7 +99,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "cognition-osteochain-to-kondo-substrate", type = "unlock-recipe"}
+                { recipe = "cognition-osteochain-to-kondo-substrate", type = "unlock-recipe" }
             }
         },
         {
@@ -108,7 +108,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "dimensional-gastricorg-to-inverse-opal", type = "unlock-recipe"}
+                { recipe = "dimensional-gastricorg-to-inverse-opal", type = "unlock-recipe" }
             }
         }
     }

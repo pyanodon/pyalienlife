@@ -1,25 +1,25 @@
-ENTITY {
+ENTITY({
     type = "resource",
     name = "grod-flower",
     category = "grod-flower",
     icon = "__pyalienlifegraphics__/graphics/icons/grod.png",
     icon_size = 64,
-    flags = {"placeable-neutral"},
+    flags = { "placeable-neutral" },
     order = "a-b-a",
-    map_color = {r = 0.0, g = 0.576, b = 0.517},
+    map_color = { r = 0.0, g = 0.576, b = 0.517 },
     minable = {
 
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = "item", name = "grod", amount = 1}
+            { type = "item", name = "grod", amount = 1 }
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
     },
     starting_area = false,
-    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     --[[
 	autoplace = {
         control = "ore-aluminium",
@@ -37,7 +37,7 @@ ENTITY {
         }
     },
 	]] --
-    stage_counts = {800},
+    stage_counts = { 800 },
     stages = {
         sheet = {
             filename = "__pyalienlifegraphics__/graphics/entity/crops/grod.png",
@@ -50,4 +50,4 @@ ENTITY {
             shift = util.by_pixel(0, -16),
         }
     }
-}
+})

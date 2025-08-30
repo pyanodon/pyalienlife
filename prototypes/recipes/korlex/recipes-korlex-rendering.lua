@@ -19,7 +19,7 @@ local IMP_BLOOD = 100
 local IMP_BRAIN = 4
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-korlex",
@@ -30,18 +30,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-korlex", amount = INPUT_AMOUNT},
+				{ name = "caged-korlex", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       amount = BASE_BONES},
-				{name = "meat",        amount = BASE_MEAT},
-				{name = "skin",        amount = BASE_SKIN},
-				{name = "mukmoux-fat", amount = BASE_FAT},
-				{name = "guts",        amount = BASE_GUTS},
-				{name = "blood",       amount = BASE_BLOOD},
-				{name = "cage",        amount = INPUT_AMOUNT},
-				{name = "brain",       amount = BASE_BRAIN},
+				{ name = "bones",       amount = BASE_BONES },
+				{ name = "meat",        amount = BASE_MEAT },
+				{ name = "skin",        amount = BASE_SKIN },
+				{ name = "mukmoux-fat", amount = BASE_FAT },
+				{ name = "guts",        amount = BASE_GUTS },
+				{ name = "blood",       amount = BASE_BLOOD },
+				{ name = "cage",        amount = INPUT_AMOUNT },
+				{ name = "brain",       amount = BASE_BRAIN },
 			},
 			crafting_speed = 30,
 			tech = "korlex",
@@ -53,24 +53,24 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-korlex",       remove_item = true},
-				{name = "brain-caged-korlex", amount = INPUT_AMOUNT},
+				{ name = "caged-korlex",       remove_item = true },
+				{ name = "brain-caged-korlex", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       remove_item = true},
-				{name = "meat",        remove_item = true},
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "skin",        remove_item = true},
-				{name = "guts",        remove_item = true},
-				{name = "blood",       remove_item = true},
-				{name = "brain",       amount = IMP_BRAIN},
+				{ name = "bones",       remove_item = true },
+				{ name = "meat",        remove_item = true },
+				{ name = "mukmoux-fat", remove_item = true },
+				{ name = "skin",        remove_item = true },
+				{ name = "guts",        remove_item = true },
+				{ name = "blood",       remove_item = true },
+				{ name = "brain",       amount = IMP_BRAIN },
 			},
 			tech = "nanochondria",
 			name = "ex-bra-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -78,19 +78,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "brain-caged-korlex", remove_item = true},
-				{name = "bone-caged-korlex",  amount = INPUT_AMOUNT},
+				{ name = "brain-caged-korlex", remove_item = true },
+				{ name = "bone-caged-korlex",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "brain", remove_item = true},
-				{name = "bones", amount = IMP_BONES},
+				{ name = "brain", remove_item = true },
+				{ name = "bones", amount = IMP_BONES },
 			},
 			tech = "bmp",
 			name = "ex-bon-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -98,19 +98,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "bone-caged-korlex", remove_item = true},
-				{name = "meat-caged-korlex", amount = INPUT_AMOUNT},
+				{ name = "bone-caged-korlex", remove_item = true },
+				{ name = "meat-caged-korlex", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones", remove_item = true},
-				{name = "meat",  amount = IMP_MEAT},
+				{ name = "bones", remove_item = true },
+				{ name = "meat",  amount = IMP_MEAT },
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -118,19 +118,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "meat-caged-korlex", remove_item = true},
-				{name = "guts-caged-korlex", amount = INPUT_AMOUNT},
+				{ name = "meat-caged-korlex", remove_item = true },
+				{ name = "guts-caged-korlex", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "meat", remove_item = true},
-				{name = "guts", amount = IMP_GUTS},
+				{ name = "meat", remove_item = true },
+				{ name = "guts", amount = IMP_GUTS },
 			},
 			tech = "antitumor",
 			name = "ex-gut-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -138,19 +138,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "guts-caged-korlex",  remove_item = true},
-				{name = "blood-caged-korlex", amount = INPUT_AMOUNT},
+				{ name = "guts-caged-korlex",  remove_item = true },
+				{ name = "blood-caged-korlex", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "guts",  remove_item = true},
-				{name = "blood", amount = IMP_BLOOD},
+				{ name = "guts",  remove_item = true },
+				{ name = "blood", amount = IMP_BLOOD },
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -158,19 +158,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-caged-korlex", remove_item = true},
-				{name = "skin-caged-korlex",  amount = INPUT_AMOUNT},
+				{ name = "blood-caged-korlex", remove_item = true },
+				{ name = "skin-caged-korlex",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "blood", remove_item = true},
-				{name = "skin",  amount = IMP_SKIN},
+				{ name = "blood", remove_item = true },
+				{ name = "skin",  amount = IMP_SKIN },
 			},
 			tech = "reca",
 			name = "ex-ski-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -178,21 +178,21 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "skin-caged-korlex", remove_item = true},
-				{name = "fat-caged-korlex",  amount = INPUT_AMOUNT},
+				{ name = "skin-caged-korlex", remove_item = true },
+				{ name = "fat-caged-korlex",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "skin",        remove_item = true},
-				{name = "mukmoux-fat", amount = IMP_FAT},
+				{ name = "skin",        remove_item = true },
+				{ name = "mukmoux-fat", amount = IMP_FAT },
 			},
 			tech = "orexigenic",
 			name = "ex-fat-kor",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-korlex.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
 	}
-}
+})

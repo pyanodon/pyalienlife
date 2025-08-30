@@ -1,12 +1,12 @@
 Caravan = {}
 
-require "event-handlers/global"
-require "event-handlers/destination"
-require "event-handlers/action"
-require "event-handlers/subheader_buttons"
-require "event-handlers/interrupts"
+require("event-handlers/global")
+require("event-handlers/destination")
+require("event-handlers/action")
+require("event-handlers/subheader_buttons")
+require("event-handlers/interrupts")
 
-require "manager"
+require("manager")
 
 py.on_event(py.events.on_init(), function()
     ---@type table<integer, Caravan>
@@ -23,10 +23,10 @@ end)
 
 -- clear UI location storage if a player changes their display settings
 py.on_event({
-    defines.events.on_player_display_resolution_changed,
-    defines.events.on_player_display_scale_changed,
-    defines.events.on_player_display_density_scale_changed},
+        defines.events.on_player_display_resolution_changed,
+        defines.events.on_player_display_scale_changed,
+        defines.events.on_player_display_density_scale_changed },
     function(event)
-        storage.gui_locations[event.player_index] = {}
+        storage.gui_locations[ event.player_index ] = {}
     end
 )

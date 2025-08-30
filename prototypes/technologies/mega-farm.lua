@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm.png",
@@ -9,147 +9,147 @@ TECHNOLOGY {
     unit = {
         count = 300,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
             --{'military-science-pack', 3},
-            {"chemical-science-pack",   1},
+            { "chemical-science-pack",   1 },
             --{"production-science-pack", 1},
             --{'utility-science-pack', 3},
         },
         time = 45
     }
-}
+})
 
 -------SPECIFICS-----
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm-ralesia",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-ralesia.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    dependencies = { "mega-farm" },
     effects = {},
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
-            {"military-science-pack",   3},
-            {"chemical-science-pack",   1},
-            {"production-science-pack", 1},
-            {"utility-science-pack",    3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
+            { "military-science-pack",   3 },
+            { "chemical-science-pack",   1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack",    3 },
         },
         time = 45
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm-rennea",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-rennea.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    dependencies = { "mega-farm" },
     effects = {},
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
-            {"military-science-pack",   3},
-            {"chemical-science-pack",   1},
-            {"production-science-pack", 1},
-            {"utility-science-pack",    3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
+            { "military-science-pack",   3 },
+            { "chemical-science-pack",   1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack",    3 },
         },
         time = 45
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm-tuuphra",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-tuuphra.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    dependencies = { "mega-farm" },
     effects = {},
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
-            {"military-science-pack",   3},
-            {"chemical-science-pack",   1},
-            {"production-science-pack", 1},
-            {"utility-science-pack",    3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
+            { "military-science-pack",   3 },
+            { "chemical-science-pack",   1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack",    3 },
         },
         time = 45
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm-grod",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-grod.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    dependencies = { "mega-farm" },
     effects = {},
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
-            {"military-science-pack",   3},
-            {"chemical-science-pack",   1},
-            {"production-science-pack", 1},
-            {"utility-science-pack",    3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
+            { "military-science-pack",   3 },
+            { "chemical-science-pack",   1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack",    3 },
         },
         time = 45
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm-yotoi",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-yotoi.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    dependencies = { "mega-farm" },
     effects = {},
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
-            {"military-science-pack",   3},
-            {"chemical-science-pack",   1},
-            {"production-science-pack", 1},
-            {"utility-science-pack",    3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
+            { "military-science-pack",   3 },
+            { "chemical-science-pack",   1 },
+            { "production-science-pack", 1 },
+            { "utility-science-pack",    3 },
         },
         time = 45
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mega-farm-bioreserve",
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-bioreserve.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    dependencies = { "mega-farm" },
     effects = {},
     unit = {
         count = 200,
         ingredients = {
-            {"automation-science-pack", 4},
-            {"logistic-science-pack",   3},
+            { "automation-science-pack", 4 },
+            { "logistic-science-pack",   3 },
             --{'military-science-pack', 3},
-            {"chemical-science-pack",   1},
+            { "chemical-science-pack",   1 },
             --{"production-science-pack", 1},
             --{'utility-science-pack', 3},
         },
         time = 45
     }
-}
+})

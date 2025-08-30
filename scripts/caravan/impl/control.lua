@@ -1,5 +1,5 @@
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
-local Utils = require "__pyalienlife__/scripts/caravan/utils"
+local caravan_prototypes = require("__pyalienlife__/scripts/caravan/caravan-prototypes")
+local Utils = require("__pyalienlife__/scripts/caravan/utils")
 
 local P = {}
 
@@ -8,12 +8,12 @@ local P = {}
 ---@param entity LuaEntity
 function P.goto_entity(caravan_data, entity)
     local caravan = caravan_data.entity
-    caravan.commandable.set_command {
+    caravan.commandable.set_command({
         type = defines.command.go_to_location,
         destination_entity = entity,
         distraction = defines.distraction.none,
-        pathfind_flags = caravan_prototypes[caravan.name].pathfinder_flags
-    }
+        pathfind_flags = caravan_prototypes[ caravan.name ].pathfinder_flags
+    })
     caravan_data.arrival_tick = nil
 end
 
@@ -22,23 +22,23 @@ end
 ---@param position MapPosition
 function P.goto_position(caravan_data, position)
     local caravan = caravan_data.entity
-    caravan.commandable.set_command {
+    caravan.commandable.set_command({
         type = defines.command.go_to_location,
         destination = position,
         distraction = defines.distraction.none,
-        pathfind_flags = caravan_prototypes[caravan.name].pathfinder_flags
-    }
+        pathfind_flags = caravan_prototypes[ caravan.name ].pathfinder_flags
+    })
     caravan_data.arrival_tick = nil
 end
 
 ---Sets the caravan to walk aimlessly in a radius.
 ---@param caravan_data Caravan
 function P.wander(caravan_data)
-    caravan_data.entity.commandable.set_command {
+    caravan_data.entity.commandable.set_command({
         type = defines.command.wander,
         distraction = defines.distraction.none,
         radius = 10
-    }
+    })
 end
 
 ---Stops all actions of the caravan and cancels the current pathfinder request.
@@ -62,8 +62,8 @@ function P.eat(caravan_data)
         local fuel = caravan_data.fuel_inventory
         for _, item in pairs(fuel.get_contents()) do
             item = item.name
-            fuel.remove {name = item, count = 1}
-            caravan_data.fuel_bar = caravan_prototypes[entity.name].favorite_foods[item]
+            fuel.remove({ name = item, count = 1 })
+            caravan_data.fuel_bar = caravan_prototypes[ entity.name ].favorite_foods[ item ]
             caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
             entity.force.get_item_production_statistics(entity.surface_index).on_flow(item, -1)
             caravan_data.fuel_bar = caravan_data.fuel_bar - 1
@@ -95,17 +95,17 @@ function P.validity_check(caravan_data)
         if caravan_data.entity.valid then caravan_data.entity.destroy() end
         if exists_and_valid(inventory) then inventory.destroy() end
         if exists_and_valid(fuel_inventory) then fuel_inventory.destroy() end
-        storage.caravans[caravan_data.unit_number] = nil
+        storage.caravans[ caravan_data.unit_number ] = nil
         return false
     end
     return true
 end
 
 function P.instantiate_caravan(entity)
-    local existing = storage.caravans[entity.unit_number]
+    local existing = storage.caravans[ entity.unit_number ]
     if existing then return existing end
 
-    local prototype = caravan_prototypes[entity.name]
+    local prototype = caravan_prototypes[ entity.name ]
     local caravan_data = {
         unit_number = entity.unit_number,
         entity = entity,
@@ -122,10 +122,10 @@ function P.instantiate_caravan(entity)
     end
 
     if prototype.inventory_size then
-        caravan_data.inventory = game.create_inventory(prototype.inventory_size, {"caravan-gui.caravan-inventory"})
+        caravan_data.inventory = game.create_inventory(prototype.inventory_size, { "caravan-gui.caravan-inventory" })
     end
 
-    storage.caravans[entity.unit_number] = caravan_data
+    storage.caravans[ entity.unit_number ] = caravan_data
     return caravan_data
 end
 
@@ -138,13 +138,13 @@ function P.select_destination(player, last_opened, camera_position)
     if not stack then return end
     if stack.valid_for_read then
         if player.insert(stack) == 0 then
-            player.surface.spill_item_stack {position = player.position, stack = stack, enable_looted = true, force = player.force}
+            player.surface.spill_item_stack({ position = player.position, stack = stack, enable_looted = true, force = player.force })
         end
         stack.clear()
     end
-    stack.set_stack {name = "caravan-control"}
+    stack.set_stack({ name = "caravan-control" })
 
-    -- store the location so the window reappears where it was last left    
+    -- store the location so the window reappears where it was last left
     if player.gui.screen.caravan_gui then
         Utils.store_gui_location(player.gui.screen.caravan_gui)
     end
@@ -158,13 +158,13 @@ function P.select_destination(player, last_opened, camera_position)
     last_opened.camera_position = player.position
     if camera_position then
         local zoom = player.zoom
-        player.set_controller{
+        player.set_controller({
             type = defines.controllers.remote,
             position = camera_position,
-        }
+        })
         player.zoom = zoom
     end
-    storage.last_opened[player.index] = last_opened
+    storage.last_opened[ player.index ] = last_opened
 end
 
 return P

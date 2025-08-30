@@ -1,26 +1,26 @@
 local MODULE_SLOTS = 1
 local FULL_CRAFTING_SPEED = .8 -- crafting speed when full of mk01 modules
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "trits-reef-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "titanium-plate",     amount = 100},
-        {type = "item", name = "iron-plate",         amount = 150},
-        {type = "item", name = "aluminium-plate",    amount = 50},
-        {type = "item", name = "steam-engine",       amount = 5},
-        {type = "item", name = "pump",               amount = 3},
-        {type = "item", name = "glass",              amount = 200},
-        {type = "item", name = "electronic-circuit", amount = 50},
+        { type = "item", name = "titanium-plate",     amount = 100 },
+        { type = "item", name = "iron-plate",         amount = 150 },
+        { type = "item", name = "aluminium-plate",    amount = 50 },
+        { type = "item", name = "steam-engine",       amount = 5 },
+        { type = "item", name = "pump",               amount = 3 },
+        { type = "item", name = "glass",              amount = 200 },
+        { type = "item", name = "electronic-circuit", amount = 50 },
     },
     results = {
-        {type = "item", name = "trits-reef-mk01", amount = 1}
+        { type = "item", name = "trits-reef-mk01", amount = 1 }
     }
-}:add_unlock("trits")
+}):add_unlock("trits")
 
-ITEM {
+ITEM({
     type = "item",
     name = "trits-reef-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/trits-reef-mk01.png",
@@ -30,25 +30,25 @@ ITEM {
     order = "d",
     place_result = "trits-reef-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "trits-reef-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/trits-reef-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "trits-reef-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "trits-reef-mk01" },
     fast_replaceable_group = "trits-reef",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"trits"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "trits" },
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -163,7 +163,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(32, -96),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/trits-reef/over.png",
@@ -183,40 +183,40 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.5, 4.5}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { -1.5, 4.5 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.5, 4.5}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 1.5, 4.5 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-1.5, -4.5}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { -1.5, -4.5 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {1.5, -4.5}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { 1.5, -4.5 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/trits-reef.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/trits-reef.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/trits-reef.ogg", volume = 1.0 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/trits-reef.ogg", volume = 0.3 },
         apparent_volume = 0.45
     }
-}
+})

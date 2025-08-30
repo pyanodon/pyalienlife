@@ -81,90 +81,90 @@ RECIPE {
 }:add_unlock("pharmacogenomics"):add_ingredient({type = "item", name = "small-parts-03", amount = 100})
 ]] --
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-cartridge-01",
     category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "brain",       amount = 15},
-        {type = "fluid", name = "scrude",      amount = 50},
-        {type = "fluid", name = "fetal-serum", amount = 50},
+        { type = "item",  name = "brain",       amount = 15 },
+        { type = "fluid", name = "scrude",      amount = 50 },
+        { type = "fluid", name = "fetal-serum", amount = 50 },
     },
     results = {
-        {type = "item", name = "brain-cartridge-01", amount = 1},
+        { type = "item", name = "brain-cartridge-01", amount = 1 },
     },
 
-}:add_unlock("vatbrain-mk01")
+}):add_unlock("vatbrain-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-cartridge-02",
     category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "brain-cartridge-01", amount = 1},
-        {type = "item",  name = "brain",              amount = 15},
-        {type = "item",  name = "glass",              amount = 2},
-        {type = "item",  name = "navens",             amount = 1},
-        {type = "fluid", name = "oleochemicals",      amount = 50},
-        {type = "fluid", name = "fetal-serum",        amount = 50},
+        { type = "item",  name = "brain-cartridge-01", amount = 1 },
+        { type = "item",  name = "brain",              amount = 15 },
+        { type = "item",  name = "glass",              amount = 2 },
+        { type = "item",  name = "navens",             amount = 1 },
+        { type = "fluid", name = "oleochemicals",      amount = 50 },
+        { type = "fluid", name = "fetal-serum",        amount = 50 },
     },
     results = {
-        {type = "item", name = "brain-cartridge-02", amount = 1},
+        { type = "item", name = "brain-cartridge-02", amount = 1 },
     },
 
-}:add_unlock("vatbrain-mk02")
+}):add_unlock("vatbrain-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-cartridge-03",
     category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "brain-cartridge-02", amount = 1},
-        {type = "item",  name = "brain",              amount = 15},
-        {type = "item",  name = "molybdenum-plate",   amount = 1},
-        {type = "fluid", name = "flavonoids",         amount = 50},
-        {type = "fluid", name = "psc",                amount = 100},
+        { type = "item",  name = "brain-cartridge-02", amount = 1 },
+        { type = "item",  name = "brain",              amount = 15 },
+        { type = "item",  name = "molybdenum-plate",   amount = 1 },
+        { type = "fluid", name = "flavonoids",         amount = 50 },
+        { type = "fluid", name = "psc",                amount = 100 },
     },
     results = {
-        {type = "item", name = "brain-cartridge-03", amount = 2},
+        { type = "item", name = "brain-cartridge-03", amount = 2 },
     },
 
-}:add_unlock("vatbrain-mk03")
+}):add_unlock("vatbrain-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-cartridge-04",
     category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "brain-cartridge-03",    amount = 1},
-        {type = "item",  name = "brain",                 amount = 15},
-        {type = "item",  name = "enzyme-pks",            amount = 2},
-        {type = "item",  name = "low-density-structure", amount = 1},
-        {type = "fluid", name = "psc",                   amount = 50},
-        {type = "fluid", name = "nitrous-oxide",         amount = 100}
+        { type = "item",  name = "brain-cartridge-03",    amount = 1 },
+        { type = "item",  name = "brain",                 amount = 15 },
+        { type = "item",  name = "enzyme-pks",            amount = 2 },
+        { type = "item",  name = "low-density-structure", amount = 1 },
+        { type = "fluid", name = "psc",                   amount = 50 },
+        { type = "fluid", name = "nitrous-oxide",         amount = 100 }
     },
     results = {
-        {type = "item", name = "brain-cartridge-04", amount = 2},
+        { type = "item", name = "brain-cartridge-04", amount = 2 },
     },
 
-}:add_unlock("vatbrain-mk04")
+}):add_unlock("vatbrain-mk04")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-food-01",
     category = "vat",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "brain-cartridge-01", amount = 1},
+        { type = "item", name = "brain-cartridge-01", amount = 1 },
     },
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png",
@@ -172,16 +172,16 @@ RECIPE {
     subgroup = "py-alienlife-used",
     order = "aa",
     hidden_in_factoriopedia = true
-}:add_unlock("vatbrain-mk01")
+}):add_unlock("vatbrain-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-food-02",
     category = "vat",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "brain-cartridge-02", amount = 1},
+        { type = "item", name = "brain-cartridge-02", amount = 1 },
     },
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png",
@@ -189,16 +189,16 @@ RECIPE {
     subgroup = "py-alienlife-used",
     order = "ab",
     hidden_in_factoriopedia = true
-}:add_unlock("vatbrain-mk02")
+}):add_unlock("vatbrain-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-food-03",
     category = "vat",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "brain-cartridge-03", amount = 1},
+        { type = "item", name = "brain-cartridge-03", amount = 1 },
     },
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png",
@@ -206,16 +206,16 @@ RECIPE {
     subgroup = "py-alienlife-used",
     order = "ac",
     hidden_in_factoriopedia = true
-}:add_unlock("vatbrain-mk03")
+}):add_unlock("vatbrain-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "brain-food-04",
     category = "vat",
     enabled = false,
     energy_required = 20,
     ingredients = {
-        {type = "item", name = "brain-cartridge-04", amount = 1},
+        { type = "item", name = "brain-cartridge-04", amount = 1 },
     },
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png",
@@ -223,4 +223,4 @@ RECIPE {
     subgroup = "py-alienlife-used",
     order = "ad",
     hidden_in_factoriopedia = true
-}:add_unlock("vatbrain-mk04")
+}):add_unlock("vatbrain-mk04")

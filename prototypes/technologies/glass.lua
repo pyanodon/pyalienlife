@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "glass",
     icon = "__pyalienlifegraphics2__/graphics/technology/glass.png",
@@ -9,8 +9,8 @@ TECHNOLOGY {
     unit = {
         count = 20,
         ingredients = {
-            {"automation-science-pack", 1},
+            { "automation-science-pack", 1 },
         },
         time = 30
     }
-}
+})

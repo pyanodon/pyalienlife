@@ -4,7 +4,7 @@ for _, caravan_data in pairs(storage.caravans) do
         for _, action in pairs(schedule.actions) do
             local type = action.type
             if type ~= "at-outpost" and type ~= "not at outpost" then
-                action.localised_name = {"?", {"caravan-actions-short."..type}, {"caravan-actions."..type}}
+                action.localised_name = { "?", { "caravan-actions-short." .. type }, { "caravan-actions." .. type } }
             end
         end
     end
@@ -15,7 +15,7 @@ for _, interrupt_data in pairs(storage.interrupts or {}) do
         for _, action in pairs(schedule.actions) do
             local type = action.type
             if type ~= "at-outpost" and type ~= "not at outpost" then
-                action.localised_name = {"?", {"caravan-actions-short."..type}, {"caravan-actions."..type}}
+                action.localised_name = { "?", { "caravan-actions-short." .. type }, { "caravan-actions." .. type } }
             end
         end
     end

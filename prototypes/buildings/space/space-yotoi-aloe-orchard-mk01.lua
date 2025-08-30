@@ -1,24 +1,24 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-yotoi-aloe-orchard-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "glass",              amount = 35},
-        {type = "item", name = "steel-plate",        amount = 50},
-        {type = "item", name = "duralumin",          amount = 50},
-        {type = "item", name = "pipe",               amount = 15},
-        {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "plastic-bar",        amount = 40},
+        { type = "item", name = "glass",              amount = 35 },
+        { type = "item", name = "steel-plate",        amount = 50 },
+        { type = "item", name = "duralumin",          amount = 50 },
+        { type = "item", name = "pipe",               amount = 15 },
+        { type = "item", name = "electronic-circuit", amount = 20 },
+        { type = "item", name = "plastic-bar",        amount = 40 },
     },
     results = {
-        {type = "item", name = "space-yotoi-aloe-orchard-mk01", amount = 1}
+        { type = "item", name = "space-yotoi-aloe-orchard-mk01", amount = 1 }
     }
-}:add_unlock("yotoi")
+}):add_unlock("yotoi")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-yotoi-aloe-orchard-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk01.png",
@@ -28,25 +28,25 @@ ITEM {
     order = "e",
     place_result = "space-yotoi-aloe-orchard-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-yotoi-aloe-orchard-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/yotoi-aloe-orchard-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-yotoi-aloe-orchard-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-yotoi-aloe-orchard-mk01" },
     fast_replaceable_group = "yotoi-aloe-orchard",
     max_health = 50,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 33,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"yotoi"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "yotoi" },
     crafting_speed = 0.06,
     energy_source = {
         type = "electric",
@@ -76,7 +76,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, 128),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/yotoi-aloe-orchard/a2.png",
@@ -95,7 +95,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, 32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/yotoi-aloe-orchard/a3.png",
@@ -114,7 +114,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, -64),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/yotoi-aloe-orchard/a4.png",
@@ -133,7 +133,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, -160),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -145,36 +145,36 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-5.0, 0.0}, direction = defines.direction.west}}
+            pipe_connections = { { flow_direction = "input", position = { -5.0, 0.0 }, direction = defines.direction.west } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {5.0, 0.0}, direction = defines.direction.east}}
+            pipe_connections = { { flow_direction = "input", position = { 5.0, 0.0 }, direction = defines.direction.east } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 0.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 0.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 1.9},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 1.9 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

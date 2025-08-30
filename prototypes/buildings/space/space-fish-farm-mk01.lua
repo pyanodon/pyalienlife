@@ -1,27 +1,27 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-fish-farm-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "lab",                amount = 1},
-        {type = "item", name = "carbon-filter",      amount = 1},
-        {type = "item", name = "glass",              amount = 140},
-        {type = "item", name = "duralumin",          amount = 30},
-        {type = "item", name = "pump",               amount = 5},
-        {type = "item", name = "steel-plate",        amount = 50},
-        {type = "item", name = "nexelit-plate",      amount = 15},
-        {type = "item", name = "electronic-circuit", amount = 50},
-        {type = "item", name = "lead-plate",         amount = 40},
+        { type = "item", name = "lab",                amount = 1 },
+        { type = "item", name = "carbon-filter",      amount = 1 },
+        { type = "item", name = "glass",              amount = 140 },
+        { type = "item", name = "duralumin",          amount = 30 },
+        { type = "item", name = "pump",               amount = 5 },
+        { type = "item", name = "steel-plate",        amount = 50 },
+        { type = "item", name = "nexelit-plate",      amount = 15 },
+        { type = "item", name = "electronic-circuit", amount = 50 },
+        { type = "item", name = "lead-plate",         amount = 40 },
     },
     results = {
-        {type = "item", name = "space-fish-farm-mk01", amount = 1}
+        { type = "item", name = "space-fish-farm-mk01", amount = 1 }
     }
-}:add_unlock("water-animals-mk01")
+}):add_unlock("water-animals-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-fish-farm-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/fish-farm-mk01.png",
@@ -31,24 +31,24 @@ ITEM {
     order = "d",
     place_result = "space-fish-farm-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-fish-farm-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/fish-farm-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-fish-farm-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-fish-farm-mk01" },
     fast_replaceable_group = "fish-farm",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.1, -5.1 }, { 5.1, 5.1 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = 7,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"fish-farm"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "fish-farm" },
     crafting_speed = 0.04,
     energy_source = {
         type = "electric",
@@ -134,7 +134,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -146,41 +146,41 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, -5.0 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, 5.0 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {5.0, 0.0}, direction = defines.direction.east}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { 5.0, 0.0 }, direction = defines.direction.east } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-5.0, 0.0}, direction = defines.direction.west}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { -5.0, 0.0 }, direction = defines.direction.west } },
+            secondary_draw_orders = { north = -1 }
         },
     },
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/fish-farm.ogg", volume = 0.65},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/fish-farm.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/fish-farm.ogg", volume = 0.65 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/fish-farm.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

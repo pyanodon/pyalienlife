@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "silicon-carbide",
     icon = "__pyalienlifegraphics2__/graphics/technology/sic.png",
@@ -8,9 +8,9 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack",   1},
+            { "automation-science-pack", 1 },
+            { "logistic-science-pack",   1 },
         },
         time = 50
     }
-}
+})

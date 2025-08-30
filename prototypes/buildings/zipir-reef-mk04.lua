@@ -1,23 +1,23 @@
 local MODULE_SLOTS = 40
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "zipir-reef-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "zipir-reef-mk03", amount = 1},
-        {type = "item", name = "blanket",         amount = 5},
-        {type = "item", name = "processing-unit", amount = 40},
-        {type = "item", name = "science-coating", amount = 15},
-        {type = "item", name = "nenbit-matrix",   amount = 30},
+        { type = "item", name = "zipir-reef-mk03", amount = 1 },
+        { type = "item", name = "blanket",         amount = 5 },
+        { type = "item", name = "processing-unit", amount = 40 },
+        { type = "item", name = "science-coating", amount = 15 },
+        { type = "item", name = "nenbit-matrix",   amount = 30 },
     },
     results = {
-        {type = "item", name = "zipir-reef-mk04", amount = 1}
+        { type = "item", name = "zipir-reef-mk04", amount = 1 }
     }
-}:add_unlock("water-animals-mk04")
+}):add_unlock("water-animals-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "zipir-reef-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/zipir-reef-mk04.png",
@@ -27,25 +27,25 @@ ITEM {
     order = "d",
     place_result = "zipir-reef-mk04",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "zipir-reef-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/zipir-reef-mk04.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "zipir-reef-mk04"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "zipir-reef-mk04" },
     fast_replaceable_group = "zipir-reef",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    collision_box = { { -4.2, -4.2 }, { 4.2, 4.2 } },
+    selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"zipir"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "zipir" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "zipir-reef-mk01"),
     energy_source = {
         type = "electric",
@@ -150,7 +150,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(8, -1),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 1.0, a = 1.0 }
                 },
             }
         },
@@ -160,37 +160,37 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, 4.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, 4.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {4.0, 0.0}, direction = defines.direction.east}}
+            pipe_connections = { { flow_direction = "input", position = { 4.0, 0.0 }, direction = defines.direction.east } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0.0, -4.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 0.0, -4.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-4.0, 0.0}, direction = defines.direction.west}}
+            pipe_connections = { { flow_direction = "output", position = { -4.0, 0.0 }, direction = defines.direction.west } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/zipir.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/zipir.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/zipir.ogg", volume = 1.5 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/zipir.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

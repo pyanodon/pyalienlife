@@ -18,73 +18,73 @@ TECHNOLOGY {
     }
 }
 ]]
-TECHNOLOGY("ulric"):set_fields {icon = "__pyalienlifegraphics__/graphics/technology/ulric.png"}:add_pack("py-science-pack-1"):add_pack("logistic-science-pack")
+TECHNOLOGY("ulric"):set_fields({ icon = "__pyalienlifegraphics__/graphics/technology/ulric.png" }):add_pack("py-science-pack-1"):add_pack("logistic-science-pack")
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "ulric-mk02",
     icon = "__pyalienlifegraphics__/graphics/technology/ulric-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"ulric"},
-    dependencies = {"ulric"},
+    prerequisites = { "ulric" },
+    dependencies = { "ulric" },
     effects = {},
     unit = {
         count = 250,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
         },
         time = 50
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "ulric-mk03",
     icon = "__pyalienlifegraphics__/graphics/technology/ulric-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"ulric-mk02"},
-    dependencies = {"ulric-mk02"},
+    prerequisites = { "ulric-mk02" },
+    dependencies = { "ulric-mk02" },
     effects = {},
     unit = {
         count = 300,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
         },
         time = 50
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "ulric-mk04",
     icon = "__pyalienlifegraphics__/graphics/technology/ulric-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"ulric-mk03"},
-    dependencies = {"ulric-mk03"},
+    prerequisites = { "ulric-mk03" },
+    dependencies = { "ulric-mk03" },
     effects = {},
     unit = {
         count = 350,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
-            {"production-science-pack", 1},
-            {"py-science-pack-4",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
+            { "production-science-pack", 1 },
+            { "py-science-pack-4",       1 },
         },
         time = 50
     }
-}
+})

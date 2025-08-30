@@ -1,27 +1,27 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "wyrmhole",
     enabled = false,
     ingredients =
     {
-        {type = "item", name = "neuromorphic-chip",      amount = 100},
-        {type = "item", name = "super-alloy",            amount = 200},
-        {type = "item", name = "low-density-structure",  amount = 100},
-        {type = "item", name = "processing-unit",        amount = 20},
-        {type = "item", name = "small-parts-03",         amount = 100},
-        {type = "item", name = "perfect-samples",        amount = 4},
-        {type = "item", name = "vonix",                  amount = 2},
-        {type = "item", name = "earth-cow-sample",       amount = 10},
-        {type = "item", name = "denatured-seismite",     amount = 2},
-        {type = "item", name = "upgrader-mk03",          amount = 1},
-        {type = "item", name = "automated-factory-mk03", amount = 1},
+        { type = "item", name = "neuromorphic-chip",      amount = 100 },
+        { type = "item", name = "super-alloy",            amount = 200 },
+        { type = "item", name = "low-density-structure",  amount = 100 },
+        { type = "item", name = "processing-unit",        amount = 20 },
+        { type = "item", name = "small-parts-03",         amount = 100 },
+        { type = "item", name = "perfect-samples",        amount = 4 },
+        { type = "item", name = "vonix",                  amount = 2 },
+        { type = "item", name = "earth-cow-sample",       amount = 10 },
+        { type = "item", name = "denatured-seismite",     amount = 2 },
+        { type = "item", name = "upgrader-mk03",          amount = 1 },
+        { type = "item", name = "automated-factory-mk03", amount = 1 },
     },
     results = {
-        {type = "item", name = "wyrmhole", amount = 1}
+        { type = "item", name = "wyrmhole", amount = 1 }
     }
-}:add_unlock("domestication-mk05")
+}):add_unlock("domestication-mk05")
 
-ITEM {
+ITEM({
     type = "item",
     name = "wyrmhole",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
@@ -31,20 +31,20 @@ ITEM {
     order = "a",
     place_result = "wyrmhole",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "linked-container",
     name = "wyrmhole",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 2, result = "wyrmhole"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 2, result = "wyrmhole" },
     max_health = 350,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.85},
-    close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},
+    open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
+    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     impact_category = "metal-large",
     resistances = {
         {
@@ -52,8 +52,8 @@ ENTITY {
             percent = 90
         }
     },
-    collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
-    selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+    collision_box = { { -7.3, -7.3 }, { 7.3, 7.3 } },
+    selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },
     inventory_size = 100,
     scale_info_icons = true,
     integration_patch = {
@@ -67,37 +67,37 @@ ENTITY {
     integration_patch_render_layer = "object-under",
     inventory_type = "with_filters_and_bar",
     gui_mode = "all",
-    icon_draw_specification = {scale = 6.0, scale_for_many = 9.0, render_layer = "entity-info-icon"},
+    icon_draw_specification = { scale = 6.0, scale_for_many = 9.0, render_layer = "entity-info-icon" },
     circuit_connector = {
         points = {
             shadow = {
-                red = {-0.484375, -6.10938},
-                green = {-0.390625, -6.10938}
+                red = { -0.484375, -6.10938 },
+                green = { -0.390625, -6.10938 }
             },
             wire = {
-                red = {-0.1875, -5.59375},
-                green = {-0.1875, -5.71875}
+                red = { -0.1875, -5.59375 },
+                green = { -0.1875, -5.71875 }
             }
         }
     },
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
-}
+})
 
-ENTITY {
+ENTITY({
     type = "electric-energy-interface",
     name = "wyrmhole-skin",
     icon = "__pyalienlifegraphics3__/graphics/icons/logistic-station.png",
     icon_size = 64,
     hidden = true,
-    flags = {"placeable-player", "player-creation",},
+    flags = { "placeable-player", "player-creation", },
     subgroup = "py-containers-warehouse",
     order = "a",
-    map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
+    map_color = { r = 0, g = 0.365, b = 0.58, a = 1 },
     max_health = 150,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
-    selection_box = {{0, 0}, {0, 0}},
+    collision_box = { { -7.3, -7.3 }, { 7.3, 7.3 } },
+    selection_box = { { 0, 0 }, { 0, 0 } },
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
@@ -108,8 +108,8 @@ ENTITY {
         output_flow_limit = "0W",
         buffer_capacity = "250MW"
     },
-    localised_name = {"entity-name.wyrmhole"},
-    localised_description = {"entity-description.wyrmhole"},
+    localised_name = { "entity-name.wyrmhole" },
+    localised_description = { "entity-description.wyrmhole" },
     energy_usage = "250MW",
     continuous_animation = true,
     animations =
@@ -391,7 +391,7 @@ ENTITY {
         }
     },
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 1.1},
+        sound = { filename = "__pyalienlifegraphics3__/sounds/pydrive.ogg", volume = 1.1 },
     },
     selectable_in_game = false
-}
+})

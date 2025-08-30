@@ -1,5 +1,5 @@
 data:extend
-{
+({
     {
         type = "module-category",
         name = "tree"
@@ -192,4 +192,4 @@ data:extend
         type = "module-category",
         name = "sawblade"
     },
-}
+})

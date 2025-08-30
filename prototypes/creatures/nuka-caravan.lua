@@ -1,57 +1,57 @@
 ---@diagnostic disable: missing-parameter
-local util = require "util"
-local sounds = require "__base__.prototypes.entity.sounds"
+local util = require("util")
+local sounds = require("__base__.prototypes.entity.sounds")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "nukavan",
     energy_required = 50,
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = "item",  name = "alien-sample01",                                                 amount = 5},
-        {type = "item",  name = "bio-sample",                                                     amount = 20},
-        {type = "item",  name = "auog",                                                           amount = 1},
-        {type = "item",  name = "moss-gen",                                                       amount = 15},
-        {type = "item",  name = "earth-bear-sample",                                              amount = 1},
-        {type = "fluid", name = "water-saline",                                                   amount = 100},
-        {type = "item",  name = mods.pyalternativeenergy and "atomic-bomb" or "explosive-rocket", amount = 1}
+        { type = "item",  name = "alien-sample01",                                                 amount = 5 },
+        { type = "item",  name = "bio-sample",                                                     amount = 20 },
+        { type = "item",  name = "auog",                                                           amount = 1 },
+        { type = "item",  name = "moss-gen",                                                       amount = 15 },
+        { type = "item",  name = "earth-bear-sample",                                              amount = 1 },
+        { type = "fluid", name = "water-saline",                                                   amount = 100 },
+        { type = "item",  name = mods.pyalternativeenergy and "atomic-bomb" or "explosive-rocket", amount = 1 }
     },
-    results = {{type = "item", name = "nukavan", amount = 1}}
-}:add_unlock("domestication-mk04")
+    results = { { type = "item", name = "nukavan", amount = 1 } }
+}):add_unlock("domestication-mk04")
 
-ITEM {
+ITEM({
     type = "item-with-tags",
     name = "nukavan",
     can_open_gates = true,
-    additional_pastable_entities = {"nukavan", "nukavan-turd"},
+    additional_pastable_entities = { "nukavan", "nukavan-turd" },
     icon = "__pyalienlifegraphics2__/graphics/icons/nuka-van.png",
     icon_size = 64,
     subgroup = "py-alienlife-special-creatures",
     order = "a",
     place_result = "nukavan",
     stack_size = 1,
-    flags = {"not-stackable"}
-}
+    flags = { "not-stackable" }
+})
 
 ---@as data.UnitPrototype
 local unit = {
     type = "unit",
     name = "nukavan",
     can_open_gates = true,
-    additional_pastable_entities = {"nukavan", "nukavan-turd"},
+    additional_pastable_entities = { "nukavan", "nukavan-turd" },
     icon = "__pyalienlifegraphics2__/graphics/icons/nuka-van.png",
     icon_size = 64,
     alert_icon_scale = 1,
-    ai_settings = {do_separation = false},
-    flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-    minable = {mining_time = 0.1, result = "nukavan"},
+    ai_settings = { do_separation = false },
+    flags = { "placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way" },
+    minable = { mining_time = 0.1, result = "nukavan" },
     max_health = 6125,
-    map_color = {1, 1, 1},
+    map_color = { 1, 1, 1 },
     radar_range = 1,
     order = "b-b-a",
     subgroup = "enemies",
-    collision_mask = {layers = {caravan_collision_mask = true}, not_colliding_with_itself = true},
+    collision_mask = { layers = { caravan_collision_mask = true }, not_colliding_with_itself = true },
     resistances = {
         {
             type = "fire",
@@ -80,9 +80,9 @@ local unit = {
         }
     },
     healing_per_tick = 0.01,
-    collision_box = {{-0.6, -0.6}, {0.6, 0.6}},
+    collision_box = { { -0.6, -0.6 }, { 0.6, 0.6 } },
     selection_priority = 51,
-    selection_box = {{-1, -1.5}, {1, 1.5}},
+    selection_box = { { -1, -1.5 }, { 1, 1.5 } },
     attack_parameters = {
         type = "projectile",
         range = 0,
@@ -139,7 +139,7 @@ local unit = {
     vision_distance = 50,
     movement_speed = 0.10,
     distance_per_frame = 0.15,
-    absorptions_to_join_attack = {pollution = 4},
+    absorptions_to_join_attack = { pollution = 4 },
     distraction_cooldown = 300,
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
@@ -195,4 +195,4 @@ local unit = {
     }
 }
 
-data:extend {unit}
+data:extend({ unit })

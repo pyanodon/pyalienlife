@@ -10,7 +10,7 @@ function entity_changed_unit_number(old, new)
     for _, caravan_data in pairs(storage.caravans) do
         for _, schedule in pairs(caravan_data.schedule) do
             if schedule.entity == old then
-                schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}
+                schedule.localised_name = { "caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y) }
                 schedule.entity = new
                 schedule.position = new.position
             end
@@ -34,34 +34,34 @@ py.on_event(defines.events.on_player_used_capsule, function(event)
             if cursor_stack.valid_for_read then
                 cursor_stack.count = cursor_stack.count + 1
             else
-                cursor_stack.set_stack {name = "ulric-infusion", count = 1}
+                cursor_stack.set_stack({ name = "ulric-infusion", count = 1 })
             end
         end
         return
     end
 
-    local ulric = player.surface.create_entity {
+    local ulric = player.surface.create_entity({
         name = "ulric-man",
         force = player.force,
         position = player.position,
         create_build_effect_smoke = false,
         move_stuck_players = false
-    }
+    })
 
     Ulric.transfer_character_inventory(character, ulric)
     player.character = ulric
     entity_changed_unit_number(character, ulric)
     character.destroy()
-    player.play_sound {path = "ulric-man-transform"}
+    player.play_sound({ path = "ulric-man-transform" })
 
-    storage.ulricman_timers[player.index] = Ulric.transformation_time
+    storage.ulricman_timers[ player.index ] = Ulric.transformation_time
 end)
 
 local update_rate = 397
 py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
     for k, ticks_remaning in pairs(storage.ulricman_timers) do
         ticks_remaning = ticks_remaning - update_rate
-        storage.ulricman_timers[k] = ticks_remaning
+        storage.ulricman_timers[ k ] = ticks_remaning
         if ticks_remaning <= 0 then
             local player = game.get_player(k)
             local ulric = player.character
@@ -71,29 +71,29 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
             if injection_equipment and injection_equipment.energy > injection_equipment.max_energy / 2 then
                 local inventory = ulric.get_main_inventory()
                 if inventory.get_item_count("ulric-infusion") > 0 then
-                    inventory.remove {name = "ulric-infusion", count = 1}
-                    storage.ulricman_timers[k] = Ulric.transformation_time
+                    inventory.remove({ name = "ulric-infusion", count = 1 })
+                    storage.ulricman_timers[ k ] = Ulric.transformation_time
                     goto injection
                 end
             end
 
             if ulric.name == "ulric-man" then
-                local character = player.surface.create_entity {
+                local character = player.surface.create_entity({
                     name = "character",
                     force = player.force,
                     position = player.position,
                     create_build_effect_smoke = false,
                     move_stuck_players = false
-                }
+                })
 
                 Ulric.transfer_character_inventory(ulric, character)
                 player.character = character
                 entity_changed_unit_number(ulric, character)
                 ulric.destroy()
-                player.play_sound {path = "ulric-man-untransform"}
+                player.play_sound({ path = "ulric-man-untransform" })
             end
 
-            storage.ulricman_timers[k] = nil
+            storage.ulricman_timers[ k ] = nil
         end
 
         ::injection::
@@ -119,13 +119,13 @@ Ulric.transfer_character_inventory = function(old, new)
         if old_inventory then
             local new_inventory = new.get_inventory(inventory) or new.get_main_inventory()
             for i = 1, #old_inventory do
-                local old_stack = old_inventory[i]
+                local old_stack = old_inventory[ i ]
                 if old_stack.valid_for_read then
                     local original_count = old_stack.count
                     local inserted_count = new_inventory.insert(old_stack)
                     if original_count ~= inserted_count then
                         old_stack.count = original_count - inserted_count
-                        new.surface.spill_item_stack {position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false}
+                        new.surface.spill_item_stack({ position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false })
                     end
                 end
                 old_stack.clear()
@@ -151,7 +151,7 @@ Ulric.transfer_character_inventory = function(old, new)
     if old_point and new_point then
         new_point.trash_not_requested = old_point.trash_not_requested
         new_point.enabled = old_point.enabled
-        
+
         for _, section in pairs(old_point.sections) do
             local new_section = new_point.add_section(section.group)
             new_section.active = section.active

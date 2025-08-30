@@ -1,38 +1,38 @@
 if data and not yafc_turd_integration then
-    data:extend {{
+    data:extend({ {
         type = "recipe",
         name = "earth-generic-sample-duplication",
         ingredients = {
-            {type = "item", name = "iron-chest",           amount = 1},
-            {type = "item", name = "earth-generic-sample", amount = 1}
+            { type = "item", name = "iron-chest",           amount = 1 },
+            { type = "item", name = "earth-generic-sample", amount = 1 }
         },
-        results = {{name = "earth-generic-sample", amount = 2, type = "item", ignored_by_productivity = 1, ignored_by_stats = 1}},
+        results = { { name = "earth-generic-sample", amount = 2, type = "item", ignored_by_productivity = 1, ignored_by_stats = 1 } },
         enabled = false,
         energy_required = 40,
         category = "data-array"
-    }}
+    } })
 
-    data:extend {{
+    data:extend({ {
         type = "recipe",
         name = "solar-panel-equipment-cheap",
         ingredients = {
-            {type = "item", name = "plastic-bar",         amount = 10},
-            {type = "item", name = "zinc-plate",          amount = 10},
-            {type = "item", name = "capacitor1",          amount = 10},
-            {type = "item", name = "glass",               amount = 10},
-            {type = "item", name = "small-electric-pole", amount = 1},
-            {type = "item", name = "water-barrel",        amount = 1},
+            { type = "item", name = "plastic-bar",         amount = 10 },
+            { type = "item", name = "zinc-plate",          amount = 10 },
+            { type = "item", name = "capacitor1",          amount = 10 },
+            { type = "item", name = "glass",               amount = 10 },
+            { type = "item", name = "small-electric-pole", amount = 1 },
+            { type = "item", name = "water-barrel",        amount = 1 },
         },
-        results = {{name = "solar-panel-mk01", amount = 1, type = "item"}},
+        results = { { name = "solar-panel-mk01", amount = 1, type = "item" } },
         enabled = false,
         energy_required = 40,
         category = "crafting"
-    }}
+    } })
 
     local machine_recipe = RECIPE("data-array"):copy()
     machine_recipe.name = machine_recipe.name .. "-with-solar"
-    machine_recipe:add_ingredient {name = "solar-panel-mk01", amount = 2, type = "item"}
-    data:extend {machine_recipe}
+    machine_recipe:add_ingredient({ name = "solar-panel-mk01", amount = 2, type = "item" })
+    data:extend({ machine_recipe })
 end
 
 return {
@@ -44,13 +44,13 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-data-array.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"genetics-mk03"},
+        prerequisites = { "genetics-mk03" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
             },
             time = 45
         }
@@ -62,7 +62,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 20, productivity = 0.1, type = "module-effects"}
+                { consumption = 20, productivity = 0.1, type = "module-effects" }
             },
         },
         {
@@ -71,7 +71,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "earth-generic-sample-duplication", type = "unlock-recipe"}
+                { recipe = "earth-generic-sample-duplication", type = "unlock-recipe" }
             }
         },
         {
@@ -80,9 +80,9 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.3,                     speed = 0.3,                   type = "module-effects"},
-                {recipe = "solar-panel-equipment-cheap", type = "unlock-recipe"},
-                {old = "data-array",                     new = "data-array-with-solar", type = "recipe-replacement"},
+                { consumption = -0.3,                     speed = 0.3,                   type = "module-effects" },
+                { recipe = "solar-panel-equipment-cheap", type = "unlock-recipe" },
+                { old = "data-array",                     new = "data-array-with-solar", type = "recipe-replacement" },
             }
         }
     },

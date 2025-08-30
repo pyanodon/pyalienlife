@@ -1,11 +1,11 @@
 if data and not yafc_turd_integration then
     local recipe = RECIPE("tuuphra-seeds"):copy()
     recipe.name = recipe.name .. "-with-water"
-    recipe:add_ingredient {type = "fluid", name = "water", amount = 1000}
+    recipe:add_ingredient({ type = "fluid", name = "water", amount = 1000 })
     recipe:add_result_amount("tuuphra-seeds", 3)
-    data:extend {recipe}
+    data:extend({ recipe })
 
-    data:extend {
+    data:extend({
         {
             type = "item",
             name = "alcl3",
@@ -22,11 +22,11 @@ if data and not yafc_turd_integration then
             enabled = false,
             energy_required = 10,
             ingredients = {
-                {type = "item",  name = "aluminium-plate",   amount = 5},
-                {type = "fluid", name = "hydrogen-chloride", amount = 100},
+                { type = "item",  name = "aluminium-plate",   amount = 5 },
+                { type = "fluid", name = "hydrogen-chloride", amount = 100 },
             },
             results = {
-                {type = "item", name = "alcl3", amount = 2},
+                { type = "item", name = "alcl3", amount = 2 },
             },
         },
         {
@@ -44,46 +44,46 @@ if data and not yafc_turd_integration then
             enabled = false,
             category = "biofactory",
             ingredients = {
-                {type = "item",  name = "phenol",          amount = 10},
-                {type = "item",  name = "plastic-bar",     amount = 2},
-                {type = "item",  name = "alcl3",           amount = 1},
-                {type = "fluid", name = "chlorine",        amount = 30},
-                {type = "fluid", name = "liquid-nitrogen", amount = 20},
-                {type = "fluid", name = "methanol",        amount = 30},
+                { type = "item",  name = "phenol",          amount = 10 },
+                { type = "item",  name = "plastic-bar",     amount = 2 },
+                { type = "item",  name = "alcl3",           amount = 1 },
+                { type = "fluid", name = "chlorine",        amount = 30 },
+                { type = "fluid", name = "liquid-nitrogen", amount = 20 },
+                { type = "fluid", name = "methanol",        amount = 30 },
             },
-            results = {{type = "item", name = "fungicide", amount = 50}},
+            results = { { type = "item", name = "fungicide", amount = 50 } },
             energy_required = 250
         }
-    }
+    })
 
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("tuuphra-1"):copy(),
         RECIPE("tuuphra-2"):copy(),
         RECIPE("tuuphra-3"):copy(),
         RECIPE("tuuphra-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-fungicide"
-        recipe:add_ingredient {type = "item", name = "fungicide", amount = 1}
+        recipe:add_ingredient({ type = "item", name = "fungicide", amount = 1 })
         recipe:add_result_amount("tuuphra", 1)
         recipe:remove_ingredient("pesticide-mk01")
         recipe:remove_ingredient("pesticide-mk02")
         recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    data:extend {{
+    data:extend({ {
         type = "recipe",
         name = "tuuphra-grease",
         energy_required = 2,
-        ingredients = {{type = "item", name = "tuuphra", amount = 1}},
+        ingredients = { { type = "item", name = "tuuphra", amount = 1 } },
         results = {
-            {type = "item",  name = "starch", amount = 1, probability = 0.4},
-            {type = "fluid", name = "grease", amount = 16}
+            { type = "item",  name = "starch", amount = 1, probability = 0.4 },
+            { type = "fluid", name = "grease", amount = 16 }
         },
         enabled = false,
         category = "biofactory",
         main_product = "grease"
-    }}
+    } })
 end
 
 return {
@@ -98,13 +98,13 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-tuuphra.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"tuuphra-mk02", "phenol"},
+        prerequisites = { "tuuphra-mk02", "phenol" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
-                {"py-science-pack-2",       1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "py-science-pack-2",       1 },
             },
             time = 45
         }
@@ -116,8 +116,8 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 0.5,     type = "module-effects"},
-                {old = "tuuphra-seeds", new = "tuuphra-seeds-with-water", type = "recipe-replacement"}
+                { consumption = 0.5,     type = "module-effects" },
+                { old = "tuuphra-seeds", new = "tuuphra-seeds-with-water", type = "recipe-replacement" }
             },
         },
         {
@@ -126,13 +126,13 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {pollution = 2,        type = "module-effects"},
-                {recipe = "alcl3",     type = "unlock-recipe"},
-                {recipe = "fungicide", type = "unlock-recipe"},
-                {old = "tuuphra-1",    new = "tuuphra-1-fungicide", type = "recipe-replacement"},
-                {old = "tuuphra-2",    new = "tuuphra-2-fungicide", type = "recipe-replacement"},
-                {old = "tuuphra-3",    new = "tuuphra-3-fungicide", type = "recipe-replacement"},
-                {old = "tuuphra-4",    new = "tuuphra-4-fungicide", type = "recipe-replacement"},
+                { pollution = 2,        type = "module-effects" },
+                { recipe = "alcl3",     type = "unlock-recipe" },
+                { recipe = "fungicide", type = "unlock-recipe" },
+                { old = "tuuphra-1",    new = "tuuphra-1-fungicide", type = "recipe-replacement" },
+                { old = "tuuphra-2",    new = "tuuphra-2-fungicide", type = "recipe-replacement" },
+                { old = "tuuphra-3",    new = "tuuphra-3-fungicide", type = "recipe-replacement" },
+                { old = "tuuphra-4",    new = "tuuphra-4-fungicide", type = "recipe-replacement" },
             }
         },
         {
@@ -141,7 +141,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "tuuphra-grease", type = "unlock-recipe"}
+                { recipe = "tuuphra-grease", type = "unlock-recipe" }
             }
         }
     },

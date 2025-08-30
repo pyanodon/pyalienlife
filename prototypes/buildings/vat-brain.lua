@@ -1,23 +1,23 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "vat-brain",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "brain",              amount = 15},
-        {type = "item", name = "washer",             amount = 1},
-        {type = "item", name = "nexelit-plate",      amount = 20},
-        {type = "item", name = "titanium-plate",     amount = 35},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "glass",              amount = 50},
-        {type = "item", name = "nickel-plate",       amount = 25},
+        { type = "item", name = "brain",              amount = 15 },
+        { type = "item", name = "washer",             amount = 1 },
+        { type = "item", name = "nexelit-plate",      amount = 20 },
+        { type = "item", name = "titanium-plate",     amount = 35 },
+        { type = "item", name = "electronic-circuit", amount = 10 },
+        { type = "item", name = "glass",              amount = 50 },
+        { type = "item", name = "nickel-plate",       amount = 25 },
     },
     results = {
-        {type = "item", name = "vat-brain", amount = 1}
+        { type = "item", name = "vat-brain", amount = 1 }
     }
-}:add_unlock("vatbrain-mk01")
+}):add_unlock("vatbrain-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "vat-brain",
     icon = "__pyalienlifegraphics__/graphics/icons/vat-brain.png",
@@ -27,23 +27,23 @@ ITEM {
     order = "a",
     place_result = "vat-brain",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "vat-brain",
     icon = "__pyalienlifegraphics__/graphics/icons/vat-brain.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "vat-brain"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "vat-brain" },
     fast_replaceable_group = "vat-brain",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.3, -3.3 }, { 3.3, 3.3 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     forced_symmetry = "diagonal-pos",
-    crafting_categories = {"vat"},
+    crafting_categories = { "vat" },
     crafting_speed = 1,
     energy_source = {
         type = "electric",
@@ -109,38 +109,38 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 2.0, -3.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -2.0, -3.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, -3.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.0, 3.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 1.0, 3.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -0.96 }, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-1.0, 3.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -1.0, 3.0 }, direction = defines.direction.south } }
         },
     },
     radius_visualisation_specification = {
@@ -150,12 +150,12 @@ ENTITY {
             height = 1
         },
         distance = 11.5,
-        offset = {0, 0}
+        offset = { 0, 0 }
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 1.5 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/vat-brain.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

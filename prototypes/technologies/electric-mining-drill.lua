@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "electric-mining-drill",
     icon = "__pyalienlifegraphics2__/graphics/technology/electric-mining-drill.png",
@@ -9,9 +9,9 @@ TECHNOLOGY {
     unit = {
         count = 100,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
         },
         time = 30
     }
-}
+})

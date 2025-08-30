@@ -1,9 +1,9 @@
 ------------------larva MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "xyhiphoe-cub",
 	category = "rc",
-	allowed_module_categories = {"xyhiphoe"},
+	allowed_module_categories = { "xyhiphoe" },
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "c",
 	main_product = "xyhiphoe-cub",
@@ -15,15 +15,15 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='xyhiphoe', amount =2},
-				{name = "fish-food-01",     amount = 2},
-				{name = "phytoplankton",    amount = 150,  fluidbox_index = 1},
-				{name = "pressured-water",  amount = 1000, fluidbox_index = 2, return_item = {name = "waste-water", amount = 650}},
-				{name = "saps",             amount = 6},
-				{name = "filtration-media", amount = 2}
+				{ name = "fish-food-01",     amount = 2 },
+				{ name = "phytoplankton",    amount = 150,  fluidbox_index = 1 },
+				{ name = "pressured-water",  amount = 1000, fluidbox_index = 2, return_item = { name = "waste-water", amount = 650 } },
+				{ name = "saps",             amount = 6 },
+				{ name = "filtration-media", amount = 2 }
 			},
 			results =
 			{
-				{name = "xyhiphoe-cub", amount = 4},
+				{ name = "xyhiphoe-cub", amount = 4 },
 			},
 			tech = "water-invertebrates-mk01"
 		},
@@ -31,12 +31,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-meal", amount = 4, fallback = {name = "blood-barrel", amount = 4}},
-				{name = "albumin",    amount = 1}
+				{ name = "blood-meal", amount = 4, fallback = { name = "blood-barrel", amount = 4 } },
+				{ name = "albumin",    amount = 1 }
 			},
 			results =
 			{
-				{name = "xyhiphoe-cub", add_amount = 3},
+				{ name = "xyhiphoe-cub", add_amount = 3 },
 			},
 			tech = "water-invertebrates-mk02"
 		},
@@ -44,11 +44,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fish-egg", amount = 10},
+				{ name = "fish-egg", amount = 10 },
 			},
 			results =
 			{
-				{name = "xyhiphoe-cub", add_amount = 3},
+				{ name = "xyhiphoe-cub", add_amount = 3 },
 			},
 			tech = "water-invertebrates-mk03"
 		},
@@ -56,18 +56,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fish-food-01", remove_item = true},
-				{name = "fish-food-02", amount = 2},
-				{name = "fawogae",      amount = 5},
+				{ name = "fish-food-01", remove_item = true },
+				{ name = "fish-food-02", amount = 2 },
+				{ name = "fawogae",      amount = 5 },
 			},
 			results =
 			{
-				{name = "xyhiphoe-cub", add_amount = 3},
+				{ name = "xyhiphoe-cub", add_amount = 3 },
 			},
 			tech = "water-invertebrates-mk04"
 		},
 	}
-}
+})
 
 --[[
 		-----------------------PHEROMONES-----------------------------
@@ -187,7 +187,7 @@ py.autorecipes {
 
 --Raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "xyhiphoe",
 	category = "xyhiphoe",
 	subgroup = "py-alienlife-xyhiphoe",
@@ -199,15 +199,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fish-food-01",     amount = 1},
-				{name = "phytoplankton",    amount = 50,   fluidbox_index = 1},
-				{name = "pressured-water",  amount = 3000, fluidbox_index = 2, return_item = {name = "waste-water", amount = 200}},
-				{name = "filtration-media", amount = 1},
-				{name = "xyhiphoe-cub",     amount = 2},
+				{ name = "fish-food-01",     amount = 1 },
+				{ name = "phytoplankton",    amount = 50,   fluidbox_index = 1 },
+				{ name = "pressured-water",  amount = 3000, fluidbox_index = 2, return_item = { name = "waste-water", amount = 200 } },
+				{ name = "filtration-media", amount = 1 },
+				{ name = "xyhiphoe-cub",     amount = 2 },
 			},
 			results =
 			{
-				{name = "xyhiphoe", probability = 0.7, amount_min = 1, amount_max = 2},
+				{ name = "xyhiphoe", probability = 0.7, amount_min = 1, amount_max = 2 },
 			},
 			crafting_speed = 150,
 			tech = "water-invertebrates-mk01"
@@ -216,13 +216,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-meal", amount = 5, fallback = {name = "blood-barrel", amount = 4}},
-				{name = "saps",       amount = 2},
+				{ name = "blood-meal", amount = 5, fallback = { name = "blood-barrel", amount = 4 } },
+				{ name = "saps",       amount = 2 },
 			},
 			results =
 			{
-				{name = "xyhiphoe", remove_item = true},
-				{name = "xyhiphoe", probability = 0.8, amount_min = 1, amount_max = 2},
+				{ name = "xyhiphoe", remove_item = true },
+				{ name = "xyhiphoe", probability = 0.8, amount_min = 1, amount_max = 2 },
 			},
 			crafting_speed = 130,
 			tech = "water-invertebrates-mk02"
@@ -231,15 +231,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-meal", remove_item = true},
-				{name = "saps",       remove_item = true},
-				{name = "fish-egg",   amount = 15},
+				{ name = "blood-meal", remove_item = true },
+				{ name = "saps",       remove_item = true },
+				{ name = "fish-egg",   amount = 15 },
 
 			},
 			results =
 			{
-				{name = "xyhiphoe", remove_item = true},
-				{name = "xyhiphoe", probability = 0.9, amount_min = 1, amount_max = 2},
+				{ name = "xyhiphoe", remove_item = true },
+				{ name = "xyhiphoe", probability = 0.9, amount_min = 1, amount_max = 2 },
 			},
 			crafting_speed = 110,
 			tech = "water-invertebrates-mk03"
@@ -248,19 +248,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-meal", amount = 5, fallback = {name = "blood-barrel", amount = 4}},
-				{name = "saps",       amount = 5},
+				{ name = "blood-meal", amount = 5, fallback = { name = "blood-barrel", amount = 4 } },
+				{ name = "saps",       amount = 5 },
 			},
 			results =
 			{
-				{name = "xyhiphoe", remove_item = true},
-				{name = "xyhiphoe", amount = 2},
+				{ name = "xyhiphoe", remove_item = true },
+				{ name = "xyhiphoe", amount = 2 },
 			},
 			crafting_speed = 100,
 			tech = "water-invertebrates-mk04"
 		},
 	}
-}
+})
 
 --[[
 		--gh

@@ -1,23 +1,23 @@
 local MODULE_SLOTS = 15
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "mukmoux-pasture-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "mukmoux-pasture-mk01", amount = 1},
-        {type = "item", name = "lead-plate",           amount = 10},
-        {type = "item", name = "latex",                amount = 20},
-        {type = "item", name = "neuroprocessor",       amount = 30},
-        {type = "item", name = "advanced-circuit",     amount = 10}
+        { type = "item", name = "mukmoux-pasture-mk01", amount = 1 },
+        { type = "item", name = "lead-plate",           amount = 10 },
+        { type = "item", name = "latex",                amount = 20 },
+        { type = "item", name = "neuroprocessor",       amount = 30 },
+        { type = "item", name = "advanced-circuit",     amount = 10 }
     },
     results = {
-        {type = "item", name = "mukmoux-pasture-mk02", amount = 1}
+        { type = "item", name = "mukmoux-pasture-mk02", amount = 1 }
     }
-}:add_unlock("land-animals-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
+}):add_unlock("land-animals-mk02"):add_ingredient({ type = "item", name = "small-parts-02", amount = 30 })
 
-ITEM {
+ITEM({
     type = "item",
     name = "mukmoux-pasture-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-pasture-mk02.png",
@@ -27,24 +27,24 @@ ITEM {
     order = "d",
     place_result = "mukmoux-pasture-mk02",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "mukmoux-pasture-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-pasture-mk02.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "mukmoux-pasture-mk02"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "mukmoux-pasture-mk02" },
     fast_replaceable_group = "mukmoux-pasture",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-9.7, -9.7}, {9.7, 9.7}},
-    selection_box = {{-10, -10}, {10, 10}},
+    collision_box = { { -9.7, -9.7 }, { 9.7, 9.7 } },
+    selection_box = { { -10, -10 }, { 10, 10 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"mukmoux"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "mukmoux" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "mukmoux-pasture-mk01"),
     energy_source = {
         type = "electric",
@@ -496,7 +496,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a = 0.4},
+                    tint = { a = 0.4 },
                     animation_speed = 0.5
                 }
             },
@@ -511,7 +511,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a = 0.4},
+                    tint = { a = 0.4 },
                     animation_speed = 0.5
                 }
             },
@@ -526,7 +526,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a = 0.4},
+                    tint = { a = 0.4 },
                     animation_speed = 0.5
                 }
             },
@@ -541,7 +541,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a = 0.4},
+                    tint = { a = 0.4 },
                     animation_speed = 0.5
                 }
             },
@@ -556,7 +556,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a = 0.4},
+                    tint = { a = 0.4 },
                     animation_speed = 0.5
                 }
             },
@@ -571,7 +571,7 @@ ENTITY {
                     line_length = 30,
                     width = 64,
                     height = 288,
-                    tint = {a = 0.4},
+                    tint = { a = 0.4 },
                     animation_speed = 0.5
                 }
             },
@@ -593,7 +593,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -32),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/mukmoux-pasture/ao.png",
@@ -608,8 +608,8 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pycoalprocessinggraphics__/sounds/mukmoux-pasture.ogg", volume = 1.3},
-        idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/mukmoux-pasture.ogg", volume = 0.3},
+        sound = { filename = "__pycoalprocessinggraphics__/sounds/mukmoux-pasture.ogg", volume = 1.3 },
+        idle_sound = { filename = "__pycoalprocessinggraphics__/sounds/mukmoux-pasture.ogg", volume = 0.3 },
         apparent_volume = 0.35
     }
-}
+})

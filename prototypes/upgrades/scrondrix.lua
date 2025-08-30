@@ -1,5 +1,5 @@
 if data and not yafc_turd_integration then
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("Scrondrix-1"):copy(),
         RECIPE("Scrondrix-2"):copy(),
         RECIPE("Scrondrix-3"):copy(),
@@ -11,19 +11,19 @@ if data and not yafc_turd_integration then
         RECIPE("Scrondrix-cub-2"):copy(),
         RECIPE("Scrondrix-cub-3"):copy(),
         RECIPE("Scrondrix-cub-4"):copy(),
-    } do
-        if i > 4 and i < 8 then recipe.localised_name = {"recipe-name." .. recipe.name} end
+    }) do
+        if i > 4 and i < 8 then recipe.localised_name = { "recipe-name." .. recipe.name } end
         recipe.name = recipe.name .. "-boron"
         local _, removed = recipe:remove_ingredient("water-barrel")
-        recipe:add_ingredient {type = "item", name = "boric-acid-barrel", amount = removed}
+        recipe:add_ingredient({ type = "item", name = "boric-acid-barrel", amount = removed })
         if i > 4 and i < 8 then
-            recipe.results[1].probability = recipe.results[1].probability * 1.5
+            recipe.results[ 1 ].probability = recipe.results[ 1 ].probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75
         end
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("Scrondrix-1"):copy(),
         RECIPE("Scrondrix-2"):copy(),
         RECIPE("Scrondrix-3"):copy(),
@@ -35,8 +35,8 @@ if data and not yafc_turd_integration then
         RECIPE("Scrondrix-cub-2"):copy(),
         RECIPE("Scrondrix-cub-3"):copy(),
         RECIPE("Scrondrix-cub-4"):copy(),
-    } do
-        if i > 4 and i < 8 then recipe.localised_name = {"recipe-name." .. recipe.name} end
+    }) do
+        if i > 4 and i < 8 then recipe.localised_name = { "recipe-name." .. recipe.name } end
         recipe.name = recipe.name .. "-vegan"
         recipe:multiply_ingredient_amount("meat", 3)
         recipe:remove_ingredient("fawogae")
@@ -45,30 +45,30 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient("navens")
         recipe:remove_ingredient("wood-seeds")
         if i > 4 and i < 8 then
-            recipe.results[1].probability = recipe.results[1].probability * 0.75
+            recipe.results[ 1 ].probability = recipe.results[ 1 ].probability * 0.75
             recipe.energy_required = recipe.energy_required * 1.5
         end
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
     local brains = RECIPE("ex-bra-scro"):copy()
     brains.name = "scrondrix-brain-slaughterhouse-ex"
-    brains.localised_name = {"recipe-name.ex-bra-scro"}
+    brains.localised_name = { "recipe-name.ex-bra-scro" }
     brains:multiply_result_amount("brain", 16)
     brains:multiply_result_amount("pineal-gland", 0.25)
 
     local experimental = RECIPE("Caged-scrondrix-9"):copy()
     experimental.name = "scrondrix-experimental-treatment"
-    experimental:add_ingredient {name = "arthurian-codex", amount = 1, type = "item"}
+    experimental:add_ingredient({ name = "arthurian-codex", amount = 1, type = "item" })
     experimental.results = {
-        {name = "bones",                 amount = 1,     type = "item",  probability = 0.6},
-        {name = "cage",                  amount = 1,     type = "item",  probability = 0.6},
-        {name = "electronic-circuit",    amount_min = 7, amount_max = 8, type = "item"},
-        {name = "brain-caged-scrondrix", amount = 1,     type = "item",  probability = 0.4},
+        { name = "bones",                 amount = 1,     type = "item",  probability = 0.6 },
+        { name = "cage",                  amount = 1,     type = "item",  probability = 0.6 },
+        { name = "electronic-circuit",    amount_min = 7, amount_max = 8, type = "item" },
+        { name = "brain-caged-scrondrix", amount = 1,     type = "item",  probability = 0.4 },
     }
     experimental.main_product = "brain-caged-scrondrix"
 
-    data:extend {brains, experimental}
+    data:extend({ brains, experimental })
 end
 
 return {
@@ -83,13 +83,13 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-scrondrix.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"scrondrix"},
+        prerequisites = { "scrondrix" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
-                {"chemical-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
             },
             time = 45
         }
@@ -101,18 +101,18 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = -0.5,            productivity = 1,              type = "module-effects"},
-                {old = "Scrondrix-cub-1", new = "Scrondrix-cub-1-boron", type = "recipe-replacement"},
-                {old = "Scrondrix-cub-2", new = "Scrondrix-cub-2-boron", type = "recipe-replacement"},
-                {old = "Scrondrix-cub-3", new = "Scrondrix-cub-3-boron", type = "recipe-replacement"},
-                {old = "Scrondrix-cub-4", new = "Scrondrix-cub-4-boron", type = "recipe-replacement"},
-                {old = "Scrondrix-1",     new = "Scrondrix-1-boron",     type = "recipe-replacement"},
-                {old = "Scrondrix-2",     new = "Scrondrix-2-boron",     type = "recipe-replacement"},
-                {old = "Scrondrix-3",     new = "Scrondrix-3-boron",     type = "recipe-replacement"},
-                {old = "Scrondrix-4",     new = "Scrondrix-4-boron",     type = "recipe-replacement"},
-                {old = "scrondrix-mk02",  new = "scrondrix-mk02-boron",  type = "recipe-replacement"},
-                {old = "scrondrix-mk03",  new = "scrondrix-mk03-boron",  type = "recipe-replacement"},
-                {old = "scrondrix-mk04",  new = "scrondrix-mk04-boron",  type = "recipe-replacement"},
+                { speed = -0.5,            productivity = 1,              type = "module-effects" },
+                { old = "Scrondrix-cub-1", new = "Scrondrix-cub-1-boron", type = "recipe-replacement" },
+                { old = "Scrondrix-cub-2", new = "Scrondrix-cub-2-boron", type = "recipe-replacement" },
+                { old = "Scrondrix-cub-3", new = "Scrondrix-cub-3-boron", type = "recipe-replacement" },
+                { old = "Scrondrix-cub-4", new = "Scrondrix-cub-4-boron", type = "recipe-replacement" },
+                { old = "Scrondrix-1",     new = "Scrondrix-1-boron",     type = "recipe-replacement" },
+                { old = "Scrondrix-2",     new = "Scrondrix-2-boron",     type = "recipe-replacement" },
+                { old = "Scrondrix-3",     new = "Scrondrix-3-boron",     type = "recipe-replacement" },
+                { old = "Scrondrix-4",     new = "Scrondrix-4-boron",     type = "recipe-replacement" },
+                { old = "scrondrix-mk02",  new = "scrondrix-mk02-boron",  type = "recipe-replacement" },
+                { old = "scrondrix-mk03",  new = "scrondrix-mk03-boron",  type = "recipe-replacement" },
+                { old = "scrondrix-mk04",  new = "scrondrix-mk04-boron",  type = "recipe-replacement" },
             },
         },
         {
@@ -121,17 +121,17 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "Scrondrix-cub-1", new = "Scrondrix-cub-1-vegan", type = "recipe-replacement"},
-                {old = "Scrondrix-cub-2", new = "Scrondrix-cub-2-vegan", type = "recipe-replacement"},
-                {old = "Scrondrix-cub-3", new = "Scrondrix-cub-3-vegan", type = "recipe-replacement"},
-                {old = "Scrondrix-cub-4", new = "Scrondrix-cub-4-vegan", type = "recipe-replacement"},
-                {old = "Scrondrix-1",     new = "Scrondrix-1-vegan",     type = "recipe-replacement"},
-                {old = "Scrondrix-2",     new = "Scrondrix-2-vegan",     type = "recipe-replacement"},
-                {old = "Scrondrix-3",     new = "Scrondrix-3-vegan",     type = "recipe-replacement"},
-                {old = "Scrondrix-4",     new = "Scrondrix-4-vegan",     type = "recipe-replacement"},
-                {old = "scrondrix-mk02",  new = "scrondrix-mk02-vegan",  type = "recipe-replacement"},
-                {old = "scrondrix-mk03",  new = "scrondrix-mk03-vegan",  type = "recipe-replacement"},
-                {old = "scrondrix-mk04",  new = "scrondrix-mk04-vegan",  type = "recipe-replacement"},
+                { old = "Scrondrix-cub-1", new = "Scrondrix-cub-1-vegan", type = "recipe-replacement" },
+                { old = "Scrondrix-cub-2", new = "Scrondrix-cub-2-vegan", type = "recipe-replacement" },
+                { old = "Scrondrix-cub-3", new = "Scrondrix-cub-3-vegan", type = "recipe-replacement" },
+                { old = "Scrondrix-cub-4", new = "Scrondrix-cub-4-vegan", type = "recipe-replacement" },
+                { old = "Scrondrix-1",     new = "Scrondrix-1-vegan",     type = "recipe-replacement" },
+                { old = "Scrondrix-2",     new = "Scrondrix-2-vegan",     type = "recipe-replacement" },
+                { old = "Scrondrix-3",     new = "Scrondrix-3-vegan",     type = "recipe-replacement" },
+                { old = "Scrondrix-4",     new = "Scrondrix-4-vegan",     type = "recipe-replacement" },
+                { old = "scrondrix-mk02",  new = "scrondrix-mk02-vegan",  type = "recipe-replacement" },
+                { old = "scrondrix-mk03",  new = "scrondrix-mk03-vegan",  type = "recipe-replacement" },
+                { old = "scrondrix-mk04",  new = "scrondrix-mk04-vegan",  type = "recipe-replacement" },
             }
         },
         {
@@ -140,8 +140,8 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "ex-bra-scro",       new = "scrondrix-brain-slaughterhouse-ex", type = "recipe-replacement"},
-                {old = "Caged-scrondrix-9", new = "scrondrix-experimental-treatment",  type = "recipe-replacement"},
+                { old = "ex-bra-scro",       new = "scrondrix-brain-slaughterhouse-ex", type = "recipe-replacement" },
+                { old = "Caged-scrondrix-9", new = "scrondrix-experimental-treatment",  type = "recipe-replacement" },
             }
         }
     },

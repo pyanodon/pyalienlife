@@ -1,26 +1,26 @@
 if data and not yafc_turd_integration then
     local recipe = RECIPE("navens-sample"):copy()
     recipe.name = "navens-sample-with-vonix-gen"
-    recipe:add_ingredient {type = "item", name = "vonix-codex", amount = 5}
-    data:extend {recipe}
+    recipe:add_ingredient({ type = "item", name = "vonix-codex", amount = 5 })
+    data:extend({ recipe })
 
-    data:extend {{
+    data:extend({ {
         type = "recipe",
         name = "pre-pesticide-01-navens",
         ingredients = {
-            {name = "navens", type = "item",  amount = 12},
-            {name = "mcb",    type = "fluid", amount = 100},
-            {name = "phenol", type = "item",  amount = 1},
+            { name = "navens", type = "item",  amount = 12 },
+            { name = "mcb",    type = "fluid", amount = 100 },
+            { name = "phenol", type = "item",  amount = 1 },
         },
         results = {
-            {name = "pre-pesticide-01", type = "fluid", amount = 350},
+            { name = "pre-pesticide-01", type = "fluid", amount = 350 },
         },
         energy_required = 20,
         enabled = false,
         category = "biofactory"
-    }}
+    } })
 
-    data:extend {
+    data:extend({
         {
             type = "item",
             name = "navens-abomination",
@@ -34,50 +34,50 @@ if data and not yafc_turd_integration then
             name = "full-render-navens-abomination",
             category = "slaughterhouse",
             subgroup = "py-alienlife-auog",
-            ingredients = {{type = "item", name = "navens-abomination", amount = 1}},
+            ingredients = { { type = "item", name = "navens-abomination", amount = 1 } },
             results = {
-                {name = "navens",            type = "item",  amount_min = 13, amount_max = 16},
-                {name = "muddy-sludge", type = "fluid", amount = 10},
-                {type = "item",              name = "guts",  amount = 1}
+                { name = "navens",       type = "item",  amount_min = 13, amount_max = 16 },
+                { name = "muddy-sludge", type = "fluid", amount = 10 },
+                { type = "item",         name = "guts",  amount = 1 }
             },
             enabled = false,
             icon = "__pyalienlifegraphics__/graphics/icons/rendering-abomination.png",
             icon_size = 64,
-            localised_name = {"recipe-name.full-render-navens-abomination"},
+            localised_name = { "recipe-name.full-render-navens-abomination" },
             energy_required = 10
         }
-    }
+    })
 
-    local victims = {"auog", "mukmoux", "scrondrix", "zungror"}
-    local profit = {1, 2, 4, 6}
-    if not mods.pyalternativeenergy then victims[4] = "antelope" end
-    for i, recipe in pairs {
+    local victims = { "auog", "mukmoux", "scrondrix", "zungror" }
+    local profit = { 1, 2, 4, 6 }
+    if not mods.pyalternativeenergy then victims[ 4 ] = "antelope" end
+    for i, recipe in pairs({
         RECIPE("navens-1"):copy(),
         RECIPE("navens-2"):copy(),
         RECIPE("navens-3"):copy(),
         RECIPE("navens-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-abomination"
-        recipe:add_ingredient {name = victims[i], amount = 1, type = "item"}
+        recipe:add_ingredient({ name = victims[ i ], amount = 1, type = "item" })
         recipe:remove_ingredient("guts")
         recipe.main_product = "navens-abomination"
-        recipe.results = {{type = "item", name = "navens-abomination", amount = profit[i]}}
+        recipe.results = { { type = "item", name = "navens-abomination", amount = profit[ i ] } }
         recipe.energy_required = recipe.energy_required * 1.5
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("navens-spore"):copy(),
         RECIPE("navens-spore-mk02"):copy(),
         RECIPE("navens-spore-mk03"):copy(),
         RECIPE("navens-spore-mk04"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-sterilization"
-        recipe:add_ingredient {type = "fluid", name = "phosphorus-tricloride", amount = 1}
-        data:extend {recipe}
+        recipe:add_ingredient({ type = "fluid", name = "phosphorus-tricloride", amount = 1 })
+        data:extend({ recipe })
     end
     table.insert(
-        data.raw.technology["microfilters"].effects,
+        data.raw.technology[ "microfilters" ].effects,
         {
             type = "change-recipe-productivity",
             recipe = "navens-spore-sterilization",
@@ -86,7 +86,7 @@ if data and not yafc_turd_integration then
         }
     )
     table.insert(
-        data.raw.technology["microfilters-mk02"].effects,
+        data.raw.technology[ "microfilters-mk02" ].effects,
         {
             type = "change-recipe-productivity",
             recipe = "navens-spore-sterilization",
@@ -108,14 +108,14 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-navens.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"navens-mk03", "vonix", "nuclear-power"},
+        prerequisites = { "navens-mk03", "vonix", "nuclear-power" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
             },
             time = 45
         }
@@ -127,9 +127,9 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = 0.08,                       type = "module-effects"},
-                {recipe = "pre-pesticide-01-navens", type = "unlock-recipe"},
-                {old = "navens-sample",              new = "navens-sample-with-vonix-gen", type = "recipe-replacement"}
+                { speed = 0.08,                       type = "module-effects" },
+                { recipe = "pre-pesticide-01-navens", type = "unlock-recipe" },
+                { old = "navens-sample",              new = "navens-sample-with-vonix-gen", type = "recipe-replacement" }
             },
         },
         {
@@ -138,11 +138,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 5,           productivity = 0.2,                      type = "module-effects"},
-                {old = "navens-spore",      new = "navens-spore-sterilization",      type = "recipe-replacement"},
-                {old = "navens-spore-mk02", new = "navens-spore-mk02-sterilization", type = "recipe-replacement"},
-                {old = "navens-spore-mk03", new = "navens-spore-mk03-sterilization", type = "recipe-replacement"},
-                {old = "navens-spore-mk04", new = "navens-spore-mk04-sterilization", type = "recipe-replacement"},
+                { consumption = 5,           productivity = 0.2,                      type = "module-effects" },
+                { old = "navens-spore",      new = "navens-spore-sterilization",      type = "recipe-replacement" },
+                { old = "navens-spore-mk02", new = "navens-spore-mk02-sterilization", type = "recipe-replacement" },
+                { old = "navens-spore-mk03", new = "navens-spore-mk03-sterilization", type = "recipe-replacement" },
+                { old = "navens-spore-mk04", new = "navens-spore-mk04-sterilization", type = "recipe-replacement" },
             }
         },
         {
@@ -151,11 +151,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "full-render-navens-abomination", type = "unlock-recipe"},
-                {old = "navens-1",                          new = "navens-1-abomination", type = "recipe-replacement"},
-                {old = "navens-2",                          new = "navens-2-abomination", type = "recipe-replacement"},
-                {old = "navens-3",                          new = "navens-3-abomination", type = "recipe-replacement"},
-                {old = "navens-4",                          new = "navens-4-abomination", type = "recipe-replacement"},
+                { recipe = "full-render-navens-abomination", type = "unlock-recipe" },
+                { old = "navens-1",                          new = "navens-1-abomination", type = "recipe-replacement" },
+                { old = "navens-2",                          new = "navens-2-abomination", type = "recipe-replacement" },
+                { old = "navens-3",                          new = "navens-3-abomination", type = "recipe-replacement" },
+                { old = "navens-4",                          new = "navens-4-abomination", type = "recipe-replacement" },
             },
         },
     },

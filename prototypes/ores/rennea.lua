@@ -1,25 +1,25 @@
-ENTITY {
+ENTITY({
     type = "resource",
     name = "rennea-flowers",
     category = "rennea-flowers",
     icon = "__pyalienlifegraphics__/graphics/icons/rennea-ore.png",
     icon_size = 64,
-    flags = {"placeable-neutral"},
+    flags = { "placeable-neutral" },
     order = "a-b-a",
-    map_color = {r = 0.780, g = 0.0, b = 0.129},
+    map_color = { r = 0.780, g = 0.0, b = 0.129 },
     minable = {
 
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = "item", name = "rennea", amount = 1}
+            { type = "item", name = "rennea", amount = 1 }
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
     },
     starting_area = false,
-    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     --[[
 	autoplace = {
         control = "ore-aluminium",
@@ -37,7 +37,7 @@ ENTITY {
         }
     },
 	]] --
-    stage_counts = {800},
+    stage_counts = { 800 },
     stages = {
         sheet = {
             filename = "__pyalienlifegraphics__/graphics/entity/crops/rennea.png",
@@ -49,4 +49,4 @@ ENTITY {
             scale = 0.5
         }
     }
-}
+})

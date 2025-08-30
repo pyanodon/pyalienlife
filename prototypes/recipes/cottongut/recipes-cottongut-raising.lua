@@ -1,9 +1,9 @@
 ------------------CUB MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "cottongut-cub",
 	category = "rc",
-	allowed_module_categories = {"cottongut"},
+	allowed_module_categories = { "cottongut" },
 	subgroup = "py-alienlife-cottongut",
 	order = "c",
 	main_product = "cottongut-pup",
@@ -15,14 +15,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut",     amount = 4},
-				{name = "moondrop",      amount = 2, fallback = "fawogae"},
-				{name = "ralesia-seeds", amount = 15},
-				{name = "water-barrel",  amount = 3, return_barrel = true},
+				{ name = "cottongut",     amount = 4 },
+				{ name = "moondrop",      amount = 2, fallback = "fawogae" },
+				{ name = "ralesia-seeds", amount = 15 },
+				{ name = "water-barrel",  amount = 3, return_barrel = true },
 			},
 			results =
 			{
-				{name = "cottongut-pup", amount = 10},
+				{ name = "cottongut-pup", amount = 10 },
 			},
 			tech = "cottongut-mk01"
 		},
@@ -30,17 +30,17 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "ralesia-seeds",     remove_item = true},
-				{name = "yotoi-seeds",       amount = 10},
-				{name = "bhoddos",           amount = 1},
-				{name = "bedding",           amount = 1},
-				{name = "cottongut-food-01", amount = 1},
-				{name = "barrel-milk",       amount = 2},
+				{ name = "ralesia-seeds",     remove_item = true },
+				{ name = "yotoi-seeds",       amount = 10 },
+				{ name = "bhoddos",           amount = 1 },
+				{ name = "bedding",           amount = 1 },
+				{ name = "cottongut-food-01", amount = 1 },
+				{ name = "barrel-milk",       amount = 2 },
 			},
 			results =
 			{
-				{name = "empty-barrel-milk", amount = 2},
-				{name = "cottongut-pup",     add_amount = 6},
+				{ name = "empty-barrel-milk", amount = 2 },
+				{ name = "cottongut-pup",     add_amount = 6 },
 			},
 			tech = "cottongut-mk02"
 		},
@@ -48,14 +48,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut-food-01", add_amount = 2},
-				{name = "cottongut-food-02", amount = 1},
-				{name = "bhoddos",           add_amount = 2},
+				{ name = "cottongut-food-01", add_amount = 2 },
+				{ name = "cottongut-food-02", amount = 1 },
+				{ name = "bhoddos",           add_amount = 2 },
 
 			},
 			results =
 			{
-				{name = "cottongut-pup", add_amount = 12},
+				{ name = "cottongut-pup", add_amount = 12 },
 			},
 			tech = "cottongut-mk03"
 		},
@@ -63,20 +63,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "grod-seeds", amount = 10},
+				{ name = "grod-seeds", amount = 10 },
 			},
 			results =
 			{
-				{name = "cottongut-pup", add_amount = 18},
+				{ name = "cottongut-pup", add_amount = 18 },
 			},
 			tech = "cottongut-mk04"
 		},
 	}
-}
+})
 
 --raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "caged-cottongut",
 	category = "cottongut",
 	subgroup = "py-alienlife-cottongut",
@@ -89,15 +89,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut-pup", amount = 7},
-				{name = "moondrop",      amount = 4, fallback = "fawogae"},
-				{name = "wood-seeds",    amount = 4},
-				{name = "water-barrel",  amount = 2, return_barrel = true},
-				{name = "ralesia-seeds", amount = 3},
+				{ name = "cottongut-pup", amount = 7 },
+				{ name = "moondrop",      amount = 4, fallback = "fawogae" },
+				{ name = "wood-seeds",    amount = 4 },
+				{ name = "water-barrel",  amount = 2, return_barrel = true },
+				{ name = "ralesia-seeds", amount = 3 },
 			},
 			results =
 			{
-				{name = "cottongut", amount = 6},
+				{ name = "cottongut", amount = 6 },
 			},
 			crafting_speed = 150,
 			tech = "cottongut-mk01"
@@ -106,16 +106,16 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut-pup",     add_amount = 4},
-				{name = "wood-seeds",        remove_item = true},
-				{name = "ralesia-seeds",     remove_item = true},
-				{name = "cottongut-food-01", amount = 1},
-				{name = "bedding",           amount = 1},
-				{name = "tuuphra-seeds",     amount = 5},
+				{ name = "cottongut-pup",     add_amount = 4 },
+				{ name = "wood-seeds",        remove_item = true },
+				{ name = "ralesia-seeds",     remove_item = true },
+				{ name = "cottongut-food-01", amount = 1 },
+				{ name = "bedding",           amount = 1 },
+				{ name = "tuuphra-seeds",     amount = 5 },
 			},
 			results =
 			{
-				{name = "cottongut", add_amount = 3},
+				{ name = "cottongut", add_amount = 3 },
 			},
 			crafting_speed = 130,
 			tech = "cottongut-mk02"
@@ -124,15 +124,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut-pup",     add_amount = 5},
-				{name = "cottongut-food-01", add_amount = 2},
-				{name = "cottongut-food-02", amount = 1},
-				{name = "bhoddos",           amount = 4},
+				{ name = "cottongut-pup",     add_amount = 5 },
+				{ name = "cottongut-food-01", add_amount = 2 },
+				{ name = "cottongut-food-02", amount = 1 },
+				{ name = "bhoddos",           amount = 4 },
 
 			},
 			results =
 			{
-				{name = "cottongut", add_amount = 4},
+				{ name = "cottongut", add_amount = 4 },
 			},
 			crafting_speed = 110,
 			tech = "cottongut-mk03"
@@ -141,18 +141,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut-pup", add_amount = 7},
-				{name = "grod-seeds",    amount = 10},
+				{ name = "cottongut-pup", add_amount = 7 },
+				{ name = "grod-seeds",    amount = 10 },
 			},
 			results =
 			{
-				{name = "cottongut", add_amount = 7},
+				{ name = "cottongut", add_amount = 7 },
 			},
 			crafting_speed = 90,
 			tech = "cottongut-mk04"
 		},
 	}
-}
+})
 
 --[[
 		-----------------------PHEROMONES-----------------------------

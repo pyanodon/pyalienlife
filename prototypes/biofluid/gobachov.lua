@@ -1,24 +1,24 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "gobachov",
     energy_required = 120,
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = "item",  name = "earth-generic-sample", amount = 2},
-        {type = "item",  name = "cdna",                 amount = 1},
-        {type = "item",  name = "alien-sample-02",      amount = 3},
-        {type = "item",  name = "bio-sample",           amount = 5},
-        {type = "fluid", name = "water-saline",         amount = 50},
-        {type = "fluid", name = "fetal-serum",          amount = 50},
-        {type = "fluid", name = "coal-slurry",          amount = 100},
+        { type = "item",  name = "earth-generic-sample", amount = 2 },
+        { type = "item",  name = "cdna",                 amount = 1 },
+        { type = "item",  name = "alien-sample-02",      amount = 3 },
+        { type = "item",  name = "bio-sample",           amount = 5 },
+        { type = "fluid", name = "water-saline",         amount = 50 },
+        { type = "fluid", name = "fetal-serum",          amount = 50 },
+        { type = "fluid", name = "coal-slurry",          amount = 100 },
     },
     results = {
-        {type = "item", name = "gobachov", amount = 1}
+        { type = "item", name = "gobachov", amount = 1 }
     }
-}:add_unlock {"biofluid-mk01"}
+}):add_unlock({ "biofluid-mk01" })
 
-ITEM {
+ITEM({
     type = "item",
     name = "gobachov",
     icon = "__pyalienlifegraphics2__/graphics/icons/gobachov.png",
@@ -28,7 +28,7 @@ ITEM {
     order = "x",
     place_result = "gobachov",
     stack_size = 10
-}
+})
 
 local animation = {
     layers = {
@@ -60,22 +60,22 @@ local animation = {
 
 ---@as data.UnitPrototype
 local unit = {
-    ai_settings = {do_separation = false, path_resolution_modifier = -2},
+    ai_settings = { do_separation = false, path_resolution_modifier = -2 },
     type = "unit",
     name = "gobachov",
     icon = "__pyalienlifegraphics2__/graphics/icons/gobachov.png",
     icon_size = 64,
-    flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-    minable = {mining_time = 0.2, result = "gobachov"},
+    flags = { "placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way" },
+    minable = { mining_time = 0.2, result = "gobachov" },
     max_health = 250,
     order = "z",
     has_belt_immunity = true,
     subgroup = "py-alienlife-biofluid-network",
     healing_per_tick = 0.01,
-    collision_box = {{0, 0}, {0, 0}},
-    resistances = {{type = "fire", percent = 100}},
-    collision_mask = {layers = {}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { 0, 0 }, { 0, 0 } },
+    resistances = { { type = "fire", percent = 100 } },
+    collision_mask = { layers = {} },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     attack_parameters = {
         type = "projectile",
         range = 0,
@@ -87,7 +87,7 @@ local unit = {
     vision_distance = 0,
     movement_speed = 0.09,
     distance_per_frame = 0.13,
-    absorptions_to_join_attack = {pollution = 4},
+    absorptions_to_join_attack = { pollution = 4 },
     distraction_cooldown = 300,
     max_pursue_distance = 50,
     dying_explosion = "blood-explosion-small",
@@ -101,8 +101,8 @@ local unit = {
         filename = "__pyalienlifegraphics3__/sounds/ocula-walk.ogg",
         volume = 0.4
     },
-    map_color = {0, 0.5, 0},
+    map_color = { 0, 0.5, 0 },
     selection_priority = 51
 }
 
-data:extend {unit}
+data:extend({ unit })

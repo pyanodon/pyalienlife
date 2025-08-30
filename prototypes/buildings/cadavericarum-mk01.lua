@@ -10,24 +10,24 @@ local pipe = {
     }
 }
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "cadaveric-arum-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "botanical-nursery",  amount = 1},
-        {type = "item", name = "plastic-bar",        amount = 100},
-        {type = "item", name = "electronic-circuit", amount = 25},
-        {type = "item", name = "steel-plate",        amount = 60},
-        {type = "item", name = "hydrocyclone-mk01",  amount = 1}
+        { type = "item", name = "botanical-nursery",  amount = 1 },
+        { type = "item", name = "plastic-bar",        amount = 100 },
+        { type = "item", name = "electronic-circuit", amount = 25 },
+        { type = "item", name = "steel-plate",        amount = 60 },
+        { type = "item", name = "hydrocyclone-mk01",  amount = 1 }
     },
     results = {
-        {type = "item", name = "cadaveric-arum-mk01", amount = 1}
+        { type = "item", name = "cadaveric-arum-mk01", amount = 1 }
     }
-}:add_unlock("cadaveric-arum")
+}):add_unlock("cadaveric-arum")
 
-ITEM {
+ITEM({
     type = "item",
     name = "cadaveric-arum-mk01",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
@@ -37,25 +37,25 @@ ITEM {
     order = "b",
     place_result = "cadaveric-arum-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "cadaveric-arum-mk01",
     icon = "__pyhightechgraphics__/graphics/icons/cadaveric-arum-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "cadaveric-arum-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "cadaveric-arum-mk01" },
     fast_replaceable_group = "cadaveric-arum",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    collision_box = { { -4.2, -4.2 }, { 4.2, 4.2 } },
+    selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"arum"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "arum" },
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -87,7 +87,7 @@ ENTITY {
                     frame_count = 20,
                     animation_speed = 0.3,
                     shift = util.by_pixel(0, -4),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyhightechgraphics__/graphics/entity/cadaveric-arum/shadow.png",
@@ -108,37 +108,37 @@ ENTITY {
         --1
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -5.1}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -5.1 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, 4.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, 4.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -5.1}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -5.1 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {4.0, 0.0}, direction = defines.direction.east}}
+            pipe_connections = { { flow_direction = "input", position = { 4.0, 0.0 }, direction = defines.direction.east } }
         },
         {
             production_type = "input",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -5.1}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -5.1 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -4.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, -4.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -5.1}, nil, nil, pipe),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, { 0.0, -5.1 }, nil, nil, pipe),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-4.0, 0.0}, direction = defines.direction.west}}
+            pipe_connections = { { flow_direction = "output", position = { -4.0, 0.0 }, direction = defines.direction.west } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyhightechgraphics__/sounds/cadaveric-arum.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyhightechgraphics__/sounds/cadaveric-arum.ogg", volume = 0.3},
+        sound = { filename = "__pyhightechgraphics__/sounds/cadaveric-arum.ogg", volume = 1.5 },
+        idle_sound = { filename = "__pyhightechgraphics__/sounds/cadaveric-arum.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

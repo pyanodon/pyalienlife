@@ -1,7 +1,7 @@
-require "actions"
+require("actions")
 
-local ImplControl = require "control"
-local ImplGui = require "gui"
+local ImplControl = require("control")
+local ImplGui = require("gui")
 
 local P = {}
 
@@ -12,15 +12,15 @@ local function get_condition_groups(interrupt)
     local operators = interrupt.conditions_operators
     local conditions = interrupt.conditions
 
-    local or_indices = table.filter(table.map(operators, function (o, idx) return o == 0 and idx or -1 end), function (i) return i ~= -1 end)
+    local or_indices = table.filter(table.map(operators, function(o, idx) return o == 0 and idx or -1 end), function(i) return i ~= -1 end)
 
     if #or_indices == 0 then
         table.insert(groups, table.deepcopy(conditions))
     else
         local j = 1
         for i = 1, #conditions do
-            table.insert(current_group, table.deepcopy(conditions[i]))
-            if or_indices[j] == i then
+            table.insert(current_group, table.deepcopy(conditions[ i ]))
+            if or_indices[ j ] == i then
                 table.insert(groups, table.deepcopy(current_group))
                 current_group = {}
                 j = j + 1
@@ -34,31 +34,30 @@ local function get_condition_groups(interrupt)
 end
 
 local function evaluate_condition(caravan_data, condition)
-    if not Caravan.actions[condition.type] then return false end
-    return Caravan.actions[condition.type](caravan_data, caravan_data.schedule[caravan_data.schedule_id], condition)
+    if not Caravan.actions[ condition.type ] then return false end
+    return Caravan.actions[ condition.type ](caravan_data, caravan_data.schedule[ caravan_data.schedule_id ], condition)
 end
 
 local function evaluate_condition_group(caravan_data, condition_group)
-    return table.all(condition_group, function (c) return evaluate_condition(caravan_data, c) end)
+    return table.all(condition_group, function(c) return evaluate_condition(caravan_data, c) end)
 end
 
 function P.evaluate_conditions(caravan_data, interrupt)
     local condition_groups = get_condition_groups(interrupt)
 
-    return table.any(condition_groups, function (cg) return evaluate_condition_group(caravan_data, cg) end)
+    return table.any(condition_groups, function(cg) return evaluate_condition_group(caravan_data, cg) end)
 end
 
 function P.find_interrupt_to_trigger(caravan_data)
-    local current_schedule = caravan_data.schedule[caravan_data.schedule_id]
+    local current_schedule = caravan_data.schedule[ caravan_data.schedule_id ]
 
     -- current schedule_id is the "soon-to-be-previous" schedule_id, do not count it
-    local temporary_schedule = table.find(caravan_data.schedule, function (sch, idx) return idx ~= caravan_data.schedule_id and sch.temporary ~= nil end)
+    local temporary_schedule = table.find(caravan_data.schedule, function(sch, idx) return idx ~= caravan_data.schedule_id and sch.temporary ~= nil end)
 
     for _, interrupt_name in pairs(caravan_data.interrupts) do
-        local interrupt = storage.interrupts[interrupt_name]
+        local interrupt = storage.interrupts[ interrupt_name ]
         -- TODO shouldn't we assert? Is it a check for multiplayer shenanigans?
         if interrupt then
-
             if not current_schedule or temporary_schedule == nil or interrupt.inside_interrupt then
                 if P.evaluate_conditions(caravan_data, interrupt) then
                     return interrupt
@@ -93,7 +92,10 @@ end
 -- Returns a copy of the caravan schedule without temporary stops, and the adjusted schedule_id
 function P.remove_temporary_stops(caravan_data)
     local removed_index
-    local fn = function (s, idx) if s.temporary and removed_index == nil then removed_index = idx end return s.temporary == nil end
+    local fn = function(s, idx)
+        if s.temporary and removed_index == nil then removed_index = idx end
+        return s.temporary == nil
+    end
     local new_schedule = table.filter(caravan_data.schedule, fn)
 
     return new_schedule, adjust_schedule_id(caravan_data.schedule, new_schedule, removed_index, caravan_data.schedule_id)
@@ -103,8 +105,8 @@ function P.insert_temporary_stops_into_schedule(schedule, interrupt, insert_inde
     local ret = table.deepcopy(schedule)
 
     for i = 1, #interrupt.schedule do
-        local sch = table.deepcopy(interrupt.schedule[i])
-        sch.temporary = {interrupt_name = interrupt.name, schedule_id = i}
+        local sch = table.deepcopy(interrupt.schedule[ i ])
+        sch.temporary = { interrupt_name = interrupt.name, schedule_id = i }
         table.insert(ret, insert_index + i - 1, sch)
     end
     return ret
@@ -118,7 +120,7 @@ function P.trigger_interrupt_in_regular_schedule(caravan_data, interrupt)
         insert_index = 1
         -- When a temporary train stop keeps triggering, it moves from the bottom to the top.
         -- Don't know if that's intended or a bug, but let's do the same thing.
-    elseif caravan_data.schedule[caravan_data.schedule_id].temporary and caravan_data.schedule_id == #caravan_data.schedule then
+    elseif caravan_data.schedule[ caravan_data.schedule_id ].temporary and caravan_data.schedule_id == #caravan_data.schedule then
         insert_index = 1
     else
         insert_index = adjusted_schedule_id + 1
@@ -136,7 +138,7 @@ function P.advance_caravan_schedule_by_1(caravan_data)
     if interrupt and #interrupt.schedule > 0 then
         P.trigger_interrupt_in_regular_schedule(caravan_data, interrupt)
     else
-        if caravan_data.schedule[caravan_data.schedule_id].temporary then
+        if caravan_data.schedule[ caravan_data.schedule_id ].temporary then
             table.remove(caravan_data.schedule, caravan_data.schedule_id)
         else
             caravan_data.schedule_id = caravan_data.schedule_id + 1
@@ -151,7 +153,7 @@ end
 ---@param schedule_id int
 ---@param skip_eating boolean?
 function P.begin_schedule(caravan_data, schedule_id, skip_eating)
-    local schedule = caravan_data.schedule[schedule_id]
+    local schedule = caravan_data.schedule[ schedule_id ]
 
     if not schedule or (schedule.entity and not schedule.entity.valid) then
         ImplControl.stop_actions(caravan_data); return
@@ -172,7 +174,7 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
         ImplControl.stop_actions(caravan_data); return
     end
 
-    local schedule = caravan_data.schedule[schedule_id]
+    local schedule = caravan_data.schedule[ schedule_id ]
     if caravan_data.fuel_inventory then
         if not skip_eating and not ImplControl.eat(caravan_data) then
             ImplControl.stop_actions(caravan_data); return
@@ -204,11 +206,11 @@ end
 ---@param action_id int
 function P.begin_action(caravan_data, action_id)
     local entity = caravan_data.entity
-    local schedule = caravan_data.schedule[caravan_data.schedule_id]
+    local schedule = caravan_data.schedule[ caravan_data.schedule_id ]
     if not schedule then
         ImplControl.stop_actions(caravan_data); return
     end
-    local action = schedule.actions[action_id]
+    local action = schedule.actions[ action_id ]
     if not action then
         ImplControl.stop_actions(caravan_data); return
     end

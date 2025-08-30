@@ -21,7 +21,7 @@ local IMP_BRAIN = 5
 local IMP_SPECIAL = 4
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-trits",
@@ -32,18 +32,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits", amount = INPUT_AMOUNT},
+				{ name = "trits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       amount = BASE_BONES},
-				{name = "meat",        amount = BASE_MEAT},
-				{name = "skin",        amount = BASE_SKIN},
-				{name = "mukmoux-fat", amount = BASE_FAT},
-				{name = "guts",        amount = BASE_GUTS},
-				{name = "photophore",  amount = BASE_SPECIAL},
-				{name = "blood",       amount = BASE_BLOOD},
-				{name = "brain",       amount = BASE_BRAIN},
+				{ name = "bones",       amount = BASE_BONES },
+				{ name = "meat",        amount = BASE_MEAT },
+				{ name = "skin",        amount = BASE_SKIN },
+				{ name = "mukmoux-fat", amount = BASE_FAT },
+				{ name = "guts",        amount = BASE_GUTS },
+				{ name = "photophore",  amount = BASE_SPECIAL },
+				{ name = "blood",       amount = BASE_BLOOD },
+				{ name = "brain",       amount = BASE_BRAIN },
 			},
 			crafting_speed = 30,
 			tech = "trits",
@@ -55,25 +55,25 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits",       remove_item = true},
-				{name = "brain-trits", amount = INPUT_AMOUNT},
+				{ name = "trits",       remove_item = true },
+				{ name = "brain-trits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       remove_item = true},
-				{name = "meat",        remove_item = true},
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "skin",        remove_item = true},
-				{name = "photophore",  remove_item = true},
-				{name = "guts",        remove_item = true},
-				{name = "blood",       remove_item = true},
-				{name = "brain",       amount = IMP_BRAIN},
+				{ name = "bones",       remove_item = true },
+				{ name = "meat",        remove_item = true },
+				{ name = "mukmoux-fat", remove_item = true },
+				{ name = "skin",        remove_item = true },
+				{ name = "photophore",  remove_item = true },
+				{ name = "guts",        remove_item = true },
+				{ name = "blood",       remove_item = true },
+				{ name = "brain",       amount = IMP_BRAIN },
 			},
 			tech = "nanochondria",
 			name = "ex-bra-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -81,19 +81,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "brain-trits", remove_item = true},
-				{name = "bone-trits",  amount = INPUT_AMOUNT},
+				{ name = "brain-trits", remove_item = true },
+				{ name = "bone-trits",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "brain", remove_item = true},
-				{name = "bones", amount = IMP_BONES},
+				{ name = "brain", remove_item = true },
+				{ name = "bones", amount = IMP_BONES },
 			},
 			tech = "bmp",
 			name = "ex-bon-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -101,19 +101,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "bone-trits", remove_item = true},
-				{name = "meat-trits", amount = INPUT_AMOUNT},
+				{ name = "bone-trits", remove_item = true },
+				{ name = "meat-trits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones", remove_item = true},
-				{name = "meat",  amount = IMP_MEAT},
+				{ name = "bones", remove_item = true },
+				{ name = "meat",  amount = IMP_MEAT },
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -121,19 +121,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "meat-trits", remove_item = true},
-				{name = "guts-trits", amount = INPUT_AMOUNT},
+				{ name = "meat-trits", remove_item = true },
+				{ name = "guts-trits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "meat", remove_item = true},
-				{name = "guts", amount = IMP_GUTS},
+				{ name = "meat", remove_item = true },
+				{ name = "guts", amount = IMP_GUTS },
 			},
 			tech = "antitumor",
 			name = "ex-gut-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -141,19 +141,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "guts-trits",  remove_item = true},
-				{name = "blood-trits", amount = INPUT_AMOUNT},
+				{ name = "guts-trits",  remove_item = true },
+				{ name = "blood-trits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "guts",  remove_item = true},
-				{name = "blood", amount = IMP_BLOOD},
+				{ name = "guts",  remove_item = true },
+				{ name = "blood", amount = IMP_BLOOD },
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/blood.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -161,20 +161,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-trits", remove_item = true},
-				{name = "skin-trits",  amount = INPUT_AMOUNT},
+				{ name = "blood-trits", remove_item = true },
+				{ name = "skin-trits",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "blood",      remove_item = true},
-				{name = "photophore", amount = IMP_SPECIAL * 2},
-				{name = "skin",       amount = IMP_SKIN},
+				{ name = "blood",      remove_item = true },
+				{ name = "photophore", amount = IMP_SPECIAL * 2 },
+				{ name = "skin",       amount = IMP_SKIN },
 			},
 			tech = "reca",
 			name = "ex-ski-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -182,22 +182,22 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "skin-trits", remove_item = true},
-				{name = "fat-trits",  amount = INPUT_AMOUNT},
+				{ name = "skin-trits", remove_item = true },
+				{ name = "fat-trits",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "photophore",  remove_item = true},
-				{name = "skin",        remove_item = true},
-				{name = "mukmoux-fat", amount = IMP_FAT},
+				{ name = "photophore",  remove_item = true },
+				{ name = "skin",        remove_item = true },
+				{ name = "mukmoux-fat", amount = IMP_FAT },
 			},
 			tech = "orexigenic",
 			name = "ex-fat-trit",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/trits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
 	}
-}
+})

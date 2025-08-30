@@ -1,9 +1,9 @@
 ------------------CUB MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "phagnot-cub",
 	category = "rc",
-	allowed_module_categories = {"phagnot"},
+	allowed_module_categories = { "phagnot" },
 	main_product = "phagnot-cub",
 	subgroup = "py-alienlife-phagnot",
 	order = "c",
@@ -15,15 +15,15 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'phagnot', amount = 2},
-				{name = "bhoddos",         amount = 3},
-				{name = "yotoi-seeds",     amount = 30},
-				{name = "phagnot-food-01", amount = 2},
-				{name = "bedding",         amount = 1},
-				{name = "water-barrel",    amount = 10, return_barrel = true},
+				{ name = "bhoddos",         amount = 3 },
+				{ name = "yotoi-seeds",     amount = 30 },
+				{ name = "phagnot-food-01", amount = 2 },
+				{ name = "bedding",         amount = 1 },
+				{ name = "water-barrel",    amount = 10, return_barrel = true },
 			},
 			results =
 			{
-				{name = "phagnot-cub", amount = 6},
+				{ name = "phagnot-cub", amount = 6 },
 				--{name = 'manure', amount = 2},
 			},
 			crafting_speed = 20,
@@ -33,13 +33,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "salt",      amount = 10},
-				{name = "raw-fiber", amount = 15},
+				{ name = "salt",      amount = 10 },
+				{ name = "raw-fiber", amount = 15 },
 			},
 			results =
 			{
-				{name = "phagnot-cub", add_amount = 2},
-				{name = "manure",      add_amount = 2},
+				{ name = "phagnot-cub", add_amount = 2 },
+				{ name = "manure",      add_amount = 2 },
 			},
 			crafting_speed = 18,
 			tech = "phagnot-mk02"
@@ -48,15 +48,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "phagnot-food-01", remove_item = true},
-				{name = "phagnot-food-02", amount = 2},
-				{name = "salt",            add_amount = 10},
+				{ name = "phagnot-food-01", remove_item = true },
+				{ name = "phagnot-food-02", amount = 2 },
+				{ name = "salt",            add_amount = 10 },
 
 			},
 			results =
 			{
-				{name = "phagnot-cub", add_amount = 2},
-				{name = "manure",      add_amount = 2},
+				{ name = "phagnot-cub", add_amount = 2 },
+				{ name = "manure",      add_amount = 2 },
 			},
 			crafting_speed = 16,
 			tech = "phagnot-mk03"
@@ -65,18 +65,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "raw-fiber", add_amount = 15},
+				{ name = "raw-fiber", add_amount = 15 },
 			},
 			results =
 			{
-				{name = "phagnot-cub", add_amount = 2},
-				{name = "manure",      add_amount = 2},
+				{ name = "phagnot-cub", add_amount = 2 },
+				{ name = "manure",      add_amount = 2 },
 			},
 			crafting_speed = 14,
 			tech = "phagnot-mk04"
 		},
 	}
-}
+})
 
 --[[
 		-----------------------PHEROMONES-----------------------------
@@ -190,7 +190,7 @@ py.autorecipes {
 
 --raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "phagnot",
 	category = "phagnot",
 	main_product = "phagnot",
@@ -203,24 +203,24 @@ py.autorecipes {
 			tech = "bigger-colon",
 			ingredient_changes =
 			{
-				{name = "fiber", amount = 4}
+				{ name = "fiber", amount = 4 }
 			},
 			result_changes =
 			{
-				{name = "manure",  add_amount = 4},
-				{name = "phagnot", subtract_percent_amount = 0.1, round_direction = "up"}
+				{ name = "manure",  add_amount = 4 },
+				{ name = "phagnot", subtract_percent_amount = 0.1, round_direction = "up" }
 			},
 		},
 		{
 			tech = "explosive-diarrhea",
 			ingredient_changes =
 			{
-				{name = "ethylene-glycol", amount = 100}
+				{ name = "ethylene-glycol", amount = 100 }
 			},
 			result_changes =
 			{
-				{name = "manure",  add_amount = 6},
-				{name = "phagnot", subtract_percent_amount = 0.2, round_direction = "up"}
+				{ name = "manure",  add_amount = 6 },
+				{ name = "phagnot", subtract_percent_amount = 0.2, round_direction = "up" }
 			}
 		},
 	},
@@ -230,14 +230,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "phagnot-cub",     amount = 6},
-				{name = "bhoddos",         amount = 3},
-				{name = "phagnot-food-01", amount = 1},
-				{name = "water-barrel",    amount = 3, return_barrel = true},
+				{ name = "phagnot-cub",     amount = 6 },
+				{ name = "bhoddos",         amount = 3 },
+				{ name = "phagnot-food-01", amount = 1 },
+				{ name = "water-barrel",    amount = 3, return_barrel = true },
 			},
 			results =
 			{
-				{name = "phagnot", amount = 3},
+				{ name = "phagnot", amount = 3 },
 				--{name = 'manure', amount = 4},
 			},
 			crafting_speed = 150,
@@ -247,15 +247,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "phagnot-cub", add_amount = 4},
-				{name = "salt",        amount = 3},
-				{name = "raw-fiber",   amount = 10},
-				{name = "bedding",     amount = 1},
+				{ name = "phagnot-cub", add_amount = 4 },
+				{ name = "salt",        amount = 3 },
+				{ name = "raw-fiber",   amount = 10 },
+				{ name = "bedding",     amount = 1 },
 			},
 			results =
 			{
-				{name = "phagnot", add_amount = 3},
-				{name = "manure",  add_amount = 4},
+				{ name = "phagnot", add_amount = 3 },
+				{ name = "manure",  add_amount = 4 },
 			},
 			crafting_speed = 130,
 			tech = "phagnot-mk02"
@@ -264,16 +264,16 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "phagnot-cub",     add_amount = 4},
-				{name = "phagnot-food-01", remove_item = true},
-				{name = "phagnot-food-02", amount = 1},
-				{name = "salt",            amount = 3},
+				{ name = "phagnot-cub",     add_amount = 4 },
+				{ name = "phagnot-food-01", remove_item = true },
+				{ name = "phagnot-food-02", amount = 1 },
+				{ name = "salt",            amount = 3 },
 
 			},
 			results =
 			{
-				{name = "phagnot", add_amount = 3},
-				{name = "manure",  add_amount = 4},
+				{ name = "phagnot", add_amount = 3 },
+				{ name = "manure",  add_amount = 4 },
 			},
 			crafting_speed = 110,
 			tech = "phagnot-mk03"
@@ -282,19 +282,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "phagnot-cub", add_amount = 4},
-				{name = "raw-fiber",   amount = 10},
+				{ name = "phagnot-cub", add_amount = 4 },
+				{ name = "raw-fiber",   amount = 10 },
 			},
 			results =
 			{
-				{name = "phagnot", add_amount = 3},
-				{name = "manure",  add_amount = 4},
+				{ name = "phagnot", add_amount = 3 },
+				{ name = "manure",  add_amount = 4 },
 			},
 			crafting_speed = 90,
 			tech = "phagnot-mk04"
 		},
 	}
-}
+})
 
 --[[
 		--gh

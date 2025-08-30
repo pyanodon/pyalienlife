@@ -1,73 +1,73 @@
 if data and not yafc_turd_integration then
-    data:extend {{
+    data:extend({ {
         type = "recipe",
         name = "cridren-sixth-layer-ethylene-chlorohydrin",
         enabled = false,
         category = "cridren",
         ingredients = {
-            {type = "item", name = "caged-phadai", amount = 1},
-            {type = "item", name = "silver-plate", amount = 2},
-            {type = "item", name = "water-barrel", amount = 20},
+            { type = "item", name = "caged-phadai", amount = 1 },
+            { type = "item", name = "silver-plate", amount = 2 },
+            { type = "item", name = "water-barrel", amount = 20 },
         },
         results = {
-            {type = "item", name = "cage",                         amount = 1},
-            {type = "item", name = "ethylene-chlorohydrin-barrel", amount = 20},
-            {type = "item", name = "bones",                        amount = 2},
-            {type = "item", name = "cridren-seeds",                amount = 1},
+            { type = "item", name = "cage",                         amount = 1 },
+            { type = "item", name = "ethylene-chlorohydrin-barrel", amount = 20 },
+            { type = "item", name = "bones",                        amount = 2 },
+            { type = "item", name = "cridren-seeds",                amount = 1 },
         },
         energy_required = 40,
         main_product = "ethylene-chlorohydrin-barrel",
         icon = "__pypetroleumhandlinggraphics__/graphics/icons/ethylene-chlorohydrin.png",
         icon_size = 32
-    }}
+    } })
 
-    data:extend {{
+    data:extend({ {
         type = "recipe",
         name = "cridren-sixth-layer-organic-acid-anhydride",
         enabled = false,
         category = "cridren",
         ingredients = {
-            {type = "item", name = "caged-vrauks",            amount = 1},
-            {type = "item", name = "geothermal-water-barrel", amount = 20},
-            {type = "item", name = "p2s5",                    amount = 1}
+            { type = "item", name = "caged-vrauks",            amount = 1 },
+            { type = "item", name = "geothermal-water-barrel", amount = 20 },
+            { type = "item", name = "p2s5",                    amount = 1 }
         },
         results = {
-            {type = "item", name = "chitin",                        amount = 3},
-            {type = "item", name = "organic-acid-anhydride-barrel", amount = 20},
-            {type = "item", name = "cage",                          amount = 1},
-            {type = "item", name = "cridren-seeds",                 amount = 1},
+            { type = "item", name = "chitin",                        amount = 3 },
+            { type = "item", name = "organic-acid-anhydride-barrel", amount = 20 },
+            { type = "item", name = "cage",                          amount = 1 },
+            { type = "item", name = "cridren-seeds",                 amount = 1 },
         },
         energy_required = 40,
         main_product = "organic-acid-anhydride-barrel",
         icon = "__pyalternativeenergygraphics__/graphics/icons/organic-acid-anhydride.png",
         icon_size = 64
-    }}
+    } })
 
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("cridren-1"):copy(),
         RECIPE("cridren-2"):copy(),
         RECIPE("cridren-3"):copy(),
         RECIPE("cridren-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-neural-cranio"
         recipe:multiply_ingredient_amount("caged-arthurian", 2)
         recipe:multiply_result_amount("cridren", 2)
         recipe:add_result_amount("cridren", 1)
         recipe.energy_required = recipe.energy_required * 2
         recipe:multiply_result_amount("cage", 2)
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    local mufflers = {"polycrystalline-slab", "alag-grid", "wall-shield", "reinforced-wall-shield"}
-    for i, recipe in pairs {
+    local mufflers = { "polycrystalline-slab", "alag-grid", "wall-shield", "reinforced-wall-shield" }
+    for i, recipe in pairs({
         RECIPE("cridren-enclosure-mk01"):copy(),
         RECIPE("cridren-enclosure-mk02"):copy(),
         RECIPE("cridren-enclosure-mk03"):copy(),
         RECIPE("cridren-enclosure-mk04"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-with-mufflers"
-        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}
-        data:extend {recipe}
+        recipe:add_ingredient({ type = "item", name = mufflers[ i ], amount = i * 35 })
+        data:extend({ recipe })
     end
 end
 
@@ -83,14 +83,14 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-cridren.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"cridren-mk02"},
+        prerequisites = { "cridren-mk02" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
             },
             time = 45
         }
@@ -102,8 +102,8 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "unlock-recipe", recipe = "cridren-sixth-layer-ethylene-chlorohydrin"},
-                {type = "unlock-recipe", recipe = "cridren-sixth-layer-organic-acid-anhydride"}
+                { type = "unlock-recipe", recipe = "cridren-sixth-layer-ethylene-chlorohydrin" },
+                { type = "unlock-recipe", recipe = "cridren-sixth-layer-organic-acid-anhydride" }
             },
         },
         {
@@ -112,10 +112,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "cridren-1", new = "cridren-1-neural-cranio", type = "recipe-replacement"},
-                {old = "cridren-2", new = "cridren-2-neural-cranio", type = "recipe-replacement"},
-                {old = "cridren-3", new = "cridren-3-neural-cranio", type = "recipe-replacement"},
-                {old = "cridren-4", new = "cridren-4-neural-cranio", type = "recipe-replacement"},
+                { old = "cridren-1", new = "cridren-1-neural-cranio", type = "recipe-replacement" },
+                { old = "cridren-2", new = "cridren-2-neural-cranio", type = "recipe-replacement" },
+                { old = "cridren-3", new = "cridren-3-neural-cranio", type = "recipe-replacement" },
+                { old = "cridren-4", new = "cridren-4-neural-cranio", type = "recipe-replacement" },
             }
         },
         {
@@ -124,11 +124,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {speed = 0.1,                    productivity = 0.1,                           consumption = -0.25,        type = "module-effects"},
-                {old = "cridren-enclosure-mk01", new = "cridren-enclosure-mk01-with-mufflers", type = "recipe-replacement"},
-                {old = "cridren-enclosure-mk02", new = "cridren-enclosure-mk02-with-mufflers", type = "recipe-replacement"},
-                {old = "cridren-enclosure-mk03", new = "cridren-enclosure-mk03-with-mufflers", type = "recipe-replacement"},
-                {old = "cridren-enclosure-mk04", new = "cridren-enclosure-mk04-with-mufflers", type = "recipe-replacement"},
+                { speed = 0.1,                    productivity = 0.1,                           consumption = -0.25,        type = "module-effects" },
+                { old = "cridren-enclosure-mk01", new = "cridren-enclosure-mk01-with-mufflers", type = "recipe-replacement" },
+                { old = "cridren-enclosure-mk02", new = "cridren-enclosure-mk02-with-mufflers", type = "recipe-replacement" },
+                { old = "cridren-enclosure-mk03", new = "cridren-enclosure-mk03-with-mufflers", type = "recipe-replacement" },
+                { old = "cridren-enclosure-mk04", new = "cridren-enclosure-mk04-with-mufflers", type = "recipe-replacement" },
             }
         }
     },

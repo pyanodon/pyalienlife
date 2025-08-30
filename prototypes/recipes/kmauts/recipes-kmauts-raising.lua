@@ -1,9 +1,9 @@
 ------------------CUB MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "kmauts-cub",
 	category = "rc",
-	allowed_module_categories = {"kmauts"},
+	allowed_module_categories = { "kmauts" },
 	subgroup = "py-alienlife-kmauts",
 	order = "c",
 	main_product = "kmauts-cub",
@@ -14,16 +14,16 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='kmauts', amount = 2},
-				{name = "caged-ulric",  amount = 1},
-				{name = "rennea",       amount = 10},
-				{name = "water-barrel", amount = 4, return_barrel = true},
-				{name = "bedding",      amount = 1},
+				{ name = "caged-ulric",  amount = 1 },
+				{ name = "rennea",       amount = 10 },
+				{ name = "water-barrel", amount = 4, return_barrel = true },
+				{ name = "bedding",      amount = 1 },
 			},
 			results =
 			{
 				--{name='kmauts', amount = 2, probability = 0.999},
-				{name = "kmauts-cub", amount = 2},
-				{name = "cage",       amount = 1},
+				{ name = "kmauts-cub", amount = 2 },
+				{ name = "cage",       amount = 1 },
 			},
 			crafting_speed = 15,
 			tech = "kmauts"
@@ -32,11 +32,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "kmauts-ration", amount = 2},
+				{ name = "kmauts-ration", amount = 2 },
 			},
 			results =
 			{
-				{name = "kmauts-cub", add_amount = 3},
+				{ name = "kmauts-cub", add_amount = 3 },
 			},
 			crafting_speed = 12,
 			tech = "kmauts-mk02"
@@ -45,11 +45,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "rennea", add_amount = 10},
+				{ name = "rennea", add_amount = 10 },
 			},
 			results =
 			{
-				{name = "kmauts-cub", add_amount = 4},
+				{ name = "kmauts-cub", add_amount = 4 },
 			},
 			crafting_speed = 10,
 			tech = "kmauts-mk03"
@@ -58,17 +58,17 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "tuuphra", amount = 10},
+				{ name = "tuuphra", amount = 10 },
 			},
 			results =
 			{
-				{name = "kmauts-cub", add_amount = 5},
+				{ name = "kmauts-cub", add_amount = 5 },
 			},
 			crafting_speed = 8,
 			tech = "kmauts-mk04"
 		},
 	}
-}
+})
 --[[
 		-----------------------PHEROMONES-----------------------------
 		{
@@ -138,7 +138,7 @@ py.autorecipes {
 
 --raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "kmauts",
 	category = "kmauts",
 	subgroup = "py-alienlife-kmauts",
@@ -151,14 +151,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "kmauts-cub",   amount = 2},
-				{name = "caged-ulric",  amount = 1},
-				{name = "water-barrel", amount = 4, return_barrel = true},
+				{ name = "kmauts-cub",   amount = 2 },
+				{ name = "caged-ulric",  amount = 1 },
+				{ name = "water-barrel", amount = 4, return_barrel = true },
 			},
 			results =
 			{
-				{name = "kmauts", amount = 1},
-				{name = "cage",   amount = 1},
+				{ name = "kmauts", amount = 1 },
+				{ name = "cage",   amount = 1 },
 			},
 			crafting_speed = 150,
 			tech = "kmauts"
@@ -167,12 +167,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "kmauts-cub",    add_amount = 2},
-				{name = "kmauts-ration", amount = 2},
+				{ name = "kmauts-cub",    add_amount = 2 },
+				{ name = "kmauts-ration", amount = 2 },
 			},
 			results =
 			{
-				{name = "kmauts", add_amount = 2},
+				{ name = "kmauts", add_amount = 2 },
 			},
 			crafting_speed = 130,
 			tech = "kmauts-mk02"
@@ -181,13 +181,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "kmauts-cub", add_amount = 2},
-				{name = "rennea",     amount = 3},
-				{name = "bedding",    amount = 1},
+				{ name = "kmauts-cub", add_amount = 2 },
+				{ name = "rennea",     amount = 3 },
+				{ name = "bedding",    amount = 1 },
 			},
 			results =
 			{
-				{name = "kmauts", add_amount = 2},
+				{ name = "kmauts", add_amount = 2 },
 			},
 			crafting_speed = 110,
 			tech = "kmauts-mk03"
@@ -196,18 +196,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "kmauts-cub", add_amount = 2},
-				{name = "tuuphra",    amount = 10},
+				{ name = "kmauts-cub", add_amount = 2 },
+				{ name = "tuuphra",    amount = 10 },
 			},
 			results =
 			{
-				{name = "kmauts", add_amount = 3},
+				{ name = "kmauts", add_amount = 3 },
 			},
 			crafting_speed = 90,
 			tech = "kmauts-mk04"
 		},
 	}
-}
+})
 
 --[[
 		--gh

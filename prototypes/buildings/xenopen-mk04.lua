@@ -1,24 +1,24 @@
 local MODULE_SLOTS = 36
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "xenopen-mk04",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "control-unit",  amount = 10},
-        {type = "item", name = "super-steel",   amount = 100},
-        {type = "item", name = "nenbit-matrix", amount = 50},
-        {type = "item", name = "xenopen-mk03",  amount = 1},
-        {type = "item", name = "wall-shield",   amount = 15},
-        {type = "item", name = "super-alloy",   amount = 20},
+        { type = "item", name = "control-unit",  amount = 10 },
+        { type = "item", name = "super-steel",   amount = 100 },
+        { type = "item", name = "nenbit-matrix", amount = 50 },
+        { type = "item", name = "xenopen-mk03",  amount = 1 },
+        { type = "item", name = "wall-shield",   amount = 15 },
+        { type = "item", name = "super-alloy",   amount = 20 },
     },
     results = {
-        {type = "item", name = "xenopen-mk04", amount = 1}
+        { type = "item", name = "xenopen-mk04", amount = 1 }
     }
-}:add_unlock("land-animals-mk05")
+}):add_unlock("land-animals-mk05")
 
-ITEM {
+ITEM({
     type = "item",
     name = "xenopen-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/xenopen-mk04.png",
@@ -28,24 +28,24 @@ ITEM {
     order = "d",
     place_result = "xenopen-mk04",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "xenopen-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/xenopen-mk04.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "xenopen-mk04"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "xenopen-mk04" },
     fast_replaceable_group = "xenopen",
     max_health = 60,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
-    selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+    collision_box = { { -6.3, -6.3 }, { 6.3, 6.3 } },
+    selection_box = { { -6.5, -6.5 }, { 6.5, 6.5 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"xeno"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "xeno" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "xenopen-mk01"),
     energy_source = {
         type = "electric",
@@ -146,7 +146,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -32),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 1.0, a = 1.0 }
                 },
             },
         },
@@ -155,8 +155,8 @@ ENTITY {
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.65},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.65 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.3 },
         apparent_volume = 1.2
     }
-}
+})

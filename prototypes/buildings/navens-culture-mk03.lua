@@ -1,25 +1,25 @@
 local MODULE_SLOTS = 10
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "navens-culture-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "navens-culture-mk02",  amount = 1},
-        {type = "item", name = "py-heat-exchanger",    amount = 1},
-        {type = "item", name = "nichrome",             amount = 25},
-        {type = "item", name = "neuromorphic-chip",    amount = 30},
-        {type = "item", name = "electric-engine-unit", amount = 2},
-        {type = "item", name = "processing-unit",      amount = 35},
-        {type = "item", name = "ticocr-alloy",         amount = 20},
+        { type = "item", name = "navens-culture-mk02",  amount = 1 },
+        { type = "item", name = "py-heat-exchanger",    amount = 1 },
+        { type = "item", name = "nichrome",             amount = 25 },
+        { type = "item", name = "neuromorphic-chip",    amount = 30 },
+        { type = "item", name = "electric-engine-unit", amount = 2 },
+        { type = "item", name = "processing-unit",      amount = 35 },
+        { type = "item", name = "ticocr-alloy",         amount = 20 },
     },
     results = {
-        {type = "item", name = "navens-culture-mk03", amount = 1}
+        { type = "item", name = "navens-culture-mk03", amount = 1 }
     }
-}:add_unlock("mycology-mk04"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
+}):add_unlock("mycology-mk04"):add_ingredient({ type = "item", name = "small-parts-03", amount = 30 })
 
-ITEM {
+ITEM({
     type = "item",
     name = "navens-culture-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk03.png",
@@ -29,25 +29,25 @@ ITEM {
     order = "b",
     place_result = "navens-culture-mk03",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "navens-culture-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/navens-culture-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "navens-culture-mk03"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "navens-culture-mk03" },
     fast_replaceable_group = "navens-culture",
     max_health = 50,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"navens"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "navens" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "navens-culture-mk01", 7.5, 12.5),
     energy_source = {
         type = "electric",
@@ -77,7 +77,7 @@ ENTITY {
                     frame_count = 120,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, 128),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a2.png",
@@ -96,7 +96,7 @@ ENTITY {
                     frame_count = 120,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, 64),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a3.png",
@@ -115,7 +115,7 @@ ENTITY {
                     frame_count = 120,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, 0),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a4.png",
@@ -134,7 +134,7 @@ ENTITY {
                     frame_count = 120,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, -64),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a5.png",
@@ -153,7 +153,7 @@ ENTITY {
                     frame_count = 120,
                     animation_speed = 0.4,
                     shift = util.by_pixel(16, -128),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/navens-culture/a6.png",
@@ -174,36 +174,36 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.5, -4.5}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 1.5, -4.5 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.5, -4.5}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -1.5, -4.5 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.5, 4.5}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 1.5, 4.5 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-1.5, 4.5}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -1.5, 4.5 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/navens-culture.ogg", volume = 1.8},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/navens-culture.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/navens-culture.ogg", volume = 1.8 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/navens-culture.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

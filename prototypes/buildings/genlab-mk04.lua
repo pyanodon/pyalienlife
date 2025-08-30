@@ -1,22 +1,22 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "genlab-mk04",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "genlab-mk03",           amount = 1},
-        {type = "item", name = "nenbit-matrix",         amount = 40},
-        {type = "item", name = "control-unit",          amount = 10},
-        {type = "item", name = "kevlar",                amount = 100},
-        {type = "item", name = "divertor",              amount = 10},
-        {type = "item", name = "low-density-structure", amount = 30},
+        { type = "item", name = "genlab-mk03",           amount = 1 },
+        { type = "item", name = "nenbit-matrix",         amount = 40 },
+        { type = "item", name = "control-unit",          amount = 10 },
+        { type = "item", name = "kevlar",                amount = 100 },
+        { type = "item", name = "divertor",              amount = 10 },
+        { type = "item", name = "low-density-structure", amount = 30 },
     },
     results = {
-        {type = "item", name = "genlab-mk04", amount = 1}
+        { type = "item", name = "genlab-mk04", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk04")
+}):add_unlock("biotech-machines-mk04")
 
-ITEM {
+ITEM({
     type = "item",
     name = "genlab-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/genlab-mk04.png",
@@ -26,25 +26,25 @@ ITEM {
     order = "a",
     place_result = "genlab-mk04",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "genlab-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/genlab-mk04.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "genlab-mk04"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "genlab-mk04" },
     fast_replaceable_group = "genlab",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.1, -3.1 }, { 3.1, 3.1 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 4,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"genlab"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "genlab" },
     crafting_speed = 4,
     energy_source = {
         type = "electric",
@@ -83,7 +83,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(-48, -64),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 1.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics__/graphics/entity/genlab/a2.png",
@@ -102,7 +102,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(80, -64),
-                    tint = {r = 1.0, g = 0.0, b = 1.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 1.0, a = 1.0 }
                 },
             }
         },
@@ -113,57 +113,57 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, -3.0 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { -2.0, -3.0 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 2.0, -3.0 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { 0.0, 3.0 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { -2.0, 3.0 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { 2.0, 3.0 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
     },
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 1.5 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

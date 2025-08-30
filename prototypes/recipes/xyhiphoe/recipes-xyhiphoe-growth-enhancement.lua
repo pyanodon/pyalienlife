@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "xyhiphoe-improve",
 	category = "xyhiphoe",
 	subgroup = "py-alienlife-xyhiphoe",
@@ -10,12 +10,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "anabolic-rna", amount = 1},
-				{name = "xyhiphoe",     amount = 1},
+				{ name = "anabolic-rna", amount = 1 },
+				{ name = "xyhiphoe",     amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-xyhiphoe", amount = 1},
+				{ name = "meat-xyhiphoe", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "anabolic-rna"
@@ -25,7 +25,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -38,14 +38,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-xyhiphoe", remove_item = true},
-				{name = "guts-xyhiphoe", amount = 1},
+				{ name = "meat-xyhiphoe", remove_item = true },
+				{ name = "guts-xyhiphoe", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "antitumor"
@@ -55,7 +55,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -68,14 +68,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-xyhiphoe",  remove_item = true},
-				{name = "blood-xyhiphoe", amount = 1},
+				{ name = "guts-xyhiphoe",  remove_item = true },
+				{ name = "blood-xyhiphoe", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "recombinant-ery"
@@ -84,7 +84,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -97,14 +97,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-xyhiphoe", remove_item = true},
-				{name = "shell-xyhiphoe", amount = 1},
+				{ name = "blood-xyhiphoe", remove_item = true },
+				{ name = "shell-xyhiphoe", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "reca"
@@ -113,7 +113,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -123,4 +123,4 @@ py.autorecipes {
 			tech = "reca"
 		},
 	}
-}
+})

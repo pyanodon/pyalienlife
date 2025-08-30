@@ -1,25 +1,25 @@
-ENTITY {
+ENTITY({
     type = "resource",
     name = "ralesia-flowers",
     category = "ralesia-flowers",
     icon = "__pyalienlifegraphics__/graphics/icons/ralesia-ore.png",
     icon_size = 64,
-    flags = {"placeable-neutral"},
+    flags = { "placeable-neutral" },
     order = "a-b-a",
-    map_color = {r = 0.960, g = 0.666, b = 0.0},
+    map_color = { r = 0.960, g = 0.666, b = 0.0 },
     minable = {
 
         -- mining_particle = "aluminium-ore-particle",
         mining_time = 2,
         results = {
-            {type = "item", name = "ralesia", amount = 1}
+            { type = "item", name = "ralesia", amount = 1 }
         },
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
     },
     starting_area = false,
-    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     --[[
 	autoplace = {
         control = "ore-aluminium",
@@ -37,7 +37,7 @@ ENTITY {
         }
     },
 	]] --
-    stage_counts = {800, 400, 200},
+    stage_counts = { 800, 400, 200 },
     stages = {
         sheet = {
             filename = "__pyalienlifegraphics__/graphics/entity/crops/ralesia.png",
@@ -49,4 +49,4 @@ ENTITY {
             scale = 0.5
         }
     }
-}
+})

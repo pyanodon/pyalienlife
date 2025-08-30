@@ -1,22 +1,22 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "micro-mine-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick",           amount = 50},
-        {type = "item", name = "electric-mining-drill", amount = 1},
-        {type = "item", name = "glass",                 amount = 12},
-        {type = "item", name = "inserter",              amount = 5},
-        {type = "item", name = "electronic-circuit",    amount = 10},
-        {type = "item", name = "iron-gear-wheel",       amount = 20},
+        { type = "item", name = "stone-brick",           amount = 50 },
+        { type = "item", name = "electric-mining-drill", amount = 1 },
+        { type = "item", name = "glass",                 amount = 12 },
+        { type = "item", name = "inserter",              amount = 5 },
+        { type = "item", name = "electronic-circuit",    amount = 10 },
+        { type = "item", name = "iron-gear-wheel",       amount = 20 },
     },
     results = {
-        {type = "item", name = "micro-mine-mk01", amount = 1}
+        { type = "item", name = "micro-mine-mk01", amount = 1 }
     }
-}:add_unlock("basic-substrate")
+}):add_unlock("basic-substrate")
 
-ITEM {
+ITEM({
     type = "item",
     name = "micro-mine-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/micro-mine-mk01.png",
@@ -26,25 +26,25 @@ ITEM {
     order = "a",
     place_result = "micro-mine-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "micro-mine-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/micro-mine-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "micro-mine-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "micro-mine-mk01" },
     fast_replaceable_group = "micro-mine",
     max_health = 100,
     fixed_recipe = "petri-dish-bacteria",
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     module_slots = 1,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"micro-mine"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "micro-mine" },
     crafting_speed = 1,
     energy_source = {
         type = "electric",
@@ -74,7 +74,7 @@ ENTITY {
                     frame_count = 125,
                     animation_speed = 0.4,
                     shift = util.by_pixel(-64, -46),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a2.png",
@@ -93,7 +93,7 @@ ENTITY {
                     frame_count = 125,
                     animation_speed = 0.4,
                     shift = util.by_pixel(32, -46),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/micro-mine/a3.png",
@@ -112,15 +112,15 @@ ENTITY {
                     frame_count = 125,
                     animation_speed = 0.4,
                     shift = util.by_pixel(112, -46),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/micro-mine.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/micro-mine.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/micro-mine.ogg", volume = 1.5 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/micro-mine.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

@@ -1,24 +1,24 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "generator-2",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stainless-steel",  amount = 15},
-        {type = "item", name = "niobium-pipe",     amount = 10},
-        {type = "item", name = "nexelit-plate",    amount = 25},
-        {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "dingrits",         amount = 1},
-        {type = "item", name = "engine-unit",      amount = 5},
-        {type = "item", name = "nbfe-alloy",       amount = 20},
-        {type = "item", name = "iron-gear-wheel",  amount = 40}
+        { type = "item", name = "stainless-steel",  amount = 15 },
+        { type = "item", name = "niobium-pipe",     amount = 10 },
+        { type = "item", name = "nexelit-plate",    amount = 25 },
+        { type = "item", name = "advanced-circuit", amount = 10 },
+        { type = "item", name = "dingrits",         amount = 1 },
+        { type = "item", name = "engine-unit",      amount = 5 },
+        { type = "item", name = "nbfe-alloy",       amount = 20 },
+        { type = "item", name = "iron-gear-wheel",  amount = 40 }
     },
     results = {
-        {type = "item", name = "generator-2", amount = 1}
+        { type = "item", name = "generator-2", amount = 1 }
     }
-}:add_unlock("domestication-mk03")
+}):add_unlock("domestication-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "generator-2",
     icon = "__pyalienlifegraphics__/graphics/icons/generator-2.png",
@@ -28,15 +28,15 @@ ITEM {
     order = "a",
     place_result = "generator-2",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "burner-generator",
     name = "generator-2",
     icon = "__pyalienlifegraphics__/graphics/icons/generator-2.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "generator-2"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "generator-2" },
     max_health = 100,
     corpse = "big-remnants",
     resistances = {
@@ -45,15 +45,15 @@ ENTITY {
             percent = 70
         }
     },
-    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     energy_source = {
         type = "electric",
         usage_priority = "secondary-output",
     },
     burner = {
         type = "burner",
-        fuel_categories = {"dingrits"},
+        fuel_categories = { "dingrits" },
         effectivity = 3,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -108,8 +108,8 @@ ENTITY {
     performance_to_sound_speedup = 0.0,
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.9 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

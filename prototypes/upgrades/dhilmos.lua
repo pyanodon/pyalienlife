@@ -1,17 +1,17 @@
 if data and not yafc_turd_integration then
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("dhilmos-1"):copy(),
         RECIPE("dhilmos-2"):copy(),
         RECIPE("dhilmos-3"):copy(),
         RECIPE("dhilmos-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-cover"
         recipe:remove_ingredient("phytoplankton")
-        recipe:add_ingredient {name = "bacteria-1", amount = 1, type = "fluid"}
-        data:extend {recipe}
+        recipe:add_ingredient({ name = "bacteria-1", amount = 1, type = "fluid" })
+        data:extend({ recipe })
     end
 
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("dhilmos-1"):copy(),
         RECIPE("dhilmos-2"):copy(),
         RECIPE("dhilmos-3"):copy(),
@@ -20,25 +20,25 @@ if data and not yafc_turd_integration then
         RECIPE("dhilmos-egg-2"):copy(),
         RECIPE("dhilmos-egg-3"):copy(),
         RECIPE("dhilmos-egg-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-skimmer"
         recipe:remove_result("waste-water")
         recipe:remove_ingredient("filtration-media")
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("dhilmos-1"):copy(),
         RECIPE("dhilmos-2"):copy(),
         RECIPE("dhilmos-3"):copy(),
         RECIPE("dhilmos-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-double-intake"
         recipe:remove_ingredient("water-saline")
-        recipe:add_ingredient {type = "item", name = "salt", amount = 2}
-        recipe:add_ingredient {type = "fluid", name = "water", amount = 400}
+        recipe:add_ingredient({ type = "item", name = "salt", amount = 2 })
+        recipe:add_ingredient({ type = "fluid", name = "water", amount = 400 })
         recipe:multiply_result_amount("waste-water", 4)
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 end
 
@@ -54,20 +54,20 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-dhilmos.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"dhilmos-mk04"},
+        prerequisites = { "dhilmos-mk04" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"military-science-pack",   1},
-                {"py-science-pack-2",       1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
-                {"production-science-pack", 1},
-                {"py-science-pack-4",       1},
-                {"utility-science-pack",    1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "military-science-pack",   1 },
+                { "py-science-pack-2",       1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
+                { "production-science-pack", 1 },
+                { "py-science-pack-4",       1 },
+                { "utility-science-pack",    1 },
             },
             time = 45
         }
@@ -79,11 +79,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {productivity = 0.16, type = "module-effects"},
-                {old = "dhilmos-1",   new = "dhilmos-1-cover", type = "recipe-replacement"},
-                {old = "dhilmos-2",   new = "dhilmos-2-cover", type = "recipe-replacement"},
-                {old = "dhilmos-3",   new = "dhilmos-3-cover", type = "recipe-replacement"},
-                {old = "dhilmos-4",   new = "dhilmos-4-cover", type = "recipe-replacement"},
+                { productivity = 0.16, type = "module-effects" },
+                { old = "dhilmos-1",   new = "dhilmos-1-cover", type = "recipe-replacement" },
+                { old = "dhilmos-2",   new = "dhilmos-2-cover", type = "recipe-replacement" },
+                { old = "dhilmos-3",   new = "dhilmos-3-cover", type = "recipe-replacement" },
+                { old = "dhilmos-4",   new = "dhilmos-4-cover", type = "recipe-replacement" },
             },
         },
         {
@@ -92,15 +92,15 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 0.2,     speed = 0.2,                   type = "module-effects"},
-                {old = "dhilmos-1",     new = "dhilmos-1-skimmer",     type = "recipe-replacement"},
-                {old = "dhilmos-2",     new = "dhilmos-2-skimmer",     type = "recipe-replacement"},
-                {old = "dhilmos-3",     new = "dhilmos-3-skimmer",     type = "recipe-replacement"},
-                {old = "dhilmos-4",     new = "dhilmos-4-skimmer",     type = "recipe-replacement"},
-                {old = "dhilmos-egg-1", new = "dhilmos-egg-1-skimmer", type = "recipe-replacement"},
-                {old = "dhilmos-egg-2", new = "dhilmos-egg-2-skimmer", type = "recipe-replacement"},
-                {old = "dhilmos-egg-3", new = "dhilmos-egg-3-skimmer", type = "recipe-replacement"},
-                {old = "dhilmos-egg-4", new = "dhilmos-egg-4-skimmer", type = "recipe-replacement"},
+                { consumption = 0.2,     speed = 0.2,                   type = "module-effects" },
+                { old = "dhilmos-1",     new = "dhilmos-1-skimmer",     type = "recipe-replacement" },
+                { old = "dhilmos-2",     new = "dhilmos-2-skimmer",     type = "recipe-replacement" },
+                { old = "dhilmos-3",     new = "dhilmos-3-skimmer",     type = "recipe-replacement" },
+                { old = "dhilmos-4",     new = "dhilmos-4-skimmer",     type = "recipe-replacement" },
+                { old = "dhilmos-egg-1", new = "dhilmos-egg-1-skimmer", type = "recipe-replacement" },
+                { old = "dhilmos-egg-2", new = "dhilmos-egg-2-skimmer", type = "recipe-replacement" },
+                { old = "dhilmos-egg-3", new = "dhilmos-egg-3-skimmer", type = "recipe-replacement" },
+                { old = "dhilmos-egg-4", new = "dhilmos-egg-4-skimmer", type = "recipe-replacement" },
             }
         },
         {
@@ -109,11 +109,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = -0.5, type = "module-effects"},
-                {old = "dhilmos-1",  new = "dhilmos-1-double-intake", type = "recipe-replacement"},
-                {old = "dhilmos-2",  new = "dhilmos-2-double-intake", type = "recipe-replacement"},
-                {old = "dhilmos-3",  new = "dhilmos-3-double-intake", type = "recipe-replacement"},
-                {old = "dhilmos-4",  new = "dhilmos-4-double-intake", type = "recipe-replacement"},
+                { consumption = -0.5, type = "module-effects" },
+                { old = "dhilmos-1",  new = "dhilmos-1-double-intake", type = "recipe-replacement" },
+                { old = "dhilmos-2",  new = "dhilmos-2-double-intake", type = "recipe-replacement" },
+                { old = "dhilmos-3",  new = "dhilmos-3-double-intake", type = "recipe-replacement" },
+                { old = "dhilmos-4",  new = "dhilmos-4-double-intake", type = "recipe-replacement" },
             }
         }
     },

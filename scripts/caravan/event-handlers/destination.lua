@@ -1,9 +1,9 @@
-local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
-local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
-local CaravanGuiComponents = require "__pyalienlife__/scripts/caravan/gui/components"
-local CaravanUtils = require "__pyalienlife__/scripts/caravan/utils"
+local CaravanImpl = require("__pyalienlife__/scripts/caravan/impl")
+local CaravanGui = require("__pyalienlife__/scripts/caravan/gui")
+local CaravanGuiComponents = require("__pyalienlife__/scripts/caravan/gui/components")
+local CaravanUtils = require("__pyalienlife__/scripts/caravan/utils")
 
-gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_destination_add_button" ] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local last_opened = {}
@@ -25,14 +25,14 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = f
     CaravanImpl.select_destination(player, last_opened)
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_destination_move_up_button"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_destination_move_up_button" ] = function(event)
     local unit_number = event.element.tags.unit_number
-    local caravan_data = storage.caravans[unit_number]
+    local caravan_data = storage.caravans[ unit_number ]
     local i = event.element.tags.schedule_id
 
     if i == 1 then return end
 
-    caravan_data.schedule[i - 1], caravan_data.schedule[i] = caravan_data.schedule[i], caravan_data.schedule[i - 1]
+    caravan_data.schedule[ i - 1 ], caravan_data.schedule[ i ] = caravan_data.schedule[ i ], caravan_data.schedule[ i - 1 ]
 
     if caravan_data.schedule_id == -1 then
         CaravanImpl.stop_actions(caravan_data)
@@ -46,14 +46,14 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_move_up_button"]
     CaravanGuiComponents.update_schedule_pane(player)
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_destination_move_down_button"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_destination_move_down_button" ] = function(event)
     local unit_number = event.element.tags.unit_number
-    local caravan_data = storage.caravans[unit_number]
+    local caravan_data = storage.caravans[ unit_number ]
     local i = event.element.tags.schedule_id
 
     if i == #caravan_data.schedule then return end
 
-    caravan_data.schedule[i + 1], caravan_data.schedule[i] = caravan_data.schedule[i], caravan_data.schedule[i + 1]
+    caravan_data.schedule[ i + 1 ], caravan_data.schedule[ i ] = caravan_data.schedule[ i ], caravan_data.schedule[ i + 1 ]
 
     if caravan_data.schedule_id == -1 then
         CaravanImpl.stop_actions(caravan_data)
@@ -67,9 +67,9 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_move_down_button
     CaravanGuiComponents.update_schedule_pane(player)
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_destination_delete_button"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_destination_delete_button" ] = function(event)
     local unit_number = event.element.tags.unit_number
-    local caravan_data = storage.caravans[unit_number]
+    local caravan_data = storage.caravans[ unit_number ]
     table.remove(caravan_data.schedule, event.element.tags.schedule_id)
 
     if event.element.tags.schedule_id == caravan_data.schedule_id then
@@ -81,12 +81,12 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_delete_button"] 
     CaravanGuiComponents.update_schedule_pane(player)
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_destination_play_stop_button"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_destination_play_stop_button" ] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local caravan_data = storage.caravans[tags.unit_number]
-    local schedule = caravan_data.schedule[tags.schedule_id]
+    local caravan_data = storage.caravans[ tags.unit_number ]
+    local schedule = caravan_data.schedule[ tags.schedule_id ]
 
     if caravan_data.schedule_id == tags.schedule_id then
         CaravanImpl.stop_actions(caravan_data)
@@ -107,44 +107,44 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_play_stop_button
     CaravanGui.update_gui(player)
 end
 
-gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destination_action_drop_down"] = function(event)
+gui_events[ defines.events.on_gui_selection_state_changed ][ "py_caravan_destination_action_drop_down" ] = function(event)
     local player = game.get_player(event.player_index)
     local action_id = event.element.selected_index
     local schedule_id = event.element.tags.schedule_id
     local element = event.element
 
     local unit_number = event.element.tags.unit_number
-    local caravan_data = storage.caravans[unit_number]
+    local caravan_data = storage.caravans[ unit_number ]
 
-    local schedule = caravan_data.schedule[schedule_id]
+    local schedule = caravan_data.schedule[ schedule_id ]
     local actions = schedule.actions
 
-    local valid_actions = table.invert(CaravanUtils.get_valid_actions_for_entity(caravan_data.entity.name, caravan_data.schedule[schedule_id].entity))
+    local valid_actions = table.invert(CaravanUtils.get_valid_actions_for_entity(caravan_data.entity.name, caravan_data.schedule[ schedule_id ].entity))
 
     -- off-by-one index is used to show "+ Add action" text
     if element.selected_index == 0 or element.selected_index > #valid_actions then return end
 
-    local type = element.get_item(element.selected_index)[2]
+    local type = element.get_item(element.selected_index)[ 2 ]
     local localised_name = element.get_item(element.selected_index)
     if type == "at-outpost" then
-        localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.not-specified"}}
+        localised_name = { "caravan-actions.at-outpost2", { "caravan-gui.not-specified" } }
     elseif type == "not-at-outpost" then
-        localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
+        localised_name = { "caravan-actions.not-at-outpost2", { "caravan-gui.not-specified" } }
     elseif type == "outpost-item-count" then
-        localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
+        localised_name = { "caravan-actions.outpost-item-count2", { "caravan-gui.not-specified" } }
     end
-    table.insert(caravan_data.schedule[schedule_id].actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
+    table.insert(caravan_data.schedule[ schedule_id ].actions, CaravanUtils.ensure_item_count({ type = type, localised_name = localised_name }))
 
     CaravanGuiComponents.update_schedule_pane(player)
 end
 
-gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_outpost_name" ] = function(event)
     local player = game.get_player(event.player_index)
     local gui = CaravanGui.get_gui(player)
-    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local caravan_data = storage.caravans[ gui.tags.unit_number ]
     local element = event.element
     local tags = element.tags
-    local schedule = CaravanUtils.get_schedule(element)[tags.schedule_id]
+    local schedule = CaravanUtils.get_schedule(element)[ tags.schedule_id ]
     local camera = gui.entity_frame.camera_frame.camera
 
     local refocus = gui.entity_frame.subheader_frame.contents_flow.py_refocus
@@ -169,13 +169,13 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     camera.zoom = 0.25
 end
 
-gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_edit_interrupt_target_name" ] = function(event)
     local player = game.get_player(event.player_index)
     local gui = CaravanGui.get_gui(player)
-    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local caravan_data = storage.caravans[ gui.tags.unit_number ]
     local element = event.element
     local tags = element.tags
-    local schedule = storage.edited_interrupt.schedule[tags.schedule_id]
+    local schedule = storage.edited_interrupt.schedule[ tags.schedule_id ]
 
     -- allow reassign if invalid or right-clicked
     if not schedule.entity or not schedule.entity.valid or event.button == defines.mouse_button_type.right then

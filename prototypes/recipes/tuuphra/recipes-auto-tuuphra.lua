@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "tuuphra",
 	category = "tuuphra",
 	subgroup = "py-alienlife-tuuphra",
@@ -10,15 +10,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "tuuphra-seeds",   amount = 5},
-				{name = "manure-bacteria", amount = 50,  fluidbox_index = 2},
-				{name = "soil",            amount = 20},
-				{name = "coarse",          amount = 10},
-				{name = "water",           amount = 100, fluidbox_index = 1},
+				{ name = "tuuphra-seeds",   amount = 5 },
+				{ name = "manure-bacteria", amount = 50,  fluidbox_index = 2 },
+				{ name = "soil",            amount = 20 },
+				{ name = "coarse",          amount = 10 },
+				{ name = "water",           amount = 100, fluidbox_index = 1 },
 			},
 			results =
 			{
-				{name = "tuuphra", amount = 3},
+				{ name = "tuuphra", amount = 3 },
 			},
 			crafting_speed = 100,
 			tech = "tuuphra"
@@ -27,14 +27,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "tuuphra-seeds", add_amount = 5},
-				{name = "fertilizer",    amount = 4},
-				{name = "ash",           amount = 5},
-				{name = "biomass",       amount = 10},
+				{ name = "tuuphra-seeds", add_amount = 5 },
+				{ name = "fertilizer",    amount = 4 },
+				{ name = "ash",           amount = 5 },
+				{ name = "biomass",       amount = 10 },
 			},
 			results =
 			{
-				{name = "tuuphra", add_amount = 5}
+				{ name = "tuuphra", add_amount = 5 }
 			},
 			crafting_speed = 75,
 			tech = "tuuphra-mk02"
@@ -43,14 +43,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "tuuphra-seeds",  add_amount = 5},
-				{name = "blood-meal",     amount = 2,    fallback = {name = "blood-barrel", amount = 2}},
-				{name = "nitrogen",       amount = 50,   fluidbox_index = 3},
-				{name = "pesticide-mk01", amount = 2},
+				{ name = "tuuphra-seeds",  add_amount = 5 },
+				{ name = "blood-meal",     amount = 2,    fallback = { name = "blood-barrel", amount = 2 } },
+				{ name = "nitrogen",       amount = 50,   fluidbox_index = 3 },
+				{ name = "pesticide-mk01", amount = 2 },
 			},
 			results =
 			{
-				{name = "tuuphra", add_amount = 10}
+				{ name = "tuuphra", add_amount = 10 }
 			},
 			crafting_speed = 50,
 			tech = "tuuphra-mk03"
@@ -59,20 +59,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "tuuphra-seeds",  add_amount = 5},
-				{name = "fertilizer",     add_amount = 4},
-				{name = "pesticide-mk02", amount = 1},
-				{name = "small-lamp",     amount = 1},
+				{ name = "tuuphra-seeds",  add_amount = 5 },
+				{ name = "fertilizer",     add_amount = 4 },
+				{ name = "pesticide-mk02", amount = 1 },
+				{ name = "small-lamp",     amount = 1 },
 			},
 			results =
 			{
-				{name = "tuuphra", add_amount = 15}
+				{ name = "tuuphra", add_amount = 15 }
 			},
 			crafting_speed = 25,
 			tech = "tuuphra-mk04"
 		},
 	}
-}
+})
 
 --[[
     --GH

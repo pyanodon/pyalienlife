@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "zipir-improved",
 	category = "zipir",
 	subgroup = "py-alienlife-zipir",
@@ -9,13 +9,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "zipir1",       amount = 1},
-				{name = "nanochondria", amount = 1},
-				{name = "antiviral",    amount = 1},
+				{ name = "zipir1",       amount = 1 },
+				{ name = "nanochondria", amount = 1 },
+				{ name = "antiviral",    amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-zipir", amount = 1},
+				{ name = "brain-zipir", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "nanochondria"
@@ -25,7 +25,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -38,14 +38,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "nanochondria", remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-zipir", remove_item = true},
-				{name = "meat-zipir",  amount = 1},
+				{ name = "brain-zipir", remove_item = true },
+				{ name = "meat-zipir",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "anabolic-rna"
@@ -55,7 +55,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -68,14 +68,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-zipir", remove_item = true},
-				{name = "guts-zipir", amount = 1},
+				{ name = "meat-zipir", remove_item = true },
+				{ name = "guts-zipir", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "antitumor"
@@ -85,7 +85,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -98,14 +98,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-zipir",  remove_item = true},
-				{name = "blood-zipir", amount = 1},
+				{ name = "guts-zipir",  remove_item = true },
+				{ name = "blood-zipir", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "recombinant-ery"
@@ -114,7 +114,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -127,14 +127,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-zipir", remove_item = true},
-				{name = "skin-zipir",  amount = 1},
+				{ name = "blood-zipir", remove_item = true },
+				{ name = "skin-zipir",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "reca"
@@ -143,7 +143,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -156,14 +156,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",         remove_item = true},
-				{name = "reca",       remove_item = true},
-				{name = "orexigenic", amount = 1},
+				{ name = "gh",         remove_item = true },
+				{ name = "reca",       remove_item = true },
+				{ name = "orexigenic", amount = 1 },
 			},
 			results =
 			{
-				{name = "skin-zipir", remove_item = true},
-				{name = "fat-zipir",  amount = 1},
+				{ name = "skin-zipir", remove_item = true },
+				{ name = "fat-zipir",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "orexigenic"
@@ -172,7 +172,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -183,4 +183,4 @@ py.autorecipes {
 		},
 
 	}
-}
+})

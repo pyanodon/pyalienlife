@@ -1,18 +1,18 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "land-bot",
     energy_required = 4,
     enabled = true,
     ingredients =
     {
-        {type = "item", name = "engine-unit",        amount = 20},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "steel-plate",        amount = 30}
+        { type = "item", name = "engine-unit",        amount = 20 },
+        { type = "item", name = "electronic-circuit", amount = 10 },
+        { type = "item", name = "steel-plate",        amount = 30 }
     },
-    results = {{type = "item", name = "land-bot", amount = 1}}
-} --:add_unlock("domestication")
+    results = { { type = "item", name = "land-bot", amount = 1 } }
+} --:add_unlock("domestication"))
 
-ITEM {
+ITEM({
     type = "item-with-entity-data",
     name = "land-bot",
     icon = "__pyalienlifegraphics__/graphics/icons/land-beetle.png",
@@ -21,24 +21,24 @@ ITEM {
     order = "a",
     place_result = "land-bot",
     stack_size = 10
-}
+})
 
 data:extend
-{
+({
     {
         type = "unit",
         name = "land-bot",
         icon = "__pyalienlifegraphics__/graphics/icons/land-beetle.png",
         icon_size = 64,
-        flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air"},
-        minable = {mining_time = 0.1, result = "land-bot"},
+        flags = { "placeable-player", "placeable-enemy", "placeable-off-grid", "not-repairable", "breaths-air" },
+        minable = { mining_time = 0.1, result = "land-bot" },
         max_health = 25,
         order = "b-b-a",
         subgroup = "enemies",
         resistances = {},
         healing_per_tick = 0.01,
-        collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
-        selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+        collision_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+        selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
         --[[
     --handles enemy loot dropping
     loot =
@@ -102,7 +102,7 @@ data:extend
         vision_distance = 30,
         movement_speed = 0.07,
         distance_per_frame = 0.03,
-        absorptions_to_join_attack = {pollution = 4},
+        absorptions_to_join_attack = { pollution = 4 },
         distraction_cooldown = 300,
         min_pursue_time = 10 * 60,
         max_pursue_distance = 50,
@@ -165,4 +165,4 @@ data:extend
 	}
 	)
 	]] --
-}
+})

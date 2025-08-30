@@ -1,21 +1,21 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "phadai-recharge-1",
     category = "bay",
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "item", name = "used-phadai",    amount = 3},
-        {type = "item", name = "cottongut",      amount = 3},
-        {type = "item", name = "phadai-food-01", amount = 2},
-        {type = "item", name = "ethanol-barrel", amount = 2}
+        { type = "item", name = "used-phadai",    amount = 3 },
+        { type = "item", name = "cottongut",      amount = 3 },
+        { type = "item", name = "phadai-food-01", amount = 2 },
+        { type = "item", name = "ethanol-barrel", amount = 2 }
     },
     results = {
-        {type = "item", name = "phadai", amount = 3},
-        {type = "item", name = "barrel", amount = 2},
+        { type = "item", name = "phadai", amount = 3 },
+        { type = "item", name = "barrel", amount = 2 },
     },
     main_product = "phadai"
-}:add_unlock("phadai")
+}):add_unlock("phadai")
 
 --[[
 Cocaine (42) is produced industrially from

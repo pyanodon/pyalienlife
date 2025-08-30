@@ -1,4 +1,4 @@
-data:extend {
+data:extend({
     {
         type = "item-group",
         name = "py-alienlife",
@@ -484,4 +484,4 @@ data:extend {
         group = "py-alienlife",
         order = "z-c"
     },
-}
+})

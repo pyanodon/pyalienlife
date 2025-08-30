@@ -1,9 +1,9 @@
 ------------------pup MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "trits-cub",
 	category = "rc",
-	allowed_module_categories = {"trits"},
+	allowed_module_categories = { "trits" },
 	subgroup = "py-alienlife-trits",
 	order = "c",
 	main_product = "trits-pup",
@@ -14,17 +14,17 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits",            amount = 1},
-				{name = "seaweed",          amount = 15},
-				{name = "wood-seeds",       amount = 15},
-				{name = "moondrop",         amount = 5,   fallback = "fawogae"},
-				{name = "sea-sponge",       amount = 2},
-				{name = "filtration-media", amount = 2},
-				{name = "water-saline",     amount = 300, return_item = {name = "waste-water", amount = 300}},
+				{ name = "trits",            amount = 1 },
+				{ name = "seaweed",          amount = 15 },
+				{ name = "wood-seeds",       amount = 15 },
+				{ name = "moondrop",         amount = 5,   fallback = "fawogae" },
+				{ name = "sea-sponge",       amount = 2 },
+				{ name = "filtration-media", amount = 2 },
+				{ name = "water-saline",     amount = 300, return_item = { name = "waste-water", amount = 300 } },
 			},
 			results =
 			{
-				{name = "trits-pup", amount = 2},
+				{ name = "trits-pup", amount = 2 },
 			},
 			crafting_speed = 80,
 			tech = "trits"
@@ -33,13 +33,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits",           add_amount = 1},
-				{name = "sodium-alginate", amount = 10},
-				{name = "albumin",         amount = 5},
+				{ name = "trits",           add_amount = 1 },
+				{ name = "sodium-alginate", amount = 10 },
+				{ name = "albumin",         amount = 5 },
 			},
 			results =
 			{
-				{name = "trits-pup", add_amount = 2},
+				{ name = "trits-pup", add_amount = 2 },
 			},
 			crafting_speed = 60,
 			tech = "trits-mk02"
@@ -48,12 +48,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits",    add_amount = 1},
-				{name = "fish-egg", amount = 5},
+				{ name = "trits",    add_amount = 1 },
+				{ name = "fish-egg", amount = 5 },
 			},
 			results =
 			{
-				{name = "trits-pup", add_amount = 2},
+				{ name = "trits-pup", add_amount = 2 },
 			},
 			crafting_speed = 50,
 			tech = "trits-mk03"
@@ -62,19 +62,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits",   add_amount = 1},
-				{name = "guts",    amount = 10},
-				{name = "bhoddos", amount = 5},
+				{ name = "trits",   add_amount = 1 },
+				{ name = "guts",    amount = 10 },
+				{ name = "bhoddos", amount = 5 },
 			},
 			results =
 			{
-				{name = "trits-pup", add_amount = 2},
+				{ name = "trits-pup", add_amount = 2 },
 			},
 			crafting_speed = 40,
 			tech = "trits-mk04"
 		},
 	}
-}
+})
 
 --[[
 		-----------------------PHEROMONES-----------------------------
@@ -195,7 +195,7 @@ py.autorecipes {
 
 --Raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "trits",
 	category = "trits",
 	subgroup = "py-alienlife-trits",
@@ -208,16 +208,16 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits-pup",        amount = 1},
-				{name = "seaweed",          amount = 30},
-				{name = "wood-seeds",       amount = 30},
-				{name = "moondrop",         amount = 15,  fallback = "fawogae"},
-				{name = "filtration-media", amount = 2},
-				{name = "water-saline",     amount = 500, return_item = {name = "waste-water", amount = 250}},
+				{ name = "trits-pup",        amount = 1 },
+				{ name = "seaweed",          amount = 30 },
+				{ name = "wood-seeds",       amount = 30 },
+				{ name = "moondrop",         amount = 15,  fallback = "fawogae" },
+				{ name = "filtration-media", amount = 2 },
+				{ name = "water-saline",     amount = 500, return_item = { name = "waste-water", amount = 250 } },
 			},
 			results =
 			{
-				{name = "trits", amount = 2},
+				{ name = "trits", amount = 2 },
 			},
 			crafting_speed = 280,
 			tech = "trits"
@@ -226,13 +226,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits-pup",       add_amount = 1},
-				{name = "sodium-alginate", amount = 15},
-				{name = "sea-sponge",      amount = 5},
+				{ name = "trits-pup",       add_amount = 1 },
+				{ name = "sodium-alginate", amount = 15 },
+				{ name = "sea-sponge",      amount = 5 },
 			},
 			results =
 			{
-				{name = "trits", add_amount = 2},
+				{ name = "trits", add_amount = 2 },
 			},
 			crafting_speed = 240,
 			tech = "trits-mk02"
@@ -241,12 +241,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits-pup", add_amount = 1},
-				{name = "fish-egg",  amount = 25},
+				{ name = "trits-pup", add_amount = 1 },
+				{ name = "fish-egg",  amount = 25 },
 			},
 			results =
 			{
-				{name = "trits", add_amount = 2},
+				{ name = "trits", add_amount = 2 },
 			},
 			crafting_speed = 200,
 			tech = "trits-mk03"
@@ -255,19 +255,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "trits-pup",       add_amount = 1},
-				{name = "sodium-alginate", add_amount = 20},
-				{name = "sea-sponge",      add_amount = 7},
+				{ name = "trits-pup",       add_amount = 1 },
+				{ name = "sodium-alginate", add_amount = 20 },
+				{ name = "sea-sponge",      add_amount = 7 },
 			},
 			results =
 			{
-				{name = "trits", add_amount = 2},
+				{ name = "trits", add_amount = 2 },
 			},
 			crafting_speed = 160,
 			tech = "trits-mk04"
 		},
 	}
-}
+})
 
 --[[
 		--gh

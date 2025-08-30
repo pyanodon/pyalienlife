@@ -1,27 +1,27 @@
 local MODULE_SLOTS = 10
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "dhilmos-pool-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nbti-alloy",        amount = 40},
-        {type = "item", name = "dhilmos-pool-mk01", amount = 1},
-        {type = "item", name = "nexelit-plate",     amount = 20},
-        {type = "item", name = "plastic-bar",       amount = 25},
-        {type = "item", name = "neuroprocessor",    amount = 50},
-        {type = "item", name = "engine-unit",       amount = 10},
-        {type = "item", name = "neuromorphic-chip", amount = 30},
-        {type = "item", name = "advanced-circuit",  amount = 50},
-        {type = "item", name = "tin-plate",         amount = 50},
+        { type = "item", name = "nbti-alloy",        amount = 40 },
+        { type = "item", name = "dhilmos-pool-mk01", amount = 1 },
+        { type = "item", name = "nexelit-plate",     amount = 20 },
+        { type = "item", name = "plastic-bar",       amount = 25 },
+        { type = "item", name = "neuroprocessor",    amount = 50 },
+        { type = "item", name = "engine-unit",       amount = 10 },
+        { type = "item", name = "neuromorphic-chip", amount = 30 },
+        { type = "item", name = "advanced-circuit",  amount = 50 },
+        { type = "item", name = "tin-plate",         amount = 50 },
     },
     results = {
-        {type = "item", name = "dhilmos-pool-mk02", amount = 1}
+        { type = "item", name = "dhilmos-pool-mk02", amount = 1 }
     }
-}:add_unlock("dhilmos-mk02")
+}):add_unlock("dhilmos-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "dhilmos-pool-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/dhilmos-pool-mk02.png",
@@ -31,25 +31,25 @@ ITEM {
     order = "d",
     place_result = "dhilmos-pool-mk02",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "dhilmos-pool-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/dhilmos-pool-mk02.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "dhilmos-pool-mk02"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "dhilmos-pool-mk02" },
     fast_replaceable_group = "dhilmos-pool",
     max_health = 50,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"dhilmos"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "dhilmos" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "dhilmos-pool-mk01"),
     energy_source = {
         type = "electric",
@@ -62,10 +62,10 @@ ENTITY {
     graphics_set = {
         working_visualisations = {
             {
-                north_position = {-4.5, 0.0},
-                west_position = {-4.5, 0.0},
-                south_position = {-4.5, 0.0},
-                east_position = {-4.5, 0.0},
+                north_position = { -4.5, 0.0 },
+                west_position = { -4.5, 0.0 },
+                south_position = { -4.5, 0.0 },
+                east_position = { -4.5, 0.0 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a1.png",
                     frame_count = 150,
@@ -76,10 +76,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-2.5, 0.0},
-                west_position = {-2.5, 0.0},
-                south_position = {-2.5, 0.0},
-                east_position = {-2.5, 0.0},
+                north_position = { -2.5, 0.0 },
+                west_position = { -2.5, 0.0 },
+                south_position = { -2.5, 0.0 },
+                east_position = { -2.5, 0.0 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a2.png",
                     frame_count = 150,
@@ -90,10 +90,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-0.5, 0.0},
-                west_position = {-0.5, 0.0},
-                south_position = {-0.5, 0.0},
-                east_position = {-0.5, 0.0},
+                north_position = { -0.5, 0.0 },
+                west_position = { -0.5, 0.0 },
+                south_position = { -0.5, 0.0 },
+                east_position = { -0.5, 0.0 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a3.png",
                     frame_count = 150,
@@ -104,10 +104,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {1.5, 0.0},
-                west_position = {1.5, 0.0},
-                south_position = {1.5, 0.0},
-                east_position = {1.5, 0.0},
+                north_position = { 1.5, 0.0 },
+                west_position = { 1.5, 0.0 },
+                south_position = { 1.5, 0.0 },
+                east_position = { 1.5, 0.0 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a4.png",
                     frame_count = 150,
@@ -118,10 +118,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {3.5, 0.0},
-                west_position = {3.5, 0.0},
-                south_position = {3.5, 0.0},
-                east_position = {3.5, 0.0},
+                north_position = { 3.5, 0.0 },
+                west_position = { 3.5, 0.0 },
+                south_position = { 3.5, 0.0 },
+                east_position = { 3.5, 0.0 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/dhilmos-pool/a5.png",
                     frame_count = 150,
@@ -147,7 +147,7 @@ ENTITY {
                     height = 384,
                     frame_count = 1,
                     shift = util.by_pixel(0, -16),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -159,36 +159,36 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, { 0.70, 0.0 }, { -0.78, 0.0 }),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, { 0.70, 0.0 }, { -0.78, 0.0 }),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, { 0.70, 0.0 }, { -0.78, 0.0 }),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 2.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, { 0.70, 0.0 }, { -0.78, 0.0 }),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -2.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 1.2},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 1.2 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

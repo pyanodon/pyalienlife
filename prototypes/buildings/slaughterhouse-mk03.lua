@@ -1,22 +1,22 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "slaughterhouse-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "nexelit-plate",         amount = 50},
-        {type = "item", name = "stainless-steel",       amount = 30},
-        {type = "item", name = "low-density-structure", amount = 40},
-        {type = "item", name = "electric-engine-unit",  amount = 20},
-        {type = "item", name = "processing-unit",       amount = 30},
-        {type = "item", name = "slaughterhouse-mk02",   amount = 1},
+        { type = "item", name = "nexelit-plate",         amount = 50 },
+        { type = "item", name = "stainless-steel",       amount = 30 },
+        { type = "item", name = "low-density-structure", amount = 40 },
+        { type = "item", name = "electric-engine-unit",  amount = 20 },
+        { type = "item", name = "processing-unit",       amount = 30 },
+        { type = "item", name = "slaughterhouse-mk02",   amount = 1 },
     },
     results = {
-        {type = "item", name = "slaughterhouse-mk03", amount = 1}
+        { type = "item", name = "slaughterhouse-mk03", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk03")
+}):add_unlock("biotech-machines-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "slaughterhouse-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk03.png",
@@ -26,25 +26,25 @@ ITEM {
     order = "a",
     place_result = "slaughterhouse-mk03",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "slaughterhouse-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "slaughterhouse-mk03"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "slaughterhouse-mk03" },
     fast_replaceable_group = "slaughterhouse",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.1, -5.1 }, { 5.1, 5.1 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"slaughterhouse"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "slaughterhouse" },
     crafting_speed = 3,
     energy_source = {
         type = "electric",
@@ -86,7 +86,7 @@ ENTITY {
                     animation_speed = 0.3,
                     run_mode = "backward",
                     shift = util.by_pixel(-128, -18),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a2.png",
@@ -107,7 +107,7 @@ ENTITY {
                     animation_speed = 0.3,
                     run_mode = "backward",
                     shift = util.by_pixel(-32, -18),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a3.png",
@@ -128,7 +128,7 @@ ENTITY {
                     animation_speed = 0.3,
                     --run_mode = "backward",
                     shift = util.by_pixel(64, -18),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/slaughterhouse/a4.png",
@@ -149,7 +149,7 @@ ENTITY {
                     --run_mode = "backward",
                     animation_speed = 0.3,
                     shift = util.by_pixel(160, -18),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
             }
         },
@@ -161,29 +161,29 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "input", position = { -2.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {0.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { 0.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "output", position = { -2.0, -5.0 }, direction = defines.direction.north } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/slaughterhouse.ogg", volume = 1.15},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/slaughterhouse.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/slaughterhouse.ogg", volume = 1.15 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/slaughterhouse.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

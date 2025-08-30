@@ -10,7 +10,7 @@ local BASE_BLOOD = 40
 local BASE_SPECIAL = 100
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-fish",
@@ -20,15 +20,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fish", amount = INPUT_AMOUNT},
+				{ name = "fish", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",    amount = BASE_BONES},
-				{name = "meat",     amount = BASE_MEAT},
-				{name = "skin",     amount = BASE_SKIN},
-				{name = "guts",     amount = BASE_GUTS},
-				{name = "fish-oil", amount = BASE_SPECIAL},
+				{ name = "bones",    amount = BASE_BONES },
+				{ name = "meat",     amount = BASE_MEAT },
+				{ name = "skin",     amount = BASE_SKIN },
+				{ name = "guts",     amount = BASE_GUTS },
+				{ name = "fish-oil", amount = BASE_SPECIAL },
 			},
 			crafting_speed = 30,
 			tech = "water-animals-mk01",
@@ -37,7 +37,7 @@ py.autorecipes {
 			icon_size = 64,
 		},
 	}
-}
+})
 --[[
 		--oil
 		{

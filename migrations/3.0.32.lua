@@ -1,4 +1,4 @@
-local turd_migrate = require "__pyalienlife__/scripts/turd/turd-migration"
+local turd_migrate = require("__pyalienlife__/scripts/turd/turd-migration")
 
 turd_migrate("bioreactor-upgrade", "aerators")
 turd_migrate("bioreactor-upgrade", "baffles")

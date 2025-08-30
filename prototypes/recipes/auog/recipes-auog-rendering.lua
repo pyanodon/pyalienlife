@@ -19,7 +19,7 @@ local IMP_BLOOD = 200
 local IMP_BRAIN = 4
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering-auog",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-auog",
@@ -29,18 +29,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-auog", amount = INPUT_AMOUNT},
+				{ name = "caged-auog", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       amount = BASE_BONES},
-				{name = "meat",        amount = BASE_MEAT},
-				{name = "skin",        amount = BASE_SKIN},
-				{name = "mukmoux-fat", amount = BASE_FAT},
-				{name = "guts",        amount = BASE_GUTS},
-				{name = "blood",       amount = BASE_BLOOD},
-				{name = "brain",       amount = BASE_BRAIN},
-				{name = "cage",        amount = INPUT_AMOUNT},
+				{ name = "bones",       amount = BASE_BONES },
+				{ name = "meat",        amount = BASE_MEAT },
+				{ name = "skin",        amount = BASE_SKIN },
+				{ name = "mukmoux-fat", amount = BASE_FAT },
+				{ name = "guts",        amount = BASE_GUTS },
+				{ name = "blood",       amount = BASE_BLOOD },
+				{ name = "brain",       amount = BASE_BRAIN },
+				{ name = "cage",        amount = INPUT_AMOUNT },
 			},
 			crafting_speed = 30,
 			tech = "auog",
@@ -52,25 +52,25 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-auog",       remove_item = true},
-				{name = "brain-caged-auog", amount = INPUT_AMOUNT},
+				{ name = "caged-auog",       remove_item = true },
+				{ name = "brain-caged-auog", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       remove_item = true},
-				{name = "meat",        remove_item = true},
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "skin",        remove_item = true},
-				{name = "guts",        remove_item = true},
-				{name = "blood",       remove_item = true},
-				{name = "brain",       amount = IMP_BRAIN},
+				{ name = "bones",       remove_item = true },
+				{ name = "meat",        remove_item = true },
+				{ name = "mukmoux-fat", remove_item = true },
+				{ name = "skin",        remove_item = true },
+				{ name = "guts",        remove_item = true },
+				{ name = "blood",       remove_item = true },
+				{ name = "brain",       amount = IMP_BRAIN },
 			},
 			crafting_speed = 30,
 			tech = "nanochondria",
 			name = "ex-bra-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -78,21 +78,21 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "brain-caged-auog", remove_item = true},
-				{name = "bone-caged-auog",  amount = INPUT_AMOUNT},
+				{ name = "brain-caged-auog", remove_item = true },
+				{ name = "bone-caged-auog",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "brain", remove_item = true},
+				{ name = "brain", remove_item = true },
 				--{name='brain', amount = BASE_BRAIN},
-				{name = "bones", amount = IMP_BONES},
+				{ name = "bones", amount = IMP_BONES },
 			},
 			crafting_speed = 30,
 			tech = "bmp",
 			name = "ex-bon-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -100,20 +100,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "bone-caged-auog", remove_item = true},
-				{name = "meat-caged-auog", amount = INPUT_AMOUNT},
+				{ name = "bone-caged-auog", remove_item = true },
+				{ name = "meat-caged-auog", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones", remove_item = true},
-				{name = "meat",  amount = IMP_MEAT},
+				{ name = "bones", remove_item = true },
+				{ name = "meat",  amount = IMP_MEAT },
 			},
 			crafting_speed = 30,
 			tech = "anabolic-rna",
 			name = "ex-me-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -121,20 +121,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "meat-caged-auog", remove_item = true},
-				{name = "guts-caged-auog", amount = INPUT_AMOUNT},
+				{ name = "meat-caged-auog", remove_item = true },
+				{ name = "guts-caged-auog", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "meat", remove_item = true},
-				{name = "guts", amount = IMP_GUTS},
+				{ name = "meat", remove_item = true },
+				{ name = "guts", amount = IMP_GUTS },
 			},
 			crafting_speed = 30,
 			tech = "antitumor",
 			name = "ex-gut-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -142,20 +142,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "guts-caged-auog",  remove_item = true},
-				{name = "blood-caged-auog", amount = INPUT_AMOUNT},
+				{ name = "guts-caged-auog",  remove_item = true },
+				{ name = "blood-caged-auog", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "guts",  remove_item = true},
-				{name = "blood", amount = IMP_BLOOD},
+				{ name = "guts",  remove_item = true },
+				{ name = "blood", amount = IMP_BLOOD },
 			},
 			crafting_speed = 30,
 			tech = "recombinant-ery",
 			name = "ex-blo-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -163,20 +163,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-caged-auog", remove_item = true},
-				{name = "skin-caged-auog",  amount = INPUT_AMOUNT},
+				{ name = "blood-caged-auog", remove_item = true },
+				{ name = "skin-caged-auog",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "blood", remove_item = true},
-				{name = "skin",  amount = IMP_SKIN},
+				{ name = "blood", remove_item = true },
+				{ name = "skin",  amount = IMP_SKIN },
 			},
 			crafting_speed = 30,
 			tech = "reca",
 			name = "ex-ski-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -184,20 +184,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "skin-caged-auog", remove_item = true},
-				{name = "fat-caged-auog",  amount = INPUT_AMOUNT},
+				{ name = "skin-caged-auog", remove_item = true },
+				{ name = "fat-caged-auog",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "skin",        remove_item = true},
-				{name = "mukmoux-fat", amount = IMP_FAT},
+				{ name = "skin",        remove_item = true },
+				{ name = "mukmoux-fat", amount = IMP_FAT },
 			},
 			crafting_speed = 30,
 			tech = "orexigenic",
 			name = "ex-fat-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -205,19 +205,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fat-caged-auog", remove_item = true},
-				{name = "used-auog",      amount = INPUT_AMOUNT},
+				{ name = "fat-caged-auog", remove_item = true },
+				{ name = "used-auog",      amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       amount = BASE_BONES},
-				{name = "meat",        amount = 4},
-				{name = "skin",        amount = BASE_SKIN},
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "guts",        amount = BASE_GUTS},
-				{name = "blood",       amount = 50},
-				{name = "brain",       amount = BASE_BRAIN},
-				{name = "cage",        remove_item = true},
+				{ name = "bones",       amount = BASE_BONES },
+				{ name = "meat",        amount = 4 },
+				{ name = "skin",        amount = BASE_SKIN },
+				{ name = "mukmoux-fat", remove_item = true },
+				{ name = "guts",        amount = BASE_GUTS },
+				{ name = "blood",       amount = 50 },
+				{ name = "brain",       amount = BASE_BRAIN },
+				{ name = "cage",        remove_item = true },
 			},
 			crafting_speed = 40,
 			tech = "domestication",
@@ -226,4 +226,4 @@ py.autorecipes {
 			icon_size = 64,
 		},
 	}
-}
+})

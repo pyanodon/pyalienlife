@@ -1,4 +1,4 @@
-data:extend {
+data:extend({
     {
         type = "sprite",
         name = "no_module_animal",
@@ -6,7 +6,7 @@ data:extend {
         priority = "extra-high-no-scale",
         width = 64,
         height = 64,
-        flags = {"gui-icon"}
+        flags = { "gui-icon" }
     },
     {
         type = "sprite",
@@ -15,7 +15,7 @@ data:extend {
         priority = "extra-high-no-scale",
         width = 64,
         height = 64,
-        flags = {"gui-icon"}
+        flags = { "gui-icon" }
     },
     {
         type = "sprite",
@@ -24,7 +24,7 @@ data:extend {
         priority = "extra-high-no-scale",
         width = 64,
         height = 64,
-        flags = {"gui-icon"}
+        flags = { "gui-icon" }
     },
     {
         type = "sprite",
@@ -43,7 +43,7 @@ data:extend {
         priority = "extra-high-no-scale",
         width = 64,
         height = 64,
-        flags = {"gui-icon"}
+        flags = { "gui-icon" }
     },
     {
         type = "sprite",
@@ -52,6 +52,6 @@ data:extend {
         priority = "extra-high-no-scale",
         width = 64,
         height = 64,
-        flags = {"gui-icon"}
+        flags = { "gui-icon" }
     },
-}
+})

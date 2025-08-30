@@ -19,7 +19,7 @@ local IMP_BRAIN = 5
 local IMP_SPECIAL = 2
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-dingrits",
@@ -30,18 +30,18 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-dingrits", amount = INPUT_AMOUNT},
+				{ name = "caged-dingrits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",         amount = BASE_BONES},
-				{name = "meat",          amount = BASE_MEAT},
-				{name = "guts",          amount = BASE_GUTS},
-				{name = "pelt",          amount = BASE_SKIN},
-				{name = "dingrit-spike", amount = BASE_SPECIAL},
-				{name = "blood",         amount = BASE_BLOOD},
-				{name = "cage",          amount = INPUT_AMOUNT},
-				{name = "brain",         amount = BASE_BRAIN},
+				{ name = "bones",         amount = BASE_BONES },
+				{ name = "meat",          amount = BASE_MEAT },
+				{ name = "guts",          amount = BASE_GUTS },
+				{ name = "pelt",          amount = BASE_SKIN },
+				{ name = "dingrit-spike", amount = BASE_SPECIAL },
+				{ name = "blood",         amount = BASE_BLOOD },
+				{ name = "cage",          amount = INPUT_AMOUNT },
+				{ name = "brain",         amount = BASE_BRAIN },
 			},
 			crafting_speed = 30,
 			tech = "dingrits",
@@ -53,26 +53,26 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-dingrits",       remove_item = true},
-				{name = "brain-caged-dingrits", amount = INPUT_AMOUNT},
+				{ name = "caged-dingrits",       remove_item = true },
+				{ name = "brain-caged-dingrits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",         remove_item = true},
-				{name = "meat",          remove_item = true},
-				{name = "pelt",          remove_item = true},
-				{name = "dingrit-spike", remove_item = true},
-				{name = "mukmoux-fat",   remove_item = true},
-				{name = "skin",          remove_item = true},
-				{name = "guts",          remove_item = true},
-				{name = "blood",         remove_item = true},
-				{name = "brain",         amount = IMP_BRAIN},
+				{ name = "bones",         remove_item = true },
+				{ name = "meat",          remove_item = true },
+				{ name = "pelt",          remove_item = true },
+				{ name = "dingrit-spike", remove_item = true },
+				{ name = "mukmoux-fat",   remove_item = true },
+				{ name = "skin",          remove_item = true },
+				{ name = "guts",          remove_item = true },
+				{ name = "blood",         remove_item = true },
+				{ name = "brain",         amount = IMP_BRAIN },
 			},
 			tech = "nanochondria",
 			name = "ex-bra-din",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",  scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",  scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -80,20 +80,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "brain-caged-dingrits", remove_item = true},
-				{name = "bone-caged-dingrits",  amount = INPUT_AMOUNT},
+				{ name = "brain-caged-dingrits", remove_item = true },
+				{ name = "bone-caged-dingrits",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "brain",         remove_item = true},
-				{name = "dingrit-spike", amount = IMP_SPECIAL},
-				{name = "bones",         amount = IMP_BONES},
+				{ name = "brain",         remove_item = true },
+				{ name = "dingrit-spike", amount = IMP_SPECIAL },
+				{ name = "bones",         amount = IMP_BONES },
 			},
 			tech = "bmp",
 			name = "ex-bon-din",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",  scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",  scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -101,20 +101,20 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "bone-caged-dingrits", remove_item = true},
-				{name = "guts-caged-dingrits", amount = INPUT_AMOUNT},
+				{ name = "bone-caged-dingrits", remove_item = true },
+				{ name = "guts-caged-dingrits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",         remove_item = true},
-				{name = "dingrit-spike", remove_item = true},
-				{name = "guts",          amount = IMP_GUTS},
+				{ name = "bones",         remove_item = true },
+				{ name = "dingrit-spike", remove_item = true },
+				{ name = "guts",          amount = IMP_GUTS },
 			},
 			tech = "antitumor",
 			name = "ex-gut-din",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",   scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",   scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -122,19 +122,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "guts-caged-dingrits",  remove_item = true},
-				{name = "blood-caged-dingrits", amount = INPUT_AMOUNT},
+				{ name = "guts-caged-dingrits",  remove_item = true },
+				{ name = "blood-caged-dingrits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "guts",  remove_item = true},
-				{name = "blood", amount = IMP_BLOOD},
+				{ name = "guts",  remove_item = true },
+				{ name = "blood", amount = IMP_BLOOD },
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-din",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",         scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/blood.png",         scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -142,19 +142,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-caged-dingrits", remove_item = true},
-				{name = "meat-caged-dingrits",  amount = INPUT_AMOUNT},
+				{ name = "blood-caged-dingrits", remove_item = true },
+				{ name = "meat-caged-dingrits",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "blood", remove_item = true},
-				{name = "meat",  amount = IMP_MEAT},
+				{ name = "blood", remove_item = true },
+				{ name = "meat",  amount = IMP_MEAT },
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-din",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",   scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",   scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -162,19 +162,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "meat-caged-dingrits", remove_item = true},
-				{name = "skin-caged-dingrits", amount = INPUT_AMOUNT},
+				{ name = "meat-caged-dingrits", remove_item = true },
+				{ name = "skin-caged-dingrits", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "meat", remove_item = true},
-				{name = "pelt", amount = IMP_SKIN},
+				{ name = "meat", remove_item = true },
+				{ name = "pelt", amount = IMP_SKIN },
 			},
 			tech = "reca",
 			name = "ex-pelt-din",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/caged-dingrits.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/skin.png",          scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -182,19 +182,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "skin-caged-dingrits", remove_item = true},
-				{name = "used-dingrit",        amount = INPUT_AMOUNT},
+				{ name = "skin-caged-dingrits", remove_item = true },
+				{ name = "used-dingrit",        amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",         amount = BASE_BONES},
-				{name = "meat",          remove_item = true},
-				{name = "pelt",          amount = BASE_SKIN},
-				{name = "dingrit-spike", amount = BASE_SPECIAL},
-				{name = "guts",          amount = BASE_GUTS},
-				{name = "blood",         remove_item = true},
-				{name = "brain",         amount = BASE_BRAIN},
-				{name = "cage",          remove_item = true},
+				{ name = "bones",         amount = BASE_BONES },
+				{ name = "meat",          remove_item = true },
+				{ name = "pelt",          amount = BASE_SKIN },
+				{ name = "dingrit-spike", amount = BASE_SPECIAL },
+				{ name = "guts",          amount = BASE_GUTS },
+				{ name = "blood",         remove_item = true },
+				{ name = "brain",         amount = BASE_BRAIN },
+				{ name = "cage",          remove_item = true },
 			},
 			tech = "domestication-mk03",
 			name = "ex-used-dingrits",
@@ -202,4 +202,4 @@ py.autorecipes {
 			icon_size = 64,
 		},
 	}
-}
+})

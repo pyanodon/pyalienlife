@@ -1,7 +1,7 @@
 local P = {}
 
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
-local MainFrameComponents = require "main_frame"
+local caravan_prototypes = require("__pyalienlife__/scripts/caravan/caravan-prototypes")
+local MainFrameComponents = require("main_frame")
 
 -- Things to implement / investigate
 --
@@ -41,7 +41,7 @@ local MainFrameComponents = require "main_frame"
 
 -- default_empty_slot is used to show the fuel_inventory gas pump icon
 local function build_inventory_slot(inventory, table, slot_index, tags, default_empty_slot)
-    local item_stack = inventory[slot_index]
+    local item_stack = inventory[ slot_index ]
     local slot_name = table.name .. "_slot_" .. slot_index
     local player = inventory.player_owner
 
@@ -50,7 +50,7 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
         filter = inventory.get_filter(slot_index)
     end
 
-    local button_style = filter and "filter_inventory_slot" or "inventory_slot" 
+    local button_style = filter and "filter_inventory_slot" or "inventory_slot"
     local sprite = default_empty_slot and default_empty_slot.sprite
     local tooltip = default_empty_slot and default_empty_slot.tooltip
     local elem_tooltip
@@ -62,19 +62,19 @@ local function build_inventory_slot(inventory, table, slot_index, tags, default_
         sprite = "utility/hand"
         hovered_sprite = "utility/hand"
     elseif item_stack.valid_for_read then
-        elem_tooltip = {type = "item-with-quality", name = item_stack.name, quality = item_stack.quality.name}
+        elem_tooltip = { type = "item-with-quality", name = item_stack.name, quality = item_stack.quality.name }
         quality = item_stack.quality
-        local prototype = prototypes.item[item_stack.name]
+        local prototype = prototypes.item[ item_stack.name ]
         if prototype.stack_size > 1 then
             number = item_stack.count
         end
-        sprite = "item/" .. item_stack.name 
+        sprite = "item/" .. item_stack.name
     elseif filter then
         sprite = "item/" .. filter.name
     end
 
     tags.slot_index = slot_index
-    local button = table.add {type = "sprite-button", name = slot_name, style = button_style, tags = tags, enabled = table.enabled}
+    local button = table.add({ type = "sprite-button", name = slot_name, style = button_style, tags = tags, enabled = table.enabled })
     button.sprite = sprite
     button.number = number
     button.tooltip = tooltip
@@ -85,7 +85,7 @@ end
 
 local function build_inventory_table(parent, inventory, name, tags, default_empty_slot)
     local enabled = parent.parent.parent.enabled -- pane<-flow<-flow (disabled)
-    local inventory_table = parent.add {type = "table", name = name, column_count = 10, enabled = enabled}
+    local inventory_table = parent.add({ type = "table", name = name, column_count = 10, enabled = enabled })
     inventory_table.style.horizontal_spacing = 0
     inventory_table.style.vertical_spacing = 0
 
@@ -97,26 +97,26 @@ local function build_inventory_table(parent, inventory, name, tags, default_empt
 end
 
 local function build_inventory_flow(parent, inventory, name, tags, default_empty_slot)
-    local flow = parent.add {type = "flow", style = "packed_horizontal_flow", tags = tags}
+    local flow = parent.add({ type = "flow", style = "packed_horizontal_flow", tags = tags })
     flow.style.vertical_align = "center"
     flow.style.horizontal_spacing = 10
 
-    local pane = flow.add {type = "scroll-pane"}
+    local pane = flow.add({ type = "scroll-pane" })
     pane.style.natural_height = 150
     pane.horizontal_scroll_policy = "never"
     pane.vertical_scroll_policy = "auto"
 
     build_inventory_table(pane, inventory, name, tags, default_empty_slot)
 
-    storage.gui_elements_by_name[name] = flow
+    storage.gui_elements_by_name[ name ] = flow
     return flow
 end
 
 local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, name, tags)
-    local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[caravan_data.entity.name].favorite_foods, "caravan-gui")
+    local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[ caravan_data.entity.name ].favorite_foods, "caravan-gui")
 
-    local flow = build_inventory_flow(parent, fuel_inventory, name, tags, {sprite = "slot_icon_food", tooltip = favorite_food_tooltip})
-    local bar = flow.add {type = "progressbar", style = "burning_progressbar"}
+    local flow = build_inventory_flow(parent, fuel_inventory, name, tags, { sprite = "slot_icon_food", tooltip = favorite_food_tooltip })
+    local bar = flow.add({ type = "progressbar", style = "burning_progressbar" })
     bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
     bar.style.horizontally_stretchable = true
     bar.style.right_margin = 8
@@ -133,50 +133,50 @@ function P.build_character_inventory(parent, player, caravan_data)
     end
 
     local name = "py_caravan_player_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
-    build_inventory_flow(inventory_frame, inventory, name, {unit_number = caravan_data.unit_number})
+    local inventory_frame = parent.add({ type = "frame", style = "inventory_frame", enabled = parent.enabled })
+    build_inventory_flow(inventory_frame, inventory, name, { unit_number = caravan_data.unit_number })
 end
 
 function P.build_caravan_inventory(parent, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
-    build_inventory_flow(inventory_frame, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
+    local inventory_frame = parent.add({ type = "frame", style = "inventory_frame", enabled = parent.enabled })
+    build_inventory_flow(inventory_frame, caravan_data.inventory, name, { unit_number = caravan_data.unit_number })
 end
 
 function P.build_fuel_inventory(parent, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
-    build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
+    local inventory_frame = parent.add({ type = "frame", style = "inventory_frame", enabled = parent.enabled })
+    build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, { unit_number = caravan_data.unit_number })
 end
 
 function P.update_character_inventory(player, caravan_data)
     local name = "py_caravan_player_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = storage.gui_elements_by_name[ name ]
     local parent = elem.parent
     elem.destroy()
 
     local inventory = get_inventory(player)
     inventory.sort_and_merge()
 
-    build_inventory_flow(parent, inventory, name, {unit_number = caravan_data.unit_number})
+    build_inventory_flow(parent, inventory, name, { unit_number = caravan_data.unit_number })
 end
 
 function P.update_caravan_inventory(player, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = storage.gui_elements_by_name[ name ]
     local parent = elem.parent
     elem.destroy()
 
-    build_inventory_flow(parent, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
+    build_inventory_flow(parent, caravan_data.inventory, name, { unit_number = caravan_data.unit_number })
 end
 
 function P.update_fuel_inventory(player, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = storage.gui_elements_by_name[ name ]
     local parent = elem.parent
     elem.destroy()
 
-    build_fuel_inventory_flow(parent, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
+    build_fuel_inventory_flow(parent, caravan_data, caravan_data.fuel_inventory, name, { unit_number = caravan_data.unit_number })
 end
 
 local function is_character_inventory(inventory)
@@ -184,33 +184,33 @@ local function is_character_inventory(inventory)
 end
 
 local function set_stack_to_cursor(player, inventory, index, stack_proj)
-    if not inventory[index].valid_for_read then return end
+    if not inventory[ index ].valid_for_read then return end
 
-    local input_stack = stack_proj(inventory[index])
+    local input_stack = stack_proj(inventory[ index ])
 
     local success = player.cursor_stack.transfer_stack(input_stack)
     if success then
-        if input_stack.count == inventory[index].count then
-            inventory[index].clear()
+        if input_stack.count == inventory[ index ].count then
+            inventory[ index ].clear()
             if is_character_inventory(inventory) then
-                player.hand_location = {inventory = inventory.index, slot = index}
+                player.hand_location = { inventory = inventory.index, slot = index }
             end
         else
-            inventory[index].count = inventory[index].count - input_stack.count
+            inventory[ index ].count = inventory[ index ].count - input_stack.count
         end
     end
 end
 
 local function set_cursor_stack_to_slot(player, target_inventory, index, stack_proj)
     local input_stack = stack_proj(player.cursor_stack)
-    local target_slot = target_inventory[index]
+    local target_slot = target_inventory[ index ]
 
     if target_slot.valid_for_read and target_slot.name == player.cursor_stack.name then
-        local prototype = prototypes.item[player.cursor_stack.name]
+        local prototype = prototypes.item[ player.cursor_stack.name ]
 
         local nb_transferred = math.min(prototype.stack_size - target_slot.count, input_stack.count)
         if nb_transferred == 0 then return end
-        target_slot.transfer_stack({name = player.cursor_stack.name, count = nb_transferred, quality = player.cursor_stack.quality})
+        target_slot.transfer_stack({ name = player.cursor_stack.name, count = nb_transferred, quality = player.cursor_stack.quality })
         player.cursor_stack.count = player.cursor_stack.count - nb_transferred
     else
         -- set_stack fails when target_slot is an incompatible filter slot, or where player.hand_location is
@@ -241,7 +241,7 @@ local function transfer_stack(source_stack, target_inventory, stack_proj)
     if nb_transferred == source_stack.count then
         source_stack.clear()
     else
-        source_stack.set_stack({name = source_stack.name, count = source_stack.count - nb_transferred, quality = source_stack.quality})
+        source_stack.set_stack({ name = source_stack.name, count = source_stack.count - nb_transferred, quality = source_stack.quality })
     end
 
     return nb_transferred
@@ -252,13 +252,13 @@ local function transfer_inventory_items(inventory, target_inventory, clicked_ite
 
     local item
     if clicked_item_stack.valid_for_read then
-        item = {name = clicked_item_stack.name, quality = clicked_item_stack.quality}
+        item = { name = clicked_item_stack.name, quality = clicked_item_stack.quality }
     end
     for i = 1, #inventory do
-        if not inventory[i].valid_for_read or not is_supported_pred(inventory[i]) then goto continue end
-        if item and (inventory[i].name ~= item.name or inventory[i].quality ~= item.quality) then goto continue end
+        if not inventory[ i ].valid_for_read or not is_supported_pred(inventory[ i ]) then goto continue end
+        if item and (inventory[ i ].name ~= item.name or inventory[ i ].quality ~= item.quality) then goto continue end
 
-        local nb_transferred = transfer_stack(inventory[i], target_inventory, stack_proj)
+        local nb_transferred = transfer_stack(inventory[ i ], target_inventory, stack_proj)
         nb_total_transferred = nb_total_transferred + nb_transferred
 
         ::continue::
@@ -267,7 +267,7 @@ local function transfer_inventory_items(inventory, target_inventory, clicked_ite
 end
 
 local function swap_stacks(a, b)
-    local tmp = {name = a.name, count = a.count}
+    local tmp = { name = a.name, count = a.count }
     a.set_stack(b)
     b.set_stack(tmp)
 end
@@ -286,20 +286,20 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local is_rmb = event.button == defines.mouse_button_type.right
     local is_lmb = event.button == defines.mouse_button_type.left
 
-    local half_stack_proj = function(s) return {name = s.name, count = math.floor((s.count / 2) + 0.5), quality = s.quality} end
+    local half_stack_proj = function(s) return { name = s.name, count = math.floor((s.count / 2) + 0.5), quality = s.quality } end
     local id_proj = function(s) return s end
-    local one_item_proj = function(s) return {name = s.name, count = 1, quality = s.quality} end
+    local one_item_proj = function(s) return { name = s.name, count = 1, quality = s.quality } end
 
     if is_ctrl and is_shift then return end
 
     local slot_index = event.element.tags.slot_index
-    
+
     if is_lmb and not (is_ctrl or is_alt or is_shift) then
         if has_items_in_cursor and is_supported_pred(player.cursor_stack) then
-            if inventory[slot_index].valid_for_read and inventory[slot_index].name ~= player.cursor_stack.name then
+            if inventory[ slot_index ].valid_for_read and inventory[ slot_index ].name ~= player.cursor_stack.name then
                 -- swapping stacks resets hand_location for some reason
                 local loc = player.hand_location
-                swap_stacks(inventory[slot_index], player.cursor_stack)
+                swap_stacks(inventory[ slot_index ], player.cursor_stack)
                 player.hand_location = loc
             else
                 -- lmb'ing the cursor stack where hand_location is allowed, not rmb'ing it
@@ -318,7 +318,7 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     elseif is_rmb and not (is_ctrl or is_alt or is_shift) then
         if has_items_in_cursor and is_supported_pred(player.cursor_stack) then
             -- disallow right-click with different item
-            if inventory[slot_index].valid_for_read and inventory[slot_index].name ~= player.cursor_stack.name then
+            if inventory[ slot_index ].valid_for_read and inventory[ slot_index ].name ~= player.cursor_stack.name then
                 return
             end
             set_cursor_stack_to_slot(player, inventory, slot_index, one_item_proj)
@@ -326,31 +326,31 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
             set_stack_to_cursor(player, inventory, slot_index, half_stack_proj)
         end
     elseif not target_inventory.is_full() then
-        local item_stack = inventory[slot_index]
+        local item_stack = inventory[ slot_index ]
 
         if is_lmb and is_ctrl and not (is_alt or is_shift) then
             transfer_inventory_items(inventory, target_inventory, item_stack, id_proj, is_supported_pred)
         elseif is_lmb and is_shift and not (is_alt or is_ctrl) then
-            if inventory[slot_index].valid_for_read and is_supported_pred(inventory[slot_index]) then
-                transfer_stack(inventory[slot_index], target_inventory, id_proj)
+            if inventory[ slot_index ].valid_for_read and is_supported_pred(inventory[ slot_index ]) then
+                transfer_stack(inventory[ slot_index ], target_inventory, id_proj)
             end
         elseif is_rmb and is_ctrl and not (is_alt or is_shift) then
             transfer_inventory_items(inventory, target_inventory, item_stack, half_stack_proj, is_supported_pred)
         elseif is_rmb and is_shift and not (is_alt or is_ctrl) then
-            if inventory[slot_index].valid_for_read and is_supported_pred(inventory[slot_index]) then
-                transfer_stack(inventory[slot_index], target_inventory, half_stack_proj)
+            if inventory[ slot_index ].valid_for_read and is_supported_pred(inventory[ slot_index ]) then
+                transfer_stack(inventory[ slot_index ], target_inventory, half_stack_proj)
             end
         end
     end
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_player_inventory_slot_." ] = function(event)
     local player = game.get_player(event.player_index)
     local inventory = get_inventory(player)
-    local caravan_data = storage.caravans[event.element.tags.unit_number]
+    local caravan_data = storage.caravans[ event.element.tags.unit_number ]
     -- make these two conditional on type
     local is_solid = not caravan_data.entity.name:find("^fluidavan")
-    local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
+    local pred = is_solid and function(s) return true end or function(s) return caravan_prototypes[ caravan_data.entity.name ].favorite_foods[ s.name ] ~= nil end
     local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
     handle_slot_click(event, caravan_data, inventory, target_inv, pred)
@@ -362,22 +362,22 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     end
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_caravan_inventory_slot_."] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_caravan_inventory_slot_." ] = function(event)
     local player = game.get_player(event.player_index)
     local inventory = get_inventory(player)
-    local caravan_data = storage.caravans[event.element.tags.unit_number]
-    local pred = function (s) return true end
+    local caravan_data = storage.caravans[ event.element.tags.unit_number ]
+    local pred = function(s) return true end
 
     handle_slot_click(event, caravan_data, caravan_data.inventory, inventory, pred)
     P.update_caravan_inventory(player, caravan_data)
 end
 
-gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = function(event)
+gui_events[ defines.events.on_gui_click ][ "py_caravan_fuel_inventory_slot_." ] = function(event)
     local player = game.get_player(event.player_index)
     local main_inventory = get_inventory(player)
-    local caravan_data = storage.caravans[event.element.tags.unit_number]
+    local caravan_data = storage.caravans[ event.element.tags.unit_number ]
 
-    local pred = function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
+    local pred = function(s) return caravan_prototypes[ caravan_data.entity.name ].favorite_foods[ s.name ] ~= nil end
 
     handle_slot_click(event, caravan_data, caravan_data.fuel_inventory, main_inventory, pred)
 
@@ -385,18 +385,18 @@ gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = fu
     MainFrameComponents.update_status_flow(player)
 end
 
-py.on_event(defines.events.on_player_main_inventory_changed, function (event)
+py.on_event(defines.events.on_player_main_inventory_changed, function(event)
     local player = game.get_player(event.player_index)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
-    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local caravan_data = storage.caravans[ gui.tags.unit_number ]
     P.update_character_inventory(player, caravan_data)
 end)
 
 -- needed to handle edge-case: power armor is click-dragged to the player
 -- bottom-left corner armor equipment. The hand location must then be reset.
-py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
+py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local player = game.get_player(event.player_index)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
@@ -404,7 +404,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
 
     if player.cursor_stack.count > 0 then return end
     player.hand_location = nil
-    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local caravan_data = storage.caravans[ gui.tags.unit_number ]
     P.update_character_inventory(player, caravan_data)
 end)
 

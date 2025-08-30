@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "Moss",
 	category = "moss",
 	subgroup = "py-alienlife-moss",
@@ -10,11 +10,11 @@ py.autorecipes {
 			tech = "spores",
 			ingredient_changes =
 			{
-				{name = "chlorinated-water", amount = 2}
+				{ name = "chlorinated-water", amount = 2 }
 			},
 			result_changes =
 			{
-				{name = "moss", add_amount = 5}
+				{ name = "moss", add_amount = 5 }
 			},
 		},
 	},
@@ -24,12 +24,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "muddy-sludge", amount = 100},
-				{name = "carbon-dioxide",    amount = 100},
+				{ name = "muddy-sludge",   amount = 100 },
+				{ name = "carbon-dioxide", amount = 100 },
 			},
 			results =
 			{
-				{name = "moss", amount = 8},
+				{ name = "moss", amount = 8 },
 			},
 			crafting_speed = 100,
 			tech = "moss-mk01"
@@ -38,11 +38,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "stone", amount = 20},
+				{ name = "stone", amount = 20 },
 			},
 			results =
 			{
-				{name = "moss", add_amount = 8}
+				{ name = "moss", add_amount = 8 }
 			},
 			crafting_speed = 80,
 			tech = "moss-mk01"
@@ -51,11 +51,11 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "coarse", amount = 5},
+				{ name = "coarse", amount = 5 },
 			},
 			results =
 			{
-				{name = "moss", add_amount = 8}
+				{ name = "moss", add_amount = 8 }
 			},
 			crafting_speed = 60,
 			tech = "moss-mk02"
@@ -64,12 +64,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "limestone", amount = 10},
-				{name = "coarse",    add_amount = 10}
+				{ name = "limestone", amount = 10 },
+				{ name = "coarse",    add_amount = 10 }
 			},
 			results =
 			{
-				{name = "moss", add_amount = 8}
+				{ name = "moss", add_amount = 8 }
 			},
 			crafting_speed = 40,
 			tech = "moss-mk03"
@@ -78,14 +78,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fertilizer", amount = 5},
+				{ name = "fertilizer", amount = 5 },
 			},
 			results =
 			{
-				{name = "moss", add_amount = 8}
+				{ name = "moss", add_amount = 8 }
 			},
 			crafting_speed = 20,
 			tech = "moss-mk04"
 		},
 	}
-}
+})

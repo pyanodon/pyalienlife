@@ -1,5 +1,5 @@
 ---@diagnostic disable: missing-parameter
-local movement_triggers = require "__base__.prototypes.entity.movement-triggers"
+local movement_triggers = require("__base__.prototypes.entity.movement-triggers")
 
 local idle = {
     layers = {
@@ -39,7 +39,7 @@ local idle = {
             shift = util.mul_shift(util.by_pixel(-0, -20)),
             scale = 0.7,
             apply_runtime_tint = true,
-            tint = {a = 0.2}
+            tint = { a = 0.2 }
         },
         {
             filenames = {
@@ -97,7 +97,7 @@ local running = {
             shift = util.mul_shift(util.by_pixel(-0, -20)),
             scale = 0.7,
             apply_runtime_tint = true,
-            tint = {a = 0.5}
+            tint = { a = 0.5 }
         },
         {
             filenames = {
@@ -155,7 +155,7 @@ local attack = {
             shift = util.mul_shift(util.by_pixel(-0, -20)),
             scale = 0.75,
             apply_runtime_tint = true,
-            tint = {a = 0.5}
+            tint = { a = 0.5 }
         },
         {
             filenames = {
@@ -179,7 +179,7 @@ local attack = {
 }
 
 data:extend
-{
+({
     {
         type = "optimized-particle",
         name = "ulric-character-footprint-particle",
@@ -205,8 +205,8 @@ data:extend
         name = "ulric-man",
         icon = "__pyalienlifegraphics2__/graphics/icons/ulric-infusion.png",
         icon_size = 64,
-        localised_name = {"item-name.ulric-infusion"},
-        flags = {"placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable"},
+        localised_name = { "item-name.ulric-infusion" },
+        flags = { "placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable" },
         alert_when_damaged = false,
         resistances = {
             {
@@ -220,12 +220,12 @@ data:extend
         },
         max_health = data.raw.character.character.max_health * 5,
         healing_per_tick = data.raw.character.character.healing_per_tick * 5,
-        collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
-        selection_box = {{-0.4, -1.4}, {0.4, 0.2}},
-        hit_visualization_box = {{-0.2, -1.1}, {0.2, 0.2}},
-        sticker_box = {{-0.2, -1}, {0.2, 0}},
-        crafting_categories = {"crafting"},
-        mining_categories = {"basic-solid"},
+        collision_box = { { -0.2, -0.2 }, { 0.2, 0.2 } },
+        selection_box = { { -0.4, -1.4 }, { 0.4, 0.2 } },
+        hit_visualization_box = { { -0.2, -1.1 }, { 0.2, 0.2 } },
+        sticker_box = { { -0.2, -1 }, { 0.2, 0 } },
+        crafting_categories = { "crafting" },
+        mining_categories = { "basic-solid" },
         character_corpse = "ulric-man-corpse",
         inventory_size = data.raw.character.character.inventory_size + 40,
         build_distance = data.raw.character.character.build_distance * 3,
@@ -239,7 +239,7 @@ data:extend
         ticks_to_keep_aiming_direction = 100,
         --ticks you need to wait after firing a weapon or taking damage to get out of combat and get healed
         ticks_to_stay_in_combat = 0,
-        damage_hit_tint = {r = 1, g = 0, b = 0, a = 0},
+        damage_hit_tint = { r = 1, g = 0, b = 0, a = 0 },
         running_speed = data.raw.character.character.running_speed * 1.4,
         distance_per_frame = 0.23,
         maximum_corner_sliding_distance = 0.7,
@@ -264,16 +264,16 @@ data:extend
                     type = "instant",
                     target_effects = {
                         type = "damage",
-                        damage = {amount = 1400, type = "impact"}
+                        damage = { amount = 1400, type = "impact" }
                     },
                 }
             },
             {
                 action_delivery = {
-                    target_effects = {{
-                        sound = data.raw.capsule["cluster-grenade"].capsule_action.attack_parameters.ammo_type.action[2].action_delivery.target_effects[1].sound,
+                    target_effects = { {
+                        sound = data.raw.capsule[ "cluster-grenade" ].capsule_action.attack_parameters.ammo_type.action[ 2 ].action_delivery.target_effects[ 1 ].sound,
                         type = "play-sound"
-                    }},
+                    } },
                     type = "instant"
                 },
                 type = "direct"
@@ -288,24 +288,24 @@ data:extend
                     layers = {
                         {
                             stripes = {
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0 },
                             },
                             slice = 10,
                             line_length = 10,
@@ -319,24 +319,24 @@ data:extend
                         },
                         {
                             stripes = {
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 448,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 896,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1344, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0 },
                             },
                             slice = 10,
                             line_length = 10,
@@ -348,28 +348,28 @@ data:extend
                             shift = util.mul_shift(util.by_pixel(-0, -20)),
                             scale = 0.7,
                             apply_runtime_tint = true,
-                            tint = {a = 0.5}
+                            tint = { a = 0.5 }
                         },
                         {
                             stripes = {
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 0,    x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
-                                {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 0,    x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 320,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 640,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 960,  x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0 },
+                                { width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0 },
                             },
                             slice = 10,
                             line_length = 10,
@@ -392,7 +392,7 @@ data:extend
                 minimum_darkness = 0.3,
                 intensity = 0.6,
                 size = 50,
-                color = {r = 1.0, g = 1.0, b = 1.0}
+                color = { r = 1.0, g = 1.0, b = 1.0 }
             },
             {
                 type = "oriented",
@@ -400,21 +400,21 @@ data:extend
                 picture = {
                     filename = "__core__/graphics/light-cone.png",
                     priority = "extra-high",
-                    flags = {"light"},
+                    flags = { "light" },
                     scale = 2,
                     width = 200,
                     height = 200
                 },
-                shift = {0, -11 * 1.5 - 4},
+                shift = { 0, -11 * 1.5 - 4 },
                 size = 3,
                 intensity = 0.8,
-                color = {r = 1.0, g = 1.0, b = 1.0}
+                color = { r = 1.0, g = 1.0, b = 1.0 }
             }
         },
         mining_speed = 10000,
-        mining_with_tool_particles_animation_positions = {19},
-        running_sound_animation_positions = {5, 16},
-        moving_sound_animation_positions = {5, 16},
+        mining_with_tool_particles_animation_positions = { 19 },
+        running_sound_animation_positions = { 5, 16 },
+        moving_sound_animation_positions = { 5, 16 },
         synced_footstep_particle_triggers = movement_triggers.character,
         footprint_particles = {
             {
@@ -445,10 +445,10 @@ data:extend
                 particle_name = nil
             }
         },
-        right_footprint_frames = {10, 21},
-        left_footprint_frames = {5, 16}, --{ 5 },
-        right_footprint_offset = {0.1, 0},
-        left_footprint_offset = {-0.1, 0},
+        right_footprint_frames = { 10, 21 },
+        left_footprint_frames = { 5, 16 }, --{ 5 },
+        right_footprint_offset = { 0.1, 0 },
+        left_footprint_offset = { -0.1, 0 },
         water_reflection = {
             pictures = {
                 filename = "__base__/graphics/entity/character/character-reflection.png",
@@ -465,21 +465,21 @@ data:extend
             orientation_to_variation = false
         }
     }
-}
+})
 
 
-ENTITY {
+ENTITY({
     type = "character-corpse",
     name = "ulric-man-corpse",
     icon = "__pyalienlifegraphics3__/graphics/entity/ulric-man/corpse.png",
     icon_size = 64,
-    minable = {mining_time = 2},
+    minable = { mining_time = 2 },
     time_to_live = 15 * 60 * 60, -- 15 minutes
-    selection_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_priority = 100,    -- 0-255 value with 255 being on-top of everything else
-    flags = {"placeable-off-grid", "not-rotatable", "not-on-map"},
-    open_sound = {filename = "__base__/sound/character-corpse-open.ogg", volume = 0.5},
-    close_sound = {filename = "__base__/sound/character-corpse-close.ogg", volume = 0.5},
+    flags = { "placeable-off-grid", "not-rotatable", "not-on-map" },
+    open_sound = { filename = "__base__/sound/character-corpse-open.ogg", volume = 0.5 },
+    close_sound = { filename = "__base__/sound/character-corpse-close.ogg", volume = 0.5 },
     picture = {
         layers = {
             {
@@ -496,14 +496,14 @@ ENTITY {
                 shift = util.by_pixel(-7.0, -5.0),
                 frame_count = 2,
                 apply_runtime_tint = true,
-                tint = {a = 0.5}
+                tint = { a = 0.5 }
             },
         }
     },
-    localised_name = {"entity-name.character-corpse"}
-}
+    localised_name = { "entity-name.character-corpse" }
+})
 
-ITEM {
+ITEM({
     type = "capsule",
     name = "ulric-infusion",
     icon = "__pyalienlifegraphics2__/graphics/icons/ulric-infusion.png",
@@ -524,34 +524,34 @@ ITEM {
             }
         }
     }
-}
+})
 
-data:extend {{
+data:extend({ {
     type = "ammo-category",
     name = "ulric-infusion",
-}}
+} })
 
-data:extend {{
+data:extend({ {
     type = "movement-bonus-equipment",
     name = "ulric-infusion-equipment",
-    localised_name = {"item-name.ulric-infusion-equipment"},
-    localised_description = {"item-description.ulric-infusion-equipment"},
+    localised_name = { "item-name.ulric-infusion-equipment" },
+    localised_description = { "item-description.ulric-infusion-equipment" },
     energy_consumption = "120kW",
     movement_bonus = 0,
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input"
     },
-    categories = {"armor"},
-    shape = {type = "full", width = 2, height = 2},
+    categories = { "armor" },
+    shape = { type = "full", width = 2, height = 2 },
     sprite = {
         width = 64,
         height = 64,
         filename = "__pyalienlifegraphics3__/graphics/icons/ulric-infusion-equipment.png"
     }
-}}
+} })
 
-ITEM {
+ITEM({
     type = "item",
     name = "ulric-infusion-equipment",
     icon = "__pyalienlifegraphics3__/graphics/icons/ulric-infusion-equipment.png",
@@ -560,50 +560,50 @@ ITEM {
     order = "y[symbiosis]-b[ulric-infusion-equipment]",
     stack_size = 10,
     place_as_equipment_result = "ulric-infusion-equipment"
-}
+})
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "ulric-infusion-equipment",
     energy_required = 10,
     category = "crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "flask",               amount = 1},
-        {type = "item", name = "quartz-tube",         amount = 2},
-        {type = "item", name = "stopper",             amount = 2},
-        {type = "item", name = "small-electric-pole", amount = 1},
+        { type = "item", name = "flask",               amount = 1 },
+        { type = "item", name = "quartz-tube",         amount = 2 },
+        { type = "item", name = "stopper",             amount = 2 },
+        { type = "item", name = "small-electric-pole", amount = 1 },
     },
     results = {
-        {type = "item", name = "ulric-infusion-equipment", amount = 1}
+        { type = "item", name = "ulric-infusion-equipment", amount = 1 }
     }
-}:add_unlock("symbiosis-mk01")
+}):add_unlock("symbiosis-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "ulric-infusion",
     category = "genlab",
     enabled = false,
     energy_required = 1200,
     ingredients = {
-        {type = "item",  name = "skin",                  amount = 100},
-        {type = "item",  name = "paragen",               amount = 1},
-        {type = "item",  name = "retrovirus",            amount = 2},
-        {type = "item",  name = "cdna",                  amount = 1},
-        {type = "item",  name = "earth-horse-sample",    amount = 1},
-        {type = "fluid", name = "xenogenic-cells",       amount = 100},
-        {type = "fluid", name = "xylenol",               amount = 100},
-        {type = "fluid", name = "flavonoids",            amount = 5},
-        {type = "item",  name = "neuroprocessor",        amount = 1},
-        {type = "item",  name = "ulric-mk02-dna-sample", amount = 6},
-        {type = "item",  name = "energy-drink",          amount = 1},
+        { type = "item",  name = "skin",                  amount = 100 },
+        { type = "item",  name = "paragen",               amount = 1 },
+        { type = "item",  name = "retrovirus",            amount = 2 },
+        { type = "item",  name = "cdna",                  amount = 1 },
+        { type = "item",  name = "earth-horse-sample",    amount = 1 },
+        { type = "fluid", name = "xenogenic-cells",       amount = 100 },
+        { type = "fluid", name = "xylenol",               amount = 100 },
+        { type = "fluid", name = "flavonoids",            amount = 5 },
+        { type = "item",  name = "neuroprocessor",        amount = 1 },
+        { type = "item",  name = "ulric-mk02-dna-sample", amount = 6 },
+        { type = "item",  name = "energy-drink",          amount = 1 },
     },
     results = {
-        {type = "item", name = "ulric-infusion", amount = 1},
+        { type = "item", name = "ulric-infusion", amount = 1 },
     },
-}:add_unlock("symbiosis-mk01")
+}):add_unlock("symbiosis-mk01")
 
-data:extend {{
+data:extend({ {
     type = "sound",
     name = "ulric-man-transform",
     filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/ulric-man-transform.ogg",
@@ -613,9 +613,9 @@ data:extend {{
     },
     category = "alert",
     volume = 2
-}}
+} })
 
-data:extend {{
+data:extend({ {
     type = "sound",
     name = "ulric-man-untransform",
     filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/ulric-man-untransform.wav",
@@ -624,4 +624,4 @@ data:extend {{
         remove = false
     },
     category = "alert"
-}}
+} })

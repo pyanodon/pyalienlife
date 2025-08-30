@@ -1,7 +1,7 @@
 ---@diagnostic disable: missing-parameter
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "ocula",
     energy_required = 90,
@@ -9,18 +9,18 @@ RECIPE {
     enabled = false,
     ingredients =
     {
-        {type = "item",  name = "alien-sample-02",      amount = 10},
-        {type = "item",  name = "cdna",                 amount = 30},
-        {type = "item",  name = "lens",                 amount = 2},
-        {type = "item",  name = "bio-sample",           amount = 100},
-        {type = "item",  name = "earth-generic-sample", amount = 10},
-        {type = "fluid", name = "fetal-serum",          amount = 100},
-        {type = "fluid", name = "artificial-blood",     amount = 200},
+        { type = "item",  name = "alien-sample-02",      amount = 10 },
+        { type = "item",  name = "cdna",                 amount = 30 },
+        { type = "item",  name = "lens",                 amount = 2 },
+        { type = "item",  name = "bio-sample",           amount = 100 },
+        { type = "item",  name = "earth-generic-sample", amount = 10 },
+        { type = "fluid", name = "fetal-serum",          amount = 100 },
+        { type = "fluid", name = "artificial-blood",     amount = 200 },
     },
-    results = {{type = "item", name = "ocula", amount = 1}}
-}:add_unlock("domestication-mk02")
+    results = { { type = "item", name = "ocula", amount = 1 } }
+}):add_unlock("domestication-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "ocula",
     icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
@@ -28,29 +28,29 @@ ITEM {
     subgroup = "py-alienlife-special-creatures",
     order = "x",
     stack_size = 1,
-    flags = {"not-stackable"},
+    flags = { "not-stackable" },
     place_result = "ocula"
-}
+})
 
 data:extend
-{
+({
     {
-        ai_settings = {do_separation = false},
+        ai_settings = { do_separation = false },
         type = "unit",
         name = "ocula",
         icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
         icon_size = 64,
-        flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way", "not-on-map"},
-        minable = {mining_time = 0.2, result = "ocula"},
+        flags = { "placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way", "not-on-map" },
+        minable = { mining_time = 0.2, result = "ocula" },
         max_health = 250,
         order = "b-b-a",
         radar_range = 1,
         subgroup = "enemies",
         resistances = {},
         healing_per_tick = 0.01,
-        collision_box = {{0, 0}, {0, 0}},
-        collision_mask = {layers = {}},
-        selection_box = {{-0.8, -0.8}, {0.8, 0.8}},
+        collision_box = { { 0, 0 }, { 0, 0 } },
+        collision_mask = { layers = {} },
+        selection_box = { { -0.8, -0.8 }, { 0.8, 0.8 } },
         attack_parameters =
         {
             type = "projectile",
@@ -106,7 +106,7 @@ data:extend
         vision_distance = 0,
         movement_speed = 0.28,
         distance_per_frame = 0.13,
-        absorptions_to_join_attack = {pollution = 4},
+        absorptions_to_join_attack = { pollution = 4 },
         distraction_cooldown = 300,
         min_pursue_time = 10 * 60,
         max_pursue_distance = 50,
@@ -167,9 +167,9 @@ data:extend
             volume = 0.65
         }
     }
-}
+})
 
-local beam = table.deepcopy(data.raw.beam["laser-beam"])
+local beam = table.deepcopy(data.raw.beam[ "laser-beam" ])
 beam.working_sound = nil
 beam.damage_interval = 10000
 beam.name = "ocula-beam"
@@ -177,21 +177,21 @@ beam.action = {
     type = "direct",
     action_delivery = {
         type = "instant",
-        target_effects = {{
+        target_effects = { {
             type = "damage",
-            damage = {amount = 0, type = "impact"}
-        }}
+            damage = { amount = 0, type = "impact" }
+        } }
     }
 }
-data:extend {beam}
+data:extend({ beam })
 
-data:extend {
+data:extend({
     {
         type = "virtual-signal",
         icon = "__pyalienlifegraphics2__/graphics/icons/ocula-map-tag.png",
         name = "ocula-map-tag",
         subgroup = "py-alienlife-special-creatures",
         icon_size = 64,
-        localised_name = {"virtual-signal-name.ocula-map-tag"}
+        localised_name = { "virtual-signal-name.ocula-map-tag" }
     }
-}
+})

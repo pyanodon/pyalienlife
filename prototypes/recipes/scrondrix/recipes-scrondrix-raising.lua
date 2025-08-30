@@ -1,9 +1,9 @@
 ------------------CUB MAKER------------------
 
-py.autorecipes {
+py.autorecipes({
 	name = "Scrondrix-cub",
 	category = "rc",
-	allowed_module_categories = {"scrondrix"},
+	allowed_module_categories = { "scrondrix" },
 	subgroup = "py-alienlife-scrondrix",
 	order = "s",
 	main_product = "scrondrix-pup",
@@ -15,14 +15,14 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name = 'scrondrix', amount = 2},
-				{name = "fawogae",      amount = 20},
-				{name = "wood-seeds",   amount = 20},
-				{name = "meat",         amount = 10},
-				{name = "water-barrel", amount = 20, return_barrel = true},
+				{ name = "fawogae",      amount = 20 },
+				{ name = "wood-seeds",   amount = 20 },
+				{ name = "meat",         amount = 10 },
+				{ name = "water-barrel", amount = 20, return_barrel = true },
 			},
 			results =
 			{
-				{name = "scrondrix-pup", amount = 5},
+				{ name = "scrondrix-pup", amount = 5 },
 				--{name = 'scrondrix', amount = 2},
 			},
 			tech = "scrondrix",
@@ -32,13 +32,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "yotoi-leaves", amount = 10},
-				{name = "salt",         amount = 5},
-				{name = "bedding",      amount = 1},
+				{ name = "yotoi-leaves", amount = 10 },
+				{ name = "salt",         amount = 5 },
+				{ name = "bedding",      amount = 1 },
 			},
 			results =
 			{
-				{name = "scrondrix-pup", add_amount = 1},
+				{ name = "scrondrix-pup", add_amount = 1 },
 			},
 			crafting_speed = 10,
 			tech = "scrondrix-mk02",
@@ -47,12 +47,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "raw-fiber", amount = 5},
-				{name = "wood",      amount = 5}
+				{ name = "raw-fiber", amount = 5 },
+				{ name = "wood",      amount = 5 }
 			},
 			results =
 			{
-				{name = "scrondrix-pup", add_amount = 2},
+				{ name = "scrondrix-pup", add_amount = 2 },
 			},
 			crafting_speed = 9,
 			tech = "scrondrix-mk03",
@@ -61,17 +61,17 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "navens", amount = 8},
+				{ name = "navens", amount = 8 },
 			},
 			results =
 			{
-				{name = "scrondrix-pup", add_amount = 2},
+				{ name = "scrondrix-pup", add_amount = 2 },
 			},
 			crafting_speed = 8,
 			tech = "scrondrix-mk04",
 		},
 	}
-}
+})
 
 --[[
 		-----------------------PHEROMONES-----------------------------
@@ -161,7 +161,7 @@ py.autorecipes {
 
 --raising
 
-py.autorecipes {
+py.autorecipes({
 	name = "Scrondrix",
 	category = "scrondrix",
 	number_icons = true,
@@ -171,24 +171,24 @@ py.autorecipes {
 			tech = "bigger-colon",
 			ingredient_changes =
 			{
-				{name = "fiber", amount = 2}
+				{ name = "fiber", amount = 2 }
 			},
 			result_changes =
 			{
-				{name = "manure",    add_amount = 4},
-				{name = "scrondrix", subtract_percent_amount = 0.2, round_direction = "up"}
+				{ name = "manure",    add_amount = 4 },
+				{ name = "scrondrix", subtract_percent_amount = 0.2, round_direction = "up" }
 			},
 		},
 		{
 			tech = "explosive-diarrhea",
 			ingredient_changes =
 			{
-				{name = "ethylene-glycol", amount = 50}
+				{ name = "ethylene-glycol", amount = 50 }
 			},
 			result_changes =
 			{
-				{name = "manure",    add_amount = 6},
-				{name = "scrondrix", subtract_percent_amount = 0.4, round_direction = "up"}
+				{ name = "manure",    add_amount = 6 },
+				{ name = "scrondrix", subtract_percent_amount = 0.4, round_direction = "up" }
 			}
 		},
 	},
@@ -201,15 +201,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "scrondrix-pup", amount = 10},
-				{name = "wood-seeds",    amount = 15},
-				{name = "meat",          amount = 5},
-				{name = "yotoi-leaves",  amount = 10},
-				{name = "water-barrel",  amount = 5, return_barrel = true},
+				{ name = "scrondrix-pup", amount = 10 },
+				{ name = "wood-seeds",    amount = 15 },
+				{ name = "meat",          amount = 5 },
+				{ name = "yotoi-leaves",  amount = 10 },
+				{ name = "water-barrel",  amount = 5, return_barrel = true },
 			},
 			results =
 			{
-				{name = "scrondrix", amount = 5},
+				{ name = "scrondrix", amount = 5 },
 			},
 			crafting_speed = 150,
 			tech = "scrondrix",
@@ -219,12 +219,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "salt",    amount = 5},
-				{name = "bedding", amount = 1},
+				{ name = "salt",    amount = 5 },
+				{ name = "bedding", amount = 1 },
 			},
 			results =
 			{
-				{name = "scrondrix", add_amount = 1},
+				{ name = "scrondrix", add_amount = 1 },
 			},
 			crafting_speed = 130,
 			tech = "scrondrix-mk02",
@@ -234,12 +234,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "raw-fiber", amount = 5},
-				{name = "gh",        amount = 1},
+				{ name = "raw-fiber", amount = 5 },
+				{ name = "gh",        amount = 1 },
 			},
 			results =
 			{
-				{name = "scrondrix", add_amount = 2},
+				{ name = "scrondrix", add_amount = 2 },
 			},
 			crafting_speed = 90,
 			tech = "scrondrix-mk03",
@@ -249,15 +249,15 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "navens",    amount = 5},
-				{name = "antiviral", amount = 1},
+				{ name = "navens",    amount = 5 },
+				{ name = "antiviral", amount = 1 },
 			},
 			results =
 			{
-				{name = "scrondrix", add_amount = 3},
+				{ name = "scrondrix", add_amount = 3 },
 			},
 			crafting_speed = 90,
 			tech = "scrondrix-mk04",
 		},
 	}
-}
+})

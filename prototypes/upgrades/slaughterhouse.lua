@@ -35,36 +35,36 @@ if pySE then
     --table.insert(rendering_recipes, 'full-render-riga')
     --table.insert(rendering_recipes, 'full-render-tuls')
 end
-local effects = {laser = {}, music = {}, lard = {}}
+local effects = { laser = {}, music = {}, lard = {} }
 
 if data and not yafc_turd_integration then
     local things_to_add = {
-        laser = {ingredients = {{type = "item", name = "laser-turret", amount = 1, ignored_by_stats = 1}}, results = {{type = "item", name = "laser-turret", amount = 1, probability = 0.999, ignored_by_stats = 1, ignored_by_productivity = 1}}},
-        music = {ingredients = {{type = "item", name = "programmable-speaker", amount = 1, ignored_by_stats = 1}}, results = {{type = "item", name = "programmable-speaker", amount = 1, probability = 0.99, ignored_by_stats = 1, ignored_by_productivity = 1}}},
-        lard = {ingredients = {{type = "fluid", name = "grease", amount = 3}}, results = {}}
+        laser = { ingredients = { { type = "item", name = "laser-turret", amount = 1, ignored_by_stats = 1 } }, results = { { type = "item", name = "laser-turret", amount = 1, probability = 0.999, ignored_by_stats = 1, ignored_by_productivity = 1 } } },
+        music = { ingredients = { { type = "item", name = "programmable-speaker", amount = 1, ignored_by_stats = 1 } }, results = { { type = "item", name = "programmable-speaker", amount = 1, probability = 0.99, ignored_by_stats = 1, ignored_by_productivity = 1 } } },
+        lard = { ingredients = { { type = "fluid", name = "grease", amount = 3 } }, results = {} }
     }
 
     local products_to_buff = {
-        laser = {"blood", "mukmoux-fat", "sulfuric-acid", "bones", "brain"},
-        music = {"skin", "carapace", "pelt", "chitin", "shell", "fish-oil", "photophore"},
-        lard = {"meat", "arthropod-blood", "guts", "formic-acid", "bonemeal", "tendon", "keratin"}
+        laser = { "blood", "mukmoux-fat", "sulfuric-acid", "bones", "brain" },
+        music = { "skin", "carapace", "pelt", "chitin", "shell", "fish-oil", "photophore" },
+        lard = { "meat", "arthropod-blood", "guts", "formic-acid", "bonemeal", "tendon", "keratin" }
     }
 
-    for _, path in pairs {"laser", "music", "lard"} do
+    for _, path in pairs({ "laser", "music", "lard" }) do
         for _, recipe_name in pairs(rendering_recipes) do
             local recipe = RECIPE(recipe_name):copy(function(r) return r.name .. "-" .. path end)
-            recipe.localised_name = recipe.localised_name or {"recipe-name." .. recipe_name}
-            for _, ingredient in pairs(things_to_add[path].ingredients) do
+            recipe.localised_name = recipe.localised_name or { "recipe-name." .. recipe_name }
+            for _, ingredient in pairs(things_to_add[ path ].ingredients) do
                 recipe:add_ingredient(ingredient)
             end
-            for _, result in pairs(things_to_add[path].results) do
+            for _, result in pairs(things_to_add[ path ].results) do
                 recipe:add_result(result)
             end
-            for _, product in pairs(products_to_buff[path]) do
+            for _, product in pairs(products_to_buff[ path ]) do
                 if product == "brain" then
                     for _, result in pairs(recipe.results) do
-                        if (result[1] or result.name) == "brain" then
-                            recipe:add_result {name = "brain", amount = 1, type = "item", probability = 0.05}
+                        if (result[ 1 ] or result.name) == "brain" then
+                            recipe:add_result({ name = "brain", amount = 1, type = "item", probability = 0.05 })
                             break
                         end
                     end
@@ -72,14 +72,14 @@ if data and not yafc_turd_integration then
                     recipe:multiply_result_amount(product, 2)
                 end
             end
-            data:extend {recipe}
-            table.insert(effects[path], {old = recipe_name, new = recipe.name, type = "recipe-replacement"})
+            data:extend({ recipe })
+            table.insert(effects[ path ], { old = recipe_name, new = recipe.name, type = "recipe-replacement" })
         end
     end
 elseif script then
-    for _, path in pairs {"laser", "music", "lard"} do
+    for _, path in pairs({ "laser", "music", "lard" }) do
         for _, recipe_name in pairs(rendering_recipes) do
-            table.insert(effects[path], {old = recipe_name, new = recipe_name .. "-" .. path, type = "recipe-replacement"})
+            table.insert(effects[ path ], { old = recipe_name, new = recipe_name .. "-" .. path, type = "recipe-replacement" })
         end
     end
 end
@@ -96,14 +96,14 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-slaugterhouse.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"laser-turret", "biotech-machines-mk02"},
+        prerequisites = { "laser-turret", "biotech-machines-mk02" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
-                {"military-science-pack",   1},
-                {"chemical-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "military-science-pack",   1 },
+                { "chemical-science-pack",   1 },
             },
             time = 45
         }

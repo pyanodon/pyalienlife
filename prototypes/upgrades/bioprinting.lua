@@ -1,39 +1,39 @@
 if data and not yafc_turd_integration then
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("bio-scafold"):copy(),
         RECIPE("bio-scafold-2"):copy(),
         RECIPE("bio-scafold-3"):copy(),
         RECIPE("bio-scafold-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-with-lamp"
-        recipe:add_ingredient {type = "item", name = "small-lamp", amount = 1}
+        recipe:add_ingredient({ type = "item", name = "small-lamp", amount = 1 })
         recipe:multiply_result_amount("bio-scafold", 2)
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    for i, recipe in pairs {
+    for i, recipe in pairs({
         RECIPE("bio-printer-mk01"):copy(),
         RECIPE("bio-printer-mk02"):copy(),
         RECIPE("bio-printer-mk03"):copy(),
         RECIPE("bio-printer-mk04"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-yag"
-        recipe:add_ingredient {type = "item", name = "yag-laser-module", amount = 2 * i}
-        data:extend {recipe}
+        recipe:add_ingredient({ type = "item", name = "yag-laser-module", amount = 2 * i })
+        data:extend({ recipe })
     end
 
-    data:extend {
+    data:extend({
         {
             type = "recipe",
             name = "stem-cell-recycle-1",
             enabled = false,
             category = "atomizer",
-            results = {{type = "fluid", name = "psc", amount = 30}},
+            results = { { type = "fluid", name = "psc", amount = 30 } },
             ingredients = {
-                {type = "item",   name = "bones",       amount = 3},
-                {type = "item",   name = "chitin",      amount = 3},
-                {type = "item",   name = "mukmoux-fat", amount = 5},
-                {name = "oxygen", amount = 150,         type = "fluid"}
+                { type = "item",   name = "bones",       amount = 3 },
+                { type = "item",   name = "chitin",      amount = 3 },
+                { type = "item",   name = "mukmoux-fat", amount = 5 },
+                { name = "oxygen", amount = 150,         type = "fluid" }
             },
             energy_required = 5
         },
@@ -42,12 +42,12 @@ if data and not yafc_turd_integration then
             name = "stem-cell-recycle-2",
             enabled = false,
             category = "atomizer",
-            results = {{type = "fluid", name = "psc", amount = 30}},
+            results = { { type = "fluid", name = "psc", amount = 30 } },
             ingredients = {
-                {type = "item",   name = "bonemeal", amount = 3},
-                {type = "item",   name = "skin",     amount = 5},
-                {type = "item",   name = "brain",    amount = 2},
-                {name = "oxygen", amount = 150,      type = "fluid"}
+                { type = "item",   name = "bonemeal", amount = 3 },
+                { type = "item",   name = "skin",     amount = 5 },
+                { type = "item",   name = "brain",    amount = 2 },
+                { name = "oxygen", amount = 150,      type = "fluid" }
             },
             energy_required = 5
         },
@@ -56,16 +56,16 @@ if data and not yafc_turd_integration then
             name = "stem-cell-recycle-3",
             enabled = false,
             category = "atomizer",
-            results = {{type = "fluid", name = "psc", amount = 30}},
+            results = { { type = "fluid", name = "psc", amount = 30 } },
             ingredients = {
-                {type = "item",   name = "guts",  amount = 6},
-                {type = "item",   name = "meat",  amount = 4},
-                {type = "fluid",  name = "blood", amount = 40},
-                {name = "oxygen", amount = 150,   type = "fluid"}
+                { type = "item",   name = "guts",  amount = 6 },
+                { type = "item",   name = "meat",  amount = 4 },
+                { type = "fluid",  name = "blood", amount = 40 },
+                { name = "oxygen", amount = 150,   type = "fluid" }
             },
             energy_required = 5
         }
-    }
+    })
 end
 
 return {
@@ -80,17 +80,17 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-bioprinting.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"organ-printing-mk02", "parametric-oscilator"},
+        prerequisites = { "organ-printing-mk02", "parametric-oscilator" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"py-science-pack-2",       2},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       2},
-                {"production-science-pack", 1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "py-science-pack-2",       2 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       2 },
+                { "production-science-pack", 1 },
             },
             time = 45
         }
@@ -102,10 +102,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "bio-scafold",   new = "bio-scafold-with-lamp",   type = "recipe-replacement"},
-                {old = "bio-scafold-2", new = "bio-scafold-2-with-lamp", type = "recipe-replacement"},
-                {old = "bio-scafold-3", new = "bio-scafold-3-with-lamp", type = "recipe-replacement"},
-                {old = "bio-scafold-4", new = "bio-scafold-4-with-lamp", type = "recipe-replacement"},
+                { old = "bio-scafold",   new = "bio-scafold-with-lamp",   type = "recipe-replacement" },
+                { old = "bio-scafold-2", new = "bio-scafold-2-with-lamp", type = "recipe-replacement" },
+                { old = "bio-scafold-3", new = "bio-scafold-3-with-lamp", type = "recipe-replacement" },
+                { old = "bio-scafold-4", new = "bio-scafold-4-with-lamp", type = "recipe-replacement" },
             },
         },
         {
@@ -114,11 +114,11 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 2,          speed = -1,                   productivity = 0.15,        type = "module-effects"},
-                {old = "bio-printer-mk01", new = "bio-printer-mk01-yag", type = "recipe-replacement"},
-                {old = "bio-printer-mk02", new = "bio-printer-mk02-yag", type = "recipe-replacement"},
-                {old = "bio-printer-mk03", new = "bio-printer-mk03-yag", type = "recipe-replacement"},
-                {old = "bio-printer-mk04", new = "bio-printer-mk04-yag", type = "recipe-replacement"},
+                { consumption = 2,          speed = -1,                   productivity = 0.15,        type = "module-effects" },
+                { old = "bio-printer-mk01", new = "bio-printer-mk01-yag", type = "recipe-replacement" },
+                { old = "bio-printer-mk02", new = "bio-printer-mk02-yag", type = "recipe-replacement" },
+                { old = "bio-printer-mk03", new = "bio-printer-mk03-yag", type = "recipe-replacement" },
+                { old = "bio-printer-mk04", new = "bio-printer-mk04-yag", type = "recipe-replacement" },
             }
         },
         {
@@ -127,9 +127,9 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {type = "unlock-recipe", recipe = "stem-cell-recycle-1"},
-                {type = "unlock-recipe", recipe = "stem-cell-recycle-2"},
-                {type = "unlock-recipe", recipe = "stem-cell-recycle-3"}
+                { type = "unlock-recipe", recipe = "stem-cell-recycle-1" },
+                { type = "unlock-recipe", recipe = "stem-cell-recycle-2" },
+                { type = "unlock-recipe", recipe = "stem-cell-recycle-3" }
             }
         }
     },

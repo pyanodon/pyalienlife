@@ -1,84 +1,84 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "arthurian-pen-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",         amount = 200},
-        {type = "item", name = "titanium-plate",   amount = 100},
-        {type = "item", name = "steel-plate",      amount = 100},
-        {type = "item", name = "duralumin",        amount = 50},
-        {type = "item", name = "glass",            amount = 20},
-        {type = "item", name = "advanced-circuit", amount = 35},
+        { type = "item", name = "concrete",         amount = 200 },
+        { type = "item", name = "titanium-plate",   amount = 100 },
+        { type = "item", name = "steel-plate",      amount = 100 },
+        { type = "item", name = "duralumin",        amount = 50 },
+        { type = "item", name = "glass",            amount = 20 },
+        { type = "item", name = "advanced-circuit", amount = 35 },
     },
     results = {
-        {type = "item", name = "arthurian-pen-mk01", amount = 1}
+        { type = "item", name = "arthurian-pen-mk01", amount = 1 }
     }
-}:add_unlock("arthurian")
+}):add_unlock("arthurian")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "arthurian-pen-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "arthurian-pen-mk01", amount = 1},
-        {type = "item", name = "concrete",           amount = 20},
-        {type = "item", name = "titanium-plate",     amount = 30},
-        {type = "item", name = "lead-plate",         amount = 50},
-        {type = "item", name = "latex",              amount = 40},
-        {type = "item", name = "neuroprocessor",     amount = 20},
+        { type = "item", name = "arthurian-pen-mk01", amount = 1 },
+        { type = "item", name = "concrete",           amount = 20 },
+        { type = "item", name = "titanium-plate",     amount = 30 },
+        { type = "item", name = "lead-plate",         amount = 50 },
+        { type = "item", name = "latex",              amount = 40 },
+        { type = "item", name = "neuroprocessor",     amount = 20 },
     },
     results = {
-        {type = "item", name = "arthurian-pen-mk02", amount = 1}
+        { type = "item", name = "arthurian-pen-mk02", amount = 1 }
     }
-}:add_unlock("land-animals-mk02")
+}):add_unlock("land-animals-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "arthurian-pen-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "arthurian-pen-mk02", amount = 1},
-        {type = "item", name = "nichrome",           amount = 20},
-        {type = "item", name = "sc-unit",            amount = 10},
-        {type = "item", name = "neuromorphic-chip",  amount = 40},
-        {type = "item", name = "stainless-steel",    amount = 40},
-        {type = "item", name = "molybdenum-plate",   amount = 20},
+        { type = "item", name = "arthurian-pen-mk02", amount = 1 },
+        { type = "item", name = "nichrome",           amount = 20 },
+        { type = "item", name = "sc-unit",            amount = 10 },
+        { type = "item", name = "neuromorphic-chip",  amount = 40 },
+        { type = "item", name = "stainless-steel",    amount = 40 },
+        { type = "item", name = "molybdenum-plate",   amount = 20 },
     },
     results = {
-        {type = "item", name = "arthurian-pen-mk03", amount = 1}
+        { type = "item", name = "arthurian-pen-mk03", amount = 1 }
     }
-}:add_unlock("land-animals-mk03")
+}):add_unlock("land-animals-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "arthurian-pen-mk04",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "arthurian-pen-mk03", amount = 1},
-        {type = "item", name = "metallic-glass",     amount = 20},
-        {type = "item", name = "super-steel",        amount = 40},
-        {type = "item", name = "control-unit",       amount = 10},
+        { type = "item", name = "arthurian-pen-mk03", amount = 1 },
+        { type = "item", name = "metallic-glass",     amount = 20 },
+        { type = "item", name = "super-steel",        amount = 40 },
+        { type = "item", name = "control-unit",       amount = 10 },
     },
     results = {
-        {type = "item", name = "arthurian-pen-mk04", amount = 1}
+        { type = "item", name = "arthurian-pen-mk04", amount = 1 }
     }
-}:add_unlock("land-animals-mk04")
+}):add_unlock("land-animals-mk04")
 
 local base_craft_speed = 1
 local module_slots_per_tier = 8
 local base_name = "arthurian-pen-mk0"
 local base_subgroup = "py-alienlife-farm-buildings-mk0"
-local energy_tiers = {"200kW","300kW", "500kW", "700kW"}
+local energy_tiers = { "200kW", "300kW", "500kW", "700kW" }
 
 for tier = 1, 4 do
     local name = base_name .. tier
     local module_slots = module_slots_per_tier * tier
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png",
@@ -88,24 +88,24 @@ for tier = 1, 4 do
         order = "d",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png",
         icon_size = 64,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.5, result = name },
         fast_replaceable_group = "arthurian-pen",
         max_health = 100,
         corpse = "big-remnants",
         dying_explosion = "big-explosion",
-        collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-        selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+        collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+        selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
         module_slots = module_slots,
-        allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-        crafting_categories = {"arthurian"},
+        allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+        crafting_categories = { "arthurian" },
         crafting_speed = (tier == 1) and py.farm_speed(module_slots, base_craft_speed) or py.farm_speed_derived(module_slots, base_name .. 1),
         energy_source = {
             type = "electric",
@@ -114,14 +114,14 @@ for tier = 1, 4 do
                 pollution = 3
             },
         },
-        energy_usage = energy_tiers[tier],
+        energy_usage = energy_tiers[ tier ],
         graphics_set = {
             working_visualisations = {
                 {
-                    north_position = {-2.5, -3.5},
-                    west_position = {-2.5, -3.5},
-                    south_position = {-2.5, -3.5},
-                    east_position = {-2.5, -3.5},
+                    north_position = { -2.5, -3.5 },
+                    west_position = { -2.5, -3.5 },
+                    south_position = { -2.5, -3.5 },
+                    east_position = { -2.5, -3.5 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/mother.png",
                         frame_count = 40,
@@ -133,10 +133,10 @@ for tier = 1, 4 do
                     }
                 },
                 {
-                    north_position = {3.3, -0.5},
-                    west_position = {3.3, -0.5},
-                    south_position = {3.3, -0.5},
-                    east_position = {3.3, -0.5},
+                    north_position = { 3.3, -0.5 },
+                    west_position = { 3.3, -0.5 },
+                    south_position = { 3.3, -0.5 },
+                    east_position = { 3.3, -0.5 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/right.png",
                         frame_count = 40,
@@ -147,10 +147,10 @@ for tier = 1, 4 do
                     }
                 },
                 {
-                    north_position = {3.5, 0.5},
-                    west_position = {3.5, 0.5},
-                    south_position = {3.5, 0.5},
-                    east_position = {3.5, 0.5},
+                    north_position = { 3.5, 0.5 },
+                    west_position = { 3.5, 0.5 },
+                    south_position = { 3.5, 0.5 },
+                    east_position = { 3.5, 0.5 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/cub.png",
                         frame_count = 40,
@@ -161,10 +161,10 @@ for tier = 1, 4 do
                     }
                 },
                 {
-                    north_position = {-0.8, 1.7},
-                    west_position = {-0.8, 1.7},
-                    south_position = {-0.8, 1.7},
-                    east_position = {-0.8, 1.7},
+                    north_position = { -0.8, 1.7 },
+                    west_position = { -0.8, 1.7 },
+                    south_position = { -0.8, 1.7 },
+                    east_position = { -0.8, 1.7 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/eatside.png",
                         frame_count = 200,
@@ -175,10 +175,10 @@ for tier = 1, 4 do
                     }
                 },
                 {
-                    north_position = {-2.5, 0.8},
-                    west_position = {-2.5, 0.8},
-                    south_position = {-2.5, 0.8},
-                    east_position = {-2.5, 0.8},
+                    north_position = { -2.5, 0.8 },
+                    west_position = { -2.5, 0.8 },
+                    south_position = { -2.5, 0.8 },
+                    east_position = { -2.5, 0.8 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/eatup.png",
                         frame_count = 200,
@@ -189,10 +189,10 @@ for tier = 1, 4 do
                     }
                 },
                 {
-                    north_position = {0.0, -1.0},
-                    west_position = {0.0, -1.0},
-                    south_position = {-0.0, -1.0},
-                    east_position = {-0.0, -1.0},
+                    north_position = { 0.0, -1.0 },
+                    west_position = { 0.0, -1.0 },
+                    south_position = { -0.0, -1.0 },
+                    east_position = { -0.0, -1.0 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/rot.png",
                         frame_count = 120,
@@ -221,16 +221,16 @@ for tier = 1, 4 do
                         frame_count = 1,
                         line_length = 1,
                         shift = util.by_pixel(4, -12),
-                        tint = py.tints[tier]
+                        tint = py.tints[ tier ]
                     },
                 },
             },
         },
         impact_category = "metal-large",
         working_sound = {
-            sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 1.0},
-            idle_sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 0.3},
+            sound = { filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 1.0 },
+            idle_sound = { filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 0.3 },
             apparent_volume = 0.45
         }
-    }
+    })
 end

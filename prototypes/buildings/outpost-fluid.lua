@@ -1,22 +1,22 @@
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "outpost-fluid",
     energy_required = 1,
     category = "crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate",    amount = 5},
-        {type = "item", name = "small-parts-01", amount = 50},
-        {type = "item", name = "concrete",       amount = 20},
-        {type = "item", name = "glass",          amount = 5},
-        {type = "item", name = "py-tank-4000",   amount = 1}
+        { type = "item", name = "steel-plate",    amount = 5 },
+        { type = "item", name = "small-parts-01", amount = 50 },
+        { type = "item", name = "concrete",       amount = 20 },
+        { type = "item", name = "glass",          amount = 5 },
+        { type = "item", name = "py-tank-4000",   amount = 1 }
     },
-    results = {{type = "item", name = "outpost-fluid", amount = 1}}
-}:add_unlock("zoology")
+    results = { { type = "item", name = "outpost-fluid", amount = 1 } }
+}):add_unlock("zoology")
 
-ITEM {
+ITEM({
     type = "item",
     name = "outpost-fluid",
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-outpost.png",
@@ -25,14 +25,14 @@ ITEM {
     order = "b-a",
     place_result = "outpost-fluid",
     stack_size = 10
-}
+})
 
-data:extend {{
+data:extend({ {
     inventory_type = "with_filters_and_bar",
     scale_info_icons = true,
     name = "outpost-fluid",
     type = "storage-tank",
-    circuit_connector = table.deepcopy(data.raw["storage-tank"]["storage-tank"].circuit_connector), -- todo
+    circuit_connector = table.deepcopy(data.raw[ "storage-tank" ][ "storage-tank" ].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
     close_sound = {
         filename = "__base__/sound/metallic-chest-close.ogg",
@@ -79,7 +79,7 @@ data:extend {{
     icon_size = 64,
     fluid_box = {
         -- don't hardcode so that volume gets adjusted when "realistic" setting is on.
-        volume = data.raw["storage-tank"]["py-tank-4000"].fluid_box.volume,
+        volume = data.raw[ "storage-tank" ][ "py-tank-4000" ].fluid_box.volume,
         pipe_picture = {
             north = {
                 layers = {
@@ -88,7 +88,7 @@ data:extend {{
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = {0, 0.9},
+                        shift = { 0, 0.9 },
                         priority = "extra-high",
                     },
                 },
@@ -100,7 +100,7 @@ data:extend {{
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = {-1, 0},
+                        shift = { -1, 0 },
                         priority = "extra-high",
                     },
                 },
@@ -112,7 +112,7 @@ data:extend {{
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = {0, -1.4},
+                        shift = { 0, -1.4 },
                         priority = "extra-high",
                     },
                     {
@@ -120,7 +120,7 @@ data:extend {{
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = {0, -0.75},
+                        shift = { 0, -0.75 },
                         priority = "extra-high",
                     },
                 },
@@ -132,23 +132,23 @@ data:extend {{
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = {1, 0},
+                        shift = { 1, 0 },
                         priority = "extra-high",
                     },
                 },
             },
-            
+
         },
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
             {
-                position = {0.5, 2.5},
+                position = { 0.5, 2.5 },
                 direction = defines.direction.south
             },
         },
         secondary_draw_order = -1,
     },
-    window_bounding_box = {{-0.0, 0.0}, {0.0, 0.0}},
+    window_bounding_box = { { -0.0, 0.0 }, { 0.0, 0.0 } },
     max_health = 600,
     minable = {
         mining_time = 0.2,
@@ -160,13 +160,13 @@ data:extend {{
     },
     pictures = {
         picture = {
-         layers = {{
+            layers = { {
                 filename = "__pyalienlifegraphics2__/graphics/entity/outpost/off-fluid.png",
                 height = 224,
                 width = 224,
                 priority = "extra-high",
                 shift = util.by_pixel(16, -16),
-            }},
+            } },
         },
         fluid_background = py.empty_image(),
         window_background = py.empty_image(),
@@ -203,4 +203,4 @@ data:extend {{
             3.0
         }
     }
-}}
+} })

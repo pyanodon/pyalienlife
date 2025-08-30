@@ -12,17 +12,17 @@
 --     },
 -- }
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "tree",
     category = "nursery",
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "item", name = "wood-seedling", amount = 3},
-        {type = "item", name = "planter-box",   amount = 1},
+        { type = "item", name = "wood-seedling", amount = 3 },
+        { type = "item", name = "planter-box",   amount = 1 },
     },
     results = {
-        {type = "item", name = "tree-mk01", amount = 1}
+        { type = "item", name = "tree-mk01", amount = 1 }
     },
-}:add_unlock("wood-processing")
+}):add_unlock("wood-processing")

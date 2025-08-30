@@ -16,70 +16,70 @@ TECHNOLOGY {
     }
 }
 ]]
-TECHNOLOGY("ralesia"):set_fields {icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk01.png"}
+TECHNOLOGY("ralesia"):set_fields({ icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk01.png" })
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "ralesia-mk02",
     icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia"},
+    dependencies = { "ralesia" },
     effects = {},
     unit = {
         count = 150,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
         },
         time = 50
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "ralesia-mk03",
     icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia-mk02"},
+    dependencies = { "ralesia-mk02" },
     effects = {},
     unit = {
         count = 150,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
         },
         time = 50
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "ralesia-mk04",
     icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia-mk03"},
+    dependencies = { "ralesia-mk03" },
     effects = {},
     unit = {
         count = 150,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
-            {"production-science-pack", 1},
-            {"py-science-pack-4",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
+            { "production-science-pack", 1 },
+            { "py-science-pack-4",       1 },
         },
         time = 50
     }
-}
+})

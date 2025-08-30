@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "vrauks-improved",
 	category = "vrauks",
 	subgroup = "py-alienlife-vrauks",
@@ -9,12 +9,12 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-vrauks", amount = 1},
-				{name = "nanochondria", amount = 1},
+				{ name = "caged-vrauks", amount = 1 },
+				{ name = "nanochondria", amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-vrauks", amount = 1},
+				{ name = "brain-caged-vrauks", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "nanochondria"
@@ -23,7 +23,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -36,14 +36,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "nanochondria", remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-vrauks", remove_item = true},
-				{name = "meat-caged-vrauks",  amount = 1},
+				{ name = "brain-caged-vrauks", remove_item = true },
+				{ name = "meat-caged-vrauks",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "anabolic-rna"
@@ -53,7 +53,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria',amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -66,14 +66,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-caged-vrauks", remove_item = true},
-				{name = "guts-caged-vrauks", amount = 1},
+				{ name = "meat-caged-vrauks", remove_item = true },
+				{ name = "guts-caged-vrauks", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "antitumor"
@@ -83,7 +83,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria',amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -96,14 +96,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",        remove_item = true},
-				{name = "antitumor", remove_item = true},
-				{name = "reca",      amount = 1},
+				{ name = "gh",        remove_item = true },
+				{ name = "antitumor", remove_item = true },
+				{ name = "reca",      amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-caged-vrauks",   remove_item = true},
-				{name = "chitin-caged-vrauks", amount = 1},
+				{ name = "guts-caged-vrauks",   remove_item = true },
+				{ name = "chitin-caged-vrauks", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "reca"
@@ -112,7 +112,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -125,14 +125,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "reca",            remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "reca",            remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "chitin-caged-vrauks", remove_item = true},
-				{name = "blood-caged-vrauks",  amount = 1},
+				{ name = "chitin-caged-vrauks", remove_item = true },
+				{ name = "blood-caged-vrauks",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "recombinant-ery"
@@ -141,7 +141,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -151,4 +151,4 @@ py.autorecipes {
 			tech = "recombinant-ery"
 		},
 	}
-}
+})

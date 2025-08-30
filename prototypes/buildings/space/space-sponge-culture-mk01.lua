@@ -1,26 +1,26 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-sponge-culture-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate",        amount = 15},
-        {type = "item", name = "glass",              amount = 100},
-        {type = "item", name = "titanium-plate",     amount = 15},
-        {type = "item", name = "duralumin",          amount = 50},
-        {type = "item", name = "iron-plate",         amount = 15},
-        {type = "item", name = "pipe",               amount = 15},
-        {type = "item", name = "electronic-circuit", amount = 15},
-        {type = "item", name = "iron-gear-wheel",    amount = 20},
+        { type = "item", name = "steel-plate",        amount = 15 },
+        { type = "item", name = "glass",              amount = 100 },
+        { type = "item", name = "titanium-plate",     amount = 15 },
+        { type = "item", name = "duralumin",          amount = 50 },
+        { type = "item", name = "iron-plate",         amount = 15 },
+        { type = "item", name = "pipe",               amount = 15 },
+        { type = "item", name = "electronic-circuit", amount = 15 },
+        { type = "item", name = "iron-gear-wheel",    amount = 20 },
     },
     results = {
-        {type = "item", name = "space-sponge-culture-mk01", amount = 1}
+        { type = "item", name = "space-sponge-culture-mk01", amount = 1 }
     }
-}:add_unlock("water-invertebrates-mk01")
+}):add_unlock("water-invertebrates-mk01")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-sponge-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/sponge-culture-mk01.png",
@@ -30,24 +30,24 @@ ITEM {
     order = "d",
     place_result = "space-sponge-culture-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-sponge-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/sponge-culture-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-sponge-culture-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-sponge-culture-mk01" },
     fast_replaceable_group = "sponge-culture",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = 8,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"sponge"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "sponge" },
     crafting_speed = 0.05,
     energy_source = {
         type = "electric",
@@ -63,34 +63,34 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, -5.0 }, direction = defines.direction.north } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, 5.0 }, direction = defines.direction.south } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {5.0, 0.0}, direction = defines.direction.east}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { 5.0, 0.0 }, direction = defines.direction.east } },
+            secondary_draw_orders = { north = -1 }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "output", position = {-5.0, 0.0}, direction = defines.direction.west}},
-            secondary_draw_orders = {north = -1}
+            pipe_connections = { { flow_direction = "output", position = { -5.0, 0.0 }, direction = defines.direction.west } },
+            secondary_draw_orders = { north = -1 }
         },
     },
     graphics_set = {
@@ -113,7 +113,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(8, 128),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a2.png",
@@ -132,7 +132,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(8, 32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a3.png",
@@ -151,7 +151,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(8, -64),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a4.png",
@@ -170,7 +170,7 @@ ENTITY {
                     frame_count = 100,
                     animation_speed = 0.4,
                     shift = util.by_pixel(8, -160),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a5.png",
@@ -186,8 +186,8 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/sponge-culture.ogg", volume = 1.4},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/sponge-culture.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/sponge-culture.ogg", volume = 1.4 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/sponge-culture.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

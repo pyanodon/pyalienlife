@@ -1,24 +1,24 @@
 local MODULE_SLOTS = 3
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "cridren-enclosure-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "ticocr-alloy",           amount = 30},
-        {type = "item", name = "cridren-enclosure-mk02", amount = 1},
-        {type = "item", name = "low-density-structure",  amount = 40},
-        {type = "item", name = "py-heat-exchanger",      amount = 1},
-        {type = "item", name = "stainless-steel",        amount = 30},
-        {type = "item", name = "processing-unit",        amount = 30},
+        { type = "item", name = "ticocr-alloy",           amount = 30 },
+        { type = "item", name = "cridren-enclosure-mk02", amount = 1 },
+        { type = "item", name = "low-density-structure",  amount = 40 },
+        { type = "item", name = "py-heat-exchanger",      amount = 1 },
+        { type = "item", name = "stainless-steel",        amount = 30 },
+        { type = "item", name = "processing-unit",        amount = 30 },
     },
     results = {
-        {type = "item", name = "cridren-enclosure-mk03", amount = 1}
+        { type = "item", name = "cridren-enclosure-mk03", amount = 1 }
     }
-}:add_unlock("cridren-mk03")
+}):add_unlock("cridren-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "cridren-enclosure-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/cridren-enclosure-mk03.png",
@@ -28,24 +28,24 @@ ITEM {
     order = "d",
     place_result = "cridren-enclosure-mk03",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "cridren-enclosure-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/cridren-enclosure-mk03.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "cridren-enclosure-mk03"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "cridren-enclosure-mk03" },
     fast_replaceable_group = "cridren-enclosure",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"cridren"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "cridren" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "cridren-enclosure-mk01"),
     energy_source = {
         type = "electric",
@@ -145,15 +145,15 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0}
+                    tint = { r = 0.223, g = 0.490, b = 0.858, a = 1.0 }
                 },
             },
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/cridren-enclosure.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/cridren-enclosure.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/cridren-enclosure.ogg", volume = 1.0 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/cridren-enclosure.ogg", volume = 0.3 },
         apparent_volume = 0.45
     }
-}
+})

@@ -1,25 +1,25 @@
 local MODULE_SLOTS = 10
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "tuuphra-plantation-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "tuuphra-plantation-mk01", amount = 1},
-        {type = "item", name = "titanium-plate",          amount = 15},
-        {type = "item", name = "duralumin",               amount = 50},
-        {type = "item", name = "latex",                   amount = 30},
-        {type = "item", name = "neuroprocessor",          amount = 20},
-        {type = "item", name = "advanced-circuit",        amount = 30},
-        {type = "item", name = "engine-unit",             amount = 5},
+        { type = "item", name = "tuuphra-plantation-mk01", amount = 1 },
+        { type = "item", name = "titanium-plate",          amount = 15 },
+        { type = "item", name = "duralumin",               amount = 50 },
+        { type = "item", name = "latex",                   amount = 30 },
+        { type = "item", name = "neuroprocessor",          amount = 20 },
+        { type = "item", name = "advanced-circuit",        amount = 30 },
+        { type = "item", name = "engine-unit",             amount = 5 },
     },
     results = {
-        {type = "item", name = "tuuphra-plantation-mk02", amount = 1}
+        { type = "item", name = "tuuphra-plantation-mk02", amount = 1 }
     }
-}:add_unlock("botany-mk02")
+}):add_unlock("botany-mk02")
 
-ITEM {
+ITEM({
     type = "item",
     name = "tuuphra-plantation-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk02.png",
@@ -29,25 +29,25 @@ ITEM {
     order = "e",
     place_result = "tuuphra-plantation-mk02",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "tuuphra-plantation-mk02",
     icon = "__pyalienlifegraphics__/graphics/icons/tuuphra-plantation-mk02.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "tuuphra-plantation-mk02"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "tuuphra-plantation-mk02" },
     fast_replaceable_group = "tuuphra-plantation",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
-    selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    collision_box = { { -4.2, -4.2 }, { 4.2, 4.2 } },
+    selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
     forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"tuuphra"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "tuuphra" },
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "tuuphra-plantation-mk01", 1, 2),
     energy_source = {
         type = "electric",
@@ -77,7 +77,7 @@ ENTITY {
                     frame_count = 150,
                     animation_speed = 0.4,
                     shift = util.by_pixel(6, 112),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a2.png",
@@ -96,7 +96,7 @@ ENTITY {
                     frame_count = 150,
                     animation_speed = 0.4,
                     shift = util.by_pixel(6, 48),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a3.png",
@@ -115,7 +115,7 @@ ENTITY {
                     frame_count = 150,
                     animation_speed = 0.4,
                     shift = util.by_pixel(6, -16),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a4.png",
@@ -134,7 +134,7 @@ ENTITY {
                     frame_count = 150,
                     animation_speed = 0.4,
                     shift = util.by_pixel(6, -80),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a5.png",
@@ -153,7 +153,7 @@ ENTITY {
                     frame_count = 150,
                     animation_speed = 0.4,
                     shift = util.by_pixel(6, -144),
-                    tint = {r = 1.0, g = 0.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 0.0, b = 0.0, a = 1.0 }
                 },
                 {
                     filename = "__pyalienlifegraphics3__/graphics/entity/tuuphra-plantation/a6.png",
@@ -174,43 +174,43 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {3.0, -4.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 3.0, -4.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-3.0, -4.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -3.0, -4.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {0.0, -4.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 0.0, -4.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 4.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 2.0, 4.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 4.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -2.0, 4.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/tuuphra-plantation.ogg", volume = 1.5},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/tuuphra-plantation.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/tuuphra-plantation.ogg", volume = 1.5 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/tuuphra-plantation.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

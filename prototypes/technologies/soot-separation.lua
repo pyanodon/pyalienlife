@@ -1,6 +1,6 @@
 -- https://github.com/pyanodon/pybugreports/issues/825
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "soot-separation",
     icon = "__pyalienlifegraphics2__/graphics/technology/ash-separation.png",
@@ -14,10 +14,10 @@ TECHNOLOGY {
     unit = {
         count = 360,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
         },
         time = 60
     }
-}
+})

@@ -1,21 +1,21 @@
 if data and not yafc_turd_integration then
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("kmauts-cub-1"):copy(),
         RECIPE("kmauts-cub-2"):copy(),
         RECIPE("kmauts-cub-3"):copy(),
         RECIPE("kmauts-cub-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-ratio"
         recipe:multiply_result_amount("kmauts-cub", 1.35)
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("kmauts-1"):copy(),
         RECIPE("kmauts-2"):copy(),
         RECIPE("kmauts-3"):copy(),
         RECIPE("kmauts-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-ratio"
         for _, result in pairs(recipe.results) do
             if result.name == "kmauts" then
@@ -24,31 +24,31 @@ if data and not yafc_turd_integration then
             end
         end
         local _, amount = recipe:remove_result("barrel")
-        recipe:add_result {type = "item", name = "soaked-gel-barrel", amount = amount}
-        data:extend {recipe}
+        recipe:add_result({ type = "item", name = "soaked-gel-barrel", amount = amount })
+        data:extend({ recipe })
     end
 
-    for _, recipe in pairs {
+    for _, recipe in pairs({
         RECIPE("kmauts-cub-1"):copy(),
         RECIPE("kmauts-cub-2"):copy(),
         RECIPE("kmauts-cub-3"):copy(),
         RECIPE("kmauts-cub-4"):copy(),
-    } do
+    }) do
         recipe.name = recipe.name .. "-eye-out"
         for _, result in pairs(recipe.results) do
             if result.name == "kmauts-cub" then
-                recipe:add_result {type = "item", name = "animal-eye", amount = result.amount}
+                recipe:add_result({ type = "item", name = "animal-eye", amount = result.amount })
                 break
             end
         end
-        data:extend {recipe}
+        data:extend({ recipe })
     end
 
     local food = RECIPE("kmauts-ration"):copy()
-    food:add_ingredient {type = "item", name = "chitin", amount = 3}
+    food:add_ingredient({ type = "item", name = "chitin", amount = 3 })
     food:add_result_amount("kmauts-ration", 4)
     food.name = "kmauts-ration-chitin"
-    data:extend {food}
+    data:extend({ food })
 end
 
 return {
@@ -63,19 +63,19 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-kmauts.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"kmauts-mk03"},
+        prerequisites = { "kmauts-mk03" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"military-science-pack",   1},
-                {"py-science-pack-2",       1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
-                {"production-science-pack", 1},
-                {"py-science-pack-4",       1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "military-science-pack",   1 },
+                { "py-science-pack-2",       1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
+                { "production-science-pack", 1 },
+                { "py-science-pack-4",       1 },
             },
             time = 45
         }
@@ -87,14 +87,14 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "kmauts-cub-1", new = "kmauts-cub-1-ratio", type = "recipe-replacement"},
-                {old = "kmauts-cub-2", new = "kmauts-cub-2-ratio", type = "recipe-replacement"},
-                {old = "kmauts-cub-3", new = "kmauts-cub-3-ratio", type = "recipe-replacement"},
-                {old = "kmauts-cub-4", new = "kmauts-cub-4-ratio", type = "recipe-replacement"},
-                {old = "kmauts-1",     new = "kmauts-1-ratio",     type = "recipe-replacement"},
-                {old = "kmauts-2",     new = "kmauts-2-ratio",     type = "recipe-replacement"},
-                {old = "kmauts-3",     new = "kmauts-3-ratio",     type = "recipe-replacement"},
-                {old = "kmauts-4",     new = "kmauts-4-ratio",     type = "recipe-replacement"},
+                { old = "kmauts-cub-1", new = "kmauts-cub-1-ratio", type = "recipe-replacement" },
+                { old = "kmauts-cub-2", new = "kmauts-cub-2-ratio", type = "recipe-replacement" },
+                { old = "kmauts-cub-3", new = "kmauts-cub-3-ratio", type = "recipe-replacement" },
+                { old = "kmauts-cub-4", new = "kmauts-cub-4-ratio", type = "recipe-replacement" },
+                { old = "kmauts-1",     new = "kmauts-1-ratio",     type = "recipe-replacement" },
+                { old = "kmauts-2",     new = "kmauts-2-ratio",     type = "recipe-replacement" },
+                { old = "kmauts-3",     new = "kmauts-3-ratio",     type = "recipe-replacement" },
+                { old = "kmauts-4",     new = "kmauts-4-ratio",     type = "recipe-replacement" },
             },
         },
         {
@@ -103,10 +103,10 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "kmauts-cub-1", new = "kmauts-cub-1-eye-out", type = "recipe-replacement"},
-                {old = "kmauts-cub-2", new = "kmauts-cub-2-eye-out", type = "recipe-replacement"},
-                {old = "kmauts-cub-3", new = "kmauts-cub-3-eye-out", type = "recipe-replacement"},
-                {old = "kmauts-cub-4", new = "kmauts-cub-4-eye-out", type = "recipe-replacement"},
+                { old = "kmauts-cub-1", new = "kmauts-cub-1-eye-out", type = "recipe-replacement" },
+                { old = "kmauts-cub-2", new = "kmauts-cub-2-eye-out", type = "recipe-replacement" },
+                { old = "kmauts-cub-3", new = "kmauts-cub-3-eye-out", type = "recipe-replacement" },
+                { old = "kmauts-cub-4", new = "kmauts-cub-4-eye-out", type = "recipe-replacement" },
             }
         },
         {
@@ -115,7 +115,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "kmauts-ration", new = "kmauts-ration-chitin", type = "recipe-replacement"}
+                { old = "kmauts-ration", new = "kmauts-ration-chitin", type = "recipe-replacement" }
             }
         }
     },

@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "phagnot-improved",
 	category = "phagnot",
 	--main_product = "phagnot",
@@ -10,13 +10,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "caged-phagnot", amount = 1},
-				{name = "nanochondria",  amount = 1},
-				{name = "antiviral",     amount = 1},
+				{ name = "caged-phagnot", amount = 1 },
+				{ name = "nanochondria",  amount = 1 },
+				{ name = "antiviral",     amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-phagnot", amount = 1},
+				{ name = "brain-caged-phagnot", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "nanochondria"
@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -39,14 +39,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "nanochondria", remove_item = true},
-				{name = "bmp",          amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "nanochondria", remove_item = true },
+				{ name = "bmp",          amount = 1 },
 			},
 			results =
 			{
-				{name = "brain-caged-phagnot", remove_item = true},
-				{name = "bone-caged-phagnot",  amount = 1},
+				{ name = "brain-caged-phagnot", remove_item = true },
+				{ name = "bone-caged-phagnot",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "bmp"
@@ -57,7 +57,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -70,14 +70,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "bmp",          remove_item = true},
-				{name = "anabolic-rna", amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "bmp",          remove_item = true },
+				{ name = "anabolic-rna", amount = 1 },
 			},
 			results =
 			{
-				{name = "bone-caged-phagnot", remove_item = true},
-				{name = "meat-caged-phagnot", amount = 1},
+				{ name = "bone-caged-phagnot", remove_item = true },
+				{ name = "meat-caged-phagnot", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "anabolic-rna"
@@ -87,7 +87,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -100,14 +100,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",           remove_item = true},
-				{name = "anabolic-rna", remove_item = true},
-				{name = "antitumor",    amount = 1},
+				{ name = "gh",           remove_item = true },
+				{ name = "anabolic-rna", remove_item = true },
+				{ name = "antitumor",    amount = 1 },
 			},
 			results =
 			{
-				{name = "meat-caged-phagnot", remove_item = true},
-				{name = "guts-caged-phagnot", amount = 1},
+				{ name = "meat-caged-phagnot", remove_item = true },
+				{ name = "guts-caged-phagnot", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "antitumor"
@@ -117,7 +117,7 @@ py.autorecipes {
 			ingredients =
 			{
 				--{name='nanochondria', amount =1},
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -130,14 +130,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "antitumor",       remove_item = true},
-				{name = "recombinant-ery", amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "antitumor",       remove_item = true },
+				{ name = "recombinant-ery", amount = 1 },
 			},
 			results =
 			{
-				{name = "guts-caged-phagnot",  remove_item = true},
-				{name = "blood-caged-phagnot", amount = 1},
+				{ name = "guts-caged-phagnot",  remove_item = true },
+				{ name = "blood-caged-phagnot", amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "recombinant-ery"
@@ -146,7 +146,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -159,14 +159,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh",              remove_item = true},
-				{name = "recombinant-ery", remove_item = true},
-				{name = "reca",            amount = 1},
+				{ name = "gh",              remove_item = true },
+				{ name = "recombinant-ery", remove_item = true },
+				{ name = "reca",            amount = 1 },
 			},
 			results =
 			{
-				{name = "blood-caged-phagnot", remove_item = true},
-				{name = "skin-caged-phagnot",  amount = 1},
+				{ name = "blood-caged-phagnot", remove_item = true },
+				{ name = "skin-caged-phagnot",  amount = 1 },
 			},
 			crafting_speed = 90,
 			tech = "reca"
@@ -175,7 +175,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "gh", amount = 1},
+				{ name = "gh", amount = 1 },
 			},
 			results =
 			{
@@ -185,4 +185,4 @@ py.autorecipes {
 			tech = "reca"
 		},
 	}
-}
+})

@@ -19,8 +19,8 @@ py.on_event(py.events.on_init(), function()
     remote.call("pywiki", "add_page", {
         name = "caravan-manager",
         section = "alienlife",
-        remote = {"pywiki_caravan_manager", "create_gui"},
-        searchable = {"pywiki_caravan_manager", "on_search"}
+        remote = { "pywiki_caravan_manager", "create_gui" },
+        searchable = { "pywiki_caravan_manager", "on_search" }
     })
 
     remote.call("pywiki", "add_page", {
@@ -75,7 +75,7 @@ py.on_event(py.events.on_init(), function()
         name = "turd",
         title = "turd-title",
         section = "alienlife",
-        remote = {"pywiki_turd_page", "create_turd_page"},
-        searchable = {"pywiki_turd_page", "on_search"}
+        remote = { "pywiki_turd_page", "create_turd_page" },
+        searchable = { "pywiki_turd_page", "on_search" }
     })
 end)

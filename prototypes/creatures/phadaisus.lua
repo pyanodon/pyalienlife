@@ -1,7 +1,7 @@
-local util = require "util"
+local util = require("util")
 
 -- https://github.com/pyanodon/pybugreports/issues/612
-data:extend {{
+data:extend({ {
     type = "belt-immunity-equipment",
     name = "phadaisus-hidden-belt-immunity-equipment",
     hidden = true,
@@ -16,53 +16,53 @@ data:extend {{
         type = "electric",
         usage_priority = "primary-input"
     },
-    categories = {"armor"},
+    categories = { "armor" },
     factoriopedia_alternative = "belt-immunity-equipment"
-}}
+} })
 
-ITEM {
+ITEM({
     type = "item",
     name = "phadaisus-hidden-belt-immunity-equipment",
     hidden = true,
     icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
     icon_size = 64,
-    flags = {"only-in-cursor"},
+    flags = { "only-in-cursor" },
     stack_size = 1,
-}
+})
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "phadaisus",
     energy_required = 60,
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = "item",  name = "py-shed-basic",                                                        amount = 1},
-        {type = "item",  name = "bioartificial-guts",                                                   amount = 1},
-        {type = "item",  name = "biomimetic-skin",                                                      amount = 1},
-        {type = "item",  name = "in-vitro-meat",                                                        amount = 1},
-        {type = "item",  name = "laboratory-grown-brain",                                               amount = 1},
-        {type = "item",  name = "scafold-free-bones",                                                   amount = 1},
-        {type = "item",  name = "tissue-engineered-fat",                                                amount = 1},
-        {type = "item",  name = "perfect-samples",                                                      amount = 10},
-        {type = "item",  name = "power-armor-mk2",                                                      amount = 1},
-        {type = "item",  name = "enzyme-pks",                                                           amount = 1},
-        {type = "item",  name = "zymogens",                                                             amount = 5},
-        {type = "item",  name = mods.pyhightech and "resilin" or "lignin",                              amount = 5},
-        {type = "item",  name = "strorix-unknown-sample",                                               amount = 5},
-        {type = "item",  name = "purine-analogues",                                                     amount = 15},
-        {type = "item",  name = "pheromones",                                                           amount = 100},
-        {type = "item",  name = "phadai-mk04",                                                          amount = 1},
-        {type = "item",  name = mods.pyalternativeenergy and "metastable-quasicrystal" or "bio-sample", amount = 10},
-        {type = "item",  name = "phadai-codex-mk04",                                                    amount = 5},
-        {type = "item",  name = "earth-tiger-sample",                                                   amount = 4},
-        {type = "fluid", name = "artificial-blood",                                                     amount = 400},
-        {type = "fluid", name = "gta",                                                                  amount = 500}
+        { type = "item",  name = "py-shed-basic",                                                        amount = 1 },
+        { type = "item",  name = "bioartificial-guts",                                                   amount = 1 },
+        { type = "item",  name = "biomimetic-skin",                                                      amount = 1 },
+        { type = "item",  name = "in-vitro-meat",                                                        amount = 1 },
+        { type = "item",  name = "laboratory-grown-brain",                                               amount = 1 },
+        { type = "item",  name = "scafold-free-bones",                                                   amount = 1 },
+        { type = "item",  name = "tissue-engineered-fat",                                                amount = 1 },
+        { type = "item",  name = "perfect-samples",                                                      amount = 10 },
+        { type = "item",  name = "power-armor-mk2",                                                      amount = 1 },
+        { type = "item",  name = "enzyme-pks",                                                           amount = 1 },
+        { type = "item",  name = "zymogens",                                                             amount = 5 },
+        { type = "item",  name = mods.pyhightech and "resilin" or "lignin",                              amount = 5 },
+        { type = "item",  name = "strorix-unknown-sample",                                               amount = 5 },
+        { type = "item",  name = "purine-analogues",                                                     amount = 15 },
+        { type = "item",  name = "pheromones",                                                           amount = 100 },
+        { type = "item",  name = "phadai-mk04",                                                          amount = 1 },
+        { type = "item",  name = mods.pyalternativeenergy and "metastable-quasicrystal" or "bio-sample", amount = 10 },
+        { type = "item",  name = "phadai-codex-mk04",                                                    amount = 5 },
+        { type = "item",  name = "earth-tiger-sample",                                                   amount = 4 },
+        { type = "fluid", name = "artificial-blood",                                                     amount = 400 },
+        { type = "fluid", name = "gta",                                                                  amount = 500 }
     },
-    results = {{type = "item", name = "phadaisus", amount = 1}}
-}:add_unlock("mounts-mk04")
+    results = { { type = "item", name = "phadaisus", amount = 1 } }
+}):add_unlock("mounts-mk04")
 
-ITEM {
+ITEM({
     type = "item-with-entity-data",
     name = "phadaisus",
     icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
@@ -73,16 +73,16 @@ ITEM {
     place_result = "phadaisus",
     stack_size = 10,
     icon_tintable_mask = "__pyalienlifegraphics__/graphics/icons/mount-mask.png",
-}
+})
 
-data:extend {{
+data:extend({ {
     type = "spider-vehicle",
     name = "phadaisus",
     icon = "__pyalienlifegraphics__/graphics/icons/phadaisus.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
-    minable = {mining_time = 0.5, result = "phadaisus"},
-    mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
+    flags = { "placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable" },
+    minable = { mining_time = 0.5, result = "phadaisus" },
+    mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
     max_health = 5000,
     healing_per_tick = 0.2,
     corpse = "big-biter-corpse",
@@ -120,15 +120,15 @@ data:extend {{
         }
     },
     selection_priority = 51,
-    collision_box = {{0, 0}, {0, 0}},
-    collision_mask = {layers = {}},
-    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_box = { { 0, 0 }, { 0, 0 } },
+    collision_mask = { layers = {} },
+    selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     drawing_box_vertical_extension = 0.5,
     effectivity = 1,
     braking_power = "5MW",
     energy_source = {
         type = "burner",
-        fuel_categories = {"phadai-food"},
+        fuel_categories = { "phadai-food" },
         effectivity = 1,
         fuel_inventory_size = 4
     },
@@ -142,15 +142,15 @@ data:extend {{
             picture = {
                 filename = "__core__/graphics/light-cone.png",
                 priority = "extra-high",
-                flags = {"light"},
+                flags = { "light" },
                 scale = 2,
                 width = 200,
                 height = 200
             },
-            shift = {-0.1, -7},
+            shift = { -0.1, -7 },
             size = 1,
             intensity = 0.7,
-            color = {r = 0.9, g = 1.0, b = 1.0}
+            color = { r = 0.9, g = 1.0, b = 1.0 }
         },
         {
             type = "oriented",
@@ -158,15 +158,15 @@ data:extend {{
             picture = {
                 filename = "__core__/graphics/light-cone.png",
                 priority = "extra-high",
-                flags = {"light"},
+                flags = { "light" },
                 scale = 2,
                 width = 200,
                 height = 200
             },
-            shift = {0.1, -7},
+            shift = { 0.1, -7 },
             size = 1,
             intensity = 0.7,
-            color = {r = 0.9, g = 1.0, b = 1.0}
+            color = { r = 0.9, g = 1.0, b = 1.0 }
         }
     },
     graphics_set = {
@@ -242,8 +242,8 @@ data:extend {{
         },
         match_speed_to_activity = false
     },
-    open_sound = {filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume = 0.7},
-    close_sound = {filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.5},
+    open_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume = 0.7 },
+    close_sound = { filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.5 },
     rotation_speed = 0.015,
     --tank_driving = true,
     weight = 6000,
@@ -251,7 +251,7 @@ data:extend {{
     render_layer = "air-object",
     automatic_weapon_cycling = false,
     equipment_grid = "mount-grid-10x10",
-    guns = {"dragon-breath"},
+    guns = { "dragon-breath" },
     torso_rotation_speed = 0.01,
     chunk_exploration_radius = 4,
     chain_shooting_cooldown_modifier = 0.4,
@@ -261,9 +261,9 @@ data:extend {{
             {
                 walking_group = 1,
                 blocking_legs = {},
-                ground_position = {0, 0},
+                ground_position = { 0, 0 },
                 leg = "py-fake-spidertron-leg",
-                mount_position = {0, 0},
+                mount_position = { 0, 0 },
             },
         },
         military_target = "spidertron-military-target",
@@ -271,15 +271,15 @@ data:extend {{
     trash_inventory_size = 30,
     minimap_representation = {
         filename = "__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk04.png",
-        flags = {"icon"},
-        size = {64, 64}
+        flags = { "icon" },
+        size = { 64, 64 }
     },
-}}
+} })
 
-local vehicle_leg = table.deepcopy(data.raw["spider-leg"]["spidertron-leg-1"])
+local vehicle_leg = table.deepcopy(data.raw[ "spider-leg" ][ "spidertron-leg-1" ])
 vehicle_leg.name = "py-fake-spidertron-leg"
 vehicle_leg.graphics_set = {}
-vehicle_leg.collision_mask = {layers = {}}
+vehicle_leg.collision_mask = { layers = {} }
 vehicle_leg.target_position_randomisation_distance = 0
 vehicle_leg.working_sound = nil
 vehicle_leg.minimal_step_size = 0
@@ -288,36 +288,36 @@ vehicle_leg.movement_based_position_selection_distance = 1.5 -- I have no idea w
 vehicle_leg.initial_movement_speed = 1
 vehicle_leg.movement_acceleration = 0
 vehicle_leg.walking_sound_volume_modifier = 0
-data:extend {vehicle_leg}
+data:extend({ vehicle_leg })
 
-local flamethrower = table.deepcopy(data.raw["gun"]["tank-flamethrower"])
+local flamethrower = table.deepcopy(data.raw[ "gun" ][ "tank-flamethrower" ])
 flamethrower.name = "dragon-breath"
 flamethrower.icon = "__pyalienlifegraphics__/graphics/icons/dragon-breath.png"
 flamethrower.icon_size = 64
 flamethrower.attack_parameters.ammo_category = "dragon-breath"
-flamethrower.attack_parameters.gun_center_shift = {-0.17, -0.2}
+flamethrower.attack_parameters.gun_center_shift = { -0.17, -0.2 }
 flamethrower.attack_parameters.range = 35
 flamethrower.subgroup = "py-alienlife-items"
-data:extend {flamethrower}
+data:extend({ flamethrower })
 
-RECIPE {
+RECIPE({
     name = "dragon-breath-ammo",
     type = "recipe",
     energy_required = 20,
     enabled = false,
     ingredients = {
-        {type = "fluid", name = "light-oil",                                       amount = 100},
-        {type = "fluid", name = "kerosene",                                        amount = 100},
-        {type = "fluid", name = mods.pyalternativeenergy and "aniline" or "water", amount = 100},
+        { type = "fluid", name = "light-oil",                                       amount = 100 },
+        { type = "fluid", name = "kerosene",                                        amount = 100 },
+        { type = "fluid", name = mods.pyalternativeenergy and "aniline" or "water", amount = 100 },
     },
     category = "chemistry",
     results = {
-        {type = "item", name = "dragon-breath-ammo", amount = 1},
+        { type = "item", name = "dragon-breath-ammo", amount = 1 },
     },
-    crafting_machine_tint = table.deepcopy(data.raw["recipe"]["flamethrower-ammo"].crafting_machine_tint),
-}:add_unlock("mounts-mk04")
+    crafting_machine_tint = table.deepcopy(data.raw[ "recipe" ][ "flamethrower-ammo" ].crafting_machine_tint),
+}):add_unlock("mounts-mk04")
 
-ITEM {
+ITEM({
     name = "dragon-breath-ammo",
     type = "ammo",
     icon = "__pyalienlifegraphics__/graphics/icons/dragon-breath-ammo.png",
@@ -337,15 +337,15 @@ ITEM {
         target_type = "position"
     },
     magazine_size = 1000000,
-    flags = {"not-stackable"},
+    flags = { "not-stackable" },
     stack_size = 1,
     subgroup = "py-alienlife-items",
-}
+})
 
-local stream = table.deepcopy(data.raw["stream"]["tank-flamethrower-fire-stream"])
+local stream = table.deepcopy(data.raw[ "stream" ][ "tank-flamethrower-fire-stream" ])
 stream.particle_horizontal_speed = 1.5
 stream.name = "dragon-breath"
-stream.action = {{
+stream.action = { {
     action_delivery = {
         target_effects = {
             {
@@ -361,10 +361,10 @@ stream.action = {{
     },
     radius = 6,
     type = "area"
-}}
-data:extend {stream}
+} }
+data:extend({ stream })
 
-data:extend {{
+data:extend({ {
     type = "ammo-category",
     name = "dragon-breath"
-}}
+} })

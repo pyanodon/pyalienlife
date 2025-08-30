@@ -19,7 +19,7 @@ local IMP_BLOOD = 90
 local IMP_BRAIN = 5
 
 
-py.autorecipes {
+py.autorecipes({
 	name = "rendering-cottongut",
 	category = "slaughterhouse",
 	subgroup = "py-alienlife-cottongut",
@@ -30,17 +30,17 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut", amount = INPUT_AMOUNT},
+				{ name = "cottongut", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       amount = BASE_BONES},
-				{name = "meat",        amount = BASE_MEAT},
-				{name = "skin",        amount = BASE_SKIN},
-				{name = "guts",        amount = BASE_GUTS},
-				{name = "mukmoux-fat", amount = BASE_FAT},
-				{name = "blood",       amount = BASE_BLOOD},
-				{name = "brain",       amount = BASE_BRAIN},
+				{ name = "bones",       amount = BASE_BONES },
+				{ name = "meat",        amount = BASE_MEAT },
+				{ name = "skin",        amount = BASE_SKIN },
+				{ name = "guts",        amount = BASE_GUTS },
+				{ name = "mukmoux-fat", amount = BASE_FAT },
+				{ name = "blood",       amount = BASE_BLOOD },
+				{ name = "brain",       amount = BASE_BRAIN },
 			},
 			crafting_speed = 30,
 			tech = "cottongut-mk01",
@@ -52,24 +52,24 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "cottongut",       remove_item = true},
-				{name = "brain-cottongut", amount = INPUT_AMOUNT},
+				{ name = "cottongut",       remove_item = true },
+				{ name = "brain-cottongut", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones",       remove_item = true},
-				{name = "meat",        remove_item = true},
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "skin",        remove_item = true},
-				{name = "guts",        remove_item = true},
-				{name = "blood",       remove_item = true},
-				{name = "brain",       amount = IMP_BRAIN},
+				{ name = "bones",       remove_item = true },
+				{ name = "meat",        remove_item = true },
+				{ name = "mukmoux-fat", remove_item = true },
+				{ name = "skin",        remove_item = true },
+				{ name = "guts",        remove_item = true },
+				{ name = "blood",       remove_item = true },
+				{ name = "brain",       amount = IMP_BRAIN },
 			},
 			tech = "nanochondria",
 			name = "ex-bra-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -77,19 +77,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "brain-cottongut", remove_item = true},
-				{name = "bone-cottongut",  amount = INPUT_AMOUNT},
+				{ name = "brain-cottongut", remove_item = true },
+				{ name = "bone-cottongut",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "brain", remove_item = true},
-				{name = "bones", amount = IMP_BONES},
+				{ name = "brain", remove_item = true },
+				{ name = "bones", amount = IMP_BONES },
 			},
 			tech = "bmp",
 			name = "ex-bon-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -97,19 +97,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "bone-cottongut", remove_item = true},
-				{name = "guts-cottongut", amount = INPUT_AMOUNT},
+				{ name = "bone-cottongut", remove_item = true },
+				{ name = "guts-cottongut", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "bones", remove_item = true},
-				{name = "guts",  amount = IMP_GUTS},
+				{ name = "bones", remove_item = true },
+				{ name = "guts",  amount = IMP_GUTS },
 			},
 			tech = "antitumor",
 			name = "ex-gut-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -117,19 +117,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "guts-cottongut",  remove_item = true},
-				{name = "blood-cottongut", amount = INPUT_AMOUNT},
+				{ name = "guts-cottongut",  remove_item = true },
+				{ name = "blood-cottongut", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "guts",  remove_item = true},
-				{name = "blood", amount = IMP_BLOOD},
+				{ name = "guts",  remove_item = true },
+				{ name = "blood", amount = IMP_BLOOD },
 			},
 			tech = "recombinant-ery",
 			name = "ex-blo-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",    scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/blood.png",    scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -137,19 +137,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-cottongut", remove_item = true},
-				{name = "skin-cottongut",  amount = INPUT_AMOUNT},
+				{ name = "blood-cottongut", remove_item = true },
+				{ name = "skin-cottongut",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "blood", remove_item = true},
-				{name = "skin",  amount = IMP_SKIN},
+				{ name = "blood", remove_item = true },
+				{ name = "skin",  amount = IMP_SKIN },
 			},
 			tech = "reca",
 			name = "ex-ski-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/skin.png",     scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -157,19 +157,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "skin-cottongut", remove_item = true},
-				{name = "fat-cottongut",  amount = INPUT_AMOUNT},
+				{ name = "skin-cottongut", remove_item = true },
+				{ name = "fat-cottongut",  amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "skin",        remove_item = true},
-				{name = "mukmoux-fat", amount = IMP_FAT},
+				{ name = "skin",        remove_item = true },
+				{ name = "mukmoux-fat", amount = IMP_FAT },
 			},
 			tech = "orexigenic",
 			name = "ex-fat-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
@@ -177,21 +177,21 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fat-cottongut",  remove_item = true},
-				{name = "meat-cottongut", amount = INPUT_AMOUNT},
+				{ name = "fat-cottongut",  remove_item = true },
+				{ name = "meat-cottongut", amount = INPUT_AMOUNT },
 			},
 			results =
 			{
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "meat",        amount = IMP_MEAT},
+				{ name = "mukmoux-fat", remove_item = true },
+				{ name = "meat",        amount = IMP_MEAT },
 			},
 			tech = "anabolic-rna",
 			name = "ex-me-cot",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+				{ icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png" },
+				{ icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = { -8, -8 } }
 			},
 			icon_size = 64,
 		},
 	}
-}
+})

@@ -1,24 +1,24 @@
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fluidavan",
     energy_required = 50,
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = "item",  name = "cocoon",               amount = 10},
-        {type = "item",  name = "bio-sample",           amount = 10},
-        {type = "item",  name = "moss-gen",             amount = 15},
-        {type = "item",  name = "earth-generic-sample", amount = 1},
-        {type = "fluid", name = "water-saline",         amount = 100},
-        {type = "item",  name = "py-tank-4000",         amount = 1},
-        {type = "item",  name = "pump",                 amount = 2}
+        { type = "item",  name = "cocoon",               amount = 10 },
+        { type = "item",  name = "bio-sample",           amount = 10 },
+        { type = "item",  name = "moss-gen",             amount = 15 },
+        { type = "item",  name = "earth-generic-sample", amount = 1 },
+        { type = "fluid", name = "water-saline",         amount = 100 },
+        { type = "item",  name = "py-tank-4000",         amount = 1 },
+        { type = "item",  name = "pump",                 amount = 2 }
     },
-    results = {{type = "item", name = "fluidavan", amount = 1}}
-}:add_unlock("zoology")
+    results = { { type = "item", name = "fluidavan", amount = 1 } }
+}):add_unlock("zoology")
 
-ITEM {
+ITEM({
     type = "item-with-tags",
     name = "fluidavan",
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-caravan.png",
@@ -27,30 +27,30 @@ ITEM {
     order = "a",
     place_result = "fluidavan",
     stack_size = 1,
-    flags = {"not-stackable"}
-}
+    flags = { "not-stackable" }
+})
 
-data:extend {{
+data:extend({ {
     type = "unit",
-    ai_settings = {do_separation = false},
-    additional_pastable_entities = {"fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd"},
+    ai_settings = { do_separation = false },
+    additional_pastable_entities = { "fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd" },
     name = "fluidavan",
     can_open_gates = true,
-    map_color = {1, 1, 1},
+    map_color = { 1, 1, 1 },
     radar_range = 1,
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-caravan.png",
     icon_size = 64,
     alert_icon_scale = 1,
-    flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-    minable = {mining_time = 0.1, result = "fluidavan"},
+    flags = { "placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way" },
+    minable = { mining_time = 0.1, result = "fluidavan" },
     max_health = 3125,
     order = "b-b-a",
-    collision_mask = {layers = {caravan_collision_mask = true}, not_colliding_with_itself = true},
+    collision_mask = { layers = { caravan_collision_mask = true }, not_colliding_with_itself = true },
     subgroup = "enemies",
     healing_per_tick = 0.03,
-    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    collision_box = { { -0.45, -0.45 }, { 0.45, 0.45 } },
     selection_priority = 51,
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     attack_parameters = {
         type = "projectile",
         range = 0,
@@ -79,7 +79,7 @@ data:extend {{
                     frame_count = 30,
                     direction_count = 16,
                     shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-                    flags = {"no-scale"},
+                    flags = { "no-scale" },
                 },
                 {
                     filenames = {
@@ -93,7 +93,7 @@ data:extend {{
                         "__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08-mask.png"
                     },
                     slice = 8,
-                    tint = {r = 0.1, g = 0.1, b = 1.0, a = 1.0},
+                    tint = { r = 0.1, g = 0.1, b = 1.0, a = 1.0 },
                     lines_per_file = 8,
                     line_length = 8,
                     width = 256,
@@ -101,7 +101,7 @@ data:extend {{
                     frame_count = 30,
                     direction_count = 16,
                     shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-                    flags = {"no-scale"},
+                    flags = { "no-scale" },
                 },
                 {
                     filenames = {
@@ -124,7 +124,7 @@ data:extend {{
                     direction_count = 16,
                     --scale = scale,
                     draw_as_shadow = true,
-                    flags = {"no-scale"},
+                    flags = { "no-scale" },
                 }
             }
         }
@@ -132,7 +132,7 @@ data:extend {{
     vision_distance = 30,
     movement_speed = 0.1 * 1.4,
     distance_per_frame = 0.13,
-    absorptions_to_join_attack = {pollution = 4},
+    absorptions_to_join_attack = { pollution = 4 },
     distraction_cooldown = 300,
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
@@ -160,7 +160,7 @@ data:extend {{
                 frame_count = 30,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0)),
-                flags = {"no-scale"},
+                flags = { "no-scale" },
             },
             {
                 filenames = {
@@ -174,7 +174,7 @@ data:extend {{
                     "__pyalienlifegraphics2__/graphics/entity/caravan/caravan-walk-08-mask.png"
                 },
                 slice = 8,
-                tint = {r = 0.1, g = 0.1, b = 1.0, a = 1.0},
+                tint = { r = 0.1, g = 0.1, b = 1.0, a = 1.0 },
                 lines_per_file = 8,
                 line_length = 8,
                 width = 256,
@@ -182,7 +182,7 @@ data:extend {{
                 frame_count = 30,
                 direction_count = 16,
                 shift = util.mul_shift(util.by_pixel(-0, -0), 0.5),
-                flags = {"no-scale"},
+                flags = { "no-scale" },
             },
             {
                 filenames = {
@@ -204,8 +204,8 @@ data:extend {{
                 shift = util.mul_shift(util.by_pixel(-0, 48)),
                 direction_count = 16,
                 draw_as_shadow = true,
-                flags = {"no-scale"},
+                flags = { "no-scale" },
             }
         }
     }
-}}
+} })

@@ -1,24 +1,24 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-ez-ranch-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "engine-unit",    amount = 10},
-        {type = "item", name = "plastic-bar",    amount = 20},
-        {type = "item", name = "steel-plate",    amount = 100},
-        {type = "item", name = "duralumin",      amount = 30},
-        {type = "item", name = "glass",          amount = 20},
-        {type = "item", name = "titanium-plate", amount = 40},
+        { type = "item", name = "engine-unit",    amount = 10 },
+        { type = "item", name = "plastic-bar",    amount = 20 },
+        { type = "item", name = "steel-plate",    amount = 100 },
+        { type = "item", name = "duralumin",      amount = 30 },
+        { type = "item", name = "glass",          amount = 20 },
+        { type = "item", name = "titanium-plate", amount = 40 },
     },
     results = {
-        {type = "item", name = "space-ez-ranch-mk01", amount = 1}
+        { type = "item", name = "space-ez-ranch-mk01", amount = 1 }
     }
-}:add_unlock("korlex"):add_ingredient {type = "item", name = "small-parts-01", amount = 100}
+}):add_unlock("korlex"):add_ingredient({ type = "item", name = "small-parts-01", amount = 100 })
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-ez-ranch-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk01.png",
@@ -28,24 +28,24 @@ ITEM {
     order = "d",
     place_result = "space-ez-ranch-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-ez-ranch-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/ez-ranch-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-ez-ranch-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-ez-ranch-mk01" },
     fast_replaceable_group = "ez-ranch",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     module_slots = 20,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"korlex"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "korlex" },
     crafting_speed = 0.02,
     energy_source = {
         type = "electric",
@@ -200,7 +200,7 @@ ENTITY {
                     height = 352,
                     frame_count = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -208,10 +208,10 @@ ENTITY {
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/ez-ranch.ogg", volume = 0.9},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/ez-ranch.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/ez-ranch.ogg", volume = 0.9 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/ez-ranch.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})
 
 --47.87%

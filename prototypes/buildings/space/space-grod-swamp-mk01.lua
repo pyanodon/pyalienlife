@@ -1,27 +1,27 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-grods-swamp-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick",        amount = 900},
-        {type = "item", name = "pump",               amount = 5},
-        {type = "item", name = "engine-unit",        amount = 5},
-        {type = "item", name = "treated-wood",       amount = 50},
-        {type = "item", name = "pipe",               amount = 40},
-        {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "titanium-plate",     amount = 50},
-        {type = "item", name = "steel-plate",        amount = 50},
-        {type = "item", name = "glass",              amount = 40},
+        { type = "item", name = "stone-brick",        amount = 900 },
+        { type = "item", name = "pump",               amount = 5 },
+        { type = "item", name = "engine-unit",        amount = 5 },
+        { type = "item", name = "treated-wood",       amount = 50 },
+        { type = "item", name = "pipe",               amount = 40 },
+        { type = "item", name = "electronic-circuit", amount = 20 },
+        { type = "item", name = "titanium-plate",     amount = 50 },
+        { type = "item", name = "steel-plate",        amount = 50 },
+        { type = "item", name = "glass",              amount = 40 },
     },
     results = {
-        {type = "item", name = "space-grods-swamp-mk01", amount = 1}
+        { type = "item", name = "space-grods-swamp-mk01", amount = 1 }
     }
-}:add_unlock("grod")
+}):add_unlock("grod")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-grods-swamp-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk01.png",
@@ -31,24 +31,24 @@ ITEM {
     order = "e",
     place_result = "space-grods-swamp-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-grods-swamp-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/grods-swamp-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-grods-swamp-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-grods-swamp-mk01" },
     fast_replaceable_group = "grods-swamp",
     max_health = 100,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = 7,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"grod"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "grod" },
     crafting_speed = 0.075,
     energy_source = {
         type = "electric",
@@ -120,7 +120,7 @@ ENTITY {
                     line_length = 1,
                     frame_count = 1,
                     shift = util.by_pixel(16, -16),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -133,36 +133,36 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -2.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 2.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -2.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 1.55},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 1.55 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/grods-swamp.ogg", volume = 0.3 },
         apparent_volume = 1.2
     }
-}
+})

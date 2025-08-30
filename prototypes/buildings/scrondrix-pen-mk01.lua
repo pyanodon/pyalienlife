@@ -1,25 +1,25 @@
 local MODULE_SLOTS = 6
 local FULL_CRAFTING_SPEED = 1.2 -- crafting speed when full of mk01 modules
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "scrondrix-pen-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate",        amount = 100},
-        {type = "item", name = "niobium-plate",      amount = 50},
-        {type = "item", name = "niobium-pipe",       amount = 20},
-        {type = "item", name = "electronic-circuit", amount = 100},
-        {type = "item", name = "plastic-bar",        amount = 60},
-        {type = "item", name = "iron-plate",         amount = 4},
+        { type = "item", name = "steel-plate",        amount = 100 },
+        { type = "item", name = "niobium-plate",      amount = 50 },
+        { type = "item", name = "niobium-pipe",       amount = 20 },
+        { type = "item", name = "electronic-circuit", amount = 100 },
+        { type = "item", name = "plastic-bar",        amount = 60 },
+        { type = "item", name = "iron-plate",         amount = 4 },
     },
     results = {
-        {type = "item", name = "scrondrix-pen-mk01", amount = 1}
+        { type = "item", name = "scrondrix-pen-mk01", amount = 1 }
     }
-}:add_unlock("scrondrix")
+}):add_unlock("scrondrix")
 
-ITEM {
+ITEM({
     type = "item",
     name = "scrondrix-pen-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/scrondrix-pen-mk01.png",
@@ -29,24 +29,24 @@ ITEM {
     order = "d",
     place_result = "scrondrix-pen-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "scrondrix-pen-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/scrondrix-pen-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "scrondrix-pen-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "scrondrix-pen-mk01" },
     fast_replaceable_group = "scrondrix-pen",
     max_health = 50,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.2, -5.2 }, { 5.2, 5.2 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = MODULE_SLOTS,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"scrondrix"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "scrondrix" },
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -59,10 +59,10 @@ ENTITY {
     graphics_set = {
         working_visualisations = {
             {
-                north_position = {-1.0, -3.0},
-                west_position = {-1.0, -3.0},
-                south_position = {-1.0, -3.0},
-                east_position = {-1.0, -3.0},
+                north_position = { -1.0, -3.0 },
+                west_position = { -1.0, -3.0 },
+                south_position = { -1.0, -3.0 },
+                east_position = { -1.0, -3.0 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s1.png",
                     frame_count = 75,
@@ -73,10 +73,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-3.1, -1.0},
-                west_position = {-3.1, -1.0},
-                south_position = {-3.1, -1.0},
-                east_position = {-3.1, -1.0},
+                north_position = { -3.1, -1.0 },
+                west_position = { -3.1, -1.0 },
+                south_position = { -3.1, -1.0 },
+                east_position = { -3.1, -1.0 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s2.png",
                     frame_count = 75,
@@ -87,10 +87,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {3.4, -2.2},
-                west_position = {3.4, -2.2},
-                south_position = {3.4, -2.2},
-                east_position = {3.4, -2.2},
+                north_position = { 3.4, -2.2 },
+                west_position = { 3.4, -2.2 },
+                south_position = { 3.4, -2.2 },
+                east_position = { 3.4, -2.2 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s3.png",
                     frame_count = 75,
@@ -101,10 +101,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {1.8, -1.0},
-                west_position = {1.8, -1.0},
-                south_position = {1.8, -1.0},
-                east_position = {1.8, -1.0},
+                north_position = { 1.8, -1.0 },
+                west_position = { 1.8, -1.0 },
+                south_position = { 1.8, -1.0 },
+                east_position = { 1.8, -1.0 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s4.png",
                     frame_count = 50,
@@ -115,10 +115,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {0.0, -0.1},
-                west_position = {0.0, -0.1},
-                south_position = {0.0, -0.1},
-                east_position = {0.0, -0.1},
+                north_position = { 0.0, -0.1 },
+                west_position = { 0.0, -0.1 },
+                south_position = { 0.0, -0.1 },
+                east_position = { 0.0, -0.1 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s5.png",
                     frame_count = 75,
@@ -129,10 +129,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-2.2, 1.1},
-                west_position = {-2.2, 1.1},
-                south_position = {-2.2, 1.1},
-                east_position = {-2.2, 1.1},
+                north_position = { -2.2, 1.1 },
+                west_position = { -2.2, 1.1 },
+                south_position = { -2.2, 1.1 },
+                east_position = { -2.2, 1.1 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s6.png",
                     frame_count = 75,
@@ -143,10 +143,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {1.1, 1.8},
-                west_position = {1.1, 1.8},
-                south_position = {1.1, 1.8},
-                east_position = {1.1, 1.8},
+                north_position = { 1.1, 1.8 },
+                west_position = { 1.1, 1.8 },
+                south_position = { 1.1, 1.8 },
+                east_position = { 1.1, 1.8 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s7.png",
                     frame_count = 50,
@@ -157,10 +157,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-3.9, 2.3},
-                west_position = {-3.9, 2.3},
-                south_position = {-3.9, 2.3},
-                east_position = {-3.9, 2.3},
+                north_position = { -3.9, 2.3 },
+                west_position = { -3.9, 2.3 },
+                south_position = { -3.9, 2.3 },
+                east_position = { -3.9, 2.3 },
                 animation = {
                     filename = "__pyalienlifegraphics2__/graphics/entity/scrondrix-pen/s8.png",
                     scale = 0.82,
@@ -203,7 +203,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(16, -34),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -211,8 +211,8 @@ ENTITY {
 
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/scrondrix-pen.ogg", volume = 0.75},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/scrondrix-pen.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/scrondrix-pen.ogg", volume = 0.75 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/scrondrix-pen.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

@@ -1,19 +1,19 @@
 Farming = {}
 
 local function validate_farm_building_list(farm_buildings, throw)
-    local modules = prototypes.get_item_filtered {{filter = "type", type = "module"}}
+    local modules = prototypes.get_item_filtered({ { filter = "type", type = "module" } })
     ---@as table<string, table<string, boolean>> two level table containing buildings indexed by their base (mk-less) name
     local buildings = {}
-    local crafting_machines = prototypes.get_entity_filtered {{filter = "crafting-machine"}}
+    local crafting_machines = prototypes.get_entity_filtered({ { filter = "crafting-machine" } })
     -- This early search and sort lets us avoid o^n searching below
     for building_name in pairs(crafting_machines) do
         -- TODO: Find a method that avoids two searches?
         local is_turd = not not building_name:find("%-turd")
         -- keep suffix if necessary while allowing other building suffixes
         local basename = building_name:gsub("%-mk..+", is_turd and "-turd" or "")
-        if farm_buildings[basename] then
-            buildings[basename] = buildings[basename] or {}
-            buildings[basename][building_name] = true
+        if farm_buildings[ basename ] then
+            buildings[ basename ] = buildings[ basename ] or {}
+            buildings[ basename ][ building_name ] = true
         end
     end
 
@@ -21,19 +21,19 @@ local function validate_farm_building_list(farm_buildings, throw)
     local result = throw and error or log
     for entity_name, farm_prototype in pairs(farm_buildings) do
         -- No buildings with this base name
-        if not buildings[entity_name] then
-            farm_buildings[entity_name] = result(("Farm building \"%s\" has no associated crafting machines"):format(entity_name))
+        if not buildings[ entity_name ] then
+            farm_buildings[ entity_name ] = result(("Farm building \"%s\" has no associated crafting machines"):format(entity_name))
             goto next_farm_prototype
         end
         -- No modules with this name
-        if farm_prototype.default_module ~= nil and not modules[farm_prototype.default_module] then
-            farm_buildings[entity_name] = result(("Invalid default module \"%s\" for farm building \"%s\""):format(farm_prototype.default_module, entity_name))
+        if farm_prototype.default_module ~= nil and not modules[ farm_prototype.default_module ] then
+            farm_buildings[ entity_name ] = result(("Invalid default module \"%s\" for farm building \"%s\""):format(farm_prototype.default_module, entity_name))
             goto next_farm_prototype
         end
         -- Unspecified or invalid domain
         local domain = farm_prototype.domain
         if not domain or not (domain == "animal" or domain == "plant" or domain == "fungi") then
-            farm_buildings[entity_name] = result(("Invalid domain \"%s\" for farm building \"%s\". Expected 'animal', 'plant', or 'fungi'"):format(domain or "nil", entity_name))
+            farm_buildings[ entity_name ] = result(("Invalid domain \"%s\" for farm building \"%s\". Expected 'animal', 'plant', or 'fungi'"):format(domain or "nil", entity_name))
             goto next_farm_prototype
         end
         -- Wow, so valid
@@ -44,7 +44,7 @@ end
 ---@as table<string, table<string, string>>
 ---Contains key-value pairs of `{farm_name = {default_module = farm_module, domain = farm_domain, requires = farm_mod}`
 -- See `scripts/farming/farm-build-list.lua` for an example
-local farm_buildings = require "farm-building-list"
+local farm_buildings = require("farm-building-list")
 
 ---register_type registers a farm for module restrictions
 ---@param farm_name string name of farm building without -mkxx suffix
@@ -53,7 +53,7 @@ local farm_buildings = require "farm-building-list"
 function Farming.register_type(farm_name, domain, default_module)
     log("remote registered farm \'" .. farm_name .. "\' (" .. domain .. ")")
     storage.farm_prototypes = storage.farm_prototypes or farm_buildings
-    storage.farm_prototypes[farm_name] = {default_module = default_module, domain = domain}
+    storage.farm_prototypes[ farm_name ] = { default_module = default_module, domain = domain }
     validate_farm_building_list(storage.farm_prototypes, true)
 end
 
@@ -61,7 +61,7 @@ end
 ---@param farm_name string name of farm building without -mkxx suffix
 function Farming.unregister_type(farm_name)
     log("remote unregistered farm \'" .. farm_name .. "\'")
-    storage.farm_prototypes[farm_name] = nil
+    storage.farm_prototypes[ farm_name ] = nil
 end
 
 remote.remove_interface("pyfarm")
@@ -74,14 +74,14 @@ remote.add_interface("pyfarm", {
 function Farming.get_kingdom(entity)
     local is_turd = not not entity.name:find("%-turd")
     local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
-    local farm_data = storage.farm_prototypes[name]
+    local farm_data = storage.farm_prototypes[ name ]
     if farm_data then return farm_data.domain end
 end
 
 function Farming.get_default_module(entity)
     local is_turd = not not entity.name:find("%-turd")
     local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
-    local farm_data = storage.farm_prototypes[name]
+    local farm_data = storage.farm_prototypes[ name ]
     if farm_data then return farm_data.default_module end
 end
 
@@ -93,15 +93,15 @@ function Farming.disable_machine(entity)
     if default_module then
         entity.custom_status = {
             diode = defines.entity_status_diode.red,
-            label = {"entity-status.requires-module", default_module, prototypes.item[default_module].localised_name}
+            label = { "entity-status.requires-module", default_module, prototypes.item[ default_module ].localised_name }
         }
     else
         entity.custom_status = {
             diode = defines.entity_status_diode.red,
-            label = {"entity-status.requires-module-reproductive-complex"}
+            label = { "entity-status.requires-module-reproductive-complex" }
         }
     end
-    storage.disabled_farm_buildings[entity.unit_number] = entity
+    storage.disabled_farm_buildings[ entity.unit_number ] = entity
     script.register_on_object_destroyed(entity)
     if entity.is_crafting() then
         entity.crafting_progress = 0.0001
@@ -111,10 +111,10 @@ function Farming.disable_machine(entity)
 end
 
 function Farming.enable_machine(entity)
-    storage.disabled_farm_buildings[entity.unit_number] = nil
+    storage.disabled_farm_buildings[ entity.unit_number ] = nil
     entity.active = true
     entity.custom_status = nil
-    storage.enabled_farm_buildings[#storage.enabled_farm_buildings + 1] = entity
+    storage.enabled_farm_buildings[ #storage.enabled_farm_buildings+1 ] = entity
 end
 
 py.on_event(py.events.on_init(), function()
@@ -133,14 +133,14 @@ end)
 py.on_event(defines.events.on_object_destroyed, function(event)
     local unit_number = event.useful_id
     if not unit_number then return end
-    storage.disabled_farm_buildings[unit_number] = nil
+    storage.disabled_farm_buildings[ unit_number ] = nil
 end)
 
 -- render warning icons
 py.register_on_nth_tick(59, "Farming59", "pyal", function(event)
     for unit_number, farm in pairs(storage.disabled_farm_buildings) do
         if not farm.valid then
-            storage.disabled_farm_buildings[unit_number] = nil
+            storage.disabled_farm_buildings[ unit_number ] = nil
         elseif farm.get_module_inventory().is_empty() then
             py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 61, 30)
         else
@@ -155,7 +155,7 @@ py.register_on_nth_tick(121, "Farming121", "pyal", function()
     if farm_count == 0 then return end
     local first_index_checked_this_tick = storage.next_farm_index
     for i = 1, math.ceil(farm_count / 8) do
-        local farm = storage.enabled_farm_buildings[storage.next_farm_index]
+        local farm = storage.enabled_farm_buildings[ storage.next_farm_index ]
 
         if not farm or not farm.valid then
             table.remove(storage.enabled_farm_buildings, storage.next_farm_index)

@@ -1,26 +1,26 @@
 local item_icon = "__pyalienlifegraphics3__/graphics/icons/thikat.png"
 local time_taken_for_thikats_to_mine = 4
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "thikat",
     energy_required = 180,
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = "item",  name = "bio-sample",           amount = 30},
-        {type = "item",  name = "earth-generic-sample", amount = 5},
-        {type = "item",  name = "earth-potato-sample",  amount = 1},
-        {type = "item",  name = "earth-bear-sample",    amount = 2},
-        {type = "item",  name = "alien-sample-02",      amount = 4},
-        {type = "item",  name = "animal-sample-01",     amount = 20},
-        {type = "item",  name = "cdna",                 amount = 3},
-        {type = "fluid", name = "fetal-serum",          amount = 300},
+        { type = "item",  name = "bio-sample",           amount = 30 },
+        { type = "item",  name = "earth-generic-sample", amount = 5 },
+        { type = "item",  name = "earth-potato-sample",  amount = 1 },
+        { type = "item",  name = "earth-bear-sample",    amount = 2 },
+        { type = "item",  name = "alien-sample-02",      amount = 4 },
+        { type = "item",  name = "animal-sample-01",     amount = 20 },
+        { type = "item",  name = "cdna",                 amount = 3 },
+        { type = "fluid", name = "fetal-serum",          amount = 300 },
     },
-    results = {{type = "item", name = "thikat", amount = 1}}
-}:add_unlock {"nexelit-mk02"}
+    results = { { type = "item", name = "thikat", amount = 1 } }
+}):add_unlock({ "nexelit-mk02" })
 
-ITEM {
+ITEM({
     type = "module",
     name = "thikat",
     icon = item_icon,
@@ -29,12 +29,12 @@ ITEM {
     order = "xxx",
     stack_size = 10,
     flags = {},
-    localised_name = {"entity-name.thikat"},
-    localised_description = {"entity-description.thikat"},
-    effect = {pollution = 1, speed = 1},
+    localised_name = { "entity-name.thikat" },
+    localised_description = { "entity-description.thikat" },
+    effect = { pollution = 1, speed = 1 },
     category = "digosaurus",
     tier = 2,
-}
+})
 
 local running_animation = {
     layers = {
@@ -177,18 +177,18 @@ local mining_animation = {
     }
 }
 
-ENTITY {
+ENTITY({
     type = "unit",
     name = "thikat",
     icon = item_icon,
     icon_size = 64,
-    ai_settings = {do_separation = false},
-    flags = {"placeable-neutral", "placeable-player", "player-creation", "placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable", "not-in-kill-statistics"},
+    ai_settings = { do_separation = false },
+    flags = { "placeable-neutral", "placeable-player", "player-creation", "placeable-off-grid", "breaths-air", "not-repairable", "not-on-map", "not-flammable", "not-in-kill-statistics" },
     max_health = 900,
     subgroup = "creatures",
     healing_per_tick = 0.01,
-    collision_box = {{0, 0}, {0, 0}},
-    collision_mask = {layers = {}},
+    collision_box = { { 0, 0 }, { 0, 0 } },
+    collision_mask = { layers = {} },
     attack_parameters = {
         type = "projectile",
         range = 1,
@@ -198,11 +198,11 @@ ENTITY {
         animation = mining_animation
     },
     --selectable_in_game = false,
-    selection_box = {{-1, -1}, {1, 1}},
+    selection_box = { { -1, -1 }, { 1, 1 } },
     vision_distance = 30,
     movement_speed = 0.070,
     distance_per_frame = 0.10,
-    absorptions_to_join_attack = {pollution = 4},
+    absorptions_to_join_attack = { pollution = 4 },
     distraction_cooldown = 300,
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
@@ -210,7 +210,7 @@ ENTITY {
     has_belt_immunity = true,
     affected_by_tiles = true,
     run_animation = running_animation
-}
+})
 
 local sound =
 {
@@ -258,36 +258,36 @@ local particle = {
     speed_from_center_deviation = 0.035,
     initial_vertical_speed = 0.045,
     initial_vertical_speed_deviation = 0.035,
-    offset_deviation = {{-0.4, -0.4}, {0.4, 0.4}}
+    offset_deviation = { { -0.4, -0.4 }, { 0.4, 0.4 } }
 }
 
-ENTITY {
+ENTITY({
     type = "simple-entity",
     name = "thikats-mineable-proxy",
     localised_name = "",
     localised_description = "",
     icon = item_icon,
     icon_size = 64,
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selectable_in_game = false,
     remove_decoratives = "false",
-    collision_mask = {layers = {}},
+    collision_mask = { layers = {} },
     hidden = true,
-    flags = {"not-in-kill-statistics", "placeable-neutral", "not-selectable-in-game", "not-rotatable", "not-flammable", "placeable-off-grid", "hide-alt-info"},
+    flags = { "not-in-kill-statistics", "placeable-neutral", "not-selectable-in-game", "not-rotatable", "not-flammable", "placeable-off-grid", "hide-alt-info" },
     max_health = time_taken_for_thikats_to_mine,
     picture = {
         filename = "__core__/graphics/empty.png",
         width = 1,
         height = 1
     },
-    attack_reaction = {{
+    attack_reaction = { {
         range = 150,
         action = {
             action_delivery = {
-                source_effects = {sound, particle},
+                source_effects = { sound, particle },
                 type = "instant"
             },
             type = "direct"
         }
-    }}
-}
+    } }
+})

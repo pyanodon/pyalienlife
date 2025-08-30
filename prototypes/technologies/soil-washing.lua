@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "soil-washing",
     icon = "__pyalienlifegraphics2__/graphics/technology/washing-soil.png",
@@ -9,8 +9,8 @@ TECHNOLOGY {
     unit = {
         count = 50,
         ingredients = {
-            {"automation-science-pack", 1},
+            { "automation-science-pack", 1 },
         },
         time = 30
     }
-}
+})

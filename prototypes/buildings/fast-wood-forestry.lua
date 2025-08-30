@@ -1,75 +1,75 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fwf-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "stone-brick",        amount = 50},
-        {type = "item", name = "steel-plate",        amount = 10},
-        {type = "item", name = "steam-engine",       amount = 5},
-        {type = "item", name = "electronic-circuit", amount = 10},
-        {type = "item", name = "iron-gear-wheel",    amount = 20},
+        { type = "item", name = "stone-brick",        amount = 50 },
+        { type = "item", name = "steel-plate",        amount = 10 },
+        { type = "item", name = "steam-engine",       amount = 5 },
+        { type = "item", name = "electronic-circuit", amount = 10 },
+        { type = "item", name = "iron-gear-wheel",    amount = 20 },
     },
     results = {
-        {type = "item", name = "fwf-mk01", amount = 1}
+        { type = "item", name = "fwf-mk01", amount = 1 }
     }
-}:add_unlock("wood-processing")
+}):add_unlock("wood-processing")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fwf-mk02",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fwf-mk01",         amount = 1},
-        {type = "item", name = "titanium-plate",   amount = 30},
-        {type = "item", name = "duralumin",        amount = 30},
-        {type = "item", name = "latex",            amount = 30},
-        {type = "item", name = "plastic-bar",      amount = 50},
-        {type = "item", name = "engine-unit",      amount = 5},
-        {type = "item", name = "advanced-circuit", amount = 20},
+        { type = "item", name = "fwf-mk01",         amount = 1 },
+        { type = "item", name = "titanium-plate",   amount = 30 },
+        { type = "item", name = "duralumin",        amount = 30 },
+        { type = "item", name = "latex",            amount = 30 },
+        { type = "item", name = "plastic-bar",      amount = 50 },
+        { type = "item", name = "engine-unit",      amount = 5 },
+        { type = "item", name = "advanced-circuit", amount = 20 },
     },
     results = {
-        {type = "item", name = "fwf-mk02", amount = 1}
+        { type = "item", name = "fwf-mk02", amount = 1 }
     }
-}:add_unlock("botany-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 30}
+}):add_unlock("botany-mk02"):add_ingredient({ type = "item", name = "small-parts-02", amount = 30 })
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fwf-mk03",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fwf-mk02",              amount = 1},
-        {type = "item", name = "nexelit-plate",         amount = 30},
-        {type = "item", name = "molybdenum-plate",      amount = 30},
-        {type = "item", name = "low-density-structure", amount = 30},
-        {type = "item", name = "boron-carbide",         amount = 50},
-        {type = "item", name = "electric-engine-unit",  amount = 10},
-        {type = "item", name = "processing-unit",       amount = 40},
+        { type = "item", name = "fwf-mk02",              amount = 1 },
+        { type = "item", name = "nexelit-plate",         amount = 30 },
+        { type = "item", name = "molybdenum-plate",      amount = 30 },
+        { type = "item", name = "low-density-structure", amount = 30 },
+        { type = "item", name = "boron-carbide",         amount = 50 },
+        { type = "item", name = "electric-engine-unit",  amount = 10 },
+        { type = "item", name = "processing-unit",       amount = 40 },
     },
     results = {
-        {type = "item", name = "fwf-mk03", amount = 1}
+        { type = "item", name = "fwf-mk03", amount = 1 }
     }
-}:add_unlock("botany-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 50}
+}):add_unlock("botany-mk03"):add_ingredient({ type = "item", name = "small-parts-03", amount = 50 })
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fwf-mk04",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "fwf-mk03",        amount = 1},
-        {type = "item", name = "science-coating", amount = 30},
-        {type = "item", name = "wall-shield",     amount = 10},
-        {type = "item", name = "super-alloy",     amount = 30},
-        {type = "item", name = "kevlar",          amount = 100},
-        {type = "item", name = "control-unit",    amount = 40},
+        { type = "item", name = "fwf-mk03",        amount = 1 },
+        { type = "item", name = "science-coating", amount = 30 },
+        { type = "item", name = "wall-shield",     amount = 10 },
+        { type = "item", name = "super-alloy",     amount = 30 },
+        { type = "item", name = "kevlar",          amount = 100 },
+        { type = "item", name = "control-unit",    amount = 40 },
     },
     results = {
-        {type = "item", name = "fwf-mk04", amount = 1}
+        { type = "item", name = "fwf-mk04", amount = 1 }
     }
-}:add_unlock("botany-mk04")
+}):add_unlock("botany-mk04")
 
 local function working_visualizations()
     local working_visualizations = {
@@ -219,7 +219,7 @@ local function working_visualizations()
             shift = util.by_pixel(224, -64 + 16)
         }
     }
-    return {{animation = {layers = working_visualizations}}}
+    return { { animation = { layers = working_visualizations } } }
 end
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
@@ -230,7 +230,7 @@ for i = 1, 4 do
     local icon_size = 64
     local MODULE_SLOTS = 10 * i
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = icon,
@@ -240,25 +240,25 @@ for i = 1, 4 do
         order = "e",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = icon,
         icon_size = icon_size,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.5, result = name },
         fast_replaceable_group = "fwf",
         max_health = 500 * i,
         corpse = "medium-remnants",
         dying_explosion = "big-explosion",
-        collision_box = {{-7.2, -7.2}, {7.2, 7.2}},
-        selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+        collision_box = { { -7.2, -7.2 }, { 7.2, 7.2 } },
+        selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },
         forced_symmetry = "diagonal-pos",
         module_slots = MODULE_SLOTS,
-        allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-        crafting_categories = {"fwf"},
+        allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+        crafting_categories = { "fwf" },
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "fwf-mk01"),
         energy_source = {
             type = "electric",
@@ -268,13 +268,13 @@ for i = 1, 4 do
             },
         },
         energy_usage = (i == 1) and "450kW" or (i .. "MW"),
-        graphics_set = py.finite_state_machine_working_visualisations {
+        graphics_set = py.finite_state_machine_working_visualisations({
             states = {
                 {
                     name = "idle",
                     next_active = "active-1",
                     next_inactive = "idle",
-                    frame_sequence = {120},
+                    frame_sequence = { 120 },
                 },
                 {
                     name = "active-1",
@@ -299,38 +299,38 @@ for i = 1, 4 do
                 },
             },
             working_visualisations = working_visualizations(),
-        },
+        }),
         fluid_boxes_off_when_no_fluid_recipe = true,
         fluid_boxes = {
             --1
             {
                 production_type = "input",
                 pipe_covers = py.pipe_covers(false, true, true, true),
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {1.0, 7.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 1.0, 7.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "input",
                 pipe_covers = py.pipe_covers(false, true, true, true),
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {-1.0, 7.0}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { -1.0, 7.0 }, direction = defines.direction.south } }
             },
             {
                 production_type = "output",
                 pipe_covers = py.pipe_covers(false, true, true, true),
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {1.0, -7.0}, direction = defines.direction.north}}
+                pipe_connections = { { flow_direction = "output", position = { 1.0, -7.0 }, direction = defines.direction.north } }
             },
         },
         impact_category = "metal-large",
         working_sound = {
             fade_in_ticks = 60,
             fade_out_ticks = 60,
-            sound = {filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 1.5},
-            idle_sound = {filename = "__pyalienlifegraphics__/sounds/fwf-idle.ogg", volume = 0.5},
+            sound = { filename = "__pyalienlifegraphics__/sounds/fwf.ogg", volume = 1.5 },
+            idle_sound = { filename = "__pyalienlifegraphics__/sounds/fwf-idle.ogg", volume = 0.5 },
         }
-    }
+    })
 end

@@ -1,4 +1,4 @@
-local Utils = require 'scripts.caravan.utils'
+local Utils = require("scripts.caravan.utils")
 local function process_schedule(schedule)
     for _, action in pairs(schedule.actions or {}) do
         Utils.ensure_item_count(action)
@@ -10,7 +10,7 @@ for _, caravan_data in pairs(storage.caravans or {}) do
     end
 end
 storage.interrupts = storage.interrupts or {}
-storage.interrupts[""] = nil
+storage.interrupts[ "" ] = nil
 for _, interrupt_data in pairs(storage.interrupts or {}) do
     process_schedule(interrupt_data.schedule)
     for _, condition in pairs(interrupt_data.conditions or {}) do

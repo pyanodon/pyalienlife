@@ -32,7 +32,7 @@ TECHNOLOGY("energy-shield-equipment"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("fluid-handling"):remove_pack("logistic-science-pack")
 TECHNOLOGY("automation-2"):add_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_prereq("logistic-science-pack"):remove_prereq("electronics")
-TECHNOLOGY("automation-3"):remove_pack("chemical-science-pack"):remove_pack("production-science-pack"):add_pack("py-science-pack-2"):set_fields {prerequisites = {}}
+TECHNOLOGY("automation-3"):remove_pack("chemical-science-pack"):remove_pack("production-science-pack"):add_pack("py-science-pack-2"):set_fields({ prerequisites = {} })
 TECHNOLOGY("fast-inserter"):add_pack("py-science-pack-1")
 TECHNOLOGY("heavy-armor"):add_pack("py-science-pack-1")
 TECHNOLOGY("logistic-science-pack"):add_pack("py-science-pack-1")
@@ -64,7 +64,7 @@ TECHNOLOGY("rocket-fuel"):add_pack("py-science-pack-3")
 TECHNOLOGY("advanced-material-processing-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("nuclear-fuel-reprocessing"):add_pack("py-science-pack-3")
 
-if not mods["pyalternativeenergy"] then
+if not mods[ "pyalternativeenergy" ] then
     TECHNOLOGY("nuclear-power"):add_pack("py-science-pack-3")
 end
 
@@ -76,29 +76,29 @@ TECHNOLOGY("destroyer"):add_pack("py-science-pack-4")
 
 ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
 ITEM("raw-fish", "capsule"):set("icon_size", 32)
-RECIPE("power-armor"):add_ingredient {type = "item", name = "pelt", amount = 1}
+RECIPE("power-armor"):add_ingredient({ type = "item", name = "pelt", amount = 1 })
 TECHNOLOGY("atomic-bomb"):remove_prereq("kovarex-enrichment-process"):remove_prereq("military-4"):remove_prereq("rocketry"):add_prereq("domestication-mk02"):add_prereq("uranium-mk03")
-RECIPE("atomic-bomb"):add_ingredient {type = "item", name = "titanium-plate", amount = 20}:add_ingredient {type = "item", name = "fuelrod-mk01", amount = 10}:remove_ingredient("yellow-cake"):add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
+RECIPE("atomic-bomb"):add_ingredient({ type = "item", name = "titanium-plate", amount = 20 }):add_ingredient({ type = "item", name = "fuelrod-mk01", amount = 10 }):remove_ingredient("yellow-cake"):add_ingredient({ type = "item", name = "neuromorphic-chip", amount = 1 })
 RECIPE("small-electric-pole"):replace_ingredient("wood", "log")
 
 -- RECIPE('automation-science-pack').category = 'research-handcrafting'
 RECIPE("logistic-science-pack").category = "research"
-RECIPE("logistic-science-pack"):add_ingredient {type = "item", name = "solidified-sarcorus", amount = 1}:add_ingredient {type = "item", name = "animal-sample-01", amount = 2}:remove_ingredient("lab-instrument")
-RECIPE("logistic-science-pack"):replace_ingredient("alien-sample01", {type = "item", name = "alien-sample01", amount = 2})
-RECIPE("logistic-science-pack"):set_fields {
+RECIPE("logistic-science-pack"):add_ingredient({ type = "item", name = "solidified-sarcorus", amount = 1 }):add_ingredient({ type = "item", name = "animal-sample-01", amount = 2 }):remove_ingredient("lab-instrument")
+RECIPE("logistic-science-pack"):replace_ingredient("alien-sample01", { type = "item", name = "alien-sample01", amount = 2 })
+RECIPE("logistic-science-pack"):set_fields({
     results = {
-        {type = "item", name = "logistic-science-pack", amount = 12}
+        { type = "item", name = "logistic-science-pack", amount = 12 }
     },
     energy_required = 90
-}
+})
 
 RECIPE("chemical-science-pack").category = "research"
 RECIPE("military-science-pack").category = "research"
 RECIPE("production-science-pack").category = "research"
-RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-samples", amount = 1}.category = "research"
+RECIPE("utility-science-pack"):add_ingredient({ type = "item", name = "perfect-samples", amount = 1 }).category = "research"
 
-ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
+ENTITY("beacon"):set_fields({ allowed_effects = { "consumption", "speed" } })
 
-RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}
+RECIPE("car"):add_ingredient({ type = "item", name = "light-armor", amount = 1 })
 
 RECIPE("barrel").allow_productivity = false

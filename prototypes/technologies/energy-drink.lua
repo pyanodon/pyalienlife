@@ -1,4 +1,4 @@
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "energy-drink",
     icon = "__pyalienlifegraphics__/graphics/technology/energy-drink.png",
@@ -9,11 +9,11 @@ TECHNOLOGY {
     unit = {
         count = 300,
         ingredients = {
-            {"automation-science-pack", 3},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   2},
-            {"py-science-pack-2",       1},
+            { "automation-science-pack", 3 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   2 },
+            { "py-science-pack-2",       1 },
         },
         time = 50
     }
-}
+})

@@ -6,13 +6,13 @@ local tech_upgrades =
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-simik.png", -- do i really need to spell it out for you
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"simik-mk02"},
+        prerequisites = { "simik-mk02" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack",   1},
-                {"chemical-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
             },
             time = 45
         }

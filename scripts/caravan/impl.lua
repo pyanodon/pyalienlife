@@ -1,4 +1,4 @@
-require "__core__/lualib/util"
+require("__core__/lualib/util")
 
 local P = {}
 

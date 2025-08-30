@@ -28,7 +28,7 @@ local TRlist =
     },
     techs_with_upgrades =
     {
-        ["bigger-colon"] = true,
+        [ "bigger-colon" ] = true,
     },
 }
 

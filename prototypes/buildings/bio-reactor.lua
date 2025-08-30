@@ -1,87 +1,87 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "bio-reactor-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "mixer-mk01",    amount = 1},
-        {type = "item", name = "tailings-pond", amount = 1},
-        {type = "item", name = "steel-plate",   amount = 40},
+        { type = "item", name = "mixer-mk01",    amount = 1 },
+        { type = "item", name = "tailings-pond", amount = 1 },
+        { type = "item", name = "steel-plate",   amount = 40 },
         --{type = "item", name = "glass", amount = 35}
     },
     results = {
-        {type = "item", name = "bio-reactor-mk01", amount = 1}
+        { type = "item", name = "bio-reactor-mk01", amount = 1 }
     }
-}:add_unlock("cottongut-science-mk01")
+}):add_unlock("cottongut-science-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "bio-reactor-mk02",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "bio-reactor-mk01", amount = 1},
-        {type = "item", name = "steel-plate",      amount = 50},
-        {type = "item", name = "glass",            amount = 50},
-        {type = "item", name = "advanced-circuit", amount = 10},
-        {type = "item", name = "titanium-plate",   amount = 20},
-        {type = "item", name = "latex",            amount = 30},
-        {type = "item", name = "engine-unit",      amount = 5},
-        {type = "item", name = "neuroprocessor",   amount = 20},
+        { type = "item", name = "bio-reactor-mk01", amount = 1 },
+        { type = "item", name = "steel-plate",      amount = 50 },
+        { type = "item", name = "glass",            amount = 50 },
+        { type = "item", name = "advanced-circuit", amount = 10 },
+        { type = "item", name = "titanium-plate",   amount = 20 },
+        { type = "item", name = "latex",            amount = 30 },
+        { type = "item", name = "engine-unit",      amount = 5 },
+        { type = "item", name = "neuroprocessor",   amount = 20 },
     },
     results = {
-        {type = "item", name = "bio-reactor-mk02", amount = 1}
+        { type = "item", name = "bio-reactor-mk02", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk02")
+}):add_unlock("biotech-machines-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "bio-reactor-mk03",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "bio-reactor-mk02",     amount = 1},
-        {type = "item", name = "nbti-alloy",           amount = 20},
-        {type = "item", name = "super-alloy",          amount = 30},
-        {type = "item", name = "stainless-steel",      amount = 50},
-        {type = "item", name = "electric-engine-unit", amount = 15},
-        {type = "item", name = "processing-unit",      amount = 30},
-        {type = "item", name = "ticocr-alloy",         amount = 20},
+        { type = "item", name = "bio-reactor-mk02",     amount = 1 },
+        { type = "item", name = "nbti-alloy",           amount = 20 },
+        { type = "item", name = "super-alloy",          amount = 30 },
+        { type = "item", name = "stainless-steel",      amount = 50 },
+        { type = "item", name = "electric-engine-unit", amount = 15 },
+        { type = "item", name = "processing-unit",      amount = 30 },
+        { type = "item", name = "ticocr-alloy",         amount = 20 },
     },
     results = {
-        {type = "item", name = "bio-reactor-mk03", amount = 1}
+        { type = "item", name = "bio-reactor-mk03", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk03"):add_ingredient {type = "item", name = "small-parts-03", amount = 30}
+}):add_unlock("biotech-machines-mk03"):add_ingredient({ type = "item", name = "small-parts-03", amount = 30 })
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "bio-reactor-mk04",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "bio-reactor-mk03", amount = 1},
-        {type = "item", name = "kevlar",           amount = 50},
-        {type = "item", name = "super-alloy",      amount = 30},
-        {type = "item", name = "super-steel",      amount = 60},
-        {type = "item", name = "control-unit",     amount = 10},
-        {type = "item", name = "blanket",          amount = 1},
+        { type = "item", name = "bio-reactor-mk03", amount = 1 },
+        { type = "item", name = "kevlar",           amount = 50 },
+        { type = "item", name = "super-alloy",      amount = 30 },
+        { type = "item", name = "super-steel",      amount = 60 },
+        { type = "item", name = "control-unit",     amount = 10 },
+        { type = "item", name = "blanket",          amount = 1 },
     },
     results = {
-        {type = "item", name = "bio-reactor-mk04", amount = 1}
+        { type = "item", name = "bio-reactor-mk04", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk04")
+}):add_unlock("biotech-machines-mk04")
 
-data:extend {{
+data:extend({ {
     name = "bio-reactor",
     type = "module-category",
-}}
+} })
 
 for i = 1, 4 do
     local name = "bio-reactor-mk0" .. i
     local icon = "__pyalienlifegraphics__/graphics/icons/" .. name .. ".png"
     local icon_size = 64
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = icon,
@@ -91,26 +91,26 @@ for i = 1, 4 do
         order = "a",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = icon,
         icon_size = icon_size,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.5, result = name },
         fast_replaceable_group = "bio-reactor",
         max_health = 400 * i,
         corpse = "big-remnants",
         dying_explosion = "medium-explosion",
-        collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
-        selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        collision_box = { { -3.2, -3.2 }, { 3.2, 3.2 } },
+        selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
         forced_symmetry = "diagonal-pos",
         module_slots = i,
-        allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-        allowed_module_categories = {"speed", "productivity", "efficiency", "bio-reactor"},
-        crafting_categories = {"bio-reactor"},
+        allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+        allowed_module_categories = { "speed", "productivity", "efficiency", "bio-reactor" },
+        crafting_categories = { "bio-reactor" },
         crafting_speed = i,
         energy_source = {
             type = "electric",
@@ -123,10 +123,10 @@ for i = 1, 4 do
         graphics_set = {
             working_visualisations = {
                 {
-                    north_position = {0.312, -0.218},
-                    west_position = {0.312, -0.218},
-                    south_position = {0.312, -0.218},
-                    east_position = {0.312, -0.218},
+                    north_position = { 0.312, -0.218 },
+                    west_position = { 0.312, -0.218 },
+                    south_position = { 0.312, -0.218 },
+                    east_position = { 0.312, -0.218 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on.png",
                         frame_count = 50,
@@ -138,10 +138,10 @@ for i = 1, 4 do
                     }
                 },
                 {
-                    north_position = {0.312, -0.218},
-                    west_position = {0.312, -0.218},
-                    south_position = {0.312, -0.218},
-                    east_position = {0.312, -0.218},
+                    north_position = { 0.312, -0.218 },
+                    west_position = { 0.312, -0.218 },
+                    south_position = { 0.312, -0.218 },
+                    east_position = { 0.312, -0.218 },
                     animation = {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/on-mask.png",
                         frame_count = 50,
@@ -149,7 +149,7 @@ for i = 1, 4 do
                         height = 236,
                         line_length = 8,
                         animation_speed = 0.3,
-                        tint = py.tints[i],
+                        tint = py.tints[ i ],
                         priority = "medium"
                     }
                 },
@@ -161,15 +161,15 @@ for i = 1, 4 do
                         width = 246,
                         height = 236,
                         frame_count = 1,
-                        shift = {0.312, -0.218},
+                        shift = { 0.312, -0.218 },
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-reactor/off-mask.png",
                         width = 246,
                         height = 236,
                         frame_count = 1,
-                        shift = {0.312, -0.218},
-                        tint = py.tints[i]
+                        shift = { 0.312, -0.218 },
+                        tint = py.tints[ i ]
                     },
                 },
             },
@@ -179,53 +179,53 @@ for i = 1, 4 do
             --North
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.0, -0.95 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {1.0, -3.0}, direction = defines.direction.north}},
+                pipe_connections = { { flow_direction = "output", position = { 1.0, -3.0 }, direction = defines.direction.north } },
                 priority = "extra-high"
             },
             --North2
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.0, -0.95 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {-1.0, -3.0}, direction = defines.direction.north}},
+                pipe_connections = { { flow_direction = "output", position = { -1.0, -3.0 }, direction = defines.direction.north } },
                 priority = "extra-high"
             },
             --South
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.00, -0.95 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {2.0, 3.0}, direction = defines.direction.south}},
+                pipe_connections = { { flow_direction = "input", position = { 2.0, 3.0 }, direction = defines.direction.south } },
                 priority = "extra-high"
             },
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.00, -0.95 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {0.0, 3.0}, direction = defines.direction.south}},
+                pipe_connections = { { flow_direction = "input", position = { 0.0, 3.0 }, direction = defines.direction.south } },
                 priority = "extra-high"
             },
             --South2
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.00, -0.95 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {-2.0, 3.0}, direction = defines.direction.south}},
+                pipe_connections = { { flow_direction = "input", position = { -2.0, 3.0 }, direction = defines.direction.south } },
                 priority = "extra-high"
             },
         },
         impact_category = "metal",
         working_sound = {
-            sound = {filename = "__pyfusionenergygraphics__/sounds/bio-reactor.ogg", volume = 1.2},
-            idle_sound = {filename = "__pyfusionenergygraphics__/sounds/bio-reactor.ogg", volume = 0.3},
+            sound = { filename = "__pyfusionenergygraphics__/sounds/bio-reactor.ogg", volume = 1.2 },
+            idle_sound = { filename = "__pyfusionenergygraphics__/sounds/bio-reactor.ogg", volume = 0.3 },
             apparent_volume = 2.5
         }
-    }
+    })
 end

@@ -1,29 +1,29 @@
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "mega-farm",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",         amount = 200},
-        {type = "item", name = "treated-wood",     amount = 50},
+        { type = "item", name = "concrete",         amount = 200 },
+        { type = "item", name = "treated-wood",     amount = 50 },
         --{type = "item", name = "control-unit", amount = 10},
         --{type = "item", name = "boron-carbide", amount = 30},
         --{type = "item", name = "super-alloy", amount = 20},
         --{type = "item", name = "blanket", amount = 5},
-        {type = "item", name = "nbfe-alloy",       amount = 50},
-        {type = "item", name = "kevlar",           amount = 100},
+        { type = "item", name = "nbfe-alloy",       amount = 50 },
+        { type = "item", name = "kevlar",           amount = 100 },
         --{type = "item", name = "divertor", amount = 10},
         --{type = "item", name = "metallic-glass", amount = 30},
-        {type = "item", name = "advanced-circuit", amount = 50},
+        { type = "item", name = "advanced-circuit", amount = 50 },
     },
     results = {
-        {type = "item", name = "mega-farm", amount = 1}
+        { type = "item", name = "mega-farm", amount = 1 }
     }
-}:add_unlock("mega-farm")
+}):add_unlock("mega-farm")
 
-ITEM {
+ITEM({
     type = "item",
     name = "mega-farm",
     icon = "__pyalienlifegraphics__/graphics/icons/mega-farm-ralesia.png",
@@ -33,31 +33,31 @@ ITEM {
     order = "a",
     place_result = "mega-farm",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "rocket-silo",
     name = "mega-farm",
     icon = "__pyalienlifegraphics__/graphics/icons/mega-farm-ralesia.png",
     icon_size = 64,
-    flags = {"placeable-player", "player-creation"},
-    crafting_categories = {"ralesia-farm", "rennea-farm", "tuuphra-farm", "grod-farm", "yotoi-farm", "kicalk-farm", "arum-farm", "bioreserve-farm"},
+    flags = { "placeable-player", "player-creation" },
+    crafting_categories = { "ralesia-farm", "rennea-farm", "tuuphra-farm", "grod-farm", "yotoi-farm", "kicalk-farm", "arum-farm", "bioreserve-farm" },
     rocket_parts_required = 1,
     crafting_speed = 1,
     to_be_inserted_to_rocket_inventory_size = 1,
     module_slots = 4,
-    icon_draw_specification = {shift = {0, 3.3}},
+    icon_draw_specification = { shift = { 0, 3.3 } },
     --fixed_recipe = "rocket-part",
     show_recipe_icon = true,
-    allowed_effects = {"consumption", "speed"},
-    minable = {mining_time = 1, result = "mega-farm"},
+    allowed_effects = { "consumption", "speed" },
+    minable = { mining_time = 1, result = "mega-farm" },
     max_health = 5000,
     dying_explosion = "medium-explosion",
     corpse = "rocket-silo-remnants",
-    collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     forced_symmetry = "diagonal-pos",
-    hole_clipping_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    hole_clipping_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     resistances =
     {
         {
@@ -76,7 +76,7 @@ ENTITY {
             height = 1
         },
         distance = 13,
-        offset = {0, -15}
+        offset = { 0, -15 }
     },
     impact_category = "metal-large",
     fluid_boxes = {
@@ -84,17 +84,17 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.00, -0.95 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {3.0, 0.0}, direction = defines.direction.east}},
+            pipe_connections = { { flow_direction = "input", position = { 3.0, 0.0 }, direction = defines.direction.east } },
             priority = "extra-high"
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { -0.00, -0.95 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-3.0, 0.0}, direction = defines.direction.west}},
+            pipe_connections = { { flow_direction = "input", position = { -3.0, 0.0 }, direction = defines.direction.west } },
             priority = "extra-high"
         },
     },
@@ -109,7 +109,7 @@ ENTITY {
     active_energy_usage = "3990kW",
     rocket_entity = "mega-farm-invisa-rocket",
     rocket_quick_relaunch_start_offset = 0,
-    cargo_station_parameters = {hatch_definitions = {{}}},
+    cargo_station_parameters = { hatch_definitions = { {} } },
 
     times_to_blink = 1,
     light_blinking_speed = 1 / (3 * 60),
@@ -118,7 +118,7 @@ ENTITY {
     {
         intensity = 0,
         size = 25,
-        shift = {0, 1.5}
+        shift = { 0, 1.5 }
     },
 
     shadow_sprite =
@@ -172,7 +172,7 @@ ENTITY {
         --slice = 2,
         shift = util.by_pixel(0, 0),
     },
-    door_back_open_offset = {1.8, -1.8 * 0.43299225},
+    door_back_open_offset = { 1.8, -1.8 * 0.43299225 },
     door_front_sprite =
     {
         filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
@@ -181,7 +181,7 @@ ENTITY {
         --slice = 2,
         shift = util.by_pixel(0, 0),
     },
-    door_front_open_offset = {-1.8, 1.8 * 0.43299225},
+    door_front_open_offset = { -1.8, 1.8 * 0.43299225 },
 
     base_day_sprite =
     {
@@ -328,25 +328,25 @@ ENTITY {
       volume = 1.0
     }
 	]] --
-}
+})
 
-data:extend {{
+data:extend({ {
     type = "cargo-pod",
     name = "dQw4w9WgXcQ",
     hidden = true,
     inventory_size = 0,
     spawned_container = "steel-chest",
-    collision_mask = {layers = {}},
-}}
+    collision_mask = { layers = {} },
+} })
 
-ENTITY {
+ENTITY({
     type = "rocket-silo-rocket",
     name = "mega-farm-invisa-rocket",
     hidden = true,
-    flags = {"not-on-map"},
-    collision_mask = {layers = {}, not_colliding_with_itself = true},
-    collision_box = {{-2, -7}, {2, 4}},
-    selection_box = {{0, 0}, {0, 0}},
+    flags = { "not-on-map" },
+    collision_mask = { layers = {}, not_colliding_with_itself = true },
+    collision_box = { { -2, -7 }, { 2, 4 } },
+    selection_box = { { 0, 0 }, { 0, 0 } },
     dying_explosion = "massive-explosion",
     shadow_slave_entity = "rocket-silo-rocket-shadow",
     inventory_size = 1,
@@ -360,8 +360,8 @@ ENTITY {
     {
         intensity = 1,
         size = 30,
-        shift = {0, 1.5},
-        color = {r = 1.0, g = 1.0, b = 1.0}
+        shift = { 0, 1.5 },
+        color = { r = 1.0, g = 1.0, b = 1.0 }
     },
 
     rocket_sprite = util.add_shift_offset(util.by_pixel(0, 32 * 3.5), --util.mul_shift(rocket_rise_offset, -1),
@@ -392,7 +392,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -405,7 +405,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -418,7 +418,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -432,7 +432,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -445,7 +445,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -458,7 +458,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -471,7 +471,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -486,7 +486,7 @@ ENTITY {
         {
             filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/filler.png",
             priority = "medium",
-            tint = {r = 0.8, g = 0.8, b = 1, a = 0.8},
+            tint = { r = 0.8, g = 0.8, b = 1, a = 0.8 },
             --tint = { r = 1, g = 0, b = 0, a = 0.8 },
             width = 32,
             height = 32,
@@ -497,9 +497,9 @@ ENTITY {
         }),
     rocket_flame_right_rotation = 0,
 
-    rocket_initial_offset = {0, 0},
-    rocket_rise_offset = {0, 0},
-    rocket_launch_offset = {0, 0},
+    rocket_initial_offset = { 0, 0 },
+    rocket_rise_offset = { 0, 0 },
+    rocket_launch_offset = { 0, 0 },
     rocket_render_layer_switch_distance = 0,
     full_render_layer_switch_distance = 0,
     effects_fade_in_start_distance = 0,
@@ -507,4 +507,4 @@ ENTITY {
     shadow_fade_out_start_ratio = 0,
     shadow_fade_out_end_ratio = 0,
     rocket_visible_distance_from_center = 0,
-}
+})

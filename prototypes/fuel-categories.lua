@@ -1,4 +1,4 @@
-data:extend {
+data:extend({
     {
         type = "fuel-category",
         name = "fish"
@@ -27,4 +27,4 @@ data:extend {
         type = "fuel-category",
         name = "simik"
     },
-}
+})

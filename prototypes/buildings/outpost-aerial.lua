@@ -1,26 +1,26 @@
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "outpost-aerial",
     energy_required = 50,
     category = "crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "stainless-steel",      amount = 15},
-        {type = "item", name = "electric-engine-unit", amount = 10},
-        {type = "item", name = "small-parts-02",       amount = 30},
-        {type = "item", name = "advanced-circuit",     amount = 10},
-        {type = "item", name = "niobium-plate",        amount = 10},
-        {type = "item", name = "titanium-plate",       amount = 10},
-        {type = "item", name = "concrete",             amount = 50},
-        {type = "item", name = "zipir-reef-mk01",      amount = 1},
-        {type = "item", name = "neuroprocessor",       amount = 10},
+        { type = "item", name = "stainless-steel",      amount = 15 },
+        { type = "item", name = "electric-engine-unit", amount = 10 },
+        { type = "item", name = "small-parts-02",       amount = 30 },
+        { type = "item", name = "advanced-circuit",     amount = 10 },
+        { type = "item", name = "niobium-plate",        amount = 10 },
+        { type = "item", name = "titanium-plate",       amount = 10 },
+        { type = "item", name = "concrete",             amount = 50 },
+        { type = "item", name = "zipir-reef-mk01",      amount = 1 },
+        { type = "item", name = "neuroprocessor",       amount = 10 },
     },
-    results = {{type = "item", name = "outpost-aerial", amount = 1}}
-}:add_unlock("domestication-mk03")
+    results = { { type = "item", name = "outpost-aerial", amount = 1 } }
+}):add_unlock("domestication-mk03")
 
-ITEM {
+ITEM({
     type = "item",
     name = "outpost-aerial",
     icon = "__pyalienlifegraphics2__/graphics/icons/flyavan-outpost.png",
@@ -29,14 +29,14 @@ ITEM {
     order = "b-b",
     place_result = "outpost-aerial",
     stack_size = 10
-}
+})
 
-data:extend {{
+data:extend({ {
     ---@diagnostic disable-next-line: assign-type-mismatch
     scale_info_icons = true,
     name = "outpost-aerial",
     type = "container",
-    circuit_connector = table.deepcopy(data.raw.container["steel-chest"].circuit_connector), -- todo
+    circuit_connector = table.deepcopy(data.raw.container[ "steel-chest" ].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
     close_sound = {
         filename = "__base__/sound/metallic-chest-close.ogg",
@@ -123,8 +123,8 @@ data:extend {{
         }
     },
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8, audible_distance_modifier = 0.35,},
-        idle_sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2, audible_distance_modifier = 0.35,},
+        sound = { filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8, audible_distance_modifier = 0.35, },
+        idle_sound = { filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2, audible_distance_modifier = 0.35, },
     },
     inventory_type = "with_filters_and_bar"
-}}
+} })

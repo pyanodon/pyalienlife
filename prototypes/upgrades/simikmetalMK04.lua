@@ -10,18 +10,18 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk04.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"simik-digestion-mk03", "simik-mk03"},
+        prerequisites = { "simik-digestion-mk03", "simik-mk03" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"py-science-pack-2",       1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
-                {"production-science-pack", 1},
-                {"py-science-pack-4",       1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "py-science-pack-2",       1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
+                { "production-science-pack", 1 },
+                { "py-science-pack-4",       1 },
             },
             time = 45
         }
@@ -33,7 +33,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-zinc", type = "unlock-recipe"}
+                { recipe = "simik-zinc", type = "unlock-recipe" }
             },
         },
         {
@@ -42,7 +42,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-nickel", type = "unlock-recipe"}
+                { recipe = "simik-nickel", type = "unlock-recipe" }
             }
         },
         {
@@ -51,7 +51,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-lead", type = "unlock-recipe"}
+                { recipe = "simik-lead", type = "unlock-recipe" }
             }
         }
     }

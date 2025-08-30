@@ -1,20 +1,20 @@
 --------------------------SEA WEED-----------------------
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings.seaweed = {}
 
-data:extend {
+data:extend({
     {
         type = "fish",
         name = "seaweed",
         icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
         icon_size = 64,
-        flags = {"placeable-neutral", "not-on-map"},
-        minable = {mining_time = 0.4, result = "seaweed", count = 2},
+        flags = { "placeable-neutral", "not-on-map" },
+        minable = { mining_time = 0.4, result = "seaweed", count = 2 },
         max_health = 20,
         subgroup = "creatures",
         order = "b-a",
-        collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
-        selection_box = {{-0.5, -0.3}, {0.5, 0.3}},
-        collision_mask = {layers = {ground_tile = true}, colliding_with_tiles_only = true},
+        collision_box = { { -0.75, -0.75 }, { 0.75, 0.75 } },
+        selection_box = { { -0.5, -0.3 }, { 0.5, 0.3 } },
+        collision_mask = { layers = { ground_tile = true }, colliding_with_tiles_only = true },
         pictures = {
             {
                 filename = "__pyalienlifegraphics2__/graphics/icons/seaweed-water-01.png",
@@ -51,4 +51,4 @@ data:extend {
         },
         protected_from_tile_building = false
     }
-}
+})

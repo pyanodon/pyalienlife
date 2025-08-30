@@ -1,25 +1,25 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-bhoddos-culture-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "gasifier",           amount = 1},
-        {type = "item", name = "glass",              amount = 30},
-        {type = "item", name = "nexelit-plate",      amount = 20},
-        {type = "item", name = "duralumin",          amount = 35},
-        {type = "item", name = "steel-plate",        amount = 50},
-        {type = "item", name = "electronic-circuit", amount = 15},
-        {type = "item", name = "tin-plate",          amount = 50},
+        { type = "item", name = "gasifier",           amount = 1 },
+        { type = "item", name = "glass",              amount = 30 },
+        { type = "item", name = "nexelit-plate",      amount = 20 },
+        { type = "item", name = "duralumin",          amount = 35 },
+        { type = "item", name = "steel-plate",        amount = 50 },
+        { type = "item", name = "electronic-circuit", amount = 15 },
+        { type = "item", name = "tin-plate",          amount = 50 },
     },
     results = {
-        {type = "item", name = "space-bhoddos-culture-mk01", amount = 1}
+        { type = "item", name = "space-bhoddos-culture-mk01", amount = 1 }
     }
-}:add_unlock("bhoddos")
+}):add_unlock("bhoddos")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-bhoddos-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-culture-mk01.png",
@@ -29,24 +29,24 @@ ITEM {
     order = "c",
     place_result = "space-bhoddos-culture-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-bhoddos-culture-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-culture-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-bhoddos-culture-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-bhoddos-culture-mk01" },
     fast_replaceable_group = "bhoddos-culture",
     max_health = 50,
     corpse = "medium-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    collision_box = { { -5.3, -5.3 }, { 5.3, 5.3 } },
+    selection_box = { { -5.5, -5.5 }, { 5.5, 5.5 } },
     module_slots = 1,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"bhoddos"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "bhoddos" },
     crafting_speed = 0.02,
     energy_source = {
         type = "electric",
@@ -131,7 +131,7 @@ ENTITY {
                     height = 416,
                     frame_count = 1,
                     shift = util.by_pixel(16, -32),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
             }
         },
@@ -144,36 +144,36 @@ ENTITY {
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {1.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { 1.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 1000,
-            pipe_connections = {{flow_direction = "input", position = {-1.0, -5.0}, direction = defines.direction.north}}
+            pipe_connections = { { flow_direction = "input", position = { -1.0, -5.0 }, direction = defines.direction.north } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {1.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { 1.0, 5.0 }, direction = defines.direction.south } }
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
-            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
             volume = 100,
-            pipe_connections = {{flow_direction = "output", position = {-1.0, 5.0}, direction = defines.direction.south}}
+            pipe_connections = { { flow_direction = "output", position = { -1.0, 5.0 }, direction = defines.direction.south } }
         },
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/bhoddos-culture.ogg", volume = 2.0},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/bhoddos-culture.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/bhoddos-culture.ogg", volume = 2.0 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/bhoddos-culture.ogg", volume = 0.3 },
         apparent_volume = 2.5
     }
-}
+})

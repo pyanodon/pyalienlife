@@ -1,22 +1,22 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "fluid-drill-mk01",
     energy_required = 0.5,
     enabled = false,
     ingredients = {
-        {type = "item", name = "burner-mining-drill", amount = 2},
-        {type = "item", name = "iron-gear-wheel",     amount = 30},
-        {type = "item", name = "pipe",                amount = 20},
-        {type = "item", name = "inductor1",           amount = 10},
-        {type = "item", name = "steel-plate",         amount = 5},
-        {type = "item", name = "steam-engine",        amount = 1},
+        { type = "item", name = "burner-mining-drill", amount = 2 },
+        { type = "item", name = "iron-gear-wheel",     amount = 30 },
+        { type = "item", name = "pipe",                amount = 20 },
+        { type = "item", name = "inductor1",           amount = 10 },
+        { type = "item", name = "steel-plate",         amount = 5 },
+        { type = "item", name = "steam-engine",        amount = 1 },
     },
     results = {
-        {type = "item", name = "fluid-drill-mk01", amount = 1}
+        { type = "item", name = "fluid-drill-mk01", amount = 1 }
     }
-}:add_unlock("mining-with-fluid")
+}):add_unlock("mining-with-fluid")
 
-ITEM {
+ITEM({
     type = "item",
     name = "fluid-drill-mk01",
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-drill-mk01.png",
@@ -26,22 +26,22 @@ ITEM {
     order = "a",
     place_result = "fluid-drill-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "mining-drill",
     name = "fluid-drill-mk01",
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-drill-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "fluid-drill-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 1, result = "fluid-drill-mk01" },
     fast_replaceable_group = "fluid-drill",
     max_health = 700,
-    resource_categories = {"basic-with-fluid"},
+    resource_categories = { "basic-with-fluid" },
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
+    selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     module_slots = 0,
     --allowed_effects = {"consumption", "speed", "pollution"},
     mining_speed = 0.5,
@@ -50,15 +50,15 @@ ENTITY {
         pipe_covers = pipecoverspictures(),
         volume = 200,
         pipe_connections = {
-            {flow_direction = "input-output", position = {-2.0, 0}, direction = defines.direction.west},
-            {flow_direction = "input-output", position = {2.0, 0},  direction = defines.direction.east},
-            {flow_direction = "input-output", position = {0, 2.0},  direction = defines.direction.south}
+            { flow_direction = "input-output", position = { -2.0, 0 }, direction = defines.direction.west },
+            { flow_direction = "input-output", position = { 2.0, 0 }, direction = defines.direction.east },
+            { flow_direction = "input-output", position = { 0, 2.0 }, direction = defines.direction.south }
         }
     },
     energy_source =
     {
         type = "burner",
-        fuel_categories = {"chemical", "biomass"},
+        fuel_categories = { "chemical", "biomass" },
         effectivity = 1,
         fuel_inventory_size = 1,
         burnt_inventory_size = 1,
@@ -70,13 +70,13 @@ ENTITY {
             minimum_intensity = 0,
             maximum_intensity = 0,
             light_intensity_to_size_coefficient = 0,
-            color = {0, 0, 0},
+            color = { 0, 0, 0 },
         },
         smoke =
         {
             {
                 name = "smoke",
-                deviation = {0.1, 0.1},
+                deviation = { 0.1, 0.1 },
                 frequency = 10,
                 north_position = util.by_pixel(-0, -132),
                 south_position = util.by_pixel(-0, -132),
@@ -87,13 +87,13 @@ ENTITY {
     },
     energy_usage = "400kW",
     resource_searching_radius = 3.49,
-    vector_to_place_result = {0, -2.65},
+    vector_to_place_result = { 0, -2.65 },
     radius_visualisation_picture = {
         filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
         width = 12,
         height = 12
     },
-    circuit_connector = circuit_connector_definitions["fluid-drill-mkxx"],
+    circuit_connector = circuit_connector_definitions[ "fluid-drill-mkxx" ],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     graphics_set = {
         animation = {
@@ -126,7 +126,7 @@ ENTITY {
                     line_length = 10,
                     frame_count = 50,
                     animation_speed = 0.15,
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 },
                     shift = util.by_pixel(-0, -32),
                 },
                 {
@@ -154,4 +154,4 @@ ENTITY {
         fade_in_ticks = 4,
         fade_out_ticks = 20
     },
-}
+})

@@ -18,75 +18,75 @@ TECHNOLOGY {
     }
 }
 ]]
-TECHNOLOGY("mukmoux"):set_fields {icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png"}
+TECHNOLOGY("mukmoux"):set_fields({ icon = "__pyalienlifegraphics__/graphics/technology/mukmoux.png" })
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mukmoux-mk02",
     icon = "__pyalienlifegraphics__/graphics/technology/mukmoux-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mukmoux"},
-    dependencies = {"mukmoux"},
+    prerequisites = { "mukmoux" },
+    dependencies = { "mukmoux" },
     effects = {},
     unit = {
         count = 250,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
         },
         time = 50
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mukmoux-mk03",
     icon = "__pyalienlifegraphics__/graphics/technology/mukmoux-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mukmoux-mk02"},
-    dependencies = {"mukmoux-mk02"},
+    prerequisites = { "mukmoux-mk02" },
+    dependencies = { "mukmoux-mk02" },
     effects = {},
     unit = {
         count = 300,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
         },
         time = 50
     }
-}
+})
 
-TECHNOLOGY {
+TECHNOLOGY({
     type = "technology",
     name = "mukmoux-mk04",
     icon = "__pyalienlifegraphics__/graphics/technology/mukmoux-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"mukmoux-mk03"},
-    dependencies = {"mukmoux-mk03"},
+    prerequisites = { "mukmoux-mk03" },
+    dependencies = { "mukmoux-mk03" },
     effects = {},
     unit = {
         count = 350,
         ingredients = {
-            {"automation-science-pack", 1},
-            {"py-science-pack-1",       1},
-            {"logistic-science-pack",   1},
-            {"py-science-pack-2",       1},
-            {"chemical-science-pack",   1},
-            {"py-science-pack-3",       1},
-            {"production-science-pack", 1},
-            {"py-science-pack-4",       1},
+            { "automation-science-pack", 1 },
+            { "py-science-pack-1",       1 },
+            { "logistic-science-pack",   1 },
+            { "py-science-pack-2",       1 },
+            { "chemical-science-pack",   1 },
+            { "py-science-pack-3",       1 },
+            { "production-science-pack", 1 },
+            { "py-science-pack-4",       1 },
 
         },
         time = 50
     }
-}
+})

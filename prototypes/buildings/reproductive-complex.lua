@@ -1,89 +1,89 @@
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "rc-mk01",
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {type = "item", name = "iron-gear-wheel",    amount = 200},
-        {type = "item", name = "steel-plate",        amount = 100},
-        {type = "item", name = "iron-plate",         amount = 200},
-        {type = "item", name = "titanium-plate",     amount = 100},
-        {type = "item", name = "glass",              amount = 50},
-        {type = "item", name = "stone-brick",        amount = 400},
-        {type = "item", name = "electronic-circuit", amount = 20},
-        {type = "item", name = "concrete",           amount = 100},
-        {type = "item", name = "steam-engine",       amount = 3},
+        { type = "item", name = "iron-gear-wheel",    amount = 200 },
+        { type = "item", name = "steel-plate",        amount = 100 },
+        { type = "item", name = "iron-plate",         amount = 200 },
+        { type = "item", name = "titanium-plate",     amount = 100 },
+        { type = "item", name = "glass",              amount = 50 },
+        { type = "item", name = "stone-brick",        amount = 400 },
+        { type = "item", name = "electronic-circuit", amount = 20 },
+        { type = "item", name = "concrete",           amount = 100 },
+        { type = "item", name = "steam-engine",       amount = 3 },
     },
     results = {
-        {type = "item", name = "rc-mk01", amount = 1}
+        { type = "item", name = "rc-mk01", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk01")
+}):add_unlock("biotech-machines-mk01")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "rc-mk02",
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {type = "item", name = "rc-mk01",          amount = 1},
-        {type = "item", name = "advanced-circuit", amount = 20},
-        {type = "item", name = "nexelit-plate",    amount = 50},
-        {type = "item", name = "stainless-steel",  amount = 60},
-        {type = "item", name = "glass",            amount = 50},
-        {type = "item", name = "concrete",         amount = 100},
-        {type = "item", name = "engine-unit",      amount = 3},
-        {type = "item", name = "small-parts-02",   amount = 150},
+        { type = "item", name = "rc-mk01",          amount = 1 },
+        { type = "item", name = "advanced-circuit", amount = 20 },
+        { type = "item", name = "nexelit-plate",    amount = 50 },
+        { type = "item", name = "stainless-steel",  amount = 60 },
+        { type = "item", name = "glass",            amount = 50 },
+        { type = "item", name = "concrete",         amount = 100 },
+        { type = "item", name = "engine-unit",      amount = 3 },
+        { type = "item", name = "small-parts-02",   amount = 150 },
         -- {type = "item", name = "eva", amount = 100},
-        {type = "item", name = "neuroprocessor",   amount = 20},
+        { type = "item", name = "neuroprocessor",   amount = 20 },
     },
     results = {
-        {type = "item", name = "rc-mk02", amount = 1}
+        { type = "item", name = "rc-mk02", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk02")
+}):add_unlock("biotech-machines-mk02")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "rc-mk03",
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {type = "item", name = "rc-mk02",              amount = 1},
-        {type = "item", name = "electric-engine-unit", amount = 6},
-        {type = "item", name = "niobium-plate",        amount = 50},
-        {type = "item", name = "processing-unit",      amount = 20},
-        {type = "item", name = "kevlar",               amount = 100},
-        {type = "item", name = "super-steel",          amount = 100},
-        {type = "item", name = "molybdenum-plate",     amount = 100},
-        {type = "item", name = "ticocr-alloy",         amount = 50},
-        {type = "item", name = "nbti-alloy",           amount = 100},
-        {type = "item", name = "small-parts-03",       amount = 100},
+        { type = "item", name = "rc-mk02",              amount = 1 },
+        { type = "item", name = "electric-engine-unit", amount = 6 },
+        { type = "item", name = "niobium-plate",        amount = 50 },
+        { type = "item", name = "processing-unit",      amount = 20 },
+        { type = "item", name = "kevlar",               amount = 100 },
+        { type = "item", name = "super-steel",          amount = 100 },
+        { type = "item", name = "molybdenum-plate",     amount = 100 },
+        { type = "item", name = "ticocr-alloy",         amount = 50 },
+        { type = "item", name = "nbti-alloy",           amount = 100 },
+        { type = "item", name = "small-parts-03",       amount = 100 },
     },
     results = {
-        {type = "item", name = "rc-mk03", amount = 1}
+        { type = "item", name = "rc-mk03", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk03")
+}):add_unlock("biotech-machines-mk03")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "rc-mk04",
     energy_required = 10,
     enabled = false,
     ingredients = {
-        {type = "item", name = "rc-mk03",               amount = 1},
-        {type = "item", name = "science-coating",       amount = 40},
-        {type = "item", name = "wall-shield",           amount = 20},
-        {type = "item", name = "nbfe-alloy",            amount = 100},
-        {type = "item", name = "super-alloy",           amount = 200},
-        {type = "item", name = "control-unit",          amount = 40},
-        {type = "item", name = "nenbit-matrix",         amount = 50},
-        {type = "item", name = "silver-foam",           amount = 30},
-        {type = "item", name = "metallic-glass",        amount = 30},
-        {type = "item", name = "low-density-structure", amount = 100},
+        { type = "item", name = "rc-mk03",               amount = 1 },
+        { type = "item", name = "science-coating",       amount = 40 },
+        { type = "item", name = "wall-shield",           amount = 20 },
+        { type = "item", name = "nbfe-alloy",            amount = 100 },
+        { type = "item", name = "super-alloy",           amount = 200 },
+        { type = "item", name = "control-unit",          amount = 40 },
+        { type = "item", name = "nenbit-matrix",         amount = 50 },
+        { type = "item", name = "silver-foam",           amount = 30 },
+        { type = "item", name = "metallic-glass",        amount = 30 },
+        { type = "item", name = "low-density-structure", amount = 100 },
     },
     results = {
-        {type = "item", name = "rc-mk04", amount = 1}
+        { type = "item", name = "rc-mk04", amount = 1 }
     }
-}:add_unlock("biotech-machines-mk04")
+}):add_unlock("biotech-machines-mk04")
 
 for i = 1, 4 do
     local name = "rc-mk0" .. i
@@ -91,7 +91,7 @@ for i = 1, 4 do
     local icon_size = 64
     local module_slots = 2 * i
 
-    ITEM {
+    ITEM({
         type = "item",
         name = name,
         icon = icon,
@@ -101,27 +101,27 @@ for i = 1, 4 do
         order = "h",
         place_result = name,
         stack_size = 10
-    }
+    })
 
-    ENTITY {
+    ENTITY({
         type = "assembling-machine",
         name = name,
         icon = icon,
         icon_size = icon_size,
-        flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.5, result = name},
+        flags = { "placeable-neutral", "player-creation" },
+        minable = { mining_time = 0.5, result = name },
         fast_replaceable_group = "reproductive-complex",
         max_health = 2000 * i,
         corpse = "big-remnants",
         dying_explosion = "big-explosion",
-        collision_box = {{-10.6, -10.6}, {10.6, 10.6}},
-        selection_box = {{-11.0, -11.0}, {11.0, 11.0}},
+        collision_box = { { -10.6, -10.6 }, { 10.6, 10.6 } },
+        selection_box = { { -11.0, -11.0 }, { 11.0, 11.0 } },
         forced_symmetry = "diagonal-pos",
         draw_entity_info_icon_background = false,
         entity_info_icon_shift = util.by_pixel(165, 265),
         module_slots = module_slots,
-        allowed_effects = {"speed", "consumption", "pollution", "productivity"},
-        crafting_categories = {"rc"},
+        allowed_effects = { "speed", "consumption", "pollution", "productivity" },
+        crafting_categories = { "rc" },
         crafting_speed = i / (module_slots + 1), -- # modules + 1 building = target speed of 1
         energy_source = {
             type = "electric",
@@ -230,7 +230,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         shift = util.by_pixel(0, 1),
                         priority = "low",
-                        tint = py.tints[i],
+                        tint = py.tints[ i ],
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/rc/l.png",
@@ -258,38 +258,38 @@ for i = 1, 4 do
             --1
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {4.5, 10.5}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 4.5, 10.5 }, direction = defines.direction.south } }
             },
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {6.5, 10.5}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 6.5, 10.5 }, direction = defines.direction.south } }
             },
             {
                 production_type = "input",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 1000,
-                pipe_connections = {{flow_direction = "input", position = {0.5, 10.5}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "input", position = { 0.5, 10.5 }, direction = defines.direction.south } }
             },
             {
                 production_type = "output",
-                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
+                pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 volume = 100,
-                pipe_connections = {{flow_direction = "output", position = {-1.5, 10.5}, direction = defines.direction.south}}
+                pipe_connections = { { flow_direction = "output", position = { -1.5, 10.5 }, direction = defines.direction.south } }
             },
         },
         impact_category = "metal",
         working_sound = {
-            sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.7, max_count = 1, audible_distance_modifier = 1,},
-            idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.4, max_count = 1, audible_distance_modifier = 1,},
+            sound = { filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.7, max_count = 1, audible_distance_modifier = 1, },
+            idle_sound = { filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.4, max_count = 1, audible_distance_modifier = 1, },
             max_sounds_per_prototype = 1,
         }
-    }
+    })
 end

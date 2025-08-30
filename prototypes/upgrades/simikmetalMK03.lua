@@ -10,17 +10,17 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk03.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"simik-mk02", "simik-digestion-mk02"},
+        prerequisites = { "simik-mk02", "simik-digestion-mk02" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"py-science-pack-2",       1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
-                {"production-science-pack", 1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "py-science-pack-2",       1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
+                { "production-science-pack", 1 },
             },
             time = 45
         }
@@ -32,7 +32,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-boron", type = "unlock-recipe"}
+                { recipe = "simik-boron", type = "unlock-recipe" }
             },
         },
         {
@@ -41,7 +41,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-chromium", type = "unlock-recipe"}
+                { recipe = "simik-chromium", type = "unlock-recipe" }
             }
         },
         {
@@ -50,7 +50,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-molybdenum", type = "unlock-recipe"}
+                { recipe = "simik-molybdenum", type = "unlock-recipe" }
             }
         }
     }

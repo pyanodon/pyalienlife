@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     local manure = RECIPE("manure-bacteria"):copy()
     manure.name = "manure-bacteria-fish"
-    manure:add_ingredient {name = "fish-hydrolysate", type = "fluid", amount = 5}
+    manure:add_ingredient({ name = "fish-hydrolysate", type = "fluid", amount = 5 })
     manure:multiply_result_amount("manure-bacteria", 1.5)
 
     local darkness = RECIPE("zogna-bacteria"):copy()
@@ -11,11 +11,11 @@ if data and not yafc_turd_integration then
 
     local icd = RECIPE("bio-sample"):copy()
     icd.name = "bio-sample-icd"
-    icd:add_ingredient {name = "pressured-air", type = "fluid", amount = 50}
-    icd:add_ingredient {name = "pressured-water", type = "fluid", amount = 50}
-    icd.results = {{name = "bio-sample", amount_max = 2, type = "item", amount_min = 1}}
+    icd:add_ingredient({ name = "pressured-air", type = "fluid", amount = 50 })
+    icd:add_ingredient({ name = "pressured-water", type = "fluid", amount = 50 })
+    icd.results = { { name = "bio-sample", amount_max = 2, type = "item", amount_min = 1 } }
 
-    data:extend {darkness, manure, icd}
+    data:extend({ darkness, manure, icd })
 end
 
 return {
@@ -30,13 +30,13 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-incubator.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"microbiology-mk02", "fertilizer-mk02"},
+        prerequisites = { "microbiology-mk02", "fertilizer-mk02" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
             },
             time = 45
         }
@@ -48,7 +48,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "manure-bacteria", new = "manure-bacteria-fish", type = "recipe-replacement"}
+                { old = "manure-bacteria", new = "manure-bacteria-fish", type = "recipe-replacement" }
             },
         },
         {
@@ -57,7 +57,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "zogna-bacteria", new = "zogna-bacteria-darkness", type = "recipe-replacement"}
+                { old = "zogna-bacteria", new = "zogna-bacteria-darkness", type = "recipe-replacement" }
             }
         },
         {
@@ -66,7 +66,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {old = "bio-sample", new = "bio-sample-icd", type = "recipe-replacement"}
+                { old = "bio-sample", new = "bio-sample-icd", type = "recipe-replacement" }
             }
         }
     }

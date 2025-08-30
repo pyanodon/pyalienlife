@@ -1,22 +1,22 @@
-local util = require "util"
+local util = require("util")
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "outpost",
     energy_required = 1,
     category = "crafting",
     enabled = false,
     ingredients = {
-        {type = "item", name = "steel-plate",    amount = 5},
-        {type = "item", name = "small-parts-01", amount = 50},
-        {type = "item", name = "wooden-chest",   amount = 6},
-        {type = "item", name = "concrete",       amount = 20},
-        {type = "item", name = "glass",          amount = 5},
+        { type = "item", name = "steel-plate",    amount = 5 },
+        { type = "item", name = "small-parts-01", amount = 50 },
+        { type = "item", name = "wooden-chest",   amount = 6 },
+        { type = "item", name = "concrete",       amount = 20 },
+        { type = "item", name = "glass",          amount = 5 },
     },
-    results = {{type = "item", name = "outpost", amount = 1}}
-}:add_unlock("zoology")
+    results = { { type = "item", name = "outpost", amount = 1 } }
+}):add_unlock("zoology")
 
-ITEM {
+ITEM({
     type = "item",
     name = "outpost",
     icon = "__pyalienlifegraphics2__/graphics/icons/outpost.png",
@@ -25,15 +25,15 @@ ITEM {
     order = "b-a",
     place_result = "outpost",
     stack_size = 10
-}
+})
 
-data:extend {{
+data:extend({ {
     inventory_type = "with_filters_and_bar",
     ---@diagnostic disable-next-line: assign-type-mismatch
     scale_info_icons = true,
     name = "outpost",
     type = "container",
-    circuit_connector = table.deepcopy(data.raw.container["steel-chest"].circuit_connector), -- todo
+    circuit_connector = table.deepcopy(data.raw.container[ "steel-chest" ].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
     close_sound = {
         filename = "__base__/sound/metallic-chest-close.ogg",
@@ -119,4 +119,4 @@ data:extend {{
             3.0
         }
     }
-}}
+} })

@@ -10,16 +10,16 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/simik-digestion-mk01.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"simik-mk01"},
+        prerequisites = { "simik-mk01" },
         unit = {
             count = 500,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"py-science-pack-1",       1},
-                {"logistic-science-pack",   1},
-                {"py-science-pack-2",       1},
-                {"chemical-science-pack",   1},
-                {"py-science-pack-3",       1},
+                { "automation-science-pack", 1 },
+                { "py-science-pack-1",       1 },
+                { "logistic-science-pack",   1 },
+                { "py-science-pack-2",       1 },
+                { "chemical-science-pack",   1 },
+                { "py-science-pack-3",       1 },
             },
             time = 45
         }
@@ -31,7 +31,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-iron", type = "unlock-recipe"}
+                { recipe = "simik-iron", type = "unlock-recipe" }
             },
         },
         {
@@ -40,7 +40,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-copper", type = "unlock-recipe"}
+                { recipe = "simik-copper", type = "unlock-recipe" }
             }
         },
         {
@@ -49,7 +49,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {recipe = "simik-quartz", type = "unlock-recipe"}
+                { recipe = "simik-quartz", type = "unlock-recipe" }
             }
         }
     }

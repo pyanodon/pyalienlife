@@ -1,4 +1,4 @@
-py.autorecipes {
+py.autorecipes({
 	name = "yotoi",
 	category = "yotoi",
 	subgroup = "py-alienlife-yotoi",
@@ -10,14 +10,14 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "yotoi-seeds", amount = 1},
-				{name = "sand",        amount = 8},
-				{name = "limestone",   amount = 6},
-				{name = "water",       amount = 100, fluidbox_index = 1},
+				{ name = "yotoi-seeds", amount = 1 },
+				{ name = "sand",        amount = 8 },
+				{ name = "limestone",   amount = 6 },
+				{ name = "water",       amount = 100, fluidbox_index = 1 },
 			},
 			results =
 			{
-				{name = "yotoi", amount = 4},
+				{ name = "yotoi", amount = 4 },
 			},
 			crafting_speed = 130,
 			tech = "yotoi"
@@ -26,13 +26,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fertilizer", amount = 6},
-				{name = "ash",        amount = 5},
-				{name = "biomass",    amount = 10},
+				{ name = "fertilizer", amount = 6 },
+				{ name = "ash",        amount = 5 },
+				{ name = "biomass",    amount = 10 },
 			},
 			results =
 			{
-				{name = "yotoi", add_amount = 8}
+				{ name = "yotoi", add_amount = 8 }
 			},
 			crafting_speed = 100,
 			tech = "yotoi-mk02"
@@ -41,13 +41,13 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "blood-meal",     amount = 5,   fallback = {name = "blood-barrel", amount = 4}},
-				{name = "carbon-dioxide", amount = 100, fluidbox_index = 2},
-				{name = "pesticide-mk01", amount = 1},
+				{ name = "blood-meal",     amount = 5,   fallback = { name = "blood-barrel", amount = 4 } },
+				{ name = "carbon-dioxide", amount = 100, fluidbox_index = 2 },
+				{ name = "pesticide-mk01", amount = 1 },
 			},
 			results =
 			{
-				{name = "yotoi", add_amount = 8}
+				{ name = "yotoi", add_amount = 8 }
 			},
 			crafting_speed = 70,
 			tech = "yotoi-mk03"
@@ -56,19 +56,19 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "fertilizer",     add_amount = 4},
-				{name = "small-lamp",     amount = 2},
-				{name = "pesticide-mk02", amount = 1},
+				{ name = "fertilizer",     add_amount = 4 },
+				{ name = "small-lamp",     amount = 2 },
+				{ name = "pesticide-mk02", amount = 1 },
 			},
 			results =
 			{
-				{name = "yotoi", add_amount = 8}
+				{ name = "yotoi", add_amount = 8 }
 			},
 			crafting_speed = 40,
 			tech = "yotoi-mk04"
 		},
 	}
-}
+})
 
 --[[
     --GH

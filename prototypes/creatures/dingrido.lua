@@ -1,35 +1,35 @@
-local util = require "util"
+local util = require("util")
 
-data:extend {{
+data:extend({ {
     type = "collision-layer",
     name = "dingrido_collision_mask"
-}}
+} })
 
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "dingrido",
     energy_required = 60,
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        {type = "item",  name = "modular-armor",     amount = 1},
-        {type = "item",  name = "py-shed-basic",     amount = 1},
-        {type = "item",  name = "dingrits",          amount = 1},
-        {type = "item",  name = "alien-sample-02",   amount = 10},
-        {type = "item",  name = "cdna",              amount = 30},
-        {type = "item",  name = "retrovirus",        amount = 10},
-        {type = "item",  name = "propeptides",       amount = 5},
-        {type = "item",  name = "cbp",               amount = 10},
-        {type = "item",  name = "bio-sample",        amount = 50},
-        {type = "item",  name = "dingrits-codex",    amount = 5},
-        {type = "item",  name = "earth-wolf-sample", amount = 10},
-        {type = "fluid", name = "fetal-serum",       amount = 100},
-        {type = "fluid", name = "artificial-blood",  amount = 200}
+        { type = "item",  name = "modular-armor",     amount = 1 },
+        { type = "item",  name = "py-shed-basic",     amount = 1 },
+        { type = "item",  name = "dingrits",          amount = 1 },
+        { type = "item",  name = "alien-sample-02",   amount = 10 },
+        { type = "item",  name = "cdna",              amount = 30 },
+        { type = "item",  name = "retrovirus",        amount = 10 },
+        { type = "item",  name = "propeptides",       amount = 5 },
+        { type = "item",  name = "cbp",               amount = 10 },
+        { type = "item",  name = "bio-sample",        amount = 50 },
+        { type = "item",  name = "dingrits-codex",    amount = 5 },
+        { type = "item",  name = "earth-wolf-sample", amount = 10 },
+        { type = "fluid", name = "fetal-serum",       amount = 100 },
+        { type = "fluid", name = "artificial-blood",  amount = 200 }
     },
-    results = {{type = "item", name = "dingrido", amount = 1}}
-}:add_unlock("mounts-mk02")
+    results = { { type = "item", name = "dingrido", amount = 1 } }
+}):add_unlock("mounts-mk02")
 
-ITEM {
+ITEM({
     type = "item-with-entity-data",
     name = "dingrido",
     icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
@@ -40,17 +40,17 @@ ITEM {
     place_result = "dingrido",
     stack_size = 10,
     icon_tintable_mask = "__pyalienlifegraphics__/graphics/icons/mount-mask.png",
-}
+})
 
-data:extend {{
+data:extend({ {
     type = "car",
     name = "dingrido",
-    collision_mask = {layers = {dingrido_collision_mask = true}},
+    collision_mask = { layers = { dingrido_collision_mask = true } },
     icon = "__pyalienlifegraphics__/graphics/icons/dingrido.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
-    minable = {mining_time = 0.5, result = "dingrido"},
-    mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
+    flags = { "placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable" },
+    minable = { mining_time = 0.5, result = "dingrido" },
+    mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
     max_health = 2500,
     healing_per_tick = 0.03,
     corpse = "medium-biter-corpse",
@@ -88,15 +88,15 @@ data:extend {{
             percent = 70
         }
     },
-    collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
-    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
+    selection_box = { { -0.9, -1.3 }, { 0.9, 1.3 } },
     drawing_box_vertical_extension = 0.5,
     trash_inventory_size = 20,
     effectivity = 0.98,
     braking_power = "30MW",
     energy_source = {
         type = "burner",
-        fuel_categories = {"dingrit-food"},
+        fuel_categories = { "dingrit-food" },
         effectivity = 1,
         fuel_inventory_size = 3
     },
@@ -110,15 +110,15 @@ data:extend {{
             picture = {
                 filename = "__core__/graphics/light-cone.png",
                 priority = "extra-high",
-                flags = {"light"},
+                flags = { "light" },
                 scale = 2,
                 width = 200,
                 height = 200
             },
-            shift = {-0.1, -7},
+            shift = { -0.1, -7 },
             size = 1,
             intensity = 0.7,
-            color = {r = 0.9, g = 1.0, b = 1.0}
+            color = { r = 0.9, g = 1.0, b = 1.0 }
         },
         {
             type = "oriented",
@@ -126,15 +126,15 @@ data:extend {{
             picture = {
                 filename = "__core__/graphics/light-cone.png",
                 priority = "extra-high",
-                flags = {"light"},
+                flags = { "light" },
                 scale = 2,
                 width = 200,
                 height = 200
             },
-            shift = {0.1, -7},
+            shift = { 0.1, -7 },
             size = 1,
             intensity = 0.7,
-            color = {r = 0.9, g = 1.0, b = 1.0}
+            color = { r = 0.9, g = 1.0, b = 1.0 }
         }
     },
     animation = {
@@ -209,7 +209,7 @@ data:extend {{
         }
     },
     sound_no_fuel = {
-        {filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9},
+        { filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9 },
     },
     ---@diagnostic disable-next-line: assign-type-mismatch
     sound_minimum_speed = 0.15,
@@ -221,8 +221,8 @@ data:extend {{
         },
         match_speed_to_activity = false
     },
-    open_sound = {filename = "__pyalienlifegraphics3__/sounds/dingrito-in.ogg", volume = 0.9},
-    close_sound = {filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9},
+    open_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-in.ogg", volume = 0.9 },
+    close_sound = { filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9 },
     rotation_speed = 0.0095,
     weight = 8000,
     inventory_size = 120,
@@ -231,7 +231,7 @@ data:extend {{
     equipment_grid = "mount-grid-10x6",
     minimap_representation = {
         filename = "__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk02.png",
-        flags = {"icon"},
-        size = {64, 64}
+        flags = { "icon" },
+        size = { 64, 64 }
     },
-}}
+} })

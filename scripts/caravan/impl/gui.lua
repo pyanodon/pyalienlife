@@ -45,9 +45,9 @@ function P.remove_alert(entity)
             -- You could use train alerts which have the wrong notification string but *do* stack
             -- player.remove_alert({prototype = prototype, type = defines.alert_type.train_out_of_fuel})
             -- If we specify more than one criteria here, it'll only pay attention to one for some reason
-            player.remove_alert {
+            player.remove_alert({
                 entity = entity
-            }
+            })
         end
     end
 end
@@ -55,13 +55,13 @@ end
 function P.status_info(caravan_data)
     local entity = caravan_data.entity
     if caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty() then
-        return {"entity-status.starved"}, "utility/status_not_working"
+        return { "entity-status.starved" }, "utility/status_not_working"
     elseif entity.health ~= entity.max_health then
-        return {"entity-status.wounded"}, "utility/status_yellow"
+        return { "entity-status.wounded" }, "utility/status_yellow"
     elseif not is_automated(caravan_data) then
-        return {"entity-status.idle"}, "utility/status_yellow"
+        return { "entity-status.idle" }, "utility/status_yellow"
     else
-        return {"entity-status.healthy"}, "utility/status_working"
+        return { "entity-status.healthy" }, "utility/status_working"
     end
 end
 

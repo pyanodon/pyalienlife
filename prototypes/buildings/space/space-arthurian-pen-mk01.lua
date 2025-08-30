@@ -1,24 +1,24 @@
 ---WIP---
 ---REDO RECIPE---
-RECIPE {
+RECIPE({
     type = "recipe",
     name = "space-arthurian-pen-mk01",
     energy_required = 1,
     enabled = false,
     ingredients = {
-        {type = "item", name = "concrete",         amount = 200},
-        {type = "item", name = "titanium-plate",   amount = 100},
-        {type = "item", name = "steel-plate",      amount = 100},
-        {type = "item", name = "duralumin",        amount = 50},
-        {type = "item", name = "glass",            amount = 20},
-        {type = "item", name = "advanced-circuit", amount = 35},
+        { type = "item", name = "concrete",         amount = 200 },
+        { type = "item", name = "titanium-plate",   amount = 100 },
+        { type = "item", name = "steel-plate",      amount = 100 },
+        { type = "item", name = "duralumin",        amount = 50 },
+        { type = "item", name = "glass",            amount = 20 },
+        { type = "item", name = "advanced-circuit", amount = 35 },
     },
     results = {
-        {type = "item", name = "space-arthurian-pen-mk01", amount = 1}
+        { type = "item", name = "space-arthurian-pen-mk01", amount = 1 }
     }
-}:add_unlock("arthurian")
+}):add_unlock("arthurian")
 
-ITEM {
+ITEM({
     type = "item",
     name = "space-arthurian-pen-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pen-mk01.png",
@@ -28,24 +28,24 @@ ITEM {
     order = "d",
     place_result = "space-arthurian-pen-mk01",
     stack_size = 10
-}
+})
 
-ENTITY {
+ENTITY({
     type = "assembling-machine",
     name = "space-arthurian-pen-mk01",
     icon = "__pyalienlifegraphics__/graphics/icons/arthurian-pen-mk01.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "space-arthurian-pen-mk01"},
+    flags = { "placeable-neutral", "player-creation" },
+    minable = { mining_time = 0.5, result = "space-arthurian-pen-mk01" },
     fast_replaceable_group = "arthurian-pen",
     max_health = 100,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
-    collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
+    collision_box = { { -4.8, -4.8 }, { 4.8, 4.8 } },
+    selection_box = { { -5.0, -5.0 }, { 5.0, 5.0 } },
     module_slots = 8,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"arthurian"},
+    allowed_effects = { "speed", "productivity", "consumption", "pollution", "quality" },
+    crafting_categories = { "arthurian" },
     crafting_speed = 0.05,
     energy_source = {
         type = "electric",
@@ -58,10 +58,10 @@ ENTITY {
     graphics_set = {
         working_visualisations = {
             {
-                north_position = {-2.5, -3.5},
-                west_position = {-2.5, -3.5},
-                south_position = {-2.5, -3.5},
-                east_position = {-2.5, -3.5},
+                north_position = { -2.5, -3.5 },
+                west_position = { -2.5, -3.5 },
+                south_position = { -2.5, -3.5 },
+                east_position = { -2.5, -3.5 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/mother.png",
                     frame_count = 40,
@@ -73,10 +73,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {3.3, -0.5},
-                west_position = {3.3, -0.5},
-                south_position = {3.3, -0.5},
-                east_position = {3.3, -0.5},
+                north_position = { 3.3, -0.5 },
+                west_position = { 3.3, -0.5 },
+                south_position = { 3.3, -0.5 },
+                east_position = { 3.3, -0.5 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/right.png",
                     frame_count = 40,
@@ -87,10 +87,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {3.5, 0.5},
-                west_position = {3.5, 0.5},
-                south_position = {3.5, 0.5},
-                east_position = {3.5, 0.5},
+                north_position = { 3.5, 0.5 },
+                west_position = { 3.5, 0.5 },
+                south_position = { 3.5, 0.5 },
+                east_position = { 3.5, 0.5 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/cub.png",
                     frame_count = 40,
@@ -101,10 +101,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-0.8, 1.7},
-                west_position = {-0.8, 1.7},
-                south_position = {-0.8, 1.7},
-                east_position = {-0.8, 1.7},
+                north_position = { -0.8, 1.7 },
+                west_position = { -0.8, 1.7 },
+                south_position = { -0.8, 1.7 },
+                east_position = { -0.8, 1.7 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/eatside.png",
                     frame_count = 200,
@@ -115,10 +115,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {-2.5, 0.8},
-                west_position = {-2.5, 0.8},
-                south_position = {-2.5, 0.8},
-                east_position = {-2.5, 0.8},
+                north_position = { -2.5, 0.8 },
+                west_position = { -2.5, 0.8 },
+                south_position = { -2.5, 0.8 },
+                east_position = { -2.5, 0.8 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/eatup.png",
                     frame_count = 200,
@@ -129,10 +129,10 @@ ENTITY {
                 }
             },
             {
-                north_position = {0.0, -1.0},
-                west_position = {0.0, -1.0},
-                south_position = {-0.0, -1.0},
-                east_position = {-0.0, -1.0},
+                north_position = { 0.0, -1.0 },
+                west_position = { 0.0, -1.0 },
+                south_position = { -0.0, -1.0 },
+                east_position = { -0.0, -1.0 },
                 animation = {
                     filename = "__pyalienlifegraphics__/graphics/entity/arthurian-pen/rot.png",
                     frame_count = 120,
@@ -162,7 +162,7 @@ ENTITY {
                     frame_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(4, -12),
-                    tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+                    tint = { r = 1.0, g = 1.0, b = 0.0, a = 1.0 }
                 },
 
             },
@@ -170,8 +170,8 @@ ENTITY {
     },
     impact_category = "metal-large",
     working_sound = {
-        sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 0.3},
+        sound = { filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 1.0 },
+        idle_sound = { filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 0.3 },
         apparent_volume = 0.45
     }
-}
+})
