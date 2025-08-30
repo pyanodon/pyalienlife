@@ -1,9 +1,9 @@
 if data and not yafc_turd_integration then
     for recipe, ingredient in pairs({
-        [ RECIPE("seaweed-crop-mk01"):copy() ] = { type = "item", name = "decider-combinator", amount = 10 },
-        [ RECIPE("seaweed-crop-mk02"):copy() ] = { type = "item", name = "arithmetic-combinator", amount = 20 },
-        [ RECIPE("seaweed-crop-mk03"):copy() ] = { type = "item", name = "decider-combinator", amount = 30 },
-        [ RECIPE("seaweed-crop-mk04"):copy() ] = { type = "item", name = "arithmetic-combinator", amount = 40 },
+        [RECIPE("seaweed-crop-mk01"):copy()] = { type = "item", name = "decider-combinator", amount = 10 },
+        [RECIPE("seaweed-crop-mk02"):copy()] = { type = "item", name = "arithmetic-combinator", amount = 20 },
+        [RECIPE("seaweed-crop-mk03"):copy()] = { type = "item", name = "decider-combinator", amount = 30 },
+        [RECIPE("seaweed-crop-mk04"):copy()] = { type = "item", name = "arithmetic-combinator", amount = 40 },
     }) do
         recipe.name = recipe.name .. "-with-ai"
         recipe:add_ingredient(ingredient)

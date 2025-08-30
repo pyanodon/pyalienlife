@@ -126,7 +126,7 @@ for i = 1, 4 do
             height = 4
         },
         collision_mask = { layers = { item = true, object = true, water_tile = true } },
-        circuit_connector = circuit_connector_definitions[ "flora-collector-mkxx" ],
+        circuit_connector = circuit_connector_definitions["flora-collector-mkxx"],
         circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
         graphics_set = {
             animation = {
@@ -211,7 +211,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(-96, 0)
                     },
                     {
@@ -221,7 +221,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(-64, 0)
                     },
                     {
@@ -231,7 +231,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(-32, 0)
                     },
                     {
@@ -241,7 +241,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(0, 0)
                     },
                     {
@@ -251,7 +251,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(32, 0)
                     },
                     {
@@ -261,7 +261,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(64, 0)
                     },
                     {
@@ -271,7 +271,7 @@ for i = 1, 4 do
                         line_length = 64,
                         frame_count = 255,
                         animation_speed = 0.2,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         shift = util.by_pixel(96, 0)
                     },
                 }

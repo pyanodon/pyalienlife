@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
         local _, removed = recipe:remove_ingredient("water-barrel")
         recipe:add_ingredient({ type = "item", name = "boric-acid-barrel", amount = removed })
         if i > 4 and i < 8 then
-            recipe.results[ 1 ].probability = recipe.results[ 1 ].probability * 1.5
+            recipe.results[1].probability = recipe.results[1].probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75
         end
         data:extend({ recipe })
@@ -45,7 +45,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient("navens")
         recipe:remove_ingredient("wood-seeds")
         if i > 4 and i < 8 then
-            recipe.results[ 1 ].probability = recipe.results[ 1 ].probability * 0.75
+            recipe.results[1].probability = recipe.results[1].probability * 0.75
             recipe.energy_required = recipe.energy_required * 1.5
         end
         data:extend({ recipe })

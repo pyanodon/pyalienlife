@@ -165,7 +165,7 @@ data:extend({ {
     flags = {},
     subgroup = "py-alienlife-kicalk",
     order = "b",
-    stack_size = data.raw.module[ "kicalk" ].stack_size * 2,
+    stack_size = data.raw.module["kicalk"].stack_size * 2,
 } })
 
 ITEM({

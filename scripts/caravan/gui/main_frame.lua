@@ -75,7 +75,7 @@ function P.build_camera_frame(parent, caravan_data)
     camera.style.horizontally_stretchable = true
     camera.entity = caravan_data.entity
     camera.visible = true
-    local prototype = caravan_prototypes[ caravan_data.entity.name ]
+    local prototype = caravan_prototypes[caravan_data.entity.name]
     camera.zoom = prototype.camera_zoom or 0.5
 end
 
@@ -90,7 +90,7 @@ function P.update_status_flow(player)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
-    local caravan_data = storage.caravans[ gui.tags.unit_number ]
+    local caravan_data = storage.caravans[gui.tags.unit_number]
     local caption, sprite = CaravanImpl.status_info(caravan_data)
 
     local status_flow = gui.entity_frame.status_flow
@@ -98,7 +98,7 @@ function P.update_status_flow(player)
     status_flow.label.caption = caption
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_close_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_close_button"] = function(event)
     local player = game.get_player(event.player_index)
 
     local slider_frame = number_selection.get_slider_frame(player)
@@ -122,12 +122,12 @@ gui_events[ defines.events.on_gui_click ][ "py_caravan_close_button" ] = functio
 end
 
 -- store tab index on swap
-gui_events[ defines.events.on_gui_selected_tab_changed ][ "tabbed_pane" ] = function(event)
+gui_events[defines.events.on_gui_selected_tab_changed]["tabbed_pane"] = function(event)
     local player = game.get_player(event.player_index)
     local tab_pane = event.element
 
     if not tab_pane then return end
-    storage.last_opened_tab[ event.player_index ] = tab_pane.selected_tab_index
+    storage.last_opened_tab[event.player_index] = tab_pane.selected_tab_index
 end
 
 return P

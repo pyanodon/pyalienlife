@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
             { name = i == 1 and "auog" or "auog-mk0" .. i, amount = 1, type = "item", probability = 0.95 },
             { name = "yaedols",                            amount = 1, type = "item", probability = 0.85 },
         }
-        for _, result in pairs(data.raw.recipe[ "ex-used-auog" ].results) do
+        for _, result in pairs(data.raw.recipe["ex-used-auog"].results) do
             result = table.deepcopy(result)
             result.probability = 0.05
             table.insert(results, result)
@@ -40,10 +40,10 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, dirt in pairs({
-        [ RECIPE("auog-paddock-mk01"):copy() ] = { { type = "item", name = "soil", amount = 13 }, { type = "item", name = "sand", amount = 7 }, { type = "item", name = "stone", amount = 5 } },
-        [ RECIPE("auog-paddock-mk02"):copy() ] = { { type = "item", name = "coarse", amount = 8 }, { type = "item", name = "limestone", amount = 12 }, { type = "item", name = "rich-clay", amount = 5 } },
-        [ RECIPE("auog-paddock-mk03"):copy() ] = { { type = "item", name = "iron-oxide", amount = 6 }, { type = "item", name = "coal-dust", amount = 3 }, { type = "item", name = "gravel", amount = 11 } },
-        [ RECIPE("auog-paddock-mk04"):copy() ] = { { type = "item", name = "oil-sand", amount = 10 }, { type = "item", name = "rare-earth-ore", amount = 2 }, { type = "item", name = "biomass", amount = 5 } },
+        [RECIPE("auog-paddock-mk01"):copy()] = { { type = "item", name = "soil", amount = 13 }, { type = "item", name = "sand", amount = 7 }, { type = "item", name = "stone", amount = 5 } },
+        [RECIPE("auog-paddock-mk02"):copy()] = { { type = "item", name = "coarse", amount = 8 }, { type = "item", name = "limestone", amount = 12 }, { type = "item", name = "rich-clay", amount = 5 } },
+        [RECIPE("auog-paddock-mk03"):copy()] = { { type = "item", name = "iron-oxide", amount = 6 }, { type = "item", name = "coal-dust", amount = 3 }, { type = "item", name = "gravel", amount = 11 } },
+        [RECIPE("auog-paddock-mk04"):copy()] = { { type = "item", name = "oil-sand", amount = 10 }, { type = "item", name = "rare-earth-ore", amount = 2 }, { type = "item", name = "biomass", amount = 5 } },
     }) do
         recipe.main_product = recipe.name
         recipe.name = recipe.name .. "-with-dirt"
@@ -53,15 +53,15 @@ if data and not yafc_turd_integration then
         data:extend({ recipe })
     end
 
-    local buffed_generator = table.deepcopy(data.raw[ "burner-generator" ][ "generator-1" ])
+    local buffed_generator = table.deepcopy(data.raw["burner-generator"]["generator-1"])
     buffed_generator.burner.effectivity = 2
     buffed_generator.effectivity = 2
     buffed_generator.max_power_output = "111MW"
     buffed_generator.localised_description = buffed_generator.localised_description or { "entity-description." .. buffed_generator.name }
     buffed_generator.placeable_by = { item = buffed_generator.name, count = 1 }
     buffed_generator.localised_name = { "entity-name." .. buffed_generator.name }
-    buffed_generator.subgroup = data.raw.item[ buffed_generator.name ].subgroup
-    buffed_generator.order = data.raw.item[ buffed_generator.name ].order
+    buffed_generator.subgroup = data.raw.item[buffed_generator.name].subgroup
+    buffed_generator.order = data.raw.item[buffed_generator.name].order
     buffed_generator.name = buffed_generator.name .. "-turd"
     data:extend({ buffed_generator })
 end

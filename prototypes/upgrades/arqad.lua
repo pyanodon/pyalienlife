@@ -1,4 +1,4 @@
-local is_pyse = (data and mods[ "pystellarexpedition" ]) or (script and script.active_mods[ "pystellarexpedition" ])
+local is_pyse = (data and mods["pystellarexpedition"]) or (script and script.active_mods["pystellarexpedition"])
 
 local cags_effects
 if is_pyse then
@@ -45,9 +45,9 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, result_name in pairs({
-        [ RECIPE("wax"):copy() ] = "wax",
-        [ RECIPE("wax-to-lube"):copy() ] = "lubricant",
-        [ RECIPE("honey-comb"):copy() ] = "arqad-honey",
+        [RECIPE("wax"):copy()] = "wax",
+        [RECIPE("wax-to-lube"):copy()] = "lubricant",
+        [RECIPE("honey-comb"):copy()] = "arqad-honey",
     }) do
         recipe.name = recipe.name .. "-buffed"
         recipe:multiply_result_amount(result_name, 3)

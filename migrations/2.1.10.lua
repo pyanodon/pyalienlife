@@ -9,7 +9,7 @@ for _, caravan_data in pairs(storage.caravans) do
     if caravan_data.is_aerial and script.active_mods.pyalternativeenergy and exists_and_valid(caravan_data.entity) then
         local entity = caravan_data.entity
         local _, player = next(game.connected_players)
-        player = player or game.players[ 1 ]
+        player = player or game.players[1]
         entity.surface.create_entity({
             name = entity.name,
             position = player.position,
@@ -32,7 +32,7 @@ for _, caravan_data in pairs(storage.caravans) do
         if exists_and_valid(fuel_inventory) then fuel_inventory.destroy() end
         goto continue
     end
-    new[ caravan_data.unit_number ] = caravan_data
+    new[caravan_data.unit_number] = caravan_data
     found = true
     ::continue::
 end

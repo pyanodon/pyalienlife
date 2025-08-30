@@ -6,7 +6,7 @@ local Impl = require("impl")
 
 local function add_gui_row(caravan_data, key, table, inner)
     local entity = caravan_data.entity
-    local prototype = caravan_prototypes[ entity.name ]
+    local prototype = caravan_prototypes[entity.name]
 
     table = table.add({ type = "frame", direction = "vertical", tags = { unit_number = key }, style = inner and "inside_shallow_frame" or nil })
 
@@ -99,29 +99,29 @@ local function add_gui_row(caravan_data, key, table, inner)
     status_text.style.right_margin = 4
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_click_caravan" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_click_caravan"] = function(event)
     local player = game.get_player(event.player_index) ---@as LuaPlayer
     local element = event.element
     local tags = element.tags
-    local caravan_data = storage.caravans[ tags.unit_number ]
+    local caravan_data = storage.caravans[tags.unit_number]
 
     player.opened = nil
     CaravanGui.build(player, caravan_data)
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_view_inventory_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_view_inventory_button"] = function(event)
     local element = event.element
     local tags = element.tags
-    local caravan_data = storage.caravans[ tags.unit_number ]
+    local caravan_data = storage.caravans[tags.unit_number]
     local tooltip = Utils.get_summary_tooltip(caravan_data)
     element.tooltip = tooltip
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_open_map_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local caravan_data = storage.caravans[ tags.unit_number ]
+    local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
     local gui = CaravanGui.get_gui(player)
     if gui then
@@ -183,9 +183,9 @@ local function title_display_mode(caption_flow, caravan_data)
     title.style.maximal_width = button.tags.maximal_width or error("No maximal width")
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_rename_caravan_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_rename_caravan_button"] = function(event)
     local element = event.element
-    local caravan_data = storage.caravans[ element.tags.unit_number ]
+    local caravan_data = storage.caravans[element.tags.unit_number]
     local caption_flow = element.parent
     if caption_flow.title then
         title_edit_mode(caption_flow, caravan_data)
@@ -194,15 +194,15 @@ gui_events[ defines.events.on_gui_click ][ "py_rename_caravan_button" ] = functi
     end
 end
 
-gui_events[ defines.events.on_gui_text_changed ][ "py_rename_caravan_textfield" ] = function(event)
+gui_events[defines.events.on_gui_text_changed]["py_rename_caravan_textfield"] = function(event)
     local element = event.element
-    local caravan_data = storage.caravans[ element.tags.index ]
+    local caravan_data = storage.caravans[element.tags.index]
     caravan_data.name = element.text
 end
 
-gui_events[ defines.events.on_gui_confirmed ][ "py_rename_caravan_textfield" ] = function(event)
+gui_events[defines.events.on_gui_confirmed]["py_rename_caravan_textfield"] = function(event)
     local element = event.element
-    local caravan_data = storage.caravans[ element.tags.index ]
+    local caravan_data = storage.caravans[element.tags.index]
     title_display_mode(element.parent, caravan_data)
 end
 
@@ -268,7 +268,7 @@ local function on_search(search_key, gui, player)
     for _, child in pairs(gui.table.children) do
         if child.type == "frame" then
             local unit_number = child.tags.unit_number
-            local caravan_data = storage.caravans[ unit_number ]
+            local caravan_data = storage.caravans[unit_number]
             if caravan_data then
                 local visible = search_key == "" or Utils.get_name(caravan_data):lower():find(search_key, 1, true)
                 child.visible = not not visible -- cast to boolean becuase factorio 2.0 is picky

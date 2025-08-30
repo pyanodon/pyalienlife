@@ -84,7 +84,7 @@ if data and not yafc_turd_integration then
         RECIPE("mukmoux-pasture-mk04"):copy(),
     }) do
         recipe.name = recipe.name .. "-with-electronics"
-        recipe:add_ingredient({ name = electronics[ i ], amount = 10 * i, type = "item" })
+        recipe:add_ingredient({ name = electronics[i], amount = 10 * i, type = "item" })
         recipe:remove_ingredient()
         data:extend({ recipe })
     end

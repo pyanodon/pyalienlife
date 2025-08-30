@@ -61,8 +61,8 @@ RECIPE("sc-wire").category = "research"
 
 RECIPE("nexelit-matrix"):remove_unlock("nenbit-matrix"):add_unlock("neuro-electronics-mk01")
 
-data.raw[ "recipe-category" ][ "xyhiphoe" ].allowed_module_categories = { "xyhiphoe" }
-data.raw[ "recipe-category" ][ "xyhiphoe" ].modules_required = true
+data.raw["recipe-category"]["xyhiphoe"].allowed_module_categories = { "xyhiphoe" }
+data.raw["recipe-category"]["xyhiphoe"].modules_required = true
 
 RECIPE("log7"):replace_result("log", "log", 9)
 RECIPE("log8"):replace_result("log", "log", 10)

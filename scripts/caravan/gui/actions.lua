@@ -9,7 +9,7 @@ local caravan_prototypes = require("__pyalienlife__/scripts/caravan/caravan-prot
 local possibly_blocking_actions = { "fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank" }
 
 local function play_stop_button_info(caravan_data, schedule_id, action_id)
-    local schedule = caravan_data.schedule[ schedule_id ]
+    local schedule = caravan_data.schedule[schedule_id]
 
     if schedule and schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
         return "utility/close_fat", "train_schedule_action_button"

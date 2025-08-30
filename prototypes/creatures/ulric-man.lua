@@ -271,7 +271,7 @@ data:extend
             {
                 action_delivery = {
                     target_effects = { {
-                        sound = data.raw.capsule[ "cluster-grenade" ].capsule_action.attack_parameters.ammo_type.action[ 2 ].action_delivery.target_effects[ 1 ].sound,
+                        sound = data.raw.capsule["cluster-grenade"].capsule_action.attack_parameters.ammo_type.action[2].action_delivery.target_effects[1].sound,
                         type = "play-sound"
                     } },
                     type = "instant"

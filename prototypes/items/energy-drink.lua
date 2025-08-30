@@ -64,7 +64,7 @@ ITEM({
     }
 })
 
-local speedup_sticker = table.deepcopy(data.raw[ "sticker" ][ "slowdown-sticker" ])
+local speedup_sticker = table.deepcopy(data.raw["sticker"]["slowdown-sticker"])
 speedup_sticker.name = "speedup-sticker"
 speedup_sticker.duration_in_ticks = 60 * 60
 speedup_sticker.target_movement_modifier_from = 20

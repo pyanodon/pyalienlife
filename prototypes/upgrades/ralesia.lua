@@ -51,7 +51,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-hydrogen-burn"
         recipe:remove_ingredient("water")
         local _, old_hydrogen = recipe:remove_ingredient("hydrogen")
-        recipe:add_ingredient({ name = "hydrogen", amount = old_hydrogen + 50, type = "fluid", fluidbox_index = fluidbox_indexs[ i ] })
+        recipe:add_ingredient({ name = "hydrogen", amount = old_hydrogen + 50, type = "fluid", fluidbox_index = fluidbox_indexs[i] })
         recipe:add_result({ name = "helium", type = "fluid", amount = i * 2 })
         recipe.main_product = "helium"
         data:extend({ recipe })

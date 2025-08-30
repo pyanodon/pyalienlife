@@ -48,7 +48,7 @@ if data and not yafc_turd_integration then
         RECIPE("vonix-den-mk03"):copy(),
     }) do
         recipe.name = recipe.name .. "-free"
-        recipe.ingredients = { previous[ i ] }
+        recipe.ingredients = { previous[i] }
         data:extend({ recipe })
     end
 

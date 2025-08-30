@@ -54,13 +54,13 @@ end
 
 local function add_new_fish_farm(i)
     local name = "fish-farm-mk0" .. i
-    local entity = table.deepcopy(data.raw[ "assembling-machine" ][ name ])
+    local entity = table.deepcopy(data.raw["assembling-machine"][name])
     entity.name = name .. "-turd"
     entity.localised_name = { "entity-name." .. name }
     entity.placeable_by = { item = name, count = 1 }
     entity.localised_description = entity.localised_description or { "entity-description." .. name }
-    entity.subgroup = data.raw.item[ name ].subgroup
-    entity.order = data.raw.item[ name ].order
+    entity.subgroup = data.raw.item[name].subgroup
+    entity.order = data.raw.item[name].order
     if i ~= 4 then entity.next_upgrade = "fish-farm-mk0" .. (i + 1) .. "-turd" end
     entity.allowed_module_categories = { "fish" }
     entity.energy_usage = (i * 5) .. "MW"
@@ -83,12 +83,12 @@ if data and not yafc_turd_integration then
         data:extend({ recipe })
     end
 
-    local ingredients = table.deepcopy(data.raw.recipe[ "fish-hydrolysate" ].ingredients)
-    ingredients[ #ingredients+1 ] = { type = "item", name = "cooling-tower-mk01", amount = 1 }
+    local ingredients = table.deepcopy(data.raw.recipe["fish-hydrolysate"].ingredients)
+    ingredients[#ingredients+1] = { type = "item", name = "cooling-tower-mk01", amount = 1 }
     data:extend({ {
         type = "recipe",
-        category = data.raw.recipe[ "fish-hydrolysate" ].category,
-        energy_required = data.raw.recipe[ "fish-hydrolysate" ].energy_required * 2,
+        category = data.raw.recipe["fish-hydrolysate"].category,
+        energy_required = data.raw.recipe["fish-hydrolysate"].energy_required * 2,
         results = {
             { type = "item",  name = "cooling-tower-mk01", amount = 1,  probability = 0.999 },
             { type = "fluid", name = "fish-hydrolysate",   amount = 300 }
@@ -149,7 +149,7 @@ if data and not yafc_turd_integration then
         }
 
         for j = 1, i do
-            recipe:add_result(path_three_dousing_byproducts[ j ])
+            recipe:add_result(path_three_dousing_byproducts[j])
         end
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         data:extend({ recipe })

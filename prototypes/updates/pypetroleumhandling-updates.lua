@@ -1,4 +1,4 @@
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     require("prototypes/recipes/moondrop/recipes-moondrop-products")
     RECIPE("arqad-mk02"):remove_ingredient("crude-oil-barrel"):add_ingredient({ type = "item", name = "moondrop-fueloil", amount = 25 })
     --data.raw.recipe['arqad-mk02'].results[3] = nil
@@ -18,14 +18,14 @@ RECIPE("reformer-mk01"):remove_unlock("oil-machines-mk01"):add_unlock("scrude")
 --BUILDINDS--
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
-data.raw[ "assembling-machine" ][ "guar-gum-plantation" ].module_slots = 16
-data.raw[ "assembling-machine" ][ "guar-gum-plantation" ].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
-data.raw[ "assembling-machine" ][ "guar-gum-plantation-mk02" ].module_slots = 32
-data.raw[ "assembling-machine" ][ "guar-gum-plantation-mk02" ].crafting_speed = py.farm_speed_derived(32, "guar-gum-plantation")
-data.raw[ "assembling-machine" ][ "guar-gum-plantation-mk03" ].module_slots = 48
-data.raw[ "assembling-machine" ][ "guar-gum-plantation-mk03" ].crafting_speed = py.farm_speed_derived(48, "guar-gum-plantation")
-data.raw[ "assembling-machine" ][ "guar-gum-plantation-mk04" ].module_slots = 64
-data.raw[ "assembling-machine" ][ "guar-gum-plantation-mk04" ].crafting_speed = py.farm_speed_derived(64, "guar-gum-plantation")
+data.raw["assembling-machine"]["guar-gum-plantation"].module_slots = 16
+data.raw["assembling-machine"]["guar-gum-plantation"].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
+data.raw["assembling-machine"]["guar-gum-plantation-mk02"].module_slots = 32
+data.raw["assembling-machine"]["guar-gum-plantation-mk02"].crafting_speed = py.farm_speed_derived(32, "guar-gum-plantation")
+data.raw["assembling-machine"]["guar-gum-plantation-mk03"].module_slots = 48
+data.raw["assembling-machine"]["guar-gum-plantation-mk03"].crafting_speed = py.farm_speed_derived(48, "guar-gum-plantation")
+data.raw["assembling-machine"]["guar-gum-plantation-mk04"].module_slots = 64
+data.raw["assembling-machine"]["guar-gum-plantation-mk04"].crafting_speed = py.farm_speed_derived(64, "guar-gum-plantation")
 
 --TECHNOLOGIES--
 TECHNOLOGY("drilling-fluid-mk01"):add_pack("py-science-pack-1")
@@ -42,10 +42,10 @@ TECHNOLOGY("plastics"):set_fields({ prerequisites = {} })
 
 --Guar--
 
-data.raw[ "recipe-category" ][ "guar" ].allowed_module_categories = { "guar" }
-data.raw[ "recipe-category" ][ "guar" ].modules_required = true
-data.raw.item[ "guar-seeds" ].subgroup = "py-alienlife-guar"
-data.raw.item[ "guar-seeds" ].order = "g-bg"
+data.raw["recipe-category"]["guar"].allowed_module_categories = { "guar" }
+data.raw["recipe-category"]["guar"].modules_required = true
+data.raw.item["guar-seeds"].subgroup = "py-alienlife-guar"
+data.raw.item["guar-seeds"].order = "g-bg"
 
 ----RECIPES----
 RECIPE("soot-to-iron"):remove_unlock("oil-sands"):add_unlock("soot-separation")

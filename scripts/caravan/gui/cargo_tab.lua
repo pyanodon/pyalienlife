@@ -31,7 +31,7 @@ function P.build_fluid_flow(parent, caravan_data)
 
     if fluid then
         local sprite = "fluid/" .. fluid.name
-        local prototype = prototypes.fluid[ fluid.name ]
+        local prototype = prototypes.fluid[fluid.name]
         local label_caption = prototype.localised_name
 
         if fluid.temperature > prototype.default_temperature then
@@ -92,7 +92,7 @@ function P.update_cargo_pane(player)
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
-    local caravan_data = storage.caravans[ gui.tags.unit_number ]
+    local caravan_data = storage.caravans[gui.tags.unit_number]
     local cargo_pane = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_pane
     local enabled = cargo_pane.cargo_flow.enabled
 
@@ -100,12 +100,12 @@ function P.update_cargo_pane(player)
     P.build_cargo_flow(cargo_pane, player, caravan_data, enabled)
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_flush_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_flush_button"] = function(event)
     local player = game.get_player(event.player_index)
     local gui = player.gui.screen.caravan_gui
     local unit_number = gui.tags.unit_number
 
-    local caravan = storage.caravans[ unit_number ]
+    local caravan = storage.caravans[unit_number]
     caravan.fluid = nil
     Impl.destroy_altmode_icon(caravan)
     P.update_cargo_pane(player)

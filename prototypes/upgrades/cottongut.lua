@@ -9,7 +9,7 @@ if data and not yafc_turd_integration then
         RECIPE("denatured-seismite-2"):copy(),
     }) do
         recipe.name = recipe.name .. "-80-20"
-        recipe:add_result_amount(cottongut_sciences[ i ], 1)
+        recipe:add_result_amount(cottongut_sciences[i], 1)
         recipe.energy_required = recipe.energy_required * 5
         data:extend({ recipe })
     end
@@ -54,7 +54,7 @@ if data and not yafc_turd_integration then
         RECIPE("prandium-lab-mk04"):copy(),
     }) do
         recipe.name = recipe.name .. "-ultrasound"
-        recipe:add_ingredient({ name = metals[ i ], amount = 80, type = "item" })
+        recipe:add_ingredient({ name = metals[i], amount = 80, type = "item" })
         data:extend({ recipe })
     end
 end

@@ -59,11 +59,11 @@ if data and not yafc_turd_integration then
         RECIPE("sea-sponge-sprouts-4"):copy(),
     }) do
         recipe.name = recipe.name .. "-flagellum"
-        productivity[ i ] = recipe.name
-        recipe:add_result({ name = sponges[ i ], probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 })
+        productivity[i] = recipe.name
+        recipe:add_result({ name = sponges[i], probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 })
         recipe:add_ingredient({ name = "limestone", type = "item", amount = 2 })
         recipe.energy_required = recipe.energy_required * 1.5
-        recipe.main_product = sponges[ i ]
+        recipe.main_product = sponges[i]
         data:extend({ recipe })
     end
     py.allow_productivity(productivity)

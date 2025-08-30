@@ -54,14 +54,14 @@ py.on_event(defines.events.on_player_used_capsule, function(event)
     character.destroy()
     player.play_sound({ path = "ulric-man-transform" })
 
-    storage.ulricman_timers[ player.index ] = Ulric.transformation_time
+    storage.ulricman_timers[player.index] = Ulric.transformation_time
 end)
 
 local update_rate = 397
 py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
     for k, ticks_remaning in pairs(storage.ulricman_timers) do
         ticks_remaning = ticks_remaning - update_rate
-        storage.ulricman_timers[ k ] = ticks_remaning
+        storage.ulricman_timers[k] = ticks_remaning
         if ticks_remaning <= 0 then
             local player = game.get_player(k)
             local ulric = player.character
@@ -72,7 +72,7 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
                 local inventory = ulric.get_main_inventory()
                 if inventory.get_item_count("ulric-infusion") > 0 then
                     inventory.remove({ name = "ulric-infusion", count = 1 })
-                    storage.ulricman_timers[ k ] = Ulric.transformation_time
+                    storage.ulricman_timers[k] = Ulric.transformation_time
                     goto injection
                 end
             end
@@ -93,7 +93,7 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
                 player.play_sound({ path = "ulric-man-untransform" })
             end
 
-            storage.ulricman_timers[ k ] = nil
+            storage.ulricman_timers[k] = nil
         end
 
         ::injection::
@@ -119,7 +119,7 @@ Ulric.transfer_character_inventory = function(old, new)
         if old_inventory then
             local new_inventory = new.get_inventory(inventory) or new.get_main_inventory()
             for i = 1, #old_inventory do
-                local old_stack = old_inventory[ i ]
+                local old_stack = old_inventory[i]
                 if old_stack.valid_for_read then
                     local original_count = old_stack.count
                     local inserted_count = new_inventory.insert(old_stack)

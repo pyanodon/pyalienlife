@@ -42,14 +42,14 @@ function Oculua.spawn_oculua(ipod_data, player)
         force = ipod.force,
         create_build_effect_smoke = false
     })
-    storage.oculuas[ oculua.unit_number ] = {
+    storage.oculuas[oculua.unit_number] = {
         entity = oculua,
         status = PICKING_UP,
         ipod = ipod,
         player = player
     }
     ipod_data.active_oculua = ipod_data.active_oculua + 1
-    return storage.oculuas[ oculua.unit_number ]
+    return storage.oculuas[oculua.unit_number]
 end
 
 function Oculua.find_ipod(player, item)
@@ -61,38 +61,38 @@ function Oculua.find_ipod(player, item)
         if ipod_data.inventory.get_item_count("ocula") == 0 then goto continue end
 
         local network = ipod.force.find_logistic_network_by_position(ipod.position, ipod.surface)
-        if not network or checked_logistic_networks[ network ] then goto continue end
+        if not network or checked_logistic_networks[network] then goto continue end
         if network.get_item_count(item) > 0 then return ipod_data, network end
-        checked_logistic_networks[ network ] = true
+        checked_logistic_networks[network] = true
         ::continue::
     end
     return nil
 end
 
 -- Checks if an item has metadata, such as item-with-tags or equipement grids. TODO: remove this and use temp luainvnetories instead
-local basic_item_types = { [ "item" ] = true, [ "capsule" ] = true, [ "gun" ] = true, [ "rail-planner" ] = true, [ "module" ] = true }
+local basic_item_types = { ["item"] = true, ["capsule"] = true, ["gun"] = true, ["rail-planner"] = true, ["module"] = true }
 local function check_for_basic_item(item)
     local items_with_metadata = storage.items_with_metadata
     if not items_with_metadata then
         items_with_metadata = {}
         for item_name, prototype in pairs(prototypes.item) do
-            if not basic_item_types[ prototype.type ] then
-                items_with_metadata[ item_name ] = true
+            if not basic_item_types[prototype.type] then
+                items_with_metadata[item_name] = true
             end
         end
         storage.items_with_metadata = items_with_metadata
     end
-    return not items_with_metadata[ item ]
+    return not items_with_metadata[item]
 end
 
 function Oculua.process_player(player)  -- #TODO fuck quality
     local inventory = player.character.get_main_inventory().get_contents()
     for _, item in ipairs(inventory) do -- ipairs cause lua is a very good language and lets you write horrible code
-        if type(item) == "table" then inventory[ item.name ] = item.count end
+        if type(item) == "table" then inventory[item.name] = item.count end
     end
     local cursor_stack = player.cursor_stack
-    storage.incoming_oculua_items[ player.index ] = storage.incoming_oculua_items[ player.index ] or {}
-    local incoming = storage.incoming_oculua_items[ player.index ]
+    storage.incoming_oculua_items[player.index] = storage.incoming_oculua_items[player.index] or {}
+    local incoming = storage.incoming_oculua_items[player.index]
     local character = player.character
     local logistic_point = player.get_requester_point()
     if not logistic_point then return end
@@ -108,7 +108,7 @@ function Oculua.process_player(player)  -- #TODO fuck quality
             local item = filter.value.name
 
             if not check_for_basic_item(item) then goto continue end -- Cannot transfer blueprint books, item-with-tags, ect. Otherwise it would wipe data
-            local needed = (filter.min or 0) - (incoming[ item ] or 0) - (inventory[ item ] or 0) - (logistic_network_incoming[ item ] or 0)
+            local needed = (filter.min or 0) - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
             if needed <= 0 then goto continue end
             if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == item then needed = needed - cursor_stack.count end
 
@@ -133,13 +133,13 @@ function Oculua.process_player(player)  -- #TODO fuck quality
             local inventory = pickup_point.get_inventory(CHEST)
             if not inventory then goto continue end
 
-            local target_count = math.min(insertable_count, needed, inventory.get_item_count(item), prototypes.item[ item ].stack_size * Oculua.inventory_size)
+            local target_count = math.min(insertable_count, needed, inventory.get_item_count(item), prototypes.item[item].stack_size * Oculua.inventory_size)
             if target_count <= 0 then goto continue end
             local oculua_data = Oculua.spawn_oculua(ipod_data, player)
             oculua_data.item = item
             oculua_data.target_count = target_count
             Oculua.set_target(oculua_data, pickup_point)
-            incoming[ item ] = (incoming[ item ] or 0) + oculua_data.target_count
+            incoming[item] = (incoming[item] or 0) + oculua_data.target_count
 
             ::continue::
         end
@@ -253,10 +253,10 @@ function Oculua.clear_incoming_oculua_items(oculua_data)
 
     local player = oculua_data.player
     if not player or not player.valid then return end
-    local incoming = storage.incoming_oculua_items[ player.index ]
+    local incoming = storage.incoming_oculua_items[player.index]
     if not incoming then return end
-    incoming[ item ] = (incoming[ item ] or 0) - (oculua_data.target_count or 0)
-    if incoming[ item ] <= 0 then incoming[ item ] = nil end
+    incoming[item] = (incoming[item] or 0) - (oculua_data.target_count or 0)
+    if incoming[item] <= 0 then incoming[item] = nil end
 end
 
 function Oculua.wander(oculua_data)
@@ -294,7 +294,7 @@ function Oculua.go_home(oculua_data)
 end
 
 py.on_event(defines.events.on_ai_command_completed, function(event)
-    local oculua_data = storage.oculuas[ event.unit_number ]
+    local oculua_data = storage.oculuas[event.unit_number]
     if not oculua_data then return end
     local oculua = oculua_data.entity
     if event.result == defines.behavior_result.success then
@@ -336,7 +336,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             if not ipod or not ipod.valid then
                 Oculua.wander(oculua_data); return
             end
-            local ipod_data = storage.ipods[ ipod.unit_number ]
+            local ipod_data = storage.ipods[ipod.unit_number]
             if not ipod_data then
                 Oculua.wander(oculua_data); return
             end
@@ -348,7 +348,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             end
             ipod_data.active_oculua = ipod_data.active_oculua - 1
             if oculua_data.map_tag then oculua_data.map_tag.destroy() end
-            storage.oculuas[ oculua.unit_number ] = nil
+            storage.oculuas[oculua.unit_number] = nil
             oculua.destroy()
         end
     else
@@ -359,7 +359,7 @@ end)
 function Oculua.find_available_ipod(entity)
     local ipods = entity.surface.find_entities_filtered({ name = "ipod", force = entity.force_index, type = "container" })
     for _, ipod in pairs(ipods) do
-        local ipod_data = storage.ipods[ ipod.unit_number ]
+        local ipod_data = storage.ipods[ipod.unit_number]
         local inventory = ipod.get_inventory(CHEST)
         if ipod_data.active_oculua + inventory.get_item_count("ocula") < #inventory then
             ipod_data.active_oculua = ipod_data.active_oculua + 1
@@ -391,26 +391,26 @@ py.on_event(py.events.on_built(), function(event)
     if entity.name == "ipod" then
         local inventory = entity.get_inventory(CHEST)
         Oculua.set_ipod_chest_filters(entity)
-        storage.ipods[ entity.unit_number ] = { entity = entity, inventory = inventory, active_oculua = 0 }
+        storage.ipods[entity.unit_number] = { entity = entity, inventory = inventory, active_oculua = 0 }
         storage.should_run_oculua_code = true
     elseif entity.name == "ocula" then
         local ipod = Oculua.find_available_ipod(entity)
         if not ipod then return end
-        storage.oculuas[ entity.unit_number ] = {
+        storage.oculuas[entity.unit_number] = {
             entity = entity,
             ipod = ipod
         }
-        Oculua.go_home(storage.oculuas[ entity.unit_number ])
+        Oculua.go_home(storage.oculuas[entity.unit_number])
     end
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name == "ipod" then
-        storage.ipods[ entity.unit_number ] = nil
+        storage.ipods[entity.unit_number] = nil
         storage.should_run_oculua_code = not not next(storage.ipods)
     elseif entity.name == "ocula" then
-        local oculua_data = storage.oculuas[ entity.unit_number ]
+        local oculua_data = storage.oculuas[entity.unit_number]
         if oculua_data and oculua_data.map_tag then
             oculua_data.map_tag.destroy()
         end
@@ -427,7 +427,7 @@ py.on_event(py.events.on_destroyed(), function(event)
                 end
             end
         end
-        storage.oculuas[ entity.unit_number ] = nil
+        storage.oculuas[entity.unit_number] = nil
     end
 end)
 

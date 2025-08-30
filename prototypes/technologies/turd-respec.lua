@@ -35,8 +35,8 @@ local offset = 5
 
 local ingredients = {}
 for i = offset, #science_packs - 1 do
-    local pack = science_packs[ i ]
-    ingredients[ i ] = { pack, 1 }
+    local pack = science_packs[i]
+    ingredients[i] = { pack, 1 }
     TECHNOLOGY({
         type = "technology",
         name = "turd-partial-respec-" .. (i - offset + 1),
@@ -55,7 +55,7 @@ for i = offset, #science_packs - 1 do
     })
 end
 
-ingredients[ #science_packs ] = { science_packs[ #science_packs ], 1 }
+ingredients[#science_packs] = { science_packs[#science_packs], 1 }
 
 TECHNOLOGY({
     type = "technology",

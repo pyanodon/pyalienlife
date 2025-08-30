@@ -276,7 +276,7 @@ data:extend({ {
     },
 } })
 
-local vehicle_leg = table.deepcopy(data.raw[ "spider-leg" ][ "spidertron-leg-1" ])
+local vehicle_leg = table.deepcopy(data.raw["spider-leg"]["spidertron-leg-1"])
 vehicle_leg.name = "py-fake-spidertron-leg"
 vehicle_leg.graphics_set = {}
 vehicle_leg.collision_mask = { layers = {} }
@@ -290,7 +290,7 @@ vehicle_leg.movement_acceleration = 0
 vehicle_leg.walking_sound_volume_modifier = 0
 data:extend({ vehicle_leg })
 
-local flamethrower = table.deepcopy(data.raw[ "gun" ][ "tank-flamethrower" ])
+local flamethrower = table.deepcopy(data.raw["gun"]["tank-flamethrower"])
 flamethrower.name = "dragon-breath"
 flamethrower.icon = "__pyalienlifegraphics__/graphics/icons/dragon-breath.png"
 flamethrower.icon_size = 64
@@ -314,7 +314,7 @@ RECIPE({
     results = {
         { type = "item", name = "dragon-breath-ammo", amount = 1 },
     },
-    crafting_machine_tint = table.deepcopy(data.raw[ "recipe" ][ "flamethrower-ammo" ].crafting_machine_tint),
+    crafting_machine_tint = table.deepcopy(data.raw["recipe"]["flamethrower-ammo"].crafting_machine_tint),
 }):add_unlock("mounts-mk04")
 
 ITEM({
@@ -342,7 +342,7 @@ ITEM({
     subgroup = "py-alienlife-items",
 })
 
-local stream = table.deepcopy(data.raw[ "stream" ][ "tank-flamethrower-fire-stream" ])
+local stream = table.deepcopy(data.raw["stream"]["tank-flamethrower-fire-stream"])
 stream.particle_horizontal_speed = 1.5
 stream.name = "dragon-breath"
 stream.action = { {

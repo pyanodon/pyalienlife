@@ -40,7 +40,7 @@ function Digosaurus.why_isnt_my_dig_site_working(dig_data)
 end
 
 function Digosaurus.update_gui(gui)
-    local dig_data = storage.dig_sites[ gui.tags.unit_number ]
+    local dig_data = storage.dig_sites[gui.tags.unit_number]
     if not Digosaurus.validity_check(dig_data) then
         gui.destroy()
         return
@@ -60,8 +60,8 @@ function Digosaurus.update_gui(gui)
 
     local food_flow = content_flow.food_flow
     for i = 1, #dig_data.food_inventory do
-        local slot = dig_data.food_inventory[ i ]
-        local element = food_flow[ "dig_food_" .. i ]
+        local slot = dig_data.food_inventory[i]
+        local element = food_flow["dig_food_" .. i]
         if slot.valid_for_read then
             element.sprite = "item/" .. slot.name
             element.number = slot.count
@@ -77,7 +77,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity or entity.name ~= "dino-dig-site" then return end
     local player = game.get_player(event.player_index)
-    local dig_data = storage.dig_sites[ entity.unit_number ]
+    local dig_data = storage.dig_sites[entity.unit_number]
 
     -- Since we never really do a search for dig sites this can happen with a weird migration or players doing editor things
     if not dig_data then
@@ -87,7 +87,11 @@ py.on_event(defines.events.on_gui_opened, function(event)
     end
 
     local main_frame = player.gui.relative.add({
-        type = "frame", name = "digosaurus_gui", caption = { "entity-name.dino-dig-site" }, direction = "vertical", tags = { unit_number = entity.unit_number },
+        type = "frame",
+        name = "digosaurus_gui",
+        caption = { "entity-name.dino-dig-site" },
+        direction = "vertical",
+        tags = { unit_number = entity.unit_number },
         anchor = {
             gui = defines.relative_gui_type.assembling_machine_gui,
             position = defines.relative_gui_position.left

@@ -1,4 +1,4 @@
-if not settings.startup[ "enable-cranes" ].value then
+if not settings.startup["enable-cranes"].value then
   return
 end
 
@@ -102,7 +102,7 @@ RECIPE({
 for i = 1, 4 do
   local name = "crane-mk0" .. i
   local icon = {
-    { icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[ i ], icon_size = 64 },
+    { icon = "__pyalienlifegraphics3__/graphics/entity/crane/inserter-icon-greyscale.png", tint = py.tints[i], icon_size = 64 },
     { icon = "__pyalienlifegraphics__/graphics/icons/meat.png",                            scale = .5,         shift = { 16, 16 }, icon_size = 32 }
   }
 
@@ -150,7 +150,7 @@ for i = 1, 4 do
       width = 72,
       height = 164,
       scale = 0.3,
-      tint = py.tints[ i ]
+      tint = py.tints[i]
     },
     hand_closed_picture =
     {
@@ -159,7 +159,7 @@ for i = 1, 4 do
       width = 72,
       height = 164,
       scale = 0.3,
-      tint = py.tints[ i ]
+      tint = py.tints[i]
     },
     hand_open_picture =
     {
@@ -168,7 +168,7 @@ for i = 1, 4 do
       width = 72,
       height = 164,
       scale = 0.3,
-      tint = py.tints[ i ]
+      tint = py.tints[i]
     },
     platform_picture =
     {
@@ -180,11 +180,11 @@ for i = 1, 4 do
         height = 79,
         shift = util.by_pixel(1.5, 7.5 - 1),
         scale = 0.75,
-        tint = py.tints[ i ]
+        tint = py.tints[i]
       }
     },
   })
   if feature_flags.belt_stacking then
-    data.raw.inserter[ name ].max_belt_stack_size = 10000
+    data.raw.inserter[name].max_belt_stack_size = 10000
   end
 end

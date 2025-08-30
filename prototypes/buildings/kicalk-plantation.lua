@@ -153,7 +153,7 @@ for i = 1, 4 do
                         frame_count = 50,
                         animation_speed = 0.4,
                         shift = util.by_pixel(-16, -5),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/right.png",
@@ -174,7 +174,7 @@ for i = 1, 4 do
                         frame_count = 50,
                         animation_speed = 0.4,
                         shift = util.by_pixel(112, -5),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/kicalk-plantation/far-right.png",
@@ -269,14 +269,14 @@ for i = 1, 4 do
     })
 
     -- Swap to niobium pipes
-    for _, fluid_box in pairs(data.raw[ "assembling-machine" ][ name ].fluid_boxes) do
+    for _, fluid_box in pairs(data.raw["assembling-machine"][name].fluid_boxes) do
         -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
         if type(fluid_box) == "boolean" then
             break
         end
         if fluid_box.pipe_covers.south.layers then
-            fluid_box.pipe_covers.south.layers[ 1 ].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
-            fluid_box.pipe_covers.south.layers[ 2 ].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+            fluid_box.pipe_covers.south.layers[1].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+            fluid_box.pipe_covers.south.layers[2].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
         end
         -- Move cover up to compensate
         fluid_box.pipe_picture.south.scale = 0.5

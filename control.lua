@@ -7,10 +7,10 @@ py.generate_favorite_food_tooltip = function(favorite_foods, locale)
     ---@type LocalisedString
     local favorites = { "" }
     for food, actions in pairs(favorite_foods) do
-        favorites[ #favorites+1 ] = { locale .. ".favorite-foods-sub", "[item=" .. food .. "]", prototypes.item[ food ].localised_name, actions }
-        favorites[ #favorites+1 ] = "\n"
+        favorites[#favorites+1] = { locale .. ".favorite-foods-sub", "[item=" .. food .. "]", prototypes.item[food].localised_name, actions }
+        favorites[#favorites+1] = "\n"
     end
-    favorites[ #favorites ] = nil
+    favorites[#favorites] = nil
     return { locale .. ".favorite-foods-main", favorites }
 end
 
@@ -29,7 +29,7 @@ require("scripts.biofluid.biofluid")
 require("scripts.mounts.mounts")
 
 local function discoscience()
-    if remote.interfaces[ "DiscoScience" ] and remote.interfaces[ "DiscoScience" ][ "setIngredientColor" ] then
+    if remote.interfaces["DiscoScience"] and remote.interfaces["DiscoScience"]["setIngredientColor"] then
         remote.call("DiscoScience", "setIngredientColor", "py-science-pack-1", { r = 178, g = 88, b = 1 })
         remote.call("DiscoScience", "setIngredientColor", "py-science-pack-2", { r = 246, g = 125, b = 45 })
         remote.call("DiscoScience", "setIngredientColor", "py-science-pack-3", { r = 213, g = 134, b = 23 })
@@ -39,7 +39,7 @@ local function discoscience()
 end
 
 local function pickerdollies()
-    if remote.interfaces[ "PickerDollies" ] then
+    if remote.interfaces["PickerDollies"] then
         remote.call("PickerDollies", "add_blacklist_name", "caravan", true)
         remote.call("PickerDollies", "add_blacklist_name", "flyavan", true)
         remote.call("PickerDollies", "add_blacklist_name", "nukavan", true)
@@ -74,13 +74,13 @@ end
 py.on_event(py.events.on_init(), function()
     discoscience()
     pickerdollies()
-    if remote.interfaces[ "freeplay" ] then
+    if remote.interfaces["freeplay"] then
         local created_items = remote.call("freeplay", "get_created_items")
-        created_items[ "firearm-magazine" ] = 500
+        created_items["firearm-magazine"] = 500
         remote.call("freeplay", "set_created_items", created_items)
 
         local ship_items = remote.call("freeplay", "get_ship_items")
-        ship_items[ "iron-chest" ] = 5
+        ship_items["iron-chest"] = 5
         remote.call("freeplay", "set_ship_items", ship_items)
     end
 end)
@@ -102,7 +102,7 @@ end)
 py.on_event(defines.events.on_tick, function(event)
     local func_list = remote.call("on_nth_tick", "query", "pyal", event.tick)
     for _, func in pairs(func_list) do
-        py.mod_nth_tick_funcs[ func ]()
+        py.mod_nth_tick_funcs[func]()
     end
 end)
 

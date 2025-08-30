@@ -13,7 +13,7 @@ for _, network_data in pairs(storage.biofluid_networks) do
     local providers = network_data.providers
     for _, provider in pairs(providers or {}) do
         if provider.valid then
-            storage.biofluid_providers[ provider.unit_number ] = { entity = provider }
+            storage.biofluid_providers[provider.unit_number] = { entity = provider }
         end
     end
 end

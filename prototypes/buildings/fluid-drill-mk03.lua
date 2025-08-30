@@ -51,8 +51,8 @@ ENTITY({
         volume = 200,
         pipe_connections = {
             { flow_direction = "input-output", position = { -2.0, 0 }, direction = defines.direction.west },
-            { flow_direction = "input-output", position = { 2.0, 0 }, direction = defines.direction.east },
-            { flow_direction = "input-output", position = { 0, 2.0 }, direction = defines.direction.south }
+            { flow_direction = "input-output", position = { 2.0, 0 },  direction = defines.direction.east },
+            { flow_direction = "input-output", position = { 0, 2.0 },  direction = defines.direction.south }
         }
     },
     energy_source =
@@ -71,7 +71,7 @@ ENTITY({
         width = 12,
         height = 12
     },
-    circuit_connector = circuit_connector_definitions[ "fluid-drill-mkxx" ],
+    circuit_connector = circuit_connector_definitions["fluid-drill-mkxx"],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     graphics_set = {
         animation = {

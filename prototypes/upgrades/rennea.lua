@@ -24,10 +24,10 @@ if data and not yafc_turd_integration then
     })
 
     for amount, recipe in pairs({
-        [ 15 ] = RECIPE("rennea-1"):copy(),
-        [ 34 ] = RECIPE("rennea-2"):copy(),
-        [ 66 ] = RECIPE("rennea-3"):copy(),
-        [ 108 ] = RECIPE("rennea-4"):copy(),
+        [15] = RECIPE("rennea-1"):copy(),
+        [34] = RECIPE("rennea-2"):copy(),
+        [66] = RECIPE("rennea-3"):copy(),
+        [108] = RECIPE("rennea-4"):copy(),
     }) do
         recipe.name = recipe.name .. "-deadhead"
         recipe:add_result({ type = "item", name = "deadhead", amount = amount })

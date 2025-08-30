@@ -21,15 +21,15 @@ TECHNOLOGY("advanced-circuit"):add_pack("py-science-pack-2")
 TECHNOLOGY("nexelit-mk01"):add_prereq("titanium-mk01"):add_prereq("lead-mk01")
 TECHNOLOGY("artillery-2"):add_pack("py-science-pack-3")
 
-if not mods[ "pyhightech" ] then
+if not mods["pyhightech"] then
     TECHNOLOGY("mining-productivity-1"):add_pack("py-science-pack-2")
 end
 
-if not mods[ "pyalternativeenergy" ] then
+if not mods["pyalternativeenergy"] then
     TECHNOLOGY("energy-3"):add_pack("py-science-pack-2")
 end
 
-if data.raw.technology[ "railway-mk03" ] then TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-3") end
+if data.raw.technology["railway-mk03"] then TECHNOLOGY("railway-mk03"):add_pack("py-science-pack-3") end
 TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
 TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 
@@ -44,16 +44,16 @@ RECIPE("washer"):remove_unlock("energy-1").enabled = true
 RECIPE("py-gas-vent"):add_unlock("coal-processing-1").enabled = false
 RECIPE("tailings-pond"):add_unlock("coal-processing-1").enabled = false
 
-table.insert(data.raw[ "assembling-machine" ][ "wpu-mk01" ].crafting_categories, "wpu-handcrafting")
-table.insert(data.raw[ "assembling-machine" ][ "wpu-mk02" ].crafting_categories, "wpu-handcrafting")
-table.insert(data.raw[ "assembling-machine" ][ "wpu-mk03" ].crafting_categories, "wpu-handcrafting")
-table.insert(data.raw[ "assembling-machine" ][ "wpu-mk04" ].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk01"].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk02"].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk03"].crafting_categories, "wpu-handcrafting")
+table.insert(data.raw["assembling-machine"]["wpu-mk04"].crafting_categories, "wpu-handcrafting")
 
 if not mods.pystellarexpedition then
-    table.insert(data.raw[ "assembling-machine" ][ "wpu-mk01-legacy" ].crafting_categories, "wpu-handcrafting")
-    table.insert(data.raw[ "assembling-machine" ][ "wpu-mk02-legacy" ].crafting_categories, "wpu-handcrafting")
-    table.insert(data.raw[ "assembling-machine" ][ "wpu-mk03-legacy" ].crafting_categories, "wpu-handcrafting")
-    table.insert(data.raw[ "assembling-machine" ][ "wpu-mk04-legacy" ].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk01-legacy"].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk02-legacy"].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk03-legacy"].crafting_categories, "wpu-handcrafting")
+    table.insert(data.raw["assembling-machine"]["wpu-mk04-legacy"].crafting_categories, "wpu-handcrafting")
 end
 
 data.raw.lab.lab.module_slots = 0
@@ -152,11 +152,11 @@ RECIPE("log3"):replace_result("log", "log", 6)
 RECIPE("log5"):replace_result("log", "log", 7)
 RECIPE("log6"):replace_result("log", "log", 8)
 
-data.raw[ "recipe-category" ][ "fawogae" ].allowed_module_categories = { "fawogae" }
-data.raw[ "recipe-category" ][ "fawogae" ].modules_required = true
-data.raw[ "recipe-category" ][ "mukmoux" ].allowed_module_categories = { "mukmoux" }
-data.raw[ "recipe-category" ][ "mukmoux" ].modules_required = true
-data.raw[ "recipe-category" ][ "ralesia" ].allowed_module_categories = { "ralesia" }
-data.raw[ "recipe-category" ][ "ralesia" ].modules_required = true
-data.raw[ "recipe-category" ][ "ulric" ].allowed_module_categories = { "ulric" }
-data.raw[ "recipe-category" ][ "ulric" ].modules_required = true
+data.raw["recipe-category"]["fawogae"].allowed_module_categories = { "fawogae" }
+data.raw["recipe-category"]["fawogae"].modules_required = true
+data.raw["recipe-category"]["mukmoux"].allowed_module_categories = { "mukmoux" }
+data.raw["recipe-category"]["mukmoux"].modules_required = true
+data.raw["recipe-category"]["ralesia"].allowed_module_categories = { "ralesia" }
+data.raw["recipe-category"]["ralesia"].modules_required = true
+data.raw["recipe-category"]["ulric"].allowed_module_categories = { "ulric" }
+data.raw["recipe-category"]["ulric"].modules_required = true

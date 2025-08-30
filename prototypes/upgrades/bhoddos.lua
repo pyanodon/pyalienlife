@@ -61,7 +61,7 @@ if data and not yafc_turd_integration then
     biomass_sporopollenin.icon_size = nil
     data:extend({ biomass_sporopollenin })
     table.insert(
-        data.raw.technology[ "microfilters-mk02" ].effects,
+        data.raw.technology["microfilters-mk02"].effects,
         {
             type = "change-recipe-productivity",
             recipe = "bhoddos-spore-upgraded",

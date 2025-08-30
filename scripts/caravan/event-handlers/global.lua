@@ -7,21 +7,21 @@ local caravan_prototypes = require("__pyalienlife__/scripts/caravan/caravan-prot
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
-    local prototype = caravan_prototypes[ entity.name ]
+    local prototype = caravan_prototypes[entity.name]
     if not prototype then return end
     if prototype.destructible == false then entity.destructible = false end
 
     local inventory = event.consumed_items
-    local tags = event.tags or (inventory and not inventory.is_empty() and inventory[ 1 ].valid_for_read and inventory[ 1 ].is_item_with_tags and inventory[ 1 ].tags) or nil
+    local tags = event.tags or (inventory and not inventory.is_empty() and inventory[1].valid_for_read and inventory[1].is_item_with_tags and inventory[1].tags) or nil
 
-    if tags and tags.unit_number and storage.caravans[ tags.unit_number ] then
-        local caravan_data = storage.caravans[ tags.unit_number ]
+    if tags and tags.unit_number and storage.caravans[tags.unit_number] then
+        local caravan_data = storage.caravans[tags.unit_number]
         caravan_data.itemised = nil
         caravan_data.unit_number = entity.unit_number
         caravan_data.entity = entity
         CaravanImpl.stop_actions(caravan_data)
-        storage.caravans[ entity.unit_number ] = caravan_data
-        storage.caravans[ tags.unit_number ] = nil
+        storage.caravans[entity.unit_number] = caravan_data
+        storage.caravans[tags.unit_number] = nil
     else
         CaravanImpl.instantiate_caravan(entity)
     end
@@ -31,17 +31,17 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
-    local prototype = caravan_prototypes[ entity.name ]
+    local prototype = caravan_prototypes[entity.name]
     if not prototype then return end
 
     CaravanImpl.remove_alert(event.entity)
 
     local buffer = event.buffer
     if buffer then
-        buffer[ 1 ].tags = { unit_number = entity.unit_number }
-        local caravan_data = storage.caravans[ entity.unit_number ]
+        buffer[1].tags = { unit_number = entity.unit_number }
+        local caravan_data = storage.caravans[entity.unit_number]
         if caravan_data then
-            buffer[ 1 ].custom_description = {
+            buffer[1].custom_description = {
                 "",
                 { "caravan-gui.hello-my-name-is", Utils.get_name(caravan_data) },
                 Utils.get_inventory_tooltip(caravan_data),
@@ -55,11 +55,11 @@ end)
 
 py.on_event(defines.events.on_object_destroyed, function(event)
     local unit_number = event.useful_id
-    local caravan_data = storage.caravans[ unit_number ]
+    local caravan_data = storage.caravans[unit_number]
 
     if not caravan_data then return end
 
-    storage.caravans[ unit_number ].itemised = true
+    storage.caravans[unit_number].itemised = true
     for _, player in pairs(game.connected_players) do
         local gui = CaravanGui.get_gui(player)
         if gui and gui.tags.unit_number == unit_number then
@@ -73,7 +73,7 @@ end)
 
 py.on_event(defines.events.on_entity_settings_pasted, function(event)
     local source, destination = event.source, event.destination
-    local source_data, destination_data = storage.caravans[ source.unit_number ], storage.caravans[ destination.unit_number ]
+    local source_data, destination_data = storage.caravans[source.unit_number], storage.caravans[destination.unit_number]
     if not source_data or not destination_data then return end
 
     for _, prototype in pairs(source.prototype.additional_pastable_entities) do
@@ -105,7 +105,7 @@ end
 -- Reopen the last closed caravan gui when player no longer holds carrot-on-stick item
 -- regardless of whether or not it was used
 py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-    local last_opened = storage.last_opened[ event.player_index ]
+    local last_opened = storage.last_opened[event.player_index]
     if not last_opened then return end
     local player = game.get_player(event.player_index) ---@as LuaPlayer
     -- If the item is in hand, don't open the gui
@@ -115,7 +115,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     if ghost and ghost.name.name == "caravan-control" then return end
     restore_controller(player, last_opened)
     if last_opened.caravan then
-        local caravan_data = storage.caravans[ last_opened.caravan ]
+        local caravan_data = storage.caravans[last_opened.caravan]
         if not CaravanGui.get_gui(player) then --The UI can already exist if someone clicks multiple times in a tick
             CaravanGui.build(player, caravan_data)
         end
@@ -124,7 +124,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
         end
     end
 
-    storage.last_opened[ event.player_index ] = nil
+    storage.last_opened[event.player_index] = nil
 end)
 
 --- Called whenever the player uses the carrot-on-stick capsule item.
@@ -132,13 +132,13 @@ local function on_carrot_used(player, cursor_position)
     player.clear_cursor()
 
     local schedule, prototype, only_outpost
-    local last_opened = storage.last_opened[ player.index ]
-    local caravan_data = storage.caravans[ last_opened.caravan ]
+    local last_opened = storage.last_opened[player.index]
+    local caravan_data = storage.caravans[last_opened.caravan]
     local interrupt_data = storage.edited_interrupt
     if caravan_data then
         if not CaravanImpl.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule
-        prototype = caravan_prototypes[ caravan_data.entity.name ]
+        prototype = caravan_prototypes[caravan_data.entity.name]
         only_outpost = prototype.only_allow_outpost_as_destination
     end
     if interrupt_data then
@@ -149,22 +149,22 @@ local function on_carrot_used(player, cursor_position)
         position = cursor_position,
         limit = 1,
         collision_mask = { object = true, player = true, train = true, resource = true, floor = true, transport_belt = true, ghost = true }
-    })[ 1 ]
+    })[1]
 
     if last_opened.action_id then
         -- Last opened is an interrupt condition
         if interrupt_data and entity then
-            if entity.operable then storage.make_operable_next_tick[ #storage.make_operable_next_tick+1 ] = entity end
+            if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick+1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
             if entity.name == "outpost" or entity.name == "outpost-fluid" or entity.name == "outpost-aerial" then
                 local action_id = last_opened.action_id
-                interrupt_data.conditions[ action_id ].entity = entity
-                interrupt_data.conditions[ action_id ].localised_name = ""
+                interrupt_data.conditions[action_id].entity = entity
+                interrupt_data.conditions[action_id].localised_name = ""
             end
         end
     elseif last_opened.schedule_id then
         -- Last opened is a schedule to reassign
-        local sch = schedule[ last_opened.schedule_id ]
+        local sch = schedule[last_opened.schedule_id]
 
         if not entity or not entity.valid then
             if only_outpost then return end
@@ -179,7 +179,7 @@ local function on_carrot_used(player, cursor_position)
             return
         end
 
-        if entity.operable then storage.make_operable_next_tick[ #storage.make_operable_next_tick+1 ] = entity end
+        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick+1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
         if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
@@ -195,7 +195,7 @@ local function on_carrot_used(player, cursor_position)
         end
         --CaravanImpl.clear_invalid_actions_from_schedule(sch) #TODO
     elseif entity then
-        if entity.operable then storage.make_operable_next_tick[ #storage.make_operable_next_tick+1 ] = entity end
+        if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick+1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
         if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
@@ -205,7 +205,7 @@ local function on_carrot_used(player, cursor_position)
             player_index = entity.player.index
             localised_name = { "caravan-gui.player-name", entity.player.name }
         end
-        schedule[ #schedule+1 ] = {
+        schedule[#schedule+1] = {
             localised_name = localised_name,
             entity = entity,
             position = entity.position,
@@ -215,7 +215,7 @@ local function on_carrot_used(player, cursor_position)
     elseif not only_outpost then
         local position = cursor_position
         if player.surface ~= caravan_data.entity.surface then return end
-        schedule[ #schedule+1 ] = {
+        schedule[#schedule+1] = {
             localised_name = { "caravan-gui.map-position", math.floor(position.x), math.floor(position.y) },
             position = position,
             player_index = nil,
@@ -253,7 +253,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     local entity = player.selected
-    if not entity or not caravan_prototypes[ entity.name ] --[[ or not player.can_reach_entity(entity) ]] then return end
+    if not entity or not caravan_prototypes[entity.name] --[[ or not player.can_reach_entity(entity) ]] then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
     local existing = CaravanGui.get_gui(player)
     if existing then
@@ -282,9 +282,9 @@ end)
 
 py.on_event(defines.events.on_ai_command_completed, function(event)
     local unit_number = event.unit_number
-    local caravan_data = storage.caravans[ unit_number ]
+    local caravan_data = storage.caravans[unit_number]
     if not caravan_data or not CaravanImpl.validity_check(caravan_data) then return end
-    local schedule = caravan_data.schedule[ caravan_data.schedule_id ]
+    local schedule = caravan_data.schedule[caravan_data.schedule_id]
     local status = event.result
     if not schedule then
         CaravanImpl.stop_actions(caravan_data); goto update_gui
@@ -299,7 +299,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if #schedule.actions == 0 then
         local schedule_num = #caravan_data.schedule
-        if schedule_num == 1 and not caravan_data.schedule[ 1 ].temporary then
+        if schedule_num == 1 and not caravan_data.schedule[1].temporary then
             caravan_data.retry_pathfinder = 3
             return
         else
@@ -313,7 +313,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             distraction = defines.distraction.none,
             pathfind_flags = {}
         })
-        local prototype = caravan_prototypes[ entity.name ]
+        local prototype = caravan_prototypes[entity.name]
         if prototype.requeue_required then
             storage.caravan_queue = nil
             caravan_data.arrival_tick = game.tick
@@ -336,7 +336,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         local queue = {}
         for _, caravan_data in pairs(storage.caravans) do
             if CaravanImpl.validity_check(caravan_data) then
-                queue[ #queue+1 ] = caravan_data
+                queue[#queue+1] = caravan_data
             end
         end
 
@@ -366,15 +366,15 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         end
 
         if caravan_data.action_id == -1 then goto continue end
-        local schedule = caravan_data.schedule[ caravan_data.schedule_id ]
+        local schedule = caravan_data.schedule[caravan_data.schedule_id]
         if not schedule then goto continue end
-        local action = schedule.actions[ caravan_data.action_id ]
+        local action = schedule.actions[caravan_data.action_id]
         if not action then goto continue end
         local target_entity = schedule.entity
 
         local result
-        if Utils.get_valid_actions_for_entity(caravan_data.entity.name, target_entity)[ action.type ] then
-            result = Caravan.actions[ action.type ](caravan_data, schedule, action)
+        if Utils.get_valid_actions_for_entity(caravan_data.entity.name, target_entity)[action.type] then
+            result = Caravan.actions[action.type](caravan_data, schedule, action)
         else
             result = true -- Skip invalid action
         end
@@ -382,7 +382,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             goto continue
         elseif result == "error" then
             CaravanImpl.stop_actions(caravan_data)
-            guis_to_update[ caravan_data.unit_number ] = true
+            guis_to_update[caravan_data.unit_number] = true
             -- Advance the schedule
         elseif result then
             if #schedule.actions == caravan_data.action_id then
@@ -391,7 +391,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             else
                 CaravanImpl.begin_action(caravan_data, caravan_data.action_id + 1)
             end
-            guis_to_update[ caravan_data.unit_number ] = true
+            guis_to_update[caravan_data.unit_number] = true
         else
             if schedule.entity and schedule.entity.valid then
                 if py.distance_squared(schedule.entity.position, entity.position) > 1000 then
@@ -411,12 +411,12 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         local gui = CaravanGui.get_gui(player)
         if not gui then goto continue end
 
-        if next(guis_to_update) and guis_to_update[ gui.tags.unit_number ] then
+        if next(guis_to_update) and guis_to_update[gui.tags.unit_number] then
             CaravanGui.update_gui(player)
             goto continue
         end
 
-        local caravan_data = storage.caravans[ gui.tags.unit_number ]
+        local caravan_data = storage.caravans[gui.tags.unit_number]
 
         for _, schedule in pairs(caravan_data.schedule) do
             if schedule.entity and not schedule.entity.valid then

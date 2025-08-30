@@ -1,4 +1,4 @@
-local zungror = data.raw[ "item-with-entity-data" ].spidertron
+local zungror = data.raw["item-with-entity-data"].spidertron
 zungror.icon = "__pyalienlifegraphics__/graphics/icons/spidertron.png"
 zungror.icon_size = 64
 zungror.icon_tintable = zungror.icon
@@ -42,7 +42,7 @@ RECIPE({
     main_product = "spidertron",
 }):add_unlock("spidertron")
 
-local zungror = data.raw[ "spider-vehicle" ].spidertron
+local zungror = data.raw["spider-vehicle"].spidertron
 zungror.inventory_size = 160
 zungror.energy_source = {
     type = "burner",

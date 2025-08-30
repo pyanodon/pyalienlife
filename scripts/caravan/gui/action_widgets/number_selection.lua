@@ -25,8 +25,8 @@ L.count_format_value = function(v) return util.format_number(v, true) end
 local function destroy_slider_frame(event)
     local player = game.get_player(event.player_index)
 
-    if player.gui.screen[ prefix .. "_frame" ] then
-        player.gui.screen[ prefix .. "_frame" ].destroy()
+    if player.gui.screen[prefix .. "_frame"] then
+        player.gui.screen[prefix .. "_frame"].destroy()
     end
 end
 
@@ -42,9 +42,9 @@ local function build_slider(event)
 
     local action = Utils.get_action_from_button(event.element)
 
-    local max_value = L[ tags.elem_type .. "_slider_maximum_value" ]()
-    local default_value = L[ tags.elem_type .. "_slider_default_value" ]()
-    local value_step = L[ tags.elem_type .. "_slider_value_step" ]()
+    local max_value = L[tags.elem_type .. "_slider_maximum_value"]()
+    local default_value = L[tags.elem_type .. "_slider_default_value"]()
+    local value_step = L[tags.elem_type .. "_slider_value_step"]()
     local value = tags.elem_type == "time" and action.wait_time or action.item_count
 
     local slider = flow.add({ type = "slider", name = prefix .. "_slider", minimum_value = 0, maximum_value = max_value, value = value or default_value, value_step = value_step, tags = tags })
@@ -59,20 +59,20 @@ end
 
 local function update_slider_textfield(event)
     local slider = event.element
-    local textfield = slider.parent[ prefix .. "_text_field" ]
+    local textfield = slider.parent[prefix .. "_text_field"]
     textfield.text = tostring(slider.slider_value)
 end
 
 local function update_slider(event)
     local textfield = event.element
-    local slider = textfield.parent[ prefix .. "_slider" ]
+    local slider = textfield.parent[prefix .. "_slider"]
 
     slider.slider_value = math.max(tonumber(textfield.text) or 0, 0)
 end
 
 local function update_action_value(event, button)
     local tags = event.element.tags
-    local textfield = event.element.parent[ prefix .. "_text_field" ]
+    local textfield = event.element.parent[prefix .. "_text_field"]
     local value = tonumber(textfield.text) or 0
 
     local action = Utils.get_action_from_button(event.element)
@@ -84,13 +84,13 @@ local function update_action_value(event, button)
         action.item_count = value
     end
 
-    button.caption = L[ tags.elem_type .. "_format_value" ](value)
+    button.caption = L[tags.elem_type .. "_format_value"](value)
 end
 
 -- confirmation is handled in event-handlers/, as state gets changed
-gui_events[ defines.events.on_gui_click ][ prefix .. "_button" ] = build_slider
-gui_events[ defines.events.on_gui_value_changed ][ prefix .. "_slider" ] = update_slider_textfield
-gui_events[ defines.events.on_gui_text_changed ][ prefix .. "_text_field" ] = update_slider
+gui_events[defines.events.on_gui_click][prefix .. "_button"] = build_slider
+gui_events[defines.events.on_gui_value_changed][prefix .. "_slider"] = update_slider_textfield
+gui_events[defines.events.on_gui_text_changed][prefix .. "_text_field"] = update_slider
 
 py.on_event(defines.events.on_gui_click, function(event)
     if not event.element.valid then return end
@@ -99,7 +99,7 @@ py.on_event(defines.events.on_gui_click, function(event)
 
     local player = game.get_player(event.player_index)
 
-    local slider_frame = player.gui.screen[ prefix .. "_frame" ]
+    local slider_frame = player.gui.screen[prefix .. "_frame"]
     if not slider_frame then return end
 
     if not Utils.is_child_of(event.element, slider_frame, 3) then
@@ -108,7 +108,7 @@ py.on_event(defines.events.on_gui_click, function(event)
 end)
 
 function P.get_slider_frame(player)
-    return player.gui.screen[ prefix .. "_frame" ]
+    return player.gui.screen[prefix .. "_frame"]
 end
 
 function P.build_time_selection_button(parent, action, tags)
@@ -128,7 +128,7 @@ function P.build_count_selection_button(parent, action, tags)
     btn.style.width = 44
     btn.style.right_padding = 0
     btn.style.left_padding = 0
-    btn.caption = L[ tags.elem_type .. "_format_value" ](action.item_count or 0)
+    btn.caption = L[tags.elem_type .. "_format_value"](action.item_count or 0)
 
     return btn
 end

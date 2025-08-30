@@ -36,7 +36,7 @@ data:extend({ {
     scale_info_icons = true,
     name = "outpost-aerial",
     type = "container",
-    circuit_connector = table.deepcopy(data.raw.container[ "steel-chest" ].circuit_connector), -- todo
+    circuit_connector = table.deepcopy(data.raw.container["steel-chest"].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
     close_sound = {
         filename = "__base__/sound/metallic-chest-close.ogg",

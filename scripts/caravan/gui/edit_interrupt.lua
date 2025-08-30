@@ -6,7 +6,7 @@ local caravan_prototypes = require("__pyalienlife__/scripts/caravan/caravan-prot
 local P = {}
 
 local function label_info(interrupt, schedule_id)
-    local schedule = interrupt.schedule[ schedule_id ]
+    local schedule = interrupt.schedule[schedule_id]
     if schedule and schedule.entity and not schedule.entity.valid then
         return "train_schedule_unavailable_stop_label", { "caravan-gui.destination-unavailable" }
     end
@@ -67,16 +67,16 @@ function P.build_conditions_operators_list(parent)
 
     local operators = storage.edited_interrupt.conditions_operators
 
-    local has_both_operators = #operators > 0 and table.any(operators, function(o) return o ~= operators[ 1 ] end)
+    local has_both_operators = #operators > 0 and table.any(operators, function(o) return o ~= operators[1] end)
 
     for i = 1, #operators do
         local tags = { condition_operator_id = i }
-        InterruptConditionsGui.build_condition_operator(flow, operators[ i ], has_both_operators, tags)
+        InterruptConditionsGui.build_condition_operator(flow, operators[i], has_both_operators, tags)
     end
 end
 
 function P.build_add_interrupt_condition_dropdown(parent)
-    local conditions = Caravan.valid_actions[ "interrupt-condition" ]
+    local conditions = Caravan.valid_actions["interrupt-condition"]
     conditions = table.map(conditions, function(v) return { "caravan-actions." .. v, v } end)
 
     table.insert(conditions, "+ Add interrupt condition")
@@ -96,7 +96,7 @@ function P.build_conditions_list(parent)
     local conditions_flow = conditions_and_operators_flow.add({ type = "flow", direction = "vertical" })
     for i = 1, #conditions do
         local tags = { condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition }
-        InterruptConditionsGui.build_condition(conditions_flow, conditions[ i ], tags)
+        InterruptConditionsGui.build_condition(conditions_flow, conditions[i], tags)
     end
 end
 
@@ -119,14 +119,14 @@ function P.build_conditions_pane(parent)
 end
 
 function P.build_action_list(parent, schedule_id)
-    local actions = storage.edited_interrupt.schedule[ schedule_id ].actions
+    local actions = storage.edited_interrupt.schedule[schedule_id].actions
 
     for i = 1, #actions do
         local tags = { schedule_id = schedule_id, action_id = i, action_list_type = Caravan.action_list_types.interrupt_targets }
-        ActionGui.build_action(parent, nil, actions[ i ], tags)
+        ActionGui.build_action(parent, nil, actions[i], tags)
     end
 
-    local entity = storage.edited_interrupt.schedule[ schedule_id ].entity
+    local entity = storage.edited_interrupt.schedule[schedule_id].entity
     local valid_actions = Utils.get_all_actions_for_entity(entity)
     local actions = table.map(table.invert(valid_actions), function(v) return { "caravan-actions." .. v, v } end)
 
@@ -140,7 +140,7 @@ function P.build_action_list(parent, schedule_id)
 end
 
 function P.build_target_destination_frame(parent, schedule_id)
-    local schedule = storage.edited_interrupt.schedule[ schedule_id ]
+    local schedule = storage.edited_interrupt.schedule[schedule_id]
     local tags = { schedule_id = schedule_id, action_list_type = Caravan.action_list_types.interrupt_targets }
 
     local frame = parent.add({ type = "frame", style = "train_schedule_station_frame" })
@@ -278,6 +278,6 @@ py.on_event(defines.events.on_gui_click, function(event)
 end)
 
 -- store window location when moved
-gui_events[ defines.events.on_gui_location_changed ][ "edit_interrupt_gui" ] = function(event) Utils.store_gui_location(event.element) end
+gui_events[defines.events.on_gui_location_changed]["edit_interrupt_gui"] = function(event) Utils.store_gui_location(event.element) end
 
 return P

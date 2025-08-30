@@ -54,7 +54,7 @@ RECIPE({
     {
         { icon = "__pyalienlifegraphics__/graphics/icons/sample-cup.png" },
         { icon = "__pyalienlifegraphics__/graphics/icons/ulric.png",          scale = 0.25,   shift = { 7.5, 7.5 } },
-        { icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,      shift = { -7.5, -7.5 } },
+        { icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25,        shift = { -7.5, -7.5 } },
     },
     icon_size = 64,
     subgroup = "py-alienlife-ulric",

@@ -20,15 +20,15 @@ if data and not yafc_turd_integration then
     end
 
     for recipe, result in pairs({
-        [ RECIPE("grod-al"):copy() ] = "al-biomass",
-        [ RECIPE("grod-al-2"):copy() ] = "al-biomass",
-        [ RECIPE("grod-al-3"):copy() ] = "al-biomass",
-        [ RECIPE("grod-pb"):copy() ] = "pb-biomass",
-        [ RECIPE("grod-pb-2"):copy() ] = "pb-biomass",
-        [ RECIPE("grod-pb-3"):copy() ] = "pb-biomass",
-        [ RECIPE("grod-sn"):copy() ] = "sn-biomass",
-        [ RECIPE("grod-sn-2"):copy() ] = "sn-biomass",
-        [ RECIPE("grod-sn-3"):copy() ] = "sn-biomass",
+        [RECIPE("grod-al"):copy()] = "al-biomass",
+        [RECIPE("grod-al-2"):copy()] = "al-biomass",
+        [RECIPE("grod-al-3"):copy()] = "al-biomass",
+        [RECIPE("grod-pb"):copy()] = "pb-biomass",
+        [RECIPE("grod-pb-2"):copy()] = "pb-biomass",
+        [RECIPE("grod-pb-3"):copy()] = "pb-biomass",
+        [RECIPE("grod-sn"):copy()] = "sn-biomass",
+        [RECIPE("grod-sn-2"):copy()] = "sn-biomass",
+        [RECIPE("grod-sn-3"):copy()] = "sn-biomass",
     }) do
         recipe.name = recipe.name .. "-tailings"
         recipe:add_ingredient_amount("tailings", 100)

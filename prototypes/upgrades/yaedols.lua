@@ -44,7 +44,7 @@ if data and not yafc_turd_integration then
     spore.name = "yaedols-spore-4"
     data:extend({ spore })
     table.insert(
-        data.raw.technology[ "microfilters" ].effects,
+        data.raw.technology["microfilters"].effects,
         {
             type = "change-recipe-productivity",
             recipe = "yaedols-spores-coke-oven-gas",
@@ -53,7 +53,7 @@ if data and not yafc_turd_integration then
         }
     )
     table.insert(
-        data.raw.technology[ "microfilters-mk02" ].effects,
+        data.raw.technology["microfilters-mk02"].effects,
         {
             type = "change-recipe-productivity",
             recipe = "yaedols-spores-coke-oven-gas",

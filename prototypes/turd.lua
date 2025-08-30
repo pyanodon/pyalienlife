@@ -88,8 +88,8 @@ table.sort(tech_upgrades, function(a, b) return a.master_tech.name < b.master_te
 local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     local mk1, mk1_module_slots
     if tech_upgrade.affected_entities then
-        local mk1_name = tech_upgrade.affected_entities[ 1 ]
-        mk1 = data.raw.furnace[ mk1_name ] or data.raw[ "assembling-machine" ][ mk1_name ]
+        local mk1_name = tech_upgrade.affected_entities[1]
+        mk1 = data.raw.furnace[mk1_name] or data.raw["assembling-machine"][mk1_name]
         if not mk1 then error("TURD ERROR: No mk1 building found: " .. mk1_name) end
         mk1_module_slots = mk1.module_slots
     end
@@ -126,7 +126,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
         not_voidable = true
     }
 
-    if not data.raw[ "module-category" ][ module.category ] then
+    if not data.raw["module-category"][module.category] then
         data:extend({ {
             type = "module-category",
             name = module.category
@@ -141,7 +141,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     if is_this_a_speed_module_that_effects_farm_buildings then
         for i, entity in pairs(tech_upgrade.affected_entities or {}) do
-            entity = data.raw.furnace[ entity ] or data.raw[ "assembling-machine" ][ entity ]
+            entity = data.raw.furnace[entity] or data.raw["assembling-machine"][entity]
             local module = table.deepcopy(module)
             module.name = module.name .. "-mk0" .. i
             module.tier = i
@@ -163,7 +163,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     local crafting_categories = table.invert(mk1.crafting_categories or {})
     if effect.productivity and effect.productivity ~= 0 then
         for _, recipe in pairs(data.raw.recipe) do
-            if not recipe.allow_productivity and recipe.category and crafting_categories[ recipe.category ] then
+            if not recipe.allow_productivity and recipe.category and crafting_categories[recipe.category] then
                 recipe.allow_productivity = true
             end
         end
@@ -183,7 +183,7 @@ local function build_tech_upgrade(tech_upgrade)
             size = sub_tech.icon_size
         } })
 
-        effects[ #effects+1 ] = {
+        effects[#effects+1] = {
             type = "nothing",
             icon = sub_tech.icon,
             icon_size = sub_tech.icon_size,
@@ -199,12 +199,12 @@ local function build_tech_upgrade(tech_upgrade)
         for _, effect in pairs(sub_tech.effects) do
             if effect.type == "module-effects" then
                 build_module_effects_turd(tech_upgrade, sub_tech, effect)
-            elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[ effect.recipe ] and not recipes_with_turd_description[ effect.recipe ] then
-                py.add_to_description("recipe", data.raw.recipe[ effect.recipe ], { "turd.font", { "turd.recipe" } })
-                recipes_with_turd_description[ effect.recipe ] = true
-            elseif effect.type == "recipe-replacement" and data.raw.recipe[ effect.new ] then
-                py.add_to_description("recipe", data.raw.recipe[ effect.new ], { "turd.font", { "turd.recipe-replacement" } })
-                local recipe = data.raw.recipe[ effect.new ]
+            elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
+                py.add_to_description("recipe", data.raw.recipe[effect.recipe], { "turd.font", { "turd.recipe" } })
+                recipes_with_turd_description[effect.recipe] = true
+            elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
+                py.add_to_description("recipe", data.raw.recipe[effect.new], { "turd.font", { "turd.recipe-replacement" } })
+                local recipe = data.raw.recipe[effect.new]
                 local icon_base = recipe and recipe:get_icons()
                 if icon_base then
                     -- Combine the base icon with our overlay
@@ -214,14 +214,14 @@ local function build_tech_upgrade(tech_upgrade)
                         scale = 0.35
                     } }, {}, 40)
                     -- this property isn't transferred by combine_icons and allows the overlay to sit outside the render area of the base icon
-                    recipe.icons[ #recipe.icons ].floating = true
+                    recipe.icons[#recipe.icons].floating = true
                     recipe.icon = nil
                     recipe.icon_size = nil
                 end
             elseif effect.type == "machine-replacement" then
                 local machine
                 for _, prototype_category in py.iter_prototype_categories("entity") do
-                    machine = prototype_category[ effect.new ]
+                    machine = prototype_category[effect.new]
                     if machine then break end
                 end
                 -- can be nil if all categories are somehow missing it
@@ -235,7 +235,7 @@ local function build_tech_upgrade(tech_upgrade)
                         shift = { 10, -10 },
                         scale = 0.35
                     } }, {}, 40)
-                    machine.icons[ #machine.icons ].floating = true
+                    machine.icons[#machine.icons].floating = true
                     machine.icon = nil
                     machine.icon_size = nil
                 else
@@ -268,21 +268,21 @@ else
     for _, upgrade in pairs(tech_upgrades) do
         local indexed_sub_techs = {}
         for _, sub_tech in pairs(upgrade.sub_techs) do
-            indexed_sub_techs[ sub_tech.name ] = sub_tech
+            indexed_sub_techs[sub_tech.name] = sub_tech
             for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
                 if effect.type == "machine-replacement" then
-                    turd_machines[ effect.new ] = effect.old
+                    turd_machines[effect.new] = effect.old
                 end
             end
         end
         upgrade.sub_techs = indexed_sub_techs
 
-        indexed_tech_upgrades[ upgrade.master_tech.name ] = upgrade
+        indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
 
         local indexed_affected_entities = {}
         for i, affected_entity in pairs(upgrade.affected_entities) do
-            indexed_affected_entities[ affected_entity ] = i
-            if upgrade.module_category then farm_building_tiers[ affected_entity ] = i end
+            indexed_affected_entities[affected_entity] = i
+            if upgrade.module_category then farm_building_tiers[affected_entity] = i end
         end
         upgrade.affected_entities = indexed_affected_entities
     end

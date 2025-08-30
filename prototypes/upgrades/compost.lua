@@ -1,10 +1,10 @@
 if data and not yafc_turd_integration then
-    data.raw.fluid[ "sweet-syrup" ].default_temperature = 0
-    data.raw.recipe[ "sweet-syrup" ].results[ 1 ].temperature = 10
-    data.raw.recipe[ "empty-sweet-syrup-barrel" ].results[ 2 ].temperature = 10
+    data.raw.fluid["sweet-syrup"].default_temperature = 0
+    data.raw.recipe["sweet-syrup"].results[1].temperature = 10
+    data.raw.recipe["empty-sweet-syrup-barrel"].results[2].temperature = 10
     for i = 1, 4 do
         local name = "compost-plant-mk0" .. i
-        local entity = table.deepcopy(data.raw[ "furnace" ][ name ])
+        local entity = table.deepcopy(data.raw["furnace"][name])
         local collision_box = entity.collision_box
         entity.name = name .. "-turd"
         if i ~= 4 then
@@ -29,7 +29,7 @@ if data and not yafc_turd_integration then
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, { 0.0, -0.88 }, nil, nil),
                 pipe_connections = {
-                    { position = { 4, -5.0 }, direction = defines.direction.north },
+                    { position = { 4, -5.0 },  direction = defines.direction.north },
                     { position = { -4, -5.0 }, direction = defines.direction.north },
                 },
                 production_type = "input-output",
@@ -43,8 +43,8 @@ if data and not yafc_turd_integration then
             effectivity = 1000
         }
         entity.energy_usage = i .. "MW"
-        entity.subgroup = data.raw.item[ name ].subgroup
-        entity.order = data.raw.item[ name ].order
+        entity.subgroup = data.raw.item[name].subgroup
+        entity.order = data.raw.item[name].order
         table.insert(entity.fluid_boxes, {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
@@ -128,7 +128,7 @@ if data and not yafc_turd_integration then
         allow_productivity = true,
     } })
 
-    if mods[ "pyhightech" ] then
+    if mods["pyhightech"] then
         RECIPE("biomass-destruction"):add_result({ type = "fluid", name = "methane", amount = 40 })
     end
 

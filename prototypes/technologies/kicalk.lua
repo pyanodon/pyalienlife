@@ -1,4 +1,4 @@
-if not mods[ "pyhightech" ] then
+if not mods["pyhightech"] then
     TECHNOLOGY({
         type = "technology",
         name = "kicalk",

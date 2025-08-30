@@ -198,7 +198,7 @@ for i = 1, 4 do
                         frame_count = 150,
                         animation_speed = 0.4,
                         shift = util.by_pixel(16, 128),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a1.png",
@@ -219,7 +219,7 @@ for i = 1, 4 do
                         frame_count = 150,
                         animation_speed = 0.4,
                         shift = util.by_pixel(-112, -64),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a2.png",
@@ -240,7 +240,7 @@ for i = 1, 4 do
                         frame_count = 150,
                         animation_speed = 0.4,
                         shift = util.by_pixel(-48, -64),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a3.png",
@@ -261,7 +261,7 @@ for i = 1, 4 do
                         frame_count = 150,
                         animation_speed = 0.4,
                         shift = util.by_pixel(16, -64),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a4.png",
@@ -282,7 +282,7 @@ for i = 1, 4 do
                         frame_count = 150,
                         animation_speed = 0.4,
                         shift = util.by_pixel(80, -64),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/bio-printer/a5.png",
@@ -303,7 +303,7 @@ for i = 1, 4 do
                         frame_count = 150,
                         animation_speed = 0.4,
                         shift = util.by_pixel(144, -64),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                 }
             },

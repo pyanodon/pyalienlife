@@ -57,7 +57,7 @@ RECIPE({
     ingredients = {
         { type = "item", name = "glass",                                                      amount = 4 },
         { type = "item", name = "small-lamp",                                                 amount = 2 },
-        { type = "item", name = mods[ "pyalternativeenergy" ] and "hts-coil" or "tinned-cable", amount = 5 },
+        { type = "item", name = mods["pyalternativeenergy"] and "hts-coil" or "tinned-cable", amount = 5 },
     },
     results = {
         { type = "item", name = "bat-codex", amount = 2 },

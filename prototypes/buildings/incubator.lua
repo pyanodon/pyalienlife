@@ -177,7 +177,7 @@ for i = 1, 4 do
                         height = 257,
                         frame_count = 1,
                         shift = { -0.00, -0.15 },
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                 }
             }
@@ -211,7 +211,7 @@ for i = 1, 4 do
         }--]]
     })
 
-    table.insert(data.raw[ "assembling-machine" ][ name ].graphics_set.working_visualisations, {
+    table.insert(data.raw["assembling-machine"][name].graphics_set.working_visualisations, {
         animation = {
             filename = "__pyalienlifegraphics__/graphics/entity/incubator/cooler.png",
             frame_count = 80,
@@ -226,7 +226,7 @@ for i = 1, 4 do
         constant_speed = true,
     })
 
-    table.insert(data.raw[ "assembling-machine" ][ name ].graphics_set.working_visualisations, {
+    table.insert(data.raw["assembling-machine"][name].graphics_set.working_visualisations, {
         animation = {
             filename = "__pyalienlifegraphics__/graphics/entity/incubator/smoke.png",
             frame_count = 50,

@@ -1,4 +1,4 @@
-if not mods[ "pyalternativeenergy" ] then
+if not mods["pyalternativeenergy"] then
     TECHNOLOGY({
         type = "technology",
         name = "biobattery",

@@ -1,5 +1,5 @@
-data.raw.tile[ "hazard-concrete-left" ].vehicle_friction_modifier = 400
-data.raw.tile[ "hazard-concrete-right" ].vehicle_friction_modifier = 400
+data.raw.tile["hazard-concrete-left"].vehicle_friction_modifier = 400
+data.raw.tile["hazard-concrete-right"].vehicle_friction_modifier = 400
 
 for _, py_tile in pairs({
     "py-asphalt",
@@ -24,7 +24,7 @@ for _, py_tile in pairs({
     "cyan-refined-concrete",
     "acid-refined-concrete",
 }) do
-    if not data.raw.tile[ py_tile ] then error("Tile " .. py_tile .. " not found") end
-    data.raw.tile[ py_tile ].walking_speed_modifier = 3.5
-    data.raw.tile[ py_tile ].vehicle_friction_modifier = -0.1 -- negative friction allows vehicles to accelerate forever
+    if not data.raw.tile[py_tile] then error("Tile " .. py_tile .. " not found") end
+    data.raw.tile[py_tile].walking_speed_modifier = 3.5
+    data.raw.tile[py_tile].vehicle_friction_modifier = -0.1 -- negative friction allows vehicles to accelerate forever
 end

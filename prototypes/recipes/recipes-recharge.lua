@@ -282,7 +282,7 @@ RECIPE({
 --------SIMIKS----------------------
 --mk01
 
-if mods[ "pyalternativeenergy" ] then
+if mods["pyalternativeenergy"] then
     RECIPE({
         type = "recipe",
         name = "simik-recharge",

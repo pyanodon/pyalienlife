@@ -10,13 +10,13 @@ local farm_filenames = {
     "farm-arum",
     "farm-yotoi-fruit",
     "farm-bioreserve",
-    script.active_mods[ "pyalternativeenergy" ] and "__pyalternativeenergy__/scripts/crops/farm-mova"
+    script.active_mods["pyalternativeenergy"] and "__pyalternativeenergy__/scripts/crops/farm-mova"
 }
 
 local farms = {}
 for _, filename in pairs(farm_filenames) do
     local farm = require(filename)
-    farms[ farm.seed ] = farm
+    farms[farm.seed] = farm
 end
 
 py.on_event(py.events.on_init(), function()
@@ -67,7 +67,7 @@ py.on_event(py.events.on_built(), function(event)
 
     local landfill_tiles = {}
     for _, position in pairs(get_landfill_positions(entity)) do
-        local x, y = position[ 1 ], position[ 2 ]
+        local x, y = position[1], position[2]
 
         local previous_tile = surface.get_tile(position)
         if not previous_tile.valid or previous_tile.prototype.collision_mask.layers.water_tile then goto continue end
@@ -75,11 +75,11 @@ py.on_event(py.events.on_built(), function(event)
 
         table.insert(landfill_tiles, { name = "landfill", position = position })
 
-        storage.smart_farm_landfill_data[ x ] = storage.smart_farm_landfill_data[ x ] or {}
-        if storage.smart_farm_landfill_data[ x ][ y ] then
-            storage.smart_farm_landfill_data[ x ][ y ].depth = storage.smart_farm_landfill_data[ x ][ y ].depth + 1
+        storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
+        if storage.smart_farm_landfill_data[x][y] then
+            storage.smart_farm_landfill_data[x][y].depth = storage.smart_farm_landfill_data[x][y].depth + 1
         else
-            storage.smart_farm_landfill_data[ x ][ y ] = { depth = 1, name = previous_tile.name }
+            storage.smart_farm_landfill_data[x][y] = { depth = 1, name = previous_tile.name }
         end
 
         ::continue::
@@ -101,19 +101,19 @@ py.on_event(py.events.on_destroyed(), function(event)
 
     local tiles_to_reset = {}
     for _, position in pairs(get_landfill_positions(entity)) do
-        local x, y = position[ 1 ], position[ 2 ]
+        local x, y = position[1], position[2]
 
-        if not storage.smart_farm_landfill_data[ x ] or not storage.smart_farm_landfill_data[ x ][ y ] then goto continue end
+        if not storage.smart_farm_landfill_data[x] or not storage.smart_farm_landfill_data[x][y] then goto continue end
 
-        local data = storage.smart_farm_landfill_data[ x ][ y ]
+        local data = storage.smart_farm_landfill_data[x][y]
         data.depth = data.depth - 1
 
         if data.depth > 0 then goto continue end
         table.insert(tiles_to_reset, { name = data.name, position = position })
 
-        storage.smart_farm_landfill_data[ x ][ y ] = nil
-        if table_size(storage.smart_farm_landfill_data[ x ]) == 0 then
-            storage.smart_farm_landfill_data[ x ] = nil
+        storage.smart_farm_landfill_data[x][y] = nil
+        if table_size(storage.smart_farm_landfill_data[x]) == 0 then
+            storage.smart_farm_landfill_data[x] = nil
         end
 
         ::continue::
@@ -131,9 +131,9 @@ py.on_event(defines.events.on_rocket_launched, function(event)
     local surface = silo.surface
     local position = silo.position
     position.y = position.y - 15
-    local replicator = event.rocket.cargo_pod.get_inventory(defines.inventory.cargo_unit).get_contents()[ 1 ]
+    local replicator = event.rocket.cargo_pod.get_inventory(defines.inventory.cargo_unit).get_contents()[1]
     if not replicator then return end
-    local farm = farms[ replicator.name ]
+    local farm = farms[replicator.name]
     if not farm then return end
 
     local output
@@ -146,7 +146,7 @@ py.on_event(defines.events.on_rocket_launched, function(event)
     end
     if not output then return end
 
-    local is_alien_biomes = script.active_mods[ "alien-biomes" ] or script.active_mods[ "combat-mechanics-overhaul" ]
+    local is_alien_biomes = script.active_mods["alien-biomes"] or script.active_mods["combat-mechanics-overhaul"]
     for x = -11, 11 do
         for y = -11, 11 do
             local ore_location = { position.x + x, position.y + y }

@@ -30,7 +30,7 @@ function P.build_title_bar_flow(parent, tags)
     local search_button = flow.add({ type = "sprite-button", name = "py_caravan_add_interrupt_search_button", style = "frame_action_button", sprite = "utility/search", tags = tags })
     flow.add({ type = "sprite-button", name = "py_caravan_add_interrupt_close_button", style = "close_button", sprite = "utility/close", tags = tags })
 
-    storage.gui_elements_by_name[ search_button.name ] = search_button
+    storage.gui_elements_by_name[search_button.name] = search_button
     return flow
 end
 
@@ -56,7 +56,7 @@ end
 function P.build_interrupt_list(parent, caravan_data, interrupts, tags)
     local flow = parent.add({ type = "flow", name = "contents_flow", direction = "vertical", style = "packed_vertical_flow" })
 
-    local enabled, disabled = Utils.partition(interrupts, function(e) return table.invert(caravan_data.interrupts)[ e.name ] == nil end)
+    local enabled, disabled = Utils.partition(interrupts, function(e) return table.invert(caravan_data.interrupts)[e.name] == nil end)
     if #enabled + #disabled == 0 then
         P.build_no_interrupts_frame(flow)
     else
@@ -68,12 +68,12 @@ function P.build_interrupt_list(parent, caravan_data, interrupts, tags)
 
         for i = 1, #enabled do
             local btn = flow.add({ type = "button", name = "py_caravan_add_interrupt_list_button_" .. i, style = "list_box_item", tags = tags })
-            btn.caption = enabled[ i ].name
+            btn.caption = enabled[i].name
             btn.style.horizontally_stretchable = true
         end
         for i = 1, #disabled do
             local btn = flow.add({ type = "button", style = "list_box_item", tags = tags })
-            btn.caption = disabled[ i ].name
+            btn.caption = disabled[i].name
             btn.enabled = false
             btn.tooltip = "This interrupt is already present in the schedule."
             btn.style.horizontally_stretchable = true
@@ -111,7 +111,7 @@ function P.update_interrupt_list(player)
 
     local textfield = gui.title_bar_flow.py_caravan_add_interrupt_search_textfield
     local tags = textfield.tags
-    local caravan_data = storage.caravans[ tags.unit_number ]
+    local caravan_data = storage.caravans[tags.unit_number]
 
     local scroll_pane = textfield.parent.parent.contents_frame.scroll_pane
     scroll_pane.contents_flow.destroy()
@@ -139,25 +139,25 @@ function P.toggle_search_button(player)
     end
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_add_interrupt_search_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_add_interrupt_search_button"] = function(event)
     local player = game.get_player(event.player_index)
     P.toggle_search_button(player)
 end
 
-gui_events[ defines.events.on_gui_text_changed ][ "py_caravan_add_interrupt_search_textfield" ] = function(event)
+gui_events[defines.events.on_gui_text_changed]["py_caravan_add_interrupt_search_textfield"] = function(event)
     local player = game.get_player(event.player_index)
     P.update_interrupt_list(player)
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_add_interrupt_list_button_." ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_add_interrupt_list_button_."] = function(event)
     local button = event.element
 
-    local last_clicked_button = clicked_list_buttons[ event.player_index ]
+    local last_clicked_button = clicked_list_buttons[event.player_index]
     if last_clicked_button and last_clicked_button.valid then
         last_clicked_button.toggled = false
     end
     button.toggled = true
-    clicked_list_buttons[ event.player_index ] = button
+    clicked_list_buttons[event.player_index] = button
 
     local input_textfield = button.parent.parent.parent.subheader_frame.py_caravan_add_interrupt_input_textfield
 
@@ -180,6 +180,6 @@ py.on_event(defines.events.on_gui_click, function(event)
 end)
 
 -- store window location when moved
-gui_events[ defines.events.on_gui_location_changed ][ "add_interrupt_gui" ] = function(event) Utils.store_gui_location(event.element) end
+gui_events[defines.events.on_gui_location_changed]["add_interrupt_gui"] = function(event) Utils.store_gui_location(event.element) end
 
 return P

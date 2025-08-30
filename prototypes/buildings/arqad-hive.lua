@@ -369,7 +369,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         shift = util.by_pixel(0, -32),
                         priority = "low",
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     --DOME
                     {

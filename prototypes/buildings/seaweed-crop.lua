@@ -135,7 +135,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(0, 183),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a1.png",
@@ -154,7 +154,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(-176, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a2.png",
@@ -173,7 +173,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(-112, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a3.png",
@@ -192,7 +192,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(-48, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a4.png",
@@ -211,7 +211,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(16, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a5.png",
@@ -230,7 +230,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(80, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a6.png",
@@ -249,7 +249,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(144, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/seaweed-crop/a7.png",
@@ -268,7 +268,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(192, -34),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                 }
             },

@@ -27,7 +27,7 @@ Caravan.alerts                                    = {
 }
 
 Caravan.all_actions                               = {
-    [ "outpost" ] = table.invert({
+    ["outpost"] = table.invert({
         "time-passed",
         "store-food",
         "store-specific-food",
@@ -40,14 +40,14 @@ Caravan.all_actions                               = {
         "circuit-condition",
         "circuit-condition-static"
     }),
-    [ "outpost-fluid" ] = table.invert({
+    ["outpost-fluid"] = table.invert({
         "time-passed",
         "fill-tank",
         "empty-tank",
         "circuit-condition",
         "circuit-condition-static"
     }),
-    [ "character" ] = table.invert({
+    ["character"] = table.invert({
         "time-passed",
         "store-food",
         "store-specific-food",
@@ -59,7 +59,7 @@ Caravan.all_actions                               = {
         "unload-target",
         "empty-autotrash"
     }),
-    [ "unit" ] = table.invert({
+    ["unit"] = table.invert({
         "time-passed",
         "store-food",
         "store-specific-food",
@@ -70,7 +70,7 @@ Caravan.all_actions                               = {
         "load-target",
         "unload-target",
     }),
-    [ "cargo-wagon" ] = table.invert({
+    ["cargo-wagon"] = table.invert({
         "time-passed",
         "fill-inventory",
         "empty-inventory",
@@ -79,7 +79,7 @@ Caravan.all_actions                               = {
         "load-target",
         "unload-target",
     }),
-    [ "car" ] = table.invert({
+    ["car"] = table.invert({
         "time-passed",
         "fill-inventory",
         "empty-inventory",
@@ -88,7 +88,7 @@ Caravan.all_actions                               = {
         "load-target",
         "unload-target",
     }),
-    [ "spider-vehicle" ] = table.invert({
+    ["spider-vehicle"] = table.invert({
         "time-passed",
         "fill-inventory",
         "empty-inventory",
@@ -97,19 +97,19 @@ Caravan.all_actions                               = {
         "load-target",
         "unload-target",
     }),
-    [ "electric-pole" ] = table.invert({
+    ["electric-pole"] = table.invert({
         "time-passed",
         "circuit-condition",
         "circuit-condition-static"
     }),
-    [ "default" ] = table.invert({
+    ["default"] = table.invert({
         "time-passed"
     })
 }
 
 Caravan.valid_actions                             = {
     caravan = {
-        [ "outpost" ] = table.invert({
+        ["outpost"] = table.invert({
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -122,7 +122,7 @@ Caravan.valid_actions                             = {
             "circuit-condition",
             "circuit-condition-static"
         }),
-        [ "character" ] = table.invert({
+        ["character"] = table.invert({
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -134,7 +134,7 @@ Caravan.valid_actions                             = {
             "unload-target",
             "empty-autotrash"
         }),
-        [ "unit" ] = table.invert({
+        ["unit"] = table.invert({
             "time-passed",
             "store-food",
             "store-specific-food",
@@ -145,7 +145,7 @@ Caravan.valid_actions                             = {
             "load-target",
             "unload-target",
         }),
-        [ "cargo-wagon" ] = table.invert({
+        ["cargo-wagon"] = table.invert({
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -154,7 +154,7 @@ Caravan.valid_actions                             = {
             "load-target",
             "unload-target",
         }),
-        [ "car" ] = table.invert({
+        ["car"] = table.invert({
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -163,7 +163,7 @@ Caravan.valid_actions                             = {
             "load-target",
             "unload-target",
         }),
-        [ "spider-vehicle" ] = table.invert({
+        ["spider-vehicle"] = table.invert({
             "time-passed",
             "fill-inventory",
             "empty-inventory",
@@ -172,40 +172,40 @@ Caravan.valid_actions                             = {
             "load-target",
             "unload-target",
         }),
-        [ "electric-pole" ] = table.invert({
+        ["electric-pole"] = table.invert({
             "time-passed",
             "circuit-condition",
             "circuit-condition-static"
         }),
-        [ "default" ] = table.invert({
+        ["default"] = table.invert({
             "time-passed"
         })
     },
     fluidavan = {
-        [ "outpost" ] = table.invert({
+        ["outpost"] = table.invert({
             "time-passed",
             "store-food",
             "store-specific-food",
             "circuit-condition",
             "circuit-condition-static"
         }),
-        [ "outpost-fluid" ] = table.invert({
+        ["outpost-fluid"] = table.invert({
             "time-passed",
             "fill-tank",
             "empty-tank",
             "circuit-condition",
             "circuit-condition-static"
         }),
-        [ "electric-pole" ] = table.invert({
+        ["electric-pole"] = table.invert({
             "time-passed",
             "circuit-condition",
             "circuit-condition-static"
         }),
-        [ "default" ] = table.invert({
+        ["default"] = table.invert({
             "time-passed"
         })
     },
-    [ "interrupt-condition" ] = {
+    ["interrupt-condition"] = {
         "is-inventory-full",
         "is-inventory-empty",
         "caravan-item-count",
@@ -223,7 +223,7 @@ Caravan.valid_actions                             = {
     }
 }
 Caravan.valid_actions.nukavan                     = table.deepcopy(Caravan.valid_actions.caravan)
-Caravan.valid_actions.nukavan[ "default" ]        = table.invert({ "detonate" })
+Caravan.valid_actions.nukavan["default"]          = table.invert({ "detonate" })
 
 Caravan.actions_with_item_count                   = table.invert({
     "time-passed", -- as wait_time
@@ -252,16 +252,16 @@ Caravan.foods                                     = {
         "gastrocapacitor",
     },
     caravan = {
-        [ "dried-meat" ] = 1,
-        [ "brain" ] = 2,
-        [ "auog-food-01" ] = 4,
-        [ "workers-food" ] = 10,
-        [ "workers-food-02" ] = 30,
-        [ "workers-food-03" ] = 50
+        ["dried-meat"] = 1,
+        ["brain"] = 2,
+        ["auog-food-01"] = 4,
+        ["workers-food"] = 10,
+        ["workers-food-02"] = 30,
+        ["workers-food-03"] = 50
     },
     flyavan = {
-        [ "workers-food" ] = 5,
-        [ "gastrocapacitor" ] = 50
+        ["workers-food"] = 5,
+        ["gastrocapacitor"] = 50
     },
 }
 
@@ -287,7 +287,7 @@ local caravan_prototypes                          = {
     },
     fluidavan = {
         opens_player_inventory = true,
-        max_volume = prototypes.entity[ "py-tank-4000" ].fluid_capacity,
+        max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
         fuel_size = 2,
         destructible = false,
         outpost = "outpost-fluid",
@@ -330,11 +330,11 @@ local caravan_prototypes                          = {
         fuel_size = 2,
         outpost = "outpost",
         favorite_foods = {
-            [ "brain" ] = 2,
-            [ "auog-food-01" ] = 4,
-            [ "workers-food" ] = 10,
-            [ "workers-food-02" ] = 30,
-            [ "workers-food-03" ] = 50
+            ["brain"] = 2,
+            ["auog-food-01"] = 4,
+            ["workers-food"] = 10,
+            ["workers-food-02"] = 30,
+            ["workers-food-03"] = 50
         },
         actions = Caravan.valid_actions.nukavan,
         placeable_by = "nukavan",
@@ -348,14 +348,14 @@ local caravan_prototypes                          = {
     }
 }
 
-caravan_prototypes[ "caravan-turd" ]              = caravan_prototypes[ "caravan" ]
-caravan_prototypes[ "fluidavan-turd" ]            = caravan_prototypes[ "fluidavan" ]
-caravan_prototypes[ "flyavan-turd" ]              = caravan_prototypes[ "flyavan" ]
-caravan_prototypes[ "nukavan-turd" ]              = caravan_prototypes[ "nukavan" ]
-caravan_prototypes[ "caravan-turd" ].placeable_by = "caravan-turd"
-caravan_prototypes[ "fluidavan-turd" ].placeable_by = "fluidavan-turd"
-caravan_prototypes[ "flyavan-turd" ].placeable_by = "flyavan-turd"
-caravan_prototypes[ "nukavan-turd" ].placeable_by = "nukavan-turd"
+caravan_prototypes["caravan-turd"]                = caravan_prototypes["caravan"]
+caravan_prototypes["fluidavan-turd"]              = caravan_prototypes["fluidavan"]
+caravan_prototypes["flyavan-turd"]                = caravan_prototypes["flyavan"]
+caravan_prototypes["nukavan-turd"]                = caravan_prototypes["nukavan"]
+caravan_prototypes["caravan-turd"].placeable_by   = "caravan-turd"
+caravan_prototypes["fluidavan-turd"].placeable_by = "fluidavan-turd"
+caravan_prototypes["flyavan-turd"].placeable_by   = "flyavan-turd"
+caravan_prototypes["nukavan-turd"].placeable_by   = "nukavan-turd"
 
 -- small migration script to ensure we are not transfering deleted items
 -- I have no access to the JSON migrations so invalid items are just deleted
@@ -378,10 +378,10 @@ local function migrate_proto(name, type_name, migrations)
     if not name then return nil end
     type_name = type_name or "item"
     if type_name == "virtual" then type_name = "virtual-signal" end                -- for circuit conditions
-    local new_name = migrations[ type_name ] and migrations[ type_name ][ name ] or name -- may also be "" if prototype was deleted
+    local new_name = migrations[type_name] and migrations[type_name][name] or name -- may also be "" if prototype was deleted
     -- global prototype table is indexed with underscores :/
     type_name = type_name:gsub("%-", "_")
-    if prototypes[ type_name ][ new_name ] then
+    if prototypes[type_name][new_name] then
         return new_name
     end
     return nil

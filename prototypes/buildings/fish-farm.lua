@@ -203,7 +203,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         line_length = 1,
                         shift = util.by_pixel(16, -16),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                 }
             },

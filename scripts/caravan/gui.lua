@@ -7,13 +7,13 @@ local P = {}
 CaravanGui = P
 
 local interactable_controllers = {
-    [ defines.controllers.character ] = true,
-    [ defines.controllers.god ] = true,
-    [ defines.controllers.editor ] = true
+    [defines.controllers.character] = true,
+    [defines.controllers.god] = true,
+    [defines.controllers.editor] = true
 }
 
 local function can_view_cargo_tab(player, caravan_data)
-    if interactable_controllers[ player.controller_type ] then
+    if interactable_controllers[player.controller_type] then
         return player.can_reach_entity(caravan_data.entity)
     end
     return false
@@ -21,7 +21,7 @@ end
 
 
 local function disabled_cargo_tab_tooltip(player)
-    if interactable_controllers[ player.controller_type ] then
+    if interactable_controllers[player.controller_type] then
         return "Caravan is out of reach."
     elseif player.controller_type == defines.controllers.remote then
         return "Cannot interact with cargo in remote view."
@@ -30,9 +30,9 @@ local function disabled_cargo_tab_tooltip(player)
 end
 
 local relative_gui_types = {
-    [ "electric-pole" ] = defines.relative_gui_type.electric_network_gui,
-    [ "character" ] = defines.relative_gui_type.other_player_gui,
-    [ "unit" ] = defines.relative_gui_type.script_inventory_gui
+    ["electric-pole"] = defines.relative_gui_type.electric_network_gui,
+    ["character"] = defines.relative_gui_type.other_player_gui,
+    ["unit"] = defines.relative_gui_type.script_inventory_gui
 }
 
 ---Guesses the GUI type that a given entity shows when opened
@@ -40,7 +40,7 @@ local relative_gui_types = {
 ---@return defines.relative_gui_type result
 function P.guess_gui_type(entity)
     local entity_type = entity.type
-    local relative_type = relative_gui_types[ entity_type ] or defines.relative_gui_type[ entity_type:gsub("%-", "_") .. "_gui" ]
+    local relative_type = relative_gui_types[entity_type] or defines.relative_gui_type[entity_type:gsub("%-", "_") .. "_gui"]
     return relative_type or defines.relative_gui_type.generic_on_off_entity_gui
 end
 
@@ -56,7 +56,7 @@ end
 
 function P.build(player, caravan_data)
     local main_frame = CaravanGuiComponents.build_main_frame(player.gui.screen, "caravan_gui", caravan_data)
-    local gui_locations = (storage.gui_locations[ player.index ] or {})
+    local gui_locations = (storage.gui_locations[player.index] or {})
     -- only loads position if it is "un-hiding" (re-creating) after selecting something with the carrot
     if gui_locations.caravan_gui then
         main_frame.location = gui_locations.caravan_gui
@@ -75,8 +75,8 @@ function P.build(player, caravan_data)
     local schedule_tab = CaravanGuiComponents.build_schedule_tab(tabbed_pane, caravan_data)
     local cargo_tab = CaravanGuiComponents.build_cargo_tab(tabbed_pane, player, caravan_data, can_view_cargo_tab(player, caravan_data))
     -- set to the player's last opened tab
-    if storage.last_opened_tab[ player.index ] then
-        tabbed_pane.selected_tab_index = storage.last_opened_tab[ player.index ]
+    if storage.last_opened_tab[player.index] then
+        tabbed_pane.selected_tab_index = storage.last_opened_tab[player.index]
     end
     return main_frame
 end
@@ -88,7 +88,7 @@ function P.update_gui(player)
     CaravanGuiComponents.update_status_flow(player)
     CaravanGuiComponents.update_schedule_pane(player)
 
-    local caravan_data = storage.caravans[ gui.tags.unit_number ]
+    local caravan_data = storage.caravans[gui.tags.unit_number]
     local can_reach_caravan = player.can_reach_entity(caravan_data.entity)
     local cargo_tab = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_tab
 
@@ -122,7 +122,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
         if slider_frame then
             slider_frame.destroy()
         elseif add_interrupt_frame then
-            local btn = storage.gui_elements_by_name[ "py_caravan_add_interrupt_search_button" ]
+            local btn = storage.gui_elements_by_name["py_caravan_add_interrupt_search_button"]
             if btn and btn.toggled then
                 AddInterruptGui.toggle_search_button(player)
             else

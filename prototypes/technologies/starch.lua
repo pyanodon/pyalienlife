@@ -36,7 +36,7 @@ TECHNOLOGY({
     }
 })
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     TECHNOLOGY({
         type = "technology",
         name = "starch-mk03",

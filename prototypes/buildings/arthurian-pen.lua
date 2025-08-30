@@ -114,7 +114,7 @@ for tier = 1, 4 do
                 pollution = 3
             },
         },
-        energy_usage = energy_tiers[ tier ],
+        energy_usage = energy_tiers[tier],
         graphics_set = {
             working_visualisations = {
                 {
@@ -221,7 +221,7 @@ for tier = 1, 4 do
                         frame_count = 1,
                         line_length = 1,
                         shift = util.by_pixel(4, -12),
-                        tint = py.tints[ tier ]
+                        tint = py.tints[tier]
                     },
                 },
             },

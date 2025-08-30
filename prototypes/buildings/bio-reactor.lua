@@ -149,7 +149,7 @@ for i = 1, 4 do
                         height = 236,
                         line_length = 8,
                         animation_speed = 0.3,
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                         priority = "medium"
                     }
                 },
@@ -169,7 +169,7 @@ for i = 1, 4 do
                         height = 236,
                         frame_count = 1,
                         shift = { 0.312, -0.218 },
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                 },
             },

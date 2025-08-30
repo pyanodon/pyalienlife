@@ -12,7 +12,7 @@ RECIPE({
     }
 }):add_unlock("phagnot-mk02"):change_category("gas-refinery")
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     RECIPE({
         type = "recipe",
         name = "gas-bladder-to-phophine-gas",

@@ -32,7 +32,7 @@ data:extend({ {
     scale_info_icons = true,
     name = "outpost-fluid",
     type = "storage-tank",
-    circuit_connector = table.deepcopy(data.raw[ "storage-tank" ][ "storage-tank" ].circuit_connector), -- todo
+    circuit_connector = table.deepcopy(data.raw["storage-tank"]["storage-tank"].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
     close_sound = {
         filename = "__base__/sound/metallic-chest-close.ogg",
@@ -79,7 +79,7 @@ data:extend({ {
     icon_size = 64,
     fluid_box = {
         -- don't hardcode so that volume gets adjusted when "realistic" setting is on.
-        volume = data.raw[ "storage-tank" ][ "py-tank-4000" ].fluid_box.volume,
+        volume = data.raw["storage-tank"]["py-tank-4000"].fluid_box.volume,
         pipe_picture = {
             north = {
                 layers = {

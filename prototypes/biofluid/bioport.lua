@@ -45,12 +45,12 @@ local recipe = RECIPE({
     allow_inserter_overload = false,
     hidden = true,
     ingredients = {
-        { type = "item", name = "gobachov", amount = data.raw.item[ "gobachov" ].stack_size },
-        { type = "item", name = "huzu",     amount = data.raw.item[ "huzu" ].stack_size },
-        { type = "item", name = "chorkok",  amount = data.raw.item[ "chorkok" ].stack_size },
+        { type = "item", name = "gobachov", amount = data.raw.item["gobachov"].stack_size },
+        { type = "item", name = "huzu",     amount = data.raw.item["huzu"].stack_size },
+        { type = "item", name = "chorkok",  amount = data.raw.item["chorkok"].stack_size },
     },
     results = {
-        { type = "item",  name = "guano",                                              amount = data.raw.item[ "guano" ].stack_size },
+        { type = "item",  name = "guano",                                              amount = data.raw.item["guano"].stack_size },
         { type = "fluid", name = mods.pyalternativeenergy and "void" or "parameter-0", amount = 1 },
     },
     energy_required = 100,
@@ -61,7 +61,7 @@ local recipe = RECIPE({
 })
 
 for name, _ in pairs(Biofluid.favorite_foods) do
-    recipe:add_ingredient({ name = name, amount = data.raw.item[ name ].stack_size, type = "item" })
+    recipe:add_ingredient({ name = name, amount = data.raw.item[name].stack_size, type = "item" })
 end
 
 ENTITY({
@@ -153,18 +153,18 @@ local function add_creature_animations(animations, animation_order, name)
     for i, _ in pairs(animation_order) do
         local layers = {}
         for j = 1, i do
-            local layer_data = animation_order[ j ]
-            local shift = util.by_pixel(layer_data[ 1 ] / 2 - 62, layer_data[ 2 ] / 2 - 113.75 - 32)
-            if name == "chorkok" then shift[ 2 ] = shift[ 2 ] + 0.16 end
-            layers[ #layers+1 ] = table.deepcopy(animations[ layer_data[ 3 ] ])
-            layers[ #layers ].shift = shift
+            local layer_data = animation_order[j]
+            local shift = util.by_pixel(layer_data[1] / 2 - 62, layer_data[2] / 2 - 113.75 - 32)
+            if name == "chorkok" then shift[2] = shift[2] + 0.16 end
+            layers[#layers+1] = table.deepcopy(animations[layer_data[3]])
+            layers[#layers].shift = shift
         end
         table.sort(layers, function(a, b) return a.priority < b.priority end)
         for _, layer in pairs(layers) do
             layer.priority = "medium"
             for _ = 0, frame_offset do
-                table.insert(layer.frame_sequence, 1, layer.frame_sequence[ #layer.frame_sequence ])
-                layer.frame_sequence[ #layer.frame_sequence ] = nil
+                table.insert(layer.frame_sequence, 1, layer.frame_sequence[#layer.frame_sequence])
+                layer.frame_sequence[#layer.frame_sequence] = nil
             end
             frame_offset = frame_offset + 13
         end
@@ -252,7 +252,7 @@ local direction_inversion = {
 
 local idle_animation = {}
 for _, direction in pairs({ "north", "east", "south", "west" }) do
-    idle_animation[ direction_inversion[ direction ] ] = {
+    idle_animation[direction_inversion[direction]] = {
         layers = {
             {
                 filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-port-" .. direction .. ".png",
@@ -331,11 +331,11 @@ ENTITY({
     name = "bioport-floor-animation",
     hidden = true,
     flags = { "placeable-neutral", "no-automated-item-insertion", "no-automated-item-removal", "not-flammable" },
-    icon = data.raw.item[ "bioport" ].icon,
-    icon_size = data.raw.item[ "bioport" ].icon_size,
-    subgroup = data.raw.item[ "bioport" ].subgroup,
-    order = data.raw.item[ "bioport" ].order,
-    collision_box = data.raw[ "assembling-machine" ][ "bioport" ].collision_box,
+    icon = data.raw.item["bioport"].icon,
+    icon_size = data.raw.item["bioport"].icon_size,
+    subgroup = data.raw.item["bioport"].subgroup,
+    order = data.raw.item["bioport"].order,
+    collision_box = data.raw["assembling-machine"]["bioport"].collision_box,
     collision_mask = { layers = {} },
     render_layer = "lower-object-above-shadow",
     -- animations = variants, -- TODO caught as undefined global, replaced by nil

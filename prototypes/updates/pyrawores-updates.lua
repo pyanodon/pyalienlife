@@ -1,6 +1,6 @@
 --TECHNOLOGY
-data.raw.technology[ "lead-mk02" ].prerequisites = {}
-data.raw.technology[ "machines-mk02" ].prerequisites = {} --TODO:sort out pyal tech tree issues with pyro
+data.raw.technology["lead-mk02"].prerequisites = {}
+data.raw.technology["machines-mk02"].prerequisites = {} --TODO:sort out pyal tech tree issues with pyro
 --TECHNOLOGY("lead-mk02")
 
 TECHNOLOGY("aluminium-mk01"):add_pack("py-science-pack-1")
@@ -24,7 +24,7 @@ TECHNOLOGY("titanium-mk02"):add_pack("py-science-pack-2")
 TECHNOLOGY("uranium-mk01"):add_pack("py-science-pack-2")
 TECHNOLOGY("salts"):add_pack("py-science-pack-2")
 
-if not mods[ "pyalternativeenergy" ] then
+if not mods["pyalternativeenergy"] then
     TECHNOLOGY("uranium-mk02"):add_pack("py-science-pack-2")
 end
 
@@ -216,9 +216,9 @@ RECIPE({
 }):add_unlock("casting-mk02"):add_ingredient({ type = "item", name = "silicon", amount = 5 }):add_ingredient({ type = "item", name = "clay", amount = 1 })
 
 RECIPE("nexelit-mine"):remove_unlock("big-mines").hidden = true
-data.raw[ "resource" ][ "nexelit-rock" ].autoplace = nil
-data.raw[ "autoplace-control" ][ "nexelit-rock" ] = nil
-data.raw.planet.nauvis.map_gen_settings.autoplace_controls[ "nexelit-rock" ] = nil
-data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings[ "nexelit-rock" ] = nil
+data.raw["resource"]["nexelit-rock"].autoplace = nil
+data.raw["autoplace-control"]["nexelit-rock"] = nil
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["nexelit-rock"] = nil
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["nexelit-rock"] = nil
 
-data.raw.recipe[ "coal-fawogae" ].ingredients[ 1 ].amount = 2
+data.raw.recipe["coal-fawogae"].ingredients[1].amount = 2

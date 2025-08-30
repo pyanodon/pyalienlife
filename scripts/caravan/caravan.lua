@@ -27,6 +27,6 @@ py.on_event({
         defines.events.on_player_display_scale_changed,
         defines.events.on_player_display_density_scale_changed },
     function(event)
-        storage.gui_locations[ event.player_index ] = {}
+        storage.gui_locations[event.player_index] = {}
     end
 )

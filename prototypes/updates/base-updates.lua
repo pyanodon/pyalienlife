@@ -64,7 +64,7 @@ TECHNOLOGY("rocket-fuel"):add_pack("py-science-pack-3")
 TECHNOLOGY("advanced-material-processing-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("nuclear-fuel-reprocessing"):add_pack("py-science-pack-3")
 
-if not mods[ "pyalternativeenergy" ] then
+if not mods["pyalternativeenergy"] then
     TECHNOLOGY("nuclear-power"):add_pack("py-science-pack-3")
 end
 

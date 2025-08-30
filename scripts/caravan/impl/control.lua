@@ -12,7 +12,7 @@ function P.goto_entity(caravan_data, entity)
         type = defines.command.go_to_location,
         destination_entity = entity,
         distraction = defines.distraction.none,
-        pathfind_flags = caravan_prototypes[ caravan.name ].pathfinder_flags
+        pathfind_flags = caravan_prototypes[caravan.name].pathfinder_flags
     })
     caravan_data.arrival_tick = nil
 end
@@ -26,7 +26,7 @@ function P.goto_position(caravan_data, position)
         type = defines.command.go_to_location,
         destination = position,
         distraction = defines.distraction.none,
-        pathfind_flags = caravan_prototypes[ caravan.name ].pathfinder_flags
+        pathfind_flags = caravan_prototypes[caravan.name].pathfinder_flags
     })
     caravan_data.arrival_tick = nil
 end
@@ -63,7 +63,7 @@ function P.eat(caravan_data)
         for _, item in pairs(fuel.get_contents()) do
             item = item.name
             fuel.remove({ name = item, count = 1 })
-            caravan_data.fuel_bar = caravan_prototypes[ entity.name ].favorite_foods[ item ]
+            caravan_data.fuel_bar = caravan_prototypes[entity.name].favorite_foods[item]
             caravan_data.last_eaten_fuel_value = caravan_data.fuel_bar
             entity.force.get_item_production_statistics(entity.surface_index).on_flow(item, -1)
             caravan_data.fuel_bar = caravan_data.fuel_bar - 1
@@ -95,17 +95,17 @@ function P.validity_check(caravan_data)
         if caravan_data.entity.valid then caravan_data.entity.destroy() end
         if exists_and_valid(inventory) then inventory.destroy() end
         if exists_and_valid(fuel_inventory) then fuel_inventory.destroy() end
-        storage.caravans[ caravan_data.unit_number ] = nil
+        storage.caravans[caravan_data.unit_number] = nil
         return false
     end
     return true
 end
 
 function P.instantiate_caravan(entity)
-    local existing = storage.caravans[ entity.unit_number ]
+    local existing = storage.caravans[entity.unit_number]
     if existing then return existing end
 
-    local prototype = caravan_prototypes[ entity.name ]
+    local prototype = caravan_prototypes[entity.name]
     local caravan_data = {
         unit_number = entity.unit_number,
         entity = entity,
@@ -125,7 +125,7 @@ function P.instantiate_caravan(entity)
         caravan_data.inventory = game.create_inventory(prototype.inventory_size, { "caravan-gui.caravan-inventory" })
     end
 
-    storage.caravans[ entity.unit_number ] = caravan_data
+    storage.caravans[entity.unit_number] = caravan_data
     return caravan_data
 end
 
@@ -164,7 +164,7 @@ function P.select_destination(player, last_opened, camera_position)
         })
         player.zoom = zoom
     end
-    storage.last_opened[ player.index ] = last_opened
+    storage.last_opened[player.index] = last_opened
 end
 
 return P

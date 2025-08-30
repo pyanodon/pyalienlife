@@ -230,7 +230,7 @@ for i = 1, 4 do
                         frame_count = 1,
                         shift = util.by_pixel(0, 1),
                         priority = "low",
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/rc/l.png",

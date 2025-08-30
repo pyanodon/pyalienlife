@@ -13,25 +13,25 @@ py.on_event(py.events.on_built(), function(event)
         position = entity.position,
         force = entity.force,
     })
-    storage.vatbrains[ beacon.unit_number ] = { beacon = beacon, vatbrain = entity }
+    storage.vatbrains[beacon.unit_number] = { beacon = beacon, vatbrain = entity }
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "vat-brain" then return end
 
-    local beacon = entity.surface.find_entities_filtered({ position = entity.position, radius = 3, name = "hidden-beacon", limit = 1 })[ 1 ]
+    local beacon = entity.surface.find_entities_filtered({ position = entity.position, radius = 3, name = "hidden-beacon", limit = 1 })[1]
     if beacon then
-        storage.vatbrains[ beacon.unit_number ] = nil
+        storage.vatbrains[beacon.unit_number] = nil
         beacon.destroy()
     end
 end)
 
 local cartridge_tiers = {
-    [ "brain-food-01" ] = { module = "vatbrain-1", tier = 1 },
-    [ "brain-food-02" ] = { module = "vatbrain-2", tier = 2 },
-    [ "brain-food-03" ] = { module = "vatbrain-3", tier = 3 },
-    [ "brain-food-04" ] = { module = "vatbrain-4", tier = 4 },
+    ["brain-food-01"] = { module = "vatbrain-1", tier = 1 },
+    ["brain-food-02"] = { module = "vatbrain-2", tier = 2 },
+    ["brain-food-03"] = { module = "vatbrain-3", tier = 3 },
+    ["brain-food-04"] = { module = "vatbrain-4", tier = 4 },
 }
 py.register_on_nth_tick(41, "Vatbrain", "pyal", function()
     for _, vatbrain_data in pairs(storage.vatbrains) do
@@ -41,7 +41,7 @@ py.register_on_nth_tick(41, "Vatbrain", "pyal", function()
 
         local recipe = vatbrain.get_recipe()
         if not recipe then goto continue end
-        local cartridge = cartridge_tiers[ recipe.name ]
+        local cartridge = cartridge_tiers[recipe.name]
         if not cartridge then goto continue end
         local module, module_tier = cartridge.module, cartridge.tier
 

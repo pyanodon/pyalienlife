@@ -62,45 +62,45 @@ ITEM({
 })
 
 local variants = {
-    [ "straight_vertical" ] = "straight-base-vertical",
-    [ "straight_vertical_window" ] = "straight-base-vertical",
-    [ "straight_horizontal" ] = "straight-base-horizontal",
-    [ "straight_horizontal_window" ] = "straight-horizontal",
-    [ "straight_vertical_single" ] = "alone",
-    [ "corner_up_right" ] = "curved-right-up",
-    [ "corner_down_right" ] = "curved-right-down",
-    [ "corner_down_left" ] = "curved-left-down",
-    [ "corner_up_left" ] = "curved-left-up",
-    [ "t_up" ] = "junction-down",
-    [ "t_right" ] = "junction-left",
-    [ "t_down" ] = "junction-up",
-    [ "t_left" ] = "junction-right",
-    [ "cross" ] = "full-junction",
-    [ "ending_up" ] = "straight-base-vertical",
-    [ "ending_down" ] = "alone",
-    [ "ending_right" ] = "straight-base-horizontal",
-    [ "ending_left" ] = "straight-base-horizontal",
+    ["straight_vertical"] = "straight-base-vertical",
+    ["straight_vertical_window"] = "straight-base-vertical",
+    ["straight_horizontal"] = "straight-base-horizontal",
+    ["straight_horizontal_window"] = "straight-horizontal",
+    ["straight_vertical_single"] = "alone",
+    ["corner_up_right"] = "curved-right-up",
+    ["corner_down_right"] = "curved-right-down",
+    ["corner_down_left"] = "curved-left-down",
+    ["corner_up_left"] = "curved-left-up",
+    ["t_up"] = "junction-down",
+    ["t_right"] = "junction-left",
+    ["t_down"] = "junction-up",
+    ["t_left"] = "junction-right",
+    ["cross"] = "full-junction",
+    ["ending_up"] = "straight-base-vertical",
+    ["ending_down"] = "alone",
+    ["ending_right"] = "straight-base-horizontal",
+    ["ending_left"] = "straight-base-horizontal",
 }
 
 local glow_translations = {
-    [ "straight-horizontal" ] = "straight-base-horizontal",
-    [ "straight-base-vertical" ] = "straight-vertical",
-    [ "junction-up" ] = "junction-down",
-    [ "junction-down" ] = "junction-up",
+    ["straight-horizontal"] = "straight-base-horizontal",
+    ["straight-base-vertical"] = "straight-vertical",
+    ["junction-up"] = "junction-down",
+    ["junction-down"] = "junction-up",
 }
 
 local shadow_translations = {
-    [ "alone" ] = "straight-base-vertical",
-    [ "straight-horizontal" ] = "straight-base-horizontal",
-    [ "junction-down" ] = "junction-up",
-    [ "junction-up" ] = "junction-down",
-    [ "junction-left" ] = "junction-right",
-    [ "junction-right" ] = "junction-left",
+    ["alone"] = "straight-base-vertical",
+    ["straight-horizontal"] = "straight-base-horizontal",
+    ["junction-down"] = "junction-up",
+    ["junction-up"] = "junction-down",
+    ["junction-left"] = "junction-right",
+    ["junction-right"] = "junction-left",
 }
 
 local animations = {}
 for picture_location, variant in pairs(variants) do
-    animations[ picture_location ] = {
+    animations[picture_location] = {
         layers = {
             {
                 filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (variant == "alone" and "straight-base-vertical" or variant) .. ".png",
@@ -114,7 +114,7 @@ for picture_location, variant in pairs(variants) do
                 animation_speed = 0.5
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (glow_translations[ variant ] or variant) .. "-glow.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (glow_translations[variant] or variant) .. "-glow.png",
                 priority = "high",
                 width = 640 / 5,
                 height = 768 / 6,
@@ -126,7 +126,7 @@ for picture_location, variant in pairs(variants) do
                 draw_as_glow = true
             },
             {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (shadow_translations[ variant ] or variant) .. "-shadow.png",
+                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (shadow_translations[variant] or variant) .. "-shadow.png",
                 priority = "high",
                 width = 640 / 5,
                 height = 768 / 6,
@@ -178,7 +178,7 @@ local gap_glow = {
 }
 
 local function fix_gap(picture_location)
-    table.insert(animations[ picture_location ].layers, 2, gap)
+    table.insert(animations[picture_location].layers, 2, gap)
     --table.insert(animations[picture_location].layers, gap_glow)
 end
 
@@ -193,7 +193,7 @@ fix_gap("t_left")
 fix_gap("ending_down")
 fix_gap("cross")
 
-local vessel = table.deepcopy(data.raw[ "pipe" ][ "pipe" ])
+local vessel = table.deepcopy(data.raw["pipe"]["pipe"])
 vessel.icon_draw_specification = { scale = 0 }
 vessel.fluid_box = {
     volume = 1,
@@ -208,8 +208,8 @@ vessel.fluid_box = {
 }
 vessel.name = "vessel"
 vessel.pictures = animations
-vessel.icon = data.raw.item[ "vessel" ].icon
-vessel.icon_size = data.raw.item[ "vessel" ].icon_size
+vessel.icon = data.raw.item["vessel"].icon
+vessel.icon_size = data.raw.item["vessel"].icon_size
 vessel.corpse = "small-remnants"
 vessel.minable.result = "vessel"
 vessel.next_upgrade = nil
@@ -218,8 +218,8 @@ data:extend({ vessel })
 
 local ug_pipe_animation = {}
 local ug_pipe_integration = {}
-for cardinal, direction in pairs({ [ "north" ] = "up", [ "east" ] = "right", [ "south" ] = "down", [ "west" ] = "left" }) do
-    ug_pipe_animation[ #ug_pipe_animation+1 ] = {
+for cardinal, direction in pairs({ ["north"] = "up", ["east"] = "right", ["south"] = "down", ["west"] = "left" }) do
+    ug_pipe_animation[#ug_pipe_animation+1] = {
         layers = {
             {
                 filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-" .. direction .. ".png",
@@ -269,12 +269,12 @@ for cardinal, direction in pairs({ [ "north" ] = "up", [ "east" ] = "right", [ "
             }
         }
     }
-    ug_pipe_integration[ cardinal ] = ug_pipe_animation[ #ug_pipe_animation ]
+    ug_pipe_integration[cardinal] = ug_pipe_animation[#ug_pipe_animation]
 end
 
 
 -- graphic fix for south-facing pipe-to-ground
-table.insert(ug_pipe_integration[ "south" ].layers, {
+table.insert(ug_pipe_integration["south"].layers, {
     filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down.png",
     priority = "high",
     width = 640 / 5,
@@ -287,12 +287,12 @@ table.insert(ug_pipe_integration[ "south" ].layers, {
 })
 
 
-local underground_pipe = table.deepcopy(data.raw[ "pipe-to-ground" ][ "pipe-to-ground" ])
+local underground_pipe = table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
 underground_pipe.name = "vessel-to-ground"
 underground_pipe.minable = { mining_time = 0.2, result = "vessel-to-ground" }
 underground_pipe.fast_replaceable_group = "vessel"
 underground_pipe.next_upgrade = nil
-underground_pipe.icon = data.raw.item[ "vessel-to-ground" ].icon
+underground_pipe.icon = data.raw.item["vessel-to-ground"].icon
 underground_pipe.icon_size = 64
 underground_pipe.fluid_box = {
     volume = 1,

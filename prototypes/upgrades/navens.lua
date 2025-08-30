@@ -50,7 +50,7 @@ if data and not yafc_turd_integration then
 
     local victims = { "auog", "mukmoux", "scrondrix", "zungror" }
     local profit = { 1, 2, 4, 6 }
-    if not mods.pyalternativeenergy then victims[ 4 ] = "antelope" end
+    if not mods.pyalternativeenergy then victims[4] = "antelope" end
     for i, recipe in pairs({
         RECIPE("navens-1"):copy(),
         RECIPE("navens-2"):copy(),
@@ -58,10 +58,10 @@ if data and not yafc_turd_integration then
         RECIPE("navens-4"):copy(),
     }) do
         recipe.name = recipe.name .. "-abomination"
-        recipe:add_ingredient({ name = victims[ i ], amount = 1, type = "item" })
+        recipe:add_ingredient({ name = victims[i], amount = 1, type = "item" })
         recipe:remove_ingredient("guts")
         recipe.main_product = "navens-abomination"
-        recipe.results = { { type = "item", name = "navens-abomination", amount = profit[ i ] } }
+        recipe.results = { { type = "item", name = "navens-abomination", amount = profit[i] } }
         recipe.energy_required = recipe.energy_required * 1.5
         data:extend({ recipe })
     end
@@ -77,7 +77,7 @@ if data and not yafc_turd_integration then
         data:extend({ recipe })
     end
     table.insert(
-        data.raw.technology[ "microfilters" ].effects,
+        data.raw.technology["microfilters"].effects,
         {
             type = "change-recipe-productivity",
             recipe = "navens-spore-sterilization",
@@ -86,7 +86,7 @@ if data and not yafc_turd_integration then
         }
     )
     table.insert(
-        data.raw.technology[ "microfilters-mk02" ].effects,
+        data.raw.technology["microfilters-mk02"].effects,
         {
             type = "change-recipe-productivity",
             recipe = "navens-spore-sterilization",

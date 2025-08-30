@@ -169,7 +169,7 @@ data:extend
     }
 })
 
-local beam = table.deepcopy(data.raw.beam[ "laser-beam" ])
+local beam = table.deepcopy(data.raw.beam["laser-beam"])
 beam.working_sound = nil
 beam.damage_interval = 10000
 beam.name = "ocula-beam"

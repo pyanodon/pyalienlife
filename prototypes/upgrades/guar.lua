@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         RECIPE("guar-gum-plantation-mk04"):copy(),
     }) do
         recipe.name = recipe.name .. "-with-bots"
-        recipe:add_ingredient({ type = "item", name = bots[ i ], amount = 4 * i })
+        recipe:add_ingredient({ type = "item", name = bots[i], amount = 4 * i })
         data:extend({ recipe })
     end
 end

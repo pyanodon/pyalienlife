@@ -7136,7 +7136,7 @@ ITEM({
     stack_size = 50
 })
 
-data.raw[ "capsule" ][ "raw-fish" ].hidden = true
+data.raw["capsule"]["raw-fish"].hidden = true
 ITEM({
     type = "module",
     name = "fish",

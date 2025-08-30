@@ -562,7 +562,7 @@ RECIPE({
 
 ------------------dimensional-gastricorg------------------
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     RECIPE({
         type = "recipe",
         name = "dimensional-gastricorg",
@@ -616,7 +616,7 @@ RECIPE({
 }):add_unlock("antitumor")
 
 
-if mods[ "pyalternativeenergy" ] then
+if mods["pyalternativeenergy"] then
     ------------------Variable Spinneret Kiloglider------------------
 
     RECIPE({

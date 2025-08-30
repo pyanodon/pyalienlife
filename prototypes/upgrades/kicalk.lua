@@ -7,7 +7,7 @@ if data and not yafc_turd_integration then
         RECIPE("kicalk-5"):copy(),
     }) do
         recipe.name = recipe.name .. "-dry"
-        local amount = recipe.results[ 1 ].amount
+        local amount = recipe.results[1].amount
         recipe:remove_result("kicalk")
         recipe:add_result({ type = "item", name = "kicalk-dry", amount = math.floor(amount / 2) })
         recipe:add_result({ type = "item", name = "kicalk", amount = math.ceil(amount * 0.35) })
@@ -82,14 +82,14 @@ if data and not yafc_turd_integration then
         },
         {
             { { type = "item", name = "ralesia-seeds", amount = 1 }, { type = "item", name = "ralesia", amount = 2 } },
-            { { type = "item", name = "rennea-seeds", amount = 1 }, { type = "item", name = "rennea", amount = 1 } },
+            { { type = "item", name = "rennea-seeds", amount = 1 },  { type = "item", name = "rennea", amount = 1 } },
         },
         {
             { { type = "item", name = "tuuphra-seeds", amount = 2 }, { type = "item", name = "tuuphra", amount = 4 } },
-            { { type = "item", name = "grod-seeds", amount = 2 },  { type = "item", name = "grod", amount = 3 } },
+            { { type = "item", name = "grod-seeds", amount = 2 },    { type = "item", name = "grod", amount = 3 } },
         },
         {
-            { { type = "item", name = "yotoi-seeds", amount = 1 },        { type = "item", name = "yotoi", amount = 4 } },
+            { { type = "item", name = "yotoi-seeds", amount = 1 },          { type = "item", name = "yotoi", amount = 4 } },
             { { type = "item", name = "cadaveric-arum-seeds", amount = 3 }, { type = "item", name = "cadaveric-arum", amount = 2 } },
         },
         {
@@ -106,9 +106,9 @@ if data and not yafc_turd_integration then
     }) do
         recipe.name = recipe.name .. "-rotation"
         recipe.main_product = "kicalk"
-        for _, other in pairs(other_species[ i ]) do
-            recipe:add_ingredient(other[ 1 ])
-            recipe:add_result(other[ 2 ])
+        for _, other in pairs(other_species[i]) do
+            recipe:add_ingredient(other[1])
+            recipe:add_result(other[2])
         end
         if i == 5 then
             recipe:add_ingredient({ type = "item", name = "ulric-cub", amount = 1 })

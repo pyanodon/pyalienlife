@@ -16,8 +16,8 @@ local function get_outpost_inventory(outpost)
         return outpost.get_inventory(defines.inventory.car_trunk)
     elseif type == "spider-vehicle" then
         return outpost.get_inventory(defines.inventory.spider_trunk)
-    elseif caravan_prototypes[ outpost.name ] then
-        local caravan_data = storage.caravans[ outpost.unit_number ]
+    elseif caravan_prototypes[outpost.name] then
+        local caravan_data = storage.caravans[outpost.unit_number]
         return caravan_data.inventory
     end
 end
@@ -26,7 +26,7 @@ local function transfer_all_items(input_inventory, output_inventory)
     if input_inventory.is_empty() or output_inventory.is_full() then return end
     local inserted_total = 0
     for i = 1, #input_inventory do
-        local stack = input_inventory[ i ]
+        local stack = input_inventory[i]
         local inserted_count = output_inventory.insert(stack)
         if inserted_count ~= 0 then
             stack.count = stack.count - inserted_count
@@ -110,7 +110,7 @@ end
 local circuit_red, circuit_green = defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green
 local function evaluate_signal(entity, signal)
     local result = entity.get_signal(signal, circuit_red, circuit_green)
-    if result == 0 and prototypes.item[ signal.name ] then
+    if result == 0 and prototypes.item[signal.name] then
         return entity.get_item_count(signal)
     end
     return result
@@ -171,7 +171,7 @@ function P.store_food(caravan_data, schedule, action)
     local fuel = caravan_data.fuel_inventory
 
     for _, item in pairs(outpost_inventory.get_contents()) do
-        if caravan_prototypes[ entity.name ].favorite_foods[ item.name ] then
+        if caravan_prototypes[entity.name].favorite_foods[item.name] then
             local inserted_count = fuel.insert(item)
             if inserted_count ~= 0 then
                 item.count = inserted_count
@@ -194,7 +194,7 @@ function P.store_specific_food(caravan_data, schedule, action)
     local goal = action.item_count or 0
     if not item then return false end
 
-    if not caravan_prototypes[ caravan_data.entity.name ].favorite_foods[ item ] then
+    if not caravan_prototypes[caravan_data.entity.name].favorite_foods[item] then
         return true
     end
 
@@ -529,7 +529,7 @@ function P.fill_tank(caravan_data, schedule, action)
     local output = caravan_data.fluid or { amount = 0, temperature = 15, name = "" }
     local input = storage_tank.get_fluid(1)
 
-    local total_output_volume = caravan_prototypes[ caravan_data.entity.name ].max_volume
+    local total_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume
     local max_output_volume = total_output_volume - output.amount
     local caravan_was_empty = output.amount == 0
 
@@ -587,7 +587,7 @@ function P.empty_tank(caravan_data, schedule, action)
 end
 
 function P.is_tank_full(caravan_data, schedule, action)
-    return caravan_data.fluid and caravan_data.fluid.amount >= caravan_prototypes[ caravan_data.entity.name ].max_volume
+    return caravan_data.fluid and caravan_data.fluid.amount >= caravan_prototypes[caravan_data.entity.name].max_volume
 end
 
 function P.is_tank_empty(caravan_data, schedule, action)
@@ -659,42 +659,42 @@ function P.target_fluid_count(caravan_data, schedule, action)
 end
 
 Caravan.actions = {
-    [ "time-passed" ] = P.wait,
-    [ "store-food" ] = P.store_food,
-    [ "store-specific-food" ] = P.store_specific_food,
-    [ "fill-inventory" ] = P.fill_inventory,
-    [ "empty-inventory" ] = P.empty_inventory,
-    [ "empty-autotrash" ] = P.empty_autotrash,
-    [ "load-caravan" ] = P.load_caravan,
-    [ "unload-caravan" ] = P.unload_caravan,
-    [ "load-target" ] = P.load_target,
-    [ "unload-target" ] = P.unload_target,
-    [ "detonate" ] = P.detonate,
-    [ "circuit-condition" ] = P.circuit_condition,
-    [ "circuit-condition-static" ] = P.circuit_condition_static,
-    [ "food-count" ] = P.food_count,
-    [ "caravan-item-count" ] = P.caravan_item_count,
-    [ "target-item-count" ] = P.target_item_count,
-    [ "outpost-item-count" ] = P.outpost_item_count,
-    [ "is-inventory-full" ] = P.is_inventory_full,
-    [ "is-inventory-empty" ] = P.is_inventory_empty,
-    [ "at-outpost" ] = P.at_outpost,
-    [ "not-at-outpost" ] = P.not_at_outpost,
-    [ "fill-tank" ] = P.fill_tank,
-    [ "empty-tank" ] = P.empty_tank,
-    [ "caravan-fluid-count" ] = P.caravan_fluid_count,
-    [ "target-fluid-count" ] = P.target_fluid_count,
-    [ "is-tank-full" ] = P.is_tank_full,
-    [ "is-tank-empty" ] = P.is_tank_empty,
+    ["time-passed"] = P.wait,
+    ["store-food"] = P.store_food,
+    ["store-specific-food"] = P.store_specific_food,
+    ["fill-inventory"] = P.fill_inventory,
+    ["empty-inventory"] = P.empty_inventory,
+    ["empty-autotrash"] = P.empty_autotrash,
+    ["load-caravan"] = P.load_caravan,
+    ["unload-caravan"] = P.unload_caravan,
+    ["load-target"] = P.load_target,
+    ["unload-target"] = P.unload_target,
+    ["detonate"] = P.detonate,
+    ["circuit-condition"] = P.circuit_condition,
+    ["circuit-condition-static"] = P.circuit_condition_static,
+    ["food-count"] = P.food_count,
+    ["caravan-item-count"] = P.caravan_item_count,
+    ["target-item-count"] = P.target_item_count,
+    ["outpost-item-count"] = P.outpost_item_count,
+    ["is-inventory-full"] = P.is_inventory_full,
+    ["is-inventory-empty"] = P.is_inventory_empty,
+    ["at-outpost"] = P.at_outpost,
+    ["not-at-outpost"] = P.not_at_outpost,
+    ["fill-tank"] = P.fill_tank,
+    ["empty-tank"] = P.empty_tank,
+    ["caravan-fluid-count"] = P.caravan_fluid_count,
+    ["target-fluid-count"] = P.target_fluid_count,
+    ["is-tank-full"] = P.is_tank_full,
+    ["is-tank-empty"] = P.is_tank_empty,
 }
 
 Caravan.free_actions = { -- actions that don't use fuel
-    [ "time-passed" ] = true,
-    [ "store-food" ] = true,
-    [ "store-specific-food" ] = true,
-    [ "detonate" ] = true,
-    [ "circuit-condition" ] = true,
-    [ "circuit-condition-static" ] = true
+    ["time-passed"] = true,
+    ["store-food"] = true,
+    ["store-specific-food"] = true,
+    ["detonate"] = true,
+    ["circuit-condition"] = true,
+    ["circuit-condition-static"] = true
 }
 
 return P

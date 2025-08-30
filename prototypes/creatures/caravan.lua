@@ -6,12 +6,12 @@ data:extend({ {
     name = "caravan_collision_mask"
 } })
 
-local zoology = data.raw.technology[ "zoology" ]
-zoology.effects[ #zoology.effects+1 ] = {
+local zoology = data.raw.technology["zoology"]
+zoology.effects[#zoology.effects+1] = {
     modifier = true,
     type = "character-logistic-requests"
 }
-zoology.effects[ #zoology.effects+1 ] = {
+zoology.effects[#zoology.effects+1] = {
     modifier = 20,
     type = "character-logistic-trash-slots"
 }

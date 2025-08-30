@@ -216,7 +216,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(8, -64),
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a4.png",
@@ -235,7 +235,7 @@ for i = 1, 4 do
                         frame_count = 100,
                         animation_speed = 0.4,
                         shift = util.by_pixel(8, -160),
-                        tint = py.tints[ i ],
+                        tint = py.tints[i],
                     },
                     {
                         filename = "__pyalienlifegraphics2__/graphics/entity/sponge-culture/a5.png",

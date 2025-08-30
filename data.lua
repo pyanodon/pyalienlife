@@ -9,7 +9,7 @@ require("prototypes/module-categories")
 require("prototypes/circuit-connector-definitions")
 
 -- Increase empty barrel stack size in order to prevent inserter deadlocks. https://github.com/pyanodon/pybugreports/issues/314
-data.raw.item[ "barrel" ].stack_size = 50
+data.raw.item["barrel"].stack_size = 50
 
 --(( Technology ))--
 require("prototypes/technologies/xenobiology")
@@ -141,12 +141,12 @@ require("prototypes/technologies/vatbrain")
 require("prototypes/technologies/turd-respec")
 require("prototypes/technologies/biofluid")
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     require("prototypes/technologies/mining-with-fluid")
     require("prototypes/technologies/electric-mining-drill")
 end
 
-if mods[ "pyalternativeenergy" ] then
+if mods["pyalternativeenergy"] then
     require("prototypes/technologies/zungror")
     --require 'prototypes/technologies/xenocognitive'
 end
@@ -301,14 +301,14 @@ require("prototypes/buildings/simik-den-mk04")
 require("prototypes/buildings/reproductive-complex")
 require("prototypes/buildings/crane")
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     require("prototypes/buildings/fluid-drill-mk01")
     require("prototypes/buildings/fluid-drill-mk02")
     require("prototypes/buildings/fluid-drill-mk03")
     require("prototypes/buildings/fluid-drill-mk04")
 end
 
-if mods[ "pyalternativeenergy" ] then
+if mods["pyalternativeenergy"] then
     require("prototypes/buildings/zungror-lair-mk01")
     require("prototypes/buildings/zungror-lair-mk02")
     require("prototypes/buildings/zungror-lair-mk03")
@@ -364,7 +364,7 @@ require("prototypes/fluids/ethyl-mercaptan")
 require("prototypes/fluids/arqad-honey")
 require("prototypes/fluids/simik-blood")
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     require("prototypes/fluids/cadaveric-arum-cum")
     require("prototypes/technologies/cadaveric-arum")
     require("prototypes/fluids/casein-solution")
@@ -376,11 +376,11 @@ require("prototypes/items/items2")
 require("prototypes/items/energy-drink")
 require("prototypes/biofluid/guano")
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     require("prototypes/items/pyhightech-items")
 end
 
-if mods[ "pyalternativeenergy" ] then
+if mods["pyalternativeenergy"] then
     require("prototypes/items/pyalternativeenergy-items")
 end
 
@@ -389,10 +389,10 @@ require("prototypes/creatures/caravan")
 require("prototypes/creatures/flying-caravan")
 require("prototypes/creatures/nuka-caravan")
 require("prototypes/creatures/fluid-caravan")
-data.raw.unit[ "caravan" ].affected_by_tiles = false
-data.raw.unit[ "fluidavan" ].affected_by_tiles = false
-data.raw.unit[ "flyavan" ].affected_by_tiles = false
-data.raw.unit[ "nukavan" ].affected_by_tiles = false
+data.raw.unit["caravan"].affected_by_tiles = false
+data.raw.unit["fluidavan"].affected_by_tiles = false
+data.raw.unit["flyavan"].affected_by_tiles = false
+data.raw.unit["nukavan"].affected_by_tiles = false
 require("prototypes/buildings/outpost-fluid")
 require("prototypes/buildings/outpost")
 require("prototypes/buildings/outpost-aerial")
@@ -709,11 +709,11 @@ if mods.pyhightech then
 end
 
 --(( BACKGROUND ))--
-data.raw[ "utility-constants" ].default.recipe_step_limit = 2000;
-data.raw[ "utility-constants" ].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
+data.raw["utility-constants"].default.recipe_step_limit = 2000;
+data.raw["utility-constants"].default.main_menu_background_image_location = "__pyalienlifegraphics3__/graphics/pyal-wall.jpg"
 
 --sprities
 require("prototypes/sprites/sprites")
 --require 'prototypes/ores/fake-plants'
 
-data.raw.fluid[ "bio-oil" ].fuel_value = "0.8MJ"
+data.raw.fluid["bio-oil"].fuel_value = "0.8MJ"

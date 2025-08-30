@@ -17,17 +17,17 @@ if data and not yafc_turd_integration then
             name = "advanced-bio-reactor"
         }
     })
-    data.raw.item[ "xeno-egg" ].fuel_value = "1.2MJ"
-    data.raw.item[ "xeno-egg" ].fuel_category = "bio-reactor-1"
-    data.raw.item[ "high-flux-core" ].fuel_value = "240kJ"
-    data.raw.item[ "high-flux-core" ].fuel_category = "bio-reactor-2"
-    data.raw.item[ "strorix-unknown-sample" ].fuel_value = "1.2MJ"
-    data.raw.item[ "strorix-unknown-sample" ].fuel_category = "bio-reactor-3"
+    data.raw.item["xeno-egg"].fuel_value = "1.2MJ"
+    data.raw.item["xeno-egg"].fuel_category = "bio-reactor-1"
+    data.raw.item["high-flux-core"].fuel_value = "240kJ"
+    data.raw.item["high-flux-core"].fuel_category = "bio-reactor-2"
+    data.raw.item["strorix-unknown-sample"].fuel_value = "1.2MJ"
+    data.raw.item["strorix-unknown-sample"].fuel_category = "bio-reactor-3"
 
     for j = 1, 3 do
         for i = 1, 4 do
             local name = "bio-reactor-mk0" .. i
-            local entity = table.deepcopy(data.raw[ "assembling-machine" ][ name ])
+            local entity = table.deepcopy(data.raw["assembling-machine"][name])
             entity.name = "advanced-" .. name .. "-turd" .. j
             if i ~= 4 then
                 entity.next_upgrade = "advanced-bio-reactor-mk0" .. i + 1 .. "-turd" .. j
@@ -98,7 +98,7 @@ if data and not yafc_turd_integration then
 
     local path3 = RECIPE("chitosan"):copy()
     path3.name = "path-3-advanced-recipe"
-    path3.ingredients[ 3 ] = { type = "fluid", name = "blood", amount = 50 }
+    path3.ingredients[3] = { type = "fluid", name = "blood", amount = 50 }
     path3.category = "advanced-bio-reactor"
     data:extend({ path3 })
 end

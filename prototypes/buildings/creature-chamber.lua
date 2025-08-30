@@ -147,7 +147,7 @@ for i = 1, 4 do
                         frame_count = 80,
                         animation_speed = 0.3,
                         shift = util.by_pixel(-112, -16),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a2.png",
@@ -166,7 +166,7 @@ for i = 1, 4 do
                         frame_count = 80,
                         animation_speed = 0.3,
                         shift = util.by_pixel(16, -16),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                     {
                         filename = "__pyalienlifegraphics__/graphics/entity/creature-chamber/a3.png",
@@ -185,7 +185,7 @@ for i = 1, 4 do
                         frame_count = 80,
                         animation_speed = 0.3,
                         shift = util.by_pixel(144, -16),
-                        tint = py.tints[ i ]
+                        tint = py.tints[i]
                     },
                 }
             },

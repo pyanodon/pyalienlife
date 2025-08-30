@@ -127,7 +127,7 @@ RECIPE({
     main_product = "xeno",
 }):add_unlock("xeno")
 
-if mods[ "pyhightech" ] then
+if mods["pyhightech"] then
     RECIPE({
         type = "recipe",
         name = "xeno-phosphoric",

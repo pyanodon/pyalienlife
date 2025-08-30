@@ -51,11 +51,11 @@ ENTITY({
     icon_size = 64,
     flags = { "placeable-player", "player-creation", "placeable-neutral", "placeable-enemy" },
     corpse = "small-remnants",
-    max_health = data.raw[ "pipe" ][ "pipe" ].max_health,
-    resistances = data.raw[ "pipe" ][ "pipe" ].resistances,
+    max_health = data.raw["pipe"]["pipe"].max_health,
+    resistances = data.raw["pipe"]["pipe"].resistances,
     fast_replaceable_group = "vessel",
-    collision_box = data.raw[ "pipe" ][ "pipe" ].collision_box,
-    selection_box = data.raw[ "pipe" ][ "pipe" ].selection_box,
+    collision_box = data.raw["pipe"]["pipe"].collision_box,
+    selection_box = data.raw["pipe"]["pipe"].selection_box,
     forced_symmetry = "diagonal-pos",
     working_sound = nil, -- TODO
     fluid_boxes = {
@@ -93,7 +93,7 @@ ENTITY({
     energy_source = { type = "void" },
     energy_usage = "1W",
     show_recipe_icon_on_map = false,
-    circuit_connector = circuit_connector_definitions[ "py-valves" ],
+    circuit_connector = circuit_connector_definitions["py-valves"],
     circuit_wire_max_distance = _G.default_circuit_wire_max_distance,
     collision_mask = collision_mask_util.get_default_mask("furnace")
 })

@@ -10,11 +10,11 @@ for _, tree in pairs(data.raw.tree) do
 
     if tree.minable and tree.minable.results then
         for _, result in pairs(tree.minable.results) do
-            if result[ 1 ] and result[ 2 ] then
-                result.name = result[ 1 ]
-                result.amount = result[ 2 ]
-                result[ 1 ] = nil
-                result[ 2 ] = nil
+            if result[1] and result[2] then
+                result.name = result[1]
+                result.amount = result[2]
+                result[1] = nil
+                result[2] = nil
             end
 
             if result.name == "wood" then

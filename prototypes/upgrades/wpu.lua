@@ -83,19 +83,19 @@ if data and not yafc_turd_integration then
             category = "crafting-with-fluid",
         })
 
-        for _, ingredient in pairs(sawblade_ingredients[ i ]) do
+        for _, ingredient in pairs(sawblade_ingredients[i]) do
             recipe:add_ingredient(ingredient)
         end
 
         local name = "wpu-mk0" .. i
-        data.raw[ "assembling-machine" ][ name ].allowed_effects = { "consumption", "speed", "productivity" }
-        local entity = table.deepcopy(data.raw[ "assembling-machine" ][ name ])
+        data.raw["assembling-machine"][name].allowed_effects = { "consumption", "speed", "productivity" }
+        local entity = table.deepcopy(data.raw["assembling-machine"][name])
         entity.name = name .. "-turd"
         entity.localised_name = { "entity-name." .. name }
         entity.placeable_by = { item = name, count = 1 }
         entity.localised_description = entity.localised_description or { "entity-description." .. name }
-        entity.subgroup = data.raw.item[ name ].subgroup
-        entity.order = data.raw.item[ name ].order
+        entity.subgroup = data.raw.item[name].subgroup
+        entity.order = data.raw.item[name].order
         entity.allowed_module_categories = { "sawblade" }
         if i ~= 4 then entity.next_upgrade = "wpu-mk0" .. (i + 1) .. "-turd" end
         table.insert(entity.flags, "not-in-made-in")
@@ -154,7 +154,7 @@ if data and not yafc_turd_integration then
         },
     })
 
-    local phenolic_board_with_laquer = RECIPE(data.raw.recipe[ "phenolicboard" ]):copy("phenolicboard-with-laquer")
+    local phenolic_board_with_laquer = RECIPE(data.raw.recipe["phenolicboard"]):copy("phenolicboard-with-laquer")
     phenolic_board_with_laquer:add_ingredient({ type = "item", name = "lacquer-resin", amount = 20 })
     phenolic_board_with_laquer:multiply_result_amount("phenolicboard", 2)
 
@@ -186,10 +186,10 @@ if data and not yafc_turd_integration then
     })
 
     for _, seedling_recipe in pairs({
-        table.deepcopy(data.raw.recipe[ "wood-seedling" ]),
-        table.deepcopy(data.raw.recipe[ "wood-seedling-mk02" ]),
-        table.deepcopy(data.raw.recipe[ "wood-seedling-mk03" ]),
-        table.deepcopy(data.raw.recipe[ "wood-seedling-mk04" ]),
+        table.deepcopy(data.raw.recipe["wood-seedling"]),
+        table.deepcopy(data.raw.recipe["wood-seedling-mk02"]),
+        table.deepcopy(data.raw.recipe["wood-seedling-mk03"]),
+        table.deepcopy(data.raw.recipe["wood-seedling-mk04"]),
     }) do
         seedling_recipe.name = seedling_recipe.name .. "-turd"
         seedling_recipe:remove_ingredient("moss")

@@ -19,16 +19,16 @@ local function update_action_gui(player, tags)
     end
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_action_move_up_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_action_move_up_button"] = function(event)
     local player = game.get_player(event.player_index)
     local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
-    local caravan_data = storage.caravans[ event.element.tags.unit_number ]
+    local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local i = event.element.tags.action_id
 
     if i == 1 then return end
 
-    actions[ i - 1 ], actions[ i ] = actions[ i ], actions[ i - 1 ]
+    actions[i - 1], actions[i] = actions[i], actions[i - 1]
 
     if caravan_data then
         if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
@@ -43,16 +43,16 @@ gui_events[ defines.events.on_gui_click ][ "py_caravan_action_move_up_button" ] 
     update_action_gui(player, event.element.tags)
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_action_move_down_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_action_move_down_button"] = function(event)
     local player = game.get_player(event.player_index)
     local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
-    local caravan_data = storage.caravans[ event.element.tags.unit_number ]
+    local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local i = event.element.tags.action_id
 
     if i == #actions then return end
 
-    actions[ i + 1 ], actions[ i ] = actions[ i ], actions[ i + 1 ]
+    actions[i + 1], actions[i] = actions[i], actions[i + 1]
 
     if caravan_data then
         if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
@@ -67,9 +67,9 @@ gui_events[ defines.events.on_gui_click ][ "py_caravan_action_move_down_button" 
     update_action_gui(player, event.element.tags)
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_action_delete_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_action_delete_button"] = function(event)
     local player = game.get_player(event.player_index)
-    local caravan_data = storage.caravans[ event.element.tags.unit_number ]
+    local caravan_data = storage.caravans[event.element.tags.unit_number]
     local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
 
     table.remove(actions, event.element.tags.action_id)
@@ -80,7 +80,7 @@ gui_events[ defines.events.on_gui_click ][ "py_caravan_action_delete_button" ] =
     update_action_gui(player, event.element.tags)
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_action_blocking_checkbox" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_action_blocking_checkbox"] = function(event)
     local player = game.get_player(event.player_index)
     local tags = event.element.tags
 
@@ -88,7 +88,7 @@ gui_events[ defines.events.on_gui_click ][ "py_caravan_action_blocking_checkbox"
     action.async = not event.element.state
 
     if tags.unit_number then
-        local caravan_data = storage.caravans[ tags.unit_number ]
+        local caravan_data = storage.caravans[tags.unit_number]
         CaravanImpl.stop_actions(caravan_data)
         CaravanGuiComponents.update_schedule_pane(player)
     else
@@ -96,12 +96,12 @@ gui_events[ defines.events.on_gui_click ][ "py_caravan_action_blocking_checkbox"
     end
 end
 
-gui_events[ defines.events.on_gui_click ][ "py_caravan_action_play_stop_button" ] = function(event)
+gui_events[defines.events.on_gui_click]["py_caravan_action_play_stop_button"] = function(event)
     local player = game.get_player(event.player_index)
     local element = event.element
     local tags = element.tags
-    local caravan_data = storage.caravans[ tags.unit_number ]
-    local schedule = caravan_data.schedule[ tags.schedule_id ]
+    local caravan_data = storage.caravans[tags.unit_number]
+    local schedule = caravan_data.schedule[tags.schedule_id]
 
     if caravan_data.schedule_id == tags.schedule_id then
         if caravan_data.action_id == tags.action_id then
@@ -129,7 +129,7 @@ local function on_confirmed(event)
     local player = game.get_player(event.player_index)
 
     local tags = event.element.tags
-    local textfield = event.element.parent[ prefix .. "_text_field" ]
+    local textfield = event.element.parent[prefix .. "_text_field"]
     local value = tonumber(textfield.text) or 0
 
     local action = CaravanUtils.get_action_from_button(event.element)
@@ -141,19 +141,19 @@ local function on_confirmed(event)
         action.item_count = value
     end
 
-    if player.gui.screen[ prefix .. "_frame" ] then
-        player.gui.screen[ prefix .. "_frame" ].destroy()
+    if player.gui.screen[prefix .. "_frame"] then
+        player.gui.screen[prefix .. "_frame"].destroy()
     end
 
     update_action_gui(player, tags)
 end
 
-gui_events[ defines.events.on_gui_confirmed ][ prefix .. "_text_field" ] = on_confirmed
-gui_events[ defines.events.on_gui_click ][ prefix .. "_confirm_button" ] = on_confirmed
+gui_events[defines.events.on_gui_confirmed][prefix .. "_text_field"] = on_confirmed
+gui_events[defines.events.on_gui_click][prefix .. "_confirm_button"] = on_confirmed
 
 -- Comparator events
 
-gui_events[ defines.events.on_gui_elem_changed ][ "py_caravan_action_comparator_left_button" ] = function(event)
+gui_events[defines.events.on_gui_elem_changed]["py_caravan_action_comparator_left_button"] = function(event)
     local tags = event.element.tags
 
     local action = CaravanUtils.get_action_from_button(event.element)
@@ -165,7 +165,7 @@ gui_events[ defines.events.on_gui_elem_changed ][ "py_caravan_action_comparator_
     end
 end
 
-gui_events[ defines.events.on_gui_selection_state_changed ][ "py_caravan_action_comparator_drop_down" ] = function(event)
+gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_action_comparator_drop_down"] = function(event)
     local tags = event.element.tags
 
     local action = CaravanUtils.get_action_from_button(event.element)
@@ -173,7 +173,7 @@ gui_events[ defines.events.on_gui_selection_state_changed ][ "py_caravan_action_
     action.operator = event.element.selected_index
 end
 
-gui_events[ defines.events.on_gui_elem_changed ][ "py_caravan_action_comparator_right_button" ] = function(event)
+gui_events[defines.events.on_gui_elem_changed]["py_caravan_action_comparator_right_button"] = function(event)
     local tags = event.element.tags
 
     local action = CaravanUtils.get_action_from_button(event.element)

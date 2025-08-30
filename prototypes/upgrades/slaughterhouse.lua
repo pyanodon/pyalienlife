@@ -54,16 +54,16 @@ if data and not yafc_turd_integration then
         for _, recipe_name in pairs(rendering_recipes) do
             local recipe = RECIPE(recipe_name):copy(function(r) return r.name .. "-" .. path end)
             recipe.localised_name = recipe.localised_name or { "recipe-name." .. recipe_name }
-            for _, ingredient in pairs(things_to_add[ path ].ingredients) do
+            for _, ingredient in pairs(things_to_add[path].ingredients) do
                 recipe:add_ingredient(ingredient)
             end
-            for _, result in pairs(things_to_add[ path ].results) do
+            for _, result in pairs(things_to_add[path].results) do
                 recipe:add_result(result)
             end
-            for _, product in pairs(products_to_buff[ path ]) do
+            for _, product in pairs(products_to_buff[path]) do
                 if product == "brain" then
                     for _, result in pairs(recipe.results) do
-                        if (result[ 1 ] or result.name) == "brain" then
+                        if (result[1] or result.name) == "brain" then
                             recipe:add_result({ name = "brain", amount = 1, type = "item", probability = 0.05 })
                             break
                         end
@@ -73,13 +73,13 @@ if data and not yafc_turd_integration then
                 end
             end
             data:extend({ recipe })
-            table.insert(effects[ path ], { old = recipe_name, new = recipe.name, type = "recipe-replacement" })
+            table.insert(effects[path], { old = recipe_name, new = recipe.name, type = "recipe-replacement" })
         end
     end
 elseif script then
     for _, path in pairs({ "laser", "music", "lard" }) do
         for _, recipe_name in pairs(rendering_recipes) do
-            table.insert(effects[ path ], { old = recipe_name, new = recipe_name .. "-" .. path, type = "recipe-replacement" })
+            table.insert(effects[path], { old = recipe_name, new = recipe_name .. "-" .. path, type = "recipe-replacement" })
         end
     end
 end

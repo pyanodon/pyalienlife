@@ -9,7 +9,7 @@ end)
 py.register_on_nth_tick(239, "update-mounts", "pyal", function(event)
     for id, mount in pairs(storage.mounts) do
         if not mount.valid then
-            storage.mounts[ id ] = nil
+            storage.mounts[id] = nil
             return
         end
 
@@ -25,7 +25,7 @@ py.register_on_nth_tick(239, "update-mounts", "pyal", function(event)
                 if fuel_inventory.is_empty() then break end
 
                 for i = 1, #fuel_inventory do
-                    local fuel = fuel_inventory[ i ]
+                    local fuel = fuel_inventory[i]
                     if not fuel.valid_for_read then goto invalid_fuel_item end
                     local prototype = fuel.prototype
                     local fuel_value = prototype.fuel_value
@@ -55,15 +55,15 @@ py.register_on_nth_tick(239, "update-mounts", "pyal", function(event)
 end)
 
 local mounts = {
-    [ "crawdad" ] = true,
-    [ "dingrido" ] = true,
-    [ "spidertron" ] = true,
-    [ "phadaisus" ] = true,
+    ["crawdad"] = true,
+    ["dingrido"] = true,
+    ["spidertron"] = true,
+    ["phadaisus"] = true,
 }
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
-    if not entity.valid or not mounts[ entity.name ] then return end
+    if not entity.valid or not mounts[entity.name] then return end
     entity.grid.put({
         name = "py-mount-generator",
         position = { 3, 0 },
@@ -74,13 +74,13 @@ py.on_event(py.events.on_built(), function(event)
             position = { 0, 0 },
         })
     end
-    storage.mounts[ entity.unit_number ] = entity
+    storage.mounts[entity.unit_number] = entity
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local unit_number = entity.valid and entity.unit_number
-    if unit_number then storage.mounts[ unit_number ] = nil end
+    if unit_number then storage.mounts[unit_number] = nil end
 end)
 
 py.on_event(defines.events.on_player_removed_equipment, function(event)
