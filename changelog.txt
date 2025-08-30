@@ -12,6 +12,7 @@ Date: ???
     - Caravans: fixed being able to put anything in fluid caravan fuel slots
     - Caravans: restores controller type and camera position when using/dropping the carrot
     - Caravans: add hint for re-assigning interrupt target via right-click
+    - Caravans: fixed that interrupts without actions would cancel other interrupts below it
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
