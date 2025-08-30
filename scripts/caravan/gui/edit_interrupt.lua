@@ -5,14 +5,6 @@ local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prot
 
 local P = {}
 
-local function label_info(interrupt, schedule_id)
-    local schedule = interrupt.schedule[schedule_id]
-    if schedule and schedule.entity and not schedule.entity.valid then
-        return "train_schedule_unavailable_stop_label", {"caravan-gui.destination-unavailable"}
-    end
-    return nil, nil
-end
-
 function P.build_main_frame(parent, fallback_location)
     local frame =  parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla edit_interrupt frame
@@ -38,6 +30,19 @@ function P.build_title_bar_flow(parent)
     return flow
 end
 
+local function caravans_with_interrupt(interrupt_name)
+    local vans = {}
+    for id, caravan in pairs(storage.caravans) do
+        for _, stored_interrupt in pairs(caravan.interrupts) do
+            if stored_interrupt == interrupt_name then
+                vans[id] = true
+                break -- can't be contained twice
+            end
+        end
+    end
+    return vans
+end
+
 function P.build_subheader_frame(parent)
     local frame = parent.add {type = "frame", name = "subheader_frame", style = "subheader_frame", direction = "horizontal"}
 
@@ -51,6 +56,9 @@ function P.build_subheader_frame(parent)
     flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false, text = storage.edited_interrupt.name}
     flow.add {type = "sprite-button", name = "py_edit_interrupt_rename_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "utility/rename_icon"}
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
+    -- work out how many caravans have this interrupt and store in the element tags for use in on_click
+    local relevant_caravans = caravans_with_interrupt(storage.edited_interrupt.name)
+    flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = storage.edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
 end
 
 function P.build_checkbox(parent)
@@ -277,6 +285,46 @@ py.on_event(defines.events.on_gui_click, function (event)
         end
     end
 end)
+
+-- used to refresh alerts drawn below
+local function redraw_alert(player, entity, alert_name)
+    if not player.valid or not entity.valid then return end
+    player.add_custom_alert(
+        entity,
+        {
+            type = "virtual",
+            name = "signal-map-marker"
+        },
+        {"", alert_name},
+        true
+    )
+end
+--- Draws an alert for 10s * cycles
+local function draw_alert_with_duration(player, entity, alert_name, cycles)
+    -- register the func if necessary
+    py.on_tick_funcs["draw_alert_with_duration"] = redraw_alert
+    local args = {player, entity, alert_name}
+    redraw_alert(table.unpack(args)) -- initial 10s
+    for i = 1, cycles - 1 do         -- refresh every 10s (600ticks) after
+        py.delayed_event(i * 600, "draw_alert_with_duration", args)
+    end
+end
+-- tag matching vans when label is clicked
+gui_events[defines.events.on_gui_click]["py_interrupt_count_label"] = function(event)
+    local ui = event.element
+    if not ui.tags then return end
+    local interrupt_name = ui.tags.name
+    local caravan_ids = ui.tags.ids
+    if not interrupt_name or not caravan_ids then return end
+    local player = game.get_player(event.player_index)
+    for id in pairs(caravan_ids) do
+        id = tonumber(id) -- .tags caveat
+        local unit = (storage.caravans[id] or {}).entity
+        if unit and unit.valid then
+            draw_alert_with_duration(player, unit, interrupt_name, 6)
+        end
+    end
+end
 
 -- store window location when moved
 gui_events[defines.events.on_gui_location_changed]["edit_interrupt_gui"] = function(event) Utils.store_gui_location(event.element) end
