@@ -95,7 +95,7 @@ end)
 local function restore_controller(player, last_opened)
     if not last_opened or not last_opened.controller_type then return end
     if last_opened.controller_type == defines.controllers.character and (not player.character or not player.character.valid) then return end
-    player.set_controller{
+    player.set_controller {
         type = last_opened.controller_type,
         character = player.character,
         position = last_opened.camera_position
@@ -107,7 +107,7 @@ end
 py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local last_opened = storage.last_opened[event.player_index]
     if not last_opened then return end
-    local player = game.get_player(event.player_index) ---@as LuaPlayer
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     -- If the item is in hand, don't open the gui
     local stack = player.cursor_stack
     if stack and stack.valid_for_read and stack.name == "caravan-control" then return end
@@ -253,14 +253,14 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     local entity = player.selected
-    if not entity or not caravan_prototypes[entity.name]--[[ or not player.can_reach_entity(entity) ]]then return end
+    if not entity or not caravan_prototypes[entity.name] --[[ or not player.can_reach_entity(entity) ]] then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
     local existing = CaravanGui.get_gui(player)
     if existing then
         -- xref: on_gui_closed
         local is_in_modal = (
             CaravanGuiComponents.get_slider_frame(player) ~= nil
-            or  player.gui.screen.add_interrupt_gui ~= nil
+            or player.gui.screen.add_interrupt_gui ~= nil
             or player.gui.screen.edit_interrupt_gui ~= nil
             or (existing.entity_frame.subheader_frame.contents_flow.py_caravan_rename_textfield or {}).visible == true
         )
@@ -340,7 +340,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             end
         end
 
-        local sort_fn = function (a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
+        local sort_fn = function(a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
         table.sort(queue, sort_fn)
         storage.caravan_queue = queue
     end
@@ -427,7 +427,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
         ::continue::
     end
-    
+
     if next(storage.make_operable_next_tick) then
         for _, entity in pairs(storage.make_operable_next_tick) do
             if entity.valid then entity.operable = true end

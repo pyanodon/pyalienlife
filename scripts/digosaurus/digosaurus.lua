@@ -118,7 +118,7 @@ end
 
 -- https://github.com/pyanodon/pybugreports/issues/1110
 local function remove_nonfood_items_from_food_inventory(dig_data)
-    local trash_inventory = dig_data.entity.get_inventory(defines.inventory.assembling_machine_trash)
+    local trash_inventory = dig_data.entity.get_inventory(defines.inventory.crafter_trash)
     local trash_slot = trash_inventory[1]
     if trash_slot.valid_for_read then return end
     local food_inventory = dig_data.food_inventory
@@ -132,7 +132,7 @@ local function remove_nonfood_items_from_food_inventory(dig_data)
 end
 
 local time_to_live = 61
-local blink_interval = time_to_live/2
+local blink_interval = time_to_live / 2
 py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     for _, dig_data in pairs(storage.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
@@ -241,7 +241,7 @@ py.on_event(py.events.on_built(), function(event)
     storage.dig_sites[entity.unit_number] = {
         unit_number = entity.unit_number,
         entity = entity,
-        inventory = entity.get_inventory(defines.inventory.assembling_machine_output),
+        inventory = entity.get_inventory(defines.inventory.crafter_output),
         food_input = food_input,
         food_inventory = food_inventory,
         digosaur_inventory = entity.get_module_inventory(),
@@ -308,7 +308,7 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     if not cursor_stack then return end
 
     if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
-    
+
     if py.distance_squared(player.position, dig_data.entity.position) > player.reach_distance ^ 2 then
         player.play_sound {path = "utility/cannot_build"}
         return
