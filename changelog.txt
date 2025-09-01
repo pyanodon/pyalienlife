@@ -15,6 +15,7 @@ Date: ???
     - Caravans: fixed that interrupts without actions would cancel other interrupts below it
     - Caravans: added label showing how many caravans use the edited interrupt
     - Caravans: removed hard-coded strings to allow for translation
+    - Added Dutch locale
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
