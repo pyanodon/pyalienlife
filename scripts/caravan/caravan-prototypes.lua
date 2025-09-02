@@ -219,7 +219,8 @@ Caravan.valid_actions = {
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
-        "outpost-item-count"
+        "outpost-item-count",
+        "outpost-fluid-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
@@ -237,6 +238,7 @@ Caravan.actions_with_item_count = table.invert{
     "caravan-item-count",
     "target-item-count",
     "outpost-item-count",
+    "outpost-fluid-count",
     "caravan-fluid-count",
     "target-fluid-count",
 }
