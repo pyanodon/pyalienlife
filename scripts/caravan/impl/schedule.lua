@@ -57,8 +57,8 @@ function P.find_interrupt_to_trigger(caravan_data)
     for _, interrupt_name in pairs(caravan_data.interrupts) do
         local interrupt = storage.interrupts[interrupt_name]
         -- TODO: shouldn't we assert `interrupt`? Is it a check for multiplayer shenanigans?
-        -- if there's no *actions* (schedule), we don't care about trying the conditions.
-        if interrupt and interrupt.schedule and #interrupt.schedule > 0 then
+        -- This schedule/condition check allows us to emulate vanilla train behavior where a blank interrupt with a met condition can stop a schedule
+        if interrupt and (#interrupt.schedule > 0 or #interrupt.conditions > 0) then
             if not current_schedule or temporary_schedule == nil or interrupt.inside_interrupt then
                 if P.evaluate_conditions(caravan_data, interrupt) then
                     return interrupt
@@ -133,12 +133,10 @@ function P.advance_caravan_schedule_by_1(caravan_data)
 
     local interrupt = P.find_interrupt_to_trigger(caravan_data)
 
-    if interrupt then
+    -- This emulates train behavior where a blank interrupt with a condition can halt evaluation
+    if interrupt and #interrupt.schedule > 0 then
         P.trigger_interrupt_in_regular_schedule(caravan_data, interrupt)
     else
-        if interrupt and #interrupt.schedule == 0 then
-            log("skipping because empty schedule")
-        end
         if caravan_data.schedule[caravan_data.schedule_id].temporary then
             table.remove(caravan_data.schedule, caravan_data.schedule_id)
         else
