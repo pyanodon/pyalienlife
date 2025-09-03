@@ -219,7 +219,8 @@ Caravan.valid_actions = {
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
-        "outpost-item-count"
+        "outpost-item-count",
+        "outpost-fluid-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
@@ -237,6 +238,7 @@ Caravan.actions_with_item_count = table.invert{
     "caravan-item-count",
     "target-item-count",
     "outpost-item-count",
+    "outpost-fluid-count",
     "caravan-fluid-count",
     "target-fluid-count",
 }
@@ -367,7 +369,7 @@ local function error_caravan(caravan_data, invalid_prototype_name, invalid_proto
             position = caravan_data.entity.position
             position = "[gps=" .. position.x .. ", " .. position.y .. "]"
         else
-            position = "UNKNOWN POSITION"
+            return
         end
         game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix a caravan @ %s", invalid_prototype_name, invalid_prototype_type, position))
     else

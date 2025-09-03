@@ -20,18 +20,19 @@ function P.build_condition_flow(parent, condition, tags)
         end
         flow.add {type = "label", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "clickable_squashable_label", caption = caption, tooltip = {"caravan-gui.reassign-hint", caption}}.style.left_padding = 4
         flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
-    elseif condition.type == "outpost-item-count" then
+    elseif Utils.contains({"outpost-item-count", "outpost-fluid-count"}, condition.type) then
         local locale_key = "caravan-actions." .. condition.type .. "2"
         local entity = condition.entity
         local caption
 
         if entity and entity.valid then
-            caption = {"caravan-actions-short.outpost-item-count", entity.position.x, entity.position.y}
+            caption = {"caravan-actions-short." .. condition.type, entity.position.x, entity.position.y}
         else
             caption = {locale_key, {"caravan-gui.not-specified"}}
         end
         flow.add {type = "label", name = "py_edit_interrupt_condition_select_outpost_button", tags = tags, index = 1, style = "clickable_squashable_label", caption = caption, tooltip = {"caravan-gui.reassign-hint", caption}}.style.left_padding = 4
-        comparator.build_static_comparator_widgets(flow, condition, tags, "item")
+        local elem_type = condition.type == "outpost-item-count" and "item" or "fluid"
+        comparator.build_static_comparator_widgets(flow, condition, tags, elem_type)
     else
         flow.add {type = "label", style = "squashable_label_with_left_padding", caption = condition.localised_name}
         if condition.type == "circuit-condition" then

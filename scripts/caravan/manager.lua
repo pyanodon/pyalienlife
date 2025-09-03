@@ -242,6 +242,7 @@ local function create_gui(gui, player)
             end
         end
     else
+        table.style.top_margin = 30
         local gui = gui.add {type = "frame", style = "negative_subheader_frame", direction = "horizontal", name = "no_spacecrafts_frame", index = 1}
         gui.style.top_margin = -4
         gui.style.left_margin = -8
@@ -254,8 +255,8 @@ local function create_gui(gui, player)
         gui.add {type = "label", caption = {"caravan-gui.empty"}, style = "bold_label"}.style.single_line = false
         gui.add {type = "label", caption = {"caravan-gui.empty-2"}}.style.single_line = false
     end
-    for i = 1, 4 do
-        for i = 1, 2 do
+    for _ = 1, 4 do
+        for _ = 1, 2 do
             local ew = table.add {type = "empty-widget"}
             ew.style.vertically_stretchable = true
             ew.style.horizontally_stretchable = true

@@ -130,7 +130,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
             end
         elseif edit_interrupt_frame then
             edit_interrupt_frame.destroy()
-            storage.edited_interrupt = nil
+            storage.edited_interrupts[event.player_index] = nil
         elseif renaming_caravan then
             local label = caravan_rename_textfield.parent.name_label
             label.visible = true

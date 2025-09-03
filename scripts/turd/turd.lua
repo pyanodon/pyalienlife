@@ -388,51 +388,100 @@ local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, f
     end
 end
 
-local function machine_replacement(old, new, assembling_machine_list)
+local crafting_machines = table.invert{"assembling-machine", "rocket-silo", "furnace"}
+
+local function machine_replacement(old_machine_name, new_machine_name, assembling_machine_list)
     local temp_inventory = game.create_inventory(9999)
     local new_machine_list = {}
-    for _, machine in pairs(assembling_machine_list) do
-        if machine.name == old or machine.name == "entity-ghost" and machine.ghost_name == old then
+    for _, old_machine in pairs(assembling_machine_list) do
+        local is_ghost = old_machine.name == "entity-ghost"
+        local old_name = is_ghost and old_machine.ghost_name or old_machine.name
+        local old_type = is_ghost and old_machine.ghost_type or old_machine.type
+        if old_name == old_machine_name then
+            -- this could be a table but we're checking the new machine type below as well just in case we do some very strange TURD replacements
+            local surface = old_machine.surface
+            local mirroring = old_machine.mirroring -- universal
+            local crafting_progress, bonus_progress, result_quality, products_finished -- CraftingMachine specific
+            local recipe, recipe_locked -- AssemblingMachine specific
+            local use_transitional_requests, rocket_parts -- RocketSilo specific
+            -- set up placement params
             local parameters = {
-              name = machine.name == "entity-ghost" and "entity-ghost" or new,
-              ghost_name = machine.name == "entity-ghost" and new or nil,
-              position = machine.position,
-              direction = machine.direction,
-              quality = machine.quality,
-              force = machine.force_index,
-              raise_built = true
+                name = is_ghost and "entity-ghost" or new_machine_name,
+                ghost_name = is_ghost and new_machine_name or nil,
+                position = old_machine.position,
+                direction = old_machine.direction,
+                quality = old_machine.quality,
+                force = old_machine.force_index,
+                raise_built = true,
             }
-            local recipe
-            local crafting_progress
-            local bonus_progress
-            if machine.type == "assembling-machine" then
-                recipe = machine.get_recipe()
-                crafting_progress = machine.crafting_progress
-                bonus_progress = machine.bonus_progress
+            -- we can skip a bunch of manual work in this case
+            if surface.can_fast_replace({
+                name = new_machine_name,
+                position = parameters.position,
+                direction = parameters.direction,
+                force = parameters.force
+            }) then
+                parameters.fast_replace = true
             end
-            local surface = machine.surface
-            local items_to_place_this = machine.prototype.items_to_place_this
-            local mirrored = machine.mirroring
-            machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
-            for _, item_to_place in pairs(items_to_place_this or {}) do
-                temp_inventory.remove(item_to_place)
+            -- save relevant properties
+            if crafting_machines[old_type] then
+                if old_type == "assembling-machine" then
+                    recipe = old_machine.get_recipe()
+                    recipe_locked = old_machine.recipe_locked
+                elseif old_type == "rocket-silo" then -- we have no TURD silos currently so this is untested
+                    use_transitional_requests = old_machine.use_transitional_requests
+                    rocket_parts = old_machine.rocket_parts
+                end
+                crafting_progress = old_machine.crafting_progress
+                bonus_progress = old_machine.bonus_progress
+                result_quality = not is_ghost and old_machine.result_quality or nil -- doesn't work on ghosts
+                products_finished = old_machine.products_finished
             end
+            -- if we can't fast replace, we pull out items and then discard the placement item as we only want to transfer the craft ingredients/outputs/trash
+            if not parameters.fast_replace then
+                local items_to_place_this = old_machine.prototype.items_to_place_this
+                old_machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
+                for _, item_to_place in pairs(items_to_place_this or {}) do
+                    temp_inventory.remove(item_to_place)
+                end
+            end
+            -- global here prevents the function we're currently in from being immediately called on the new machine
             just_built_new_machine = true
             local new_machine = surface.create_entity(parameters)
             just_built_new_machine = false
-            if new_machine then --check for nil in case of placement restriction
-                if new_machine.type == "assembling-machine" then
-                    new_machine.crafting_progress = crafting_progress
-                    new_machine.bonus_progress = bonus_progress
-                    new_machine.set_recipe(recipe)
+            -- can be nil if surface restrictions, for example
+            if new_machine then
+                local new_machine_type = is_ghost and new_machine.ghost_type or new_machine.type
+                -- We could ignore some of these with fast_replace but the game isn't super consistent about what properties transfer
+                -- So, it's easier just to reapply everything
+                new_machine.mirroring = mirroring
+                if crafting_machines[new_machine_type] then
+                    if new_machine_type == "assembling-machine" then
+                        new_machine.set_recipe(recipe)
+                        new_machine.recipe_locked = recipe_locked
+                    elseif new_machine_type == "rocket-silo" then
+                        new_machine.use_transitional_requests = use_transitional_requests
+                        new_machine.rocket_parts = rocket_parts
+                    end
+                    if not is_ghost then -- errors on ghosts
+                        new_machine.crafting_progress = crafting_progress
+                        new_machine.bonus_progress = bonus_progress
+                    end
+                    if result_quality ~= nil then -- errors with `nil`
+                        new_machine.result_quality = result_quality
+                    end
+                    new_machine.products_finished = products_finished
                 end
-                handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
-                new_machine.mirroring = mirrored
-                temp_inventory.clear()
-                machine = new_machine
+                -- shove everything back in if not fast replaced
+                if not parameters.fast_replace then
+                    handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
+                    temp_inventory.clear()
+                end
+                -- for storing back in the result table
+                old_machine = new_machine
             end
         end
-        new_machine_list[#new_machine_list + 1] = machine
+        new_machine_list[#new_machine_list + 1] = old_machine
     end
     temp_inventory.destroy()
     return new_machine_list
@@ -553,6 +602,7 @@ local new_turd = function(event)
 
     local turd_bonuses = storage.turd_bonuses[force_index] or {}
     storage.turd_bonuses[force_index] = turd_bonuses
+    storage.turd_unlocked_modules[force_index] = storage.turd_unlocked_modules[force_index] or {}
     local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
     if selection == NOT_SELECTED then
         force.print {"turd.font", {"turd.selected-alert", {"technology-name." .. master_tech_name}, {"technology-name." .. sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
