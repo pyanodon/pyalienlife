@@ -154,7 +154,7 @@ function P.destroy_altmode_icon(caravan_data)
 end
 
 function P.wait(caravan_data, schedule, action)
-    if not action.timer or action.timer == 1 then
+    if not action.timer or action.timer <= 1 then
         action.timer = nil
         return true
     end
