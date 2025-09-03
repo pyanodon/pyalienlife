@@ -18,6 +18,7 @@ Date: ???
     - Caravans: fixed Caravan Manager drawing the background over the "no caravans" warning
     - Caravans: added "outpost fluid count" condition
     - Caravans: made editing interrupts multiplayer safe
+    - Caravans: fixed that re-assigning an active schedule would result in its actions completing remotely on the new target
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23

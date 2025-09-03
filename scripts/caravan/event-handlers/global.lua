@@ -194,6 +194,10 @@ local function on_carrot_used(player, cursor_position)
             sch.player_index = nil
             sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
         end
+        -- If this is our current schedule schedule item, we have the caravan restart it
+        if caravan_data and caravan_data.schedule_id == last_opened.schedule_id then
+            CaravanImpl.begin_schedule(caravan_data, last_opened.schedule_id, true)
+        end
         --CaravanImpl.clear_invalid_actions_from_schedule(sch) #TODO
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
