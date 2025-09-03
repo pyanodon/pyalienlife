@@ -100,6 +100,7 @@ local function restore_controller(player, last_opened)
         character = player.character,
         position = last_opened.camera_position
     }
+    player.zoom = last_opened.zoom
 end
 
 -- Reopen the last closed caravan gui when player no longer holds carrot-on-stick item
