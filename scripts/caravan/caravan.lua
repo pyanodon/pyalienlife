@@ -17,7 +17,7 @@ py.on_event(py.events.on_init(), function()
     storage.last_opened = storage.last_opened or {}
     storage.last_opened_tab = storage.last_opened_tab or {}
     storage.make_operable_next_tick = storage.make_operable_next_tick or {}
-    storage.edited_interrupt = storage.edited_interrupt or nil
+    storage.edited_interrupts = storage.edited_interrupts or {}
     storage.gui_locations = storage.gui_locations or {}
 end)
 
