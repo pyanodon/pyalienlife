@@ -304,11 +304,13 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if #schedule.actions == 0 then
         local schedule_num = #caravan_data.schedule
+        -- need a delay before looping the same action or we'll just empty the food constantly
         if schedule_num == 1 and not caravan_data.schedule[1].temporary then
             caravan_data.retry_pathfinder = 3
             return
         else
             CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
+            CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id)
         end
     else
         local entity = caravan_data.entity
