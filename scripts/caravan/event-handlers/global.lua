@@ -119,8 +119,9 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
         if not CaravanGui.get_gui(player) then --The UI can already exist if someone clicks multiple times in a tick
             CaravanGui.build(player, caravan_data)
         end
-        if storage.edited_interrupt then
-            EditInterruptGui.build(player.gui.screen, storage.edited_interrupt)
+        local edited_interrupt = storage.edited_interrupts[event.player_index]
+        if edited_interrupt then
+            EditInterruptGui.build(player.gui.screen, edited_interrupt)
         end
     end
 
@@ -134,7 +135,7 @@ local function on_carrot_used(player, cursor_position)
     local schedule, prototype, only_outpost
     local last_opened = storage.last_opened[player.index]
     local caravan_data = storage.caravans[last_opened.caravan]
-    local interrupt_data = storage.edited_interrupt
+    local interrupt_data = storage.edited_interrupts[player.index]
     if caravan_data then
         if not CaravanImpl.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule

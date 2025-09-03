@@ -21,7 +21,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_action_move_up_button"] = function(event)
     local player = game.get_player(event.player_index)
-    local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
+    local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local i = event.element.tags.action_id
@@ -45,7 +45,7 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_action_move_down_button"] = function(event)
     local player = game.get_player(event.player_index)
-    local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
+    local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
     local i = event.element.tags.action_id
@@ -70,7 +70,7 @@ end
 gui_events[defines.events.on_gui_click]["py_caravan_action_delete_button"] = function(event)
     local player = game.get_player(event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
-    local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
+    local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
 
     table.remove(actions, event.element.tags.action_id)
 

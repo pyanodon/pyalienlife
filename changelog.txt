@@ -17,6 +17,7 @@ Date: ???
     - Caravans: removed hard-coded strings to allow for translation
     - Caravans: fixed Caravan Manager drawing the background over the "no caravans" warning
     - Caravans: added "outpost fluid count" condition
+    - Caravans: made editing interrupts multiplayer safe
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
