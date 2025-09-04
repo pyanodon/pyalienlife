@@ -7,6 +7,7 @@ require "prototypes/recipe-categories"
 require "prototypes/fuel-categories"
 require "prototypes/module-categories"
 require "prototypes/circuit-connector-definitions"
+require "prototypes/keyboard-shortcuts"
 
 -- Increase empty barrel stack size in order to prevent inserter deadlocks. https://github.com/pyanodon/pybugreports/issues/314
 data.raw.item["barrel"].stack_size = 50
