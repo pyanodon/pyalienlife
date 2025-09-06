@@ -57,6 +57,7 @@ end
 ---@param element LuaGuiElement
 function P.get_action_from_button(element)
     local tags = element.tags
+    local player_index = element.player_index
     local action_list_type = tags.action_list_type
 
     local action
@@ -65,10 +66,10 @@ function P.get_action_from_button(element)
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        local interrupt = storage.edited_interrupt
+        local interrupt = storage.edited_interrupts[player_index]
         action = interrupt.conditions[tags.condition_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        local interrupt = storage.edited_interrupt
+        local interrupt = storage.edited_interrupts[player_index]
         action = interrupt.schedule[tags.schedule_id].actions[tags.action_id]
     else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
@@ -105,7 +106,7 @@ function P.get_schedule(element)
     end
 end
 
-function P.get_actions_from_tags(tags)
+function P.get_actions_from_tags(tags, player_index)
     local action_list_type = tags.action_list_type
 
     local action
@@ -114,11 +115,13 @@ function P.get_actions_from_tags(tags)
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        return storage.edited_interrupt.conditions
+        local interrupt = storage.edited_interrupts[player_index]
+        return interrupt.conditions
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        return storage.edited_interrupt.schedule[tags.schedule_id].actions
+        local interrupt = storage.edited_interrupts[player_index]
+        return interrupt.schedule[tags.schedule_id].actions
     else
-        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags))
     end
 end
 

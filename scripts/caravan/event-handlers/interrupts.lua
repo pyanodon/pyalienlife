@@ -43,9 +43,10 @@ end
 local function on_edit_interrupt_confirmed(event)
     local label = event.element.parent.name_label
     local textfield = event.element.parent.py_edit_interrupt_textfield
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
 
     if textfield.text == "" then return end
-    if textfield.text ~= storage.edited_interrupt.name and storage.interrupts[textfield.text] ~= nil then return end
+    if textfield.text ~= edited_interrupt.name and storage.interrupts[textfield.text] ~= nil then return end -- can't overwrite another interrupt
 
     textfield.visible = not textfield.visible
     label.visible = not label.visible
@@ -58,7 +59,7 @@ local function on_edit_interrupt_confirmed(event)
         local interrupt = storage.interrupts[label.caption]
         CaravanUtils.rename_interrupt(interrupt, new_name)
         label.caption = new_name
-        storage.edited_interrupt.name = new_name
+        edited_interrupt.name = new_name
 
         local player = game.get_player(event.player_index)
         CaravanGuiComponents.update_schedule_pane(player)
@@ -156,31 +157,34 @@ gui_events[defines.events.on_gui_confirmed]["py_edit_interrupt_textfield"] = on_
 -- all functions below operate on a copy of an interrupt, until the "Save interrupt" button is pressed
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_checkbox"] = function(event)
-    storage.edited_interrupt.inside_interrupt = event.element.state
+    storage.edited_interrupts[event.player_index].inside_interrupt = event.element.state
 end
 
 gui_events[defines.events.on_gui_selection_state_changed]["py_edit_interrupt_add_condition_drop_down"] = function(event)
     local player = game.get_player(event.player_index)
     local action_id = event.element.selected_index
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
     local element = event.element
 
     local valid_conditions = Caravan.valid_actions["interrupt-condition"]
 
     -- off-by-one index is used to show "+ Add interrupt condition" text
-    if element.selected_index == 0 or element.selected_index > #valid_conditions then return end
+    if action_id == 0 or action_id > #valid_conditions then return end
 
-    local type = element.get_item(element.selected_index)[2]
-    local localised_name = element.get_item(element.selected_index)
+    local type = element.get_item(action_id)[2]
+    local localised_name = element.get_item(action_id)
     if type == "at-outpost" then
         localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "not-at-outpost" then
         localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "outpost-item-count" then
         localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
+    elseif type == "outpost-fluid-count" then
+        localised_name = {"caravan-actions.outpost-fluid-count2", {"caravan-gui.not-specified"}}
     end
-    table.insert(storage.edited_interrupt.conditions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
-    if #storage.edited_interrupt.conditions > 1 then
-        table.insert(storage.edited_interrupt.conditions_operators, 1)
+    table.insert(edited_interrupt.conditions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
+    if #edited_interrupt.conditions > 1 then
+        table.insert(edited_interrupt.conditions_operators, 1)
     end
 
     EditInterruptGui.update_conditions_pane(player)
@@ -189,23 +193,26 @@ end
 gui_events[defines.events.on_gui_selection_state_changed]["py_edit_interrupt_target_add_action_drop_down"] = function(event)
     local player = game.get_player(event.player_index)
     local action_id = event.element.selected_index
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
     local element = event.element
 
-    local schedule = storage.edited_interrupt.schedule[element.tags.schedule_id]
+    local schedule = edited_interrupt.schedule[element.tags.schedule_id]
     local valid_actions = table.invert(CaravanUtils.get_all_actions_for_entity(schedule.entity))
 
     -- off-by-one index is used to show "+ Add action" text
-    if element.selected_index == 0 or element.selected_index > #valid_actions then return end
+    if action_id == 0 or action_id > #valid_actions then return end
 
-    local type = element.get_item(element.selected_index)[2]
+    local type = element.get_item(action_id)[2]
 
-    local localised_name = element.get_item(element.selected_index)
+    local localised_name = element.get_item(action_id)
     if type == "at-outpost" then
         localised_name = {"caravan-actions.at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "not-at-outpost" then
         localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "outpost-item-count" then
         localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
+    elseif type == "outpost-fluid-count" then
+        localised_name = {"caravan-actions.outpost-fluid-count2", {"caravan-gui.not-specified"}}
     end
     table.insert(schedule.actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
 
@@ -238,7 +245,8 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outp
     last_opened.caravan = unit_number
     last_opened.action_id = element.tags.condition_id
 
-    local target = storage.edited_interrupt.conditions[last_opened.action_id].entity
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
+    local target = edited_interrupt.conditions[last_opened.action_id].entity
     local camera = gui.entity_frame.camera_frame.camera
 
     -- allow reassign if invalid or right-clicked
@@ -253,35 +261,38 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outp
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_move_up_button"] = function(event)
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
     local i = event.element.tags.schedule_id
 
     if i == 1 then return end
-    storage.edited_interrupt.schedule[i - 1], storage.edited_interrupt.schedule[i] = storage.edited_interrupt.schedule[i], storage.edited_interrupt.schedule[i - 1]
+    edited_interrupt.schedule[i - 1], edited_interrupt.schedule[i] = edited_interrupt.schedule[i], edited_interrupt.schedule[i - 1]
 
     local player = game.get_player(event.player_index)
     EditInterruptGui.update_targets_pane(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_move_down_button"] = function(event)
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
     local i = event.element.tags.schedule_id
 
-    if i == #storage.edited_interrupt.schedule then return end
-    storage.edited_interrupt.schedule[i + 1], storage.edited_interrupt.schedule[i] = storage.edited_interrupt.schedule[i], storage.edited_interrupt.schedule[i + 1]
+    if i == #edited_interrupt.schedule then return end
+    edited_interrupt.schedule[i + 1], edited_interrupt.schedule[i] = edited_interrupt.schedule[i], edited_interrupt.schedule[i + 1]
 
     local player = game.get_player(event.player_index)
     EditInterruptGui.update_targets_pane(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_delete_button"] = function(event)
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
     local i = event.element.tags.schedule_id
 
-    table.remove(storage.edited_interrupt.schedule, i)
+    table.remove(edited_interrupt.schedule, i)
     local player = game.get_player(event.player_index)
     EditInterruptGui.update_targets_pane(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_close_button"] = function(event)
-    storage.edited_interrupt = nil
+    storage.edited_interrupts[event.player_index] = nil
     local player = game.get_player(event.player_index)
     if player.gui.screen.edit_interrupt_gui then
         player.gui.screen.edit_interrupt_gui.destroy()
@@ -290,29 +301,31 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = function(event)
     local player = game.get_player(event.player_index)
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
 
     -- edge case: need to check the rename textfield when 'Save interrupt' is pressed instead of enter
     local textfield = event.element.parent.parent.inside_frame.subheader_frame.contents_flow.py_edit_interrupt_textfield
-    if string.len(textfield.text) ~= 0 and textfield.text ~= storage.edited_interrupt.name then
+    if string.len(textfield.text) ~= 0 and textfield.text ~= edited_interrupt.name then
         if storage.interrupts[textfield.text] ~= nil then return end
 
-        local interrupt = storage.interrupts[storage.edited_interrupt.name]
+        local interrupt = storage.interrupts[edited_interrupt.name]
         CaravanUtils.rename_interrupt(interrupt, textfield.text)
-        storage.edited_interrupt.name = textfield.text
+        edited_interrupt.name = textfield.text
         CaravanGuiComponents.update_schedule_pane(player)
     end
 
-    storage.interrupts[storage.edited_interrupt.name] = storage.edited_interrupt
+    storage.interrupts[edited_interrupt.name] = edited_interrupt
 
     if player.gui.screen.edit_interrupt_gui then
         player.gui.screen.edit_interrupt_gui.destroy()
     end
-    storage.edited_interrupt = nil
+    storage.edited_interrupts[event.player_index] = nil
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_up_button"] = function(event)
-    local conditions = storage.edited_interrupt.conditions
-    local conditions_operators = storage.edited_interrupt.conditions_operators
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
+    local conditions = edited_interrupt.conditions
+    local conditions_operators = edited_interrupt.conditions_operators
 
     local i = event.element.tags.condition_id
 
@@ -328,8 +341,9 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_up_but
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_down_button"] = function(event)
-    local conditions = storage.edited_interrupt.conditions
-    local conditions_operators = storage.edited_interrupt.conditions_operators
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
+    local conditions = edited_interrupt.conditions
+    local conditions_operators = edited_interrupt.conditions_operators
 
     local i = event.element.tags.condition_id
 
@@ -345,8 +359,9 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_down_b
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_delete_button"] = function(event)
-    local conditions = storage.edited_interrupt.conditions
-    local operators = storage.edited_interrupt.conditions_operators
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
+    local conditions = edited_interrupt.conditions
+    local operators = edited_interrupt.conditions_operators
     local condition_id = event.element.tags.condition_id
 
     if #conditions > 1 then
@@ -359,7 +374,8 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_delete_butt
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_operator_button_."] = function(event)
-    local operators = storage.edited_interrupt.conditions_operators
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
+    local operators = edited_interrupt.conditions_operators
     local operator_id = event.element.tags.condition_operator_id
 
     operators[operator_id] = operators[operator_id] == 1 and 0 or 1

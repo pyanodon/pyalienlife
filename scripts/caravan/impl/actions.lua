@@ -154,7 +154,7 @@ function P.destroy_altmode_icon(caravan_data)
 end
 
 function P.wait(caravan_data, schedule, action)
-    if not action.timer or action.timer == 1 then
+    if not action.timer or action.timer <= 1 then
         action.timer = nil
         return true
     end
@@ -506,6 +506,33 @@ function P.outpost_item_count(caravan_data, schedule, action)
     end
 end
 
+function P.outpost_fluid_count(caravan_data, schedule, action)
+    local outpost = action.entity
+    if not outpost or not outpost.valid or outpost.name ~= "outpost-fluid" then return false end
+
+    local fluid = action.elem_value
+
+    local right = action.item_count
+    if right == nil then return false end
+
+    local left = outpost.get_fluid_count(fluid)
+
+    local operator = action.operator or 3
+    if operator == 1 then
+        return left > right
+    elseif operator == 2 then
+        return left < right
+    elseif operator == 3 then
+        return left == right
+    elseif operator == 4 then
+        return left >= right
+    elseif operator == 5 then
+        return left <= right
+    elseif operator == 6 then
+        return left ~= right
+    end
+end
+
 function P.is_inventory_full(caravan_data, schedule, action)
     return (caravan_data.inventory and caravan_data.inventory.is_full()) or P.is_tank_full(caravan_data, schedule, action)
 end
@@ -676,6 +703,7 @@ Caravan.actions = {
     ["caravan-item-count"] = P.caravan_item_count,
     ["target-item-count"] = P.target_item_count,
     ["outpost-item-count"] = P.outpost_item_count,
+    ["outpost-fluid-count"] = P.outpost_fluid_count,
     ["is-inventory-full"] = P.is_inventory_full,
     ["is-inventory-empty"] = P.is_inventory_empty,
     ["at-outpost"] = P.at_outpost,

@@ -44,6 +44,8 @@ local function caravans_with_interrupt(interrupt_name)
 end
 
 function P.build_subheader_frame(parent)
+    local edited_interrupt = storage.edited_interrupts[parent.player_index]
+
     local frame = parent.add {type = "frame", name = "subheader_frame", style = "subheader_frame", direction = "horizontal"}
 
     frame.style.top_margin = -12
@@ -52,17 +54,18 @@ function P.build_subheader_frame(parent)
 
     local flow = frame.add {type = "flow", name = "contents_flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
-    flow.add {type = "label", name = "name_label", caption = storage.edited_interrupt.name, style = "subheader_caption_label"}
-    flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false, text = storage.edited_interrupt.name}
+    flow.add {type = "label", name = "name_label", caption = edited_interrupt.name, style = "subheader_caption_label"}
+    flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false, text = edited_interrupt.name}
     flow.add {type = "sprite-button", name = "py_edit_interrupt_rename_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "utility/rename_icon"}
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     -- work out how many caravans have this interrupt and store in the element tags for use in on_click
-    local relevant_caravans = caravans_with_interrupt(storage.edited_interrupt.name)
-    flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = storage.edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
+    local relevant_caravans = caravans_with_interrupt(edited_interrupt.name)
+    flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
 end
 
 function P.build_checkbox(parent)
-    return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = storage.edited_interrupt.inside_interrupt, caption = {"caravan-gui.allow-interrupt-interrupt"}, tooltip = {"caravan-gui.allow-interrupt-interrupt-tooltip"}}
+    local edited_interrupt = storage.edited_interrupts[parent.player_index]
+    return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = edited_interrupt.inside_interrupt, caption = {"caravan-gui.allow-interrupt-interrupt"}, tooltip = {"caravan-gui.allow-interrupt-interrupt-tooltip"}}
 end
 
 function P.build_conditions_operators_list(parent)
@@ -73,7 +76,7 @@ function P.build_conditions_operators_list(parent)
     flow.style.vertical_spacing = 4
     flow.style.top_margin = 40 
 
-    local operators = storage.edited_interrupt.conditions_operators
+    local operators = storage.edited_interrupts[parent.player_index].conditions_operators
 
     local has_both_operators = #operators > 0 and table.any(operators, function (o) return o ~= operators[1] end)
 
@@ -96,7 +99,7 @@ function P.build_add_interrupt_condition_dropdown(parent)
 end
 
 function P.build_conditions_list(parent)
-    local conditions = storage.edited_interrupt.conditions
+    local conditions = storage.edited_interrupts[parent.player_index].conditions
     if #conditions == 0 then return end
 
     local conditions_and_operators_flow = parent.add {type = "flow", direction = "horizontal"}
@@ -127,14 +130,15 @@ function P.build_conditions_pane(parent)
 end
 
 function P.build_action_list(parent, schedule_id)
-    local actions = storage.edited_interrupt.schedule[schedule_id].actions
+    local edited_interrupt = storage.edited_interrupts[parent.player_index]
+    local actions = edited_interrupt.schedule[schedule_id].actions
 
     for i = 1, #actions do
         local tags = {schedule_id = schedule_id, action_id = i, action_list_type = Caravan.action_list_types.interrupt_targets}
         ActionGui.build_action(parent, nil, actions[i], tags)
     end
 
-    local entity = storage.edited_interrupt.schedule[schedule_id].entity
+    local entity = edited_interrupt.schedule[schedule_id].entity
     local valid_actions = Utils.get_all_actions_for_entity(entity)
     local actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
 
@@ -148,7 +152,7 @@ function P.build_action_list(parent, schedule_id)
 end
 
 function P.build_target_destination_frame(parent, schedule_id)
-    local schedule = storage.edited_interrupt.schedule[schedule_id]
+    local schedule = storage.edited_interrupts[parent.player_index].schedule[schedule_id]
     local tags = {schedule_id = schedule_id, action_list_type = Caravan.action_list_types.interrupt_targets}
 
     local frame = parent.add {type = "frame", style = "train_schedule_station_frame"}
@@ -177,7 +181,7 @@ function P.build_target_destination_frame(parent, schedule_id)
 end
 
 function P.build_targets_list(parent)
-    for i = 1, #storage.edited_interrupt.schedule do
+    for i = 1, #storage.edited_interrupts[parent.player_index].schedule do
         local flow = parent.add {type = "flow", direction = "vertical"}
         flow.style.horizontal_align = "right"
 
@@ -222,7 +226,7 @@ end
 ---@param cursor_location GuiLocation?
 ---@return LuaGuiElement
 function P.build(parent, interrupt_data, cursor_location)
-    storage.edited_interrupt = table.deepcopy(interrupt_data)
+    storage.edited_interrupts[parent.player_index] = table.deepcopy(interrupt_data)
 
     local main_frame = P.build_main_frame(parent, cursor_location)
 
@@ -280,7 +284,7 @@ py.on_event(defines.events.on_gui_click, function (event)
         local slider_frame = player.gui.screen.py_caravan_action_number_selection_frame
         -- do not close the GUI when the user adds an action, that pops the number selection slider
         if not slider_frame or not Utils.is_child_of(event.element, slider_frame, 3) then
-            storage.edited_interrupt = nil
+            storage.edited_interrupts[event.player_index] = nil
             gui.destroy()
         end
     end

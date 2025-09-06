@@ -20,7 +20,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = f
     -- If it comes up again, we can add a flag in last_opened instead
     if player.gui.screen.edit_interrupt_gui then
         player.gui.screen.edit_interrupt_gui.destroy()
-        storage.edited_interrupt = nil
+        storage.edited_interrupts[event.player_index] = nil
     end
     CaravanImpl.select_destination(player, last_opened)
 end
@@ -132,6 +132,8 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destinatio
         localised_name = {"caravan-actions.not-at-outpost2", {"caravan-gui.not-specified"}}
     elseif type == "outpost-item-count" then
         localised_name = {"caravan-actions.outpost-item-count2", {"caravan-gui.not-specified"}}
+    elseif type == "outpost-fluid-count" then
+        localised_name = {"caravan-actions.outpost-fluid-count2", {"caravan-gui.not-specified"}}
     end
     table.insert(caravan_data.schedule[schedule_id].actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
 
@@ -175,7 +177,7 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = funct
     local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
     local tags = element.tags
-    local schedule = storage.edited_interrupt.schedule[tags.schedule_id]
+    local schedule = storage.edited_interrupts[event.player_index].schedule[tags.schedule_id]
 
     -- allow reassign if invalid or right-clicked
     if not schedule.entity or not schedule.entity.valid or event.button == defines.mouse_button_type.right then
