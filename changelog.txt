@@ -22,6 +22,7 @@ Date: ???
     - Caravans: fixed that caravans wouldn't continue to the next destination after reaching one with no actions
     - Caravans: fixed wait times of 0 lasting forever
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
+    - Added Dutch locale
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
