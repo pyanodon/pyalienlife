@@ -422,6 +422,7 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
                 force = parameters.force
             }) then
                 parameters.fast_replace = true
+                parameters.spill = false
             end
             -- save relevant properties
             if crafting_machines[old_type] then

@@ -23,6 +23,7 @@ Date: ???
     - Caravans: fixed wait times of 0 lasting forever
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
+    - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
