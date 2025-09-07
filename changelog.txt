@@ -15,7 +15,7 @@ Date: ???
     - Caravans: clarified fluid-related condition names
     - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
     - Caravans: fixed being able to put anything in fluid caravan fuel slots
-    - Caravans: restores controller type and camera position when using/dropping the carrot
+    - Caravans: restores controller type, camera position, and zoom when using/dropping the carrot
     - Caravans: added hint for re-assigning interrupt target via right-click
     - Caravans: fixed that interrupts without actions would cancel other interrupts below it
     - Caravans: added label showing how many caravans use the edited interrupt
@@ -23,6 +23,12 @@ Date: ???
     - Caravans: fixed Caravan Manager drawing the background over the "no caravans" warning
     - Caravans: added "outpost fluid count" condition
     - Caravans: made editing interrupts multiplayer safe
+    - Caravans: fixed that re-assigning an active schedule would result in its actions completing remotely on the new target
+    - Caravans: fixed that caravans wouldn't continue to the next destination after reaching one with no actions
+    - Caravans: fixed wait times of 0 lasting forever
+    - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
+    - Added Dutch locale
+    - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
