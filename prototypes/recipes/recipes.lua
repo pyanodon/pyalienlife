@@ -317,7 +317,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-4", amount = 3},
     },
-}:add_unlock("py-science-pack-mk04")
+}:add_unlock("py-science-pack-4")
 
 RECIPE {
     type = "recipe",
@@ -2013,7 +2013,7 @@ RECIPE {
     results = {
         {type = "item", name = "perfect-samples", amount = 10},
     },
-}:add_unlock("py-science-pack-mk04")
+}:add_unlock("py-science-pack-4")
 
 RECIPE {
     type = "recipe",

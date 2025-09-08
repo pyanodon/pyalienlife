@@ -11,6 +11,10 @@
         [
             "py-science-pack-mk03",
             "py-science-pack-3"
+        ],
+        [
+            "py-science-pack-mk04",
+            "py-science-pack-4"
         ]
     ]
 }

@@ -55,8 +55,8 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk04",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk04.png",
+    name = "py-science-pack-4",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-4.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"py-science-pack-3"},
