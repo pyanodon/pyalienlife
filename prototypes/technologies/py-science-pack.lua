@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
     name = "py-science-pack-1",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-1.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk01.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -17,7 +17,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "py-science-pack-2",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-2.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk02.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"py-science-pack-1"},
@@ -35,7 +35,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "py-science-pack-3",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-3.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk03.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"py-science-pack-2"},
@@ -56,7 +56,7 @@ TECHNOLOGY {
 TECHNOLOGY {
     type = "technology",
     name = "py-science-pack-4",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-4.png",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk04.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"py-science-pack-3"},
