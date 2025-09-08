@@ -328,6 +328,23 @@ for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
     end
 end
 
+-- science pack order and subgroup
+data.raw.tool["py-science-pack-1"].subgroup = "science-pack"
+data.raw.tool["py-science-pack-2"].subgroup = "science-pack"
+data.raw.tool["py-science-pack-3"].subgroup = "science-pack"
+data.raw.tool["py-science-pack-4"].subgroup = "science-pack"
+data.raw.tool["automation-science-pack"].order = "a"
+data.raw.tool["py-science-pack-1"].order = "b"
+data.raw.tool["logistic-science-pack"].order = "c"
+data.raw.tool["military-science-pack"].order = "d"
+data.raw.tool["py-science-pack-2"].order = "e"
+data.raw.tool["chemical-science-pack"].order = "f"
+data.raw.tool["py-science-pack-3"].order = "g"
+data.raw.tool["production-science-pack"].order = "h"
+data.raw.tool["py-science-pack-4"].order = "i"
+data.raw.tool["utility-science-pack"].order = "j"
+data.raw.tool["space-science-pack"].order = "k"
+
 if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
