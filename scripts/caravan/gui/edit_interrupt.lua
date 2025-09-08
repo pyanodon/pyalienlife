@@ -165,14 +165,8 @@ function P.build_target_destination_frame(parent, schedule_id)
     local flow = frame.add {type = "flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
 
-    local entity = schedule.entity
-    local caption
-    if entity and entity.valid then
-        caption = schedule.localised_name
-    else
-        caption = {"caravan-gui.not-specified"}
-    end
-    local destination_label = flow.add {type = "label", name = "py_edit_interrupt_target_name", style = "clickable_squashable_label", caption = caption, tooltip = {"caravan-gui.reassign-hint", caption}, tags = tags}
+    local label_style, label_caption, label_tooltip = Utils.label_info(schedule)
+    local destination_label = flow.add {type = "label", name = "py_edit_interrupt_target_name", style = label_style, caption = label_caption, tooltip = label_tooltip, tags = tags}
     destination_label.style.left_padding = 5
     destination_label.style.horizontally_squashable = true
 
