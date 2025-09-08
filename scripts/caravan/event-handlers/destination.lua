@@ -164,8 +164,9 @@ gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
             return
         end
     end
+    -- if temporary we don't want to allow reassign
+    if schedule.temporary then return end
     -- if we haven't returned before here, we're reassigning a destination
-
     -- see caveat under py_caravan_destination_add_button click event (~L15 in this file)
     local interrupt_gui = player.gui.screen.edit_interrupt_gui
     if interrupt_gui then
