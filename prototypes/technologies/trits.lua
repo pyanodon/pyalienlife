@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/trits.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-animals-mk02", "biotech-mk02"},
+    prerequisites = {"biotech-mk02"},
     effects = {},
     unit = {
         count = 150,
