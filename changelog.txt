@@ -7,7 +7,7 @@ Date: ???
     - Caravans: fixed condition item_count being nil sometimes
     - Caravans: reduced default zoom for preview pane
     - Caravans: fixed that interrupts could be renamed to "" (empty string)
-    - Caravans: clarified fluid-related condition names
+    - Caravans: clarified condition names
     - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
     - Caravans: fixed being able to put anything in fluid caravan fuel slots
     - Caravans: restores controller type, camera position, and zoom when using/dropping the carrot
@@ -21,6 +21,7 @@ Date: ???
     - Caravans: fixed that re-assigning an active schedule would result in its actions completing remotely on the new target
     - Caravans: fixed that caravans wouldn't continue to the next destination after reaching one with no actions
     - Caravans: fixed wait times of 0 lasting forever
+    - Caravans: fixed crash when opening caravan GUI from a controller with no inventory (e.g. editor's map view)
     - Caravans: added delete button to edit interrupt GUI
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
