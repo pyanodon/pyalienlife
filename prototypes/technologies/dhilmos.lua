@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/dhilmos.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-invertebrates-mk03", "genetics-mk04"},
+    prerequisites = {"water-invertebrates-mk02", "genetics-mk04"},
     effects = {},
     unit = {
         count = 100,
