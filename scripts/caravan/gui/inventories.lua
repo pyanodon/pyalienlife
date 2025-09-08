@@ -128,8 +128,9 @@ end
 
 function P.build_character_inventory(parent, player, caravan_data)
     local inventory = get_inventory(player)
-    if (inventory == nil) then
-        log("what the fuck man")
+    if not inventory then
+        -- e.g. editor + remote view
+        return
     end
 
     local name = "py_caravan_player_inventory"
