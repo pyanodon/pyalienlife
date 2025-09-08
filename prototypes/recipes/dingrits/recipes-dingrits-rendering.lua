@@ -203,3 +203,5 @@ py.autorecipes {
 		},
 	}
 }
+
+data.raw.recipe["ex-used-dingrits"].autotech_ignore = true
