@@ -22,7 +22,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"moss-mk01"},
-    dependencies = {"moss-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -43,7 +42,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02", "moss-mk02"},
-    dependencies = {"moss-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -65,7 +63,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03", "moss-mk03"},
-    dependencies = {"moss-mk03"},
     effects = {},
     unit = {
         count = 350,

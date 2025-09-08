@@ -27,7 +27,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phadai"},
-    dependencies = {"phadai"},
     effects = {},
     unit = {
         count = 200,
@@ -51,7 +50,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phadai-mk02"},
-    dependencies = {"phadai-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -76,7 +74,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phadai-mk03"},
-    dependencies = {"phadai-mk03"},
     effects = {},
     unit = {
         count = 300,

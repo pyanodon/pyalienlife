@@ -24,7 +24,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tuuphra"},
-    dependencies = {"tuuphra"},
     effects = {},
     unit = {
         count = 250,
@@ -46,7 +45,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tuuphra-mk02"},
-    dependencies = {"tuuphra-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -70,7 +68,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"tuuphra-mk03"},
-    dependencies = {"tuuphra-mk03"},
     effects = {},
     unit = {
         count = 350,

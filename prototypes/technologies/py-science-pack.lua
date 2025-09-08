@@ -20,7 +20,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"py-science-pack-mk01"},
+    prerequisites = {"py-science-pack-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -38,7 +38,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"py-science-pack-mk02"},
+    prerequisites = {"py-science-pack-mk02"},
     effects = {},
     unit = {
         count = 150,
@@ -59,7 +59,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"py-science-pack-mk03"},
+    prerequisites = {"py-science-pack-mk03"},
     effects = {},
     unit = {
         count = 150,

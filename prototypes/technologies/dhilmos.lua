@@ -26,7 +26,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dhilmos"},
-    dependencies = {"dhilmos"},
     effects = {},
     unit = {
         count = 150,
@@ -49,7 +48,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dhilmos-mk02"},
-    dependencies = {"dhilmos-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -74,7 +72,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dhilmos-mk03"},
-    dependencies = {"dhilmos-mk03"},
     effects = {},
     unit = {
         count = 250,

@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"trits"},
-    dependencies = {"trits"},
     effects = {},
     unit = {
         count = 200,
@@ -47,7 +46,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"trits-mk02"},
-    dependencies = {"trits-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -70,7 +68,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"trits-mk03"},
-    dependencies = {"trits-mk03"},
     effects = {},
     unit = {
         count = 300,

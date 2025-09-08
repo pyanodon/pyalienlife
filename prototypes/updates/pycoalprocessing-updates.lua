@@ -1,7 +1,7 @@
 ITEM("automation-science-pack", "tool"):set("icon", "__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
 
 
-TECHNOLOGY("wood-processing"):set_fields {dependencies = {"moss-mk01"}}
+TECHNOLOGY("wood-processing"):set_fields {prerequisites = {"moss-mk01"}}
 TECHNOLOGY("cooling-tower-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("energy-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("py-burner"):add_pack("py-science-pack-1")
@@ -33,7 +33,7 @@ if data.raw.technology["railway-mk03"] then TECHNOLOGY("railway-mk03"):add_pack(
 TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
 TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 
-TECHNOLOGY("electric-energy-accumulators"):set_fields {prerequisites = {}}:set_fields {dependencies = {}}:add_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
+TECHNOLOGY("electric-energy-accumulators"):set_fields {prerequisites = {}}:add_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
 
 RECIPE("accumulator"):remove_ingredient("battery"):add_ingredient {type = "item", name = "battery", amount = 30}
 

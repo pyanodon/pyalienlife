@@ -24,7 +24,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"korlex"},
-    dependencies = {"korlex"},
     effects = {},
     unit = {
         count = 280,
@@ -46,7 +45,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"korlex-mk02"},
-    dependencies = {"korlex-mk02"},
     effects = {},
     unit = {
         count = 330,
@@ -69,7 +67,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"korlex-mk03"},
-    dependencies = {"korlex-mk03"},
     effects = {},
     unit = {
         count = 380,

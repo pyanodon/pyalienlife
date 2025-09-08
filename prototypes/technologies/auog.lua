@@ -23,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog"},
-    dependencies = {"auog"},
     effects = {},
     unit = {
         count = 150,
@@ -44,7 +43,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog-mk02"},
-    dependencies = {"auog-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -67,7 +65,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog-mk03"},
-    dependencies = {"auog-mk03"},
     effects = {},
     unit = {
         count = 300,

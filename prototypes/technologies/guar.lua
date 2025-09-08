@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"guar", "chemical-science-pack"},
-    dependencies = {"guar", "chemical-science-pack"},
     effects = {},
     unit = {
         count = 250,
@@ -47,7 +46,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"guar-mk02"},
-    dependencies = {"guar-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -71,7 +69,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"guar-mk03"},
-    dependencies = {"guar-mk03"},
     effects = {},
     unit = {
         count = 350,

@@ -29,7 +29,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xeno"},
-    dependencies = {"xeno"},
     effects = {},
     unit = {
         count = 300,
@@ -54,7 +53,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xeno-mk02"},
-    dependencies = {"xeno-mk02"},
     effects = {},
     unit = {
         count = 350,
@@ -80,7 +78,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"xeno-mk03"},
-    dependencies = {"xeno-mk03"},
     effects = {},
     unit = {
         count = 400,

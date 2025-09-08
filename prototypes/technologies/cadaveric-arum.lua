@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cadaveric-arum"},
-    dependencies = {"cadaveric-arum"},
     effects = {},
     unit = {
         count = 150,
@@ -47,7 +46,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cadaveric-arum-mk02"},
-    dependencies = {"cadaveric-arum-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -70,7 +68,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cadaveric-arum-mk03"},
-    dependencies = {"cadaveric-arum-mk03"},
     effects = {},
     unit = {
         count = 250,

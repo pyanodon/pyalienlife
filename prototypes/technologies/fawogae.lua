@@ -22,8 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"fawogae-mk01"},
+    prerequisites = {"fawogae-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -43,8 +42,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"fawogae-mk02"},
+    prerequisites = {"fawogae-mk02"},
     effects = {},
     unit = {
         count = 100,
@@ -66,8 +64,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"fawogae-mk03"},
+    prerequisites = {"fawogae-mk03"},
     effects = {},
     unit = {
         count = 100,
@@ -91,8 +88,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/fawogae-mk05.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"fawogae-mk04"},
+    prerequisites = {"fawogae-mk04"},
     effects = {},
     unit = {
         count = 100,

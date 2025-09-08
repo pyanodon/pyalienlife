@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk01", "moondrop"},
-    dependencies = {"moondrop"},
     effects = {},
     unit = {
         count = 200,
@@ -45,7 +44,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02", "moondrop-mk02", "phytomining"},
-    dependencies = {"moondrop-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -66,7 +64,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02", "moondrop-mk03", "phytomining-mk02"},
-    dependencies = {"moondrop-mk03"},
     effects = {},
     unit = {
         count = 350,
@@ -89,7 +86,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03", "moondrop-mk04", "phytomining-mk03"},
-    dependencies = {"moondrop-mk04"},
     effects = {},
     unit = {
         count = 350,
