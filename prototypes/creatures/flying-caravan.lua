@@ -49,7 +49,7 @@ data:extend
         icon_size = 64,
         alert_icon_scale = 1,
         flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-        minable = {mining_time = 0.1, result = "flyavan"},
+        minable = {mining_time = 0.5, result = "flyavan"},
         max_health = 2200,
         order = "b-b-a",
         subgroup = "enemies",
