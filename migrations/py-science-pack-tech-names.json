@@ -7,6 +7,10 @@
         [
             "py-science-pack-mk02",
             "py-science-pack-2"
+        ],
+        [
+            "py-science-pack-mk03",
+            "py-science-pack-3"
         ]
     ]
 }

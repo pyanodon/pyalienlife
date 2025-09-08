@@ -34,8 +34,8 @@ TECHNOLOGY {
 
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk03",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk03.png",
+    name = "py-science-pack-3",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-3.png",
     icon_size = 128,
     order = "c-a",
     prerequisites = {"py-science-pack-2"},
@@ -59,7 +59,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"py-science-pack-mk03"},
+    prerequisites = {"py-science-pack-3"},
     effects = {},
     unit = {
         count = 150,

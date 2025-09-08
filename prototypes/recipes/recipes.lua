@@ -294,7 +294,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-3", amount = 3},
     },
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
