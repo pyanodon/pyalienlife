@@ -238,26 +238,33 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outp
     local player = game.get_player(event.player_index)
     local gui = CaravanGui.get_gui(player)
     local element = event.element
-    local last_opened = {}
+    local tags = element.tags
+    local condition = storage.edited_interrupts[event.player_index].conditions[tags.condition_id]
 
-    local unit_number = gui.tags.unit_number
-    assert(unit_number)
-    last_opened.caravan = unit_number
-    last_opened.action_id = element.tags.condition_id
+    local is_lmb = event.button ~= defines.mouse_button_type.right
+    local is_valid = false
 
-    local edited_interrupt = storage.edited_interrupts[event.player_index]
-    local target = edited_interrupt.conditions[last_opened.action_id].entity
-    local camera = gui.entity_frame.camera_frame.camera
-
-    -- allow reassign if invalid or right-clicked
-    if target and target.valid and event.button ~= defines.mouse_button_type.right then
-        camera.entity = target
-        -- make refocus button visible
-        gui.entity_frame.subheader_frame.contents_flow.py_refocus.visible = true
-        camera.zoom = 0.25
-    else
-        CaravanImpl.select_destination(player, last_opened)
+    -- handle refocus and return
+    if is_lmb then
+        if condition.entity then
+            if condition.entity.valid then
+                is_valid = true
+                CaravanGui.refocus(gui, condition.entity)
+                return
+            end
+        else
+            CaravanGui.refocus(gui, condition.position)
+            return
+        end
     end
+
+    assert(gui.tags.unit_number)
+    -- else reassign
+    local last_opened = {
+        caravan = gui.tags.unit_number,
+        action_id = element.tags.condition_id
+    }
+    CaravanImpl.select_destination(player, last_opened, is_valid and condition.entity or condition.position)
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_move_up_button"] = function(event)
