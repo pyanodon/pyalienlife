@@ -6,7 +6,8 @@ data:extend {{
     flags = {"always-show"},
     subgroup = "py-alienlife-items",
     order = "a",
-    stack_size = 100
+    stack_size = 100,
+    autotech_always_available = true
 }}
 
 RECIPE {
