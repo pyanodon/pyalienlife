@@ -14,7 +14,7 @@ RECIPE {
     results = {
         {type = "item", name = "research-center-mk01", amount = 1}
     }
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 ITEM {
     type = "item",

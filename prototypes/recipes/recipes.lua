@@ -247,7 +247,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-1", amount = 3},
     },
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 RECIPE {
     type = "recipe",
@@ -1416,7 +1416,7 @@ RECIPE {
     results = {
         {type = "item", name = "stopper", amount = 4}
     }
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 RECIPE {
     type = "recipe",

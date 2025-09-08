@@ -1,7 +1,7 @@
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk01",
-    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk01.png",
+    name = "py-science-pack-1",
+    icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-1.png",
     icon_size = 128,
     order = "c-a",
     effects = {},
@@ -20,7 +20,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"py-science-pack-mk01"},
+    prerequisites = {"py-science-pack-1"},
     effects = {},
     unit = {
         count = 150,
