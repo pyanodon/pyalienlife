@@ -59,7 +59,7 @@ function P.label_info(schedule_entry)
         tooltip = schedule_entry.temporary and caption or {"caravan-gui.reassign-hint", caption}
     elseif schedule_entry.entity and not schedule_entry.entity.valid then
         caption = schedule_entry.localised_name or {"caravan-gui.destination-unavailable"}
-        tooltip = schedule_entry.temporary and caption or {"caravan-gui.reassign-hint", caption}
+        tooltip = schedule_entry.temporary and {"caravan-gui.interrupt-destination-unavailable"} or {"caravan-gui.reassign-hint", caption}
     else
         style = schedule_entry.temporary and "black_squashable_label" or "clickable_squashable_label"
         caption = schedule_entry.localised_name
