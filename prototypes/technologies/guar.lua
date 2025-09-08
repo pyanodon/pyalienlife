@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/guar-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02", "py-science-pack-mk02"},
+    prerequisites = {"botany-mk02", "py-science-pack-2"},
     effects = {},
     unit = {
         count = 200,
