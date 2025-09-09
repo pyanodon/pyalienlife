@@ -345,6 +345,42 @@ data.raw.tool["py-science-pack-4"].order = "i"
 data.raw.tool["utility-science-pack"].order = "j"
 data.raw.tool["space-science-pack"].order = "k"
 
+-- autotech settings
+if mods.autotech then
+    local config = data.raw["mod-data"]["autotech-config"].data
+
+    config.tech_cost_time_requirement["automation-science-pack"] = 30
+    config.tech_cost_time_requirement["py-science-pack-1"] = 45
+    config.tech_cost_time_requirement["logistic-science-pack"] = 60
+    config.tech_cost_time_requirement["military-science-pack"] = 90
+    config.tech_cost_time_requirement["py-science-pack-2"] = 90
+    config.tech_cost_time_requirement["chemical-science-pack"] = 120
+    config.tech_cost_time_requirement["py-science-pack-3"] = 180
+    config.tech_cost_time_requirement["production-science-pack"] = 300
+    config.tech_cost_time_requirement["py-science-pack-4"] = 450
+    config.tech_cost_time_requirement["utility-science-pack"] = 600
+    config.tech_cost_time_requirement["space-science-pack"] = 1200
+
+    config.tech_cost_science_pack_tiers["automation-science-pack"] = 1
+    config.tech_cost_science_pack_tiers["py-science-pack-1"] = 2
+    config.tech_cost_science_pack_tiers["logistic-science-pack"] = 3
+    config.tech_cost_science_pack_tiers["military-science-pack"] = 3
+    config.tech_cost_science_pack_tiers["py-science-pack-2"] = 4
+    config.tech_cost_science_pack_tiers["chemical-science-pack"] = 5
+    config.tech_cost_science_pack_tiers["py-science-pack-3"] = 6
+    config.tech_cost_science_pack_tiers["production-science-pack"] = 7
+    config.tech_cost_science_pack_tiers["py-science-pack-4"] = 8
+    config.tech_cost_science_pack_tiers["utility-science-pack"] = 9
+    config.tech_cost_science_pack_tiers["space-science-pack"] = 10
+
+    config.tech_cost_science_packs_per_tier = {1, 2, 3, 6, 10, 20, 30, 60, 100, 200}
+    config.tech_cost_additional_multipliers.pyrrhic = 2
+    config.tech_cost_starting_cost = 20
+    config.tech_cost_victory_cost = 2500
+    config.tech_cost_exponent = 3
+    config.victory_tech = "pyrrhic"
+end
+
 if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
