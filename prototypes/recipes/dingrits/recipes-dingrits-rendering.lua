@@ -204,4 +204,4 @@ py.autorecipes {
 	}
 }
 
-data.raw.recipe["ex-used-dingrits"].autotech_ignore = true
+data.raw.recipe["ex-used-dingrits"].autotech_is_not_primary_recipe = true

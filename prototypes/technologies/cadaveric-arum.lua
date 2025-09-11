@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/cadaveric-arum.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 100,
