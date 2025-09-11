@@ -24,6 +24,7 @@ Date: ???
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
     - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
+    - Removed `simik-food-01a` and `simik-food-02a` unused recipes.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
