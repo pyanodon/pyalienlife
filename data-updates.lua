@@ -375,9 +375,9 @@ if mods.autotech then
 
     config.tech_cost_science_packs_per_tier = {1, 2, 3, 6, 10, 20, 30, 60, 100, 200}
     config.tech_cost_additional_multipliers.pyrrhic = 2
-    config.tech_cost_starting_cost = 20
+    config.tech_cost_starting_cost = 30
     config.tech_cost_victory_cost = 5000
-    config.tech_cost_exponent = 2
+    config.tech_cost_exponent = 3
     config.victory_tech = "pyrrhic"
 end
 
