@@ -2,6 +2,18 @@
 Version: 3.0.58
 Date: ???
   Changes:
+    - Remade tech tree with autotech 2.0. Science pack cost comparasion:
+    - automation: n/a -> trigger
+    - py1: 100 -> 50
+    - logi: 360 -> 200
+    - py2: 1300 -> 750
+    - chem: 2000 -> 1300
+    - py3: 2250 -> 2000
+    - prod: 1750 -> 2750
+    - py4: 2250 -> 3600
+    - utility: 1500 -> 4000
+    - space: 1000 -> 4500
+    - phyrric: 3000 -> 10000
     - Caravans: allow copy-paste between different types (regular, flying, fluid).
     - Caravans: made edit interrupt GUI wider
     - Caravans: fixed condition item_count being nil sometimes
