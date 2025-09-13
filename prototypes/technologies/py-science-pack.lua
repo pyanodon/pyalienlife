@@ -11,7 +11,8 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
 
 TECHNOLOGY {
@@ -29,7 +30,8 @@ TECHNOLOGY {
             {"logistic-science-pack",   1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
 
 TECHNOLOGY {
@@ -50,7 +52,8 @@ TECHNOLOGY {
             {"chemical-science-pack",   1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
 
 TECHNOLOGY {
@@ -74,5 +77,6 @@ TECHNOLOGY {
             {"production-science-pack", 1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
