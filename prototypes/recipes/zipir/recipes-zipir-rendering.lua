@@ -36,7 +36,7 @@ py.autorecipes {
 				{name = "skin",            amount = BASE_SKIN},
 				{name = "mukmoux-fat",     amount = BASE_FAT},
 				{name = "guts",            amount = BASE_GUTS},
-				{name = "arthropod-blood", amount = BASE_BLOOD},
+				{name = "arthropod-blood", amount = BASE_BLOOD, autotech_ignore = true},
 				{name = "brain",           amount = BASE_BRAIN},
 			},
 			crafting_speed = 30,

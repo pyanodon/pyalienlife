@@ -87,7 +87,7 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-biofactory.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"ethylene"},
+        prerequisites = mods.pyhightech and {"ethylene"} or {},
         unit = {
             count = 500,
             ingredients = {
