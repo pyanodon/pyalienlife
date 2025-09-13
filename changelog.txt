@@ -23,6 +23,7 @@ Date: ???
     - Caravans: fixed wait times of 0 lasting forever
     - Caravans: fixed crash when opening caravan GUI from a controller with no inventory (e.g. editor's map view)
     - Caravans: added delete button to edit interrupt GUI
+    - Caravans: allow ctrl+clicking up/down arrows to send to top or bottom of schedule
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
     - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
