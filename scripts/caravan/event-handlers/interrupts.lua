@@ -86,11 +86,13 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_move_up_button"] =
     local player = game.get_player(event.player_index)
     local unit_number = event.element.tags.unit_number
     local caravan_data = storage.caravans[unit_number]
-    local i = event.element.tags.caravan_interrupt_index
 
-    if i == 1 then return end
+    local old_index = event.element.tags.caravan_interrupt_index
+    local new_index = event.control and 1 or old_index - 1
 
-    caravan_data.interrupts[i - 1], caravan_data.interrupts[i] = caravan_data.interrupts[i], caravan_data.interrupts[i - 1]
+    if old_index == 1 then return end
+
+    caravan_data.interrupts[new_index], caravan_data.interrupts[old_index] = caravan_data.interrupts[old_index], caravan_data.interrupts[new_index]
 
     CaravanGuiComponents.update_schedule_pane(player)
 end
@@ -99,11 +101,13 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_move_down_button"]
     local player = game.get_player(event.player_index)
     local unit_number = event.element.tags.unit_number
     local caravan_data = storage.caravans[unit_number]
-    local i = event.element.tags.caravan_interrupt_index
 
-    if i == #caravan_data.interrupts then return end
+    local old_index = event.element.tags.caravan_interrupt_index
+    local new_index = event.control and #caravan_data.interrupts or old_index + 1
 
-    caravan_data.interrupts[i + 1], caravan_data.interrupts[i] = caravan_data.interrupts[i], caravan_data.interrupts[i + 1]
+    if old_index == #caravan_data.interrupts then return end
+
+    caravan_data.interrupts[new_index], caravan_data.interrupts[old_index] = caravan_data.interrupts[old_index], caravan_data.interrupts[new_index]
 
     CaravanGuiComponents.update_schedule_pane(player)
 end

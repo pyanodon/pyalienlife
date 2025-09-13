@@ -24,19 +24,20 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_move_up_button"] = fu
     local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
-    local i = event.element.tags.action_id
+    local old_index = event.element.tags.action_id
+    local new_index = event.control and 1 or old_index - 1
 
-    if i == 1 then return end
+    if old_index == 1 then return end
 
-    actions[i - 1], actions[i] = actions[i], actions[i - 1]
+    actions[new_index], actions[old_index] = actions[old_index], actions[new_index]
 
     if caravan_data then
         if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
             CaravanImpl.stop_actions(caravan_data)
-        elseif caravan_data.action_id == i then
-            caravan_data.action_id = i - 1
-        elseif caravan_data.action_id == i - 1 then
-            caravan_data.action_id = i
+        elseif caravan_data.action_id == old_index then
+            caravan_data.action_id = new_index
+        elseif caravan_data.action_id == new_index then
+            caravan_data.action_id = old_index
         end
     end
 
@@ -48,19 +49,20 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_move_down_button"] = 
     local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
-    local i = event.element.tags.action_id
+    local old_index = event.element.tags.action_id
+    local new_index = event.control and #actions or old_index + 1
 
-    if i == #actions then return end
+    if old_index == #actions then return end
 
-    actions[i + 1], actions[i] = actions[i], actions[i + 1]
+    actions[new_index], actions[old_index] = actions[old_index], actions[new_index]
 
     if caravan_data then
         if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
             CaravanImpl.stop_actions(caravan_data)
-        elseif caravan_data.action_id == i then
-            caravan_data.action_id = i + 1
-        elseif caravan_data.action_id == i + 1 then
-            caravan_data.action_id = i
+        elseif caravan_data.action_id == old_index then
+            caravan_data.action_id = new_index
+        elseif caravan_data.action_id == new_index then
+            caravan_data.action_id = old_index
         end
     end
 
