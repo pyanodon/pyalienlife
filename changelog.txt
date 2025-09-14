@@ -43,6 +43,7 @@ Date: ???
     - The first level of TURD respect infinite technology now depends on fawogae turd instead of ulric turd.
     - Added circuit connections to biocranes.
     - Enabled fast replace and upgrade planner for biocranes.
+    - Added new tier of worker robots speed. Resolves https://github.com/pyanodon/pybugreports/issues/608
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
