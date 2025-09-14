@@ -108,7 +108,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_play_stop_button"] = 
             CaravanImpl.stop_actions(caravan_data)
         else
             local position
-            if schedule.entity then position = schedule.entity.position else position = schedule.position end
+            if schedule.entity and schedule.entity.valid then position = schedule.entity.position else position = schedule.position end
             if py.distance_squared(position, caravan_data.entity.position) < 1000 then
                 CaravanImpl.begin_action(caravan_data, tags.action_id)
             end

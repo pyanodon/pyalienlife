@@ -4,13 +4,14 @@ local CaravanGuiComponents = require "__pyalienlife__/scripts/caravan/gui/compon
 local CaravanUtils = require "__pyalienlife__/scripts/caravan/utils"
 
 gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) ---@cast player LuaPlayer
     local element = event.element
-    local last_opened = {}
 
     local unit_number = CaravanGui.get_gui(player).tags.unit_number
     assert(unit_number)
-    last_opened.caravan = unit_number
+    local last_opened = {
+        caravan = unit_number
+    }
     -- edge case: when having the edit_interrupt GUI open, clicking on the Add destination button in the caravan GUI
     -- should close the edit_interrupt GUI. But the on_gui_click event handler responsible for that is called AFTER
     -- the event handler for 'Add destination'. The latter closes both GUIs, and reopens them afterwards.
@@ -22,7 +23,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_add_button"] = f
         player.gui.screen.edit_interrupt_gui.destroy()
         storage.edited_interrupts[event.player_index] = nil
     end
-    CaravanImpl.select_destination(player, last_opened)
+    CaravanImpl.select_destination(player, last_opened, player.position)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_destination_move_up_button"] = function(event)
@@ -143,48 +144,71 @@ end
 gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
     local player = game.get_player(event.player_index)
     local gui = CaravanGui.get_gui(player)
-    local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
     local tags = element.tags
     local schedule = CaravanUtils.get_schedule(element)[tags.schedule_id]
-    local camera = gui.entity_frame.camera_frame.camera
 
-    local refocus = gui.entity_frame.subheader_frame.contents_flow.py_refocus
+    local is_lmb = event.button ~= defines.mouse_button_type.right
+    local is_valid = false
 
-    if schedule.entity then
-        -- allow reassign if invalid or right-clicked
-        if schedule.entity.valid and event.button ~= defines.mouse_button_type.right then
-            camera.entity = schedule.entity
+    -- handle refocus and return
+    if is_lmb then
+        if schedule.entity then
+            if schedule.entity.valid then
+                is_valid = true
+                CaravanGui.refocus(gui, schedule.entity)
+                return
+            end
         else
-            local last_opened = {}
-            last_opened.caravan = caravan_data.unit_number
-            last_opened.schedule_id = element.tags.schedule_id
-            CaravanImpl.select_destination(player, last_opened, schedule.position)
+            CaravanGui.refocus(gui, schedule.position)
             return
         end
-    else
-        camera.entity = nil
-        camera.position = schedule.position
-        camera.surface_index = caravan_data.entity.surface_index
     end
-    refocus.visible = true
-    camera.zoom = 0.25
+    -- if temporary we don't want to allow reassign
+    if schedule.temporary then return end
+    -- if we haven't returned before here, we're reassigning a destination
+    -- see caveat under py_caravan_destination_add_button click event (~L15 in this file)
+    local interrupt_gui = player.gui.screen.edit_interrupt_gui
+    if interrupt_gui then
+        interrupt_gui.destroy()
+        storage.edited_interrupts[event.player_index] = nil
+    end
+
+    local last_opened = {
+        caravan = gui.tags.unit_number,
+        schedule_id = element.tags.schedule_id
+    }
+    CaravanImpl.select_destination(player, last_opened, is_valid and schedule.entity or schedule.position)
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_name"] = function(event)
     local player = game.get_player(event.player_index)
     local gui = CaravanGui.get_gui(player)
-    local caravan_data = storage.caravans[gui.tags.unit_number]
     local element = event.element
     local tags = element.tags
     local schedule = storage.edited_interrupts[event.player_index].schedule[tags.schedule_id]
 
-    -- allow reassign if invalid or right-clicked
-    if not schedule.entity or not schedule.entity.valid or event.button == defines.mouse_button_type.right then
-        local last_opened = {}
-        last_opened.caravan = caravan_data.unit_number
-        last_opened.schedule_id = element.tags.schedule_id
-        CaravanImpl.select_destination(player, last_opened, schedule.position)
-        return
+    local is_lmb = event.button ~= defines.mouse_button_type.right
+    local is_valid = false
+
+    -- handle refocus and return
+    if is_lmb then
+        if schedule.entity then
+            if schedule.entity.valid then
+                is_valid = true
+                CaravanGui.refocus(gui, schedule.entity)
+                return
+            end
+        else
+            CaravanGui.refocus(gui, schedule.position)
+            return
+        end
     end
+
+    -- else reassign
+    local last_opened = {
+        caravan = gui.tags.unit_number,
+        schedule_id = element.tags.schedule_id
+    }
+    CaravanImpl.select_destination(player, last_opened, is_valid and schedule.entity or schedule.position)
 end

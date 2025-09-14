@@ -238,26 +238,33 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_select_outp
     local player = game.get_player(event.player_index)
     local gui = CaravanGui.get_gui(player)
     local element = event.element
-    local last_opened = {}
+    local tags = element.tags
+    local condition = storage.edited_interrupts[event.player_index].conditions[tags.condition_id]
 
-    local unit_number = gui.tags.unit_number
-    assert(unit_number)
-    last_opened.caravan = unit_number
-    last_opened.action_id = element.tags.condition_id
+    local is_lmb = event.button ~= defines.mouse_button_type.right
+    local is_valid = false
 
-    local edited_interrupt = storage.edited_interrupts[event.player_index]
-    local target = edited_interrupt.conditions[last_opened.action_id].entity
-    local camera = gui.entity_frame.camera_frame.camera
-
-    -- allow reassign if invalid or right-clicked
-    if target and target.valid and event.button ~= defines.mouse_button_type.right then
-        camera.entity = target
-        -- make refocus button visible
-        gui.entity_frame.subheader_frame.contents_flow.py_refocus.visible = true
-        camera.zoom = 0.25
-    else
-        CaravanImpl.select_destination(player, last_opened)
+    -- handle refocus and return
+    if is_lmb then
+        if condition.entity then
+            if condition.entity.valid then
+                is_valid = true
+                CaravanGui.refocus(gui, condition.entity)
+                return
+            end
+        else
+            CaravanGui.refocus(gui, condition.position)
+            return
+        end
     end
+
+    assert(gui.tags.unit_number)
+    -- else reassign
+    local last_opened = {
+        caravan = gui.tags.unit_number,
+        action_id = element.tags.condition_id
+    }
+    CaravanImpl.select_destination(player, last_opened, is_valid and condition.entity or condition.position)
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_target_move_up_button"] = function(event)
@@ -320,6 +327,45 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = fu
         player.gui.screen.edit_interrupt_gui.destroy()
     end
     storage.edited_interrupts[event.player_index] = nil
+end
+
+gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function(event)
+    local element = event.element
+    local removed_interrupt = element.tags.interrupt_name
+
+    if element.parent.py_delete_interrupt_cancel.visible then
+        for _, caravan in pairs(storage.caravans or {}) do
+            for i, interrupt in pairs(caravan.interrupts or {}) do
+                if interrupt == removed_interrupt then
+                    table.remove(caravan.interrupts, i)
+                    break
+                end
+            end
+        end
+        storage.interrupts[element.tags.interrupt_name] = nil
+        for player_index, edited_interrupt in pairs(storage.edited_interrupts) do
+            if edited_interrupt.name == removed_interrupt then
+                storage.edited_interrupts[player_index] = nil
+                local player = game.get_player(event.player_index)
+                if player and player.gui.screen.edit_interrupt_gui then
+                    player.gui.screen.edit_interrupt_gui.destroy()
+                    CaravanGui.update_gui(player)
+                end
+            end
+        end
+    else
+        element.parent.py_delete_interrupt_cancel.visible = true
+        element.parent.py_delete_interrupt_confirm.visible = true
+        element.parent.py_interrupt_count_label.visible = false
+    end
+end
+
+gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function(event)
+    local element = event.element
+
+    element.parent.py_interrupt_count_label.visible = true
+    element.parent.py_delete_interrupt_cancel.visible = false
+    element.parent.py_delete_interrupt_confirm.visible = false
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_up_button"] = function(event)
