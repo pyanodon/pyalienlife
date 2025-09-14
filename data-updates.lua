@@ -375,10 +375,23 @@ if mods.autotech then
 
     config.tech_cost_science_packs_per_tier = {1, 2, 3, 6, 10, 20, 30, 60, 100, 200}
     config.tech_cost_additional_multipliers.pyrrhic = 2
-    config.tech_cost_starting_cost = 30
-    config.tech_cost_victory_cost = 5000
-    config.tech_cost_exponent = 3
+    config.tech_cost_starting_cost = 60
+    config.tech_cost_victory_cost = 4000
+    config.tech_cost_exponent = 2.5
     config.victory_tech = "pyrrhic"
+
+    -- reduce early tree manual mining
+    config.tech_cost_additional_multipliers["coal-processing-1"] = 0.2
+    config.tech_cost_additional_multipliers["automation"] = 0.2
+    config.tech_cost_additional_multipliers["soil-washing"] = 0.3
+    config.tech_cost_additional_multipliers["steel-processing"] = 0.3
+    config.tech_cost_additional_multipliers["mining-with-fluid"] = 0.4
+    config.tech_cost_additional_multipliers["crusher"] = 0.4
+    config.tech_cost_additional_multipliers["concrete"] = 0.4
+    config.tech_cost_additional_multipliers["glass"] = 0.5
+    config.tech_cost_additional_multipliers["moss-mk01"] = 0.5
+    config.tech_cost_additional_multipliers["botany-mk01"] = 0.5
+    config.tech_cost_additional_multipliers["wood-processing"] = 0.5
 end
 
 if register_cache_file ~= nil then
