@@ -1,18 +1,33 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.0
+Version: 4.0.0
 Date: ???
   Changes:
-    - [BREAKING] Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
+    - Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
+    - New recipe to convert bonemeal into geothermal water.
     - New recipe for heating geothermal water.
+    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
+---------------------------------------------------------------------------------------------------
 Version: 3.0.58
 Date: ???
   Changes:
+    - Remade tech tree with autotech 2.0. Science pack cost comparasion:
+    - automation: n/a -> trigger
+    - py1: 100 -> 100
+    - logi: 360 -> 300
+    - py2: 1300 -> 800
+    - chem: 2000 -> 1400
+    - py3: 2250 -> 1750
+    - prod: 1750 -> 2250
+    - py4: 2250 -> 3000
+    - utility: 1500 -> 3300
+    - space: 1000 -> 3600
+    - phyrric: 3000 -> 8000
     - Caravans: allow copy-paste between different types (regular, flying, fluid).
     - Caravans: made edit interrupt GUI wider
     - Caravans: fixed condition item_count being nil sometimes
     - Caravans: reduced default zoom for preview pane
     - Caravans: fixed that interrupts could be renamed to "" (empty string)
-    - Caravans: clarified fluid-related condition names
+    - Caravans: clarified condition names
     - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
     - Caravans: fixed being able to put anything in fluid caravan fuel slots
     - Caravans: restores controller type, camera position, and zoom when using/dropping the carrot
@@ -26,10 +41,17 @@ Date: ???
     - Caravans: fixed that re-assigning an active schedule would result in its actions completing remotely on the new target
     - Caravans: fixed that caravans wouldn't continue to the next destination after reaching one with no actions
     - Caravans: fixed wait times of 0 lasting forever
+    - Caravans: fixed crash when opening caravan GUI from a controller with no inventory (e.g. editor's map view)
+    - Caravans: added delete button to edit interrupt GUI
+    - Caravans: allow ctrl+clicking up/down arrows to send to top or bottom of schedule
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
     - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
-    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
+    - Removed `simik-food-01a` and `simik-food-02a` unused recipes.
+    - The first level of TURD respect infinite technology now depends on fawogae turd instead of ulric turd.
+    - Added circuit connections to biocranes.
+    - Enabled fast replace and upgrade planner for biocranes.
+    - Added new tier of worker robots speed. Resolves https://github.com/pyanodon/pybugreports/issues/608
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23

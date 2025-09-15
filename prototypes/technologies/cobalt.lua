@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cobalt-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cobalt-mk01"},
+    prerequisites = {"cobalt-mk01"},
     effects = {},
     unit = {
         count = 150,

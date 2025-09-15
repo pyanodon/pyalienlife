@@ -190,7 +190,7 @@ py.autorecipes {
 				{name = "bones",         amount = BASE_BONES},
 				{name = "meat",          remove_item = true},
 				{name = "pelt",          amount = BASE_SKIN},
-				{name = "dingrit-spike", amount = BASE_SPECIAL},
+				{name = "dingrit-spike", amount = BASE_SPECIAL, autotech_is_not_primary_source = true},
 				{name = "guts",          amount = BASE_GUTS},
 				{name = "blood",         remove_item = true},
 				{name = "brain",         amount = BASE_BRAIN},

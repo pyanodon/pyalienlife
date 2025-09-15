@@ -27,7 +27,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arqad-mk04", "pheromone-transition"},
-    dependencies = {"pheromone-transition"},
     effects = {},
     unit = {
         count = 300,

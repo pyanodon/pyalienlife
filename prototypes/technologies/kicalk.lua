@@ -31,7 +31,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kicalk"},
-    dependencies = {"kicalk"},
     effects = {},
     unit = {
         count = 150,
@@ -52,7 +51,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kicalk-mk02"},
-    dependencies = {"kicalk-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -76,7 +74,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"kicalk-mk03"},
-    dependencies = {"kicalk-mk03"},
     effects = {},
     unit = {
         count = 250,

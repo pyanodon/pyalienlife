@@ -5,7 +5,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"organic-breeding", "biotech-mk02", "domestication"},
-    dependencies = {"organic-breeding"},
     effects = {},
     unit = {
         count = 200,

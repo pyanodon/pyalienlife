@@ -61,6 +61,10 @@ function P.build_subheader_frame(parent)
     -- work out how many caravans have this interrupt and store in the element tags for use in on_click
     local relevant_caravans = caravans_with_interrupt(edited_interrupt.name)
     flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
+    -- handle deletion
+    flow.add {type = "label", visible = false, name = "py_delete_interrupt_confirm", caption = {"caravan-gui.confirm-deletion"}}
+    flow.add {type = "sprite-button", name = "py_delete_interrupt_button", style = "tool_button_red", sprite = "utility/trash", tooltip = {"caravan-gui.delete-interrupt"}, tags = {interrupt_name = edited_interrupt.name}}
+    flow.add {type = "sprite-button", visible = false, name = "py_delete_interrupt_cancel", style = "tool_button", sprite = "utility/close_black", tooltip = {"caravan-gui.cancel-deletion"}}
 end
 
 function P.build_checkbox(parent)
@@ -161,14 +165,8 @@ function P.build_target_destination_frame(parent, schedule_id)
     local flow = frame.add {type = "flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
 
-    local entity = schedule.entity
-    local caption
-    if entity and entity.valid then
-        caption = schedule.localised_name
-    else
-        caption = {"caravan-gui.not-specified"}
-    end
-    local destination_label = flow.add {type = "label", name = "py_edit_interrupt_target_name", style = "clickable_squashable_label", caption = caption, tooltip = {"caravan-gui.reassign-hint", caption}, tags = tags}
+    local label_style, label_caption, label_tooltip = Utils.label_info(schedule)
+    local destination_label = flow.add {type = "label", name = "py_edit_interrupt_target_name", style = label_style, caption = label_caption, tooltip = label_tooltip, tags = tags}
     destination_label.style.left_padding = 5
     destination_label.style.horizontally_squashable = true
 

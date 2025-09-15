@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/neuro-electronics-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"neuro-electronics-mk01"},
+    prerequisites = {"neuro-electronics-mk01"},
     effects = {},
     unit = {
         count = 150,

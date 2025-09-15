@@ -23,7 +23,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cottongut-mk01"},
-    dependencies = {"cottongut-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -45,7 +44,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cottongut-mk02"},
-    dependencies = {"cottongut-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -68,7 +66,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cottongut-mk03"},
-    dependencies = {"cottongut-mk03"},
     effects = {},
     unit = {
         count = 250,

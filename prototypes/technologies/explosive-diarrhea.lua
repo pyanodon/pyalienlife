@@ -5,7 +5,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"bigger-colon"},
-    dependencies = {"bigger-colon"},
     effects = {},
     unit = {
         count = 600,
