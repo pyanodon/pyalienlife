@@ -19,7 +19,7 @@ Date: ???
     - Caravans: fixed condition item_count being nil sometimes
     - Caravans: reduced default zoom for preview pane
     - Caravans: fixed that interrupts could be renamed to "" (empty string)
-    - Caravans: clarified fluid-related condition names
+    - Caravans: clarified condition names
     - Caravans: fixed fuel being deleted when right-clicked with a different fuel in cursor
     - Caravans: fixed being able to put anything in fluid caravan fuel slots
     - Caravans: restores controller type, camera position, and zoom when using/dropping the carrot
@@ -33,11 +33,16 @@ Date: ???
     - Caravans: fixed that re-assigning an active schedule would result in its actions completing remotely on the new target
     - Caravans: fixed that caravans wouldn't continue to the next destination after reaching one with no actions
     - Caravans: fixed wait times of 0 lasting forever
+    - Caravans: fixed crash when opening caravan GUI from a controller with no inventory (e.g. editor's map view)
+    - Caravans: added delete button to edit interrupt GUI
+    - Caravans: allow ctrl+clicking up/down arrows to send to top or bottom of schedule
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
     - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
     - Removed `simik-food-01a` and `simik-food-02a` unused recipes.
     - The first level of TURD respect infinite technology now depends on fawogae turd instead of ulric turd.
+    - Added circuit connections to biocranes.
+    - Enabled fast replace and upgrade planner for biocranes.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
