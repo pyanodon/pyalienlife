@@ -27,7 +27,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"ulric"},
-    dependencies = {"ulric"},
     effects = {},
     unit = {
         count = 250,
@@ -48,7 +47,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"ulric-mk02"},
-    dependencies = {"ulric-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -71,7 +69,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"ulric-mk03"},
-    dependencies = {"ulric-mk03"},
     effects = {},
     unit = {
         count = 350,

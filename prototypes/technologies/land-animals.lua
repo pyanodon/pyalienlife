@@ -22,7 +22,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk01", "botany-mk02", "biotech-mk02"},
-    dependencies = {"land-animals-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -44,7 +43,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"land-animals-mk02", "botany-mk03"},
-    dependencies = {"land-animals-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -67,7 +65,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"land-animals-mk03"},
+    prerequisites = {"land-animals-mk03"},
     effects = {},
     unit = {
         count = 250,
@@ -91,8 +89,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/land-animals-mk05.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk04", "dingrits-upgrade"}, --TODO:see why it thinks this tech doesnt exist "schrodinger-antelope-upgrade"
-    dependencies = {"land-animals-mk04", "dingrits-upgrade"},  --TODO:see why it thinks this tech doesnt exist "schrodinger-antelope-upgrade"
+    prerequisites = {"land-animals-mk04", "dingrits-upgrade"},
     effects = {},
     unit = {
         count = 700,

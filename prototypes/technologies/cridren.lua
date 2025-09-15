@@ -26,7 +26,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cridren"},
-    dependencies = {"cridren"},
     effects = {},
     unit = {
         count = 250,
@@ -49,7 +48,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cridren-mk02"},
-    dependencies = {"cridren-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -74,7 +72,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"cridren-mk03"},
-    dependencies = {"cridren-mk03"},
     effects = {},
     unit = {
         count = 350,

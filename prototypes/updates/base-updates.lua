@@ -29,6 +29,7 @@ TECHNOLOGY("discharge-defense-equipment"):add_pack("py-science-pack-3")
 TECHNOLOGY("energy-shield-mk2-equipment"):add_pack("py-science-pack-3")
 TECHNOLOGY("personal-laser-defense-equipment"):add_pack("py-science-pack-3")
 TECHNOLOGY("energy-shield-equipment"):add_pack("py-science-pack-2")
+TECHNOLOGY("personal-roboport-mk2-equipment"):remove_pack("chemical-science-pack"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("fluid-handling"):remove_pack("logistic-science-pack")
 TECHNOLOGY("automation-2"):add_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_prereq("logistic-science-pack"):remove_prereq("electronics")

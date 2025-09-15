@@ -28,10 +28,6 @@ local farm =
             recipe_name = "bioreserve-super-6", -- recipe name
             crop_output = 6                     -- crop yield
         },
-        {
-            recipe_name = "bioreserve-super-7", -- recipe name
-            crop_output = 7                     -- crop yield
-        },
     }
 }
 

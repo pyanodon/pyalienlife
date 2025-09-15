@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/phagnot.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02", "biotech-mk02"},
+    prerequisites = {"land-animals-mk01", "biotech-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -13,6 +13,7 @@ TECHNOLOGY {
             {"py-science-pack-1",       1},
             {"logistic-science-pack",   1},
             {"py-science-pack-2",       1},
+            {"chemical-science-pack",   1},
         },
         time = 50
     }
@@ -25,7 +26,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot"},
-    dependencies = {"phagnot"},
     effects = {},
     unit = {
         count = 250,
@@ -47,7 +47,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot-mk02"},
-    dependencies = {"phagnot-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -71,7 +70,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"phagnot-mk03"},
-    dependencies = {"phagnot-mk03"},
     effects = {},
     unit = {
         count = 350,

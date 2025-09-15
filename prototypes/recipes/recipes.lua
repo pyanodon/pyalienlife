@@ -247,7 +247,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-1", amount = 3},
     },
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 RECIPE {
     type = "recipe",
@@ -271,7 +271,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-2", amount = 18},
     },
-}:add_unlock("py-science-pack-mk02")
+}:add_unlock("py-science-pack-2")
 
 RECIPE {
     type = "recipe",
@@ -294,7 +294,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-3", amount = 3},
     },
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
@@ -317,7 +317,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-4", amount = 3},
     },
-}:add_unlock("py-science-pack-mk04")
+}:add_unlock("py-science-pack-4")
 
 RECIPE {
     type = "recipe",
@@ -1416,7 +1416,7 @@ RECIPE {
     results = {
         {type = "item", name = "stopper", amount = 4}
     }
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 RECIPE {
     type = "recipe",
@@ -2013,7 +2013,7 @@ RECIPE {
     results = {
         {type = "item", name = "perfect-samples", amount = 10},
     },
-}:add_unlock("py-science-pack-mk04")
+}:add_unlock("py-science-pack-4")
 
 RECIPE {
     type = "recipe",

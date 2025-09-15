@@ -26,8 +26,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/double-skin.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"defective-collagen", "reca"},
-    dependencies = {"defective-collagen"},
+    prerequisites = {"defective-collagen"},
     effects = {},
     unit = {
         count = 600,
