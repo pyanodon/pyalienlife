@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/rennea.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 150,
@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"rennea"},
-    dependencies = {"rennea"},
     effects = {},
     unit = {
         count = 200,
@@ -48,7 +47,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"rennea-mk02"},
-    dependencies = {"rennea-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -72,7 +70,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"rennea-mk03"},
-    dependencies = {"rennea-mk03"},
     effects = {},
     unit = {
         count = 300,

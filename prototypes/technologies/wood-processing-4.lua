@@ -5,7 +5,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03", "wood-processing-3"},
-    dependencies = {"wood-processing-3"},
     effects = {},
     unit = {
         count = 350,

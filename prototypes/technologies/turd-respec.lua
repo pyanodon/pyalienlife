@@ -42,7 +42,7 @@ for i = offset, #science_packs - 1 do
         name = "turd-partial-respec-" .. (i - offset + 1),
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/restart.png",
         icon_size = 128,
-        prerequisites = i ~= offset and {"turd-partial-respec-" .. (i - offset)} or {"ulric-upgrade"},
+        prerequisites = i ~= offset and {"turd-partial-respec-" .. (i - offset)} or {"fawogae-upgrade"},
         effects = {},
         unit = {
             count = 50,

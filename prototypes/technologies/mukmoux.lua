@@ -27,7 +27,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mukmoux"},
-    dependencies = {"mukmoux"},
     effects = {},
     unit = {
         count = 250,
@@ -49,7 +48,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mukmoux-mk02"},
-    dependencies = {"mukmoux-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -72,7 +70,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"mukmoux-mk03"},
-    dependencies = {"mukmoux-mk03"},
     effects = {},
     unit = {
         count = 350,

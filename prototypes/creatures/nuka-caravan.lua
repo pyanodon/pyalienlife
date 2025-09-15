@@ -45,7 +45,7 @@ local unit = {
     alert_icon_scale = 1,
     ai_settings = {do_separation = false},
     flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-    minable = {mining_time = 0.1, result = "nukavan"},
+    minable = {mining_time = 0.5, result = "nukavan"},
     max_health = 6125,
     map_color = {1, 1, 1},
     radar_range = 1,

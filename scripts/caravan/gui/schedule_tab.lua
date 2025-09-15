@@ -18,20 +18,6 @@ local function play_stop_button_info(caravan_data, schedule_id)
     end
 end
 
-local function label_info(caravan_data, schedule_id)
-    local schedule = caravan_data.schedule[schedule_id]
-
-    local tooltip = nil
-    if not schedule then return nil, nil end
-
-    if schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
-        return "train_schedule_unavailable_stop_label", {"caravan-gui.destination-unavailable"}
-    else
-        local style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
-        return style, nil
-    end
-end
-
 function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
     local tags = {schedule_id = schedule_id, unit_number = caravan_data.unit_number, action_list_type = Caravan.action_list_types.standard_schedule}
 
@@ -46,8 +32,8 @@ function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
     local button_sprite, button_style = play_stop_button_info(caravan_data, schedule_id)
     flow.add {type = "sprite-button", name = "py_caravan_destination_play_stop_button", style = button_style, sprite = button_sprite, tags = tags}
 
-    local label_style, label_tooltip = label_info(caravan_data, schedule_id)
-    local destination_label = flow.add {type = "label", style = label_style, name = "py_outpost_name", caption = caravan_data.schedule[schedule_id].localised_name, tooltip = label_tooltip, tags = tags}
+    local label_style, label_caption, label_tooltip = Utils.label_info(caravan_data.schedule[schedule_id])
+    local destination_label = flow.add {type = "label", style = label_style, name = "py_outpost_name", caption = label_caption, tooltip = label_tooltip, tags = tags}
     destination_label.style.left_padding = 5
     destination_label.style.horizontally_squashable = true
 

@@ -56,7 +56,7 @@ data:extend {{
     icon_size = 64,
     alert_icon_scale = 1,
     flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-    minable = {mining_time = 0.1, result = "caravan"},
+    minable = {mining_time = 0.5, result = "caravan"},
     max_health = 3125,
     order = "b-b-a",
     collision_mask = {layers = {caravan_collision_mask = true}, not_colliding_with_itself = true},

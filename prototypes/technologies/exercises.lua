@@ -24,8 +24,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/myostatin.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"exercises", "anabolic-rna"},
-    dependencies = {"exercises"},
+    prerequisites = {"exercises"},
     effects = {},
     unit = {
         count = 600,

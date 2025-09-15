@@ -24,7 +24,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia"},
+    prerequisites = {"ralesia"},
     effects = {},
     unit = {
         count = 150,
@@ -44,7 +44,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia-mk02"},
+    prerequisites = {"ralesia-mk02"},
     effects = {},
     unit = {
         count = 150,
@@ -66,7 +66,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/ralesia-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"ralesia-mk03"},
+    prerequisites = {"ralesia-mk03"},
     effects = {},
     unit = {
         count = 150,

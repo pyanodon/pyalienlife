@@ -4,8 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/vrauks-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk01"},
-    dependencies = {"sap-mk01"},
+    prerequisites = {"land-animals-mk01", "sap-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -23,7 +22,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks"},
-    dependencies = {"vrauks"},
     effects = {},
     unit = {
         count = 150,
@@ -42,7 +40,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk02"},
-    dependencies = {"vrauks-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -63,7 +60,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk03"},
-    dependencies = {"vrauks-mk03"},
     effects = {},
     unit = {
         count = 250,
@@ -86,7 +82,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vrauks-mk04"},
-    dependencies = {"vrauks-mk04"},
     effects = {},
     unit = {
         count = 250,

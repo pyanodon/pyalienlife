@@ -328,6 +328,72 @@ for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
     end
 end
 
+-- science pack order and subgroup
+data.raw.tool["py-science-pack-1"].subgroup = "science-pack"
+data.raw.tool["py-science-pack-2"].subgroup = "science-pack"
+data.raw.tool["py-science-pack-3"].subgroup = "science-pack"
+data.raw.tool["py-science-pack-4"].subgroup = "science-pack"
+data.raw.tool["automation-science-pack"].order = "a"
+data.raw.tool["py-science-pack-1"].order = "b"
+data.raw.tool["logistic-science-pack"].order = "c"
+data.raw.tool["military-science-pack"].order = "d"
+data.raw.tool["py-science-pack-2"].order = "e"
+data.raw.tool["chemical-science-pack"].order = "f"
+data.raw.tool["py-science-pack-3"].order = "g"
+data.raw.tool["production-science-pack"].order = "h"
+data.raw.tool["py-science-pack-4"].order = "i"
+data.raw.tool["utility-science-pack"].order = "j"
+data.raw.tool["space-science-pack"].order = "k"
+
+-- autotech settings
+if mods.autotech then
+    local config = data.raw["mod-data"]["autotech-config"].data
+
+    config.tech_cost_time_requirement["automation-science-pack"] = 30
+    config.tech_cost_time_requirement["py-science-pack-1"] = 45
+    config.tech_cost_time_requirement["logistic-science-pack"] = 60
+    config.tech_cost_time_requirement["military-science-pack"] = 90
+    config.tech_cost_time_requirement["py-science-pack-2"] = 90
+    config.tech_cost_time_requirement["chemical-science-pack"] = 120
+    config.tech_cost_time_requirement["py-science-pack-3"] = 180
+    config.tech_cost_time_requirement["production-science-pack"] = 300
+    config.tech_cost_time_requirement["py-science-pack-4"] = 450
+    config.tech_cost_time_requirement["utility-science-pack"] = 600
+    config.tech_cost_time_requirement["space-science-pack"] = 1200
+
+    config.tech_cost_science_pack_tiers["automation-science-pack"] = 1
+    config.tech_cost_science_pack_tiers["py-science-pack-1"] = 2
+    config.tech_cost_science_pack_tiers["logistic-science-pack"] = 3
+    config.tech_cost_science_pack_tiers["military-science-pack"] = 3
+    config.tech_cost_science_pack_tiers["py-science-pack-2"] = 4
+    config.tech_cost_science_pack_tiers["chemical-science-pack"] = 5
+    config.tech_cost_science_pack_tiers["py-science-pack-3"] = 6
+    config.tech_cost_science_pack_tiers["production-science-pack"] = 7
+    config.tech_cost_science_pack_tiers["py-science-pack-4"] = 8
+    config.tech_cost_science_pack_tiers["utility-science-pack"] = 9
+    config.tech_cost_science_pack_tiers["space-science-pack"] = 10
+
+    config.tech_cost_science_packs_per_tier = {1, 2, 3, 6, 10, 20, 30, 60, 100, 200}
+    config.tech_cost_additional_multipliers.pyrrhic = 2
+    config.tech_cost_starting_cost = 60
+    config.tech_cost_victory_cost = 4000
+    config.tech_cost_exponent = 2.5
+    config.victory_tech = "pyrrhic"
+
+    -- reduce early tree manual mining
+    config.tech_cost_additional_multipliers["coal-processing-1"] = 0.2
+    config.tech_cost_additional_multipliers["automation"] = 0.2
+    config.tech_cost_additional_multipliers["soil-washing"] = 0.3
+    config.tech_cost_additional_multipliers["steel-processing"] = 0.3
+    config.tech_cost_additional_multipliers["mining-with-fluid"] = 0.4
+    config.tech_cost_additional_multipliers["crusher"] = 0.4
+    config.tech_cost_additional_multipliers["concrete"] = 0.4
+    config.tech_cost_additional_multipliers["glass"] = 0.5
+    config.tech_cost_additional_multipliers["moss-mk01"] = 0.5
+    config.tech_cost_additional_multipliers["botany-mk01"] = 0.5
+    config.tech_cost_additional_multipliers["wood-processing"] = 0.5
+end
+
 if register_cache_file ~= nil then
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyindustry+pypetroleumhandling+pyrawores")
     register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pyhightech", "pypetroleumhandling", "pyalienlife"}, "__pyalienlife__/cached-configs/pyalienlife+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
