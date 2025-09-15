@@ -4,16 +4,16 @@ Date: ???
   Changes:
     - Remade tech tree with autotech 2.0. Science pack cost comparasion:
     - automation: n/a -> trigger
-    - py1: 100 -> 50
-    - logi: 360 -> 200
-    - py2: 1300 -> 750
-    - chem: 2000 -> 1300
-    - py3: 2250 -> 2000
-    - prod: 1750 -> 2750
-    - py4: 2250 -> 3600
-    - utility: 1500 -> 4000
-    - space: 1000 -> 4500
-    - phyrric: 3000 -> 10000
+    - py1: 100 -> 100
+    - logi: 360 -> 300
+    - py2: 1300 -> 800
+    - chem: 2000 -> 1400
+    - py3: 2250 -> 1750
+    - prod: 1750 -> 2250
+    - py4: 2250 -> 3000
+    - utility: 1500 -> 3300
+    - space: 1000 -> 3600
+    - phyrric: 3000 -> 8000
     - Caravans: allow copy-paste between different types (regular, flying, fluid).
     - Caravans: made edit interrupt GUI wider
     - Caravans: fixed condition item_count being nil sometimes
@@ -43,6 +43,7 @@ Date: ???
     - The first level of TURD respect infinite technology now depends on fawogae turd instead of ulric turd.
     - Added circuit connections to biocranes.
     - Enabled fast replace and upgrade planner for biocranes.
+    - Added new tier of worker robots speed. Resolves https://github.com/pyanodon/pybugreports/issues/608
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23
