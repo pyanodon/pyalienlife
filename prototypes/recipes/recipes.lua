@@ -2573,9 +2573,9 @@ RECIPE {
         {type = "fluid", name = "bio-oil", amount = 300},
     },
     results = {
-        {type = "fluid", name = "condensates",       amount = 150},
-        {type = "fluid", name = "low-distillate",    amount = 50},
-        {type = "fluid", name = "medium-distillate", amount = 50},
+        {type = "fluid", name = "condensates",       amount = 150, autotech_is_not_primary_source = true},
+        {type = "fluid", name = "low-distillate",    amount = 50, autotech_is_not_primary_source = true},
+        {type = "fluid", name = "medium-distillate", amount = 50, autotech_is_not_primary_source = true},
     },
     main_product = "condensates",
 }:add_unlock("light-oil-mk02")
