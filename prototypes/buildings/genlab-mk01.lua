@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {type = "item", name = "biofactory-mk01",    amount = 1},
         {type = "item", name = "plastic-bar",        amount = 20},
-        {type = "item", name = "py-tank-3000",       amount = 2},
+        {type = "item", name = "py-tank-15000",       amount = 2},
         {type = "item", name = "steel-plate",        amount = 15},
         {type = "item", name = "electronic-circuit", amount = 15},
         {type = "item", name = "glass",              amount = 50},

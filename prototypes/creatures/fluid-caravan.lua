@@ -12,7 +12,7 @@ RECIPE {
         {type = "item",  name = "moss-gen",             amount = 15},
         {type = "item",  name = "earth-generic-sample", amount = 1},
         {type = "fluid", name = "water-saline",         amount = 100},
-        {type = "item",  name = "py-tank-4000",         amount = 1},
+        {type = "item",  name = "py-tank-27500",         amount = 1},
         {type = "item",  name = "pump",                 amount = 2}
     },
     results = {{type = "item", name = "fluidavan", amount = 1}}
