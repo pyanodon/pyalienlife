@@ -337,7 +337,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
     end
 end)
 
-py.register_on_nth_tick(61, "update-caravans", "pyal", function()
+py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     local guis_to_update = {}
 
     if not storage.caravan_queue then
@@ -360,7 +360,7 @@ py.register_on_nth_tick(61, "update-caravans", "pyal", function()
 
         if needs_fuel then
             CaravanImpl.add_alert(entity, Caravan.alerts.no_fuel)
-            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 61, 61/2)
+            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 62, 31)
             goto continue
         end
 
