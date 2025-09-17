@@ -2,6 +2,7 @@
 Version: 3.0.60
 Date: ????
   Changes:
+    - Fixed Caravans not respecting "Enable Warning Icon Blinking" setting
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
 ---------------------------------------------------------------------------------------------------
