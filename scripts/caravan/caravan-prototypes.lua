@@ -289,7 +289,7 @@ local caravan_prototypes = {
     },
     fluidavan = {
         opens_player_inventory = true,
-        max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
+        max_volume = prototypes.entity["py-tank-27500"].fluid_capacity,
         fuel_size = 2,
         destructible = false,
         outpost = "outpost-fluid",
