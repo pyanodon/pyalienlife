@@ -7,8 +7,19 @@ Date: ???
     - New recipe for heating geothermal water.
     - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.60
+Date: ????
+  Changes:
+    - Fixed some techs having a too-fast cycle time
+    - Fixed all techs added by "enable all feature flags" not being seen by autotech.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.59
+Date: 2025-09-15
+  Changes:
+    - Fixed infinite research progress for worker robots speed getting reset.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.58
-Date: ???
+Date: 2025-09-15
   Changes:
     - Remade tech tree with autotech 2.0. Science pack cost comparasion:
     - automation: n/a -> trigger
