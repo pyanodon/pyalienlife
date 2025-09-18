@@ -74,7 +74,7 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "anti-lope",    probability = 0.5, amount = 1},
                 {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
             },
-            energy_required = 40,
+            energy_required = 4,
             subgroup = "py-alienlife-antelope",
             icon = "__pyalienlifegraphics__/graphics/icons/antelope.png",
             icon_size = 64
@@ -92,7 +92,7 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "neutra-lope",  amount = 2},
                 {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
             },
-            energy_required = 40,
+            energy_required = 4,
             subgroup = "py-alienlife-antelope",
             icon = "__pyalienlifegraphics3__/graphics/icons/anti-lope.png",
             icon_size = 64
@@ -111,7 +111,7 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "antelope",     amount = 1},
                 {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
             },
-            energy_required = 40,
+            energy_required = 4,
             subgroup = "py-alienlife-antelope",
             icon = "__pyalienlifegraphics3__/graphics/icons/pos-tilope.png",
             icon_size = 64
@@ -129,7 +129,7 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "pos-tilope",   amount = 1,        probability = 0.5},
                 {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
             },
-            energy_required = 40,
+            energy_required = 4,
             subgroup = "py-alienlife-antelope",
             icon = "__pyalienlifegraphics3__/graphics/icons/neutra-lope.png",
             icon_size = 64
