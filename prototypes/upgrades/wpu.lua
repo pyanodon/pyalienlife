@@ -51,7 +51,7 @@ if data and not yafc_turd_integration then
 
     for i = 1, 4 do
         local MODULE_SLOTS = 3 * i
-        local FULL_CRAFTING_SPEED = 1
+        local FULL_CRAFTING_SPEED = 0.25
 
         ITEM {
             type = "module",

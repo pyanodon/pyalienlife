@@ -9,6 +9,7 @@ Date: ???
     - TURD: Nerfed fwf path 2 from 2x to 1.75x.
     - TURD: Increased speed of antelope -> quantum dots folding by 10x.
     - TURD: Nerfed auog turd productivity from 35% to 25%.
+    - TURD: Nerfed machine full of WPU sawblades speed from 100% to 25%.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: ????
