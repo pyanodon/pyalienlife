@@ -38,7 +38,7 @@ if data and not yafc_turd_integration then
             results = {
                 {name = "navens",            type = "item",  amount_min = 13, amount_max = 16},
                 {name = "muddy-sludge", type = "fluid", amount = 10},
-                {type = "item",              name = "guts",  amount = 1}
+                {type = "item",              name = "brain",  amount = 1}
             },
             enabled = false,
             icon = "__pyalienlifegraphics__/graphics/icons/rendering-abomination.png",

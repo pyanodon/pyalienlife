@@ -10,6 +10,7 @@ Date: ???
     - TURD: Increased speed of antelope -> quantum dots folding by 10x.
     - TURD: Nerfed auog turd productivity from 35% to 25%.
     - TURD: Nerfed machine full of WPU sawblades speed from 100% to 25%.
+    - TURD: Slaughtering navens abomination now grants +1 brain instead of +1 guts.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: ????
