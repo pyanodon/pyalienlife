@@ -8,6 +8,7 @@ Date: ???
     - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01.
     - TURD: Nerfed fwf path 2 from 2x to 1.75x.
     - TURD: Increased speed of antelope -> quantum dots folding by 10x.
+    - TURD: Nerfed auog turd productivity from 35% to 25%.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: ????

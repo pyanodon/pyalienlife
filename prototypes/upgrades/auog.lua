@@ -120,7 +120,7 @@ return {
             icon_size = 128,
             order = "c-a",
             effects = { -- the effects the tech will have on the building. valid types: 'module-effects', 'unlock-recipe', 'recipe-replacement', 'machine-replacement'
-                {consumption = 3,           productivity = 0.35,                 type = "module-effects"},
+                {consumption = 3,           productivity = 0.2,                 type = "module-effects"},
                 {old = "auog-paddock-mk01", new = "auog-paddock-mk01-with-dirt", type = "recipe-replacement"},
                 {old = "auog-paddock-mk02", new = "auog-paddock-mk02-with-dirt", type = "recipe-replacement"},
                 {old = "auog-paddock-mk03", new = "auog-paddock-mk03-with-dirt", type = "recipe-replacement"},
