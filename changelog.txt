@@ -5,7 +5,8 @@ Date: ???
     - Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
     - New recipe to convert bonemeal into geothermal water.
     - New recipe for heating geothermal water.
-    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
+    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01.
+    - Nerfed fwf path 2 from 2x to 1.75x.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: ????

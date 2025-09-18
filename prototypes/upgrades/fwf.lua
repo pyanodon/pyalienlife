@@ -43,7 +43,7 @@ if data and not yafc_turd_integration then
 
     local wood_fast = RECIPE("log-wood"):copy()
     wood_fast.name = "log-wood-fast"
-    wood_fast:multiply_result_amount("wood", 2)
+    wood_fast:multiply_result_amount("wood", 1.75)
     wood_fast.energy_required = 1
     wood_fast.enabled = false
     data:extend {wood_fast}
