@@ -21,7 +21,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "auog",         amount = 1, probability = 0.7},
-        {type = "item", name = "charged-auog", amount = 1, probability = 0.1},
+        {type = "item", name = "charged-auog", amount = 1, probability = 0.1,  autotech_always_available = true},
         {type = "item", name = "auog-mk02",    amount = 1, probability = 0.005},
     },
     --main_product = "auog-mk02",
@@ -145,7 +145,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "auog-mk02",    amount = 1, probability = 0.7},
-        {type = "item", name = "charged-auog", amount = 1, probability = 0.1},
+        {type = "item", name = "charged-auog", amount = 1, probability = 0.1,  autotech_always_available = true},
         {type = "item", name = "auog-mk03",    amount = 1, probability = 0.005},
     },
     --main_product = "auog-mk02",
@@ -238,7 +238,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "auog-mk03",    amount = 1, probability = 0.7},
-        {type = "item", name = "charged-auog", amount = 1, probability = 0.1},
+        {type = "item", name = "charged-auog", amount = 1, probability = 0.1,  autotech_always_available = true},
         {type = "item", name = "auog-mk04",    amount = 1, probability = 0.005},
     },
     --main_product = "auog-mk02",
