@@ -2,10 +2,13 @@
 Version: 3.0.60
 Date: ????
   Changes:
-    - Fixed Caravans not respecting "Enable Warning Icon Blinking" setting
+    - Caravans: warnings now respect "Enable Warning Icon Blinking" setting
+    - Caravans: fixed desync from accidental global variable
+    - Caravans: fixed "destination removed" warning
     - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
+    - Fixed some issues with incorrectly replacing ghosts of T.U.R.D. buildings. Fixes https://github.com/pyanodon/pybugreports/issues/1212
     - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
     - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
 ---------------------------------------------------------------------------------------------------
