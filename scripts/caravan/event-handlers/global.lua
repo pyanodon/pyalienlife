@@ -298,6 +298,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if status == defines.behavior_result.in_progress then return end
     if status == defines.behavior_result.fail or status == defines.behavior_result.deleted then
+        -- if the target has been deleted, it will throw the error after 10 seconds when the schedule is re-ran
         caravan_data.retry_pathfinder = 10
         caravan_data.action_id = -1
         return
@@ -367,8 +368,8 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         if caravan_data.retry_pathfinder then
             caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
             if caravan_data.retry_pathfinder == 0 then
-                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
                 caravan_data.retry_pathfinder = nil
+                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
             end
             goto continue
         end
