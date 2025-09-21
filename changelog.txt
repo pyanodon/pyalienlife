@@ -6,6 +6,7 @@ Date: ????
     - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
+    - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.59
 Date: 2025-09-15
