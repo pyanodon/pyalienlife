@@ -7,6 +7,7 @@ Date: ????
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
     - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
+    - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.59
 Date: 2025-09-15
