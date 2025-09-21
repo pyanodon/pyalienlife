@@ -1,7 +1,7 @@
 ITEM("automation-science-pack", "tool"):set("icon", "__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
 
 
-TECHNOLOGY("wood-processing"):set_fields {dependencies = {"moss-mk01"}}
+TECHNOLOGY("wood-processing"):set_fields {prerequisites = {"moss-mk01"}}
 TECHNOLOGY("cooling-tower-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("energy-1"):add_pack("py-science-pack-1")
 TECHNOLOGY("py-burner"):add_pack("py-science-pack-1")
@@ -33,7 +33,7 @@ if data.raw.technology["railway-mk03"] then TECHNOLOGY("railway-mk03"):add_pack(
 TECHNOLOGY("filtration-mk02"):add_pack("py-science-pack-3")
 TECHNOLOGY("methanol-processing-2"):add_pack("py-science-pack-3")
 
-TECHNOLOGY("electric-energy-accumulators"):set_fields {prerequisites = {}}:set_fields {dependencies = {}}:add_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
+TECHNOLOGY("electric-energy-accumulators"):set_fields {prerequisites = {}}:add_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
 
 RECIPE("accumulator"):remove_ingredient("battery"):add_ingredient {type = "item", name = "battery", amount = 30}
 
@@ -109,7 +109,7 @@ RECIPE("flask"):remove_ingredient("wood"):add_ingredient {type = "item", name = 
 RECIPE("hotair-flask"):remove_ingredient("wood"):add_ingredient {type = "item", name = "stopper", amount = 4}:remove_ingredient("molten-glass"):add_ingredient {type = "fluid", name = "molten-glass", amount = 100, fluidbox_index = 2}
 RECIPE("aromatics-to-plastic"):remove_ingredient("aromatics"):add_ingredient {type = "fluid", name = "aromatics", amount = 50}:remove_ingredient("syngas"):add_ingredient {type = "fluid", name = "syngas", amount = 100}.category = "biofactory"
 RECIPE("oil-refinery"):remove_unlock("plastics")
-RECIPE("flask"):add_unlock("py-science-pack-mk01").enabled = false
+RECIPE("flask"):add_unlock("py-science-pack-1").enabled = false
 
 RECIPE("mukmoux-fat"):remove_unlock("mukmoux")
 RECIPE("log-organics"):remove_unlock("wood-processing-2"):delete()

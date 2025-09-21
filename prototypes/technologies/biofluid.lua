@@ -4,8 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/robooport-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"genetics-mk04"},
-    dependencies = {"genetics-mk04"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 100,
@@ -27,7 +26,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biofluid-mk01"},
-    dependencies = {"biofluid-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -50,7 +48,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"biofluid-mk02"},
-    dependencies = {"biofluid-mk02"},
     effects = {},
     unit = {
         count = 200,

@@ -523,7 +523,7 @@ for i, item in pairs(biomass_convertion) do
         category = "compost",
         enabled = false,
         hide_from_player_crafting = true,
-        ignore_for_dependencies = true,
+        autotech_always_available = true,
         hidden_in_factoriopedia = false,
         hidden = false,
         energy_required = 3,

@@ -93,10 +93,10 @@ TECHNOLOGY("antitumor"):add_prereq("earnshaw-theorem")
 -- TECHNOLOGY('penrose'):add_pack('py-science-pack-3')
 -- TECHNOLOGY('quantum'):add_pack('py-science-pack-3')
 
-TECHNOLOGY("electronics"):set_fields {dependencies = {"sap-mk01"}}
+TECHNOLOGY("electronics"):set_fields {prerequisites = {"sap-mk01"}}
 
 if not mods["omnimatter"] then
-    TECHNOLOGY("syngas"):set_fields {dependencies = {"electronics"}}
+    TECHNOLOGY("syngas"):set_fields {prerequisites = {"electronics"}}
 end
 
 --RECIPES--
@@ -471,8 +471,6 @@ RECIPE("ralesia-extract"):remove_unlock("zno-nanoparticles"):add_unlock("ralesia
 
 RECIPE("simik-food-01"):add_ingredient {type = "item", name = "cadaveric-arum", amount = 2}
 RECIPE("simik-food-02"):add_ingredient {type = "item", name = "cadaveric-arum", amount = 2}
-RECIPE("simik-food-01a"):replace_ingredient("gravel", "phosphate-rock")
-RECIPE("simik-food-02a"):replace_ingredient("gravel", "phosphate-rock")
 
 RECIPE("centrifuge"):add_unlock("filtration")
 RECIPE("stone-wool"):add_unlock("zipir")

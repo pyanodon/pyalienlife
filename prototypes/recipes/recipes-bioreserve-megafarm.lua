@@ -108,25 +108,3 @@ RECIPE {
         {type = "item", name = "native-flora", amount = tile_count * 6},
     },
 }:add_unlock("mega-farm-bioreserve")
-
-RECIPE {
-    type = "recipe",
-    name = "bioreserve-super-7",
-    category = "bioreserve-farm",
-    enabled = false,
-    energy_required = 60,
-    ingredients = {
-        {type = "fluid", name = "water",           amount = 10000},
-        {type = "item",  name = "soil",            amount = 1000},
-        {type = "item",  name = "bio-sample",      amount = 2},
-        {type = "item",  name = "stone",           amount = 1500},
-        {type = "item",  name = "alien-sample-02", amount = 5},
-        {type = "item",  name = "fertilizer",      amount = 150},
-        {type = "item",  name = "coarse",          amount = 100},
-        {type = "item",  name = "gh",              amount = 3},
-    },
-    results = {
-        {type = "item", name = "native-flora", amount = tile_count * 7},
-    },
-    ignore_for_dependencies = true,
-} --:add_unlock("mega-farm-bioreserve")

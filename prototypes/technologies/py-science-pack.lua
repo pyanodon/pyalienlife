@@ -1,6 +1,6 @@
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk01",
+    name = "py-science-pack-1",
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk01.png",
     icon_size = 128,
     order = "c-a",
@@ -11,16 +11,17 @@ TECHNOLOGY {
             {"automation-science-pack", 1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
 
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk02",
+    name = "py-science-pack-2",
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"py-science-pack-mk01"},
+    prerequisites = {"py-science-pack-1"},
     effects = {},
     unit = {
         count = 150,
@@ -29,16 +30,17 @@ TECHNOLOGY {
             {"logistic-science-pack",   1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
 
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk03",
+    name = "py-science-pack-3",
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"py-science-pack-mk02"},
+    prerequisites = {"py-science-pack-2"},
     effects = {},
     unit = {
         count = 150,
@@ -50,16 +52,17 @@ TECHNOLOGY {
             {"chemical-science-pack",   1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }
 
 TECHNOLOGY {
     type = "technology",
-    name = "py-science-pack-mk04",
+    name = "py-science-pack-4",
     icon = "__pyalienlifegraphics2__/graphics/technology/py-science-pack-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"py-science-pack-mk03"},
+    prerequisites = {"py-science-pack-3"},
     effects = {},
     unit = {
         count = 150,
@@ -74,5 +77,6 @@ TECHNOLOGY {
             {"production-science-pack", 1},
         },
         time = 50
-    }
+    },
+    show_levels_info = false
 }

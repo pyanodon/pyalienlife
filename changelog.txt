@@ -1,7 +1,34 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.58
-Date: ???
+Version: 3.0.60
+Date: ????
   Changes:
+    - Fixed Caravans not respecting "Enable Warning Icon Blinking" setting
+    - Updated Simplified Chinese locale courtesy of @alone on Discord
+    - Fixed some techs having a too-fast cycle time
+    - Fixed all techs added by "enable all feature flags" not being seen by autotech.
+    - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
+    - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.59
+Date: 2025-09-15
+  Changes:
+    - Fixed infinite research progress for worker robots speed getting reset.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.58
+Date: 2025-09-15
+  Changes:
+    - Remade tech tree with autotech 2.0. Science pack cost comparasion:
+    - automation: n/a -> trigger
+    - py1: 100 -> 100
+    - logi: 360 -> 300
+    - py2: 1300 -> 800
+    - chem: 2000 -> 1400
+    - py3: 2250 -> 1750
+    - prod: 1750 -> 2250
+    - py4: 2250 -> 3000
+    - utility: 1500 -> 3300
+    - space: 1000 -> 3600
+    - phyrric: 3000 -> 8000
     - Caravans: allow copy-paste between different types (regular, flying, fluid).
     - Caravans: made edit interrupt GUI wider
     - Caravans: fixed condition item_count being nil sometimes
@@ -23,12 +50,15 @@ Date: ???
     - Caravans: fixed wait times of 0 lasting forever
     - Caravans: fixed crash when opening caravan GUI from a controller with no inventory (e.g. editor's map view)
     - Caravans: added delete button to edit interrupt GUI
-    - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
+    - Caravans: allow ctrl+clicking up/down arrows to send to top or bottom of schedule
     - Phagnot food recipe unlocked via Healthy rumination TURD now accepts productivity
     - Added Dutch locale
     - Fixed that building a T.U.R.D. building also placed an item on the ground inside the hitbox
+    - Removed `simik-food-01a` and `simik-food-02a` unused recipes.
+    - The first level of TURD respect infinite technology now depends on fawogae turd instead of ulric turd.
     - Added circuit connections to biocranes.
     - Enabled fast replace and upgrade planner for biocranes.
+    - Added new tier of worker robots speed. Resolves https://github.com/pyanodon/pybugreports/issues/608
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.57
 Date: 2025-08-23

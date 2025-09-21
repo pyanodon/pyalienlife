@@ -29,18 +29,20 @@ end
 gui_events[defines.events.on_gui_click]["py_caravan_destination_move_up_button"] = function(event)
     local unit_number = event.element.tags.unit_number
     local caravan_data = storage.caravans[unit_number]
-    local i = event.element.tags.schedule_id
 
-    if i == 1 then return end
+    local old_index = event.element.tags.schedule_id
+    local new_index = event.control and 1 or old_index - 1
 
-    caravan_data.schedule[i - 1], caravan_data.schedule[i] = caravan_data.schedule[i], caravan_data.schedule[i - 1]
+    if old_index == 1 then return end
+
+    caravan_data.schedule[new_index], caravan_data.schedule[old_index] = caravan_data.schedule[old_index], caravan_data.schedule[new_index]
 
     if caravan_data.schedule_id == -1 then
         CaravanImpl.stop_actions(caravan_data)
-    elseif caravan_data.schedule_id == i then
-        caravan_data.schedule_id = i - 1
-    elseif caravan_data.schedule_id == i - 1 then
-        caravan_data.schedule_id = i
+    elseif caravan_data.schedule_id == old_index then
+        caravan_data.schedule_id = new_index
+    elseif caravan_data.schedule_id == new_index then
+        caravan_data.schedule_id = old_index
     end
 
     local player = game.get_player(event.player_index)
@@ -50,18 +52,20 @@ end
 gui_events[defines.events.on_gui_click]["py_caravan_destination_move_down_button"] = function(event)
     local unit_number = event.element.tags.unit_number
     local caravan_data = storage.caravans[unit_number]
-    local i = event.element.tags.schedule_id
 
-    if i == #caravan_data.schedule then return end
+    local old_index = event.element.tags.schedule_id
+    local new_index = event.control and #caravan_data.schedule or old_index + 1
 
-    caravan_data.schedule[i + 1], caravan_data.schedule[i] = caravan_data.schedule[i], caravan_data.schedule[i + 1]
+    if old_index == #caravan_data.schedule then return end
+
+    caravan_data.schedule[new_index], caravan_data.schedule[old_index] = caravan_data.schedule[old_index], caravan_data.schedule[new_index]
 
     if caravan_data.schedule_id == -1 then
         CaravanImpl.stop_actions(caravan_data)
-    elseif caravan_data.schedule_id == i then
-        caravan_data.schedule_id = i + 1
-    elseif caravan_data.schedule_id == i + 1 then
-        caravan_data.schedule_id = i
+    elseif caravan_data.schedule_id == old_index then
+        caravan_data.schedule_id = new_index
+    elseif caravan_data.schedule_id == new_index then
+        caravan_data.schedule_id = old_index
     end
 
     local player = game.get_player(event.player_index)
