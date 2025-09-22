@@ -742,8 +742,8 @@ local on_turd_built = function(event)
     local force_replacements = storage.turd_machine_replacements[force_index] or {} -- replacements that apply to this force
     if force_replacements[name] then
         machine_replacement(name, force_replacements[name], {entity})
-    elseif base_variant and not force_replacements[base_variant] and name == entity.name then -- is a turd building but not unlocked and not a ghost, should be replaced with normal building
-        machine_replacement(name, turd_machines[name], {entity})
+    elseif base_variant and not force_replacements[base_variant] then -- is a turd building but not unlocked, should be replaced with normal building
+        machine_replacement(name, base_variant, {entity})
     end
 
     if entity.valid and bhoddos_lib.cultures[entity.name] then
