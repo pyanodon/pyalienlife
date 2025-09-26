@@ -142,8 +142,8 @@ local function parse_math_expr(expr, vars)
     end)
 
     if ok and type(result) == "number" then
-        -- Floor the result to avoid fractions in item counts or time
-        result = math.floor(result)
+        -- handle natural rounding
+        result = math.floor(result + 0.5)
 
         return result
     else
@@ -164,17 +164,6 @@ local function on_confirmed(event)
 
         local slider = textfield.parent[prefix .. "_slider"]
         if slider and slider.valid then
-            -- clamp to slider bounds if present
-
-            -- TODO: Try to get the bounds from tags saved at creation
-            local min_v = 0
-            local max_v = 50000 
-            
-            if min_v and max_v then
-                parsed_value = math.max(min_v, math.min(max_v, parsed_value))
-                -- lets also update the textfield to reflect clamping
-                textfield.text = tostring(parsed_value)
-            end
             slider.slider_value = parsed_value
         end
 
@@ -191,13 +180,11 @@ local function on_confirmed(event)
     end
 
     -- keep slider in sync after setting the action value 
-    do
-        local frame = player.gui.screen[prefix .. "_frame"]
-        if frame and frame.valid then
-            local slider = frame[prefix .. "_slider"]
-            if slider and slider.valid then
-                slider.slider_value = value
-            end
+    local frame = player.gui.screen[prefix .. "_frame"]
+    if frame and frame.valid then
+        local slider = frame[prefix .. "_slider"]
+        if slider and slider.valid then
+            slider.slider_value = value
         end
     end
 
