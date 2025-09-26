@@ -210,17 +210,17 @@ Caravan.valid_actions = {
         "is-inventory-empty",
         "caravan-item-count",
         "target-item-count",
+        "outpost-item-count",
         "is-tank-full",
         "is-tank-empty",
         "caravan-fluid-count",
         "target-fluid-count",
+        "outpost-fluid-count",
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
-        "outpost-item-count",
-        "outpost-fluid-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
