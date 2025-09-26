@@ -123,6 +123,7 @@ function P.render_altmode_icon(caravan_data)
         target = caravan_data.entity,
         target_offset = target_offset,
         surface = caravan_data.entity.surface,
+        render_layer = "wires-above",
         only_in_alt_mode = true,
         x_scale = 0.9,
         y_scale = 0.9
@@ -132,6 +133,7 @@ function P.render_altmode_icon(caravan_data)
         target = caravan_data.entity,
         target_offset = target_offset,
         surface = caravan_data.entity.surface,
+        render_layer = "wires-above",
         only_in_alt_mode = true,
         x_scale = 1.2,
         y_scale = 1.2
