@@ -67,12 +67,7 @@ end
 local function update_action_value(event, button)
     local tags = event.element.tags
     local textfield = event.element.parent[prefix .. "_text_field"]
-    local user_input = textfield.text
-
-    local value = parse_math_expr(user_input)
-    if not value then
-        return
-    end
+    local value = tonumber(textfield.text) or 0
 
     local action = Utils.get_action_from_button(event.element)
 
