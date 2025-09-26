@@ -19,7 +19,7 @@ L.count_format_value = function(v) return util.format_number(v, true) end
 local function destroy_slider_frame(event)
     local player = game.get_player(event.player_index)
 
-    if player.gui.screen[prefix .. "_frame"] then
+    if player.gui.screen[prefix .. "_frame"] then 
         player.gui.screen[prefix .. "_frame"].destroy()
     end
 end
@@ -93,7 +93,7 @@ py.on_event(defines.events.on_gui_click, function (event)
 
     local player = game.get_player(event.player_index)
 
-    local slider_frame = player.gui.screen[prefix .. "_frame"]
+    local slider_frame = player.gui.screen[prefix .. "_frame"] 
     if not slider_frame then return end
 
     if not Utils.is_child_of(event.element, slider_frame, 3) then
