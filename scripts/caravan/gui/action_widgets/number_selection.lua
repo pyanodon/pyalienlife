@@ -16,6 +16,31 @@ function L.count_slider_default_value() return 0 end
 function L.count_slider_value_step() return 10 end
 L.count_format_value = function(v) return util.format_number(v, true) end
 
+local expression_variables = {k=1000, K=1000, m=1000000, M=1000000, g=1000000000, G=1000000000}
+
+
+--- Parses a mathematical expression using MathExp library with predefined variables.
+--- @param expr string
+--- @param vars { [string]: number }?
+--- @return number?
+local function parse_math_expr(expr, vars)
+    if not expr or expr == "" then return nil end
+
+    local ok, result = pcall(function()
+        return helpers.evaluate_expression(expr, vars or expression_variables)
+    end)
+
+    if ok and type(result) == "number" then
+        -- Floor the result to avoid fractions in item counts or time
+        result = math.floor(result)
+
+        return result
+    else
+        return nil
+    end
+end
+
+
 local function destroy_slider_frame(event)
     local player = game.get_player(event.player_index)
 
@@ -61,13 +86,25 @@ local function update_slider(event)
     local textfield = event.element
     local slider = textfield.parent[prefix .. "_slider"]
 
-    slider.slider_value = math.max(tonumber(textfield.text) or 0, 0)
+    local user_input = textfield.text
+    local value = parse_math_expr(user_input)
+    if not value then
+        return
+    end
+
+    slider.slider_value = math.max(value, 0)
+    textfield.text = tostring(slider.slider_value)
 end
 
 local function update_action_value(event, button)
     local tags = event.element.tags
     local textfield = event.element.parent[prefix .. "_text_field"]
-    local value = tonumber(textfield.text) or 0
+    local user_input = textfield.text
+
+    local value = parse_math_expr(user_input)
+    if not value then
+        return
+    end
 
     local action = Utils.get_action_from_button(event.element)
 

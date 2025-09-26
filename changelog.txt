@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
+    - Enhanced caravan number input to handle MathExp and large numbers better.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.59
 Date: 2025-09-15
