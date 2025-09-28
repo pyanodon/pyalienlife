@@ -163,7 +163,7 @@ local function on_confirmed(event)
         textfield.text = tostring(parsed_value)
 
         local slider = textfield.parent[prefix .. "_slider"]
-        if slider and slider.valid then
+        if slider then
             slider.slider_value = parsed_value
         end
 
@@ -181,9 +181,9 @@ local function on_confirmed(event)
 
     -- keep slider in sync after setting the action value 
     local frame = player.gui.screen[prefix .. "_frame"]
-    if frame and frame.valid then
+    if frame then
         local slider = frame[prefix .. "_slider"]
-        if slider and slider.valid then
+        if slider then
             slider.slider_value = value
         end
     end
