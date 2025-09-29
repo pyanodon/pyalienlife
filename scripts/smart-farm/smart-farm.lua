@@ -26,9 +26,13 @@ end)
 ---This function sets the "autolaunch" checkbox on the rocket silo gui.
 ---This parameter is not exposed directly on `LuaEntity`.
 ---The workaround is to place a blueprint since the property is exposed on the blueprint string.
----@param rocket_silo_data RocketSiloData
+---@param rocket_silo_data EventData
 local function enable_autolaunch(rocket_silo_data)
     local entity = rocket_silo_data.entity
+    local erecipe = entity.get_recipe()
+    if erecipe ~= nil then
+        erecipe = erecipe.name
+    end
     local inventory = game.create_inventory(1)
     inventory.insert {name = "blueprint"}
     local stack = inventory[1]
@@ -41,6 +45,8 @@ local function enable_autolaunch(rocket_silo_data)
     stack.set_blueprint_entities {{
         entity_number = 1,
         name = entity.name,
+        recipe = erecipe,
+        control_behavior = entity.get_control_behavior(),
         position = {
             x = 0,
             y = 0
