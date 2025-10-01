@@ -8,6 +8,7 @@ Date: ????
     - Caravans: fixed constant UI refreshes when destination is invalid
     - Caravans: add setting for camera return behavior
     - Caravans: sorted conditions more logically
+    - Caravans: allow pipette to select food from empty food slots
     - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
