@@ -36,8 +36,7 @@ local function on_add_interrupt_confirmed(event)
         player.gui.screen.add_interrupt_gui.destroy()
     end
     CaravanScheduleGui.update_schedule_pane(player)
-    local edit_interrupt_gui = EditInterruptGui.build(player.gui.screen, storage.interrupts[name])
-    CaravanUtils.restore_gui_location(edit_interrupt_gui, window_location)
+    -- used to open the edit screen here but it annoyed players
 end
 
 local function on_edit_interrupt_confirmed(event)
