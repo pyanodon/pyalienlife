@@ -5,6 +5,9 @@ Date: ????
     - Caravans: warnings now respect "Enable Warning Icon Blinking" setting
     - Caravans: fixed desync from accidental global variable
     - Caravans: fixed "destination removed" warning
+    - Caravans: fixed constant UI refreshes when destination is invalid
+    - Caravans: add setting for camera return behavior
+    - Caravans: sorted conditions more logically
     - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Fixed some techs having a too-fast cycle time
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
