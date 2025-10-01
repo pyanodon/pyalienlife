@@ -425,14 +425,8 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             goto continue
         end
 
-        local caravan_data = storage.caravans[gui.tags.unit_number]
-
-        for _, schedule in pairs(caravan_data.schedule) do
-            if schedule.entity and not schedule.entity.valid then
-                CaravanGui.update_gui(player)
-                goto continue
-            end
-        end
+        -- used to refresh the schedule here every update if the target entity is invalid
+        -- if this removal causes trouble we need a better way to handle it
 
         ::continue::
     end
