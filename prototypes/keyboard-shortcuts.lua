@@ -11,4 +11,11 @@ data:extend{
         key_sequence = "CONTROL + ALT + T",
         order = "b"
     },
+    {
+        type = "custom-input",
+        name = "py_caravan_pipette",
+        linked_game_control = "pipette",
+        key_sequence = "",
+        include_selected_prototype = true
+    }
 }
