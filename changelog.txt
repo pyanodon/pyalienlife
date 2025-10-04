@@ -2,6 +2,7 @@
 Version: 4.0.0
 Date: ???
   Changes:
+    - Linearilized Dependencies.
     - Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
     - New recipe to convert bonemeal into geothermal water.
     - New recipe for heating geothermal water.
