@@ -18,20 +18,6 @@ local function play_stop_button_info(caravan_data, schedule_id)
     end
 end
 
-local function label_info(caravan_data, schedule_id)
-    local schedule = caravan_data.schedule[schedule_id]
-
-    local tooltip = nil
-    if not schedule then return nil, nil end
-
-    if schedule.entity and (not schedule.entity.valid or schedule.entity.surface ~= caravan_data.entity.surface) then
-        return "train_schedule_unavailable_stop_label", {"caravan-gui.destination-unavailable"}
-    else
-        local style = schedule.temporary and "black_squashable_label" or "clickable_squashable_label"
-        return style, nil
-    end
-end
-
 function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
     local tags = {schedule_id = schedule_id, unit_number = caravan_data.unit_number, action_list_type = Caravan.action_list_types.standard_schedule}
 
@@ -46,8 +32,8 @@ function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
     local button_sprite, button_style = play_stop_button_info(caravan_data, schedule_id)
     flow.add {type = "sprite-button", name = "py_caravan_destination_play_stop_button", style = button_style, sprite = button_sprite, tags = tags}
 
-    local label_style, label_tooltip = label_info(caravan_data, schedule_id)
-    local destination_label = flow.add {type = "label", style = label_style, name = "py_outpost_name", caption = caravan_data.schedule[schedule_id].localised_name, tooltip = label_tooltip, tags = tags}
+    local label_style, label_caption, label_tooltip = Utils.label_info(caravan_data.schedule[schedule_id])
+    local destination_label = flow.add {type = "label", style = label_style, name = "py_outpost_name", caption = label_caption, tooltip = label_tooltip, tags = tags}
     destination_label.style.left_padding = 5
     destination_label.style.horizontally_squashable = true
 
@@ -94,7 +80,7 @@ function P.build_schedule_list(parent, caravan_data)
         P.build_action_list(flow, i, caravan_data)
     end
 
-    parent.add {type = "button", name = "py_caravan_destination_add_button", style = "train_schedule_add_station_button", caption = "+ Add outpost", tags = {unit_number = caravan_data.unit_number}}
+    parent.add {type = "button", name = "py_caravan_destination_add_button", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-outpost"}, tags = {unit_number = caravan_data.unit_number}}
 end
 
 function P.build_interrupt_frame(parent, caravan_interrupt_index, caravan_data)
@@ -121,13 +107,13 @@ function P.build_interrupt_list(parent, caravan_data)
     local frame = parent.add {type = "frame", direction = "horizontal", style = "train_schedule_station_frame"}
     frame.style.horizontally_stretchable = true
 
-    frame.add {type = "label", style = "subheader_semibold_label", caption = "Interrupts", tooltip = "Interrupts are conditions that can be added to schedules. Their configuration is shared globally between all caravans."}
+    frame.add {type = "label", style = "subheader_semibold_label", caption = {"caravan-gui.interrupt-header-label"}, tooltip = {"caravan-gui.interrupt-header-tooltip"}}
     for i = 1, #caravan_data.interrupts do
         local flow = parent.add {type = "flow", direction = "vertical"}
 
         P.build_interrupt_frame(flow, i, caravan_data)
     end
-    parent.add {type = "button", name = "py_caravan_interrupt_add_button", style = "train_schedule_add_station_button", caption = "+ Add interrupt", tags = {unit_number = caravan_data.unit_number}}
+    parent.add {type = "button", name = "py_caravan_interrupt_add_button", style = "train_schedule_add_station_button", caption = {"caravan-gui.add-interrupt"}, tags = {unit_number = caravan_data.unit_number}}
 end
 
 function P.build_schedule_flow(parent, caravan_data)

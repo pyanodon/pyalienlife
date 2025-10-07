@@ -20,7 +20,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cellulose-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cellulose-mk01"},
+    prerequisites = {"cellulose-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -40,7 +40,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cellulose-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cellulose-mk02"},
+    prerequisites = {"cellulose-mk02"},
     effects = {},
     unit = {
         count = 150,

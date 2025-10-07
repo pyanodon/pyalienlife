@@ -1,0 +1,20 @@
+{
+    "technology": [
+        [
+            "py-science-pack-mk01",
+            "py-science-pack-1"
+        ],
+        [
+            "py-science-pack-mk02",
+            "py-science-pack-2"
+        ],
+        [
+            "py-science-pack-mk03",
+            "py-science-pack-3"
+        ],
+        [
+            "py-science-pack-mk04",
+            "py-science-pack-4"
+        ]
+    ]
+}

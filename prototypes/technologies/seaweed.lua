@@ -20,7 +20,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"seaweed-mk01"},
+    prerequisites = {"seaweed-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -39,7 +39,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"seaweed-mk02"},
+    prerequisites = {"seaweed-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -59,7 +59,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"seaweed-mk03"},
+    prerequisites = {"seaweed-mk03"},
     effects = {},
     unit = {
         count = 350,
@@ -81,7 +81,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/seaweed-mk05.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"seaweed-mk04"},
+    prerequisites = {"seaweed-mk04"},
     effects = {},
     unit = {
         count = 350,

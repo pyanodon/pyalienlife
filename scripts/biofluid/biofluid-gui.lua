@@ -55,7 +55,7 @@ function Biofluid.update_bioport_gui(player, gui)
         element.tags = tags
     end
 
-    local inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
+    local inventory = entity.get_inventory(defines.inventory.crafter_input) --[[@as LuaInventory]]
     local contents = inventory.get_contents()
     local i = 1
     local j = 1
@@ -87,7 +87,7 @@ function Biofluid.update_bioport_gui(player, gui)
     if i == 1 then fuel_flow["py_biofluid_food_1"].visible = true end
 
     entity.set_recipe("bioport-hidden-recipe", "normal")
-    local slot = entity.get_inventory(defines.inventory.assembling_machine_output)[1]
+    local slot = entity.get_inventory(defines.inventory.crafter_output)[1]
     local element = fuel_flow["py_guano_output"]
     element.number = slot.valid_for_read and slot.count or 0
 
@@ -366,7 +366,7 @@ function Biofluid.update_provider_gui(player, gui)
 end
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     if event.gui_type == defines.gui_type.entity then
         local gui = player.gui.relative.bioport_gui
         if gui then gui.destroy() end
@@ -380,7 +380,7 @@ py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surf
 end)
 
 local function gui_click(event, inventory_index)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local cursor_stack = player.cursor_stack
     if not cursor_stack then return end
     local element = event.element
@@ -390,7 +390,7 @@ local function gui_click(event, inventory_index)
     if not bioport_data then return end
     local entity = bioport_data.entity
     if not entity or not entity.valid then return end
-    local inventory = entity.get_inventory(inventory_index)
+    local inventory = entity.get_inventory(inventory_index) --[[@as LuaInventory]]
 
     if cursor_stack.valid_for_read then
         local actually_inserted = inventory.insert(cursor_stack)
@@ -405,18 +405,9 @@ local function gui_click(event, inventory_index)
     Biofluid.update_bioport_gui(player, player.gui.relative.bioport_gui)
 end
 
-gui_events[defines.events.on_gui_click]["py_biofluid_food_."] = function(event)
-    gui_click(event,
-        defines.inventory.assembling_machine_input)
-end
-gui_events[defines.events.on_gui_click]["py_biofluid_module_."] = function(event)
-    gui_click(event,
-        defines.inventory.assembling_machine_input)
-end
-gui_events[defines.events.on_gui_click]["py_guano_output"] = function(event)
-    gui_click(event,
-        defines.inventory.assembling_machine_output)
-end
+gui_events[defines.events.on_gui_click]["py_biofluid_food_."] = function(event) gui_click(event, defines.inventory.crafter_input) end
+gui_events[defines.events.on_gui_click]["py_biofluid_module_."] = function(event) gui_click(event, defines.inventory.crafter_input) end
+gui_events[defines.events.on_gui_click]["py_guano_output"] = function(event) gui_click(event, defines.inventory.crafter_output) end
 
 gui_events[defines.events.on_gui_elem_changed]["py_request_type"] = function(event)
     local element = event.element

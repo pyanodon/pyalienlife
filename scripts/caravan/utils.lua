@@ -47,6 +47,27 @@ function P.get_name(caravan_data)
     return random_name
 end
 
+---Accepts a condition or action and returns the relevant label
+function P.label_info(schedule_entry)
+    if not schedule_entry then return nil, nil, nil end
+
+    local style = schedule_entry.temporary and "black_squashable_label" or "train_schedule_unavailable_stop_label"
+    local caption
+    local tooltip
+    if not schedule_entry.entity and not schedule_entry.position then -- should only be possible with interrupts
+        caption = {"caravan-gui.not-specified"}
+        tooltip = schedule_entry.temporary and caption or {"caravan-gui.reassign-hint", caption}
+    elseif schedule_entry.entity and not schedule_entry.entity.valid then
+        caption = schedule_entry.localised_name or {"caravan-gui.destination-unavailable"}
+        tooltip = schedule_entry.temporary and {"caravan-gui.interrupt-destination-unavailable"} or {"caravan-gui.reassign-hint", caption}
+    else
+        style = schedule_entry.temporary and "black_squashable_label" or "clickable_squashable_label"
+        caption = schedule_entry.localised_name
+        tooltip = schedule_entry.temporary and caption or {"caravan-gui.reassign-hint", caption}
+    end
+    return style, caption, tooltip
+end
+
 function P.is_child_of(c, p, depth)
     if depth == 0 or not c then return false end
 
@@ -57,6 +78,7 @@ end
 ---@param element LuaGuiElement
 function P.get_action_from_button(element)
     local tags = element.tags
+    local player_index = element.player_index
     local action_list_type = tags.action_list_type
 
     local action
@@ -65,10 +87,10 @@ function P.get_action_from_button(element)
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        local interrupt = storage.edited_interrupt
+        local interrupt = storage.edited_interrupts[player_index]
         action = interrupt.conditions[tags.condition_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        local interrupt = storage.edited_interrupt
+        local interrupt = storage.edited_interrupts[player_index]
         action = interrupt.schedule[tags.schedule_id].actions[tags.action_id]
     else
         error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
@@ -105,7 +127,7 @@ function P.get_schedule(element)
     end
 end
 
-function P.get_actions_from_tags(tags)
+function P.get_actions_from_tags(tags, player_index)
     local action_list_type = tags.action_list_type
 
     local action
@@ -114,11 +136,13 @@ function P.get_actions_from_tags(tags)
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
-        return storage.edited_interrupt.conditions
+        local interrupt = storage.edited_interrupts[player_index]
+        return interrupt.conditions
     elseif action_list_type == Caravan.action_list_types.interrupt_targets then
-        return storage.edited_interrupt.schedule[tags.schedule_id].actions
+        local interrupt = storage.edited_interrupts[player_index]
+        return interrupt.schedule[tags.schedule_id].actions
     else
-        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags) .. " elem name: " .. element.name)
+        error("Invalid action_list_type " .. tostring(action_list_type) .. ". GUI tags: " .. serpent.line(tags))
     end
 end
 
@@ -248,7 +272,7 @@ function P.ensure_item_count(action)
     if not action or not action.type then
         return action
     end
-    if not Caravan.actions_with_item_count[action] then
+    if not Caravan.actions_with_item_count[action.type] then
         return action
     end
     if action.type == "time-passed" then

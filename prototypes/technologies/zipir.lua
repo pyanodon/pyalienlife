@@ -24,7 +24,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zipir"},
-    dependencies = {"zipir"},
     effects = {},
     unit = {
         count = 250,
@@ -46,7 +45,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zipir-mk02"},
-    dependencies = {"zipir-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -71,7 +69,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"zipir-mk03"},
-    dependencies = {"zipir-mk03"},
     effects = {},
     unit = {
         count = 350,

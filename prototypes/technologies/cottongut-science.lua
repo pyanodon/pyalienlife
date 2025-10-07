@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cottongut-science-mk01"},
+    prerequisites = {"cottongut-science-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cottongut-science-mk02"},
+    prerequisites = {"cottongut-science-mk02"},
     effects = {},
     unit = {
         count = 150,
@@ -62,7 +62,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cottongut-science-mk03"},
+    prerequisites = {"cottongut-science-mk03"},
     effects = {},
     unit = {
         count = 150,
@@ -84,7 +84,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/cottongut-science-mk05.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"cottongut-science-mk04"},
+    prerequisites = {"cottongut-science-mk04"},
     effects = {},
     unit = {
         count = 150,

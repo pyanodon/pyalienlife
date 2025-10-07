@@ -4,8 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"moss-mk01"},
+    prerequisites = {"moss-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -22,8 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"genetics-mk01"},
+    prerequisites = {"genetics-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -41,8 +39,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/genetics-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
-    dependencies = {"genetics-mk02"},
+    prerequisites = {"genetics-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -62,7 +59,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetics-mk03"},
-    dependencies = {"genetics-mk03"},
     effects = {},
     unit = {
         count = 250,
@@ -84,7 +80,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"genetics-mk04", "pharmacogenomics"},
-    dependencies = {"genetics-mk04"},
     effects = {},
     unit = {
         count = 300,

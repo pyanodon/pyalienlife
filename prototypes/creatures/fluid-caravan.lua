@@ -21,7 +21,6 @@ RECIPE {
 ITEM {
     type = "item-with-tags",
     name = "fluidavan",
-    additional_pastable_entities = {"fluidavan", "fluidavan-turd"},
     icon = "__pyalienlifegraphics2__/graphics/icons/fluid-caravan.png",
     icon_size = 64,
     subgroup = "py-alienlife-special-creatures",
@@ -34,7 +33,7 @@ ITEM {
 data:extend {{
     type = "unit",
     ai_settings = {do_separation = false},
-    additional_pastable_entities = {"fluidavan", "fluidavan-turd"},
+    additional_pastable_entities = {"fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd"},
     name = "fluidavan",
     can_open_gates = true,
     map_color = {1, 1, 1},
@@ -43,7 +42,7 @@ data:extend {{
     icon_size = 64,
     alert_icon_scale = 1,
     flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
-    minable = {mining_time = 0.1, result = "fluidavan"},
+    minable = {mining_time = 0.5, result = "fluidavan"},
     max_health = 3125,
     order = "b-b-a",
     collision_mask = {layers = {caravan_collision_mask = true}, not_colliding_with_itself = true},

@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/arthurian.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk02", "biotech-mk02", "genetics-mk03"},
+    prerequisites = {"land-animals-mk01", "biotech-mk02", "genetics-mk03"},
     effects = {},
     unit = {
         count = 150,
@@ -26,7 +26,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arthurian"},
-    dependencies = {"arthurian"},
     effects = {},
     unit = {
         count = 200,
@@ -50,7 +49,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arthurian-mk02"},
-    dependencies = {"arthurian-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -75,7 +73,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"arthurian-mk03"},
-    dependencies = {"arthurian-mk03"},
     effects = {},
     unit = {
         count = 300,

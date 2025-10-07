@@ -123,6 +123,7 @@ function P.render_altmode_icon(caravan_data)
         target = caravan_data.entity,
         target_offset = target_offset,
         surface = caravan_data.entity.surface,
+        render_layer = "wires-above",
         only_in_alt_mode = true,
         x_scale = 0.9,
         y_scale = 0.9
@@ -132,6 +133,7 @@ function P.render_altmode_icon(caravan_data)
         target = caravan_data.entity,
         target_offset = target_offset,
         surface = caravan_data.entity.surface,
+        render_layer = "wires-above",
         only_in_alt_mode = true,
         x_scale = 1.2,
         y_scale = 1.2
@@ -154,7 +156,7 @@ function P.destroy_altmode_icon(caravan_data)
 end
 
 function P.wait(caravan_data, schedule, action)
-    if not action.timer or action.timer == 1 then
+    if not action.timer or action.timer <= 1 then
         action.timer = nil
         return true
     end
@@ -209,6 +211,7 @@ function P.fill_inventory(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(chest)
     if not outpost_inventory then return true end
     local inventory = caravan_data.inventory
+    if not inventory then return true end
 
     local amount = transfer_all_items(outpost_inventory, inventory)
     local completed = action.async or inventory.is_full()
@@ -224,6 +227,7 @@ function P.empty_inventory(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(chest)
     if not outpost_inventory then return true end
     local inventory = caravan_data.inventory
+    if not inventory then return true end
 
     local amount = transfer_all_items(inventory, outpost_inventory)
     local completed = action.async or inventory.is_empty()
@@ -239,6 +243,7 @@ function P.empty_autotrash(caravan_data, schedule, action)
     local autotrash_inventory = character.get_inventory(defines.inventory.character_trash)
     if not autotrash_inventory then return true end
     local inventory = caravan_data.inventory
+    if not inventory then return true end
 
     local amount = transfer_all_items(autotrash_inventory, inventory)
     if amount and amount > 0 then
@@ -253,6 +258,7 @@ function P.load_caravan(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(chest)
     if not outpost_inventory then return false end
     local caravan_inventory = caravan_data.inventory
+    if not caravan_inventory then return false end
     local item = action.elem_value
     local goal = action.item_count or 0
     if not item then return false end
@@ -272,6 +278,7 @@ function P.unload_caravan(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(chest)
     if not outpost_inventory then return false end
     local caravan_inventory = caravan_data.inventory
+    if not caravan_inventory then return false end
     local item = action.elem_value
     local goal = action.item_count or 0
     if not item then return false end
@@ -291,6 +298,7 @@ function P.load_target(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(chest)
     if not outpost_inventory then return false end
     local caravan_inventory = caravan_data.inventory
+    if not caravan_inventory then return false end
     local item = action.elem_value
     local goal = action.item_count or 0
     if not item then return false end
@@ -310,6 +318,7 @@ function P.unload_target(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(chest)
     if not outpost_inventory then return false end
     local caravan_inventory = caravan_data.inventory
+    if not caravan_inventory then return false end
     local item = action.elem_value
     local goal = action.item_count or 0
     if not item then return false end
@@ -430,7 +439,9 @@ function P.caravan_item_count(caravan_data, schedule, action)
     local right = action.item_count
     if right == nil then return false end
 
-    local left = caravan_data.inventory.get_item_count(item)
+    local inventory = caravan_data.inventory
+    if not inventory then return false end
+    local left = inventory.get_item_count(item)
 
     local operator = action.operator or 3
     if operator == 1 then
@@ -489,6 +500,33 @@ function P.outpost_item_count(caravan_data, schedule, action)
     local outpost_inventory = get_outpost_inventory(outpost)
     if not outpost_inventory then return false end
     local left = outpost_inventory.get_item_count(item)
+
+    local operator = action.operator or 3
+    if operator == 1 then
+        return left > right
+    elseif operator == 2 then
+        return left < right
+    elseif operator == 3 then
+        return left == right
+    elseif operator == 4 then
+        return left >= right
+    elseif operator == 5 then
+        return left <= right
+    elseif operator == 6 then
+        return left ~= right
+    end
+end
+
+function P.outpost_fluid_count(caravan_data, schedule, action)
+    local outpost = action.entity
+    if not outpost or not outpost.valid or outpost.name ~= "outpost-fluid" then return false end
+
+    local fluid = action.elem_value
+
+    local right = action.item_count
+    if right == nil then return false end
+
+    local left = outpost.get_fluid_count(fluid)
 
     local operator = action.operator or 3
     if operator == 1 then
@@ -676,6 +714,7 @@ Caravan.actions = {
     ["caravan-item-count"] = P.caravan_item_count,
     ["target-item-count"] = P.target_item_count,
     ["outpost-item-count"] = P.outpost_item_count,
+    ["outpost-fluid-count"] = P.outpost_fluid_count,
     ["is-inventory-full"] = P.is_inventory_full,
     ["is-inventory-empty"] = P.is_inventory_empty,
     ["at-outpost"] = P.at_outpost,

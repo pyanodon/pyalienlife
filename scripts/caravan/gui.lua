@@ -95,6 +95,33 @@ function P.update_gui(player)
     CaravanGuiComponents.update_cargo_pane(player)
 end
 
+---Refocuses the caravan GUI onto a given entity
+---@param gui LuaGuiElement
+---@param target LuaEntity | MapPosition | nil
+function P.refocus(gui, target)
+    local camera = gui.entity_frame.camera_frame.camera
+    local refocus_button = gui.entity_frame.subheader_frame.contents_flow.py_refocus -- reverts camera to the GUI's entity
+    local caravan_unit = storage.caravans[gui.tags.unit_number].entity
+    -- reset
+    if target == nil then
+        camera.entity = caravan_unit
+        -- zoom is halved because default is a bit too zoomed in
+        camera.zoom = (caravan_prototypes[caravan_unit.name].camera_zoom or 0.5) / 2
+        refocus_button.visible = false
+        return
+    end
+    -- entity
+    if target.type then ---@cast target LuaEntity
+        camera.entity = target
+    else --@cast target MapPosition
+        camera.entity = nil
+        camera.position = target
+        camera.surface_index = caravan_unit.surface_index
+    end
+    camera.zoom = 0.25
+    refocus_button.visible = true
+end
+
 py.on_event(defines.events.on_gui_closed, function(event)
     local player = game.get_player(event.player_index)
     local gui = event.element
@@ -130,7 +157,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
             end
         elseif edit_interrupt_frame then
             edit_interrupt_frame.destroy()
-            storage.edited_interrupt = nil
+            storage.edited_interrupts[event.player_index] = nil
         elseif renaming_caravan then
             local label = caravan_rename_textfield.parent.name_label
             label.visible = true

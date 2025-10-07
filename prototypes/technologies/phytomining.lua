@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02", "phytomining"},
-    dependencies = {"phytomining"},
     effects = {},
     unit = {
         count = 250,

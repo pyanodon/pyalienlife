@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/yotoi.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"botany-mk02", "genetics-mk03"},
+    prerequisites = {"botany-mk01", "genetics-mk03"},
     effects = {},
     unit = {
         count = 150,
@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi"},
-    dependencies = {"yotoi"},
     effects = {},
     unit = {
         count = 200,
@@ -48,7 +47,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi-mk02"},
-    dependencies = {"yotoi-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -72,7 +70,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"yotoi-mk03"},
-    dependencies = {"yotoi-mk03"},
     effects = {},
     unit = {
         count = 300,

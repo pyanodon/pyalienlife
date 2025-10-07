@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/chitin.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {},
+    prerequisites = {"dingrits"},
     effects = {},
     unit = {
         count = 200,

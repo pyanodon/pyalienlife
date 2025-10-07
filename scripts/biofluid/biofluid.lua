@@ -11,8 +11,8 @@ local PICKING_UP = 1
 local DROPPING_OFF = 2
 local RETURNING = 3
 
-local INPUT_INVENTORY = defines.inventory.assembling_machine_input
-local OUTPUT_INVENTORY = defines.inventory.assembling_machine_output
+local INPUT_INVENTORY = defines.inventory.crafter_input
+local OUTPUT_INVENTORY = defines.inventory.crafter_output
 
 local sort = table.sort
 local insert = table.insert
@@ -138,8 +138,8 @@ py.on_event(py.events.on_built(), function(event)
             animation = {
                 gobachov = {stage = 0, id = nil},
                 chorkok = {stage = 0, id = nil}
-           }
-       }
+            }
+        }
     elseif entity.type == "pipe-to-ground" then
         entity.operable = false
     elseif connection_type == Biofluid.PROVIDER then
@@ -747,7 +747,7 @@ local function returning(biorobot_data)
         find_new_home(biorobot_data); return
     end
     local biorobot = biorobot_data.entity
-    local inventory = bioport.get_inventory(INPUT_INVENTORY)
+    local inventory = bioport.get_inventory(INPUT_INVENTORY) --[[@as LuaInventory]]
     if inventory.insert {name = biorobot.name, count = 1} == 1 then
         storage.biofluid_robots[biorobot.unit_number] = nil
         biorobot.destroy()
@@ -889,7 +889,7 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
 end)
 
 py.on_event(defines.events.on_player_setup_blueprint, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local blueprint = player.blueprint_to_setup
     if not blueprint.valid_for_read then blueprint = player.cursor_stack end
     if not blueprint or not blueprint.valid_for_read then return end
@@ -958,7 +958,7 @@ py.on_event(defines.events.on_player_fast_transferred, function(event)
 end)
 
 py.on_event(defines.events.on_selected_entity_changed, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local entity = player.selected
     if not entity or not entity.valid then return end
     local entity_name = entity.name

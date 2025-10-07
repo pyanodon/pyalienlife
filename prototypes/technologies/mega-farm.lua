@@ -28,7 +28,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-ralesia.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
@@ -50,7 +50,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-rennea.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
@@ -72,7 +72,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-tuuphra.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
@@ -94,7 +94,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-grod.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
@@ -116,7 +116,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-yotoi.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
         count = 100,
@@ -138,7 +138,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/mega-farm-bioreserve.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"mega-farm"},
+    prerequisites = {"mega-farm"},
     effects = {},
     unit = {
         count = 200,

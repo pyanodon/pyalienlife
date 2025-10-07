@@ -20,7 +20,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"biotech-machines-mk01"},
+    prerequisites = {"biotech-machines-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"biotech-machines-mk02"},
+    prerequisites = {"biotech-machines-mk02"},
     effects = {},
     unit = {
         count = 150,
@@ -63,7 +63,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/biotech-machines-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"biotech-machines-mk03"},
+    prerequisites = {"biotech-machines-mk03"},
     effects = {},
     unit = {
         count = 150,

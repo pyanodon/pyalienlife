@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/botany-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"xenobiology"},
+    prerequisites = {},
     effects = {},
     unit = {
         count = 150,
@@ -22,7 +22,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk01"},
-    dependencies = {"botany-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -42,7 +41,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk02"},
-    dependencies = {"botany-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -63,7 +61,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"botany-mk03"},
-    dependencies = {"botany-mk03"},
     effects = {},
     unit = {
         count = 300,

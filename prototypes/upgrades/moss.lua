@@ -113,7 +113,7 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-moss.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"machines-mk01", "moss-mk01", "melamine"},
+        prerequisites = (mods and mods.pyhightech) and {"machines-mk01", "moss-mk01", "melamine"} or {"machines-mk01", "moss-mk01"},
         unit = {
             count = 500,
             ingredients = {

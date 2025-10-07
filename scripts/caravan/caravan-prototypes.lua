@@ -210,16 +210,17 @@ Caravan.valid_actions = {
         "is-inventory-empty",
         "caravan-item-count",
         "target-item-count",
+        "outpost-item-count",
         "is-tank-full",
         "is-tank-empty",
         "caravan-fluid-count",
         "target-fluid-count",
+        "outpost-fluid-count",
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
-        "outpost-item-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
@@ -237,6 +238,7 @@ Caravan.actions_with_item_count = table.invert{
     "caravan-item-count",
     "target-item-count",
     "outpost-item-count",
+    "outpost-fluid-count",
     "caravan-fluid-count",
     "target-fluid-count",
 }
@@ -274,7 +276,7 @@ local caravan_prototypes = {
         outpost = "outpost",
         favorite_foods = Caravan.foods.caravan,
         actions = Caravan.valid_actions.caravan,
-        camera_zoom = 0.8,
+        camera_zoom = 0.5,
         placeable_by = "caravan",
         map_tag = {
             type = "virtual",
@@ -293,7 +295,7 @@ local caravan_prototypes = {
         outpost = "outpost-fluid",
         favorite_foods = Caravan.foods.caravan,
         actions = Caravan.valid_actions.fluidavan,
-        camera_zoom = 0.8,
+        camera_zoom = 0.5,
         placeable_by = "fluidavan",
         map_tag = {
             type = "virtual",
@@ -312,7 +314,7 @@ local caravan_prototypes = {
         outpost = "outpost-aerial",
         favorite_foods = Caravan.foods.flyavan,
         actions = Caravan.valid_actions.caravan,
-        camera_zoom = 0.5,
+        camera_zoom = 0.25,
         placeable_by = "flyavan",
         map_tag = {
             type = "virtual",
@@ -367,7 +369,7 @@ local function error_caravan(caravan_data, invalid_prototype_name, invalid_proto
             position = caravan_data.entity.position
             position = "[gps=" .. position.x .. ", " .. position.y .. "]"
         else
-            position = "UNKNOWN POSITION"
+            return
         end
         game.print(string.format("CARAVAN MIGRATION: \"%s\" is not a valid %s prototype. You will need to manually fix a caravan @ %s", invalid_prototype_name, invalid_prototype_type, position))
     else

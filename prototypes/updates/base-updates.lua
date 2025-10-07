@@ -29,6 +29,7 @@ TECHNOLOGY("discharge-defense-equipment"):add_pack("py-science-pack-3")
 TECHNOLOGY("energy-shield-mk2-equipment"):add_pack("py-science-pack-3")
 TECHNOLOGY("personal-laser-defense-equipment"):add_pack("py-science-pack-3")
 TECHNOLOGY("energy-shield-equipment"):add_pack("py-science-pack-2")
+TECHNOLOGY("personal-roboport-mk2-equipment"):remove_pack("chemical-science-pack"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("fluid-handling"):remove_pack("logistic-science-pack")
 TECHNOLOGY("automation-2"):add_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_prereq("logistic-science-pack"):remove_prereq("electronics")
@@ -48,7 +49,6 @@ TECHNOLOGY("nuclear-fuel-reprocessing"):add_pack("py-science-pack-2")
 TECHNOLOGY("production-science-pack"):add_pack("py-science-pack-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("utility-science-pack"):add_pack("py-science-pack-3"):add_pack("py-science-pack-4")
 TECHNOLOGY("chemical-science-pack"):add_pack("py-science-pack-2")
-TECHNOLOGY("worker-robots-speed-1"):add_pack("py-science-pack-2")
 
 TECHNOLOGY("electric-energy-distribution-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("speed-module-2"):add_pack("py-science-pack-3")
@@ -56,7 +56,6 @@ TECHNOLOGY("productivity-module-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("efficiency-module-2"):add_pack("py-science-pack-3")
 TECHNOLOGY("power-armor"):add_pack("py-science-pack-3")
 --TECHNOLOGY('robotics'):add_pack('py-science-pack-3')
-TECHNOLOGY("worker-robots-speed-3"):remove_pack("production-science-pack"):add_pack("py-science-pack-3")
 TECHNOLOGY("worker-robots-storage-1"):add_pack("py-science-pack-3")
 TECHNOLOGY("low-density-structure"):add_pack("py-science-pack-3")
 TECHNOLOGY("rocket-silo"):add_pack("py-science-pack-3")
@@ -91,14 +90,31 @@ RECIPE("logistic-science-pack"):set_fields {
     },
     energy_required = 90
 }
-
 RECIPE("chemical-science-pack").category = "research"
 RECIPE("military-science-pack").category = "research"
 RECIPE("production-science-pack").category = "research"
 RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-samples", amount = 1}.category = "research"
 
 ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
-
 RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}
-
 RECIPE("barrel").allow_productivity = false
+
+data.raw.technology["worker-robots-speed-1"]:add_pack("py-science-pack-2")
+data.raw.technology["worker-robots-speed-3"]:remove_pack("production-science-pack"):add_pack("py-science-pack-3")
+-- https://github.com/pyanodon/pybugreports/issues/608
+data.raw.technology["worker-robots-speed-5"]:remove_pack("utility-science-pack"):add_pack("py-science-pack-4")
+local worker_robot_speed_7 = table.deepcopy(data.raw.technology["worker-robots-speed-6"])
+worker_robot_speed_7.name = "worker-robots-speed-7"
+data:extend{worker_robot_speed_7}
+data.raw.technology["worker-robots-speed-6"].unit.count_formula = nil
+data.raw.technology["worker-robots-speed-6"].unit.count = 1000
+data.raw.technology["worker-robots-speed-6"].max_level = nil
+data.raw.technology["worker-robots-speed-6"]:remove_pack("space-science-pack")
+
+data.raw.technology["worker-robots-speed-1"].prerequisites = {"logistic-robotics", "py-science-pack-2"}
+data.raw.technology["worker-robots-speed-2"].prerequisites = {"worker-robots-speed-1"}
+data.raw.technology["worker-robots-speed-3"].prerequisites = {"worker-robots-speed-2"}
+data.raw.technology["worker-robots-speed-4"].prerequisites = {"worker-robots-speed-3"}
+data.raw.technology["worker-robots-speed-5"].prerequisites = {"worker-robots-speed-4"}
+data.raw.technology["worker-robots-speed-6"].prerequisites = {"worker-robots-speed-5"}
+data.raw.technology["worker-robots-speed-7"].prerequisites = {"worker-robots-speed-6"}

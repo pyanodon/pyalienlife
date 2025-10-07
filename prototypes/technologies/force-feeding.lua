@@ -24,8 +24,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/fto4.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"force-feeding", "orexigenic"},
-    dependencies = {"force-feeding"},
+    prerequisites = {"force-feeding"},
     effects = {},
     unit = {
         count = 600,

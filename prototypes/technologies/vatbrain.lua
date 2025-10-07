@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vatbrain-mk01"},
-    dependencies = {"vatbrain-mk01"},
     effects = {},
     unit = {
         count = 350,
@@ -46,7 +45,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vatbrain-mk02"},
-    dependencies = {"vatbrain-mk02"},
     effects = {},
     unit = {
         count = 400,
@@ -69,7 +67,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"vatbrain-mk03"},
-    dependencies = {"vatbrain-mk03"},
     effects = {},
     unit = {
         count = 450,
