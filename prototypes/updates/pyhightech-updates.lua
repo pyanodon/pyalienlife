@@ -439,8 +439,8 @@ RECIPE("waste-water-urea"):subgroup_order("py-alienlife-recipes", "a"):remove_un
 RECIPE("ammonia-urea"):subgroup_order("py-alienlife-recipes", "a"):remove_unlock("basic-electronics"):add_unlock("biotech-mk02")
 RECIPE("urea2"):remove_unlock("auog-2"):set_fields {hidden = true}
 RECIPE("urea"):set_fields {enabled = false}
-RECIPE("mukmoux-fat2"):remove_unlock("advanced-circuit")
-RECIPE("mukmoux-fat3"):remove_unlock("advanced-circuit")
+RECIPE("mukmoux-fat2"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
+RECIPE("mukmoux-fat3"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
 RECIPE("fertilizer"):remove_unlock("basic-electronics")
 RECIPE("advanced-circuit"):add_ingredient {type = "item", name = "battery", amount = 5}:add_ingredient {type = "item", name = "mosfet", amount = 5}
 RECIPE("processing-unit"):add_ingredient {type = "item", name = "mosfet", amount = 10}:add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
