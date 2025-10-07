@@ -18,6 +18,7 @@ Date: ????
     - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
     - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
     - Enhanced caravan number input to handle MathExp and large numbers better.
+    - Hide some unused urea and lard recipes from factoriopedia
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.59
 Date: 2025-09-15
