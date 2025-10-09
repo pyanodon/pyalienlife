@@ -1,12 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.61
-Date: 2025-10-09
-  Changes:
-    - added german locale
----------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: ????
   Changes:
+    - Added German locale courtesy of Spunk42
     - Caravans: warnings now respect "Enable Warning Icon Blinking" setting
     - Caravans: fixed desync from accidental global variable
     - Caravans: fixed "destination removed" warning
