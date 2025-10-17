@@ -26,6 +26,8 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "dynemicin", amount = 100},
         },
+        icons = py.composite_icon("dynemicin", "venom-gland"),
+        icon_size = 64,
     }
 
     RECIPE {
@@ -40,6 +42,8 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "kondo-substrate", amount = 100},
         },
+        icons = py.composite_icon("kondo-substrate", "cognition-osteochain"),
+        icon_size = 64,
     }
 
     RECIPE {
@@ -54,6 +58,8 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "inverse-opal", amount = 100},
         },
+        icons = py.composite_icon("inverse-opal", "dimensional-gastricorg"),
+        icon_size = 64,
     }
 end
 

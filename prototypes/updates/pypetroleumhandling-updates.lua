@@ -154,7 +154,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "nb-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/nb-biomass.png",
+    icons = py.composite_icon("nb-biomass", "guar", nil, nil, nil),
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
@@ -174,7 +174,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "nb-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/nb-biomass.png",
+    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", nil),
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
@@ -195,7 +195,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "nb-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/nb-biomass.png",
+    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", "hmas"),
     icon_size = 64,
 }:add_unlock("phytomining-mk03")
 

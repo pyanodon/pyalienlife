@@ -549,6 +549,8 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 5},
     },
+    icons = py.composite_icon("phosphate-rock", "bones"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -564,6 +566,8 @@ RECIPE {
     results = {
         {type = "item", name = "rare-earth-ore", amount = 20},
     },
+    icons = py.composite_icon("rare-earth-ore", "carapace"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -579,6 +583,8 @@ RECIPE {
     results = {
         {type = "fluid", name = "cyanic-acid", amount = 50},
     },
+    icons = py.composite_icon("cyanic-acid", "meat"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
@@ -594,6 +600,8 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 20},
     },
+    icons = py.composite_icon("iron-ore", "kicalk-seeds"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -609,6 +617,8 @@ RECIPE {
     results = {
         {type = "item", name = "sulfur", amount = 5},
     },
+    icons = py.composite_icon("sulfur", "cadaveric-arum"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -624,6 +634,8 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 10},
     },
+    icons = py.composite_icon("copper-ore", "cadaveric-arum"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -639,6 +651,8 @@ RECIPE {
     results = {
         {type = "item", name = "urea", amount = 10},
     },
+    icons = py.composite_icon("urea", "blood"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
@@ -953,6 +967,8 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 7},
     },
+    icons = py.composite_icon("phosphate-rock", "chitin"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -968,6 +984,8 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 3},
     },
+    icons = py.composite_icon("phosphate-rock", "meat"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
@@ -983,6 +1001,8 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 1},
     },
+    icons = py.composite_icon("phosphate-rock", "fish"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
@@ -998,6 +1018,8 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 2},
     },
+    icons = py.composite_icon("wood-seeds", "phosphate-rock"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
@@ -1013,6 +1035,8 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 3},
     },
+    icons = py.composite_icon("phosphate-rock", "rennea-seeds"),
+    icon_size = 64,
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
@@ -1176,7 +1200,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "s-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+    icons = py.composite_icon("s-biomass", "cadaveric-arum", nil, nil, nil),
     icon_size = 64,
 }:add_unlock("phytomining")
 
@@ -1196,7 +1220,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "s-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+    icons = py.composite_icon("s-biomass", "cadaveric-arum", nil, "chelator", nil),
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
@@ -1217,7 +1241,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "s-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+    icons = py.composite_icon("s-biomass", "cadaveric-arum", nil, "chelator", "hmas"),
     icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
@@ -1236,7 +1260,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "zn-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icons = py.composite_icon("zn-biomass", "kicalk", nil, nil, nil),
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
@@ -1256,7 +1280,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "zn-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icons = py.composite_icon("zn-biomass", "kicalk", nil, "chelator", nil),
     icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
@@ -1277,7 +1301,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "zn-biomass",
-    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icons = py.composite_icon("zn-biomass", "kicalk", nil, "chelator", "hmas"),
     icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
@@ -1298,7 +1322,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product = "sulfur",
-    icon = "__base__/graphics/icons/sulfur.png",
+    icons = py.composite_icon("sulfur", "s-biomass"),
     icon_size = 64,
 }:add_unlock("phytomining").category = "pulp"
 
