@@ -146,7 +146,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
     },
     results = {
@@ -165,7 +165,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
     },
@@ -185,7 +185,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
         {type = "item",  name = "hmas",              amount = 1},
