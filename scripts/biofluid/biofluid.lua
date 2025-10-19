@@ -335,8 +335,8 @@ local function build_providers_by_contents(network_data, relavant_fluids)
         local already_allocated = network_data.allocated_fluids_from_providers[provider.unit_number] or 0
         local can_give = contents.amount - already_allocated
 
-        if (contents.amount >= Biofluid.tank_size) then
-            -- if the provider tank is full, allow as many bots as possible to use it
+        if (contents.amount >= Biofluid.tank_size * .8) then
+            -- if the provider tank is near-full, allow as many bots as possible to use it
             -- this allows a well-supplied provider to service many more requesters per unit time without impacting providers with smaller supply
             -- the downside is that sudden demand spikes will waste biofluid bot time by over-allocating them, but that should be rare.
             can_give = contents.amount
@@ -394,8 +394,8 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
         end
         local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
 
-        if (contents.amount >= Biofluid.tank_size) then
-            -- again, if the provider tank is full assume it is also well-supplied and can provide much more than we can currently see
+        if (contents.amount >= Biofluid.tank_size * .8) then
+            -- again, if the provider tank is near-full assume it is also well-supplied and can provide much more than we can currently see
             -- ignore existing allocations and assume it will be full when we get there
             can_give = contents.amount
         end
@@ -763,7 +763,7 @@ end
 function Biofluid.get_unfulfilled_requests()
     local relavant_fluids = {}
     local result = {}
-    local min_fluid_request = 10000
+    local min_fluid_request = 20000
 
     for unit_number, requester_data in pairs(storage.biofluid_requesters) do
         local requester = requester_data.entity
@@ -791,7 +791,19 @@ function Biofluid.get_unfulfilled_requests()
             already_stored = already_stored + contents.amount
         end
         local request_size = goal - already_stored
-        if request_size < min_fluid_request then goto continue end
+        
+        if requester_data.amount >= min_fluid_request then
+			-- large requests
+			if request_size < min_fluid_request then 
+				goto continue 
+			end
+		else
+			-- small requests, what is the player even doing here?
+			if request_size < goal * .2 then 
+				goto continue 
+			end
+		end
+        
         result[#result + 1] = {
             name = fluid_name,
             amount = request_size,
