@@ -18,6 +18,9 @@ Date: ????
     - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
     - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
     - Enhanced caravan number input to handle MathExp and large numbers better.
+    - Biofluid: the threshold for a "well-supplied" provider tank is now 80%, down from 100%.
+    - Biofluid: the minimum fluid order is now 20k, up from 10k.  This is to better utilize Huzu and Chrokok.
+    - Biofluid: <10k fluid unit biofluid orders now work, when before they did not.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.59
 Date: 2025-09-15
