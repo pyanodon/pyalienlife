@@ -13,6 +13,7 @@ Date: ????
     - Caravans: fixed crash with item interrupt conditions on fluid caravans
     - Caravans: adding an interrupt no longer opens the edit dialog
     - Fixed some techs having a too-fast cycle time
+    - Increased the output fluidbox size of all buildings from 100->1000. Allows fluid transfer at even higher rates before hitting engine limitations. Resolves https://github.com/pyanodon/pybugreports/issues/1203
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
     - Fixed some issues with incorrectly replacing ghosts of T.U.R.D. buildings. Fixes https://github.com/pyanodon/pybugreports/issues/1212
     - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
