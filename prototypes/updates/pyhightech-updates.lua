@@ -1168,7 +1168,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 2},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 2},
         {type = "item",  name = "cadaveric-arum",    amount = 1},
     },
     results = {
@@ -1187,7 +1187,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 2},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 2},
         {type = "item",  name = "cadaveric-arum",    amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 3},
     },
@@ -1207,7 +1207,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 2},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 2},
         {type = "item",  name = "hmas",              amount = 1},
         {type = "item",  name = "cadaveric-arum",    amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 3},
@@ -1228,7 +1228,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "kicalk",            amount = 1},
     },
     results = {
@@ -1247,7 +1247,7 @@ RECIPE {
     enabled = false,
     energy_required = 60,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "kicalk",            amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
     },
@@ -1267,7 +1267,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "kicalk",            amount = 1},
         {type = "item",  name = "hmas",              amount = 1},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
