@@ -6,6 +6,7 @@ Date: ???
     - New recipe to convert bonemeal into geothermal water.
     - New recipe for heating geothermal water.
     - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
+    - Fixed certain phytomining recipes taking muddy sludge instead of tailings. Resolves https://github.com/pyanodon/pybugreports/issues/1242
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: ????
