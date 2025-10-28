@@ -79,13 +79,3 @@ py.on_event(py.events.on_init(), function()
         searchable = {"pywiki_turd_page", "on_search"}
     })
 end)
-
-script.on_event("py_toggle_turd_gui", function(event)
-    local player = game.get_player(event.player_index)
-    remote.call("pywiki", "open_wiki_to_page", player, "turd")
-end)
-
-script.on_event("py_toggle_caravan_manager_gui", function(event)
-    local player = game.get_player(event.player_index)
-    remote.call("pywiki", "open_wiki_to_page", player, "caravan-manager")
-end)

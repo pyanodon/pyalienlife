@@ -123,9 +123,7 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
-    local position
     local gui = CaravanGui.get_gui(player)
-    -- if the camera has a target, use that instead of the schedule target
     if gui then
         local camera = gui.entity_frame.camera_frame.camera
         position = camera.position
@@ -133,13 +131,7 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     end
 
     player.opened = nil
-    if entity or position then
-        local zoom = player.zoom
-        player.set_controller {
-            type = defines.controllers.remote,
-            position = position or entity.position,
-        }
-        player.zoom = zoom
+    if entity then
         player.centered_on = entity
     end
 end

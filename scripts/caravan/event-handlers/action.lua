@@ -127,48 +127,12 @@ end
 
 local prefix = "py_caravan_action_number_selection"
 
-local expression_variables = {k=1000, K=1000, m=1000000, M=1000000, g=1000000000, G=1000000000}
-
-
---- Parses a mathematical expression using MathExp library with predefined variables.
---- @param expr string
---- @param vars { [string]: number }?
---- @return number?
-local function parse_math_expr(expr, vars)
-    if not expr or expr == "" then return nil end
-
-    local ok, result = pcall(function()
-        return helpers.evaluate_expression(expr, vars or expression_variables)
-    end)
-
-    if ok and type(result) == "number" then
-        -- handle natural rounding
-        result = math.floor(result + 0.5)
-
-        return result
-    else
-        return nil
-    end
-end
-
 local function on_confirmed(event)
     local player = game.get_player(event.player_index)
 
     local tags = event.element.tags
     local textfield = event.element.parent[prefix .. "_text_field"]
     local value = tonumber(textfield.text) or 0
-    local parsed_value = parse_math_expr(textfield.text)
-
-    if value ~= parsed_value and parsed_value then
-        textfield.text = tostring(parsed_value)
-
-        local slider = textfield.parent[prefix .. "_slider"]
-        if slider then
-            slider.slider_value = parsed_value
-        end
-
-        return
-    end
 
     local action = CaravanUtils.get_action_from_button(event.element)
 
@@ -179,16 +143,7 @@ local function on_confirmed(event)
         action.item_count = value
     end
 
-    -- keep slider in sync after setting the action value 
-    local frame = player.gui.screen[prefix .. "_frame"]
-    if frame then
-        local slider = frame[prefix .. "_slider"]
-        if slider then
-            slider.slider_value = value
-        end
-    end
-
-    if player.gui.screen[prefix .. "_frame"] then
+    if player.gui.screen[prefix .. "_frame"] then 
         player.gui.screen[prefix .. "_frame"].destroy()
     end
 
