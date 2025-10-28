@@ -407,7 +407,7 @@ local function machine_replacement(old_machine_name, new_machine_name, assemblin
             -- set up placement params
             local parameters = {
                 name = is_ghost and "entity-ghost" or new_machine_name,
-                ghost_name = is_ghost and new_machine_name or nil,
+                inner_name = is_ghost and new_machine_name or nil,
                 position = old_machine.position,
                 direction = old_machine.direction,
                 quality = old_machine.quality,
@@ -738,10 +738,12 @@ local on_turd_built = function(event)
         end
     end
 
-    if storage.turd_machine_replacements[force_index] and storage.turd_machine_replacements[force_index][name] then
-        machine_replacement(name, storage.turd_machine_replacements[force_index][name], {entity})
-    elseif turd_machines[name] then -- is a turd building, should be normal
-        machine_replacement(name, turd_machines[name], {entity})
+    local base_variant = turd_machines[name] -- non-turd machine if `name` is a turd machine, nil otherwise
+    local force_replacements = storage.turd_machine_replacements[force_index] or {} -- replacements that apply to this force
+    if force_replacements[name] then
+        machine_replacement(name, force_replacements[name], {entity})
+    elseif base_variant and not force_replacements[base_variant] then -- is a turd building but not unlocked, should be replaced with normal building
+        machine_replacement(name, base_variant, {entity})
     end
 
     if entity.valid and bhoddos_lib.cultures[entity.name] then

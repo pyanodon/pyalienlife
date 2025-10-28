@@ -298,6 +298,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if status == defines.behavior_result.in_progress then return end
     if status == defines.behavior_result.fail or status == defines.behavior_result.deleted then
+        -- if the target has been deleted, it will throw the error after 10 seconds when the schedule is re-ran
         caravan_data.retry_pathfinder = 10
         caravan_data.action_id = -1
         return
@@ -360,15 +361,15 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
         if needs_fuel then
             CaravanImpl.add_alert(entity, Caravan.alerts.no_fuel)
-            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 30)
+            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 62, 31)
             goto continue
         end
 
         if caravan_data.retry_pathfinder then
             caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
             if caravan_data.retry_pathfinder == 0 then
-                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
                 caravan_data.retry_pathfinder = nil
+                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
             end
             goto continue
         end
@@ -424,14 +425,8 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             goto continue
         end
 
-        local caravan_data = storage.caravans[gui.tags.unit_number]
-
-        for _, schedule in pairs(caravan_data.schedule) do
-            if schedule.entity and not schedule.entity.valid then
-                CaravanGui.update_gui(player)
-                goto continue
-            end
-        end
+        -- used to refresh the schedule here every update if the target entity is invalid
+        -- if this removal causes trouble we need a better way to handle it
 
         ::continue::
     end

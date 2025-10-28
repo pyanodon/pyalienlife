@@ -18,7 +18,9 @@ local function on_add_interrupt_confirmed(event)
     if string.len(name) == 0 then return end
     if table.invert(caravan_data.interrupts)[name] ~= nil then return end
 
+    local is_new = false
     if not storage.interrupts[name] then
+        is_new = true
         storage.interrupts[name] = {
             name = name,
             conditions = {},
@@ -36,8 +38,11 @@ local function on_add_interrupt_confirmed(event)
         player.gui.screen.add_interrupt_gui.destroy()
     end
     CaravanScheduleGui.update_schedule_pane(player)
-    local edit_interrupt_gui = EditInterruptGui.build(player.gui.screen, storage.interrupts[name])
-    CaravanUtils.restore_gui_location(edit_interrupt_gui, window_location)
+    -- used to open the edit screen unconditionally here but it annoyed players
+    if is_new then
+        local edit_interrupt_gui = EditInterruptGui.build(player.gui.screen, storage.interrupts[name])
+        CaravanUtils.restore_gui_location(edit_interrupt_gui, window_location)
+    end
 end
 
 local function on_edit_interrupt_confirmed(event)
