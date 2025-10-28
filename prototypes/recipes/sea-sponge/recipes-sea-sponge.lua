@@ -112,8 +112,7 @@ RECIPE {
     },
     subgroup = "py-alienlife-items",
     order = "c",
-    icons = py.composite_icon("ore-quartz", "sea-sponge"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-quartz", "sea-sponge")
 }:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
@@ -130,8 +129,7 @@ RECIPE {
     },
     subgroup = "py-alienlife-items",
     order = "c",
-    icons = py.composite_icon("ore-quartz", "sea-sponge-sprouts"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-quartz", "sea-sponge-sprouts")
 }:add_unlock("water-invertebrates-mk01")
 
 

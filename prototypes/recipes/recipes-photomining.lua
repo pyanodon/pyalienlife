@@ -115,8 +115,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("pb-biomass", "grod", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -134,8 +133,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("sn-biomass", "grod", nil, nil, nil)
 }:add_unlock("phytomining")
 
 RECIPE {
@@ -153,8 +151,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("al-biomass", "grod", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -172,8 +169,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("ag-biomass", "bhoddos", nil, nil, nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -191,8 +187,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("ag-biomass", "seaweed", nil, nil, nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -210,8 +205,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("zn-biomass", "moss", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -229,8 +223,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("au-biomass", "navens", nil, nil, nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -248,8 +241,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("fe-biomass", "navens", nil, nil, nil)
 }:add_unlock("phytomining")
 
 RECIPE {
@@ -267,8 +259,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("cu-biomass", "rennea", nil, nil, nil)
 }:add_unlock("phytomining")
 
 RECIPE {
@@ -286,8 +277,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("co-biomass", "rennea", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -305,8 +295,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("ni-biomass", "ralesia", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -324,8 +313,7 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 50},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, nil, nil)
 }:add_unlock("phytomining")
 
 RECIPE {
@@ -343,8 +331,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("ti-biomass", "yaedols", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -362,8 +349,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("fe-biomass", "yotoi", nil, nil, nil)
 }:add_unlock("phytomining")
 
 
@@ -385,8 +371,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("pb-biomass", "grod", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -405,8 +390,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("sn-biomass", "grod", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -425,8 +409,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("al-biomass", "grod", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -445,8 +428,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "chelator", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -465,8 +447,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("ag-biomass", "seaweed", nil, "chelator", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -485,8 +466,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("zn-biomass", "moss", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -505,8 +485,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("au-biomass", "navens", nil, "chelator", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -525,8 +504,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("fe-biomass", "navens", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -545,8 +523,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("cu-biomass", "rennea", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -565,8 +542,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("co-biomass", "rennea", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -585,8 +561,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("ni-biomass", "ralesia", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -605,8 +580,7 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 80},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -625,8 +599,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("ti-biomass", "yaedols", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -645,8 +618,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("fe-biomass", "yotoi", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 
@@ -670,8 +642,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("pb-biomass", "grod", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -691,8 +662,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("sn-biomass", "grod", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -712,8 +682,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("al-biomass", "grod", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -733,8 +702,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -754,8 +722,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("ag-biomass", "seaweed", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -775,8 +742,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("zn-biomass", "moss", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -796,8 +762,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("au-biomass", "navens", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -817,8 +782,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("fe-biomass", "navens", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -838,8 +802,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("cu-biomass", "rennea", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -859,8 +822,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("co-biomass", "rennea", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -880,8 +842,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("ni-biomass", "ralesia", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -901,8 +862,7 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 100},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -922,8 +882,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("ti-biomass", "yaedols", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -943,8 +902,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("fe-biomass", "yotoi", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 
@@ -972,8 +930,7 @@ RECIPE {
         {type = "item", name = "biomass",  amount = 5},
     },
     main_product = "ore-lead",
-    icons = py.composite_icon("ore-lead", "pb-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-lead", "pb-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -991,8 +948,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product = "ore-tin",
-    icons = py.composite_icon("ore-tin", "sn-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-tin", "sn-biomass")
 }:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
@@ -1010,8 +966,7 @@ RECIPE {
         {type = "item", name = "biomass",       amount = 5},
     },
     main_product = "ore-aluminium",
-    icons = py.composite_icon("ore-aluminium", "al-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-aluminium", "al-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -1029,8 +984,7 @@ RECIPE {
         {type = "item", name = "biomass",              amount = 5},
     },
     main_product = "lead-refined-dust-03",
-    icons = py.composite_icon("lead-refined-dust-03", "ag-biomass"),
-    icon_size = 32,
+    icons = py.composite_icon("lead-refined-dust-03", "ag-biomass")
 }:add_unlock("phytomining-mk03"):change_category("pulp")
 
 RECIPE {
@@ -1048,8 +1002,7 @@ RECIPE {
         {type = "item", name = "biomass",          amount = 5},
     },
     main_product = "gold-concentrate",
-    icons = py.composite_icon("gold-concentrate", "au-biomass"),
-    icon_size = 32,
+    icons = py.composite_icon("gold-concentrate", "au-biomass")
 }:add_unlock("phytomining-mk03"):change_category("pulp")
 
 RECIPE {
@@ -1067,8 +1020,7 @@ RECIPE {
         {type = "item", name = "biomass",  amount = 5},
     },
     main_product = "ore-zinc",
-    icons = py.composite_icon("ore-zinc", "zn-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-zinc", "zn-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -1086,8 +1038,7 @@ RECIPE {
         {type = "item", name = "biomass",    amount = 5},
     },
     main_product = "copper-ore",
-    icons = py.composite_icon("copper-ore", "cu-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("copper-ore", "cu-biomass")
 }:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
@@ -1105,8 +1056,7 @@ RECIPE {
         {type = "item", name = "biomass",        amount = 5},
     },
     main_product = "cobalt-extract",
-    icons = py.composite_icon("cobalt-extract", "co-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("cobalt-extract", "co-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -1124,8 +1074,7 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product = "salt",
-    icons = py.composite_icon("salt", "nacl-biomass"),
-    icon_size = 32,
+    icons = py.composite_icon("salt", "nacl-biomass")
 }:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
@@ -1143,8 +1092,7 @@ RECIPE {
         {type = "item", name = "biomass",      amount = 5},
     },
     main_product = "ore-titanium",
-    icons = py.composite_icon("ore-titanium", "ti-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-titanium", "ti-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -1162,8 +1110,7 @@ RECIPE {
         {type = "item", name = "biomass",  amount = 5},
     },
     main_product = "iron-ore",
-    icons = py.composite_icon("iron-ore", "fe-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("iron-ore", "fe-biomass")
 }:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
@@ -1181,8 +1128,7 @@ RECIPE {
         {type = "item", name = "biomass",    amount = 5},
     },
     main_product = "ore-nickel",
-    icons = py.composite_icon("ore-nickel", "ni-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("ore-nickel", "ni-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -1200,8 +1146,7 @@ RECIPE {
         {type = "item", name = "biomass",     amount = 5},
     },
     main_product = "niobium-ore",
-    icons = py.composite_icon("niobium-ore", "nb-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("niobium-ore", "nb-biomass")
 }:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
@@ -1219,8 +1164,7 @@ RECIPE {
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("ur-biomass", "bhoddos", nil, nil, nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -1239,8 +1183,7 @@ RECIPE {
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "chelator", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -1260,8 +1203,7 @@ RECIPE {
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
@@ -1278,6 +1220,5 @@ RECIPE {
         {type = "item", name = "uranium-ore", amount = 5},
     },
     main_product = "uranium-ore",
-    icons = py.composite_icon("uranium-ore", "ur-biomass"),
-    icon_size = 64,
+    icons = py.composite_icon("uranium-ore", "ur-biomass")
 }:add_unlock("phytomining-mk03"):change_category("pulp")

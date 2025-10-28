@@ -146,7 +146,7 @@ RECIPE {
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
     },
     results = {
@@ -154,8 +154,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "nb-biomass",
-    icons = py.composite_icon("nb-biomass", "guar", nil, nil, nil),
-    icon_size = 64,
+    icons = py.composite_icon("nb-biomass", "guar", nil, nil, nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -165,7 +164,7 @@ RECIPE {
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
     },
@@ -174,8 +173,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "nb-biomass",
-    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", nil),
-    icon_size = 64,
+    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", nil)
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
@@ -185,7 +183,7 @@ RECIPE {
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
         {type = "item",  name = "hmas",              amount = 1},
@@ -195,8 +193,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "nb-biomass",
-    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", "hmas"),
-    icon_size = 64,
+    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", "hmas")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
