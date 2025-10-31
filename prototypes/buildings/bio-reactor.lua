@@ -181,7 +181,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 100,
+                volume = 1000,
                 pipe_connections = {{flow_direction = "output", position = {1.0, -3.0}, direction = defines.direction.north}},
                 priority = "extra-high"
             },
@@ -190,7 +190,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 100,
+                volume = 1000,
                 pipe_connections = {{flow_direction = "output", position = {-1.0, -3.0}, direction = defines.direction.north}},
                 priority = "extra-high"
             },
