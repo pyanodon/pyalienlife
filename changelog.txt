@@ -2,6 +2,7 @@
 Version: 3.0.60
 Date: ????
   Changes:
+    - Fixed typo in Dig-o-saurus locale. Resolves https://github.com/pyanodon/pybugreports/issues/1233
     - Caravans: warnings now respect "Enable Warning Icon Blinking" setting
     - Caravans: fixed desync from accidental global variable
     - Caravans: fixed "destination removed" warning
@@ -11,14 +12,15 @@ Date: ????
     - Caravans: allow pipette to select food from empty food slots
     - Caravans: fixed crash with item interrupt conditions on fluid caravans
     - Caravans: adding an interrupt no longer opens the edit dialog
-    - Updated Simplified Chinese locale courtesy of @alone on Discord
     - Fixed some techs having a too-fast cycle time
+    - Increased the output fluidbox size of all buildings from 100->1000. Allows fluid transfer at even higher rates before hitting engine limitations. Resolves https://github.com/pyanodon/pybugreports/issues/1203
     - Fixed all techs added by "enable all feature flags" not being seen by autotech.
     - Fixed some issues with incorrectly replacing ghosts of T.U.R.D. buildings. Fixes https://github.com/pyanodon/pybugreports/issues/1212
     - Fixed an issue with simik den localization. Fixes https://github.com/pyanodon/pybugreports/issues/1217
     - Added keyboard shortcuts for quickly opening the T.U.R.D. codex page and the Caravan manager.
     - Enhanced caravan number input to handle MathExp and large numbers better.
     - Buff starch stage 3 by 4x and allow productivity
+    - Hide some unused urea and lard recipes from factoriopedia
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.59
 Date: 2025-09-15
