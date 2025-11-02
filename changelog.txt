@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
-Date: ????
+Date: 2025-11-02
   Changes:
     - Fixed typo in Dig-o-saurus locale. Resolves https://github.com/pyanodon/pybugreports/issues/1233
     - Caravans: warnings now respect "Enable Warning Icon Blinking" setting
