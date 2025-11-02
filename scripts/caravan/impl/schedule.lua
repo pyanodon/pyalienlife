@@ -56,9 +56,9 @@ function P.find_interrupt_to_trigger(caravan_data)
 
     for _, interrupt_name in pairs(caravan_data.interrupts) do
         local interrupt = storage.interrupts[interrupt_name]
-        -- TODO shouldn't we assert? Is it a check for multiplayer shenanigans?
-        if interrupt then
-
+        -- TODO: shouldn't we assert `interrupt`? Is it a check for multiplayer shenanigans?
+        -- This schedule/condition check allows us to emulate vanilla train behavior where a blank interrupt with a met condition can stop a schedule
+        if interrupt and (#interrupt.schedule > 0 or #interrupt.conditions > 0) then
             if not current_schedule or temporary_schedule == nil or interrupt.inside_interrupt then
                 if P.evaluate_conditions(caravan_data, interrupt) then
                     return interrupt
@@ -133,6 +133,7 @@ function P.advance_caravan_schedule_by_1(caravan_data)
 
     local interrupt = P.find_interrupt_to_trigger(caravan_data)
 
+    -- This emulates train behavior where a blank interrupt with a condition can halt evaluation
     if interrupt and #interrupt.schedule > 0 then
         P.trigger_interrupt_in_regular_schedule(caravan_data, interrupt)
     else
@@ -153,7 +154,7 @@ end
 function P.begin_schedule(caravan_data, schedule_id, skip_eating)
     local schedule = caravan_data.schedule[schedule_id]
 
-    if not schedule or (schedule.entity and not schedule.entity.valid) then
+    if not schedule then
         ImplControl.stop_actions(caravan_data); return
     end
     if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
@@ -172,7 +173,6 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
         ImplControl.stop_actions(caravan_data); return
     end
 
-    local schedule = caravan_data.schedule[schedule_id]
     if caravan_data.fuel_inventory then
         if not skip_eating and not ImplControl.eat(caravan_data) then
             ImplControl.stop_actions(caravan_data); return
@@ -187,7 +187,7 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
             ImplControl.goto_entity(caravan_data, schedule.entity)
         else
             ImplGui.add_alert(entity, Caravan.alerts.destination_destroyed)
-            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 30)
+            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 60, 30)
             ImplControl.wander(caravan_data)
             caravan_data.retry_pathfinder = 1
             return

@@ -82,7 +82,7 @@ local function add_gui_row(caravan_data, key, table, inner)
     camera.entity = entity
     camera.visible = true
     camera.style.height = 155
-    camera.zoom = (prototype.camera_zoom or 1) / 2
+    camera.zoom = (prototype.camera_zoom or 0.5) / 2
 
     local status_flow = table.add {type = "flow", direction = "horizontal"}
     status_flow.style.height = 0
@@ -123,7 +123,9 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
+    local position
     local gui = CaravanGui.get_gui(player)
+    -- if the camera has a target, use that instead of the schedule target
     if gui then
         local camera = gui.entity_frame.camera_frame.camera
         position = camera.position
@@ -131,7 +133,13 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     end
 
     player.opened = nil
-    if entity then
+    if entity or position then
+        local zoom = player.zoom
+        player.set_controller {
+            type = defines.controllers.remote,
+            position = position or entity.position,
+        }
+        player.zoom = zoom
         player.centered_on = entity
     end
 end
@@ -242,6 +250,7 @@ local function create_gui(gui, player)
             end
         end
     else
+        table.style.top_margin = 30
         local gui = gui.add {type = "frame", style = "negative_subheader_frame", direction = "horizontal", name = "no_spacecrafts_frame", index = 1}
         gui.style.top_margin = -4
         gui.style.left_margin = -8
@@ -254,8 +263,8 @@ local function create_gui(gui, player)
         gui.add {type = "label", caption = {"caravan-gui.empty"}, style = "bold_label"}.style.single_line = false
         gui.add {type = "label", caption = {"caravan-gui.empty-2"}}.style.single_line = false
     end
-    for i = 1, 4 do
-        for i = 1, 2 do
+    for _ = 1, 4 do
+        for _ = 1, 2 do
             local ew = table.add {type = "empty-widget"}
             ew.style.vertically_stretchable = true
             ew.style.horizontally_stretchable = true

@@ -31,7 +31,7 @@ local MainFrameComponents = require "main_frame"
 -- Do not show number of items when item is not stackable (e.g. deconstruction planners, caravans)
 --
 -- Won't implement(?)
--- Pipette
+-- Z (single-item transfer)
 -- Shift LMB + drag
 -- Shift RMB + drag w/ and w/o item in cursor
 -- Click sounds (https://lua-api.factorio.com/latest/prototypes/ItemPrototype.html#inventory_move_sound)
@@ -128,8 +128,9 @@ end
 
 function P.build_character_inventory(parent, player, caravan_data)
     local inventory = get_inventory(player)
-    if (inventory == nil) then
-        log("what the fuck man")
+    if not inventory then
+        -- e.g. editor + remote view
+        return
     end
 
     local name = "py_caravan_player_inventory"
@@ -290,7 +291,7 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local id_proj = function(s) return s end
     local one_item_proj = function(s) return {name = s.name, count = 1, quality = s.quality} end
 
-    if is_control and is_shift then return end
+    if is_ctrl and is_shift then return end
 
     local slot_index = event.element.tags.slot_index
     
@@ -317,6 +318,10 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
         end
     elseif is_rmb and not (is_ctrl or is_alt or is_shift) then
         if has_items_in_cursor and is_supported_pred(player.cursor_stack) then
+            -- disallow right-click with different item
+            if inventory[slot_index].valid_for_read and inventory[slot_index].name ~= player.cursor_stack.name then
+                return
+            end
             set_cursor_stack_to_slot(player, inventory, slot_index, one_item_proj)
         else
             set_stack_to_cursor(player, inventory, slot_index, half_stack_proj)
@@ -344,15 +349,17 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     local player = game.get_player(event.player_index)
     local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
-    local is_fluid = caravan_data.entity.name:find("^fluidavan")
-    local pred = function (s) return true end
+    -- make these two conditional on type
+    local is_solid = not caravan_data.entity.name:find("^fluidavan")
+    local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
+    local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
-    handle_slot_click(event, caravan_data, inventory, is_fluid and caravan_data.fuel_inventory or caravan_data.inventory, pred)
+    handle_slot_click(event, caravan_data, inventory, target_inv, pred)
 
-    if is_fluid then
-        P.update_fuel_inventory(player, caravan_data)
-    else
+    if is_solid then
         P.update_caravan_inventory(player, caravan_data)
+    else
+        P.update_fuel_inventory(player, caravan_data)
     end
 end
 
@@ -400,6 +407,38 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
     player.hand_location = nil
     local caravan_data = storage.caravans[gui.tags.unit_number]
     P.update_character_inventory(player, caravan_data)
+end)
+
+-- allow pipette on fuel slots to quick-grab fuel from the player inventory
+-- TODO: expand to regular slots
+py.on_event("py_caravan_pipette", function(event)
+    local player = game.get_player(event.player_index)
+    local element = event.element
+    -- element meets requirements?
+    if not element or not element.name or not element.name:match("^py_caravan_fuel_inventory_slot_") then return end
+    local caravan_data = storage.caravans[event.element.tags.unit_number]
+    -- player meets requirements?
+    local main_inventory = get_inventory(player)
+    if not main_inventory or not player.is_cursor_empty() then return end
+    -- edge case (not handled): god controller/cheat mode where pipette gives you a full stack
+    local target_slot = caravan_data.fuel_inventory[event.element.tags.slot_index]
+    -- fuel slot has something in it, so find that item in the player inventory
+    if target_slot.valid_for_read then
+        local _, index = main_inventory.find_item_stack(target_slot.name)
+        if index then
+            set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
+        end
+    else -- otherwise find the most valuable food in the player inventory and put it into the cursor
+        local sorted_foods = table.deepcopy(caravan_prototypes[caravan_data.entity.name].favorite_foods)
+        table.sort(sorted_foods, function(a, b) return a > b end)
+        for food_name in pairs(sorted_foods) do
+            local _, index = main_inventory.find_item_stack(food_name)
+            if index then
+                set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
+                break
+            end
+        end
+    end
 end)
 
 return P

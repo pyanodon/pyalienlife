@@ -91,25 +91,38 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
     end
 end)
 
+--- restores the player's camera type and position
+local function restore_controller(player, last_opened)
+    if not last_opened or not last_opened.controller_type then return end
+    if last_opened.controller_type == defines.controllers.character and (not player.character or not player.character.valid) then return end
+    player.set_controller {
+        type = last_opened.controller_type,
+        character = player.character,
+        position = last_opened.camera_position
+    }
+    player.zoom = last_opened.zoom
+end
+
 -- Reopen the last closed caravan gui when player no longer holds carrot-on-stick item
 -- regardless of whether or not it was used
 py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local last_opened = storage.last_opened[event.player_index]
     if not last_opened then return end
-    local player = game.get_player(event.player_index) ---@as LuaPlayer
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     -- If the item is in hand, don't open the gui
     local stack = player.cursor_stack
     if stack and stack.valid_for_read and stack.name == "caravan-control" then return end
     local ghost = player.cursor_ghost
     if ghost and ghost.name.name == "caravan-control" then return end
-
+    restore_controller(player, last_opened)
     if last_opened.caravan then
         local caravan_data = storage.caravans[last_opened.caravan]
         if not CaravanGui.get_gui(player) then --The UI can already exist if someone clicks multiple times in a tick
             CaravanGui.build(player, caravan_data)
         end
-        if storage.edited_interrupt then
-            EditInterruptGui.build(player.gui.screen, storage.edited_interrupt)
+        local edited_interrupt = storage.edited_interrupts[event.player_index]
+        if edited_interrupt then
+            EditInterruptGui.build(player.gui.screen, edited_interrupt)
         end
     end
 
@@ -123,7 +136,7 @@ local function on_carrot_used(player, cursor_position)
     local schedule, prototype, only_outpost
     local last_opened = storage.last_opened[player.index]
     local caravan_data = storage.caravans[last_opened.caravan]
-    local interrupt_data = storage.edited_interrupt
+    local interrupt_data = storage.edited_interrupts[player.index]
     if caravan_data then
         if not CaravanImpl.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule
@@ -181,6 +194,10 @@ local function on_carrot_used(player, cursor_position)
         else
             sch.player_index = nil
             sch.localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
+        end
+        -- If this is our current schedule schedule item, we have the caravan restart it
+        if caravan_data and caravan_data.schedule_id == last_opened.schedule_id then
+            CaravanImpl.begin_schedule(caravan_data, last_opened.schedule_id, true)
         end
         --CaravanImpl.clear_invalid_actions_from_schedule(sch) #TODO
     elseif entity then
@@ -242,14 +259,14 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     local entity = player.selected
-    if not entity or not caravan_prototypes[entity.name]--[[ or not player.can_reach_entity(entity) ]]then return end
+    if not entity or not caravan_prototypes[entity.name] --[[ or not player.can_reach_entity(entity) ]] then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
     local existing = CaravanGui.get_gui(player)
     if existing then
         -- xref: on_gui_closed
         local is_in_modal = (
             CaravanGuiComponents.get_slider_frame(player) ~= nil
-            or  player.gui.screen.add_interrupt_gui ~= nil
+            or player.gui.screen.add_interrupt_gui ~= nil
             or player.gui.screen.edit_interrupt_gui ~= nil
             or (existing.entity_frame.subheader_frame.contents_flow.py_caravan_rename_textfield or {}).visible == true
         )
@@ -281,6 +298,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if status == defines.behavior_result.in_progress then return end
     if status == defines.behavior_result.fail or status == defines.behavior_result.deleted then
+        -- if the target has been deleted, it will throw the error after 10 seconds when the schedule is re-ran
         caravan_data.retry_pathfinder = 10
         caravan_data.action_id = -1
         return
@@ -288,11 +306,13 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
 
     if #schedule.actions == 0 then
         local schedule_num = #caravan_data.schedule
+        -- need a delay before looping the same action or we'll just empty the food constantly
         if schedule_num == 1 and not caravan_data.schedule[1].temporary then
             caravan_data.retry_pathfinder = 3
             return
         else
             CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
+            CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id)
         end
     else
         local entity = caravan_data.entity
@@ -329,7 +349,7 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             end
         end
 
-        local sort_fn = function (a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
+        local sort_fn = function(a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
         table.sort(queue, sort_fn)
         storage.caravan_queue = queue
     end
@@ -341,15 +361,15 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
         if needs_fuel then
             CaravanImpl.add_alert(entity, Caravan.alerts.no_fuel)
-            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 30)
+            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 62, 31)
             goto continue
         end
 
         if caravan_data.retry_pathfinder then
             caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
             if caravan_data.retry_pathfinder == 0 then
-                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
                 caravan_data.retry_pathfinder = nil
+                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
             end
             goto continue
         end
@@ -405,18 +425,12 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
             goto continue
         end
 
-        local caravan_data = storage.caravans[gui.tags.unit_number]
-
-        for _, schedule in pairs(caravan_data.schedule) do
-            if schedule.entity and not schedule.entity.valid then
-                CaravanGui.update_gui(player)
-                goto continue
-            end
-        end
+        -- used to refresh the schedule here every update if the target entity is invalid
+        -- if this removal causes trouble we need a better way to handle it
 
         ::continue::
     end
-    
+
     if next(storage.make_operable_next_tick) then
         for _, entity in pairs(storage.make_operable_next_tick) do
             if entity.valid then entity.operable = true end

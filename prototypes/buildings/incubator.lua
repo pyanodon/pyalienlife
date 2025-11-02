@@ -186,7 +186,7 @@ for i = 1, 4 do
         fluid_boxes = {
             {
                 production_type = "output",
-                volume = 100,
+                volume = 1000,
                 pipe_connections = {{flow_direction = "output", position = {-2.0, -3.0}, direction = defines.direction.north}},
                 priority = "extra-high"
             },

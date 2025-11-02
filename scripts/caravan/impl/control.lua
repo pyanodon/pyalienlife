@@ -149,11 +149,16 @@ function P.select_destination(player, last_opened, camera_position)
         Utils.store_gui_location(player.gui.screen.caravan_gui)
     end
     if player.gui.screen.edit_interrupt_gui then
-        -- destroy the edit interrupt GUI before triggering on_gui_closed, to keep the storage.edited_interrupt alive
+        -- destroy the edit interrupt GUI before triggering on_gui_closed, to keep the storage.edited_interrupts[player_index] alive
         player.gui.screen.edit_interrupt_gui.destroy()
     end
 
     player.opened = nil
+    if settings.get_player_settings(player.index)["py-caravan-return-camera"].value then
+        last_opened.controller_type = player.controller_type
+        last_opened.camera_position = player.position
+        last_opened.zoom = player.zoom
+    end
     if camera_position then
         local zoom = player.zoom
         player.set_controller{

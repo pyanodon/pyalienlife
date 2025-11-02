@@ -21,22 +21,23 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_action_move_up_button"] = function(event)
     local player = game.get_player(event.player_index)
-    local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
+    local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
-    local i = event.element.tags.action_id
+    local old_index = event.element.tags.action_id
+    local new_index = event.control and 1 or old_index - 1
 
-    if i == 1 then return end
+    if old_index == 1 then return end
 
-    actions[i - 1], actions[i] = actions[i], actions[i - 1]
+    actions[new_index], actions[old_index] = actions[old_index], actions[new_index]
 
     if caravan_data then
         if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
             CaravanImpl.stop_actions(caravan_data)
-        elseif caravan_data.action_id == i then
-            caravan_data.action_id = i - 1
-        elseif caravan_data.action_id == i - 1 then
-            caravan_data.action_id = i
+        elseif caravan_data.action_id == old_index then
+            caravan_data.action_id = new_index
+        elseif caravan_data.action_id == new_index then
+            caravan_data.action_id = old_index
         end
     end
 
@@ -45,22 +46,23 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_action_move_down_button"] = function(event)
     local player = game.get_player(event.player_index)
-    local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
+    local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
-    local i = event.element.tags.action_id
+    local old_index = event.element.tags.action_id
+    local new_index = event.control and #actions or old_index + 1
 
-    if i == #actions then return end
+    if old_index == #actions then return end
 
-    actions[i + 1], actions[i] = actions[i], actions[i + 1]
+    actions[new_index], actions[old_index] = actions[old_index], actions[new_index]
 
     if caravan_data then
         if caravan_data.schedule_id == event.element.tags.schedule_id and caravan_data.action_id ~= -1 then
             CaravanImpl.stop_actions(caravan_data)
-        elseif caravan_data.action_id == i then
-            caravan_data.action_id = i + 1
-        elseif caravan_data.action_id == i + 1 then
-            caravan_data.action_id = i
+        elseif caravan_data.action_id == old_index then
+            caravan_data.action_id = new_index
+        elseif caravan_data.action_id == new_index then
+            caravan_data.action_id = old_index
         end
     end
 
@@ -70,7 +72,7 @@ end
 gui_events[defines.events.on_gui_click]["py_caravan_action_delete_button"] = function(event)
     local player = game.get_player(event.player_index)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
-    local actions = CaravanUtils.get_actions_from_tags(event.element.tags)
+    local actions = CaravanUtils.get_actions_from_tags(event.element.tags, event.player_index)
 
     table.remove(actions, event.element.tags.action_id)
 
@@ -108,7 +110,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_play_stop_button"] = 
             CaravanImpl.stop_actions(caravan_data)
         else
             local position
-            if schedule.entity then position = schedule.entity.position else position = schedule.position end
+            if schedule.entity and schedule.entity.valid then position = schedule.entity.position else position = schedule.position end
             if py.distance_squared(position, caravan_data.entity.position) < 1000 then
                 CaravanImpl.begin_action(caravan_data, tags.action_id)
             end
@@ -125,12 +127,48 @@ end
 
 local prefix = "py_caravan_action_number_selection"
 
+local expression_variables = {k=1000, K=1000, m=1000000, M=1000000, g=1000000000, G=1000000000}
+
+
+--- Parses a mathematical expression using MathExp library with predefined variables.
+--- @param expr string
+--- @param vars { [string]: number }?
+--- @return number?
+local function parse_math_expr(expr, vars)
+    if not expr or expr == "" then return nil end
+
+    local ok, result = pcall(function()
+        return helpers.evaluate_expression(expr, vars or expression_variables)
+    end)
+
+    if ok and type(result) == "number" then
+        -- handle natural rounding
+        result = math.floor(result + 0.5)
+
+        return result
+    else
+        return nil
+    end
+end
+
 local function on_confirmed(event)
     local player = game.get_player(event.player_index)
 
     local tags = event.element.tags
     local textfield = event.element.parent[prefix .. "_text_field"]
     local value = tonumber(textfield.text) or 0
+    local parsed_value = parse_math_expr(textfield.text)
+
+    if value ~= parsed_value and parsed_value then
+        textfield.text = tostring(parsed_value)
+
+        local slider = textfield.parent[prefix .. "_slider"]
+        if slider then
+            slider.slider_value = parsed_value
+        end
+
+        return
+    end
 
     local action = CaravanUtils.get_action_from_button(event.element)
 
@@ -141,7 +179,16 @@ local function on_confirmed(event)
         action.item_count = value
     end
 
-    if player.gui.screen[prefix .. "_frame"] then 
+    -- keep slider in sync after setting the action value 
+    local frame = player.gui.screen[prefix .. "_frame"]
+    if frame then
+        local slider = frame[prefix .. "_slider"]
+        if slider then
+            slider.slider_value = value
+        end
+    end
+
+    if player.gui.screen[prefix .. "_frame"] then
         player.gui.screen[prefix .. "_frame"].destroy()
     end
 

@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/dingrits.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"land-animals-mk03", "biotech-mk03",},
+    prerequisites = {"land-animals-mk02", "biotech-mk02"},
     effects = {},
     unit = {
         count = 200,
@@ -26,7 +26,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dingrits"},
-    dependencies = {"dingrits"},
     effects = {},
     unit = {
         count = 250,
@@ -49,7 +48,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dingrits-mk02"},
-    dependencies = {"dingrits-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -74,7 +72,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"dingrits-mk03"},
-    dependencies = {"dingrits-mk03"},
     effects = {},
     unit = {
         count = 350,

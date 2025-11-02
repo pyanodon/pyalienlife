@@ -4,8 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/biased-mutation.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"artificial-breeding", "biotech-mk04"},
-    dependencies = {"artificial-breeding"},
+    prerequisites = {"artificial-breeding"},
     effects = {},
     unit = {
         count = 300,

@@ -107,8 +107,11 @@ end
 
 function P.build_time_selection_button(parent, action, tags)
     tags.elem_type = "time"
+    parent.add {type = "empty-widget"}.style.horizontally_stretchable = true
     local btn = parent.add {type = "button", name = prefix .. "_button", style = "train_schedule_condition_time_selection_button", tags = tags}
-    btn.style.width = 60
+    btn.style.width = 44
+    btn.style.right_padding = 0
+    btn.style.left_padding = 0
     btn.caption = L.time_format_value(action.wait_time or 5)
 
     return btn
@@ -117,7 +120,9 @@ end
 function P.build_count_selection_button(parent, action, tags)
     tags.elem_type = "count"
     local btn = parent.add {type = "button", name = prefix .. "_button", style = "train_schedule_condition_time_selection_button", tags = tags}
-    btn.style.width = 60
+    btn.style.width = 44
+    btn.style.right_padding = 0
+    btn.style.left_padding = 0
     btn.caption = L[tags.elem_type .. "_format_value"](action.item_count or 0)
 
     return btn

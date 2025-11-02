@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/starch-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"starch-mk01"},
+    prerequisites = {"starch-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -43,7 +43,7 @@ if mods["pyhightech"] then
         icon = "__pyalienlifegraphics2__/graphics/technology/starch-mk03.png",
         icon_size = 128,
         order = "c-a",
-        dependencies = {"starch-mk02"},
+        prerequisites = {"starch-mk02"},
         effects = {},
         unit = {
             count = 150,

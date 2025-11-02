@@ -22,7 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/sap-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"sap-mk01"},
+    prerequisites = {"sap-mk01"},
     effects = {},
     unit = {
         count = 100,
@@ -41,7 +41,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/sap-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"sap-mk02"},
+    prerequisites = {"sap-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -61,7 +61,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/sap-mk04.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"sap-mk03"},
+    prerequisites = {"sap-mk03"},
     effects = {},
     unit = {
         count = 350,

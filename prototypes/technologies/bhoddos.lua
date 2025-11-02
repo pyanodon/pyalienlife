@@ -25,7 +25,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"bhoddos"},
-    dependencies = {"bhoddos"},
     effects = {},
     unit = {
         count = 200,
@@ -48,7 +47,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"bhoddos-mk02"},
-    dependencies = {"bhoddos-mk02"},
     effects = {},
     unit = {
         count = 250,
@@ -72,7 +70,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"bhoddos-mk03"},
-    dependencies = {"bhoddos-mk03"},
     effects = {},
     unit = {
         count = 300,
