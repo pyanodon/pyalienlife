@@ -40,7 +40,7 @@ py.autorecipes {
 			},
 			tech = "water-invertebrates-mk02"
 		},
-		--food 2
+		--fish egg
 		{
 			ingredients =
 			{
@@ -52,7 +52,7 @@ py.autorecipes {
 			},
 			tech = "water-invertebrates-mk03"
 		},
-		--food 2 blood-meal
+		--food 2 fawogae
 		{
 			ingredients =
 			{
@@ -227,12 +227,14 @@ py.autorecipes {
 			crafting_speed = 130,
 			tech = "water-invertebrates-mk02"
 		},
-		--fish egg
+		--food 2 fish egg, no blood meal
 		{
 			ingredients =
 			{
 				{name = "blood-meal", remove_item = true},
 				{name = "saps",       remove_item = true},
+				{name = "fish-food-01", remove_item = true},
+				{name = "fish-food-02", amount = 1},
 				{name = "fish-egg",   amount = 15},
 
 			},
@@ -244,7 +246,7 @@ py.autorecipes {
 			crafting_speed = 110,
 			tech = "water-invertebrates-mk03"
 		},
-		--food 2 blood-meal
+		--blood-meal
 		{
 			ingredients =
 			{
