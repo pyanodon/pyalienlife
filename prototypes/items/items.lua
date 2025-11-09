@@ -5462,10 +5462,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "cottongut-pup-mk01",
-    icons = {
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk01.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-pup.png"}
-    },
+    icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-cottongut",
@@ -5477,8 +5474,8 @@ ITEM {
     type = "item",
     name = "cottongut-pup-mk02",
     icons = {
-        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png"}
     },
     icon_size = 64,
     flags = {},
@@ -5491,8 +5488,8 @@ ITEM {
     type = "item",
     name = "cottongut-pup-mk03",
     icons = {
-        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png"}
     },
     icon_size = 64,
     flags = {},
@@ -5505,8 +5502,8 @@ ITEM {
     type = "item",
     name = "cottongut-pup-mk04",
     icons = {
-        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"}
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/cottongut-stud-pup.png"}
     },
     icon_size = 64,
     flags = {},
