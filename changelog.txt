@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.61
+Date: 2025-11-08
+  Changes:
+    - Changed xyhiphoe recipes to use deluxe fish food instead of regular fish food starting at tier 3. Resolves https://github.com/pyanodon/pybugreports/issues/1259
+---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02
   Changes:
