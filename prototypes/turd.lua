@@ -15,7 +15,6 @@ local tech_upgrades = {
     require "prototypes/upgrades/yaedols",
 }
 
-
 if (data and mods.pyhightech) or (script and script.active_mods.pyhightech) then -- is pyHT installed?
     for _, upgrade in pairs {
         "prototypes/upgrades/fwf",
@@ -110,7 +109,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
         category = tech_upgrade.module_category or error("TURD ERROR: No module category defined for " .. sub_tech.name),
         tier = 1,
         hidden = true, -- does this break helmod?
-        flags = {"not-stackable"},
+        flags = { "not-stackable" },
         subgroup = "py-alienlife-turd-modules",
         order = "z",
         stack_size = 1,
@@ -121,22 +120,22 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
             pollution = -1 * (effect.pollution or 0),
             quality = effect.quality or 0
         },
-        localised_name = {"technology-name." .. sub_tech.name},
-        localised_description = {"turd.font", {"turd.module"}},
+        localised_name = { "technology-name." .. sub_tech.name },
+        localised_description = { "turd.font", { "turd.module" } },
         not_voidable = true
     }
 
     if not data.raw["module-category"][module.category] then
-        data:extend {{
+        data:extend { {
             type = "module-category",
             name = module.category
-        }}
+        } }
     end
 
     if effective_speed then
         local adjusted_speed = effect.speed * 100
         if adjusted_speed >= 0 then adjusted_speed = "+" .. adjusted_speed end
-        py.add_to_description("module", module, {"turd.adjusted-speed", tostring(adjusted_speed)})
+        py.add_to_description("module", module, { "turd.adjusted-speed", tostring(adjusted_speed) })
     end
 
     if is_this_a_speed_module_that_effects_farm_buildings then
@@ -151,12 +150,13 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
                 module.effect.speed = (desired_speed / entity.crafting_speed) * effect.speed
             end
             if i ~= 1 then
-                module.localised_name = {"", {"technology-name." .. sub_tech.name}, " MK0" .. i}
+                module.localised_name = { "", { "technology-name." .. sub_tech.name }, " MK0" .. i }
             end
-            data:extend {module}
+            data:extend { module }
         end
     else
-        data:extend {module}
+        module.name = module.name .. "-mk01"
+        data:extend { module }
     end
 
     -- https://github.com/pyanodon/pybugreports/issues/809
@@ -170,18 +170,94 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     end
 end
 
+
+if py.stage == "data" then
+    for _, upgrade in pairs(tech_upgrades) do
+        for i, _ in pairs { 0, 0, 0 } do
+            local effects = {}
+
+            for _, effect in pairs(upgrade.sub_techs[i].effects) do
+                if effect.type == "recipe-replacement" then
+                    local main_product = "none"
+                    if data.raw.recipe[effect.old] and data.raw.recipe[effect.old].main_product then
+                        main_product = data.raw.recipe[effect.old].main_product
+                    end
+
+                    local result = "none"
+                    if data.raw.recipe[effect.old] and data.raw.recipe[effect.old].results then
+                        result = data.raw.recipe[effect.old].results[1].name
+                    end
+
+                    if data.raw.recipe[effect.old] then
+                        local icons = table.deepcopy(RECIPE(effect.old):get_icons())
+
+                        table.insert(icons, {
+                            icon = "__pyalienlifegraphics__/graphics/icons/minus.png",
+                            icon_size = 32
+                        })
+
+                        table.insert(effects, {
+                            type = "nothing",
+                            effect_description = { "", "Remove ", {"?", {"recipe-name." .. effect.old}, {"item-name." .. effect.old}, {"entity-name." .. effect.old}, {"item-name." .. main_product}, {"item-name." .. result}}, " Recipe"},
+                            icons = icons,
+                        })
+                    end
+
+                    table.insert(effects, {
+                        type = "unlock-recipe",
+                        recipe = effect.new
+                    })
+                end
+                if effect.type == "unlock-recipe" then
+                    table.insert(effects, {
+                        type = "unlock-recipe",
+                        recipe = effect.recipe
+                    })
+                end
+                if effect.type == "module-effects" then
+                    local item = upgrade.sub_techs[i].name .. "-module-mk01"
+                    -- local icons = table.deepcopy(ITEM(item):get_icons())
+
+                    table.insert(effects, {
+                        type = "nothing",
+                        effect_description = {"item-description."  .. item},
+                        icon = upgrade.sub_techs[i].icon,
+                        icon_size = upgrade.sub_techs[i].icon_size,
+                    })
+                end
+            end
+
+            TECHNOLOGY {
+                type = "technology",
+                name = upgrade.sub_techs[i].name,
+                icon = upgrade.sub_techs[i].icon,
+                icon_size = upgrade.sub_techs[i].icon_size,
+                prerequisites = {
+                    upgrade.master_tech.name
+                },
+                effects = effects,
+                research_trigger = {
+                    type = "scripted",
+                    icon = upgrade.master_tech.icon,
+                    icon_size = upgrade.master_tech.icon_size,
+                }
+            }
+        end
+    end
+end
+
 local recipes_with_turd_description = {}
 local function build_tech_upgrade(tech_upgrade)
     local master_tech = tech_upgrade.master_tech
     local effects = master_tech.effects or {}
 
     for _, sub_tech in pairs(tech_upgrade.sub_techs) do
-        data:extend {{
+        data:extend { {
             type = "sprite",
             name = sub_tech.name,
             filename = sub_tech.icon,
             size = sub_tech.icon_size
-        }}
+        } }
 
         effects[#effects + 1] = {
             type = "nothing",
@@ -190,9 +266,9 @@ local function build_tech_upgrade(tech_upgrade)
             effect_description = {
                 "",
                 "[font=default-semibold][color=255,230,192]",
-                {"technology-name." .. sub_tech.name},
+                { "technology-name." .. sub_tech.name },
                 "[/color][/font]\n",
-                {"technology-description." .. sub_tech.name}
+                { "technology-description." .. sub_tech.name }
             }
         }
 
@@ -200,19 +276,19 @@ local function build_tech_upgrade(tech_upgrade)
             if effect.type == "module-effects" then
                 build_module_effects_turd(tech_upgrade, sub_tech, effect)
             elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
-                py.add_to_description("recipe", data.raw.recipe[effect.recipe], {"turd.font", {"turd.recipe"}})
+                py.add_to_description("recipe", data.raw.recipe[effect.recipe], { "turd.font", { "turd.recipe" } })
                 recipes_with_turd_description[effect.recipe] = true
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
-                py.add_to_description("recipe", data.raw.recipe[effect.new], {"turd.font", {"turd.recipe-replacement"}})
+                py.add_to_description("recipe", data.raw.recipe[effect.new], { "turd.font", { "turd.recipe-replacement" } })
                 local recipe = data.raw.recipe[effect.new]
                 local icon_base = recipe and recipe:get_icons()
                 if icon_base then
                     -- Combine the base icon with our overlay
-                    recipe.icons = util.combine_icons(icon_base, {{
+                    recipe.icons = util.combine_icons(icon_base, { {
                         icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                        shift = {10, -10},
+                        shift = { 10, -10 },
                         scale = 0.35
-                    }}, {}, 40)
+                    } }, {}, 40)
                     -- this property isn't transferred by combine_icons and allows the overlay to sit outside the render area of the base icon
                     recipe.icons[#recipe.icons].floating = true
                     recipe.icon = nil
@@ -226,15 +302,15 @@ local function build_tech_upgrade(tech_upgrade)
                 end
                 -- can be nil if all categories are somehow missing it
                 if machine then
-                    local icon_base = machine.icons or {{
+                    local icon_base = machine.icons or { {
                         icon = machine.icon,
                         icon_size = machine.icon_size
-                    }}
-                    machine.icons = util.combine_icons(icon_base, {{
+                    } }
+                    machine.icons = util.combine_icons(icon_base, { {
                         icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                        shift = {10, -10},
+                        shift = { 10, -10 },
                         scale = 0.35
-                    }}, {}, 40)
+                    } }, {}, 40)
                     machine.icons[#machine.icons].floating = true
                     machine.icon = nil
                     machine.icon_size = nil
@@ -255,7 +331,7 @@ local function build_tech_upgrade(tech_upgrade)
         effects = effects,
         unit = master_tech.unit,
         is_turd = true,
-        localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"turd.tech-2", tostring(#tech_upgrade.sub_techs)}}
+        localised_description = { "", { "turd.font", { "turd.tech" } }, "\n", { "turd.tech-2", tostring(#tech_upgrade.sub_techs) } }
     }
 end
 
@@ -287,5 +363,5 @@ else
         upgrade.affected_entities = indexed_affected_entities
     end
 
-    return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
+    return { indexed_tech_upgrades, farm_building_tiers, turd_machines }
 end
