@@ -187,14 +187,14 @@ ENTITY {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {2.0, 4.0}, direction = defines.direction.south}}
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "output", position = {-2.0, 4.0}, direction = defines.direction.south}}
         },
     },
