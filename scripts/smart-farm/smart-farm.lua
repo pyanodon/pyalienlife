@@ -23,6 +23,45 @@ py.on_event(py.events.on_init(), function()
     storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
 end)
 
+---This function sets the "autolaunch" checkbox on the rocket silo gui.
+---This parameter is not exposed directly on `LuaEntity`.
+---The workaround is to place a blueprint since the property is exposed on the blueprint string.
+---@param rocket_silo_data EventData
+local function enable_autolaunch(rocket_silo_data)
+    local entity = rocket_silo_data.entity
+    local erecipe = entity.get_recipe()
+    if erecipe ~= nil then
+        erecipe = erecipe.name
+    end
+    local inventory = game.create_inventory(1)
+    inventory.insert {name = "blueprint"}
+    local stack = inventory[1]
+    stack.create_blueprint {
+        surface = entity.surface_index,
+        force = entity.force_index,
+        area = {{0, 0}, {0, 0}},
+        include_entities = false
+    }
+    stack.set_blueprint_entities {{
+        entity_number = 1,
+        name = entity.name,
+        recipe = erecipe,
+        control_behavior = entity.get_control_behavior(),
+        position = {
+            x = 0,
+            y = 0
+        },
+        launch_to_orbit_automatically = true -- Magic happens on this line.
+    }}
+    stack.build_blueprint {
+        surface = entity.surface_index,
+        force = entity.force_index,
+        position = entity.position,
+        skip_fog_of_war = false
+    }
+    inventory.destroy()
+end
+
 local function get_fence_positions(entity)
     local position = entity.position
     position.y = position.y - 15
@@ -85,6 +124,7 @@ py.on_event(py.events.on_built(), function(event)
         ::continue::
     end
     surface.set_tiles(landfill_tiles)
+	enable_autolaunch(event)
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
