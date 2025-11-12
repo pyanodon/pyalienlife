@@ -249,14 +249,14 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
                 pipe_covers = py.pipe_covers(false, false, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-6.0, 0.0}, direction = defines.direction.west}}
             },
             {
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
                 pipe_covers = py.pipe_covers(false, false, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {6.0, 0.0}, direction = defines.direction.east}}
             },
         },

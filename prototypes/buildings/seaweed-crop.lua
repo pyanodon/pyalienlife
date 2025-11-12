@@ -318,7 +318,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {2.0, 6.0}, direction = defines.direction.south}}
             },
             {
@@ -327,7 +327,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-2.0, 6.0}, direction = defines.direction.south}}
             },
         },

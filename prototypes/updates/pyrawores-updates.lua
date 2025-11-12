@@ -104,7 +104,7 @@ TECHNOLOGY("nexelit-mk03"):add_pack("military-science-pack")
 RECIPE("chemical-plant-mk01"):remove_unlock("filtration"):add_unlock("electric-energy-accumulators")
 RECIPE("compressor-mk01"):remove_unlock("nitrogen-mk02")
 
-RECIPE("mukmoux-fat-salt"):remove_unlock("mukmoux"):set_fields {hidden = true}
+RECIPE("mukmoux-fat-salt"):remove_unlock("mukmoux")
 RECIPE("bonemeal-salt"):remove_unlock("ulric"):set_fields {hidden = true}
 RECIPE("fertilizer-2"):remove_unlock("basic-electronics")
 RECIPE("molten-stainless-steel"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
