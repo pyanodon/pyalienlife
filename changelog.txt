@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - New cottongut stud icons
     - Removed mk01 indicator from sawblade and cottongut stud
+    - Added Spanish locale courtesy of @Ruby-Nova
+    - Added German locale courtesy of Spunk42
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02
