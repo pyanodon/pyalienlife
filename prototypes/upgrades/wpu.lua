@@ -52,37 +52,22 @@ if data and not yafc_turd_integration then
     for i = 1, 4 do
         local MODULE_SLOTS = 3 * i
         local FULL_CRAFTING_SPEED = 1
-
-        if i == 1 then
-            ITEM {
-                type = "module",
-                name = "py-sawblade-module-mk0" .. i,
-                subgroup = "py-alienlife-tree",
-                order = "u[sawblade]-a[mk0" .. i .. "]",
-                stack_size = 10,
-                effect = { speed = i, productivity = (1 + i) * 0.025 },
-                category = "sawblade",
-                tier = i,
-                icon_size = 64,
-                icon = "__pyalienlifegraphics__/graphics/icons/sawblade.png",
-            }
-        else
-            ITEM {
-                type = "module",
-                name = "py-sawblade-module-mk0" .. i,
-                subgroup = "py-alienlife-tree",
-                order = "u[sawblade]-a[mk0" .. i .. "]",
-                stack_size = 10,
-                effect = { speed = i, productivity = (1 + i) * 0.025 },
-                category = "sawblade",
-                tier = i,
-                icon_size = 64,
-                icons = {
-                    { icon = "__pyalienlifegraphics__/graphics/icons/sawblade.png" },
-                    { icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. i .. ".png" }
-                },
-            }
-        end
+        
+        ITEM {
+            type = "module",
+            name = "py-sawblade-module-mk0" .. i,
+            subgroup = "py-alienlife-tree",
+            order = "u[sawblade]-a[mk0" .. i .. "]",
+            stack_size = 10,
+            effect = { speed = i, productivity = (1 + i) * 0.025 },
+            category = "sawblade",
+            tier = i,
+            icon_size = 64,
+            icons = {
+                { icon = "__pyalienlifegraphics__/graphics/icons/sawblade.png" },
+                i ~= 1 and { icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. i .. ".png" } or nil
+            },
+        }
 
         local recipe = RECIPE {
             type = "recipe",

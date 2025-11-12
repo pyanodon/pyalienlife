@@ -3,7 +3,7 @@ Version: 3.0.61
 Date: ???
   Changes:
     - New cottongut stud icons
-    - Removed mk01 indicator from sawblade
+    - Removed mk01 indicator from sawblade and cottongut stud
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02
