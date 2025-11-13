@@ -13,6 +13,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 1},
     },
+    order = "ya-a-a"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -29,6 +30,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 2},
     },
+    order = "ya-a-b"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -46,6 +48,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 3},
     },
+    order = "ya-a-c"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -63,6 +66,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 4},
     },
+    order = "ya-a-d"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -81,6 +85,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 5},
     },
+    order = "ya-a-e"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -100,6 +105,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 6},
     },
+    order = "ya-a-f"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -120,6 +126,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 7},
     },
+    order = "ya-a-g"
 }:add_unlock("mega-farm-yotoi"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
@@ -141,6 +148,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 8},
     },
+    order = "ya-a-h"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
@@ -162,4 +170,5 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 10},
     },
+    order = "ya-a-j"
 }:add_unlock("mega-farm-yotoi"):add_ingredient {type = "item", name = "urea", amount = 300}:add_ingredient {type = "item", name = "blood-meal", amount = 120}
