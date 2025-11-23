@@ -7,6 +7,7 @@ Date: ???
     - Added Spanish locale courtesy of @Ruby-Nova
     - Added German locale courtesy of Spunk42
     - Fixed smart farm recipes being out of order
+    - Fixed module icon rendering order resulting in weird shadows. Resolves https://github.com/pyanodon/pybugreports/issues/1285
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02
