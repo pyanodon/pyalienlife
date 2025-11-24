@@ -774,11 +774,74 @@ local get_machine_replacement = function(force_index, entity_name)
     return storage.turd_machine_replacements[force_index][entity_name]
 end
 
+---@param force_index integer the force requesting this information
+---@return table<string, string> replacements map of old entity_name to new entity_name
+local get_machine_replacements = function(force_index)
+    return storage.turd_machine_replacements[force_index] or {}
+end
+
+---@param force_index integer the force requesting this information
+---@return table<string, string|integer> selections map of master_tech_name to selected sub_tech_name (or NOT_SELECTED constant)
+local get_turd_selections = function(force_index)
+    return storage.turd_bonuses[force_index] or {}
+end
+
+---@param force_index integer the force requesting this information
+---@param master_tech_name string? optional filter for a specific master tech
+---@return string|integer|nil selected_subtech the selected sub-tech name, NOT_SELECTED constant, or nil if not found
+local get_turd_selection = function(force_index, master_tech_name)
+    if not master_tech_name then return nil end
+    local selections = storage.turd_bonuses[force_index]
+    if not selections then return nil end
+    return selections[master_tech_name]
+end
+
+---@param force_index integer the force requesting this information
+---@return table<string, string> modules map of entity_name to module_name
+local get_unlocked_modules = function(force_index)
+    return storage.turd_unlocked_modules[force_index] or {}
+end
+
+---@param force_index integer the force requesting this information
+---@param entity_name string the entity to get the module for
+---@return string? module_name the name of the unlocked module for this entity
+local get_unlocked_module = function(force_index, entity_name)
+    if not storage.turd_unlocked_modules[force_index] then return nil end
+    return storage.turd_unlocked_modules[force_index][entity_name]
+end
+
+---@return table tech_upgrades the complete tech_upgrades data structure
+local get_tech_upgrades = function()
+    return tech_upgrades
+end
+
+---@param master_tech_name string the master technology name
+---@return table? tech_upgrade the tech upgrade data, or nil if not found
+local get_tech_upgrade = function(master_tech_name)
+    return tech_upgrades[master_tech_name]
+end
+
+---@return integer NOT_SELECTED the constant representing no selection
+local get_not_selected_constant = function()
+    return NOT_SELECTED
+end
+
 remote.add_interface("pywiki_turd_page", {
     create_turd_page = create_turd_page,
     on_search = on_search,
     reapply_turd_bonuses = reapply_turd_bonuses,
     new_turd = new_turd,
     on_turd_built = on_turd_built,
-    get_machine_replacement = get_machine_replacement
+    get_machine_replacement = get_machine_replacement,
+    get_machine_replacements = get_machine_replacements,
+    -- TURD selection getters
+    get_turd_selections = get_turd_selections,
+    get_turd_selection = get_turd_selection,
+    get_not_selected_constant = get_not_selected_constant,
+    -- Module getters
+    get_unlocked_modules = get_unlocked_modules,
+    get_unlocked_module = get_unlocked_module,
+    -- Tech upgrade data getters
+    get_tech_upgrades = get_tech_upgrades,
+    get_tech_upgrade = get_tech_upgrade
 })

@@ -9,6 +9,8 @@ Date: ???
     - Fixed smart farm recipes being out of order
     - Fixed module icon rendering order resulting in weird shadows. Resolves https://github.com/pyanodon/pybugreports/issues/1285
     - Added checks to ensure smart farms auto-launch (thanks, skofisk!). Resolves https://github.com/pyanodon/pybugreports/issues/817
+  Scripting:
+    - Exposed TURD selections, modules, and machine replacements via remote interface functions (get_turd_selections, get_turd_selection, get_unlocked_modules, get_unlocked_module, get_machine_replacements, get_tech_upgrades, get_tech_upgrade, get_not_selected_constant)
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02
