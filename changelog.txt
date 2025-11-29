@@ -8,6 +8,7 @@ Date: ???
     - Added German locale courtesy of Spunk42
     - Fixed smart farm recipes being out of order
     - Fixed module icon rendering order resulting in weird shadows. Resolves https://github.com/pyanodon/pybugreports/issues/1285
+    - Added checks to ensure smart farms auto-launch (thanks, skofisk!). Resolves https://github.com/pyanodon/pybugreports/issues/817
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02
