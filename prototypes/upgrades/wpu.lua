@@ -65,7 +65,7 @@ if data and not yafc_turd_integration then
             icon_size = 64,
             icons = {
                 {icon = "__pyalienlifegraphics__/graphics/icons/sawblade.png"},
-                {icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. i .. ".png"},
+                i ~= 1 and {icon = "__pyalienlifegraphics__/graphics/icons/over-mk0" .. i .. ".png"} or nil
             },
         }
 
