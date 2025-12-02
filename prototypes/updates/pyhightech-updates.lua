@@ -1017,7 +1017,7 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 2},
     },
-    icons = py.composite_icon("wood-seeds", "phosphate-rock")
+    icons = py.composite_icon("phosphate-rock", "wood-seeds")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
@@ -1048,7 +1048,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "methane", amount = 50}
-    }
+    },
+    icons = py.composite_icon("methane", "gas-bladder")
 }:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
@@ -1062,7 +1063,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ammonia", amount = 40}
-    }
+    },
+    icons = py.composite_icon("ammonia", "gas-bladder")
 }:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
@@ -1076,7 +1078,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "propene", amount = 35}
-    }
+    },
+    icons = py.composite_icon("propene", "gas-bladder")
 }:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
@@ -1090,7 +1093,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ethylene", amount = 30}
-    }
+    },
+    icons = py.composite_icon("ethylene", "gas-bladder")
 }:add_unlock("phagnot-mk03").category = "gas-refinery"
 
 RECIPE {
