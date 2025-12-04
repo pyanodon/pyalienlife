@@ -136,7 +136,7 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-creature.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"domestication"},
+        prerequisites = {},
         unit = {
             count = 500,
             ingredients = {
