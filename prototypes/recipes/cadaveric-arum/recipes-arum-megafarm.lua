@@ -13,6 +13,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 1},
     },
+    order = "arum-a"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -30,6 +31,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 1.5},
     },
+    order = "arum-b"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -47,6 +49,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 3},
     },
+    order = "arum-c"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -66,6 +69,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 4},
     },
+    order = "arum-d"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -86,6 +90,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 5},
     },
+    order = "arum-e"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -106,6 +111,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 6},
     },
+    order = "arum-f"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -126,6 +132,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 7},
     },
+    order = "arum-g"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
@@ -146,6 +153,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 8},
     },
+    order = "arum-h"
 }:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")
 
 RECIPE {
@@ -167,6 +175,7 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 9},
     },
+    order = "arum-i"
 }:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")
 
 RECIPE {
@@ -188,4 +197,5 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 10},
     },
+    order = "arum-j"
 }:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")

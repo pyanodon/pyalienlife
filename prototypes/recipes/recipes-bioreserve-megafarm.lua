@@ -13,6 +13,7 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 1},
     },
+    order = "flora-a"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
@@ -30,6 +31,7 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 2},
     },
+    order = "flora-b"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
@@ -48,6 +50,7 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 3},
     },
+    order = "flora-c"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
@@ -67,6 +70,7 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 4},
     },
+    order = "flora-d"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
@@ -87,6 +91,7 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 5},
     },
+    order = "flora-e"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
@@ -107,4 +112,5 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 6},
     },
+    order = "flora-f"
 }:add_unlock("mega-farm-bioreserve")
