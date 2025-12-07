@@ -13,9 +13,35 @@ function remove_digosaur(name)
     Digosaurus.mining_proxies[name] = nil
 end
 
+function add_mining_category(category_to_add)
+  if type(category_to_add) == "table" then
+    for _, category in pairs(category_to_add) do
+      table.insert(Digosaurus.minable_categories, category) 
+    end
+  else
+    table.insert(Digosaurus.minable_categories, category_to_add) 
+  end
+end
+
+function remove_mining_category(category_to_remove)
+  if type(category_to_remove) == "table" then
+    for _, category in pairs(category_to_remove) do
+      remove_mining_category(category)
+    end
+  else
+    for i, category in pairs(Digosaurus.minable_categories) do
+      if category == category_to_remove then
+        table.remove(Digosaurus.minable_categories, i)
+      end
+    end
+  end
+end
+
 remote.add_interface("py_digosaurs", {
     new_digosaur = new_digosaur,
     remove_digosaur = remove_digosaur,
+    add_mining_category = add_mining_category,
+    remove_mining_category = remove_mining_category,
 })
 
 py.on_event(py.events.on_init(), function(event)
