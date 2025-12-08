@@ -14,6 +14,7 @@ Date: ???
   Scripting:
     - Exposed TURD selections, modules, and machine replacements via remote interface functions (get_turd_selections, get_turd_selection, get_unlocked_modules, get_unlocked_module, get_machine_replacements, get_tech_upgrades, get_tech_upgrade, get_not_selected_constant)
     - Expose digosaurus mining categories via remote interface functions (add_mining_category, remove_mining_category)
+    - Expose digosaurus food via remote interface functions (add_food, remove_food)
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.60
 Date: 2025-11-02

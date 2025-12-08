@@ -3,38 +3,30 @@ Digosaurus = {}
 require "digosaurus-prototypes"
 require "digosaurus-gui"
 
-function new_digosaur(name, bonus, proxy_name)
+local function new_digosaur(name, bonus, proxy_name)
     Digosaurus.valid_creatures[name] = bonus
     Digosaurus.mining_proxies[name] = proxy_name
 end
 
-function remove_digosaur(name)
+local function remove_digosaur(name)
     Digosaurus.valid_creatures[name] = nil
     Digosaurus.mining_proxies[name] = nil
 end
 
-function add_mining_category(category_to_add)
-  if type(category_to_add) == "table" then
-    for _, category in pairs(category_to_add) do
-      table.insert(Digosaurus.minable_categories, category) 
-    end
-  else
-    table.insert(Digosaurus.minable_categories, category_to_add) 
-  end
+local function add_mining_category(category_to_add)
+    Digosaurus.minable_categories[category_to_add] = true
 end
 
-function remove_mining_category(category_to_remove)
-  if type(category_to_remove) == "table" then
-    for _, category in pairs(category_to_remove) do
-      remove_mining_category(category)
-    end
-  else
-    for i, category in pairs(Digosaurus.minable_categories) do
-      if category == category_to_remove then
-        table.remove(Digosaurus.minable_categories, i)
-      end
-    end
-  end
+local function remove_mining_category(category_to_remove)
+    Digosaurus.minable_categories[category_to_remove] = nil
+end
+
+local function add_food(name, value)
+    Digosaurus.favorite_foods[name] = value
+end
+
+local function remove_food(name)
+    Digosaurus.favorite_foods[name] = nil
 end
 
 remote.add_interface("py_digosaurs", {
@@ -42,6 +34,8 @@ remote.add_interface("py_digosaurs", {
     remove_digosaur = remove_digosaur,
     add_mining_category = add_mining_category,
     remove_mining_category = remove_mining_category,
+    add_food = add_food,
+    remove_food = remove_food,
 })
 
 py.on_event(py.events.on_init(), function(event)
