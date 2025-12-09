@@ -1,6 +1,5 @@
-local farm =
-{
-    seed = "replicator-ralesia", --the seed being planted
+return {
+    name = "replicator-ralesia", -- the seed being planted (item launched)
     crop = "ralesia-flowers",    --the 'ore' that is spawned
     recipes =                    --all the recipes that use these seeds to grow the crop
     {
@@ -46,5 +45,3 @@ local farm =
         },
     }
 }
-
-return farm

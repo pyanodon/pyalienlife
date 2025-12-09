@@ -21,6 +21,7 @@ require "scripts.ocula.ocula"
 ---@diagnostic disable-next-line: different-requires
 require "scripts.farming.farming"
 require "scripts.smart-farm.smart-farm"
+require "scripts.smart-farm.mega-farm"
 require "scripts.worm.worm"
 require "scripts.turd.turd"
 require "scripts.vatbrain.vatbrain"
