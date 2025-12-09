@@ -49,125 +49,125 @@ local function on_launch(silo, crop_results)
 end
 
 local function get_fence_positions(entity)
-  local position = entity.position
-  position.y = position.y - 15
-  local fence_positions = {}
-  for x = -12, 12 do
-      table.insert(fence_positions, {position.x + x, position.y + 13})
-      table.insert(fence_positions, {position.x + x, position.y - 13})
-  end
-  for y = -13, 13 do
-      table.insert(fence_positions, {position.x + 13, position.y + y})
-      table.insert(fence_positions, {position.x - 13, position.y + y})
-  end
-  return fence_positions
+    local position = entity.position
+    position.y = position.y - 15
+    local fence_positions = {}
+    for x = -12, 12 do
+        fence_positions[#fence_positions+1] = {position.x + x, position.y + 13}
+        fence_positions[#fence_positions+1] = {position.x + x, position.y - 13}
+    end
+    for y = -13, 13 do
+        fence_positions[#fence_positions+1] = {position.x + 13, position.y + y}
+        fence_positions[#fence_positions+1] = {position.x - 13, position.y + y}
+    end
+    return fence_positions
 end
 
 local function get_landfill_positions(entity)
-  local position = entity.position
-  position.y = position.y - 15
-  local landfill_positions = {}
-  for x = -12, 12 do
-      for y = -12, 12 do
-          table.insert(landfill_positions, {position.x + x, position.y + y})
-      end
-  end
-  return landfill_positions
+    local position = entity.position
+    position.y = position.y - 15
+    local landfill_positions = {}
+    for x = -12, 12 do
+        for y = -12, 12 do
+            landfill_positions[#landfill_positions+1] = {position.x + x, position.y + y}
+        end
+    end
+    return landfill_positions
 end
 
 local function on_built(entity)
-  local surface = entity.surface
+    local surface = entity.surface
 
-  for _, position in pairs(get_fence_positions(entity)) do
-      if not surface.entity_prototype_collides("wood-fence", position, false) then
-          surface.create_entity {
-              name = "wood-fence",
-              position = position,
-              force = entity.force
-          }
-      end
-  end
+    for _, position in pairs(get_fence_positions(entity)) do
+        if not surface.entity_prototype_collides("wood-fence", position, false) then
+            surface.create_entity {
+                name = "wood-fence",
+                position = position,
+                force = entity.force
+            }
+        end
+    end
 
-  local landfill_tiles = {}
-  for _, position in pairs(get_landfill_positions(entity)) do
-      local x, y = position[1], position[2]
+    local landfill_tiles = {}
+    for _, position in pairs(get_landfill_positions(entity)) do
+        local x, y = position[1], position[2]
 
-      local previous_tile = surface.get_tile(position)
-      if not previous_tile.valid or previous_tile.prototype.collision_mask.layers.water_tile then goto continue end
-      if previous_tile.name == "sut-panel" then goto continue end
+        local previous_tile = surface.get_tile(position)
+        if not previous_tile.valid or previous_tile.prototype.collision_mask.layers.water_tile then goto continue end
+        if previous_tile.name == "sut-panel" then goto continue end
 
-      table.insert(landfill_tiles, {name = "landfill", position = position})
+        landfill_tiles[#landfill_tiles+1] = {name = "landfill", position = position}
 
-      storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
-      if storage.smart_farm_landfill_data[x][y] then
-          storage.smart_farm_landfill_data[x][y].depth = storage.smart_farm_landfill_data[x][y].depth + 1
-      else
-          storage.smart_farm_landfill_data[x][y] = {depth = 1, name = previous_tile.name}
-      end
+        storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
+        if storage.smart_farm_landfill_data[x][y] then
+            storage.smart_farm_landfill_data[x][y].depth = storage.smart_farm_landfill_data[x][y].depth + 1
+        else
+            storage.smart_farm_landfill_data[x][y] = {depth = 1, name = previous_tile.name}
+        end
 
-      ::continue::
-  end
-  surface.set_tiles(landfill_tiles)
+        ::continue::
+    end
+    surface.set_tiles(landfill_tiles)
 end
 
 local function on_destroyed(entity)
-  local surface = entity.surface
+    local surface = entity.surface
 
-  for _, position in pairs(get_fence_positions(entity)) do
-      local fence = surface.find_entity("wood-fence", position)
-      if fence and fence.force_index == entity.force_index then
-          fence.destroy()
-      end
-  end
+    for _, position in pairs(get_fence_positions(entity)) do
+        local fence = surface.find_entity("wood-fence", position)
+        if fence and fence.force_index == entity.force_index then
+            fence.destroy()
+        end
+    end
 
-  local tiles_to_reset = {}
-  for _, position in pairs(get_landfill_positions(entity)) do
-      local x, y = position[1], position[2]
+    local tiles_to_reset = {}
+    for _, position in pairs(get_landfill_positions(entity)) do
+        local x, y = position[1], position[2]
 
-      if not storage.smart_farm_landfill_data[x] or not storage.smart_farm_landfill_data[x][y] then goto continue end
+        if not storage.smart_farm_landfill_data[x] or not storage.smart_farm_landfill_data[x][y] then goto continue end
 
-      local data = storage.smart_farm_landfill_data[x][y]
-      data.depth = data.depth - 1
+        local data = storage.smart_farm_landfill_data[x][y]
+        data.depth = data.depth - 1
 
-      if data.depth > 0 then goto continue end
-      table.insert(tiles_to_reset, {name = data.name, position = position})
+        if data.depth > 0 then goto continue end
+        tiles_to_reset[#tiles_to_reset + 1] = {name = data.name, position = position}
 
-      storage.smart_farm_landfill_data[x][y] = nil
-      if table_size(storage.smart_farm_landfill_data[x]) == 0 then
-          storage.smart_farm_landfill_data[x] = nil
-      end
+        storage.smart_farm_landfill_data[x][y] = nil
+        if table_size(storage.smart_farm_landfill_data[x]) == 0 then
+            storage.smart_farm_landfill_data[x] = nil
+        end
 
-      ::continue::
-  end
+        ::continue::
+    end
 
-  if table_size(tiles_to_reset) == 0 then return end
-  surface.set_tiles(tiles_to_reset, true, false, false, true)
+    if #tiles_to_reset == 0 then return end
+    surface.set_tiles(tiles_to_reset, true, false, false, true)
 end
 
 local farm_data = {
-  require "farm-ralesia",
-  require "farm-rennea",
-  require "farm-tuuphra",
-  require "farm-grod",
-  require "farm-yotoi",
-  require "farm-kicalk",
-  require "farm-arum",
-  require "farm-yotoi-fruit",
-  require "farm-bioreserve",
+    require "farm-ralesia",
+    require "farm-rennea",
+    require "farm-tuuphra",
+    require "farm-grod",
+    require "farm-yotoi",
+    require "farm-kicalk",
+    require "farm-arum",
+    require "farm-yotoi-fruit",
+    require "farm-bioreserve",
 }
 
 py.on_event(py.events.on_init(), function()
-  storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
+    storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
 
-  -- add launch products for later reference
-  for _, launch_products in pairs(farm_data) do
-    remote.call("py_smart_farming", "add_launch_products", launch_products)
-  end
+    -- add launch products for later reference
+    for _, launch_products in pairs(farm_data) do
+        remote.call("py_smart_farming", "add_launch_products", launch_products)
+    end
 
-  remote.call("py_smart_farming", "add_rocket_silo", {
-    entity = "mega-farm",
-    on_built = on_built,
-    on_destroyed = on_destroyed,
-    on_launch = on_launch
-  })
+    remote.call("py_smart_farming", "add_rocket_silo", {
+        entity = "mega-farm",
+        on_built = on_built,
+        on_destroyed = on_destroyed,
+        on_launch = on_launch
+    })
 end)
