@@ -122,7 +122,7 @@ py.on_event(py.events.on_built(), function(event)
     manager.get_wire_connector(defines.wire_connector_id.circuit_green, true).connect_to(monitor.get_wire_connector(defines.wire_connector_id.circuit_green, true), false, defines.wire_origin.script)
     
     -- set circuit settings
-    manager_behaviour = manager.get_or_create_control_behavior()
+    local manager_behaviour = manager.get_or_create_control_behavior()
     manager_behaviour.circuit_enable_disable = true
     manager_behaviour.circuit_condition = {
         comparator = "≠",
@@ -142,7 +142,6 @@ py.on_event(py.events.on_built(), function(event)
     script.register_on_object_destroyed(entity)
     storage.farm_buildings[entity.unit_number] = {farm = entity, manager = manager, monitor = monitor, warning = py.draw_error_sprite(entity, "no_module_" .. Farming.get_kingdom(entity), 0, 30)}
     register_sacrifice(manager, entity)
-
 end)
 
 py.on_event(defines.events.on_object_destroyed, function(event)
