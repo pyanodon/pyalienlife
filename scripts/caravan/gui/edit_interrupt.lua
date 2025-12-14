@@ -5,22 +5,11 @@ local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prot
 
 local P = {}
 
-local function label_info(interrupt, schedule_id)
-    local schedule = interrupt.schedule[schedule_id]
-    if schedule and schedule.entity and not schedule.entity.valid then
-        return "train_schedule_unavailable_stop_label", {"caravan-gui.destination-unavailable"}
-    end
-    return nil, nil
-end
-
-function P.build_main_frame(parent)
+function P.build_main_frame(parent, fallback_location)
     local frame =  parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla edit_interrupt frame
     frame.style.maximal_height = 1290
-    if storage.edit_interrupt_gui_last_location then
-        frame.location = storage.edit_interrupt_gui_last_location 
-        storage.edit_interrupt_gui_last_location = nil
-    end
+    Utils.restore_gui_location(frame, fallback_location)
 
     return frame
 end
@@ -28,7 +17,7 @@ end
 function P.build_title_bar_flow(parent)
     local flow = parent.add {type = "flow", name = "title_bar_flow", direction = "horizontal", style = "frame_header_flow"}
 
-    flow.add {type = "label", caption = "Edit interrupt", style = "frame_title"}
+    flow.add {type = "label", caption = {"caravan-gui.edit-interrupt-frame-title"}, style = "frame_title"}
 
     local drag_handler = flow.add {type = "empty-widget", style = "draggable_space_header"}
     drag_handler.style.horizontally_stretchable = true
@@ -41,7 +30,22 @@ function P.build_title_bar_flow(parent)
     return flow
 end
 
+local function caravans_with_interrupt(interrupt_name)
+    local vans = {}
+    for id, caravan in pairs(storage.caravans) do
+        for _, stored_interrupt in pairs(caravan.interrupts) do
+            if stored_interrupt == interrupt_name then
+                vans[id] = true
+                break -- can't be contained twice
+            end
+        end
+    end
+    return vans
+end
+
 function P.build_subheader_frame(parent)
+    local edited_interrupt = storage.edited_interrupts[parent.player_index]
+
     local frame = parent.add {type = "frame", name = "subheader_frame", style = "subheader_frame", direction = "horizontal"}
 
     frame.style.top_margin = -12
@@ -50,23 +54,43 @@ function P.build_subheader_frame(parent)
 
     local flow = frame.add {type = "flow", name = "contents_flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
-    flow.add {type = "label", name = "name_label", caption = storage.edited_interrupt.name, style = "subheader_caption_label"}
-    flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false}
+    flow.add {type = "label", name = "name_label", caption = edited_interrupt.name, style = "subheader_caption_label"}
+    flow.add {type = "textfield", name = "py_edit_interrupt_textfield", style = "stretchable_textfield", icon_selector = true, visible = false, text = edited_interrupt.name}
     flow.add {type = "sprite-button", name = "py_edit_interrupt_rename_button", style = "mini_button_aligned_to_text_vertically_when_centered", sprite = "utility/rename_icon"}
     flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
+    -- work out how many caravans have this interrupt and store in the element tags for use in on_click
+    local relevant_caravans = caravans_with_interrupt(edited_interrupt.name)
+    flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
+    -- handle deletion
+    flow.add {type = "label", visible = false, name = "py_delete_interrupt_confirm", caption = {"caravan-gui.confirm-deletion"}}
+    flow.add {type = "sprite-button", name = "py_delete_interrupt_button", style = "tool_button_red", sprite = "utility/trash", tooltip = {"caravan-gui.delete-interrupt"}, tags = {interrupt_name = edited_interrupt.name}}
+    flow.add {type = "sprite-button", visible = false, name = "py_delete_interrupt_cancel", style = "tool_button", sprite = "utility/close_black", tooltip = {"caravan-gui.cancel-deletion"}}
 end
 
 function P.build_checkbox(parent)
-    return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = storage.edited_interrupt.inside_interrupt, caption = "Allow interrupting other interrupts", tooltip = "By default, an interrupt cannot trigger while another interrupt is being executed. This option disables this behavior, allowing the interrupt to trigger while another interrupt is in progress."}
+    local edited_interrupt = storage.edited_interrupts[parent.player_index]
+    return parent.add {type = "checkbox", name = "py_edit_interrupt_checkbox", state = edited_interrupt.inside_interrupt, caption = {"caravan-gui.allow-interrupt-interrupt"}, tooltip = {"caravan-gui.allow-interrupt-interrupt-tooltip"}}
 end
 
-function P.build_conditions_list(parent)
-    local conditions = storage.edited_interrupt.conditions
-    for i = 1, #conditions do
-        local tags = {condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
-        InterruptConditionsGui.build_condition(parent, conditions[i], tags)
-    end
+function P.build_conditions_operators_list(parent)
+    local flow = parent.add {type = "flow", direction = "vertical"}
+    flow.style.vertically_stretchable = true
+    flow.style.width = 100
+    flow.style.horizontal_align = "right"
+    flow.style.vertical_spacing = 4
+    flow.style.top_margin = 40 
 
+    local operators = storage.edited_interrupts[parent.player_index].conditions_operators
+
+    local has_both_operators = #operators > 0 and table.any(operators, function (o) return o ~= operators[1] end)
+
+    for i = 1, #operators do
+        local tags = {condition_operator_id = i}
+        InterruptConditionsGui.build_condition_operator(flow, operators[i], has_both_operators, tags)
+    end
+end
+
+function P.build_add_interrupt_condition_dropdown(parent)
     local conditions = Caravan.valid_actions["interrupt-condition"]
     conditions = table.map(conditions, function(v) return {"caravan-actions." .. v, v} end)
 
@@ -78,13 +102,30 @@ function P.build_conditions_list(parent)
     drop_down.style.horizontally_stretchable = true
 end
 
+function P.build_conditions_list(parent)
+    local conditions = storage.edited_interrupts[parent.player_index].conditions
+    if #conditions == 0 then return end
+
+    local conditions_and_operators_flow = parent.add {type = "flow", direction = "horizontal"}
+    P.build_conditions_operators_list(conditions_and_operators_flow)
+    local conditions_flow = conditions_and_operators_flow.add {type = "flow", direction = "vertical"}
+    for i = 1, #conditions do
+        local tags = {condition_id = i, action_list_type = Caravan.action_list_types.interrupt_condition}
+        InterruptConditionsGui.build_condition(conditions_flow, conditions[i], tags)
+    end
+end
+
 function P.build_conditions_flow(parent)
     local flow = parent.add {type = "flow", name = "conditions_flow", direction = "vertical"}
     P.build_conditions_list(flow)
+    P.build_add_interrupt_condition_dropdown(flow)
 end
 
 function P.build_conditions_pane(parent)
     local pane = parent.add {type = "scroll-pane", name = "conditions_pane", style = "train_interrupts_scroll_pane"}
+    -- This is 400 maximum width by default (inherited from style), we need it a bit wider
+    pane.style.width = 500
+    pane.style.natural_width = 500
 
     pane.style.vertically_stretchable = false
     P.build_conditions_flow(pane)
@@ -93,14 +134,16 @@ function P.build_conditions_pane(parent)
 end
 
 function P.build_action_list(parent, schedule_id)
-    local actions = storage.edited_interrupt.schedule[schedule_id].actions
+    local edited_interrupt = storage.edited_interrupts[parent.player_index]
+    local actions = edited_interrupt.schedule[schedule_id].actions
 
     for i = 1, #actions do
         local tags = {schedule_id = schedule_id, action_id = i, action_list_type = Caravan.action_list_types.interrupt_targets}
         ActionGui.build_action(parent, nil, actions[i], tags)
     end
 
-    local valid_actions = Utils.get_valid_actions_for_entity("caravan", storage.edited_interrupt.schedule[schedule_id].entity)
+    local entity = edited_interrupt.schedule[schedule_id].entity
+    local valid_actions = Utils.get_all_actions_for_entity(entity)
     local actions = table.map(table.invert(valid_actions), function(v) return {"caravan-actions." .. v, v} end)
 
     table.insert(actions, "+ Add action")
@@ -113,6 +156,7 @@ function P.build_action_list(parent, schedule_id)
 end
 
 function P.build_target_destination_frame(parent, schedule_id)
+    local schedule = storage.edited_interrupts[parent.player_index].schedule[schedule_id]
     local tags = {schedule_id = schedule_id, action_list_type = Caravan.action_list_types.interrupt_targets}
 
     local frame = parent.add {type = "frame", style = "train_schedule_station_frame"}
@@ -121,8 +165,8 @@ function P.build_target_destination_frame(parent, schedule_id)
     local flow = frame.add {type = "flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
 
-    local label_style, label_tooltip = label_info(storage.edited_interrupt, schedule_id)
-    local destination_label = flow.add {type = "label", name = "py_edit_interrupt_target_name", style = label_style, caption = storage.edited_interrupt.schedule[schedule_id].localised_name, tooltip = label_tooltip, tags = tags}
+    local label_style, label_caption, label_tooltip = Utils.label_info(schedule)
+    local destination_label = flow.add {type = "label", name = "py_edit_interrupt_target_name", style = label_style, caption = label_caption, tooltip = label_tooltip, tags = tags}
     destination_label.style.left_padding = 5
     destination_label.style.horizontally_squashable = true
 
@@ -135,7 +179,7 @@ function P.build_target_destination_frame(parent, schedule_id)
 end
 
 function P.build_targets_list(parent)
-    for i = 1, #storage.edited_interrupt.schedule do
+    for i = 1, #storage.edited_interrupts[parent.player_index].schedule do
         local flow = parent.add {type = "flow", direction = "vertical"}
         flow.style.horizontal_align = "right"
 
@@ -143,7 +187,7 @@ function P.build_targets_list(parent)
         P.build_action_list(flow, i)
     end
 
-    parent.add {type = "button", name = "py_edit_interrupt_add_target_button", caption = "+ Add interrupt station", style = "train_schedule_add_interrupt_station_button"}
+    parent.add {type = "button", name = "py_edit_interrupt_add_target_button", caption = {"caravan-gui.add-interrupt-station"}, style = "train_schedule_add_interrupt_station_button"}
 end
 
 function P.build_targets_flow(parent)
@@ -153,6 +197,9 @@ end
 
 function P.build_targets_pane(parent)
     local pane = parent.add {type = "scroll-pane", name = "targets_pane", style = "train_interrupts_scroll_pane"}
+    -- This is 400 maximum width by default (inherited from style), we need it a bit wider
+    pane.style.width = 500
+    pane.style.natural_width = 500
 
     pane.style.vertically_stretchable = false
     P.build_targets_flow(pane)
@@ -169,13 +216,17 @@ function P.build_bottom_bar_flow(parent)
     drag_handler.style.height = 32
     drag_handler.drag_target = parent
 
-    flow.add {type = "button", name = "py_edit_interrupt_confirm_button", style = "confirm_button", caption = "Save interrupt"}
+    flow.add {type = "button", name = "py_edit_interrupt_confirm_button", style = "confirm_button", caption = {"caravan-gui.save-interrupt"}}
 end
 
-function P.build(parent, interrupt_data)
-    storage.edited_interrupt = table.deepcopy(interrupt_data)
+---@param parent LuaGuiElement
+---@param interrupt_data table
+---@param cursor_location GuiLocation?
+---@return LuaGuiElement
+function P.build(parent, interrupt_data, cursor_location)
+    storage.edited_interrupts[parent.player_index] = table.deepcopy(interrupt_data)
 
-    local main_frame = P.build_main_frame(parent)
+    local main_frame = P.build_main_frame(parent, cursor_location)
 
     P.build_title_bar_flow(main_frame)
 
@@ -184,11 +235,11 @@ function P.build(parent, interrupt_data)
     P.build_subheader_frame(inside_frame)
     P.build_checkbox(inside_frame)
 
-    inside_frame.add {type = "label", style = "semibold_label", caption = "Conditions", tooltip = "When the conditions are met, the interrupt will activate and append all the targets to the schedule as temporary stops."}
+    inside_frame.add {type = "label", style = "semibold_label", caption = {"caravan-gui.interrupt-conditions-label"}, tooltip = {"caravan-gui.interrupt-conditions-tooltip"}}
 
     P.build_conditions_pane(inside_frame)
 
-    inside_frame.add {type = "label", style = "semibold_label", caption = "Targets", tooltip = "The target stops of this interrupt."}
+    inside_frame.add {type = "label", style = "semibold_label", caption = {"caravan-gui.interrupt-targets-label"}, tooltip = {"caravan-gui.interrupt-targets-tooltip"}}
 
     P.build_targets_pane(inside_frame)
     P.build_bottom_bar_flow(main_frame)
@@ -227,14 +278,57 @@ py.on_event(defines.events.on_gui_click, function (event)
     local gui = player.gui.screen.edit_interrupt_gui
     if not gui then return end
 
-    if not Utils.is_child_of(event.element, gui, 8) then
+    if not Utils.is_child_of(event.element, gui, 9) then
         local slider_frame = player.gui.screen.py_caravan_action_number_selection_frame
         -- do not close the GUI when the user adds an action, that pops the number selection slider
         if not slider_frame or not Utils.is_child_of(event.element, slider_frame, 3) then
-            storage.edited_interrupt = nil
+            storage.edited_interrupts[event.player_index] = nil
             gui.destroy()
         end
     end
 end)
+
+-- used to refresh alerts drawn below
+local function redraw_alert(player, entity, alert_name)
+    if not player.valid or not entity.valid then return end
+    player.add_custom_alert(
+        entity,
+        {
+            type = "virtual",
+            name = "signal-map-marker"
+        },
+        {"", alert_name},
+        true
+    )
+end
+--- Draws an alert for 10s * cycles
+local function draw_alert_with_duration(player, entity, alert_name, cycles)
+    -- register the func if necessary
+    py.on_tick_funcs["draw_alert_with_duration"] = redraw_alert
+    local args = {player, entity, alert_name}
+    redraw_alert(table.unpack(args)) -- initial 10s
+    for i = 1, cycles - 1 do         -- refresh every 10s (600ticks) after
+        py.delayed_event(i * 600, "draw_alert_with_duration", args)
+    end
+end
+-- tag matching vans when label is clicked
+gui_events[defines.events.on_gui_click]["py_interrupt_count_label"] = function(event)
+    local ui = event.element
+    if not ui.tags then return end
+    local interrupt_name = ui.tags.name
+    local caravan_ids = ui.tags.ids
+    if not interrupt_name or not caravan_ids then return end
+    local player = game.get_player(event.player_index)
+    for id in pairs(caravan_ids) do
+        id = tonumber(id) -- .tags caveat
+        local unit = (storage.caravans[id] or {}).entity
+        if unit and unit.valid then
+            draw_alert_with_duration(player, unit, interrupt_name, 6)
+        end
+    end
+end
+
+-- store window location when moved
+gui_events[defines.events.on_gui_location_changed]["edit_interrupt_gui"] = function(event) Utils.store_gui_location(event.element) end
 
 return P

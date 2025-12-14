@@ -5,7 +5,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"auog", "land-animals-mk01"},
-    dependencies = {},
     effects = {},
     unit = {
         count = 100,
@@ -23,8 +22,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-2.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"domestication", "biotech-mk02"},
-    dependencies = {"domestication"},
+    prerequisites = {"domestication"},
     effects = {},
     unit = {
         count = 150,
@@ -44,8 +42,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-3.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"domestication-mk02"},
-    dependencies = {"domestication-mk02"},
+    prerequisites = {"domestication-mk02", "chitin"},
     effects = {},
     unit = {
         count = 200,
@@ -67,8 +64,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/domestication-4.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"domestication-mk03", "dingrits", "chitin"},
-    dependencies = {"domestication-mk03"},
+    prerequisites = {"domestication-mk03"},
     effects = {},
     unit = {
         count = 200,
@@ -92,7 +88,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"domestication-mk04"},
-    dependencies = {"domestication-mk04"},
     effects = {},
     unit = {
         count = 200,

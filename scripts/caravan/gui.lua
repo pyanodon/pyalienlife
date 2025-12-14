@@ -6,15 +6,22 @@ local AddInterruptGui = require "gui/add_interrupt"
 local P = {}
 CaravanGui = P
 
+local interactable_controllers = {
+    [defines.controllers.character] = true,
+    [defines.controllers.god] = true,
+    [defines.controllers.editor] = true
+}
+
 local function can_view_cargo_tab(player, caravan_data)
-    if player.controller_type == defines.controllers.character then
+    if interactable_controllers[player.controller_type] then
         return player.can_reach_entity(caravan_data.entity)
     end
     return false
 end
 
+
 local function disabled_cargo_tab_tooltip(player)
-    if player.controller_type == defines.controllers.character then
+    if interactable_controllers[player.controller_type] then
         return "Caravan is out of reach."
     elseif player.controller_type == defines.controllers.remote then
         return "Cannot interact with cargo in remote view."
@@ -22,16 +29,38 @@ local function disabled_cargo_tab_tooltip(player)
     return "Cannot interact with cargo in " .. tostring(player.controller_type) .. " mode."
 end
 
+local relative_gui_types = {
+    ["electric-pole"] = defines.relative_gui_type.electric_network_gui,
+    ["character"] = defines.relative_gui_type.other_player_gui,
+    ["unit"] = defines.relative_gui_type.script_inventory_gui
+}
+
+---Guesses the GUI type that a given entity shows when opened
+---@param entity LuaEntity
+---@return defines.relative_gui_type result
+function P.guess_gui_type(entity)
+    local entity_type = entity.type
+    local relative_type = relative_gui_types[entity_type] or defines.relative_gui_type[entity_type:gsub("%-", "_") .. "_gui"]
+    return relative_type or defines.relative_gui_type.generic_on_off_entity_gui
+end
+
 function P.get_gui(player)
     local gui = player.gui.screen.caravan_gui
     if gui then return gui end
 end
 
+function P.get_relative_gui(player)
+    local gui = player.gui.relative.relative_caravan_gui
+    if gui then return gui end
+end
+
 function P.build(player, caravan_data)
     local main_frame = CaravanGuiComponents.build_main_frame(player.gui.screen, "caravan_gui", caravan_data)
-    if storage.caravan_gui_last_location then
-        main_frame.location = storage.caravan_gui_last_location
-        storage.caravan_gui_last_location = nil
+    local gui_locations = (storage.gui_locations[player.index] or {})
+    -- only loads position if it is "un-hiding" (re-creating) after selecting something with the carrot
+    if gui_locations.caravan_gui then
+        main_frame.location = gui_locations.caravan_gui
+        gui_locations.caravan_gui = nil
     else
         main_frame.auto_center = true
     end
@@ -44,10 +73,10 @@ function P.build(player, caravan_data)
     local tabbed_pane = tab_frame.tabbed_pane
 
     local schedule_tab = CaravanGuiComponents.build_schedule_tab(tabbed_pane, caravan_data)
-    local cargo_tab = CaravanGuiComponents.build_cargo_tab(tabbed_pane, player, caravan_data)
-    if not can_view_cargo_tab(player, caravan_data) then
-        cargo_tab.enabled = false
-        cargo_tab.tooltip = disabled_cargo_tab_tooltip(player)
+    local cargo_tab = CaravanGuiComponents.build_cargo_tab(tabbed_pane, player, caravan_data, can_view_cargo_tab(player, caravan_data))
+    -- set to the player's last opened tab
+    if storage.last_opened_tab[player.index] then
+        tabbed_pane.selected_tab_index = storage.last_opened_tab[player.index]
     end
     return main_frame
 end
@@ -63,32 +92,49 @@ function P.update_gui(player)
     local can_reach_caravan = player.can_reach_entity(caravan_data.entity)
     local cargo_tab = gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_tab
 
-    cargo_tab.enabled = can_view_cargo_tab(player, caravan_data)
+    CaravanGuiComponents.update_cargo_pane(player)
+end
 
-    if cargo_tab.enabled then
-        cargo_tab.tooltip = nil
-        CaravanGuiComponents.update_cargo_pane(player)
-    else
-        cargo_tab.tooltip = disabled_cargo_tab_tooltip(player)
-        gui.entity_frame.tabbed_pane_frame.tabbed_pane.selected_tab_index = 1
+---Refocuses the caravan GUI onto a given entity
+---@param gui LuaGuiElement
+---@param target LuaEntity | MapPosition | nil
+function P.refocus(gui, target)
+    local camera = gui.entity_frame.camera_frame.camera
+    local refocus_button = gui.entity_frame.subheader_frame.contents_flow.py_refocus -- reverts camera to the GUI's entity
+    local caravan_unit = storage.caravans[gui.tags.unit_number].entity
+    -- reset
+    if target == nil then
+        camera.entity = caravan_unit
+        -- zoom is halved because default is a bit too zoomed in
+        camera.zoom = (caravan_prototypes[caravan_unit.name].camera_zoom or 0.5) / 2
+        refocus_button.visible = false
+        return
     end
+    -- entity
+    if target.type then ---@cast target LuaEntity
+        camera.entity = target
+    else --@cast target MapPosition
+        camera.entity = nil
+        camera.position = target
+        camera.surface_index = caravan_unit.surface_index
+    end
+    camera.zoom = 0.25
+    refocus_button.visible = true
 end
 
-function P.cargo_tab_enabled(player)
-    local gui = P.get_gui(player)
-    if not gui then return false end
-
-    return gui.entity_frame.tabbed_pane_frame.tabbed_pane.cargo_tab.enabled
-end
-
--- TODO what about on_player_changed_surface?
 py.on_event(defines.events.on_gui_closed, function(event)
-    if not event.element or event.element.name ~= "caravan_gui" then return end
     local player = game.get_player(event.player_index)
     local gui = event.element
 
+    if not gui then -- not modded UI, the only thing we care to do is check for the relative frame
+        local relative_gui = P.get_relative_gui(player)
+        if relative_gui then relative_gui.destroy() end
+        return
+    end
+    if gui.name ~= "caravan_gui" then return end -- also not our UI, nothing to do
+
     -- only close the main GUI if no other "pop-ups" are on the screen
-    local slider_frame = CaravanGuiComponents.get_slider_frame(player) 
+    local slider_frame = CaravanGuiComponents.get_slider_frame(player)
     local add_interrupt_frame = player.gui.screen.add_interrupt_gui
     local edit_interrupt_frame = player.gui.screen.edit_interrupt_gui
     -- Ideally, it should rely on a 'focused' attribute, but it doesn't exist.
@@ -96,7 +142,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
     local renaming_caravan = caravan_rename_textfield.visible
 
     local should_close_gui = not (slider_frame ~= nil or add_interrupt_frame ~= nil or edit_interrupt_frame ~= nil or renaming_caravan)
-    
+
     if should_close_gui then
         gui.destroy()
     else
@@ -111,12 +157,14 @@ py.on_event(defines.events.on_gui_closed, function(event)
             end
         elseif edit_interrupt_frame then
             edit_interrupt_frame.destroy()
-            storage.edited_interrupt = nil
+            storage.edited_interrupts[event.player_index] = nil
         elseif renaming_caravan then
             local label = caravan_rename_textfield.parent.name_label
             label.visible = true
             caravan_rename_textfield.visible = false
         end
+        --TODO: this throws out the paradigm of `.opened = nil` mostly-guaranteeing a UI close
+        --This can error in cases like the entity click handler if we don't *also* find and destroy the UI in the caller :/
         player.opened = player.gui.screen.caravan_gui
     end
 end)

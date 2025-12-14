@@ -19,7 +19,12 @@ if data and not yafc_turd_integration then
         RECIPE("guar-4"):copy(),
     } do
         recipe.name = recipe.name .. "-aquaguar"
-        local _, water = recipe:remove_ingredient("water")
+        local water
+        if mods.pystellarexpedition then
+            _, water = recipe:remove_ingredient("muddy-sludge")
+        else
+            _, water = recipe:remove_ingredient("water")
+        end
         recipe:add_ingredient {type = "fluid", name = "water-saline", amount = math.ceil(water / 5), fluidbox_index = 1}
         recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
         recipe:multiply_ingredient_amount("guar-seeds", 0.65)

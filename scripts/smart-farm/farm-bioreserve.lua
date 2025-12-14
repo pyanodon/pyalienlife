@@ -1,6 +1,5 @@
-local farm =
-{
-    seed = "replicator-bioreserve", --the seed being planted
+return {
+    name = "replicator-bioreserve", -- the seed being planted (item launched)
     crop = "ore-bioreserve",        --the 'ore' that is spawned
     recipes =                       --all the recipes that use these seeds to grow the crop
     {
@@ -28,11 +27,5 @@ local farm =
             recipe_name = "bioreserve-super-6", -- recipe name
             crop_output = 6                     -- crop yield
         },
-        {
-            recipe_name = "bioreserve-super-7", -- recipe name
-            crop_output = 7                     -- crop yield
-        },
     }
 }
-
-return farm

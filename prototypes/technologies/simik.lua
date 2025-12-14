@@ -27,7 +27,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"simik-mk01"},
-    dependencies = {"simik-mk01"},
     effects = {},
     unit = {
         count = 200,
@@ -51,7 +50,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"simik-mk02"},
-    dependencies = {"simik-mk02"},
     effects = {},
     unit = {
         count = 300,
@@ -76,7 +74,6 @@ TECHNOLOGY {
     icon_size = 128,
     order = "c-a",
     prerequisites = {"simik-mk03"},
-    dependencies = {"simik-mk03"},
     effects = {},
     unit = {
         count = 400,

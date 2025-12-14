@@ -35,26 +35,33 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     elseif action.type == "circuit-condition" then
         comparator.build_circuit_comparator_widgets(flow, action, tags)
     elseif action.type == "circuit-condition-static" then
-        -- whoops, migration fail. https://github.com/pyanodon/pybugreports/issues/880
-        if type(action.circuit_condition_left) == "number" then
-            action.circuit_condition_left, action.circuit_condition_right = action.circuit_condition_right, action.circuit_condition_left
-        end
-
-        comparator.build_circuit_static_comparator_widgets(flow, action, tags)
+        comparator.build_static_comparator_widgets(flow, action, tags, "signal")
     elseif Utils.contains({"load-caravan", "unload-caravan", "load-target", "unload-target"}, action.type) then
         -- don't know why we restrict comparison here, shouldn't it be a regular dropdown?
-        comparator.build_item_static_comparator_widgets(flow, action, tags, nil, "=")
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", nil, "=")
         -- these are interrupt-only
     elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count"}, action.type) then
         local filters
         if action.type == "food-count" then
             filters = {{filter = "name", name = Caravan.foods.all}}
         end
-        comparator.build_item_static_comparator_widgets(flow, action, tags, filters)
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
+    elseif action.type == "outpost-item-count" then
+        flow.add {type = "sprite-button", name = "py_caravan_action_add_outpost", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
+
+        local locale_key = "caravan-actions." .. action.type .. "2"
+        local entity = action.entity
+
+        if entity and entity.valid then
+            label.caption = {locale_key, {"caravan-gui.entity-position", entity.localised_name, entity.position.x, entity.position.y}}
+        else
+            label.caption = {locale_key, {"caravan-gui.not-specified"}}
+        end
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
     elseif action.type == "store-specific-food" then
         local filters = {{filter = "name", name = Caravan.foods.all}}
 
-        comparator.build_item_static_comparator_widgets(flow, action, tags, filters, "≥")
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", filters, "≥")
     elseif Utils.contains({"at-outpost", "not-at-outpost"}, action.type) then
         flow.add {type = "sprite-button", name = "py_caravan_action_add_outpost", tags = tags, index = 1, style = "train_schedule_action_button", sprite = "utility/rename_icon"}
 
@@ -65,9 +72,10 @@ function P.build_action_flow(parent, caravan_data, action, tags)
         else
             label.caption = {locale_key, {"caravan-gui.not-specified"}}
         end
+    else
+        flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     end
 
-    flow.add {type = "empty-widget"}.style.horizontally_stretchable = true
     if Utils.contains(possibly_blocking_actions, action.type) then
         flow.add {type = "checkbox", name = "py_caravan_action_blocking_checkbox", state = not action.async, tooltip = {"caravan-gui.wait"}, tags = tags}
     end

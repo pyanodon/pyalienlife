@@ -11,8 +11,8 @@ local PICKING_UP = 1
 local DROPPING_OFF = 2
 local RETURNING = 3
 
-local INPUT_INVENTORY = defines.inventory.assembling_machine_input
-local OUTPUT_INVENTORY = defines.inventory.assembling_machine_output
+local INPUT_INVENTORY = defines.inventory.crafter_input
+local OUTPUT_INVENTORY = defines.inventory.crafter_output
 
 local sort = table.sort
 local insert = table.insert
@@ -38,7 +38,59 @@ local pi = math.pi
 ---@field providers_by_contents table<string, table<int, LuaEntity>>,
 ---@field allocated_fluids_from_providers table<int, number>,
 
-py.on_event(py.events.on_init(), function()
+local function migrate_network_data(fluids)
+    local num_migrated = 0
+    local fluids_deleted = {}
+    local fluids_deleted_full = {}
+    local MAX_MESSAGE_SIZE = 30
+
+    if not fluids then return end
+    for _, biofluid_entity_type in pairs {"biofluid_robots", "biofluid_requesters"} do
+        for k, entry in pairs(storage[biofluid_entity_type]) do
+            if fluids[entry.name] == "" then
+                -- This fluid has been deleted from factorio.
+                if biofluid_entity_type == "biofluid_requesters" then
+                    -- Remove the filter from the requester tank.
+                    entry.name = nil
+                else
+                    -- Delete the in-flight robot and drop the robot item on the ground.
+                    local entity = entry.entity
+                    entity.surface.spill_item_stack {
+                        position = entity.position,
+                        force = entity.force_index,
+                        stack = {name = entity.name, count = 1},
+                        marked_for_deconstruction = true
+                    }
+                    storage.biofluid_robots[k] = nil
+                    num_migrated = num_migrated + 1
+
+                    if num_migrated <= MAX_MESSAGE_SIZE then
+                        fluids_deleted[entity.gps_tag] = entry.name
+                    end
+                    fluids_deleted_full[entity.gps_tag] = entry.name
+
+                    entity.destroy()
+                end
+            else
+                entry.name = fluids[entry.name] or entry.name -- if it exists in the table, swap over
+            end
+        end
+    end
+
+    if num_migrated ~= 0 then
+        local fluids_deleted = serpent.block(fluids_deleted):gsub("\"] = \"", " used to be => \""):gsub("%[\"", "biofluid robot at ")
+        local fluids_deleted_full = serpent.block(fluids_deleted_full):gsub("\"] = \"", " used to be => \""):gsub("%[\"", "biofluid robot at ")
+
+        game.print {"messages.warning-biofluid-migration", num_migrated, fluids_deleted}
+        if num_migrated > MAX_MESSAGE_SIZE then
+            game.print("\t... " .. (num_migrated - MAX_MESSAGE_SIZE) .. " more not shown. Check factorio-current.log for full list.")
+            log "FULL LIST: "
+            log {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_full}
+        end
+    end
+end
+
+py.on_event(py.events.on_init(), function(changes)
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
     storage.biofluid_providers = storage.biofluid_providers or {}
@@ -46,9 +98,10 @@ py.on_event(py.events.on_init(), function()
     storage.biofluid_bioports = storage.biofluid_bioports or {}
     ---@type BiofluidNetwork[]
     storage.biofluid_networks = storage.biofluid_networks or {}
+    if changes and changes.migrations then
+        migrate_network_data(changes.migrations.fluid)
+    end
 end)
-
-
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
@@ -84,13 +137,13 @@ py.on_event(py.events.on_built(), function(event)
                 chorkok = {stage = 0, id = nil}
             }
         }
-    elseif entity.type == "pipe-to-ground" then	
+    elseif entity.type == "pipe-to-ground" then
         entity.operable = false
     elseif connection_type == Biofluid.PROVIDER then
         storage.biofluid_providers[unit_number] = {entity = entity}
     end
-	
-	::continue::
+
+    ::continue::
     Biofluid.built_pipe()
 end)
 
@@ -224,35 +277,31 @@ function order_by_distance(base_entity, unit_numbers)
         table.insert(order, unit_number)
     end
     table.sort(order, function(a, b)
+        local dataA = storage.biofluid_bioports[a]
+        if dataA == nil then return false end
 
-		local dataA = storage.biofluid_bioports[a]
-		if dataA == nil then return false end
-		
-		local entityA = dataA.entity
-		if entityA == nil then return false end
-		
-		local entityA_pos = entityA.position
-		if entityA_pos == nil then return false end
-		
-		local dataB = storage.biofluid_bioports[b]
-		if dataB == nil then return false end
-		
-		local entityB = dataB.entity
-		if entityB == nil then return false end
-		
-		local entityB_pos = entityB.position
-		if entityB_pos == nil then return false end
-	
-		local distA = (entityA_pos.x - base_entity.position.x)^2 + (entityA_pos.y - base_entity.position.y)^2
-        local distB = (entityB_pos.x - base_entity.position.x)^2 + (entityB_pos.y - base_entity.position.y)^2
-		
+        local entityA = dataA.entity
+        if entityA == nil then return false end
+
+        local entityA_pos = entityA.position
+        if entityA_pos == nil then return false end
+
+        local dataB = storage.biofluid_bioports[b]
+        if dataB == nil then return false end
+
+        local entityB = dataB.entity
+        if entityB == nil then return false end
+
+        local entityB_pos = entityB.position
+        if entityB_pos == nil then return false end
+
+        local distA = (entityA_pos.x - base_entity.position.x) ^ 2 + (entityA_pos.y - base_entity.position.y) ^ 2
+        local distB = (entityB_pos.x - base_entity.position.x) ^ 2 + (entityB_pos.y - base_entity.position.y) ^ 2
+
         return distA < distB
     end)
     return ipairs(order)
 end
-
-
-
 
 local function random_order(l)
     local order = {}
@@ -285,15 +334,15 @@ local function build_providers_by_contents(network_data, relavant_fluids)
         if not relavant_fluids[name] then goto continue end
         local already_allocated = network_data.allocated_fluids_from_providers[provider.unit_number] or 0
         local can_give = contents.amount - already_allocated
-        
-		if (contents.amount >= Biofluid.tank_size) then
-			-- if the provider tank is full, allow as many bots as possible to use it
-			-- this allows a well-supplied provider to service many more requesters per unit time without impacting providers with smaller supply
-			-- the downside is that sudden demand spikes will waste biofluid bot time by over-allocating them, but that should be rare.
-			can_give = contents.amount
-		end
-		
-		if can_give < min_fluid_reserve then goto continue end
+
+        if (contents.amount >= Biofluid.tank_size) then
+            -- if the provider tank is full, allow as many bots as possible to use it
+            -- this allows a well-supplied provider to service many more requesters per unit time without impacting providers with smaller supply
+            -- the downside is that sudden demand spikes will waste biofluid bot time by over-allocating them, but that should be rare.
+            can_give = contents.amount
+        end
+
+        if can_give < min_fluid_reserve then goto continue end
 
         local list = providers_by_contents[name] or {}
         providers_by_contents[name] = list
@@ -344,13 +393,13 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
             end
         end
         local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
-		
-		if (contents.amount >= Biofluid.tank_size) then
-			-- again, if the provider tank is full assume it is also well-supplied and can provide much more than we can currently see
-			-- ignore existing allocations and assume it will be full when we get there
-			can_give = contents.amount
-		end
-		
+
+        if (contents.amount >= Biofluid.tank_size) then
+            -- again, if the provider tank is full assume it is also well-supplied and can provide much more than we can currently see
+            -- ignore existing allocations and assume it will be full when we get there
+            can_give = contents.amount
+        end
+
         provider = p
         unfulfilled_request.amount = min(amount, can_give)
         break
@@ -358,20 +407,19 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
     end
 
     if not provider then return end
-	
-    local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
-	
-    for _, unit_number in order_by_distance(requester_data.entity, network_data.biofluid_bioports) do
 
+    local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
+
+    for _, unit_number in order_by_distance(requester_data.entity, network_data.biofluid_bioports) do
         local bioport_data = storage.biofluid_bioports[unit_number]
         if not bioport_data or not bioport_data.active or not bioport_data.entity.valid then goto continue end
 
-		if (unfulfilled_request.amount <= 0) then
-			break
-		end
+        if (unfulfilled_request.amount <= 0) then
+            break
+        end
 
         local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
-		
+
         if delivery_amount ~= 0 then
             local allocated = network_data.allocated_fluids_from_providers
             allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
@@ -680,7 +728,7 @@ local function returning(biorobot_data)
         find_new_home(biorobot_data); return
     end
     local biorobot = biorobot_data.entity
-    local inventory = bioport.get_inventory(INPUT_INVENTORY)
+    local inventory = bioport.get_inventory(INPUT_INVENTORY) --[[@as LuaInventory]]
     if inventory.insert {name = biorobot.name, count = 1} == 1 then
         storage.biofluid_robots[biorobot.unit_number] = nil
         biorobot.destroy()
@@ -822,7 +870,7 @@ py.on_event(defines.events.on_entity_settings_pasted, function(event)
 end)
 
 py.on_event(defines.events.on_player_setup_blueprint, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local blueprint = player.blueprint_to_setup
     if not blueprint.valid_for_read then blueprint = player.cursor_stack end
     if not blueprint or not blueprint.valid_for_read then return end
@@ -891,7 +939,7 @@ py.on_event(defines.events.on_player_fast_transferred, function(event)
 end)
 
 py.on_event(defines.events.on_selected_entity_changed, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local entity = player.selected
     if not entity or not entity.valid then return end
     local entity_name = entity.name

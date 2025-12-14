@@ -4,15 +4,20 @@ local CaravanGui = require "gui"
 local Utils = require "utils"
 local Impl = require "impl"
 
-local function add_gui_row(caravan_data, key, table)
+local function add_gui_row(caravan_data, key, table, inner)
     local entity = caravan_data.entity
     local prototype = caravan_prototypes[entity.name]
 
-    table = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}}
+    table = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}, style = inner and "inside_shallow_frame" or nil}
 
     local button_flow = table.add {type = "flow", direction = "horizontal"}
     button_flow.style.vertical_align = "top"
     button_flow.style.height = 30
+    if inner then
+        button_flow.style.left_margin = 5
+        button_flow.style.right_margin = 5
+        button_flow.style.top_margin = 5
+    end
 
     local caption_flow = button_flow.add {type = "flow", direction = "horizontal"}
 
@@ -77,7 +82,7 @@ local function add_gui_row(caravan_data, key, table)
     camera.entity = entity
     camera.visible = true
     camera.style.height = 155
-    camera.zoom = (prototype.camera_zoom or 1) / 2
+    camera.zoom = (prototype.camera_zoom or 0.5) / 2
 
     local status_flow = table.add {type = "flow", direction = "horizontal"}
     status_flow.style.height = 0
@@ -100,6 +105,7 @@ gui_events[defines.events.on_gui_click]["py_click_caravan"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
 
+    player.opened = nil
     CaravanGui.build(player, caravan_data)
 end
 
@@ -117,11 +123,23 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
     local entity = caravan_data.entity
-    local position = entity.position
-    if entity then position = entity.position end
+    local position
+    local gui = CaravanGui.get_gui(player)
+    -- if the camera has a target, use that instead of the schedule target
+    if gui then
+        local camera = gui.entity_frame.camera_frame.camera
+        position = camera.position
+        entity = camera.entity
+    end
 
     player.opened = nil
-    if entity then
+    if entity or position then
+        local zoom = player.zoom
+        player.set_controller {
+            type = defines.controllers.remote,
+            position = position or entity.position,
+        }
+        player.zoom = zoom
         player.centered_on = entity
     end
 end
@@ -196,6 +214,19 @@ gui_events[defines.events.on_gui_confirmed]["py_rename_caravan_textfield"] = fun
     title_display_mode(element.parent, caravan_data)
 end
 
+---checks to see if either any caravan or a specific caravan has this entity in its schedule
+---@param entity LuaEntity
+---@param caravan_data  table?
+---@return boolean result whether the given entity has any caravans with it as a destination
+function entity_has_caravan(entity, caravan_data)
+    -- Check one or many depending on if a source caravan is specified
+    local caravan_list = caravan_data and {caravan_data} or storage.caravans
+    for _, caravan in pairs(caravan_list) do
+        if has_entity_in_schedule(caravan, entity) then return true end
+    end
+    return false
+end
+
 local function has_any_caravan_at_all()
     for _, caravan in pairs(storage.caravans) do
         if Impl.validity_check(caravan) then return true end
@@ -219,6 +250,7 @@ local function create_gui(gui, player)
             end
         end
     else
+        table.style.top_margin = 30
         local gui = gui.add {type = "frame", style = "negative_subheader_frame", direction = "horizontal", name = "no_spacecrafts_frame", index = 1}
         gui.style.top_margin = -4
         gui.style.left_margin = -8
@@ -231,8 +263,8 @@ local function create_gui(gui, player)
         gui.add {type = "label", caption = {"caravan-gui.empty"}, style = "bold_label"}.style.single_line = false
         gui.add {type = "label", caption = {"caravan-gui.empty-2"}}.style.single_line = false
     end
-    for i = 1, 4 do
-        for i = 1, 2 do
+    for _ = 1, 4 do
+        for _ = 1, 2 do
             local ew = table.add {type = "empty-widget"}
             ew.style.vertically_stretchable = true
             ew.style.horizontally_stretchable = true
@@ -253,6 +285,81 @@ local function on_search(search_key, gui, player)
         end
     end
 end
+
+---Checks to see if the given caravan has the given entity in its schedule
+---@param caravan_data any
+---@param entity any
+---@return boolean
+function has_entity_in_schedule(caravan_data, entity)
+    if not Impl.validity_check(caravan_data) then return false end
+    if not caravan_data.schedule then return false end
+    for _, schedule in pairs(caravan_data.schedule) do
+        if schedule.entity == entity then return true end
+    end
+    return false
+end
+
+--creates the relative frame from of the remote view gui
+local function instantiate_relative_frame(gui, anchor)
+    if anchor then
+        return gui.relative.add {
+            type = "frame",
+            name = "relative_caravan_gui",
+            caption = {"caravan-gui.caption"},
+            direction = "vertical",
+            anchor = anchor
+        }
+    end
+    if not gui.relative.caravan_flow then return end
+        gui.relative.caravan_flow.clear()
+    return gui.relative.caravan_flow.add {
+        type = "frame",
+        name = "relative_caravan_gui",
+        caption = {"caravan-gui.caption"},
+        direction = "vertical",
+    }
+end
+
+--attempts to add a remote view for caravans connected to the given outpost
+local function build_gui_connected(player, entity, anchor)
+    if not entity then return end
+    if not entity_has_caravan(entity) then return end
+    local main_frame = instantiate_relative_frame(player.gui, anchor)
+    if not main_frame then return end
+    main_frame.style.minimal_width = 300
+    main_frame.tags = {unit_number = entity.unit_number}
+
+    local scroll_pane = main_frame.add {type = "scroll-pane", style = "list_box_scroll_pane", vertical_scroll_policy = "auto"}
+    scroll_pane.style.horizontally_stretchable = true
+    scroll_pane.style.top_margin = -6
+
+    for key, caravan_data in pairs(storage.caravans) do
+        if has_entity_in_schedule(caravan_data, entity) then
+            add_gui_row(caravan_data, key, scroll_pane, true)
+        end
+    end
+end
+
+py.on_event(defines.events.on_gui_opened, function(event)
+    local player = game.get_player(event.player_index)
+    local entity = event.entity
+    if not entity then return end
+    local old_gui = CaravanGui.get_relative_gui(player)
+    if old_gui then old_gui.destroy() end
+    build_gui_connected(player, entity, {
+        gui = CaravanGui.guess_gui_type(entity),
+        position = defines.relative_gui_position.left
+    })
+end)
+
+-- The list will be invalidated when a player changes surface, destroy it
+py.on_event(defines.events.on_player_changed_surface, function(event)
+    local player = game.get_player(event.player_index)
+    local gui = CaravanGui.get_relative_gui(player)
+    if gui then
+        gui.destroy()
+    end
+end)
 
 remote.add_interface("pywiki_caravan_manager", {
     create_gui = create_gui,

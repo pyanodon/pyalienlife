@@ -205,40 +205,41 @@ local function build_tech_upgrade(tech_upgrade)
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
                 py.add_to_description("recipe", data.raw.recipe[effect.new], {"turd.font", {"turd.recipe-replacement"}})
                 local recipe = data.raw.recipe[effect.new]
-                if recipe then
-                    local main_product = recipe.main_product or #recipe.results == 1 and recipe.results[1].name
-                    main_product = data.raw.item[main_product] or data.raw.module[main_product] or data.raw.fluid[main_product] or data.raw["spider-vehicle"][main_product] or data.raw.unit[main_product] or data.raw.car[main_product] or data.raw.capsule[main_product] or data.raw.tool[main_product]
-                    recipe.icons = recipe.icon and {{
-                        icon = recipe.icon,
-                        icon_size = recipe.icon_size
-                    }} or (recipe.icons and table.deepcopy(recipe.icons)) or main_product.icon and {{
-                        icon = main_product.icon,
-                        icon_size = main_product.icon_size
-                    }} or (main_product.icons and table.deepcopy(main_product.icons))
-                    recipe.icons[#recipe.icons+1] = {
+                local icon_base = recipe and recipe:get_icons()
+                if icon_base then
+                    -- Combine the base icon with our overlay
+                    recipe.icons = util.combine_icons(icon_base, {{
                         icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                        shift = {14, -6},
-                        scale = 0.35,
-                        floating = true
-                    }
+                        shift = {10, -10},
+                        scale = 0.35
+                    }}, {}, 40)
+                    -- this property isn't transferred by combine_icons and allows the overlay to sit outside the render area of the base icon
+                    recipe.icons[#recipe.icons].floating = true
                     recipe.icon = nil
                     recipe.icon_size = nil
                 end
             elseif effect.type == "machine-replacement" then
-                local machine = data.raw["assembling-machine"][effect.new] or data.raw.furnace[effect.new] or data.raw["burner-generator"][effect.new]
+                local machine
+                for _, prototype_category in py.iter_prototype_categories("entity") do
+                    machine = prototype_category[effect.new]
+                    if machine then break end
+                end
+                -- can be nil if all categories are somehow missing it
                 if machine then
-                    machine.icons = machine.icons or {{
+                    local icon_base = machine.icons or {{
                         icon = machine.icon,
                         icon_size = machine.icon_size
                     }}
-                    machine.icons[#machine.icons + 1] = {
+                    machine.icons = util.combine_icons(icon_base, {{
                         icon = "__pycoalprocessinggraphics__/graphics/icons/gui/turd.png",
-                        shift = {14, -6},
-                        scale = 0.35,
-                        floating = true
-                    }
+                        shift = {10, -10},
+                        scale = 0.35
+                    }}, {}, 40)
+                    machine.icons[#machine.icons].floating = true
                     machine.icon = nil
                     machine.icon_size = nil
+                else
+                    error(string.format("No entity found with name %s", effect.new))
                 end
             end
         end

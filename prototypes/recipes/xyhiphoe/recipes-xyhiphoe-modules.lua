@@ -79,7 +79,7 @@ RECIPE {
         {type = "item", name = "xyhiphoe",      amount = 1},
     },
     main_product = "xyhiphoe-mk02",
-    {
+    icons = {
         {icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png",       icon_size = 64},
         {icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk02.png", icon_size = 64, scale = 0.25, shift = {-7.5, -7.5}},
     },

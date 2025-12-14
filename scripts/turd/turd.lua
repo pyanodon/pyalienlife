@@ -328,8 +328,16 @@ gui_events[defines.events.on_gui_click]["py_minimize_turd"] = function(event)
 end
 
 local function handle_removed_items(surface, force, machine, removed_items)
+    --get the output inventory
+    local output = machine.get_output_inventory()
     for _, item in pairs(removed_items) do
+        --insert items into main inventory
         item.count = item.count - machine.insert(item)
+        --if items left inesert into output inventory
+        if item.count ~= 0 and output then
+            item.count = item.count - output.insert(item)
+        end
+        --if items left drop on ground
         if item.count ~= 0 then
             surface.spill_item_stack {position = machine.position, stack = item, enable_looted = true, force = force, allow_belts = false}
         end
@@ -380,49 +388,101 @@ local function module_effects(tech_upgrade, sub_tech, assembling_machine_list, f
     end
 end
 
-local function machine_replacement(old, new, assembling_machine_list)
+local crafting_machines = table.invert{"assembling-machine", "rocket-silo", "furnace"}
+
+local function machine_replacement(old_machine_name, new_machine_name, assembling_machine_list)
     local temp_inventory = game.create_inventory(9999)
     local new_machine_list = {}
-    for _, machine in pairs(assembling_machine_list) do
-        if machine.name == old or machine.name == "entity-ghost" and machine.ghost_name == old then
+    for _, old_machine in pairs(assembling_machine_list) do
+        local is_ghost = old_machine.name == "entity-ghost"
+        local old_name = is_ghost and old_machine.ghost_name or old_machine.name
+        local old_type = is_ghost and old_machine.ghost_type or old_machine.type
+        if old_name == old_machine_name then
+            -- this could be a table but we're checking the new machine type below as well just in case we do some very strange TURD replacements
+            local surface = old_machine.surface
+            local mirroring = old_machine.mirroring -- universal
+            local crafting_progress, bonus_progress, result_quality, products_finished -- CraftingMachine specific
+            local recipe, recipe_locked -- AssemblingMachine specific
+            local use_transitional_requests, rocket_parts -- RocketSilo specific
+            -- set up placement params
             local parameters = {
-              name = machine.name == "entity-ghost" and "entity-ghost" or new,
-              ghost_name = machine.name == "entity-ghost" and new or nil,
-              position = machine.position,
-              direction = machine.direction,
-              quality = machine.quality,
-              force = machine.force_index,
-              raise_built = true
+                name = is_ghost and "entity-ghost" or new_machine_name,
+                inner_name = is_ghost and new_machine_name or nil,
+                position = old_machine.position,
+                direction = old_machine.direction,
+                quality = old_machine.quality,
+                force = old_machine.force_index,
+                raise_built = true,
             }
-            local recipe
-            local crafting_progress
-            local bonus_progress
-            if machine.type == "assembling-machine" then
-                recipe = machine.get_recipe()
-                crafting_progress = machine.crafting_progress
-                bonus_progress = machine.bonus_progress
+            -- we can skip a bunch of manual work in this case
+            if surface.can_fast_replace({
+                name = new_machine_name,
+                position = parameters.position,
+                direction = parameters.direction,
+                force = parameters.force
+            }) then
+                parameters.fast_replace = true
+                parameters.spill = false
             end
-            local surface = machine.surface
-            local items_to_place_this = machine.prototype.items_to_place_this
-            local mirrored = machine.mirroring
-            machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
-            for _, item_to_place in pairs(items_to_place_this or {}) do
-                temp_inventory.remove(item_to_place)
+            -- save relevant properties
+            if crafting_machines[old_type] then
+                if old_type == "assembling-machine" then
+                    recipe = old_machine.get_recipe()
+                    recipe_locked = old_machine.recipe_locked
+                elseif old_type == "rocket-silo" then -- we have no TURD silos currently so this is untested
+                    use_transitional_requests = old_machine.use_transitional_requests
+                    rocket_parts = old_machine.rocket_parts
+                end
+                crafting_progress = old_machine.crafting_progress
+                bonus_progress = old_machine.bonus_progress
+                result_quality = not is_ghost and old_machine.result_quality or nil -- doesn't work on ghosts
+                products_finished = old_machine.products_finished
             end
+            -- if we can't fast replace, we pull out items and then discard the placement item as we only want to transfer the craft ingredients/outputs/trash
+            if not parameters.fast_replace then
+                local items_to_place_this = old_machine.prototype.items_to_place_this
+                old_machine.mine {inventory = temp_inventory, force = true, raise_destroyed = false, ignore_minable = true}
+                for _, item_to_place in pairs(items_to_place_this or {}) do
+                    temp_inventory.remove(item_to_place)
+                end
+            end
+            -- global here prevents the function we're currently in from being immediately called on the new machine
             just_built_new_machine = true
             local new_machine = surface.create_entity(parameters)
             just_built_new_machine = false
-            if new_machine.type == "assembling-machine" then
-                new_machine.crafting_progress = crafting_progress
-                new_machine.bonus_progress = bonus_progress
-                new_machine.set_recipe(recipe)
+            -- can be nil if surface restrictions, for example
+            if new_machine then
+                local new_machine_type = is_ghost and new_machine.ghost_type or new_machine.type
+                -- We could ignore some of these with fast_replace but the game isn't super consistent about what properties transfer
+                -- So, it's easier just to reapply everything
+                new_machine.mirroring = mirroring
+                if crafting_machines[new_machine_type] then
+                    if new_machine_type == "assembling-machine" then
+                        new_machine.set_recipe(recipe)
+                        new_machine.recipe_locked = recipe_locked
+                    elseif new_machine_type == "rocket-silo" then
+                        new_machine.use_transitional_requests = use_transitional_requests
+                        new_machine.rocket_parts = rocket_parts
+                    end
+                    if not is_ghost then -- errors on ghosts
+                        new_machine.crafting_progress = crafting_progress
+                        new_machine.bonus_progress = bonus_progress
+                    end
+                    if result_quality ~= nil then -- errors with `nil`
+                        new_machine.result_quality = result_quality
+                    end
+                    new_machine.products_finished = products_finished
+                end
+                -- shove everything back in if not fast replaced
+                if not parameters.fast_replace then
+                    handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
+                    temp_inventory.clear()
+                end
+                -- for storing back in the result table
+                old_machine = new_machine
             end
-            handle_removed_items(new_machine.surface, new_machine.force, new_machine, temp_inventory.get_contents())
-            new_machine.mirroring = mirrored
-            temp_inventory.clear()
-            machine = new_machine
         end
-        new_machine_list[#new_machine_list + 1] = machine
+        new_machine_list[#new_machine_list + 1] = old_machine
     end
     temp_inventory.destroy()
     return new_machine_list
@@ -516,29 +576,42 @@ gui_events[defines.events.on_gui_click]["py_turd_randomize_button"] = function(e
     gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] {element = confirm_button, player_index = event.player_index}
 end
 
-gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(event)
-    local element = event.element
-    local master_tech_name = element.tags.master_tech_name
-    local sub_tech_name = element.tags.sub_tech_name
-    local sub_tech_flow = element.parent.parent.parent
-    local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
+local new_turd = function(event)
+    local skip_gui = event.skip_gui
+
+    local element
+    local sub_tech_flow
+    local header_flow
+    local randomize_button
+    if not skip_gui then
+        element = event.element
+        sub_tech_flow = element.parent.parent.parent
+        header_flow = sub_tech_flow.parent.header_flow
+        randomize_button = header_flow.py_turd_randomize_button
+    end
+    local master_tech_name = event.master_tech_name or element.tags.master_tech_name
+    local sub_tech_name = event.sub_tech_name or element.tags.sub_tech_name
+    local player = event.player or game.get_player(event.player_index) --[[@as LuaPlayer]]
     local force = player.force
     local force_index = force.index
-    local header_flow = sub_tech_flow.parent.header_flow
-    local randomize_button = header_flow.py_turd_randomize_button
 
     if not force.technologies[master_tech_name].researched then return end
 
-    if element.caption[1] == "turd.unavailable" then return end
+    if not skip_gui then
+        if element.caption[1] == "turd.unavailable" then return end
+    end
 
     local turd_bonuses = storage.turd_bonuses[force_index] or {}
     storage.turd_bonuses[force_index] = turd_bonuses
+    storage.turd_unlocked_modules[force_index] = storage.turd_unlocked_modules[force_index] or {}
     local selection = turd_bonuses[master_tech_name] or NOT_SELECTED
     if selection == NOT_SELECTED then
         force.print {"turd.font", {"turd.selected-alert", {"technology-name." .. master_tech_name}, {"technology-name." .. sub_tech_name}, player.name, player.color.r, player.color.g, player.color.b}}
         turd_bonuses[master_tech_name] = sub_tech_name
         apply_turd_bonus(force, master_tech_name, tech_upgrades[master_tech_name], find_all_assembling_machines(force))
-        randomize_button.visible = false
+        if not skip_gui then
+            randomize_button.visible = false
+        end
     else
         storage.turd_reset_remaining[force_index] = storage.turd_reset_remaining[force_index] or 0
         if storage.turd_reset_remaining[force_index] <= 0 and not has_turd_migration(force_index, sub_tech_name) then
@@ -556,20 +629,25 @@ gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = function(eve
         reapply_turd_bonuses(force)
 
         local resets_left = storage.turd_reset_remaining[force_index]
-        local reset_label = sub_tech_flow.parent.parent.textbox_frame.py_resets_left
-        if resets_left == 0 and reset_label then
-            reset_label.destroy()
-        elseif resets_left > 0 and reset_label then
-            reset_label.caption = {"turd.resets-left", resets_left}
+        if not skip_gui then
+            local reset_label = sub_tech_flow.parent.parent.textbox_frame.py_resets_left
+            if resets_left == 0 and reset_label then
+                reset_label.destroy()
+            elseif resets_left > 0 and reset_label then
+                reset_label.caption = {"turd.resets-left", resets_left}
+            end
+            randomize_button.visible = true
         end
-        randomize_button.visible = true
     end
 
-    for _, sub_tech in pairs(sub_tech_flow.children) do
-        local confirm_button = sub_tech.info_flow.py_turd_confirm_button
-        update_confirm_button(confirm_button, player)
+    if not skip_gui then
+        for _, sub_tech in pairs(sub_tech_flow.children) do
+            local confirm_button = sub_tech.info_flow.py_turd_confirm_button
+            update_confirm_button(confirm_button, player)
+        end
     end
 end
+gui_events[defines.events.on_gui_click]["py_turd_confirm_button"] = new_turd
 
 local function clear_new_turd_recipe_notifications()
     local recipe_prototypes = prototypes.recipe
@@ -647,7 +725,7 @@ end
 py.on_event(defines.events.on_research_finished, on_researched)
 py.on_event(defines.events.on_research_reversed, on_unresearched)
 
-py.on_event(py.events.on_built(), function(event)
+local on_turd_built = function(event)
     local entity = event.entity
     if just_built_new_machine or not entity.valid or not entity.unit_number then return end
     local force_index = entity.force_index
@@ -660,16 +738,20 @@ py.on_event(py.events.on_built(), function(event)
         end
     end
 
-    if storage.turd_machine_replacements[force_index] and storage.turd_machine_replacements[force_index][name] then
-        machine_replacement(name, storage.turd_machine_replacements[force_index][name], {entity})
-    elseif turd_machines[name] then -- is a turd building, should be normal
-        machine_replacement(name, turd_machines[name], {entity})
+    local base_variant = turd_machines[name] -- non-turd machine if `name` is a turd machine, nil otherwise
+    local force_replacements = storage.turd_machine_replacements[force_index] or {} -- replacements that apply to this force
+    if force_replacements[name] then
+        machine_replacement(name, force_replacements[name], {entity})
+    elseif base_variant and not force_replacements[base_variant] then -- is a turd building but not unlocked, should be replaced with normal building
+        machine_replacement(name, base_variant, {entity})
     end
 
     if entity.valid and bhoddos_lib.cultures[entity.name] then
         bhoddos_lib.update_culture_table(entity, "add")
     end
-end)
+end
+
+py.on_event(py.events.on_built(), on_turd_built)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
@@ -684,8 +766,82 @@ py.on_event(py.events.on_destroyed(), function(event)
     end
 end)
 
+---@param force_index integer the force requesting this information
+---@param entity_name string the entity get the replacement for
+---@return string? replacement_entity the name of the entity that replaces the given entity
+local get_machine_replacement = function(force_index, entity_name)
+    if not storage.turd_machine_replacements[force_index] then return end
+    return storage.turd_machine_replacements[force_index][entity_name]
+end
+
+---@param force_index integer the force requesting this information
+---@return table<string, string> replacements map of old entity_name to new entity_name
+local get_machine_replacements = function(force_index)
+    return storage.turd_machine_replacements[force_index] or {}
+end
+
+---@param force_index integer the force requesting this information
+---@return table<string, string|integer> selections map of master_tech_name to selected sub_tech_name (or NOT_SELECTED constant)
+local get_turd_selections = function(force_index)
+    return storage.turd_bonuses[force_index] or {}
+end
+
+---@param force_index integer the force requesting this information
+---@param master_tech_name string? optional filter for a specific master tech
+---@return string|integer|nil selected_subtech the selected sub-tech name, NOT_SELECTED constant, or nil if not found
+local get_turd_selection = function(force_index, master_tech_name)
+    if not master_tech_name then return nil end
+    local selections = storage.turd_bonuses[force_index]
+    if not selections then return nil end
+    return selections[master_tech_name]
+end
+
+---@param force_index integer the force requesting this information
+---@return table<string, string> modules map of entity_name to module_name
+local get_unlocked_modules = function(force_index)
+    return storage.turd_unlocked_modules[force_index] or {}
+end
+
+---@param force_index integer the force requesting this information
+---@param entity_name string the entity to get the module for
+---@return string? module_name the name of the unlocked module for this entity
+local get_unlocked_module = function(force_index, entity_name)
+    if not storage.turd_unlocked_modules[force_index] then return nil end
+    return storage.turd_unlocked_modules[force_index][entity_name]
+end
+
+---@return table tech_upgrades the complete tech_upgrades data structure
+local get_tech_upgrades = function()
+    return tech_upgrades
+end
+
+---@param master_tech_name string the master technology name
+---@return table? tech_upgrade the tech upgrade data, or nil if not found
+local get_tech_upgrade = function(master_tech_name)
+    return tech_upgrades[master_tech_name]
+end
+
+---@return integer NOT_SELECTED the constant representing no selection
+local get_not_selected_constant = function()
+    return NOT_SELECTED
+end
+
 remote.add_interface("pywiki_turd_page", {
     create_turd_page = create_turd_page,
     on_search = on_search,
-    reapply_turd_bonuses = reapply_turd_bonuses
+    reapply_turd_bonuses = reapply_turd_bonuses,
+    new_turd = new_turd,
+    on_turd_built = on_turd_built,
+    get_machine_replacement = get_machine_replacement,
+    get_machine_replacements = get_machine_replacements,
+    -- TURD selection getters
+    get_turd_selections = get_turd_selections,
+    get_turd_selection = get_turd_selection,
+    get_not_selected_constant = get_not_selected_constant,
+    -- Module getters
+    get_unlocked_modules = get_unlocked_modules,
+    get_unlocked_module = get_unlocked_module,
+    -- Tech upgrade data getters
+    get_tech_upgrades = get_tech_upgrades,
+    get_tech_upgrade = get_tech_upgrade
 })

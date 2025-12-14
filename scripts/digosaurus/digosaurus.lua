@@ -3,6 +3,41 @@ Digosaurus = {}
 require "digosaurus-prototypes"
 require "digosaurus-gui"
 
+local function new_digosaur(name, bonus, proxy_name)
+    Digosaurus.valid_creatures[name] = bonus
+    Digosaurus.mining_proxies[name] = proxy_name
+end
+
+local function remove_digosaur(name)
+    Digosaurus.valid_creatures[name] = nil
+    Digosaurus.mining_proxies[name] = nil
+end
+
+local function add_mining_category(category_to_add)
+    Digosaurus.minable_categories[category_to_add] = true
+end
+
+local function remove_mining_category(category_to_remove)
+    Digosaurus.minable_categories[category_to_remove] = nil
+end
+
+local function add_food(name, value)
+    Digosaurus.favorite_foods[name] = value
+end
+
+local function remove_food(name)
+    Digosaurus.favorite_foods[name] = nil
+end
+
+remote.add_interface("py_digosaurs", {
+    new_digosaur = new_digosaur,
+    remove_digosaur = remove_digosaur,
+    add_mining_category = add_mining_category,
+    remove_mining_category = remove_mining_category,
+    add_food = add_food,
+    remove_food = remove_food,
+})
+
 py.on_event(py.events.on_init(), function(event)
     storage.dig_sites = storage.dig_sites or {}
     storage.digosaurs = storage.digosaurs or {}
@@ -103,7 +138,7 @@ end
 
 -- https://github.com/pyanodon/pybugreports/issues/1110
 local function remove_nonfood_items_from_food_inventory(dig_data)
-    local trash_inventory = dig_data.entity.get_inventory(defines.inventory.assembling_machine_trash)
+    local trash_inventory = dig_data.entity.get_inventory(defines.inventory.crafter_trash)
     local trash_slot = trash_inventory[1]
     if trash_slot.valid_for_read then return end
     local food_inventory = dig_data.food_inventory
@@ -117,7 +152,7 @@ local function remove_nonfood_items_from_food_inventory(dig_data)
 end
 
 local time_to_live = 61
-local blink_interval = time_to_live/2
+local blink_interval = time_to_live / 2
 py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     for _, dig_data in pairs(storage.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
@@ -226,7 +261,7 @@ py.on_event(py.events.on_built(), function(event)
     storage.dig_sites[entity.unit_number] = {
         unit_number = entity.unit_number,
         entity = entity,
-        inventory = entity.get_inventory(defines.inventory.assembling_machine_output),
+        inventory = entity.get_inventory(defines.inventory.crafter_output),
         food_input = food_input,
         food_inventory = food_inventory,
         digosaur_inventory = entity.get_module_inventory(),
@@ -293,7 +328,7 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     if not cursor_stack then return end
 
     if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
-    
+
     if py.distance_squared(player.position, dig_data.entity.position) > player.reach_distance ^ 2 then
         player.play_sound {path = "utility/cannot_build"}
         return

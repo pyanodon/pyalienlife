@@ -1,6 +1,7 @@
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
+local number_selection = require "action_widgets/number_selection"
 
 local P = {}
  
@@ -24,12 +25,17 @@ end
 
 function P.build_main_frame(parent, name, caravan_data)
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
-    -- enough to show the full cargo tab with starting inventory, without scroll bars
-    main_frame.style.height = 950
+    if caravan_data.entity.name:find("^fluidavan") then
+        main_frame.style.natural_height = 910
+    else
+        -- enough to show the full cargo tab with starting inventory, without scroll bars
+        main_frame.style.natural_height = 980
+    end
 
     P.build_title_bar_flow(main_frame, caravan_data)
 
-    main_frame.add {type = "frame", direction = "vertical", name = "entity_frame", style = "entity_frame"}
+    local entity_frame = main_frame.add {type = "frame", direction = "vertical", name = "entity_frame", style = "entity_frame"}
+    entity_frame.style.horizontally_stretchable = true
 
     return main_frame
 end
@@ -70,7 +76,7 @@ function P.build_camera_frame(parent, caravan_data)
     camera.entity = caravan_data.entity
     camera.visible = true
     local prototype = caravan_prototypes[caravan_data.entity.name]
-    camera.zoom = prototype.camera_zoom or 1
+    camera.zoom = prototype.camera_zoom or 0.5
 end
 
 function P.build_tabbed_pane_frame(parent)
@@ -94,7 +100,34 @@ end
 
 gui_events[defines.events.on_gui_click]["py_caravan_close_button"] = function(event)
     local player = game.get_player(event.player_index)
+
+    local slider_frame = number_selection.get_slider_frame(player)
+    local add_interrupt_frame = player.gui.screen.add_interrupt_gui
+    local edit_interrupt_frame = player.gui.screen.edit_interrupt_gui
+
+    if slider_frame then
+        slider_frame.destroy()
+    end
+    if add_interrupt_frame then
+        add_interrupt_frame.destroy()
+    end
+    if edit_interrupt_frame then
+        edit_interrupt_frame.destroy()
+    end
+    if player.gui.screen.caravan_gui then
+        player.gui.screen.caravan_gui.destroy()
+    end
+
     player.opened = nil
+end
+
+-- store tab index on swap
+gui_events[defines.events.on_gui_selected_tab_changed]["tabbed_pane"] = function(event)
+    local player = game.get_player(event.player_index)
+    local tab_pane = event.element
+
+    if not tab_pane then return end
+    storage.last_opened_tab[event.player_index] = tab_pane.selected_tab_index
 end
 
 return P

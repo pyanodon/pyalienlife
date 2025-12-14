@@ -191,10 +191,10 @@ if mods.pyalternativeenergy then
         enabled = false,
         energy_required = 4,
         ingredients = {
-            {type = "item", name = "cage",           amount = 1},
+            {type = "item", name = "cage", amount = 1},
         },
         results = {
-            {type = "item", name = "iron-stick",     amount = 15, probability = 0.25},
+            {type = "item", name = "iron-stick", amount = 15, probability = 0.25},
             {type = "item", name = "solder",     amount = 2,  probability = 0.25},
             (not mods.pystellarexpedition) and {type = "item", name = "titanium-plate", amount = 5, probability = 0.25} or nil,
         },
@@ -247,7 +247,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-1", amount = 3},
     },
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 RECIPE {
     type = "recipe",
@@ -271,7 +271,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-2", amount = 18},
     },
-}:add_unlock("py-science-pack-mk02")
+}:add_unlock("py-science-pack-2")
 
 RECIPE {
     type = "recipe",
@@ -294,7 +294,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-3", amount = 3},
     },
-}:add_unlock("py-science-pack-mk03")
+}:add_unlock("py-science-pack-3")
 
 RECIPE {
     type = "recipe",
@@ -317,7 +317,7 @@ RECIPE {
     results = {
         {type = "item", name = "py-science-pack-4", amount = 3},
     },
-}:add_unlock("py-science-pack-mk04")
+}:add_unlock("py-science-pack-4")
 
 RECIPE {
     type = "recipe",
@@ -722,8 +722,8 @@ RECIPE {
         {type = "item",  name = "mixed-ores",    amount = 15},
     },
     results = {
-        {type = "item",  name = "cobalt-extract",    amount = 3},
-        {type = "fluid", name = "tailings", amount = 50},
+        {type = "item",  name = "cobalt-extract", amount = 3},
+        {type = "fluid", name = "tailings",       amount = 50},
     },
     main_product = "cobalt-extract",
 }:add_unlock("cobalt-mk01")
@@ -770,8 +770,8 @@ RECIPE {
         {type = "item",  name = "cobalt-sulfate-02", amount = 3},
     },
     results = {
-        {type = "item",  name = "cobalt-oxide",      amount = 3},
-        {type = "fluid", name = "tailings", amount = 100},
+        {type = "item",  name = "cobalt-oxide", amount = 3},
+        {type = "fluid", name = "tailings",     amount = 100},
     },
     main_product = "cobalt-oxide",
 }:add_unlock("cobalt-mk02")
@@ -1416,7 +1416,7 @@ RECIPE {
     results = {
         {type = "item", name = "stopper", amount = 4}
     }
-}:add_unlock("py-science-pack-mk01")
+}:add_unlock("py-science-pack-1")
 
 RECIPE {
     type = "recipe",
@@ -1463,6 +1463,7 @@ RECIPE {
     results = {
         {type = "item", name = "raw-coal", amount = 10}
     },
+    icons = py.composite_icon("raw-coal", "navens")
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
 
@@ -1797,10 +1798,10 @@ RECIPE {
         {type = "fluid", name = "depolymerized-organics", amount = 100},
     },
     results = {
-        {type = "fluid", name = "crude-oil",         amount = 70},
-        {type = "fluid", name = "steam",             amount = 50, temperature = 150},
-        {type = "fluid", name = "tailings", amount = 50},
-        {type = "item",  name = "ash",               amount = 3},
+        {type = "fluid", name = "crude-oil", amount = 70},
+        {type = "fluid", name = "steam",     amount = 50, temperature = 150},
+        {type = "fluid", name = "tailings",  amount = 50},
+        {type = "item",  name = "ash",       amount = 3},
     },
     main_product = "crude-oil",
 }:add_unlock("light-oil-mk01")
@@ -1918,7 +1919,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "chitosan",          amount = 3},
+        {type = "item",  name = "chitosan", amount = 3},
         {type = "fluid", name = "tailings", amount = 150},
     },
     results = {
@@ -1933,7 +1934,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "chitosan",          amount = 3},
+        {type = "item",  name = "chitosan", amount = 3},
         {type = "fluid", name = "tailings", amount = 150},
     },
     results = {
@@ -2013,7 +2014,7 @@ RECIPE {
     results = {
         {type = "item", name = "perfect-samples", amount = 10},
     },
-}:add_unlock("py-science-pack-mk04")
+}:add_unlock("py-science-pack-4")
 
 RECIPE {
     type = "recipe",
@@ -2060,8 +2061,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 500},
     },
     results = {
-        {type = "fluid", name = "casein-pulp-01",    amount = 100},
-        {type = "fluid", name = "muddy-sludge", amount = 50},
+        {type = "fluid", name = "casein-pulp-01", amount = 100},
+        {type = "fluid", name = "muddy-sludge",   amount = 50},
     },
     main_product = "casein-pulp-01",
 }:add_unlock("korlex")
@@ -2573,9 +2574,9 @@ RECIPE {
         {type = "fluid", name = "bio-oil", amount = 300},
     },
     results = {
-        {type = "fluid", name = "condensates",       amount = 150},
-        {type = "fluid", name = "low-distillate",    amount = 50},
-        {type = "fluid", name = "medium-distillate", amount = 50},
+        {type = "fluid", name = "condensates",       amount = 150, autotech_is_not_primary_source = true},
+        {type = "fluid", name = "low-distillate",    amount = 50,  autotech_is_not_primary_source = true},
+        {type = "fluid", name = "medium-distillate", amount = 50,  autotech_is_not_primary_source = true},
     },
     main_product = "condensates",
 }:add_unlock("light-oil-mk02")

@@ -21,7 +21,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/fertilizer-mk02.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"fertilizer-mk01"},
+    prerequisites = {"fertilizer-mk01"},
     effects = {},
     unit = {
         count = 150,
@@ -40,7 +40,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics2__/graphics/technology/fertilizer-mk03.png",
     icon_size = 128,
     order = "c-a",
-    dependencies = {"fertilizer-mk02"},
+    prerequisites = {"fertilizer-mk02"},
     effects = {},
     unit = {
         count = 150,

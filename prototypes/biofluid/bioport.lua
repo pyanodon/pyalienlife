@@ -51,7 +51,7 @@ local recipe = RECIPE {
     },
     results = {
         {type = "item",  name = "guano",                                              amount = data.raw.item["guano"].stack_size},
-        {type = "fluid", name = mods.pyalternativeenergy and "void" or "parameter-0", amount = 1},
+        {type = "fluid", name = mods.pyalternativeenergy and "void" or "vacuum", amount = 1},
     },
     energy_required = 100,
     category = "biofluid",
@@ -338,6 +338,7 @@ ENTITY {
     collision_box = data.raw["assembling-machine"]["bioport"].collision_box,
     collision_mask = {layers = {}},
     render_layer = "lower-object-above-shadow",
-    animations = variants,
+    -- animations = variants, -- TODO caught as undefined global, replaced by nil
+    animations = nil,
     selectable_in_game = false,
 }
