@@ -92,6 +92,9 @@ py.on_event(py.events.on_init(), function()
     validate_farm_building_list(storage.farm_prototypes)
 end)
 
+---function to register an event firing when the manager is enabled via the circuit network, i.e. detects a change in the farm module inventory
+---this works by creating an item with data (health in this case) and registering it to fire an event when destroyed (consumed for crafting)
+---we save the associated farm data by unit number in storage via a key associated with that specific item, returned from script.register_on_object_destroyed
 local function register_sacrifice(manager, farm)
   manager.get_inventory(defines.inventory.crafter_input).insert{
     name = "pyfarm-internal-item",
@@ -106,7 +109,7 @@ py.on_event(py.events.on_built(), function(event)
     if not storage.farm_prototypes[base_name(entity.name)] then return end
 
     local default_module = Farming.get_default_module(entity)
-
+    -- create entities to track modules
     local manager = entity.surface.create_entity{
         name = "pyfarm-internal-manager",
         position = entity.position,
@@ -118,10 +121,10 @@ py.on_event(py.events.on_built(), function(event)
         force = entity.force
     }
     
-    -- connect source, manager, mimic, and (?) monitor
+    -- connect manager and monitor such that any changes to the module inventory are sent via circuit network
     manager.get_wire_connector(defines.wire_connector_id.circuit_green, true).connect_to(monitor.get_wire_connector(defines.wire_connector_id.circuit_green, true), false, defines.wire_origin.script)
     
-    -- set circuit settings
+    -- set circuit settings, such that when any item is detected in the module inventory the crafter will turn on
     local manager_behaviour = manager.get_or_create_control_behavior()
     manager_behaviour.circuit_enable_disable = true
     manager_behaviour.circuit_condition = {
@@ -129,28 +132,33 @@ py.on_event(py.events.on_built(), function(event)
         constant = 0,
         first_signal = { name = "signal-anything", type = "virtual" }
     }
+    -- set the monitor to point to the module inventory
     monitor.proxy_target_entity = entity
     monitor.proxy_target_inventory = defines.inventory.crafter_modules
-
+    -- turn off the farm, it will turn on when modules are inserted
     entity.active = false
     entity.custom_status = {
         diode = defines.entity_status_diode.red,
         label = default_module and {"entity-status.requires-module", default_module, prototypes.item[default_module].localised_name} or {"entity-status.requires-module-reproductive-complex"}
     }
 
-    -- save data and register event
+    -- save farm data in storage and register this farm to fire an event when modules are inserted
+    -- also register the farm to fire an event when it is destroyed so we can clean up
     script.register_on_object_destroyed(entity)
     storage.farm_buildings[entity.unit_number] = {farm = entity, manager = manager, monitor = monitor, warning = py.draw_error_sprite(entity, "no_module_" .. Farming.get_kingdom(entity), 0, 30)}
     register_sacrifice(manager, entity)
 end)
 
+-- event fired when a thing registered via script.register_on_destroyed is destroyed
 py.on_event(defines.events.on_object_destroyed, function(event)
+    -- skip other event categories we dont care about
     if not event.useful_id or not event.registration_number then return end
-
+    -- other mods can use it too, make sure its our event (registration number is unique across all mods and all registrations)
     if storage.farming_deathrattles[event.registration_number] then
 
-        -- handle deathrattles
+        -- handle deathrattles from module inventories changing
         local metadata = storage.farm_buildings[storage.farming_deathrattles[event.registration_number]]
+        -- if anything is invalid destroy it all
         if not metadata then return elseif not (metadata.farm and metadata.farm.valid and metadata.manager and metadata.manager.valid and metadata.monitor and metadata.monitor.valid) then
             if metadata.farm and metadata.farm.valid then metadata.farm.destroy() end
             if metadata.manager and metadata.manager.valid then metadata.manager.destroy() end
@@ -164,17 +172,19 @@ py.on_event(defines.events.on_object_destroyed, function(event)
         local farm = metadata.farm
         local manager = metadata.manager
         local default_module = Farming.get_default_module(farm)
-        
+        -- reset the event trigger
         register_sacrifice(manager, farm)
-
+        -- it should be ON if the module inventory is not empty
         local active = not farm.get_module_inventory().is_empty()
-        if active ~= farm.disabled_by_script then return end -- no change
+        -- skip if the state hasnt changed (required to skip triggering twice)
+        if active ~= farm.disabled_by_script then return end
 
         farm.active = active
         farm.custom_status = not active and {
             diode = defines.entity_status_diode.red,
             label = default_module and {"entity-status.requires-module", default_module, prototypes.item[default_module].localised_name} or {"entity-status.requires-module-reproductive-complex"}
         } or nil
+        -- set manager to enable if everything = 0 (no modules exist) or anything ~= 0 (modules exist)
         manager.get_or_create_control_behavior().circuit_condition = {
             comparator = active and "=" or "≠",
             constant = 0,
