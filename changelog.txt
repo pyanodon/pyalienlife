@@ -11,6 +11,7 @@ Date: ???
     - Added checks to ensure smart farms auto-launch (thanks, skofisk!). Resolves https://github.com/pyanodon/pybugreports/issues/817
     - Fixed certain recipes missing layered icons. Resolves https://github.com/pyanodon/pybugreports/issues/1268
     - Fixed Starch MK01, Molecular Decohesion MK01, and Creature Chamber TURD being locked behind Domestication MK01. Resolves https://github.com/pyanodon/pybugreports/issues/1289#issuecomment-3610942618
+    - Re-added research cost halving when entering a new tier before Py4
   Scripting:
     - Exposed TURD selections, modules, and machine replacements via remote interface functions (get_turd_selections, get_turd_selection, get_unlocked_modules, get_unlocked_module, get_machine_replacements, get_tech_upgrades, get_tech_upgrade, get_not_selected_constant)
     - Expose digosaurus mining categories via remote interface functions (add_mining_category, remove_mining_category)
