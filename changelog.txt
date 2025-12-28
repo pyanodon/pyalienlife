@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.62
+Date: ???
+  Changes:
+    - Added actually correct Dutch locale files. Resolves https://github.com/pyanodon/pybugreports/issues/1305
+---------------------------------------------------------------------------------------------------
 Version: 3.0.61
 Date: 2025-12-28
   Changes:
