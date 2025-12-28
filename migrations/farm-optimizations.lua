@@ -20,34 +20,34 @@ local function get_default_module(entity)
 end
 
 local function register_sacrifice(manager, farm)
-  manager.get_inventory(defines.inventory.crafter_input).insert{
-    name = "pyfarm-internal-item",
-    count = 1,
-    health = 0.5,
-  }
-  storage.farming_deathrattles[script.register_on_object_destroyed(manager.get_inventory(defines.inventory.crafter_input)[1].item)] = farm.unit_number
+    manager.get_inventory(defines.inventory.crafter_input).insert {
+        name = "pyfarm-internal-item",
+        count = 1,
+        health = 0.5,
+    }
+    storage.farming_deathrattles[script.register_on_object_destroyed(manager.get_inventory(defines.inventory.crafter_input)[1].item)] = farm.unit_number
 end
 
-for _, metadata in pairs{storage.enabled_farm_buildings, storage.disabled_farm_buildings} do
-    for _, entity in pairs(metadata)do
+for _, metadata in pairs {storage.enabled_farm_buildings, storage.disabled_farm_buildings} do
+    for _, entity in pairs(metadata) do
         if entity.valid and storage.farm_prototypes[base_name(entity.name)] then
             local default_module = get_default_module(entity)
 
-            local manager = entity.surface.create_entity{
+            local manager = entity.surface.create_entity {
                 name = "pyfarm-internal-manager",
                 position = entity.position,
                 force = entity.force
             }
-            local monitor = entity.surface.create_entity{
+            local monitor = entity.surface.create_entity {
                 name = "pyfarm-internal-monitor",
                 position = entity.position,
                 force = entity.force
             }
             local warning
-            
+
             -- connect source, manager, mimic, and (?) monitor
             manager.get_wire_connector(defines.wire_connector_id.circuit_green, true).connect_to(monitor.get_wire_connector(defines.wire_connector_id.circuit_green, true), false, defines.wire_origin.script)
-            
+
             local active = not entity.get_module_inventory().is_empty()
             entity.active = active
             entity.custom_status = not active and {
@@ -61,7 +61,7 @@ for _, metadata in pairs{storage.enabled_farm_buildings, storage.disabled_farm_b
             manager_behaviour.circuit_condition = {
                 comparator = active and "=" or "≠",
                 constant = 0,
-                first_signal = { name = active and "signal-everything" or "signal-anything", type = "virtual" }
+                first_signal = {name = active and "signal-everything" or "signal-anything", type = "virtual"}
             }
 
             monitor.proxy_target_entity = entity
