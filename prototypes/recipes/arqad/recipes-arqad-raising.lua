@@ -15,7 +15,7 @@ py.autorecipes {
 		{
 			ingredients =
 			{
-				{name = "arqad-queen",        amount = 1},
+				{name = "arqad-queen",        amount = 1, ignored_by_stats = 1},
 				{name = "arqad",              amount = 5},
 				{name = "arqad-honey-barrel", amount = 3,  return_barrel = true},
 				{name = "natural-gas-barrel", amount = 10, return_barrel = true},
@@ -24,7 +24,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "arqad-egg",   amount = 10},
-				{name = "arqad-queen", amount = 1, probability = 0.999, ignored_by_productivity = 1},
+				{name = "arqad-queen", amount = 1, probability = 0.999, ignored_by_productivity = 1, ignored_by_stats = 1},
 			},
 			tech = "arqad"
 		},
