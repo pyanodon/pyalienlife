@@ -158,7 +158,9 @@ local farm_data = {
 
 py.on_event(py.events.on_init(), function()
     storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
+end)
 
+script.on_load(function()
     -- add launch products for later reference
     for _, launch_products in pairs(farm_data) do
         remote.call("py_smart_farming", "add_launch_products", launch_products)
