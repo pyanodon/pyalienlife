@@ -3,6 +3,7 @@ Version: 3.0.62
 Date: ???
   Changes:
     - Added actually correct Dutch locale files. Resolves https://github.com/pyanodon/pybugreports/issues/1305
+    - Allowed sea sponges mk02+ from sea sponge sprouts mk02+ to accept productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1335
     - Fix smart farms not working after a reload. Resolves https://github.com/pyanodon/pybugreports/issues/1346
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.61
