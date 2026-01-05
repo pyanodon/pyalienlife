@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.62
-Date: ???
+Date: 2026-01-05
   Changes:
     - Added actually correct Dutch locale files. Resolves https://github.com/pyanodon/pybugreports/issues/1305
     - Fix smart farms not working after a reload. Resolves https://github.com/pyanodon/pybugreports/issues/1346
