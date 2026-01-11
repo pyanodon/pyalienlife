@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.63
+Date: ????
+  Changes:
+    - Allowed sea sponges mk02+ from sea sponge sprouts mk02+ to accept productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1335
+---------------------------------------------------------------------------------------------------
 Version: 3.0.62
 Date: 2026-01-05
   Changes:
