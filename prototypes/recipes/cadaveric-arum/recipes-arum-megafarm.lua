@@ -26,7 +26,6 @@ RECIPE {
         {type = "item",  name = "stone-wool", amount = 100},
         {type = "fluid", name = "coal-gas",   amount = 1000},
         {type = "fluid", name = "water",      amount = 3000},
-        {type = "item",  name = "sand",       amount = 150},
     },
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 1.5},
