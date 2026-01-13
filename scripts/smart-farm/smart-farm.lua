@@ -16,46 +16,12 @@ remote.add_interface("py_smart_farming", {
     add_launch_products = add_launch_products
 })
 
----This function sets the "autolaunch" checkbox on the rocket silo gui.
----This parameter is not exposed directly on `LuaEntity`.
----The workaround is to place a blueprint since the property is exposed on the blueprint string.
----@param silo LuaEntity
-local function enable_autolaunch(silo)
-    local recipe = (silo.get_recipe() or {}).name
-    local inventory = game.create_inventory(1)
-    inventory.insert {name = "blueprint"}
-    local stack = inventory[1]
-    stack.create_blueprint {
-        surface = silo.surface_index,
-        force = silo.force_index,
-        area = {{0, 0}, {0, 0}},
-        include_entities = false
-    }
-    stack.set_blueprint_entities {{
-        entity_number = 1,
-        name = silo.name,
-        recipe = recipe,
-        control_behavior = silo.get_control_behavior(),
-        position = {
-            x = 0,
-            y = 0
-        },
-        launch_to_orbit_automatically = true -- Magic happens on this line.
-    }}
-    stack.build_blueprint {
-        surface = silo.surface_index,
-        force = silo.force_index,
-        position = silo.position,
-        skip_fog_of_war = false
-    }
-    inventory.destroy()
-end
-
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if not rocket_silos[entity.name] then return end
 
-	enable_autolaunch(entity)
+    -- finally, added in 2.0.73
+	entity.send_to_orbit_automatically = true
 
     -- run the on_built function, if exists
     if rocket_silos[entity.name].on_built then
