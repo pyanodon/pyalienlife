@@ -59,7 +59,15 @@ permitted_recipes.parameters = nil
 -- cache permitted recipes
 for category in pairs(permitted_recipes) do
   for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
-    permitted_recipes[category][r] = recipe.subgroup.name
+		for _, animal in pairs(animals) do
+			if recipe.subgroup.name:match(animal) then
+				permitted_recipes[category][r] = animal
+				break
+			end
+		end
+		if not permitted_recipes[category][r] then
+			error("Could not find associated animal for recipe: " .. r)
+		end
   end
 end
 
@@ -89,27 +97,18 @@ local function build_animal_table(content_frame, player)
   main_frame.caption = main_frame.tags.caption
   local animal_table = content_frame.add {type = "table", name = "s_table", column_count = 6}
   for category in pairs(main_frame.tags.categories) do
-    for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
-      if player.force.recipes[recipe].enabled then
-        for _, animal in pairs(animals) do
-          if subgroup:match(animal, 1, true) then
-            local name = "py_slaughterhouse_animal_" .. animal
-            if not animal_table[name] then
-              animal_table.add {
-                type = "choose-elem-button",
-                name = name,
-                elem_type = "item",
-                item = get_animal_item(animal),
-                style = "image_tab_slot",
-                tags = {animal = animal},
-                locked = true
-              }
-            end
-            goto continue
-          end
-        end
-        game.print('ERROR: Recipe "' .. recipe .. '" has crafting category "' .. category .. '" but is unselectable in the GUI')
-        ::continue::
+    for recipe, animal in pairs(permitted_recipes[category] or {}) do
+			local name = "py_slaughterhouse_animal_" .. animal
+      if not animal_table[name] and player.force.recipes[recipe].enabled then
+				animal_table.add {
+					type = "choose-elem-button",
+					name = name,
+					elem_type = "item",
+					item = get_animal_item(animal),
+					style = "image_tab_slot",
+					tags = {animal = animal},
+					locked = true
+				}
       end
     end
   end
@@ -188,8 +187,8 @@ gui_events[defines.events.on_gui_click]["py_slaughterhouse_animal_.+"] = functio
   local recipe_table = recipe_flow.add {type = "table", column_count = 5}
   local recipe_count, avalible_recipe = 0, nil
   for category in pairs(main_frame.tags.categories) do
-    for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
-      if subgroup:match(animal) and player.force.recipes[recipe].enabled then
+    for recipe, recipe_animal in pairs(permitted_recipes[category] or {}) do
+      if recipe_animal == animal and player.force.recipes[recipe].enabled then
         recipe_count, avalible_recipe = recipe_count + 1, recipe
         recipe_table.add {
           type = "choose-elem-button",
