@@ -148,7 +148,10 @@ py.on_event(py.events.on_gui_opened(), function(event)
 		storage.watched_slaughterhouses[event.player_index] = entity
 		storage.watch_slaughterhouse = true
 	else
-		create_slaughterhouse_gui(event.player_index)
+		local control_behavior = entity.get_control_behavior()
+		if not control_behavior or not control_behavior.circuit_set_recipe then
+			create_slaughterhouse_gui(event.player_index)
+		end
 	end
 end)
 
