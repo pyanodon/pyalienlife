@@ -121,7 +121,8 @@ local function create_slaughterhouse_gui(player_index)
 	local entity = player.opened
 	if not entity then return end
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
-  if not machines_with_gui[name] or entity.get_recipe() then return end
+	local control_behavior = entity.get_control_behavior()
+  if not machines_with_gui[name] or entity.get_recipe() or (control_behavior and control_behavior.circuit_set_recipe) then return end
 	local main_frame = player.gui.screen.add {
 		type = "frame",
 		name = "slaughterhouse",
@@ -143,15 +144,13 @@ py.on_event(py.events.on_gui_opened(), function(event)
 	local entity = event.entity
 	if not entity then return end
 	if not string.match(entity.name, "slaughterhouse%-") and not string.match(entity.name, "rc%-") then return end
+	local control_behavior = entity.get_control_behavior()
 
-	if entity.get_recipe() then
+	if entity.get_recipe() or control_behavior and control_behavior.circuit_set_recipe then
 		storage.watched_slaughterhouses[event.player_index] = entity
 		storage.watch_slaughterhouse = true
 	else
-		local control_behavior = entity.get_control_behavior()
-		if not control_behavior or not control_behavior.circuit_set_recipe then
-			create_slaughterhouse_gui(event.player_index)
-		end
+		create_slaughterhouse_gui(event.player_index)
 	end
 end)
 
