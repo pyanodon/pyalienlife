@@ -45,7 +45,11 @@ Caravan.all_actions = {
             "fill-tank",
             "empty-tank",
             "circuit-condition",
-            "circuit-condition-static"
+            "circuit-condition-static",
+            "fill-tank-caravan",
+            "fill-tank-target",
+            "empty-tank-caravan",
+            "empty-tank-target",
         },
         ["character"] = table.invert {
             "time-passed",
@@ -194,7 +198,11 @@ Caravan.valid_actions = {
             "fill-tank",
             "empty-tank",
             "circuit-condition",
-            "circuit-condition-static"
+            "circuit-condition-static",
+            "fill-tank-caravan",
+            "fill-tank-target",
+            "empty-tank-caravan",
+            "empty-tank-target",
         },
         ["electric-pole"] = table.invert{
             "time-passed",
@@ -241,6 +249,10 @@ Caravan.actions_with_item_count = table.invert{
     "outpost-fluid-count",
     "caravan-fluid-count",
     "target-fluid-count",
+    "fill-tank-caravan",
+    "fill-tank-target",
+    "empty-tank-caravan",
+    "empty-tank-target",
 }
 
 Caravan.foods = {

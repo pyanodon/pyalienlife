@@ -6,7 +6,7 @@ local number_selection = require "action_widgets/number_selection"
 local comparator = require "action_widgets/comparator"
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
-local possibly_blocking_actions = {"fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank"}
+local possibly_blocking_actions = {"fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank", "fill-tank-caravan", "fill-tank-target", "empty-tank-caravan", "empty-tank-target"}
 
 local function play_stop_button_info(caravan_data, schedule_id, action_id)
     local schedule = caravan_data.schedule[schedule_id]
@@ -39,6 +39,10 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     elseif Utils.contains({"load-caravan", "unload-caravan", "load-target", "unload-target"}, action.type) then
         -- don't know why we restrict comparison here, shouldn't it be a regular dropdown?
         comparator.build_static_comparator_widgets(flow, action, tags, "item", nil, "=")
+    elseif Utils.contains({"fill-tank-caravan", "empty-tank-target"}, action.type) then
+        comparator.build_static_comparator_widgets(flow, action, tags, "fluid", nil, "≥")
+    elseif Utils.contains({"fill-tank-target", "empty-tank-caravan"}, action.type) then
+        comparator.build_static_comparator_widgets(flow, action, tags, "fluid", nil, "≤")
         -- these are interrupt-only
     elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count"}, action.type) then
         local filters
