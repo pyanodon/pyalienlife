@@ -46,30 +46,78 @@ local machines_with_gui = {
   ["rc-mk04"] = true,
 }
 
--- cache crafting categories
+local alt_items = {
+  zipir = "zipir1",
+  kakkalakki = "kakkalakki-f"
+}
+
 local permitted_recipes = {}
+
+local function update_recipes()
+  for category in pairs(permitted_recipes) do
+    for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
+      for _, subgroup in pairs(subgroups) do
+        if recipe.subgroup.name:match(subgroup) then
+          permitted_recipes[category][r] = subgroup
+          break
+        end
+      end
+      if not permitted_recipes[category][r] then
+        error("Could not find associated subgroup for recipe: " .. r)
+      end
+    end
+  end
+end
+
+remote.add_interface("py-recipe-gui", {
+  ---add a machine to use the custom recipe viewer. requires subgroups to be registered
+  ---@param machine data.EntityID
+  add_machine = function (machine)
+    local update = not machines_with_gui
+    machines_with_gui[machine] = true
+    for category in pairs(update and prototypes.entity[machine].crafting_categories or {}) do
+      permitted_recipes[category] = {}
+    end
+    permitted_recipes.parameters = nil
+  end,
+  ---remove a machine from the whitelist for the custom recipe viewer
+  ---@param machine data.EntityID
+  remove_machine = function (machine)
+    machines_with_gui[machine] = nil
+  end,
+  ---add a subgroup to use the custom recipe viewer. requires a compatible crafting machine
+  ---@param subgroup data.EntityID
+  add_subgroup = function (subgroup)
+    local update = not subgroups[subgroup]
+    subgroups[subgroup] = true
+    if update then update_recipes() end
+  end,
+  ---add a subgroup to use the custom recipe viewer
+  ---@param subgroup data.EntityID
+  remove_subgroup = function (subgroup)
+    subgroups[subgroup] = nil
+  end,
+  ---use an alternative item for the subgroup header icon. set to nil to remove
+  ---@param subgroup data.ItemSubGroupID
+  ---@param item data.ItemID
+  set_alt_item = function (subgroup, item)
+    alt_items[subgroup] = item
+  end,
+})
+
+-- TODO have AE/SE use remote interface
+
+-- cache crafting categories
 for machine in pairs(machines_with_gui) do
   for category in pairs(prototypes.entity[machine].crafting_categories) do
     permitted_recipes[category] = {}
   end
 end
+
 -- ignore parameters
 permitted_recipes.parameters = nil
 
--- cache permitted recipes
-for category in pairs(permitted_recipes) do
-  for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
-		for _, subgroup in pairs(subgroups) do
-			if recipe.subgroup.name:match(subgroup) then
-				permitted_recipes[category][r] = subgroup
-				break
-			end
-		end
-		if not permitted_recipes[category][r] then
-			error("Could not find associated subgroup for recipe: " .. r)
-		end
-  end
-end
+update_recipes()
 
 py.on_event(defines.events.on_object_destroyed, function(event)
   local unit_number = event.useful_id
@@ -81,11 +129,6 @@ py.on_event(defines.events.on_object_destroyed, function(event)
     if gui and gui.tags.entity == unit_number then gui.destroy() end
   end
 end)
-
-local alt_items = {
-  zipir = "zipir1",
-  kakkalakki = "kakkalakki-f"
-}
 
 local function get_item_from_subgroup(subgroup)
   return alt_items[subgroup] or subgroup
