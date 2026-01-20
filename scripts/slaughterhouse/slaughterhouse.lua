@@ -126,7 +126,7 @@ local function create_gui(player_index)
     type = "frame",
     name = "slaughterhouse",
     direction = "vertical",
-    tags = {entity = entity.unit_number, categories = entity.prototype.crafting_categories, caption = {"py-recipe-gui." .. name}}
+    tags = {entity = entity.unit_number, categories = (entity.name == "entity-ghost" and entity.ghost_prototype or entity.prototype).crafting_categories, caption = {"py-recipe-gui." .. name}}
   }
   main_frame.force_auto_center()
   player.opened = main_frame
