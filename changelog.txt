@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.63
+Date: ????
+  Changes:
+    - Allowed sea sponges mk02+ from sea sponge sprouts mk02+ to accept productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1335
+    - Fixed cadaveric arum smart farm recipe 2 being the same as recipe 3. Resolves https://github.com/pyanodon/pybugreports/issues/1358
+    - Switched smart farm autolaunch hotfix to proper runtime API call introduced in 2.0.73
+---------------------------------------------------------------------------------------------------
 Version: 3.0.62
 Date: 2026-01-05
   Changes:
