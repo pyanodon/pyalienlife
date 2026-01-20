@@ -1,6 +1,6 @@
 -- for full history reference: https://github.com/pyanodon/pyalienlife/commit/ed87228489c87e6c68993d78f09e76e21970302a
 
-local animals = {
+local subgroups = {
   "auog",
   "ulric",
   "mukmoux",
@@ -26,13 +26,13 @@ local animals = {
   "simik",
 }
 if script.active_mods["pyalternativeenergy"] then
-  table.insert(animals, "zungror")
-  table.insert(animals, "numal")
+  subgroups[#subgroups+1] = "zungror"
+  subgroups[#subgroups+1] = "numal"
 end
 if script.active_mods["pystellarexpedition"] then
-  --table.insert(animals, 'tuls')
-  --table.insert(animals, 'riga')
-  table.insert(animals, "kakkalakki")
+  -- subgroups[#subgroups+1] = "tuls"
+  -- subgroups[#subgroups+1] = "riga"
+  subgroups[#subgroups+1] = "kakkalakki"
 end
 
 local machines_with_gui = {
@@ -59,14 +59,14 @@ permitted_recipes.parameters = nil
 -- cache permitted recipes
 for category in pairs(permitted_recipes) do
   for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
-		for _, animal in pairs(animals) do
-			if recipe.subgroup.name:match(animal) then
-				permitted_recipes[category][r] = animal
+		for _, subgroup in pairs(subgroups) do
+			if recipe.subgroup.name:match(subgroup) then
+				permitted_recipes[category][r] = subgroup
 				break
 			end
 		end
 		if not permitted_recipes[category][r] then
-			error("Could not find associated animal for recipe: " .. r)
+			error("Could not find associated subgroup for recipe: " .. r)
 		end
   end
 end
@@ -82,31 +82,31 @@ py.on_event(defines.events.on_object_destroyed, function(event)
   end
 end)
 
-local alt_animals = {
+local alt_items = {
   zipir = "zipir1",
   kakkalakki = "kakkalakki-f"
 }
 
-local function get_animal_item(animal)
-  return alt_animals[animal] or animal
+local function get_item_from_subgroup(subgroup)
+  return alt_items[subgroup] or subgroup
 end
 
-local function build_animal_table(content_frame, player)
+local function build_subgroup_table(content_frame, player)
   content_frame.clear()
   local main_frame = content_frame.parent
   main_frame.caption = main_frame.tags.caption
-  local animal_table = content_frame.add {type = "table", name = "s_table", column_count = 6}
+  local subgroup_table = content_frame.add {type = "table", name = "s_table", column_count = 6}
   for category in pairs(main_frame.tags.categories) do
-    for recipe, animal in pairs(permitted_recipes[category] or {}) do
-			local name = "py_slaughterhouse_animal_" .. animal
-      if not animal_table[name] and player.force.recipes[recipe].enabled then
-				animal_table.add {
+    for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
+			local name = "py_recipe_gui_subgroup_" .. subgroup
+      if not subgroup_table[name] and player.force.recipes[recipe].enabled then
+				subgroup_table.add {
 					type = "choose-elem-button",
 					name = name,
 					elem_type = "item",
-					item = get_animal_item(animal),
+					item = get_item_from_subgroup(subgroup),
 					style = "image_tab_slot",
-					tags = {animal = animal},
+					tags = {subgroup = subgroup},
 					locked = true
 				}
       end
@@ -114,7 +114,7 @@ local function build_animal_table(content_frame, player)
   end
 end
 
-local function create_slaughterhouse_gui(player_index)
+local function create_gui(player_index)
   local player = game.get_player(player_index)
   if not player then return end
   local entity = player.opened
@@ -126,13 +126,13 @@ local function create_slaughterhouse_gui(player_index)
     type = "frame",
     name = "slaughterhouse",
     direction = "vertical",
-    tags = {entity = entity.unit_number, categories = entity.prototype.crafting_categories, caption = {"slaughterhouse-gui." .. name}}
+    tags = {entity = entity.unit_number, categories = entity.prototype.crafting_categories, caption = {"py-recipe-gui." .. name}}
   }
   main_frame.force_auto_center()
   player.opened = main_frame
   local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
   content_frame.style.vertically_stretchable = true
-  build_animal_table(content_frame, player)
+  build_subgroup_table(content_frame, player)
   storage.opened_slaughterhouses[entity.unit_number] = entity
   script.register_on_object_destroyed(entity)
   storage.watched_slaughterhouses[player_index] = nil
@@ -142,14 +142,15 @@ end
 py.on_event(py.events.on_gui_opened(), function(event)
   local entity = event.entity
   if not entity then return end
-  if not string.match(entity.name, "slaughterhouse%-") and not string.match(entity.name, "rc%-") then return end
+  local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
+  if not machines_with_gui[name] then return end
   local control_behavior = entity.get_control_behavior()
 
   if entity.get_recipe() or control_behavior and control_behavior.circuit_set_recipe then
     storage.watched_slaughterhouses[event.player_index] = entity
     storage.watch_slaughterhouse = true
   else
-    create_slaughterhouse_gui(event.player_index)
+    create_gui(event.player_index)
   end
 end)
 
@@ -174,25 +175,25 @@ local function set_recipe(player, entity, recipe)
   player.opened = entity
 end
 
-gui_events[defines.events.on_gui_click]["py_slaughterhouse_animal_.+"] = function(event)
+gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(event)
   local player = game.get_player(event.player_index)
   local element = event.element
   local content_frame = element.parent.parent
   local main_frame = content_frame.parent
-  local animal = element.tags.animal
+  local subgroup = element.tags.subgroup
   content_frame.clear()
-  main_frame.caption = {"slaughterhouse-gui.select-recipe"}
+  main_frame.caption = {"py-recipe-gui.select-recipe"}
   local recipe_flow = content_frame.add {type = "flow", direction = "horizontal"}
-  recipe_flow.add {type = "sprite-button", name = "py_slaughterhouse_back", sprite = "utility/left_arrow"}
+  recipe_flow.add {type = "sprite-button", name = "py_recipe_gui_back", sprite = "utility/left_arrow"}
   local recipe_table = recipe_flow.add {type = "table", column_count = 5}
   local recipe_count, avalible_recipe = 0, nil
   for category in pairs(main_frame.tags.categories) do
-    for recipe, recipe_animal in pairs(permitted_recipes[category] or {}) do
-      if recipe_animal == animal and player.force.recipes[recipe].enabled then
+    for recipe, recipe_subgroup in pairs(permitted_recipes[category] or {}) do
+      if recipe_subgroup == subgroup and player.force.recipes[recipe].enabled then
         recipe_count, avalible_recipe = recipe_count + 1, recipe
         recipe_table.add {
           type = "choose-elem-button",
-          name = "py_slaughterhouse_recipe_" .. recipe,
+          name = "py_recipe_gui_recipe_" .. recipe,
           elem_type = "recipe",
           recipe = recipe,
           style = "slot_button",
@@ -210,13 +211,13 @@ gui_events[defines.events.on_gui_click]["py_slaughterhouse_animal_.+"] = functio
   end
 end
 
-gui_events[defines.events.on_gui_click]["py_slaughterhouse_back"] = function(event)
+gui_events[defines.events.on_gui_click]["py_recipe_gui_back"] = function(event)
   local player = game.players[event.player_index]
   local content_frame = event.element.parent.parent
-  build_animal_table(content_frame, player)
+  build_subgroup_table(content_frame, player)
 end
 
-gui_events[defines.events.on_gui_click]["py_slaughterhouse_recipe_.+"] = function(event)
+gui_events[defines.events.on_gui_click]["py_recipe_gui_recipe_.+"] = function(event)
   local player = game.get_player(event.player_index)
   local element = event.element
   local main_frame = element.parent.parent.parent.parent
@@ -241,7 +242,7 @@ py.on_event(defines.events.on_tick, function()
     end
 
     if not entity.get_recipe() then
-      create_slaughterhouse_gui(player_index, entity)
+      create_gui(player_index, entity)
     end
   end
 end)
