@@ -147,6 +147,88 @@ py.on_event(py.events.on_built(), function(event)
     Biofluid.built_pipe()
 end)
 
+local current_bioport_to_scan = 0
+
+local function homeless_scan()
+    if not storage.biofluid_networks then goto continue end
+    if not storage.biofluid_bioports then goto continue end
+
+    local names = {"gobachov", "huzu", "chorkok"}
+    local localports = nil
+
+    -- we scan two areas:  a random chunk and the next bioport
+    local areas = {}
+
+    -- random chunk
+    local chunk = game.surfaces[1].get_random_chunk()
+    if not chunk then goto continue end
+    table.insert(areas, {{chunk.x * 32, chunk.y * 32}, {(chunk.x + 2) * 32, (chunk.y + 2) * 32}})
+
+    local next_bioport_data = nil
+    local count = 0
+    current_bioport_to_scan = current_bioport_to_scan + 1
+
+    for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
+        count = count + 1
+
+        if (count == current_bioport_to_scan) then
+            next_bioport_data = bioport_data
+            break;
+        end
+    end
+
+    if (next_bioport_data ~= nil) and (next_bioport_data.entity ~= nil) then
+        -- bioport chunk
+        table.insert(areas, {{next_bioport_data.entity.position.x - 32, next_bioport_data.entity.position.y - 32}, {next_bioport_data.entity.position.x + 32, next_bioport_data.entity.position.y + 32}})
+    else
+        -- start at the beginning of the loop
+        current_bioport_to_scan = 0
+    end
+
+    for _, area in pairs(areas) do
+        for _, name in pairs(names) do
+            local entities = game.surfaces[1].find_entities_filtered {name = name, area = area}
+
+            for _, biobot in pairs(entities) do
+                if biobot.valid then
+                    local uid = biobot.unit_number
+                    if uid and not storage.biofluid_robots[uid] then
+                        -- homeless biobots: find them a new home
+                        -- homeless biobots lose all reference to their networks (which might no longer exist), so just send them somewhere with space.
+                        if localports == nil then
+                            localports = {}
+                            for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
+                                table.insert(localports, unit_number)
+                            end
+                        end
+
+                        if localports == nil or #localports == 0 then goto continue end
+                        local newhomeid = localports[math.random(#localports)]
+                        if newhomeid == nil then goto continue end
+                        local newhome = storage.biofluid_bioports[newhomeid]
+                        if newhome == nil or newhome.network_id == nil then goto continue end
+
+                        local biorobot_data = {
+                            entity = biobot,
+                            status = RETURNING,
+                            bioport = newhomeid,
+                            network_id = newhome.network_id
+                        }
+
+                        storage.biofluid_robots[biobot.unit_number] = biorobot_data
+
+                        local position = newhome.entity.position
+                        Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
+                    end
+                end
+            end
+        end
+    end
+
+    ::continue::
+end
+
+
 local ENTITY_BIOFLUID_PIPE_INDEXES = {
     ["vessel-to-ground"] = 1,
     ["vessel"] = 1,
@@ -335,8 +417,8 @@ local function build_providers_by_contents(network_data, relavant_fluids)
         local already_allocated = network_data.allocated_fluids_from_providers[provider.unit_number] or 0
         local can_give = contents.amount - already_allocated
 
-        if (contents.amount >= Biofluid.tank_size) then
-            -- if the provider tank is full, allow as many bots as possible to use it
+        if (contents.amount >= Biofluid.tank_size * .8) then
+            -- if the provider tank is near-full, allow as many bots as possible to use it
             -- this allows a well-supplied provider to service many more requesters per unit time without impacting providers with smaller supply
             -- the downside is that sudden demand spikes will waste biofluid bot time by over-allocating them, but that should be rare.
             can_give = contents.amount
@@ -394,8 +476,8 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
         end
         local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
 
-        if (contents.amount >= Biofluid.tank_size) then
-            -- again, if the provider tank is full assume it is also well-supplied and can provide much more than we can currently see
+        if (contents.amount >= Biofluid.tank_size * .8) then
+            -- again, if the provider tank is near-full assume it is also well-supplied and can provide much more than we can currently see
             -- ignore existing allocations and assume it will be full when we get there
             can_give = contents.amount
         end
@@ -432,6 +514,8 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
 end
 
 py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
+    homeless_scan()
+
     local networks = storage.biofluid_networks
     if not next(networks) then return end
     Biofluid.render_error_icons()
@@ -445,7 +529,7 @@ py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
     for _, network_data in pairs(storage.biofluid_networks) do network_data.providers_by_contents = nil end
 end)
 
-local function set_target(biorobot_data, target)
+function Biofluid.set_target(biorobot_data, target)
     biorobot_data.entity.commandable.set_command {
         type = defines.command.go_to_location,
         destination = target,
@@ -498,7 +582,7 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
         name = unfulfilled_request.name,
         network_id = bioport_data.network_id
     }
-    set_target(biorobot_data, provider.position)
+    Biofluid.set_target(biorobot_data, provider.position)
     storage.biofluid_robots[robot.unit_number] = biorobot_data
     Biofluid.update_bioport_animation(bioport_data)
     return delivery_amount
@@ -589,7 +673,7 @@ local function find_new_home(biorobot_data, network_data)
         local bioport = bioport_data.entity
         if not bioport.valid then goto continue end
         local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
-        if robot_count < 6 then
+        if robot_count < 16 then
             home = bioport
             biorobot_data.bioport = unit_number
             break
@@ -604,7 +688,7 @@ local function find_new_home(biorobot_data, network_data)
         make_homeless(biorobot_data); return
     end
     local position = home.position
-    set_target(biorobot_data, {position.x, position.y - 2.5})
+    Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 local function go_home(biorobot_data)
@@ -628,7 +712,7 @@ local function go_home(biorobot_data)
         return
     end
     local position = bioport_data.entity.position
-    set_target(biorobot_data, {position.x, position.y - 2.5})
+    Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 local function combine_tempatures(first_count, first_tempature, second_count, second_tempature)
@@ -662,7 +746,7 @@ local function pickup(biorobot_data)
     else
         provider.fluidbox[1] = {name = name, amount = new_amount, temperature = contents.temperature}
     end
-    set_target(biorobot_data, requester_data.entity.position)
+    Biofluid.set_target(biorobot_data, requester_data.entity.position)
     reset_provider_allocations(biorobot_data)
     requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
     biorobot_data.delivery_amount = delivery_amount
@@ -763,7 +847,7 @@ end
 function Biofluid.get_unfulfilled_requests()
     local relavant_fluids = {}
     local result = {}
-    local min_fluid_request = 10000
+    local min_fluid_request = 20000
 
     for unit_number, requester_data in pairs(storage.biofluid_requesters) do
         local requester = requester_data.entity
@@ -791,7 +875,19 @@ function Biofluid.get_unfulfilled_requests()
             already_stored = already_stored + contents.amount
         end
         local request_size = goal - already_stored
-        if request_size < min_fluid_request then goto continue end
+
+        if requester_data.amount >= min_fluid_request then
+            -- large requests
+            if request_size < min_fluid_request then
+                goto continue
+            end
+        else
+            -- small requests, what is the player even doing here?
+            if request_size < goal * .2 then
+                goto continue
+            end
+        end
+
         result[#result + 1] = {
             name = fluid_name,
             amount = request_size,
