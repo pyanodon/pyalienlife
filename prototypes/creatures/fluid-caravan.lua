@@ -33,7 +33,7 @@ ITEM {
 data:extend {{
     type = "unit",
     ai_settings = {do_separation = false},
-    additional_pastable_entities = {"fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd"},
+    additional_pastable_entities = {"fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "fluidflyavan", "fluidflyavan-turd", "caravan", "caravan-turd"},
     name = "fluidavan",
     can_open_gates = true,
     map_color = {1, 1, 1},
