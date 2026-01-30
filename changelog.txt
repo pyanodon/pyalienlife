@@ -8,6 +8,7 @@ Date: ????
     - Fixed smart farms not working with most plants on new saves
     - Removed part of the smart farm remote API due to engine constraints
     - Fixed parts of the caravan interrupt GUI being hidden if too many conditions or targets were added. Resolves https://github.com/pyanodon/pybugreports/issues/1325
+    - Added flying fluid caravans (thanks, FreezingSnail!)
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.62
 Date: 2026-01-05
