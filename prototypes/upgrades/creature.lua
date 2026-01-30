@@ -37,8 +37,7 @@ if data and not yafc_turd_integration then
                 local replacement = table.deepcopy(recipe)
                 replacement.name = replacement.name .. "-earth-sample-turd"
                 replacement.enabled = false
-                replacement.main_product = replacement.main_product or replacement.results[1].name or
-                    replacement.results[1][1]
+                replacement.main_product = replacement.main_product or replacement.results[1].name or replacement.results[1][1]
                 for _, sample in pairs(dna_samples) do
                     local amount = sample.amount or sample[2] or 1
                     local name = sample.name or sample[1]
@@ -49,12 +48,7 @@ if data and not yafc_turd_integration then
                     end
                 end
                 to_add[#to_add + 1] = replacement
-                path_1_effects[#path_1_effects + 1] = {
-                    type = "recipe-replacement",
-                    old = recipe.name,
-                    new = replacement
-                        .name
-                }
+                path_1_effects[#path_1_effects + 1] = {type = "recipe-replacement", old = recipe.name, new = replacement.name}
             end
         end
     end
@@ -80,8 +74,7 @@ if data and not yafc_turd_integration then
     for _, unit_name in pairs(units) do
         local unit = table.deepcopy(data.raw.unit[unit_name])
         local recipe = RECIPE(unit_name):copy()
-        local item = table.deepcopy(data.raw.item[unit_name] or data.raw["item-with-tags"][unit_name] or
-            data.raw.module[unit_name])
+        local item = table.deepcopy(data.raw.item[unit_name] or data.raw["item-with-tags"][unit_name] or data.raw.module[unit_name])
         if not item then error("no item for " .. unit_name) end
         local name = unit_name .. "-turd"
 
@@ -125,12 +118,7 @@ elseif script then
         local result = {path_1_module_effect}
         for _, recipe in pairs(prototypes.get_recipe_filtered {{filter = "category", category = category}}) do
             if recipe.name:match(".+%-earth%-sample%-turd") then
-                result[#result + 1] = {
-                    type = "recipe-replacement",
-                    old = recipe.name:gsub("%-earth%-sample%-turd", ""),
-                    new =
-                        recipe.name
-                }
+                result[#result + 1] = {type = "recipe-replacement", old = recipe.name:gsub("%-earth%-sample%-turd", ""), new = recipe.name}
             end
         end
         return result
