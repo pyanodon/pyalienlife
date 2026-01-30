@@ -8,23 +8,23 @@ RECIPE {
     category = "creature-chamber",
     enabled = false,
     ingredients = {
-        { type = "item",  name = "alien-sample-02",   amount = 5 },
-        { type = "item",  name = "bio-sample",        amount = 50 },
-        { type = "item",  name = "trits",             amount = 1 },
-        { type = "item",  name = "cdna",              amount = 5 },
-        { type = "item",  name = "brain",             amount = 5 },
-        { type = "item",  name = "lab-instrument",    amount = 10 },
-        { type = "item",  name = "neuroprocessor",    amount = 5 },
-        { type = "item",  name = "py-science-pack-2", amount = 5 },
-        { type = "item",  name = "earth-cow-sample",  amount = 5 },
-        { type = "fluid", name = "artificial-blood",  amount = 150 },
-        { type = "item",  name = "mukmoux-fat",       amount = 500 },
-        { type = "fluid", name = "hydrogen",          amount = 500 },
-        { type = "item",  name = "small-parts-01",    amount = 100 },
-        { type = "item",  name = "py-tank-10000",     amount = 1 },
-        { type = "item",  name = "pump",              amount = 2 }
+        {type = "item",  name = "alien-sample-02",   amount = 5},
+        {type = "item",  name = "bio-sample",        amount = 50},
+        {type = "item",  name = "trits",             amount = 1},
+        {type = "item",  name = "cdna",              amount = 5},
+        {type = "item",  name = "brain",             amount = 5},
+        {type = "item",  name = "lab-instrument",    amount = 10},
+        {type = "item",  name = "neuroprocessor",    amount = 5},
+        {type = "item",  name = "py-science-pack-2", amount = 5},
+        {type = "item",  name = "earth-cow-sample",  amount = 5},
+        {type = "fluid", name = "artificial-blood",  amount = 150},
+        {type = "item",  name = "mukmoux-fat",       amount = 500},
+        {type = "fluid", name = "hydrogen",          amount = 500},
+        {type = "item",  name = "small-parts-01",    amount = 100},
+        {type = "item",  name = "py-tank-10000",     amount = 1},
+        {type = "item",  name = "pump",              amount = 2}
     },
-    results = { { type = "item", name = "fluidflyavan", amount = 1 } }
+    results = {{type = "item", name = "fluidflyavan", amount = 1}}
 }:add_unlock("domestication-mk03")
 
 ITEM {
@@ -36,31 +36,31 @@ ITEM {
     order = "a",
     place_result = "fluidflyavan",
     stack_size = 1,
-    flags = { "not-stackable" }
+    flags = {"not-stackable"}
 }
 
 data:extend
 {
     {
-        ai_settings = { do_separation = false, path_resolution_modifier = -1 },
+        ai_settings = {do_separation = false, path_resolution_modifier = -1},
         type = "unit",
-        additional_pastable_entities = { "fluidflyavan", "fluidflyavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd" },
+        additional_pastable_entities = {"fluidflyavan", "fluidflyavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd"},
         name = "fluidflyavan",
-        map_color = { 1, 1, 1 },
+        map_color = {1, 1, 1},
         icon = "__pyalienlifegraphics2__/graphics/icons/fluid-flyavan.png",
         icon_size = 64,
         alert_icon_scale = 1,
-        flags = { "placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way" },
-        minable = { mining_time = 0.5, result = "fluidflyavan" },
+        flags = {"placeable-player", "placeable-off-grid", "not-repairable", "breaths-air", "building-direction-8-way"},
+        minable = {mining_time = 0.5, result = "fluidflyavan"},
         max_health = 2200,
         order = "b-b-a",
         subgroup = "enemies",
         healing_per_tick = 0.1,
         radar_range = 1,
-        collision_box = { { 0, 0 }, { 0, 0 } },
+        collision_box = {{0, 0}, {0, 0}},
         render_layer = "air-object",
-        collision_mask = { layers = {}, not_colliding_with_itself = true },
-        selection_box = { { -1.5, -4.5 }, { 1.5, 4.5 } },
+        collision_mask = {layers = {}, not_colliding_with_itself = true},
+        selection_box = {{-1.5, -4.5}, {1.5, 4.5}},
         selection_priority = 51,
         attack_parameters =
         {
@@ -141,7 +141,7 @@ data:extend
         vision_distance = 0,
         movement_speed = 0.2 * 1.4,
         distance_per_frame = 1,
-        absorptions_to_join_attack = { pollution = 4 },
+        absorptions_to_join_attack = {pollution = 4},
         distraction_cooldown = 300,
         min_pursue_time = 10 * 60,
         max_pursue_distance = 50,

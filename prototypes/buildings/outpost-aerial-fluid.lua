@@ -7,18 +7,18 @@ RECIPE {
     category = "crafting",
     enabled = false,
     ingredients = {
-        { type = "item", name = "stainless-steel",      amount = 15 },
-        { type = "item", name = "electric-engine-unit", amount = 10 },
-        { type = "item", name = "small-parts-02",       amount = 30 },
-        { type = "item", name = "advanced-circuit",     amount = 10 },
-        { type = "item", name = "niobium-plate",        amount = 10 },
-        { type = "item", name = "titanium-plate",       amount = 10 },
-        { type = "item", name = "concrete",             amount = 50 },
-        { type = "item", name = "zipir-reef-mk01",      amount = 1 },
-        { type = "item", name = "neuroprocessor",       amount = 10 },
-        { type = "item", name = "py-tank-10000",        amount = 1 }
+        {type = "item", name = "stainless-steel",      amount = 15},
+        {type = "item", name = "electric-engine-unit", amount = 10},
+        {type = "item", name = "small-parts-02",       amount = 30},
+        {type = "item", name = "advanced-circuit",     amount = 10},
+        {type = "item", name = "niobium-plate",        amount = 10},
+        {type = "item", name = "titanium-plate",       amount = 10},
+        {type = "item", name = "concrete",             amount = 50},
+        {type = "item", name = "zipir-reef-mk01",      amount = 1},
+        {type = "item", name = "neuroprocessor",       amount = 10},
+        {type = "item", name = "py-tank-10000",        amount = 1}
     },
-    results = { { type = "item", name = "outpost-aerial-fluid", amount = 1 } }
+    results = {{type = "item", name = "outpost-aerial-fluid", amount = 1}}
 }:add_unlock("domestication-mk03")
 
 ITEM {
@@ -32,7 +32,7 @@ ITEM {
     stack_size = 10
 }
 
-data:extend { {
+data:extend {{
     ---@diagnostic disable-next-line: assign-type-mismatch
     name = "outpost-aerial-fluid",
     inventory_type = "with_filters_and_bar",
@@ -94,7 +94,7 @@ data:extend { {
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = { 0, 0.9 },
+                        shift = {0, 0.9},
                         priority = "extra-high",
                     },
                 },
@@ -106,7 +106,7 @@ data:extend { {
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = { -1, 0 },
+                        shift = {-1, 0},
                         priority = "extra-high",
                     },
                 },
@@ -118,7 +118,7 @@ data:extend { {
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = { 0, -1.4 },
+                        shift = {0, -1.4},
                         priority = "extra-high",
                     },
                     {
@@ -126,7 +126,7 @@ data:extend { {
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = { 0, -0.75 },
+                        shift = {0, -0.75},
                         priority = "extra-high",
                     },
                 },
@@ -138,7 +138,7 @@ data:extend { {
                         height = 128,
                         width = 128,
                         scale = 0.5,
-                        shift = { 1, 0 },
+                        shift = {1, 0},
                         priority = "extra-high",
                     },
                 },
@@ -148,13 +148,13 @@ data:extend { {
         pipe_covers = _G.pipecoverspictures(),
         pipe_connections = {
             {
-                position = { -5, 6 },
+                position = {-5, 6},
                 direction = defines.direction.south
             },
         },
         secondary_draw_order = -1,
     },
-    window_bounding_box = { { -0.0, 0.0 }, { 0.0, 0.0 } },
+    window_bounding_box = {{-0.0, 0.0}, {0.0, 0.0}},
     max_health = 1200,
     minable = {
         mining_time = 0.2,
@@ -166,13 +166,13 @@ data:extend { {
     },
     pictures = {
         picture = {
-            layers = { {
+            layers = {{
                 filename = "__pyalienlifegraphics2__/graphics/entity/fluid-flyavan/outpost.png",
                 height = 512,
                 width = 480,
                 priority = "extra-high",
                 shift = util.by_pixel(32, -48),
-            } },
+            }},
         },
         fluid_background = py.empty_image(),
         window_background = py.empty_image(),
@@ -210,8 +210,8 @@ data:extend { {
         }
     },
     working_sound = {
-        sound = { filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8, audible_distance_modifier = 0.35, },
-        idle_sound = { filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2, audible_distance_modifier = 0.35, },
+        sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8, audible_distance_modifier = 0.35,},
+        idle_sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2, audible_distance_modifier = 0.35,},
     },
     inventory_type = "with_filters_and_bar"
-} }
+}}
