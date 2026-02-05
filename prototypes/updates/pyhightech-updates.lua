@@ -1583,6 +1583,7 @@ RECIPE {
     category = "biofactory",
     enabled = false,
     energy_required = 5,
+    allow_productivity = true,
     ingredients = {
         {type = "fluid", name = "formic-acid",    amount = 100},
         {type = "item",  name = "enzyme-pks",     amount = 1},
@@ -1590,7 +1591,7 @@ RECIPE {
         {type = "item",  name = "fiberboard",     amount = 2},
     },
     results = {
-        {type = "item", name = "starch", amount = 20}
+        {type = "item", name = "starch", amount = 80}
     }
 }:add_unlock("starch-mk03")
 
