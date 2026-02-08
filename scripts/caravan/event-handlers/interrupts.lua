@@ -342,7 +342,7 @@ gui_events[defines.events.on_gui_click]["py_duplicate_interrupt_button"] = funct
     local player = game.get_player(event.player_index)
     local edited_interrupt = storage.edited_interrupts[event.player_index]
 
-    -- edge case: need to check the rename textfield when 'Copy interrupt' is pressed instead of enter
+    -- edge case: need to check the rename textfield when 'Duplicate interrupt' is pressed instead of enter
     local textfield = event.element.parent.py_edit_interrupt_textfield
     if string.len(textfield.text) ~= 0 and textfield.text ~= edited_interrupt.name then
         edited_interrupt.name = textfield.text
