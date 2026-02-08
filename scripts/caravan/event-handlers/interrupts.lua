@@ -338,6 +338,37 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = fu
     storage.edited_interrupts[event.player_index] = nil
 end
 
+gui_events[defines.events.on_gui_click]["py_duplicate_interrupt_button"] = function(event)
+    local player = game.get_player(event.player_index)
+    local edited_interrupt = storage.edited_interrupts[event.player_index]
+
+    -- edge case: need to check the rename textfield when 'Duplicate interrupt' is pressed instead of enter
+    local textfield = event.element.parent.py_edit_interrupt_textfield
+    if string.len(textfield.text) ~= 0 and textfield.text ~= edited_interrupt.name then
+        edited_interrupt.name = textfield.text
+    end
+
+    local interrupt_copy_name = edited_interrupt.name
+    while storage.interrupts[interrupt_copy_name] ~= nil do
+        interrupt_copy_name = interrupt_copy_name .. "*"
+    end
+    
+    storage.interrupts[interrupt_copy_name] = table.deepcopy(edited_interrupt)
+    storage.interrupts[interrupt_copy_name].name = interrupt_copy_name
+
+    local unit_number = CaravanGui.get_gui(player).tags.unit_number
+    assert(unit_number)
+    local caravan_data = storage.caravans[unit_number]
+    table.insert(caravan_data.interrupts, interrupt_copy_name)
+    CaravanScheduleGui.update_schedule_pane(player)
+
+    if player.gui.screen.edit_interrupt_gui then
+        player.gui.screen.edit_interrupt_gui.destroy()
+        local edit_interrupt_gui = EditInterruptGui.build(player.gui.screen, storage.interrupts[interrupt_copy_name])
+        CaravanUtils.restore_gui_location(edit_interrupt_gui, window_location)
+    end
+end
+
 gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function(event)
     local element = event.element
     local removed_interrupt = element.tags.interrupt_name
@@ -366,6 +397,7 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_button"] = function
         element.parent.py_delete_interrupt_cancel.visible = true
         element.parent.py_delete_interrupt_confirm.visible = true
         element.parent.py_interrupt_count_label.visible = false
+        element.parent.py_duplicate_interrupt_button.visible = false
     end
 end
 
@@ -375,6 +407,7 @@ gui_events[defines.events.on_gui_click]["py_delete_interrupt_cancel"] = function
     element.parent.py_interrupt_count_label.visible = true
     element.parent.py_delete_interrupt_cancel.visible = false
     element.parent.py_delete_interrupt_confirm.visible = false
+    element.parent.py_duplicate_interrupt_button.visible = true
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_move_up_button"] = function(event)
