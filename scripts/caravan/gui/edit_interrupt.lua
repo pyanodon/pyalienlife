@@ -61,6 +61,7 @@ function P.build_subheader_frame(parent)
     -- work out how many caravans have this interrupt and store in the element tags for use in on_click
     local relevant_caravans = caravans_with_interrupt(edited_interrupt.name)
     flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
+    flow.add {type = "sprite-button", name = "py_duplicate_interrupt_button", style = "tool_button", sprite = "utility/copy", tooltip = {"caravan-gui.duplicate-interrupt"}}
     -- handle deletion
     flow.add {type = "label", visible = false, name = "py_delete_interrupt_confirm", caption = {"caravan-gui.confirm-deletion"}}
     flow.add {type = "sprite-button", name = "py_delete_interrupt_button", style = "tool_button_red", sprite = "utility/trash", tooltip = {"caravan-gui.delete-interrupt"}, tags = {interrupt_name = edited_interrupt.name}}
