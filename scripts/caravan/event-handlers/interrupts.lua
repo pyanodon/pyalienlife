@@ -348,11 +348,9 @@ gui_events[defines.events.on_gui_click]["py_duplicate_interrupt_button"] = funct
         edited_interrupt.name = textfield.text
     end
 
-    local interrupt_copy_name = edited_interrupt.name .. "*"
-    local increment = 2
+    local interrupt_copy_name = edited_interrupt.name
     while storage.interrupts[interrupt_copy_name] ~= nil do
-        interrupt_copy_name = edited_interrupt.name .. "* (" .. increment .. ")"
-        increment = increment + 1
+        interrupt_copy_name = interrupt_copy_name .. "*"
     end
     
     storage.interrupts[interrupt_copy_name] = table.deepcopy(edited_interrupt)
