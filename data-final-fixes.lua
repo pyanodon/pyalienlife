@@ -84,6 +84,7 @@ local recipes_list = {
     "cridren-seeds-to-mo",
     "cysteine",
     "cytostatics",
+    "cytostatics-2",
     "decalin",
     "dhilmos-food-01",
     "dhilmos-food-02",
