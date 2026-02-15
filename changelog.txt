@@ -8,6 +8,7 @@ Date: ????
     - Fixed smart farms not working with most plants on new saves
     - Removed part of the smart farm remote API due to engine constraints
     - Fixed parts of the caravan interrupt GUI being hidden if too many conditions or targets were added. Resolves https://github.com/pyanodon/pybugreports/issues/1325
+    - Fixed composter not showing working animation when working. Resolves https://github.com/pyanodon/pybugreports/issues/1257
     - Fixed cytostatics 2 not accepting productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1393
     - Removed the period from smart farm package technology locales
     - Added flying fluid caravans (thanks, FreezingSnail!)
