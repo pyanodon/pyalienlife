@@ -1,6 +1,6 @@
 {
     "name": "pyalienlife",
-    "version": "3.0.61",
+    "version": "3.0.63",
     "factorio_version": "2.0",
     "title": "Pyanodons AlienLife",
     "author": "Pyanodon, Nexela, Kingarthur, notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple, przemo1232",
@@ -8,9 +8,9 @@
     "homepage": "https://forums.factorio.com/viewtopic.php?f=94&t=51490&sid=f5d85f769fccb0ac398bf4036f829064",
     "description": "Adds farming, ranching, and pharmaceutics into Factorio. It's extremely unethical but also extremely profitable. WARNING! This mod will greatly enhance and extend the rest of the pY mods. Expect a 1000+ hour long game!",
     "dependencies": [
-        "base >= 2.0.48",
+        "base >= 2.0.73",
         "~ pyalienlifegraphics >= 3.0.9",
-        "~ pyalienlifegraphics2 >= 3.0.2",
+        "~ pyalienlifegraphics2 >= 3.0.3",
         "~ pyalienlifegraphics3 >= 3.0.4",
         "pyrawores >= 3.0.0",
         "pypetroleumhandling >= 3.0.0",
