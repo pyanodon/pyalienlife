@@ -121,6 +121,7 @@ Date: 2025-08-23
     - When selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
     - Reduce actual vatbrain radius by one tile match visible vatbrain radius. See https://github.com/pyanodon/pybugreports/issues/1062
     - Fix actual vatbrain radius being offset by one tile to the east and south. See https://github.com/pyanodon/pybugreports/issues/1062
+    - Biofluid networks now support provider priority
     - Caravans: when selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
     - Caravans: fixed that ESC/E wouldn't close a caravan menu when opened from a caravan outpost.
     - Caravans: fixed scroll pane overlapping buttons in outpost's caravan view

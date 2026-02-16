@@ -9,7 +9,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
     elseif connection_type == Biofluid.REQUESTER then
         Biofluid.build_requester_gui(entity, player)
     elseif connection_type == Biofluid.PROVIDER then
-        player.opened = nil
+        Biofluid.build_provider_gui(entity, player)
     end
 end)
 
@@ -105,8 +105,8 @@ function Biofluid.build_bioport_gui(entity, player)
         anchor = {
             gui = defines.relative_gui_type.assembling_machine_gui,
             position = defines.relative_gui_position.right
-        }
-    }
+       }
+   }
     main_frame.style.width = 448
     main_frame.style.vertically_stretchable = false
     main_frame.style.vertically_squashable = true
@@ -246,7 +246,7 @@ function Biofluid.build_requester_gui(entity, player)
         type = "sprite-button", name = "py_change_priority_1", style = "py_schedule_move_button",
         tags = {unit_number = unit_number, up = false},
         sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
-    }.style.height = 35
+   }.style.height = 35
     local priority = config_flow.add {type = "textfield", name = "py_requester_priority_input", tags = tags}
     priority.numeric = true
     priority.allow_decimal = false
@@ -257,7 +257,7 @@ function Biofluid.build_requester_gui(entity, player)
         type = "sprite-button", name = "py_change_priority_2", style = "py_schedule_move_button",
         tags = {unit_number = unit_number, up = true},
         sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
-    }.style.height = 35
+   }.style.height = 35
 
     content_flow.add {type = "line"}
     content_flow.add {type = "label", caption = {"gui.temperature-filter"}}.style.font = "default-semibold"
@@ -283,14 +283,99 @@ function Biofluid.build_requester_gui(entity, player)
     Biofluid.update_requester_gui(player, main_frame)
 end
 
+function Biofluid.build_provider_gui(entity, player)
+    if player.gui.screen.biofluid_provider_gui then player.gui.screen.biofluid_provider_gui.destroy() end
+    local unit_number = entity.unit_number
+
+    local main_frame = player.gui.screen.add {type = "frame", name = "biofluid_provider_gui", caption = entity.prototype.localised_name, direction = "vertical"}
+    main_frame.auto_center = true
+    player.opened = main_frame
+    main_frame.style.width = 436
+    local tags = {unit_number = unit_number}
+    main_frame.tags = tags
+
+    local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
+    content_frame.style.vertically_stretchable = true
+    local content_flow = content_frame.add {type = "flow", name = "content_flow", direction = "vertical"}
+    content_flow.style.vertical_spacing = 8
+    content_flow.style.margin = {-4, 0, -4, 0}
+    content_flow.style.vertical_align = "center"
+
+    local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
+    status_flow.style.vertical_align = "center"
+    local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
+    status_sprite.resize_to_sprite = false
+    status_sprite.style.size = {16, 16}
+    status_flow.add {type = "label", name = "status_text"}
+    status_flow.add {type = "empty-widget", style = "py_empty_widget"}
+
+    local camera_frame = content_flow.add {type = "frame", name = "camera_frame", style = "py_nice_frame"}
+    local camera = camera_frame.add {type = "camera", name = "camera", position = entity.position, style = "py_caravan_camera", surface_index = entity.surface.index}
+    camera.visible = true
+    camera.style.height = 155
+    camera.zoom = 2
+
+    local label_flow = content_flow.add {type = "flow", direction = "horizontal"}
+    label_flow.add {type = "label", caption = {"gui.priority"}}.style.font = "default-semibold"
+
+    local config_flow = content_flow.add {type = "flow", direction = "horizontal", name = "config_flow"}
+    config_flow.add {
+        type = "sprite-button", name = "py_change_priority_1", style = "py_schedule_move_button",
+        tags = {unit_number = unit_number, up = false},
+        sprite = "down-white", hovered_sprite = "down-black", clicked_sprite = "down-black"
+   }.style.height = 35
+    local priority = config_flow.add {type = "textfield", name = "py_provider_priority_input", tags = tags}
+    priority.numeric = true
+    priority.allow_decimal = false
+    priority.allow_negative = false
+    priority.style.width = 55
+    priority.style.height = 35
+    config_flow.add {
+        type = "sprite-button", name = "py_change_priority_2", style = "py_schedule_move_button",
+        tags = {unit_number = unit_number, up = true},
+        sprite = "up-white", hovered_sprite = "up-black", clicked_sprite = "up-black"
+   }.style.height = 35
+
+    Biofluid.update_provider_gui(player, main_frame)
+end
+
+function Biofluid.update_provider_gui(player, gui)
+    local unit_number = gui.tags.unit_number
+    local provider_data = storage.biofluid_providers[unit_number]
+    if not provider_data then
+        player.opened = nil; return
+    end
+    local entity = provider_data.entity
+    if not entity or not entity.valid then
+        player.opened = nil; return
+    end
+    local network = storage.biofluid_networks[provider_data.network_id]
+    if not network then
+        player.opened = nil; return
+    end
+
+    local status = "entity-status.working"
+    if not next(network.biofluid_bioports) then status = "entity-status.no-biofluid-network" end
+    local img = Biofluid.failure_reasons[status]
+    local content_flow = gui.content_frame.content_flow
+    content_flow.status_flow.status_text.caption = {status}
+    content_flow.status_flow.status_sprite.sprite = img
+
+    local config_flow = content_flow.config_flow
+    config_flow.py_provider_priority_input.text = tostring(provider_data.priority)
+end
+
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     if event.gui_type == defines.gui_type.entity then
         local gui = player.gui.relative.bioport_gui
         if gui then gui.destroy() end
     elseif event.gui_type == defines.gui_type.custom then
-        local gui = player.gui.screen.biofluid_requester_gui
-        if gui then gui.destroy() end
+        local requester_gui = player.gui.screen.biofluid_requester_gui
+        if requester_gui then requester_gui.destroy() end
+
+        local provider_gui = player.gui.screen.biofluid_provider_gui
+        if provider_gui then provider_gui.destroy() end
     end
 end)
 
@@ -348,11 +433,18 @@ end
 gui_events[defines.events.on_gui_click]["py_change_priority_."] = function(event)
     local element = event.element
     local unit_number = element.tags.unit_number
+
     local requester_data = storage.biofluid_requesters[unit_number]
-    if not requester_data then return end
-    local change = element.tags.up and 1 or -1
-    requester_data.priority = requester_data.priority + change
-    element.parent.py_requester_priority_input.text = tostring(requester_data.priority)
+    local provider_data = storage.biofluid_providers[unit_number]
+    if requester_data then 
+        local change = element.tags.up and 1 or -1
+        requester_data.priority = requester_data.priority + change
+        element.parent.py_requester_priority_input.text = tostring(requester_data.priority)
+    elseif provider_data then
+        local change = element.tags.up and 1 or -1
+        provider_data.priority = provider_data.priority + change
+        element.parent.py_provider_priority_input.text = tostring(provider_data.priority)
+    end
 end
 
 gui_events[defines.events.on_gui_text_changed]["py_requester_priority_input"] = function(event)
@@ -361,6 +453,14 @@ gui_events[defines.events.on_gui_text_changed]["py_requester_priority_input"] = 
     local requester_data = storage.biofluid_requesters[unit_number]
     if not requester_data then return end
     requester_data.priority = tonumber(element.text) or 0
+end
+
+gui_events[defines.events.on_gui_text_changed]["py_provider_priority_input"] = function(event)
+    local element = event.element
+    local unit_number = element.tags.unit_number
+    local provider_data = storage.biofluid_providers[unit_number]
+    if not provider_data then return end
+    provider_data.priority = tonumber(element.text) or 0
 end
 
 gui_events[defines.events.on_gui_switch_state_changed]["py_biofluid_temperature_switch"] = function(event)
