@@ -57,7 +57,7 @@ local function update_recipes()
   for category in pairs(permitted_recipes) do
     for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
       for _, subgroup in pairs(subgroups) do
-        if recipe.subgroup.name:match(subgroup) then
+        if recipe.subgroup.name:find(subgroup, nil, true) then
           permitted_recipes[category][r] = subgroup
           break
         end
