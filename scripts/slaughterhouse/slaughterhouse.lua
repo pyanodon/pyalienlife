@@ -158,13 +158,14 @@ local function build_subgroup_table(main_frame, player)
 			local name = "py_recipe_gui_subgroup_" .. subgroup
       if not subgroup_table[name] and player.force.recipes[recipe].enabled then
         local icon = alt_icons[subgroup] or subgroup
-        local type = assert(prototypes.item[icon] and "item" or prototypes.fluid[icon] and "fluid", "ERROR: Could not find reference for icon: " .. icon)
+        local type = assert(prototypes.item[icon] and "item" or prototypes.fluid[icon] and "fluid" or prototypes.recipe[icon] and "recipe", "ERROR: Could not find reference for icon: " .. icon)
 				subgroup_table.add {
 					type = "choose-elem-button",
 					name = name,
 					elem_type = type,
 					item = icon,
           fluid = icon,
+          recipe = icon,
           style = "filter_group_button_tab_slightly_larger",
 					tags = {subgroup = subgroup},
 					locked = true
