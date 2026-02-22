@@ -810,10 +810,10 @@ Caravan.actions = {
     ["target-fluid-count"] = P.target_fluid_count,
     ["is-tank-full"] = P.is_tank_full,
     ["is-tank-empty"] = P.is_tank_empty,
-    ["fill-tank-caravan"] = P.fill_tank_until_caravan_contains,
-    ["fill-tank-target"] = P.fill_tank_until_outpost_contains,
-    ["empty-tank-caravan"] = P.empty_tank_until_caravan_contains,
-    ["empty-tank-target"] = P.empty_tank_until_outpost_contains,
+    ["fill-tank-until-caravan-has"] = P.fill_tank_until_caravan_contains,
+    ["fill-tank-until-target-has"] = P.fill_tank_until_outpost_contains,
+    ["empty-tank-until-caravan-has"] = P.empty_tank_until_caravan_contains,
+    ["empty-tank-until-target-has"] = P.empty_tank_until_outpost_contains,
 }
 
 Caravan.free_actions = { -- actions that don't use fuel
