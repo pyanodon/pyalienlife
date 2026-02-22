@@ -46,7 +46,7 @@ local machines_with_gui = {
   ["rc-mk04"] = true,
 }
 
-local alt_items = {
+local alt_icons = {
   zipir = "zipir1",
   kakkalakki = "kakkalakki-f"
 }
@@ -97,11 +97,11 @@ remote.add_interface("py-recipe-gui", {
   remove_subgroup = function (subgroup)
     subgroups[subgroup] = nil
   end,
-  ---use an alternative item for the subgroup header icon. set to nil to remove
+  ---use an alternative icon for the subgroup header icon. set to nil to remove
   ---@param subgroup data.ItemSubGroupID
-  ---@param item data.ItemID
-  set_alt_item = function (subgroup, item)
-    alt_items[subgroup] = item
+  ---@param icon data.ItemID|data.FluidID
+  set_alt_item = function (subgroup, icon)
+    alt_icons[subgroup] = icon
   end,
 })
 
@@ -130,10 +130,6 @@ py.on_event(defines.events.on_object_destroyed, function(event)
   end
 end)
 
-local function get_item_from_subgroup(subgroup)
-  return alt_items[subgroup] or subgroup
-end
-
 local function build_subgroup_table(content_frame, player)
   content_frame.clear()
   local main_frame = content_frame.parent
@@ -143,11 +139,14 @@ local function build_subgroup_table(content_frame, player)
     for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
 			local name = "py_recipe_gui_subgroup_" .. subgroup
       if not subgroup_table[name] and player.force.recipes[recipe].enabled then
+        local icon = alt_icons[subgroup] or subgroup
+        local type = assert(prototypes.item[icon] and "item" or prototypes.fluid[icon] and "fluid", "ERROR: Could not find reference for icon: " .. icon)
 				subgroup_table.add {
 					type = "choose-elem-button",
 					name = name,
-					elem_type = "item",
-					item = get_item_from_subgroup(subgroup),
+					elem_type = type,
+					item = icon,
+          fluid = icon,
 					style = "image_tab_slot",
 					tags = {subgroup = subgroup},
 					locked = true
