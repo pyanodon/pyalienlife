@@ -63,6 +63,15 @@ local function update_recipes()
         end
       end
       if not permitted_recipes[category][r] then
+        -- search by comparing recipe name
+        for _, subgroup in pairs(subgroups) do
+          if recipe.name:find(subgroup, nil, true) then
+            permitted_recipes[category][r] = subgroup
+            break
+          end
+        end
+      end
+      if not permitted_recipes[category][r] then
         error("Could not find associated subgroup for recipe: " .. r)
       end
     end
