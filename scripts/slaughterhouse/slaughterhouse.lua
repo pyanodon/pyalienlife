@@ -146,8 +146,13 @@ local function build_subgroup_table(main_frame, player)
   local tags = main_frame.tags
   tags.main_menu = true
   main_frame.tags = tags
-  local subgroup_table = content_frame.add {type = "scroll-pane", name = "pane", style = "deep_slots_scroll_pane"}
-  subgroup_table = subgroup_table.add {type = "table", name = "s_table", column_count = 6, style = "filter_slot_table"}
+  local subgroup_table = content_frame.add {type = "table", name = "s_table", column_count = 6}
+  subgroup_table.style.horizontal_spacing = 0
+  subgroup_table.style.vertical_spacing = 0
+  subgroup_table.style.top_margin = -12
+  subgroup_table.style.left_margin = -12
+  subgroup_table.style.bottom_margin = -12
+  subgroup_table.style.right_margin = -12
   for category in pairs(main_frame.tags.categories) do
     for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
 			local name = "py_recipe_gui_subgroup_" .. subgroup
@@ -160,7 +165,7 @@ local function build_subgroup_table(main_frame, player)
 					elem_type = type,
 					item = icon,
           fluid = icon,
-					style = "slot_button",
+          style = "filter_group_button_tab_slightly_larger",
 					tags = {subgroup = subgroup},
 					locked = true
 				}.style.size = 80
@@ -246,14 +251,15 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(
   local player = game.get_player(event.player_index)
   local element = event.element
   local content_frame = element.parent.parent
-  local main_frame = content_frame.parent.parent
+  local main_frame = content_frame.parent
   local subgroup = element.tags.subgroup
   content_frame.clear()
   main_frame.toolbar.label.caption = {"py-recipe-gui.select-recipe"}
   local tags = main_frame.tags
   tags.main_menu = false
   main_frame.tags = tags
-  local recipe_table = content_frame.add {type = "table", column_count = 5, style = "filter_slot_table"}
+  local recipe_table = content_frame.add {type = "scroll-pane", name = "pane", style = "deep_slots_scroll_pane"}
+  recipe_table = recipe_table.add {type = "table", column_count = 5, style = "filter_slot_table"}
   local recipe_count, avalible_recipe = 0, nil
   for category in pairs(main_frame.tags.categories) do
     for recipe, recipe_subgroup in pairs(permitted_recipes[category] or {}) do
