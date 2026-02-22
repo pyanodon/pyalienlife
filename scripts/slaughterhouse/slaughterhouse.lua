@@ -139,11 +139,15 @@ py.on_event(defines.events.on_object_destroyed, function(event)
   end
 end)
 
-local function build_subgroup_table(content_frame, player)
+local function build_subgroup_table(main_frame, player)
+  local content_frame = main_frame.content_frame
   content_frame.clear()
-  local main_frame = content_frame.parent
-  main_frame.caption = main_frame.tags.caption
-  local subgroup_table = content_frame.add {type = "table", name = "s_table", column_count = 6}
+  main_frame.toolbar.label.caption = main_frame.tags.caption
+  local tags = main_frame.tags
+  tags.main_menu = true
+  main_frame.tags = tags
+  local subgroup_table = content_frame.add {type = "scroll-pane", name = "pane", style = "deep_slots_scroll_pane"}
+  subgroup_table = subgroup_table.add {type = "table", name = "s_table", column_count = 6, style = "filter_slot_table"}
   for category in pairs(main_frame.tags.categories) do
     for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
 			local name = "py_recipe_gui_subgroup_" .. subgroup
@@ -156,10 +160,10 @@ local function build_subgroup_table(content_frame, player)
 					elem_type = type,
 					item = icon,
           fluid = icon,
-					style = "image_tab_slot",
+					style = "slot_button",
 					tags = {subgroup = subgroup},
 					locked = true
-				}
+				}.style.size = 80
       end
     end
   end
@@ -177,13 +181,25 @@ local function create_gui(player_index)
     type = "frame",
     name = "slaughterhouse",
     direction = "vertical",
-    tags = {entity = entity.unit_number, categories = (entity.name == "entity-ghost" and entity.ghost_prototype or entity.prototype).crafting_categories, caption = {"py-recipe-gui." .. name}}
+    tags = {entity = entity.unit_number, categories = (entity.name == "entity-ghost" and entity.ghost_prototype or entity.prototype).crafting_categories, caption = {"py-recipe-gui." .. name}, main_menu = true}
   }
   main_frame.force_auto_center()
+  local toolbar = main_frame.add {type = "flow", name = "toolbar", direction = "horizontal", style = "frame_header_flow"}
+  toolbar.style.bottom_padding = 0
+  toolbar.add {type = "label", name = "label", style = "frame_title"}
+  toolbar.label.style.bottom_padding = 3
+  toolbar.label.style.top_margin = -3
+  local header = toolbar.add {type = "empty-widget", style = "draggable_space_header"}
+  header.style.horizontally_stretchable = true
+  header.style.natural_height = 24
+  header.style.height = 24
+  header.style.right_margin = 4
+  header.drag_target = main_frame
+  toolbar.add {type = "sprite-button", name = "py_recipe_gui_back", sprite = "utility/close", style = "close_button"}
   player.opened = main_frame
   local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
   content_frame.style.vertically_stretchable = true
-  build_subgroup_table(content_frame, player)
+  build_subgroup_table(main_frame, player)
   storage.opened_slaughterhouses[entity.unit_number] = entity
   script.register_on_object_destroyed(entity)
   storage.watched_slaughterhouses[player_index] = nil
@@ -230,13 +246,14 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(
   local player = game.get_player(event.player_index)
   local element = event.element
   local content_frame = element.parent.parent
-  local main_frame = content_frame.parent
+  local main_frame = content_frame.parent.parent
   local subgroup = element.tags.subgroup
   content_frame.clear()
-  main_frame.caption = {"py-recipe-gui.select-recipe"}
-  local recipe_flow = content_frame.add {type = "flow", direction = "horizontal"}
-  recipe_flow.add {type = "sprite-button", name = "py_recipe_gui_back", sprite = "utility/left_arrow"}
-  local recipe_table = recipe_flow.add {type = "table", column_count = 5}
+  main_frame.toolbar.label.caption = {"py-recipe-gui.select-recipe"}
+  local tags = main_frame.tags
+  tags.main_menu = false
+  main_frame.tags = tags
+  local recipe_table = content_frame.add {type = "table", column_count = 5, style = "filter_slot_table"}
   local recipe_count, avalible_recipe = 0, nil
   for category in pairs(main_frame.tags.categories) do
     for recipe, recipe_subgroup in pairs(permitted_recipes[category] or {}) do
@@ -264,8 +281,12 @@ end
 
 gui_events[defines.events.on_gui_click]["py_recipe_gui_back"] = function(event)
   local player = game.players[event.player_index]
-  local content_frame = event.element.parent.parent
-  build_subgroup_table(content_frame, player)
+  local main_frame = event.element.parent.parent
+  if main_frame.tags.main_menu then
+    player.opened = nil
+    return -- exit completely
+  end
+  build_subgroup_table(main_frame, player)
 end
 
 gui_events[defines.events.on_gui_click]["py_recipe_gui_recipe_.+"] = function(event)
