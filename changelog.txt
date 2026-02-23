@@ -15,6 +15,7 @@ Date: ????
     - Removed the period from smart farm package technology locales
     - Added flying fluid caravans (thanks, FreezingSnail!)
     - Added "fill until" and "empty until" fluid caravan actions (thanks, charleycrissman!)
+    - Improved wyrmhole performance when scaling. Resolves https://github.com/pyanodon/pybugreports/issues/1404
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.62
 Date: 2026-01-05
