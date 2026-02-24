@@ -4,7 +4,7 @@ require "prototypes/technologies/mega-farm-cadaveric-arum"
 require "prototypes/technologies/moondrop"
 
 TECHNOLOGY("epoxy"):remove_pack("chemical-science-pack")
-TECHNOLOGY("fertilizer"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("fertilizer"):hide().enabled = false
 TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
 TECHNOLOGY("separation"):add_pack("py-science-pack-1")
 TECHNOLOGY("fertilizer-mk03"):remove_pack("chemical-science-pack")
@@ -56,7 +56,7 @@ data.raw["recipe-category"]["arum"].allowed_module_categories = {"arum"}
 data.raw["recipe-category"]["arum"].modules_required = true
 data.raw["recipe-category"]["moon"].allowed_module_categories = {"moondrop"}
 data.raw["recipe-category"]["moon"].modules_required = true
-data.raw.recipe.urea.hidden = true
+RECIPE("urea"):hide()
 
 TECHNOLOGY("melamine"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 TECHNOLOGY("fiberboard"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
@@ -382,9 +382,6 @@ RECIPE("fungal-substrate-02"):add_ingredient {type = "item", name = "urea", amou
 RECIPE("alien-sample-03"):replace_ingredient("plastic-bar", "graphene-roll")
 RECIPE("log7-2"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):add_unlock("wood-processing-3").category = "fwf"
 --RECIPE('urea'):replace_ingredient('fawogae', 'seaweed'):subgroup_order('py-alienlife-items', 'a')
-RECIPE("bonemeal2"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
-RECIPE("bonemeal3"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
-RECIPE("bonemeal4"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
 RECIPE("cobalt-extract"):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE("neuroprocessor"):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient {type = "item", name = "resistor1", amount = 5}:add_ingredient {type = "item", name = "capacitor1", amount = 5}:add_ingredient {type = "item", name = "inductor1", amount = 10}
 RECIPE("empty-neuromorphic-chip"):add_ingredient {type = "item", name = "bakelite", amount = 5}:add_ingredient {type = "item", name = "micro-fiber", amount = 4}:add_ingredient {type = "item", name = "capacitor2", amount = 5}:add_ingredient {type = "item", name = "melamine", amount = 10}:add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:add_ingredient {type = "item", name = "nylon-parts", amount = 10} --:add_ingredient({type = 'item', name = 'diamagnetic-material', amount = 4})
