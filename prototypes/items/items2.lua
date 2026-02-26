@@ -426,7 +426,7 @@ ITEM {
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bio/29.png", scale = 1}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-native-flora-smartfarm",
     order = "a",
     stack_size = 50
 }

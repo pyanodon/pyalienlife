@@ -763,6 +763,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-8",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -782,6 +783,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-9",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -804,6 +806,7 @@ RECIPE {
     type = "recipe",
     name = "rennea-super-8",
     category = "rennea-farm",
+    subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -823,6 +826,7 @@ RECIPE {
     type = "recipe",
     name = "rennea-super-9",
     category = "rennea-farm",
+    subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -845,6 +849,7 @@ RECIPE {
     type = "recipe",
     name = "tuuphra-super-8",
     category = "tuuphra-farm",
+    subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -865,6 +870,7 @@ RECIPE {
     type = "recipe",
     name = "tuuphra-super-9",
     category = "tuuphra-farm",
+    subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -888,6 +894,7 @@ RECIPE {
     type = "recipe",
     name = "grod-super-9",
     category = "grod-farm",
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -911,6 +918,7 @@ RECIPE {
     type = "recipe",
     name = "yotoi-super-9",
     category = "yotoi-farm",
+    subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
