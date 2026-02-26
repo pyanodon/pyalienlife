@@ -49,7 +49,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cobalt-oxide.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -60,7 +60,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cobalt-extract.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -71,7 +71,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/co-sulfate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -82,7 +82,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/co-sulfate-02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -93,7 +93,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cobalt-nx.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -104,7 +104,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/mixed-ores.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -350,7 +350,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/empty-petri-dish.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -427,7 +427,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/bio-container.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "b",
     stack_size = 100
 }
@@ -839,7 +839,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cage.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -1093,7 +1093,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/neuroprocessor.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "h",
     stack_size = 100
 }
@@ -1148,7 +1148,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/magnetic-beads.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "h",
     stack_size = 100
 }
@@ -1170,7 +1170,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/nanofibrils.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "h",
     stack_size = 100
 }
@@ -1181,7 +1181,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/empty-barrel-milk.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "h",
     stack_size = 100
 }
@@ -1192,7 +1192,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/barrel-milk.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "h",
     stack_size = 100
 }
@@ -2046,7 +2046,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cobalt-fluoride.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "h",
     stack_size = 100
 }
@@ -4590,7 +4590,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/empty-neuromorphic-chip.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -4601,7 +4601,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/neuromorphic-chip.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -5377,7 +5377,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/casein.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -5682,7 +5682,7 @@ ITEM {
     icon = "__pyalienlifegraphics3__/graphics/icons/pesticide-mk01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "d",
     stack_size = 100
 }
@@ -5693,7 +5693,7 @@ ITEM {
     icon = "__pyalienlifegraphics3__/graphics/icons/pesticide-mk02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "d",
     stack_size = 100
 }
@@ -9136,7 +9136,7 @@ ITEM {
     icon = "__pyalienlifegraphics3__/graphics/icons/empty-planter-box.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "x",
     stack_size = 100
 }
@@ -9147,7 +9147,7 @@ ITEM {
     icon = "__pyalienlifegraphics3__/graphics/icons/planter-box.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "x",
     stack_size = 100
 }

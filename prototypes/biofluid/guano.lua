@@ -50,7 +50,7 @@ data:extend {{
     icon = "__pyalienlifegraphics2__/graphics/icons/ammonium-nitrate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }}

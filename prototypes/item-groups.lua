@@ -133,13 +133,19 @@ data:extend {
         type = "item-subgroup",
         name = "py-alienlife-creature-product",
         group = "py-alienlife",
-        order = "bba"
+        order = "bbb"
     },
     {
         type = "item-subgroup",
         name = "py-alienlife-fertilizer",
         group = "py-alienlife",
-        order = "bbb"
+        order = "bbc"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-anorganics",
+        group = "py-alienlife",
+        order = "bba"
     },
 
 

@@ -43,7 +43,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -54,7 +54,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/sic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -65,7 +65,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/quartz-tube.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -76,7 +76,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/mosfet.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -87,7 +87,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/nisi.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }

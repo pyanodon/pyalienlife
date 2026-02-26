@@ -2543,7 +2543,6 @@ RECIPE {
     --main_product = "chloral",
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic-recrush.png",
     icon_size = 64,
-    subgroup = "py-alienlife-items",
     order = "h"
 }:add_unlock("silicon-carbide")
 
