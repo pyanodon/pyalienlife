@@ -158,12 +158,6 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-recipes",
-        group = "py-alienlife",
-        order = "cb"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-gases",
         group = "py-alienlife",
         order = "cc"

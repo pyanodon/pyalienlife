@@ -449,7 +449,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/cocoon.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-recipes",
+    subgroup = "py-alienlife-vrauks",
     order = "b",
     stack_size = 100
 }
@@ -463,7 +463,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-recipes",
+    subgroup = "py-alienlife-vrauks",
     order = "b",
     stack_size = 100
 }
@@ -477,7 +477,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-recipes",
+    subgroup = "py-alienlife-vrauks",
     order = "b",
     stack_size = 100
 }
@@ -491,7 +491,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-recipes",
+    subgroup = "py-alienlife-vrauks",
     order = "b",
     stack_size = 100
 }

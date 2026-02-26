@@ -1351,7 +1351,7 @@ RECIPE {
         {type = "fluid", name = "syngas",    amount = 50},
     },
     main_product = "crude-oil",
-    subgroup = "py-alienlife-recipes",
+    subgroup = "py-alienlife-fluids",
     order = "a"
 }:add_unlock("biotech-mk03")
 
