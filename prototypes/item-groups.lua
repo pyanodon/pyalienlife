@@ -168,6 +168,18 @@ data:extend {
         group = "py-alienlife",
         order = "cc"
     },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-psc-chelator",
+        group = "py-alienlife",
+        order = "caa"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-xenogenic",
+        group = "py-alienlife",
+        order = "cab"
+    },
 
     -- codex
     {
