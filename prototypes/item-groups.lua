@@ -204,12 +204,6 @@ data:extend {
     -- animals
     {
         type = "item-subgroup",
-        name = "py-alienlife-sea-sponge",
-        group = "py-alienlife",
-        order = "e",
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-ulric",
         group = "py-alienlife",
         order = "e-a",

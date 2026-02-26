@@ -1799,7 +1799,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/sea-sponge-sprouts.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "a",
     stack_size = 100
 }
@@ -1813,7 +1813,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "a",
     stack_size = 100
 }
@@ -1827,7 +1827,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "a",
     stack_size = 100
 }
@@ -1841,7 +1841,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "a",
     stack_size = 100
 }
@@ -6231,7 +6231,7 @@ ITEM {
     category = "sponge",
     tier = 1,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "sa",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
@@ -6248,7 +6248,7 @@ ITEM {
     category = "sponge",
     tier = 2,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "sb",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
@@ -6265,7 +6265,7 @@ ITEM {
     category = "sponge",
     tier = 3,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "sc",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
@@ -6282,7 +6282,7 @@ ITEM {
     category = "sponge",
     tier = 4,
     flags = {},
-    subgroup = "py-alienlife-sea-sponge",
+    subgroup = "py-alienlife-sponge",
     order = "sd",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
