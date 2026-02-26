@@ -169,7 +169,7 @@ RECIPE {
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png",
     icon_size = 64,
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "aa",
     hidden_in_factoriopedia = true
 }:add_unlock("vatbrain-mk01")
@@ -186,7 +186,7 @@ RECIPE {
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png",
     icon_size = 64,
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ab",
     hidden_in_factoriopedia = true
 }:add_unlock("vatbrain-mk02")
@@ -203,7 +203,7 @@ RECIPE {
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png",
     icon_size = 64,
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ac",
     hidden_in_factoriopedia = true
 }:add_unlock("vatbrain-mk03")
@@ -220,7 +220,7 @@ RECIPE {
     results = {},
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png",
     icon_size = 64,
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ad",
     hidden_in_factoriopedia = true
 }:add_unlock("vatbrain-mk04")

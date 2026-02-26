@@ -84,8 +84,8 @@ data:extend {
     {
         type = "item-subgroup",
         name = "py-alienlife-vatbrain",
-        group = "py-alienlife",
-        order = "ba-2"
+        group = "production",
+        order = "fb"
     },
     {
         type = "item-subgroup",
@@ -122,6 +122,18 @@ data:extend {
         name = "py-alienlife-used",
         group = "py-alienlife",
         order = "bf"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-creature-product",
+        group = "py-alienlife",
+        order = "bba"
+    },
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-fertilizer",
+        group = "py-alienlife",
+        order = "bbb"
     },
 
 

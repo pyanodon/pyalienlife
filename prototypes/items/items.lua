@@ -170,7 +170,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/fawogae-spore.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fawogae",
     order = "a",
     stack_size = 100
 }
@@ -183,7 +183,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",     icon_size = 64}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fawogae",
     order = "a",
     stack_size = 100
 }
@@ -196,7 +196,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",     icon_size = 64}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fawogae",
     order = "a",
     stack_size = 100
 }
@@ -209,7 +209,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",     icon_size = 64}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fawogae",
     order = "a",
     stack_size = 100
 }
@@ -220,7 +220,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/navens-spore.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-navens",
     order = "a",
     stack_size = 100
 }
@@ -234,7 +234,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-navens",
     order = "a",
     stack_size = 100
 }
@@ -248,7 +248,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-navens",
     order = "a",
     stack_size = 100
 }
@@ -262,7 +262,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-navens",
     order = "a",
     stack_size = 100
 }
@@ -273,7 +273,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/yaedols-spores.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-yaedols",
     order = "a",
     stack_size = 100
 }
@@ -286,7 +286,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",      icon_size = 64}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-yaedols",
     order = "a",
     stack_size = 100
 }
@@ -299,7 +299,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",      icon_size = 64}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-yaedols",
     order = "a",
     stack_size = 100
 }
@@ -312,7 +312,7 @@ ITEM {
         {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",      icon_size = 64}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-yaedols",
     order = "a",
     stack_size = 100
 }
@@ -911,7 +911,7 @@ ITEM {
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.66}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -948,7 +948,7 @@ ITEM {
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/brain-06.png", scale = 0.66}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -971,7 +971,7 @@ ITEM {
     fuel_acceleration_multiplier = 1,
     fuel_top_speed_multiplier = 1,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -991,7 +991,7 @@ ITEM {
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bones-07.png", scale = 0.66}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -1002,7 +1002,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/bonemeal.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -1013,7 +1013,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -1061,7 +1061,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -1072,7 +1072,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/carapace.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "a",
     stack_size = 100
 }
@@ -1083,7 +1083,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/skin.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "h",
     stack_size = 100
 }
@@ -1896,7 +1896,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/fertilizer.png",
     icon_size = 32,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fertilizer",
     order = "h",
     stack_size = 100
 }
@@ -3076,7 +3076,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/fish-eggs.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fish",
     order = "x",
     stack_size = 100
 }
@@ -3090,7 +3090,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fish",
     order = "x",
     stack_size = 100
 }
@@ -3104,7 +3104,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fish",
     order = "x",
     stack_size = 100
 }
@@ -3118,7 +3118,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-fish",
     order = "x",
     stack_size = 100
 }
@@ -4117,7 +4117,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/laboratory-grown-brain.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4128,7 +4128,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/tissue-engineered-fat.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4139,7 +4139,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/in-vitro-meat.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4150,7 +4150,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/biomimetic-skin.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4161,7 +4161,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/bioartificial-guts.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4172,7 +4172,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/scafold-free-bones.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4183,7 +4183,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/bio-scafold.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-creature-product",
     order = "k",
     stack_size = 100
 }
@@ -4269,7 +4269,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/bhoddos-spore.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-bhoddos",
     order = "a",
     stack_size = 100
 }
@@ -4283,7 +4283,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-bhoddos",
     order = "a",
     stack_size = 100
 }
@@ -4297,7 +4297,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-bhoddos",
     order = "a",
     stack_size = 100
 }
@@ -4311,7 +4311,7 @@ ITEM {
     },
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-bhoddos",
     order = "a",
     stack_size = 100
 }

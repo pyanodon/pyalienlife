@@ -481,7 +481,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "aa",
     stack_size = 50
 }
@@ -492,7 +492,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ab",
     stack_size = 50
 }
@@ -503,7 +503,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ac",
     stack_size = 50
 }
@@ -514,7 +514,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ad",
     stack_size = 50
 }
