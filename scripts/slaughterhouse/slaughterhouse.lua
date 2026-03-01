@@ -130,9 +130,9 @@ update_recipes()
 
 py.on_event(defines.events.on_object_destroyed, function(event)
   local unit_number = event.useful_id
-  if not unit_number or not storage.opened_slaughterhouses[unit_number] then return end
+  if not unit_number or not storage.opened_recipe_viewer[unit_number] then return end
 
-  storage.opened_slaughterhouses[unit_number] = nil
+  storage.opened_recipe_viewer[unit_number] = nil
   for _, player in pairs(game.players) do
     local gui = player.gui.screen.slaughterhouse
     if gui and gui.tags.entity == unit_number then gui.destroy() end
@@ -175,11 +175,9 @@ local function build_subgroup_table(main_frame, player)
   end
 end
 
-local function create_gui(player_index)
+local function create_gui(player_index, entity)
   local player = game.get_player(player_index)
-  if not player then return end
-  local entity = player.opened
-  if not entity then return end
+  if not player or not entity then return end
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
   local control_behavior = entity.get_control_behavior()
   if not machines_with_gui[name] or entity.get_recipe() or (control_behavior and control_behavior.circuit_set_recipe) then return end
@@ -206,10 +204,10 @@ local function create_gui(player_index)
   local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
   content_frame.style.vertically_stretchable = true
   build_subgroup_table(main_frame, player)
-  storage.opened_slaughterhouses[entity.unit_number] = entity
+  storage.opened_recipe_viewer[entity.unit_number] = entity
   script.register_on_object_destroyed(entity)
-  storage.watched_slaughterhouses[player_index] = nil
-  storage.watch_slaughterhouse = not not next(storage.watched_slaughterhouses)
+  storage.watched_buildings[player_index] = nil
+  storage.watch_buildings = not not next(storage.watched_buildings)
 end
 
 py.on_event(py.events.on_gui_opened(), function(event)
@@ -220,10 +218,10 @@ py.on_event(py.events.on_gui_opened(), function(event)
   local control_behavior = entity.get_control_behavior()
 
   if entity.get_recipe() or control_behavior and control_behavior.circuit_set_recipe then
-    storage.watched_slaughterhouses[event.player_index] = entity
-    storage.watch_slaughterhouse = true
+    storage.watched_buildings[event.player_index] = entity
+    storage.watch_buildings = true
   else
-    create_gui(event.player_index)
+    create_gui(event.player_index, entity)
   end
 end)
 
@@ -234,8 +232,8 @@ py.on_event(defines.events.on_gui_closed, function(event)
     local gui = player.gui.screen.slaughterhouse
     if gui then gui.destroy() end
   end
-  storage.watched_slaughterhouses[event.player_index] = nil
-  storage.watch_slaughterhouse = not not next(storage.watched_slaughterhouses)
+  storage.watched_buildings[event.player_index] = nil
+  storage.watch_buildings = not not next(storage.watched_buildings)
 end)
 
 local function set_recipe(player, entity, recipe)
@@ -280,7 +278,7 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(
   end
 
   if recipe_count == 1 then
-    local entity = storage.opened_slaughterhouses[main_frame.tags.entity]
+    local entity = storage.opened_recipe_viewer[main_frame.tags.entity]
     if not entity or not entity.valid then return end
     set_recipe(player, entity, avalible_recipe)
   end
@@ -300,23 +298,23 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_recipe_.+"] = function(ev
   local player = game.get_player(event.player_index)
   local element = event.element
   local main_frame = element.parent.parent.parent.parent
-  local entity = storage.opened_slaughterhouses[main_frame.tags.entity]
+  local entity = storage.opened_recipe_viewer[main_frame.tags.entity]
   local recipe = element.tags.recipe
   if not entity or not entity.valid then return end
   set_recipe(player, entity, recipe)
 end
 
 py.on_event(py.events.on_init(), function()
-  storage.watched_slaughterhouses = storage.watched_slaughterhouses or {}
-  storage.opened_slaughterhouses = storage.opened_slaughterhouses or {}
+  storage.watched_buildings = storage.watched_buildings or {}
+  storage.opened_recipe_viewer = storage.opened_recipe_viewer or {}
 end)
 
 py.on_event(defines.events.on_tick, function()
-  if not storage.watch_slaughterhouse then return end
+  if not storage.watch_buildings then return end
 
-  for player_index, entity in pairs(storage.watched_slaughterhouses) do
+  for player_index, entity in pairs(storage.watched_buildings) do
     if not entity.valid then
-      storage.watched_slaughterhouses[player_index] = nil
+      storage.watched_buildings[player_index] = nil
       return
     end
 
