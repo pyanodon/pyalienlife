@@ -105,7 +105,7 @@ RECIPE("chemical-plant-mk01"):remove_unlock("filtration"):add_unlock("electric-e
 RECIPE("compressor-mk01"):remove_unlock("nitrogen-mk02")
 
 RECIPE("mukmoux-fat-salt"):remove_unlock("mukmoux")
-RECIPE("bonemeal-salt"):remove_unlock("ulric"):set_fields {hidden = true}
+RECIPE("bonemeal-salt"):remove_unlock("ulric"):hide()
 RECIPE("fertilizer-2"):remove_unlock("basic-electronics")
 RECIPE("molten-stainless-steel"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
 RECIPE("full-molten-stainless-steel-3"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
@@ -215,7 +215,7 @@ RECIPE {
     order = "a"
 }:add_unlock("casting-mk02"):add_ingredient {type = "item", name = "silicon", amount = 5}:add_ingredient {type = "item", name = "clay", amount = 1}
 
-RECIPE("nexelit-mine"):remove_unlock("big-mines").hidden = true
+RECIPE("nexelit-mine"):remove_unlock("big-mines"):hide()
 data.raw["resource"]["nexelit-rock"].autoplace = nil
 data.raw["autoplace-control"]["nexelit-rock"] = nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["nexelit-rock"] = nil
