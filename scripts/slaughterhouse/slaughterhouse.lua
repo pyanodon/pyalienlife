@@ -24,6 +24,16 @@ local subgroups = {
   "zipir",
   "korlex",
   "simik",
+  "arum-super",
+  "grod-super",
+  "kicalk-super",
+  "ralesia-super",
+  "rennea-super",
+  "tuuphra-super",
+  "yotoi-super",
+  "yotoi-fruit-super",
+  "bioreserve-super",
+  "mova-super"
 }
 if script.active_mods["pyalternativeenergy"] then
   subgroups[#subgroups+1] = "zungror"
@@ -44,11 +54,22 @@ local machines_with_gui = {
   ["rc-mk02"] = true,
   ["rc-mk03"] = true,
   ["rc-mk04"] = true,
+  ["mega-farm"] = true,
 }
 
 local alt_icons = {
   zipir = "zipir1",
-  kakkalakki = "kakkalakki-f"
+  kakkalakki = "kakkalakki-f",
+  ["arum-super"] = "cadaveric-arum",
+  ["grod-super"] = "grod",
+  ["kicalk-super"] = "kicalk",
+  ["ralesia-super"] = "ralesia",
+  ["rennea-super"] = "rennea",
+  ["tuuphra-super"] = "tuuphra",
+  ["yotoi-super"] = "yotoi",
+  ["yotoi-fruit-super"] = "yotoi-fruit",
+  ["bioreserve-super"] = "native-flora",
+  ["mova-super"] = "mova"
 }
 
 local permitted_recipes = {}
@@ -134,7 +155,7 @@ py.on_event(defines.events.on_object_destroyed, function(event)
 
   storage.opened_recipe_viewer[unit_number] = nil
   for _, player in pairs(game.players) do
-    local gui = player.gui.screen.slaughterhouse
+    local gui = player.gui.screen.py_recipe_viewer
     if gui and gui.tags.entity == unit_number then gui.destroy() end
   end
 end)
@@ -173,6 +194,7 @@ local function build_subgroup_table(main_frame, player)
       end
     end
   end
+  main_frame.force_auto_center()
 end
 
 local function create_gui(player_index, entity)
@@ -183,11 +205,17 @@ local function create_gui(player_index, entity)
   if not machines_with_gui[name] or entity.get_recipe() or (control_behavior and control_behavior.circuit_set_recipe) then return end
   local main_frame = player.gui.screen.add {
     type = "frame",
-    name = "slaughterhouse",
+    name = "py_recipe_viewer",
     direction = "vertical",
-    tags = {entity = entity.unit_number, categories = (entity.name == "entity-ghost" and entity.ghost_prototype or entity.prototype).crafting_categories, caption = {"py-recipe-gui." .. name}, main_menu = true}
+    tags = {
+      entity = entity.unit_number,
+      categories = (entity.name == "entity-ghost" and entity.ghost_prototype or entity.prototype).crafting_categories,
+      caption = {"py-recipe-gui." .. name},
+      main_menu = true
+    }
   }
   main_frame.force_auto_center()
+  player.opened = main_frame
   local toolbar = main_frame.add {type = "flow", name = "toolbar", direction = "horizontal", style = "frame_header_flow"}
   toolbar.style.bottom_padding = 0
   toolbar.add {type = "label", name = "label", style = "frame_title"}
@@ -200,14 +228,12 @@ local function create_gui(player_index, entity)
   header.style.right_margin = 4
   header.drag_target = main_frame
   toolbar.add {type = "sprite-button", name = "py_recipe_gui_back", sprite = "utility/close", style = "close_button"}
-  player.opened = main_frame
   local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
   content_frame.style.vertically_stretchable = true
   build_subgroup_table(main_frame, player)
   storage.opened_recipe_viewer[entity.unit_number] = entity
   script.register_on_object_destroyed(entity)
   storage.watched_buildings[player_index] = nil
-  storage.watch_buildings = not not next(storage.watched_buildings)
 end
 
 py.on_event(py.events.on_gui_opened(), function(event)
@@ -219,21 +245,17 @@ py.on_event(py.events.on_gui_opened(), function(event)
 
   if entity.get_recipe() or control_behavior and control_behavior.circuit_set_recipe then
     storage.watched_buildings[event.player_index] = entity
-    storage.watch_buildings = true
   else
     create_gui(event.player_index, entity)
   end
 end)
 
 py.on_event(defines.events.on_gui_closed, function(event)
-  -- if not storage.watched_slaughterhouses then return end
-  local player = game.get_player(event.player_index)
   if event.gui_type == defines.gui_type.custom then
-    local gui = player.gui.screen.slaughterhouse
-    if gui then gui.destroy() end
+    local element = event.element
+    if element.name == "py_recipe_viewer" then element.destroy() end
   end
   storage.watched_buildings[event.player_index] = nil
-  storage.watch_buildings = not not next(storage.watched_buildings)
 end)
 
 local function set_recipe(player, entity, recipe)
@@ -282,13 +304,14 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(
     if not entity or not entity.valid then return end
     set_recipe(player, entity, avalible_recipe)
   end
+  main_frame.force_auto_center()
 end
 
 gui_events[defines.events.on_gui_click]["py_recipe_gui_back"] = function(event)
   local player = game.players[event.player_index]
   local main_frame = event.element.parent.parent
   if main_frame.tags.main_menu then
-    player.opened = nil
+    main_frame.destroy()
     return -- exit completely
   end
   build_subgroup_table(main_frame, player)
@@ -310,8 +333,6 @@ py.on_event(py.events.on_init(), function()
 end)
 
 py.on_event(defines.events.on_tick, function()
-  if not storage.watch_buildings then return end
-
   for player_index, entity in pairs(storage.watched_buildings) do
     if not entity.valid then
       storage.watched_buildings[player_index] = nil
