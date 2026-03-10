@@ -50,7 +50,7 @@ data:extend {{
     icon = "__pyalienlifegraphics2__/graphics/icons/ammonium-nitrate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }}
@@ -96,7 +96,7 @@ FLUID {
     flow_color = {r = 1, g = 0.5, b = 0.5},
     max_temperature = 100,
     gas_temperature = 15,
-    subgroup = "py-alienlife-fluids",
+    subgroup = "py-alienlife-gases",
     order = "d"
 }
 

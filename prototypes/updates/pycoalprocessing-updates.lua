@@ -82,9 +82,9 @@ RECIPE("automated-factory-mk01"):replace_ingredient("fast-inserter", "inserter")
 -----RECIPES-----
 FLUID("carbon-dioxide"):subgroup_order("py-alienlife-items", "a")
 ITEM("ralesia-seeds"):subgroup_order("py-alienlife-ralesia", "a")
-ITEM("bonemeal"):subgroup_order("py-alienlife-items", "a")
+ITEM("bonemeal"):subgroup_order("py-alienlife-creature-product", "a")
 ITEM("organics"):subgroup_order("py-alienlife-items", "a")
-ITEM("mukmoux-fat"):subgroup_order("py-alienlife-items", "a")
+ITEM("mukmoux-fat"):subgroup_order("py-alienlife-creature-product", "a")
 ITEM("fawogae-substrate"):subgroup_order("py-alienlife-items", "a")
 RECIPE("fawogae"):set_fields {enabled = false}
 RECIPE("log1"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a").category = "fwf"
@@ -93,8 +93,8 @@ RECIPE("log3"):add_ingredient {type = "item", name = "wood-seedling", amount = 3
 RECIPE("log4"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a").category = "fwf"
 RECIPE("log5"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a").category = "fwf"
 RECIPE("log6"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a").category = "fwf"
-RECIPE("log-wood"):subgroup_order("py-alienlife-recipes", "a")
-RECIPE("fawogae-substrate"):remove_ingredient("fawogae"):add_ingredient {type = "item", name = "petri-dish-bacteria", amount = 2}:add_ingredient {type = "item", name = "cellulose", amount = 3}:replace_ingredient("coke", "moss"):subgroup_order("py-alienlife-recipes", "a")
+RECIPE("log-wood"):subgroup_order("py-alienlife-plants", "a").category = "fwf"
+RECIPE("fawogae-substrate"):remove_ingredient("fawogae"):add_ingredient {type = "item", name = "petri-dish-bacteria", amount = 2}:add_ingredient {type = "item", name = "cellulose", amount = 3}:replace_ingredient("coke", "moss"):subgroup_order("py-alienlife-items", "a")
 RECIPE("bio-sample01"):add_ingredient {type = "item", name = "petri-dish-bacteria", amount = 2}:add_ingredient {type = "item", name = "native-flora", amount = 12}
 RECIPE("fawogae-substrate"):add_unlock("basic-substrate").enabled = false
 

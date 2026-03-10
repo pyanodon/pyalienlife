@@ -1351,7 +1351,7 @@ RECIPE {
         {type = "fluid", name = "syngas",    amount = 50},
     },
     main_product = "crude-oil",
-    subgroup = "py-alienlife-recipes",
+    subgroup = "py-alienlife-fluids",
     order = "a"
 }:add_unlock("biotech-mk03")
 
@@ -2543,7 +2543,6 @@ RECIPE {
     --main_product = "chloral",
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic-recrush.png",
     icon_size = 64,
-    subgroup = "py-alienlife-items",
     order = "h"
 }:add_unlock("silicon-carbide")
 
