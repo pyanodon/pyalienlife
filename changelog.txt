@@ -2,6 +2,7 @@
 Version: 3.0.63
 Date: ????
   Changes:
+    - Clarified the descriptions for the fastwood forestry TURD path 2 and 3
     - Fixed arqad queen production statistics issues
     - Removed productivity watermark from botanical nursery recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1360
     - Allowed sea sponges mk02+ from sea sponge sprouts mk02+ to accept productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1335
