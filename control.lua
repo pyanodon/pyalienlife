@@ -21,7 +21,6 @@ require "scripts.ocula.ocula"
 ---@diagnostic disable-next-line: different-requires
 require "scripts.farming.farming"
 require "scripts.smart-farm.smart-farm"
-require "scripts.smart-farm.mega-farm"
 require "scripts.worm.worm"
 require "scripts.turd.turd"
 require "scripts.vatbrain.vatbrain"
@@ -43,11 +42,13 @@ local function pickerdollies()
     if remote.interfaces["PickerDollies"] then
         remote.call("PickerDollies", "add_blacklist_name", "caravan", true)
         remote.call("PickerDollies", "add_blacklist_name", "flyavan", true)
+        remote.call("PickerDollies", "add_blacklist_name", "fluidflyavan", true)
         remote.call("PickerDollies", "add_blacklist_name", "nukavan", true)
         remote.call("PickerDollies", "add_blacklist_name", "fluidavan", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost-fluid", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost-aerial", true)
+        remote.call("PickerDollies", "add_blacklist_name", "outpost-aerial-fluid", true)
         remote.call("PickerDollies", "add_blacklist_name", "mega-farm", true)
         remote.call("PickerDollies", "add_blacklist_name", "wyrmhole", true)
         remote.call("PickerDollies", "add_blacklist_name", "ipod", true)

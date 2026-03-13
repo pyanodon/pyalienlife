@@ -61,7 +61,7 @@ function P.build_cargo_flow(parent, player, caravan_data, enabled)
     inv.build_fuel_inventory(flow, caravan_data)
     flow.add {type = "line", style = "inside_shallow_frame_with_padding_line"}.style.horizontally_stretchable = true
 
-    if caravan_data.entity.name:find("^fluidavan") then
+    if caravan_data.entity.name:find("^fluidavan") or caravan_data.entity.name:find("^fluidflyavan")then
         flow.add {type = "label", caption = {"caravan-gui.tank-label"}}
         P.build_fluid_flow(flow, caravan_data)
     else
