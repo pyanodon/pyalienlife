@@ -18,6 +18,7 @@ Date: ????
     - Added "fill until" and "empty until" fluid caravan actions (thanks, charleycrissman!)
     - Improved wyrmhole performance when scaling. Resolves https://github.com/pyanodon/pybugreports/issues/1404
     - Fixed poor recipe icon placement for smart farms. Resolves https://github.com/pyanodon/pybugreports/issues/1387
+    - Fixed Xeno TURD Sequential Hermaphroditsm creating cages from nothing.  Resolves https://github.com/pyanodon/pybugreports/issues/1426
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.62
 Date: 2026-01-05
