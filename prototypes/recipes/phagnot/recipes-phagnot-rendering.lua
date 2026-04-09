@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "phagnot",
 			name = "full-render-phagnots",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phagnot.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",   draw_background = true}
+			}
 		},
 		--brain phagnot rendering
 		{
@@ -69,7 +71,8 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-phag",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -89,7 +92,8 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-phag",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -110,8 +114,9 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-phag",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",     draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -131,8 +136,9 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-phag",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",        scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -151,8 +157,9 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-phag",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -171,8 +178,9 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-phag",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phagnot.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",     draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

@@ -49,8 +49,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "scrondrix",
 			name = "full-render-scrondrixs",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-scrondrix.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", draw_background = true}
+			}
 		},
 		--brain scrondrix rendering
 		{
@@ -73,8 +75,9 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",   scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png",    draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -94,8 +97,9 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",   scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png",    draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -114,8 +118,9 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -134,8 +139,9 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",          scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -154,8 +160,9 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -174,8 +181,9 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -194,8 +202,9 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-scro",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-scrondrix.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

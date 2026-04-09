@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "phadai",
 			name = "full-render-phadais",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phadai.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",    draw_background = true}
+			}
 		},
 		--brain phadai rendering
 		{
@@ -69,7 +71,8 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",       draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -89,7 +92,8 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",       draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -109,7 +113,8 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -129,8 +134,9 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",    draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -149,7 +155,8 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -169,8 +176,9 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",        scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",    draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -189,7 +197,8 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-pha",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-phadai.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,

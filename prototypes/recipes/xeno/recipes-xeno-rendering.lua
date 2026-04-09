@@ -39,8 +39,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "xeno",
 			name = "full-render-xenos",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xeno.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",     draw_background = true}
+			}
 		},
 		--brain xeno rendering
 		{
@@ -61,7 +63,8 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-xeno",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",        draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -81,7 +84,8 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-xeno",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",        draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -101,7 +105,8 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-xeno",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",     draw_background = true},
 				{icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -121,7 +126,8 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-chi-xeno",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",     draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",    scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -141,7 +147,8 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-xeno",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-xeno.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",       draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,

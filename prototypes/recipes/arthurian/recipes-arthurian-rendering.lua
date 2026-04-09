@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "arthurian",
 			name = "full-render-arthurian",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-arthurian.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png", draw_background = true}
+			}
 		},
 		--brain arthurian rendering
 		{
@@ -69,8 +71,9 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png",   scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png",    draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -90,8 +93,9 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png",   scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png",    draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -111,8 +115,9 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -132,8 +137,9 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",          scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -153,8 +159,9 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",           scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png", draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -174,8 +181,9 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -195,8 +203,9 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-art",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-arthurian.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png",   draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

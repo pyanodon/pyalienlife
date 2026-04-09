@@ -45,8 +45,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "auog",
 			name = "full-render-auogs",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",      draw_background = true}
+			}
 		},
 		--brain auog rendering
 		{
@@ -69,7 +71,8 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",         draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -91,7 +94,8 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",         draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -112,7 +116,8 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",        draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -133,7 +138,8 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",        draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -154,7 +160,8 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -175,7 +182,8 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",      draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -196,7 +204,8 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-auog",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/caged-auog.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",        draw_background = true},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
