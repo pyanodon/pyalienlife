@@ -67,8 +67,7 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-zun",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",      draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -88,9 +87,8 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-zun",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",     draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png",  scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -109,8 +107,7 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-zun",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",       draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",         draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -130,9 +127,8 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-zun",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",   draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",         scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -151,9 +147,8 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-zun",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",     draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png",  scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -172,9 +167,8 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-zun",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",     draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-zungror.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png",  scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},

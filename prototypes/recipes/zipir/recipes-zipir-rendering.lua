@@ -66,8 +66,7 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-zipir",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",        draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -87,8 +86,7 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-zipir",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",       draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -108,8 +106,7 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-zipir",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",       draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",           draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/arthropod-blood.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -129,9 +126,8 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-zipir",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",     draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png",      scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/skin.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -150,8 +146,7 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-zipir",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",       draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -171,8 +166,7 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-zipir",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",       draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,

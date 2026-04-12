@@ -75,8 +75,7 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-sim",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",       draw_background = true},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -97,8 +96,7 @@ py.autorecipes {
 			tech = "bmp",
 			name = "ex-bon-sim",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",       draw_background = true},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/bones-03.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -119,8 +117,7 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-sim",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",      draw_background = true},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -140,8 +137,7 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-sim",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",      draw_background = true},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -161,9 +157,8 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-sim",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",    draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",     scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
@@ -185,9 +180,8 @@ py.autorecipes {
 			name = "ex-ski-sim",
 			icons =
 			{
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",    draw_background = true},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/skull.png",    icon_size = 64, scale = 0.25, shift = {-7.5, -7.5}},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png", icon_size = 64},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/skull.png",       icon_size = 64, scale = 0.25, shift = {-7.5, -7.5}},
 			},
 		},
 		--fat simik rendering
@@ -206,8 +200,7 @@ py.autorecipes {
 			tech = "orexigenic",
 			name = "ex-fat-sim",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",      draw_background = true},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux-fat.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,

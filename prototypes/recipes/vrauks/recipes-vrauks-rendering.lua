@@ -62,8 +62,7 @@ py.autorecipes {
 			tech = "nanochondria",
 			name = "ex-bra-vrauks",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",    draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",       draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/brain-05.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -83,8 +82,7 @@ py.autorecipes {
 			tech = "anabolic-rna",
 			name = "ex-me-vrauks",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",      draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/meat-01.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -104,8 +102,7 @@ py.autorecipes {
 			tech = "antitumor",
 			name = "ex-gut-vrauks",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",      draw_background = true},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
 				{icon = "__pyalienlifegraphics__/graphics/icons/mip/guts-07.png", scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
@@ -125,9 +122,8 @@ py.autorecipes {
 			tech = "recombinant-ery",
 			name = "ex-blo-vrauks",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png",   draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",      draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png", icon_size = 64, scale = 0.25, shift = {-7.5, -7.5}},
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png", icon_size = 64},
+				{icon = "__pyalienlifegraphics__/graphics/icons/formic-acid.png",  icon_size = 64, scale = 0.25, shift = {-7.5, -7.5}},
 			},
 			icon_size = 64,
 		},
@@ -146,9 +142,8 @@ py.autorecipes {
 			tech = "reca",
 			name = "ex-ski-vrauks",
 			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",    draw_background = true},
-				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",    scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics__/graphics/icons/caged-vrauks.png"},
+				{icon = "__pyalienlifegraphics__/graphics/icons/chitin.png",      scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
