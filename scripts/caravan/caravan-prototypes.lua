@@ -473,7 +473,7 @@ py.on_event(py.events.on_init(), function(changes)
         for _, condition in pairs(interrupt_data.conditions or {}) do
             local elem_value = condition.elem_value
             if elem_value ~= nil then
-                local elem_type = condition.type:find("fluid") and "fluid" or "item"
+                local elem_type = (condition.type:find("fluid") or condition.type:find("tank")) and "fluid" or "item"
                 condition.elem_value = migrate_proto(elem_value, elem_type, migrations)
                 if condition.elem_value == nil then
                     error_caravan(interrupt_name, elem_value, elem_type)
