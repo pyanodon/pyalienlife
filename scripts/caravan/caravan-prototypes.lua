@@ -422,14 +422,21 @@ local function migrate_proto(name, type_name, migrations)
     end
     return nil
 end
+local function get_elem_type(condition_or_action_type)
+    if condition_or_action_type:find("fluid") or condition_or_action_type:find("tank") then
+        return "fluid"
+    end
+    return "item"
+end
 local function migrate_action(action, caravan_data, migrations)
     local prev_value = action.elem_value
     if prev_value == nil then
         return
     end
-    action.elem_value = migrate_proto(prev_value, "item", migrations)
+    local elem_type = get_elem_type(action.type)
+    action.elem_value = migrate_proto(prev_value, elem_type, migrations)
     if not action.elem_value then
-        error_caravan(caravan_data, prev_value, "item")
+        error_caravan(caravan_data, prev_value, elem_type)
     end
 end
 local function migrate_circuit_condition(condition, caravan_data, migrations)
@@ -473,7 +480,7 @@ py.on_event(py.events.on_init(), function(changes)
         for _, condition in pairs(interrupt_data.conditions or {}) do
             local elem_value = condition.elem_value
             if elem_value ~= nil then
-                local elem_type = (condition.type:find("fluid") or condition.type:find("tank")) and "fluid" or "item"
+                local elem_type = get_elem_type(condition.type)
                 condition.elem_value = migrate_proto(elem_value, elem_type, migrations)
                 if condition.elem_value == nil then
                     error_caravan(interrupt_name, elem_value, elem_type)
