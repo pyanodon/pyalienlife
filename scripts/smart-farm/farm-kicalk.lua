@@ -1,6 +1,5 @@
-local farm =
-{
-    seed = "replicator-kicalk", --the seed being planted
+return {
+    name = "replicator-kicalk", -- the seed being planted (item launched)
     crop = "kicalk-tree",       --the 'ore' that is spawned
     recipes =                   --all the recipes that use these seeds to grow the crop
     {
@@ -46,5 +45,3 @@ local farm =
         },
     }
 }
-
-return farm

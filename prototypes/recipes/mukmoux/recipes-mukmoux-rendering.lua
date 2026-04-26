@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "mukmoux",
 			name = "full-render-mukmoux",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-mukmoux.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png",   draw_background = true}
+			}
 		},
 		--brain mukmoux rendering
 		{

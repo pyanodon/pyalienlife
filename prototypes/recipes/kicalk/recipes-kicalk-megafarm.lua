@@ -13,6 +13,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 1},
     },
+    order = "k-a-a"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -29,6 +30,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 2},
     },
+    order = "k-a-b"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -46,6 +48,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 3},
     },
+    order = "k-a-c"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -65,6 +68,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 4},
     },
+    order = "k-a-d"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -85,6 +89,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 5},
     },
+    order = "k-a-e"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -105,6 +110,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 6},
     },
+    order = "k-a-f"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -125,6 +131,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 7},
     },
+    order = "k-a-g"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
@@ -145,6 +152,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 8},
     },
+    order = "k-a-h"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
 RECIPE {
@@ -166,6 +174,7 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 9},
     },
+    order = "k-a-i"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
 RECIPE {
@@ -187,4 +196,5 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 10},
     },
+    order = "k-a-j"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")

@@ -373,6 +373,12 @@ if mods.autotech then
     config.tech_cost_science_pack_tiers["utility-science-pack"] = 9
     config.tech_cost_science_pack_tiers["space-science-pack"] = 10
 
+    config.tech_cost_nonhalved_packs["py-science-pack-4"] = true
+    config.tech_cost_nonhalved_packs["utility-science-pack"] = true
+    config.tech_cost_nonhalved_packs["space-science-pack"] = true
+
+    config.tech_cost_nonprogression_packs["military-science-pack"] = true
+
     config.tech_cost_science_packs_per_tier = {1, 2, 3, 6, 10, 20, 30, 60, 100, 200}
     config.tech_cost_additional_multipliers.pyrrhic = 2
     config.tech_cost_starting_cost = 60

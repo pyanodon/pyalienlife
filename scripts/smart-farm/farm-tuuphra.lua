@@ -1,6 +1,5 @@
-local farm =
-{
-    seed = "replicator-tuuphra", --the seed being planted
+return {
+    name = "replicator-tuuphra", -- the seed being planted (item launched)
     crop = "tuuphra-tuber",      --the 'ore' that is spawned
     recipes =                    --all the recipes that use these seeds to grow the crop
     {
@@ -46,5 +45,3 @@ local farm =
         },
     }
 }
-
-return farm

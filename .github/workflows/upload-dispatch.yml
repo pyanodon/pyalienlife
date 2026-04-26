@@ -1,0 +1,12 @@
+name: Mod Portal Upload
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  portal-upload:
+    name: "Upload to mod portal"
+    uses: pyanodon/pyanodontests/.github/workflows/portal-upload.yml@v1
+    secrets: inherit

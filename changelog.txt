@@ -1,6 +1,60 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.64
+Date: ???
+  Changes:
+    - Fixed failure migrating certain fluid caravan interrupts
+    - Fixed pipette food selection on caravan food slots having incorrect priority
+---------------------------------------------------------------------------------------------------
+Version: 3.0.63
+Date: 2026-03-28
+  Changes:
+    - Clarified the descriptions for the fastwood forestry TURD path 2 and 3
+    - Fixed arqad queen production statistics issues
+    - Removed productivity watermark from botanical nursery recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1360
+    - Allowed sea sponges mk02+ from sea sponge sprouts mk02+ to accept productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1335
+    - Fixed cadaveric arum smart farm recipe 2 being the same as recipe 3. Resolves https://github.com/pyanodon/pybugreports/issues/1358
+    - Switched smart farm autolaunch hotfix to proper runtime API call introduced in 2.0.73
+    - Fixed smart farms not working with most plants on new saves
+    - Removed part of the smart farm remote API due to engine constraints
+    - Fixed parts of the caravan interrupt GUI being hidden if too many conditions or targets were added. Resolves https://github.com/pyanodon/pybugreports/issues/1325
+    - Fixed composter not showing working animation when working. Resolves https://github.com/pyanodon/pybugreports/issues/1257
+    - Fixed cytostatics 2 not accepting productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1393
+    - Removed the period from smart farm package technology locales
+    - Added flying fluid caravans (thanks, FreezingSnail!)
+    - Added "fill until" and "empty until" fluid caravan actions (thanks, charleycrissman!)
+    - Improved wyrmhole performance when scaling. Resolves https://github.com/pyanodon/pybugreports/issues/1404
+    - Fixed poor recipe icon placement for smart farms. Resolves https://github.com/pyanodon/pybugreports/issues/1387
+    - Fixed rendering icons being inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1080
+    - Updated specialized rendering icons to reflect normal rendering icon
+---------------------------------------------------------------------------------------------------
+Version: 3.0.62
+Date: 2026-01-05
+  Changes:
+    - Added actually correct Dutch locale files. Resolves https://github.com/pyanodon/pybugreports/issues/1305
+    - Fix smart farms not working after a reload. Resolves https://github.com/pyanodon/pybugreports/issues/1346
+---------------------------------------------------------------------------------------------------
+Version: 3.0.61
+Date: 2025-12-28
+  Changes:
+    - New cottongut stud icons
+    - Removed mk01 indicator from sawblade and cottongut stud
+    - Added Spanish locale courtesy of @Ruby-Nova
+    - Added German locale courtesy of Spunk42
+    - Fixed smart farm recipes being out of order
+    - Fixed module icon rendering order resulting in weird shadows. Resolves https://github.com/pyanodon/pybugreports/issues/1285
+    - Added checks to ensure smart farms auto-launch (thanks, skofisk!). Resolves https://github.com/pyanodon/pybugreports/issues/817
+    - Fixed certain recipes missing layered icons. Resolves https://github.com/pyanodon/pybugreports/issues/1268
+    - Fixed Starch MK01, Molecular Decohesion MK01, and Creature Chamber TURD being locked behind Domestication MK01. Resolves https://github.com/pyanodon/pybugreports/issues/1289#issuecomment-3610942618
+    - Re-added research cost halving when entering a new tier before Py4
+  Scripting:
+    - Exposed TURD selections, modules, and machine replacements via remote interface functions (get_turd_selections, get_turd_selection, get_unlocked_modules, get_unlocked_module, get_machine_replacements, get_tech_upgrades, get_tech_upgrade, get_not_selected_constant)
+    - Expose digosaurus mining categories via remote interface functions (add_mining_category, remove_mining_category)
+    - Expose digosaurus food via remote interface functions (add_food, remove_food)
+    - Exposed smart farm silo scripting via remote interface function add_rocket_silo
+    - Exposed smart farm launch scripting via remote interface function add_launch_products
+---------------------------------------------------------------------------------------------------
 Version: 3.0.60
-Date: ????
+Date: 2025-11-02
   Changes:
     - Fixed typo in Dig-o-saurus locale. Resolves https://github.com/pyanodon/pybugreports/issues/1233
     - Caravans: warnings now respect "Enable Warning Icon Blinking" setting
@@ -80,6 +134,7 @@ Date: 2025-08-23
     - When selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
     - Reduce actual vatbrain radius by one tile match visible vatbrain radius. See https://github.com/pyanodon/pybugreports/issues/1062
     - Fix actual vatbrain radius being offset by one tile to the east and south. See https://github.com/pyanodon/pybugreports/issues/1062
+    - Biofluid networks now support provider priority
     - Caravans: when selecting view on map with an outpost selected, the map view now centers on the outpost rather than the caravan. Resolves https://github.com/pyanodon/pybugreports/issues/1170
     - Caravans: fixed that ESC/E wouldn't close a caravan menu when opened from a caravan outpost.
     - Caravans: fixed scroll pane overlapping buttons in outpost's caravan view

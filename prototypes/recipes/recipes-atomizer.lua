@@ -671,5 +671,6 @@ if mods.pyalternativeenergy then
         results = {
             {type = "fluid", name = "geothermal-water", amount = 50, temperature = 3000},
         },
+        -- icons = py.composite_icon("geothermal-water", "chitin") TODO enable once linearization is done, geowater doesnt exist when this is ran
     }:add_unlock("molecular-decohesion")
 end

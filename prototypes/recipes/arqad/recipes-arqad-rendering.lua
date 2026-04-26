@@ -38,8 +38,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "arqad",
 			name = "full-render-arqads",
-			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-arqad.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png",    draw_background = true}
+			}
 		},
 		{
 			ingredients =

@@ -27,8 +27,10 @@ py.autorecipes {
 			crafting_speed = 40,
 			tech = "schrodinger-antelope",
 			name = "full-render-antelope",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-antelope.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/antelope.png",  draw_background = true}
+			}
 		},
 	}
 }

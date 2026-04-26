@@ -15,6 +15,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 2},
     },
+    order = "ra-a"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -32,6 +33,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 3},
     },
+    order = "ra-b"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -49,6 +51,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 4},
     },
+    order = "ra-c"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -67,6 +70,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 5},
     },
+    order = "ra-d"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -85,6 +89,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 6},
     },
+    order = "ra-e"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -104,6 +109,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 7},
     },
+    order = "ra-f"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -121,6 +127,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 8},
     },
+    order = "ra-g"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -141,4 +148,5 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 11},
     },
+    order = "ra-j"
 }:add_unlock("mega-farm-ralesia")

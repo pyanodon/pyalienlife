@@ -775,6 +775,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 8},
     },
+    order = "ra-h"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
@@ -794,6 +795,7 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 9},
     },
+    order = "ra-i"
 }:add_unlock("mega-farm-ralesia")
 
 --------------------------rennea mega farm----------------
@@ -814,6 +816,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 8},
     },
+    order = "ren-a-h"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -833,6 +836,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 9},
     },
+    order = "ren-a-i"
 }:add_unlock("mega-farm-rennea")
 
 --------------------------tuuphra mega farm----------------
@@ -854,6 +858,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 8},
     },
+    order = "ta-h"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -874,6 +879,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 9},
     },
+    order = "ta-i"
 }:add_unlock("mega-farm-tuuphra")
 
 --------------------------grod mega farm----------------
@@ -896,6 +902,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 9},
     },
+    order = "grod-i"
 }:add_unlock("mega-farm-grod")
 
 --------------------------yotoi mega farm----------------
@@ -920,6 +927,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 9},
     },
+    order = "ya-a-i"
 }:add_unlock("mega-farm-yotoi")
 
 --------------------------yotoi fruit mega farm----------------
@@ -945,6 +953,7 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 9},
     },
+    order = "ya-f-i"
 }:add_unlock("mega-farm-yotoi")
 
 
@@ -1008,7 +1017,7 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 2},
     },
-    icons = py.composite_icon("wood-seeds", "phosphate-rock")
+    icons = py.composite_icon("phosphate-rock", "wood-seeds")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
@@ -1039,7 +1048,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "methane", amount = 50}
-    }
+    },
+    icons = py.composite_icon("methane", "gas-bladder")
 }:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
@@ -1053,7 +1063,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ammonia", amount = 40}
-    }
+    },
+    icons = py.composite_icon("ammonia", "gas-bladder")
 }:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
@@ -1067,7 +1078,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "propene", amount = 35}
-    }
+    },
+    icons = py.composite_icon("propene", "gas-bladder")
 }:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
@@ -1081,7 +1093,8 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ethylene", amount = 30}
-    }
+    },
+    icons = py.composite_icon("ethylene", "gas-bladder")
 }:add_unlock("phagnot-mk03").category = "gas-refinery"
 
 RECIPE {

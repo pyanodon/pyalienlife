@@ -39,8 +39,10 @@ py.autorecipes {
 			},
 			tech = "rendering",
 			name = "full-render-vrauks",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",    draw_background = true}
+			}
 		},
 		--brain vrauks rendering
 		{

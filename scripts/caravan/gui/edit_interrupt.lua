@@ -126,6 +126,7 @@ function P.build_conditions_pane(parent)
     -- This is 400 maximum width by default (inherited from style), we need it a bit wider
     pane.style.width = 500
     pane.style.natural_width = 500
+    pane.style.minimal_height = 90
 
     pane.style.vertically_stretchable = false
     P.build_conditions_flow(pane)
@@ -200,6 +201,7 @@ function P.build_targets_pane(parent)
     -- This is 400 maximum width by default (inherited from style), we need it a bit wider
     pane.style.width = 500
     pane.style.natural_width = 500
+    pane.style.minimal_height = 90
 
     pane.style.vertically_stretchable = false
     P.build_targets_flow(pane)

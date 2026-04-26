@@ -43,8 +43,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "kmauts",
 			name = "full-render-kmauts",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-kmauts.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png",    draw_background = true}
+			}
 		},
 		--brain kmauts rendering
 		{

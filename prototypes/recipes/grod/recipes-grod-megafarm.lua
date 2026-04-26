@@ -12,6 +12,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 1},
     },
+    order = "grod-a"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
@@ -27,6 +28,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 2},
     },
+    order = "grod-b"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
@@ -43,6 +45,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 3},
     },
+    order = "grod-c"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
@@ -60,6 +63,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 4},
     },
+    order = "grod-d"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
@@ -78,6 +82,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 5},
     },
+    order = "grod-e"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
@@ -97,6 +102,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 6},
     },
+    order = "grod-f"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
@@ -117,6 +123,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 7},
     },
+    order = "grod-g"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
@@ -138,6 +145,7 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 8},
     },
+    order = "grod-h"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
@@ -159,4 +167,5 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 10},
     },
+    order = "grod-j"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}

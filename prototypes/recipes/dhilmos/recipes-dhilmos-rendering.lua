@@ -38,8 +38,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "dhilmos",
 			name = "full-render-dhilmoss",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-dhilmos.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png",    draw_background = true}
+			}
 		},
 		--meat dhilmos rendering
 		{

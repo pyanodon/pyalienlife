@@ -15,6 +15,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 1},
     },
+    order = "ren-a-a"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -33,6 +34,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 2},
     },
+    order = "ren-a-b"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -52,6 +54,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 3},
     },
+    order = "ren-a-c"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -71,6 +74,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 4},
     },
+    order = "ren-a-d"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -91,6 +95,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 5},
     },
+    order = "ren-a-e"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -111,6 +116,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 6},
     },
+    order = "ren-a-f"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -129,6 +135,7 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 7},
     },
+    order = "ren-a-g"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
@@ -149,4 +156,5 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 10},
     },
+    order = "ren-a-j"
 }:add_unlock("mega-farm-rennea")

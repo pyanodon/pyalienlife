@@ -1463,6 +1463,7 @@ RECIPE {
     results = {
         {type = "item", name = "raw-coal", amount = 10}
     },
+    icons = py.composite_icon("raw-coal", "navens")
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
 

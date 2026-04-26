@@ -158,7 +158,7 @@ local function on_carrot_used(player, cursor_position)
         if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-            if entity.name == "outpost" or entity.name == "outpost-fluid" or entity.name == "outpost-aerial" then
+            if entity.name == "outpost" or entity.name == "outpost-fluid" or entity.name == "outpost-aerial" or entity.name == "outpost-aerial-fluid" then
                 local action_id = last_opened.action_id
                 interrupt_data.conditions[action_id].entity = entity
                 interrupt_data.conditions[action_id].localised_name = ""

@@ -14,6 +14,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 1},
     },
+    order = "ta-a"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -31,6 +32,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 2},
     },
+    order = "ta-b"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -49,6 +51,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 3},
     },
+    order = "ta-c"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -68,6 +71,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 4},
     },
+    order = "ta-d"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -87,6 +91,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 5},
     },
+    order = "ta-e"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -107,6 +112,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 6},
     },
+    order = "ta-f"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -126,6 +132,7 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 7},
     },
+    order = "ta-g"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
@@ -146,4 +153,5 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 10},
     },
+    order = "ta-j"
 }:add_unlock("mega-farm-tuuphra")

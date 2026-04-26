@@ -350,7 +350,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     -- make these two conditional on type
-    local is_solid = not caravan_data.entity.name:find("^fluidavan")
+    local is_solid = not caravan_data.entity.name:find("^fluidavan") and not caravan_data.entity.name:find("^fluidflyavan")
     local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
     local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
@@ -429,14 +429,16 @@ py.on_event("py_caravan_pipette", function(event)
             set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
         end
     else -- otherwise find the most valuable food in the player inventory and put it into the cursor
-        local sorted_foods = table.deepcopy(caravan_prototypes[caravan_data.entity.name].favorite_foods)
-        table.sort(sorted_foods, function(a, b) return a > b end)
-        for food_name in pairs(sorted_foods) do
-            local _, index = main_inventory.find_item_stack(food_name)
-            if index then
-                set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
-                break
+        local best_slot, best_value = nil, 0
+        for food_name, food_value in pairs(caravan_prototypes[caravan_data.entity.name].favorite_foods) do
+            local _, new_slot = main_inventory.find_item_stack(food_name)
+            if new_slot and food_value > best_value then
+                best_slot = new_slot
+                best_value = food_value
             end
+        end
+        if best_value > 0 then
+            set_stack_to_cursor(player, main_inventory, best_slot, function(s) return s end)
         end
     end
 end)
