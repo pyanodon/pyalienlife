@@ -2,6 +2,7 @@
 Version: 3.0.64
 Date: ???
   Changes:
+    - Changes around the locations of alienlife items to be more sensical
     - Fixed failure migrating certain fluid caravan interrupts
     - Fixed pipette food selection on caravan food slots having incorrect priority
 ---------------------------------------------------------------------------------------------------
