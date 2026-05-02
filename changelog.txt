@@ -6,6 +6,7 @@ Date: ???
     - Changes around the locations of alienlife items to be more sensical
     - Fixed failure migrating certain fluid caravan interrupts
     - Fixed pipette food selection on caravan food slots having incorrect priority
+    - Fixed a crash with oculae attempting to index a player without a physical character. Resolves https://github.com/pyanodon/pybugreports/issues/1425
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.63
 Date: 2026-03-28
