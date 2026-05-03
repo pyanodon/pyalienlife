@@ -10,6 +10,7 @@ Date: ???
     - Fixed ocula not being able to deliver complex item types. Resolves https://github.com/pyanodon/pybugreports/issues/1376
     - Fixed mutagenic infusion dumping items on ground when going to/from ulric man. Resolves https://github.com/pyanodon/pybugreports/issues/1314
     - Removed extra mutagenic infusion inventory indices, because you can only use it in the character controller anyway
+    - Fixed a crash with caravan interrupt notifications between save loads. Resolves https://github.com/pyanodon/pybugreports/issues/1440
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.63
 Date: 2026-03-28

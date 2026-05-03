@@ -303,10 +303,10 @@ local function redraw_alert(player, entity, alert_name)
         true
     )
 end
+-- register the func if necessary
+py.on_tick_funcs["draw_alert_with_duration"] = redraw_alert
 --- Draws an alert for 10s * cycles
 local function draw_alert_with_duration(player, entity, alert_name, cycles)
-    -- register the func if necessary
-    py.on_tick_funcs["draw_alert_with_duration"] = redraw_alert
     local args = {player, entity, alert_name}
     redraw_alert(table.unpack(args)) -- initial 10s
     for i = 1, cycles - 1 do         -- refresh every 10s (600ticks) after
