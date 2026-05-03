@@ -91,6 +91,7 @@ function Oculua.process_player(player)  -- #TODO fuck quality
             if filter.import_from and filter.import_from.name ~= player.surface.name then goto continue end
 
             local item = filter.value.name
+            if not prototypes.item[item] then goto continue end
 
             local needed = (filter.min or 0) - (incoming[item] or 0) - (inventory[item] or 0) - (logistic_network_incoming[item] or 0)
             if needed <= 0 then goto continue end
