@@ -1,6 +1,6 @@
 Ulric = {}
 
-Ulric.transformation_time = 200 --60 * 60 * 10 -- ticks
+Ulric.transformation_time = 60 * 60 * 10 -- ticks
 
 ---This is called whenever an entity is swapped out for an identical entity. For example ulric man steroids transforming the player character into a different entity.
 ---@param old LuaEntity
