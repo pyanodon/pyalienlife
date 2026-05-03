@@ -1,6 +1,6 @@
 Ulric = {}
 
-Ulric.transformation_time = 60 * 60 * 10 -- ticks
+Ulric.transformation_time = 200 --60 * 60 * 10 -- ticks
 
 ---This is called whenever an entity is swapped out for an identical entity. For example ulric man steroids transforming the player character into a different entity.
 ---@param old LuaEntity
@@ -100,21 +100,17 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
     end
 end)
 
-local inventories = {
-    defines.inventory.character_main,
-    defines.inventory.god_main,
-    defines.inventory.editor_main,
+local inventories = { -- we only care about these inventories, you can't use ulric man any other time
+    defines.inventory.character_armor,
     defines.inventory.character_guns,
     defines.inventory.character_ammo,
-    defines.inventory.character_armor,
     defines.inventory.character_vehicle,
     defines.inventory.character_trash,
-    defines.inventory.editor_guns,
-    defines.inventory.editor_ammo,
-    defines.inventory.editor_armor,
+    defines.inventory.character_main,
 }
-Ulric.transfer_character_inventory = function(old, new)
-    for _, inventory in pairs(inventories) do
+Ulric.transfer_character_inventory = function(old, new, controller)
+    -- transfer stacks
+    for _, inventory in pairs(inventories or {}) do
         local old_inventory = old.get_inventory(inventory)
         if old_inventory then
             local new_inventory = new.get_inventory(inventory) or new.get_main_inventory()
@@ -128,7 +124,6 @@ Ulric.transfer_character_inventory = function(old, new)
                         new.surface.spill_item_stack {position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false}
                     end
                 end
-                old_stack.clear()
             end
             if old_inventory.is_filtered() and new_inventory.supports_filters() then
                 for i = 1, math.min(#old_inventory, #new_inventory) do
@@ -151,7 +146,7 @@ Ulric.transfer_character_inventory = function(old, new)
     if old_point and new_point then
         new_point.trash_not_requested = old_point.trash_not_requested
         new_point.enabled = old_point.enabled
-        
+
         for _, section in pairs(old_point.sections) do
             local new_section = new_point.add_section(section.group)
             new_section.active = section.active
