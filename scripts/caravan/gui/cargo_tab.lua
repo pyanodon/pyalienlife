@@ -58,7 +58,7 @@ function P.build_cargo_flow(parent, player, caravan_data, enabled)
     local flow = parent.add {type = "flow", direction = "vertical", name = "cargo_flow", enabled = enabled}
     flow.style.vertical_spacing = 8
     flow.add {type = "label", caption = "Food"}
-    inv.build_fuel_inventory(flow, caravan_data)
+    inv.build_fuel_inventory(flow, player, caravan_data)
     flow.add {type = "line", style = "inside_shallow_frame_with_padding_line"}.style.horizontally_stretchable = true
 
     if caravan_data.entity.name:find("^fluidavan") or caravan_data.entity.name:find("^fluidflyavan")then
@@ -66,7 +66,7 @@ function P.build_cargo_flow(parent, player, caravan_data, enabled)
         P.build_fluid_flow(flow, caravan_data)
     else
         flow.add {type = "label", caption = {"entity-name.caravan"}}
-        inv.build_caravan_inventory(flow, caravan_data)
+        inv.build_caravan_inventory(flow, player, caravan_data)
     end
     flow.add {type = "line", style = "inside_shallow_frame_with_padding_line"}.style.horizontally_stretchable = true
     flow.add {type = "label", caption = "Character"}

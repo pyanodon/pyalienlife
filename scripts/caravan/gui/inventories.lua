@@ -96,7 +96,7 @@ local function build_inventory_table(parent, inventory, name, tags, default_empt
     return inventory_table
 end
 
-local function build_inventory_flow(parent, inventory, name, tags, default_empty_slot)
+local function build_inventory_flow(parent, player, inventory, name, tags, default_empty_slot)
     local flow = parent.add {type = "flow", style = "packed_horizontal_flow", tags = tags}
     flow.style.vertical_align = "center"
     flow.style.horizontal_spacing = 10
@@ -108,14 +108,16 @@ local function build_inventory_flow(parent, inventory, name, tags, default_empty
 
     build_inventory_table(pane, inventory, name, tags, default_empty_slot)
 
-    storage.gui_elements_by_name[name] = flow
+    local elems = storage.gui_elements_by_name
+    elems[player.index] = elems[player.index] or {}
+    elems[player.index][name] = flow
     return flow
 end
 
-local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, name, tags)
+local function build_fuel_inventory_flow(parent, player, caravan_data, fuel_inventory, name, tags)
     local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[caravan_data.entity.name].favorite_foods, "caravan-gui")
 
-    local flow = build_inventory_flow(parent, fuel_inventory, name, tags, {sprite = "slot_icon_food", tooltip = favorite_food_tooltip})
+    local flow = build_inventory_flow(parent, player, fuel_inventory, name, tags, {sprite = "slot_icon_food", tooltip = favorite_food_tooltip})
     local bar = flow.add {type = "progressbar", style = "burning_progressbar"}
     bar.value = caravan_data.fuel_bar / caravan_data.last_eaten_fuel_value
     bar.style.horizontally_stretchable = true
@@ -135,49 +137,55 @@ function P.build_character_inventory(parent, player, caravan_data)
 
     local name = "py_caravan_player_inventory"
     local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
-    build_inventory_flow(inventory_frame, inventory, name, {unit_number = caravan_data.unit_number})
+    build_inventory_flow(inventory_frame, player, inventory, name, {unit_number = caravan_data.unit_number})
 end
 
-function P.build_caravan_inventory(parent, caravan_data)
+function P.build_caravan_inventory(parent, player, caravan_data)
     local name = "py_caravan_caravan_inventory"
     local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
-    build_inventory_flow(inventory_frame, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
+    build_inventory_flow(inventory_frame, player, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
 end
 
-function P.build_fuel_inventory(parent, caravan_data)
+function P.build_fuel_inventory(parent, player, caravan_data)
     local name = "py_caravan_fuel_inventory"
     local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
-    build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
+    build_fuel_inventory_flow(inventory_frame, player, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.update_character_inventory(player, caravan_data)
     local name = "py_caravan_player_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local player_elems = storage.gui_elements_by_name[player.index]
+    local elem = player_elems and player_elems[name]
+    if not elem or not elem.valid then return end
     local parent = elem.parent
     elem.destroy()
 
     local inventory = get_inventory(player)
     inventory.sort_and_merge()
 
-    build_inventory_flow(parent, inventory, name, {unit_number = caravan_data.unit_number})
+    build_inventory_flow(parent, player, inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.update_caravan_inventory(player, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local player_elems = storage.gui_elements_by_name[player.index]
+    local elem = player_elems and player_elems[name]
+    if not elem or not elem.valid then return end
     local parent = elem.parent
     elem.destroy()
 
-    build_inventory_flow(parent, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
+    build_inventory_flow(parent, player, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.update_fuel_inventory(player, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local player_elems = storage.gui_elements_by_name[player.index]
+    local elem = player_elems and player_elems[name]
+    if not elem or not elem.valid then return end
     local parent = elem.parent
     elem.destroy()
 
-    build_fuel_inventory_flow(parent, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
+    build_fuel_inventory_flow(parent, player, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 local function is_character_inventory(inventory)

@@ -15,7 +15,7 @@ function P.build_main_frame(parent, fallback_location)
     return frame
 end
 
-function P.build_title_bar_flow(parent, tags)
+function P.build_title_bar_flow(parent, player, tags)
     local flow = parent.add {type = "flow", name = "title_bar_flow", direction = "horizontal", style = "frame_header_flow"}
 
     flow.add {type = "label", caption = {"caravan-gui.add-interrupt-frame-title"}, style = "frame_title"}
@@ -30,7 +30,9 @@ function P.build_title_bar_flow(parent, tags)
     local search_button = flow.add {type = "sprite-button", name = "py_caravan_add_interrupt_search_button", style = "frame_action_button", sprite = "utility/search", tags = tags}
     flow.add {type = "sprite-button", name = "py_caravan_add_interrupt_close_button", style = "close_button", sprite = "utility/close", tags = tags}
 
-    storage.gui_elements_by_name[search_button.name] = search_button
+    local elems = storage.gui_elements_by_name
+    elems[player.index] = elems[player.index] or {}
+    elems[player.index][search_button.name] = search_button
     return flow
 end
 
@@ -83,15 +85,16 @@ function P.build_interrupt_list(parent, caravan_data, interrupts, tags)
 end
 
 ---@param parent LuaGuiElement
+---@param player LuaPlayer
 ---@param caravan_data table
 ---@param cursor_location GuiLocation?
 ---@return LuaGuiElement
-function P.build(parent, caravan_data, cursor_location)
+function P.build(parent, player, caravan_data, cursor_location)
     local tags = {unit_number = caravan_data.unit_number}
 
     local main_frame = P.build_main_frame(parent, cursor_location)
 
-    P.build_title_bar_flow(main_frame, tags)
+    P.build_title_bar_flow(main_frame, player, tags)
 
     local contents_frame = main_frame.add {type = "frame", name = "contents_frame", style = "inside_deep_frame", direction = "vertical", tags = tags}
     P.build_text_input(contents_frame, tags)
