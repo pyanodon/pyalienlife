@@ -46,6 +46,7 @@ local function on_add_interrupt_confirmed(event)
 end
 
 local function on_edit_interrupt_confirmed(event)
+    local player = game.get_player(event.player_index)
     local label = event.element.parent.name_label
     local textfield = event.element.parent.py_edit_interrupt_textfield
     local edited_interrupt = storage.edited_interrupts[event.player_index]
@@ -66,7 +67,6 @@ local function on_edit_interrupt_confirmed(event)
         label.caption = new_name
         edited_interrupt.name = new_name
 
-        local player = game.get_player(event.player_index)
         CaravanGuiComponents.update_schedule_pane(player)
     end
 end
@@ -318,6 +318,8 @@ end
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = function(event)
     local player = game.get_player(event.player_index)
     local edited_interrupt = storage.edited_interrupts[event.player_index]
+
+    if CaravanGuiComponents.get_slider_frame(player) then return end -- you're not done editing!
 
     -- edge case: need to check the rename textfield when 'Save interrupt' is pressed instead of enter
     local textfield = event.element.parent.parent.inside_frame.subheader_frame.contents_flow.py_edit_interrupt_textfield
