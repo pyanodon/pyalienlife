@@ -17,5 +17,5 @@ for _, surface in pairs(game.surfaces) do
     end
 end
 if killed_ninjas > 0 then
-    game.print("Killed " .. killed_ninjas .. " ninjas")
+    log("Killed " .. killed_ninjas .. " ninjas")
 end
