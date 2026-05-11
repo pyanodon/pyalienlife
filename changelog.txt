@@ -12,6 +12,7 @@ Date: ???
     - Removed extra mutagenic infusion inventory indices, because you can only use it in the character controller anyway
     - Fixed a crash when indexing non-items in the player logistics requests. Resolves https://github.com/pyanodon/pybugreports/issues/1414
     - Fixed a crash with caravan interrupt notifications between save loads. Resolves https://github.com/pyanodon/pybugreports/issues/1440
+    - Updated Russian locale courtesy of @Astorin
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.63
 Date: 2026-03-28
