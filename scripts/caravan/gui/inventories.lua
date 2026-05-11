@@ -97,18 +97,16 @@ local function build_inventory_table(parent, inventory, name, tags, default_empt
 end
 
 local function build_inventory_flow(parent, inventory, name, tags, default_empty_slot)
-    local flow = parent.add {type = "flow", style = "packed_horizontal_flow", tags = tags}
+    local flow = parent.add {type = "flow", name = "horizontal_flow", style = "packed_horizontal_flow", tags = tags}
     flow.style.vertical_align = "center"
     flow.style.horizontal_spacing = 10
 
-    local pane = flow.add {type = "scroll-pane"}
+    local pane = flow.add {type = "scroll-pane", name = "scroll_pane"}
     pane.style.natural_height = 150
     pane.horizontal_scroll_policy = "never"
     pane.vertical_scroll_policy = "auto"
 
     build_inventory_table(pane, inventory, name, tags, default_empty_slot)
-
-    storage.gui_elements_by_name[name] = flow
     return flow
 end
 
@@ -134,25 +132,29 @@ function P.build_character_inventory(parent, player, caravan_data)
     end
 
     local name = "py_caravan_player_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
+    local inventory_frame = parent.add {type = "frame", name = name, style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_caravan_inventory(parent, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
+    local inventory_frame = parent.add {type = "frame", name = name, style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_fuel_inventory(parent, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
+    local inventory_frame = parent.add {type = "frame", name = name, style = "inventory_frame", enabled = parent.enabled}
     build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
+end
+
+local function get_cargo_flow(player, cargo_type)
+    return CaravanGui.get_gui(player).entity_frame.tabbed_pane_frame.tabbed_pane.cargo_pane.cargo_flow[cargo_type].horizontal_flow
 end
 
 function P.update_character_inventory(player, caravan_data)
     local name = "py_caravan_player_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = get_cargo_flow(player, name)
     local parent = elem.parent
     elem.destroy()
 
@@ -164,7 +166,7 @@ end
 
 function P.update_caravan_inventory(player, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = get_cargo_flow(player, name)
     local parent = elem.parent
     elem.destroy()
 
@@ -173,7 +175,7 @@ end
 
 function P.update_fuel_inventory(player, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = get_cargo_flow(player, name)
     local parent = elem.parent
     elem.destroy()
 

@@ -29,8 +29,6 @@ function P.build_title_bar_flow(parent, tags)
     flow.add {type = "textfield", name = "py_caravan_add_interrupt_search_textfield", style = "search_popup_textfield", visible = false, tags = tags}
     local search_button = flow.add {type = "sprite-button", name = "py_caravan_add_interrupt_search_button", style = "frame_action_button", sprite = "utility/search", tags = tags}
     flow.add {type = "sprite-button", name = "py_caravan_add_interrupt_close_button", style = "close_button", sprite = "utility/close", tags = tags}
-
-    storage.gui_elements_by_name[search_button.name] = search_button
     return flow
 end
 
