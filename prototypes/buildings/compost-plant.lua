@@ -149,152 +149,152 @@ for i = 1, 4 do
                     },
                 },
             },
-        },
-        working_visualisations = {
-            {
-                north_position = util.by_pixel(-144, -112),
-                west_position = util.by_pixel(-144, -112),
-                south_position = util.by_pixel(-144, -112),
-                east_position = util.by_pixel(-144, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a1.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4
-                }
-            },
-            {
-                north_position = util.by_pixel(-144, -112),
-                west_position = util.by_pixel(-144, -112),
-                south_position = util.by_pixel(-144, -112),
-                east_position = util.by_pixel(-144, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a1-mask.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4,
-                    tint = py.tints[i]
-                }
-            },
-            {
-                north_position = util.by_pixel(-80, -112),
-                west_position = util.by_pixel(-80, -112),
-                south_position = util.by_pixel(-80, -112),
-                east_position = util.by_pixel(-80, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a2.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4
-                }
-            },
-            {
-                north_position = util.by_pixel(-80, -112),
-                west_position = util.by_pixel(-80, -112),
-                south_position = util.by_pixel(-80, -112),
-                east_position = util.by_pixel(-80, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a2-mask.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4,
-                    tint = py.tints[i]
-                }
-            },
-            {
-                north_position = util.by_pixel(-16, -112),
-                west_position = util.by_pixel(-16, -112),
-                south_position = util.by_pixel(-16, -112),
-                east_position = util.by_pixel(-16, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a3.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4
-                }
-            },
-            {
-                north_position = util.by_pixel(-16, -112),
-                west_position = util.by_pixel(-16, -112),
-                south_position = util.by_pixel(-16, -112),
-                east_position = util.by_pixel(-16, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a3-mask.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4,
-                    tint = py.tints[i]
-                }
-            },
-            {
-                north_position = util.by_pixel(48, -112),
-                west_position = util.by_pixel(48, -112),
-                south_position = util.by_pixel(48, -112),
-                east_position = util.by_pixel(48, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a4.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4
-                }
-            },
-            {
-                north_position = util.by_pixel(48, -112),
-                west_position = util.by_pixel(48, -112),
-                south_position = util.by_pixel(48, -112),
-                east_position = util.by_pixel(48, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a4-mask.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4,
-                    tint = py.tints[i]
-                }
-            },
-            {
-                north_position = util.by_pixel(112, -112),
-                west_position = util.by_pixel(112, -112),
-                south_position = util.by_pixel(112, -112),
-                east_position = util.by_pixel(112, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a5.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4
-                }
-            },
-            {
-                north_position = util.by_pixel(112, -112),
-                west_position = util.by_pixel(112, -112),
-                south_position = util.by_pixel(112, -112),
-                east_position = util.by_pixel(112, -112),
-                animation = {
-                    filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a5-mask.png",
-                    frame_count = 100,
-                    line_length = 32,
-                    width = 64,
-                    height = 512,
-                    animation_speed = 0.4,
-                    tint = py.tints[i]
-                }
+            working_visualisations = {
+                {
+                    north_position = util.by_pixel(-144, -112),
+                    west_position = util.by_pixel(-144, -112),
+                    south_position = util.by_pixel(-144, -112),
+                    east_position = util.by_pixel(-144, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a1.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4
+                    }
+                },
+                {
+                    north_position = util.by_pixel(-144, -112),
+                    west_position = util.by_pixel(-144, -112),
+                    south_position = util.by_pixel(-144, -112),
+                    east_position = util.by_pixel(-144, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a1-mask.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4,
+                        tint = py.tints[i]
+                    }
+                },
+                {
+                    north_position = util.by_pixel(-80, -112),
+                    west_position = util.by_pixel(-80, -112),
+                    south_position = util.by_pixel(-80, -112),
+                    east_position = util.by_pixel(-80, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a2.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4
+                    }
+                },
+                {
+                    north_position = util.by_pixel(-80, -112),
+                    west_position = util.by_pixel(-80, -112),
+                    south_position = util.by_pixel(-80, -112),
+                    east_position = util.by_pixel(-80, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a2-mask.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4,
+                        tint = py.tints[i]
+                    }
+                },
+                {
+                    north_position = util.by_pixel(-16, -112),
+                    west_position = util.by_pixel(-16, -112),
+                    south_position = util.by_pixel(-16, -112),
+                    east_position = util.by_pixel(-16, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a3.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4
+                    }
+                },
+                {
+                    north_position = util.by_pixel(-16, -112),
+                    west_position = util.by_pixel(-16, -112),
+                    south_position = util.by_pixel(-16, -112),
+                    east_position = util.by_pixel(-16, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a3-mask.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4,
+                        tint = py.tints[i]
+                    }
+                },
+                {
+                    north_position = util.by_pixel(48, -112),
+                    west_position = util.by_pixel(48, -112),
+                    south_position = util.by_pixel(48, -112),
+                    east_position = util.by_pixel(48, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a4.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4
+                    }
+                },
+                {
+                    north_position = util.by_pixel(48, -112),
+                    west_position = util.by_pixel(48, -112),
+                    south_position = util.by_pixel(48, -112),
+                    east_position = util.by_pixel(48, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a4-mask.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4,
+                        tint = py.tints[i]
+                    }
+                },
+                {
+                    north_position = util.by_pixel(112, -112),
+                    west_position = util.by_pixel(112, -112),
+                    south_position = util.by_pixel(112, -112),
+                    east_position = util.by_pixel(112, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a5.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4
+                    }
+                },
+                {
+                    north_position = util.by_pixel(112, -112),
+                    west_position = util.by_pixel(112, -112),
+                    south_position = util.by_pixel(112, -112),
+                    east_position = util.by_pixel(112, -112),
+                    animation = {
+                        filename = "__pyalienlifegraphics2__/graphics/entity/compost-plant/a5-mask.png",
+                        frame_count = 100,
+                        line_length = 32,
+                        width = 64,
+                        height = 512,
+                        animation_speed = 0.4,
+                        tint = py.tints[i]
+                    }
+                },
             },
         },
         fluid_boxes = {

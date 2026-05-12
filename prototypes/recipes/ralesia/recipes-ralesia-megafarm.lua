@@ -4,6 +4,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-1",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -22,6 +23,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-2",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -40,6 +42,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-3",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -58,6 +61,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-4",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -77,6 +81,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-5",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -96,6 +101,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-6",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -116,6 +122,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-7",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -134,6 +141,7 @@ RECIPE {
     type = "recipe",
     name = "ralesia-super-10",
     category = "ralesia-farm",
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {

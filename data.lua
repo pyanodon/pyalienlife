@@ -387,13 +387,16 @@ require "prototypes/creatures/caravan"
 require "prototypes/creatures/flying-caravan"
 require "prototypes/creatures/nuka-caravan"
 require "prototypes/creatures/fluid-caravan"
+require "prototypes/creatures/fluid-flying-caravan"
 data.raw.unit["caravan"].affected_by_tiles = false
 data.raw.unit["fluidavan"].affected_by_tiles = false
 data.raw.unit["flyavan"].affected_by_tiles = false
+data.raw.unit["fluidflyavan"].affected_by_tiles = false
 data.raw.unit["nukavan"].affected_by_tiles = false
 require "prototypes/buildings/outpost-fluid"
 require "prototypes/buildings/outpost"
 require "prototypes/buildings/outpost-aerial"
+require "prototypes/buildings/outpost-aerial-fluid"
 require "prototypes/creatures/digosaurus"
 require "prototypes/creatures/thikats"
 require "prototypes/creatures/work-o-dile"

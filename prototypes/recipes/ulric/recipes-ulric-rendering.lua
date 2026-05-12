@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "ulric",
 			name = "full-render-ulrics",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-ulric.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/ulric.png",     draw_background = true}
+			}
 		},
 		--brain ulric rendering
 		{

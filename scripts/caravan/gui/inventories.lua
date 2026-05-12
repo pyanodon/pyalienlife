@@ -97,18 +97,16 @@ local function build_inventory_table(parent, inventory, name, tags, default_empt
 end
 
 local function build_inventory_flow(parent, inventory, name, tags, default_empty_slot)
-    local flow = parent.add {type = "flow", style = "packed_horizontal_flow", tags = tags}
+    local flow = parent.add {type = "flow", name = "horizontal_flow", style = "packed_horizontal_flow", tags = tags}
     flow.style.vertical_align = "center"
     flow.style.horizontal_spacing = 10
 
-    local pane = flow.add {type = "scroll-pane"}
+    local pane = flow.add {type = "scroll-pane", name = "scroll_pane"}
     pane.style.natural_height = 150
     pane.horizontal_scroll_policy = "never"
     pane.vertical_scroll_policy = "auto"
 
     build_inventory_table(pane, inventory, name, tags, default_empty_slot)
-
-    storage.gui_elements_by_name[name] = flow
     return flow
 end
 
@@ -134,25 +132,29 @@ function P.build_character_inventory(parent, player, caravan_data)
     end
 
     local name = "py_caravan_player_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
+    local inventory_frame = parent.add {type = "frame", name = name, style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_caravan_inventory(parent, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
+    local inventory_frame = parent.add {type = "frame", name = name, style = "inventory_frame", enabled = parent.enabled}
     build_inventory_flow(inventory_frame, caravan_data.inventory, name, {unit_number = caravan_data.unit_number})
 end
 
 function P.build_fuel_inventory(parent, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local inventory_frame = parent.add {type = "frame", style = "inventory_frame", enabled = parent.enabled}
+    local inventory_frame = parent.add {type = "frame", name = name, style = "inventory_frame", enabled = parent.enabled}
     build_fuel_inventory_flow(inventory_frame, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
+end
+
+local function get_cargo_flow(player, cargo_type)
+    return CaravanGui.get_gui(player).entity_frame.tabbed_pane_frame.tabbed_pane.cargo_pane.cargo_flow[cargo_type].horizontal_flow
 end
 
 function P.update_character_inventory(player, caravan_data)
     local name = "py_caravan_player_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = get_cargo_flow(player, name)
     local parent = elem.parent
     elem.destroy()
 
@@ -164,7 +166,7 @@ end
 
 function P.update_caravan_inventory(player, caravan_data)
     local name = "py_caravan_caravan_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = get_cargo_flow(player, name)
     local parent = elem.parent
     elem.destroy()
 
@@ -173,7 +175,7 @@ end
 
 function P.update_fuel_inventory(player, caravan_data)
     local name = "py_caravan_fuel_inventory"
-    local elem = storage.gui_elements_by_name[name]
+    local elem = get_cargo_flow(player, name)
     local parent = elem.parent
     elem.destroy()
 
@@ -350,7 +352,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     -- make these two conditional on type
-    local is_solid = not caravan_data.entity.name:find("^fluidavan")
+    local is_solid = not caravan_data.entity.name:find("^fluidavan") and not caravan_data.entity.name:find("^fluidflyavan")
     local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
     local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
@@ -429,14 +431,16 @@ py.on_event("py_caravan_pipette", function(event)
             set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
         end
     else -- otherwise find the most valuable food in the player inventory and put it into the cursor
-        local sorted_foods = table.deepcopy(caravan_prototypes[caravan_data.entity.name].favorite_foods)
-        table.sort(sorted_foods, function(a, b) return a > b end)
-        for food_name in pairs(sorted_foods) do
-            local _, index = main_inventory.find_item_stack(food_name)
-            if index then
-                set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
-                break
+        local best_slot, best_value = nil, 0
+        for food_name, food_value in pairs(caravan_prototypes[caravan_data.entity.name].favorite_foods) do
+            local _, new_slot = main_inventory.find_item_stack(food_name)
+            if new_slot and food_value > best_value then
+                best_slot = new_slot
+                best_value = food_value
             end
+        end
+        if best_value > 0 then
+            set_stack_to_cursor(player, main_inventory, best_slot, function(s) return s end)
         end
     end
 end)

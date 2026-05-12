@@ -149,7 +149,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
         if slider_frame then
             slider_frame.destroy()
         elseif add_interrupt_frame then
-            local btn = storage.gui_elements_by_name["py_caravan_add_interrupt_search_button"]
+            local btn = add_interrupt_frame.title_bar_flow.py_caravan_add_interrupt_search_button
             if btn and btn.toggled then
                 AddInterruptGui.toggle_search_button(player)
             else

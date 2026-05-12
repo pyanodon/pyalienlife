@@ -36,8 +36,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "water-invertebrates-mk01",
 			name = "full-render-xyhiphoe",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xyhiphoe.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png",  draw_background = true}
+			}
 		},
 		--meat xyhiphoe rendering
 		{

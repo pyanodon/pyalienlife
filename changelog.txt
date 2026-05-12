@@ -1,10 +1,42 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.63
-Date: ????
+Version: 3.0.64
+Date: ???
   Changes:
+    - Biofluid networks now support provider priority
+    - Changes around the locations of alienlife items to be more sensical
+    - Fixed failure migrating certain fluid caravan interrupts
+    - Fixed pipette food selection on caravan food slots having incorrect priority
+    - Fixed a crash with oculae attempting to index a player without a physical character. Resolves https://github.com/pyanodon/pybugreports/issues/1425
+    - Fixed ocula not being able to deliver complex item types. Resolves https://github.com/pyanodon/pybugreports/issues/1376
+    - Fixed mutagenic infusion dumping items on ground when going to/from ulric man. Resolves https://github.com/pyanodon/pybugreports/issues/1314
+    - Removed extra mutagenic infusion inventory indices, because you can only use it in the character controller anyway
+    - Fixed a crash when indexing non-items in the player logistics requests. Resolves https://github.com/pyanodon/pybugreports/issues/1414
+    - Fixed a crash with caravan interrupt notifications between save loads. Resolves https://github.com/pyanodon/pybugreports/issues/1440
+    - Updated Russian locale courtesy of @Astorin
+    - Fixed that wyrmholes would leave behind invisible lamps with collisions
+    - Fixed that caravans would crash when triggering an interrupt on an newly empty schedule within one update cycle. Resolves https://github.com/pyanodon/pybugreports/issues/1267
+---------------------------------------------------------------------------------------------------
+Version: 3.0.63
+Date: 2026-03-28
+  Changes:
+    - Clarified the descriptions for the fastwood forestry TURD path 2 and 3
+    - Fixed arqad queen production statistics issues
+    - Removed productivity watermark from botanical nursery recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1360
     - Allowed sea sponges mk02+ from sea sponge sprouts mk02+ to accept productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1335
     - Fixed cadaveric arum smart farm recipe 2 being the same as recipe 3. Resolves https://github.com/pyanodon/pybugreports/issues/1358
     - Switched smart farm autolaunch hotfix to proper runtime API call introduced in 2.0.73
+    - Fixed smart farms not working with most plants on new saves
+    - Removed part of the smart farm remote API due to engine constraints
+    - Fixed parts of the caravan interrupt GUI being hidden if too many conditions or targets were added. Resolves https://github.com/pyanodon/pybugreports/issues/1325
+    - Fixed composter not showing working animation when working. Resolves https://github.com/pyanodon/pybugreports/issues/1257
+    - Fixed cytostatics 2 not accepting productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1393
+    - Removed the period from smart farm package technology locales
+    - Added flying fluid caravans (thanks, FreezingSnail!)
+    - Added "fill until" and "empty until" fluid caravan actions (thanks, charleycrissman!)
+    - Improved wyrmhole performance when scaling. Resolves https://github.com/pyanodon/pybugreports/issues/1404
+    - Fixed poor recipe icon placement for smart farms. Resolves https://github.com/pyanodon/pybugreports/issues/1387
+    - Fixed rendering icons being inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1080
+    - Updated specialized rendering icons to reflect normal rendering icon
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.62
 Date: 2026-01-05

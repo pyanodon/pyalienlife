@@ -42,8 +42,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "zipir",
 			name = "full-render-zipir",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-zipir.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",     draw_background = true}
+			}
 		},
 		--brain zipir rendering
 		{

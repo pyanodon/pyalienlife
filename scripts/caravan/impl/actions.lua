@@ -107,6 +107,76 @@ local function transfer_filtered_items_2(input_inventory, output_inventory, item
     end
 end
 
+local function transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, max_transfer)
+    if not outpost or not outpost.valid then return true end
+
+    local input = outpost.get_fluid(1)
+    if not input or (input.amount == 0) or input.name ~= fluid then return action.async end
+    if caravan_data.fluid and caravan_data.fluid.name ~= input.name then return action.async end
+
+    local output = caravan_data.fluid or {amount = 0, temperature = 15, name = ""}
+
+    local total_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume
+    local remaining_space = total_output_volume - output.amount
+    local goal = math.min(max_transfer, remaining_space)
+    if goal <= 0 then return true end
+
+    local amount_to_transfer = outpost.remove_fluid({name = input.name, amount = goal})
+
+    output.temperature = math.floor((output.amount * output.temperature + amount_to_transfer * input.temperature) / (output.amount + amount_to_transfer))
+    output.amount = output.amount + amount_to_transfer
+    output.name = input.name
+    if output.amount == 0 then
+        caravan_data.fluid = nil
+    else
+        caravan_data.fluid = output
+    end
+
+    if caravan_data.alt_mode == nil and caravan_data.fluid then
+        P.render_altmode_icon(caravan_data)
+    end
+
+    local completed = action.async or (amount_to_transfer >= goal)
+    if amount_to_transfer > 0 and completed then
+        ImplControl.eat(caravan_data)
+    end
+    return completed
+end
+
+local function transfer_fluid_from_caravan(caravan_data, outpost, fluid, action, max_transfer)
+    if not outpost or not outpost.valid then return true end
+
+    local input = caravan_data.fluid
+
+    if input == nil then return true end
+    if input.name ~= fluid then return true end
+    local goal = math.min(max_transfer, input.amount)
+    if goal <= 0 then return true end
+
+    local amount_transfered = outpost.insert_fluid({
+        amount = goal,
+        name = input.name,
+        temperature = input.temperature
+    })
+
+    input.amount = input.amount - amount_transfered
+    if input.amount == 0 then
+        caravan_data.fluid = nil
+    else
+        caravan_data.fluid = input
+    end
+
+    if caravan_data.alt_mode and caravan_data.fluid == nil then
+        P.destroy_altmode_icon(caravan_data)
+    end
+
+    local completed = action.async or (amount_transfered >= goal)
+    if amount_transfered > 0 and completed then
+        ImplControl.eat(caravan_data)
+    end
+    return completed
+end
+
 local circuit_red, circuit_green = defines.wire_connector_id.circuit_red, defines.wire_connector_id.circuit_green
 local function evaluate_signal(entity, signal)
     local result = entity.get_signal(signal, circuit_red, circuit_green)
@@ -562,66 +632,81 @@ function P.not_at_outpost(caravan_data, schedule, action)
 end
 
 function P.fill_tank(caravan_data, schedule, action)
-    local storage_tank = schedule.entity
-    if not storage_tank or not storage_tank.valid then return true end
-    local output = caravan_data.fluid or {amount = 0, temperature = 15, name = ""}
-    local input = storage_tank.get_fluid(1)
+    local outpost = schedule.entity
+    if not outpost or not outpost.valid then return true end
 
-    local total_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume
-    local max_output_volume = total_output_volume - output.amount
-    local caravan_was_empty = output.amount == 0
+    local outpost_fluid = outpost.get_fluid(1)
+    if not outpost_fluid or outpost_fluid.amount == 0 then return action.async end
+    local fluid = outpost_fluid.name
 
-    if max_output_volume == 0 then return true end
-    if input == nil then return action.async end
+    -- request to transfer the full tank capacity; we later reduce this to the available contents
+    local max_transfer = caravan_prototypes[caravan_data.entity.name].max_volume
 
-    local amount_to_transfer = storage_tank.remove_fluid({name = input.name, amount = max_output_volume})
+    return transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, max_transfer)
+end
 
-    output.temperature = math.floor((output.amount * output.temperature + amount_to_transfer * input.temperature) / (output.amount + amount_to_transfer))
-    output.amount = output.amount + amount_to_transfer
-    output.name = input.name
-    if output.amount == 0 then
-        caravan_data.fluid = nil
-    else
-        caravan_data.fluid = output
+function P.fill_tank_until_caravan_contains(caravan_data, schedule, action)
+    local outpost = schedule.entity
+    local goal = action.item_count or 0
+    local fluid = action.elem_value
+
+    local max_transfer = goal
+    if caravan_data.fluid then
+        max_transfer = max_transfer - caravan_data.fluid.amount
     end
 
-    if caravan_data.alt_mode == nil and caravan_data.fluid then
-        P.render_altmode_icon(caravan_data)
-    end
+    return transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, max_transfer)
+end
 
-    local completed = action.async or output.amount >= total_output_volume
-    if amount_to_transfer > 0 and completed then
-        ImplControl.eat(caravan_data)
-    end
-    return completed
+function P.fill_tank_until_outpost_contains(caravan_data, schedule, action)
+    local outpost = schedule.entity
+    if not outpost or not outpost.valid then return true end
+
+    local fluid = action.elem_value
+    local outpost_goal = action.item_count or 0
+    local outpost_contents = outpost.get_fluid_count(fluid)
+
+    local max_transfer = outpost_contents - outpost_goal
+
+    return transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, max_transfer)
 end
 
 function P.empty_tank(caravan_data, schedule, action)
-    local storage_tank = schedule.entity
-    if not storage_tank or not storage_tank.valid then return true end
-    local input = caravan_data.fluid
-    local output = storage_tank.get_fluid(1)
+    local outpost = schedule.entity
+    local caravan_contents = caravan_data.fluid
+    if caravan_contents == nil then return true end
 
-    if input == nil then return true end
+    local fluid = caravan_contents.name
+    local max_transfer = caravan_contents.amount
 
-    local amount_transfered = storage_tank.insert_fluid(input)
+    return transfer_fluid_from_caravan(caravan_data, outpost, fluid, action, max_transfer)
+end
 
-    input.amount = input.amount - amount_transfered
-    if input.amount == 0 then
-        caravan_data.fluid = nil
-    else
-        caravan_data.fluid = input
-    end
+function P.empty_tank_until_caravan_contains(caravan_data, schedule, action)
+    local outpost = schedule.entity
+    local fluid = action.elem_value
+    local goal = action.item_count
 
-    if caravan_data.alt_mode and caravan_data.fluid == nil then
-        P.destroy_altmode_icon(caravan_data)
-    end
+    local caravan_contents = caravan_data.fluid
+    if caravan_contents == nil then return true end
+    local max_transfer = caravan_contents.amount - goal
 
-    local completed = action.async or input.amount == 0
-    if amount_transfered > 0 and completed then
-        ImplControl.eat(caravan_data)
-    end
-    return completed
+    return transfer_fluid_from_caravan(caravan_data, outpost, fluid, action, max_transfer)
+end
+
+function P.empty_tank_until_outpost_contains(caravan_data, schedule, action)
+    local outpost = schedule.entity
+    if not outpost or not outpost.valid then return true end
+
+    if not caravan_data.fluid then return true end
+
+    local fluid = action.elem_value
+    local outpost_goal = action.item_count or 0
+    local outpost_contents = outpost.get_fluid_count(fluid)
+
+    local max_transfer = outpost_goal - outpost_contents
+
+    return transfer_fluid_from_caravan(caravan_data, outpost, fluid, action, max_transfer)
 end
 
 function P.is_tank_full(caravan_data, schedule, action)
@@ -725,6 +810,10 @@ Caravan.actions = {
     ["target-fluid-count"] = P.target_fluid_count,
     ["is-tank-full"] = P.is_tank_full,
     ["is-tank-empty"] = P.is_tank_empty,
+    ["fill-tank-until-caravan-has"] = P.fill_tank_until_caravan_contains,
+    ["fill-tank-until-target-has"] = P.fill_tank_until_outpost_contains,
+    ["empty-tank-until-caravan-has"] = P.empty_tank_until_caravan_contains,
+    ["empty-tank-until-target-has"] = P.empty_tank_until_outpost_contains,
 }
 
 Caravan.free_actions = { -- actions that don't use fuel

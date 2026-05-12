@@ -8,7 +8,8 @@ local units = {
     "caravan",
     "flyavan",
     "nukavan",
-    "fluidavan"
+    "fluidavan",
+    "fluidflyavan"
 }
 
 local path_3_effects = {}

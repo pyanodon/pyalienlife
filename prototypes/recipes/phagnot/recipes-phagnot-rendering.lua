@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "phagnot",
 			name = "full-render-phagnots",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phagnot.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",   draw_background = true}
+			}
 		},
 		--brain phagnot rendering
 		{

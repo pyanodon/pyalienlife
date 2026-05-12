@@ -33,8 +33,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "water-animals-mk01",
 			name = "full-render-fish",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/fish.png",      draw_background = true, icon_size = 32}
+			}
 		},
 	}
 }

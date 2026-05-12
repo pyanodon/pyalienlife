@@ -45,8 +45,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "auog",
 			name = "full-render-auogs",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",      draw_background = true}
+			}
 		},
 		--brain auog rendering
 		{

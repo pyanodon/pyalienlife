@@ -15,7 +15,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus", amount = 3},
     },
     main_product = "solidified-sarcorus",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk01")
 
@@ -38,7 +37,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus", amount = 5},
     },
     main_product = "paragen",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk02")
 
@@ -65,7 +63,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus", amount = 7},
     },
     main_product = "negasium",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk03"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 1}
 
@@ -94,7 +91,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus",    amount = 9},
     },
     main_product = "nonconductive-phazogen",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk04")
 
@@ -125,6 +121,5 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus",    amount = 11},
     },
     main_product = "denatured-seismite",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk05"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 20}

@@ -49,8 +49,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "simik-mk01",
 			name = "full-render-simik",
-			icon = "__pyalienlifegraphics2__/graphics/icons/rendering-simik.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",    draw_background = true}
+			}
 		},
 		--brain simik rendering
 		{

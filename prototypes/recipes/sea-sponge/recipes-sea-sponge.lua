@@ -110,7 +110,7 @@ RECIPE {
     results = {
         {type = "item", name = "ore-quartz", amount = 10},
     },
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-sponge",
     order = "c",
     icons = py.composite_icon("ore-quartz", "sea-sponge")
 }:add_unlock("water-invertebrates-mk01")
@@ -127,7 +127,7 @@ RECIPE {
     results = {
         {type = "item", name = "ore-quartz", amount = 7},
     },
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-sponge",
     order = "c",
     icons = py.composite_icon("ore-quartz", "sea-sponge-sprouts")
 }:add_unlock("water-invertebrates-mk01")

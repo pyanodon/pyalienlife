@@ -46,8 +46,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "phadai",
 			name = "full-render-phadais",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phadai.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",    draw_background = true}
+			}
 		},
 		--brain phadai rendering
 		{

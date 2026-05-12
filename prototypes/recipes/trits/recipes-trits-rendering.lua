@@ -48,8 +48,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "trits",
 			name = "full-render-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-trits.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png",     draw_background = true}
+			}
 		},
 		--brain trits rendering
 		{

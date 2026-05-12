@@ -39,8 +39,10 @@ py.autorecipes {
 			crafting_speed = 30,
 			tech = "xeno",
 			name = "full-render-xenos",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xeno.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",     draw_background = true}
+			}
 		},
 		--brain xeno rendering
 		{

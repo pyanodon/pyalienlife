@@ -42,7 +42,7 @@ data:extend
     {
         ai_settings = {do_separation = false, path_resolution_modifier = -1},
         type = "unit",
-        additional_pastable_entities = {"flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd"},
+        additional_pastable_entities = {"fluidflyavan","flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd"},
         name = "flyavan",
         map_color = {1, 1, 1},
         icon = "__pyalienlifegraphics2__/graphics/icons/flyavan.png",
