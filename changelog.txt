@@ -1,15 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.64
 Date: ???
+  Biofluid:
+    - Minimum fluid request for requestor tanks increased from 10k to 20k.  This improves the efficiency of higher-tier biofluid creatures.
+    - Loosened the definition of 'fully supplied provider tank' from 100% full to 80% full.  This is more in-line with the fluid system's performance.
+    - Bioports can now deploy more than one critter per biofluid cycle.  This greatly increases effiency in busy networks.
+    - Permenently fixed the Biofluid Creature Homelessness Crisis.  Praise the Factory!
+    - Provider tanks now pick the closest bioport as their 'preferred source' of critters, then the system attracts critters to that port.
+    - Improved the Bioport GUI to show incoming/outgoing diagnostics.
+    - Implemented a variety of optimizations to increase the performance of the biofluid network at all levels.
   Changes:
-    - Biofluid overhaul.  Changes:
-      - Minimum fluid request for requestor tanks increased from 10k to 20k.  This improves the efficiency of higher-tier biofluid creatures.
-      - Loosened the definition of 'fully supplied provider tank' from 100% full to 80% full.  This is more in-line with the fluid system's performance.
-      - Bioports can now deploy more than one critter per biofluid cycle.  This greatly increases effiency in busy networks.
-      - Permenently fixed the Biofluid Creature Homelessness Crisis.  Praise the Factory!
-      - Provider tanks now pick the closest bioport as their 'preferred source' of critters, then the system attracts critters to that port.
-      - Improved the Bioport GUI to show incoming/outgoing diagnostics.
-      - Implemented a variety of optimizations to increase the performance of the biofluid network at all levels.
     - Biofluid networks now support provider priority
     - Changes around the locations of alienlife items to be more sensical
     - Fixed failure migrating certain fluid caravan interrupts
