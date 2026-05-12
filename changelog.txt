@@ -15,6 +15,7 @@ Date: ???
     - Updated Russian locale courtesy of @Astorin
     - Fixed that wyrmholes would leave behind invisible lamps with collisions
     - Fixed that caravans would crash when triggering an interrupt on an newly empty schedule within one update cycle. Resolves https://github.com/pyanodon/pybugreports/issues/1267
+    - Returned the custom recipe selector UI for the slaughterhouse, reproductive complex, and smart farm. Can be disabled in the mod settings.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.63
 Date: 2026-03-28
