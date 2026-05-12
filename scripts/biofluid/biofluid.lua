@@ -277,9 +277,6 @@ local function provider_sort_function(entity_a, entity_b)
     if not b then b = 0 else b = b.amount end
     b = b - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
 
-    if not priority_a then priority_a = 0 end
-	if not priority_b then priority_b = 0 end
-    
     if (priority_a > priority_b) then
         return true
     elseif (priority_a < priority_b) then
