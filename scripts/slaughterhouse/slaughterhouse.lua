@@ -155,6 +155,7 @@ py.on_event(defines.events.on_object_destroyed, function(event)
 
   storage.opened_recipe_viewer[unit_number] = nil
   for _, player in pairs(game.players) do
+    ---@cast player LuaPlayer
     local gui = player.gui.screen.py_recipe_viewer
     if gui and gui.tags.entity == unit_number then gui.destroy() end
   end
@@ -242,6 +243,7 @@ py.on_event(py.events.on_gui_opened(), function(event)
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
   if not machines_with_gui[name] then return end
   local control_behavior = entity.get_control_behavior()
+  if not settings.get_player_settings(event.player_index)["py-custom-recipe-gui"].value then return end
 
   if entity.get_recipe() or control_behavior and control_behavior.circuit_set_recipe then
     storage.watched_buildings[event.player_index] = entity
