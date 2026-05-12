@@ -14,6 +14,7 @@ Date: ???
     - Fixed a crash with caravan interrupt notifications between save loads. Resolves https://github.com/pyanodon/pybugreports/issues/1440
     - Updated Russian locale courtesy of @Astorin
     - Fixed that wyrmholes would leave behind invisible lamps with collisions
+    - Fixed that caravans would crash when triggering an interrupt on an newly empty schedule within one update cycle. Resolves https://github.com/pyanodon/pybugreports/issues/1267
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.63
 Date: 2026-03-28
