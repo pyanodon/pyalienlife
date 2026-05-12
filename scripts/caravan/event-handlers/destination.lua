@@ -79,6 +79,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_destination_delete_button"] 
 
     if event.element.tags.schedule_id == caravan_data.schedule_id then
         caravan_data.retry_pathfinder = 1
+        caravan_data.schedule_id = -1
     elseif event.element.tags.schedule_id < caravan_data.schedule_id then
         caravan_data.schedule_id = caravan_data.schedule_id - 1
     end
