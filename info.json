@@ -1,6 +1,6 @@
 {
     "name": "pyalienlife",
-    "version": "3.0.65",
+    "version": "3.0.66",
     "factorio_version": "2.0",
     "title": "Pyanodons AlienLife",
     "author": "Pyanodon, Nexela, Kingarthur, notnotmelon, Mootykins, ShadowGlass, Archezekiel, Quintuple, przemo1232",
@@ -16,7 +16,7 @@
         "pypetroleumhandling >= 3.0.0",
         "pycoalprocessing >= 3.0.36",
         "? pyhightech >= 3.0.0",
-        "~ pypostprocessing >= 3.0.36",
+        "~ pypostprocessing >= 3.0.42",
         "! wret-beacon-rebalance-mod",
         "! BigBags",
         "! ResearchFog",

@@ -38,6 +38,8 @@ local MainFrameComponents = require "main_frame"
 --
 -- These are limited by the modding API :/
 -- drag: waiting for an answer on https://forums.factorio.com/viewtopic.php?t=128019
+--
+-- TODO use REDACTED - protocol_1903
 
 -- default_empty_slot is used to show the fuel_inventory gas pump icon
 local function build_inventory_slot(inventory, table, slot_index, tags, default_empty_slot)
@@ -182,99 +184,6 @@ function P.update_fuel_inventory(player, caravan_data)
     build_fuel_inventory_flow(parent, caravan_data, caravan_data.fuel_inventory, name, {unit_number = caravan_data.unit_number})
 end
 
-local function is_character_inventory(inventory)
-    return inventory.player_owner ~= nil
-end
-
-local function set_stack_to_cursor(player, inventory, index, stack_proj)
-    if not inventory[index].valid_for_read then return end
-
-    local input_stack = stack_proj(inventory[index])
-
-    local success = player.cursor_stack.transfer_stack(input_stack)
-    if success then
-        if input_stack.count == inventory[index].count then
-            inventory[index].clear()
-            if is_character_inventory(inventory) then
-                player.hand_location = {inventory = inventory.index, slot = index}
-            end
-        else
-            inventory[index].count = inventory[index].count - input_stack.count
-        end
-    end
-end
-
-local function set_cursor_stack_to_slot(player, target_inventory, index, stack_proj)
-    local input_stack = stack_proj(player.cursor_stack)
-    local target_slot = target_inventory[index]
-
-    if target_slot.valid_for_read and target_slot.name == player.cursor_stack.name then
-        local prototype = prototypes.item[player.cursor_stack.name]
-
-        local nb_transferred = math.min(prototype.stack_size - target_slot.count, input_stack.count)
-        if nb_transferred == 0 then return end
-        target_slot.transfer_stack({name = player.cursor_stack.name, count = nb_transferred, quality = player.cursor_stack.quality})
-        player.cursor_stack.count = player.cursor_stack.count - nb_transferred
-    else
-        -- set_stack fails when target_slot is an incompatible filter slot, or where player.hand_location is
-        local success = target_slot.set_stack(input_stack)
-        if success then
-            -- cursor_stack is special, it can have a 0 count unlike other LuaItemStacks
-            player.cursor_stack.count = player.cursor_stack.count - input_stack.count
-        end
-    end
-end
-
--- precondition: source_stack.valid_for_read == true
-local function transfer_stack(source_stack, target_inventory, stack_proj)
-    local input_stack = stack_proj(source_stack)
-
-    if not target_inventory.can_insert(input_stack) then return 0 end
-
-    -- special case for items with equipment grids
-    -- LuaInventory.insert does not copy the grid, LuaItemStack.transfer_stack must be used
-    if input_stack.grid then
-        local target_stack = target_inventory.find_empty_stack(input_stack)
-        if not target_stack then return 0 end
-        target_stack.transfer_stack(input_stack)
-        return 1
-    end
-    local nb_transferred = target_inventory.insert(input_stack)
-
-    if nb_transferred == source_stack.count then
-        source_stack.clear()
-    else
-        source_stack.set_stack({name = source_stack.name, count = source_stack.count - nb_transferred, quality = source_stack.quality})
-    end
-
-    return nb_transferred
-end
-
-local function transfer_inventory_items(inventory, target_inventory, clicked_item_stack, stack_proj, is_supported_pred)
-    local nb_total_transferred = 0
-
-    local item
-    if clicked_item_stack.valid_for_read then
-        item = {name = clicked_item_stack.name, quality = clicked_item_stack.quality}
-    end
-    for i = 1, #inventory do
-        if not inventory[i].valid_for_read or not is_supported_pred(inventory[i]) then goto continue end
-        if item and (inventory[i].name ~= item.name or inventory[i].quality ~= item.quality) then goto continue end
-
-        local nb_transferred = transfer_stack(inventory[i], target_inventory, stack_proj)
-        nb_total_transferred = nb_total_transferred + nb_transferred
-
-        ::continue::
-    end
-    return nb_total_transferred
-end
-
-local function swap_stacks(a, b)
-    local tmp = {name = a.name, count = a.count}
-    a.set_stack(b)
-    b.set_stack(tmp)
-end
-
 local function handle_slot_click(event, caravan_data, inventory, target_inventory, is_supported_pred)
     local player = game.get_player(event.player_index)
     -- spectators, begone
@@ -289,10 +198,6 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
     local is_rmb = event.button == defines.mouse_button_type.right
     local is_lmb = event.button == defines.mouse_button_type.left
 
-    local half_stack_proj = function(s) return {name = s.name, count = math.floor((s.count / 2) + 0.5), quality = s.quality} end
-    local id_proj = function(s) return s end
-    local one_item_proj = function(s) return {name = s.name, count = 1, quality = s.quality} end
-
     if is_ctrl and is_shift then return end
 
     local slot_index = event.element.tags.slot_index
@@ -302,21 +207,21 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
             if inventory[slot_index].valid_for_read and inventory[slot_index].name ~= player.cursor_stack.name then
                 -- swapping stacks resets hand_location for some reason
                 local loc = player.hand_location
-                swap_stacks(inventory[slot_index], player.cursor_stack)
+                inventory[slot_index].swap_stack(player.cursor_stack)
                 player.hand_location = loc
             else
                 -- lmb'ing the cursor stack where hand_location is allowed, not rmb'ing it
                 if player.hand_location and inventory.index and player.hand_location.inventory == inventory.index and player.hand_location.slot == slot_index then
                     player.hand_location = nil
                 end
-                set_cursor_stack_to_slot(player, inventory, slot_index, id_proj)
+                py.transfer_cursor_to_stack(player, inventory[slot_index])
                 -- Item was originally from character inventory, hand_location somehow gets reset in the call above
                 if not player.hand_location then
                     P.update_character_inventory(player, caravan_data)
                 end
             end
         else
-            set_stack_to_cursor(player, inventory, slot_index, id_proj)
+            py.transfer_stack_to_cursor(player, inventory[slot_index])
         end
     elseif is_rmb and not (is_ctrl or is_alt or is_shift) then
         if has_items_in_cursor and is_supported_pred(player.cursor_stack) then
@@ -324,24 +229,24 @@ local function handle_slot_click(event, caravan_data, inventory, target_inventor
             if inventory[slot_index].valid_for_read and inventory[slot_index].name ~= player.cursor_stack.name then
                 return
             end
-            set_cursor_stack_to_slot(player, inventory, slot_index, one_item_proj)
+            py.transfer_cursor_to_stack(player, inventory[slot_index], 1)
         else
-            set_stack_to_cursor(player, inventory, slot_index, half_stack_proj)
+            py.transfer_stack_to_cursor(player, inventory[slot_index], 0.5)
         end
     elseif not target_inventory.is_full() then
         local item_stack = inventory[slot_index]
 
         if is_lmb and is_ctrl and not (is_alt or is_shift) then
-            transfer_inventory_items(inventory, target_inventory, item_stack, id_proj, is_supported_pred)
+            py.transfer_inventory_items(inventory, target_inventory, item_stack, nil, is_supported_pred)
         elseif is_lmb and is_shift and not (is_alt or is_ctrl) then
             if inventory[slot_index].valid_for_read and is_supported_pred(inventory[slot_index]) then
-                transfer_stack(inventory[slot_index], target_inventory, id_proj)
+                py.transfer_stack(inventory[slot_index], target_inventory)
             end
         elseif is_rmb and is_ctrl and not (is_alt or is_shift) then
-            transfer_inventory_items(inventory, target_inventory, item_stack, half_stack_proj, is_supported_pred)
+            py.transfer_inventory_items(inventory, target_inventory, item_stack, 0.5, is_supported_pred)
         elseif is_rmb and is_shift and not (is_alt or is_ctrl) then
             if inventory[slot_index].valid_for_read and is_supported_pred(inventory[slot_index]) then
-                transfer_stack(inventory[slot_index], target_inventory, half_stack_proj)
+                py.transfer_stack(inventory[slot_index], target_inventory, 0.5)
             end
         end
     end
@@ -428,7 +333,7 @@ py.on_event("py_caravan_pipette", function(event)
     if target_slot.valid_for_read then
         local _, index = main_inventory.find_item_stack(target_slot.name)
         if index then
-            set_stack_to_cursor(player, main_inventory, index, function(s) return s end)
+            py.transfer_stack_to_cursor(player, main_inventory[index])
         end
     else -- otherwise find the most valuable food in the player inventory and put it into the cursor
         local best_slot, best_value = nil, 0
@@ -440,7 +345,7 @@ py.on_event("py_caravan_pipette", function(event)
             end
         end
         if best_value > 0 then
-            set_stack_to_cursor(player, main_inventory, best_slot, function(s) return s end)
+            py.transfer_stack_to_cursor(player, main_inventory[best_slot])
         end
     end
 end)
