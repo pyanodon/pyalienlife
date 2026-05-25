@@ -3,6 +3,7 @@ Version: 3.0.66
 Date: ???
   Changes:
     - Fixed that caravans would not properly transfer items with attached data. Resolves https://github.com/pyanodon/pybugreports/issues/1455
+    - Fixed that ocula would always deliver a full stack of items, regardless of how many were requested. Resolves https://github.com/pyanodon/pybugreports/issues/1471
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.65
 Date: 2026-05-15

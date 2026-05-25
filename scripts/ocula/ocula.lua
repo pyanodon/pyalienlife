@@ -302,7 +302,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             end
 
             -- collect items
-            oculua_data.inventory[1].transfer_stack(stack)
+            oculua_data.inventory[1].transfer_stack(stack, oculua_data.target_count)
             Oculua.fire_laser_beam(oculua_data)
             Oculua.render_altmode_icon(oculua_data)
             Oculua.set_target(oculua_data, character)
