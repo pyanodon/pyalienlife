@@ -202,8 +202,9 @@ local function create_gui(player_index, entity)
   local player = game.get_player(player_index)
   if not player or not entity then return end
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
+  local type = entity.type == "entity-ghost" and entity.ghost_type or entity.type
   local control_behavior = entity.get_control_behavior()
-  if not machines_with_gui[name] or entity.get_recipe() or (control_behavior and control_behavior.circuit_set_recipe) then return end
+  if not machines_with_gui[name] or entity.get_recipe() or (type == "assembling-machine" and control_behavior and control_behavior.circuit_set_recipe) then return end
   local main_frame = player.gui.screen.add {
     type = "frame",
     name = "py_recipe_viewer",
