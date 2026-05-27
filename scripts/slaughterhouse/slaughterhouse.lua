@@ -246,7 +246,8 @@ py.on_event(py.events.on_gui_opened(), function(event)
   local control_behavior = entity.get_control_behavior()
   if not settings.get_player_settings(event.player_index)["py-custom-recipe-gui"].value then return end
 
-  if entity.get_recipe() or control_behavior and control_behavior.circuit_set_recipe then
+  local type = entity.type == "entity-ghost" and entity.ghost_type or entity.type
+  if entity.get_recipe() or type == "assembling-machine" and control_behavior and control_behavior.circuit_set_recipe then
     storage.watched_buildings[event.player_index] = entity
   else
     create_gui(event.player_index, entity)
