@@ -256,7 +256,7 @@ end)
 py.on_event(defines.events.on_gui_closed, function(event)
   if event.gui_type == defines.gui_type.custom then
     local element = event.element
-    if element.name == "py_recipe_viewer" then element.destroy() end
+    if element.valid and element.name == "py_recipe_viewer" then element.destroy() end
   end
   storage.watched_buildings[event.player_index] = nil
 end)

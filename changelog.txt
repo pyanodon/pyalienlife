@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Readded slaughterhouse UI (again)
     - Fixed a crash when changing the recipe on a smart farm connected to a wire. Resolves https://github.com/pyanodon/pybugreports/issues/1464
+    - Fixed a crash when interacting with the caravan UI. Resolves https://github.com/pyanodon/pybugreports/issues/1465
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.66
 Date: 2026-05-27
