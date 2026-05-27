@@ -1,5 +1,6 @@
 -- for full history reference: https://github.com/pyanodon/pyalienlife/commit/ed87228489c87e6c68993d78f09e76e21970302a
 
+---@type string[]
 local subgroups = {
   "auog",
   "ulric",
@@ -24,6 +25,7 @@ local subgroups = {
   "zipir",
   "korlex",
   "simik",
+  "navens",
   "arum-super",
   "grod-super",
   "kicalk-super",
@@ -93,11 +95,13 @@ local function update_recipes()
         end
       end
       if not permitted_recipes[category][r] then
-        error("Could not find associated subgroup for recipe: " .. r)
+        error("Could not find associated recipe selector group for recipe: " .. r .. " with subgroup: " .. recipe.subgroup.name)
       end
     end
   end
 end
+
+log("pY recipe selector: initial valid subgroups: " .. serpent.block(subgroups))
 
 remote.add_interface("py-recipe-gui", {
   ---add a machine to use the custom recipe viewer. requires subgroups to be registered
@@ -109,29 +113,34 @@ remote.add_interface("py-recipe-gui", {
       permitted_recipes[category] = {}
     end
     permitted_recipes.parameters = nil
+    log("pY recipe selector: adding supported machine: " .. machine)
   end,
   ---remove a machine from the whitelist for the custom recipe viewer
   ---@param machine data.EntityID
   remove_machine = function (machine)
     machines_with_gui[machine] = nil
+    log("pY recipe selector: removing supported machine: " .. machine)
   end,
   ---add a subgroup to use the custom recipe viewer. requires a compatible crafting machine
-  ---@param subgroup data.EntityID
+  ---@param subgroup data.ItemSubGroupID
   add_subgroup = function (subgroup)
     local update = not subgroups[subgroup]
     subgroups[subgroup] = true
     if update then update_recipes() end
+    log("pY recipe selector: adding valid subgroup: " .. subgroup)
   end,
   ---add a subgroup to use the custom recipe viewer
-  ---@param subgroup data.EntityID
+  ---@param subgroup data.ItemSubGroupID
   remove_subgroup = function (subgroup)
     subgroups[subgroup] = nil
+    log("pY recipe selector: removing valid subgroup: " .. subgroup)
   end,
   ---use an alternative icon for the subgroup header icon. set to nil to remove
   ---@param subgroup data.ItemSubGroupID
   ---@param icon data.ItemID|data.FluidID
   set_alt_item = function (subgroup, icon)
     alt_icons[subgroup] = icon
+    log("pY recipe selector: adding subgroup alt icon: " .. subgroup " -> " .. icon)
   end,
 })
 
