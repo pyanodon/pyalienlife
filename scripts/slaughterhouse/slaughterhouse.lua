@@ -25,7 +25,6 @@ local subgroups = {
   "zipir",
   "korlex",
   "simik",
-  "navens",
   "arum-super",
   "grod-super",
   "kicalk-super",
