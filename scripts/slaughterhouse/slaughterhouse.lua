@@ -307,8 +307,9 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(
     local entity = storage.opened_recipe_viewer[main_frame.tags.entity]
     if not entity or not entity.valid then return end
     set_recipe(player, entity, avalible_recipe)
+  else
+    main_frame.force_auto_center()
   end
-  main_frame.force_auto_center()
 end
 
 gui_events[defines.events.on_gui_click]["py_recipe_gui_back"] = function(event)
