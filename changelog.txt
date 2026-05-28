@@ -3,6 +3,7 @@ Version: 3.0.67
 Date: ????
   Changes:
     - Fixed that ocula placed in-world would not have an associated inventory created. Resolves https://github.com/pyanodon/pybugreports/issues/1473
+    - Added "duplicate interrupt" button to caravan GUI (thanks, Kamayana!)
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.66
 Date: 2026-05-27
