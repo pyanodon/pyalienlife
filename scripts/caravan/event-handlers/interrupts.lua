@@ -348,11 +348,19 @@ gui_events[defines.events.on_gui_click]["py_duplicate_interrupt_button"] = funct
         edited_interrupt.name = textfield.text
     end
 
-    local interrupt_copy_name = edited_interrupt.name
-    while storage.interrupts[interrupt_copy_name] ~= nil do
-        interrupt_copy_name = interrupt_copy_name .. "*"
+    local interrupt_copy_name = edited_interrupt.name .. " - Copy"
+
+    -- emulate the Windows duplicate name logic: if "<name> - Copy" is taken we append "(#n)"
+    if storage.interrupts[interrupt_copy_name] ~= nil then
+        for copy_num = 2, math.huge do
+            local new_copy_name = interrupt_copy_name .. string.format(" (%i)", copy_num)
+            if not storage.interrupts[new_copy_name] then
+                interrupt_copy_name = new_copy_name
+                break
+            end
+        end
     end
-    
+
     storage.interrupts[interrupt_copy_name] = table.deepcopy(edited_interrupt)
     storage.interrupts[interrupt_copy_name].name = interrupt_copy_name
 
