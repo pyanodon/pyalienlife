@@ -386,7 +386,8 @@ py.on_event(py.events.on_built(), function(event)
         if not ipod then return end
         storage.oculuas[entity.unit_number] = {
             entity = entity,
-            ipod = ipod
+            ipod = ipod,
+            inventory = game.create_inventory(Oculua.inventory_size)
         }
         Oculua.go_home(storage.oculuas[entity.unit_number])
     end
