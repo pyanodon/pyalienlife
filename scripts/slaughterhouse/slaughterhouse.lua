@@ -2,48 +2,48 @@
 
 ---@type string[]
 local subgroups = {
-  "auog",
-  "ulric",
-  "mukmoux",
-  "arthurian",
-  "cottongut",
-  "dhilmos",
-  "scrondrix",
-  "phadai",
-  "fish",
-  "phagnot",
-  "kmauts",
-  "dingrits",
-  "xeno",
-  "arqad",
-  "cridren",
-  "antelope",
-  "trits",
-  "vonix",
-  "vrauks",
-  "xyhiphoe",
-  "zipir",
-  "korlex",
-  "simik",
-  "arum-super",
-  "grod-super",
-  "kicalk-super",
-  "ralesia-super",
-  "rennea-super",
-  "tuuphra-super",
-  "yotoi-super",
-  "yotoi-fruit-super",
-  "bioreserve-super",
-  "mova-super"
+  ["auog"] = true,
+  ["ulric"] = true,
+  ["mukmoux"] = true,
+  ["arthurian"] = true,
+  ["cottongut"] = true,
+  ["dhilmos"] = true,
+  ["scrondrix"] = true,
+  ["phadai"] = true,
+  ["fish"] = true,
+  ["phagnot"] = true,
+  ["kmauts"] = true,
+  ["dingrits"] = true,
+  ["xeno"] = true,
+  ["arqad"] = true,
+  ["cridren"] = true,
+  ["antelope"] = true,
+  ["trits"] = true,
+  ["vonix"] = true,
+  ["vrauks"] = true,
+  ["xyhiphoe"] = true,
+  ["zipir"] = true,
+  ["korlex"] = true,
+  ["simik"] = true,
+  ["arum-super"] = true,
+  ["grod-super"] = true,
+  ["kicalk-super"] = true,
+  ["ralesia-super"] = true,
+  ["rennea-super"] = true,
+  ["tuuphra-super"] = true,
+  ["yotoi-super"] = true,
+  ["yotoi-fruit-super"] = true,
+  ["bioreserve-super"] = true,
+  ["mova-super"] = true
 }
 if script.active_mods["pyalternativeenergy"] then
-  subgroups[#subgroups+1] = "zungror"
-  subgroups[#subgroups+1] = "numal"
+  subgroups["zungror"] = true
+  subgroups["numal"] = true
 end
 if script.active_mods["pystellarexpedition"] then
-  -- subgroups[#subgroups+1] = "tuls"
-  -- subgroups[#subgroups+1] = "riga"
-  subgroups[#subgroups+1] = "kakkalakki"
+  subgroups["kakkalakki"] = true
+  subgroups["tuls"] = true
+  subgroups["riga"] = true
 end
 
 local machines_with_gui = {
@@ -78,7 +78,7 @@ local permitted_recipes = {}
 local function update_recipes()
   for category in pairs(permitted_recipes) do
     for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
-      for _, subgroup in pairs(subgroups) do
+      for subgroup in pairs(subgroups) do
         if recipe.subgroup.name:find(subgroup, nil, true) then
           permitted_recipes[category][r] = subgroup
           break
@@ -86,7 +86,7 @@ local function update_recipes()
       end
       if not permitted_recipes[category][r] then
         -- search by comparing recipe name
-        for _, subgroup in pairs(subgroups) do
+        for subgroup in pairs(subgroups) do
           if recipe.name:find(subgroup, nil, true) then
             permitted_recipes[category][r] = subgroup
             break
