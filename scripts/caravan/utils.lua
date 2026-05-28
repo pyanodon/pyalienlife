@@ -179,7 +179,7 @@ end
 
 local function get_fluidavan_inventory_tooltip(caravan_data)
     if caravan_data.fluid then
-        return {"", "\n[fluid=" .. caravan_data.fluid.name .. "] ", " ×", caravan_data.fluid.amount}
+        return {"", "\n[fluid=" .. caravan_data.fluid.name .. "] ", " ×", string.format("%g", caravan_data.fluid.amount)}
     else
         return {"", "\n[img=utility/fluid_icon] ", {"caravan-gui.tank-is-empty"}}
     end
