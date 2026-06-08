@@ -114,7 +114,7 @@ function P.update_interrupt_list(player)
     local scroll_pane = textfield.parent.parent.contents_frame.scroll_pane
     scroll_pane.contents_flow.destroy()
 
-    local interrupts = Utils.filter(storage.interrupts, function (e) return string.find(e.name, textfield.text) end)
+    local interrupts = Utils.filter(storage.interrupts, function (e) return string.find(e.name, textfield.text, nil, true) end)
 
     P.build_interrupt_list(scroll_pane, caravan_data, interrupts, tags)
 end
