@@ -27,6 +27,7 @@ local function transfer_all_items(input_inventory, output_inventory)
     local inserted_total = 0
     for i = 1, #input_inventory do
         local stack = input_inventory[i]
+        -- local target_stack = output_inventory.
         local inserted_count = output_inventory.insert(stack)
         if inserted_count ~= 0 then
             stack.count = stack.count - inserted_count
