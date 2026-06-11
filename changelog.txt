@@ -1,11 +1,42 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.67
+Date: 2026-06-08
+  Changes:
+    - Fixed that ocula placed in-world would not have an associated inventory created. Resolves https://github.com/pyanodon/pybugreports/issues/1473
+    - Added "duplicate interrupt" button to caravan GUI (thanks, Kamayana!)
+    - Capped precision on fluid tooltip for itemized caravans
+    - Fixed crash searching caravan interrupts with [ or ]. Resolves https://github.com/pyanodon/pybugreports/issues/1478
+---------------------------------------------------------------------------------------------------
+Version: 3.0.66
+Date: 2026-05-27
+  Changes:
+    - Fixed that caravans would not properly transfer items with attached data. Resolves https://github.com/pyanodon/pybugreports/issues/1455
+    - Fixed that ocula would always deliver a full stack of items, regardless of how many were requested. Resolves https://github.com/pyanodon/pybugreports/issues/1471
+    - Fixed a crash when migrating ocula inventories. Resolves https://github.com/pyanodon/pybugreports/issues/1466
+---------------------------------------------------------------------------------------------------
+Version: 3.0.65
+Date: 2026-05-15
+  Changes:
+    - Reverted unstable slaughterhouse GUI
+---------------------------------------------------------------------------------------------------
 Version: 3.0.64
-Date: ???
+Date: 2026-05-15
   Changes:
     - Biofluid networks now support provider priority
     - Changes around the locations of alienlife items to be more sensical
     - Fixed failure migrating certain fluid caravan interrupts
     - Fixed pipette food selection on caravan food slots having incorrect priority
+    - Fixed a crash with oculae attempting to index a player without a physical character. Resolves https://github.com/pyanodon/pybugreports/issues/1425
+    - Fixed ocula not being able to deliver complex item types. Resolves https://github.com/pyanodon/pybugreports/issues/1376
+    - Fixed mutagenic infusion dumping items on ground when going to/from ulric man. Resolves https://github.com/pyanodon/pybugreports/issues/1314
+    - Removed extra mutagenic infusion inventory indices, because you can only use it in the character controller anyway
+    - Fixed a crash when indexing non-items in the player logistics requests. Resolves https://github.com/pyanodon/pybugreports/issues/1414
+    - Fixed a crash with caravan interrupt notifications between save loads. Resolves https://github.com/pyanodon/pybugreports/issues/1440
+    - Updated Russian locale courtesy of @Astorin
+    - Fixed that wyrmholes would leave behind invisible lamps with collisions
+    - Fixed that caravans would crash when triggering an interrupt on an newly empty schedule within one update cycle. Resolves https://github.com/pyanodon/pybugreports/issues/1267
+    - Returned the custom recipe selector UI for the slaughterhouse, reproductive complex, and smart farm. Can be disabled in the mod settings.
+    - Fixed that biofluid networks were not properly migrated to support priorities
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.63
 Date: 2026-03-28
