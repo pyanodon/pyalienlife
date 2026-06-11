@@ -106,6 +106,11 @@ gui_events[defines.events.on_gui_click]["py_click_caravan"] = function(event)
     local caravan_data = storage.caravans[tags.unit_number]
 
     player.opened = nil
+    -- Normally wiping .opened here resolves it, but there's some weird edge cases where .opened is already nil
+    local old_gui = CaravanGui.get_gui(player)
+    if old_gui then
+        old_gui.destroy()
+    end
     CaravanGui.build(player, caravan_data)
 end
 
