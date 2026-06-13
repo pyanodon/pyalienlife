@@ -37,6 +37,8 @@ py.on_event(py.events.on_destroyed(), function(event)
 
     CaravanImpl.remove_alert(event.entity)
 
+	storage.caravan_activities[entity.unit_number] = nil
+
     local buffer = event.buffer
     if buffer then
         buffer[1].tags = {unit_number = entity.unit_number}
@@ -326,9 +328,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
         }
         local prototype = caravan_prototypes[entity.name]
         if prototype.requeue_required then
-            storage.caravan_fast_queue = nil
-            storage.caravan_slow_queue = nil			
-            caravan_data.arrival_tick = game.tick
+            CaravanImpl.wake_up(unit_number)
         end
     end
 
@@ -362,16 +362,12 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 			if not storage.caravan_activities[ caravan_data.unit_number ] then
 				storage.caravan_activities[ caravan_data.unit_number ] = 0
 			end		
-			
-			if CaravanImpl.check_for_stall(caravan_data) then
-				CaravanImpl.begin_action(caravan_data, action_id)
-			end
-	
+				
 			-- hungry caravans are always in the fast queue.
 			local entity = caravan_data.entity
 			local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 		
-			if CaravanImpl.validity_check(caravan_data) and (caravan_data.action_id ~= -1 or needs_fuel) then								
+			if CaravanImpl.validity_check(caravan_data) then								
 				if (storage.caravan_activities[ caravan_data.unit_number ] == nil) or (storage.caravan_activities[ caravan_data.unit_number ] < 10) then		
 					storage.caravan_fast_queue[ caravan_data.unit_number ] = caravan_data
 					
@@ -385,11 +381,6 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 				end
 			end
         end
-
-        local sort_fn = function(a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
-
-        table.sort(storage.caravan_fast_queue, sort_fn)
-        table.sort(storage.caravan_slow_queue, sort_fn)
 	end
 
 
