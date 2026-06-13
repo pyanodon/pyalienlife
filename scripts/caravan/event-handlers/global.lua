@@ -380,11 +380,6 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 				end
 			end
         end
-
-        --local sort_fn = function(a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
-
-        --table.sort(storage.caravan_fast_queue, sort_fn)
-        --table.sort(storage.caravan_slow_queue, sort_fn)
 	end
 
 
