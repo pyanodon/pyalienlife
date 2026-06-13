@@ -96,6 +96,8 @@ function Biofluid.update_bioport_gui(player, gui)
         bar_flow.fuel_bar.value = bioport_data.fuel_remaning / bioport_data.last_eaten_fuel_value
     end
     bar_flow.guano_bar.value = bioport_data.guano / 3
+	
+	Biofluid.update_bioport_traffic(entity, gui.content_frame) 
 end
 
 function Biofluid.build_bioport_gui(entity, player)
@@ -117,7 +119,7 @@ function Biofluid.build_bioport_gui(entity, player)
     content_flow.style.vertical_spacing = 8
     content_flow.style.margin = {-4, 0, -4, 0}
     content_flow.style.vertical_align = "center"
-
+	
     local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
     status_flow.style.vertical_align = "center"
     local status_sprite = status_flow.add {type = "sprite", name = "status_sprite"}
@@ -154,9 +156,337 @@ function Biofluid.build_bioport_gui(entity, player)
         module_slot.sprite = "utility/empty_module_slot"
         module_slot.tooltip = allowed_module_tooltip
     end
+	
+	Biofluid.add_bioport_traffic(entity, content_frame) 
 
     Biofluid.update_bioport_gui(player, main_frame)
 end
+
+
+function Biofluid.get_requestor_stats( entity )
+
+	local requestor_id = entity.unit_number
+
+	local stats = { 
+		gobachov = {total = 0, active = 0}, 
+		huzu = {total = 0, active = 0}, 
+		chorkok = {total = 0, active = 0} 
+	}
+	
+	for _, biobot in pairs( storage.biofluid_robots ) do
+		
+		if not biobot.entity then goto continue end
+		if not biobot.entity.valid then goto continue end
+		if not biobot.requester then goto continue end
+		if biobot.requester ~= requestor_id then goto continue end
+		
+		-- we are only interested in distances from picking up or dropping off biobots.
+		if biobot.status ~= 1 and biobot.status ~= 2 then goto continue end
+
+		local distance = math.floor(math.sqrt((entity.position.x - biobot.entity.position.x)^2 + (entity.position.y - biobot.entity.position.y)^2))
+	
+		if biobot.entity.name == "gobachov" then 
+			stats.gobachov.active = stats.gobachov.active + 1
+			if distance < stats.gobachov.total or stats.gobachov.total == 0 then stats.gobachov.total = distance end
+		end
+		
+		if biobot.entity.name == "huzu" then 
+			stats.huzu.active = stats.huzu.active + 1
+			if distance < stats.huzu.total or stats.huzu.total == 0 then stats.huzu.total = distance end
+		end
+		
+		if biobot.entity.name == "chorkok" then 
+			stats.chorkok.active = stats.chorkok.active + 1
+			if distance < stats.chorkok.total or stats.chorkok.total == 0 then stats.chorkok.total = distance end
+		end
+
+		::continue::
+	end
+	
+	return stats
+end
+
+
+function Biofluid.get_network_stats( network_id ) 
+
+	-- creatures in network stats
+	local stats = { 
+		gobachov = {total = 0, active = 0}, 
+		huzu = {total = 0, active = 0}, 
+		chorkok = {total = 0, active = 0} 
+	}
+	
+	-- cycle through all flying bots finding active members of the network
+	for _, biobot in pairs( storage.biofluid_robots ) do
+		
+		if not biobot.entity then goto continue end
+		if not biobot.entity.valid then goto continue end
+		
+		if biobot.network_id == network_id then
+		
+			if biobot.entity.name == "gobachov" then 
+				stats.gobachov.active = stats.gobachov.active + 1
+				stats.gobachov.total = stats.gobachov.total + 1
+			end
+			
+			if biobot.entity.name == "huzu" then 
+				stats.huzu.active = stats.huzu.active + 1
+				stats.huzu.total = stats.huzu.total + 1
+			end
+			
+			if biobot.entity.name == "chorkok" then 
+				stats.chorkok.active = stats.chorkok.active + 1
+				stats.chorkok.total = stats.chorkok.total + 1
+			end
+		end
+		::continue::
+	end
+	
+	-- cycle through all bioports finding inactive members of the network
+	for bioport_id, exists  in pairs( storage.biofluid_networks[ network_id ].biofluid_bioports ) do
+	
+		if not bioport_id then goto continue end
+		
+		local bioport = storage.biofluid_bioports[ bioport_id ] 		
+		
+		if not bioport then goto continue end
+		if not bioport.entity then goto continue end
+		if not bioport.entity.valid then goto continue end
+	
+		stats.gobachov.total 	= stats.gobachov.total + bioport.entity.get_inventory( defines.inventory.crafter_input ).get_item_count( "gobachov" )
+		stats.huzu.total 		= stats.huzu.total + bioport.entity.get_inventory( defines.inventory.crafter_input ).get_item_count( "huzu" )
+		stats.chorkok.total 	= stats.chorkok.total + bioport.entity.get_inventory( defines.inventory.crafter_input ).get_item_count( "chorkok" )
+
+		::continue::
+	end
+
+	return stats
+end
+
+
+function Biofluid.display_network_stats( stats, content_frame, tooltip_text ) 
+
+	if stats.gobachov.total > 0 then
+		local creature = content_frame.creature_count_grid.add {
+			type = "sprite-button",
+			name = "item_index_1", 
+			sprite = "item/gobachov",
+			tooltip = tooltip_text,
+			number = stats.gobachov.total, 			
+			style = "slot_button"
+		}
+		
+		local topper = creature.add {
+			type = "label",
+			name = "secondary_number_1",
+			caption = stats.gobachov.active, 
+			ignored_by_interaction = true 
+		}
+
+		topper.style.font = "default-semibold"
+		topper.style.font_color = {1, 1, 1}
+		topper.style.top_padding = -5
+		topper.style.left_padding = -2	
+	end
+	
+	if stats.huzu.total > 0 then
+		local creature = content_frame.creature_count_grid.add {
+			type = "sprite-button",
+			name = "item_index_2", 
+			sprite = "item/huzu",
+			tooltip = tooltip_text,
+			number = stats.huzu.total, 			
+			style = "slot_button"
+		}
+		
+		local topper = creature.add {
+			type = "label",
+			name = "secondary_number_2",
+			caption = stats.huzu.active, 
+			ignored_by_interaction = true 
+		}
+
+		topper.style.font = "default-semibold"
+		topper.style.font_color = {1, 1, 1}
+		topper.style.top_padding = -5
+		topper.style.left_padding = -2	
+	end
+	
+	if stats.chorkok.total > 0 then
+		local creature = content_frame.creature_count_grid.add {
+			type = "sprite-button",
+			name = "item_index_3", 
+			sprite = "item/chorkok",
+			tooltip = tooltip_text,
+			number = stats.chorkok.total, 			
+			style = "slot_button"
+		}
+		
+		local topper = creature.add {
+			type = "label",
+			name = "secondary_number_3",
+			caption = stats.chorkok.active, 
+			ignored_by_interaction = true 
+		}
+
+		topper.style.font = "default-semibold"
+		topper.style.font_color = {1, 1, 1}
+		topper.style.top_padding = -5
+		topper.style.left_padding = -2	
+	end
+	
+	if stats.gobachov.total <= 0 and stats.huzu.total <= 0 and stats.chorkok.total <= 0 then
+		local creature = content_frame.creature_count_grid.add {
+			type = "sprite-button",
+			name = "status_zero",
+			sprite = "virtual-signal/signal-no-entry",
+			style = "slot_button"
+		}
+	end
+end
+
+
+function Biofluid.update_bioport_traffic(entity, content_frame) 
+
+	local unit_number = entity.unit_number
+	if not storage.biofluid_bioports[ unit_number ] then return end
+
+	local bioport_data = storage.biofluid_bioports[ unit_number ]
+	if not bioport_data.network_id then return end
+	
+	local network_id = bioport_data.network_id
+	if not storage.biofluid_networks[ network_id ] then return end
+	
+	-- network traffic stats
+	local dispatched = -1
+	if storage.biofluid_networks[ network_id ].dispatched_requests ~= nil then dispatched = storage.biofluid_networks[ network_id ].dispatched_requests end
+	content_frame.item_status_grid.status_green.number = dispatched
+	
+	local undispatched = -1
+	if storage.biofluid_networks[ network_id ].undispatched_requests ~= nil then undispatched = storage.biofluid_networks[ network_id ].undispatched_requests end
+	content_frame.item_status_grid.status_red.number = undispatched
+	
+	-- creatures in network stats
+	local stats = Biofluid.get_network_stats( network_id )
+	
+	content_frame.creature_count_grid.clear()
+	
+	Biofluid.display_network_stats( stats, content_frame, {"biofluid-gui.creature-in-network"} )
+	
+	-- icons of fluids we cannot deliver
+	content_frame.item_icon_grid.clear()
+	
+	if not storage.biofluid_networks[ network_id ].undispatched_fluids then return end
+	local undispatched_fluids = storage.biofluid_networks[ network_id ].undispatched_fluids
+	local undispatched_fluid_amounts = storage.biofluid_networks[ network_id ].undispatched_fluid_amounts
+
+	local cnt = 0
+	
+	for fluid, amount in pairs(undispatched_fluid_amounts) do
+	
+		local fluid_path = "fluid/" .. fluid
+		
+		if not helpers.is_valid_sprite_path(fluid_path) then
+			fluid_path = "utility/questionmark"
+		end
+		
+		local icon = content_frame.item_icon_grid.add{
+			type = "sprite-button",
+			name = "item_index_" .. cnt, 
+			sprite = fluid_path,
+			tooltip = {"fluid-name." .. fluid},
+			number = amount, 			
+			style = "slot_button"
+		}
+		
+		local topper = icon.add{
+			type = "label",
+			name = "secondary_number_" .. cnt,
+			caption = undispatched_fluids[ fluid ], 
+			ignored_by_interaction = true 
+		}
+
+		topper.style.font = "default-semibold"
+		topper.style.font_color = {1, 1, 1}
+		topper.style.top_padding = -5
+		topper.style.left_padding = -2		
+
+		cnt = cnt + 1
+		
+		if cnt >= 36 then break end
+	end
+	
+	if cnt == 0 then
+		content_frame.item_icon_grid.add {
+			type = "sprite-button",
+			name = "status_zero",
+			sprite = "virtual-signal/signal-no-entry",
+			style = "slot_button"
+		}
+	end
+end
+
+
+function Biofluid.add_bioport_traffic(entity, content_frame) 
+
+	local unit_number = entity.unit_number
+	if not storage.biofluid_bioports[ unit_number ] then return end
+	
+	local bioport_data = storage.biofluid_bioports[ unit_number ]
+
+	local divider_line1 = content_frame.add{ type = "line", direction = "horizontal" }
+	divider_line1.style.top_margin = 10
+	divider_line1.style.bottom_margin = 3
+	
+	local creature_count = content_frame.add{ type = "label", caption = {"biofluid-gui.creatures-in-network"} }
+	creature_count.style = "bold_label"
+	
+	content_frame.add{ type = "table", column_count = 3, name = "creature_count_grid" }
+	
+	local dispatched = -1
+	if bioport_data.dispatched_orders ~= nil then dispatched = bioport_data.dispatched_orders end
+	
+	local undispatched = -1
+	if bioport_data.undispatched_orders ~= nil then undispatched = bioport_data.undispatched_orders end
+	
+	local divider_line1 = content_frame.add{ type = "line", direction = "horizontal" }
+	divider_line1.style.top_margin = 10
+	divider_line1.style.bottom_margin = 3
+	
+	local network_status = content_frame.add{ type = "label", caption = {"biofluid-gui.network-traffic"} }
+	network_status.style = "bold_label"
+	
+	local status_table = content_frame.add{ type = "table", column_count = 2, name = "item_status_grid" }
+	
+	status_table.add{
+		type = "sprite-button",
+		name = "status_green",
+		sprite = "virtual-signal/signal-green",
+		tooltip = {"biofluid-gui.status-filled-orders"},
+		number = 0, 			
+		style = "slot_button"
+	}
+	
+	status_table.add{
+		type = "sprite-button",
+		name = "status_red",
+		sprite = "virtual-signal/signal-red",
+		tooltip = {"biofluid-gui.status-failed-orders"},
+		number = 0, 			
+		style = "slot_button"
+	}
+	
+	local divider_line2 = content_frame.add{ type = "line", direction = "horizontal" }
+	divider_line2.style.top_margin = 3
+	divider_line2.style.bottom_margin = 5
+	
+	local undeliverable_requests_title = content_frame.add{ type = "label", caption = {"biofluid-gui.unsatisfied-fluid-requests"} }
+	undeliverable_requests_title.style = "bold_label"
+	undeliverable_requests_title.style.bottom_margin = 5
+	
+	local grid_table = content_frame.add{ type = "table", column_count = 9, name = "item_icon_grid" }
+end
+
 
 function Biofluid.update_requester_gui(player, gui)
     local unit_number = gui.tags.unit_number
@@ -181,9 +511,11 @@ function Biofluid.update_requester_gui(player, gui)
     content_flow.status_flow.status_sprite.sprite = img
 
     local config_flow = content_flow.config_flow
-    config_flow.py_request_type.elem_value = requester_data.name
-    config_flow.py_request_amount.text = tostring(requester_data.amount)
-    config_flow.py_requester_priority_input.text = tostring(requester_data.priority)
+	if config_flow.py_request_type.elem_value == nil then
+		config_flow.py_request_type.elem_value = requester_data.name
+		config_flow.py_request_amount.text = tostring(requester_data.amount)
+		config_flow.py_requester_priority_input.text = tostring(requester_data.priority)
+	end
 
     local temperature_flow = content_flow.temperature_flow
     local enabled = requester_data.care_about_temperature
@@ -192,6 +524,12 @@ function Biofluid.update_requester_gui(player, gui)
     temperature_flow.py_biofluid_temperature.enabled = enabled
     temperature_flow.py_biofluid_temperature_equality_operator.selected_index = requester_data.temperature_operator or 1
     temperature_flow.py_biofluid_temperature_equality_operator.enabled = enabled
+	
+	local stats = Biofluid.get_requestor_stats( entity )
+	
+	gui.content_frame.creature_count_grid.clear()
+	
+	Biofluid.display_network_stats( stats, gui.content_frame, {"biofluid-gui.requestor-active-distant"} )
 end
 
 function Biofluid.build_requester_gui(entity, player)
@@ -210,6 +548,15 @@ function Biofluid.build_requester_gui(entity, player)
     content_flow.style.vertical_spacing = 8
     content_flow.style.margin = {-4, 0, -4, 0}
     content_flow.style.vertical_align = "center"
+
+	local divider_line1 = content_frame.add{ type = "line", direction = "horizontal" }
+	divider_line1.style.top_margin = 10
+	divider_line1.style.bottom_margin = 3
+	
+	local creature_count = content_frame.add{ type = "label", caption = {"biofluid-gui.requestor-active-creatures"} }
+	creature_count.style = "bold_label"
+	
+	content_frame.add{ type = "table", column_count = 3, name = "creature_count_grid" }
 
     local status_flow = content_flow.add {type = "flow", name = "status_flow", direction = "horizontal"}
     status_flow.style.vertical_align = "center"

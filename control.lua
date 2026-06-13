@@ -97,6 +97,10 @@ py.register_on_nth_tick(7, "update-guis", "pyal", function()
         if gui then
             Biofluid.update_bioport_gui(player, gui); goto continue
         end
+		gui = player.gui.screen.biofluid_requester_gui
+		if gui then
+            Biofluid.update_requester_gui(player, gui); goto continue
+        end
         ::continue::
     end
 end)

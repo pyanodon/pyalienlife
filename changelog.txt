@@ -22,6 +22,14 @@ Date: 2026-05-15
 Version: 3.0.64
 Date: 2026-05-15
   Changes:
+    - Biofluid overhaul.  Changes:
+      - Minimum fluid request for requestor tanks increased from 10k to 20k.  This improves the efficiency of higher-tier biofluid creatures.
+      - Loosened the definition of 'fully supplied provider tank' from 100% full to 80% full.  This is more in-line with the fluid system's performance.
+      - Bioports can now deploy more than one critter per biofluid cycle.  This greatly increases effiency in busy networks.
+      - Permenently fixed the Biofluid Creature Homelessness Crisis.  Praise the Factory!
+      - Provider tanks now pick the closest bioport as their 'preferred source' of critters, then the system attracts critters to that port.
+      - Improved the Bioport GUI to show incoming/outgoing diagnostics.
+      - Implemented a variety of optimizations to increase the performance of the biofluid network at all levels.
     - Caravan speed optimizations.  Idle caravans are now processed less often, leading to substantial performance improvements in large bases.
     - Minor Caravan schedule UI improvements.
     - Biofluid networks now support provider priority
@@ -59,6 +67,7 @@ Date: 2026-03-28
     - Added "fill until" and "empty until" fluid caravan actions (thanks, charleycrissman!)
     - Improved wyrmhole performance when scaling. Resolves https://github.com/pyanodon/pybugreports/issues/1404
     - Fixed poor recipe icon placement for smart farms. Resolves https://github.com/pyanodon/pybugreports/issues/1387
+    - Fixed Xeno TURD Sequential Hermaphroditsm creating cages from nothing.  Resolves https://github.com/pyanodon/pybugreports/issues/1426
     - Fixed rendering icons being inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1080
     - Updated specialized rendering icons to reflect normal rendering icon
 ---------------------------------------------------------------------------------------------------

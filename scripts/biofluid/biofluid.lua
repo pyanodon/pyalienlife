@@ -97,6 +97,7 @@ py.on_event(py.events.on_init(), function(changes)
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
     storage.biofluid_providers = storage.biofluid_providers or {}
+    storage.biofluid_preferred_bioports = storage.biofluid_preferred_bioports or {}
     ---@type BiofluidBioport[]
     storage.biofluid_bioports = storage.biofluid_bioports or {}
     ---@type BiofluidNetwork[]
@@ -128,7 +129,8 @@ py.on_event(py.events.on_built(), function(event)
             target_temperature = tags.target_temperature or 15,
             temperature_operator = tags.temperature_operator or 1,
             priority = tags.priority or 0
-       }
+        }
+
     elseif connection_type == Biofluid.ROBOPORT then
         storage.biofluid_bioports[unit_number] = {
             entity = entity,
@@ -140,6 +142,10 @@ py.on_event(py.events.on_built(), function(event)
                 chorkok = {stage = 0, id = nil}
             }
         }
+		
+		-- we have a new bioport; invalidate the preferred bioport cache
+		storage.biofluid_preferred_bioports = {}
+		
     elseif entity.type == "pipe-to-ground" then
         entity.operable = false
     elseif connection_type == Biofluid.PROVIDER then
@@ -153,6 +159,88 @@ py.on_event(py.events.on_built(), function(event)
     ::continue::
     Biofluid.built_pipe()
 end)
+
+local current_bioport_to_scan = 0
+
+local function homeless_scan()
+    if not storage.biofluid_networks then goto continue end
+    if not storage.biofluid_bioports then goto continue end
+
+    local names = {"gobachov", "huzu", "chorkok"}
+    local localports = nil
+
+    -- we scan two areas:  a random chunk and the next bioport
+    local areas = {}
+
+    -- random chunk
+    local chunk = game.surfaces[1].get_random_chunk()
+    if not chunk then goto continue end
+    table.insert(areas, {{chunk.x * 32, chunk.y * 32}, {(chunk.x + 2) * 32, (chunk.y + 2) * 32}})
+
+    local next_bioport_data = nil
+    local count = 0
+    current_bioport_to_scan = current_bioport_to_scan + 1
+
+    for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
+        count = count + 1
+
+        if (count == current_bioport_to_scan) then
+            next_bioport_data = bioport_data
+            break;
+        end
+    end
+
+    if (next_bioport_data ~= nil) and (next_bioport_data.entity ~= nil) and (next_bioport_data.entity.valid) then
+        -- bioport chunk
+        table.insert(areas, {{next_bioport_data.entity.position.x - 32, next_bioport_data.entity.position.y - 32}, {next_bioport_data.entity.position.x + 32, next_bioport_data.entity.position.y + 32}})
+    else
+        -- start at the beginning of the loop
+        current_bioport_to_scan = 0
+    end
+
+    for _, area in pairs(areas) do
+        for _, name in pairs(names) do
+            local entities = game.surfaces[1].find_entities_filtered {name = name, area = area}
+
+            for _, biobot in pairs(entities) do
+                if biobot.valid then
+                    local uid = biobot.unit_number
+                    if uid and not storage.biofluid_robots[uid] then
+                        -- homeless biobots: find them a new home
+                        -- homeless biobots lose all reference to their networks (which might no longer exist), so just send them somewhere with space.
+                        if localports == nil then
+                            localports = {}
+                            for unit_number, bioport_data in pairs(storage.biofluid_bioports) do
+                                table.insert(localports, unit_number)
+                            end
+                        end
+
+                        if localports == nil or #localports == 0 then goto continue end
+                        local newhomeid = localports[math.random(#localports)]
+                        if newhomeid == nil then goto continue end
+                        local newhome = storage.biofluid_bioports[newhomeid]
+                        if newhome == nil or newhome.network_id == nil or not newhome.entity.valid then goto continue end
+
+                        local biorobot_data = {
+                            entity = biobot,
+                            status = RETURNING,
+                            bioport = newhomeid,
+                            network_id = newhome.network_id
+                        }
+
+                        storage.biofluid_robots[biobot.unit_number] = biorobot_data
+
+                        local position = newhome.entity.position
+                        Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
+                    end
+                end
+            end
+        end
+    end
+
+    ::continue::
+end
+
 
 local ENTITY_BIOFLUID_PIPE_INDEXES = {
     ["vessel-to-ground"] = 1,
@@ -217,6 +305,7 @@ end
 
 function Biofluid.update_bioport_animation(bioport_data)
     local entity = bioport_data.entity
+	if not entity.valid then return end
     local input = entity.get_inventory(INPUT_INVENTORY)
     for creature_name, animation_data in pairs(bioport_data.animation) do
         local new_stage = floor(input.get_item_count(creature_name) / 2)
@@ -277,6 +366,9 @@ local function provider_sort_function(entity_a, entity_b)
     if not b then b = 0 else b = b.amount end
     b = b - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
 
+	if not priority_a then priority_a = 0 end
+	if not priority_b then priority_b = 0 end
+	
     if (priority_a > priority_b) then
         return true
     elseif (priority_a < priority_b) then
@@ -288,7 +380,33 @@ end
 
 
 
---TODO: cache this on the provider, invalidate caches on bioport placement
+
+-- ie, the preferred bioport
+-- I should be checking network, yeah?
+function find_closest_bioport(base_entity, unit_numbers)
+    local closest_unit = nil
+    local min_dist_sq = math.huge
+    local base_pos = base_entity.position
+
+    for unit_number in pairs(unit_numbers) do
+        local data = storage.biofluid_bioports[unit_number]
+        
+        if data and data.entity and data.entity.valid and data.entity.position then
+            local pos = data.entity.position
+
+            local dist_sq = (pos.x - base_pos.x)^2 + (pos.y - base_pos.y)^2
+            
+            if dist_sq < min_dist_sq then
+                min_dist_sq = dist_sq
+                closest_unit = unit_number
+            end
+        end
+    end
+
+    return closest_unit
+end
+
+
 function order_by_distance(base_entity, unit_numbers)
     local order = {}
     for unit_number in pairs(unit_numbers) do
@@ -354,8 +472,8 @@ local function build_providers_by_contents(network_data, relavant_fluids)
         local already_allocated = network_data.allocated_fluids_from_providers[provider.unit_number] or 0
         local can_give = contents.amount - already_allocated
 
-        if (contents.amount >= Biofluid.tank_size) then
-            -- if the provider tank is full, allow as many bots as possible to use it
+        if (contents.amount >= Biofluid.tank_size * .8) then
+            -- if the provider tank is near-full, allow as many bots as possible to use it
             -- this allows a well-supplied provider to service many more requesters per unit time without impacting providers with smaller supply
             -- the downside is that sudden demand spikes will waste biofluid bot time by over-allocating them, but that should be rare.
             can_give = contents.amount
@@ -372,9 +490,12 @@ local function build_providers_by_contents(network_data, relavant_fluids)
 end
 
 local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
+
     local network_id = unfulfilled_request.network_id
     local network_data = storage.biofluid_networks[network_id]
     local providers_by_contents = network_data.providers_by_contents
+	local requestor_unit_number = unfulfilled_request.entity.unit_number
+	local requester_data = storage.biofluid_requesters[requestor_unit_number]
 
     if not providers_by_contents then
         build_providers_by_contents(network_data, relavant_fluids[network_id])
@@ -389,8 +510,12 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
     if not providers then return end
 
     allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
+	
     sort(providers, provider_sort_function)
     for _, p in pairs(providers) do
+	
+		if not p.valid then goto continue end
+	
         local contents = p.fluidbox[1]
         if target_temperature then
             local stored_temperature = contents.temperature
@@ -413,8 +538,8 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
         end
         local can_give = contents.amount - (allocated_fluids_from_providers[p.unit_number] or 0)
 
-        if (contents.amount >= Biofluid.tank_size) then
-            -- again, if the provider tank is full assume it is also well-supplied and can provide much more than we can currently see
+        if (contents.amount >= Biofluid.tank_size * .8) then
+            -- again, if the provider tank is near-full assume it is also well-supplied and can provide much more than we can currently see
             -- ignore existing allocations and assume it will be full when we get there
             can_give = contents.amount
         end
@@ -426,45 +551,126 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
     end
 
     if not provider then return end
+	if unfulfilled_request.amount <= 0 then return end
+	
+	-- now we figure out where we're geting our biobot from.  Try the preferred bioport first.
+	if not storage.biofluid_preferred_bioports[requestor_unit_number] then
+		-- this requestor doesn't have a preferred bioport set yet.  Lets fix that.
+		storage.biofluid_preferred_bioports[requestor_unit_number] = find_closest_bioport(provider, network_data.biofluid_bioports)
+	end
 
-    local requester_data = storage.biofluid_requesters[unfulfilled_request.entity.unit_number]
+	-- try the preferred bioport first, then fall back to ordered by distance.
+	local preferred_bioport_number = storage.biofluid_preferred_bioports[requestor_unit_number]
+	local preferred_bioport = storage.biofluid_bioports[preferred_bioport_number]
+	local delivery_amount = 0
+	
+	if not preferred_bioport.entity or not preferred_bioport.entity.valid then
+		storage.biofluid_preferred_bioports[requestor_unit_number] = nil
+		storage.biofluid_bioports[preferred_bioport_number] = nil
+		preferred_bioport = nil
+	end
+	
+	if preferred_bioport ~= nil and preferred_bioport.active then
+		-- test the preferred bioport
+		delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, preferred_bioport, preferred_bioport_number)
 
-    for _, unit_number in order_by_distance(requester_data.entity, network_data.biofluid_bioports) do
-        local bioport_data = storage.biofluid_bioports[unit_number]
-        if not bioport_data or not bioport_data.active or not bioport_data.entity.valid then goto continue end
+		if delivery_amount == 0 then
+			-- whelp, the preferred bioport didn't work out.  Mark the preferred port as inactive.
+			preferred_bioport.active = nil
+		end
+	end
+	
+	
+	if delivery_amount == 0 then
+		-- preferred port couldn't perform.  Cycle through until we find one closest.  We still return to the preferred bioport!
+		for _, unit_number in order_by_distance(requester_data.entity, network_data.biofluid_bioports) do
+	
+			local bioport_data = storage.biofluid_bioports[unit_number]
 
-        if (unfulfilled_request.amount <= 0) then
-            break
-        end
+			if not bioport_data or not bioport_data.active then goto continue end
 
-        local delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
+			if not bioport_data.entity or not bioport_data.entity.valid then
+				storage.biofluid_bioports[unit_number] = nil
+				goto continue
+			end
 
-        if delivery_amount ~= 0 then
-            local allocated = network_data.allocated_fluids_from_providers
-            allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
-            requester_data.incoming = requester_data.incoming + delivery_amount
-            bioport_data.active = nil
-            break
-        end
-        ::continue::
-    end
+			delivery_amount = Biofluid.start_journey(unfulfilled_request, provider, bioport_data, preferred_bioport_number)
+
+			if delivery_amount ~= 0 then
+				break
+			else 
+				-- probably no robots
+				bioport_data.active = nil
+			end
+			::continue::
+		end
+	end
+	
+	
+	if delivery_amount ~= 0 then
+		-- sucessful delivery initiated
+		unfulfilled_request.dispatched = true		
+		local allocated = network_data.allocated_fluids_from_providers
+		allocated[provider.unit_number] = (allocated[provider.unit_number] or 0) + delivery_amount
+		requester_data.incoming = requester_data.incoming + delivery_amount
+		return
+	end 
+	
+	-- if we get here, we can't fill the order.  Very sad.
 end
 
 py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
+
+	if not storage.biofluid_preferred_bioports then
+		storage.biofluid_preferred_bioports = {}
+	end
+	
+    homeless_scan()
+
     local networks = storage.biofluid_networks
     if not next(networks) then return end
     Biofluid.render_error_icons()
 
     local unfulfilled_requests, relavant_fluids = Biofluid.get_unfulfilled_requests()
 
+	for _, network in pairs(storage.biofluid_networks) do 
+		network.undispatched_requests = 0;
+		network.dispatched_requests = 0;
+		network.undispatched_fluids = {};
+		network.undispatched_fluid_amounts = {};
+	end
+	
     for _, unfulfilled_request in pairs(unfulfilled_requests) do
+	
+		local network_id = unfulfilled_request.network_id
+		local fluid_name = unfulfilled_request.name
+	
+		if not storage.biofluid_networks[ network_id ] then break end
+		local network_data = storage.biofluid_networks[ network_id ]
+	
         process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
+		
+		-- build stats on how many orders we delivered, how many we couldn't deliver, and the fluids we can't deliver.
+		if unfulfilled_request.dispatched == false then 
+			network_data.undispatched_requests = network_data.undispatched_requests + 1
+			
+			if network_data.undispatched_fluids[ fluid_name ] == nil then
+				network_data.undispatched_fluids[ fluid_name ] = 1
+				network_data.undispatched_fluid_amounts[ fluid_name ] = unfulfilled_request.amount
+			else
+				network_data.undispatched_fluids[ fluid_name ] = network_data.undispatched_fluids[ fluid_name ] + 1
+				network_data.undispatched_fluid_amounts[ fluid_name ] = network_data.undispatched_fluid_amounts[ fluid_name ] + unfulfilled_request.amount
+			end
+			
+		else
+			storage.biofluid_networks[ network_id ].dispatched_requests = storage.biofluid_networks[ network_id ].dispatched_requests + 1
+		end
     end
 
     for _, network_data in pairs(storage.biofluid_networks) do network_data.providers_by_contents = nil end
 end)
 
-local function set_target(biorobot_data, target)
+function Biofluid.set_target(biorobot_data, target)
     biorobot_data.entity.commandable.set_command {
         type = defines.command.go_to_location,
         destination = target,
@@ -474,12 +680,13 @@ local function set_target(biorobot_data, target)
             low_priority = true,
             allow_paths_through_own_entities = true,
             allow_destroy_friendly_entities = true,
-       },
+			cache = true
+        },
         distraction = defines.distraction.none
    }
 end
 
-function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
+function Biofluid.start_journey(unfulfilled_request, provider, bioport_data, preferred_bioport_number)
     if not Biofluid.eat(bioport_data) then return 0 end
     local delivery_amount = unfulfilled_request.amount
     local requester = unfulfilled_request.entity
@@ -512,12 +719,13 @@ function Biofluid.start_journey(unfulfilled_request, provider, bioport_data)
         requester = requester.unit_number,
         provider = provider,
         provider_unit_number = provider.unit_number,
-        bioport = bioport.unit_number,
+        bioport = preferred_bioport_number,
         delivery_amount = delivery_amount,
         name = unfulfilled_request.name,
         network_id = bioport_data.network_id
-   }
-    set_target(biorobot_data, provider.position)
+    }
+	
+    Biofluid.set_target(biorobot_data, provider.position)
     storage.biofluid_robots[robot.unit_number] = biorobot_data
     Biofluid.update_bioport_animation(bioport_data)
     return delivery_amount
@@ -601,14 +809,15 @@ local function find_new_home(biorobot_data, network_data)
     local old_home = biorobot_data.bioport
     local home
     local min_robot_count = 999
-    for unit_number in pairs(network_data.biofluid_bioports) do
+	
+	for _, unit_number in order_by_distance(biorobot_data.entity, network_data.biofluid_bioports) do
         if unit_number == old_home then goto continue end
         local bioport_data = storage.biofluid_bioports[unit_number]
         if not bioport_data then goto continue end
         local bioport = bioport_data.entity
         if not bioport.valid then goto continue end
         local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
-        if robot_count < 6 then
+        if robot_count < 16 then
             home = bioport
             biorobot_data.bioport = unit_number
             break
@@ -623,7 +832,7 @@ local function find_new_home(biorobot_data, network_data)
         make_homeless(biorobot_data); return
     end
     local position = home.position
-    set_target(biorobot_data, {position.x, position.y - 2.5})
+    Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 local function go_home(biorobot_data)
@@ -635,10 +844,16 @@ local function go_home(biorobot_data)
         reset_requester_allocations(biorobot_data)
     end
     biorobot_data.status = RETURNING
-    local bioport_data = storage.biofluid_bioports[biorobot_data.bioport]
+	
+	local bioport_data = nil
+	if storage.biofluid_bioports[biorobot_data.bioport] ~= nil then	
+		bioport_data = storage.biofluid_bioports[biorobot_data.bioport]
+	end
+	
     local network_id = bioport_data and bioport_data.network_id or biorobot_data.network_id
     local network_data = storage.biofluid_networks[network_id]
-    if not bioport_data or not bioport_data.entity or (network_data and random() > 0.9 and table_size(network_data.biofluid_bioports) > 1) then
+	
+    if not bioport_data or not bioport_data.entity or not bioport_data.entity.valid or (network_data and random() > 0.9 and table_size(network_data.biofluid_bioports) > 1) then
         if network_data then
             find_new_home(biorobot_data, network_data)
         else
@@ -647,7 +862,8 @@ local function go_home(biorobot_data)
         return
     end
     local position = bioport_data.entity.position
-    set_target(biorobot_data, {position.x, position.y - 2.5})
+	
+    Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
 end
 
 local function combine_tempatures(first_count, first_tempature, second_count, second_tempature)
@@ -658,6 +874,7 @@ local function combine_tempatures(first_count, first_tempature, second_count, se
 end
 
 local function pickup(biorobot_data)
+
     local provider = biorobot_data.provider
     if not provider.valid then
         go_home(biorobot_data); return
@@ -681,29 +898,33 @@ local function pickup(biorobot_data)
     else
         provider.fluidbox[1] = {name = name, amount = new_amount, temperature = contents.temperature}
     end
-    set_target(biorobot_data, requester_data.entity.position)
+    Biofluid.set_target(biorobot_data, requester_data.entity.position)
     reset_provider_allocations(biorobot_data)
     requester_data.incoming = requester_data.incoming - biorobot_data.delivery_amount + delivery_amount
     biorobot_data.delivery_amount = delivery_amount
     biorobot_data.status = DROPPING_OFF
     if contents then biorobot_data.temperature = contents.temperature end
     local entity = biorobot_data.entity
-    biorobot_data.alt_mode_shadow = rendering.draw_sprite {
-        sprite = "utility/entity_info_dark_background",
-        target = entity,
-        surface = entity.surface,
-        only_in_alt_mode = true,
-        x_scale = 0.5,
-        y_scale = 0.5,
-   }.id
-    biorobot_data.alt_mode_sprite = rendering.draw_sprite {
-        sprite = "fluid/" .. name,
-        target = entity,
-        surface = entity.surface,
-        only_in_alt_mode = true,
-        x_scale = 0.8,
-        y_scale = 0.8,
-   }.id
+	if entity and entity.valid then
+		biorobot_data.alt_mode_shadow = rendering.draw_sprite {
+			sprite = "utility/entity_info_dark_background",
+			target = entity,
+			surface = entity.surface,
+			only_in_alt_mode = true,
+			x_scale = 0.5,
+			y_scale = 0.5,
+		}.id
+		biorobot_data.alt_mode_sprite = rendering.draw_sprite {
+			sprite = "fluid/" .. name,
+			target = entity,
+			surface = entity.surface,
+			only_in_alt_mode = true,
+			x_scale = 0.8,
+			y_scale = 0.8,
+		}.id
+	else
+		go_home(biorobot_data); return
+    end
 end
 
 local function dropoff(biorobot_data)
@@ -758,8 +979,11 @@ local function returning(biorobot_data)
 end
 
 py.on_event(defines.events.on_ai_command_completed, function(event)
+
     local biorobot_data = storage.biofluid_robots[event.unit_number]
+	
     if not biorobot_data then return end
+
     if event.result ~= defines.behavior_result.success then
         go_home(biorobot_data); return
     end
@@ -782,7 +1006,7 @@ end
 function Biofluid.get_unfulfilled_requests()
     local relavant_fluids = {}
     local result = {}
-    local min_fluid_request = 10000
+    local min_fluid_request = 20000
 
     for unit_number, requester_data in pairs(storage.biofluid_requesters) do
         local requester = requester_data.entity
@@ -810,14 +1034,27 @@ function Biofluid.get_unfulfilled_requests()
             already_stored = already_stored + contents.amount
         end
         local request_size = goal - already_stored
-        if request_size < min_fluid_request then goto continue end
+
+        if goal >= min_fluid_request then
+            -- large requests.  is it already in flight?
+            if request_size < min_fluid_request then
+                goto continue
+            end
+        else
+            -- small requests, what is the player even doing here?
+            if request_size < goal * .2 then
+                goto continue
+            end
+        end
+
         result[#result + 1] = {
             name = fluid_name,
             amount = request_size,
             entity = requester,
             priority = requester_data.priority,
-            network_id = network_id
-       }
+            network_id = network_id,
+			dispatched = false
+        }
         if requester_data.care_about_temperature then
             result[#result].target_temperature = requester_data.target_temperature
             result[#result].temperature_operator = requester_data.temperature_operator
@@ -931,6 +1168,9 @@ py.on_event(py.events.on_destroyed(), function(event)
             local graphic = bioport_data.animation_entity
             if graphic and graphic.valid then graphic.destroy() end
             storage.biofluid_bioports[unit_number] = nil
+			
+			-- RIP bioport; invalidate the preferred bioport cache
+			storage.biofluid_preferred_bioports = {}
         else
             storage.biofluid_requesters[unit_number] = nil
         end

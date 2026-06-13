@@ -52,6 +52,31 @@ if data and not yafc_turd_integration then
         recipe:multiply_result_amount("xeno-egg", 10)
         data:extend {recipe}
     end
+	
+	for i, recipe in pairs {
+        RECIPE("caged-xeno-1"):copy(),
+        RECIPE("caged-xeno-2"):copy(),
+        RECIPE("caged-xeno-3"):copy(),
+    } do
+        recipe.name = recipe.name .. "-herm"
+		recipe.main_product = "xeno"
+		recipe:remove_result("caged-xeno")
+		recipe:add_result {type = "item", name = "cage", amount = i}
+		recipe:add_result {type = "item", name = "xeno", amount = i}
+        data:extend {recipe}
+    end
+	
+	for _, recipe in pairs {
+        RECIPE("caged-xeno-4"):copy(),
+    } do
+        recipe.name = recipe.name .. "-herm"
+		recipe.main_product = "xeno"
+		recipe:remove_result("caged-xeno")
+		recipe:remove_ingredient("cage")
+		recipe:add_result {type = "item", name = "cage", amount = 3}
+		recipe:add_result {type = "item", name = "xeno", amount = 4}
+        data:extend {recipe}
+    end
 end
 
 return {
@@ -105,6 +130,10 @@ return {
                 {old = "xeno-egg-2",          new = "xeno-egg-2-cheap", type = "recipe-replacement"},
                 {old = "xeno-egg-3",          new = "xeno-egg-3-cheap", type = "recipe-replacement"},
                 {old = "xeno-egg-4",          new = "xeno-egg-4-cheap", type = "recipe-replacement"},
+				{old = "caged-xeno-1",        new = "caged-xeno-1-herm", type = "recipe-replacement"},
+                {old = "caged-xeno-2",        new = "caged-xeno-2-herm", type = "recipe-replacement"},
+                {old = "caged-xeno-3",        new = "caged-xeno-3-herm", type = "recipe-replacement"},
+                {old = "caged-xeno-4",        new = "caged-xeno-4-herm", type = "recipe-replacement"},
             }
         },
         {
