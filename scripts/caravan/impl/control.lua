@@ -170,4 +170,25 @@ function P.select_destination(player, last_opened, camera_position)
     storage.last_opened[player.index] = last_opened
 end
 
+-- gets called in the GUI button functions to boot caravans out of the slow queue
+-- the exclaimation point is implied
+function P.wake_up( unit_number ) 
+
+	-- wake up!  if it happens to be in deep sleep
+	if storage.caravans[unit_number] ~= nil and storage.caravans[unit_number].entity ~= nil then
+		storage.caravans[unit_number].entity.active = true
+		
+		if storage.caravan_activities[unit_number] ~= nil then
+			storage.caravan_activities[unit_number] = 0
+		end
+		
+		if storage.caravan_slow_queue ~= nil then
+			storage.caravan_slow_queue[unit_number] = nil
+		end
+		if storage.caravan_fast_queue ~= nil then
+			storage.caravan_fast_queue[unit_number] = storage.caravans[unit_number]
+		end
+	end
+end
+
 return P

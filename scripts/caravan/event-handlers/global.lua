@@ -36,6 +36,8 @@ py.on_event(py.events.on_destroyed(), function(event)
 
     CaravanImpl.remove_alert(event.entity)
 
+	storage.caravan_activities[entity.unit_number] = nil
+
     local buffer = event.buffer
     if buffer then
         buffer[1].tags = {unit_number = entity.unit_number}
@@ -324,8 +326,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
         }
         local prototype = caravan_prototypes[entity.name]
         if prototype.requeue_required then
-            storage.caravan_queue = nil
-            caravan_data.arrival_tick = game.tick
+            CaravanImpl.wake_up(unit_number)
         end
     end
 
@@ -344,81 +345,168 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
     if not storage.caravan_queue then
         local queue = {}
         for _, caravan_data in pairs(storage.caravans) do
-            if CaravanImpl.validity_check(caravan_data) then
-                queue[#queue + 1] = caravan_data
-            end
+			
+			if not storage.caravan_activities[ caravan_data.unit_number ] then
+				storage.caravan_activities[ caravan_data.unit_number ] = 0
+			end		
+				
+			-- hungry caravans are always in the fast queue.
+			local entity = caravan_data.entity
+			local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
+		
+			if CaravanImpl.validity_check(caravan_data) then								
+				if (storage.caravan_activities[ caravan_data.unit_number ] == nil) or (storage.caravan_activities[ caravan_data.unit_number ] < 10) then		
+					storage.caravan_fast_queue[ caravan_data.unit_number ] = caravan_data
+					
+					-- wake up!  now!
+					caravan_data.entity.active = true
+				else 
+					storage.caravan_slow_queue[ caravan_data.unit_number ] = caravan_data
+					
+					-- no struggle, only dreams
+					caravan_data.entity.active = false
+				end
+			end
         end
+	end
 
-        local sort_fn = function(a, b) return (a.arrival_tick or 0) < (b.arrival_tick or 0) end
-        table.sort(queue, sort_fn)
-        storage.caravan_queue = queue
-    end
 
-    for _, caravan_data in pairs(storage.caravan_queue) do
-        if not CaravanImpl.validity_check(caravan_data) then goto continue end
-        local entity = caravan_data.entity
-        local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
+	-- the slow queue is processed once for every ten times the fast queue is processed
+	if storage.caravan_queue_counter == nil then
+		storage.caravan_queue_counter = 0
+	end
 
-        if needs_fuel then
-            CaravanImpl.add_alert(entity, Caravan.alerts.no_fuel)
-            py.draw_error_sprite(entity, "virtual-signal.py-no-food", 62, 31)
-            goto continue
-        end
+	storage.caravan_queue_counter = storage.caravan_queue_counter + 1
+	
+	local queues = { storage.caravan_fast_queue }
+	
+	if storage.caravan_queue_counter >= 10 then
+		table.insert(queues, storage.caravan_slow_queue)
+		storage.caravan_queue_counter = 0
+	end
 
-        if caravan_data.retry_pathfinder then
-            caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
-            if caravan_data.retry_pathfinder == 0 then
-                caravan_data.retry_pathfinder = nil
-                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
-            end
-            goto continue
-        end
+	local queue_number = 0
+	
+	for _, queue in pairs( queues ) do
+	
+		queue_number = queue_number + 1
 
-        if caravan_data.action_id == -1 then goto continue end
-        local schedule = caravan_data.schedule[caravan_data.schedule_id]
-        if not schedule then goto continue end
-        local action = schedule.actions[caravan_data.action_id]
-        if not action then goto continue end
-        local target_entity = schedule.entity
+		for _, caravan_data in pairs( queue ) do
 
-        local result
-        if Utils.get_valid_actions_for_entity(caravan_data.entity.name, target_entity)[action.type] then
-            result = Caravan.actions[action.type](caravan_data, schedule, action)
-        else
-            result = true -- Skip invalid action
-        end
-        if result == "nuke" then
-            goto continue
-        elseif result == "error" then
-            CaravanImpl.stop_actions(caravan_data)
-            guis_to_update[caravan_data.unit_number] = true
-            -- Advance the schedule
-        elseif result then
-            if #schedule.actions == caravan_data.action_id then
-                CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
-                CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, #caravan_data.schedule == 1)
-            else
-                CaravanImpl.begin_action(caravan_data, caravan_data.action_id + 1)
-            end
-            guis_to_update[caravan_data.unit_number] = true
-        else
-            if schedule.entity and schedule.entity.valid then
-                if py.distance_squared(schedule.entity.position, entity.position) > 1000 then
-                    CaravanImpl.goto_entity(caravan_data, schedule.entity)
-                end
-            else
-                if py.distance_squared(schedule.position, entity.position) > 1000 then
-                    CaravanImpl.goto_position(caravan_data, schedule.position)
-                end
-            end
-        end
+			-- wake up the slow queue
+			if (queue_number == 2) then
+				caravan_data.entity.active = true
+			end
 
-        ::continue::
-    end
+			if not CaravanImpl.validity_check(caravan_data) then 
+				goto continue 
+			end
+			
+			local entity = caravan_data.entity
+			local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
-    for _, player in pairs(game.connected_players) do
-        local gui = CaravanGui.get_gui(player)
-        if not gui then goto continue end
+			if needs_fuel then
+				CaravanImpl.add_alert(entity, Caravan.alerts.no_fuel)
+				py.draw_error_sprite(entity, "virtual-signal.py-no-food", 62, 31)
+				goto continue
+			end
+
+			if caravan_data.retry_pathfinder then		
+				caravan_data.retry_pathfinder = caravan_data.retry_pathfinder - 1
+				if caravan_data.retry_pathfinder == 0 then
+					caravan_data.retry_pathfinder = nil
+					CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, true)
+				end
+				goto continue
+			end
+
+			if caravan_data.action_id == -1 then 
+				goto continue 
+			end			
+			
+			local schedule = caravan_data.schedule[caravan_data.schedule_id]
+			if not schedule then 
+				goto continue 
+			end
+			local action = schedule.actions[caravan_data.action_id]
+			if not action then 
+				goto continue 
+			end
+			local target_entity = schedule.entity
+
+			local result
+			if Utils.get_valid_actions_for_entity(caravan_data.entity.name, target_entity)[action.type] then
+				result = Caravan.actions[action.type](caravan_data, schedule, action)
+			else
+				result = true -- Skip invalid action
+			end
+			
+			-- update this after we take an action.  used in the wait function to normalize the slow queue.
+			caravan_data.last_run_tick = game.tick
+
+			if result == "nuke" then
+				goto continue
+			elseif result == "error" then
+				CaravanImpl.stop_actions(caravan_data)
+				guis_to_update[caravan_data.unit_number] = true
+				-- Advance the schedule
+			elseif result then
+			
+				storage.caravan_activities[ caravan_data.unit_number ] = 0
+			
+				if #schedule.actions == caravan_data.action_id then
+					CaravanImpl.advance_caravan_schedule_by_1(caravan_data)
+					CaravanImpl.begin_schedule(caravan_data, caravan_data.schedule_id, #caravan_data.schedule == 1)
+				else
+					CaravanImpl.begin_action(caravan_data, caravan_data.action_id + 1)
+				end
+				guis_to_update[caravan_data.unit_number] = true
+			else
+			
+				storage.caravan_activities[ caravan_data.unit_number ] = storage.caravan_activities[ caravan_data.unit_number ] + 1
+			
+				-- not doing anything with our lives; go back to sleep
+				if (queue_number == 2) then
+					caravan_data.entity.active = false
+				end	
+			
+				if schedule.entity and schedule.entity.valid then
+					if py.distance_squared(schedule.entity.position, entity.position) > 1000 then
+						CaravanImpl.goto_entity(caravan_data, schedule.entity)
+					end
+				else
+					if py.distance_squared(schedule.position, entity.position) > 1000 then
+						CaravanImpl.goto_position(caravan_data, schedule.position)
+					end
+				end
+			end
+
+			::continue::			
+		end
+
+		for _, player in pairs(game.connected_players) do
+			local gui = CaravanGui.get_gui(player)
+			if not gui then goto continue end
+
+			if next(guis_to_update) and guis_to_update[gui.tags.unit_number] then
+				CaravanGui.update_gui(player)
+				goto continue
+			end
+
+			-- used to refresh the schedule here every update if the target entity is invalid
+			-- if this removal causes trouble we need a better way to handle it
+
+			::continue::
+		end
+
+		if next(storage.make_operable_next_tick) then
+			for _, entity in pairs(storage.make_operable_next_tick) do
+				if entity.valid then entity.operable = true end
+			end
+			storage.make_operable_next_tick = {}
+		end
+	end
+end)
 
         if next(guis_to_update) and guis_to_update[gui.tags.unit_number] then
             CaravanGui.update_gui(player)
