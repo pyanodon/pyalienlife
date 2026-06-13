@@ -215,11 +215,11 @@ local function homeless_scan()
                             end
                         end
 
-                        if localports == nil or #localports == 0 then goto continue end
+                        if localports == nil or #localports == 0 then goto continue2 end
                         local newhomeid = localports[math.random(#localports)]
-                        if newhomeid == nil then goto continue end
+                        if newhomeid == nil then goto continue2 end
                         local newhome = storage.biofluid_bioports[newhomeid]
-                        if newhome == nil or newhome.network_id == nil or not newhome.entity.valid then goto continue end
+                        if newhome == nil or newhome.network_id == nil or not newhome.entity.valid then goto continue2 end
 
                         local biorobot_data = {
                             entity = biobot,
@@ -233,6 +233,8 @@ local function homeless_scan()
                         local position = newhome.entity.position
                         Biofluid.set_target(biorobot_data, {position.x, position.y - 2.5})
                     end
+					
+					::continue2::
                 end
             end
         end
@@ -340,6 +342,7 @@ function Biofluid.render_error_icons()
         local entity = bioport_data.entity
         if not entity or not entity.valid then
             storage.biofluid_bioports[unit_number] = nil
+			storage.biofluid_preferred_bioports = {}
             goto continue
         end
         local failure_reason = Biofluid.why_isnt_my_bioport_working(bioport_data)
@@ -366,6 +369,9 @@ local function provider_sort_function(entity_a, entity_b)
     if not b then b = 0 else b = b.amount end
     b = b - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
 
+	if not priority_a then priority_a = 0 end
+	if not priority_b then priority_b = 0 end
+	
     if (priority_a > priority_b) then
         return true
     elseif (priority_a < priority_b) then
@@ -561,10 +567,13 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
 	local preferred_bioport = storage.biofluid_bioports[preferred_bioport_number]
 	local delivery_amount = 0
 	
-	if not preferred_bioport.entity or not preferred_bioport.entity.valid then
-		storage.biofluid_preferred_bioports[requestor_unit_number] = nil
+	-- just checking to see if the bioport is broken.
+	if preferred_bioport and (not preferred_bioport.entity or not preferred_bioport.entity.valid) then
 		storage.biofluid_bioports[preferred_bioport_number] = nil
 		preferred_bioport = nil
+	end
+	if not preferred_bioport then
+		storage.biofluid_preferred_bioports[requestor_unit_number] = nil
 	end
 	
 	if preferred_bioport ~= nil and preferred_bioport.active then
@@ -642,7 +651,7 @@ py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
 		local network_id = unfulfilled_request.network_id
 		local fluid_name = unfulfilled_request.name
 	
-		if not storage.biofluid_networks[ network_id ] then break end
+		if not storage.biofluid_networks[ network_id ] then goto continue end
 		local network_data = storage.biofluid_networks[ network_id ]
 	
         process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
@@ -662,6 +671,8 @@ py.register_on_nth_tick(143, "update-biofluid", "pyal", function()
 		else
 			storage.biofluid_networks[ network_id ].dispatched_requests = storage.biofluid_networks[ network_id ].dispatched_requests + 1
 		end
+		
+		::continue::
     end
 
     for _, network_data in pairs(storage.biofluid_networks) do network_data.providers_by_contents = nil end
