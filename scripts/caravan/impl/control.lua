@@ -183,9 +183,12 @@ end
 function P.wake_up( unit_number ) 
 
 	-- wake up!  if it happens to be in deep sleep
-	if storage.caravans[unit_number].entity ~= nil then
+	if storage.caravans[unit_number] ~= nil and storage.caravans[unit_number].entity ~= nil then
 		storage.caravans[unit_number].entity.active = true
-		storage.caravan_activities[unit_number] = 0
+		
+		if storage.caravan_activities[unit_number] ~= nil then
+			storage.caravan_activities[unit_number] = 0
+		end
 		
 		if storage.caravan_slow_queue ~= nil then
 			storage.caravan_slow_queue[unit_number] = nil
@@ -195,38 +198,5 @@ function P.wake_up( unit_number )
 		end
 	end
 end
-
-
-function P.check_for_stall(caravan_data) 
-	
-	-- Under some circumstances caravans can become stuck in wander mode
-	-- why?  don't know.  But the solution is to tell them to get back to work.
-	if not (caravan_data.entity and caravan_data.entity.valid and caravan_data.entity.commandable) then 
-		return false 
-	end
-
-	local cmd = caravan_data.entity.commandable.command		
-	
-	if not (cmd and cmd.type == defines.command.wander) then 
-		return false 
-	end
-
-	if caravan_data.schedule_id <= -1 then 
-		return false 
-	end
-		
-	local schedule = caravan_data.schedule[caravan_data.schedule_id]
-		
-	-- some caravans perma-wander because their next destination has been removed.  no hope for these guys.
-	if not (schedule and schedule.entity and schedule.entity.valid and schedule.entity.surface == caravan_data.entity.surface) then 
-		return false 
-	end
-	
-	local action_id = caravan_data.action_id
-	if action_id < 0 then action_id = 1 end
-	
-	return true
-end
-
 
 return P
