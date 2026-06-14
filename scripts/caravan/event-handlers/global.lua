@@ -406,15 +406,15 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
 
 		for _, caravan_data in pairs( queue ) do
 
+			if not CaravanImpl.validity_check(caravan_data) then 
+				goto continue 
+			end
+
 			-- wake up the slow queue
 			if (queue_number == 2) then
 				caravan_data.entity.active = true
 			end
-
-			if not CaravanImpl.validity_check(caravan_data) then 
-				goto continue 
-			end
-			
+				
 			local entity = caravan_data.entity
 			local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
