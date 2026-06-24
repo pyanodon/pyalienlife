@@ -122,7 +122,7 @@ local function transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, m
     local goal = math.min(max_transfer, remaining_space)
     if goal <= 0 then return true end
 
-    local amount_to_transfer = outpost.remove_fluid({name = input.name, amount = goal})
+    local amount_to_transfer = outpost.extract_fluid({name = input.name, amount = goal})
 
     output.temperature = math.floor((output.amount * output.temperature + amount_to_transfer * input.temperature) / (output.amount + amount_to_transfer))
     output.amount = output.amount + amount_to_transfer

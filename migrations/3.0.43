@@ -9,15 +9,15 @@ for _, surface in pairs(game.surfaces) do
             local force = tank.force
 			local fluids = {}
 			
-			local fluidcount = #tank.fluidbox
-			
 			local unit_number = tank.unit_number
 			
 			local settings = storage.biofluid_providers[unit_number]
 			storage.biofluid_providers[unit_number] = nil
 			
-			for i=1,fluidcount do
-				fluids[i] = tank.fluidbox[i]
+            for i=1, math.huge do
+                local fluid = tank.get_fluid(i)
+                if not fluid then break end
+				fluids[i] = fluid
 			end
 			
             tank.destroy()
@@ -31,9 +31,9 @@ for _, surface in pairs(game.surfaces) do
 			settings.entity = new_tank	
 			storage.biofluid_providers[new_tank.unit_number] = settings
 			
-            if new_tank and fluidcount > 0 then
-				for i=1,fluidcount do
-					new_tank.fluidbox[i] = fluids[i]
+            if new_tank and #fluids > 0 then
+				for i=1, #fluids do
+					new_tank.set_fluid(i, fluids[i])
 				end
             end
 			
@@ -52,14 +52,13 @@ for _, surface in pairs(game.surfaces) do
             local force = tank.force
 			local fluids = {}
 			
-			local fluidcount = #tank.fluidbox
-			
 			local unit_number = tank.unit_number
 			
-			for i=1,fluidcount do
-				fluids[i] = tank.fluidbox[i]
+            for i=1, math.huge do
+                local fluid = tank.get_fluid(i)
+                if not fluid then break end
+				fluids[i] = fluid
 			end
-			
 			local settings = storage.biofluid_requesters[unit_number]
 			storage.biofluid_requesters[unit_number] = nil
 			
@@ -74,9 +73,9 @@ for _, surface in pairs(game.surfaces) do
 			settings.entity = new_tank
 			storage.biofluid_requesters[new_tank.unit_number] = settings
 			
-            if new_tank and fluidcount > 0 then
-				for i=1,fluidcount do
-					new_tank.fluidbox[i] = fluids[i]
+            if new_tank and #fluids > 0 then
+				for i=1, #fluids do
+					new_tank.set_fluid(i, fluids[i])
 				end
             end
 			
