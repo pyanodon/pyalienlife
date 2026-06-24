@@ -5,7 +5,7 @@ end
 RECIPE {
     type = "recipe",
     name = "crane-mk01",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     subgroup = "inserter",
     order = "i[crane-mk01]",
     energy_required = 1,
@@ -29,7 +29,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crane-mk02",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     subgroup = "inserter",
     order = "i[crane-mk02]",
     energy_required = 1,
@@ -53,7 +53,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crane-mk03",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     subgroup = "inserter",
     order = "i[crane-mk03]",
     energy_required = 1,
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crane-mk04",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     subgroup = "inserter",
     order = "i[crane-mk04]",
     energy_required = 1,

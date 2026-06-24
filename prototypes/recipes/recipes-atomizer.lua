@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "blood-to-iron",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "meat-to-iron",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -33,7 +33,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "meat-and-gut-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -43,14 +43,14 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 35},
     },
-    icons = py.composite_icon("copper-ore", "meat", "guts"),
+    icons = py.composite_icon("copper-ore", "meat", nil, "guts"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "arthropod-blood-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -66,7 +66,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -82,7 +82,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "meat-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -98,7 +98,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guts-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-to-iron",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -130,7 +130,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuupha-to-iron",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -146,7 +146,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-to-iron",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -162,7 +162,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-oil-to-tin",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -178,7 +178,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "meat-to-nitrogen",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guts-to-chlorine",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -210,7 +210,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "blood-to-chlorine",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -226,7 +226,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-guts-to-zinc",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -236,14 +236,14 @@ RECIPE {
     results = {
         {type = "item", name = "ore-zinc", amount = 30},
     },
-    icons = py.composite_icon("ore-zinc", "guts", "brain"),
+    icons = py.composite_icon("ore-zinc", "guts", nil, "brain"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-to-zinc",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -259,7 +259,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "blood-to-zinc",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -275,7 +275,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-to-ti",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -291,7 +291,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-to-ti",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -307,7 +307,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedol-to-sulfur",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -323,7 +323,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-to-sulfur",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -339,7 +339,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -355,7 +355,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-to-copper",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -371,7 +371,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-to-zinc",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -387,7 +387,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guts-to-zinc",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -403,7 +403,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "carapace-to-al",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -419,7 +419,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "spikes-to-mo",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -435,7 +435,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-to-mo",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -451,7 +451,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cridren-seeds-to-mo",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -467,7 +467,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-leaves-to-chromium",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -483,7 +483,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-to-chromium",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -499,7 +499,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "meat-to-chromium",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -515,7 +515,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-seed-to-chromium",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -531,7 +531,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "meat-to-tin",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -547,7 +547,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-to-tin",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -563,7 +563,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-to-tin",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -579,7 +579,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-to-tin",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -595,7 +595,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-to-tin",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -611,7 +611,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "manure-to-nitrogen",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -627,7 +627,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-scales-to-uranium",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -643,7 +643,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-poop-to-borax",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -661,7 +661,7 @@ if mods.pyalternativeenergy then
     RECIPE {
         type = "recipe",
         name = "chitin-to-geothermal-water",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         hidden = false,
         energy_required = 10,

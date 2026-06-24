@@ -21,7 +21,7 @@ local IMP_SPECIAL = 2
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
 	crafting_speed = 30,

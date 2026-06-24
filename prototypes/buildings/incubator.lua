@@ -121,7 +121,6 @@ for i = 1, 4 do
         dying_explosion = "medium-explosion",
         collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-        forced_symmetry = "diagonal-pos",
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"incubator"},
@@ -186,28 +185,24 @@ for i = 1, 4 do
         fluid_boxes = {
             {
                 production_type = "output",
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-2.0, -3.0}, direction = defines.direction.north}},
-                priority = "extra-high"
             },
             {
                 production_type = "input",
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {2.0, 3.0}, direction = defines.direction.south}},
-                priority = "extra-high"
             },
             {
                 production_type = "input",
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {3.0, -2.0}, direction = defines.direction.east}},
-                priority = "extra-high"
             },
         },
         impact_category = "metal-large",
         --[[working_sound = { -- disabled for now, this is annoying
             sound = {filename = "__pyalienlifegraphics__/sounds/incubator.ogg", volume = 0.7},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/incubator.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }--]]
     }
 

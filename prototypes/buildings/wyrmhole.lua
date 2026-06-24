@@ -55,7 +55,6 @@ ENTITY {
     collision_box = {{-7.3, -7.3}, {7.3, 7.3}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     inventory_size = 100,
-    scale_info_icons = true,
     integration_patch = {
         filename = "__pyalienlifegraphics3__/graphics/entity/logistic-station/off.png",
         priority = "low",

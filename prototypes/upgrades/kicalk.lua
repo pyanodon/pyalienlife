@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "heating-system-cheap",
-        category = "crafting-with-fluid",
+        categories = {"crafting-with-fluid"},
         enabled = false,
         energy_required = 20,
         results = {
@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "kicalk-dry-bedding",
-        category = "wpu",
+        categories = {"wpu"},
         enabled = false,
         energy_required = 3.5,
         ingredients = {

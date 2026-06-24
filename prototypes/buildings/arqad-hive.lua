@@ -112,6 +112,7 @@ for i = 1, 4 do
         module_slots = MODULE_SLOTS,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"arqad"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "arqad-hive-mk01"),
         energy_source = {
             type = "electric",
@@ -387,7 +388,6 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics3__/sounds/arqad-hive.ogg", volume = 0.85},
             idle_sound = {filename = "__pyalienlifegraphics3__/sounds/arqad-hive.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }
     }
 end

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "kicalk-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -20,12 +20,13 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = 1},
     },
+    icons = py.composite_icon("kicalk", "kicalk-codex")
 }:add_unlock("kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-palmtree-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -63,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -79,7 +80,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-kicalk",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {

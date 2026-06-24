@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "Scrondrix-Manure",
-	category = "scrondrix",
+	categories = {"scrondrix"},
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	main_product = "manure",

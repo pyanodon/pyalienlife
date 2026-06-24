@@ -1,7 +1,7 @@
 --Aoug breeding
 py.autorecipes {
 	name = "auog-pup-breeding",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
@@ -112,7 +112,7 @@ py.autorecipes {
 --Raising auog pups
 py.autorecipes {
 	name = "auog-maturing",
-	category = "auog",
+	categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	number_icons = true,

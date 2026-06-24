@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "vonix-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"vonix"},
 	subgroup = "py-alienlife-vonix",
 	order = "c",
@@ -147,7 +147,7 @@ py.autorecipes {
 RECIPE {
 	type = "recipe",
 	name = "vonix-grow-01",
-	category = "incubator",
+	categories = {"incubator"},
 	enabled = false,
 	energy_required = 24,
 	ingredients = {
@@ -167,7 +167,7 @@ RECIPE {
 
 py.autorecipes {
 	name = "vonix-raising",
-	category = "vonix",
+	categories = {"vonix"},
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	main_product = "vonix",
@@ -248,7 +248,7 @@ py.autorecipes {
 			results =
 				{
 					{name = 'vonix', remove_item = true},
-					{name = 'vonix', probability = 1, amount_min =2, amount_max =3},
+					{name = 'vonix', independent_probability = 1, amount_min =2, amount_max =3},
 				},
 			crafting_speed = 60,
 			tech = 'antiviral'

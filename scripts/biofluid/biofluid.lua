@@ -111,7 +111,7 @@ py.on_event(py.events.on_built(), function(event)
     if not entity.valid then return end
     local connection_type = Biofluid.connectable[entity.name]
     if not connection_type then return end
-    entity.active = false
+    entity.disabled_by_script = true
     entity.custom_status = {
         diode = defines.entity_status_diode.green,
         label = {"entity-status.working"},

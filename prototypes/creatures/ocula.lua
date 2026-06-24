@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "ocula",
     energy_required = 90,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients =
     {
@@ -14,8 +14,8 @@ RECIPE {
         {type = "item",  name = "lens",                 amount = 2},
         {type = "item",  name = "bio-sample",           amount = 100},
         {type = "item",  name = "earth-generic-sample", amount = 10},
-        {type = "fluid", name = "fetal-serum",          amount = 100},
         {type = "fluid", name = "artificial-blood",     amount = 200},
+        {type = "fluid", name = "fetal-serum",          amount = 100},
     },
     results = {{type = "item", name = "ocula", amount = 1}}
 }:add_unlock("domestication-mk02")

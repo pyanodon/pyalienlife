@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "cridren-sixth-layer-ethylene-chlorohydrin",
         enabled = false,
-        category = "cridren",
+        categories = {"cridren"},
         ingredients = {
             {type = "item", name = "caged-phadai", amount = 1},
             {type = "item", name = "silver-plate", amount = 2},
@@ -25,7 +25,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "cridren-sixth-layer-organic-acid-anhydride",
         enabled = false,
-        category = "cridren",
+        categories = {"cridren"},
         ingredients = {
             {type = "item", name = "caged-vrauks",            amount = 1},
             {type = "item", name = "geothermal-water-barrel", amount = 20},

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "ralesia",
-	category = "ralesia",
+	categories = {"ralesia"},
 	subgroup = "py-alienlife-ralesia",
 	order = "a",
 	number_icons = true,

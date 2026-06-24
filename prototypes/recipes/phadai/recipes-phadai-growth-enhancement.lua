@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "caged-phadai",
-	category = "phadai",
+	categories = {"phadai"},
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	--main_product = "phadai",

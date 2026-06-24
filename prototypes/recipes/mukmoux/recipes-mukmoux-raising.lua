@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "mukmoux-calf",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"mukmoux"},
 	main_product = "mukmoux-calf",
 	subgroup = "py-alienlife-mukmoux",
@@ -194,7 +194,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "mukmoux",
-	category = "mukmoux",
+	categories = {"mukmoux"},
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	main_product = "mukmoux",
@@ -317,7 +317,7 @@ py.autorecipes {
 				{
 
 					{name='caged-mukmoux', remove_item = true},
-					{name='caged-mukmoux', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-mukmoux', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 12,
 			tech = 'antiviral'

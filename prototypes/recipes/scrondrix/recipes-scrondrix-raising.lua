@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "Scrondrix-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"scrondrix"},
 	subgroup = "py-alienlife-scrondrix",
 	order = "s",
@@ -163,7 +163,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "Scrondrix",
-	category = "scrondrix",
+	categories = {"scrondrix"},
 	number_icons = true,
 	upgrades =
 	{

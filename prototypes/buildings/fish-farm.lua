@@ -110,10 +110,10 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
         selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-        forced_symmetry = "diagonal-pos",
         module_slots = MODULE_SLOTS,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"fish-farm"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "fish-farm-mk01"),
         energy_source = {
             type = "electric",
@@ -215,7 +215,7 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
                 secondary_draw_orders = {north = -1}
             },
@@ -223,7 +223,7 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
                 secondary_draw_orders = {north = -1}
             },
@@ -231,7 +231,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input-output", position = {5.0, 0.0}, direction = defines.direction.east}},
                 secondary_draw_orders = {north = -1}
             },
@@ -239,7 +239,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_covers = py.pipe_covers(true, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input-output", position = {-5.0, 0.0}, direction = defines.direction.west}},
                 secondary_draw_orders = {north = -1}
             },
@@ -248,7 +248,6 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/fish-farm.ogg", volume = 0.65},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/fish-farm.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }
     }
 end

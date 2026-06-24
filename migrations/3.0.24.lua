@@ -8,7 +8,7 @@ local function has_value(hay_stack, needle)
     return false
 end
 
-recipes_to_check = {"korlex-food-01", "korlex-food-02", "dhilmos-food-02", "simik-food-02", "dingrits-food-01", "dingrits-food-02", "zipir-food-02"}
+local recipes_to_check = {"korlex-food-01", "korlex-food-02", "dhilmos-food-02", "simik-food-02", "dingrits-food-01", "dingrits-food-02", "zipir-food-02"}
 
 for _, surface in pairs(game.surfaces) do
     for _, ass in ipairs {"automated-factory-mk01", "automated-factory-mk02", "automated-factory-mk03", "automated-factory-mk04"} do

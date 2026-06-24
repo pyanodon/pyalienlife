@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "digosaurus",
     energy_required = 120,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "moss-gen",             amount = 30},
@@ -196,7 +196,7 @@ RECIPE {
     name = "digosaurus-hidden-recipe",
     ingredients = {},
     results = {{type = "item", name = "nexelit-ore", amount = 4000}},
-    category = "dino-dig-site",
+    categories = {"dino-dig-site"},
     enabled = false,
     localised_name = {"entity-name.ore-nexelit"},
     hidden = true,
@@ -306,7 +306,6 @@ ENTITY {
     collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
     collision_mask = {layers = {}},
     inventory_size = 2,
-    enable_inventory_bar = false,
     picture = {
         filename = "__core__/graphics/empty.png",
         width = 1,

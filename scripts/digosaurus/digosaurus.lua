@@ -250,7 +250,7 @@ end)
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "dino-dig-site" then return end
-    entity.active = false
+    entity.disabled_by_script = true
     local surface = entity.surface
     local force = entity.force
     local position = entity.position

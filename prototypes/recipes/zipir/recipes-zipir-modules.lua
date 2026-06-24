@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "zipir-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"zipir"},
     enabled = false,
     energy_required = 30,
@@ -20,8 +20,8 @@ RECIPE {
         {type = "fluid", name = "pressured-water",   amount = 3000},
     },
     results = {
-        {type = "item", name = "zipir2", amount = 1, probability = 0.005},
-        {type = "item", name = "zipir1", amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "zipir2", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "zipir1", amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "zipir-mk02",
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"zipir"},
     enabled = false,
     energy_required = 30,
@@ -53,8 +53,8 @@ RECIPE {
         {type = "fluid", name = "pressured-water",  amount = 3000},
     },
     results = {
-        {type = "item", name = "zipir3", amount = 1, probability = 0.004},
-        {type = "item", name = "zipir2", amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "zipir3", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "zipir2", amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "zipir-mk03",
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"zipir"},
     enabled = false,
     energy_required = 30,
@@ -86,8 +86,8 @@ RECIPE {
         {type = "fluid", name = "pressured-water",      amount = 3000},
     },
     results = {
-        {type = "item", name = "zipir4", amount = 1, probability = 0.003},
-        {type = "item", name = "zipir3", amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "zipir4", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "zipir3", amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "zipir-mk04",
@@ -106,7 +106,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -138,7 +138,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-zipir-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -156,7 +156,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -188,7 +188,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-zipir-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -206,7 +206,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -237,7 +237,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-zipir-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "tuuphra-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -20,12 +20,13 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = 2},
     },
+    icons = py.composite_icon("tuuphra", "tuuphra-codex")
 }:add_unlock("tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-potato-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -62,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -76,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-tuuphra",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {

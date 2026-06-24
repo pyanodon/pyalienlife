@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "ulric-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "c",
@@ -195,7 +195,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "ulric",
-	category = "ulric",
+	categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "ulric",
@@ -322,7 +322,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-ulric', remove_item = true},
-					{name='caged-ulric', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-ulric', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

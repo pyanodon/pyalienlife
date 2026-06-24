@@ -80,7 +80,7 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "py-sawblade-module-mk0" .. i, amount = 1},
                 {type = "item", name = "iron-oxide",                  amount = 5},
             },
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
         }
 
         for _, ingredient in pairs(sawblade_ingredients[i]) do
@@ -101,6 +101,7 @@ if data and not yafc_turd_integration then
         table.insert(entity.flags, "not-in-made-in")
         entity.module_slots = MODULE_SLOTS
         entity.allowed_effects = {"speed", "productivity", "pollution"}
+        entity.effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
         entity.crafting_speed = i == 1 and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "wpu-mk01-turd")
         data:extend {entity}
     end
@@ -127,7 +128,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "lacquer-resin",
-        category = "wpu",
+        categories = {"wpu"},
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -142,7 +143,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "lacquer-resin-to-formica",
-        category = "pulp",
+        categories = {"pulp"},
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -161,7 +162,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "high-distillate-to-anthracene-oil",
-        category = "tar",
+        categories = {"tar"},
         enabled = false,
         localised_name = {"recipe-name.high-distillate-to-anthracene-oil"},
         energy_required = 10,
@@ -201,7 +202,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         name = "biosynthetic-nylon",
         type = "recipe",
-        category = "wpu",
+        categories = {"wpu"},
         enabled = false,
         energy_required = 30,
         ingredients = {

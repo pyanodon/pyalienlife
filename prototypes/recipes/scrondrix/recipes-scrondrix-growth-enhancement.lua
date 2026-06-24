@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "scrondrix-improved",
-	category = "scrondrix",
+	categories = {"scrondrix"},
 	subgroup = "py-alienlife-scrondrix",
 	order = "c",
 	--main_product = 'scrondrix-pup',

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "cridren",
-	category = "cridren",
+	categories = {"cridren"},
 	subgroup = "py-alienlife-cridren",
 	order = "a",
 	number_icons = true,

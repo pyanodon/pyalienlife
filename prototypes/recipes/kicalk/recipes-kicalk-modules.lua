@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "kicalk-mk02",
-    category = "kicalk",
+    categories = {"kicalk"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -20,9 +20,9 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "kicalk-mk02",       amount = 1, probability = 0.005},
-        {type = "item", name = "kicalk-seeds-mk02", amount = 1, probability = 0.02},
-        {type = "item", name = "kicalk",            amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "kicalk-mk02",       amount = 1, independent_probability = 0.005},
+        {type = "item", name = "kicalk-seeds-mk02", amount = 1, independent_probability = 0.02},
+        {type = "item", name = "kicalk",            amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "kicalk-seeds-mk02",
     icons =
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-mk02-breeder",
-    category = "kicalk",
+    categories = {"kicalk"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -50,9 +50,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "kicalk-mk02",       amount = 4},
-        {type = "item", name = "kicalk-mk02",       amount = 2, probability = 0.5},
-        {type = "item", name = "kicalk-seeds",      amount = 3, probability = 0.5},
-        {type = "item", name = "kicalk-seeds-mk02", amount = 2, probability = 0.25, ignored_by_productivity = 2},
+        {type = "item", name = "kicalk-mk02",       amount = 2, independent_probability = 0.5},
+        {type = "item", name = "kicalk-seeds",      amount = 3, independent_probability = 0.5},
+        {type = "item", name = "kicalk-seeds-mk02", amount = 2, independent_probability = 0.25, ignored_by_productivity = 2},
     },
     main_product = "kicalk-seeds-mk02",
     icons =
@@ -68,7 +68,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-seeds-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-mk03",
-    category = "kicalk",
+    categories = {"kicalk"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -98,9 +98,9 @@ RECIPE {
         {type = "fluid", name = "water",             amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "kicalk-mk03",       amount = 1, probability = 0.004},
-        {type = "item", name = "kicalk-seeds-mk03", amount = 1, probability = 0.01},
-        {type = "item", name = "kicalk",            amount = 1, probability = 0.6},
+        {type = "item", name = "kicalk-mk03",       amount = 1, independent_probability = 0.004},
+        {type = "item", name = "kicalk-seeds-mk03", amount = 1, independent_probability = 0.01},
+        {type = "item", name = "kicalk",            amount = 1, independent_probability = 0.6},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "kicalk-mk03",
@@ -117,7 +117,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-mk03-breeder",
-    category = "kicalk",
+    categories = {"kicalk"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -130,11 +130,11 @@ RECIPE {
     },
     results = {
         {type = "item", name = "kicalk-mk03",       amount = 5},
-        {type = "item", name = "kicalk-mk03",       amount = 3, probability = 0.4},
-        {type = "item", name = "kicalk-mk02",       amount = 2, probability = 0.2},
-        {type = "item", name = "kicalk-seeds",      amount = 3, probability = 0.4},
-        {type = "item", name = "kicalk-seeds-mk02", amount = 3, probability = 0.2},
-        {type = "item", name = "kicalk-seeds-mk03", amount = 2, probability = 0.05, ignored_by_productivity = 2},
+        {type = "item", name = "kicalk-mk03",       amount = 3, independent_probability = 0.4},
+        {type = "item", name = "kicalk-mk02",       amount = 2, independent_probability = 0.2},
+        {type = "item", name = "kicalk-seeds",      amount = 3, independent_probability = 0.4},
+        {type = "item", name = "kicalk-seeds-mk02", amount = 3, independent_probability = 0.2},
+        {type = "item", name = "kicalk-seeds-mk03", amount = 2, independent_probability = 0.05, ignored_by_productivity = 2},
     },
     --main_product = "kicalk-mk03",
     icons =
@@ -150,7 +150,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-seeds-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -167,7 +167,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-mk04",
-    category = "kicalk",
+    categories = {"kicalk"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -180,9 +180,9 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "kicalk-mk04",       amount = 1, probability = 0.003},
-        {type = "item", name = "kicalk-seeds-mk04", amount = 1, probability = 0.008},
-        {type = "item", name = "kicalk",            amount = 1, probability = 0.7},
+        {type = "item", name = "kicalk-mk04",       amount = 1, independent_probability = 0.003},
+        {type = "item", name = "kicalk-seeds-mk04", amount = 1, independent_probability = 0.008},
+        {type = "item", name = "kicalk",            amount = 1, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "kicalk-mk04",
@@ -199,7 +199,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-mk04-breeder",
-    category = "kicalk",
+    categories = {"kicalk"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -214,13 +214,13 @@ RECIPE {
     },
     results = {
         {type = "item", name = "kicalk-mk04",       amount = 5},
-        {type = "item", name = "kicalk-mk04",       amount = 3, probability = 0.4},
-        {type = "item", name = "kicalk-mk03",       amount = 2, probability = 0.25},
-        {type = "item", name = "kicalk-mk02",       amount = 2, probability = 0.15},
-        {type = "item", name = "kicalk-seeds",      amount = 3, probability = 0.6},
-        {type = "item", name = "kicalk-seeds-mk02", amount = 3, probability = 0.4},
-        {type = "item", name = "kicalk-seeds-mk03", amount = 2, probability = 0.3},
-        {type = "item", name = "kicalk-seeds-mk03", amount = 2, probability = 0.15},
+        {type = "item", name = "kicalk-mk04",       amount = 3, independent_probability = 0.4},
+        {type = "item", name = "kicalk-mk03",       amount = 2, independent_probability = 0.25},
+        {type = "item", name = "kicalk-mk02",       amount = 2, independent_probability = 0.15},
+        {type = "item", name = "kicalk-seeds",      amount = 3, independent_probability = 0.6},
+        {type = "item", name = "kicalk-seeds-mk02", amount = 3, independent_probability = 0.4},
+        {type = "item", name = "kicalk-seeds-mk03", amount = 2, independent_probability = 0.3},
+        {type = "item", name = "kicalk-seeds-mk03", amount = 2, independent_probability = 0.15},
     },
     --main_product = "kicalk-mk04",
     icons =
@@ -236,7 +236,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-seeds-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {

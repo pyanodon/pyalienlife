@@ -98,8 +98,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     local is_this_a_speed_module_that_effects_farm_buildings = mk1.crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
     if is_this_a_speed_module_that_effects_farm_buildings then
-        local desired_mk1_speed = mk1.crafting_speed * (mk1_module_slots + 1)
-        effective_speed = (desired_mk1_speed / mk1.crafting_speed) * effect.speed
+        effective_speed = mk1_module_slots * effect.speed
     end
 
     local module = {
@@ -146,9 +145,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
             module.name = module.name .. "-mk0" .. i
             module.tier = i
             if i ~= 1 and entity.module_slots and entity.module_slots ~= 0 then
-                local module_slots = entity.module_slots
-                local desired_speed = entity.crafting_speed * (module_slots + 1 / i) * i
-                module.effect.speed = (desired_speed / entity.crafting_speed) * effect.speed
+                module.effect.speed = effect.speed * entity.module_slots * i
             end
             if i ~= 1 then
                 module.localised_name = {"", {"technology-name." .. sub_tech.name}, " MK0" .. i}
@@ -254,7 +251,6 @@ local function build_tech_upgrade(tech_upgrade)
         prerequisites = master_tech.prerequisites,
         effects = effects,
         unit = master_tech.unit,
-        is_turd = true,
         localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"turd.tech-2", tostring(#tech_upgrade.sub_techs)}}
     }
 end

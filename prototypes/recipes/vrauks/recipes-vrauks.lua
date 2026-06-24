@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "vrauks",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = true,
     energy_required = 400,
     ingredients = {
@@ -14,12 +14,13 @@ RECIPE {
     results = {
         {type = "item", name = "vrauks", amount = 1},
     },
+    icons = py.composite_icon("vrauks", "vrauks-codex")
 }:add_unlock("vrauks")
 
 RECIPE {
     type = "recipe",
     name = "vrauks-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = true,
     energy_required = 5,
     ingredients = {
@@ -36,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vrauks-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -56,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vrauks-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -82,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-vrauks",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -97,7 +98,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-vrauks",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -115,7 +116,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'vrauks-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -134,7 +135,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'vrauks-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 60,
     ingredients = {

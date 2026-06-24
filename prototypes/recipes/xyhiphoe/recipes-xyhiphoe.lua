@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "xyhiphoe",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -21,12 +21,13 @@ RECIPE {
     results = {
         {type = "item", name = "xyhiphoe", amount = 1},
     },
+    icons = py.composite_icon("xyhiphoe", "xyhiphoe-codex")
 }:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -49,7 +50,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -67,7 +68,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xyhiphoe-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 100,
     ingredients = {

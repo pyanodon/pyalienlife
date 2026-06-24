@@ -43,10 +43,10 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-    forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"dhilmos"},
+    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "dhilmos-pool-mk01"),
     energy_source = {
         type = "electric",
@@ -157,28 +157,28 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}}
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}}
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}}
         },
         {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, {0.70, 0.0}, {-0.78, 0.0}),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}}
         },
     },
@@ -186,6 +186,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 1.2},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/dhilmos-pool.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

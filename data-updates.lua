@@ -50,7 +50,7 @@ for food, value in pairs(Digosaurus.favorite_foods) do
         results = {
             {type = "item", name = "nexelit-ore", amount = value}
         },
-        category = "dino-dig-site",
+        categories = {"dino-dig-site"},
         hide_from_player_crafting = true
     }
 end
@@ -232,7 +232,7 @@ for _, recipe in pairs(data.raw.recipe) do
                     RECIPE {
                         type = "recipe",
                         name = name .. "-biomass",
-                        category = "combustion",
+                        categories = {"combustion"},
                         enabled = false,
                         energy_required = 3,
                         ingredients = recipe_copy.ingredients,
@@ -329,21 +329,21 @@ for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
 end
 
 -- science pack order and subgroup
-data.raw.tool["py-science-pack-1"].subgroup = "science-pack"
-data.raw.tool["py-science-pack-2"].subgroup = "science-pack"
-data.raw.tool["py-science-pack-3"].subgroup = "science-pack"
-data.raw.tool["py-science-pack-4"].subgroup = "science-pack"
-data.raw.tool["automation-science-pack"].order = "a"
-data.raw.tool["py-science-pack-1"].order = "b"
-data.raw.tool["logistic-science-pack"].order = "c"
-data.raw.tool["military-science-pack"].order = "d"
-data.raw.tool["py-science-pack-2"].order = "e"
-data.raw.tool["chemical-science-pack"].order = "f"
-data.raw.tool["py-science-pack-3"].order = "g"
-data.raw.tool["production-science-pack"].order = "h"
-data.raw.tool["py-science-pack-4"].order = "i"
-data.raw.tool["utility-science-pack"].order = "j"
-data.raw.tool["space-science-pack"].order = "k"
+data.raw.item["py-science-pack-1"].subgroup = "science-pack"
+data.raw.item["py-science-pack-2"].subgroup = "science-pack"
+data.raw.item["py-science-pack-3"].subgroup = "science-pack"
+data.raw.item["py-science-pack-4"].subgroup = "science-pack"
+data.raw.item["automation-science-pack"].order = "a"
+data.raw.item["py-science-pack-1"].order = "b"
+data.raw.item["logistic-science-pack"].order = "c"
+data.raw.item["military-science-pack"].order = "d"
+data.raw.item["py-science-pack-2"].order = "e"
+data.raw.item["chemical-science-pack"].order = "f"
+data.raw.item["py-science-pack-3"].order = "g"
+data.raw.item["production-science-pack"].order = "h"
+data.raw.item["py-science-pack-4"].order = "i"
+data.raw.item["utility-science-pack"].order = "j"
+data.raw.item["space-science-pack"].order = "k"
 
 -- autotech settings
 if mods.autotech then

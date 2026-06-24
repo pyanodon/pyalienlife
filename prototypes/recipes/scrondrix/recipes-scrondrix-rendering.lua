@@ -23,7 +23,7 @@ local IMP_SPECIAL = 4
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	crafting_speed = 30,

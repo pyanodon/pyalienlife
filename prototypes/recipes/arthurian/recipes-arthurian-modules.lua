@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "arthurian-egg-mk02-gmo",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"arthurian"},
     enabled = false,
     energy_required = 30,
@@ -20,8 +20,8 @@ RECIPE {
         {type = "item", name = "water-barrel", amount = 4},
     },
     results = {
-        {type = "item", name = "arthurian-egg-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "arthurian-egg",      amount = 1, probability = 0.5},
+        {type = "item", name = "arthurian-egg-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "arthurian-egg",      amount = 1, independent_probability = 0.5},
         {type = "item", name = "barrel",             amount = 4},
         {type = "item", name = "cage",               amount = 1},
     },
@@ -39,7 +39,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-pup-mk02",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 45,
     ingredients = {
@@ -47,7 +47,7 @@ RECIPE {
         {type = "fluid", name = "gta",                amount = 150},
     },
     results = {
-        {type = "item", name = "arthurian-pup-mk02", amount = 1, probability = 0.5},
+        {type = "item", name = "arthurian-pup-mk02", amount = 1, independent_probability = 0.5},
     },
     --main_product = "arthurian-mk02",
     icons =
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-mk02",
-    category = "arthurian",
+    categories = {"arthurian"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-egg-mk02",
-    category = "arthurian",
+    categories = {"arthurian"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -119,7 +119,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-egg-mk03-gmo",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"arthurian"},
     enabled = false,
     energy_required = 30,
@@ -132,9 +132,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 4},
     },
     results = {
-        {type = "item", name = "arthurian-egg-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "arthurian-egg-mk02", amount = 1, probability = 0.4},
-        {type = "item", name = "arthurian-egg",      amount = 1, probability = 0.3},
+        {type = "item", name = "arthurian-egg-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "arthurian-egg-mk02", amount = 1, independent_probability = 0.4},
+        {type = "item", name = "arthurian-egg",      amount = 1, independent_probability = 0.3},
         {type = "item", name = "barrel",             amount = 4},
         {type = "item", name = "cage",               amount = 1},
     },
@@ -152,7 +152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-pup-mk03",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 45,
     ingredients = {
@@ -160,7 +160,7 @@ RECIPE {
         {type = "fluid", name = "autoantigens",       amount = 250},
     },
     results = {
-        {type = "item", name = "arthurian-pup-mk03", amount = 1, probability = 0.5},
+        {type = "item", name = "arthurian-pup-mk03", amount = 1, independent_probability = 0.5},
     },
     --main_product = "arthurian-mk03",
     icons =
@@ -176,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-mk03",
-    category = "arthurian",
+    categories = {"arthurian"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -203,7 +203,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-egg-mk03",
-    category = "arthurian",
+    categories = {"arthurian"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -232,7 +232,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-egg-mk04-gmo",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"arthurian"},
     enabled = false,
     energy_required = 30,
@@ -245,10 +245,10 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 4},
     },
     results = {
-        {type = "item", name = "arthurian-egg-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "arthurian-egg-mk03", amount = 1, probability = 0.45},
-        {type = "item", name = "arthurian-egg-mk02", amount = 1, probability = 0.35},
-        {type = "item", name = "arthurian-egg",      amount = 1, probability = 0.25},
+        {type = "item", name = "arthurian-egg-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "arthurian-egg-mk03", amount = 1, independent_probability = 0.45},
+        {type = "item", name = "arthurian-egg-mk02", amount = 1, independent_probability = 0.35},
+        {type = "item", name = "arthurian-egg",      amount = 1, independent_probability = 0.25},
         {type = "item", name = "barrel",             amount = 4},
         {type = "item", name = "cage",               amount = 1},
     },
@@ -266,7 +266,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-pup-mk04",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 45,
     ingredients = {
@@ -274,7 +274,7 @@ RECIPE {
         {type = "fluid", name = "autoantigens",       amount = 250},
     },
     results = {
-        {type = "item", name = "arthurian-pup-mk04", amount = 1, probability = 0.5},
+        {type = "item", name = "arthurian-pup-mk04", amount = 1, independent_probability = 0.5},
     },
     --main_product = "arthurian-mk04",
     icons =
@@ -290,7 +290,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-mk04",
-    category = "arthurian",
+    categories = {"arthurian"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -317,7 +317,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-egg-mk04",
-    category = "arthurian",
+    categories = {"arthurian"},
     enabled = false,
     energy_required = 60,
     ingredients = {

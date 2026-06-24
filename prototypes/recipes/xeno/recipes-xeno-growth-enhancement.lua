@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "xeno-improved",
-	category = "xeno",
+	categories = {"xeno"},
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	--main_product = "caged-xeno",

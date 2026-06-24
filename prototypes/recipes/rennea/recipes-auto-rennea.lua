@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "rennea",
-	category = "rennea",
+	categories = {"rennea"},
 	subgroup = "py-alienlife-rennea",
 	order = "a",
 	number_icons = true,

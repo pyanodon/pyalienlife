@@ -21,7 +21,7 @@ local IMP_BRAIN = 5
 
 py.autorecipes {
 	name = "rendering-cottongut",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	crafting_speed = 30,

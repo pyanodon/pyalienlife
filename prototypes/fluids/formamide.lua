@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "formamide",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 5,
     ingredients = {

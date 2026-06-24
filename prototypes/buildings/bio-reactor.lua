@@ -106,7 +106,6 @@ for i = 1, 4 do
         dying_explosion = "medium-explosion",
         collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-        forced_symmetry = "diagonal-pos",
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         allowed_module_categories = {"speed", "productivity", "efficiency", "bio-reactor"},
@@ -181,51 +180,45 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {1.0, -3.0}, direction = defines.direction.north}},
-                priority = "extra-high"
             },
             --North2
             {
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.0, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-1.0, -3.0}, direction = defines.direction.north}},
-                priority = "extra-high"
             },
             --South
             {
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {2.0, 3.0}, direction = defines.direction.south}},
-                priority = "extra-high"
             },
             {
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, 3.0}, direction = defines.direction.south}},
-                priority = "extra-high"
             },
             --South2
             {
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {-2.0, 3.0}, direction = defines.direction.south}},
-                priority = "extra-high"
             },
         },
         impact_category = "metal",
         working_sound = {
             sound = {filename = "__pyfusionenergygraphics__/sounds/bio-reactor.ogg", volume = 1.2},
             idle_sound = {filename = "__pyfusionenergygraphics__/sounds/bio-reactor.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }
     }
 end

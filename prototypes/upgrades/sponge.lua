@@ -11,7 +11,7 @@ if data and not yafc_turd_integration then
             results = {
                 {type = "item", name = "pure-sand", amount = 16}
             },
-            category = "sponge",
+            categories = {"sponge"},
             subgroup = "py-alienlife-sponge",
             order = "x",
             energy_required = 4
@@ -27,7 +27,7 @@ if data and not yafc_turd_integration then
             results = {
                 {type = "item", name = "stone-brick", amount = 9}
             },
-            category = "sponge",
+            categories = {"sponge"},
             subgroup = "py-alienlife-sponge",
             order = "x",
             energy_required = 4
@@ -43,7 +43,7 @@ if data and not yafc_turd_integration then
             results = {
                 {type = "item", name = "rich-clay", amount = 12}
             },
-            category = "sponge",
+            categories = {"sponge"},
             subgroup = "py-alienlife-sponge",
             order = "x",
             energy_required = 4
@@ -60,7 +60,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-flagellum"
         productivity[i] = recipe.name
-        recipe:add_result {name = sponges[i], probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1}
+        recipe:add_result {name = sponges[i], independent_probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1}
         recipe:add_ingredient {name = "limestone", type = "item", amount = 2}
         recipe.energy_required = recipe.energy_required * 1.5
         recipe.main_product = sponges[i]

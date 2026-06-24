@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "simik-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"simik"},
 	subgroup = "py-alienlife-simik",
 	order = "c",
@@ -188,7 +188,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "caged-simik",
-	category = "simik",
+	categories = {"simik"},
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	main_product = "simik",
@@ -291,7 +291,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-simik', remove_item = true},
-					{name='caged-simik', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-simik', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'
@@ -610,7 +610,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "simik-poop",
-	category = "simik",
+	categories = {"simik"},
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	main_product = "simik-poop",

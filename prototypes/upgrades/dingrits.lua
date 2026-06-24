@@ -21,17 +21,17 @@ if data and not yafc_turd_integration then
             enabled = false,
             energy_required = 36000,
             ingredients = {{type = "item", name = "dingrits-mk04", amount = 1}},
-            results = {{name = "dingrits-alpha", probability = 0.5, type = "item", amount = 1}},
+            results = {{name = "dingrits-alpha", independent_probability = 0.5, type = "item", amount = 1}},
             allow_productivity = true,
-            category = "dingrits"
+            categories = {"dingrits"}
         }
     }
 
     local recipe = RECIPE("snarer-heart"):copy()
     recipe.name = "snarer-heart-mutation"
     recipe.results = {
-        {type = "item", probability = 0.99,  name = "snarer-heart", amount = 1},
-        {type = "item", probability = 0.099, name = "snarer-heart", amount = 1}
+        {type = "item", independent_probability = 0.99,  name = "snarer-heart", amount = 1},
+        {type = "item", independent_probability = 0.099, name = "snarer-heart", amount = 1}
     }
     data:extend {recipe}
 
@@ -51,8 +51,8 @@ if data and not yafc_turd_integration then
         RECIPE("dingrits-4"):copy(),
     } do
         recipe.name = recipe.name .. "-training"
-        recipe:add_result {type = "item", amount = 1, probability = 0.8, name = "dingrits-food-01", ignored_by_productivity = 1}
-        if i > 2 then recipe:add_result {type = "item", amount = 1, probability = 0.8, name = "dingrits-food-02", ignored_by_productivity = 1} end
+        recipe:add_result {type = "item", amount = 1, independent_probability = 0.8, name = "dingrits-food-01", ignored_by_productivity = 1}
+        if i > 2 then recipe:add_result {type = "item", amount = 1, independent_probability = 0.8, name = "dingrits-food-02", ignored_by_productivity = 1} end
         data:extend {recipe}
     end
 end

@@ -34,7 +34,7 @@ RECIPE {
     type = "recipe",
     name = "phadaisus",
     energy_required = 60,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "py-shed-basic",                                                        amount = 1},
@@ -88,9 +88,6 @@ data:extend {{
     corpse = "big-biter-corpse",
     dying_explosion = "blood-explosion-huge",
     alert_icon_shift = util.by_pixel(-4, -13),
-    immune_to_tree_impacts = true,
-    has_belt_immunity = true,
-    immune_to_rock_impacts = true,
     energy_per_hit_point = 0.5,
     resistances = {
         {
@@ -124,8 +121,7 @@ data:extend {{
     collision_mask = {layers = {}},
     selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     drawing_box_vertical_extension = 0.5,
-    effectivity = 1,
-    braking_power = "5MW",
+    braking_force = 5000000,
     energy_source = {
         type = "burner",
         fuel_categories = {"phadai-food"},
@@ -134,41 +130,7 @@ data:extend {{
     },
     movement_energy_consumption = "800kW",
     --terrain_friction_modifier = 0.01,
-    friction = 0.001,
-    light = {
-        {
-            type = "oriented",
-            minimum_darkness = 0.3,
-            picture = {
-                filename = "__core__/graphics/light-cone.png",
-                priority = "extra-high",
-                flags = {"light"},
-                scale = 2,
-                width = 200,
-                height = 200
-            },
-            shift = {-0.1, -7},
-            size = 1,
-            intensity = 0.7,
-            color = {r = 0.9, g = 1.0, b = 1.0}
-        },
-        {
-            type = "oriented",
-            minimum_darkness = 0.3,
-            picture = {
-                filename = "__core__/graphics/light-cone.png",
-                priority = "extra-high",
-                flags = {"light"},
-                scale = 2,
-                width = 200,
-                height = 200
-            },
-            shift = {0.1, -7},
-            size = 1,
-            intensity = 0.7,
-            color = {r = 0.9, g = 1.0, b = 1.0}
-        }
-    },
+    friction_force = 0.001,
     graphics_set = {
         animation = {
             priority = "high",
@@ -224,31 +186,21 @@ data:extend {{
             }
         }
     },
-    sound_no_fuel = {
-        {
-            filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
-            volume = 0.35
-        }
-    },
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    sound_minimum_speed = 0.05,
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    sound_scaling_ratio = 0.8,
     impact_category = "metal-large",
     working_sound = {
         sound = {
             filename = "__pyalienlifegraphics3__/sounds/phadaisus-breath.ogg",
             volume = 0.25
         },
-        match_speed_to_activity = false
+        match_speed_to_activity = false,
+        activity_to_speed_modifiers = {minimum = 0.05},
+        activity_to_volume_modifiers ={multiplier = 0.8}
     },
     open_sound = {filename = "__pyalienlifegraphics3__/sounds/phadaisus-in.ogg", volume = 0.7},
     close_sound = {filename = "__pyalienlifegraphics3__/sounds/phadaisus-out.ogg", volume = 0.5},
-    rotation_speed = 0.015,
     --tank_driving = true,
     weight = 6000,
     inventory_size = 200,
-    render_layer = "air-object",
     automatic_weapon_cycling = false,
     equipment_grid = "mount-grid-10x10",
     guns = {"dragon-breath"},
@@ -260,13 +212,11 @@ data:extend {{
         legs = {
             {
                 walking_group = 1,
-                blocking_legs = {},
                 ground_position = {0, 0},
                 leg = "py-fake-spidertron-leg",
                 mount_position = {0, 0},
-            },
-        },
-        military_target = "spidertron-military-target",
+            }
+        }
     },
     trash_inventory_size = 30,
     minimap_representation = {
@@ -283,7 +233,6 @@ vehicle_leg.collision_mask = {layers = {}}
 vehicle_leg.target_position_randomisation_distance = 0
 vehicle_leg.working_sound = nil
 vehicle_leg.minimal_step_size = 0
-vehicle_leg.part_length = 2
 vehicle_leg.movement_based_position_selection_distance = 1.5 -- I have no idea what this does.
 vehicle_leg.initial_movement_speed = 1
 vehicle_leg.movement_acceleration = 0
@@ -310,7 +259,7 @@ RECIPE {
         {type = "fluid", name = "kerosene",                                        amount = 100},
         {type = "fluid", name = mods.pyalternativeenergy and "aniline" or "water", amount = 100},
     },
-    category = "chemistry",
+    categories = {"chemistry"},
     results = {
         {type = "item", name = "dragon-breath-ammo", amount = 1},
     },
@@ -333,7 +282,6 @@ ITEM {
         },
         clamp_position = true,
         consumption_modifier = 1,
-        source_type = "vehicle",
         target_type = "position"
     },
     magazine_size = 1000000,

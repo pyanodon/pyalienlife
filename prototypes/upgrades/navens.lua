@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
         },
         energy_required = 20,
         enabled = false,
-        category = "biofactory"
+        categories = {"biofactory"}
     }}
 
     data:extend {
@@ -32,7 +32,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "full-render-navens-abomination",
-            category = "slaughterhouse",
+            categories = {"slaughterhouse"},
             subgroup = "py-alienlife-auog",
             ingredients = {{type = "item", name = "navens-abomination", amount = 1}},
             results = {

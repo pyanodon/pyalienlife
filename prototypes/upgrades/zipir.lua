@@ -14,10 +14,10 @@ if data and not yafc_turd_integration then
         recipe:multiply_ingredient_amount("zipir-food-02", 0.5)
         for _, result in pairs(recipe.results) do
             if result.name == "zipir1" then
-                if result.probability then
-                    result.probability = result.probability - 0.15
+                if result.independent_probability then
+                    result.independent_probability = result.independent_probability - 0.15
                 else
-                    result.probability = 0.85
+                    result.independent_probability = 0.85
                 end
             end
         end
@@ -35,7 +35,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-trits-gen"
         recipe.energy_required = recipe.energy_required * 1.5
         recipe:add_ingredient {name = "trits-codex", type = "item", amount = 1}
-        recipe:add_result {name = "trits-codex", type = "item", amount = 1, probability = 0.95}
+        recipe:add_result {name = "trits-codex", type = "item", amount = 1, independent_probability = 0.95}
         for _, result in pairs(recipe.results) do
             if result.name == "zipir-eggs" then
                 result.amount_max = result.amount_max * 2

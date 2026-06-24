@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "liquid-manure",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 8,
     ingredients = {

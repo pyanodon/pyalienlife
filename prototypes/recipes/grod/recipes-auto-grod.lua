@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "grod",
-	category = "grod",
+	categories = {"grod"},
 	main_product = "grod",
 	subgroup = "py-alienlife-grod",
 	order = "a",

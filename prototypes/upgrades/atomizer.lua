@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "venom-gland-to-dynemicin",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         energy_required = 90,
         ingredients = {
@@ -32,7 +32,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "cognition-osteochain-to-kondo-substrate",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         energy_required = 90,
         ingredients = {
@@ -47,7 +47,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "dimensional-gastricorg-to-inverse-opal",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         energy_required = 90,
         ingredients = {

@@ -6,7 +6,7 @@ RECIPE {
     type = "recipe",
     name = "nukavan",
     energy_required = 50,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "alien-sample01",                                                 amount = 5},
@@ -23,8 +23,6 @@ RECIPE {
 ITEM {
     type = "item-with-tags",
     name = "nukavan",
-    can_open_gates = true,
-    additional_pastable_entities = {"nukavan", "nukavan-turd"},
     icon = "__pyalienlifegraphics2__/graphics/icons/nuka-van.png",
     icon_size = 64,
     subgroup = "py-alienlife-special-creatures",

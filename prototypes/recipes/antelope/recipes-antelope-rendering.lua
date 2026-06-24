@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "rendering-antelope",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-antelope",
 	order = "b",
 	mats =

@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-ratio"
         for _, result in pairs(recipe.results) do
             if result.name == "kmauts" then
-                result.probability = 0.65
+                result.independent_probability = 0.65
                 break
             end
         end

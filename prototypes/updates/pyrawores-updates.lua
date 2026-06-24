@@ -123,7 +123,7 @@ RECIPE("starch-2"):add_unlock("starch-mk02")
 RECIPE {
     type = "recipe",
     name = "fertilizer-5",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -141,7 +141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hydrogen-chloride-quartz",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -152,7 +152,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
-        {type = "item",  name = "small-lamp",        amount = 1,  probability = 0.9,    ignored_by_productivity = 1},
+        {type = "item",  name = "small-lamp",        amount = 1,  independent_probability = 0.9,    ignored_by_productivity = 1},
         {type = "item",  name = "quartz-tube",       amount = 1,  ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     main_product = "hydrogen-chloride",
@@ -165,7 +165,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "drill-head-6",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -182,7 +182,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "drill-head-7",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -200,7 +200,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mold",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 4,
     ingredients = {

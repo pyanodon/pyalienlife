@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "xyhiphoe-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"xyhiphoe"},
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "c",
@@ -189,7 +189,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "xyhiphoe",
-	category = "xyhiphoe",
+	categories = {"xyhiphoe"},
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	main_product = "xyhiphoe",
@@ -207,7 +207,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "xyhiphoe", probability = 0.7, amount_min = 1, amount_max = 2},
+				{name = "xyhiphoe", independent_probability = 0.7, amount_min = 1, amount_max = 2},
 			},
 			crafting_speed = 150,
 			tech = "water-invertebrates-mk01"
@@ -222,7 +222,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "xyhiphoe", remove_item = true},
-				{name = "xyhiphoe", probability = 0.8, amount_min = 1, amount_max = 2},
+				{name = "xyhiphoe", independent_probability = 0.8, amount_min = 1, amount_max = 2},
 			},
 			crafting_speed = 130,
 			tech = "water-invertebrates-mk02"
@@ -239,7 +239,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "xyhiphoe", remove_item = true},
-				{name = "xyhiphoe", probability = 0.9, amount_min = 1, amount_max = 2},
+				{name = "xyhiphoe", independent_probability = 0.9, amount_min = 1, amount_max = 2},
 			},
 			crafting_speed = 110,
 			tech = "water-invertebrates-mk03"
@@ -286,7 +286,7 @@ py.autorecipes {
 			results =
 				{
 					{name='xyhiphoe', remove_item = true},
-					{name='xyhiphoe', probability = 1, amount_min =1, amount_max =2},
+					{name='xyhiphoe', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

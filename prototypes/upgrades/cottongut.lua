@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
         name = "cottongut-food-03",
         enabled = false,
         energy_required = 10,
-        category = "crafting-with-fluid",
+        categories = {"crafting-with-fluid"},
         ingredients = {
             {type = "item",  name = "bones",             amount = 10},
             {type = "item",  name = "moondrop",          amount = 1},

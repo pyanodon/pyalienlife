@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "ulric-improved",
-	category = "ulric",
+	categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	--main_product = 'ulric',

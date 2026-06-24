@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "tuuphra",
-	category = "tuuphra",
+	categories = {"tuuphra"},
 	subgroup = "py-alienlife-tuuphra",
 	order = "a",
 	number_icons = true,

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "rennea-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -21,12 +21,13 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = 2},
     },
+    icons = py.composite_icon("rennea", "rennea-codex")
 }:add_unlock("rennea")
 
 RECIPE {
     type = "recipe",
     name = "rennea-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -43,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-sunflower-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -63,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -78,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-rennea",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {

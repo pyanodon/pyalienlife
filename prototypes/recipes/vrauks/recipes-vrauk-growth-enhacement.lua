@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "vrauks-improved",
-	category = "vrauks",
+	categories = {"vrauks"},
 	subgroup = "py-alienlife-vrauks",
 	order = "b",
 	mats =

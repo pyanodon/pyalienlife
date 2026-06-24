@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "arqad-egg",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"arqad"},
 	subgroup = "py-alienlife-arqad",
 	order = "c",
@@ -24,7 +24,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "arqad-egg",   amount = 10},
-				{name = "arqad-queen", amount = 1, probability = 0.999, ignored_by_productivity = 1, ignored_by_stats = 1},
+				{name = "arqad-queen", amount = 1, independent_probability = 0.999, ignored_by_productivity = 1, ignored_by_stats = 1},
 			},
 			tech = "arqad"
 		},
@@ -89,7 +89,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "arqad-maggots",
-	category = "vrauks",
+	categories = {"vrauks"},
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-maggot",
@@ -119,7 +119,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "arqad-egg-nests",
-	category = "arqad",
+	categories = {"arqad"},
 	subgroup = "py-alienlife-arqad",
 	order = "c",
 	main_product = "arqad-egg-nest",
@@ -198,7 +198,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "caged-arqad",
-	category = "arqad",
+	categories = {"arqad"},
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	main_product = "arqad",
@@ -284,7 +284,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "arqad-queen",
-	category = "arqad",
+	categories = {"arqad"},
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	main_product = "arqad-queen",
@@ -300,7 +300,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "arqad-queen", amount = 1, probability = 0.01},
+				{name = "arqad-queen", amount = 1, independent_probability = 0.01},
 				{name = "used-comb",   amount = 1},
 			},
 			crafting_speed = 140,
@@ -312,7 +312,7 @@ py.autorecipes {
 --[[
 py.autorecipes {
     name = 'special-arqad-guts',
-	category = "creature-chamber",
+	categories = {"creature-chamber"},
 	subgroup = 'py-alienlife-arqad',
 	order = 'b',
     mats =

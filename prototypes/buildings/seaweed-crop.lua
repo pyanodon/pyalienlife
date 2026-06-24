@@ -102,10 +102,10 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-6.2, -6.2}, {6.2, 6.2}},
         selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
-        forced_symmetry = "diagonal-pos",
         module_slots = MODULE_SLOTS,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"seaweed"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "seaweed-crop-mk01"),
         energy_source = {
             type = "electric",
@@ -282,7 +282,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {4.0, -6.0}, direction = defines.direction.north}}
             },
             {
@@ -291,7 +291,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {2.0, -6.0}, direction = defines.direction.north}}
             },
             {
@@ -300,7 +300,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {-2.0, -6.0}, direction = defines.direction.north}}
             },
             {
@@ -309,7 +309,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {-4.0, -6.0}, direction = defines.direction.north}}
             },
             {
@@ -318,7 +318,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {2.0, 6.0}, direction = defines.direction.south}}
             },
             {
@@ -327,7 +327,7 @@ for i = 1, 4 do
                 pipe_picture_frozen = py.sexy_pipe_pictures_frozen(),
                 pipe_covers = pipecoverspictures(),
                 secondary_draw_orders = {north = -1, east = -1, west = -1},
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-2.0, 6.0}, direction = defines.direction.south}}
             },
         },

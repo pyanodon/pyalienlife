@@ -1,7 +1,7 @@
 --NOT STANDARD AOUGS
 py.autorecipes {
 	name = "auog-mods",
-	category = "auog",
+	categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "c",
 	mats =

@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "arthurian-growth-enhancement",
-	category = "arthurian",
+	categories = {"arthurian"},
 	subgroup = "py-alienlife-arthurian",
 	order = "c",
 	mats =

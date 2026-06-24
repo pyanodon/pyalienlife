@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "dingrits",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -15,18 +15,19 @@ RECIPE {
         {type = "item",  name = "dingrits-codex",    amount = 2},
         {type = "item",  name = "arthurian-egg",     amount = 10},
         {type = "item",  name = "earth-wolf-sample", amount = 1},
-        {type = "fluid", name = "fetal-serum",       amount = 50},
         {type = "fluid", name = "artificial-blood",  amount = 50},
+        {type = "fluid", name = "fetal-serum",       amount = 50},
     },
     results = {
         {type = "item", name = "dingrits", amount = 1},
     },
+    icons = py.composite_icon("dingrits", "dingrits-codex")
 }:add_unlock("dingrits")
 
 RECIPE {
     type = "recipe",
     name = "dingrits-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-wolf-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -59,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrits-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -82,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrits-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -113,7 +114,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dingrits-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -132,7 +133,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dingrits-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -160,7 +161,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-dingrits",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -175,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-dingrits",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {

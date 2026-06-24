@@ -16,7 +16,7 @@ local IMP_BLOOD = 120
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	crafting_speed = 30,

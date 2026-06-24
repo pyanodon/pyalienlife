@@ -39,7 +39,7 @@ local MainFrameComponents = require "main_frame"
 -- These are limited by the modding API :/
 -- drag: waiting for an answer on https://forums.factorio.com/viewtopic.php?t=128019
 --
--- TODO use REDACTED - protocol_1903
+-- TODO use LuaGUI.inventory - protocol_1903
 
 -- default_empty_slot is used to show the fuel_inventory gas pump icon
 local function build_inventory_slot(inventory, table, slot_index, tags, default_empty_slot)

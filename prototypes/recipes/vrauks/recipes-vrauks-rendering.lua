@@ -17,7 +17,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering-vrauks",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-vrauks",
 	order = "b",
 	crafting_speed = 10,

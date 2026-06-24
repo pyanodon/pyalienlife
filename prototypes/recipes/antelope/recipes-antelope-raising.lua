@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "caged-antelope",
-	category = "antelope",
+	categories = {"antelope"},
 	subgroup = "py-alienlife-antelope",
 	order = "b",
 	main_product = "caged-antelope",
@@ -18,7 +18,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "caged-antelope", probability = 0.5, amount_min = 1, amount_max = 1},
+				{name = "caged-antelope", independent_probability = 0.5, amount_min = 1, amount_max = 1},
 			},
 			crafting_speed = 120,
 			tech = "schrodinger-antelope"
@@ -99,7 +99,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "caged-antelope", remove_item = true},
-				{name = "caged-antelope", probability = 0.7, amount_min = 1, amount_max = 1},
+				{name = "caged-antelope", independent_probability = 0.7, amount_min = 1, amount_max = 1},
 			},
 			crafting_speed = 30,
 			tech = "schrodinger-antelope"

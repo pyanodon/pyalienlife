@@ -106,10 +106,10 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
         selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-        forced_symmetry = "diagonal-pos",
         module_slots = MODULE_SLOTS,
         allowed_effects = {"consumption", "speed", "pollution", "productivity"},
         crafting_categories = {"sap-extractor"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "sap-extractor-mk01"),
         energy_source = {
             type = "electric",
@@ -161,7 +161,7 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, -2.0}, direction = defines.direction.north}},
                 secondary_draw_orders = {north = -1}
             },
@@ -170,9 +170,8 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.6},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/sap-extractor.ogg", volume = 0.3},
-            apparent_volume = 2.5
         },
-        vector_to_place_result = {0, 2.51},
+        vector_to_place_result = {0, 2.8},
     }
 
     -- https://github.com/pyanodon/pycoalprocessing/commit/cf03a35fa5dec4c74a464d847b4e266394317726

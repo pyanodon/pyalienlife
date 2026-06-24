@@ -51,7 +51,7 @@ RECIPE {
     type = "recipe",
     name = "crawdad",
     energy_required = 60,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "py-shed-basic",        amount = 1},
@@ -62,8 +62,8 @@ RECIPE {
         {type = "item",  name = "moss-gen",             amount = 30},
         {type = "item",  name = "bio-sample",           amount = 50},
         {type = "item",  name = "earth-generic-sample", amount = 20},
-        {type = "fluid", name = "blood",                amount = 300},
-        {type = "fluid", name = "water-saline",         amount = 500}
+        {type = "fluid", name = "water-saline",         amount = 500},
+        {type = "fluid", name = "blood",                amount = 300}
     },
     results = {{type = "item", name = "crawdad", amount = 1}}
 }:add_unlock("mounts-mk01")
@@ -130,7 +130,7 @@ data:extend {{
     drawing_box_vertical_extension = 0.5,
     trash_inventory_size = 10,
     effectivity = 1,
-    braking_power = "2MW",
+    braking_force = 2000000,
     energy_source = {
         type = "burner",
         fuel_categories = {"fish"},
@@ -139,7 +139,7 @@ data:extend {{
     },
     consumption = "800kW",
     --terrain_friction_modifier = 0.01,
-    friction = 0.002,
+    friction_force = 0.002,
     light = {
         {
             type = "oriented",
@@ -234,23 +234,16 @@ data:extend {{
     },
     turret_rotation_speed = 0.35 / 60,
     turret_return_timeout = 300,
-    sound_no_fuel = {
-        {
-            filename = "__pyalienlifegraphics3__/sounds/crawdad-breath.ogg",
-            volume = 0.6
-        }
-    },
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    sound_minimum_speed = 0.05,
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    sound_scaling_ratio = 0.8,
+    sound_no_fuel = {filename = "__pyalienlifegraphics3__/sounds/crawdad-breath.ogg", volume = 0.6},
     impact_category = "metal-large",
     working_sound = {
         sound = {
             filename = "__pyalienlifegraphics3__/sounds/crawdad-breath.ogg",
             volume = 0.6
         },
-        match_speed_to_activity = false
+        match_speed_to_activity = false,
+        activity_to_speed_modifiers = {minimum = 0.05},
+        activity_to_volume_modifiers ={multiplier = 0.8}
     },
     open_sound = {filename = "__pyalienlifegraphics3__/sounds/crawdad-in.ogg", volume = 0.5},
     close_sound = {filename = "__pyalienlifegraphics3__/sounds/crawdad-out.ogg", volume = 0.5},

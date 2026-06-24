@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.0
+Date: ???
+  Changes:
+    - Updated to Factorio 2.1
+    - Removed unnecessary prototype values to clear up the log
+    - Updated vector_to_place_result so items shouldn't drop on the floor. Resolves https://github.com/pyanodon/pybugreports/issues/1486
+    - Updated Reproductive Complex icons positioning, similar to what it was in 1.1
+    - Updated icon layering standardization. Main 'modifier' will appear in the top left, secondary will appear in the bottom left.
+    - Fixed that most bioprinting recipes did not have icon overlays. Resolves https://github.com/pyanodon/pybugreports/issues/1241
+    - Added codex icons to fauna bootstrapping recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1177
+    - Updated farming buildings to use a custom minimum speed of -99.99%, default speed of -99.99%, and removed scripting to detect and disable farms without modules. Farms will still have warnings displaying lack of modules, but they will be updated less often
+    - Fixed that many buildings did not have certain pipe covers rendered
+    - Fixed that moss recipe icons were inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1353
+    - Readded slaughterhouse UI (again)
+    - Fixed a crash when changing the recipe on a smart farm connected to a wire. Resolves https://github.com/pyanodon/pybugreports/issues/1464
+    - Fixed a crash when interacting with the caravan UI. Resolves https://github.com/pyanodon/pybugreports/issues/1465
+    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
+    - Fixed certain phytomining recipes taking muddy sludge instead of tailings. Resolves https://github.com/pyanodon/pybugreports/issues/1242
+    - Fixed that creature chamber fluid inputs were inconsistent between recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1309
+    - Reduced most fluidbox sizes from 1000 to 100
+---------------------------------------------------------------------------------------------------
 Version: 3.0.67
 Date: ????
   Changes:

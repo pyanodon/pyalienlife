@@ -2,7 +2,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-carapace-phadai',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-phadai',
 -- 	order = 'b',
 --     mats =
@@ -39,7 +39,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-pelt-dingrits',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-dingrits',
 -- 	order = 'b',
 --     mats =
@@ -78,7 +78,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-spikes-dingrits',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-dingrits',
 -- 	order = 'b',
 --     mats =
@@ -117,7 +117,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-pineal-scrondrix',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-scrondrix',
 -- 	order = 'b',
 --     mats =
@@ -154,7 +154,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-tendon-kmauts',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-kmauts',
 -- 	order = 'b',
 --     mats =
@@ -191,7 +191,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-bladder-phagnot',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-phagnot',
 -- 	order = 'b',
 --     mats =
@@ -227,7 +227,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-venon-vonix',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-vonix',
 -- 	order = 'b',
 --     mats =
@@ -266,7 +266,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-photophore-trits',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-trits',
 -- 	order = 'b',
 --     mats =
@@ -299,7 +299,7 @@
 
 -- py.autorecipes {
 --     name = 'rendering-shell-xyhiphoe',
--- 	category = 'slaughterhouse',
+-- 	categories = {'slaughterhouse'},
 -- 	subgroup = 'py-alienlife-xyhiphoe',
 -- 	order = 'b',
 --     mats =
@@ -332,7 +332,7 @@
 -- RECIPE {
 --     type = "recipe",
 --     name = "adrenal-cortex-2",
---     category = "slaughterhouse",
+--     categories = {"slaughterhouse"},
 --     enabled = false,
 --     energy_required = 15,
 --     ingredients = {
@@ -350,7 +350,7 @@
 RECIPE {
     type = "recipe",
     name = "magnetic-organ",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -368,7 +368,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "intestinal-ee",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -386,7 +386,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cognition-osteochain",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -404,7 +404,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adaptable-automucosa",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -421,7 +421,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "polynuclear-ganglion",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -439,7 +439,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "geostabilization-tissue",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -458,7 +458,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lcc",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -476,7 +476,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cryogland",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -494,7 +494,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "subdermal-chemosnare",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -512,7 +512,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "snarer-heart",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -529,7 +529,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "glandular-myocluster",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -547,7 +547,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "autoantigens",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -566,14 +566,14 @@ if mods["pyhightech"] then
     RECIPE {
         type = "recipe",
         name = "dimensional-gastricorg",
-        category = "slaughterhouse",
+        categories = {"slaughterhouse"},
         enabled = false,
         energy_required = 10,
         ingredients = {
             {type = "item", name = "caged-antelope", amount = 1}
         },
         results = {
-            {type = "item", name = "dimensional-gastricorg", amount = 1, probability = 0.5},
+            {type = "item", name = "dimensional-gastricorg", amount = 1, independent_probability = 0.5},
             {type = "item", name = "cage-antelope",          amount = 1},
         },
         main_product = "dimensional-gastricorg",
@@ -585,7 +585,7 @@ end
 RECIPE {
     type = "recipe",
     name = "sternite-lung",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -602,7 +602,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hormonal",
-    category = "slaughterhouse",
+    categories = {"slaughterhouse"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -622,7 +622,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "vsk",
-        category = "slaughterhouse",
+        categories = {"slaughterhouse"},
         enabled = false,
         energy_required = 40,
         ingredients = {
@@ -638,7 +638,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "aeroorgan",
-        category = "slaughterhouse",
+        categories = {"slaughterhouse"},
         enabled = false,
         energy_required = 40,
         ingredients = {
@@ -656,7 +656,7 @@ end
 RECIPE {
     type = "recipe",
     name = "energy-drinkb",
-    category = "mixer",
+    categories = {"mixer"},
     enabled = false,
     energy_required = 5,
     ingredients = {

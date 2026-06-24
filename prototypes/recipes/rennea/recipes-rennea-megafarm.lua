@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "rennea-super-1",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -22,7 +22,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-2",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-3",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-4",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -84,7 +84,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-5",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -106,7 +106,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-6",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -128,7 +128,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-7",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -148,7 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-10",
-    category = "rennea-farm",
+    categories = {"rennea-farm"},
     subgroup = "py-alienlife-rennea-smartfarm",
     enabled = false,
     energy_required = 60,

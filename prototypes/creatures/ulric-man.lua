@@ -245,12 +245,6 @@ data:extend
         maximum_corner_sliding_distance = 0.7,
         subgroup = "creatures",
         order = "a",
-        eat = {
-            {
-                filename = "__base__/sound/eat-5.ogg",
-                volume = 1
-            }
-        },
         heartbeat = {
             {
                 filename = "__base__/sound/heartbeat.ogg"
@@ -307,7 +301,6 @@ data:extend
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
                             },
-                            slice = 10,
                             line_length = 10,
                             width = 224,
                             height = 224,
@@ -338,7 +331,6 @@ data:extend
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
                             },
-                            slice = 10,
                             line_length = 10,
                             width = 224,
                             height = 224,
@@ -371,7 +363,6 @@ data:extend
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
                             },
-                            slice = 10,
                             line_length = 10,
                             width = 224,
                             height = 160,
@@ -519,7 +510,6 @@ ITEM {
             cooldown = 60,
             ammo_category = "ulric-infusion",
             ammo_type = {
-                category = "caravan-control",
                 target_type = "position",
             }
         }
@@ -566,7 +556,7 @@ RECIPE {
     type = "recipe",
     name = "ulric-infusion-equipment",
     energy_required = 10,
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "flask",               amount = 1},
@@ -582,7 +572,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-infusion",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 1200,
     ingredients = {

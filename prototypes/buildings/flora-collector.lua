@@ -115,7 +115,6 @@ for i = 1, 4 do
             },
         },
         energy_usage = (100 * (2 ^ (i - 1))) .. "kW",
-        mining_power = 1,
         shuffle_resources_to_mine = false,
         resource_drain_rate_percent = 200 * (2 ^ -i),
         resource_searching_radius = 4.49 + ((i - 1) * 3),
@@ -281,7 +280,6 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/flora-collector.ogg", volume = 0.9},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/flora-collector.ogg", volume = 0.3},
-            apparent_volume = 2.5
         },
         next_upgrade = (i ~= 4) and ("flora-collector-mk0" .. (i + 1)) or nil
     }

@@ -27,7 +27,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             name = "stem-cell-recycle-1",
             enabled = false,
-            category = "atomizer",
+            categories = {"atomizer"},
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
                 {type = "item",   name = "bones",       amount = 3},
@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             name = "stem-cell-recycle-2",
             enabled = false,
-            category = "atomizer",
+            categories = {"atomizer"},
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
                 {type = "item",   name = "bonemeal", amount = 3},
@@ -55,7 +55,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             name = "stem-cell-recycle-3",
             enabled = false,
-            category = "atomizer",
+            categories = {"atomizer"},
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
                 {type = "item",   name = "guts",  amount = 6},

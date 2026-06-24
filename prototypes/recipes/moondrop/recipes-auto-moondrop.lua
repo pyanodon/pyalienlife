@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "moondrop",
-	category = "moon",
+	categories = {"moon"},
 	subgroup = "py-alienlife-moon",
 	order = "a",
 	number_icons = true,

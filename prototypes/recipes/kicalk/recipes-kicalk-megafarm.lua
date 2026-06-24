@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "kicalk-super-1",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-2",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-3",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-4",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-5",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -100,7 +100,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-6",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-7",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-8",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -166,7 +166,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-9",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -189,7 +189,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-super-10",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
     subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 60,

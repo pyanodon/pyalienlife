@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "sea-sponge",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -19,12 +19,13 @@ RECIPE {
     results = {
         {type = "item", name = "sea-sponge", amount = 1},
     },
+    icons = py.composite_icon("sea-sponge", "sea-sponge-codex")
 }:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
     type = "recipe",
     name = "sea-sponge-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -41,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-sea-sponge-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -59,7 +60,7 @@ RECIPE {
 ---breeding---
 py.autorecipes {
     name = "sea-sponge",
-    category = "sponge",
+    categories = {"sponge"},
     main_product = "sea-sponge",
     number_icons = true,
     mats =
@@ -101,7 +102,7 @@ py.autorecipes {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-processing-01",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -118,7 +119,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-processing-01",
-    category = "atomizer",
+    categories = {"atomizer"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -137,7 +138,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -151,7 +152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-2",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -165,7 +166,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-3",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -179,7 +180,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-4",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 15,
     ingredients = {

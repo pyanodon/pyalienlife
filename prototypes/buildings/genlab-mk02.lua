@@ -43,7 +43,6 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-3.1, -3.1}, {3.1, 3.1}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    forced_symmetry = "diagonal-pos",
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"genlab"},
@@ -116,7 +115,7 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0.0, -3.0}, direction = defines.direction.north}},
             secondary_draw_orders = {north = -1}
         },
@@ -124,7 +123,7 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {-2.0, -3.0}, direction = defines.direction.north}},
             secondary_draw_orders = {north = -1}
         },
@@ -132,7 +131,7 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {2.0, -3.0}, direction = defines.direction.north}},
             secondary_draw_orders = {north = -1}
         },
@@ -140,7 +139,7 @@ ENTITY {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {0.0, 3.0}, direction = defines.direction.south}},
             secondary_draw_orders = {north = -1}
         },
@@ -148,7 +147,7 @@ ENTITY {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {-2.0, 3.0}, direction = defines.direction.south}},
             secondary_draw_orders = {north = -1}
         },
@@ -156,7 +155,7 @@ ENTITY {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "output", position = {2.0, 3.0}, direction = defines.direction.south}},
             secondary_draw_orders = {north = -1}
         },
@@ -166,6 +165,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 1.5},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/genlab.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

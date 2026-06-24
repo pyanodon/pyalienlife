@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "fawogae-spore",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 -- RECIPE {
 --     type = "recipe",
 --     name = "fawogae-spore-2",
---     category = "spore",
+--     categories = {"spore"},
 --     enabled = false,
 --     energy_required = 7,
 --     ingredients = {
@@ -31,7 +31,7 @@ RECIPE {
 -- RECIPE {
 --     type = "recipe",
 --     name = "fawogae-spore-3",
---     category = "spore",
+--     categories = {"spore"},
 --     enabled = false,
 --     energy_required = 6,
 --     ingredients = {
@@ -46,7 +46,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-spore-mk02",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-spore-mk03",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -74,7 +74,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-spore-mk04",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -104,12 +104,13 @@ RECIPE {
     results = {
         {type = "item", name = "fawogae", amount = 2},
     },
+    icons = py.composite_icon("fawogae", "fawogae-codex")
 }:add_unlock("fawogae-mk01")
 
 RECIPE {
     type = "recipe",
     name = "fawogae-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -126,7 +127,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-shroom-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -143,7 +144,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'replicator-ralesia',
-    category = 'advanced-crafting',
+    categories = {'advanced-crafting'},
     enabled = false,
     energy_required = 30,
     ingredients = {

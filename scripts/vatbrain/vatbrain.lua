@@ -37,7 +37,7 @@ py.register_on_nth_tick(41, "Vatbrain", "pyal", function()
     for _, vatbrain_data in pairs(storage.vatbrains) do
         local vatbrain, beacon = vatbrain_data.vatbrain, vatbrain_data.beacon
         if not vatbrain or not vatbrain.valid or not beacon or not beacon.valid then goto continue end
-        beacon.active = false
+        beacon.disabled_by_script = true
 
         local recipe = vatbrain.get_recipe()
         if not recipe then goto continue end
@@ -52,7 +52,7 @@ py.register_on_nth_tick(41, "Vatbrain", "pyal", function()
             vatbrain_data.current_lvl = module_tier
         end
 
-        if vatbrain.status == defines.entity_status.working then beacon.active = true end
+        if vatbrain.status == defines.entity_status.working then beacon.disabled_by_script = false end
         ::continue::
     end
 end)

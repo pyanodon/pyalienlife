@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "auog-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"auog"},
     enabled = false,
     energy_required = 30,
@@ -20,9 +20,9 @@ RECIPE {
         --{type = 'item', name = 'immunosupressants', amount =2},
     },
     results = {
-        {type = "item", name = "auog",         amount = 1, probability = 0.7},
-        {type = "item", name = "charged-auog", amount = 1, probability = 0.1,  autotech_is_not_primary_source = true},
-        {type = "item", name = "auog-mk02",    amount = 1, probability = 0.005},
+        {type = "item", name = "auog",         amount = 1, independent_probability = 0.7},
+        {type = "item", name = "charged-auog", amount = 1, independent_probability = 0.1,  autotech_is_not_primary_source = true},
+        {type = "item", name = "auog-mk02",    amount = 1, independent_probability = 0.005},
     },
     --main_product = "auog-mk02",
     icons =
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk02-breeder",
-    category = "auog",
+    categories = {"auog"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -67,7 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-pup-mk02-breeder",
-    category = "auog",
+    categories = {"auog"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -101,7 +101,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"auog"},
     enabled = false,
     energy_required = 30,
@@ -113,9 +113,9 @@ RECIPE {
         {type = "item", name = "immunosupressants", amount = 2},
     },
     results = {
-        {type = "item", name = "auog-mk02",    amount = 1, probability = 0.7},
-        {type = "item", name = "charged-auog", amount = 1, probability = 0.1,  autotech_is_not_primary_source = true},
-        {type = "item", name = "auog-mk03",    amount = 1, probability = 0.005},
+        {type = "item", name = "auog-mk02",    amount = 1, independent_probability = 0.7},
+        {type = "item", name = "charged-auog", amount = 1, independent_probability = 0.1,  autotech_is_not_primary_source = true},
+        {type = "item", name = "auog-mk03",    amount = 1, independent_probability = 0.005},
     },
     --main_product = "auog-mk02",
     icons =
@@ -131,7 +131,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk03-breeder",
-    category = "auog",
+    categories = {"auog"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -160,7 +160,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-pup-mk03-breeder",
-    category = "auog",
+    categories = {"auog"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"auog"},
     enabled = false,
     energy_required = 30,
@@ -206,9 +206,9 @@ RECIPE {
         {type = "item", name = "immunosupressants", amount = 2},
     },
     results = {
-        {type = "item", name = "auog-mk03",    amount = 1, probability = 0.7},
-        {type = "item", name = "charged-auog", amount = 1, probability = 0.1,  autotech_is_not_primary_source = true},
-        {type = "item", name = "auog-mk04",    amount = 1, probability = 0.005},
+        {type = "item", name = "auog-mk03",    amount = 1, independent_probability = 0.7},
+        {type = "item", name = "charged-auog", amount = 1, independent_probability = 0.1,  autotech_is_not_primary_source = true},
+        {type = "item", name = "auog-mk04",    amount = 1, independent_probability = 0.005},
     },
     --main_product = "auog-mk02",
     icons =
@@ -224,7 +224,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk04-breeder",
-    category = "auog",
+    categories = {"auog"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -253,7 +253,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-pup-mk04-breeder",
-    category = "auog",
+    categories = {"auog"},
     enabled = false,
     energy_required = 30,
     ingredients = {

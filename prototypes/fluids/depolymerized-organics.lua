@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "depolymerized-organics",
-    category = "gas-separator",
+    categories = {"gas-separator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -11,7 +11,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "depolymerized-organics", amount = 100},
     },
-}:add_unlock("cottongut-science-mk01"):change_category("reformer")
+}:add_unlock("cottongut-science-mk01"):replace_category("gas-separator", "reformer")
 
 FLUID {
     type = "fluid",

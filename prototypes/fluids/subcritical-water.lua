@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "subcritical-water-01",
-    category = "combustion",
+    categories = {"combustion"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "subcritical-water-02",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 60,
     ingredients = {

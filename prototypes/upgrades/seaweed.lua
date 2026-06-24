@@ -26,7 +26,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         name = "slacked-lime-seaweed-recycle",
         energy_required = 16,
-        category = "seaweed",
+        categories = {"seaweed"},
         ingredients = {
             {type = "fluid", name = "slacked-lime", amount = 200},
             {type = "item",  name = "carbon-dust",  amount = 2},
@@ -43,7 +43,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         name = "slacked-lime-from-seaweed",
         energy_required = 4,
-        category = "bof",
+        categories = {"bof"},
         ingredients = {
             {type = "fluid", name = "water",   amount = 100},
             {type = "fluid", name = "oxygen",  amount = 50},

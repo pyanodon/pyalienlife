@@ -234,6 +234,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.62},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/dingrits-pack.ogg", volume = 0.3},
-        apparent_volume = 1.2
     }
 }

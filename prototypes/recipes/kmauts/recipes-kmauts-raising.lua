@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "kmauts-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"kmauts"},
 	subgroup = "py-alienlife-kmauts",
 	order = "c",
@@ -21,7 +21,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				--{name='kmauts', amount = 2, probability = 0.999},
+				--{name='kmauts', amount = 2, independent_probability = 0.999},
 				{name = "kmauts-cub", amount = 2},
 				{name = "cage",       amount = 1},
 			},
@@ -140,7 +140,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "kmauts",
-	category = "kmauts",
+	categories = {"kmauts"},
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	main_product = "kmauts",
@@ -220,7 +220,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-kmauts', remove_item = true},
-					{name='caged-kmauts', probability = 0.8, amount_min =3, amount_max =4},   --2.8
+					{name='caged-kmauts', independent_probability = 0.8, amount_min =3, amount_max =4},   --2.8
 				},
 			crafting_speed = 25,
 			tech = 'growth-hormone'
@@ -234,7 +234,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-kmauts', remove_item = true},
-					{name='caged-kmauts', probability = 1, amount_min =3, amount_max =3},
+					{name='caged-kmauts', independent_probability = 1, amount_min =3, amount_max =3},
 				},
 			crafting_speed = 25,
 			tech = 'antiviral'

@@ -21,7 +21,7 @@ local IMP_BRAIN = 8
 
 py.autorecipes {
 	name = "rendering-arthurian",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
 	crafting_speed = 30,

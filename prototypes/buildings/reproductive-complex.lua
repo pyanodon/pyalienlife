@@ -116,9 +116,13 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-10.6, -10.6}, {10.6, 10.6}},
         selection_box = {{-11.0, -11.0}, {11.0, 11.0}},
-        forced_symmetry = "diagonal-pos",
         draw_entity_info_icon_background = false,
-        entity_info_icon_shift = util.by_pixel(165, 265),
+        icon_draw_specification = {shift = util.by_pixel(165, 165), scale = 4.5},
+        icons_positioning = {{
+            inventory_index = defines.inventory.crafter_modules,
+            scale = 1.7,
+            shift = util.by_pixel(-22, -110)
+        }},
         module_slots = module_slots,
         allowed_effects = {"speed", "consumption", "pollution", "productivity"},
         crafting_categories = {"rc"},
@@ -260,35 +264,35 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {4.5, 10.5}, direction = defines.direction.south}}
             },
             {
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {6.5, 10.5}, direction = defines.direction.south}}
             },
             {
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.5, 10.5}, direction = defines.direction.south}}
             },
             {
                 production_type = "output",
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
                 pipe_covers = py.pipe_covers(true, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-1.5, 10.5}, direction = defines.direction.south}}
             },
         },
         impact_category = "metal",
         working_sound = {
-            sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.7, max_count = 1, audible_distance_modifier = 1,},
-            idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.4, max_count = 1, audible_distance_modifier = 1,},
+            sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.7, audible_distance_modifier = 1,},
+            idle_sound = {filename = "__pyalienlifegraphics2__/sounds/rc.ogg", volume = 0.4, audible_distance_modifier = 1,},
             max_sounds_per_prototype = 1,
         }
     }

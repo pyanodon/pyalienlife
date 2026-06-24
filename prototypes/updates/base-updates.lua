@@ -80,8 +80,8 @@ TECHNOLOGY("atomic-bomb"):remove_prereq("kovarex-enrichment-process"):remove_pre
 RECIPE("atomic-bomb"):add_ingredient {type = "item", name = "titanium-plate", amount = 20}:add_ingredient {type = "item", name = "fuelrod-mk01", amount = 10}:remove_ingredient("yellow-cake"):add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
 RECIPE("small-electric-pole"):replace_ingredient("wood", "log")
 
--- RECIPE('automation-science-pack').category = 'research-handcrafting'
-RECIPE("logistic-science-pack").category = "research"
+-- RECIPE('automation-science-pack').categories = {'research-handcrafting'}
+RECIPE("logistic-science-pack").categories = {"research"}
 RECIPE("logistic-science-pack"):add_ingredient {type = "item", name = "solidified-sarcorus", amount = 1}:add_ingredient {type = "item", name = "animal-sample-01", amount = 2}:remove_ingredient("lab-instrument")
 RECIPE("logistic-science-pack"):replace_ingredient("alien-sample01", {type = "item", name = "alien-sample01", amount = 2})
 RECIPE("logistic-science-pack"):set_fields {
@@ -90,10 +90,10 @@ RECIPE("logistic-science-pack"):set_fields {
     },
     energy_required = 90
 }
-RECIPE("chemical-science-pack").category = "research"
-RECIPE("military-science-pack").category = "research"
-RECIPE("production-science-pack").category = "research"
-RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-samples", amount = 1}.category = "research"
+RECIPE("chemical-science-pack").categories = {"research"}
+RECIPE("military-science-pack").categories = {"research"}
+RECIPE("production-science-pack").categories = {"research"}
+RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-samples", amount = 1}.categories = {"research"}
 
 ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
 RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}

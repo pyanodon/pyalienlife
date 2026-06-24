@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "dingrits-improved",
-	category = "dingrits",
+	categories = {"dingrits"},
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	--main_product = "dingrits",

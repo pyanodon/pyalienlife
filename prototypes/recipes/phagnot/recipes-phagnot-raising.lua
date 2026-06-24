@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "phagnot-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"phagnot"},
 	main_product = "phagnot-cub",
 	subgroup = "py-alienlife-phagnot",
@@ -192,7 +192,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "phagnot",
-	category = "phagnot",
+	categories = {"phagnot"},
 	main_product = "phagnot",
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
@@ -320,7 +320,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-phagnot', remove_item = true},
-					{name='caged-phagnot', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-phagnot', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

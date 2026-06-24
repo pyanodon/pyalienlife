@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-5th-dimension"
         for _, result in pairs(recipe.results) do
             if result.name == "caged-antelope" then
-                result.probability = result.probability + 0.2
+                result.independent_probability = result.independent_probability + 0.2
             end
         end
         data:extend {recipe}
@@ -21,7 +21,7 @@ if data and not yafc_turd_integration then
     local strangelets = RECIPE("full-render-antelope"):copy()
     strangelets.name = "full-render-antelope-existential"
     strangelets.main_product = "strangelets"
-    strangelets:add_result {type = "item", name = "strangelets", probability = 0.5, amount = 1}
+    strangelets:add_result {type = "item", name = "strangelets", independent_probability = 0.5, amount = 1}
     data:extend {strangelets}
 
     data:extend {
@@ -68,11 +68,11 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "antelope", amount = 1},
             },
             enabled = false,
-            category = "antelope",
+            categories = {"antelope"},
             results = {
-                {type = "item", name = "pos-tilope",   probability = 0.5, amount = 1},
-                {type = "item", name = "anti-lope",    probability = 0.5, amount = 1},
-                {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
+                {type = "item", name = "pos-tilope",   independent_probability = 0.5, amount = 1},
+                {type = "item", name = "anti-lope",    independent_probability = 0.5, amount = 1},
+                {type = "item", name = "quantum-dots", independent_probability = 0.5, amount = 1},
             },
             energy_required = 40,
             subgroup = "py-alienlife-antelope",
@@ -87,10 +87,10 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "anti-lope", amount = 1},
             },
             enabled = false,
-            category = "antelope",
+            categories = {"antelope"},
             results = {
                 {type = "item", name = "neutra-lope",  amount = 2},
-                {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
+                {type = "item", name = "quantum-dots", independent_probability = 0.5, amount = 1},
             },
             energy_required = 40,
             subgroup = "py-alienlife-antelope",
@@ -105,11 +105,11 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "neutra-lope", amount = 1},
             },
             enabled = false,
-            category = "antelope",
+            categories = {"antelope"},
             results = {
                 {type = "item", name = "anti-lope",    amount = 1},
                 {type = "item", name = "antelope",     amount = 1},
-                {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
+                {type = "item", name = "quantum-dots", independent_probability = 0.5, amount = 1},
             },
             energy_required = 40,
             subgroup = "py-alienlife-antelope",
@@ -123,11 +123,11 @@ if data and not yafc_turd_integration then
                 {type = "item", name = "neutra-lope", amount = 1},
             },
             enabled = false,
-            category = "antelope",
+            categories = {"antelope"},
             results = {
-                {type = "item", name = "antelope",     amount = 1,        probability = 0.5},
-                {type = "item", name = "pos-tilope",   amount = 1,        probability = 0.5},
-                {type = "item", name = "quantum-dots", probability = 0.5, amount = 1},
+                {type = "item", name = "antelope",     amount = 1,        independent_probability = 0.5},
+                {type = "item", name = "pos-tilope",   amount = 1,        independent_probability = 0.5},
+                {type = "item", name = "quantum-dots", independent_probability = 0.5, amount = 1},
             },
             energy_required = 40,
             subgroup = "py-alienlife-antelope",

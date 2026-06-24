@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "zungror-improved",
-	category = "zungror",
+	categories = {"zungror"},
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	--main_product = "zungror",

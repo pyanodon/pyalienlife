@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "trits",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -22,12 +22,13 @@ RECIPE {
     results = {
         {type = "item", name = "trits", amount = 1},
     },
+    icons = py.composite_icon("trits", "trits-codex")
 }:add_unlock("trits")
 
 RECIPE {
     type = "recipe",
     name = "trits-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -48,7 +49,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'trits-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -66,7 +67,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'trits-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 100,
     ingredients = {

@@ -35,7 +35,7 @@ if data and not yafc_turd_integration then
             energy_required = 40,
             results = {{type = "item", name = "nutrient", amount = 1}},
             name = "nutrient",
-            category = "electronic",
+            categories = {"electronic"},
             ingredients = {
                 {type = "fluid", name = "manure-bacteria",       amount = 100},
                 {type = "fluid", name = "etching",               amount = 100},

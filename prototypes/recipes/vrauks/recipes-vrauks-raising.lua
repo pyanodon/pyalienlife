@@ -1,6 +1,6 @@
 py.autorecipes {
     name = "vrauks",
-    category = "vrauks",
+    categories = {"vrauks"},
     subgroup = "py-alienlife-vrauks",
     order = "b",
     main_product = "vrauks",
@@ -80,7 +80,7 @@ py.autorecipes {
 
 py.autorecipes {
     name = "vrauks-cocoon",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"vrauks"},
     subgroup = "py-alienlife-vrauks",
     order = "c",
