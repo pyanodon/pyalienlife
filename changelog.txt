@@ -19,6 +19,7 @@ Date: ???
     - Fixed certain phytomining recipes taking muddy sludge instead of tailings. Resolves https://github.com/pyanodon/pybugreports/issues/1242
     - Fixed that creature chamber fluid inputs were inconsistent between recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1309
     - Reduced most fluidbox sizes from 1000 to 100
+    - Added the following entities to be hidden when visibility of tall entities is toggled: bioport, bioprinter, compost plant, gene lab, moss farm, research center, spore collector, vatbrain, xeno pen, zungror lair
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.67
 Date: ????

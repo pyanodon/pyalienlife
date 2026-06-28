@@ -175,6 +175,7 @@ for i = 1, 4 do
                 secondary_draw_orders = {north = -1}
             },
         },
+        tall = true,
         graphics_set = {
             animation = {
                 layers = {

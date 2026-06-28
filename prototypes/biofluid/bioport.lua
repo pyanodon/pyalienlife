@@ -98,6 +98,7 @@ ENTITY {
         },
     },
     impact_category = "metal-large",
+    tall = true,
     graphics_set = {
         integration_patch = {
             layers = {

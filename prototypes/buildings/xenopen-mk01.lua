@@ -57,6 +57,7 @@ ENTITY {
         },
     },
     energy_usage = "500kW",
+    tall = true,
     graphics_set = {
         working_visualisations = {
             {

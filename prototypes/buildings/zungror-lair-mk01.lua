@@ -62,6 +62,7 @@ ENTITY {
         },
     },
     energy_usage = "2000kW",
+    tall = true,
     graphics_set = {
         working_visualisations = {
             {
