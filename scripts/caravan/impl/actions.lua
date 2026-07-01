@@ -1,5 +1,4 @@
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
-
+local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local ImplControl = require "control"
 
 local P = {}
@@ -16,7 +15,7 @@ local function get_outpost_inventory(outpost)
         return outpost.get_inventory(defines.inventory.car_trunk)
     elseif type == "spider-vehicle" then
         return outpost.get_inventory(defines.inventory.spider_trunk)
-    elseif caravan_prototypes[outpost.name] then
+    elseif Utils.Get_caravan_prototypes()[outpost.name] then
         local caravan_data = storage.caravans[outpost.unit_number]
         return caravan_data.inventory
     end
@@ -117,7 +116,9 @@ local function transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, m
 
     local output = caravan_data.fluid or {amount = 0, temperature = 15, name = ""}
 
-    local total_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume
+    local total_output_volume = Utils.Get_caravan_prototypes()[caravan_data.entity.name].max_volume
+    game.print(caravan_data.entity.name)
+    game.print(serpent.block(Utils.Get_caravan_prototypes()[caravan_data.entity.name].max_volume))
     local remaining_space = total_output_volume - output.amount
     local goal = math.min(max_transfer, remaining_space)
     if goal <= 0 then return true end
@@ -244,7 +245,7 @@ function P.store_food(caravan_data, schedule, action)
     local fuel = caravan_data.fuel_inventory
 
     for _, item in pairs(outpost_inventory.get_contents()) do
-        if caravan_prototypes[entity.name].favorite_foods[item.name] then
+        if Utils.Get_caravan_prototypes()[entity.name].favorite_foods[item.name] then
             local inserted_count = fuel.insert(item)
             if inserted_count ~= 0 then
                 item.count = inserted_count
@@ -267,7 +268,7 @@ function P.store_specific_food(caravan_data, schedule, action)
     local goal = action.item_count or 0
     if not item then return false end
 
-    if not caravan_prototypes[caravan_data.entity.name].favorite_foods[item] then
+    if not Utils.Get_caravan_prototypes()[caravan_data.entity.name].favorite_foods[item] then
         return true
     end
 
@@ -641,7 +642,7 @@ function P.fill_tank(caravan_data, schedule, action)
     local fluid = outpost_fluid.name
 
     -- request to transfer the full tank capacity; we later reduce this to the available contents
-    local max_transfer = caravan_prototypes[caravan_data.entity.name].max_volume
+    local max_transfer = Utils.Get_caravan_prototypes()[caravan_data.entity.name].max_volume
 
     return transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, max_transfer)
 end
@@ -711,7 +712,7 @@ function P.empty_tank_until_outpost_contains(caravan_data, schedule, action)
 end
 
 function P.is_tank_full(caravan_data, schedule, action)
-    return caravan_data.fluid and caravan_data.fluid.amount >= caravan_prototypes[caravan_data.entity.name].max_volume
+    return caravan_data.fluid and caravan_data.fluid.amount >= Utils.Get_caravan_prototypes()[caravan_data.entity.name].max_volume
 end
 
 function P.is_tank_empty(caravan_data, schedule, action)

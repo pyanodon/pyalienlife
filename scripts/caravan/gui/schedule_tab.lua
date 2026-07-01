@@ -2,7 +2,6 @@ local ActionGui = require "actions"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local AddInterruptGui = require "add_interrupt"
 local EditInterruptGui = require "edit_interrupt"
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
 local P = {}
 
@@ -19,7 +18,7 @@ local function play_stop_button_info(caravan_data, schedule_id)
 end
 
 function P.build_schedule_destination_frame(parent, schedule_id, caravan_data)
-    local tags = {schedule_id = schedule_id, unit_number = caravan_data.unit_number, action_list_type = Caravan.action_list_types.standard_schedule}
+    local tags = {schedule_id = schedule_id, unit_number = caravan_data.unit_number, action_list_type = Utils.Get_caravan_data().action_list_types.standard_schedule}
 
     local temporary = caravan_data.schedule[schedule_id].temporary 
     local frame_style = temporary and "train_schedule_temporary_station_frame" or "train_schedule_station_frame"
@@ -55,7 +54,7 @@ function P.build_action_list(parent, schedule_id, caravan_data)
     local caravan_actions = caravan_data.schedule[schedule_id].actions
 
     for i = 1, #caravan_actions do
-        local tags = {schedule_id = schedule_id, action_id = i, unit_number = caravan_data.entity.unit_number, action_list_type = Caravan.action_list_types.standard_schedule}
+        local tags = {schedule_id = schedule_id, action_id = i, unit_number = caravan_data.entity.unit_number, action_list_type = Utils.Get_caravan_data().action_list_types.standard_schedule}
         ActionGui.build_action(parent, caravan_data, caravan_actions[i], tags)
     end
 

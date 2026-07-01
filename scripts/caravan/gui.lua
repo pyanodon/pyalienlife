@@ -1,6 +1,5 @@
-local caravan_prototypes = require("caravan-prototypes")
 require "gui/components"
-
+local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local AddInterruptGui = require "gui/add_interrupt"
 
 local P = {}
@@ -106,7 +105,7 @@ function P.refocus(gui, target)
     if target == nil then
         camera.entity = caravan_unit
         -- zoom is halved because default is a bit too zoomed in
-        camera.zoom = (caravan_prototypes[caravan_unit.name].camera_zoom or 0.5) / 2
+        camera.zoom = (Utils.Get_caravan_prototypes()[caravan_unit.name].camera_zoom or 0.5) / 2
         refocus_button.visible = false
         return
     end

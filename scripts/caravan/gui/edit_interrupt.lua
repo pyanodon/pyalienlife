@@ -1,7 +1,6 @@
 local InterruptConditionsGui = require "__pyalienlife__/scripts/caravan/gui/interrupt_conditions"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local ActionGui = require "__pyalienlife__/scripts/caravan/gui/actions"
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
 local P = {}
 

@@ -1,11 +1,8 @@
-local P = {}
-
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
-
 local number_selection = require "action_widgets/number_selection"
 local comparator = require "action_widgets/comparator"
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
+local P = {}
 local possibly_blocking_actions = {"fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank", "fill-tank-until-caravan-has", "fill-tank-until-target-has", "empty-tank-until-caravan-has", "empty-tank-until-target-has"}
 
 local function play_stop_button_info(caravan_data, schedule_id, action_id)
@@ -24,7 +21,7 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     local flow = parent.add {type = "flow", direction = "horizontal"}
     flow.style.vertical_align = "center"
 
-    if tags.action_list_type == Caravan.action_list_types.standard_schedule then
+    if tags.action_list_type == Utils.Get_caravan_data().action_list_types.standard_schedule then
         local sprite, style = play_stop_button_info(caravan_data, tags.schedule_id, tags.action_id)
         flow.add {type = "sprite-button", name = "py_caravan_action_play_stop_button", style = style, sprite = sprite, tags = tags}
     end
@@ -47,7 +44,7 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count"}, action.type) then
         local filters
         if action.type == "food-count" then
-            filters = {{filter = "name", name = Caravan.foods.all}}
+            filters = {{filter = "name", name = Utils.Get_caravan_data().foods.all}}
         end
         comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
     elseif action.type == "outpost-item-count" then
@@ -63,7 +60,7 @@ function P.build_action_flow(parent, caravan_data, action, tags)
         end
         comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
     elseif action.type == "store-specific-food" then
-        local filters = {{filter = "name", name = Caravan.foods.all}}
+        local filters = {{filter = "name", name = Utils.Get_caravan_data().foods.all}}
 
         comparator.build_static_comparator_widgets(flow, action, tags, "item", filters, "≥")
     elseif Utils.contains({"at-outpost", "not-at-outpost"}, action.type) then

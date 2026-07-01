@@ -1,7 +1,8 @@
-local P = {}
-
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local MainFrameComponents = require "main_frame"
+local Utils = require "__pyalienlife__/scripts/caravan/utils"
+
+
+local P = {}
 
 -- Things to implement / investigate
 --
@@ -113,7 +114,7 @@ local function build_inventory_flow(parent, inventory, name, tags, default_empty
 end
 
 local function build_fuel_inventory_flow(parent, caravan_data, fuel_inventory, name, tags)
-    local favorite_food_tooltip = py.generate_favorite_food_tooltip(caravan_prototypes[caravan_data.entity.name].favorite_foods, "caravan-gui")
+    local favorite_food_tooltip = py.generate_favorite_food_tooltip(Utils.Get_caravan_prototypes()[caravan_data.entity.name].favorite_foods, "caravan-gui")
 
     local flow = build_inventory_flow(parent, fuel_inventory, name, tags, {sprite = "slot_icon_food", tooltip = favorite_food_tooltip})
     local bar = flow.add {type = "progressbar", style = "burning_progressbar"}
@@ -256,9 +257,10 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     local player = game.get_player(event.player_index)
     local inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
-    -- make these two conditional on type
+    --TODO make these two conditional on type ? 
+    -- move to list in mod data
     local is_solid = not caravan_data.entity.name:find("^fluidavan") and not caravan_data.entity.name:find("^fluidflyavan")
-    local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
+    local pred = is_solid and function (s) return true end or function (s) return Utils.Get_caravan_prototypes()[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
     local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
     handle_slot_click(event, caravan_data, inventory, target_inv, pred)
@@ -285,7 +287,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = fu
     local main_inventory = get_inventory(player)
     local caravan_data = storage.caravans[event.element.tags.unit_number]
 
-    local pred = function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
+    local pred = function (s) return Utils.Get_caravan_prototypes()[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
 
     handle_slot_click(event, caravan_data, caravan_data.fuel_inventory, main_inventory, pred)
 
@@ -337,7 +339,7 @@ py.on_event("py_caravan_pipette", function(event)
         end
     else -- otherwise find the most valuable food in the player inventory and put it into the cursor
         local best_slot, best_value = nil, 0
-        for food_name, food_value in pairs(caravan_prototypes[caravan_data.entity.name].favorite_foods) do
+        for food_name, food_value in pairs(Utils.Get_caravan_prototypes()[caravan_data.entity.name].favorite_foods) do
             local _, new_slot = main_inventory.find_item_stack(food_name)
             if new_slot and food_value > best_value then
                 best_slot = new_slot

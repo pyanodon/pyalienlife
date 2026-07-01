@@ -1,6 +1,6 @@
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
 local CaravanGuiComponents = require "__pyalienlife__/scripts/caravan/gui/components"
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
+
 
 gui_events[defines.events.on_gui_click]["py_caravan_rename_button"] = function(event)
     local player = game.get_player(event.player_index)
@@ -46,5 +46,5 @@ gui_events[defines.events.on_gui_click]["py_refocus"] = function(event)
 
     camera.entity = caravan_data.entity
     refocus.visible = false
-    camera.zoom = caravan_prototypes[caravan_data.entity.name].camera_zoom or 0.5
+    camera.zoom = Utils.Get_caravan_prototypes()[caravan_data.entity.name].camera_zoom or 0.5
 end

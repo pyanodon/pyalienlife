@@ -3,11 +3,10 @@ local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
 local EditInterruptGui = require "__pyalienlife__/scripts/caravan/gui/edit_interrupt"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
-    local prototype = caravan_prototypes[entity.name]
+    local prototype = Utils.Get_caravan_prototypes()[entity.name]
     if not prototype then return end
     if prototype.destructible == false then entity.destructible = false end
 
@@ -31,7 +30,7 @@ end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
-    local prototype = caravan_prototypes[entity.name]
+    local prototype = Utils.Get_caravan_prototypes()[entity.name]
     if not prototype then return end
 
     CaravanImpl.remove_alert(event.entity)
@@ -140,7 +139,7 @@ local function on_carrot_used(player, cursor_position)
     if caravan_data then
         if not CaravanImpl.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule
-        prototype = caravan_prototypes[caravan_data.entity.name]
+        prototype = Utils.Get_caravan_prototypes()[caravan_data.entity.name]
         only_outpost = prototype.only_allow_outpost_as_destination
     end
     if interrupt_data then
@@ -158,6 +157,7 @@ local function on_carrot_used(player, cursor_position)
         if interrupt_data and entity then
             if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
             entity.operable = false -- Prevents the player from opening the gui of the clicked entity
+            -- TODO move to list in mod data
             if entity.name == "outpost" or entity.name == "outpost-fluid" or entity.name == "outpost-aerial" or entity.name == "outpost-aerial-fluid" then
                 local action_id = last_opened.action_id
                 interrupt_data.conditions[action_id].entity = entity
@@ -259,7 +259,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     local entity = player.selected
-    if not entity or not caravan_prototypes[entity.name] --[[ or not player.can_reach_entity(entity) ]] then return end
+    if not entity or not Utils.Get_caravan_prototypes()[entity.name] --[[ or not player.can_reach_entity(entity) ]] then return end
     local caravan_data = CaravanImpl.instantiate_caravan(entity)
     local existing = CaravanGui.get_gui(player)
     if existing then
@@ -322,7 +322,13 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             distraction = defines.distraction.none,
             pathfind_flags = {}
         }
-        local prototype = caravan_prototypes[entity.name]
+        local prototype = Utils.Get_caravan_prototypes()[entity.name]
+        local protos = Utils.Get_caravan_prototypes()
+        for k,_ in pairs(protos) do
+            game.print(k)
+        end
+        game.print(entity.name)
+        game.print(serpent.block(prototype))
         if prototype.requeue_required then
             storage.caravan_queue = nil
             caravan_data.arrival_tick = game.tick
@@ -360,7 +366,8 @@ py.register_on_nth_tick(60, "update-caravans", "pyal", function()
         local needs_fuel = caravan_data.fuel_inventory and caravan_data.fuel_bar == 0 and caravan_data.fuel_inventory.is_empty()
 
         if needs_fuel then
-            CaravanImpl.add_alert(entity, Caravan.alerts.no_fuel)
+            game.print(serpent.block(Utils.Get_caravan_data().action_list_types).." \nneeds_fuel")
+            CaravanImpl.add_alert(entity, Utils.Get_caravan_data().alerts.no_fuel)
             py.draw_error_sprite(entity, "virtual-signal.py-no-food", 62, 31)
             goto continue
         end

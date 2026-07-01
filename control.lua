@@ -49,6 +49,7 @@ local function pickerdollies()
         remote.call("PickerDollies", "add_blacklist_name", "outpost-fluid", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost-aerial", true)
         remote.call("PickerDollies", "add_blacklist_name", "outpost-aerial-fluid", true)
+        --TODO idk about this?
         remote.call("PickerDollies", "add_blacklist_name", "mega-farm", true)
         remote.call("PickerDollies", "add_blacklist_name", "wyrmhole", true)
         remote.call("PickerDollies", "add_blacklist_name", "ipod", true)

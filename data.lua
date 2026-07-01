@@ -383,6 +383,7 @@ if mods["pyalternativeenergy"] then
 end
 
 --Creature
+require "prototypes/creatures/caravan-data"
 require "prototypes/creatures/caravan"
 require "prototypes/creatures/flying-caravan"
 require "prototypes/creatures/nuka-caravan"

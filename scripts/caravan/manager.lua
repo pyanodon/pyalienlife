@@ -1,12 +1,11 @@
-local caravan_prototypes = require "caravan-prototypes"
-
 local CaravanGui = require "gui"
 local Utils = require "utils"
 local Impl = require "impl"
 
+
 local function add_gui_row(caravan_data, key, table, inner)
     local entity = caravan_data.entity
-    local prototype = caravan_prototypes[entity.name]
+    local prototype = Utils.Get_caravan_prototypes()[entity.name]
 
     table = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}, style = inner and "inside_shallow_frame" or nil}
 

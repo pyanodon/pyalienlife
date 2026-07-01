@@ -1,4 +1,3 @@
-local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local number_selection = require "action_widgets/number_selection"
@@ -75,7 +74,7 @@ function P.build_camera_frame(parent, caravan_data)
     camera.style.horizontally_stretchable = true
     camera.entity = caravan_data.entity
     camera.visible = true
-    local prototype = caravan_prototypes[caravan_data.entity.name]
+    local prototype = Utils.Get_caravan_prototypes()[caravan_data.entity.name]
     camera.zoom = prototype.camera_zoom or 0.5
 end
 

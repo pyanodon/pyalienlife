@@ -1,12 +1,30 @@
-local caravan_prototypes = require "caravan-prototypes"
 local italian_names = require "italian-names"
 
 local P = {}
 
+-- Create a helper function to safely fetch the data on-demand
+function P.Get_caravan_prototypes()
+    local caravan_prototypes = prototypes.mod_data["pyanadons"].data["caravan_prototypes"]
+    if not caravan_prototypes then
+
+        return nil
+    end
+    return caravan_prototypes
+end
+
+function P.Get_caravan_data()
+    local caravan_prototypes = prototypes.mod_data["pyanadons"].data["caravan_data"]
+    if not caravan_prototypes then
+        game.print("no caravan data!")
+        return nil
+    end
+    return caravan_prototypes
+end
+
 ---@param caravan_data Caravan
 ---@param entity LuaEntity
 function P.get_valid_actions_for_entity(caravan_entity_name, entity)
-    local prototype = caravan_prototypes[caravan_entity_name]
+    local prototype = P.Get_caravan_prototypes()[caravan_entity_name]
     local all_actions = prototype.actions
     local valid_actions
     if entity and entity.valid then
@@ -23,7 +41,7 @@ function P.get_valid_actions_for_entity(caravan_entity_name, entity)
 end
 
 function P.get_all_actions_for_entity(entity)
-    local all_actions = Caravan.all_actions
+    local all_actions = P.Get_caravan_data().all_actions
     local valid_actions
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
@@ -82,14 +100,14 @@ function P.get_action_from_button(element)
     local action_list_type = tags.action_list_type
 
     local action
-    if action_list_type == Caravan.action_list_types.standard_schedule then
+    if action_list_type == P.Get_caravan_data().action_list_types.standard_schedule then
         action = storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions[tags.action_id]
-    elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_schedule then
         error()
-    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_condition then
         local interrupt = storage.edited_interrupts[player_index]
         action = interrupt.conditions[tags.condition_id]
-    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_targets then
         local interrupt = storage.edited_interrupts[player_index]
         action = interrupt.schedule[tags.schedule_id].actions[tags.action_id]
     else
@@ -108,17 +126,17 @@ function P.get_schedule(element)
     local tags = element.tags
     local action_list_type = tags.action_list_type
 
-    if action_list_type == Caravan.action_list_types.standard_schedule then
+    if action_list_type == P.Get_caravan_data().action_list_types.standard_schedule then
         local caravan_data = storage.caravans[tags.unit_number]
         local schedule = caravan_data.schedule
         if tags.action_id then schedule = schedule[tags.schedule_id].actions end
         return schedule
-    elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_schedule then
         local caravan_data = storage.caravans[tags.unit_number]
         return caravan_data.interrupts
-    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_condition then
         return storage.interrupts[tags.interrupt_name].conditions
-    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_targets then
         local schedule = storage.interrupts[tags.interrupt_name].schedule
         if tags.action_id then schedule = schedule[tags.schedule_id].actions end
         return schedule
@@ -131,14 +149,14 @@ function P.get_actions_from_tags(tags, player_index)
     local action_list_type = tags.action_list_type
 
     local action
-    if action_list_type == Caravan.action_list_types.standard_schedule then
+    if action_list_type == P.Get_caravan_data().action_list_types.standard_schedule then
         return storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions
-    elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_schedule then
         error()
-    elseif action_list_type == Caravan.action_list_types.interrupt_condition then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_condition then
         local interrupt = storage.edited_interrupts[player_index]
         return interrupt.conditions
-    elseif action_list_type == Caravan.action_list_types.interrupt_targets then
+    elseif action_list_type == P.Get_caravan_data().action_list_types.interrupt_targets then
         local interrupt = storage.edited_interrupts[player_index]
         return interrupt.schedule[tags.schedule_id].actions
     else
@@ -272,7 +290,7 @@ function P.ensure_item_count(action)
     if not action or not action.type then
         return action
     end
-    if not Caravan.actions_with_item_count[action.type] then
+    if not P.Get_caravan_data().actions_with_item_count[action.type] then
         return action
     end
     if action.type == "time-passed" then
