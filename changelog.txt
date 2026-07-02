@@ -9,7 +9,8 @@ Date: ???
     - Updated icon layering standardization. Main 'modifier' will appear in the top left, secondary will appear in the bottom left.
     - Fixed that most bioprinting recipes did not have icon overlays. Resolves https://github.com/pyanodon/pybugreports/issues/1241
     - Added codex icons to fauna bootstrapping recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1177
-    - Updated farming buildings to use a custom minimum speed of -99.99%, default speed of -99.99%, and removed scripting to detect and disable farms without modules. Farms will still have warnings displaying lack of modules, but they will be updated less often
+    - Updated AlienLife buildings to use a custom minimum speed of -99.99%, default speed of -99.99%, and removed scripting to detect and disable farms without modules
+    - AlienLife buildings now generate persistent alerts when modules are missing
     - Fixed that many buildings did not have certain pipe covers rendered
     - Fixed that moss recipe icons were inconsistent. Resolves https://github.com/pyanodon/pybugreports/issues/1353
     - Readded slaughterhouse UI (again)

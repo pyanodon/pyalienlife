@@ -92,25 +92,15 @@ function Farming.process(farm_data)
     if entity.get_module_inventory().is_empty() then
         -- update render, otherwise it will destroy itself
         -- it lasts just longer than once cycle so it will always stick around even when timing and ordering gets weird
-        local render = farm_data.render
-        if render and render.valid then
-            render.time_to_live = 970
-        else
-            farm_data.render = py.draw_error_sprite(entity, "no_module_" .. kingdom, 970, 30)
-        end
         local default_module = Farming.get_default_module(entity)
-        if default_module then
-            entity.custom_status = {
-                diode = defines.entity_status_diode.red,
-                label = {"entity-status.requires-module", default_module, prototypes.item[default_module].localised_name}
-            }
-        else
-            entity.custom_status = {
-                diode = defines.entity_status_diode.red,
-                label = {"entity-status.requires-module-reproductive-complex"}
-            }
-        end
+        local message = default_module and {"entity-status.requires-module", default_module, "__ITEM__" .. default_module .. "__"} or {"entity-status.requires-module-reproductive-complex"}
+        farm_data.alert_id = farm_data.alert_id or py.generate_alert(entity, {type = "virtual", name = "no_module_" .. kingdom}, "no_module_" .. kingdom, message, true)
+        entity.custom_status = {
+            diode = defines.entity_status_diode.red,
+            label = message
+        }
     else
+        py.clear_alert(farm_data.alert_id)
         entity.custom_status = nil
     end
 end
@@ -136,6 +126,7 @@ py.on_event(defines.events.on_object_destroyed, function(event)
     local unit_number = event.useful_id
     if not unit_number then return end
     if storage.farms[unit_number] then
+        py.clear_alert(storage.farms[unit_number].alert_id)
         storage.farms[unit_number] = nil
         storage.farm_count = storage.farm_count - 1
     end
@@ -147,24 +138,24 @@ py.register_on_nth_tick(121, "Farming121", "pyal", function()
         storage.farm_batch_size = math.ceil(storage.farm_count / 8)
         storage.last_farm_index = nil
     end
-    local to_remove = {}
     local limit = (storage.last_farm_index or game.tick % 8 == 0) and storage.farm_batch_size or 0
     local i = 1
+    local remove_previous = false
     while i <= limit do
         local index, farm_data = next(storage.farms, storage.last_farm_index)
-        if not farm_data or not farm_data.entity or not farm_data.entity.valid then
-            to_remove[#to_remove+1] = index
-        else
-            Farming.process(farm_data)
-            i = i + 1; -- only count things we process
+        if remove_previous then
+          local farm = storage.farms[storage.last_farm_index]
+          if farm and farm.entity and farm.entity.valid then farm.destroy() end
+          storage.farms[storage.last_farm_index] = nil
+          remove_previous = false
         end
         storage.last_farm_index = index
+        if farm_data and farm_data.entity and farm_data.entity.valid then
+            Farming.process(farm_data)
+            i = i + 1; -- only count things we process
+        else
+            remove_previous = true
+        end
         if not index then break end
-    end
-    -- remove old farms, must be done after loop to avoid issues
-    for _, index in pairs(to_remove) do
-        storage.farm_count = storage.farm_count - 1
-        if storage.farms[index] and storage.farms[index].entity and storage.farms[index].entity.valid then storage.farms[index].destroy() end
-        storage.farms[index] = nil
     end
 end)
