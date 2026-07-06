@@ -22,6 +22,7 @@ Date: ???
     - Fixed a crash when interacting with the caravan UI. Resolves https://github.com/pyanodon/pybugreports/issues/1465
     - Reduced most fluidbox sizes from 1000 to 100
     - Buffed fluid mining drill range from 7x7 on all tiers to 7x7, 9x9, 11x11, 13x13
+    - Fixed using pipette on nexelit to pick digosaurus dig sites
     - Added the following entities to be hidden when visibility of tall entities is toggled: bioport, bioprinter, compost plant, gene lab, moss farm, research center, spore collector, vatbrain, xeno pen, zungror lair
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.67
