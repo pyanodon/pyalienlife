@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
 Date: ???
+  Breaking Changes:
+    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
+    - Fixed certain phytomining recipes taking muddy sludge instead of tailings. Resolves https://github.com/pyanodon/pybugreports/issues/1242
+    - Fixed that creature chamber fluid inputs were inconsistent between recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1309
   Changes:
     - Updated to Factorio 2.1
     - Removed unnecessary prototype values to clear up the log
@@ -16,9 +20,6 @@ Date: ???
     - Readded slaughterhouse UI (again)
     - Fixed a crash when changing the recipe on a smart farm connected to a wire. Resolves https://github.com/pyanodon/pybugreports/issues/1464
     - Fixed a crash when interacting with the caravan UI. Resolves https://github.com/pyanodon/pybugreports/issues/1465
-    - Change fluid output positions of tuuphra-platation-mk02/mk03/mk04 to be the same position as mk01
-    - Fixed certain phytomining recipes taking muddy sludge instead of tailings. Resolves https://github.com/pyanodon/pybugreports/issues/1242
-    - Fixed that creature chamber fluid inputs were inconsistent between recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1309
     - Reduced most fluidbox sizes from 1000 to 100
     - Buffed fluid mining drill range from 7x7 on all tiers to 7x7, 9x9, 11x11, 13x13
     - Added the following entities to be hidden when visibility of tall entities is toggled: bioport, bioprinter, compost plant, gene lab, moss farm, research center, spore collector, vatbrain, xeno pen, zungror lair
