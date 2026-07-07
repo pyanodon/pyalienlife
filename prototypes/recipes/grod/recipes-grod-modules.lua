@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "grod-mk02",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "grod-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "grod",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "grod-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "grod",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "grod-mk02",
     icons =
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-mk02-breeder",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -48,8 +48,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "grod-mk02", amount = 7},
-        {type = "item", name = "grod-mk02", amount = 2, probability = 0.5},
-        {type = "item", name = "grod",      amount = 1, probability = 0.5},
+        {type = "item", name = "grod-mk02", amount = 2, independent_probability = 0.5},
+        {type = "item", name = "grod",      amount = 1, independent_probability = 0.5},
     },
     main_product = "grod-mk02",
     icons =
@@ -65,7 +65,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds-mk02-breeder",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -88,7 +88,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds-mk02-soaker",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-mk03",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -127,8 +127,8 @@ RECIPE {
         {type = "fluid", name = "water",           amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "grod-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "grod",      amount = 1, probability = 0.6},
+        {type = "item", name = "grod-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "grod",      amount = 1, independent_probability = 0.6},
     },
     main_product = "grod-mk03",
     icons =
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-mk03-breeder",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -158,8 +158,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "grod-mk03", amount = 7},
-        {type = "item", name = "grod-mk03", amount = 2, probability = 0.4},
-        {type = "item", name = "grod-mk02", amount = 1, probability = 0.6},
+        {type = "item", name = "grod-mk03", amount = 2, independent_probability = 0.4},
+        {type = "item", name = "grod-mk02", amount = 1, independent_probability = 0.6},
     },
     main_product = "grod-mk03",
     icons =
@@ -175,7 +175,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds-mk03-breeder",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -198,7 +198,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds-mk03-soaker",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -224,7 +224,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-mk04",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -237,8 +237,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "grod-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "grod",      amount = 1, probability = 0.7},
+        {type = "item", name = "grod-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "grod",      amount = 1, independent_probability = 0.7},
     },
     main_product = "grod-mk04",
     icons =
@@ -254,7 +254,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-mk04-breeder",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -268,8 +268,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "grod-mk04", amount = 7},
-        {type = "item", name = "grod-mk04", amount = 2, probability = 0.3},
-        {type = "item", name = "grod-mk03", amount = 1, probability = 0.7},
+        {type = "item", name = "grod-mk04", amount = 2, independent_probability = 0.3},
+        {type = "item", name = "grod-mk03", amount = 1, independent_probability = 0.7},
     },
     main_product = "grod-mk04",
     icons =
@@ -285,7 +285,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds-mk04-breeder",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -308,7 +308,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds-mk04-soaker",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 40,
     ingredients = {

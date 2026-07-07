@@ -21,7 +21,7 @@ local IMP_BRAIN = 6
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	crafting_speed = 30,

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "cottongut-science-red-seeds",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -22,7 +22,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-green-seeds",
     enabled = false,
-    category = "incubator",
+    categories = {"incubator"},
     energy_required = 30,
     ingredients = {
         {type = "fluid", name = "subcritical-water", amount = 200},
@@ -44,7 +44,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-blue-seeds",
     enabled = false,
-    category = mods.pyhightech and "nano" or "incubator",
+    categories = {mods.pyhightech and "nano" or "incubator"},
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "alien-sample-02", amount = 1},
@@ -70,7 +70,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-py-seeds",
     enabled = false,
-    category = mods.pyhightech and "nano" or "incubator",
+    categories = {mods.pyhightech and "nano" or "incubator"},
     energy_required = 15,
     ingredients = {
         {type = "fluid", name = "simik-blood",   amount = 50},
@@ -98,7 +98,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-prod-seeds",
     enabled = false,
-    category = mods.pyhightech and "nano" or "incubator",
+    categories = {mods.pyhightech and "nano" or "incubator"},
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "alien-sample-03",   amount = 3},

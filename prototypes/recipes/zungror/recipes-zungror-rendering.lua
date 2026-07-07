@@ -19,7 +19,7 @@ local IMP_BRAIN = 5
 
 py.autorecipes {
 	name = "rendering-zungror",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	crafting_speed = 50,

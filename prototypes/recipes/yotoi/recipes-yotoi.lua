@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "yotoi-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -21,12 +21,13 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = 2},
     },
+    icons = py.composite_icon("yotoi", "yotoi-codex")
 }:add_unlock("yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-tropical-tree-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -64,7 +65,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -80,7 +81,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-leaves",
-    category = "wpu",
+    categories = {"wpu"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -96,7 +97,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-yotoi",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -117,7 +118,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-yotoi-fruit",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {

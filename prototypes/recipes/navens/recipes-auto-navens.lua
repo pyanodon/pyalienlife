@@ -1,6 +1,6 @@
 py.autorecipes {
     name = "navens",
-    category = "navens",
+    categories = {"navens"},
     subgroup = "py-alienlife-navens",
     order = "b",
     number_icons = true,

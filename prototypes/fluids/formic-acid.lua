@@ -15,7 +15,7 @@ FLUID {
 RECIPE {
     type = "recipe",
     name = "formic-acid",
-    category = "distilator",
+    categories = {"distilator"},
     enabled = false,
     energy_required = 4,
     ingredients = {

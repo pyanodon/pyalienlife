@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "cheap-retrovirus",
-        category = "incubator",
+        categories = {"incubator"},
         ingredients = {
             {type = "item",  name = "retrovirus", amount = 1},
             {type = "item",  name = "biomass",    amount = 2},
@@ -93,7 +93,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm",
-        category = "biofactory",
+        categories = {"biofactory"},
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -111,7 +111,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "biomass-destruction",
-        category = "distilator",
+        categories = {"distilator"},
         enabled = false,
         energy_required = 5,
         ingredients = {
@@ -135,7 +135,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-stone",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 1,
         ingredients = {
@@ -152,7 +152,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-wood",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 2,
         ingredients = {
@@ -169,7 +169,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-coarse",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 3,
         ingredients = {
@@ -186,7 +186,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-manure",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 4,
         ingredients = {
@@ -214,7 +214,7 @@ if data and not yafc_turd_integration then
     local fine_powdered_biomass = RECIPE("fine-powdered-biomass"):copy()
     fine_powdered_biomass.name = "fine-powdered-biomass-irragration"
     fine_powdered_biomass:add_ingredient {type = "fluid", name = "water", amount = 250}
-    fine_powdered_biomass.category = "washer"
+    fine_powdered_biomass:replace_category("screener", "washer")
     fine_powdered_biomass.energy_required = 3
     fine_powdered_biomass.main_product = "steam"
     fine_powdered_biomass:add_result {type = "fluid", name = "steam", amount = 250, temperature = 250}

@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk02-item",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "acidgas",              amount = 100, fluidbox_index = 3},
     },
     results = {
-        {type = "item", name = "cadaveric-arum-mk02-a", amount = 1, probability = 0.005},
-        {type = "item", name = "cadaveric-arum",        amount = 1, probability = 0.7},
+        {type = "item", name = "cadaveric-arum-mk02-a", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "cadaveric-arum",        amount = 1, independent_probability = 0.7},
     },
     main_product = "cadaveric-arum-mk02-a",
     icons =
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk02-seeder",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk02-juicer",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk02-breeder",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -120,7 +120,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk03-item",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -132,8 +132,8 @@ RECIPE {
         {type = "fluid", name = "natural-gas",               amount = 500, fluidbox_index = 3},
     },
     results = {
-        {type = "item", name = "cadaveric-arum-mk03-a", amount = 1, probability = 0.004},
-        {type = "item", name = "cadaveric-arum-mk02-a", amount = 1, probability = 0.7},
+        {type = "item", name = "cadaveric-arum-mk03-a", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "cadaveric-arum-mk02-a", amount = 1, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "cadaveric-arum-mk03-a",
@@ -152,7 +152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk03-seeder",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -178,7 +178,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk03-juicer",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -205,7 +205,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk03-breeder",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -236,7 +236,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk04-item",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -249,8 +249,8 @@ RECIPE {
         {type = "fluid", name = "water",                     amount = 1000, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "cadaveric-arum-mk04-a", amount = 1, probability = 0.003},
-        {type = "item", name = "cadaveric-arum-mk03-a", amount = 1, probability = 0.7},
+        {type = "item", name = "cadaveric-arum-mk04-a", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "cadaveric-arum-mk03-a", amount = 1, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "cadaveric-arum-mk04-a",
@@ -269,7 +269,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk04-seeder",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -295,7 +295,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk04-juicer",
-    category = "pan",
+    categories = {"pan"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -322,7 +322,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-mk04-breeder",
-    category = "arum",
+    categories = {"arum"},
     enabled = false,
     energy_required = 30,
     ingredients = {

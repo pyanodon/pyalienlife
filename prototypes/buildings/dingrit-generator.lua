@@ -61,7 +61,6 @@ ENTITY {
             pollution = 0
         },
     },
-    effectivity = 2,
     max_power_output = "60MW",
     animation = {
         layers = {
@@ -104,12 +103,11 @@ ENTITY {
         },
     },
 
-    min_perceived_performance = 0.1,
-    performance_to_sound_speedup = 0.0,
+    perceived_performance = {minimum = 0.1},
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.9},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-2.ogg", volume = 0.3},
-        apparent_volume = 2.5
+        activity_to_speed_modifiers = {multiplier = 0}
     }
 }

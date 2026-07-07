@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "fawogae",
-	category = "fawogae",
+	categories = {"fawogae"},
 	subgroup = "py-alienlife-fawogae",
 	order = "b",
 	number_icons = true,

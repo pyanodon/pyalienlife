@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "guar-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -31,7 +31,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {

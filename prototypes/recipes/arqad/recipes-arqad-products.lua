@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "arqad-filled-comb",
-	category = "arqad",
+	categories = {"arqad"},
 	subgroup = "py-alienlife-arqad",
 	main_product = "filled-comb",
 	number_icons = true,

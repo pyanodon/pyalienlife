@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "phagnot-improved",
-	category = "phagnot",
+	categories = {"phagnot"},
 	--main_product = "phagnot",
 	subgroup = "py-alienlife-phagnot",
 	order = "b",

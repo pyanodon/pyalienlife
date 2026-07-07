@@ -57,7 +57,6 @@ ENTITY {
             width = 128,
             height = 160,
             frame_count = 64,
-            randomize_visual_position = true,
             variation_count = 11,
             shift = util.by_pixel(0, -16),
             scale = 0.65

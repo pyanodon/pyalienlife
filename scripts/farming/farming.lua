@@ -85,88 +85,77 @@ function Farming.get_default_module(entity)
     if farm_data then return farm_data.default_module end
 end
 
-function Farming.disable_machine(entity)
+function Farming.process(farm_data)
+    local entity = farm_data.entity
     local kingdom = Farming.get_kingdom(entity)
     if not kingdom then return end
-    local default_module = Farming.get_default_module(entity)
-    entity.active = false
-    if default_module then
+    if entity.get_module_inventory().is_empty() then
+        -- update render, otherwise it will destroy itself
+        -- it lasts just longer than once cycle so it will always stick around even when timing and ordering gets weird
+        local default_module = Farming.get_default_module(entity)
+        local message = default_module and {"entity-status.requires-module", default_module, "__ITEM__" .. default_module .. "__"} or {"entity-status.requires-module-reproductive-complex"}
+        farm_data.alert_id = farm_data.alert_id or py.generate_alert(entity, {type = "virtual", name = "no_module_" .. kingdom}, "no_module_" .. kingdom, message, true)
         entity.custom_status = {
             diode = defines.entity_status_diode.red,
-            label = {"entity-status.requires-module", default_module, prototypes.item[default_module].localised_name}
+            label = message
         }
     else
-        entity.custom_status = {
-            diode = defines.entity_status_diode.red,
-            label = {"entity-status.requires-module-reproductive-complex"}
-        }
+        py.clear_alert(farm_data.alert_id)
+        entity.custom_status = nil
     end
-    storage.disabled_farm_buildings[entity.unit_number] = entity
-    script.register_on_object_destroyed(entity)
-    if entity.is_crafting() then
-        entity.crafting_progress = 0.0001
-        entity.bonus_progress = 0
-    end
-    py.draw_error_sprite(entity, "no_module_" .. kingdom, 61, 30)
-end
-
-function Farming.enable_machine(entity)
-    storage.disabled_farm_buildings[entity.unit_number] = nil
-    entity.active = true
-    entity.custom_status = nil
-    storage.enabled_farm_buildings[#storage.enabled_farm_buildings + 1] = entity
 end
 
 py.on_event(py.events.on_init(), function()
-    storage.disabled_farm_buildings = storage.disabled_farm_buildings or {}
-    storage.enabled_farm_buildings = storage.enabled_farm_buildings or {}
+    storage.farms = storage.farms or {}
+    storage.farm_count = storage.farm_count or 0
     storage.farm_prototypes = farm_buildings
     validate_farm_building_list(storage.farm_prototypes)
-    storage.next_farm_index = storage.next_farm_index or 1
 end)
 
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
-    if entity.type == "assembling-machine" then Farming.disable_machine(entity) end
+    local kingdom = Farming.get_kingdom(entity)
+    if not kingdom then return end
+    script.register_on_object_destroyed(entity)
+    storage.farms[entity.unit_number] = {entity = entity}
+    Farming.process(storage.farms[entity.unit_number])
+    storage.farm_count = storage.farm_count + 1
 end)
 
 py.on_event(defines.events.on_object_destroyed, function(event)
     local unit_number = event.useful_id
     if not unit_number then return end
-    storage.disabled_farm_buildings[unit_number] = nil
-end)
-
--- render warning icons
-py.register_on_nth_tick(59, "Farming59", "pyal", function(event)
-    for unit_number, farm in pairs(storage.disabled_farm_buildings) do
-        if not farm.valid then
-            storage.disabled_farm_buildings[unit_number] = nil
-        elseif farm.get_module_inventory().is_empty() then
-            py.draw_error_sprite(farm, "no_module_" .. Farming.get_kingdom(farm), 61, 30)
-        else
-            Farming.enable_machine(farm)
-        end
+    if storage.farms[unit_number] then
+        py.clear_alert(storage.farms[unit_number].alert_id)
+        storage.farms[unit_number] = nil
+        storage.farm_count = storage.farm_count - 1
     end
 end)
 
--- every 2 seconds, check 1/8th of farm buildings for empty module inventory
+-- every 2 seconds, check 1/8th of farm buildings
 py.register_on_nth_tick(121, "Farming121", "pyal", function()
-    local farm_count = #storage.enabled_farm_buildings
-    if farm_count == 0 then return end
-    local first_index_checked_this_tick = storage.next_farm_index
-    for i = 1, math.ceil(farm_count / 8) do
-        local farm = storage.enabled_farm_buildings[storage.next_farm_index]
-
-        if not farm or not farm.valid then
-            table.remove(storage.enabled_farm_buildings, storage.next_farm_index)
-        elseif farm.get_module_inventory().is_empty() then
-            Farming.disable_machine(farm)
-            table.remove(storage.enabled_farm_buildings, storage.next_farm_index)
-        else
-            storage.next_farm_index = storage.next_farm_index + 1
+    if game.tick % 8 == 0 then
+        storage.farm_batch_size = math.ceil(storage.farm_count / 8)
+        storage.last_farm_index = nil
+    end
+    local limit = (storage.last_farm_index or game.tick % 8 == 0) and storage.farm_batch_size or 0
+    local i = 1
+    local remove_previous = false
+    while i <= limit do
+        local index, farm_data = next(storage.farms, storage.last_farm_index)
+        if remove_previous then
+          local farm = storage.farms[storage.last_farm_index]
+          if farm and farm.entity and farm.entity.valid then farm.destroy() end
+          storage.farms[storage.last_farm_index] = nil
+          remove_previous = false
         end
-
-        if storage.next_farm_index > #storage.enabled_farm_buildings then storage.next_farm_index = 1 end
-        if storage.next_farm_index == first_index_checked_this_tick then return end
+        storage.last_farm_index = index
+        if farm_data and farm_data.entity and farm_data.entity.valid then
+            Farming.process(farm_data)
+            i = i + 1; -- only count things we process
+        else
+            remove_previous = true
+        end
+        if not index then break end
     end
 end)

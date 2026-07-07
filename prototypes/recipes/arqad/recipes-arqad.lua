@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "arqad",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -19,13 +19,14 @@ RECIPE {
         {type = "item", name = "arqad-egg", amount = 10},
         {type = "item", name = "arqad",     amount = 1},
     },
-    main_product = "arqad"
+    main_product = "arqad",
+    icons = py.composite_icon("arqad", "arqad-codex")
 }:add_unlock("arqad")
 
 RECIPE {
     type = "recipe",
     name = "arqad-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-bee-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -60,7 +61,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "empty-comb",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -78,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bitumen-comb",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -94,7 +95,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "honey-comb",
-    category = "carbonfilter",
+    categories = {"carbonfilter"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -110,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "empty-comb-2",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -124,7 +125,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "empty-honeycomb-2",
-    category = "casting",
+    categories = {"casting"},
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -138,7 +139,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wax",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -153,7 +154,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wax-honeycomb",
-    category = "hpf",
+    categories = {"hpf"},
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -170,7 +171,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sugar-wax",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -186,7 +187,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "honey-wax",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -202,7 +203,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'wax-2',
-    category = 'arqad',
+    categories = {'arqad'},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -221,7 +222,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-jelly-01",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -239,7 +240,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-propolis-01",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -259,7 +260,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "propolis-diesel-01",
-    category = "olefin",
+    categories = {"olefin"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -275,7 +276,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "jelly-to-kerosene-01",
-    category = "olefin",
+    categories = {"olefin"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -291,7 +292,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wax-to-lube",
-    category = "mixer",
+    categories = {"mixer"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -306,7 +307,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wax-to-tar",
-    category = "gasifier",
+    categories = {"gasifier"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -321,7 +322,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "honey-to-sugar",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -335,7 +336,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "honey-to-ethanol",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -355,7 +356,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -373,7 +374,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arqad-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -394,7 +395,7 @@ RECIPE {
 RECIPE {
     name = "used-comb-oil-recycling",
     type = "recipe",
-    category = "upgrader",
+    categories = {"upgrader"},
     enabled = false,
     energy_required = 2,
     ingredients = {

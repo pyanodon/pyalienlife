@@ -12,7 +12,7 @@ local BASE_SPECIAL = 100
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-fish",
 	order = "b",
 	mats =

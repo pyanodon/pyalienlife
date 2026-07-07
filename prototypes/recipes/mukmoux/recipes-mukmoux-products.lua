@@ -2,7 +2,7 @@
 
 py.autorecipes {
     name = "mukmoux-manure",
-    category = "mukmoux",
+    categories = {"mukmoux"},
     main_product = "manure",
     subgroup = "py-alienlife-mukmoux",
     order = "c",

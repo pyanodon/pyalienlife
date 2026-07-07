@@ -47,6 +47,7 @@ ENTITY {
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"xeno"},
+    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -56,6 +57,7 @@ ENTITY {
         },
     },
     energy_usage = "500kW",
+    tall = true,
     graphics_set = {
         working_visualisations = {
             {
@@ -158,6 +160,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.65},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.3},
-        apparent_volume = 1.2
     }
 }

@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
         recipe:add_ingredient {type = "fluid", name = "purest-nitrogen-gas", amount = 100}
         for _, result in pairs(recipe.results) do
             if result.name == "arqad-queen" then
-                result.probability = 0.995
+                result.independent_probability = 0.995
                 break
             end
         end
@@ -78,7 +78,7 @@ if data and not yafc_turd_integration then
                 {type = "item",  name = "silver-plate",  amount = 10},
                 {type = "fluid", name = "creamy-latex",  amount = 10},
             },
-            category = "crafting-with-fluid",
+            categories = {"crafting-with-fluid"},
             energy_required = 10,
             enabled = false
         }

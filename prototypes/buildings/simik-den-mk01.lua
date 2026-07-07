@@ -48,10 +48,10 @@ ENTITY {
     dying_explosion = "medium-explosion",
     collision_box = {{-7.6, -7.6}, {7.6, 7.6}},
     selection_box = {{-8.0, -8.0}, {8.0, 8.0}},
-    forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"simik"},
+    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED),
     energy_source = {
         type = "electric",
@@ -235,7 +235,7 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {
                 {flow_direction = "input", position = {0.5, -7.5},  direction = defines.direction.north},
                 {flow_direction = "input", position = {-0.5, -7.5}, direction = defines.direction.north}

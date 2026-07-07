@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "kicalk",
-	category = "kicalk",
+	categories = {"kicalk"},
 	subgroup = "py-alienlife-kicalk",
 	order = "a",
 	number_icons = true,

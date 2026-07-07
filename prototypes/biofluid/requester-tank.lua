@@ -4,15 +4,15 @@ RECIPE {
     type = "recipe",
     name = "requester-tank",
     energy_required = 40,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "earth-generic-sample", amount = 1},
         {type = "item",  name = "cdna",                 amount = 1},
         {type = "item",  name = "alien-sample01",       amount = 2},
         {type = "fluid", name = "water-saline",         amount = 50},
-        {type = "fluid", name = "fetal-serum",          amount = 10},
         {type = "fluid", name = "coal-slurry",          amount = 50},
+        {type = "fluid", name = "fetal-serum",          amount = 10},
     },
     results = {
         {type = "item", name = "requester-tank", amount = 1}
@@ -57,7 +57,6 @@ ENTITY {
     fast_replaceable_group = "vessel",
     collision_box = data.raw["pipe"]["pipe"].collision_box,
     selection_box = data.raw["pipe"]["pipe"].selection_box,
-    forced_symmetry = "diagonal-pos",
     working_sound = nil, -- TODO
     fluid_boxes = {
         {

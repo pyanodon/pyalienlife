@@ -1,6 +1,6 @@
 py.autorecipes {
     name = "bhoddos",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     subgroup = "py-alienlife-bhoddos",
     order = "b",
     number_icons = true,

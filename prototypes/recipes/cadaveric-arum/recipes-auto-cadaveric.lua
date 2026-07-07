@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "cadaveric-arum",
-	category = "arum",
+	categories = {"arum"},
 	subgroup = "py-alienlife-cadaveric",
 	order = "a",
 	number_icons = true,

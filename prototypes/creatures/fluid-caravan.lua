@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "fluidavan",
     energy_required = 50,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "cocoon",               amount = 10},

@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "zungror-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"zungror"},
     enabled = false,
     energy_required = 30,
@@ -20,9 +20,9 @@ RECIPE {
         {type = "item", name = "water-barrel",  amount = 15},
     },
     results = {
-        {type = "item", name = "zungror-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "zungror-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",       amount = 15},
-        {type = "item", name = "zungror",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "zungror",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         {type = "item", name = "cage",         amount = 1},
     },
     main_product = "zungror-mk02",
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"zungror"},
     enabled = false,
     energy_required = 30,
@@ -55,9 +55,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 15},
     },
     results = {
-        {type = "item", name = "zungror-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "zungror-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",       amount = 15},
-        {type = "item", name = "zungror",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "zungror",      amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
         {type = "item", name = "cage",         amount = 1},
     },
     main_product = "zungror-mk03",
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"zungror"},
     enabled = false,
     energy_required = 30,
@@ -90,10 +90,10 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 15},
     },
     results = {
-        {type = "item", name = "zungror-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "zungror-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",       amount = 15},
         {type = "item", name = "cage",         amount = 1},
-        {type = "item", name = "zungror",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "zungror",      amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
     },
     main_product = "zungror-mk04",
     icons =
@@ -112,7 +112,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -145,7 +145,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-zungror-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -163,7 +163,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -196,7 +196,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-zungror-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -214,7 +214,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -246,7 +246,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-zungror-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

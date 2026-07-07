@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "hmas",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -25,7 +25,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-to-chelator",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -40,7 +40,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-to-chelator",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -55,7 +55,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yeadols-to-chelator",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -70,7 +70,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phytoplankton-to-chelator",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "seaweed-to-chelator",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -103,7 +103,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-pb",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -115,13 +115,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, nil, nil)
+    icons = py.composite_icon("pb-biomass", "grod")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "grod-sn",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -133,13 +133,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, nil, nil)
+    icons = py.composite_icon("sn-biomass", "grod")
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "grod-al",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -151,13 +151,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, nil, nil)
+    icons = py.composite_icon("al-biomass", "grod")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ag",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -169,13 +169,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, nil, nil)
+    icons = py.composite_icon("ag-biomass", "bhoddos")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "seaweed-ag",
-    category = "seaweed",
+    categories = {"seaweed"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -187,13 +187,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, nil, nil)
+    icons = py.composite_icon("ag-biomass", "seaweed")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "moss-zn",
-    category = "moss",
+    categories = {"moss"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -205,13 +205,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, nil, nil)
+    icons = py.composite_icon("zn-biomass", "moss")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "navens-au",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -223,13 +223,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, nil, nil)
+    icons = py.composite_icon("au-biomass", "navens")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-fe",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -241,13 +241,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, nil, nil)
+    icons = py.composite_icon("fe-biomass", "navens")
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "rennea-cu",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -259,13 +259,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, nil, nil)
+    icons = py.composite_icon("cu-biomass", "rennea")
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "rennea-co",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -277,13 +277,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, nil, nil)
+    icons = py.composite_icon("co-biomass", "rennea")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-ni",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -295,13 +295,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, nil, nil)
+    icons = py.composite_icon("ni-biomass", "ralesia")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-nacl",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -313,13 +313,13 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 50},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, nil, nil)
+    icons = py.composite_icon("nacl-biomass", "tuuphra")
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-ti",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -331,13 +331,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, nil, nil)
+    icons = py.composite_icon("ti-biomass", "yaedols")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fe",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -349,7 +349,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, nil, nil)
+    icons = py.composite_icon("fe-biomass", "yotoi")
 }:add_unlock("phytomining")
 
 
@@ -358,7 +358,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-pb-2",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -377,7 +377,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-sn-2",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -396,7 +396,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-al-2",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -415,7 +415,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhodos-ag-2",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -434,7 +434,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "seaweed-ag-2",
-    category = "seaweed",
+    categories = {"seaweed"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -453,7 +453,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-zn-2",
-    category = "moss",
+    categories = {"moss"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -472,7 +472,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-au-2",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -491,7 +491,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-fe-2",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -510,7 +510,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-cu-2",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -529,7 +529,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-co-2",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -548,7 +548,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-ni-2",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -567,7 +567,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-nacl-2",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -586,7 +586,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-ti-2",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -605,7 +605,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fe-2",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -628,7 +628,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-pb-3",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -642,13 +642,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, "chelator", "hmas")
+    icons = py.composite_icon("pb-biomass", "grod", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-sn-3",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -662,13 +662,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, "chelator", "hmas")
+    icons = py.composite_icon("sn-biomass", "grod", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-al-3",
-    category = "grod",
+    categories = {"grod"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -682,13 +682,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, "chelator", "hmas")
+    icons = py.composite_icon("al-biomass", "grod", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ag-3",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -702,13 +702,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "chelator", "hmas")
+    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "seaweed-ag-3",
-    category = "seaweed",
+    categories = {"seaweed"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -722,13 +722,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, "chelator", "hmas")
+    icons = py.composite_icon("ag-biomass", "seaweed", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "moss-zn-3",
-    category = "moss",
+    categories = {"moss"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -742,13 +742,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, "chelator", "hmas")
+    icons = py.composite_icon("zn-biomass", "moss", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-au-3",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -762,13 +762,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, "chelator", "hmas")
+    icons = py.composite_icon("au-biomass", "navens", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-fe-3",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -782,13 +782,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, "chelator", "hmas")
+    icons = py.composite_icon("fe-biomass", "navens", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "rennea-cu-3",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -802,13 +802,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, "chelator", "hmas")
+    icons = py.composite_icon("cu-biomass", "rennea", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "rennea-co-3",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -822,13 +822,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, "chelator", "hmas")
+    icons = py.composite_icon("co-biomass", "rennea", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-ni-3",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -842,13 +842,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, "chelator", "hmas")
+    icons = py.composite_icon("ni-biomass", "ralesia", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-nacl-3",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -862,13 +862,13 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 100},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "chelator", "hmas")
+    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-ti-3",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -882,13 +882,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, "chelator", "hmas")
+    icons = py.composite_icon("ti-biomass", "yaedols", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fe-3",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -902,7 +902,7 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, "chelator", "hmas")
+    icons = py.composite_icon("fe-biomass", "yotoi", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 
@@ -918,7 +918,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pb-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -931,12 +931,12 @@ RECIPE {
     },
     main_product = "ore-lead",
     icons = py.composite_icon("ore-lead", "pb-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "sn-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -949,12 +949,12 @@ RECIPE {
     },
     main_product = "ore-tin",
     icons = py.composite_icon("ore-tin", "sn-biomass")
-}:add_unlock("phytomining"):change_category("pulp")
+}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "al-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -967,12 +967,12 @@ RECIPE {
     },
     main_product = "ore-aluminium",
     icons = py.composite_icon("ore-aluminium", "al-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "ag-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -985,12 +985,12 @@ RECIPE {
     },
     main_product = "lead-refined-dust-03",
     icons = py.composite_icon("lead-refined-dust-03", "ag-biomass")
-}:add_unlock("phytomining-mk03"):change_category("pulp")
+}:add_unlock("phytomining-mk03"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "au-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1003,12 +1003,12 @@ RECIPE {
     },
     main_product = "gold-concentrate",
     icons = py.composite_icon("gold-concentrate", "au-biomass")
-}:add_unlock("phytomining-mk03"):change_category("pulp")
+}:add_unlock("phytomining-mk03"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "zn-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1021,12 +1021,12 @@ RECIPE {
     },
     main_product = "ore-zinc",
     icons = py.composite_icon("ore-zinc", "zn-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "cu-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1039,12 +1039,12 @@ RECIPE {
     },
     main_product = "copper-ore",
     icons = py.composite_icon("copper-ore", "cu-biomass")
-}:add_unlock("phytomining"):change_category("pulp")
+}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "co-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1057,12 +1057,12 @@ RECIPE {
     },
     main_product = "cobalt-extract",
     icons = py.composite_icon("cobalt-extract", "co-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "nacl-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1075,12 +1075,12 @@ RECIPE {
     },
     main_product = "salt",
     icons = py.composite_icon("salt", "nacl-biomass")
-}:add_unlock("phytomining"):change_category("pulp")
+}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "ti-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1093,12 +1093,12 @@ RECIPE {
     },
     main_product = "ore-titanium",
     icons = py.composite_icon("ore-titanium", "ti-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "fe-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1111,12 +1111,12 @@ RECIPE {
     },
     main_product = "iron-ore",
     icons = py.composite_icon("iron-ore", "fe-biomass")
-}:add_unlock("phytomining"):change_category("pulp")
+}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "ni-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1129,12 +1129,12 @@ RECIPE {
     },
     main_product = "ore-nickel",
     icons = py.composite_icon("ore-nickel", "ni-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "nb-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1147,12 +1147,12 @@ RECIPE {
     },
     main_product = "niobium-ore",
     icons = py.composite_icon("niobium-ore", "nb-biomass")
-}:add_unlock("phytomining-mk02"):change_category("pulp")
+}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ur",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -1164,13 +1164,13 @@ RECIPE {
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, nil, nil)
+    icons = py.composite_icon("ur-biomass", "bhoddos")
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ur-2",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 140,
     ingredients = {
@@ -1189,7 +1189,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhodos-ur-3",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -1203,13 +1203,13 @@ RECIPE {
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
     main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "chelator", "hmas")
+    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "ur-biomass-extraction",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -1221,4 +1221,4 @@ RECIPE {
     },
     main_product = "uranium-ore",
     icons = py.composite_icon("uranium-ore", "ur-biomass")
-}:add_unlock("phytomining-mk03"):change_category("pulp")
+}:add_unlock("phytomining-mk03"):replace_category("biofactory", "pulp")

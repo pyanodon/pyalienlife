@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "yaedols-mk02",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -18,8 +18,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 1000},
     },
     results = {
-        {type = "item", name = "yaedols-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "yaedols",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "yaedols-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "yaedols",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk02",
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-mk02-breeder",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -49,7 +49,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "yaedols-mk02", amount = 2},
-        {type = "item", name = "yaedols-mk02", amount = 1, probability = 0.25}
+        {type = "item", name = "yaedols-mk02", amount = 1, independent_probability = 0.25}
     },
     main_product = "yaedols-mk02",
     icons =
@@ -65,7 +65,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-spore-mk02",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -82,7 +82,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-mk03",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -94,8 +94,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 1000},
     },
     results = {
-        {type = "item", name = "yaedols-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "yaedols",      amount = 1, probability = 0.6},
+        {type = "item", name = "yaedols-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "yaedols",      amount = 1, independent_probability = 0.6},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk03",
@@ -112,7 +112,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-mk03-breeder",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -125,7 +125,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "yaedols-mk03", amount = 2},
-        {type = "item", name = "yaedols-mk03", amount = 1, probability = 0.225}
+        {type = "item", name = "yaedols-mk03", amount = 1, independent_probability = 0.225}
     },
     main_product = "yaedols-mk03",
     icons =
@@ -141,7 +141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-spore-mk03",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-mk04",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -170,8 +170,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000},
     },
     results = {
-        {type = "item", name = "yaedols-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "yaedols",      amount = 1, probability = 0.7},
+        {type = "item", name = "yaedols-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "yaedols",      amount = 1, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "yaedols-mk04",
@@ -188,7 +188,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-mk04-breeder",
-    category = "yaedols",
+    categories = {"yaedols"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -201,7 +201,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "yaedols-mk04", amount = 2},
-        {type = "item", name = "yaedols-mk04", amount = 1, probability = 0.2}
+        {type = "item", name = "yaedols-mk04", amount = 1, independent_probability = 0.2}
     },
     main_product = "yaedols-mk04",
     icons =
@@ -217,7 +217,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-spore-mk04",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 5,
     ingredients = {

@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "abacus",
-            category = "crafting",
+            categories = {"crafting"},
             enabled = false,
             energy_required = 6,
             ingredients = {
@@ -74,7 +74,7 @@ if data and not yafc_turd_integration then
             {name = "blood-barrel", amount = 3, type = "item"},
             {name = "barrel",       amount = 3, type = "item"},
         },
-        category = "arthurian",
+        categories = {"arthurian"},
         main_product = "agar"
     }}
 end

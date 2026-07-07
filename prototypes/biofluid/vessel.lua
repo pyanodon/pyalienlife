@@ -3,7 +3,7 @@ RECIPE {
     name = "vessel",
     energy_required = 20,
     enabled = false,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     ingredients = {
         {type = "item",  name = "earth-generic-sample", amount = 1},
         {type = "item",  name = "microcin-j25",         amount = 1},
@@ -21,7 +21,7 @@ RECIPE {
     name = "vessel-to-ground",
     energy_required = 40,
     enabled = false,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     ingredients = {
         {type = "item",  name = "vessel",               amount = 10},
         {type = "item",  name = "earth-generic-sample", amount = 1},
@@ -29,8 +29,8 @@ RECIPE {
         {type = "item",  name = "alien-sample-02",      amount = 2},
         {type = "item",  name = "bio-sample",           amount = 3},
         {type = "fluid", name = "water-saline",         amount = 40},
-        {type = "fluid", name = "fetal-serum",          amount = 10},
         {type = "fluid", name = "coal-slurry",          amount = 40},
+        {type = "fluid", name = "fetal-serum",          amount = 10},
     },
     results = {
         {type = "item", name = "vessel-to-ground", amount = 10}
@@ -297,21 +297,21 @@ underground_pipe.icon_size = 64
 underground_pipe.fluid_box = {
     volume = 1,
     max_pipeline_extent = 2000000, -- The radius of nauvis
-	pipe_connections =
-      {
+    hide_connection_info = true,
+	  pipe_connections = {
         { 
-			direction = defines.direction.north, 
-			position = {0, 0},
-			connection_category = "biofluid"
-		},
+            direction = defines.direction.north, 
+            position = {0, 0},
+            connection_category = "biofluid"
+        },
         {
-          connection_type = "underground",
-          direction = defines.direction.south,
-          position = {0, 0},
-          max_underground_distance = 48,
-		  connection_category = "biofluid"
+            connection_type = "underground",
+            direction = defines.direction.south,
+            position = {0, 0},
+            max_underground_distance = 48,
+            connection_category = "biofluid"
         }
-      }
+      },
 }
 underground_pipe.pictures = ug_pipe_integration
 underground_pipe.integration_patch = nil

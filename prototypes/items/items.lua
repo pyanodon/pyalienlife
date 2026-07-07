@@ -845,55 +845,43 @@ ITEM {
 }
 
 ITEM {
-    type = "tool",
+    type = "item",
     name = "py-science-pack-1",
     icon = "__pycoalprocessinggraphics__/graphics/icons/py-science-pack-1.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }
 
 ITEM {
-    type = "tool",
+    type = "item",
     name = "py-science-pack-2",
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-1.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }
 
 ITEM {
-    type = "tool",
+    type = "item",
     name = "py-science-pack-3",
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-2.png",
     icon_size = 64,
     subgroup = "py-alienlife-items",
     order = "a-a",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }
 
 ITEM {
-    type = "tool",
+    type = "item",
     name = "py-science-pack-4",
     icon = "__pyalienlifegraphics__/graphics/icons/py-science-pack-3.png",
     icon_size = 64,
     subgroup = "science-pack",
     order = "a-a",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value"
+    stack_size = 200
 }
 
 ITEM {
@@ -4859,7 +4847,6 @@ ITEM {
             cooldown = 30,
             range = 0,
             ammo_type = {
-                category = "capsule",
                 target_type = "position",
                 action = {
                     type = "direct",

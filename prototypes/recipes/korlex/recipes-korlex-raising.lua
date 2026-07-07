@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "korlex-pup",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"korlex"},
 	subgroup = "py-alienlife-korlex",
 	order = "c",
@@ -186,7 +186,7 @@ py.autorecipes {
 --raising
 py.autorecipes {
 	name = "korlex",
-	category = "korlex",
+	categories = {"korlex"},
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	main_product = "korlex",
@@ -284,7 +284,7 @@ py.autorecipes {
 				{
 
 					{name='caged-korlex', remove_item = true},
-					{name='caged-korlex', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-korlex', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

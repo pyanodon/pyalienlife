@@ -1,6 +1,6 @@
 py.autorecipes {
     name = "yaedols",
-    category = "yaedols",
+    categories = {"yaedols"},
     main_product = "yaedols",
     number_icons = true,
     mats =

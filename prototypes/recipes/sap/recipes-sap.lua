@@ -29,7 +29,7 @@ for _, tree in pairs(data.raw.tree) do
                         type = "item",
                         name = "saps",
                         amount = 1,
-                        probability = 0.1
+                        independent_probability = 0.1
                     })
                 end
                 break
@@ -41,7 +41,7 @@ end
 RECIPE {
     type = "recipe",
     name = "sap-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -55,7 +55,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-tree",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 45,
     ingredients = {

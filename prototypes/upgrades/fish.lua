@@ -5,7 +5,7 @@ local function new_fluid_boxes()
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
             secondary_draw_orders = {north = -1}
         },
@@ -13,7 +13,7 @@ local function new_fluid_boxes()
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
             secondary_draw_orders = {north = -1}
         },
@@ -21,7 +21,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {5.0, -1.0}, direction = defines.direction.east}},
             secondary_draw_orders = {north = -1}
         },
@@ -29,7 +29,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {-5.0, 1.0}, direction = defines.direction.west}},
             secondary_draw_orders = {north = -1}
         },
@@ -37,7 +37,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {-5.0, -1.0}, direction = defines.direction.west}},
             secondary_draw_orders = {north = -1}
         },
@@ -45,7 +45,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {5.0, 1.0}, direction = defines.direction.east}},
             secondary_draw_orders = {north = -1}
         },
@@ -87,10 +87,10 @@ if data and not yafc_turd_integration then
     ingredients[#ingredients + 1] = {type = "item", name = "cooling-tower-mk01", amount = 1}
     data:extend {{
         type = "recipe",
-        category = data.raw.recipe["fish-hydrolysate"].category,
+        categories = data.raw.recipe["fish-hydrolysate"].categories,
         energy_required = data.raw.recipe["fish-hydrolysate"].energy_required * 2,
         results = {
-            {type = "item",  name = "cooling-tower-mk01", amount = 1,  probability = 0.999},
+            {type = "item",  name = "cooling-tower-mk01", amount = 1,  independent_probability = 0.999},
             {type = "fluid", name = "fish-hydrolysate",   amount = 300}
         },
         ingredients = ingredients,
@@ -102,7 +102,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "cyanic-acid-from-fish-hydrolysate",
-        category = "reformer",
+        categories = {"reformer"},
         enabled = false,
         energy_required = 5,
         ingredients = {

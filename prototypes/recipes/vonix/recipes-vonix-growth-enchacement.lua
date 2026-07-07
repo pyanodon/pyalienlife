@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "vonix-improved",
-	category = "vonix",
+	categories = {"vonix"},
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	--main_product = "vonix",

@@ -9,7 +9,7 @@ RECIPE {
     type = "recipe",
     name = "dingrido",
     energy_required = 60,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "modular-armor",     amount = 1},
@@ -23,8 +23,8 @@ RECIPE {
         {type = "item",  name = "bio-sample",        amount = 50},
         {type = "item",  name = "dingrits-codex",    amount = 5},
         {type = "item",  name = "earth-wolf-sample", amount = 10},
-        {type = "fluid", name = "fetal-serum",       amount = 100},
-        {type = "fluid", name = "artificial-blood",  amount = 200}
+        {type = "fluid", name = "artificial-blood",  amount = 200},
+        {type = "fluid", name = "fetal-serum",       amount = 100}
     },
     results = {{type = "item", name = "dingrido", amount = 1}}
 }:add_unlock("mounts-mk02")
@@ -93,7 +93,7 @@ data:extend {{
     drawing_box_vertical_extension = 0.5,
     trash_inventory_size = 20,
     effectivity = 0.98,
-    braking_power = "30MW",
+    braking_force = 30000000,
     energy_source = {
         type = "burner",
         fuel_categories = {"dingrit-food"},
@@ -102,7 +102,7 @@ data:extend {{
     },
     consumption = "800kW",
     terrain_friction_modifier = 1,
-    friction = 0.0003,
+    friction_force = 0.0003,
     light = {
         {
             type = "oriented",
@@ -208,18 +208,15 @@ data:extend {{
             }
         }
     },
-    sound_no_fuel = {
-        {filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9},
-    },
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    sound_minimum_speed = 0.15,
+    sound_no_fuel = {filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9},
     impact_category = "metal-large",
     working_sound = {
         sound = {
             filename = "__pyalienlifegraphics__/sounds/dingrit-breath.ogg",
             volume = 0.7
         },
-        match_speed_to_activity = false
+        match_speed_to_activity = false,
+        activity_to_speed_modifiers = {minimum = 0.15}
     },
     open_sound = {filename = "__pyalienlifegraphics3__/sounds/dingrito-in.ogg", volume = 0.9},
     close_sound = {filename = "__pyalienlifegraphics3__/sounds/dingrito-out.ogg", volume = 0.9},
@@ -227,7 +224,6 @@ data:extend {{
     weight = 8000,
     inventory_size = 120,
     guns = {},
-    automatic_weapon_cycling = false,
     equipment_grid = "mount-grid-10x6",
     minimap_representation = {
         filename = "__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk02.png",

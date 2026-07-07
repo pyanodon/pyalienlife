@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "dhilmos-egg",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"dhilmos"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "c",
@@ -79,7 +79,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "dhilmos-hatching",
-	category = "dhilmos",
+	categories = {"dhilmos"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "c",
 	main_product = "dhilmos-pup",
@@ -186,7 +186,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "dhilmos",
-	category = "dhilmos",
+	categories = {"dhilmos"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	main_product = "dhilmos",
@@ -280,7 +280,7 @@ py.autorecipes {
 			results =
 				{
 					{name='dhilmos', remove_item = true},
-					{name='dhilmos', probability = 1, amount_min =1, amount_max =2},
+					{name='dhilmos', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

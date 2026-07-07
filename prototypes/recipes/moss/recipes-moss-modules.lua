@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "moss-mk02",
-    category = "moss",
+    categories = {"moss"},
     enabled = true,
     energy_required = 25,
     ingredients = {
@@ -18,12 +18,12 @@ RECIPE {
         {type = "item",  name = "wood",              amount = 5},
     },
     results = {
-        {type = "item", name = "moss-mk02", amount = 1, probability = 0.02},
+        {type = "item", name = "moss-mk02", amount = 1, independent_probability = 0.02},
     },
     icons =
     {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png", icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png",    icon_size = 64, scale = 0.35},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk02.png",      icon_size = 64},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64, scale = 0.35},
     },
     icon_size = 64,
 }:add_unlock("moss-mk02"):add_ingredient {type = "item", name = "urea", amount = 1}
@@ -34,7 +34,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-mk03",
-    category = "moss",
+    categories = {"moss"},
     enabled = true,
     energy_required = 25,
     ingredients = {
@@ -44,12 +44,12 @@ RECIPE {
         {type = "item",  name = "tuuphra-seeds",     amount = 5},
     },
     results = {
-        {type = "item", name = "moss-mk03", amount = 1, probability = 0.02},
+        {type = "item", name = "moss-mk03", amount = 1, independent_probability = 0.02},
     },
     icons =
     {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png", icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png",    icon_size = 64, scale = 0.35},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk03.png",      icon_size = 64},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64, scale = 0.35},
     },
     icon_size = 64,
 }:add_unlock("moss-mk03")
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-mk04",
-    category = "moss",
+    categories = {"moss"},
     enabled = true,
     energy_required = 25,
     ingredients = {
@@ -70,12 +70,12 @@ RECIPE {
         {type = "item",  name = "bhoddos",           amount = 5},
     },
     results = {
-        {type = "item", name = "moss-mk04", amount = 1, probability = 0.02},
+        {type = "item", name = "moss-mk04", amount = 1, independent_probability = 0.02},
     },
     icons =
     {
-        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png", icon_size = 64},
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png",    icon_size = 64, scale = 0.35},
+        {icon = "__pyalienlifegraphics2__/graphics/icons/c-mk04.png",      icon_size = 64},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png", icon_size = 64, scale = 0.35},
     },
     icon_size = 64,
 }:add_unlock("moss-mk04")
@@ -86,7 +86,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-mk02r",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -103,8 +103,8 @@ RECIPE {
     },
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk02.png",   icon_size = 64},
     },
     icon_size = 64,
     subgroup = "py-alienlife-moss",
@@ -116,7 +116,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-mk03r",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -133,8 +133,8 @@ RECIPE {
     },
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk03.png",   icon_size = 64},
     },
     icon_size = 64,
     subgroup = "py-alienlife-moss",
@@ -146,7 +146,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-mk04r",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -163,8 +163,8 @@ RECIPE {
     },
     icons =
     {
-        {icon = "__pyalienlifegraphics__/graphics/icons/moss.png"},
-        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png", icon_size = 64},
+        {icon = "__pyalienlifegraphics3__/graphics/icons/mip/moss-01.png"},
+        {icon = "__pyalienlifegraphics__/graphics/icons/over-mk04.png",   icon_size = 64},
     },
     icon_size = 64,
     subgroup = "py-alienlife-moss",

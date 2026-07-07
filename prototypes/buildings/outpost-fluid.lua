@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "outpost-fluid",
     energy_required = 1,
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "steel-plate",    amount = 5},
@@ -28,8 +28,6 @@ ITEM {
 }
 
 data:extend {{
-    inventory_type = "with_filters_and_bar",
-    scale_info_icons = true,
     name = "outpost-fluid",
     type = "storage-tank",
     circuit_connector = table.deepcopy(data.raw["storage-tank"]["storage-tank"].circuit_connector), -- todo
@@ -180,7 +178,6 @@ data:extend {{
             filename = "__base__/sound/storage-tank.ogg",
             volume = 0.8
         },
-        apparent_volume = 1.5,
         max_sounds_per_prototype = 3
     },
     resistances = {

@@ -2,7 +2,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "chlorinated-water",
-        category = "chemistry",
+        categories = {"chemistry"},
         enabled = false,
         energy_required = 3,
         ingredients = {
@@ -60,7 +60,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "unrefine-refsyngas",
-            category = "moss",
+            categories = {"moss"},
             energy_required = 8,
             ingredients = {
                 {type = "fluid", name = "refsyngas",         amount = 50},
@@ -75,7 +75,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "unrefine-refined-natural-gas",
-            category = "moss",
+            categories = {"moss"},
             energy_required = 8,
             ingredients = {
                 {type = "fluid", name = "refined-natural-gas", amount = 100},

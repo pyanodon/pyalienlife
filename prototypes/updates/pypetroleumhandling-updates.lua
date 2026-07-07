@@ -18,12 +18,16 @@ RECIPE("reformer-mk01"):remove_unlock("oil-machines-mk01"):add_unlock("scrude")
 --BUILDINDS--
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
+data.raw["assembling-machine"]["guar-gum-plantation"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["guar-gum-plantation"].module_slots = 16
 data.raw["assembling-machine"]["guar-gum-plantation"].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
+data.raw["assembling-machine"]["guar-gum-plantation-mk02"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["guar-gum-plantation-mk02"].module_slots = 32
 data.raw["assembling-machine"]["guar-gum-plantation-mk02"].crafting_speed = py.farm_speed_derived(32, "guar-gum-plantation")
+data.raw["assembling-machine"]["guar-gum-plantation-mk02"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["guar-gum-plantation-mk03"].module_slots = 48
 data.raw["assembling-machine"]["guar-gum-plantation-mk03"].crafting_speed = py.farm_speed_derived(48, "guar-gum-plantation")
+data.raw["assembling-machine"]["guar-gum-plantation-mk04"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["guar-gum-plantation-mk04"].module_slots = 64
 data.raw["assembling-machine"]["guar-gum-plantation-mk04"].crafting_speed = py.farm_speed_derived(64, "guar-gum-plantation")
 
@@ -41,9 +45,6 @@ TECHNOLOGY("tholin-mk01"):add_pack("py-science-pack-3")
 TECHNOLOGY("plastics"):set_fields {prerequisites = {}}
 
 --Guar--
-
-data.raw["recipe-category"]["guar"].allowed_module_categories = {"guar"}
-data.raw["recipe-category"]["guar"].modules_required = true
 data.raw.item["guar-seeds"].subgroup = "py-alienlife-guar"
 data.raw.item["guar-seeds"].order = "g-bg"
 
@@ -97,7 +98,7 @@ RECIPE("mining-limestone"):remove_unlock("excavation-2"):add_unlock("excavation-
 RECIPE {
     type = "recipe",
     name = "dried-grods-02",
-    category = "evaporator",
+    categories = {"evaporator"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -112,7 +113,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gas-bladder-to-natura-gas",
-    category = "gas-separator",
+    categories = {"gas-separator"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -121,12 +122,12 @@ RECIPE {
     results = {
         {type = "fluid", name = "raw-gas", amount = 50}
     }
-}:add_unlock("phagnot-mk02").category = "gas-refinery"
+}:add_unlock("phagnot-mk02"):replace_category("gas-separator", "gas-refinery")
 
 RECIPE {
     type = "recipe",
     name = "subcritical-water-03",
-    category = "heat-exchanger",
+    categories = {"heat-exchanger"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -142,11 +143,11 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-nb",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 50,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
     },
     results = {
@@ -154,17 +155,17 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "nb-biomass",
-    icons = py.composite_icon("nb-biomass", "guar", nil, nil, nil)
+    icons = py.composite_icon("nb-biomass", "guar")
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "guar-nb-2",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 40,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
     },
@@ -179,11 +180,11 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-nb-3",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 30,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200, fluidbox_index = 1},
+        {type = "fluid", name = "tailings", amount = 200, fluidbox_index = 1},
         {type = "item",  name = "guar-seeds",        amount = 40},
         {type = "fluid", name = "chelator",          amount = 50,  fluidbox_index = 2},
         {type = "item",  name = "hmas",              amount = 1},
@@ -193,13 +194,13 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "nb-biomass",
-    icons = py.composite_icon("nb-biomass", "guar", nil, "chelator", "hmas")
+    icons = py.composite_icon("nb-biomass", "guar", nil, "hmas", nil)
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "lab-instrument-2",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -225,7 +226,7 @@ RECIPE("fawogae-mk04-breeder"):replace_ingredient("iron-plate", "nb-biomass")
 RECIPE {
     type = "recipe",
     name = "flue-gas-3",
-    category = "gas-refinery",
+    categories = {"gas-refinery"},
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -241,7 +242,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "stopper-2",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {

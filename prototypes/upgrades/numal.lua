@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "aeroorgan-ink",
         enabled = false,
-        category = "jig",
+        categories = {"jig"},
         energy_required = 50,
         ingredients = {
             {type = "item",  name = "aeroorgan",   amount = 1},

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "arqad-filled-honeycomb",
-	category = "arqad",
+	categories = {"arqad"},
 	subgroup = "py-alienlife-arqad",
 	number_icons = true,
 	upgrades =

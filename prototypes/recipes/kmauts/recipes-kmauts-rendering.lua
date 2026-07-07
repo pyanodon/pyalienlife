@@ -19,7 +19,7 @@ local IMP_SPECIAL = 5
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	crafting_speed = 30,

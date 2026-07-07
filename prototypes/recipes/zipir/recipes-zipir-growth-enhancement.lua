@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "zipir-improved",
-	category = "zipir",
+	categories = {"zipir"},
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	mats =

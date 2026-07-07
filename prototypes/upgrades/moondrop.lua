@@ -29,9 +29,9 @@ if data and not yafc_turd_integration then
         results = {
             {type = "fluid", amount = 60, name = "methane"},
             {type = "fluid", amount = 40, name = "oxygen"},
-            {type = "item",  amount = 1,  name = "small-lamp", probability = 0.95, ignored_by_productivity = 1},
+            {type = "item",  amount = 1,  name = "small-lamp", independent_probability = 0.95, ignored_by_productivity = 1},
         },
-        category = "moon",
+        categories = {"moon"},
         enabled = false,
         type = "recipe",
         main_product = "methane"
@@ -42,7 +42,7 @@ if data and not yafc_turd_integration then
         results = {{type = "fluid", amount = 200, name = "carbon-dioxide", fluidbox_index = 1}},
         energy_required = 5,
         ingredients = {},
-        category = "moon",
+        categories = {"moon"},
         enabled = false,
         type = "recipe"
     }}

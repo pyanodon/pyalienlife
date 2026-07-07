@@ -20,7 +20,7 @@ if data and not yafc_turd_integration then
         name = "xeno-rc-breeding",
         enabled = false,
         energy_required = 150,
-        category = "rc",
+        categories = {"rc"},
         main_product = "caged-xeno",
         ingredients = {
             {type = "item", name = "water-barrel",   amount = 6},

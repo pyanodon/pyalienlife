@@ -111,7 +111,7 @@ py.on_event(py.events.on_built(), function(event)
     if not entity.valid then return end
     local connection_type = Biofluid.connectable[entity.name]
     if not connection_type then return end
-    entity.active = false
+    entity.disabled_by_script = true
     entity.custom_status = {
         diode = defines.entity_status_diode.green,
         label = {"entity-status.working"},
@@ -166,9 +166,8 @@ local ENTITY_BIOFLUID_PIPE_INDEXES = {
 local function get_fluid_segment_id(entity)
     local biofluid_pipe_index = ENTITY_BIOFLUID_PIPE_INDEXES[entity.name]
     if not biofluid_pipe_index then error("Invalid biofluid pipe: " .. entity.name) end
-    local fluidbox = entity.fluidbox
-    for _, connection in pairs(fluidbox.get_connections(biofluid_pipe_index)) do
-        local network_id = connection.get_fluid_segment_id(1)
+    for _, connection in pairs(entity.get_fluid_box_neighbours(biofluid_pipe_index)) do
+        local network_id = connection.entity.get_fluid_segment_id(1)
         if network_id then return network_id end
     end
     return math.random(1, 1000000) -- todo: remove this once the vanilla bug is fixed
@@ -267,12 +266,12 @@ end
 
 local allocated_fluids_from_providers
 local function provider_sort_function(entity_a, entity_b)
-    local a = entity_a.fluidbox[1]
+    local a = entity_a.get_fluid(1)
     local priority_a = storage.biofluid_providers[entity_a.unit_number].priority
     if not a then a = 0 else a = a.amount end
     a = a - (allocated_fluids_from_providers[entity_a.unit_number] or 0)
 
-    local b = entity_b.fluidbox[1]
+    local b = entity_b.get_fluid(1)
     local priority_b = storage.biofluid_providers[entity_b.unit_number].priority
     if not b then b = 0 else b = b.amount end
     b = b - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
@@ -347,7 +346,7 @@ local function build_providers_by_contents(network_data, relavant_fluids)
         if not provider.valid then goto continue end
         local provider_priority = provider_data.priority
 
-        local contents = provider.fluidbox[1]
+        local contents = provider.get_fluid(1)
         if not contents then goto continue end
         local name = contents.name
         if not relavant_fluids[name] then goto continue end
@@ -391,7 +390,7 @@ local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids
     allocated_fluids_from_providers = network_data.allocated_fluids_from_providers
     sort(providers, provider_sort_function)
     for _, p in pairs(providers) do
-        local contents = p.fluidbox[1]
+        local contents = p.get_fluid(1)
         if target_temperature then
             local stored_temperature = contents.temperature
             local operator = Biofluid.equality_operators[unfulfilled_request.temperature_operator or 1]
@@ -663,7 +662,7 @@ local function pickup(biorobot_data)
         go_home(biorobot_data); return
     end
     local name = biorobot_data.name
-    local contents = provider.fluidbox[1]
+    local contents = provider.get_fluid(1)
     if not contents or contents.name ~= name then
         go_home(biorobot_data); return
     end
@@ -677,9 +676,9 @@ local function pickup(biorobot_data)
     end
     local new_amount = contents.amount - delivery_amount
     if new_amount == 0 then
-        provider.fluidbox[1] = nil
+        provider.clear_fluid(1)
     else
-        provider.fluidbox[1] = {name = name, amount = new_amount, temperature = contents.temperature}
+        provider.set_fluid(1, {name = name, amount = new_amount, temperature = contents.temperature})
     end
     set_target(biorobot_data, requester_data.entity.position)
     reset_provider_allocations(biorobot_data)
@@ -713,18 +712,18 @@ local function dropoff(biorobot_data)
     end
     local requester = requester_data.entity
     local name, amount, temperature = biorobot_data.name, biorobot_data.delivery_amount, biorobot_data.temperature
-    local contents = requester.fluidbox[2]
+    local contents = requester.get_fluid(2)
     if contents then
         if contents.name ~= name then
             go_home(biorobot_data); return
         end
-        requester.fluidbox[2] = {
+        requester.set_fluid(2, {
             name = name,
             amount = contents.amount + amount,
             temperature = combine_tempatures(contents.amount, contents.temperature, amount, temperature)
-       }
+       })
     elseif amount > 0 then
-        requester.fluidbox[2] = {name = name, amount = amount, temperature = temperature}
+        requester.set_fluid(2, {name = name, amount = amount, temperature = temperature})
     end
     go_home(biorobot_data)
     if biorobot_data.alt_mode_sprite then
@@ -800,7 +799,7 @@ function Biofluid.get_unfulfilled_requests()
         if not fluid_name then goto continue end
         local goal = requester_data.amount
         if goal == 0 then goto continue end
-        local contents = requester.fluidbox[2]
+        local contents = requester.get_fluid(2)
         local already_stored = requester_data.incoming
         if not contents then
             -- pass

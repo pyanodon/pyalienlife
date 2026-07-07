@@ -20,7 +20,7 @@ RECIPE {
     type = "recipe",
     name = "caravan",
     energy_required = 50,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "cocoon",               amount = 10},

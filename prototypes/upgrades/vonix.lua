@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "barrel",     amount = 6},
         },
         energy_required = 85,
-        category = "rc",
+        categories = {"rc"},
         allowed_module_categories = {"vonix"},
         main_product = "vonix-cub"
     }}

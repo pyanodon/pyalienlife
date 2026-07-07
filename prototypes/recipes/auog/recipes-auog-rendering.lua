@@ -21,7 +21,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering-auog",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =

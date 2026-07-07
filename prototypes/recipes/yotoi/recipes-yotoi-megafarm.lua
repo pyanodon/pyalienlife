@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "yotoi-super-1",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-2",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-3",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-4",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-5",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -96,7 +96,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-6",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -117,7 +117,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-7",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -139,7 +139,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-8",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -162,7 +162,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-10",
-    category = "yotoi-farm",
+    categories = {"yotoi-farm"},
     subgroup = "py-alienlife-yotoi-smartfarm",
     enabled = false,
     energy_required = 60,

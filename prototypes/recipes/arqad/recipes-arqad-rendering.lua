@@ -16,7 +16,7 @@ local IMP_SPECIAL = 80
 
 py.autorecipes {
 	name = "rendering-arqad",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	crafting_speed = 30,

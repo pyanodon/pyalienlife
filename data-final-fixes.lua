@@ -4,7 +4,7 @@ if mods.pyalternativeenergy then -- used in turd upgrade zipir path 3
     recipe.icons = nil
     recipe.icon = "__pyhightechgraphics__/graphics/icons/rendering.png"
     recipe.icon_size = 32
-    recipe.results = {{type = "item", name = "processed-ash", probability = 0.8, amount = 1}}
+    recipe.results = {{type = "item", name = "processed-ash", independent_probability = 0.8, amount = 1}}
     data:extend {recipe}
 end
 

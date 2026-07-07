@@ -33,7 +33,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "ammonia-from-cyanic",
-        category = "distilator",
+        categories = {"distilator"},
         enabled = false,
         energy_required = 24,
         ingredients = {

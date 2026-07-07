@@ -46,7 +46,7 @@ if data and not yafc_turd_integration then
         },
         main_product = "xyhiphoe",
         enabled = false,
-        category = "xyhiphoe",
+        categories = {"xyhiphoe"},
         energy_required = 140
     }}
 

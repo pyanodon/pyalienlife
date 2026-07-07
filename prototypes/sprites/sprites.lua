@@ -54,4 +54,28 @@ data:extend {
         height = 64,
         flags = {"gui-icon"}
     },
+    {
+        type = "virtual-signal",
+        name = "no_module_animal",
+        icon = "__pyalienlifegraphics__/graphics/icons/missing-animal.png",
+        priority = "extra-high-no-scale",
+        flags = {"gui-icon"},
+        hidden = true
+    },
+    {
+        type = "virtual-signal",
+        name = "no_module_plant",
+        icon = "__pyalienlifegraphics__/graphics/icons/missing-plant.png",
+        priority = "extra-high-no-scale",
+        flags = {"gui-icon"},
+        hidden = true
+    },
+    {
+        type = "virtual-signal",
+        name = "no_module_fungi",
+        icon = "__pyalienlifegraphics__/graphics/icons/missing-fungus.png",
+        priority = "extra-high-no-scale",
+        flags = {"gui-icon"},
+        hidden = true
+    },
 }

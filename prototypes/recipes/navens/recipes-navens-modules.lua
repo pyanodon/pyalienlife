@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "navens-mk02",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 500, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "navens-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "navens",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "navens-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "navens",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "navens-mk02",
     icons =
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-mk02-breeder",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -48,7 +48,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "navens-mk02", amount = 8},
-        {type = "item", name = "navens-mk02", amount = 4, probability = 0.5},
+        {type = "item", name = "navens-mk02", amount = 4, independent_probability = 0.5},
     },
     main_product = "navens-mk02",
     icons =
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-spore-mk02",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-mk03",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -103,8 +103,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 1000, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "navens-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "navens",      amount = 1, probability = 0.6},
+        {type = "item", name = "navens-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "navens",      amount = 1, independent_probability = 0.6},
     },
     main_product = "navens-mk03",
     icons =
@@ -120,7 +120,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-mk03-breeder",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -132,7 +132,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "navens-mk03", amount = 8},
-        {type = "item", name = "navens-mk03", amount = 4, probability = 0.375},
+        {type = "item", name = "navens-mk03", amount = 4, independent_probability = 0.375},
     },
     main_product = "navens-mk03",
     icons =
@@ -148,7 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-spore-mk03",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -169,7 +169,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-mk04",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -182,8 +182,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000},
     },
     results = {
-        {type = "item", name = "navens-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "navens",      amount = 1, probability = 0.7},
+        {type = "item", name = "navens-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "navens",      amount = 1, independent_probability = 0.7},
     },
     main_product = "navens-mk04",
     icons =
@@ -199,7 +199,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-mk04-breeder",
-    category = "navens",
+    categories = {"navens"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -210,7 +210,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "navens-mk04", amount = 8},
-        {type = "item", name = "navens-mk04", amount = 4, probability = 0.25},
+        {type = "item", name = "navens-mk04", amount = 4, independent_probability = 0.25},
     },
     main_product = "navens-mk04",
     icons =
@@ -226,7 +226,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-spore-mk04",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 50,
     ingredients = {

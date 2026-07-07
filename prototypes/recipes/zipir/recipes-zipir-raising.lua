@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "zipir-eggs",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"zipir"},
 	subgroup = "py-alienlife-zipir",
 	order = "c",
@@ -21,8 +21,8 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "zipir-eggs", probability = 1, amount_min = 3, amount_max = 5}, -- maybe 8 for the max if you feel generous
-				--{name = 'zipir1', amount = 3, probability = 1, amount_min =2, amount_max =3},
+				{name = "zipir-eggs", independent_probability = 1, amount_min = 3, amount_max = 5}, -- maybe 8 for the max if you feel generous
+				--{name = 'zipir1', amount = 3, independent_probability = 1, amount_min =2, amount_max =3},
 			},
 			crafting_speed = 60,
 			tech = "zipir"
@@ -38,7 +38,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "zipir-eggs", remove_item = true},
-				{name = "zipir-eggs", probability = 1,   amount_min = 5, amount_max = 7},
+				{name = "zipir-eggs", independent_probability = 1,   amount_min = 5, amount_max = 7},
 			},
 			crafting_speed = 45,
 			tech = "zipir-mk02"
@@ -53,7 +53,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "zipir-eggs", remove_item = true},
-				{name = "zipir-eggs", probability = 1,   amount_min = 7, amount_max = 12},
+				{name = "zipir-eggs", independent_probability = 1,   amount_min = 7, amount_max = 12},
 			},
 			crafting_speed = 30,
 			tech = "zipir-mk03"
@@ -67,7 +67,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "zipir-eggs", remove_item = true},
-				{name = "zipir-eggs", probability = 1,   amount_min = 12, amount_max = 16},
+				{name = "zipir-eggs", independent_probability = 1,   amount_min = 12, amount_max = 16},
 			},
 			crafting_speed = 20,
 			tech = "zipir-mk03"
@@ -83,7 +83,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "zipir-eggs", remove_item = true},
-				{name = "zipir-eggs", probability = 1,   amount_min = 14, amount_max = 20},
+				{name = "zipir-eggs", independent_probability = 1,   amount_min = 14, amount_max = 20},
 			},
 			crafting_speed = 20,
 			tech = "zipir-mk04"
@@ -183,7 +183,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "zipir-a",
-	category = "zipir",
+	categories = {"zipir"},
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	main_product = "zipir1",
@@ -201,7 +201,7 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "zipir1", probability = 0.7, amount_min = 1, amount_max = 1},
+				{name = "zipir1", independent_probability = 0.7, amount_min = 1, amount_max = 1},
 			},
 			crafting_speed = 150,
 			tech = "zipir"
@@ -216,7 +216,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "zipir1", remove_item = true},
-				{name = "zipir1", probability = 0.8, amount_min = 1, amount_max = 1},
+				{name = "zipir1", independent_probability = 0.8, amount_min = 1, amount_max = 1},
 			},
 			crafting_speed = 140,
 			tech = "zipir"
@@ -231,7 +231,7 @@ py.autorecipes {
 			results =
 			{
 				{name = "zipir1", remove_item = true},
-				{name = "zipir1", probability = 0.9, amount_min = 1, amount_max = 1},
+				{name = "zipir1", independent_probability = 0.9, amount_min = 1, amount_max = 1},
 			},
 			crafting_speed = 130,
 			tech = "zipir-mk02"

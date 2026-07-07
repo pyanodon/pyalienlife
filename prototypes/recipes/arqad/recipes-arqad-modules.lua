@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "arqad-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"arqad"},
     enabled = false,
     energy_required = 100,
@@ -19,8 +19,8 @@ RECIPE {
         {type = "item", name = "mutant-enzymes-barrel", amount = 2},
     },
     results = {
-        {type = "item", name = "arqad-mk02", probability = 0.005, amount = 1},
-        {type = "item", name = "arqad",      probability = 0.8,   amount = 1},
+        {type = "item", name = "arqad-mk02", independent_probability = 0.005, amount = 1},
+        {type = "item", name = "arqad",      independent_probability = 0.8,   amount = 1},
         {type = "item", name = "barrel",     amount = 7,          ignored_by_productivity = 7, ignored_by_stats = 7},
     },
     --main_product = "arqad-mk02",
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk02-breeding",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk02-incubating",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -91,7 +91,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk02-hatching",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -115,7 +115,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk02-maturing",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"arqad"},
     enabled = false,
     energy_required = 100,
@@ -155,9 +155,9 @@ RECIPE {
         {type = "item", name = "mutant-enzymes-barrel", amount = 4},
     },
     results = {
-        {type = "item", name = "arqad-mk03", probability = 0.005, amount = 1},
-        {type = "item", name = "arqad-mk02", probability = 0.4,   amount = 1},
-        {type = "item", name = "arqad",      probability = 0.4,   amount = 1},
+        {type = "item", name = "arqad-mk03", independent_probability = 0.005, amount = 1},
+        {type = "item", name = "arqad-mk02", independent_probability = 0.4,   amount = 1},
+        {type = "item", name = "arqad",      independent_probability = 0.4,   amount = 1},
         {type = "item", name = "barrel",     amount = 14,         ignored_by_productivity = 14, ignored_by_stats = 14},
     },
     --main_product = "arqad-mk03",
@@ -174,7 +174,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk03-breeding",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -201,7 +201,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk03-incubating",
-    category = "korlex",
+    categories = {"korlex"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -227,7 +227,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk03-hatching",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -252,7 +252,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk03-maturing",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -281,7 +281,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"arqad"},
     enabled = false,
     energy_required = 100,
@@ -292,10 +292,10 @@ RECIPE {
         {type = "item", name = "mutant-enzymes-barrel", amount = 8},
     },
     results = {
-        {type = "item", name = "arqad-mk04", probability = 0.005, amount = 1},
-        {type = "item", name = "arqad-mk03", probability = 0.3,   amount = 1},
-        {type = "item", name = "arqad-mk02", probability = 0.3,   amount = 1},
-        {type = "item", name = "arqad",      probability = 0.2,   amount = 1},
+        {type = "item", name = "arqad-mk04", independent_probability = 0.005, amount = 1},
+        {type = "item", name = "arqad-mk03", independent_probability = 0.3,   amount = 1},
+        {type = "item", name = "arqad-mk02", independent_probability = 0.3,   amount = 1},
+        {type = "item", name = "arqad",      independent_probability = 0.2,   amount = 1},
         {type = "item", name = "barrel",     amount = 28,         ignored_by_productivity = 28, ignored_by_stats = 28},
     },
     --main_product = "arqad-mk04",
@@ -312,7 +312,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk04-breeding",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -339,7 +339,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk04-incubating",
-    category = "phadai",
+    categories = {"phadai"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -366,7 +366,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk04-hatching",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -391,7 +391,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arqad-mk04-maturing",
-    category = "arqad",
+    categories = {"arqad"},
     enabled = false,
     energy_required = 100,
     ingredients = {

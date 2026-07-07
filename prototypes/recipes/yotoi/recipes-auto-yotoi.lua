@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "yotoi",
-	category = "yotoi",
+	categories = {"yotoi"},
 	subgroup = "py-alienlife-yotoi",
 	order = "a",
 	number_icons = true,

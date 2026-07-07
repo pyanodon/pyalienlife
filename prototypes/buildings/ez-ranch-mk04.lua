@@ -43,10 +43,10 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
-    forced_symmetry = "diagonal-pos",
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"korlex"},
+    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "ez-ranch-mk01"),
     energy_source = {
         type = "electric",
@@ -212,7 +212,7 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {
                 {flow_direction = "input-output", position = {0.5, -4.5}, direction = defines.direction.north},
                 {flow_direction = "input-output", position = {-0.5, 4.5}, direction = defines.direction.south},
@@ -225,7 +225,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/ez-ranch.ogg", volume = 0.9},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/ez-ranch.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }
 

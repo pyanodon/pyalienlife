@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
         local _, removed = recipe:remove_ingredient("water-barrel")
         recipe:add_ingredient {type = "item", name = "boric-acid-barrel", amount = removed}
         if i > 4 and i < 8 then
-            recipe.results[1].probability = recipe.results[1].probability * 1.5
+            recipe.results[1].independent_probability = recipe.results[1].independent_probability * 1.5
             recipe.energy_required = recipe.energy_required * 0.75
         end
         data:extend {recipe}
@@ -45,7 +45,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient("navens")
         recipe:remove_ingredient("wood-seeds")
         if i > 4 and i < 8 then
-            recipe.results[1].probability = recipe.results[1].probability * 0.75
+            recipe.results[1].independent_probability = recipe.results[1].independent_probability * 0.75
             recipe.energy_required = recipe.energy_required * 1.5
         end
         data:extend {recipe}
@@ -61,10 +61,10 @@ if data and not yafc_turd_integration then
     experimental.name = "scrondrix-experimental-treatment"
     experimental:add_ingredient {name = "arthurian-codex", amount = 1, type = "item"}
     experimental.results = {
-        {name = "bones",                 amount = 1,     type = "item",  probability = 0.6},
-        {name = "cage",                  amount = 1,     type = "item",  probability = 0.6},
+        {name = "bones",                 amount = 1,     type = "item",  independent_probability = 0.6},
+        {name = "cage",                  amount = 1,     type = "item",  independent_probability = 0.6},
         {name = "electronic-circuit",    amount_min = 7, amount_max = 8, type = "item"},
-        {name = "brain-caged-scrondrix", amount = 1,     type = "item",  probability = 0.4},
+        {name = "brain-caged-scrondrix", amount = 1,     type = "item",  independent_probability = 0.4},
     }
     experimental.main_product = "brain-caged-scrondrix"
 

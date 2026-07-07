@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "rennea-mk02",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -20,8 +20,8 @@ RECIPE {
         {type = "fluid", name = "water",            amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "rennea-seeds-mk02", amount_min = 1, amount_max = 20,  probability = 0.005},
-        {type = "item", name = "rennea-seeds",      amount = 1,     probability = 0.5},
+        {type = "item", name = "rennea-seeds-mk02", amount_min = 1, amount_max = 20,  independent_probability = 0.005},
+        {type = "item", name = "rennea-seeds",      amount = 1,     independent_probability = 0.5},
     },
     main_product = "rennea-seeds-mk02",
     icons =
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk02-dingrit-pup-digestion",
-    category = "dingrits",
+    categories = {"dingrits"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "abraded-rennea-seed-filtering-mk02",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -90,7 +90,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk02-breeding",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -120,7 +120,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk02-seed-seperation",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -148,7 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk03",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -160,8 +160,8 @@ RECIPE {
         {type = "fluid", name = "water",            amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "rennea-seeds-mk03", amount_min = 1, amount_max = 20,  probability = 0.005},
-        {type = "item", name = "rennea-seeds",      amount = 1,     probability = 0.5},
+        {type = "item", name = "rennea-seeds-mk03", amount_min = 1, amount_max = 20,  independent_probability = 0.005},
+        {type = "item", name = "rennea-seeds",      amount = 1,     independent_probability = 0.5},
     },
     main_product = "rennea-seeds-mk03",
     icons =
@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk03-dingrit-pup-digestion",
-    category = "dingrits",
+    categories = {"dingrits"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -204,7 +204,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "abraded-rennea-seed-filtering-mk03",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -230,7 +230,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk03-breeding",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -260,7 +260,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk03-seed-seperation",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -288,7 +288,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk04",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -300,8 +300,8 @@ RECIPE {
         {type = "fluid", name = "water",            amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "rennea-seeds-mk04", amount_min = 1, amount_max = 20,  probability = 0.005},
-        {type = "item", name = "rennea-seeds",      amount = 1,     probability = 0.5},
+        {type = "item", name = "rennea-seeds-mk04", amount_min = 1, amount_max = 20,  independent_probability = 0.005},
+        {type = "item", name = "rennea-seeds",      amount = 1,     independent_probability = 0.5},
     },
     main_product = "rennea-seeds-mk04",
     icons =
@@ -317,7 +317,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk04-dingrit-pup-digestion",
-    category = "dingrits",
+    categories = {"dingrits"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -344,7 +344,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "abraded-rennea-seed-filtering-mk04",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -370,7 +370,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk04-breeding",
-    category = "rennea",
+    categories = {"rennea"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -400,7 +400,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-mk04-seed-seperation",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 15,
     ingredients = {

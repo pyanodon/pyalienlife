@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "manure-bacteria",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 8,
     ingredients = {

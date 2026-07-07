@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "ulric-manure",
-	category = "ulric",
+	categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "manure",

@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "tuuphra-mk02",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -21,8 +21,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "tuuphra",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "tuuphra-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "tuuphra",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "tuuphra-mk02",
@@ -39,7 +39,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-mk02-breeder",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -71,7 +71,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-mk03",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -84,9 +84,9 @@ RECIPE {
         {type = "fluid", name = "water",           amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "tuuphra",      amount = 1, probability = 0.8},
-        {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.01, ignored_by_productivity = 1},
-        {type = "item", name = "tuuphra-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "tuuphra",      amount = 1, independent_probability = 0.8},
+        {type = "item", name = "tuuphra-mk02", amount = 1, independent_probability = 0.01, ignored_by_productivity = 1},
+        {type = "item", name = "tuuphra-mk03", amount = 1, independent_probability = 0.004},
     },
     --main_product = "tuuphra-mk03",
     icons =
@@ -102,7 +102,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-mk03-breeder",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -134,7 +134,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-mk04",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -147,10 +147,10 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "tuuphra",      amount = 1, probability = 0.8},
-        {type = "item", name = "tuuphra-mk02", amount = 1, probability = 0.15},
-        {type = "item", name = "tuuphra-mk03", amount = 1, probability = 0.01, ignored_by_productivity = 1},
-        {type = "item", name = "tuuphra-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "tuuphra",      amount = 1, independent_probability = 0.8},
+        {type = "item", name = "tuuphra-mk02", amount = 1, independent_probability = 0.15},
+        {type = "item", name = "tuuphra-mk03", amount = 1, independent_probability = 0.01, ignored_by_productivity = 1},
+        {type = "item", name = "tuuphra-mk04", amount = 1, independent_probability = 0.003},
     },
     --main_product = "tuuphra-mk04",
     icons =
@@ -166,7 +166,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-mk04-breeder",
-    category = "tuuphra",
+    categories = {"tuuphra"},
     enabled = false,
     energy_required = 400,
     ingredients = {

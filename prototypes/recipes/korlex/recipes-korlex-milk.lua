@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "korlex-milk",
-	category = "korlex",
+	categories = {"korlex"},
 	subgroup = "py-alienlife-korlex",
 	order = "z",
 	main_product = "barrel-milk",

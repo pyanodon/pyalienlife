@@ -3,7 +3,6 @@ data:extend {
         type = "item-group",
         name = "py-alienlife",
         order = "v",
-        inventory_order = "z",
         icon = "__pyalienlifegraphics__/graphics/technology/item-group.png",
         icon_size = 64
     },

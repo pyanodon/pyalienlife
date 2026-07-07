@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "kmauts-improved",
-	category = "kmauts",
+	categories = {"kmauts"},
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	--main_product = "kmauts",

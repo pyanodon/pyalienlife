@@ -37,7 +37,7 @@ if data and not yafc_turd_integration then
     local spore = RECIPE("yaedols-spores"):copy()
     spore.energy_required = 2
     spore.results = {
-        {type = "item",  probability = 0.9,    name = "yaedols-spores", amount = 4},
+        {type = "item",  independent_probability = 0.9,    name = "yaedols-spores", amount = 4},
         {type = "fluid", name = "waste-water", amount = 5}
     }
     spore.main_product = "yaedols-spores"

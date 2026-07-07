@@ -520,12 +520,10 @@ for i, item in pairs(biomass_convertion) do
     RECIPE {
         type = "recipe",
         name = "biomass-" .. i,
-        category = "compost",
+        categories = {"compost"},
         enabled = false,
         hide_from_player_crafting = true,
         autotech_always_available = true,
-        hidden_in_factoriopedia = false,
-        hidden = false,
         energy_required = 3,
         ingredients = {
             {type = local_name_type, name = i, amount = item.item_amount},

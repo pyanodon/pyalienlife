@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-1",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -21,7 +21,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-2",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -40,7 +40,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-3",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-4",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -81,7 +81,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-5",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -102,7 +102,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-6",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -124,7 +124,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-7",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -145,7 +145,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-10",
-    category = "tuuphra-farm",
+    categories = {"tuuphra-farm"},
     subgroup = "py-alienlife-tuuphra-smartfarm",
     enabled = false,
     energy_required = 60,

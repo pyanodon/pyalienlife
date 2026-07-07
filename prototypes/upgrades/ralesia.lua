@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
             name = "paper-towel",
             type = "recipe",
             enabled = false,
-            category = "pulp",
+            categories = {"pulp"},
             energy_required = 4,
             ingredients = {
                 {name = "cellulose", type = "item",  amount = 2},

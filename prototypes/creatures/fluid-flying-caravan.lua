@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "fluidflyavan",
     energy_required = 50,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "alien-sample-02",   amount = 5},

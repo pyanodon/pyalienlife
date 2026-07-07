@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "zungror-cocoon",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"zungror"},
 	subgroup = "py-alienlife-zungror",
 	order = "c",
@@ -144,7 +144,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "zungror-raising",
-	category = "zungror",
+	categories = {"zungror"},
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	main_product = "zungror",

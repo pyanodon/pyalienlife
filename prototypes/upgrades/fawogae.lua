@@ -20,7 +20,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "acid-gas-fawogae",
         enabled = false,
-        category = "desulfurization",
+        categories = {"desulfurization"},
         energy_required = 6,
         ingredients = {
             {type = "item",  name = "fawogae", amount = 2},

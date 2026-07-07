@@ -2,7 +2,7 @@
 RECIPE {
     type = 'recipe',
     name = 'logistic-science-01',
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'chemical-science-01',
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -40,7 +40,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'production-science-01',
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -61,7 +61,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'utility-science-01',
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -84,7 +84,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-cartridge-01",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -101,7 +101,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-cartridge-02",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -121,7 +121,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-cartridge-03",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-cartridge-04",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -160,7 +160,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-food-01",
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-food-02",
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-food-03",
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -211,7 +211,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "brain-food-04",
-    category = "vat",
+    categories = {"vat"},
     enabled = false,
     energy_required = 20,
     ingredients = {

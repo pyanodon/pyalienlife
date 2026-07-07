@@ -24,7 +24,7 @@ if data and not yafc_turd_integration then
     path_1_effects[#path_1_effects + 1] = path_1_module_effect
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do
-        if recipe.category == category then
+        if recipe:has_category(category) then
             recipe:standardize()
             local dna_samples = {}
             for _, ingredient in pairs(recipe.ingredients or {}) do
@@ -44,7 +44,7 @@ if data and not yafc_turd_integration then
                     if amount >= 5 then
                         replacement:multiply_ingredient_amount(name, 0.1)
                     else
-                        replacement:add_result {type = "item", name = name, amount = amount, probability = 0.8, ignored_by_productivity = amount}
+                        replacement:add_result {type = "item", name = name, amount = amount, independent_probability = 0.8, ignored_by_productivity = amount}
                     end
                 end
                 to_add[#to_add + 1] = replacement
@@ -101,7 +101,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             name = unit_name .. "-convert-from-base",
             enabled = false,
-            category = "crafting",
+            categories = {"crafting"},
             energy_required = 0.5,
             ingredients = {{type = "item", name = unit_name, amount = 1}},
             results = {{type = "item", name = name, amount = 1}},

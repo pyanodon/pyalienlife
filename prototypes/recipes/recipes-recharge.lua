@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "charged-auog",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "charged-dingrit",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -35,7 +35,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-recharge-0",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -50,7 +50,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-recharge-00",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -67,7 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk02-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -104,7 +104,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk03-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -123,7 +123,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-mk04-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -142,7 +142,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-recharge-2",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -176,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-mk02-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -193,7 +193,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-mk02-recharge-2",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -212,7 +212,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-mk03-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -229,7 +229,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-mk03-recharge-2",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -248,7 +248,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-mk04-recharge",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -265,7 +265,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dingrit-mk04-recharge-2",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -286,7 +286,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-recharge",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -302,7 +302,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-recharge-2",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 5,
         ingredients = {
@@ -320,7 +320,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-mk02-recharge",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 40,
         ingredients = {
@@ -337,7 +337,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-mk02-recharge-2",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 30,
         ingredients = {
@@ -356,7 +356,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-mk03-recharge",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 40,
         ingredients = {
@@ -373,7 +373,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-mk03-recharge-2",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 30,
         ingredients = {
@@ -392,7 +392,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-mk04-recharge",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 40,
         ingredients = {
@@ -409,7 +409,7 @@ if mods["pyalternativeenergy"] then
     RECIPE {
         type = "recipe",
         name = "simik-mk04-recharge-2",
-        category = "bay",
+        categories = {"bay"},
         enabled = false,
         energy_required = 30,
         ingredients = {

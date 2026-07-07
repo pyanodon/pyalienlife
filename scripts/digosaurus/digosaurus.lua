@@ -250,7 +250,7 @@ end)
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "dino-dig-site" then return end
-    entity.active = false
+    entity.disabled_by_script = true
     local surface = entity.surface
     local force = entity.force
     local position = entity.position
@@ -381,24 +381,3 @@ local function swap_to_stack(player, item_name, cursor_stack)
     end
     return false
 end
-
-py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-    local player = game.get_player(event.player_index)
-    if player and player.valid then
-        -- valid cursor?
-        local stack = player.cursor_stack
-        if not stack or not stack.valid_for_read then
-            return
-        end
-        -- is it the item we want?
-        local ghost_name = player.cursor_ghost or ""
-        if stack.name ~= "pipette-dino-dig-site" and ghost_name ~= "pipette-dino-dig-site" then
-            return
-        end
-        -- Try to add to cursor from inventory, otherwise set the ghost
-        if not swap_to_stack(player, "dino-dig-site", stack) then
-            stack.clear()
-            player.cursor_ghost = "dino-dig-site"
-        end
-    end
-end)

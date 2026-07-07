@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         name = "kimberlite-into-lime",
         type = "recipe",
-        category = "crusher",
+        categories = {"crusher"},
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -25,7 +25,7 @@ if data and not yafc_turd_integration then
         },
         results = {
             {type = "item", name = "lime",           amount = 5},
-            {type = "item", name = "diamond-reject", amount = 1, probability = 0.5},
+            {type = "item", name = "diamond-reject", amount = 1, independent_probability = 0.5},
         },
         main_product = "lime",
     }}

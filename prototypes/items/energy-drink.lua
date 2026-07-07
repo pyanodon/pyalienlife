@@ -53,7 +53,6 @@ ITEM {
                     },
                     type = "direct"
                 },
-                category = "capsule",
                 target_type = "position"
             },
             cooldown = 30,

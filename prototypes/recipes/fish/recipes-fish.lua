@@ -6,7 +6,7 @@
 RECIPE {
     type = "recipe",
     name = "fish-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -28,7 +28,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'fish-mature-01',
-    category = 'incubator',
+    categories = {'incubator'},
     enabled = false,
     energy_required = 30,
     ingredients = {

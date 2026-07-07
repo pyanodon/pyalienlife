@@ -15,7 +15,7 @@ FLUID {
 RECIPE {
     type = "recipe",
     name = "bio-oil",
-    category = "gasifier",
+    categories = {"gasifier"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -26,7 +26,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "bio-oil",     amount = 300},
-        {type = "item",  name = "quartz-tube", amount = 1,  probability = 0.75, ignored_by_productivity = 1},
+        {type = "item",  name = "quartz-tube", amount = 1,  independent_probability = 0.75, ignored_by_productivity = 1},
     },
     main_product = "bio-oil",
-}:add_unlock("bioprocessing"):change_category("hor")
+}:add_unlock("bioprocessing"):replace_category("gasifier", "hor")

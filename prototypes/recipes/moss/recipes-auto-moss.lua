@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "Moss",
-	category = "moss",
+	categories = {"moss"},
 	subgroup = "py-alienlife-moss",
 	order = "a",
 	number_icons = true,

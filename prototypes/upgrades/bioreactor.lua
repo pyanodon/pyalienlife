@@ -71,11 +71,11 @@ if data and not yafc_turd_integration then
             results = {
                 {type = "fluid", name = "hydrogen-peroxide", amount = 75},
                 {type = "fluid", name = "anthraquinone",     amount = 125},
-                {type = "item",  name = "cage",              amount = 1,  probability = 0.5},
+                {type = "item",  name = "cage",              amount = 1,  independent_probability = 0.5},
             },
             main_product = "hydrogen-peroxide",
             enabled = false,
-            category = "advanced-bio-reactor",
+            categories = {"advanced-bio-reactor"},
             energy_required = 10,
         },
         {
@@ -91,7 +91,7 @@ if data and not yafc_turd_integration then
             },
             results = {{type = "item", name = "nems", amount = 1}},
             enabled = false,
-            category = "advanced-bio-reactor",
+            categories = {"advanced-bio-reactor"},
             energy_required = 10,
         },
     }
@@ -99,7 +99,7 @@ if data and not yafc_turd_integration then
     local path3 = RECIPE("chitosan"):copy()
     path3.name = "path-3-advanced-recipe"
     path3.ingredients[3] = {type = "fluid", name = "blood", amount = 50}
-    path3.category = "advanced-bio-reactor"
+    path3:replace_category("bio-reactor", "advanced-bio-reactor")
     data:extend {path3}
 end
 

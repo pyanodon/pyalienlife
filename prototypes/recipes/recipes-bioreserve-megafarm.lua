@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-1",
-    category = "bioreserve-farm",
+    categories = {"bioreserve-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -19,7 +19,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-2",
-    category = "bioreserve-farm",
+    categories = {"bioreserve-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-3",
-    category = "bioreserve-farm",
+    categories = {"bioreserve-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -56,7 +56,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-4",
-    category = "bioreserve-farm",
+    categories = {"bioreserve-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-5",
-    category = "bioreserve-farm",
+    categories = {"bioreserve-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -97,7 +97,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-6",
-    category = "bioreserve-farm",
+    categories = {"bioreserve-farm"},
     enabled = false,
     energy_required = 100,
     ingredients = {

@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "outpost-aerial-fluid",
     energy_required = 50,
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "stainless-steel",      amount = 15},
@@ -35,8 +35,6 @@ ITEM {
 data:extend {{
     ---@diagnostic disable-next-line: assign-type-mismatch
     name = "outpost-aerial-fluid",
-    inventory_type = "with_filters_and_bar",
-    scale_info_icons = true,
     type = "storage-tank",
     circuit_connector = table.deepcopy(data.raw["storage-tank"]["storage-tank"].circuit_connector), -- todo
     circuit_wire_max_distance = 9,
@@ -186,7 +184,6 @@ data:extend {{
             filename = "__base__/sound/storage-tank.ogg",
             volume = 0.8
         },
-        apparent_volume = 1.5,
         max_sounds_per_prototype = 3
     },
     resistances = {
@@ -213,5 +210,4 @@ data:extend {{
         sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.8, audible_distance_modifier = 0.35,},
         idle_sound = {filename = "__pyalienlifegraphics3__/sounds/flyavan.ogg", volume = 0.2, audible_distance_modifier = 0.35,},
     },
-    inventory_type = "with_filters_and_bar"
 }}

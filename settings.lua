@@ -11,5 +11,11 @@ data:extend{
     name = "py-caravan-return-camera",
     setting_type = "runtime-per-user",
     default_value = true
+  },
+  {
+    type = "bool-setting",
+    name = "py-custom-recipe-gui",
+    setting_type = "runtime-per-user",
+    default_value = true
   }
 }

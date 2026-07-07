@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "phadai-pup",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"phadai"},
 	subgroup = "py-alienlife-phadai",
 	order = "c",
@@ -230,7 +230,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "phadai",
-	category = "phadai",
+	categories = {"phadai"},
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	main_product = "phadai",
@@ -325,7 +325,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-phadai', remove_item = true},
-					{name='caged-phadai', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-phadai', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "scrondrix-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"scrondrix"},
     enabled = false,
     energy_required = 100,
@@ -21,9 +21,9 @@ RECIPE {
         {type = "item", name = "water-barrel", amount = 8},
     },
     results = {
-        {type = "item", name = "scrondrix-mk02", amount = 1, probability = 0.01},
+        {type = "item", name = "scrondrix-mk02", amount = 1, independent_probability = 0.01},
         {type = "item", name = "barrel",         amount = 8},
-        {type = "item", name = "scrondrix",      amount = 1, probability = 0.5, ignored_by_productivity = 1},
+        {type = "item", name = "scrondrix",      amount = 1, independent_probability = 0.5, ignored_by_productivity = 1},
     },
     --main_product = "scrondrix-mk02",
     icons =
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "scrondrix-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"scrondrix"},
     enabled = false,
     energy_required = 100,
@@ -56,9 +56,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 8},
     },
     results = {
-        {type = "item", name = "scrondrix-mk03", amount = 1, probability = 0.01},
+        {type = "item", name = "scrondrix-mk03", amount = 1, independent_probability = 0.01},
         {type = "item", name = "barrel",         amount = 8},
-        {type = "item", name = "scrondrix",      amount = 1, probability = 0.6, ignored_by_productivity = 1},
+        {type = "item", name = "scrondrix",      amount = 1, independent_probability = 0.6, ignored_by_productivity = 1},
     },
     --main_product = "scrondrix-mk03",
     icons =
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "scrondrix-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"scrondrix"},
     enabled = false,
     energy_required = 100,
@@ -90,9 +90,9 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 8},
     },
     results = {
-        {type = "item", name = "scrondrix-mk04", amount = 1, probability = 0.01},
+        {type = "item", name = "scrondrix-mk04", amount = 1, independent_probability = 0.01},
         {type = "item", name = "barrel",         amount = 8},
-        {type = "item", name = "scrondrix",      amount = 1, probability = 0.7, ignored_by_productivity = 1},
+        {type = "item", name = "scrondrix",      amount = 1, independent_probability = 0.7, ignored_by_productivity = 1},
     },
     --main_product = "scrondrix-mk04",
     icons =
@@ -109,7 +109,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "scrondrix-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-scrondrix-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "scrondrix-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -192,7 +192,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-scrondrix-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -210,7 +210,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "scrondrix-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -241,7 +241,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-scrondrix-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

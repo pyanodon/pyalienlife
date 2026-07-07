@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "simik-improved",
-	category = "simik",
+	categories = {"simik"},
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	--main_product = "simik",

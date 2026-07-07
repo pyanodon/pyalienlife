@@ -21,7 +21,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	crafting_speed = 30,

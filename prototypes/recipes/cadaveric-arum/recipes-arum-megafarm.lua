@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "arum-super-1",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -20,7 +20,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-2",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-3",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -57,7 +57,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-4",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-5",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -100,7 +100,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-6",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-7",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-8",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -166,7 +166,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-9",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -189,7 +189,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arum-super-10",
-    category = "arum-farm",
+    categories = {"arum-farm"},
     subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 60,

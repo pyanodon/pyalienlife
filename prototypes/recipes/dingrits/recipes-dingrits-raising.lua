@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "dingrits-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"dingrits"},
 	subgroup = "py-alienlife-dingrits",
 	order = "c",
@@ -184,7 +184,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "dingrits",
-	category = "dingrits",
+	categories = {"dingrits"},
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	main_product = "dingrits",
@@ -282,7 +282,7 @@ py.autorecipes {
 			results =
 				{
 					{name='dingrits', remove_item = true},
-					{name='dingrits', probability = 1, amount_min =1, amount_max =2},
+					{name='dingrits', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

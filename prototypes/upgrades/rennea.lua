@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
             },
             results = {{type = "item", name = "native-flora", amount = 55}},
             enabled = false,
-            category = "rennea",
+            categories = {"rennea"},
             energy_required = 15
         }
     }

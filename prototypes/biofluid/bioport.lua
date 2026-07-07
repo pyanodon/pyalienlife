@@ -3,7 +3,7 @@ RECIPE {
     name = "bioport",
     energy_required = 200,
     enabled = false,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     ingredients = {
         {type = "item",  name = "megadar",              amount = 1},
         {type = "item",  name = "earth-generic-sample", amount = 5},
@@ -12,8 +12,8 @@ RECIPE {
         {type = "item",  name = "alien-sample-02",      amount = 5},
         {type = "item",  name = "bio-sample",           amount = 20},
         {type = "fluid", name = "water-saline",         amount = 200},
-        {type = "fluid", name = "fetal-serum",          amount = 100},
         {type = "fluid", name = "coal-slurry",          amount = 100},
+        {type = "fluid", name = "fetal-serum",          amount = 100},
     },
     results = {
         {type = "item", name = "bioport", amount = 1}
@@ -54,7 +54,7 @@ local recipe = RECIPE {
         {type = "fluid", name = mods.pyalternativeenergy and "void" or "vacuum", amount = 1},
     },
     energy_required = 100,
-    category = "biofluid",
+    categories = {"biofluid"},
     icon = "__pyalienlifegraphics2__/graphics/icons/o-roboport.png",
     icon_size = 64,
     subgroup = "py-alienlife-biofluid-network",
@@ -80,7 +80,6 @@ ENTITY {
     corpse = "big-remnants",
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    forced_symmetry = "diagonal-pos",
     dying_explosion = "medium-explosion",
     crafting_speed = 1,
     energy_usage = "1W",
@@ -99,6 +98,7 @@ ENTITY {
         },
     },
     impact_category = "metal-large",
+    tall = true,
     graphics_set = {
         integration_patch = {
             layers = {
@@ -108,8 +108,7 @@ ENTITY {
                     width = 351,
                     height = 365,
                     shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                    scale = 0.5,
-                    frame_count = 1
+                    scale = 0.5
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/glow.png",
@@ -118,8 +117,7 @@ ENTITY {
                     height = 365,
                     shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                     draw_as_glow = true,
-                    scale = 0.5,
-                    frame_count = 1
+                    scale = 0.5
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/sh.png",
@@ -128,8 +126,7 @@ ENTITY {
                     width = 352,
                     height = 232,
                     shift = {1.5, 1.5 - 9 / 32},
-                    scale = 0.5,
-                    frame_count = 1
+                    scale = 0.5
                 }
             }
         },

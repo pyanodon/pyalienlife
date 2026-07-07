@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "cottongut-growth-enhancement",
-	category = "cottongut",
+	categories = {"cottongut"},
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	mats =

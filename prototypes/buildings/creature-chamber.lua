@@ -104,7 +104,6 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-5.1, -5.1}, {5.1, 5.1}},
         selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-        forced_symmetry = "diagonal-pos",
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         allowed_module_categories = {"speed", "productivity", "efficiency", "quality", "creature-chamber"},
@@ -197,7 +196,7 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
                 secondary_draw_orders = {north = -1}
             },
@@ -205,7 +204,7 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {-2.0, -5.0}, direction = defines.direction.north}},
                 secondary_draw_orders = {north = -1}
             },
@@ -213,7 +212,7 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {2.0, -5.0}, direction = defines.direction.north}},
                 secondary_draw_orders = {north = -1}
             },
@@ -221,7 +220,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {0.0, 5.0}, direction = defines.direction.south}},
                 secondary_draw_orders = {north = -1}
             },
@@ -229,7 +228,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-2.0, 5.0}, direction = defines.direction.south}},
                 secondary_draw_orders = {north = -1}
             },
@@ -237,7 +236,7 @@ for i = 1, 4 do
                 production_type = "output",
                 pipe_covers = py.pipe_covers(false, true, true, true),
                 pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {2.0, 5.0}, direction = defines.direction.south}},
                 secondary_draw_orders = {north = -1}
             },
@@ -247,7 +246,6 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/creature-chamber.ogg", volume = 0.7},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/creature-chamber.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }
     }
 end

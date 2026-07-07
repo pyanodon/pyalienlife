@@ -1,7 +1,7 @@
 --Aoug breeding
 py.autorecipes {
 	name = "auog-pooping",
-	category = "auog",
+	categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	number_icons = true,

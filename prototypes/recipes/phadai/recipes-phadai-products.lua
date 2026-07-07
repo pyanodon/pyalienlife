@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "Phadai-Dance-Dance-Revolution",
-	category = "phadai",
+	categories = {"phadai"},
 	subgroup = "py-alienlife-phadai",
 	main_product = "carapace",
 	number_icons = true,
