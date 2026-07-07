@@ -21,7 +21,7 @@ RECIPE {
     results = {
         {type = "item", name = "zipir1", amount = 1},
     },
-    icons = py.composite_icon("zipir", "zipir-codex")
+    icons = py.composite_icon("zipir1", "zipir-codex")
 }:add_unlock("zipir")
 
 RECIPE {
