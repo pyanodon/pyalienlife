@@ -116,6 +116,7 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-10.6, -10.6}, {10.6, 10.6}},
         selection_box = {{-11.0, -11.0}, {11.0, 11.0}},
+        use_mirroring = true,
         draw_entity_info_icon_background = false,
         icon_draw_specification = {shift = util.by_pixel(165, 165), scale = 4.5},
         icons_positioning = {{

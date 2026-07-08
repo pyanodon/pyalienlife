@@ -56,6 +56,7 @@ ENTITY {
     fast_replaceable_group = "vessel",
     collision_box = data.raw["pipe"]["pipe"].collision_box,
     selection_box = data.raw["pipe"]["pipe"].selection_box,
+    use_mirroring = true,
     working_sound = nil, -- TODO
     fluid_boxes = {
         {

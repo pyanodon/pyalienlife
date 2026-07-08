@@ -44,6 +44,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+    use_mirroring = true,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"yaedols"},

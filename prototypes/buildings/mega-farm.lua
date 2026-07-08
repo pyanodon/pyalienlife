@@ -55,6 +55,7 @@ ENTITY {
     corpse = "rocket-silo-remnants",
     collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    use_mirroring = true,
     hole_clipping_box = {{-0.5, -0.5}, {0.5, 0.5}},
     resistances =
     {

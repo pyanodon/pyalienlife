@@ -42,6 +42,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    use_mirroring = true,
     crafting_categories = {"vat"},
     crafting_speed = 1,
     energy_source = {

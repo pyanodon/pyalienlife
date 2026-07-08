@@ -103,6 +103,7 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
         selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
+        use_mirroring = true,
         module_slots = i,
         allowed_effects = {"speed", "consumption"},
         allowed_module_categories = {"speed", "efficiency", "compost-plant"},

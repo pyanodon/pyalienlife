@@ -106,6 +106,7 @@ for i = 1, 4 do
         dying_explosion = "medium-explosion",
         collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+        use_mirroring = true,
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         allowed_module_categories = {"speed", "productivity", "efficiency", "bio-reactor"},

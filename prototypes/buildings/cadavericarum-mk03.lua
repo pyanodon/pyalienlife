@@ -53,6 +53,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-4.2, -4.2}, {4.2, 4.2}},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+    use_mirroring = true,
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"arum"},
