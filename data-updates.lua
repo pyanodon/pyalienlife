@@ -208,7 +208,7 @@ RECIPE("empty-sweet-syrup-barrel"):set_fields {results = {{type = "item", name =
 
 --copy`s of combustion recipes with biomass
 for _, recipe in pairs(data.raw.recipe) do
-    if recipe.category == "combustion" and string.match(recipe.name, "biomass") == nil then
+    if table.find(recipe.categories or {}, "combustion") and string.match(recipe.name, "biomass") == nil then
         local recipe_copy = table.deepcopy(recipe)
         local name = recipe_copy.name
         if recipe_copy.ingredients ~= nil then

@@ -218,7 +218,7 @@ if data and not yafc_turd_integration then
     }
 
     for _, recipe in pairs(data.raw.recipe) do
-        if not recipe.allow_productivity and recipe.category == "wpu" then
+        if not recipe.allow_productivity and table.find(recipe.categories or {}, "wpu") then
             recipe.allow_productivity = true
             recipe.allowed_module_categories = {"speed", "efficiency", "quality", "sawblade"}
         end
