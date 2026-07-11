@@ -274,10 +274,10 @@ py.on_event(defines.events.on_gui_closed, function(event)
 end)
 
 local function set_recipe(player, entity, recipe)
-  for item, count in pairs(entity.set_recipe(recipe)) do
-    count = count - player.insert {name = item, count = count}
-    if count > 0 then
-      player.surface.spill_item_stack {position = player.position, stack = {name = item, count = count}, enable_looted = true}
+  for _, overflow in pairs(entity.set_recipe(recipe)) do ---@cast overflow ItemWithQualityCount
+    overflow.count = overflow.count - player.insert(overflow)
+    if overflow.count > 0 then
+      player.surface.spill_item_stack {position = player.position, stack = overflow, enable_looted = true}
     end
   end
   player.opened = entity
