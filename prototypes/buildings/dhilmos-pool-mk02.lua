@@ -51,7 +51,8 @@ ENTITY {
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"dhilmos"},
     effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
-    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "dhilmos-pool-mk01"),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "dhilmos-pool-mk01") * py.farm_speed_correction20_wrong_modules(
+                            MODULE_SLOTS, "dhilmos-pool-mk01", 1, 1.5),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",

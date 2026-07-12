@@ -115,7 +115,7 @@ for i = 1, 4 do
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"fish-farm"},
         effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
-        crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "fish-farm-mk01"),
+        crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "fish-farm-mk01") * py.farm_speed_correction20_wrong_modules(MODULE_SLOTS, "fish-farm-mk01", 1, 1 + 0.5*(i-1)),
         energy_source = {
             type = "electric",
             usage_priority = "secondary-input",
