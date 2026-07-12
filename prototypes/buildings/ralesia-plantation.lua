@@ -90,9 +90,9 @@ data.raw["assembling-machine"]["ralesia-plantation-mk02"].crafting_speed = py.fa
 data.raw["assembling-machine"]["ralesia-plantation-mk02"].module_slots = MODULE_SLOTS * 2
 
 data.raw["assembling-machine"]["ralesia-plantation-mk03"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
-data.raw["assembling-machine"]["ralesia-plantation-mk03"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 3, "ralesia-plantation-mk02")
+data.raw["assembling-machine"]["ralesia-plantation-mk03"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 3, "ralesia-plantation-mk01")
 data.raw["assembling-machine"]["ralesia-plantation-mk03"].module_slots = MODULE_SLOTS * 3
 
 data.raw["assembling-machine"]["ralesia-plantation-mk04"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
-data.raw["assembling-machine"]["ralesia-plantation-mk04"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 4, "ralesia-plantation-mk03")
+data.raw["assembling-machine"]["ralesia-plantation-mk04"].crafting_speed = py.farm_speed_derived(MODULE_SLOTS * 4, "ralesia-plantation-mk01")
 data.raw["assembling-machine"]["ralesia-plantation-mk04"].module_slots = MODULE_SLOTS * 4
