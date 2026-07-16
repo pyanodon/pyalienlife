@@ -36,9 +36,7 @@ TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 -- digosaurus recipes
 ----------------------------------------------------------------------------------------------------
 
-Digosaurus = Digosaurus or {}
-require "__pyalienlife__/scripts/digosaurus/digosaurus-prototypes"
-for food, value in pairs(Digosaurus.favorite_foods) do
+for food, value in pairs(data.raw["mod-data"].pyanodons.data.digosaurus.foods) do
     RECIPE {
         type = "recipe",
         name = "digosaurus-helmod-recipe-" .. food,
