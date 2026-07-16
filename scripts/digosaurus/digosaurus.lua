@@ -1,79 +1,83 @@
+---@diagnostic disable: need-check-nil, param-type-mismatch, assign-type-mismatch, undefined-field, inject-field
+
+---@class Digosaurus
+---@field creatures {[data.EntityID]: DigosaurPrototype}
+---@field foods {[data.ItemID]: uint}
+---@field resource_categories {[data.ResourceCategoryID]: true}
+---@field dig_sites {[data.EntityID]: DigSitePrototype}
+---@field validity_check fun(dig_data: DigSite): boolean
+---@field why_isnt_my_dig_site_working fun(dig_site: DigSite): LocalisedString, SpritePath, defines.entity_status_diode
+---@field update_gui fun(gui: GuiElementType)
 Digosaurus = {}
+
+---@class DigSite
+---@field unit_number uint
+---@field entity LuaEntity
+---@field inventory LuaInventory
+---@field food_input LuaEntity
+---@field food_inventory LuaInventory
+---@field digosaur_inventory LuaInventory
+---@field active_digosaurs Digosaur[]
+---@field scanned_ores LuaEntity[] resources in the area of this dig site
+
+---@class Digosaur
+---@field i uint index
+---@field entity LuaEntity
+---@field proxy LuaEntity
+---@field ore_id uint
+---@field ore LuaEntity
+---@field parent_id uint
+---@field state string
+---@field ores_gained_per_trip uint
+
+---@class (partial) PyAlienLifeStorage:PyPostProcessingStorage
+---@field dig_sites {[uint]: DigSite?}
+---@field digosaurs {[uint64]: Digosaur?}
+storage = {}
 
 require "digosaurus-prototypes"
 require "digosaurus-gui"
-
-local function new_digosaur(name, bonus, proxy_name)
-    Digosaurus.valid_creatures[name] = bonus
-    Digosaurus.mining_proxies[name] = proxy_name
-end
-
-local function remove_digosaur(name)
-    Digosaurus.valid_creatures[name] = nil
-    Digosaurus.mining_proxies[name] = nil
-end
-
-local function add_mining_category(category_to_add)
-    Digosaurus.minable_categories[category_to_add] = true
-end
-
-local function remove_mining_category(category_to_remove)
-    Digosaurus.minable_categories[category_to_remove] = nil
-end
-
-local function add_food(name, value)
-    Digosaurus.favorite_foods[name] = value
-end
-
-local function remove_food(name)
-    Digosaurus.favorite_foods[name] = nil
-end
-
-remote.add_interface("py_digosaurs", {
-    new_digosaur = new_digosaur,
-    remove_digosaur = remove_digosaur,
-    add_mining_category = add_mining_category,
-    remove_mining_category = remove_mining_category,
-    add_food = add_food,
-    remove_food = remove_food,
-})
 
 py.on_event(py.events.on_init(), function(event)
     storage.dig_sites = storage.dig_sites or {}
     storage.digosaurs = storage.digosaurs or {}
 end)
 
-function Digosaurus.validity_check(dig_data)
-    if not dig_data then return false end
+---@param dig_site DigSite?
+---@return boolean
+function Digosaurus.validity_check(dig_site)
+    if not dig_site then return false end
 
     -- An inventory object can be independently invalid, irregardless of the entity.valid state
     -- This includes operations like indexing
-    if dig_data.digosaur_inventory.valid then
-        for i = 1, #dig_data.digosaur_inventory do
-            local digosaur_data = dig_data.active_digosaurs[i]
-            if digosaur_data and not digosaur_data.entity.valid then dig_data.active_digosaurs[i] = nil end
+    if dig_site.digosaur_inventory.valid then
+        for i = 1, #dig_site.digosaur_inventory do
+            local digosaur_data = dig_site.active_digosaurs[i]
+            if digosaur_data and not digosaur_data.entity.valid then dig_site.active_digosaurs[i] = nil end
         end
     end
 
     if
-        not dig_data.entity.valid or
-        not dig_data.inventory.valid or
-        not dig_data.food_input.valid or
-        not dig_data.food_inventory.valid or
-        not dig_data.digosaur_inventory.valid
+        not dig_site.entity.valid or
+        not dig_site.inventory.valid or
+        not dig_site.food_input.valid or
+        not dig_site.food_inventory.valid or
+        not dig_site.digosaur_inventory.valid
     then
-        if dig_data.entity.valid then dig_data.entity.destroy() end
-        if dig_data.food_input.valid then dig_data.food_input.destroy() end
-        if dig_data.digosaur_inventory.valid then dig_data.digosaur_inventory.destroy() end
+        if dig_site.entity.valid then dig_site.entity.destroy() end
+        if dig_site.food_input.valid then dig_site.food_input.destroy() end
+        if dig_site.digosaur_inventory.valid then dig_site.digosaur_inventory.destroy() end
 
-        storage.dig_sites[dig_data.unit_number] = nil
+        storage.dig_sites[dig_site.unit_number] = nil
         return false
     end
     return true
 end
 
-function Digosaurus.find_random_scanned_ore(dig_data)
-    local scanned_ores = dig_data.scanned_ores
+---@param dig_site DigSite
+---@return LuaEntity?, uint?
+function Digosaurus.find_random_scanned_ore(dig_site)
+    local scanned_ores = dig_site.scanned_ores
     local max_index = 0
     for i in pairs(scanned_ores) do max_index = math.max(max_index, i) end
 
@@ -86,25 +90,29 @@ function Digosaurus.find_random_scanned_ore(dig_data)
     return nil
 end
 
-function Digosaurus.start_mining_command(dig_data, i)
-    local ore, rng = Digosaurus.find_random_scanned_ore(dig_data)
-    if not ore then return false end
+---@param dig_site DigSite
+---@param i uint inventory index
+---@return Digosaur?
+function Digosaurus.start_mining_command(dig_site, i)
+    local ore, rng = Digosaurus.find_random_scanned_ore(dig_site)
+    if not ore or not rng then return end
 
-    local entity = dig_data.entity
-    local spawn_point = Digosaurus.digosaurus_spawn_point[entity.direction]
+    local entity = dig_site.entity
+    local prototype = Digosaurus.dig_sites[entity.name]
+    local spawn_point = prototype.spawn_point[entity.direction]
     local digosaur = entity.surface.create_entity {
-        name = dig_data.digosaur_inventory[i].name,
+        name = dig_site.digosaur_inventory[i].name,
         position = {entity.position.x + spawn_point.x, entity.position.y + spawn_point.y},
         force = entity.force,
         create_build_effect_smoke = false,
         direction = entity.direction
-    }
+    }---@cast digosaur -?
     local proxy = entity.surface.create_entity {
-        name = Digosaurus.mining_proxies[digosaur.name],
+        name = Digosaurus.creatures[digosaur.name].proxy,
         position = ore.position,
         force = entity.force,
         create_build_effect_smoke = false
-    }
+    }---@cast proxy -?
 
     digosaur.commandable.set_command {
         type = defines.command.attack,
@@ -112,23 +120,39 @@ function Digosaurus.start_mining_command(dig_data, i)
         distraction = defines.distraction.none
     }
 
-    local digosaur_data = {i = i, entity = digosaur, proxy = proxy, ore_id = rng, ore = ore, parent = entity.unit_number, state = "mining"}
-    dig_data.active_digosaurs[i] = digosaur_data
+    ---@type Digosaur
+    local digosaur_data = {
+      i = i,
+      entity = digosaur,
+      proxy = proxy,
+      ore_id = rng,
+      ore = ore,
+      parent_id = entity.unit_number,
+      state = "mining",
+      ores_gained_per_trip = 0
+    }
+    dig_site.active_digosaurs[i] = digosaur_data
     storage.digosaurs[digosaur.unit_number] = digosaur_data
     return digosaur_data
 end
 
+---@param food_inventory_contents ItemWithQualityCount[]
+---@return boolean
 function Digosaurus.has_food(food_inventory_contents)
     for _, item in pairs(food_inventory_contents) do
-        if Digosaurus.favorite_foods[item.name] then return true end
+        if Digosaurus.foods[item.name] then return true end
     end
     return false
 end
 
+---@param food_inventory LuaInventory
+---@param food_inventory_contents ItemWithQualityCount[]
+---@param entity LuaEntity
+---@return ItemID?
 function Digosaurus.eat(food_inventory, food_inventory_contents, entity)
     for _, food in pairs(food_inventory_contents) do
         food = food.name
-        if Digosaurus.favorite_foods[food] then
+        if Digosaurus.foods[food] then
             food_inventory.remove {name = food, count = 1}
             entity.force.get_item_production_statistics(entity.surface_index).on_flow(food, -1) -- todo THIS WILL CRASH put a surface in get_item_production_statistics()
             return food
@@ -137,14 +161,15 @@ function Digosaurus.eat(food_inventory, food_inventory_contents, entity)
 end
 
 -- https://github.com/pyanodon/pybugreports/issues/1110
-local function remove_nonfood_items_from_food_inventory(dig_data)
-    local trash_inventory = dig_data.entity.get_inventory(defines.inventory.crafter_trash)
+---@param dig_site DigSite
+local function remove_nonfood_items_from_food_inventory(dig_site)
+    local trash_inventory = dig_site.entity.get_inventory(defines.inventory.crafter_trash) ---@cast trash_inventory -?
     local trash_slot = trash_inventory[1]
     if trash_slot.valid_for_read then return end
-    local food_inventory = dig_data.food_inventory
+    local food_inventory = dig_site.food_inventory
     for i = 1, #food_inventory do
         local food = food_inventory[i]
-        if food.valid_for_read and not Digosaurus.favorite_foods[food.name] then
+        if food.valid_for_read and not Digosaurus.foods[food.name] then
             food.swap_stack(trash_slot)
             return
         end
@@ -152,7 +177,6 @@ local function remove_nonfood_items_from_food_inventory(dig_data)
 end
 
 local time_to_live = 61
-local blink_interval = time_to_live / 2
 py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     for _, dig_data in pairs(storage.dig_sites) do
         if not Digosaurus.validity_check(dig_data) then goto continue end
@@ -163,15 +187,15 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
         local food_inventory_contents = dig_data.food_inventory.get_contents()
 
         if table_size(dig_data.scanned_ores) == 0 then
-            py.draw_error_sprite(entity, "utility.warning_icon", time_to_live, blink_interval)
+            py.draw_error_sprite(entity, "utility.warning_icon", time_to_live)
         elseif not Digosaurus.has_food(food_inventory_contents) then
-            py.draw_error_sprite(entity, "utility.fuel_icon", time_to_live, blink_interval)
+            py.draw_error_sprite(entity, "utility.fuel_icon", time_to_live)
         elseif entity.energy == 0 then
-            py.draw_error_sprite(entity, "utility.electricity_icon_unplugged", time_to_live, blink_interval)
+            py.draw_error_sprite(entity, "utility.electricity_icon_unplugged", time_to_live)
         elseif dig_data.digosaur_inventory.is_empty() then
-            py.draw_error_sprite(entity, "no_module_animal", time_to_live, blink_interval)
-        elseif entity.energy < entity.electric_buffer_size * 0.9 then
-            py.draw_error_sprite(entity, "utility.electricity_icon", time_to_live, blink_interval)
+            py.draw_error_sprite(entity, "no_module_animal", time_to_live)
+        elseif entity.energy < (entity.electric_buffer_size or 0) * 0.9 then
+            py.draw_error_sprite(entity, "utility.electricity_icon", time_to_live)
         else
             if dig_data.inventory.get_item_count() > 1000 then
                 goto continue -- only mine until 1000 ores
@@ -183,7 +207,7 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
                     digosaur_data = Digosaurus.start_mining_command(dig_data, i)
                     if digosaur_data then
                         local food = Digosaurus.eat(dig_data.food_inventory, food_inventory_contents, entity)
-                        digosaur_data.ores_gained_per_trip = Digosaurus.favorite_foods[food]
+                        digosaur_data.ores_gained_per_trip = Digosaurus.foods[food]
                         goto continue
                     end
                 end
@@ -194,18 +218,22 @@ py.register_on_nth_tick(61, "Digosaurus", "pyal", function(event)
     end
 end)
 
+---@param event EventData.on_ai_command_completed
 py.on_event(defines.events.on_ai_command_completed, function(event)
     local unit_number = event.unit_number
+    ---@type Digosaur?
     local digosaur_data = storage.digosaurs[unit_number]
     if not digosaur_data then return end
     local digosaur = digosaur_data.entity
     if digosaur_data.proxy.valid then digosaur_data.proxy.destroy() end
+    local dig_data = storage.dig_sites[digosaur_data.parent_id]
+    if not dig_data then return end
 
     if digosaur_data.state == "mining" then
         digosaur_data.state = "returning"
         digosaur.commandable.set_command {
             type = defines.command.go_to_location,
-            destination_entity = storage.dig_sites[digosaur_data.parent].entity,
+            destination_entity = dig_data.entity,
             distraction = defines.distraction.none,
             radius = -1.2,
             pathfind_flags = {
@@ -214,21 +242,20 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
             }
         }
     elseif digosaur_data.state == "returning" then
-        local creature_bonus = Digosaurus.valid_creatures[digosaur.name]
+        local prototype = Digosaurus.creatures[digosaur.name]
         digosaur.destroy()
         storage.digosaurs[unit_number] = nil
-        local dig_data = storage.dig_sites[digosaur_data.parent]
-        if not dig_data then return end
         dig_data.active_digosaurs[digosaur_data.i] = nil
 
         local ore = digosaur_data.ore
         if not ore or not ore.valid then return end
 
         for _, product in pairs(ore.prototype.mineable_properties.products) do
+          ---@cast product Product
             if product.type == "item" then
-                local to_insert = math.min(ore.amount, digosaur_data.ores_gained_per_trip or 1) * product.amount * creature_bonus
+                local to_insert = math.min(ore.amount, digosaur_data.ores_gained_per_trip or 1) * product.amount * prototype.mining_bonus
                 if to_insert == 0 then return end
-                local ore_removed = dig_data.inventory.insert {name = product.name, count = to_insert} / product.amount / creature_bonus
+                local ore_removed = dig_data.inventory.insert {name = product.name, count = to_insert} / product.amount / prototype.mining_bonus ---@cast ore_removed uint
                 if not dig_data.inventory[1].valid_for_read or ore_removed == 0 then return end
                 if ore.prototype.infinite_resource then
                     -- pass
@@ -325,9 +352,9 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     local tags = element.tags
     local dig_data = storage.dig_sites[tags.unit_number]
     local cursor_stack = player.cursor_stack
-    if not cursor_stack then return end
+    if not cursor_stack or not dig_data then return end
 
-    if cursor_stack.valid_for_read and not Digosaurus.favorite_foods[cursor_stack.name] then return end
+    if cursor_stack.valid_for_read and not Digosaurus.foods[cursor_stack.name] then return end
 
     if py.distance_squared(player.position, dig_data.entity.position) > player.reach_distance ^ 2 then
         player.play_sound {path = "utility/cannot_build"}
@@ -338,24 +365,24 @@ gui_events[defines.events.on_gui_click]["dig_food_."] = function(event)
     Digosaurus.update_gui(player.gui.relative.digosaurus_gui)
 end
 
-function Digosaurus.scan_ores(dig_data)
-    local entity = dig_data.entity
+---@param dig_site DigSite
+function Digosaurus.scan_ores(dig_site)
+    local entity = dig_site.entity
     local position = entity.position
-    local range = Digosaurus.mining_range
-    local offset = Digosaurus.mining_range_offset[entity.direction]
+    local prototype = Digosaurus.dig_sites[entity.name]
+    if not prototype then return end
+    local range = prototype.mining_range
+    local offset = prototype.mining_range_offsets[entity.direction]
 
     local area = {
         {position.x - range + offset.x, position.y - range + offset.y},
         {position.x + range + offset.x, position.y + range + offset.y}
     }
 
-    dig_data.scanned_ores = table.filter(
+    dig_site.scanned_ores = table.filter(
         entity.surface.find_entities_filtered {area = area, type = "resource"},
-        function(ore) return Digosaurus.minable_categories[ore.prototype.resource_category] end
+        function(ore) return Digosaurus.resource_categories[ore.prototype.resource_category] end
     )
-
-    --rendering.clear('pyalienlife')
-    --for _, ore in pairs(dig_data.scanned_ores) do rendering.draw_circle{color = {1, 1, 1}, radius = 0.2, filled = true, target = ore, surface = ore.surface} end
 end
 
 local function swap_to_stack(player, item_name, cursor_stack)

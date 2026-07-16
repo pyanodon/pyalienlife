@@ -1,16 +1,24 @@
-function Digosaurus.why_isnt_my_dig_site_working(dig_data)
-    local entity = dig_data.entity
+---@diagnostic disable: need-check-nil, param-type-mismatch, undefined-field
+
+
+---@type PyAlienLifeStorage
+---@diagnostic disable-next-line
+storage = {}
+
+---@param dig_site DigSite
+function Digosaurus.why_isnt_my_dig_site_working(dig_site)
+    local entity = dig_site.entity
 
     local status, img, diode
     if entity.to_be_deconstructed() then
         status = {"entity-status.marked-for-deconstruction"}
         img = "utility/status_not_working"
         diode = defines.entity_status_diode.red
-    elseif table_size(dig_data.scanned_ores) == 0 then
+    elseif table_size(dig_site.scanned_ores) == 0 then
         status = {"entity-status.no-minable-resources"}
         img = "utility/status_not_working"
         diode = defines.entity_status_diode.red
-    elseif dig_data.food_inventory.is_empty() then
+    elseif dig_site.food_inventory.is_empty() then
         status = {"entity-status.no-food"}
         img = "utility/status_not_working"
         diode = defines.entity_status_diode.red
@@ -18,7 +26,7 @@ function Digosaurus.why_isnt_my_dig_site_working(dig_data)
         status = {"entity-status.no-power"}
         img = "utility/status_not_working"
         diode = defines.entity_status_diode.red
-    elseif dig_data.digosaur_inventory.is_empty() then
+    elseif dig_site.digosaur_inventory.is_empty() then
         status = {"entity-status.no-creature"}
         img = "utility/status_not_working"
         diode = defines.entity_status_diode.red
@@ -39,28 +47,31 @@ function Digosaurus.why_isnt_my_dig_site_working(dig_data)
     return status, img, diode
 end
 
+---@param gui LuaGuiElement
 function Digosaurus.update_gui(gui)
-    local dig_data = storage.dig_sites[gui.tags.unit_number]
-    if not Digosaurus.validity_check(dig_data) then
+    if not gui.tags or not gui.tags.unit_number then return end
+    ---@type DigSite
+    local dig_site = storage.dig_sites[gui.tags.unit_number]
+    if not Digosaurus.validity_check(dig_site) then
         gui.destroy()
         return
     end
     local content_flow = gui.content_frame.content_flow
-    local entity = dig_data.entity
+    local entity = dig_site.entity
 
-    content_flow.status_flow.electricity.value = entity.energy / entity.electric_buffer_size
-    content_flow.status_flow.consumption.caption = {"", py.format_energy(entity.energy, "W"), "/", py.format_energy(entity.electric_buffer_size, "W")}
+    content_flow.status_flow.electricity.value = entity.energy / (entity.electric_buffer_size or 1)
+    content_flow.status_flow.consumption.caption = {"", py.format_energy(entity.energy, "W"), "/", py.format_energy(entity.electric_buffer_size or 1, "W")}
     if entity.to_be_deconstructed() then
         content_flow.status_flow.consumption.caption = ""
     end
 
-    local status, img, _ = Digosaurus.why_isnt_my_dig_site_working(dig_data)
+    local status, img, _ = Digosaurus.why_isnt_my_dig_site_working(dig_site)
     content_flow.status_flow.status_text.caption = status
     content_flow.status_flow.status_sprite.sprite = img
 
     local food_flow = content_flow.food_flow
-    for i = 1, #dig_data.food_inventory do
-        local slot = dig_data.food_inventory[i]
+    for i = 1, #dig_site.food_inventory do
+        local slot = dig_site.food_inventory[i]
         local element = food_flow["dig_food_" .. i]
         if slot.valid_for_read then
             element.sprite = "item/" .. slot.name
@@ -69,7 +80,7 @@ function Digosaurus.update_gui(gui)
             element.sprite = "slot_icon_fuel"
             element.number = nil
         end
-        element.tooltip = py.generate_favorite_food_tooltip(Digosaurus.favorite_foods, "digosaurus-gui")
+        element.tooltip = py.generate_favorite_food_tooltip(Digosaurus.foods, "digosaurus-gui")
     end
 end
 
@@ -87,7 +98,11 @@ py.on_event(defines.events.on_gui_opened, function(event)
     end
 
     local main_frame = player.gui.relative.add {
-        type = "frame", name = "digosaurus_gui", caption = {"entity-name.dino-dig-site"}, direction = "vertical", tags = {unit_number = entity.unit_number},
+        type = "frame",
+        name = "digosaurus_gui",
+        caption = {"entity-name.dino-dig-site"},
+        direction = "vertical",
+        tags = {unit_number = entity.unit_number},
         anchor = {
             gui = defines.relative_gui_type.assembling_machine_gui,
             position = defines.relative_gui_position.left
@@ -132,7 +147,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
 end)
 
 py.on_event({defines.events.on_gui_closed, defines.events.on_player_changed_surface}, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index) ---@cast player -?
     if event.gui_type == defines.gui_type.entity then
         local gui = player.gui.relative.digosaurus_gui
         if gui then gui.destroy() end

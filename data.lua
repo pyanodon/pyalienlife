@@ -717,4 +717,9 @@ data.raw["utility-constants"].default.main_menu_background_image_location = "__p
 require "prototypes/sprites/sprites"
 --require 'prototypes/ores/fake-plants'
 
+--mod-data
+-- require "prototypes/mod-data/caravans"
+require "prototypes/mod-data/digosaurus"
+-- require "prototypes/mod-data/farming"
+
 data.raw.fluid["bio-oil"].fuel_value = "0.8MJ"
