@@ -24,7 +24,7 @@ data.raw["assembling-machine"]["guar-gum-plantation"].crafting_speed = py.farm_s
 data.raw["assembling-machine"]["guar-gum-plantation-mk02"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["guar-gum-plantation-mk02"].module_slots = 32
 data.raw["assembling-machine"]["guar-gum-plantation-mk02"].crafting_speed = py.farm_speed_derived(32, "guar-gum-plantation")
-data.raw["assembling-machine"]["guar-gum-plantation-mk02"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
+data.raw["assembling-machine"]["guar-gum-plantation-mk03"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["guar-gum-plantation-mk03"].module_slots = 48
 data.raw["assembling-machine"]["guar-gum-plantation-mk03"].crafting_speed = py.farm_speed_derived(48, "guar-gum-plantation")
 data.raw["assembling-machine"]["guar-gum-plantation-mk04"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}

@@ -47,7 +47,8 @@ ENTITY {
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"phadai"},
     effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
-    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "phadai-enclosure-mk01"),
+    crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "phadai-enclosure-mk01") * py.farm_speed_correction20_wrong_modules(
+                            MODULE_SLOTS, "phadai-enclosure-mk01", 1, 1.75),
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
