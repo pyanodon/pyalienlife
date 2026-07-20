@@ -381,6 +381,7 @@ RECIPE("wyrmhole"):replace_ingredient("processing-unit", "intelligent-unit"):add
 RECIPE("fungal-substrate-02"):add_ingredient {type = "item", name = "urea", amount = 3}
 RECIPE("alien-sample-03"):replace_ingredient("plastic-bar", "graphene-roll")
 RECIPE("log7-2"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):add_unlock("wood-processing-3"):replace_category("nursery", "fwf")
+py.allow_productivity({"log7", "log7-2"})
 --RECIPE('urea'):replace_ingredient('fawogae', 'seaweed'):subgroup_order('py-alienlife-items', 'a')
 RECIPE("bonemeal2"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
 RECIPE("bonemeal3"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
