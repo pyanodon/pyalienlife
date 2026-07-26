@@ -1,5 +1,5 @@
----@diagnostic disable: unnecessary-assert, undefined-field
----@type {creatures: {[data.EntityID]: DigosaurPrototype}, foods: {[data.ItemID]: uint}, resource_categories: {[data.ResourceCategoryID]: true}, dig_sites: {[data.EntityID]: DigSitePrototype}}
+---@diagnostic disable: unnecessary-assert, undefined-field, assign-type-mismatch
+---@type DigosaursData
 local data = py.mod_data.digosaurus
 
 if not data then error ("ERROR: pY mod data [digosaurus] not found!") end
@@ -8,35 +8,63 @@ local assert = function(value, error, param1, param2, param3, param4)
     _G.assert (value, error:format(param1, param2, param3, param4))
 end
 
+local type_assert = function(value, vtype, error, param1, param2, param3, param4)
+    assert (value and type(value) == vtype, (error .. " Expected " .. vtype .. ", found " .. type(value) .. "."):format(param1, param2, param3, param4))
+end
+
 for creature, creature_data in pairs(data.creatures) do
     assert (
         prototypes.entity[creature],
         "ERROR: pY mod data [digosaurus] has invalid creature EntityID: %s",
         creature
     )
-    assert (
-        prototypes.entity[creature_data.proxy],
-        "ERROR: pY mod data [digosaurus] creature [%s] has invalid proxy EntityID: %s",
-        creature, creature_data.proxy
+    type_assert (
+        creature_data.proxy,
+        "string",
+        "ERROR: pY mod data [digosaurus] creature [%s] has invalid proxy.",
+        creature
     )
     assert (
-        type(creature_data.mining_bonus) == "number" and creature_data.mining_bonus > 0,
-        "ERROR: pY mod data [digosaurus] creature [%s] has invalid mining_bonus: %s",
-        creature, creature_data.mining_bonus
+        prototypes.entity[creature_data.proxy],
+        "ERROR: pY mod data [digosaurus] creature [%s] has invalid proxy EntityID. Entity [%s] does not exist.",
+        creature, creature_data.proxy
+    )
+    type_assert (
+        creature_data.mining_bonus,
+        "number",
+        "ERROR: pY mod data [digosaurus] creature [%s] has invalid mining_bonus.",
+        creature
+    )
+    assert (
+        creature_data.mining_bonus > 0,
+        "ERROR: pY mod data [digosaurus] creature [%s] has invalid mining_bonus. Number must be > 0.",
+        creature
     )
 end
 
 Digosaurus.creatures = data.creatures
 
 for food, mult in pairs(data.foods) do
-    assert(
-        prototypes.item[food],
-        "ERROR: pY mod data [digosaurus] has invalid food ItemID: %s",
+    type_assert (
+        food,
+        "string",
+        "ERROR: pY mod data [digosaurus] has invalid food ItemID.",
         food
     )
-    assert(
-        type(mult) == "number" and mult > 0,
-        "ERROR: pY mod data [digosaurus] food [%s] has invalid multiplier: %s",
+    assert (
+        prototypes.item[food],
+        "ERROR: pY mod data [digosaurus] has invalid food ItemID. Item [%s] does not exist.",
+        food
+    )
+    type_assert (
+        mult,
+        "number",
+        "ERROR: pY mod data [digosaurus] food [%s] has invalid multiplier.",
+        food
+    )
+    assert (
+        mult > 0,
+        "ERROR: pY mod data [digosaurus] food [%s] has invalid multiplier. Number must be > 0.",
         food, mult
     )
 end
@@ -44,9 +72,15 @@ end
 Digosaurus.foods = data.foods
 
 for category in pairs(data.resource_categories) do
-    assert(
+    type_assert (
+        category,
+        "string",
+        "ERROR: pY mod data [digosaurus] has invalid ResourceCategoryID.",
+        category
+    )
+    assert (
         prototypes.resource_category[category],
-        "ERROR: pY mod data [digosaurus] has invalid ResourceCategoryID: %s",
+        "ERROR: pY mod data [digosaurus] has invalid ResourceCategoryID. ResourceCategory [%s] does not exist.",
         category
     )
 end
@@ -54,30 +88,34 @@ end
 Digosaurus.resource_categories = data.resource_categories
 
 for site, site_data in pairs(data.dig_sites) do
-    assert (
-        prototypes.entity[site],
-        "ERROR: pY mod data [digosaurus] has invalid site EntityID: %s",
+    type_assert (
+        site,
+        "string",
+        "ERROR: pY mod data [digosaurus] has invalid site EntityID.",
         site
     )
     assert (
+        prototypes.entity[site],
+        "ERROR: pY mod data [digosaurus] has invalid site EntityID. Entity [%s] does not exist.",
+        site
+    )
+    type_assert (
+        site_data.mining_range_offsets,
+        "table",
+        "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range_offsets.",
+        site
+    )
+    type_assert (
+        site_data.spawn_point,
+        "table",
+        "ERROR: pY mod data [digosaurus] site [%s] has invalid spawn_point.",
+        site
+    )
+    type_assert (
         site_data.mining_range,
-        "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range: %s",
-        site, site_data.mining_range
-    )
-    assert (
-        site_data.mining_range_offsets and type(site_data.mining_range_offsets) == "table",
-        "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range_offset: %s",
-        site, site_data.mining_range_offsets
-    )
-    assert (
-        site_data.spawn_point and type(site_data.spawn_point) == "table",
-        "ERROR: pY mod data [digosaurus] site [%s] has invalid spawn_point: %s",
-        site, site_data.spawn_point
-    )
-    assert (
-        site_data.mining_range and type(site_data.mining_range) == "number",
-        "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range: %s",
-        site, site_data.mining_range
+        "number",
+        "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range.",
+        site
     )
     for _, direction in pairs{
       "north",
@@ -87,30 +125,22 @@ for site, site_data in pairs(data.dig_sites) do
     } do
         local offset = site_data.mining_range_offsets[defines.direction[direction] .. ""]
         local spawn = site_data.spawn_point[defines.direction[direction] .. ""]
-        assert (
+        type_assert (
             offset,
-            "ERROR: pY mod data [digosaurus] site [%s] is missing mining_range_offset [%s]",
-            site, direction
-        )
-        assert (
-            type(offset) == "table",
-            "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range_offset [%s]: %s",
-            site, direction, offset
+            "table",
+            "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range_offset [defines.direction.%s].",
+            site, direction, offset or "nil"
         )
         assert (
             (offset.x and offset.y or offset[1] and offset[2]) and type(offset.x or offset[1]) == "number" and type(offset.y or offset[1]) == "number",
             "ERROR: pY mod data [digosaurus] site [%s] has invalid mining_range_offset [%s]: %s",
             site, direction, serpent.line(offset)
         )
-        assert (
+        type_assert (
             spawn,
-            "ERROR: pY mod data [digosaurus] site [%s] is missing spawn_point [%s]",
-            site, direction
-        )
-        assert (
-            type(spawn) == "table",
-            "ERROR: pY mod data [digosaurus] site [%s] has invalid spawn_point [%s]: %s", 
-            site, direction, spawn
+            "table",
+            "ERROR: pY mod data [digosaurus] site [%s] has invalid spawn_point [defines.direction.%s].",
+            site, direction, offset or "nil"
         )
         assert (
             (spawn.x and spawn.y or spawn[1] and spawn[2]) and type(spawn.x or spawn[1]) == "number" and type(spawn.y or spawn[1]) == "number",

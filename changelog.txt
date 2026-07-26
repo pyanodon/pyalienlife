@@ -6,6 +6,8 @@ Date: ???
     - Changed digosaurus remote interfaces to use pyanodons mod data
     - Updated digosaurus custom prototype structure
     - Added annotations to digosaurus scripts and prototypes
+    - Changed farming remote interfaces to use pyanodons mod data
+    - Added annotations to farming scripts and prototypes
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.2
 Date: 2026-07-09
