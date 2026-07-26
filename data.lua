@@ -720,6 +720,6 @@ require "prototypes/sprites/sprites"
 --mod-data
 -- require "prototypes/mod-data/caravans"
 require "prototypes/mod-data/digosaurus"
--- require "prototypes/mod-data/farming"
+require "prototypes/mod-data/farming"
 
 data.raw.fluid["bio-oil"].fuel_value = "0.8MJ"

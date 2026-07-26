@@ -1,87 +1,21 @@
+---@class Farming
+---@field farm_prototypes table<string, AlienlifeFarmPrototype>
 Farming = {}
 
-local function validate_farm_building_list(farm_buildings, throw)
-    local modules = prototypes.get_item_filtered {{filter = "type", type = "module"}}
-    ---@as table<string, table<string, boolean>> two level table containing buildings indexed by their base (mk-less) name
-    local buildings = {}
-    local crafting_machines = prototypes.get_entity_filtered {{filter = "crafting-machine"}}
-    -- This early search and sort lets us avoid o^n searching below
-    for building_name in pairs(crafting_machines) do
-        -- TODO: Find a method that avoids two searches?
-        local is_turd = not not building_name:find("%-turd")
-        -- keep suffix if necessary while allowing other building suffixes
-        local basename = building_name:gsub("%-mk..+", is_turd and "-turd" or "")
-        if farm_buildings[basename] then
-            buildings[basename] = buildings[basename] or {}
-            buildings[basename][building_name] = true
-        end
-    end
-
-    -- Assigns nil or errors depending on `throw`
-    local result = throw and error or log
-    for entity_name, farm_prototype in pairs(farm_buildings) do
-        -- No buildings with this base name
-        if not buildings[entity_name] then
-            farm_buildings[entity_name] = result(("Farm building \"%s\" has no associated crafting machines"):format(entity_name))
-            goto next_farm_prototype
-        end
-        -- No modules with this name
-        if farm_prototype.default_module ~= nil and not modules[farm_prototype.default_module] then
-            farm_buildings[entity_name] = result(("Invalid default module \"%s\" for farm building \"%s\""):format(farm_prototype.default_module, entity_name))
-            goto next_farm_prototype
-        end
-        -- Unspecified or invalid domain
-        local domain = farm_prototype.domain
-        if not domain or not (domain == "animal" or domain == "plant" or domain == "fungi") then
-            farm_buildings[entity_name] = result(("Invalid domain \"%s\" for farm building \"%s\". Expected 'animal', 'plant', or 'fungi'"):format(domain or "nil", entity_name))
-            goto next_farm_prototype
-        end
-        -- Wow, so valid
-        ::next_farm_prototype::
-    end
-end
-
----@as table<string, table<string, string>>
----Contains key-value pairs of `{farm_name = {default_module = farm_module, domain = farm_domain, requires = farm_mod}`
--- See `scripts/farming/farm-build-list.lua` for an example
-local farm_buildings = require "farm-building-list"
-
----register_type registers a farm for module restrictions
----@param farm_name string name of farm building without -mkxx suffix
----@param domain 'animal' | 'plant' | 'fungi'
----@param default_module string
-function Farming.register_type(farm_name, domain, default_module)
-    log("remote registered farm \'" .. farm_name .. "\' (" .. domain .. ")")
-    storage.farm_prototypes = storage.farm_prototypes or farm_buildings
-    storage.farm_prototypes[farm_name] = {default_module = default_module, domain = domain}
-    validate_farm_building_list(storage.farm_prototypes, true)
-end
-
----unregister_type unregisters a farm for module restrictions
----@param farm_name string name of farm building without -mkxx suffix
-function Farming.unregister_type(farm_name)
-    log("remote unregistered farm \'" .. farm_name .. "\'")
-    storage.farm_prototypes[farm_name] = nil
-end
-
-remote.remove_interface("pyfarm")
-remote.add_interface("pyfarm", {
-    register = Farming.register_type,
-    unregister = Farming.unregister_type
-})
+Farming.farm_prototypes = require "farming-prototypes"
 
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
     local is_turd = not not entity.name:find("%-turd")
     local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
-    local farm_data = storage.farm_prototypes[name]
+    local farm_data = Farming.farm_prototypes[name]
     if farm_data then return farm_data.domain end
 end
 
 function Farming.get_default_module(entity)
     local is_turd = not not entity.name:find("%-turd")
     local name = entity.name:gsub("%-mk..+", is_turd and "-turd" or "")
-    local farm_data = storage.farm_prototypes[name]
+    local farm_data = Farming.farm_prototypes[name]
     if farm_data then return farm_data.default_module end
 end
 
@@ -108,8 +42,6 @@ end
 py.on_event(py.events.on_init(), function()
     storage.farms = storage.farms or {}
     storage.farm_count = storage.farm_count or 0
-    storage.farm_prototypes = farm_buildings
-    validate_farm_building_list(storage.farm_prototypes)
 end)
 
 py.on_event(py.events.on_built(), function(event)
