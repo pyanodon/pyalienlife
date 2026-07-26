@@ -6,7 +6,7 @@ local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prot
 local P = {}
 
 function P.build_main_frame(parent, fallback_location)
-    local frame =  parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
+    local frame = parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla edit_interrupt frame
     frame.style.maximal_height = 1290
     Utils.restore_gui_location(frame, fallback_location)
@@ -79,11 +79,11 @@ function P.build_conditions_operators_list(parent)
     flow.style.width = 100
     flow.style.horizontal_align = "right"
     flow.style.vertical_spacing = 4
-    flow.style.top_margin = 40 
+    flow.style.top_margin = 40
 
     local operators = storage.edited_interrupts[parent.player_index].conditions_operators
 
-    local has_both_operators = #operators > 0 and table.any(operators, function (o) return o ~= operators[1] end)
+    local has_both_operators = #operators > 0 and table.any(operators, function(o) return o ~= operators[1] end)
 
     for i = 1, #operators do
         local tags = {condition_operator_id = i}
@@ -260,7 +260,6 @@ function P.update_conditions_pane(player)
     P.build_conditions_flow(conditions_pane)
 end
 
-
 function P.update_targets_pane(player)
     local gui = player.gui.screen.edit_interrupt_gui
     if not gui then return end
@@ -271,7 +270,7 @@ function P.update_targets_pane(player)
     P.build_targets_flow(targets_pane)
 end
 
-py.on_event(defines.events.on_gui_click, function (event)
+py.on_event(defines.events.on_gui_click, function(event)
     if not event.element.valid then return end
     -- do not destroy the frame right after creating it
     if event.element.name == "py_caravan_interrupt_edit_button" then return end
@@ -305,7 +304,7 @@ local function redraw_alert(player, entity, alert_name)
     )
 end
 -- register the func if necessary
-py.on_tick_funcs["draw_alert_with_duration"] = redraw_alert
+py.register_delayed_function("draw_alert_with_duration", redraw_alert)
 --- Draws an alert for 10s * cycles
 local function draw_alert_with_duration(player, entity, alert_name, cycles)
     local args = {player, entity, alert_name}
