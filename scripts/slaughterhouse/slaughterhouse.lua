@@ -1,164 +1,14 @@
+---@diagnostic disable: need-check-nil, param-type-mismatch, assign-type-mismatch, undefined-field, inject-field
 -- for full history reference: https://github.com/pyanodon/pyalienlife/commit/ed87228489c87e6c68993d78f09e76e21970302a
 
----@type {[string]: true}
-local subgroups = {
-  ["auog"] = true,
-  ["ulric"] = true,
-  ["mukmoux"] = true,
-  ["arthurian"] = true,
-  ["cottongut"] = true,
-  ["dhilmos"] = true,
-  ["scrondrix"] = true,
-  ["phadai"] = true,
-  ["fish"] = true,
-  ["phagnot"] = true,
-  ["kmauts"] = true,
-  ["dingrits"] = true,
-  ["xeno"] = true,
-  ["arqad"] = true,
-  ["cridren"] = true,
-  ["antelope"] = true,
-  ["trits"] = true,
-  ["vonix"] = true,
-  ["vrauks"] = true,
-  ["xyhiphoe"] = true,
-  ["zipir"] = true,
-  ["korlex"] = true,
-  ["simik"] = true,
-  ["arum-super"] = true,
-  ["grod-super"] = true,
-  ["kicalk-super"] = true,
-  ["ralesia-super"] = true,
-  ["rennea-super"] = true,
-  ["tuuphra-super"] = true,
-  ["yotoi-super"] = true,
-  ["yotoi-fruit-super"] = true,
-  ["bioreserve-super"] = true,
-  ["mova-super"] = true
-}
-if script.active_mods["pyalternativeenergy"] then
-  subgroups["zungror"] = true
-  subgroups["numal"] = true
-end
-if script.active_mods["pystellarexpedition"] then
-  subgroups["kakkalakki"] = true
-  subgroups["tuls"] = true
-  subgroups["riga"] = true
-end
+---@class RecipeGUI
+---@field subgroups {[string]: true?}
+---@field machines {[data.CraftingMachineName]: true?}
+---@field alt_icons {[string]: string?}
+---@field permitted_recipes {[data.RecipeCategoryID]: {[data.RecipeID]: data.ItemSubGroupID}?}
+RecipeGUI = {}
 
----@type {[string]: true}
-local machines_with_gui = {
-  ["slaughterhouse-mk01"] = true,
-  ["slaughterhouse-mk02"] = true,
-  ["slaughterhouse-mk03"] = true,
-  ["slaughterhouse-mk04"] = true,
-  ["rc-mk01"] = true,
-  ["rc-mk02"] = true,
-  ["rc-mk03"] = true,
-  ["rc-mk04"] = true,
-  ["mega-farm"] = true,
-}
-
----@type {[string]: string}
-local alt_icons = {
-  zipir = "zipir1",
-  kakkalakki = "kakkalakki-f",
-  ["arum-super"] = "cadaveric-arum",
-  ["grod-super"] = "grod",
-  ["kicalk-super"] = "kicalk",
-  ["ralesia-super"] = "ralesia",
-  ["rennea-super"] = "rennea",
-  ["tuuphra-super"] = "tuuphra",
-  ["yotoi-super"] = "yotoi",
-  ["yotoi-fruit-super"] = "yotoi-fruit",
-  ["bioreserve-super"] = "native-flora",
-  ["mova-super"] = "mova"
-}
-
----@type {[string]: {[string]: string}}
-local permitted_recipes = {}
-
-local function update_recipes()
-  for category in pairs(permitted_recipes) do
-    for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
-      for subgroup in pairs(subgroups) do
-        if recipe.subgroup.name:find(subgroup, nil, true) then
-          permitted_recipes[category][r] = subgroup
-          break
-        end
-      end
-      if not permitted_recipes[category][r] then
-        -- search by comparing recipe name
-        for subgroup in pairs(subgroups) do
-          if recipe.name:find(subgroup, nil, true) then
-            permitted_recipes[category][r] = subgroup
-            break
-          end
-        end
-      end
-      if not permitted_recipes[category][r] then
-        log("Could not find associated recipe selector group for recipe: " .. r .. " with subgroup: " .. recipe.subgroup.name)
-      end
-    end
-  end
-end
-
-log("pY recipe selector: initial valid subgroups: " .. serpent.block(subgroups))
-
-remote.add_interface("py-recipe-gui", {
-  ---add a machine to use the custom recipe viewer. requires subgroups to be registered
-  ---@param machine data.EntityID
-  add_machine = function (machine)
-    local update = not machines_with_gui
-    machines_with_gui[machine] = true
-    for category in pairs(update and prototypes.entity[machine].crafting_categories or {}) do
-      permitted_recipes[category] = {}
-    end
-    permitted_recipes.parameters = nil
-    log("pY recipe selector: adding supported machine: " .. machine)
-  end,
-  ---remove a machine from the whitelist for the custom recipe viewer
-  ---@param machine data.EntityID
-  remove_machine = function (machine)
-    machines_with_gui[machine] = nil
-    log("pY recipe selector: removing supported machine: " .. machine)
-  end,
-  ---add a subgroup to use the custom recipe viewer. requires a compatible crafting machine
-  ---@param subgroup data.ItemSubGroupID
-  add_subgroup = function (subgroup)
-    local update = not subgroups[subgroup]
-    subgroups[subgroup] = true
-    if update then update_recipes() end
-    log("pY recipe selector: adding valid subgroup: " .. subgroup)
-  end,
-  ---add a subgroup to use the custom recipe viewer
-  ---@param subgroup data.ItemSubGroupID
-  remove_subgroup = function (subgroup)
-    subgroups[subgroup] = nil
-    log("pY recipe selector: removing valid subgroup: " .. subgroup)
-  end,
-  ---use an alternative icon for the subgroup header icon. set to nil to remove
-  ---@param subgroup data.ItemSubGroupID
-  ---@param icon data.ItemID|data.FluidID
-  set_alt_item = function (subgroup, icon)
-    alt_icons[subgroup] = icon
-    log("pY recipe selector: adding subgroup alt icon: " .. subgroup .. " -> " .. icon)
-  end,
-})
-
--- TODO have AE/SE use remote interface
-
--- cache crafting categories
-for machine in pairs(machines_with_gui) do
-  for category in pairs(prototypes.entity[machine].crafting_categories) do
-    permitted_recipes[category] = {}
-  end
-end
-
--- ignore parameters
-permitted_recipes.parameters = nil
-
-update_recipes()
+require "recipe-gui-prototypes"
 
 py.on_event(defines.events.on_object_destroyed, function(event)
   local unit_number = event.useful_id
@@ -187,11 +37,11 @@ local function build_subgroup_table(main_frame, player)
   subgroup_table.style.bottom_margin = -12
   subgroup_table.style.right_margin = -12
   for category in pairs(main_frame.tags.categories) do
-    for recipe, subgroup in pairs(permitted_recipes[category] or {}) do
+    for recipe, subgroup in pairs(RecipeGUI.permitted_recipes[category] or {}) do
 			local name = "py_recipe_gui_subgroup_" .. subgroup
       if not subgroup_table[name] and player.force.recipes[recipe].enabled then
-        local icon = alt_icons[subgroup] or subgroup
-        local type = assert(prototypes.item[icon] and "item" or prototypes.fluid[icon] and "fluid" or prototypes.recipe[icon] and "recipe", "ERROR: Could not find reference for icon: " .. icon)
+        local icon = RecipeGUI.alt_icons[subgroup] or subgroup
+        local type = prototypes.item[icon] and "item" or prototypes.fluid[icon] and "fluid" or prototypes.recipe[icon] and "recipe"
 				subgroup_table.add {
 					type = "choose-elem-button",
 					name = name,
@@ -215,7 +65,7 @@ local function create_gui(player_index, entity)
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
   local type = entity.type == "entity-ghost" and entity.ghost_type or entity.type
   local control_behavior = entity.get_control_behavior()
-  if not machines_with_gui[name] or entity.get_recipe() or (type == "assembling-machine" and control_behavior and control_behavior.circuit_set_recipe) then return end
+  if not RecipeGUI.machines[name] or entity.get_recipe() or (type == "assembling-machine" and control_behavior and control_behavior.circuit_set_recipe) then return end
   local main_frame = player.gui.screen.add {
     type = "frame",
     name = "py_recipe_viewer",
@@ -253,7 +103,7 @@ py.on_event(py.events.on_gui_opened(), function(event)
   local entity = event.entity
   if not entity then return end
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
-  if not machines_with_gui[name] then return end
+  if not RecipeGUI.machines[name] then return end
   local control_behavior = entity.get_control_behavior()
   if not settings.get_player_settings(event.player_index)["py-custom-recipe-gui"].value then return end
 
@@ -298,7 +148,7 @@ gui_events[defines.events.on_gui_click]["py_recipe_gui_subgroup_.+"] = function(
   recipe_table = recipe_table.add {type = "table", column_count = 5, style = "filter_slot_table"}
   local recipe_count, avalible_recipe = 0, nil
   for category in pairs(main_frame.tags.categories) do
-    for recipe, recipe_subgroup in pairs(permitted_recipes[category] or {}) do
+    for recipe, recipe_subgroup in pairs(RecipeGUI.permitted_recipes[category] or {}) do
       if recipe_subgroup == subgroup and player.force.recipes[recipe].enabled then
         recipe_count, avalible_recipe = recipe_count + 1, recipe
         recipe_table.add {
