@@ -2,6 +2,21 @@
 ---@type table<string,AlienlifeFarmPrototype>
 local farm_buildings = py.mod_data.farm_buildings
 
+local assert = function(value, str, param1, param2, param3, param4)
+    if value then return end
+    error (str:format(param1, param2, param3, param4), 0)
+end
+
+local type_assert = function(value, vtype, error, param1, param2, param3, param4)
+    assert (value and type(value) == vtype, (error .. " Expected " .. vtype .. ", found " .. type(value) .. "."):format(param1, param2, param3, param4))
+end
+
+type_assert (
+    farm_buildings,
+    "table",
+    "ERROR: pY mod data [farm_buildings] not found."
+)
+
 local modules = prototypes.get_item_filtered {{filter = "type", type = "module"}}
 ---@as table<string, table<string, boolean>> two level table containing buildings indexed by their base (mk-less) name
 local checked = {}
@@ -17,20 +32,16 @@ for building_name in pairs(crafting_machines) do
     end
 end
 
-local assert = function(value, error, param1, param2, param3, param4)
-    _G.assert (value, error:format(param1, param2, param3, param4))
-end
-
 -- Assigns nil or errors depending on `throw`
 for entity_name, farm_prototype in pairs(farm_buildings) do
     -- No buildings with this base name
-    assert(
+    assert (
         checked[entity_name],
         "ERROR: pY mod data [farm-buildings] entity [%s] has no associated crafting machines",
         entity_name
     )
     if farm_prototype.default_module then
-      assert(
+      assert (
           modules[farm_prototype.default_module],
           "ERROR: pY mod data [farm-buildings] entity [%s] has invalid default module [%s]",
           entity_name, farm_prototype.default_module
@@ -47,4 +58,4 @@ for entity_name, farm_prototype in pairs(farm_buildings) do
     ::next_farm_prototype::
 end
 
-return farm_buildings
+Farming.farm_prototypes = farm_buildings

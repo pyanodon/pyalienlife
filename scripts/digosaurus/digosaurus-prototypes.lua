@@ -2,15 +2,26 @@
 ---@type DigosaursData
 local data = py.mod_data.digosaurus
 
-if not data then error ("ERROR: pY mod data [digosaurus] not found!") end
-
-local assert = function(value, error, param1, param2, param3, param4)
-    _G.assert (value, error:format(param1, param2, param3, param4))
+local assert = function(value, str, param1, param2, param3, param4)
+    if value then return end
+    error (str:format(param1, param2, param3, param4), 0)
 end
 
 local type_assert = function(value, vtype, error, param1, param2, param3, param4)
     assert (value and type(value) == vtype, (error .. " Expected " .. vtype .. ", found " .. type(value) .. "."):format(param1, param2, param3, param4))
 end
+
+type_assert (
+    data,
+    "table",
+    "ERROR: pY mod data [digosaurus] not found."
+)
+
+type_assert(
+    data.creatures,
+    "table",
+    "ERROR: pY mod data [digosaurus] has invalid creatures."
+)
 
 for creature, creature_data in pairs(data.creatures) do
     assert (
@@ -44,6 +55,12 @@ end
 
 Digosaurus.creatures = data.creatures
 
+type_assert(
+    data.foods,
+    "table",
+    "ERROR: pY mod data [digosaurus] has invalid foods."
+)
+
 for food, mult in pairs(data.foods) do
     type_assert (
         food,
@@ -71,6 +88,12 @@ end
 
 Digosaurus.foods = data.foods
 
+type_assert(
+    data.resource_categories,
+    "table",
+    "ERROR: pY mod data [digosaurus] has invalid resource_categories."
+)
+
 for category in pairs(data.resource_categories) do
     type_assert (
         category,
@@ -86,6 +109,12 @@ for category in pairs(data.resource_categories) do
 end
 
 Digosaurus.resource_categories = data.resource_categories
+
+type_assert(
+    data.dig_sites,
+    "table",
+    "ERROR: pY mod data [digosaurus] has invalid dig_sites."
+)
 
 for site, site_data in pairs(data.dig_sites) do
     type_assert (

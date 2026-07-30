@@ -52,6 +52,15 @@ require "prototypes/recipes/moondrop/recipes-auto-moondrop"
 require "prototypes/recipes/moondrop/recipes-moondrop-modules"
 --require 'prototypes/recipes/moondrop/recipes-moondrop-copper' TODO: SETUP TURD FARM TECHS AGAIN
 
+-- update smart farm recipe ui
+py.mod_data.recipe_gui.subgroups["arum-super"] = true
+py.mod_data.recipe_gui.alt_icons["arum-super"] = "cadaveric-arum"
+py.mod_data.recipe_gui.subgroups["kicalk-super"] = true
+py.mod_data.recipe_gui.alt_icons["kicalk-super"] = "kicalk"
+
+-- update rc and slaughterhouse ui
+py.mod_data.recipe_gui.subgroups["antelope"] = true
+
 data.raw.recipe.urea.hidden = true
 
 TECHNOLOGY("melamine"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")

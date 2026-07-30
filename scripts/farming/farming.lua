@@ -2,7 +2,7 @@
 ---@field farm_prototypes table<string, AlienlifeFarmPrototype>
 Farming = {}
 
-Farming.farm_prototypes = require "farming-prototypes"
+require "farming-prototypes"
 
 -- animal, plant, or fungi?
 function Farming.get_kingdom(entity)
