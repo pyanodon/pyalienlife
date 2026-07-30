@@ -9,6 +9,7 @@ Date: ???
     - Changed farming remote interfaces to use pyanodons mod data
     - Added annotations to farming scripts and prototypes
     - Changed custom recipe UI to use pyanodons mod data
+    - Localized a global variable in the caravan copy interrupt script. Resolves https://github.com/pyanodon/pybugreports/issues/1536
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.2
 Date: 2026-07-09

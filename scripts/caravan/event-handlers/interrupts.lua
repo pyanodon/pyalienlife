@@ -373,6 +373,7 @@ gui_events[defines.events.on_gui_click]["py_duplicate_interrupt_button"] = funct
     CaravanScheduleGui.update_schedule_pane(player)
 
     if player.gui.screen.edit_interrupt_gui then
+        local window_location = player.gui.screen.add_interrupt_gui.location
         player.gui.screen.edit_interrupt_gui.destroy()
         local edit_interrupt_gui = EditInterruptGui.build(player.gui.screen, storage.interrupts[interrupt_copy_name])
         CaravanUtils.restore_gui_location(edit_interrupt_gui, window_location)
