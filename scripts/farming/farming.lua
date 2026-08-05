@@ -23,7 +23,9 @@ function Farming.process(farm_data)
     local entity = farm_data.entity
     local kingdom = Farming.get_kingdom(entity)
     if not kingdom then return end
-    if entity.get_module_inventory().is_empty() then
+    local is_rc = not not entity.name:find("^rc%-mk")
+    local module_inv = entity.get_module_inventory()
+    if not module_inv or module_inv.get_item_count() < (is_rc and 2 or 1) then
         -- update render, otherwise it will destroy itself
         -- it lasts just longer than once cycle so it will always stick around even when timing and ordering gets weird
         local default_module = Farming.get_default_module(entity)
@@ -33,9 +35,11 @@ function Farming.process(farm_data)
             diode = defines.entity_status_diode.red,
             label = message
         }
+        if is_rc then entity.disabled_by_script = true end
     else
         py.clear_alert(farm_data.alert_id)
         entity.custom_status = nil
+        if is_rc then entity.disabled_by_script = false end
     end
 end
 
