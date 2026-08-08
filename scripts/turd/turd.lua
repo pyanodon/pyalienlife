@@ -79,7 +79,7 @@ local function on_search(search_key, gui, player)
             local tech_upgrade = tech_upgrades[element.tags.name]
             local name = tech_upgrade.master_tech.name:lower()
             local translated_name = ""
-            if(storage.technology_locale[player.locale]) then 
+            if(storage.technology_locale[player.locale]) then
                 translated_name = (storage.technology_locale[player.locale][name] or ""):lower()
             else
                 translate_upgrades(player)
@@ -566,6 +566,12 @@ local function destroy_all_hidden_beacons(force)
     end
 end
 
+-- Tells FP the named interface went stale, prompting it to pull again
+local function notify_factory_planner(integration)
+    if not remote.interfaces["fp-integration"] then return end
+    remote.call("fp-integration", "invalidate", {version = 1, integration = integration})
+end
+
 gui_events[defines.events.on_gui_click]["py_turd_randomize_button"] = function(event)
     local element = event.element
     local frame = element.parent.parent
@@ -640,6 +646,10 @@ local new_turd = function(event)
         end
     end
 
+    notify_factory_planner("machine_effects")
+    notify_factory_planner("recipe_substitutions")
+    notify_factory_planner("machine_substitutions")
+
     if not skip_gui then
         for _, sub_tech in pairs(sub_tech_flow.children) do
             local confirm_button = sub_tech.info_flow.py_turd_confirm_button
@@ -689,6 +699,7 @@ end)
 -- If we don't handle this, a force.reset_technology_effects() will lock all TURD recipes until a technology is researched
 py.on_event(defines.events.on_technology_effects_reset, function(event)
     reapply_turd_bonuses(event.force)
+    notify_factory_planner("recipe_substitutions")
 end)
 
 local function starts_with(str, start)
@@ -710,7 +721,10 @@ local function on_researched(event)
 
     -- this is for recipe replacement. if a non turd tech unlocks a recipe that is replaced by a turd tech, run reapply_turd_bonuses
     -- TODO: optimize this to not run if the tech doesn't need recipe replacements (maybe a table of all turd replacable recipes is needed)
-    if game.tick ~= 0 then reapply_turd_bonuses(force) end
+    if game.tick ~= 0 then
+        reapply_turd_bonuses(force)
+        notify_factory_planner("recipe_substitutions")
+    end
 end
 
 local function on_unresearched(event)
@@ -844,4 +858,117 @@ remote.add_interface("pywiki_turd_page", {
     -- Tech upgrade data getters
     get_tech_upgrades = get_tech_upgrades,
     get_tech_upgrade = get_tech_upgrade
+})
+
+
+-- ** FACTORY PLANNER INTEGRATION **
+-- FP plans from prototypes, so it can't see what TURD scripts. One per-force interface below per
+-- effect type it misses: module-effects, recipe-replacement, machine-replacement. unlock-recipe
+-- needs none, FP reads that off the force. FP caches what it pulls until notify_factory_planner().
+-- Docs: https://github.com/ClaudeMetz/FactoryPlanner/blob/master/compatibility-interface.md
+
+-- The hidden beacons TURD grants its bonuses through are invisible to FP, so every upgraded machine
+-- reads as unmodded to it. Hand it the effects directly.
+local function turd_module_effects(force_index)
+    -- FP can ask before our on_init ran, so assume nothing about storage
+    local effects = {}
+    local unlocked_modules = storage.turd_unlocked_modules and storage.turd_unlocked_modules[force_index]
+    if not unlocked_modules then return effects end
+
+    local item_prototypes = prototypes.item
+    for entity_name, module_name in pairs(unlocked_modules) do
+        -- Farm buildings get a per-tier module, as create_hidden_beacon inserts
+        local name = module_name
+        if not item_prototypes[name] then
+            name = module_name .. "-mk0" .. (farm_building_tiers[entity_name] or 1)
+        end
+
+        local module = item_prototypes[name]
+        if module and module.module_effects then effects[entity_name] = module.module_effects end
+    end
+
+    return effects
+end
+
+-- The recipes a TURD can swap in, grouped by the one they replace
+local function build_turd_recipe_groups()
+    local groups = {}
+    for _, tech_upgrade in pairs(tech_upgrades) do
+        for _, sub_tech in pairs(tech_upgrade.sub_techs) do
+            defunctionize_effect_table(sub_tech)
+            for _, effect in pairs(sub_tech.effects) do
+                if effect.type == "recipe-replacement" then
+                    local replacements = groups[effect.old] or {}
+                    replacements[#replacements + 1] = effect.new
+                    groups[effect.old] = replacements
+                end
+            end
+        end
+    end
+    return groups
+end
+
+-- Same shape as the recipe groups, inverted out of the map the prototype stage already built
+local function build_turd_machine_groups()
+    local groups = {}
+    for turd_machine, base_machine in pairs(turd_machines) do
+        local replacements = groups[base_machine] or {}
+        replacements[#replacements + 1] = turd_machine
+        groups[base_machine] = replacements
+    end
+    return groups
+end
+
+-- FP wants a flat map of everything the force can't use, pointing at what stands in for it. A group
+-- with no active member hasn't been selected, so the one it replaces is what still applies.
+local function expand_substitutions(groups, active_members)
+    local substitutions = {}
+    for replaced_name, replacements in pairs(groups) do
+        local active = active_members[replaced_name] or replaced_name
+
+        if active ~= replaced_name then substitutions[replaced_name] = active end
+        for _, replacement in pairs(replacements) do
+            if replacement ~= active then substitutions[replacement] = active end
+        end
+    end
+    return substitutions
+end
+
+local function turd_recipe_substitutions(force_index)
+    local recipes = game.forces[force_index].recipes
+    local groups = build_turd_recipe_groups()
+
+    -- Swapping a recipe in disables the one it replaces, so the game itself holds the answer
+    local active_recipes = {}
+    for replaced_name, replacements in pairs(groups) do
+        for _, replacement in pairs(replacements) do
+            if recipes[replacement] and recipes[replacement].enabled then
+                active_recipes[replaced_name] = replacement
+                break
+            end
+        end
+    end
+
+    return expand_substitutions(groups, active_recipes)
+end
+
+local function turd_machine_substitutions(force_index)
+    -- Machines have no such state, which is why we track replacements ourselves and why FP needs
+    -- every machine it shouldn't offer named. What we track is already the map of what applies.
+    local active_machines = storage.turd_machine_replacements
+        and storage.turd_machine_replacements[force_index] or {}
+
+    return expand_substitutions(build_turd_machine_groups(), active_machines)
+end
+
+remote.add_interface("fp-integration-pyalienlife", {
+    machine_effects = (function(force_index)
+        return {version = 1, effects = turd_module_effects(force_index)}
+    end),
+    recipe_substitutions = (function(force_index)
+        return {version = 1, substitutions = turd_recipe_substitutions(force_index)}
+    end),
+    machine_substitutions = (function(force_index)
+        return {version = 1, substitutions = turd_machine_substitutions(force_index)}
+    end)
 })
