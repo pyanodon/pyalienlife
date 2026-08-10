@@ -121,7 +121,7 @@ data:extend {{
     collision_mask = {layers = {}},
     selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     drawing_box_vertical_extension = 0.5,
-    braking_force = 5000000,
+    braking_force = 5000000 / 60,
     energy_source = {
         type = "burner",
         fuel_categories = {"phadai-food"},

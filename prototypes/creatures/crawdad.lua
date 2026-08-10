@@ -130,7 +130,7 @@ data:extend {{
     drawing_box_vertical_extension = 0.5,
     trash_inventory_size = 10,
     effectivity = 1,
-    braking_force = 2000000,
+    braking_force = 2000000 / 60,
     energy_source = {
         type = "burner",
         fuel_categories = {"fish"},

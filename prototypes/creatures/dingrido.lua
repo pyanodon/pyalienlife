@@ -93,7 +93,7 @@ data:extend {{
     drawing_box_vertical_extension = 0.5,
     trash_inventory_size = 20,
     effectivity = 0.98,
-    braking_force = 30000000,
+    braking_force = 30000000 / 60,
     energy_source = {
         type = "burner",
         fuel_categories = {"dingrit-food"},
