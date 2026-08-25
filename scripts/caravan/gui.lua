@@ -31,6 +31,7 @@ end
 
 local relative_gui_types = {
     ["electric-pole"] = defines.relative_gui_type.electric_network_gui,
+    ["storage-tank"] = defines.relative_gui_type.pipe_gui,
     ["character"] = defines.relative_gui_type.other_player_gui,
     ["unit"] = defines.relative_gui_type.script_inventory_gui
 }
