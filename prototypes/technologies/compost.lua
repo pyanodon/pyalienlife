@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/compost.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk01"},
+    prerequisites = {"biotech-mk01", "py-science-pack-1"},
     effects = {},
     unit = {
         count = 200,
