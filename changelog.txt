@@ -15,6 +15,7 @@ Date: ???
     - Fixed misaligned pipe connection graphics. Resolves https://github.com/pyanodon/pybugreports/issues/1540
     - Fixed that clicking on a fluid caravan outpost would not show relevant fluid caravans. Resolves https://github.com/pyanodon/pybugreports/issues/1541
     - Fixed that compost plant fluidbox was too small for some recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1553
+    - Fixed that Fish Stage 1 did not require Composting to be researched. Resolves https://github.com/pyanodon/pybugreports/issues/1491
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.2
 Date: 2026-07-09

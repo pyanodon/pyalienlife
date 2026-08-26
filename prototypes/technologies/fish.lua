@@ -4,7 +4,7 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/fish-mk01.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"water-animals-mk01"},
+    prerequisites = {"water-animals-mk01", "compost"},
     effects = {},
     unit = {
         count = 200,
