@@ -568,7 +568,9 @@ end
 
 -- Tells FP the named interface went stale, prompting it to pull again
 local function notify_factory_planner(integration)
-    if not remote.interfaces["fp-integration"] then return end
+    -- FP versions before TURD support register the interface without this function
+    local interface = remote.interfaces["fp-integration"]
+    if not (interface and interface.invalidate) then return end
     remote.call("fp-integration", "invalidate", {version = 1, integration = integration})
 end
 
