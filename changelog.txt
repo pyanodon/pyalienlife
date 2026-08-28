@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.3
-Date: ???
+Date: 2026-08-28
   Changes:
     - Fixed crash setting recipe on a non-empty reproductive complex. Resolves https://github.com/pyanodon/pybugreports/issues/1521
     - Changed digosaurus remote interfaces to use pyanodons mod data
