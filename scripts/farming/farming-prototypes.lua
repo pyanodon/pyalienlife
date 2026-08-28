@@ -1,20 +1,11 @@
----@diagnostic disable: unnecessary-assert, undefined-field, assign-type-mismatch
+---@diagnostic disable-next-line: assign-type-mismatch
 ---@type table<string,AlienlifeFarmPrototype>
 local farm_buildings = py.mod_data.farm_buildings
 
-local assert = function(value, str, param1, param2, param3, param4)
-    if value then return end
-    error (str:format(param1, param2, param3, param4), 0)
-end
-
-local type_assert = function(value, vtype, error, param1, param2, param3, param4)
-    assert (value and type(value) == vtype, (error .. " Expected " .. vtype .. ", found " .. type(value) .. "."):format(param1, param2, param3, param4))
-end
-
-type_assert (
+py.assert_type (
     farm_buildings,
     "table",
-    "ERROR: pY mod data [farm_buildings] not found."
+    "ERROR: pY mod data [farm_buildings] is invalid"
 )
 
 local modules = prototypes.get_item_filtered {{filter = "type", type = "module"}}
@@ -35,13 +26,13 @@ end
 -- Assigns nil or errors depending on `throw`
 for entity_name, farm_prototype in pairs(farm_buildings) do
     -- No buildings with this base name
-    assert (
+    py.assert (
         checked[entity_name],
         "ERROR: pY mod data [farm-buildings] entity [%s] has no associated crafting machines",
         entity_name
     )
     if farm_prototype.default_module then
-      assert (
+      py.assert (
           modules[farm_prototype.default_module],
           "ERROR: pY mod data [farm-buildings] entity [%s] has invalid default module [%s]",
           entity_name, farm_prototype.default_module
@@ -49,7 +40,7 @@ for entity_name, farm_prototype in pairs(farm_buildings) do
     end
     -- Unspecified or invalid domain
     local domain = farm_prototype.domain
-    assert (
+    py.assert (
         domain and (domain == "animal" or domain == "plant" or domain == "fungi"),
         "ERROR: pY mod data [farm-buildings] entity [%s] has invalid domain [%s]. Expected 'animal', 'plant', or 'fungi'",
         entity_name, domain or "nil"
