@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.5
+Date: 2026-08-29
+  Changes:
+    - Fixed digosaurus dig sites gradually stopping after a save was updated across 3.1.3 (the parent -> parent_id rename shipped without a migration); existing sites now recover on load instead of needing to be re-placed
+---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: 2026-08-28
   Changes:
