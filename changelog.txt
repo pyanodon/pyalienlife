@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.5
-Date: ???
+Date: 2026-08-29
   Changes:
     - Updated autotech caches so tech tree fixes from 3.1.3 now apply
     - Fixed digosaurs being stuck idle due to missing migration (thanks, JeromeJ!)
