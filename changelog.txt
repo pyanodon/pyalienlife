@@ -3,6 +3,7 @@ Version: 3.1.6
 Date: ????
   Changes:
     - Fixed that the reproductive complex did not have the right recipe speed scaling
+    - Allow harvesters to be placed without resources under them. Resolves https://github.com/pyanodon/pybugreports/issues/1557
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.5
 Date: 2026-08-29
