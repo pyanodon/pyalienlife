@@ -127,7 +127,8 @@ for i = 1, 4 do
         module_slots = module_slots,
         allowed_effects = {"speed", "consumption", "pollution", "productivity"},
         crafting_categories = {"rc"},
-        crafting_speed = i / (module_slots + 1), -- # modules + 1 building = target speed of 1
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
+        crafting_speed = i / module_slots, -- # modules = target speed of 1
         energy_source = {
             type = "electric",
             usage_priority = "secondary-input",
