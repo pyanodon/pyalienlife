@@ -135,7 +135,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     if effective_speed then
         local adjusted_speed = effect.speed * 100
         if adjusted_speed >= 0 then adjusted_speed = "+" .. adjusted_speed end
-        py.add_to_description("module", module, {"turd.adjusted-speed", tostring(adjusted_speed)})
+        py.add_to_description(module, "turd.adjusted-speed", tostring(adjusted_speed))
     end
 
     if is_this_a_speed_module_that_effects_farm_buildings then
@@ -197,10 +197,10 @@ local function build_tech_upgrade(tech_upgrade)
             if effect.type == "module-effects" then
                 build_module_effects_turd(tech_upgrade, sub_tech, effect)
             elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
-                py.add_to_description("recipe", data.raw.recipe[effect.recipe], {"turd.font", {"turd.recipe"}})
+                py.add_to_description(data.raw.recipe[effect.recipe], nil, {"turd.recipe"})
                 recipes_with_turd_description[effect.recipe] = true
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
-                py.add_to_description("recipe", data.raw.recipe[effect.new], {"turd.font", {"turd.recipe-replacement"}})
+                py.add_to_description(data.raw.recipe[effect.new], nil, {"turd.recipe-replacement"})
                 local recipe = data.raw.recipe[effect.new]
                 local icon_base = recipe and recipe:get_icons()
                 if icon_base then
