@@ -6,6 +6,8 @@ Date: ????
     - Allow harvesters to be placed without resources under them. Resolves https://github.com/pyanodon/pybugreports/issues/1557
     - Fixed that some sample recipes did not allow productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1558
     - Fixed a crash when building biofluid entities. Resolves https://github.com/pyanodon/pybugreports/issues/1539
+    - Fixed that aerial fluid caravans did not show their inventory in the tooltip in the caravan manager. Resolves https://github.com/pyanodon/pybugreports/issues/1502
+    - Fixed other logical discrepancies between aerial and ground fluid caravans
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.5
 Date: 2026-08-29
