@@ -258,6 +258,8 @@ gui_events[defines.events.on_gui_click]["py_caravan_player_inventory_slot_."] = 
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     -- make these two conditional on type
     local is_solid = not caravan_data.entity.name:find("^fluid")
+    --TODO: fix that this doesn't allow left-click-to-drop items within the player inventory on a fluid caravan UI
+    --Probably by checking the inventory index (-1 is caravan, 1 is player)
     local pred = is_solid and function (s) return true end or function (s) return caravan_prototypes[caravan_data.entity.name].favorite_foods[s.name] ~= nil end
     local target_inv = is_solid and caravan_data.inventory or caravan_data.fuel_inventory
 
