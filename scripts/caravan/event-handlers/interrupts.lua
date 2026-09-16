@@ -310,6 +310,9 @@ end
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_close_button"] = function(event)
     storage.edited_interrupts[event.player_index] = nil
     local player = game.get_player(event.player_index)
+    if player.gui.screen.py_caravan_action_number_selection_frame then -- slider/edit frame
+        player.gui.screen.py_caravan_action_number_selection_frame.destroy()
+    end
     if player.gui.screen.edit_interrupt_gui then
         player.gui.screen.edit_interrupt_gui.destroy()
     end
