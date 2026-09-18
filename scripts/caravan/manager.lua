@@ -8,9 +8,10 @@ local function add_gui_row(caravan_data, key, table, inner)
     local entity = caravan_data.entity
     local prototype = caravan_prototypes[entity.name]
 
-    table = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}, style = inner and "inside_shallow_frame" or nil}
+    local frame = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}, style = inner and "inside_shallow_frame" or nil}
+    frame.style.natural_width = 450
 
-    local button_flow = table.add {type = "flow", direction = "horizontal"}
+    local button_flow = frame.add {type = "flow", name = "button_flow", direction = "horizontal"}
     button_flow.style.vertical_align = "top"
     button_flow.style.height = 30
     if inner then
@@ -19,7 +20,7 @@ local function add_gui_row(caravan_data, key, table, inner)
         button_flow.style.top_margin = 5
     end
 
-    local caption_flow = button_flow.add {type = "flow", direction = "horizontal"}
+    local caption_flow = button_flow.add {type = "flow", name = "caption_flow", direction = "horizontal"}
 
     local title = caption_flow.add {
         name = "title",
@@ -28,14 +29,14 @@ local function add_gui_row(caravan_data, key, table, inner)
         style = "frame_title",
         ignored_by_interaction = true
     }
-    title.style.maximal_width = 150
+    title.style.maximal_width = 240
 
     local rename_button = caption_flow.add {
         type = "sprite-button",
         name = "py_rename_caravan_button",
         style = "mini_button_aligned_to_text_vertically_when_centered",
         sprite = "utility/rename_icon",
-        tags = {unit_number = key, maximal_width = 150}
+        tags = {unit_number = key, maximal_width = 240}
     }
     rename_button.style.top_margin = 6
 
@@ -77,14 +78,14 @@ local function add_gui_row(caravan_data, key, table, inner)
         button.style.bottom_margin = -4
     end
 
-    local camera_frame = table.add {type = "frame", name = "camera_frame", style = "inside_shallow_frame"}
+    local camera_frame = frame.add {type = "frame", name = "camera_frame", style = "inside_shallow_frame"}
     local camera = camera_frame.add {type = "camera", name = "camera", style = "py_caravan_camera", position = entity.position, surface_index = entity.surface.index}
     camera.entity = entity
     camera.visible = true
     camera.style.height = 155
     camera.zoom = (prototype.camera_zoom or 0.5) / 2
 
-    local status_flow = table.add {type = "flow", direction = "horizontal"}
+    local status_flow = frame.add {type = "flow", direction = "horizontal"}
     status_flow.style.height = 0
     status_flow.style.top_margin = -26
     status_flow.style.bottom_margin = 6
@@ -163,7 +164,7 @@ local function title_edit_mode(caption_flow, caravan_data)
     }
     textfield.focus()
     textfield.select_all()
-    textfield.style.maximal_width = 150
+    textfield.style.width = 220 -- fill the available space a bit better than the default 200
     local button = caption_flow.py_rename_caravan_button
     ---@class SpriteButton.style
     ---@diagnostic disable-next-line: assign-type-mismatch
