@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local py_science_1 = RECIPE("py-science-pack-1"):copy()
     local py_science_2 = RECIPE("py-science-pack-2"):copy()
     local py_science_3 = RECIPE("py-science-pack-3"):copy()
