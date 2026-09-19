@@ -197,10 +197,10 @@ local function build_tech_upgrade(tech_upgrade)
             if effect.type == "module-effects" then
                 build_module_effects_turd(tech_upgrade, sub_tech, effect)
             elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
-                py.add_to_description(data.raw.recipe[effect.recipe], nil, {"turd.recipe"})
+                py.add_to_description(data.raw.recipe[effect.recipe], nil, {"turd.font", {"turd.recipe"}})
                 recipes_with_turd_description[effect.recipe] = true
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
-                py.add_to_description(data.raw.recipe[effect.new], nil, {"turd.recipe-replacement"})
+                py.add_to_description(data.raw.recipe[effect.new], nil, {"turd.font", {"turd.recipe-replacement"}})
                 local recipe = data.raw.recipe[effect.new]
                 local icon_base = recipe and recipe:get_icons()
                 if icon_base then
