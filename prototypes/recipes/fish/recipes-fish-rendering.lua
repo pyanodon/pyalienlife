@@ -21,7 +21,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "fish", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",    amount = BASE_BONES},
@@ -29,7 +29,7 @@ py.autorecipes {
 				{name = "skin",     amount = BASE_SKIN},
 				{name = "guts",     amount = BASE_GUTS},
 				{name = "fish-oil", amount = BASE_SPECIAL},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "water-animals-mk01",
 			name = "full-render-fish",

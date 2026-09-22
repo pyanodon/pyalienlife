@@ -269,15 +269,17 @@ for i = 1, 4 do
     }
 
     -- Swap to niobium pipes
-    for _, fluid_box in pairs(data.raw["assembling-machine"][name].fluid_boxes) do
+    for _, fluid_box in pairs(data.raw["assembling-machine"][name].fluid_boxes--[[@cast -?]]) do
         -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
         if type(fluid_box) == "boolean" then
             break
         end
+        if fluid_box.pipe_covers == nil or fluid_box.pipe_covers.south == nil then error() end
         if fluid_box.pipe_covers.south.layers then
-            fluid_box.pipe_covers.south.layers[1].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
-            fluid_box.pipe_covers.south.layers[2].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+            fluid_box.pipe_covers.south.layers[1]--[[@cast -?]].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+            fluid_box.pipe_covers.south.layers[2]--[[@cast -?]].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
         end
+        if fluid_box.pipe_picture == nil or fluid_box.pipe_picture.south == nil then error() end
         -- Move cover up to compensate
         fluid_box.pipe_picture.south.scale = 0.5
         fluid_box.pipe_picture.south.shift = {0, -2.33}

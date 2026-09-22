@@ -62,7 +62,7 @@ if data and not yafc_turd_integration then
             end
             for _, product in pairs(products_to_buff[path]) do
                 if product == "brain" then
-                    for _, result in pairs(recipe.results) do
+                    for _, result in pairs(recipe.results--[[@cast -?]]) do
                         if (result[1] or result.name) == "brain" then
                             recipe:add_result {name = "brain", amount = 1, type = "item", independent_probability = 0.05}
                             break

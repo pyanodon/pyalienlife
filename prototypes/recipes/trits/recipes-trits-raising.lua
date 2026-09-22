@@ -21,11 +21,11 @@ py.autorecipes {
 				{name = "sea-sponge",       amount = 2},
 				{name = "filtration-media", amount = 2},
 				{name = "water-saline",     amount = 300, return_item = {name = "waste-water", amount = 300}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "trits-pup", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "trits"
 		},
@@ -214,11 +214,11 @@ py.autorecipes {
 				{name = "moondrop",         amount = 15,  fallback = "fawogae"},
 				{name = "filtration-media", amount = 2},
 				{name = "water-saline",     amount = 500, return_item = {name = "waste-water", amount = 250}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "trits", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 280,
 			tech = "trits"
 		},

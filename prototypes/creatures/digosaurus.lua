@@ -278,7 +278,7 @@ ENTITY {
     resource_searching_radius = 1.0,
     mining_speed = 0,
     resource_categories = {"ore-nexelit"}
-}
+}--[[@as data.EntityPrototype]]
 
 ITEM {
     type = "item",

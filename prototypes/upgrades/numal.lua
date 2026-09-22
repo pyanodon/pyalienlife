@@ -55,9 +55,9 @@ if data and not yafc_turd_integration then
         RECIPE("numal-egg-6"):copy(),
     } do
         recipe.name = recipe.name .. "-neutron"
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "numal-egg" then
-                local amount = result.amount
+                local amount = result.amount--[[@as number]]
                 result.amount = nil
                 result.amount_min = math.ceil(amount / 2)
                 result.amount_max = math.ceil(amount * 2)

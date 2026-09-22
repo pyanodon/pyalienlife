@@ -14,11 +14,11 @@ py.autorecipes {
 				{name = "water",         amount = 100, fluidbox_index = 1},
 				{name = "hydrogen",      amount = 100, fluidbox_index = 2},
 				{name = "soil",          amount = 15},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "ralesia", amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 125,
 			tech = "ralesia"
 		},

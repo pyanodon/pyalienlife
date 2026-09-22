@@ -1,3 +1,4 @@
+---@diagnostic disable
 local util = require '__core__.lualib.util'
 local SECONDS = 60
 -- recreate beacons to reflect the new radius

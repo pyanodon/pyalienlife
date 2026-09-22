@@ -36,11 +36,11 @@ py.autorecipes {
 			{
 				{name = "empty-honeycomb", amount = 3},
 				{name = "ulric",           amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "honeycomb", amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "arqad",
 		},

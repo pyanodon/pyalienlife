@@ -10,7 +10,7 @@ if data and not yafc_turd_integration then
         recipe:multiply_ingredient_amount("empty-barrel-milk", 2)
         recipe:multiply_result_amount("barrel", 2)
         recipe:multiply_result_amount("barrel-milk", 2)
-        recipe.energy_required = recipe.energy_required * 2
+        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 2
         data:extend {recipe}
     end
 
@@ -39,7 +39,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-slowed"
         recipe:add_ingredient {type = "item", name = "barrel-milk", amount = i}
         recipe:add_result {type = "item", name = "empty-barrel-milk", amount = i}
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.3)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 1.3)
         data:extend {recipe}
     end
 
@@ -51,7 +51,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-pressured"
         recipe:add_ingredient {type = "fluid", name = "pressured-hydrogen", amount = 20}
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.7)
         recipe:add_result {type = "item", name = "kimberlite-grade3", amount_min = i * 11, amount_max = i * 16}
         recipe.main_product = "kimberlite-grade3"
         data:extend {recipe}

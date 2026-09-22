@@ -39,11 +39,11 @@ py.autorecipes {
 				{name = "native-flora",     amount = 10},
 				{name = "saps",             amount = 4},
 				{name = "crude-oil-barrel", amount = 2, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "filled-comb", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "arqad",
 		},

@@ -61,7 +61,7 @@ function P.build_action_flow(parent, caravan_data, action, tags)
         else
             label.caption = {locale_key, {"caravan-gui.not-specified"}}
         end
-        comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", nil)
     elseif action.type == "store-specific-food" then
         local filters = {{filter = "name", name = Caravan.foods.all}}
 

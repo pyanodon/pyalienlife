@@ -24,6 +24,7 @@ if data and not yafc_turd_integration then
     path_1_effects[#path_1_effects + 1] = path_1_module_effect
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do
+        recipe = RECIPE(recipe)
         if recipe:has_category(category) then
             recipe:standardize()
             local dna_samples = {}
@@ -37,7 +38,7 @@ if data and not yafc_turd_integration then
                 local replacement = table.deepcopy(recipe)
                 replacement.name = replacement.name .. "-earth-sample-turd"
                 replacement.enabled = false
-                replacement.main_product = replacement.main_product or replacement.results[1].name or replacement.results[1][1]
+                replacement.main_product = replacement.main_product or replacement.results--[[@cast -?]][1]--[[@cast -?]].name
                 for _, sample in pairs(dna_samples) do
                     local amount = sample.amount or sample[2] or 1
                     local name = sample.name or sample[1]
@@ -54,6 +55,7 @@ if data and not yafc_turd_integration then
     end
     data:extend(to_add)
 
+    --[[@type table<integer, string> ]]
     local arthurians = {
         "arthurian-codex",
         "arthurian-mk02",
@@ -67,7 +69,7 @@ if data and not yafc_turd_integration then
         RECIPE("creature-chamber-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-arthurian"
-        recipe:add_ingredient {type = "item", name = arthurians[i], amount = 1}
+        recipe:add_ingredient {type = "item", name = arthurians[i], amount = 1}--[[@as data.IngredientPrototype]]
         data:extend {recipe}
     end
 
@@ -80,21 +82,21 @@ if data and not yafc_turd_integration then
 
         unit.name = name
         unit.movement_speed = unit.movement_speed * 1.35
-        unit.max_health = unit.max_health * 1.35
+        unit.max_health = unit.max_health--[[@cast -?]] * 1.35
         unit.distance_per_frame = unit.distance_per_frame * 1.35
         if unit.minable and unit.minable.result then unit.minable.result = name end
         unit.localised_name = unit.localised_name or {"entity-name." .. unit_name}
         unit.localised_description = unit.localised_description or {"?", {"entity-description." .. unit_name}, ""}
 
         recipe.name = name
-        recipe.energy_required = recipe.energy_required * 4
+        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 4
         recipe.results = {{type = "item", name = name, amount = 1}}
 
         item.name = name
         if item.place_result then item.place_result = name end
         item.icons = {
             {icon = item.icon, icon_size = item.icon_size, tint = {1, 1, 0.6}},
-        }
+        }--[[@as data.IconData[] ]]
         item.icon = nil
 
         local convert_recipe = {
@@ -153,7 +155,9 @@ return {
             icon = "__pyalienlifegraphics3__/graphics/technology/respiratory.png",
             icon_size = 128,
             order = "c-a",
-            effects = path_1_effects
+            -- why the fuck would this ever need to be a function is beyond me
+            -- other upgrades may suffer from the same thing
+            effects = path_1_effects -- TODO find out if just calling the function here instead of using defunctionize_effect_table will break anything
         },
         {
             name = "neural-fusion",

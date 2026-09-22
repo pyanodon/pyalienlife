@@ -14,11 +14,11 @@ py.autorecipes {
 				{name = "gravel",    amount = 10},
 				{name = "limestone", amount = 5},
 				{name = "water",     amount = 100, fluidbox_index = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "yotoi-fruit", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "yotoi"
 		},

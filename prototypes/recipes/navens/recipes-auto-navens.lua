@@ -15,11 +15,11 @@ py.autorecipes {
                 {name = "water",               amount = 100, fluidbox_index = 2},
                 {name = "fungal-substrate-02", amount = 2},
                 {name = "fertilizer",          amount = 5},
-            },
+			}--[[@as data.IngredientPrototype[] ]],
             results =
             {
                 {name = "navens", amount = 7}
-            },
+			}--[[@as data.ProductPrototype[] ]],
             crafting_speed = 100,
             tech = "navens"
         },

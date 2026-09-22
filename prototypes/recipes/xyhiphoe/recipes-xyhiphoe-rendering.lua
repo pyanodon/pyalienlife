@@ -25,14 +25,14 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "xyhiphoe", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
 				{name = "shell",           amount = BASE_SKIN},
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "water-invertebrates-mk01",
 			name = "full-render-xyhiphoe",

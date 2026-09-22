@@ -16,12 +16,12 @@ py.autorecipes {
 				{name = "native-flora", amount = 20},
 				{name = "moss",         amount = 10},
 				{name = "water-barrel", amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				--{name= 'auog', amount=2},
 				{name = "auog-pup", amount_min = 2, amount_max = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 15,
 			tech = "auog",
 			main_product = "auog-pup"
@@ -153,11 +153,11 @@ py.autorecipes {
 				{name = "native-flora", amount = 20},
 				{name = "moss",         amount = 10},
 				{name = "water-barrel", amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "auog", amount_min = 2, amount_max = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 160,
 			tech = "auog",
 			main_product = "auog"

@@ -19,11 +19,11 @@ py.autorecipes {
 				{name = "moondrop",      amount = 2, fallback = "fawogae"},
 				{name = "ralesia-seeds", amount = 15},
 				{name = "water-barrel",  amount = 3, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "cottongut-pup", amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "cottongut-mk01"
 		},
 		--green
@@ -94,11 +94,11 @@ py.autorecipes {
 				{name = "wood-seeds",    amount = 4},
 				{name = "water-barrel",  amount = 2, return_barrel = true},
 				{name = "ralesia-seeds", amount = 3},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "cottongut", amount = 6},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "cottongut-mk01"
 		},

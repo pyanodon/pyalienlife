@@ -20,11 +20,11 @@ py.autorecipes {
 				{name = "pressured-water",  amount = 1000, fluidbox_index = 2, return_item = {name = "waste-water", amount = 650}},
 				{name = "saps",             amount = 6},
 				{name = "filtration-media", amount = 2}
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "xyhiphoe-cub", amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "water-invertebrates-mk01"
 		},
 		--blood-meal
@@ -204,11 +204,11 @@ py.autorecipes {
 				{name = "pressured-water",  amount = 3000, fluidbox_index = 2, return_item = {name = "waste-water", amount = 200}},
 				{name = "filtration-media", amount = 1},
 				{name = "xyhiphoe-cub",     amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "xyhiphoe", independent_probability = 0.7, amount_min = 1, amount_max = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "water-invertebrates-mk01"
 		},

@@ -9,7 +9,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-cu"
         recipe:add_ingredient {name = "copper-ore", amount = 10, type = "item"}
         recipe:multiply_result_amount("moondrop", 2)
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.5)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.5)
         recipe:remove_ingredient("hydrogen")
         recipe:remove_ingredient("biomass")
         recipe:remove_ingredient("fertilizer")

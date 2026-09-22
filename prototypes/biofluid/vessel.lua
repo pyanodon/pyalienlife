@@ -211,7 +211,7 @@ vessel.pictures = animations
 vessel.icon = data.raw.item["vessel"].icon
 vessel.icon_size = data.raw.item["vessel"].icon_size
 vessel.corpse = "small-remnants"
-vessel.minable.result = "vessel"
+vessel.minable--[[@cast -?]].result = "vessel"
 vessel.next_upgrade = nil
 
 data:extend {vessel}

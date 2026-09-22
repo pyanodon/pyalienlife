@@ -67,7 +67,7 @@ if data and not yafc_turd_integration then
         recipe:add_result_amount("tuuphra", 1)
         recipe:remove_ingredient("pesticide-mk01")
         recipe:remove_ingredient("pesticide-mk02")
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.85)
         data:extend {recipe}
     end
 

@@ -14,11 +14,11 @@ py.autorecipes {
                 {name = "fungal-substrate-02", amount = 1},
                 {name = "biomass",             amount = 10},
                 {name = "water",               amount = 100, fluidbox_index = 1},
-            },
+			}--[[@as data.IngredientPrototype[] ]],
             results =
             {
                 {name = "bhoddos", amount = 5}
-            },
+			}--[[@as data.ProductPrototype[] ]],
             crafting_speed = 130,
             tech = "bhoddos"
         },

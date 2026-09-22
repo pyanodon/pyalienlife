@@ -12,11 +12,11 @@ py.autorecipes {
 				{name = "zipir1",       amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-zipir", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

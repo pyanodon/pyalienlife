@@ -18,12 +18,12 @@ py.autorecipes {
 				{name = "stone-wool",      amount = 2,   fallback = "raw-fiber"},
 				{name = "fish",            amount = 5},
 				{name = "phytoplankton",   amount = 100, fluidbox_index = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "zipir-eggs", independent_probability = 1, amount_min = 3, amount_max = 5}, -- maybe 8 for the max if you feel generous
 				--{name = 'zipir1', amount = 3, independent_probability = 1, amount_min =2, amount_max =3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 60,
 			tech = "zipir"
 		},
@@ -198,11 +198,11 @@ py.autorecipes {
 				{name = "fish",            amount = 3},
 				{name = "stone-wool",      amount = 3,   fallback = "raw-fiber"},
 				{name = "water",           amount = 200, fluidbox_index = 1,    return_item = {name = "waste-water", amount = 100}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "zipir1", independent_probability = 0.7, amount_min = 1, amount_max = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "zipir"
 		},

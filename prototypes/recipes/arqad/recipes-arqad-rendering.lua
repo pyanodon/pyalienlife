@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "arqad", amount = INPUT_AMOUNT}
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -34,7 +34,7 @@ py.autorecipes {
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "bee-venom",       amount = BASE_SPECIAL}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "arqad",
 			name = "full-render-arqads",

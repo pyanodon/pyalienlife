@@ -20,11 +20,11 @@ py.autorecipes {
 				{name = "korlex-food-01",          amount = 2},
 				{name = "fish-hydrolysate-barrel", amount = 5,  return_barrel = true},
 				{name = "water-barrel",            amount = 20, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "korlex-pup", amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "korlex"
 		},
 		--py
@@ -202,11 +202,11 @@ py.autorecipes {
 				{name = "kicalk",         amount = 1, fallback = {name = "raw-fiber", amount = 5}},
 				{name = "korlex-food-01", amount = 1},
 				{name = "water-barrel",   amount = 8, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "korlex", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "korlex"
 		},

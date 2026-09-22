@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         data:extend {recipe}
     end
 
-    local previous = {{type = "item", name = "soil", amount = 20}, {type = "item", name = "vonix-den-mk01", amount = 1}, {type = "item", name = "vonix-den-mk02", amount = 1}}
+    local previous = {{type = "item", name = "soil", amount = 20}, {type = "item", name = "vonix-den-mk01", amount = 1}, {type = "item", name = "vonix-den-mk02", amount = 1}}--[[@as data.IngredientPrototype[] ]]
     for i, recipe in pairs {
         RECIPE("vonix-den-mk01"):copy(),
         RECIPE("vonix-den-mk02"):copy(),

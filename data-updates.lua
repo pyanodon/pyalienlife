@@ -181,9 +181,9 @@ require "prototypes/buildings/hidden-beacon"
 ----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
-    recipe:replace_ingredient("organics", "biomass")
-    recipe:replace_result("organics", "biomass")
-    recipe:replace_ingredient("raw-fish", "fish")
+    RECIPE(recipe):replace_ingredient("organics", "biomass")
+    RECIPE(recipe):replace_result("organics", "biomass")
+    RECIPE(recipe):replace_ingredient("raw-fish", "fish")
 end
 data.raw.item["organics"] = nil
 
@@ -216,13 +216,13 @@ for _, recipe in pairs(data.raw.recipe) do
                     local locale
                     local type
                     local temp
-                    for _, ingred in pairs(recipe.ingredients) do
+                    for _, ingred in pairs(recipe.ingredients--[[@cast -?]]) do
                         if ingred.name ~= "water" and ingred.name ~= "coke" then
                             locale = ingred.name
                             type = ingred.type
                         end
                     end
-                    for _, result in pairs(recipe.results) do
+                    for _, result in pairs(recipe.results--[[@cast -?]]) do
                         if result.name == "combustion-mixture1" then
                             temp = result.temperature
                         end
@@ -257,6 +257,7 @@ for _, recipe in pairs(data.raw.recipe) do
     end
 end
 
+---@diagnostic disable-next-line: undefined-field
 if data.data_crawler then
     data.script_enabled = data.script_enabled or {}
     table.insert(data.script_enabled, {type = "entity", name = "tar-patch"})
@@ -404,5 +405,6 @@ if register_cache_file ~= nil then
 end
 
 if mods["dependency-graph-lib"] then
+    ---@diagnostic disable-next-line: inject-field
     data.raw.item["iron-chest"].autotech_startup = true
 end

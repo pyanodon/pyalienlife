@@ -7,7 +7,7 @@ if data and not yafc_turd_integration then
         RECIPE("bhoddos-4"):copy(),
     } do
         recipe.name = recipe.name .. "-meltdown"
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.3333)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.3333)
         recipe:remove_ingredient("fungal-substrate")
         recipe:remove_ingredient("fungal-substrate-02")
         recipe:remove_ingredient("fungal-substrate-03")
@@ -61,7 +61,7 @@ if data and not yafc_turd_integration then
     biomass_sporopollenin.icon_size = nil
     data:extend {biomass_sporopollenin}
     table.insert(
-        data.raw.technology["microfilters-mk02"].effects,
+        data.raw.technology["microfilters-mk02"].effects--[[@cast -?]],
         {
             type = "change-recipe-productivity",
             recipe = "bhoddos-spore-upgraded",

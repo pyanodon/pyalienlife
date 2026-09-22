@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
         RECIPE("kmauts-4"):copy(),
     } do
         recipe.name = recipe.name .. "-ratio"
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "kmauts" then
                 result.independent_probability = 0.65
                 break
@@ -35,9 +35,9 @@ if data and not yafc_turd_integration then
         RECIPE("kmauts-cub-4"):copy(),
     } do
         recipe.name = recipe.name .. "-eye-out"
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "kmauts-cub" then
-                recipe:add_result {type = "item", name = "animal-eye", amount = result.amount}
+                recipe:add_result {type = "item", name = "animal-eye", amount = result.amount}--[[@as data.ProductPrototype]]
                 break
             end
         end
