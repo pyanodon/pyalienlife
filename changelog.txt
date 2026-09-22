@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Adjusted caravan name label text width to better fill the caravan manager UI
     - Fixed that TURD recipe replacement and TURD recipe descriptions were not colored and missing the TURD icon
+    - Changed to ItemPrototype.fuel_categories
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.6
 Date: 2026-09-16
