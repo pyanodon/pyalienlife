@@ -18,11 +18,11 @@ if data and not yafc_turd_integration then
         }
     }
     data.raw.item["xeno-egg"].fuel_value = "1.2MJ"
-    data.raw.item["xeno-egg"].fuel_category = "bio-reactor-1"
+    data.raw.item["xeno-egg"].fuel_categories = {"bio-reactor-1"}
     data.raw.item["high-flux-core"].fuel_value = "240kJ"
-    data.raw.item["high-flux-core"].fuel_category = "bio-reactor-2"
+    data.raw.item["high-flux-core"].fuel_categories = {"bio-reactor-2"}
     data.raw.item["strorix-unknown-sample"].fuel_value = "1.2MJ"
-    data.raw.item["strorix-unknown-sample"].fuel_category = "bio-reactor-3"
+    data.raw.item["strorix-unknown-sample"].fuel_categories = {"bio-reactor-3"}
 
     for j = 1, 3 do
         for i = 1, 4 do
