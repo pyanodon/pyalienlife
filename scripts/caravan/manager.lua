@@ -8,8 +8,9 @@ local function add_gui_row(caravan_data, key, table, inner)
     local entity = caravan_data.entity
     local prototype = caravan_prototypes[entity.name]
 
+    -- "inner" here is a relative gui, otherwise it's in the caravan manager screen
     local frame = table.add {type = "frame", direction = "vertical", tags = {unit_number = key}, style = inner and "inside_shallow_frame" or nil}
-    frame.style.natural_width = 450
+    frame.style.natural_width = inner and 240 or 450
 
     local button_flow = frame.add {type = "flow", name = "button_flow", direction = "horizontal"}
     button_flow.style.vertical_align = "top"
@@ -29,14 +30,14 @@ local function add_gui_row(caravan_data, key, table, inner)
         style = "frame_title",
         ignored_by_interaction = true
     }
-    title.style.maximal_width = 240
+    title.style.maximal_width = inner and 140 or 240
 
     local rename_button = caption_flow.add {
         type = "sprite-button",
         name = "py_rename_caravan_button",
         style = "mini_button_aligned_to_text_vertically_when_centered",
         sprite = "utility/rename_icon",
-        tags = {unit_number = key, maximal_width = 240}
+        tags = {unit_number = key, maximal_width = inner and 140 or 240}
     }
     rename_button.style.top_margin = 6
 
