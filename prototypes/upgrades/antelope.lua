@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     for _, recipe in pairs {
         RECIPE("caged-antelope-1"):copy(),
         RECIPE("caged-antelope-2"):copy(),

@@ -255,33 +255,33 @@ local function build_tech_upgrade(tech_upgrade)
     }
 end
 
-if data and not yafc_turd_integration then
+if data then
     for _, tech_upgrade in pairs(tech_upgrades) do build_tech_upgrade(tech_upgrade) end
-else
-    local indexed_tech_upgrades = {}
-    local farm_building_tiers = {}
-    local turd_machines = {}
-    for _, upgrade in pairs(tech_upgrades) do
-        local indexed_sub_techs = {}
-        for _, sub_tech in pairs(upgrade.sub_techs) do
-            indexed_sub_techs[sub_tech.name] = sub_tech
-            for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
-                if effect.type == "machine-replacement" then
-                    turd_machines[effect.new] = effect.old
-                end
+end
+
+local indexed_tech_upgrades = {}
+local farm_building_tiers = {}
+local turd_machines = {}
+for _, upgrade in pairs(tech_upgrades) do
+    local indexed_sub_techs = {}
+    for _, sub_tech in pairs(upgrade.sub_techs) do
+        indexed_sub_techs[sub_tech.name] = sub_tech
+        for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
+            if effect.type == "machine-replacement" then
+                turd_machines[effect.new] = effect.old
             end
         end
-        upgrade.sub_techs = indexed_sub_techs
-
-        indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
-
-        local indexed_affected_entities = {}
-        for i, affected_entity in pairs(upgrade.affected_entities) do
-            indexed_affected_entities[affected_entity] = i
-            if upgrade.module_category then farm_building_tiers[affected_entity] = i end
-        end
-        upgrade.affected_entities = indexed_affected_entities
     end
+    upgrade.sub_techs = indexed_sub_techs
 
-    return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
+    indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
+
+    local indexed_affected_entities = {}
+    for i, affected_entity in pairs(upgrade.affected_entities) do
+        indexed_affected_entities[affected_entity] = i
+        if upgrade.module_category then farm_building_tiers[affected_entity] = i end
+    end
+    upgrade.affected_entities = indexed_affected_entities
 end
+
+return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
