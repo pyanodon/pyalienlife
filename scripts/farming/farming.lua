@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 ---@class Farming
 ---@field farm_prototypes table<string, AlienlifeFarmPrototype>
 Farming = {}
@@ -38,6 +42,12 @@ function Farming.process(farm_data)
         entity.custom_status = nil
     end
 end
+
+---@class (partial) PyAlienLifeStorage
+---@field farms table
+---@field farm_count uint
+---@field farm_batch_size uint?
+---@field last_farm_index uint?
 
 py.on_event(py.events.on_init(), function()
     storage.farms = storage.farms or {}

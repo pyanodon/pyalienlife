@@ -1,3 +1,8 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
+---@type table<string, table>
 local launch_results = {}
 
 remote.add_interface("py_smart_farming", {
@@ -17,6 +22,9 @@ local farm_data = {
     require "farm-yotoi-fruit",
     require "farm-bioreserve",
 }
+
+---@class (partial) PyAlienLifeStorage
+---@field smart_farm_landfill_data table
 
 py.on_event(py.events.on_init(), function()
     storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
@@ -143,14 +151,16 @@ py.on_event(defines.events.on_rocket_launched, function(event)
     local silo = event.rocket_silo --[[@as LuaEntity]]
     if not silo or not silo.valid then return end -- silo died after launch started
     if silo.name ~= "mega-farm" then return end
-    local satellite = event.rocket.cargo_pod.get_inventory(defines.inventory.cargo_unit).get_contents()[1]
+    local satellite = event.rocket.cargo_pod--[[@cast -?]].get_inventory(defines.inventory.cargo_unit)--[[@cast -?]].get_contents()[1]
     if not satellite then return end
     local crop_results = launch_results[satellite.name]
     local surface = silo.surface
     local position = silo.position
+    --[[@cast position.x -?]]
+    --[[@cast position.y -?]]
     position.y = position.y - 15
     local yield
-    local recipe_name = silo.get_recipe().name
+    local recipe_name = silo.get_recipe()--[[@cast -?]].name
     for _, recipe in pairs(crop_results.recipes) do
         if recipe.recipe_name == recipe_name then
             yield = recipe.crop_output

@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Ulric = {}
 
 Ulric.transformation_time = 60 * 60 * 10 -- ticks
@@ -18,6 +22,9 @@ function entity_changed_unit_number(old, new)
     end
 end
 
+---@class (partial) PyAlienLifeStorage
+---@field ulricman_timers table
+
 py.on_event(py.events.on_init(), function()
     storage.ulricman_timers = storage.ulricman_timers or {}
 end)
@@ -26,7 +33,7 @@ end)
 py.on_event(defines.events.on_player_used_capsule, function(event)
     if event.item.name ~= "ulric-infusion" then return end
 
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local cursor_stack = player.cursor_stack
     local character = player.character
     if not character or not character.valid or character.name == "ulric-man" then

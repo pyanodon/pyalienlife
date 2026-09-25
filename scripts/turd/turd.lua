@@ -1,6 +1,11 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Turd = {}
 
 local tech_upgrades, farm_building_tiers, turd_machines = table.unpack(require "prototypes/turd")
+---@cast tech_upgrades table<string, table>
 local just_built_new_machine = false
 local bhoddos_lib = require("bhoddos")
 
@@ -109,13 +114,13 @@ local function update_confirm_button(element, player, researched_technologies)
     elseif selected_upgrade == element.tags.sub_tech_name then
         if has_turd_migration(force_index, selected_upgrade) then
             local ticks_remaining = storage.turd_migrations[force_index][selected_upgrade] - game.tick
-            local hours = math.floor(ticks_remaining / 216000)
-            local minutes = math.floor(ticks_remaining / 3600) % 60
-            local seconds = math.floor(ticks_remaining / 60) % 60
+            local hours = tostring(math.floor(ticks_remaining / 216000))
+            local minutes = tostring(math.floor(ticks_remaining / 3600) % 60)
+            local seconds = tostring(math.floor(ticks_remaining / 60) % 60)
             if minutes < 10 then minutes = "0" .. minutes end
             if seconds < 10 then seconds = "0" .. seconds end
             element.style = "confirm_button_without_tooltip"
-            element.caption = {"turd.unselect-migrate", tostring(hours), tostring(minutes), tostring(seconds)}
+            element.caption = {"turd.unselect-migrate", hours, minutes, seconds}
         elseif (storage.turd_reset_remaining[force_index] or 0) > 0 then
             element.style = "confirm_button_without_tooltip"
             element.caption = {"turd.unselect"}
@@ -297,7 +302,7 @@ gui_events[defines.events.on_gui_click]["py_minimize_turd"] = function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local tech_name = frame.tags.name
     local selected_upgrade = storage.turd_bonuses[player.force_index][tech_name] or NOT_SELECTED
-    local is_researched = player.force.technologies[tech_name].researched
+    local is_researched = player.force.technologies--[[@cast -?]][tech_name].researched
 
     for _, tech_upgrade_element in pairs(gui.children) do
         local sub_tech_flow = tech_upgrade_element.sub_tech_flow
@@ -682,6 +687,17 @@ local function clear_new_turd_recipe_notifications()
         end
     end
 end
+
+---@class (partial) PyAlienLifeStorage
+---@field turd_bonuses table
+---@field turd_beaconed_machines table
+---@field turd_unlocked_modules table
+---@field turd_views table
+---@field turd_reset_remaining table
+---@field turd_machine_replacements table
+---@field turd_migrations table
+---@field turd_bhoddos table
+---@field technology_locale table
 
 py.on_event(py.events.on_init(), function()
     storage.turd_bonuses = storage.turd_bonuses or {}

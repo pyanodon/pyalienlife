@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Caravan = {}
 
 require "event-handlers/global"
@@ -8,8 +12,16 @@ require "event-handlers/interrupts"
 
 require "manager"
 
+---@class (partial) PyAlienLifeStorage
+---@field caravans table<integer, Caravan>
+---@field interrupts table
+---@field last_opened table
+---@field last_opened_tab table
+---@field make_operable_next_tick table
+---@field edited_interrupts table
+---@field gui_locations table
+
 py.on_event(py.events.on_init(), function()
-    ---@type table<integer, Caravan>
     storage.caravans = storage.caravans or {}
     storage.interrupts = storage.interrupts or {}
     storage.last_opened = storage.last_opened or {}

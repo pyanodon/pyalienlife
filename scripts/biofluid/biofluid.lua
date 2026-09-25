@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local TO_GROUND = "pipe-to-ground"
 local VESSEL = "vessel"
 local BIOPORT = "bioport"
@@ -93,13 +97,18 @@ local function migrate_network_data(fluids)
     end
 end
 
+---@class (partial) PyAlienLifeStorage
+---@field biofluid_robots table
+---@field biofluid_requesters table
+---@field biofluid_providers table
+---@field biofluid_bioports BiofluidBioport[]
+---@field biofluid_networks BiofluidNetwork[]
+
 py.on_event(py.events.on_init(), function(changes)
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
     storage.biofluid_providers = storage.biofluid_providers or {}
-    ---@type BiofluidBioport[]
     storage.biofluid_bioports = storage.biofluid_bioports or {}
-    ---@type BiofluidNetwork[]
     storage.biofluid_networks = storage.biofluid_networks or {}
     if changes and changes.migrations then
         migrate_network_data(changes.migrations.fluid)
@@ -232,7 +241,7 @@ function Biofluid.update_bioport_animation(bioport_data)
             else
                 local new_animation_name = "bioport-animation-" .. creature_name .. "-" .. math.min(new_stage, 10)
                 if animation_data.id then
-                    rendering.get_object_by_id(animation_data.id).animation = new_animation_name
+                    rendering.get_object_by_id(animation_data.id)--[[@cast -?]].animation = new_animation_name
                 else
                     animation_data.id = rendering.draw_animation {
                         animation = new_animation_name,
@@ -266,7 +275,7 @@ function Biofluid.render_error_icons()
     end
 end
 
-local allocated_fluids_from_providers
+local allocated_fluids_from_providers = {}
 local function provider_sort_function(entity_a, entity_b)
     local a = entity_a.get_fluid(1)
     local priority_a = storage.biofluid_providers[entity_a.unit_number].priority
@@ -291,7 +300,7 @@ end
 
 --TODO: cache this on the provider, invalidate caches on bioport placement
 function order_by_distance(base_entity, unit_numbers)
-    local order = {}
+    local order = {}--[[@as integer[] ]]
     for unit_number in pairs(unit_numbers) do
         table.insert(order, unit_number)
     end
@@ -313,9 +322,8 @@ function order_by_distance(base_entity, unit_numbers)
 
         local entityB_pos = entityB.position
         if entityB_pos == nil then return false end
-
-        local distA = (entityA_pos.x - base_entity.position.x) ^ 2 + (entityA_pos.y - base_entity.position.y) ^ 2
-        local distB = (entityB_pos.x - base_entity.position.x) ^ 2 + (entityB_pos.y - base_entity.position.y) ^ 2
+        local distA = (py.vector.new(entityA_pos) - base_entity.position):mag2()
+        local distB = (py.vector.new(entityB_pos) - base_entity.position):mag2()
 
         return distA < distB
     end)
@@ -569,6 +577,7 @@ local function reset_provider_allocations(biorobot_data)
     local provider_unit_number = biorobot_data.provider_unit_number
     local allocated = network_data.allocated_fluids_from_providers
     if not allocated[provider_unit_number] then return end
+    ---@type number?
     local new = allocated[provider_unit_number] - delivery_amount
     if new < 0.001 then new = nil end
     allocated[provider_unit_number] = new
@@ -608,7 +617,7 @@ local function find_new_home(biorobot_data, network_data)
         if not bioport_data then goto continue end
         local bioport = bioport_data.entity
         if not bioport.valid then goto continue end
-        local robot_count = bioport.get_inventory(INPUT_INVENTORY).get_item_count(biorobot_data.entity.name)
+        local robot_count = bioport.get_inventory(INPUT_INVENTORY)--[[@cast -?]].get_item_count(biorobot_data.entity.name)
         if robot_count < 6 then
             home = bioport
             biorobot_data.bioport = unit_number
@@ -892,7 +901,7 @@ end)
 py.on_event(defines.events.on_player_setup_blueprint, function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local blueprint = player.blueprint_to_setup
-    if not blueprint.valid_for_read then blueprint = player.cursor_stack end
+    if not blueprint.valid_for_read then blueprint = player.cursor_stack--[[@as LuaItemStack]] end
     if not blueprint or not blueprint.valid_for_read then return end
 
     local requesters = storage.biofluid_requesters
@@ -966,7 +975,7 @@ py.on_event(defines.events.on_selected_entity_changed, function(event)
     local entity_status
 
     if entity_name == "bioport" then
-        local bioport_data = storage.biofluid_bioports[entity.unit_number]
+        local bioport_data = storage.biofluid_bioports[entity.unit_number--[[@cast -?]]]
         if not bioport_data then return end
         entity_status = Biofluid.why_isnt_my_bioport_working(bioport_data)
     elseif entity_name == "requester-tank" then

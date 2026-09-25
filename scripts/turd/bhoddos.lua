@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local lib = require("scripts/turd/bhoddos-lib")
 
 local UPDATE_RATE = 423
@@ -46,6 +50,9 @@ local function draw_circle(entity, player)
         target = entity, filled = true, surface = entity.surface
     }.id
 end
+
+---@class (partial) PyAlienLifeStorage
+---@field bhoddos_circles table
 
 py.on_event(defines.events.on_selected_entity_changed, function(event)
     local circles = storage.bhoddos_circles
