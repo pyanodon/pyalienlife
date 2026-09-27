@@ -14,7 +14,7 @@ function entity_changed_unit_number(old, new)
     for _, caravan_data in pairs(storage.caravans) do
         for _, schedule in pairs(caravan_data.schedule) do
             if schedule.entity == old then
-                schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}
+                schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x--[[@cast -?]]), math.floor(new.position.y--[[@cast -?]])}
                 schedule.entity = new
                 schedule.position = new.position
             end
@@ -54,6 +54,7 @@ py.on_event(defines.events.on_player_used_capsule, function(event)
         create_build_effect_smoke = false,
         move_stuck_players = false
     }
+    ---@cast ulric LuaEntity
 
     Ulric.transfer_character_inventory(character, ulric)
     player.character = ulric
@@ -70,13 +71,13 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
         ticks_remaning = ticks_remaning - update_rate
         storage.ulricman_timers[k] = ticks_remaning
         if ticks_remaning <= 0 then
-            local player = game.get_player(k)
+            local player = game.get_player(k)--[[@as LuaPlayer]]
             local ulric = player.character
             if not ulric then goto injection end
 
             local injection_equipment = ulric.grid and ulric.grid.find("ulric-infusion-equipment")
             if injection_equipment and injection_equipment.energy > injection_equipment.max_energy / 2 then
-                local inventory = ulric.get_main_inventory()
+                local inventory = ulric.get_main_inventory()--[[@as LuaInventory]]
                 if inventory.get_item_count("ulric-infusion") > 0 then
                     inventory.remove {name = "ulric-infusion", count = 1}
                     storage.ulricman_timers[k] = Ulric.transformation_time
@@ -92,6 +93,7 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
                     create_build_effect_smoke = false,
                     move_stuck_players = false
                 }
+                ---@cast character LuaEntity
 
                 Ulric.transfer_character_inventory(ulric, character)
                 player.character = character

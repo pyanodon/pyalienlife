@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local CaravanUtils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
@@ -127,12 +131,13 @@ end
 
 local prefix = "py_caravan_action_number_selection"
 
+---@type table<string, number>
 local expression_variables = {k=1000, K=1000, m=1000000, M=1000000, g=1000000000, G=1000000000}
 
 
 --- Parses a mathematical expression using MathExp library with predefined variables.
 --- @param expr string
---- @param vars { [string]: number }?
+--- @param vars table<string, number>?
 --- @return number?
 local function parse_math_expr(expr, vars)
     if not expr or expr == "" then return nil end
@@ -152,7 +157,7 @@ local function parse_math_expr(expr, vars)
 end
 
 local function on_confirmed(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     local tags = event.element.tags
     local textfield = event.element.parent[prefix .. "_text_field"]

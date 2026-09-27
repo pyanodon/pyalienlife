@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
 local CaravanGuiComponents = require "__pyalienlife__/scripts/caravan/gui/components"
@@ -147,7 +151,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destinatio
 end
 
 gui_events[defines.events.on_gui_click]["py_outpost_name"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = CaravanGui.get_gui(player)
     local element = event.element
     local tags = element.tags

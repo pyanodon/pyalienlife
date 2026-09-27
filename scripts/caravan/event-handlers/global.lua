@@ -1,3 +1,10 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
+---@class (partial) PyAlienLifeStorage
+---@field caravan_queue table
+
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
 local EditInterruptGui = require "__pyalienlife__/scripts/caravan/gui/edit_interrupt"
@@ -113,7 +120,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local stack = player.cursor_stack
     if stack and stack.valid_for_read and stack.name == "caravan-control" then return end
     local ghost = player.cursor_ghost
-    if ghost and ghost.name.name == "caravan-control" then return end
+    if ghost and ghost.name--[[@cast -?]].name == "caravan-control" then return end
     restore_controller(player, last_opened)
     if last_opened.caravan then
         local caravan_data = storage.caravans[last_opened.caravan]
@@ -245,6 +252,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     if cursor_contents then
+        --[[@cast cursor_contents LuaItemPrototype]]
         -- If we're setting the caravan destination
         if cursor_contents.name == "caravan-control" then
             on_carrot_used(player, event.cursor_position)

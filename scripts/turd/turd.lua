@@ -11,8 +11,10 @@ local bhoddos_lib = require("bhoddos")
 
 local NOT_SELECTED = 333 -- enum
 
+---@type string[]
 local views = {"all", "researched", "selected", "unselected"}
 views = table.map(views, function(v) return {"turd.visible-" .. v, v} end)
+---@cast views table[]
 
 local function check_viewable(element, player, researched_technologies)
     local name = element.tags.name

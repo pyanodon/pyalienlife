@@ -13,7 +13,7 @@ require "event-handlers/interrupts"
 require "manager"
 
 ---@class (partial) PyAlienLifeStorage
----@field caravans table<integer, Caravan>
+---@field caravans table<integer, table>
 ---@field interrupts table
 ---@field last_opened table
 ---@field last_opened_tab table

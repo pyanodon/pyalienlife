@@ -382,7 +382,7 @@ end
 
 local function process_unfulfilled_requests(unfulfilled_request, relavant_fluids)
     local network_id = unfulfilled_request.network_id
-    local network_data = storage.biofluid_networks[network_id]
+    local network_data = storage.biofluid_networks[network_id]--[[@as BiofluidNetwork]]
     local providers_by_contents = network_data.providers_by_contents
 
     if not providers_by_contents then
@@ -981,7 +981,7 @@ py.on_event(defines.events.on_selected_entity_changed, function(event)
     elseif entity_name == "requester-tank" then
         local requester_data = storage.biofluid_requesters[entity.unit_number]
         if not requester_data then return end
-        local network = storage.biofluid_networks[requester_data.network_id]
+        local network = storage.biofluid_networks[requester_data.network_id]--[[@as BiofluidNetwork]]
         entity_status = "entity-status.working"
         if not next(network.biofluid_bioports) then entity_status = "entity-status.no-biofluid-network" end
     end
