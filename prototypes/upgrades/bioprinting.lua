@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     for _, recipe in pairs {
         RECIPE("bio-scafold"):copy(),
         RECIPE("bio-scafold-2"):copy(),

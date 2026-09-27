@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     for _, recipe in pairs {
         RECIPE("moondrop-1"):copy(),
         RECIPE("moondrop-2"):copy(),

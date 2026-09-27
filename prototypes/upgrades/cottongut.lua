@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local cottongut_sciences = {"solidified-sarcorus", "paragen", "negasium", "nonconductive-phazogen", "denatured-seismite", "denatured-seismite"}
     for i, recipe in pairs {
         RECIPE("cottongut-science-red-seeds"):copy(),

@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local biomass = {"nacl-biomass", "s-biomass", "ni-biomass", "ti-biomass"}
     for i, recipe in pairs {
         RECIPE("bhoddos-1"):copy(),

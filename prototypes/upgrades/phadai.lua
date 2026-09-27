@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     data.raw.recipe["energy-drinkb"]:replace_category("mixer", "chemistry")
 
     for i, recipe in pairs {

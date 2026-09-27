@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local sawblade_ingredients = {
         {
             {type = "item",  name = "steel-plate",    amount = 5},

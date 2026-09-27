@@ -13,7 +13,7 @@
 -- all tin -> tin dust
 -- all zinc -> zinc grade 3
 
-if data and not yafc_turd_integration then
+if data then
     RECIPE {
         type = "recipe",
         name = "venom-gland-to-dynemicin",
