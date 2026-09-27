@@ -196,7 +196,7 @@ py.on_event(defines.events.on_rocket_launched, function(event)
         name = {"harvester", "flora-collector-mk01", "flora-collector-mk02", "flora-collector-mk03", "flora-collector-mk04"}
     }) do
         harvester.update_connections()
-        local control_behavior = harvester.get_or_create_control_behavior() --[[@as LuaControlBehavior]]
+        local control_behavior = harvester.get_or_create_control_behavior() --[[@as LuaMiningDrillControlBehavior]]
         if control_behavior.circuit_read_resources then
             control_behavior.circuit_read_resources = false
             control_behavior.circuit_read_resources = true

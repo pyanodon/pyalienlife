@@ -279,7 +279,7 @@ local function create_turd_page(gui, player)
         ::continue::
     end
 
-    local search_key = remote.call("pywiki", "get_page_searchbar", player).text
+    local search_key = remote.call("pywiki", "get_page_searchbar", player)--[[@cast -?]].text
     on_search(search_key, gui, player)
 end
 
@@ -287,7 +287,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_select_view"] = fu
     local player = game.get_player(event.player_index)
     local element = event.element
     storage.turd_views[event.player_index] = element.selected_index
-    local search_key = remote.call("pywiki", "get_page_searchbar", player).text
+    local search_key = remote.call("pywiki", "get_page_searchbar", player)--[[@cast -?]].text
     on_search(search_key, element.parent.parent, player)
 end
 
