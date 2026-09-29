@@ -85,3 +85,40 @@ mod_data.digosaurus.dig_sites = {
         }
     }
 }
+
+if helpers.stage == "prototype" then
+    py.yafc_integrations.pyalienlife_digosaurus = function()
+        py.log.debug("Fix dig-site")
+
+        data.raw.recipe["digosaurus-hidden-recipe"].results = {}
+        data.raw["assembling-machine"]["dino-dig-site"].fixed_recipe = nil
+
+        local dig_creatures = {
+            -- {creature, amount, time_taken_to_mine, attack_cooldown_ticks}
+            {"digosaurus",  1, 15, 30},
+            {"thikat",      2, 4,  49 * 2},
+            {"work-o-dile", 3, 8,  49 * 2}
+        }
+
+        for food_name, food_bonus in pairs(data.raw["mod-data"].pyanodons.data.digosaurus.foods) do
+            for _, y in ipairs(dig_creatures) do
+                -- The creature is looped in the recipe to make it only available after the creature is available
+                RECIPE {
+                    type = "recipe",
+                    name = "nexelit-from-" .. food_name .. "-" .. y[1],
+                    energy_required = y[3] * y[4] / 60,
+                    ingredients = {
+                        {type = "item", name = food_name, amount = 4},
+                        {type = "item", name = y[1],      amount = 4}
+                    },
+                    results = {
+                        {type = "item", name = "nexelit-ore", amount = food_bonus * y[2] * 4},
+                        {type = "item", name = y[1],          amount = 4}
+                    },
+                    main_product = "nexelit-ore",
+                    categories = {"dino-dig-site"}
+                }
+            end
+        end
+    end
+end

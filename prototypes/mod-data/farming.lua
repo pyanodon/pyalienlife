@@ -51,3 +51,68 @@ mod_data.farm_buildings = {
     ["navens-culture"] = {default_module = "navens", domain = "fungi"},
     ["yaedols-culture"] = {default_module = "yaedols", domain = "fungi"},
 }
+
+if helpers.stage == "prototype" then
+    py.yafc_integrations.pyalienlife_farming = function()
+        py.log.debug("Fix animal module dependencies")
+        -- Needed to make the milestones work properly and lock normal production after the bootstrapping recipe
+
+        local mod_buildings = {
+            -- {required_module, locked_building}
+            {"antelope",       "antelope-enclosure-mk01"},
+            {"arqad",          "arqad-hive-mk01"},
+            {"auog",           "auog-paddock-mk01"},
+            {"cridren",        "cridren-enclosure-mk01"},
+            {"arthurian",      "arthurian-pen-mk01"},
+            {"bhoddos",        "bhoddos-culture-mk01"},
+            {"cadaveric-arum", "cadaveric-arum-mk01"},
+            {"cottongut-mk01", "prandium-lab-mk01"},
+            {"dingrits",       "dingrits-pack-mk01"},
+            {"dhilmos",        "dhilmos-pool-mk01"},
+            {"fish",           "fish-farm-mk01"},
+            {"grod",           "grods-swamp-mk01"},
+            {"guar",           "guar-gum-plantation"},
+            {"kicalk",         "kicalk-plantation-mk01"},
+            {"kmauts",         "kmauts-enclosure-mk01"},
+            {"korlex",         "ez-ranch-mk01"},
+            {"fawogae",        "fawogae-plantation-mk01"},
+            {"moondrop",       "moondrop-greenhouse-mk01"},
+            {"moss",           "moss-farm-mk01"},
+            {"mukmoux",        "mukmoux-pasture-mk01"},
+            {"sap-tree",       "sap-extractor-mk01"},
+            {"navens",         "navens-culture-mk01"},
+            {"phagnot",        "phagnot-corral-mk01"},
+            {"phadai",         "phadai-enclosure-mk01"},
+            {"ralesia",        "ralesia-plantation-mk01"},
+            {"rennea",         "rennea-plantation-mk01"},
+            {"seaweed",        "seaweed-crop-mk01"},
+            {"sea-sponge",     "sponge-culture-mk01"},
+            {"scrondrix",      "scrondrix-pen-mk01"},
+            {"tuuphra",        "tuuphra-plantation-mk01"},
+            {"tree-mk01",      "fwf-mk01"},
+            {"trits",          "trits-reef-mk01"},
+            {"ulric",          "ulric-corral-mk01"},
+            {"vonix",          "vonix-den-mk01"},
+            {"vrauks",         "vrauks-paddock-mk01"},
+            {"xyhiphoe",       "xyhiphoe-pool-mk01"},
+            {"xeno",           "xenopen-mk01"},
+            {"simik",          "simik-den-mk01"},
+            {"yotoi",          "yotoi-aloe-orchard-mk01"},
+            {"yaedols",        "yaedols-culture-mk01"},
+            {"zipir1",         "zipir-reef-mk01"}
+        }
+
+        if mods["pyalternativeenergy"] then
+            mod_buildings[#mod_buildings + 1] = {"zungror", "zungror-lair-mk01"}
+            mod_buildings[#mod_buildings + 1] = {"numal", "numal-reef-mk01"}
+        end
+
+        if mods["pystellarexpedition"] then
+            mod_buildings[#mod_buildings + 1] = {"kakkalakki-m", "kakkalakki-habitat-mk01"}
+        end
+
+        for _, x in ipairs(mod_buildings) do
+            table.insert(RECIPE(x[2]).ingredients, {type = "item", name = x[1], amount = 1})
+        end
+    end
+end

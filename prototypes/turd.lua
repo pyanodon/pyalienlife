@@ -255,7 +255,7 @@ local function build_tech_upgrade(tech_upgrade)
     }
 end
 
-if data then
+if helpers.stage == "prototype" then
     for _, tech_upgrade in pairs(tech_upgrades) do build_tech_upgrade(tech_upgrade) end
 end
 
@@ -282,6 +282,98 @@ for _, upgrade in pairs(tech_upgrades) do
         if upgrade.module_category then farm_building_tiers[affected_entity] = i end
     end
     upgrade.affected_entities = indexed_affected_entities
+end
+
+if helpers.stage == "prototype" then
+    py.yafc_integrations.pyalienlife_turds = function()
+        py.log.debug("Improve TURD selection")
+
+        ITEM {
+            type = "item",
+            name = "hidden-beacon-turd",
+            icon = data.raw["beacon"]["hidden-beacon-turd"].icon,
+            icon_size = data.raw["beacon"]["hidden-beacon-turd"].icon_size,
+            place_result = "hidden-beacon-turd"
+        }
+        RECIPE {
+            type = "recipe",
+            name = "hidden-beacon-turd",
+            ingredients = {},
+            results = {{type = "item", name = "hidden-beacon-turd", amount = 1}}
+        }
+
+        for _, tech_upgrade in pairs(indexed_tech_upgrades) do
+            local master_tech = tech_upgrade.master_tech
+            for _, tech in pairs(tech_upgrade.sub_techs) do
+                local effects = {}
+                for _, effect in pairs(tech.effects) do
+                    if effect.type == "module-effects" then
+                        local modules = {}
+                        if data.raw.module[tech.name .. "-module"] then
+                            table.insert(modules, tech.name .. "-module")
+                        else
+                            for i, entity in pairs(tech_upgrade.affected_entities or {}) do
+                                table.insert(modules, tech.name .. "-module-mk0" .. i)
+                            end
+                        end
+                        for _, module in pairs(modules) do
+                            RECIPE {
+                                type = "recipe",
+                                name = module,
+                                enabled = false,
+                                ingredients = {},
+                                result = module
+                            }
+                            table.insert(effects, {
+                                type = "unlock-recipe",
+                                recipe = module
+                            })
+                        end
+                    elseif effect.type == "unlock-recipe" then
+                        table.insert(effects, {
+                            type = "unlock-recipe",
+                            recipe = effect.recipe
+                        })
+                    elseif effect.type == "recipe-replacement" then
+                        table.insert(effects, {
+                            type = "unlock-recipe",
+                            recipe = effect.new
+                        })
+                    end
+                end
+                TECHNOLOGY {
+                    type = "technology",
+                    name = "turd-select-" .. tech.name,
+                    localised_name = {"", {"turd.select"}, " ", {"technology-name." .. tech.name}},
+                    icon = tech.icon,
+                    icon_size = tech.icon_size,
+                    order = tech.order,
+                    prerequisites = {},
+                    effects = {},
+                    enabled = false,
+                    unit = {
+                        count = 1,
+                        ingredients = {},
+                        time = 60
+                    }
+                }
+                TECHNOLOGY {
+                    type = "technology",
+                    name = tech.name,
+                    icon = tech.icon,
+                    icon_size = tech.icon_size,
+                    order = tech.order,
+                    prerequisites = {master_tech.name, "turd-select-" .. tech.name},
+                    effects = effects,
+                    unit = {
+                        count = 1,
+                        ingredients = {},
+                        time = 60
+                    }
+                }
+            end
+        end
+    end
 end
 
 return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
