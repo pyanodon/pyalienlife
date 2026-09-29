@@ -167,8 +167,10 @@ local function get_fluid_segment_id(entity)
     local biofluid_pipe_index = ENTITY_BIOFLUID_PIPE_INDEXES[entity.name]
     if not biofluid_pipe_index then error("Invalid biofluid pipe: " .. entity.name) end
     for _, connection in pairs(entity.get_fluid_box_neighbours(biofluid_pipe_index)) do
-        local network_id = connection.entity.get_fluid_segment_id(1)
-        if network_id then return network_id end
+        if connection.entity.has_fluid_segment(1) then
+            local network_id = connection.entity.get_fluid_segment_id(1)
+            if network_id then return network_id end
+        end
     end
     return math.random(1, 1000000) -- todo: remove this once the vanilla bug is fixed
 end

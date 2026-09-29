@@ -99,17 +99,17 @@ ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
 RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}
 RECIPE("barrel").allow_productivity = false
 
-data.raw.technology["worker-robots-speed-1"]:add_pack("py-science-pack-2")
-data.raw.technology["worker-robots-speed-3"]:remove_pack("production-science-pack"):add_pack("py-science-pack-3")
+TECHNOLOGY("worker-robots-speed-1"):add_pack("py-science-pack-2")
+TECHNOLOGY("worker-robots-speed-3"):remove_pack("production-science-pack"):add_pack("py-science-pack-3")
 -- https://github.com/pyanodon/pybugreports/issues/608
-data.raw.technology["worker-robots-speed-5"]:remove_pack("utility-science-pack"):add_pack("py-science-pack-4")
+TECHNOLOGY("worker-robots-speed-5"):remove_pack("utility-science-pack"):add_pack("py-science-pack-4")
 local worker_robot_speed_7 = table.deepcopy(data.raw.technology["worker-robots-speed-6"])
 worker_robot_speed_7.name = "worker-robots-speed-7"
 data:extend{worker_robot_speed_7}
 data.raw.technology["worker-robots-speed-6"].unit.count_formula = nil
 data.raw.technology["worker-robots-speed-6"].unit.count = 1000
 data.raw.technology["worker-robots-speed-6"].max_level = nil
-data.raw.technology["worker-robots-speed-6"]:remove_pack("space-science-pack")
+TECHNOLOGY("worker-robots-speed-6"):remove_pack("space-science-pack")
 
 data.raw.technology["worker-robots-speed-1"].prerequisites = {"logistic-robotics", "py-science-pack-2"}
 data.raw.technology["worker-robots-speed-2"].prerequisites = {"worker-robots-speed-1"}

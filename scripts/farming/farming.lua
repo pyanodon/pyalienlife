@@ -62,6 +62,9 @@ py.on_event(defines.events.on_object_destroyed, function(event)
         storage.farms[unit_number] = nil
         storage.farm_count = storage.farm_count - 1
     end
+    if unit_number == storage.last_farm_index then
+        storage.last_farm_index = nil
+    end
 end)
 
 -- every 2 seconds, check 1/8th of farm buildings
