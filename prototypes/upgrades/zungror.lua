@@ -38,7 +38,7 @@ if data and not yafc_turd_integration then
         recipe:remove_ingredient("bedding")
         recipe:remove_ingredient("caged-mukmoux")
         recipe:remove_ingredient("arqad-honey-barrel")
-        recipe:remove_result("empty-barrel")
+        recipe:remove_result("barrel")
         recipe:add_result_amount("cage", -1)
         data:extend {recipe}
     end
