@@ -201,7 +201,7 @@ local function build_tech_upgrade(tech_upgrade)
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
                 py.add_to_description(data.raw.recipe[effect.new], nil, {"turd.font", {"turd.recipe-replacement"}})
                 local recipe = data.raw.recipe[effect.new]
-                local icon_base = recipe and recipe:get_icons()
+                local icon_base = recipe and RECIPE(recipe):get_icons()
                 if icon_base then
                     -- Combine the base icon with our overlay
                     recipe.icons = util.combine_icons(icon_base, {{
