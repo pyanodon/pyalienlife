@@ -157,10 +157,9 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     end
 
     -- https://github.com/pyanodon/pybugreports/issues/809
-    local crafting_categories = table.invert(mk1.crafting_categories or {})
     if effect.productivity and effect.productivity ~= 0 then
         for _, recipe in pairs(data.raw.recipe) do
-            if not recipe.allow_productivity and recipe.category and crafting_categories[recipe.category] then
+            if not recipe.allow_productivity and RECIPE(recipe):has_categories(mk1.crafting_categories) then
                 recipe.allow_productivity = true
             end
         end
