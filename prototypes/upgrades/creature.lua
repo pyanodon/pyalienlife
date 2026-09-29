@@ -24,8 +24,7 @@ if data and not yafc_turd_integration then
     path_1_effects[#path_1_effects + 1] = path_1_module_effect
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do
-        recipe = RECIPE(recipe)
-        if recipe:has_category(category) then
+        if RECIPE(recipe):has_category(category) then
             recipe:standardize()
             local dna_samples = {}
             for _, ingredient in pairs(recipe.ingredients or {}) do

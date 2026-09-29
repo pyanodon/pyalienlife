@@ -181,9 +181,7 @@ require "prototypes/buildings/hidden-beacon"
 ----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
-    RECIPE(recipe):replace_ingredient("organics", "biomass")
-    RECIPE(recipe):replace_result("organics", "biomass")
-    RECIPE(recipe):replace_ingredient("raw-fish", "fish")
+    RECIPE(recipe):replace_ingredient("organics", "biomass"):replace_result("organics", "biomass"):replace_ingredient("raw-fish", "fish")
 end
 data.raw.item["organics"] = nil
 
