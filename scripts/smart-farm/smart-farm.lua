@@ -65,7 +65,7 @@ py.on_event(py.events.on_built(), function(event)
     if entity.name ~= "mega-farm" then return end
 
     -- finally, added in 2.0.73
-	entity.send_to_orbit_automatically = true
+	  entity.send_to_orbit_automatically = true
 
     local surface = entity.surface
 

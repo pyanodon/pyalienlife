@@ -1,9 +1,14 @@
 ---@diagnostic disable-next-line: assign-type-mismatch
 ---@type pyModData
-local mod_data = data.raw["mod-data"].pyanodons.data
+local mod_data = py.mod_data
 
 ---@class (partial) pyModData
 ---@field recipe_gui RecipeGUIData
+
+---@class RecipeGUIData
+---@field subgroups {[string]: true?}
+---@field machines {[data.CraftingMachineName]: true?}
+---@field alt_icons {[string]: string?}
 
 mod_data.recipe_gui = {
     subgroups = {
