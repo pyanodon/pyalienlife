@@ -12,7 +12,7 @@ Ulric.transformation_time = 60 * 60 * 10 -- ticks
 function entity_changed_unit_number(old, new)
     if not old.valid then error("Don\'t call this with an invalid entity") end
     for _, caravan_data in pairs(storage.caravans) do
-        for _, schedule in pairs(caravan_data.schedule) do
+        for _, schedule in pairs(caravan_data.schedule--[[@cast -?]]) do
             if schedule.entity == old then
                 schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x--[[@cast -?]]), math.floor(new.position.y--[[@cast -?]])}
                 schedule.entity = new

@@ -5,7 +5,7 @@
 ---@field subgroups {[string]: true?}
 ---@field machines {[data.CraftingMachineName]: true?}
 ---@field alt_icons {[string]: string?}
----@field permitted_recipes {[data.RecipeCategoryID]: {[data.RecipeID]: data.ItemSubGroupID}?}
+---@field permitted_recipes table<data.RecipeCategoryID, table<data.RecipeID, data.ItemSubGroup?>>
 RecipeGUI = {}
 
 require "recipe-gui-prototypes"

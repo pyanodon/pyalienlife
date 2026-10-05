@@ -36,8 +36,11 @@ local function build_slider(event)
 
     local action = Utils.get_action_from_button(event.element)
 
+    ---@diagnostic disable-next-line: need-check-nil
     local max_value = L[tags.elem_type .. "_slider_maximum_value"]()
+    ---@diagnostic disable-next-line: need-check-nil
     local default_value = L[tags.elem_type .. "_slider_default_value"]()
+    ---@diagnostic disable-next-line: need-check-nil
     local value_step = L[tags.elem_type .. "_slider_value_step"]()
     local value = tags.elem_type == "time" and action.wait_time or action.item_count
 
@@ -78,6 +81,7 @@ local function update_action_value(event, button)
         action.item_count = value
     end
 
+    ---@diagnostic disable-next-line: need-check-nil
     button.caption = L[tags.elem_type .. "_format_value"](value)
 end
 
@@ -123,6 +127,7 @@ function P.build_count_selection_button(parent, action, tags)
     btn.style.width = 44
     btn.style.right_padding = 0
     btn.style.left_padding = 0
+    ---@diagnostic disable-next-line: need-check-nil
     btn.caption = L[tags.elem_type .. "_format_value"](action.item_count or 0)
 
     return btn

@@ -96,7 +96,7 @@ function P.build_conditions_operators_list(parent)
 end
 
 function P.build_add_interrupt_condition_dropdown(parent)
-    local conditions = Caravan.valid_actions["interrupt-condition"]
+    local conditions = Caravan.valid_actions["interrupt-condition"]--[[@as string[] ]]
     conditions = table.map(conditions, function(v) return {"caravan-actions." .. v, v} end)
 
     table.insert(conditions, "+ Add interrupt condition")

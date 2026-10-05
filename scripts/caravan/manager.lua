@@ -155,6 +155,7 @@ gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
     end
 end
 
+---@param caption_flow LuaGuiElement
 local function title_edit_mode(caption_flow, caravan_data)
     local title = caption_flow.title
     local index = title.get_index_in_parent()
@@ -177,7 +178,7 @@ local function title_edit_mode(caption_flow, caravan_data)
     button.sprite = "utility/check_mark"
     button.hovered_sprite = "utility/check_mark"
     button.clicked_sprite = "utility/check_mark"
-    button.style.size = {26, 26}
+    button.style--[[@as LuaStyle]].size = {26, 26}
 end
 
 local function title_display_mode(caption_flow, caravan_data)

@@ -12,8 +12,24 @@ require "event-handlers/interrupts"
 
 require "manager"
 
+---@class CaravanEntity:LuaEntity
+---@field name CaravanName
+
+---@class Caravan
+---@field itemised nil
+---@field unit_number int
+---@field entity CaravanEntity
+---@field schedule table?
+---@field map_tag LuaCustomChartTag?
+---@field schedule_id int?
+---@field interrupts table[]
+---@field action_id int?
+---@field fluid Fluid?
+---@field inventory LuaInventory?
+---@field fuel_inventory LuaInventory?
+
 ---@class (partial) PyAlienLifeStorage
----@field caravans table<integer, table>
+---@field caravans table<integer, Caravan>
 ---@field interrupts table
 ---@field last_opened table
 ---@field last_opened_tab table

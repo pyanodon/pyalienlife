@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
 local ImplControl = require "control"
