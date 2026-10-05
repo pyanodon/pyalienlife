@@ -16,7 +16,7 @@ py.on_event(py.events.on_built(), function(event)
     if not entity.valid or entity.name ~= "vat-brain" then return end
 
     local beacon = entity.surface.create_entity {
-        name = "hidden-beacon",
+        name = "hidden-beacon-vatbrain",
         position = entity.position,
         force = entity.force,
     }
@@ -27,7 +27,7 @@ py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "vat-brain" then return end
 
-    local beacon = entity.surface.find_entities_filtered {position = entity.position, radius = 3, name = "hidden-beacon", limit = 1}[1]
+    local beacon = entity.surface.find_entities_filtered {position = entity.position, radius = 3, name = "hidden-beacon-vatbrain", limit = 1}[1]
     if beacon then
         storage.vatbrains[beacon.unit_number] = nil
         beacon.destroy()
