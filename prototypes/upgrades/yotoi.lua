@@ -4,7 +4,7 @@ if data and not yafc_turd_integration then
     recipe:add_ingredient {type = "fluid", name = "cold-air", amount = 30}
     recipe:add_ingredient {type = "item", name = "yotoi-leaves", amount = 1}
     recipe:multiply_result_amount("yotoi-seeds", 3)
-    recipe.energy_required = recipe.energy_required * 4
+    recipe.energy_required = recipe.energy_required--[[@cast -?]] * 4
     data:extend {recipe}
 
     for i, recipe in pairs {

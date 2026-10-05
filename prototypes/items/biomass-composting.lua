@@ -536,7 +536,7 @@ for i, item in pairs(biomass_convertion) do
         subgroup = "py-alienlife-compost",
         order = i,
         localised_name = {"recipe-name.biomass-composting", tostring(item.item_amount), prototype.localised_name or {local_name_type .. "-name." .. i}}
-    }:add_unlock("compost")
+    }--[[@as data.RecipePrototype]]:add_unlock("compost")
     py.add_to_description(prototype, {"item-description.compost-amount"}, {"", tostring(math.floor(item.biomass_amount / item.item_amount * 10) / 10), " [item=biomass]"})
 
     ::continue::

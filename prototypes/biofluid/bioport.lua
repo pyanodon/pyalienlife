@@ -150,9 +150,9 @@ local function add_creature_animations(animations, animation_order, name)
     for i, _ in pairs(animation_order) do
         local layers = {}
         for j = 1, i do
-            local layer_data = animation_order[j]
+            local layer_data = animation_order[j] --[[@as table<int, number> ]]
             local shift = util.by_pixel(layer_data[1] / 2 - 62, layer_data[2] / 2 - 113.75 - 32)
-            if name == "chorkok" then shift[2] = shift[2] + 0.16 end
+            if name == "chorkok" then shift[2] = shift[2]--[[@cast -?]] + 0.16 end
             layers[#layers + 1] = table.deepcopy(animations[layer_data[3]])
             layers[#layers].shift = shift
         end

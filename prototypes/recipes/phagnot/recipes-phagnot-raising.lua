@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "phagnot-food-01", amount = 2},
 				{name = "bedding",         amount = 1},
 				{name = "water-barrel",    amount = 10, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "phagnot-cub", amount = 6},
 				--{name = 'manure', amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 20,
 			tech = "phagnot"
 		},
@@ -234,12 +234,12 @@ py.autorecipes {
 				{name = "bhoddos",         amount = 3},
 				{name = "phagnot-food-01", amount = 1},
 				{name = "water-barrel",    amount = 3, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "phagnot", amount = 3},
 				--{name = 'manure', amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "phagnot"
 		},

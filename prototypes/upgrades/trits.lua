@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
         RECIPE("trits-4"):copy(),
     } do
         recipe.name = recipe.name .. "-dc"
-        recipe.energy_required = recipe.energy_required * 2
+        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 2
         recipe:multiply_result_amount("trits", 1.5)
         data:extend {recipe}
     end

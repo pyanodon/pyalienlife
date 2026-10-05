@@ -10,9 +10,9 @@ if data and not yafc_turd_integration then
         RECIPE("caged-antelope-8"):copy(),
     } do
         recipe.name = recipe.name .. "-5th-dimension"
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "caged-antelope" then
-                result.independent_probability = result.independent_probability + 0.2
+                result.independent_probability = result.independent_probability--[[@cast -?]] + 0.2
             end
         end
         data:extend {recipe}

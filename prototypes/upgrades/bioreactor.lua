@@ -33,8 +33,8 @@ if data and not yafc_turd_integration then
                 entity.next_upgrade = "advanced-bio-reactor-mk0" .. i + 1 .. "-turd" .. j
             end
             entity.crafting_speed = entity.crafting_speed * 2
-            local old_module_slots = entity.module_slots
-            entity.module_slots = math.floor(entity.module_slots * 1.7)
+            local old_module_slots = entity.module_slots--[[@as integer]]
+            entity.module_slots = math.floor(entity.module_slots--[[@cast -?]] * 1.7)
             if entity.module_slots == old_module_slots then
                 entity.module_slots = entity.module_slots + 1
             end
@@ -43,7 +43,7 @@ if data and not yafc_turd_integration then
             entity.localised_name = {"entity-name." .. name}
             entity.placeable_by = {item = name, count = 1}
             entity.localised_description = entity.localised_description or {"entity-description." .. name}
-            table.insert(entity.flags, "not-in-made-in")
+            table.insert(entity.flags--[[@cast -?]], "not-in-made-in")
             entity.energy_source = {
                 type = "burner",
                 fuel_categories = {"bio-reactor-" .. j},
@@ -98,7 +98,7 @@ if data and not yafc_turd_integration then
 
     local path3 = RECIPE("chitosan"):copy()
     path3.name = "path-3-advanced-recipe"
-    path3.ingredients[3] = {type = "fluid", name = "blood", amount = 50}
+    path3.ingredients--[[@cast -?]][3] = {type = "fluid", name = "blood", amount = 50}
     path3:replace_category("bio-reactor", "advanced-bio-reactor")
     data:extend {path3}
 end

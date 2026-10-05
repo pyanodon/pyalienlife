@@ -1,3 +1,4 @@
+---@diagnostic disable
 for _, metadata in pairs(storage.biofluid_providers) do
     metadata.priority = metadata.priority or 0
 end

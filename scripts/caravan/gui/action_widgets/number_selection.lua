@@ -17,7 +17,7 @@ function L.count_slider_value_step() return 10 end
 L.count_format_value = function(v) return util.format_number(v, true) end
 
 local function destroy_slider_frame(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     if player.gui.screen[prefix .. "_frame"] then 
         player.gui.screen[prefix .. "_frame"].destroy()
@@ -26,7 +26,7 @@ end
 
 local function build_slider(event)
     local tags = event.element.tags
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     destroy_slider_frame(event)
 
@@ -91,7 +91,7 @@ py.on_event(defines.events.on_gui_click, function (event)
     -- do not destroy the frame right after creating it
     if event.element.name == prefix .. "_button" then return end
 
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     local slider_frame = player.gui.screen[prefix .. "_frame"] 
     if not slider_frame then return end

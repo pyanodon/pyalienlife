@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 py.on_event(defines.events.on_gui_opened, function(event)
     local entity = event.entity
     if event.gui_type ~= defines.gui_type.entity or not entity then return end
@@ -62,7 +66,7 @@ function Biofluid.update_bioport_gui(player, gui)
     for _, item in pairs(contents) do
         local name = item.name
 
-        local slot_index = Biofluid.bioport_slot_indexes[name]
+        local slot_index = Biofluid.bioport_slot_indexes[name]--[[@as uint]]
         local slot = inventory[slot_index]
         if slot.valid_for_read then
             local element

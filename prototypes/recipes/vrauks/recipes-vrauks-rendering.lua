@@ -27,7 +27,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-vrauks", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",        amount = BASE_MEAT},
@@ -36,7 +36,7 @@ py.autorecipes {
 				{name = "formic-acid", amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
 				{name = "cage",        amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "rendering",
 			name = "full-render-vrauks",
 			icons = {

@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
 
     local duplicated_spinner = RECIPE("vsk"):copy()
     duplicated_spinner.name = "vsk-duplicated"
-    duplicated_spinner.energy_required = duplicated_spinner.energy_required * 5
+    duplicated_spinner.energy_required = duplicated_spinner.energy_required--[[@cast -?]] * 5
     duplicated_spinner:multiply_result_amount("vsk", 5)
     data:extend {duplicated_spinner}
 
@@ -27,11 +27,12 @@ if data and not yafc_turd_integration then
     buffed_fiber:multiply_result_amount("pre-fiber-1", 10)
     data:extend {buffed_fiber}
 
-    for isotope, recipe in pairs {
+    local isotope_table = {
         [{type = "item", name = "pu-239", amount = 2}] = RECIPE("zungror-raising-1"):copy(),
         [{type = "item", name = "pu-240", amount = 2}] = RECIPE("zungror-raising-2"):copy(),
         [{type = "item", name = "pu-238", amount = 2}] = RECIPE("zungror-raising-3"):copy(),
-    } do
+    }
+    for isotope, recipe in pairs(isotope_table) do
         recipe.name = recipe.name .. "-with-funny-rock"
         recipe:add_ingredient(isotope)
         recipe:remove_ingredient("meat")

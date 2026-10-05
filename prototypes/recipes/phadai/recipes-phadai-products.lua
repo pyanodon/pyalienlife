@@ -16,12 +16,12 @@ py.autorecipes {
 				{name = "phadai-food-01",       amount = 3},
 				{name = "programmable-speaker", amount = 1},
 				{name = "small-lamp",           amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "carapace",    amount = 5},
 				{name = "used-phadai", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 60,
 			tech = "phadai",
 			--icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png"

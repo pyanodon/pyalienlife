@@ -19,12 +19,12 @@ py.autorecipes {
 				{name = "wood-seeds",   amount = 20},
 				{name = "meat",         amount = 10},
 				{name = "water-barrel", amount = 20, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "scrondrix-pup", amount = 5},
 				--{name = 'scrondrix', amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "scrondrix",
 			crafting_speed = 12,
 		},
@@ -206,11 +206,11 @@ py.autorecipes {
 				{name = "meat",          amount = 5},
 				{name = "yotoi-leaves",  amount = 10},
 				{name = "water-barrel",  amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "scrondrix", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "scrondrix",
 		},

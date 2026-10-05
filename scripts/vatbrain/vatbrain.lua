@@ -1,3 +1,10 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
+---@class (partial) PyAlienLifeStorage
+---@field vatbrains table
+
 Vatbrain = {}
 
 py.on_event(py.events.on_init(), function()

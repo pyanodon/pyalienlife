@@ -30,7 +30,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-auog", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -41,7 +41,7 @@ py.autorecipes {
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
 				{name = "cage",        amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "auog",
 			name = "full-render-auogs",

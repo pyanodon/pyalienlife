@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "dhilmos", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -34,7 +34,7 @@ py.autorecipes {
 				{name = "chitin",          amount = BASE_SKIN},
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "dhilmos",
 			name = "full-render-dhilmoss",

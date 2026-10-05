@@ -51,7 +51,7 @@ if data and not yafc_turd_integration then
     }
 
     local productivity = {}
-    local sponges = {"sea-sponge", "sea-sponge-mk02", "sea-sponge-mk03", "sea-sponge-mk04"}
+    local sponges = {"sea-sponge", "sea-sponge-mk02", "sea-sponge-mk03", "sea-sponge-mk04"}--[[@as string[] ]]
     for i, recipe in pairs {
         RECIPE("sea-sponge-sprouts"):copy(),
         RECIPE("sea-sponge-sprouts-2"):copy(),
@@ -60,9 +60,9 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-flagellum"
         productivity[i] = recipe.name
-        recipe:add_result {name = sponges[i], independent_probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1}
+        recipe:add_result {name = sponges[i], independent_probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1}--[[@as data.ProductPrototype]]
         recipe:add_ingredient {name = "limestone", type = "item", amount = 2}
-        recipe.energy_required = recipe.energy_required * 1.5
+        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 1.5
         recipe.main_product = sponges[i]
         data:extend {recipe}
     end

@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "caravan-prototypes"
 
 local CaravanGui = require "gui"
@@ -125,7 +129,7 @@ gui_events[defines.events.on_gui_click]["py_view_inventory_button"] = function(e
 end
 
 gui_events[defines.events.on_gui_click]["py_open_map_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]

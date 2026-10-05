@@ -53,11 +53,12 @@ if data and not yafc_turd_integration then
         recipe:multiply_ingredient_amount("caged-arthurian", 2)
         recipe:multiply_result_amount("cridren", 2)
         recipe:add_result_amount("cridren", 1)
-        recipe.energy_required = recipe.energy_required * 2
+        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 2
         recipe:multiply_result_amount("cage", 2)
         data:extend {recipe}
     end
 
+    --[[@type table<integer, string> ]]
     local mufflers = {"polycrystalline-slab", "alag-grid", "wall-shield", "reinforced-wall-shield"}
     for i, recipe in pairs {
         RECIPE("cridren-enclosure-mk01"):copy(),
@@ -66,7 +67,7 @@ if data and not yafc_turd_integration then
         RECIPE("cridren-enclosure-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-mufflers"
-        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}
+        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}--[[@as data.IngredientPrototype]]
         data:extend {recipe}
     end
 end

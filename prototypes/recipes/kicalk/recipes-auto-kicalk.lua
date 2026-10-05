@@ -12,11 +12,11 @@ py.autorecipes {
 			{
 				{name = "kicalk-seeds", amount = 15},
 				{name = "clay",         amount = 4},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "kicalk", amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "kicalk"
 		},

@@ -1,3 +1,4 @@
+---@diagnostic disable
 local Utils = require 'scripts.caravan.utils'
 local function process_schedule(schedule)
     for _, action in pairs(schedule.actions or {}) do

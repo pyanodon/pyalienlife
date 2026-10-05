@@ -11,7 +11,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-antelope", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",         amount = 5},
@@ -23,7 +23,7 @@ py.autorecipes {
 				{name = "blood",         amount = 60},
 				{name = "cage-antelope", amount = 1},
 				{name = "strangelets",   amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 40,
 			tech = "schrodinger-antelope",
 			name = "full-render-antelope",

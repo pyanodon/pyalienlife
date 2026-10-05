@@ -168,7 +168,7 @@ local function remove_nonfood_items_from_food_inventory(dig_site)
     if trash_slot.valid_for_read then return end
     local food_inventory = dig_site.food_inventory
     for i = 1, #food_inventory do
-        local food = food_inventory[i]
+        local food = food_inventory[i--[[@as uint]]]
         if food.valid_for_read and not Digosaurus.foods[food.name] then
             food.swap_stack(trash_slot)
             return

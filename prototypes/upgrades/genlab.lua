@@ -5,21 +5,21 @@ if data and not yafc_turd_integration then
     adam:add_result {name = "personal-laser-defense-equipment", amount = 1, type = "item", independent_probability = 0.99, ignored_by_productivity = 1, ignored_by_stats = 1}
     adam:remove_result("adam42-gen")
     adam:add_result {name = "adam42-gen", type = "item", amount_min = 1, amount_max = 2}
-    adam.energy_required = adam.energy_required * 4
+    adam.energy_required = adam.energy_required--[[@cast -?]] * 4
     adam.main_product = "adam42-gen"
 
     local pks = RECIPE("enzyme-pks"):copy()
     pks.name = "enzyme-pks-nickel-carbonyl"
     pks:add_ingredient {name = "nickel-carbonyl", amount = 200, type = "fluid"}
     pks:multiply_result_amount("enzyme-pks", 2)
-    pks.energy_required = pks.energy_required * 2
+    pks.energy_required = pks.energy_required--[[@cast -?]] * 2
     pks.main_product = "enzyme-pks"
 
     local hmas = RECIPE("hmas"):copy()
     hmas.name = "hmas-pvp"
     hmas:add_ingredient {name = "pvp", amount = 2, type = "item"}
     hmas:multiply_result_amount("hmas", 2.5)
-    hmas.energy_required = hmas.energy_required * 3
+    hmas.energy_required = hmas.energy_required--[[@cast -?]] * 3
 
     data:extend {adam, pks, hmas}
 end

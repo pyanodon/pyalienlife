@@ -73,8 +73,8 @@ TECHNOLOGY("military-4"):add_pack("py-science-pack-4")
 
 TECHNOLOGY("destroyer"):add_pack("py-science-pack-4")
 
-ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
-ITEM("raw-fish", "capsule"):set("icon_size", 32)
+ITEM("raw-fish"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
+ITEM("raw-fish"):set("icon_size", 32)
 RECIPE("power-armor"):add_ingredient {type = "item", name = "pelt", amount = 1}
 TECHNOLOGY("atomic-bomb"):remove_prereq("kovarex-enrichment-process"):remove_prereq("military-4"):remove_prereq("rocketry"):add_prereq("domestication-mk02"):add_prereq("uranium-mk03")
 RECIPE("atomic-bomb"):add_ingredient {type = "item", name = "titanium-plate", amount = 20}:add_ingredient {type = "item", name = "fuelrod-mk01", amount = 10}:remove_ingredient("yellow-cake"):add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
@@ -106,8 +106,8 @@ TECHNOLOGY("worker-robots-speed-5"):remove_pack("utility-science-pack"):add_pack
 local worker_robot_speed_7 = table.deepcopy(data.raw.technology["worker-robots-speed-6"])
 worker_robot_speed_7.name = "worker-robots-speed-7"
 data:extend{worker_robot_speed_7}
-data.raw.technology["worker-robots-speed-6"].unit.count_formula = nil
-data.raw.technology["worker-robots-speed-6"].unit.count = 1000
+data.raw.technology["worker-robots-speed-6"].unit--[[@cast -?]].count_formula = nil
+data.raw.technology["worker-robots-speed-6"].unit--[[@cast -?]].count = 1000
 data.raw.technology["worker-robots-speed-6"].max_level = nil
 TECHNOLOGY("worker-robots-speed-6"):remove_pack("space-science-pack")
 

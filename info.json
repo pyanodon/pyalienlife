@@ -9,7 +9,7 @@
     "description": "Adds farming, ranching, and pharmaceutics into Factorio. It's extremely unethical but also extremely profitable. WARNING! This mod will greatly enhance and extend the rest of the pY mods. Expect a 1000+ hour long game!",
     "dependencies": [
         "base >= 2.1.20",
-        "~ pypostprocessing >= 3.1.5",
+        "~ pypostprocessing >= 3.1.6",
         "~ pyalienlifegraphics >= 3.1.0",
         "~ pyalienlifegraphics2 >= 3.1.0",
         "~ pyalienlifegraphics3 >= 3.1.0",

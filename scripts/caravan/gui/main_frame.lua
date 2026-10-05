@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
@@ -99,7 +103,7 @@ function P.update_status_flow(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_close_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     local slider_frame = number_selection.get_slider_frame(player)
     local add_interrupt_frame = player.gui.screen.add_interrupt_gui
