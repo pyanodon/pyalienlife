@@ -334,7 +334,7 @@ py.on_event("py_caravan_pipette", function(event)
     local main_inventory = get_inventory(player)
     if not main_inventory or not player.is_cursor_empty() then return end
     -- edge case (not handled): god controller/cheat mode where pipette gives you a full stack
-    local target_slot = caravan_data.fuel_inventory[event.element.tags.slot_index]
+    local target_slot = caravan_data.fuel_inventory--[[@cast -?]][event.element.tags.slot_index]--[[@as LuaItemStack]]
     -- fuel slot has something in it, so find that item in the player inventory
     if target_slot.valid_for_read then
         local _, index = main_inventory.find_item_stack(target_slot.name)

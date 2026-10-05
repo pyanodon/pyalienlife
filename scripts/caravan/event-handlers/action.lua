@@ -107,7 +107,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_play_stop_button"] = 
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
-    local schedule = caravan_data.schedule[tags.schedule_id]
+    local schedule = caravan_data.schedule--[[@cast -?]][tags.schedule_id]
 
     if caravan_data.schedule_id == tags.schedule_id then
         if caravan_data.action_id == tags.action_id then

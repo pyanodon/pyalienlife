@@ -96,9 +96,9 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     local effective_speed
 
-    local is_this_a_speed_module_that_effects_farm_buildings = mk1.crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
+    local is_this_a_speed_module_that_effects_farm_buildings = mk1--[[@cast -?]].crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
     if is_this_a_speed_module_that_effects_farm_buildings then
-        effective_speed = mk1_module_slots * effect.speed
+        effective_speed = mk1_module_slots--[[@cast -?]] * effect.speed
     end
 
     local module = {
@@ -134,8 +134,9 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     if effective_speed then
         local adjusted_speed = effect.speed * 100
-        if adjusted_speed >= 0 then adjusted_speed = "+" .. adjusted_speed end
-        py.add_to_description(module, "turd.adjusted-speed", tostring(adjusted_speed))
+        local adjusted_speed_string = tostring(adjusted_speed)
+        if adjusted_speed >= 0 then adjusted_speed_string = "+" .. adjusted_speed end
+        py.add_to_description(module, "turd.adjusted-speed", adjusted_speed_string)
     end
 
     if is_this_a_speed_module_that_effects_farm_buildings then
@@ -159,7 +160,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     -- https://github.com/pyanodon/pybugreports/issues/809
     if effect.productivity and effect.productivity ~= 0 then
         for _, recipe in pairs(data.raw.recipe) do
-            if not recipe.allow_productivity and RECIPE(recipe):has_categories(mk1.crafting_categories) then
+            if not recipe.allow_productivity and RECIPE(recipe):has_categories(mk1--[[@cast -?]].crafting_categories) then
                 recipe.allow_productivity = true
             end
         end
@@ -270,6 +271,7 @@ else
                 end
             end
         end
+        ---@diagnostic disable-next-line: assign-type-mismatch
         upgrade.sub_techs = indexed_sub_techs
 
         indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
@@ -279,6 +281,7 @@ else
             indexed_affected_entities[affected_entity] = i
             if upgrade.module_category then farm_building_tiers[affected_entity] = i end
         end
+        ---@diagnostic disable-next-line: assign-type-mismatch
         upgrade.affected_entities = indexed_affected_entities
     end
 

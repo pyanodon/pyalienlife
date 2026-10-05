@@ -126,10 +126,10 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destinatio
     local unit_number = event.element.tags.unit_number
     local caravan_data = storage.caravans[unit_number]
 
-    local schedule = caravan_data.schedule[schedule_id]
+    local schedule = caravan_data.schedule--[[@cast -?]][schedule_id]
     local actions = schedule.actions
 
-    local valid_actions = table.invert(CaravanUtils.get_valid_actions_for_entity(caravan_data.entity.name, caravan_data.schedule[schedule_id].entity))
+    local valid_actions = table.invert(CaravanUtils.get_valid_actions_for_entity(caravan_data.entity.name, caravan_data.schedule--[[@cast -?]][schedule_id].entity))
 
     -- off-by-one index is used to show "+ Add action" text
     if element.selected_index == 0 or element.selected_index > #valid_actions then return end
@@ -145,7 +145,7 @@ gui_events[defines.events.on_gui_selection_state_changed]["py_caravan_destinatio
     elseif type == "outpost-fluid-count" then
         localised_name = {"caravan-actions.outpost-fluid-count2", {"caravan-gui.not-specified"}}
     end
-    table.insert(caravan_data.schedule[schedule_id].actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
+    table.insert(caravan_data.schedule--[[@cast -?]][schedule_id].actions, CaravanUtils.ensure_item_count{type = type, localised_name = localised_name})
 
     CaravanGuiComponents.update_schedule_pane(player)
 end

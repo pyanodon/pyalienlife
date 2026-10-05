@@ -190,6 +190,7 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
         if schedule_entity.valid and schedule_entity.surface == entity.surface then
             ImplControl.goto_entity(caravan_data, schedule.entity)
         else
+            ---@diagnostic disable-next-line: undefined-field
             ImplGui.add_alert(entity, Caravan.alerts.destination_destroyed)
             py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 60, 30)
             ImplControl.wander(caravan_data)

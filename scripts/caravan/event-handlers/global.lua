@@ -148,7 +148,7 @@ local function on_carrot_used(player, cursor_position)
         if not CaravanImpl.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule
         prototype = caravan_prototypes[caravan_data.entity.name]
-        only_outpost = prototype.only_allow_outpost_as_destination
+        -- only_outpost = prototype.only_allow_outpost_as_destination
     end
     if interrupt_data then
         schedule = interrupt_data.schedule
@@ -190,7 +190,7 @@ local function on_carrot_used(player, cursor_position)
 
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-        if only_outpost and entity.name ~= prototype.outpost then return end
+        -- if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
 
         sch.entity = entity
@@ -210,7 +210,7 @@ local function on_carrot_used(player, cursor_position)
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-        if only_outpost and entity.name ~= prototype.outpost then return end
+        -- if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
         local player_index = nil
         local localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}

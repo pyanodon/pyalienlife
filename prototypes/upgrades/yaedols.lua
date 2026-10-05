@@ -23,9 +23,9 @@ if data and not yafc_turd_integration then
         recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.9)
 
         local _, amount_removed = recipe:remove_ingredient("nitrogen")
-        local nitrogen_barrels = math.ceil(amount_removed / 50)
+        local nitrogen_barrels = math.ceil(amount_removed / 50)--[[@as number]]
         if nitrogen_barrels > 0 then
-            recipe:add_ingredient {name = "nitrogen-barrel", amount = nitrogen_barrels, type = "item"}
+            recipe:add_ingredient {name = "nitrogen-barrel", amount = nitrogen_barrels, type = "item"}--[[@as data.IngredientPrototype]]
             local _, amount_removed = recipe:remove_result("barrel")
             nitrogen_barrels = nitrogen_barrels + amount_removed
             recipe:add_result {name = "barrel", amount = nitrogen_barrels, type = "item"}--[[@as data.ProductPrototype]]

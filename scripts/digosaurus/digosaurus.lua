@@ -30,7 +30,7 @@ Digosaurus = {}
 ---@field state string
 ---@field ores_gained_per_trip uint
 
----@class (partial) PyAlienLifeStorage:PyPostProcessingStorage
+---@class (partial) PyAlienLifeStorage
 ---@field dig_sites {[uint]: DigSite?}
 ---@field digosaurs {[uint64]: Digosaur?}
 storage = {}
