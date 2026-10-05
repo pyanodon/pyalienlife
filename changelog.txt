@@ -6,6 +6,7 @@ Date: ???
     - Fixed crash when players with low luck delete a farm
     - Fixed TURD productivity not applying to all recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1585, resolves https://github.com/pyanodon/pybugreports/issues/1579, resolves https://github.com/pyanodon/pybugreports/issues/1558, resolves https://github.com/pyanodon/pybugreports/issues/1534
     - Updated German locale (thanks, Spunk42!)
+    - Fixed Oviduct Bombardment TURD returning an extra barrel. Resolves https://github.com/pyanodon/pybugreports/issues/1589
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.7
 Date: 2026-09-22
