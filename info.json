@@ -10,7 +10,7 @@
     "dependencies": [
         "base >= 2.1.20",
         "~ pypostprocessing >= 3.1.6",
-        "~ pyalienlifegraphics >= 3.1.0",
+        "~ pyalienlifegraphics >= 3.1.1",
         "~ pyalienlifegraphics2 >= 3.1.0",
         "~ pyalienlifegraphics3 >= 3.1.0",
         "pyrawores >= 3.1.0",
