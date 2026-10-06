@@ -1,3 +1,4 @@
+---@diagnostic disable
 -- farming changes
 storage.farms = storage.farms or {}
 storage.farm_count = storage.farm_count or 0

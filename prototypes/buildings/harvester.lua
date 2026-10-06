@@ -53,6 +53,7 @@ ENTITY {
         },
     },
     energy_usage = "600kW",
+    require_resources_to_place = false,
     resource_searching_radius = 4.49,
     vector_to_place_result = {0, -3.8},
     radius_visualisation_picture = {

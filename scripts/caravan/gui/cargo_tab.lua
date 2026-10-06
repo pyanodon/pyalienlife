@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local Impl = require "__pyalienlife__/scripts/caravan/impl"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local inv = require "inventories"
@@ -61,7 +65,7 @@ function P.build_cargo_flow(parent, player, caravan_data, enabled)
     inv.build_fuel_inventory(flow, caravan_data)
     flow.add {type = "line", style = "inside_shallow_frame_with_padding_line"}.style.horizontally_stretchable = true
 
-    if caravan_data.entity.name:find("^fluidavan") or caravan_data.entity.name:find("^fluidflyavan")then
+    if caravan_data.entity.name:find("^fluid") then
         flow.add {type = "label", caption = {"caravan-gui.tank-label"}}
         P.build_fluid_flow(flow, caravan_data)
     else
@@ -101,9 +105,9 @@ function P.update_cargo_pane(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_flush_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = player.gui.screen.caravan_gui
-    local unit_number = gui.tags.unit_number
+    local unit_number = gui.tags.unit_number--[[@as int]]
 
     local caravan = storage.caravans[unit_number]
     caravan.fluid = nil

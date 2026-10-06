@@ -5,7 +5,7 @@ if data and not yafc_turd_integration then
         RECIPE("caged-xeno-3"):copy(),
         RECIPE("caged-xeno-4"):copy(),
     } do
-        recipe.energy_required = math.ceil(recipe.energy_required / 2)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] / 2)
         recipe.name = recipe.name .. "-dna-polymerase"
         if i == 1 or i == 3 then
             recipe:add_result {name = "dna-polymerase", amount = i * 20, type = "item"}

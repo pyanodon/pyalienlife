@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-zungror", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -39,7 +39,7 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "brain",           amount = BASE_BRAIN},
 				{name = "cage",            amount = INPUT_AMOUNT}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "zungror",
 			name = "full-render-zun",

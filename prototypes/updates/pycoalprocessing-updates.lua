@@ -1,4 +1,5 @@
-ITEM("automation-science-pack", "tool"):set("icon", "__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
+ITEM("automation-science-pack"):set("icon", "__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
+TECHNOLOGY("automation-science-pack"):set("icon_size", 64):create_icons("__pyalienlifegraphics3__/graphics/icons/automation-science-pack.png")
 
 
 TECHNOLOGY("wood-processing"):set_fields {prerequisites = {"moss-mk01"}}

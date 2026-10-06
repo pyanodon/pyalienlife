@@ -83,7 +83,7 @@ if data and not yafc_turd_integration then
             categories = {"crafting-with-fluid"},
         }
 
-        for _, ingredient in pairs(sawblade_ingredients[i]) do
+        for _, ingredient in pairs(sawblade_ingredients[i]--[[@cast -?]]) do
             recipe:add_ingredient(ingredient)
         end
 
@@ -98,7 +98,7 @@ if data and not yafc_turd_integration then
         entity.order = data.raw.item[name].order
         entity.allowed_module_categories = {"sawblade"}
         if i ~= 4 then entity.next_upgrade = "wpu-mk0" .. (i + 1) .. "-turd" end
-        table.insert(entity.flags, "not-in-made-in")
+        table.insert(entity.flags--[[@cast -?]], "not-in-made-in")
         entity.module_slots = MODULE_SLOTS
         entity.allowed_effects = {"speed", "productivity", "pollution"}
         entity.effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
@@ -193,6 +193,7 @@ if data and not yafc_turd_integration then
         table.deepcopy(data.raw.recipe["wood-seedling-mk04"]),
     } do
         seedling_recipe.name = seedling_recipe.name .. "-turd"
+        seedling_recipe = RECIPE(seedling_recipe)
         seedling_recipe:remove_ingredient("moss")
         seedling_recipe:remove_ingredient("chelator")
         seedling_recipe:add_ingredient {type = "fluid", name = "anthracene-oil", amount = 35}

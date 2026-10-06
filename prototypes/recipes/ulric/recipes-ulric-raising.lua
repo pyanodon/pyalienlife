@@ -18,13 +18,13 @@ py.autorecipes {
 				{name = "fawogae",       amount = 3},
 				{name = "ulric-food-01", amount = 2},
 				{name = "water-barrel",  amount = 15, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				--{name = 'ulric', amount = 2,},
 				{name = "ulric-cub", amount = 3},
 				--{name = 'manure', amount = 1}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 15,
 			tech = "ulric"
 		},
@@ -237,12 +237,12 @@ py.autorecipes {
 				{name = "ralesia-seeds", amount = 15},
 				{name = "ulric-food-01", amount = 1},
 				{name = "water-barrel",  amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "ulric", amount = 3},
 				--{name = 'manure', amount = 3}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "ulric"
 		},

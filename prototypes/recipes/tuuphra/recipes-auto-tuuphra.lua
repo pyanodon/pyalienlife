@@ -15,11 +15,11 @@ py.autorecipes {
 				{name = "soil",            amount = 20},
 				{name = "coarse",          amount = 10},
 				{name = "water",           amount = 100, fluidbox_index = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "tuuphra", amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "tuuphra"
 		},

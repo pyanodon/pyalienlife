@@ -1,6 +1,45 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.3
+Version: 3.1.8
 Date: ???
+  Changes:
+    - Fixed relative caravan GUI (i.e. on depots) needing horizontal scroll
+    - Fixed crash when players with low luck delete a farm
+    - Fixed TURD productivity not applying to all recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1585, resolves https://github.com/pyanodon/pybugreports/issues/1579, resolves https://github.com/pyanodon/pybugreports/issues/1558, resolves https://github.com/pyanodon/pybugreports/issues/1534
+    - Updated German locale (thanks, Spunk42!)
+    - Fixed Oviduct Bombardment TURD returning an extra barrel. Resolves https://github.com/pyanodon/pybugreports/issues/1589
+---------------------------------------------------------------------------------------------------
+Version: 3.1.7
+Date: 2026-09-22
+  Changes:
+    - Adjusted caravan name label text width to better fill the caravan manager UI
+    - Fixed that TURD recipe replacement and TURD recipe descriptions were not colored and missing the TURD icon
+    - Changed to ItemPrototype.fuel_categories
+---------------------------------------------------------------------------------------------------
+Version: 3.1.6
+Date: 2026-09-16
+  Changes:
+    - Fixed that the reproductive complex did not have the right recipe speed scaling
+    - Allow harvesters to be placed without resources under them. Resolves https://github.com/pyanodon/pybugreports/issues/1557
+    - Fixed that some sample recipes did not allow productivity. Resolves https://github.com/pyanodon/pybugreports/issues/1558
+    - Fixed a crash when building biofluid entities. Resolves https://github.com/pyanodon/pybugreports/issues/1539
+    - Fixed that aerial fluid caravans did not show their inventory in the tooltip in the caravan manager. Resolves https://github.com/pyanodon/pybugreports/issues/1502
+    - Fixed other logical discrepancies between aerial and ground fluid caravans
+    - Fixed crash copying caravan interrupts. Resolves https://github.com/pyanodon/pybugreports/issues/1561
+    - Fixed crash from left-over slider when closing caravan edit interrupt UI. Resolves https://github.com/pyanodon/pybugreports/issues/1487
+---------------------------------------------------------------------------------------------------
+Version: 3.1.5
+Date: 2026-08-29
+  Changes:
+    - Updated autotech caches so tech tree fixes from 3.1.3 now apply
+    - Fixed digosaurs being stuck idle due to missing migration (thanks, JeromeJ!)
+---------------------------------------------------------------------------------------------------
+Version: 3.1.4
+Date: 2026-08-28
+  Changes:
+    - Fixed crash with latest Factory Planner (thanks, Claude (human)!)
+---------------------------------------------------------------------------------------------------
+Version: 3.1.3
+Date: 2026-08-28
   Changes:
     - Fixed crash setting recipe on a non-empty reproductive complex. Resolves https://github.com/pyanodon/pybugreports/issues/1521
     - Changed digosaurus remote interfaces to use pyanodons mod data

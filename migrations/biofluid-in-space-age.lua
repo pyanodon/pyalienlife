@@ -1,3 +1,4 @@
+---@diagnostic disable
 require "scripts.biofluid.biofluid"
 
 storage.network_positions = nil

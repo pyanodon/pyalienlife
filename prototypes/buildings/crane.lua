@@ -118,7 +118,7 @@ for i = 1, 4 do
         order = "i[" .. name .. "]",
         stack_size = 10,
         place_result = name,
-    }
+    }--[[@as data.ItemPrototype]]
 
     ENTITY {
         type = "inserter",
@@ -193,8 +193,5 @@ for i = 1, 4 do
                 tint = py.tints[i]
             }
         },
-    }
-    if feature_flags.belt_stacking then
-        data.raw.inserter[name].max_belt_stack_size = 10000
-    end
+    }--[[@as data.EntityPrototype]]
 end

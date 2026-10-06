@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local P = {}
@@ -167,7 +171,7 @@ py.on_event(defines.events.on_gui_click, function (event)
     -- do not destroy the frame right after creating it
     if event.element.name == "py_caravan_interrupt_add_button" then return end
 
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     local gui = player.gui.screen.add_interrupt_gui
     if not gui then return end

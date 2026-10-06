@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
         recipe:add_result {name = "guts", amount = 1, type = "item"}
         recipe:multiply_ingredient_amount("zipir-food-01", 0.5)
         recipe:multiply_ingredient_amount("zipir-food-02", 0.5)
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "zipir1" then
                 if result.independent_probability then
                     result.independent_probability = result.independent_probability - 0.15
@@ -21,7 +21,7 @@ if data and not yafc_turd_integration then
                 end
             end
         end
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.8)
         data:extend {recipe}
     end
 
@@ -33,12 +33,12 @@ if data and not yafc_turd_integration then
         RECIPE("zipir-eggs-5"):copy(),
     } do
         recipe.name = recipe.name .. "-trits-gen"
-        recipe.energy_required = recipe.energy_required * 1.5
+        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 1.5
         recipe:add_ingredient {name = "trits-codex", type = "item", amount = 1}
         recipe:add_result {name = "trits-codex", type = "item", amount = 1, independent_probability = 0.95}
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "zipir-eggs" then
-                result.amount_max = result.amount_max * 2
+                result.amount_max = result.amount_max--[[@cast -?]] * 2
                 break
             end
         end

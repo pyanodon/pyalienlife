@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require("caravan-prototypes")
 require "gui/components"
 
@@ -102,7 +106,7 @@ end
 function P.refocus(gui, target)
     local camera = gui.entity_frame.camera_frame.camera
     local refocus_button = gui.entity_frame.subheader_frame.contents_flow.py_refocus -- reverts camera to the GUI's entity
-    local caravan_unit = storage.caravans[gui.tags.unit_number].entity
+    local caravan_unit = storage.caravans[gui.tags.unit_number--[[@as int]]].entity
     -- reset
     if target == nil then
         camera.entity = caravan_unit
@@ -124,7 +128,7 @@ function P.refocus(gui, target)
 end
 
 py.on_event(defines.events.on_gui_closed, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = event.element
 
     if not gui then -- not modded UI, the only thing we care to do is check for the relative frame

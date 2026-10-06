@@ -18,13 +18,13 @@ py.autorecipes {
 				{name = "rennea",       amount = 10},
 				{name = "water-barrel", amount = 4, return_barrel = true},
 				{name = "bedding",      amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				--{name='kmauts', amount = 2, independent_probability = 0.999},
 				{name = "kmauts-cub", amount = 2},
 				{name = "cage",       amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 15,
 			tech = "kmauts"
 		},
@@ -154,12 +154,12 @@ py.autorecipes {
 				{name = "kmauts-cub",   amount = 2},
 				{name = "caged-ulric",  amount = 1},
 				{name = "water-barrel", amount = 4, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "kmauts", amount = 1},
 				{name = "cage",   amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "kmauts"
 		},

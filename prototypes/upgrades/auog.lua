@@ -19,7 +19,7 @@ if data and not yafc_turd_integration then
             {name = i == 1 and "auog" or "auog-mk0" .. i, amount = 1, type = "item", independent_probability = 0.95},
             {name = "yaedols",                            amount = 1, type = "item", independent_probability = 0.85},
         }
-        for _, result in pairs(data.raw.recipe["ex-used-auog"].results) do
+        for _, result in pairs(data.raw.recipe["ex-used-auog"].results--[[@cast -?]]) do
             result = table.deepcopy(result)
             result.independent_probability = 0.05
             table.insert(results, result)

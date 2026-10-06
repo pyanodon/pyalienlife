@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "cocoon",       amount = 1},
 				{name = "water-barrel", amount = 5, return_barrel = true},
 				{name = "bedding",      amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				--{name = 'arthurian', amount = 2},
 				{name = "arthurian-egg", amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "arthurian"
 		},
 		--py
@@ -168,11 +168,11 @@ py.autorecipes {
 				{name = "automation-science-pack", amount = 1},
 				{name = "logistic-science-pack",   amount = 1},
 				{name = "chemical-science-pack",   amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arthurian-pup", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			name = "arthurian-egg-incubation-01",
 			tech = "arthurian"
@@ -198,11 +198,11 @@ py.autorecipes {
 				{name = "arthurian-pup", amount = 1},
 				{name = "cottongut",     amount = 4},
 				{name = "water-barrel",  amount = 4, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arthurian", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 130,
 			tech = "arthurian"
 		},

@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
 local ImplControl = require "control"
@@ -17,7 +21,7 @@ local function get_outpost_inventory(outpost)
     elseif type == "spider-vehicle" then
         return outpost.get_inventory(defines.inventory.spider_trunk)
     elseif caravan_prototypes[outpost.name] then
-        local caravan_data = storage.caravans[outpost.unit_number]
+        local caravan_data = storage.caravans[outpost.unit_number--[[@as int]]]
         return caravan_data.inventory
     end
 end
@@ -118,7 +122,7 @@ local function transfer_fluid_to_caravan(caravan_data, outpost, fluid, action, m
     local output = caravan_data.fluid or {amount = 0, temperature = 15, name = ""}
 
     local total_output_volume = caravan_prototypes[caravan_data.entity.name].max_volume
-    local remaining_space = total_output_volume - output.amount
+    local remaining_space = total_output_volume--[[@cast -?]] - output.amount
     local goal = math.min(max_transfer, remaining_space)
     if goal <= 0 then return true end
 
@@ -620,7 +624,7 @@ function P.is_inventory_full(caravan_data, schedule, action)
 end
 
 function P.is_inventory_empty(caravan_data, schedule, action)
-    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or (caravan_data.entity.name:find("^fluidavan") and P.is_tank_empty(caravan_data, schedule, action))
+    return (caravan_data.inventory == nil or caravan_data.inventory.is_empty()) or (caravan_data.entity.name:find("^fluid") and P.is_tank_empty(caravan_data, schedule, action))
 end
 
 function P.at_outpost(caravan_data, schedule, action)
