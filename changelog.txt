@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.8
-Date: ???
+Date: 2026-10-06
   Changes:
     - Fixed relative caravan GUI (i.e. on depots) needing horizontal scroll
     - Fixed crash when players with low luck delete a farm
