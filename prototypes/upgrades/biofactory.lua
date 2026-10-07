@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     RECIPE {
         type = "recipe",
         name = "naphtha-arqad",

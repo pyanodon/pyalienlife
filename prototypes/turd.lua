@@ -255,35 +255,127 @@ local function build_tech_upgrade(tech_upgrade)
     }
 end
 
-if data and not yafc_turd_integration then
+if helpers.stage == "prototype" then
     for _, tech_upgrade in pairs(tech_upgrades) do build_tech_upgrade(tech_upgrade) end
-else
-    local indexed_tech_upgrades = {}
-    local farm_building_tiers = {}
-    local turd_machines = {}
-    for _, upgrade in pairs(tech_upgrades) do
-        local indexed_sub_techs = {}
-        for _, sub_tech in pairs(upgrade.sub_techs) do
-            indexed_sub_techs[sub_tech.name] = sub_tech
-            for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
-                if effect.type == "machine-replacement" then
-                    turd_machines[effect.new] = effect.old
-                end
+end
+
+local indexed_tech_upgrades = {}
+local farm_building_tiers = {}
+local turd_machines = {}
+for _, upgrade in pairs(tech_upgrades) do
+    local indexed_sub_techs = {}
+    for _, sub_tech in pairs(upgrade.sub_techs) do
+        indexed_sub_techs[sub_tech.name] = sub_tech
+        for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
+            if effect.type == "machine-replacement" then
+                turd_machines[effect.new] = effect.old
             end
         end
-        ---@diagnostic disable-next-line: assign-type-mismatch
-        upgrade.sub_techs = indexed_sub_techs
-
-        indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
-
-        local indexed_affected_entities = {}
-        for i, affected_entity in pairs(upgrade.affected_entities) do
-            indexed_affected_entities[affected_entity] = i
-            if upgrade.module_category then farm_building_tiers[affected_entity] = i end
-        end
-        ---@diagnostic disable-next-line: assign-type-mismatch
-        upgrade.affected_entities = indexed_affected_entities
     end
+    ---@diagnostic disable-next-line: assign-type-mismatch
+    upgrade.sub_techs = indexed_sub_techs
 
-    return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
+    indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
+
+    local indexed_affected_entities = {}
+    for i, affected_entity in pairs(upgrade.affected_entities) do
+        indexed_affected_entities[affected_entity] = i
+        if upgrade.module_category then farm_building_tiers[affected_entity] = i end
+    end
+    ---@diagnostic disable-next-line: assign-type-mismatch
+    upgrade.affected_entities = indexed_affected_entities
 end
+
+if helpers.stage == "prototype" then
+    py.yafc_integrations.pyalienlife_turds = function()
+        py.log.debug("Improve TURD selection")
+
+        ITEM {
+            type = "item",
+            name = "hidden-beacon-turd",
+            icon = data.raw["beacon"]["hidden-beacon-turd"].icon,
+            icon_size = data.raw["beacon"]["hidden-beacon-turd"].icon_size,
+            place_result = "hidden-beacon-turd"
+        }
+        RECIPE {
+            type = "recipe",
+            name = "hidden-beacon-turd",
+            ingredients = {},
+            results = {{type = "item", name = "hidden-beacon-turd", amount = 1}}
+        }
+
+        for _, tech_upgrade in pairs(indexed_tech_upgrades) do
+            local master_tech = tech_upgrade.master_tech
+            for _, tech in pairs(tech_upgrade.sub_techs) do
+                local effects = {}
+                for _, effect in pairs(tech.effects) do
+                    if effect.type == "module-effects" then
+                        local modules = {}
+                        if data.raw.module[tech.name .. "-module"] then
+                            table.insert(modules, tech.name .. "-module")
+                        else
+                            for i, entity in pairs(tech_upgrade.affected_entities or {}) do
+                                table.insert(modules, tech.name .. "-module-mk0" .. i)
+                            end
+                        end
+                        for _, module in pairs(modules) do
+                            RECIPE {
+                                type = "recipe",
+                                name = module,
+                                enabled = false,
+                                ingredients = {},
+                                result = module
+                            }
+                            table.insert(effects, {
+                                type = "unlock-recipe",
+                                recipe = module
+                            })
+                        end
+                    elseif effect.type == "unlock-recipe" then
+                        table.insert(effects, {
+                            type = "unlock-recipe",
+                            recipe = effect.recipe
+                        })
+                    elseif effect.type == "recipe-replacement" then
+                        table.insert(effects, {
+                            type = "unlock-recipe",
+                            recipe = effect.new
+                        })
+                    end
+                end
+                TECHNOLOGY {
+                    type = "technology",
+                    name = "turd-select-" .. tech.name,
+                    localised_name = {"", {"turd.select"}, " ", {"technology-name." .. tech.name}},
+                    icon = tech.icon,
+                    icon_size = tech.icon_size,
+                    order = tech.order,
+                    prerequisites = {},
+                    effects = {},
+                    enabled = false,
+                    unit = {
+                        count = 1,
+                        ingredients = {},
+                        time = 60
+                    }
+                }
+                TECHNOLOGY {
+                    type = "technology",
+                    name = tech.name,
+                    icon = tech.icon,
+                    icon_size = tech.icon_size,
+                    order = tech.order,
+                    prerequisites = {master_tech.name, "turd-select-" .. tech.name},
+                    effects = effects,
+                    unit = {
+                        count = 1,
+                        ingredients = {},
+                        time = 60
+                    }
+                }
+            end
+        end
+    end
+end
+
+return {indexed_tech_upgrades, farm_building_tiers, turd_machines}

@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local recipe = RECIPE("navens-sample"):copy()
     recipe.name = "navens-sample-with-vonix-gen"
     recipe:add_ingredient {type = "item", name = "vonix-codex", amount = 5}

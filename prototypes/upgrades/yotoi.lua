@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local recipe = RECIPE("yotoi-seeds"):copy()
     recipe.name = "yotoi-seeds-cold"
     recipe:add_ingredient {type = "fluid", name = "cold-air", amount = 30}
