@@ -70,8 +70,6 @@ py.on_event(defines.events.on_rocket_launched, function(event)
     yield = math.floor(yield)
     local surface = silo.surface
     local position = silo.position
-    --[[@cast position.x -?]]
-    --[[@cast position.y -?]]
     position.y = position.y - 15
 
     local is_alien_biomes = script.active_mods["alien-biomes"] or script.active_mods["combat-mechanics-overhaul"]

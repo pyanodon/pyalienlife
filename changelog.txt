@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.9
+Date: ????
+  Changes:
+    - Moved Smart Farm crops to mod-data
+    - Removed smart farm landfilling (yes, that was a feature)
+    - Added extra count fraction to smart farm resource yield calculations
+    - Moved farming buildings to mod-data
+---------------------------------------------------------------------------------------------------
 Version: 3.1.8
 Date: 2026-10-06
   Changes:
