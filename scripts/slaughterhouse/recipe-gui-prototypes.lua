@@ -1,6 +1,4 @@
----@diagnostic disable-next-line: assign-type-mismatch
----@type RecipeGUIData
-local recipe_gui = py.mod_data.recipe_gui
+local recipe_gui = py.mod_data.recipe_gui --[[@as RecipeGUIData]]
 
 py.assert_type (
     recipe_gui,

@@ -7,14 +7,12 @@ local mod_data = py.mod_data --[[@as pyModData]]
 ---@field crops table<data.ResourceEntityName, SmartFarmCropData>
 
 ---@class SmartFarmCropData
----@field launch_item data.ItemName item launched
 ---@field resource data.ResourceEntityName
 ---@field recipes table<data.RecipeName, number> recipe - yield per tile. decimal values indicate a chance of resource per tile, 1.5 means one garunteed resource and 50% chance of an extra
 
 mod_data.smart_farm = {
     crops = {
-        ["arum"] = {
-            launch_item = "replicator-cadaveric-arum",
+        ["replicator-cadaveric-arum"] = {
             resource = "arum",
             recipes = {
                 ["arum-super-1"] = 1,
@@ -29,8 +27,7 @@ mod_data.smart_farm = {
                 ["arum-super-10"] = 10,
             }
         },
-        ["ore-bioreserve"] = {
-            launch_item = "replicator-bioreserve",
+        ["replicator-bioreserve"] = {
             resource = "ore-bioreserve",
             recipes = {
                 ["bioreserve-super-1"] = 1,
@@ -45,8 +42,7 @@ mod_data.smart_farm = {
                 ["bioreserve-super-10"] = 10,
             }
         },
-        ["grod-flower"] = {
-            launch_item = "replicator-grod",
+        ["replicator-grod"] = {
             resource = "grod-flower",
             recipes = {
                 ["grod-super-1"] = 1,
@@ -61,8 +57,7 @@ mod_data.smart_farm = {
                 ["grod-super-10"] = 10,
             }
         },
-        ["kicalk-tree"] = {
-            launch_item = "replicator-kicalk",
+        ["replicator-kicalk"] = {
             resource = "kicalk-tree",
             recipes = {
                 ["kicalk-super-1"] = 1,
@@ -77,8 +72,7 @@ mod_data.smart_farm = {
                 ["kicalk-super-10"] = 10,
             }
         },
-        ["ralesia-flowers"] = {
-            launch_item = "replicator-ralesia",
+        ["replicator-ralesia"] = {
             resource = "ralesia-flowers",
             recipes = {
                 ["ralesia-super-1"] = 1,
@@ -93,8 +87,7 @@ mod_data.smart_farm = {
                 ["ralesia-super-10"] = 10,
             }
         },
-        ["rennea-flowers"] = {
-            launch_item = "replicator-rennea",
+        ["replicator-rennea"] = {
             resource = "rennea-flowers",
             recipes = {
                 ["rennea-super-1"] = 1,
@@ -109,8 +102,7 @@ mod_data.smart_farm = {
                 ["rennea-super-10"] = 10,
             }
         },
-        ["tuuphra-tuber"] = {
-            launch_item = "replicator-tuuphra",
+        ["replicator-tuuphra"] = {
             resource = "tuuphra-tuber",
             recipes = {
                 ["tuuphra-super-1"] = 1,
@@ -125,8 +117,7 @@ mod_data.smart_farm = {
                 ["tuuphra-super-10"] = 10,
             }
         },
-        ["yotoi-tree-fruit"] = {
-            launch_item = "replicator-yotoi-fruit",
+        ["replicator-yotoi-fruit"] = {
             resource = "yotoi-tree-fruit",
             recipes = {
                 ["yotoi-fruit-super-1"] = 1,
@@ -141,8 +132,7 @@ mod_data.smart_farm = {
                 ["yotoi-fruit-super-10"] = 10,
             }
         },
-        ["yotoi-tree"] = {
-            launch_item = "replicator-yotoi",
+        ["replicator-yotoi"] = {
             resource = "yotoi-tree",
             recipes = {
                 ["yotoi-super-1"] = 1,
@@ -178,13 +168,13 @@ if helpers.stage == "prototype" then
             mod_data.smart_farm.crops["ore-bioreserve-farming"].resource = "ore-bioreserve-farming"
         end
 
-        for _, cropdata in pairs(mod_data.smart_farm.crops) do
-            local fluid_name = cropdata.resource .. "-farming-fluid"
-            local resource = data.raw["resource"][cropdata.resource]
+        for launch_item, crop_data in pairs(mod_data.smart_farm.crops) do
+            local fluid_name = crop_data.resource .. "-farming-fluid"
+            local resource = data.raw["resource"][crop_data.resource]
             FLUID {
                 type = "fluid",
                 name = fluid_name,
-                localised_name = {"", "Smart farming with ", {"item-name." .. cropdata.launch_item}},
+                localised_name = {"", "Smart farming with ", {"item-name." .. launch_item}},
                 icon = resource.icon,
                 icon_size = resource.icon_size,
                 default_temperature = 15,
@@ -195,9 +185,9 @@ if helpers.stage == "prototype" then
             resource.minable.fluid_amount = 10
             resource.autoplace = {control = "trees", probability_expression = ""}
 
-            for recipe_name, yield in pairs(cropdata.recipes) do
+            for recipe_name, yield in pairs(crop_data.recipes) do
                 local recipe = RECIPE(recipe_name)
-                RECIPE(recipe):add_ingredient {name = cropdata.launch_item, amount = 1, type = "item"} --[[@as data.IngredientPrototype]]
+                RECIPE(recipe):add_ingredient {name = launch_item, amount = 1, type = "item"} --[[@as data.IngredientPrototype]]
                 recipe.results[1] = {type = "fluid", name = fluid_name, amount = math.floor(yield * 529)}
             end
         end

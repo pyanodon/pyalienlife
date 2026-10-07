@@ -1,7 +1,4 @@
----@diagnostic disable: missing-fields
----@diagnostic disable-next-line: assign-type-mismatch
----@type pyModData
-local mod_data = py.mod_data
+local mod_data = py.mod_data --[[@as pyModData]]
 
 ---@class DigosaurPrototype
 ---@field proxy data.EntityID mining target
@@ -94,10 +91,10 @@ if helpers.stage == "prototype" then
         data.raw["assembling-machine"]["dino-dig-site"].fixed_recipe = nil
 
         ---@type {[data.EntityID]: DigosaurPrototype}
-        local dig_creatures = py.mod_data.digosaurus.creatures
+        local dig_creatures = mod_data.digosaurus.creatures
 
-        for food_name, food_bonus in pairs(py.mod_data.digosaurus.foods) do
-            for creature, creature_data in ipairs(dig_creatures) do
+        for food_name, food_bonus in pairs(mod_data.digosaurus.foods) do
+            for creature, creature_data in pairs(dig_creatures) do
                 -- The creature is looped in the recipe to make it only available after the creature is available
                 RECIPE {
                     type = "recipe",

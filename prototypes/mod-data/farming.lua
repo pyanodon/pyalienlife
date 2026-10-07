@@ -1,6 +1,4 @@
----@diagnostic disable-next-line: assign-type-mismatch
----@type pyModData
-local mod_data = py.mod_data
+local mod_data = py.mod_data --[[@as pyModData]]
 
 -- note, farm building does not need to include -mk0x or -turd, they are filtered out manually (may change in the future)
 
@@ -57,8 +55,10 @@ if helpers.stage == "prototype" then
         py.log.debug("Fix animal module dependencies")
         -- Needed to make the milestones work properly and lock normal production after the bootstrapping recipe
 
-        for farm, farm_data in ipairs(py.mod_data.farm_buildings) do
-            RECIPE(farm .. "-mk01"):add_ingredient{type = "item", name = farm_data.default_module, amount = 1}
+        for farm, farm_data in pairs(mod_data.farm_buildings) do
+            if farm_data.default_module then
+                RECIPE(farm .. "-mk01"):add_ingredient{type = "item", name = farm_data.default_module, amount = 1}
+            end
         end
     end
 end

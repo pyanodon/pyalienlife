@@ -1,7 +1,4 @@
----@diagnostic disable: assign-type-mismatch
----@diagnostic disable-next-line: assign-type-mismatch
----@type DigosaursData
-local data = py.mod_data.digosaurus
+local data = py.mod_data.digosaurus --[[@as DigosaursData]]
 
 py.assert_type (
     data,

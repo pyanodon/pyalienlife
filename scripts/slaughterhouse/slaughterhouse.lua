@@ -1,4 +1,3 @@
----@diagnostic disable: need-check-nil, param-type-mismatch, assign-type-mismatch, undefined-field, inject-field
 -- for full history reference: https://github.com/pyanodon/pyalienlife/commit/ed87228489c87e6c68993d78f09e76e21970302a
 
 ---@class RecipeGUI

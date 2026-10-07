@@ -1,6 +1,4 @@
----@diagnostic disable-next-line: assign-type-mismatch
----@type pyModData
-local mod_data = py.mod_data
+local mod_data = py.mod_data --[[@as pyModData]]
 
 ---@class (partial) pyModData
 ---@field recipe_gui RecipeGUIData

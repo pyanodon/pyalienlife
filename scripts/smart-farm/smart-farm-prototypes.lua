@@ -1,147 +1,76 @@
----@diagnostic disable-next-line: assign-type-mismatch
----@type SmartFarmData
-local smart_farm = py.mod_data.smart_farm
+local smart_farm = py.mod_data.smart_farm --[[@as SmartFarmData]]
 
 py.assert_type (
     smart_farm,
     "table",
-    "ERROR: pY mod data [recipe_gui] is invalid"
+    "ERROR: pY mod data [smart_farm] is invalid"
 )
 
 py.assert_type (
-    smart_farm.machines,
+    smart_farm.crops,
     "table",
-    "ERROR: pY mod data [recipe_gui] has invalid machines"
+    "ERROR: pY mod data [smart_farm] has invalid field crops"
 )
 
-RecipeGUI.permitted_recipes = {}
-RecipeGUI.machines = {}
+SmartFarm = SmartFarm or {}
+SmartFarm.crops = {}
 
-for machine in pairs(smart_farm.machines) do
+for launch_item, crop_data in pairs(smart_farm.crops) do
     py.assert_type (
-        machine,
+        launch_item,
         "string",
-        "ERROR: pY mod data [recipe_gui] has invalid machine"
+        "ERROR: pY mod data [smart_farm] SmartFarmCropData has invalid index"
     )
     py.assert(
-        prototypes.entity[machine],
-        "ERROR: pY mod data [recipe_gui] has invalid machine"
+        prototypes.item[launch_item],
+        "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] launch item does not exist",
+        launch_item
     )
     py.assert(
-        prototypes.entity[machine].crafting_categories,
-        "ERROR: pY mod data [recipe_gui] has invalid machine. [%s] is not a CraftingMachine"
+        prototypes.item[launch_item].send_to_orbit_mode == "automated",
+        "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] launch item cannot be automatically launched",
+        launch_item
     )
-
-    RecipeGUI.machines[machine] = true
-    ---@diagnostic disable-next-line: param-type-mismatch
-    for category in pairs(prototypes.entity[machine].crafting_categories) do
-        RecipeGUI.permitted_recipes[category] = {}
-    end
-end
-
-RecipeGUI.permitted_recipes.parameters = nil
-
-py.assert_type (
-    smart_farm.subgroups,
-    "table",
-    "ERROR: pY mod data [recipe_gui] has invalid subgroups"
-)
-
-RecipeGUI.subgroups = {}
-
-for subgroup in pairs(smart_farm.subgroups) do
     py.assert_type (
-        subgroup,
-        "string",
-        "ERROR: pY mod data [recipe_gui] has invalid subgroup"
+        crop_data,
+        "table",
+        "ERROR: pY mod data [smart_farm] has invalid SmartFarmCropData [%s]",
+        launch_item
     )
-    -- simple subgroup check
-    for g in pairs(prototypes.item_subgroup) do
-        if g:find(subgroup, nil, true) then
-            RecipeGUI.subgroups[subgroup] = 0
-        end
-    end
-    -- simple recipe check
-    if not RecipeGUI.subgroups[subgroup] then
-        for r in pairs(prototypes.recipe) do
-            if r:find(subgroup, nil, true) then
-                RecipeGUI.subgroups[subgroup] = 0
-            end
-        end
-    end
-    py.assert (
-        RecipeGUI.subgroups[subgroup],
-        "ERROR: pY mod data [recipe_gui] could not find item-subgroup or recipe to match provided [%s]",
-        subgroup
-    )
-end
-
-py.assert_type (
-    smart_farm.alt_icons,
-    "table",
-    "ERROR: pY mod data [recipe_gui] has invalid alt_icons"
-)
-
-RecipeGUI.alt_icons = {}
-
-for subgroup, alt in pairs(smart_farm.alt_icons) do
     py.assert_type (
-        subgroup,
+        crop_data.resource,
         "string",
-        "ERROR: pY mod data [recipe_gui] has invalid alt icon subgroup"
+        "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] has invalid resource",
+        launch_item
     )
-
-    py.assert (
-        RecipeGUI.subgroups[subgroup],
-        "ERROR: pY mod data [recipe_gui] has invalid alt icon subgroup. [%s] is not a supported subgroup",
-        subgroup
-    )
-
     py.assert_type (
-        alt,
+        crop_data.resource,
         "string",
-        "ERROR: pY mod data [recipe_gui] has invalid alt icon for [%s]",
-        subgroup
+        "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] resource [%s] does not exist",
+        launch_item, crop_data.resource
     )
-
-    py.assert (
-        prototypes.item[alt] or prototypes.fluid[alt] or prototypes.recipe[alt],
-        "ERROR: pY mod data [recipe_gui] has invalid alt icon for [%s]. No item, fluid, or recipe found for [%s]",
-        subgroup, alt
+    py.assert_type (
+        crop_data.recipes,
+        "table",
+        "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] has invalid recipes",
+        launch_item
     )
-
-    RecipeGUI.alt_icons[subgroup] = alt
-end
-
-for category in pairs(RecipeGUI.permitted_recipes) do
-    for r, recipe in pairs(prototypes.get_recipe_filtered{{filter = "category", category = category}}) do
-        for subgroup, count in pairs(RecipeGUI.subgroups) do
-            if recipe.subgroup.name:find(subgroup, nil, true) then
-                RecipeGUI.permitted_recipes[category][r] = subgroup
-                RecipeGUI.subgroups[subgroup] = count + 1
-                break
-            end
+    for recipe, yield in pairs(crop_data.recipes) do
+        py.assert_type(
+            recipe,
+            "string",
+            "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] has invalid recipe index",
+            launch_item
+        )
+        if not prototypes.recipe[recipe] then
+            py.log.info("recipe [" .. recipe .. "] does not exist", "pY mod data [smart_farm]")
         end
-        if not RecipeGUI.permitted_recipes[category][r] then
-            -- search by comparing recipe name
-            for subgroup, count in pairs(RecipeGUI.subgroups) do
-                if recipe.name:find(subgroup, nil, true) then
-                    RecipeGUI.permitted_recipes[category][r] = subgroup
-                    RecipeGUI.subgroups[subgroup] = count + 1
-                    break
-                end
-            end
-        end
-        py.assert (
-            RecipeGUI.permitted_recipes[category][r],
-            "ERROR: pY mod data [recipe_gui] parse category [%s]: Could not find associated recipe selector group for recipe [%s] with subgroup [%s]",
-            category, r, recipe.subgroup.name
+        py.assert_type(
+            yield,
+            {"number", "gtzero"},
+            "ERROR: pY mod data [smart_farm] SmartFarmCropData [%s] has recipe [%s] has invalid yield",
+            launch_item, recipe
         )
     end
-end
-
-for subgroup, count in pairs(RecipeGUI.subgroups) do
-    if count == 0 then
-        log(("WARNING: pY mod data [recipe_gui] subgroup [%s] was not used."):format(subgroup))
-    end
+    SmartFarm.crops[launch_item] = crop_data
 end
