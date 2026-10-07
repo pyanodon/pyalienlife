@@ -2,12 +2,19 @@
 
 ---@class RecipeGUI
 ---@field subgroups {[string]: true?}
----@field machines {[data.CraftingMachineName]: true?}
+---@field machines {[string]: true?}
 ---@field alt_icons {[string]: string?}
----@field permitted_recipes table<data.RecipeCategoryID, table<data.RecipeID, data.ItemSubGroup?>>
+---@field permitted_recipes table<string, table<string, string?>>
 RecipeGUI = {}
 
 require "recipe-gui-prototypes"
+
+---@namespace PyAlienLife
+---@class (partial) PyAlienLifeStorage
+---@field opened_recipe_viewer table<uint, LuaEntity>
+---@field watched_buildings table<uint, LuaEntity>
+storage = storage --[[@as PyAlienLifeStorage]]
+
 
 py.on_event(defines.events.on_object_destroyed, function(event)
   local unit_number = event.useful_id
@@ -21,6 +28,8 @@ py.on_event(defines.events.on_object_destroyed, function(event)
   end
 end)
 
+---@param main_frame LuaGuiElement
+---@param player LuaPlayer
 local function build_subgroup_table(main_frame, player)
   local content_frame = main_frame.content_frame
   content_frame.clear()
@@ -35,7 +44,7 @@ local function build_subgroup_table(main_frame, player)
   subgroup_table.style.left_margin = -12
   subgroup_table.style.bottom_margin = -12
   subgroup_table.style.right_margin = -12
-  for category in pairs(main_frame.tags.categories) do
+  for category in pairs(main_frame.tags.categories --[[@as table<string,boolean>]]) do
     for recipe, subgroup in pairs(RecipeGUI.permitted_recipes[category] or {}) do
 			local name = "py_recipe_gui_subgroup_" .. subgroup
       if not subgroup_table[name] and player.force.recipes[recipe].enabled then
@@ -58,12 +67,14 @@ local function build_subgroup_table(main_frame, player)
   main_frame.force_auto_center()
 end
 
+---@param player_index uint
+---@param entity LuaEntity?
 local function create_gui(player_index, entity)
   local player = game.get_player(player_index)
   if not player or not entity then return end
   local name = entity.name == "entity-ghost" and entity.ghost_name or entity.name
   local type = entity.type == "entity-ghost" and entity.ghost_type or entity.type
-  local control_behavior = entity.get_control_behavior()
+  local control_behavior = entity.get_control_behavior() --[[@as LuaAssemblingMachineControlBehavior|LuaFurnaceControlBehavior|LuaRocketSiloControlBehavior?]]
   if not RecipeGUI.machines[name] or entity.get_recipe() or (type == "assembling-machine" and control_behavior and control_behavior.circuit_set_recipe) then return end
   local main_frame = player.gui.screen.add {
     type = "frame",
@@ -75,7 +86,7 @@ local function create_gui(player_index, entity)
       caption = {"py-recipe-gui." .. name},
       main_menu = true
     }
-  }
+  } --[[@as LuaGuiElement.add_param]]
   main_frame.force_auto_center()
   player.opened = main_frame
   local toolbar = main_frame.add {type = "flow", name = "toolbar", direction = "horizontal", style = "frame_header_flow"}
@@ -93,7 +104,7 @@ local function create_gui(player_index, entity)
   local content_frame = main_frame.add {type = "frame", name = "content_frame", direction = "vertical", style = "inside_shallow_frame_with_padding"}
   content_frame.style.vertically_stretchable = true
   build_subgroup_table(main_frame, player)
-  storage.opened_recipe_viewer[entity.unit_number] = entity
+  storage.opened_recipe_viewer[entity.unit_number --[[@cast -?]]] = entity
   script.register_on_object_destroyed(entity)
   storage.watched_buildings[player_index] = nil
 end
@@ -124,7 +135,7 @@ end)
 
 local function set_recipe(player, entity, recipe)
   for _, overflow in pairs(entity.set_recipe(recipe)) do ---@cast overflow ItemWithQualityCount
-    overflow.count = overflow.count - player.insert(overflow)
+    overflow.count = overflow.count - player.insert(overflow) --[[@as uint]]
     if overflow.count > 0 then
       player.surface.spill_item_stack {position = player.position, stack = overflow, enable_looted = true}
     end

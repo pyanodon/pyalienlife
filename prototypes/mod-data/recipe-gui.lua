@@ -5,7 +5,7 @@ local mod_data = py.mod_data --[[@as pyModData]]
 
 ---@class RecipeGUIData
 ---@field subgroups {[string]: true?}
----@field machines {[data.CraftingMachineName]: true?}
+---@field machines {[string]: true?}
 ---@field alt_icons {[string]: string?}
 
 mod_data.recipe_gui = {
