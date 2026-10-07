@@ -1,9 +1,12 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "caravan-prototypes"
 local italian_names = require "italian-names"
 
 local P = {}
 
----@param caravan_data Caravan
 ---@param entity LuaEntity
 function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     local prototype = caravan_prototypes[caravan_entity_name]
@@ -83,7 +86,7 @@ function P.get_action_from_button(element)
 
     local action
     if action_list_type == Caravan.action_list_types.standard_schedule then
-        action = storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions[tags.action_id]
+        action = storage.caravans[tags.unit_number--[[@as int]]].schedule--[[@cast -?]][tags.schedule_id].actions[tags.action_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
@@ -109,12 +112,12 @@ function P.get_schedule(element)
     local action_list_type = tags.action_list_type
 
     if action_list_type == Caravan.action_list_types.standard_schedule then
-        local caravan_data = storage.caravans[tags.unit_number]
+        local caravan_data = storage.caravans[tags.unit_number--[[@as int]]]
         local schedule = caravan_data.schedule
-        if tags.action_id then schedule = schedule[tags.schedule_id].actions end
+        if tags.action_id then schedule = schedule--[[@cast -?]][tags.schedule_id].actions end
         return schedule
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
-        local caravan_data = storage.caravans[tags.unit_number]
+        local caravan_data = storage.caravans[tags.unit_number--[[@as int]]]
         return caravan_data.interrupts
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
         return storage.interrupts[tags.interrupt_name].conditions
@@ -132,7 +135,7 @@ function P.get_actions_from_tags(tags, player_index)
 
     local action
     if action_list_type == Caravan.action_list_types.standard_schedule then
-        return storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions
+        return storage.caravans[tags.unit_number].schedule--[[@cast -?]][tags.schedule_id].actions
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then

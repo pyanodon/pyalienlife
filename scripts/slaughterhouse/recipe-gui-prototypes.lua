@@ -14,6 +14,7 @@ py.assert_type (
     "ERROR: pY mod data [recipe_gui] has invalid machines"
 )
 
+---@diagnostic disable-next-line: assign-type-mismatch
 RecipeGUI.permitted_recipes = {}
 RecipeGUI.machines = {}
 

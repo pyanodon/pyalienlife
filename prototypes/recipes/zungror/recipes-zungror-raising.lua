@@ -18,12 +18,12 @@ py.autorecipes {
 				{name = "trits",       amount = 1},
 				{name = "cdna",        amount = 1},
 				{name = "barrel-milk", amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "zungror-cocoon",    amount = 4},
 				{name = "empty-barrel-milk", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 50,
 			tech = "zungror"
 		},
@@ -160,12 +160,12 @@ py.autorecipes {
 				{name = "meat",               amount = 10},
 				{name = "guts",               amount = 10},
 				{name = "arqad-honey-barrel", amount = 1, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "zungror", amount_min = 1, amount_max = 4},
 				{name = "cage",    amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 250,
 			tech = "zungror"
 		},

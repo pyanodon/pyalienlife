@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "programmable-speaker", amount = 1},
 				{name = "small-lamp",           amount = 2},
 				--{name = 'phadai', amount = 3},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "phadai-pup", amount = 3},
 				--{name = 'phadai', amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 70,
 			tech = "phadai"
 		},
@@ -248,11 +248,11 @@ py.autorecipes {
 				{name = "water-barrel",         amount = 4, return_barrel = true},
 				{name = "programmable-speaker", amount = 1},
 				{name = "small-lamp",           amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "phadai", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "phadai"
 		},

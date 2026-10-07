@@ -19,12 +19,12 @@ py.autorecipes {
 				{name = "fish",          amount = 25},
 				{name = "bones",         amount = 20},
 				{name = "water-barrel",  amount = 15, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "xeno-egg", amount = 3},
 				{name = "cage",     amount = 2}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "xeno"
 		},
@@ -171,11 +171,11 @@ py.autorecipes {
 				{name = "caged-mukmoux", amount = 1},
 				{name = "bones",         amount = 10},
 				{name = "water-barrel",  amount = 6, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "caged-xeno", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 130,
 			tech = "xeno"
 		},

@@ -1,3 +1,4 @@
+---@diagnostic disable
 -- The digosaur_data structure changed in 3.1.3, the easiest way to resolve this is just to invalidate the diggo and let the depot regenerate it.
 storage.dig_sites = storage.dig_sites or {}
 

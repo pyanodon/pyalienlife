@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Oculua = {}
 
 Oculua.inventory_size = 1
@@ -9,6 +13,12 @@ local DROPPING_OFF = 2
 local RETURNING = 3
 
 local CHEST = defines.inventory.chest
+
+---@class (partial) PyAlienLifeStorage
+---@field incoming_oculua_items table
+---@field should_run_oculua_code boolean
+---@field oculuas table
+---@field ipods table
 
 py.on_event(py.events.on_init(), function()
     storage.incoming_oculua_items = storage.incoming_oculua_items or {} -- items on the way to a specific player
@@ -170,7 +180,7 @@ end
 py.register_on_nth_tick(221, "Oculua221", "pyal", function()
     if not storage.should_run_oculua_code then return end -- Save on UPS if no ipods are built
     for _, player in pairs(game.connected_players) do
-        if player.character and player.get_requester_point().enabled and not player.force.find_logistic_network_by_position(player.physical_position, player.surface) then
+        if player.character and player.get_requester_point()--[[@cast -?]].enabled and not player.force--[[@as LuaForce]].find_logistic_network_by_position(player.physical_position, player.surface) then
             Oculua.process_player(player)
         end
     end

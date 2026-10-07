@@ -8,7 +8,7 @@ end
 
 ENTITY {
     type = "beacon",
-    name = "hidden-beacon",
+    name = "hidden-beacon-vatbrain",
     icon = "__pycoalprocessinggraphics__/graphics/empty.png",
     icon_size = 32,
     hidden = true,
@@ -19,7 +19,7 @@ ENTITY {
     collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
     selection_box = {{0, 0}, {0, 0}},
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    allowed_module_categories = allowed_module_categories(),
+    allowed_module_categories = {"vatbrain"},
     supply_area_distance = 11,
     energy_source = {type = "void"},
     energy_usage = "1W",

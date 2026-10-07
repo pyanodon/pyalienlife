@@ -20,11 +20,11 @@ py.autorecipes {
 				{name = "meat",               amount = 5},
 				{name = "guts",               amount = 10},
 				{name = "arqad-honey-barrel", amount = 2, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "vonix-eggs", amount = 6},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 45,
 			tech = "vonix"
 		},
@@ -183,11 +183,11 @@ py.autorecipes {
 				{name = "meat",               amount = 10},
 				{name = "guts",               amount = 10},
 				{name = "arqad-honey-barrel", amount = 1, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "vonix", amount_min = 1, amount_max = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 250,
 			tech = "vonix"
 		},

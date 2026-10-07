@@ -1,6 +1,13 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Mounts = {}
 
 local transfer_efficiency = 2
+
+---@class (partial) PyAlienLifeStorage
+---@field mounts table
 
 py.on_event(py.events.on_init(), function()
     storage.mounts = storage.mounts or {}
@@ -90,12 +97,12 @@ py.on_event(defines.events.on_player_removed_equipment, function(event)
             name = equipment_name,
             position = {3, 0},
         }
-        game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
+        game.get_player(event.player_index)--[[@cast -?]].remove_item {name = equipment_name, count = 100}
     elseif equipment_name == "phadaisus-hidden-belt-immunity-equipment" then
         event.grid.put {
             name = equipment_name,
             position = {0, 0},
         }
-        game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
+        game.get_player(event.player_index)--[[@cast -?]].remove_item {name = equipment_name, count = 100}
     end
 end)

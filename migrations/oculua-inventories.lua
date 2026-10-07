@@ -1,3 +1,4 @@
+---@diagnostic disable
 for _, oculua_data in pairs(storage.oculuas or {}) do
     oculua_data.inventory = game.create_inventory(Oculua.inventory_size)
     if oculua_data.count and oculua_data.count > 0 then

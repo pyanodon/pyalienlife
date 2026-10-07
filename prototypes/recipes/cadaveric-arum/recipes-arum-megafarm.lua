@@ -33,7 +33,7 @@ RECIPE {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 1.5},
     },
     order = "arum-b"
-}:add_unlock("mega-farm-cadaveric-arum")
+}--[[@as data.RecipePrototype]]:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",

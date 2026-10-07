@@ -21,7 +21,6 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/biotech-mk02.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk01", "land-animals-mk01", "water-animals-mk01"},
     prerequisites = {"biotech-mk01"},
     effects = {},
     unit = {
@@ -40,7 +39,6 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/biotech-mk03.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"chitin", "land-animals-mk02", "water-animals-mk02"},
     prerequisites = {"biotech-mk02"},
     effects = {},
     unit = {
@@ -63,7 +61,6 @@ TECHNOLOGY {
     icon = "__pyalienlifegraphics__/graphics/technology/biotech-mk04.png",
     icon_size = 128,
     order = "c-a",
-    prerequisites = {"biotech-mk03", "pharmacogenomics"},
     prerequisites = {"biotech-mk03"},
     effects = {},
     unit = {

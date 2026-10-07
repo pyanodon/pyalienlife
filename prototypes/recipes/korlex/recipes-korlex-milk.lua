@@ -31,11 +31,11 @@ py.autorecipes {
 				{name = "korlex-food-01",    amount = 1},
 				{name = "empty-barrel-milk", amount = 3},
 				{name = "water-barrel",      amount = 10, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "barrel-milk", amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "korlex",
 		},

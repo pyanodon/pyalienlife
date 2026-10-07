@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "cottongut", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -41,7 +41,7 @@ py.autorecipes {
 				{name = "mukmoux-fat", amount = BASE_FAT},
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "cottongut-mk01",
 			name = "full-render-cottongut",

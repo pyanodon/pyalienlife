@@ -20,15 +20,15 @@ if data then
         recipe:add_ingredient {name = "hot-air", amount = 60, type = "fluid", fluidbox_index = 2}
         recipe:add_result {name = "cold-air", amount = 60, type = "fluid"}
         recipe.main_product = "cold-air"
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.9)
 
         local _, amount_removed = recipe:remove_ingredient("nitrogen")
-        local nitrogen_barrels = math.ceil(amount_removed / 50)
+        local nitrogen_barrels = math.ceil(amount_removed / 50)--[[@as number]]
         if nitrogen_barrels > 0 then
-            recipe:add_ingredient {name = "nitrogen-barrel", amount = nitrogen_barrels, type = "item"}
+            recipe:add_ingredient {name = "nitrogen-barrel", amount = nitrogen_barrels, type = "item"}--[[@as data.IngredientPrototype]]
             local _, amount_removed = recipe:remove_result("barrel")
             nitrogen_barrels = nitrogen_barrels + amount_removed
-            recipe:add_result {"barrel", nitrogen_barrels}
+            recipe:add_result {name = "barrel", amount = nitrogen_barrels, type = "item"}--[[@as data.ProductPrototype]]
         end
 
         data:extend {recipe}
@@ -44,7 +44,7 @@ if data then
     spore.name = "yaedols-spore-4"
     data:extend {spore}
     table.insert(
-        data.raw.technology["microfilters"].effects,
+        data.raw.technology["microfilters"].effects--[[@cast -?]],
         {
             type = "change-recipe-productivity",
             recipe = "yaedols-spores-coke-oven-gas",
@@ -53,7 +53,7 @@ if data then
         }
     )
     table.insert(
-        data.raw.technology["microfilters-mk02"].effects,
+        data.raw.technology["microfilters-mk02"].effects--[[@cast -?]],
         {
             type = "change-recipe-productivity",
             recipe = "yaedols-spores-coke-oven-gas",

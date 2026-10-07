@@ -33,7 +33,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "trits", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -44,7 +44,7 @@ py.autorecipes {
 				{name = "photophore",  amount = BASE_SPECIAL},
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "trits",
 			name = "full-render-trit",
