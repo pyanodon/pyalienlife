@@ -46,6 +46,7 @@ ITEM {
 
 data:extend {{
     type = "unit",
+    tall = true,
     ai_settings = {do_separation = false},
     additional_pastable_entities = {"fluidflyavan", "fluidflyavan-turd", "caravan", "caravan-turd", "flyavan", "flyavan-turd", "fluidavan", "fluidavan-turd"},
     name = "caravan",

@@ -138,6 +138,7 @@ local mining_animation = {
 
 ENTITY {
     type = "unit",
+    tall = true,
     name = "digosaurus",
     icon = item_icon,
     icon_size = 64,
