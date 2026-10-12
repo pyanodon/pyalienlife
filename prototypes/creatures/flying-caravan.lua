@@ -42,6 +42,7 @@ data:extend
     {
         ai_settings = {do_separation = false, path_resolution_modifier = -1},
         type = "unit",
+        tall = true,
         additional_pastable_entities = {"fluidflyavan","flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd"},
         name = "flyavan",
         map_color = {1, 1, 1},
