@@ -37,6 +37,7 @@ data:extend
     {
         ai_settings = {do_separation = false},
         type = "unit",
+        tall = true,
         name = "ocula",
         icon = "__pyalienlifegraphics__/graphics/icons/ocula.png",
         icon_size = 64,

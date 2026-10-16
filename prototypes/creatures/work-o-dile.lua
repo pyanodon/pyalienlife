@@ -197,6 +197,7 @@ local mining_animation = {
 
 ENTITY {
     type = "unit",
+    tall = true,
     name = "work-o-dile",
     icon = item_icon,
     icon_size = 64,
