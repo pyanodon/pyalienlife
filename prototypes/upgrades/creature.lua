@@ -20,7 +20,7 @@ for _, unit_name in pairs(units) do
     path_3_effects[#path_3_effects + 1] = {type = "unlock-recipe", recipe = unit_name .. "-convert-from-base"}
 end
 
-if data and not yafc_turd_integration then
+if data then
     path_1_effects[#path_1_effects + 1] = path_1_module_effect
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do

@@ -6,7 +6,12 @@ local TO_GROUND = "pipe-to-ground"
 local VESSEL = "vessel"
 local BIOPORT = "bioport"
 
-Biofluid = {}
+---@class (partial) Biofluid
+---@field built_pipe fun()
+---@field update_bioport_animation fun(bioport_data: BiofluidBioport)
+---@field render_error_icons fun()
+
+Biofluid = Biofluid or {} --[[@as Biofluid]]
 
 require "scripts.biofluid.biofluid-prototypes"
 require "scripts.biofluid.biofluid-gui"
@@ -42,6 +47,7 @@ local pi = math.pi
 ---@field providers_by_contents table<string, table<int, LuaEntity>>,
 ---@field allocated_fluids_from_providers table<int, number>,
 
+---@param fluids table<string, string>
 local function migrate_network_data(fluids)
     local num_migrated = 0
     local fluids_deleted = {}
@@ -82,17 +88,17 @@ local function migrate_network_data(fluids)
     end
 
     if num_migrated ~= 0 then
-        local fluids_deleted = serpent.block(fluids_deleted):gsub("\"] = \"", " used to be => \""):gsub("%[\"",
+        local fluids_deleted_message = serpent.block(fluids_deleted):gsub("\"] = \"", " used to be => \""):gsub("%[\"",
             "biofluid robot at ")
-        local fluids_deleted_full = serpent.block(fluids_deleted_full):gsub("\"] = \"", " used to be => \""):gsub("%[\"",
+        local fluids_deleted_full_message = serpent.block(fluids_deleted_full):gsub("\"] = \"", " used to be => \""):gsub("%[\"",
             "biofluid robot at ")
 
-        game.print {"messages.warning-biofluid-migration", num_migrated, fluids_deleted}
+        game.print {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_message}
         if num_migrated > MAX_MESSAGE_SIZE then
             game.print("\t... " ..
                 (num_migrated - MAX_MESSAGE_SIZE) .. " more not shown. Check factorio-current.log for full list.")
             log "FULL LIST: "
-            log {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_full}
+            log {"messages.warning-biofluid-migration", num_migrated, fluids_deleted_full_message}
         end
     end
 end
@@ -104,6 +110,7 @@ end
 ---@field biofluid_bioports BiofluidBioport[]
 ---@field biofluid_networks BiofluidNetwork[]
 
+---@param changes ConfigurationChangedData?
 py.on_event(py.events.on_init(), function(changes)
     storage.biofluid_robots = storage.biofluid_robots or {}
     storage.biofluid_requesters = storage.biofluid_requesters or {}
@@ -118,7 +125,7 @@ end)
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if not entity.valid then return end
-    local connection_type = Biofluid.connectable[entity.name]
+    local connection_type = Biofluid.connectables[entity.name]
     if not connection_type then return end
     entity.disabled_by_script = true
     entity.custom_status = {
@@ -126,7 +133,7 @@ py.on_event(py.events.on_built(), function(event)
         label = {"entity-status.working"},
    }
     local unit_number = entity.unit_number
-    if connection_type == Biofluid.REQUESTER then
+    if connection_type == Biofluid.type.requester then
         local tags = event.tags or {}
         storage.biofluid_requesters[unit_number] = {
             entity = entity,
@@ -138,7 +145,7 @@ py.on_event(py.events.on_built(), function(event)
             temperature_operator = tags.temperature_operator or 1,
             priority = tags.priority or 0
        }
-    elseif connection_type == Biofluid.ROBOPORT then
+    elseif connection_type == Biofluid.type.roboport then
         storage.biofluid_bioports[unit_number] = {
             entity = entity,
             fuel_remaning = 0,
@@ -151,7 +158,7 @@ py.on_event(py.events.on_built(), function(event)
         }
     elseif entity.type == "pipe-to-ground" then
         entity.operable = false
-    elseif connection_type == Biofluid.PROVIDER then
+    elseif connection_type == Biofluid.type.provider then
         local tags = event.tags or {}
         storage.biofluid_providers[unit_number] = {
             entity = entity, 
@@ -171,17 +178,17 @@ local ENTITY_BIOFLUID_PIPE_INDEXES = {
     ["requester-tank"] = 1,
 }
 
--- https://forums.factorio.com/viewtopic.php?f=7&t=120459
+---@param entity LuaEntity
 local function get_fluid_segment_id(entity)
     local biofluid_pipe_index = ENTITY_BIOFLUID_PIPE_INDEXES[entity.name]
     if not biofluid_pipe_index then error("Invalid biofluid pipe: " .. entity.name) end
-    for _, connection in pairs(entity.get_fluid_box_neighbours(biofluid_pipe_index)) do
+    for _, connection --[[@as FluidBoxNeighbourRecord]] in pairs(entity.get_fluid_box_neighbours(biofluid_pipe_index) or {}) do
         if connection.entity.has_fluid_segment(1) then
             local network_id = connection.entity.get_fluid_segment_id(1)
             if network_id then return network_id end
         end
     end
-    return math.random(1, 1000000) -- todo: remove this once the vanilla bug is fixed
+    return math.random(1, 1000000) -- todo get rid of this bad system
 end
 
 function Biofluid.built_pipe()
@@ -276,29 +283,35 @@ function Biofluid.render_error_icons()
 end
 
 local allocated_fluids_from_providers = {}
-local function provider_sort_function(entity_a, entity_b)
-    local a = entity_a.get_fluid(1)
-    local priority_a = storage.biofluid_providers[entity_a.unit_number].priority
-    if not a then a = 0 else a = a.amount end
-    a = a - (allocated_fluids_from_providers[entity_a.unit_number] or 0)
 
-    local b = entity_b.get_fluid(1)
+---@param entity_a LuaEntity
+---@param entity_b LuaEntity
+local function provider_sort_function(entity_a, entity_b)
+    local priority_a = storage.biofluid_providers[entity_a.unit_number].priority
     local priority_b = storage.biofluid_providers[entity_b.unit_number].priority
-    if not b then b = 0 else b = b.amount end
-    b = b - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
 
     if (priority_a > priority_b) then
         return true
     elseif (priority_a < priority_b) then
         return false
-    else
-        return a > b
     end
+  
+    local a_fluid = entity_a.get_fluid(1) or {} --[[@as Fluid]]
+    a_fluid.amount = a_fluid.amount or 0
+    a_fluid.amount = a_fluid.amount - (allocated_fluids_from_providers[entity_a.unit_number] or 0)
+
+    local b_fluid = entity_b.get_fluid(1) or {} --[[@as Fluid]]
+    b_fluid.amount = b_fluid.amount or 0
+    b_fluid.amount = b_fluid.amount - (allocated_fluids_from_providers[entity_b.unit_number] or 0)
+
+    return a_fluid.amount > b_fluid.amount
 end
 
 
 
 --TODO: cache this on the provider, invalidate caches on bioport placement
+---@param base_entity LuaEntity
+---@param unit_numbers table<uint64, any>
 function order_by_distance(base_entity, unit_numbers)
     local order = {}--[[@as integer[] ]]
     for unit_number in pairs(unit_numbers) do
@@ -857,7 +870,7 @@ function Biofluid.why_isnt_my_bioport_working(bioport_data)
     local has_creature = false
     for _, item in pairs(entity.get_inventory(INPUT_INVENTORY).get_contents()) do
         item = item.name
-        if not has_food and Biofluid.favorite_foods[item] then
+        if not has_food and Biofluid.food[item] then
             has_food = true
         elseif not has_creature and Biofluid.biorobots[item] then
             has_creature = true
@@ -926,14 +939,14 @@ py.on_event(defines.events.on_player_rotated_entity, function(event)
     local entity = event.entity
     if not entity.valid then return end
     local name = entity.name
-    if Biofluid.connectable[name] then Biofluid.built_pipe() end
+    if Biofluid.connectables[name] then Biofluid.built_pipe() end
 end)
 
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if not entity.valid then return end
     local name = entity.name
-    if Biofluid.connectable[name] then
+    if Biofluid.connectables[name] then
         local unit_number = entity.unit_number
         if entity.name == BIOPORT then
             local bioport_data = storage.biofluid_bioports[unit_number]
@@ -988,7 +1001,7 @@ py.on_event(defines.events.on_selected_entity_changed, function(event)
 
     if entity_status then
         entity.custom_status = {
-            diode = Biofluid.diode_colors[Biofluid.failure_reasons[entity_status]],
+            diode = Biofluid.diode_colors[Biofluid.status[entity_status]],
             label = {entity_status},
        }
     end

@@ -1,7 +1,4 @@
----@diagnostic disable: missing-fields
----@diagnostic disable-next-line: assign-type-mismatch
----@type pyModData
-local mod_data = data.raw["mod-data"].pyanodons.data
+local mod_data = py.mod_data --[[@as pyModData]]
 
 ---@class DigosaurPrototype
 ---@field proxy data.EntityID mining target
@@ -85,3 +82,36 @@ mod_data.digosaurus.dig_sites = {
         }
     }
 }
+
+if helpers.stage == "prototype" then
+    py.yafc_integrations.pyalienlife_digosaurus = function()
+        py.log.debug("Fix dig-site")
+
+        data.raw.recipe["digosaurus-hidden-recipe"].results = {}
+        data.raw["assembling-machine"]["dino-dig-site"].fixed_recipe = nil
+
+        ---@type {[data.EntityID]: DigosaurPrototype}
+        local dig_creatures = mod_data.digosaurus.creatures
+
+        for food_name, food_bonus in pairs(mod_data.digosaurus.foods) do
+            for creature, creature_data in pairs(dig_creatures) do
+                -- The creature is looped in the recipe to make it only available after the creature is available
+                RECIPE {
+                    type = "recipe",
+                    name = "nexelit-from-" .. food_name .. "-" .. creature,
+                    energy_required = data.raw["simple-entity"][creature_data.proxy].max_health * data.raw.unit[creature].attack_parameters.cooldown / 60,
+                    ingredients = {
+                        {type = "item", name = food_name, amount = 4},
+                        {type = "item", name = creature,      amount = 4}
+                    },
+                    results = {
+                        {type = "item", name = "nexelit-ore", amount = food_bonus * creature_data.mining_bonus * 4},
+                        {type = "item", name = creature,          amount = 4}
+                    },
+                    main_product = "nexelit-ore",
+                    categories = {"dino-dig-site"}
+                }
+            end
+        end
+    end
+end

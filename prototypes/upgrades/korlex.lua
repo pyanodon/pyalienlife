@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     for _, recipe in pairs {
         RECIPE("korlex-milk-1"):copy(),
         RECIPE("korlex-milk-2"):copy(),
