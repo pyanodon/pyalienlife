@@ -158,7 +158,7 @@ py.autorecipes {
 			name = "ex-blo-sim",
 			icons = {
 				{icon = "__pyalienlifegraphics2__/graphics/icons/caged-simik.png"},
-				{icon = "__pyalienlifegraphics__/graphics/icons/blood.png",       scale = 0.25, shift = {-8, -8}}
+				{icon = "__pyalienlifegraphics2__/graphics/icons/simik-blood.png",       scale = 0.25, shift = {-8, -8}}
 			},
 			icon_size = 64,
 		},
