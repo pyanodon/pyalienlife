@@ -61,7 +61,7 @@ local recipe = RECIPE {
 }
 
 for name, _ in pairs(Biofluid.favorite_foods) do
-    RECIPE(recipe):add_ingredient {name = name, amount = data.raw.item[name].stack_size, type = "item"}
+    RECIPE(recipe.name):add_ingredient {name = name, amount = data.raw.item[name].stack_size, type = "item"}
 end
 
 ENTITY {

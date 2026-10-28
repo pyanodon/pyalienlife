@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
         RECIPE("yotoi-fruit-4"):copy(),
     } do
         recipe.name = recipe.name .. "-nutrient"
-        local _, amount = recipe:remove_ingredient("fertilizer")
+        local _, amount = recipe:remove_ingredient("fertilizer")--[[@cast amount int]]
         recipe:add_result {type = "item", name = "fertilizer", amount = amount}
         recipe:add_result_amount("yotoi", 1)
         recipe:add_result_amount("yotoi-fruit", 1)
