@@ -160,7 +160,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     -- https://github.com/pyanodon/pybugreports/issues/809
     if effect.productivity and effect.productivity ~= 0 then
         for _, recipe in pairs(data.raw.recipe) do
-            if not recipe.allow_productivity and RECIPE(recipe):has_categories(mk1--[[@cast -?]].crafting_categories) then
+            if not recipe.allow_productivity and RECIPE(recipe.name):has_categories(mk1--[[@cast -?]].crafting_categories) then
                 recipe.allow_productivity = true
             end
         end
@@ -202,7 +202,7 @@ local function build_tech_upgrade(tech_upgrade)
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
                 py.add_to_description(data.raw.recipe[effect.new], nil, {"turd.font", {"turd.recipe-replacement"}})
                 local recipe = data.raw.recipe[effect.new]
-                local icon_base = recipe and RECIPE(recipe):get_icons()
+                local icon_base = recipe and RECIPE(recipe.name):get_icons()
                 if icon_base then
                     -- Combine the base icon with our overlay
                     recipe.icons = util.combine_icons(icon_base, {{
