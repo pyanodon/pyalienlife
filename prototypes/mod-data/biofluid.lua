@@ -8,7 +8,7 @@ local mod_data = py.mod_data --[[@as pyModData]]
 ---@class (exact) BiofluidData
 ---@field food table<string, uint>
 ---@field biorobots table<string, BiorobotPrototype>
----@field connectables table<string, BiofluidType>
+---@field connectables table<string, Biofluid.type>
 
 ---@class BiorobotPrototype
 ---@field delivery_volume uint
@@ -59,8 +59,6 @@ if helpers.stage == "prototype" then
         data.raw.recipe["bioport-hidden-recipe"].results = {}
         data.raw["assembling-machine"]["bioport"].fixed_recipe = nil
 
-        Biofluid = {}
-        require "__pyalienlife__/scripts/biofluid/biofluid-prototypes"
         for food_name, food_bonus in pairs(mod_data.biofluid.food) do
             for creature_name, creature_data in pairs(mod_data.biofluid.biorobots) do
                 RECIPE {
@@ -77,7 +75,7 @@ if helpers.stage == "prototype" then
                     },
                     main_product = "guano",
                     categories = {"biofluid"}
-                }
+                } --[[@as data.RecipePrototype]]
             end
         end
     end

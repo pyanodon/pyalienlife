@@ -46,9 +46,9 @@ function Biofluid.update_bioport_gui(player, gui)
     Biofluid.update_bioport_animation(bioport_data)
 
     local status = Biofluid.why_isnt_my_bioport_working(bioport_data)
-    local img = Biofluid.status[status]
+    local img = Biofluid.status_image[status]
     local content_flow = gui.content_frame.content_flow
-    content_flow.status_flow.status_text.caption = {status}
+    content_flow.status_flow.status_text.caption = Biofluid.bioport_status_locale[status]
     content_flow.status_flow.status_sprite.sprite = img
 
     local fuel_flow = content_flow.fuel_flow
@@ -78,7 +78,7 @@ function Biofluid.update_bioport_gui(player, gui)
     for _, item in pairs(contents) do
         local name = item.name
 
-        local slot_index = Biofluid.bioport_slot_indexes[name]--[[@as uint]]
+        local slot_index = Biofluid.bioport_slot_indices[name]--[[@as uint]]
         local slot = inventory[slot_index]
         if slot.valid_for_read then
             local element
@@ -103,7 +103,7 @@ function Biofluid.update_bioport_gui(player, gui)
     if i == 1 then fuel_flow["py_biofluid_food_1"].visible = true end
 
     entity.set_recipe("bioport-hidden-recipe", "normal")
-    local slot = entity.get_inventory(defines.inventory.crafter_output)[1]
+    local slot = entity.get_inventory(defines.inventory.crafter_output) --[[@as LuaInventory]][1]
     local element = fuel_flow["py_guano_output"]
     element.number = slot.valid_for_read and slot.count or 0
 
@@ -190,11 +190,10 @@ function Biofluid.update_requester_gui(player, gui)
         player.opened = nil; return
     end
 
-    local status = "entity-status.working"
-    if not next(network.biofluid_bioports) then status = "entity-status.no-biofluid-network" end
-    local img = Biofluid.failure_reasons[status]
+    local status = not next(network.biofluid_bioports) and Biofluid.bioport_status.no_biofluid_network or Biofluid.bioport_status.working
+    local img = Biofluid.status_icons[status]
     local content_flow = gui.content_frame.content_flow
-    content_flow.status_flow.status_text.caption = {status}
+    content_flow.status_flow.status_text.caption = Biofluid.bioport_status_locale[status]
     content_flow.status_flow.status_sprite.sprite = img
 
     local config_flow = content_flow.config_flow
@@ -371,11 +370,10 @@ function Biofluid.update_provider_gui(player, gui)
         player.opened = nil; return
     end
 
-    local status = "entity-status.working"
-    if not next(network.biofluid_bioports) then status = "entity-status.no-biofluid-network" end
-    local img = Biofluid.failure_reasons[status]
+    local status = not next(network.biofluid_bioports) and Biofluid.bioport_status.no_biofluid_network or Biofluid.bioport_status.working
+    local img = Biofluid.status_icons[status]
     local content_flow = gui.content_frame.content_flow
-    content_flow.status_flow.status_text.caption = {status}
+    content_flow.status_flow.status_text.caption = Biofluid.bioport_status_locale[status]
     content_flow.status_flow.status_sprite.sprite = img
 
     local config_flow = content_flow.config_flow

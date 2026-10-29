@@ -4,50 +4,89 @@ local mod_data = py.mod_data --[[@as pyModData]]
 
 ---@class (partial) Biofluid
 ---@field food table<string, uint>
----@field type BiofluidType
----@field connectables table<string, BiofluidType>
+---@field type Biofluid.type
+---@field connectables table<string, Biofluid.type>
 ---@field biorobots table<string, BiorobotPrototype>
----@field status BiofluidStatus
----@field status_icons BiofluidStatusIcons
----@field diode_colors BiofluidDiodeColors
+---@field biorobot_status Biofluid.biorobot_status
+---@field bioport_status Biofluid.bioport_status
+---@field bioport_status_locale table<Biofluid.bioport_status, LocalisedString>
+---@field status_image table<Biofluid.bioport_status, string>
+---@field status_icons table<Biofluid.bioport_status, string>
+---@field diode_colors table<Biofluid.bioport_status, defines.entity_status_diode>
 ---@field equality_operators {[1]: "=", [2]: ">", [3]: "≥", [4]: "<", [5]: "≤", [6]: "≠"}
 ---@field tank_size 100000
 ---@field max_request_size 100000
 ---@field fuel_size uint
 ---@field module_size uint
+---@field bioport_slot_indices table<string, uint>
 
 Biofluid = Biofluid or {} --[[@as Biofluid]]
 
----@enum BiofluidType
+---@class Biofluid.type
 Biofluid.type = {
+    ---@class Biofluid.type.pipe
     pipe = 1,
+    ---@class Biofluid.type.roboport
     roboport = 2,
+    ---@class Biofluid.type.provider
     provider = 3,
+    ---@class Biofluid.type.requester
     requester = 4
 }
 
----@enum BiofluidStatus
-Biofluid.status = {
-    ["entity-status.no-food"] = "utility/status_not_working",
-    ["entity-status.no-creature"] = "utility/status_not_working",
-    ["entity-status.no-biofluid-network"] = "utility/status_yellow",
-    ["entity-status.full-output"] = "utility/status_yellow",
-    ["entity-status.working"] = "utility/status_working"
+---@enum Biofluid.biorobot_status
+Biofluid.biorobot_status = {
+    ---@class Biofluid.biorobot_status.picking_up
+    picking_up = 1,
+    ---@class Biofluid.biorobot_status.dropping_off
+    dropping_off = 2,
+    ---@class Biofluid.biorobot_status.returning
+    returning = 3
 }
 
----@enum BiofluidStatusIcons
+---@enum Biofluid.bioport_status
+Biofluid.bioport_status = {
+    ---@class Biofluid.bioport_status.no_food
+    no_food = 1,
+    ---@class Biofluid.bioport_status.no_creature
+    no_creature = 2,
+    ---@class Biofluid.bioport_status.no_biofluid_network
+    no_biofluid_network = 3,
+    ---@class Biofluid.bioport_status.full_output
+    full_output = 4,
+    ---@class Biofluid.bioport_status.working
+    working = 5
+}
+
+Biofluid.bioport_status_locale = {
+    [Biofluid.bioport_status.no_food] = {"entity-status.no-food"},
+    [Biofluid.bioport_status.no_creature] = {"entity-status.no-creature"},
+    [Biofluid.bioport_status.no_biofluid_network] = {"entity-status.no-biofluid-network"},
+    [Biofluid.bioport_status.full_output] = {"entity-status.full-output"},
+    [Biofluid.bioport_status.working] = {"entity-status.working"}
+}
+
+Biofluid.status_image = {
+    [Biofluid.bioport_status.no_food] = "utility/status_not_working",
+    [Biofluid.bioport_status.no_creature] = "utility/status_not_working",
+    [Biofluid.bioport_status.no_biofluid_network] = "utility/status_yellow",
+    [Biofluid.bioport_status.full_output] = "utility/status_yellow",
+    [Biofluid.bioport_status.working] = "utility/status_working"
+}
+
 Biofluid.status_icons = {
-    ["entity-status.no-food"] = "utility.fuel_icon",
-    ["entity-status.no-creature"] = "no_module_animal",
-    ["entity-status.no-biofluid-network"] = "utility.too_far_from_roboport_icon",
-    ["entity-status.full-output"] = "utility.warning_icon"
+    [Biofluid.bioport_status.no_food] = "utility.fuel_icon",
+    [Biofluid.bioport_status.no_creature] = "no_module_animal",
+    [Biofluid.bioport_status.no_biofluid_network] = "utility.too_far_from_roboport_icon",
+    [Biofluid.bioport_status.full_output] = "utility.warning_icon"
 }
 
----@enum BiofluidDiodeColors
 Biofluid.diode_colors = {
-    ["utility/status_not_working"] = defines.entity_status_diode.red,
-    ["utility/status_yellow"] = defines.entity_status_diode.yellow,
-    ["utility/status_working"] = defines.entity_status_diode.green
+    [Biofluid.bioport_status.no_food] = defines.entity_status_diode.red,
+    [Biofluid.bioport_status.no_creature] = defines.entity_status_diode.red,
+    [Biofluid.bioport_status.no_biofluid_network] = defines.entity_status_diode.yellow,
+    [Biofluid.bioport_status.full_output] = defines.entity_status_diode.yellow,
+    [Biofluid.bioport_status.working] = defines.entity_status_diode.green
 }
 
 Biofluid.equality_operators = {"=", ">", "≥", "<", "≤", "≠"}
@@ -174,12 +213,15 @@ end
 
 Biofluid.biorobots = mod_data.biofluid.biorobots
 
-Biofluid.bioport_slot_indexes = {
-    ["guano"] = 1,
-    ["workers-food"] = 1,
-    ["workers-food-02"] = 2,
-    ["workers-food-03"] = 3,
-    ["gobachov"] = 4,
-    ["huzu"] = 5,
-    ["chorkok"] = 6
-}
+py.assert(
+    prototypes.recipe["bioport-hidden-recipe"],
+    "ERROR: pY mod data [biofluid] [bioport-hidden-recipe] does not exist"
+)
+
+Biofluid.bioport_slot_indices = {}
+local i = 1
+for _, ingredient in pairs(prototypes.recipe["bioport-hidden-recipe"].ingredients) do
+    if ingredient.type == "item" then
+        Biofluid.bioport_slot_indices[ingredient.name] = i
+    end
+end
