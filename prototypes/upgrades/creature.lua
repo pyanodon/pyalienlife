@@ -24,7 +24,7 @@ if data then
     path_1_effects[#path_1_effects + 1] = path_1_module_effect
     local to_add = {}
     for _, recipe in pairs(data.raw.recipe) do
-        recipe = RECIPE(recipe)
+        recipe = RECIPE(recipe.name)
         if recipe:has_category(category) then
             recipe:standardize()
             local dna_samples = {}

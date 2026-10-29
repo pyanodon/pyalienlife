@@ -33,7 +33,7 @@ if data then
         RECIPE("vonix-raising-3"):copy(),
     } do
         recipe.name = recipe.name .. "-cancer"
-        local _, barrel_count = recipe:remove_result("barrel")
+        local _, barrel_count = recipe:remove_result("barrel")--[[@cast barrel_count int]]
         recipe:add_result {type = "item", name = "mutant-enzymes-barrel", amount = barrel_count * 5}
         recipe:multiply_ingredient_amount("arqad-honey-barrel", 5)
         recipe.icon = "__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png"
