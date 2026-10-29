@@ -1,7 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.9
-Date: ???
+Date: ????
   Changes:
+    - Moved Smart Farm crops to mod-data
+    - Removed smart farm landfilling (yes, that was a feature)
+    - Added extra count fraction to smart farm resource yield calculations
+    - Moved farming buildings to mod-data
     - Made biofluid, caravan, digosaurus and ocula units tall
     - Fix 3.0.57 migration for old saves
 ---------------------------------------------------------------------------------------------------
