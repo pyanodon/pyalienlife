@@ -35,11 +35,7 @@ mod_data.smart_farm = {
                 ["bioreserve-super-3"] = 3,
                 ["bioreserve-super-4"] = 4,
                 ["bioreserve-super-5"] = 5,
-                ["bioreserve-super-6"] = 6,
-                ["bioreserve-super-7"] = 7,
-                ["bioreserve-super-8"] = 8,
-                ["bioreserve-super-9"] = 9,
-                ["bioreserve-super-10"] = 10,
+                ["bioreserve-super-6"] = 6
             }
         },
         ["replicator-grod"] = {
