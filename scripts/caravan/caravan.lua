@@ -12,6 +12,12 @@ require "event-handlers/interrupts"
 
 require "manager"
 
+-- Caravan add-ons: a mod can run its own caravan scripts here, next to the caravans they extend, by declaring a
+-- mod-data prototype with data_type = "py-caravan-addon" and data = {script = "__its-mod__/path/to/file"}.
+for _, addon in pairs(prototypes.mod_data) do
+    if addon.data_type == "py-caravan-addon" and addon.data.script then require(addon.data.script) end
+end
+
 ---@class CaravanEntity:LuaEntity
 ---@field name CaravanName
 
