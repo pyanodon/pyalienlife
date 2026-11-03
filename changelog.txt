@@ -3,7 +3,8 @@ Version: 3.1.9
 Date: ???
   Changes:
     - Made biofluid, caravan, digosaurus and ocula units tall
-    - Fix 3.0.57 migration for old saves
+    - Fixed 3.0.57 migration for old saves
+    - Fixed Ocula delivery logic for multi-stack requests (thanks, novaakropola!)
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.8
 Date: 2026-10-06
