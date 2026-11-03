@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Ulric = {}
 
 Ulric.transformation_time = 60 * 60 * 10 -- ticks
@@ -8,15 +12,18 @@ Ulric.transformation_time = 60 * 60 * 10 -- ticks
 function entity_changed_unit_number(old, new)
     if not old.valid then error("Don\'t call this with an invalid entity") end
     for _, caravan_data in pairs(storage.caravans) do
-        for _, schedule in pairs(caravan_data.schedule) do
+        for _, schedule in pairs(caravan_data.schedule--[[@cast -?]]) do
             if schedule.entity == old then
-                schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x), math.floor(new.position.y)}
+                schedule.localised_name = {"caravan-gui.entity-position", new.prototype.localised_name, math.floor(new.position.x--[[@cast -?]]), math.floor(new.position.y--[[@cast -?]])}
                 schedule.entity = new
                 schedule.position = new.position
             end
         end
     end
 end
+
+---@class (partial) PyAlienLifeStorage
+---@field ulricman_timers table
 
 py.on_event(py.events.on_init(), function()
     storage.ulricman_timers = storage.ulricman_timers or {}
@@ -26,7 +33,7 @@ end)
 py.on_event(defines.events.on_player_used_capsule, function(event)
     if event.item.name ~= "ulric-infusion" then return end
 
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local cursor_stack = player.cursor_stack
     local character = player.character
     if not character or not character.valid or character.name == "ulric-man" then
@@ -47,6 +54,7 @@ py.on_event(defines.events.on_player_used_capsule, function(event)
         create_build_effect_smoke = false,
         move_stuck_players = false
     }
+    ---@cast ulric LuaEntity
 
     Ulric.transfer_character_inventory(character, ulric)
     player.character = ulric
@@ -63,13 +71,13 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
         ticks_remaning = ticks_remaning - update_rate
         storage.ulricman_timers[k] = ticks_remaning
         if ticks_remaning <= 0 then
-            local player = game.get_player(k)
+            local player = game.get_player(k)--[[@as LuaPlayer]]
             local ulric = player.character
             if not ulric then goto injection end
 
             local injection_equipment = ulric.grid and ulric.grid.find("ulric-infusion-equipment")
             if injection_equipment and injection_equipment.energy > injection_equipment.max_energy / 2 then
-                local inventory = ulric.get_main_inventory()
+                local inventory = ulric.get_main_inventory()--[[@as LuaInventory]]
                 if inventory.get_item_count("ulric-infusion") > 0 then
                     inventory.remove {name = "ulric-infusion", count = 1}
                     storage.ulricman_timers[k] = Ulric.transformation_time
@@ -85,6 +93,7 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
                     create_build_effect_smoke = false,
                     move_stuck_players = false
                 }
+                ---@cast character LuaEntity
 
                 Ulric.transfer_character_inventory(ulric, character)
                 player.character = character
@@ -100,21 +109,17 @@ py.register_on_nth_tick(update_rate, "update-ulric-man", "pyal", function()
     end
 end)
 
-local inventories = {
-    defines.inventory.character_main,
-    defines.inventory.god_main,
-    defines.inventory.editor_main,
+local inventories = { -- we only care about these inventories, you can't use ulric man any other time
+    defines.inventory.character_armor,
     defines.inventory.character_guns,
     defines.inventory.character_ammo,
-    defines.inventory.character_armor,
     defines.inventory.character_vehicle,
     defines.inventory.character_trash,
-    defines.inventory.editor_guns,
-    defines.inventory.editor_ammo,
-    defines.inventory.editor_armor,
+    defines.inventory.character_main,
 }
-Ulric.transfer_character_inventory = function(old, new)
-    for _, inventory in pairs(inventories) do
+Ulric.transfer_character_inventory = function(old, new, controller)
+    -- transfer stacks
+    for _, inventory in pairs(inventories or {}) do
         local old_inventory = old.get_inventory(inventory)
         if old_inventory then
             local new_inventory = new.get_inventory(inventory) or new.get_main_inventory()
@@ -128,7 +133,6 @@ Ulric.transfer_character_inventory = function(old, new)
                         new.surface.spill_item_stack {position = new.position, stack = old_stack, enable_looted = true, force = nil, allow_belts = false}
                     end
                 end
-                old_stack.clear()
             end
             if old_inventory.is_filtered() and new_inventory.supports_filters() then
                 for i = 1, math.min(#old_inventory, #new_inventory) do
@@ -151,7 +155,7 @@ Ulric.transfer_character_inventory = function(old, new)
     if old_point and new_point then
         new_point.trash_not_requested = old_point.trash_not_requested
         new_point.enabled = old_point.enabled
-        
+
         for _, section in pairs(old_point.sections) do
             local new_section = new_point.add_section(section.group)
             new_section.active = section.active

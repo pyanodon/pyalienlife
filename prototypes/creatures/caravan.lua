@@ -7,11 +7,11 @@ data:extend {{
 }}
 
 local zoology = data.raw.technology["zoology"]
-zoology.effects[#zoology.effects + 1] = {
+zoology.effects--[[@cast -?]][#zoology.effects + 1] = {
     modifier = true,
     type = "character-logistic-requests"
 }
-zoology.effects[#zoology.effects + 1] = {
+zoology.effects--[[@cast -?]][#zoology.effects + 1] = {
     modifier = 20,
     type = "character-logistic-trash-slots"
 }
@@ -20,7 +20,7 @@ RECIPE {
     type = "recipe",
     name = "caravan",
     energy_required = 50,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "cocoon",               amount = 10},
@@ -46,8 +46,9 @@ ITEM {
 
 data:extend {{
     type = "unit",
+    tall = true,
     ai_settings = {do_separation = false},
-    additional_pastable_entities = {"caravan", "caravan-turd", "flyavan", "flyavan-turd", "fluidavan", "fluidavan-turd"},
+    additional_pastable_entities = {"fluidflyavan", "fluidflyavan-turd", "caravan", "caravan-turd", "flyavan", "flyavan-turd", "fluidavan", "fluidavan-turd"},
     name = "caravan",
     can_open_gates = true,
     map_color = {1, 1, 1},

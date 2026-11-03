@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "auog",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -19,12 +19,13 @@ RECIPE {
     results = {
         {type = "item", name = "auog", amount = 1},
     },
+    icons = py.composite_icon("auog", "auog-codex")
 }:add_unlock("auog")
 
 RECIPE {
     type = "recipe",
     name = "auog-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -41,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-bear-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -58,7 +59,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -78,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "auog-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -108,7 +109,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -127,7 +128,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'auog-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -153,7 +154,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-auog",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -168,7 +169,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-auog",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {

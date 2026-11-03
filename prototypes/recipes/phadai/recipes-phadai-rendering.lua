@@ -21,7 +21,7 @@ local IMP_BRAIN = 6
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	crafting_speed = 30,
@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-phadai", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -42,12 +42,14 @@ py.autorecipes {
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "cage",        amount = INPUT_AMOUNT},
 				{name = "brain",       amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "phadai",
 			name = "full-render-phadais",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phadai.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/phadai.png",    draw_background = true}
+			}
 		},
 		--brain phadai rendering
 		{

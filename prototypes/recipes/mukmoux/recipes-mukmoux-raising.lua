@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "mukmoux-calf",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"mukmoux"},
 	main_product = "mukmoux-calf",
 	subgroup = "py-alienlife-mukmoux",
@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "mukmoux-food-01", amount = 2},
 				{name = "bedding",         amount = 2},
 				{name = "water-barrel",    amount = 15, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "mukmoux-calf", amount = 2},
 				--{name = 'mukmoux', amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 10,
 			tech = "mukmoux"
 		},
@@ -194,7 +194,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "mukmoux",
-	category = "mukmoux",
+	categories = {"mukmoux"},
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	main_product = "mukmoux",
@@ -235,11 +235,11 @@ py.autorecipes {
 				{name = "ralesia-seeds",   amount = 15},
 				{name = "mukmoux-food-01", amount = 2},
 				{name = "water-barrel",    amount = 6, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "mukmoux", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 75,
 			tech = "mukmoux"
 		},
@@ -317,7 +317,7 @@ py.autorecipes {
 				{
 
 					{name='caged-mukmoux', remove_item = true},
-					{name='caged-mukmoux', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-mukmoux', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 12,
 			tech = 'antiviral'

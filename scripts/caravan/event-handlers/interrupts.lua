@@ -1,10 +1,14 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local CaravanUtils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanScheduleGui = require "__pyalienlife__/scripts/caravan/gui/schedule_tab"
 local EditInterruptGui = require "__pyalienlife__/scripts/caravan/gui/edit_interrupt"
 
 gui_events[defines.events.on_gui_click]["py_caravan_add_interrupt_close_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = player.gui.screen.add_interrupt_gui 
     if gui then gui.destroy() end
 end
@@ -28,9 +32,9 @@ local function on_add_interrupt_confirmed(event)
         }
     end
     table.insert(caravan_data.interrupts, name)
-    local window_location = {0, 0}
+    local window_location = {x=0, y=0}--[[@as GuiLocation?]]
 
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     if player.gui.screen.add_interrupt_gui then
         window_location = player.gui.screen.add_interrupt_gui.location
         player.gui.screen.add_interrupt_gui.destroy()
@@ -41,6 +45,7 @@ local function on_add_interrupt_confirmed(event)
 end
 
 local function on_edit_interrupt_confirmed(event)
+    local player = game.get_player(event.player_index)
     local label = event.element.parent.name_label
     local textfield = event.element.parent.py_edit_interrupt_textfield
     local edited_interrupt = storage.edited_interrupts[event.player_index]
@@ -61,7 +66,6 @@ local function on_edit_interrupt_confirmed(event)
         label.caption = new_name
         edited_interrupt.name = new_name
 
-        local player = game.get_player(event.player_index)
         CaravanGuiComponents.update_schedule_pane(player)
     end
 end
@@ -304,15 +308,20 @@ end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_close_button"] = function(event)
     storage.edited_interrupts[event.player_index] = nil
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    if player.gui.screen.py_caravan_action_number_selection_frame then -- slider/edit frame
+        player.gui.screen.py_caravan_action_number_selection_frame.destroy()
+    end
     if player.gui.screen.edit_interrupt_gui then
         player.gui.screen.edit_interrupt_gui.destroy()
     end
 end
 
 gui_events[defines.events.on_gui_click]["py_edit_interrupt_confirm_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local edited_interrupt = storage.edited_interrupts[event.player_index]
+
+    if CaravanGuiComponents.get_slider_frame(player) then return end -- you're not done editing!
 
     -- edge case: need to check the rename textfield when 'Save interrupt' is pressed instead of enter
     local textfield = event.element.parent.parent.inside_frame.subheader_frame.contents_flow.py_edit_interrupt_textfield
@@ -412,7 +421,7 @@ gui_events[defines.events.on_gui_click]["py_edit_interrupt_condition_delete_butt
     local edited_interrupt = storage.edited_interrupts[event.player_index]
     local conditions = edited_interrupt.conditions
     local operators = edited_interrupt.conditions_operators
-    local condition_id = event.element.tags.condition_id
+    local condition_id = event.element.tags.condition_id--[[@as int]]
 
     if #conditions > 1 then
         table.remove(operators, math.max(1, condition_id - 1))

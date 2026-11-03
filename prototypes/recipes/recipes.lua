@@ -191,10 +191,10 @@ if mods.pyalternativeenergy then
         enabled = false,
         energy_required = 4,
         ingredients = {
-            {type = "item", name = "cage", amount = 1},
+            {type = "item", name = "cage",           amount = 1},
         },
         results = {
-            {type = "item", name = "iron-stick", amount = 15, probability = 0.25},
+            {type = "item", name = "iron-stick",     amount = 15, probability = 0.25},
             {type = "item", name = "solder",     amount = 2,  probability = 0.25},
             (not mods.pystellarexpedition) and {type = "item", name = "titanium-plate", amount = 5, probability = 0.25} or nil,
         },
@@ -722,8 +722,8 @@ RECIPE {
         {type = "item",  name = "mixed-ores",    amount = 15},
     },
     results = {
-        {type = "item",  name = "cobalt-extract", amount = 3},
-        {type = "fluid", name = "tailings",       amount = 50},
+        {type = "item",  name = "cobalt-extract",    amount = 3},
+        {type = "fluid", name = "tailings", amount = 50},
     },
     main_product = "cobalt-extract",
 }:add_unlock("cobalt-mk01")
@@ -770,8 +770,8 @@ RECIPE {
         {type = "item",  name = "cobalt-sulfate-02", amount = 3},
     },
     results = {
-        {type = "item",  name = "cobalt-oxide", amount = 3},
-        {type = "fluid", name = "tailings",     amount = 100},
+        {type = "item",  name = "cobalt-oxide",      amount = 3},
+        {type = "fluid", name = "tailings", amount = 100},
     },
     main_product = "cobalt-oxide",
 }:add_unlock("cobalt-mk02")
@@ -1013,7 +1013,7 @@ RECIPE {
     results = {
         {type = "item", name = "metallic-glass", amount = 1}
     }
-}:add_unlock("bio-implants"):add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:replace_ingredient("nickel-plate", "powdered-phosphate-rock"):change_category("nano")
+}:add_unlock("bio-implants"):add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:replace_ingredient("nickel-plate", "powdered-phosphate-rock"):add_category("nano")
 
 RECIPE {
     type = "recipe",
@@ -1053,7 +1053,7 @@ RECIPE {
     results = {
         {type = "item", name = "nanochondria", amount = 200}
     }
-}:add_unlock("nanochondria"):add_ingredient {type = "item", name = "resilin", amount = 1}:add_ingredient {type = "item", name = "collagen", amount = 5}:replace_ingredient("bacteria-1", "bacteria-2"):change_category("nano")
+}:add_unlock("nanochondria"):add_ingredient {type = "item", name = "resilin", amount = 1}:add_ingredient {type = "item", name = "collagen", amount = 5}:replace_ingredient("bacteria-1", "bacteria-2"):add_category("nano")
 
 RECIPE {
     type = "recipe",
@@ -1163,7 +1163,7 @@ RECIPE {
     results = {
         {type = "item", name = "lignin", amount = 8},
     },
-}:add_unlock("cellulose-mk02"):change_category("cracker")
+}:add_unlock("cellulose-mk02"):add_category("cracker")
 
 RECIPE {
     type = "recipe",
@@ -1599,7 +1599,7 @@ RECIPE {
         {type = "item", name = "seeds-extract-01", amount = 5}
     },
     --main_product = "adrenal-cortex",
-}:add_unlock("energy-drink"):change_category("pulp")
+}:add_unlock("energy-drink"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1650,7 +1650,7 @@ RECIPE {
         {type = "item",  name = "biomass",   amount = 8}
     },
     main_product = "a-molasse",
-}:add_unlock("sugar"):change_category("pulp")
+}:add_unlock("sugar"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -1797,10 +1797,10 @@ RECIPE {
         {type = "fluid", name = "depolymerized-organics", amount = 100},
     },
     results = {
-        {type = "fluid", name = "crude-oil", amount = 70},
-        {type = "fluid", name = "steam",     amount = 50, temperature = 150},
-        {type = "fluid", name = "tailings",  amount = 50},
-        {type = "item",  name = "ash",       amount = 3},
+        {type = "fluid", name = "crude-oil",         amount = 70},
+        {type = "fluid", name = "steam",             amount = 50, temperature = 150},
+        {type = "fluid", name = "tailings", amount = 50},
+        {type = "item",  name = "ash",               amount = 3},
     },
     main_product = "crude-oil",
 }:add_unlock("light-oil-mk01")
@@ -1821,9 +1821,9 @@ local bonemeal_recipe = RECIPE {
     --main_product = "crude-oil",
 }
 if mods.pyhightech then
-    bonemeal_recipe:add_unlock("logistic-science-pack"):change_category("fbreactor")
+    bonemeal_recipe:add_unlock("logistic-science-pack"):add_category("fbreactor")
 else
-    bonemeal_recipe:add_unlock("logistic-science-pack"):change_category("bio-reactor")
+    bonemeal_recipe:add_unlock("logistic-science-pack"):add_category("bio-reactor")
 end
 
 RECIPE {
@@ -1841,7 +1841,7 @@ RECIPE {
     results = {
         {type = "item", name = "magnetic-beads", amount = 5},
     },
-}:add_unlock("chitin"):change_category("nano")
+}:add_unlock("chitin"):add_category("nano")
 
 RECIPE {
     type = "recipe",
@@ -1918,7 +1918,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "chitosan", amount = 3},
+        {type = "item",  name = "chitosan",          amount = 3},
         {type = "fluid", name = "tailings", amount = 150},
     },
     results = {
@@ -1933,7 +1933,7 @@ RECIPE {
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "chitosan", amount = 3},
+        {type = "item",  name = "chitosan",          amount = 3},
         {type = "fluid", name = "tailings", amount = 150},
     },
     results = {
@@ -2060,8 +2060,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 500},
     },
     results = {
-        {type = "fluid", name = "casein-pulp-01", amount = 100},
-        {type = "fluid", name = "muddy-sludge",   amount = 50},
+        {type = "fluid", name = "casein-pulp-01",    amount = 100},
+        {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "casein-pulp-01",
 }:add_unlock("korlex")
@@ -2198,7 +2198,7 @@ RECIPE {
         {type = "fluid", name = "flue-gas", amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("compost"):change_category("gas-refinery")
+}:add_unlock("compost"):add_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
@@ -2214,7 +2214,7 @@ RECIPE {
         {type = "fluid", name = "flue-gas", amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("filtration"):change_category("gas-refinery")
+}:add_unlock("filtration"):add_category("gas-refinery")
 
 --[[
 RECIPE {
@@ -2477,7 +2477,7 @@ RECIPE {
         {type = "item", name = "powdered-biomass", amount = 20},
     },
     --main_product = "chloral",
-}:add_unlock("bioprocessing"):change_category("pulp")
+}:add_unlock("bioprocessing"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
@@ -2573,9 +2573,9 @@ RECIPE {
         {type = "fluid", name = "bio-oil", amount = 300},
     },
     results = {
-        {type = "fluid", name = "condensates",       amount = 150, autotech_is_not_primary_source = true},
-        {type = "fluid", name = "low-distillate",    amount = 50,  autotech_is_not_primary_source = true},
-        {type = "fluid", name = "medium-distillate", amount = 50,  autotech_is_not_primary_source = true},
+        {type = "fluid", name = "condensates",       amount = 150},
+        {type = "fluid", name = "low-distillate",    amount = 50},
+        {type = "fluid", name = "medium-distillate", amount = 50},
     },
     main_product = "condensates",
 }:add_unlock("light-oil-mk02")
@@ -2750,7 +2750,7 @@ RECIPE {
         {type = "item", name = "raw-fiber", amount = 3},
     },
     allow_productivity = true,
-}:add_unlock("yotoi"):change_category("pulp")
+}:add_unlock("yotoi"):add_category("pulp")
 
 RECIPE {
     type = "recipe",

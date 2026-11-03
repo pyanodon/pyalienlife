@@ -21,7 +21,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering-auog",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	mats =
@@ -30,7 +30,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-auog", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -41,12 +41,14 @@ py.autorecipes {
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
 				{name = "cage",        amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "auog",
 			name = "full-render-auogs",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-auog.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/auog.png",      draw_background = true}
+			}
 		},
 		--brain auog rendering
 		{
@@ -210,14 +212,14 @@ py.autorecipes {
 			},
 			results =
 			{
-				{name = "bones",       amount = BASE_BONES},
-				{name = "meat",        amount = 4},
-				{name = "skin",        amount = BASE_SKIN},
-				{name = "mukmoux-fat", remove_item = true},
-				{name = "guts",        amount = BASE_GUTS},
-				{name = "blood",       amount = 50},
-				{name = "brain",       amount = BASE_BRAIN},
-				{name = "cage",        remove_item = true},
+				{name = "bones",       amount = BASE_BONES, autotech_is_not_primary_source = true},
+				{name = "meat",        amount = 4,          autotech_is_not_primary_source = true},
+				{name = "skin",        amount = BASE_SKIN,  autotech_is_not_primary_source = true},
+				{name = "mukmoux-fat", remove_item = true,  autotech_is_not_primary_source = true},
+				{name = "guts",        amount = BASE_GUTS,  autotech_is_not_primary_source = true},
+				{name = "blood",       amount = 50,         autotech_is_not_primary_source = true},
+				{name = "brain",       amount = BASE_BRAIN, autotech_is_not_primary_source = true},
+				{name = "cage",        remove_item = true,  autotech_is_not_primary_source = true},
 			},
 			crafting_speed = 40,
 			tech = "domestication",

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "vonix-improved",
-	category = "vonix",
+	categories = {"vonix"},
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	--main_product = "vonix",
@@ -12,11 +12,11 @@ py.autorecipes {
 			{
 				{name = "nanochondria", amount = 1},
 				{name = "vonix",        amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-vonix", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 180,
 			tech = "nanochondria"
 		},

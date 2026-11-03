@@ -4,17 +4,12 @@ zungror.icon_size = 64
 zungror.icon_tintable = zungror.icon
 zungror.icon_tintables = nil
 zungror.icon_tintable_masks = nil
-zungror.minimap_representation = {
-    filename = "__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk02.png",
-    flags = {"icon"},
-    size = {64, 64}
-}
 zungror.icon_tintable_mask = "__pyalienlifegraphics__/graphics/icons/mount-mask.png"
 
 RECIPE {
     name = "spidertron",
     type = "recipe",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -27,8 +22,8 @@ RECIPE {
         {type = "item",  name = "alien-sample-03",                                                              amount = 10},
         {type = "item",  name = mods.pyalternativeenergy and "mechanical-parts-03" or "gastrocapacitor",        amount = 8},
         {type = "item",  name = mods.pyalternativeenergy and "earth-spider-sample" or "strorix-unknown-sample", amount = 8},
-        {type = "fluid", name = "molten-nexelit",                                                               amount = 800},
         {type = "fluid", name = "artificial-blood",                                                             amount = 300},
+        {type = "fluid", name = "molten-nexelit",                                                               amount = 800},
         {type = "item",  name = "small-parts-03",                                                               amount = 80},
         {type = "item",  name = "neuromorphic-chip",                                                            amount = 4},
         {type = "item",  name = "nanofibrils",                                                                  amount = 8},
@@ -53,3 +48,8 @@ zungror.energy_source = {
 zungror.movement_energy_consumption = "8MW"
 zungror.equipment_grid = "mount-grid-10x8"
 zungror.healing_per_tick = 0.08
+zungror.minimap_representation = {
+    filename = "__pyalienlifegraphics2__/graphics/icons/caravan-map-tag-mk02.png",
+    flags = {"icon"},
+    size = {64, 64}
+}

@@ -50,7 +50,6 @@ for i = offset, #science_packs - 1 do
             time = 30,
         },
         upgrade = true,
-        is_turd = true,
         localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"technology-description.turd-partial-respec"}}
     }
 end
@@ -70,7 +69,6 @@ TECHNOLOGY {
         time = 1800,
     },
     max_level = "infinite",
-    is_turd = true,
     upgrade = true,
     localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"technology-description.turd-partial-respec"}}
 }

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "simik-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"simik"},
     enabled = false,
     energy_required = 30,
@@ -18,8 +18,8 @@ RECIPE {
         {type = "fluid", name = "olefin",        amount = 50},
     },
     results = {
-        {type = "item", name = "simik-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "simik",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "simik-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "simik",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "simik-mk02",
@@ -39,7 +39,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"simik"},
     enabled = false,
     energy_required = 30,
@@ -50,8 +50,8 @@ RECIPE {
         {type = "fluid", name = "olefin",        amount = 50},
     },
     results = {
-        {type = "item", name = "simik-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "simik-mk02", amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "simik-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "simik-mk02", amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "simik-mk03",
@@ -71,7 +71,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"simik"},
     enabled = false,
     energy_required = 30,
@@ -84,8 +84,8 @@ RECIPE {
         {type = "fluid", name = "olefin",            amount = 50},
     },
     results = {
-        {type = "item", name = "simik-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "simik-mk03", amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "simik-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "simik-mk03", amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "simik-mk04",
@@ -104,7 +104,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -137,7 +137,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-simik-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -155,7 +155,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -189,7 +189,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-simik-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -207,7 +207,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -238,7 +238,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-simik-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

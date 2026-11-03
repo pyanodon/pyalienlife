@@ -16,7 +16,7 @@ local IMP_BLOOD = 120
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	crafting_speed = 30,
@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "dhilmos", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -34,12 +34,14 @@ py.autorecipes {
 				{name = "chitin",          amount = BASE_SKIN},
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "dhilmos",
 			name = "full-render-dhilmoss",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-dhilmos.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/dhilmo.png",    draw_background = true}
+			}
 		},
 		--meat dhilmos rendering
 		{

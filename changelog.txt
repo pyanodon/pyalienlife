@@ -20,7 +20,7 @@ Date: 2025-09-15
     - Fixed infinite research progress for worker robots speed getting reset.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.58
-Date: 2025-09-15
+Date: ???
   Changes:
     - Remade tech tree with autotech 2.0. Science pack cost comparasion:
     - automation: n/a -> trigger
@@ -155,29 +155,9 @@ Date: 2025-8-12
     - Fish and WPU now use `-turd` instead of `turd-``
     - Fixed Icons Blinking if blinking icons are disabled. Resolves https://github.com/pyanodon/pybugreports/issues/1090
     - Invalid food items (including spoil results) in the dig site will now be ejected to trash slots. Resolves https://github.com/pyanodon/pybugreports/issues/1110
-    - Fixed a potential crash in interrupts migrations
-    - Added a TURD sign to the icons of TURD buildings so they're easier to differentiate in a GUI. Resolves https://github.com/pyanodon/pybugreports/issues/1107
-    - Added a TURD sign to the icons of TURD recipes so they're easier to differentiate in a GUI
-    - Fixed a potential crash in interrupts migrations.
-    - Caravan GUI has been remade. Should now be more responsive and nicer to use. https://github.com/pyanodon/pyalienlife/pull/329
-    - Fixed mining a entity in a caravan's schedule did not update the caravan GUI with "Destination is unavailable. Click here to reassign it.".
-    - Fixed caravan GUI crash after clicking the ground while in the "Destination is unavailable. Click here to reassign it." state. Resolves https://github.com/pyanodon/pybugreports/issues/1113
-    - Fixed re-assigning to the player whilst in the "Destination is unavailable. Click here to reassign it." state would only keep track of the player entity, and not the player controller. (relevant if the player dies or turns into a horse-man)
-    - Fixed TURD recipes becoming locked after another mod triggers reset_technology_effects
-    - Fixed selecting a TURD that changes entities not changing ghosts to the new entity
-    - Fixed that you could place a TURD entity without having the TURD selected
-    - Fixed that you could place a normal entity when you have an entity-replacing TURD selected
-    - Fixed Bulk Inserter 1 and 2 technologies not having the correct prerequesites and dependants. Resolves https://github.com/pyanodon/pybugreports/issues/1086 and https://github.com/pyanodon/pybugreports/issues/1099
-    - TURD selection seach now respects locale. Resolves https://github.com/pyanodon/pybugreports/issues/669
-    - Added a new interrupt, 'outpost-item-count', which allows you to choose the target outpost from which to read the item count, similar to 'target-item-count'
-    - Fixed dig sites not respecting control behavior (circuit enable/disable)
-    - Fixed that caravan food would allow 1 more action per food item than intended.
-    - Fixed many caravan interrupts quirks. They now behave like train interrupts.
-    - Added and/or buttons to caravan's interrupt conditions
-    - Clicking on a caravan while trying to place a building will no longer open the caravan GUI (just like vanilla GUIs).
-    - Hide some disabled bone meal recipes. Resolves https://github.com/pyanodon/pybugreports/issues/1126
-    - Add fluid caravans, creatures capable of transporting fluids between two fluid outposts.
-    - Fixed collision mask of mega farm's cargo pod
+    - [BREAKING] Chitin to geothermal water recipe now returns 15C fluid instead of 3000C fluid.
+    - New recipe to convert bonemeal into geothermal water.
+    - New recipe for heating geothermal water.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.47
 Date: 2025-7-20

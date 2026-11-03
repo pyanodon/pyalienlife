@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "mutant-enzymes",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 10,
     ingredients = {

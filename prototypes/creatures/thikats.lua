@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "thikat",
     energy_required = 180,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "bio-sample",           amount = 30},
@@ -179,6 +179,7 @@ local mining_animation = {
 
 ENTITY {
     type = "unit",
+    tall = true,
     name = "thikat",
     icon = item_icon,
     icon_size = 64,

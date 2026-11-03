@@ -17,7 +17,6 @@ ENTITY {
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
     },
-    starting_area = false,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     --[[

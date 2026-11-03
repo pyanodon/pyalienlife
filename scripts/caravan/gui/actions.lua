@@ -6,7 +6,7 @@ local number_selection = require "action_widgets/number_selection"
 local comparator = require "action_widgets/comparator"
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
-local possibly_blocking_actions = {"fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank"}
+local possibly_blocking_actions = {"fill-inventory", "empty-inventory", "store-food", "store-specific-food", "load-caravan", "unload-caravan", "load-target", "unload-target", "fill-tank", "empty-tank", "fill-tank-until-caravan-has", "fill-tank-until-target-has", "empty-tank-until-caravan-has", "empty-tank-until-target-has"}
 
 local function play_stop_button_info(caravan_data, schedule_id, action_id)
     local schedule = caravan_data.schedule[schedule_id]

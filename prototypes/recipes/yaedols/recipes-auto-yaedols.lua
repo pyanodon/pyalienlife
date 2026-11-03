@@ -1,6 +1,6 @@
 py.autorecipes {
     name = "yaedols",
-    category = "yaedols",
+    categories = {"yaedols"},
     main_product = "yaedols",
     number_icons = true,
     mats =
@@ -14,11 +14,11 @@ py.autorecipes {
                 {name = "water",            amount = 80, fluidbox_index = 1},
                 {name = "fungal-substrate", amount = 2},
                 {name = "fertilizer",       amount = 5},
-            },
+			}--[[@as data.IngredientPrototype[] ]],
             results =
             {
                 {name = "yaedols", amount = 3}
-            },
+			}--[[@as data.ProductPrototype[] ]],
             crafting_speed = 140,
             tech = "yaedols"
         },

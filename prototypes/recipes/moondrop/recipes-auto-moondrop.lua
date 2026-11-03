@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "moondrop",
-	category = "moon",
+	categories = {"moon"},
 	subgroup = "py-alienlife-moon",
 	order = "a",
 	number_icons = true,
@@ -12,11 +12,11 @@ py.autorecipes {
 			{
 				{name = "moondrop-seeds", amount = 4},
 				{name = "water",          amount = 100, fluidbox_index = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "moondrop", amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 140,
 			tech = "moondrop"
 		},

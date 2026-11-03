@@ -1,7 +1,7 @@
 if data and not yafc_turd_integration then
     data.raw.fluid["sweet-syrup"].default_temperature = 0
-    data.raw.recipe["sweet-syrup"].results[1].temperature = 10
-    data.raw.recipe["empty-sweet-syrup-barrel"].results[2].temperature = 10
+    data.raw.recipe["sweet-syrup"].results--[[@cast -?]][1]--[[@cast -?]].temperature = 10
+    data.raw.recipe["empty-sweet-syrup-barrel"].results--[[@cast -?]][2]--[[@cast -?]].temperature = 10
     for i = 1, 4 do
         local name = "compost-plant-mk0" .. i
         local entity = table.deepcopy(data.raw["furnace"][name])
@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
             }
         }
         entity.localised_description = entity.localised_description or {"entity-description." .. name}
-        table.insert(entity.flags, "not-in-made-in")
+        table.insert(entity.flags--[[@cast -?]], "not-in-made-in")
         entity.energy_source = {
             type = "fluid",
             emissions_per_minute = {
@@ -45,7 +45,7 @@ if data and not yafc_turd_integration then
         entity.energy_usage = i .. "MW"
         entity.subgroup = data.raw.item[name].subgroup
         entity.order = data.raw.item[name].order
-        table.insert(entity.fluid_boxes, {
+        table.insert(entity.fluid_boxes--[[@cast -?]], {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
@@ -59,7 +59,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "cheap-retrovirus",
-        category = "incubator",
+        categories = {"incubator"},
         ingredients = {
             {type = "item",  name = "retrovirus", amount = 1},
             {type = "item",  name = "biomass",    amount = 2},
@@ -93,7 +93,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm",
-        category = "biofactory",
+        categories = {"biofactory"},
         enabled = false,
         energy_required = 10,
         ingredients = {
@@ -111,7 +111,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "biomass-destruction",
-        category = "distilator",
+        categories = {"distilator"},
         enabled = false,
         energy_required = 5,
         ingredients = {
@@ -135,7 +135,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-stone",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 1,
         ingredients = {
@@ -152,7 +152,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-wood",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 2,
         ingredients = {
@@ -169,7 +169,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-coarse",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 3,
         ingredients = {
@@ -186,7 +186,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "worm-manure",
-        category = "agitator",
+        categories = {"agitator"},
         enabled = false,
         energy_required = 4,
         ingredients = {
@@ -214,7 +214,7 @@ if data and not yafc_turd_integration then
     local fine_powdered_biomass = RECIPE("fine-powdered-biomass"):copy()
     fine_powdered_biomass.name = "fine-powdered-biomass-irragration"
     fine_powdered_biomass:add_ingredient {type = "fluid", name = "water", amount = 250}
-    fine_powdered_biomass.category = "washer"
+    fine_powdered_biomass:replace_category("screener", "washer")
     fine_powdered_biomass.energy_required = 3
     fine_powdered_biomass.main_product = "steam"
     fine_powdered_biomass:add_result {type = "fluid", name = "steam", amount = 250, temperature = 250}

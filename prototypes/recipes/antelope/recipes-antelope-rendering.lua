@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "rendering-antelope",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-antelope",
 	order = "b",
 	mats =
@@ -11,7 +11,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-antelope", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",         amount = 5},
@@ -23,12 +23,14 @@ py.autorecipes {
 				{name = "blood",         amount = 60},
 				{name = "cage-antelope", amount = 1},
 				{name = "strangelets",   amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 40,
 			tech = "schrodinger-antelope",
 			name = "full-render-antelope",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-antelope.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/antelope.png",  draw_background = true}
+			}
 		},
 	}
 }

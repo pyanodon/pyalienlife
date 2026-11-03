@@ -4,7 +4,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         enabled = false,
         energy_required = 75,
-        category = "incubator",
+        categories = {"incubator"},
         ingredients = {
             {name = "mukmoux",           amount = 1,   type = "item"},
             {name = "quartz-tube",       amount = 1,   type = "item"},
@@ -15,8 +15,8 @@ if data and not yafc_turd_integration then
         },
         results = {
             {name = "mukmoux-calf",      amount_min = 30,  amount_max = 80,  type = "item"},
-            {name = "quartz-tube",       amount = 1,       type = "item",    probability = 0.5},
-            {name = "immunosupressants", amount = 1,       type = "item",    probability = 0.5},
+            {name = "quartz-tube",       amount = 1,       type = "item",    independent_probability = 0.5},
+            {name = "immunosupressants", amount = 1,       type = "item",    independent_probability = 0.5},
             {name = "meat",              amount = 3,       type = "item"},
             {name = "guts",              amount = 5,       type = "item"},
             {name = "mukmoux-fat",       amount = 5,       type = "item"},
@@ -35,7 +35,7 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-microchip"
         recipe:add_ingredient {name = "microchip", amount = 1, type = "item"}
-        recipe:add_result {name = "microchip", amount = 1, type = "item", probability = 0.25}
+        recipe:add_result {name = "microchip", amount = 1, type = "item", independent_probability = 0.25}
         recipe:add_result {name = "fetal-serum", amount_min = 50 * i, amount_max = 70 * i, type = "fluid"}
         data:extend {recipe}
     end
@@ -47,9 +47,9 @@ if data and not yafc_turd_integration then
         RECIPE("mukmoux-4"):copy(),
     } do
         recipe.name = recipe.name .. "-bip"
-        for _, ingredient in pairs(recipe.ingredients) do
+        for _, ingredient in pairs(recipe.ingredients--[[@cast -?]]) do
             if ingredient.name == "mukmoux-food-01" or ingredient.name == "mukmoux-food-02" then
-                recipe:add_result {name = ingredient.name, amount = 1, type = "item", probability = 0.5}
+                recipe:add_result {name = ingredient.name, amount = 1, type = "item", independent_probability = 0.5}
             end
         end
         recipe:remove_ingredient("fawogae")
@@ -68,15 +68,15 @@ if data and not yafc_turd_integration then
         poop_recipe:multiply_result_amount("manure", 2)
         poop_recipe:add_result_amount("manure-bacteria-barrel", -1)
         poop_recipe:add_result_amount("barrel", 1)
-        for _, ingredient in pairs(poop_recipe.ingredients) do
+        for _, ingredient in pairs(poop_recipe.ingredients--[[@cast -?]]) do
             if ingredient.name == "mukmoux-food-01" or ingredient.name == "mukmoux-food-02" or ingredient.name == "bedding" then
-                poop_recipe:add_result {name = ingredient.name, amount_min = 0, amount_max = ingredient.amount, type = "item"}
+                poop_recipe:add_result {name = ingredient.name, amount_min = 0, amount_max = ingredient.amount, type = "item"}--[[@as data.ProductPrototype]]
             end
         end
         data:extend {poop_recipe}
     end
 
-    local electronics = {"controler-mk01", "controler-mk02", "controler-mk03", "controler-mk04"}
+    local electronics = {"controler-mk01", "controler-mk02", "controler-mk03", "controler-mk04"}--[[@as string[] ]]
     for i, recipe in pairs {
         RECIPE("mukmoux-pasture-mk01"):copy(),
         RECIPE("mukmoux-pasture-mk02"):copy(),
@@ -84,8 +84,7 @@ if data and not yafc_turd_integration then
         RECIPE("mukmoux-pasture-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-electronics"
-        recipe:add_ingredient {name = electronics[i], amount = 10 * i, type = "item"}
-        recipe:remove_ingredient()
+        recipe:add_ingredient {name = electronics[i], amount = 10 * i, type = "item"}--[[@as data.IngredientPrototype]]
         data:extend {recipe}
     end
 end

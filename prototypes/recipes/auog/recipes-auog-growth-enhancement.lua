@@ -1,7 +1,7 @@
 --NOT STANDARD AOUGS
 py.autorecipes {
 	name = "auog-mods",
-	category = "auog",
+	categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "c",
 	mats =
@@ -14,11 +14,11 @@ py.autorecipes {
 				{name = "gh",           amount = 1},
 				{name = "antiviral",    amount = 1},
 				{name = "nanochondria", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-auog", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

@@ -3,7 +3,8 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "grod-super-1",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -12,12 +13,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 1},
     },
+    order = "grod-a"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
     type = "recipe",
     name = "grod-super-2",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -27,12 +30,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 2},
     },
+    order = "grod-b"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
     type = "recipe",
     name = "grod-super-3",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -43,12 +48,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 3},
     },
+    order = "grod-c"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
     type = "recipe",
     name = "grod-super-4",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -60,12 +67,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 4},
     },
+    order = "grod-d"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
     type = "recipe",
     name = "grod-super-5",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -78,12 +87,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 5},
     },
+    order = "grod-e"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
     type = "recipe",
     name = "grod-super-6",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -97,12 +108,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 6},
     },
+    order = "grod-f"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
     type = "recipe",
     name = "grod-super-7",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -117,12 +130,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 7},
     },
+    order = "grod-g"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
     type = "recipe",
     name = "grod-super-8",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -138,12 +153,14 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 8},
     },
+    order = "grod-h"
 }:add_unlock("mega-farm-grod")
 
 RECIPE {
     type = "recipe",
     name = "grod-super-10",
-    category = "grod-farm",
+    categories = {"grod-farm"},
+    subgroup = "py-alienlife-grod-smartfarm",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -159,4 +176,5 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 10},
     },
+    order = "grod-j"
 }:add_unlock("mega-farm-grod"):add_ingredient {type = "item", name = "urea", amount = 300}

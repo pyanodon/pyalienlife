@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"xyhiphoe"},
     enabled = false,
     energy_required = 30,
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "pressured-water",  amount = 3000, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "xyhiphoe-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "xyhiphoe",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "xyhiphoe-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "xyhiphoe",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "xyhiphoe-mk02",
     icons =
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-cub-mk02-breeder",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"xyhiphoe"},
     enabled = false,
     energy_required = 30,
@@ -50,8 +50,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "xyhiphoe-cub-mk02", amount = 2},
-        {type = "item", name = "xyhiphoe-cub-mk02", amount = 1, probability = 0.3},
-        {type = "item", name = "xyhiphoe-cub",      amount = 1, probability = 0.7},
+        {type = "item", name = "xyhiphoe-cub-mk02", amount = 1, independent_probability = 0.3},
+        {type = "item", name = "xyhiphoe-cub",      amount = 1, independent_probability = 0.7},
     },
     main_product = "xyhiphoe-cub-mk02",
     icons =
@@ -67,7 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-mk02-breeder",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -93,7 +93,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"xyhiphoe"},
     enabled = false,
     energy_required = 30,
@@ -106,8 +106,8 @@ RECIPE {
         {type = "fluid", name = "pressured-water",  amount = 3000, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "xyhiphoe-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "xyhiphoe",      amount = 1, probability = 0.6},
+        {type = "item", name = "xyhiphoe-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "xyhiphoe",      amount = 1, independent_probability = 0.6},
     },
     main_product = "xyhiphoe-mk03",
     icons =
@@ -123,7 +123,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-cub-mk03-breeder",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"xyhiphoe"},
     enabled = false,
     energy_required = 30,
@@ -137,8 +137,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "xyhiphoe-cub-mk03", amount = 2},
-        {type = "item", name = "xyhiphoe-cub-mk03", amount = 1, probability = 0.3},
-        {type = "item", name = "xyhiphoe-cub-mk02", amount = 1, probability = 0.7},
+        {type = "item", name = "xyhiphoe-cub-mk03", amount = 1, independent_probability = 0.3},
+        {type = "item", name = "xyhiphoe-cub-mk02", amount = 1, independent_probability = 0.7},
     },
     main_product = "xyhiphoe-cub-mk03",
     icons =
@@ -154,7 +154,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-mk03-breeder",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -182,7 +182,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"xyhiphoe"},
     enabled = false,
     energy_required = 30,
@@ -195,8 +195,8 @@ RECIPE {
         {type = "fluid", name = "pressured-water",      amount = 3000, fluidbox_index = 2},
     },
     results = {
-        {type = "item", name = "xyhiphoe-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "xyhiphoe",      amount = 1, probability = 0.7},
+        {type = "item", name = "xyhiphoe-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "xyhiphoe",      amount = 1, independent_probability = 0.7},
     },
     main_product = "xyhiphoe-mk04",
     icons =
@@ -212,7 +212,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-cub-mk04-breeder",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"xyhiphoe"},
     enabled = false,
     energy_required = 30,
@@ -226,8 +226,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "xyhiphoe-cub-mk04", amount = 2},
-        {type = "item", name = "xyhiphoe-cub-mk04", amount = 1, probability = 0.3},
-        {type = "item", name = "xyhiphoe-cub-mk03", amount = 1, probability = 0.7},
+        {type = "item", name = "xyhiphoe-cub-mk04", amount = 1, independent_probability = 0.3},
+        {type = "item", name = "xyhiphoe-cub-mk03", amount = 1, independent_probability = 0.7},
     },
     main_product = "xyhiphoe-cub-mk04",
     icons =
@@ -243,7 +243,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xyhiphoe-mk04-breeder",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 30,
     ingredients = {

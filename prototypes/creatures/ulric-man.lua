@@ -218,8 +218,8 @@ data:extend
                 percent = 80
             }
         },
-        max_health = data.raw.character.character.max_health * 5,
-        healing_per_tick = data.raw.character.character.healing_per_tick * 5,
+        max_health = data.raw.character.character.max_health--[[@cast -?]] * 5,
+        healing_per_tick = data.raw.character.character.healing_per_tick--[[@cast -?]] * 5,
         collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
         selection_box = {{-0.4, -1.4}, {0.4, 0.2}},
         hit_visualization_box = {{-0.2, -1.1}, {0.2, 0.2}},
@@ -233,7 +233,7 @@ data:extend
         reach_distance = data.raw.character.character.reach_distance * 3,
         item_pickup_distance = data.raw.character.character.item_pickup_distance * 3,
         loot_pickup_distance = data.raw.character.character.loot_pickup_distance * 3,
-        enter_vehicle_distance = data.raw.character.character.enter_vehicle_distance * 3,
+        enter_vehicle_distance = data.raw.character.character.enter_vehicle_distance--[[@cast -?]] * 3,
         reach_resource_distance = 2.7,
         ticks_to_keep_gun = 600,
         ticks_to_keep_aiming_direction = 100,
@@ -245,12 +245,6 @@ data:extend
         maximum_corner_sliding_distance = 0.7,
         subgroup = "creatures",
         order = "a",
-        eat = {
-            {
-                filename = "__base__/sound/eat-5.ogg",
-                volume = 1
-            }
-        },
         heartbeat = {
             {
                 filename = "__base__/sound/heartbeat.ogg"
@@ -271,6 +265,7 @@ data:extend
             {
                 action_delivery = {
                     target_effects = {{
+                        ---@diagnostic disable-next-line: need-check-nil
                         sound = data.raw.capsule["cluster-grenade"].capsule_action.attack_parameters.ammo_type.action[2].action_delivery.target_effects[1].sound,
                         type = "play-sound"
                     }},
@@ -307,7 +302,6 @@ data:extend
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01.png", y = 1792, x = 0},
                             },
-                            slice = 10,
                             line_length = 10,
                             width = 224,
                             height = 224,
@@ -338,7 +332,6 @@ data:extend
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-mask.png", y = 1792, x = 0},
                             },
-                            slice = 10,
                             line_length = 10,
                             width = 224,
                             height = 224,
@@ -371,7 +364,6 @@ data:extend
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
                                 {width_in_frames = 10, height_in_frames = 2, filename = "__pyalienlifegraphics3__/graphics/entity/ulric-man/run-01-sh.png", y = 1280, x = 0},
                             },
-                            slice = 10,
                             line_length = 10,
                             width = 224,
                             height = 160,
@@ -519,7 +511,6 @@ ITEM {
             cooldown = 60,
             ammo_category = "ulric-infusion",
             ammo_type = {
-                category = "caravan-control",
                 target_type = "position",
             }
         }
@@ -566,7 +557,7 @@ RECIPE {
     type = "recipe",
     name = "ulric-infusion-equipment",
     energy_required = 10,
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "flask",               amount = 1},
@@ -582,7 +573,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-infusion",
-    category = "genlab",
+    categories = {"genlab"},
     enabled = false,
     energy_required = 1200,
     ingredients = {

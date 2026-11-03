@@ -17,7 +17,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "venom-gland-to-dynemicin",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         energy_required = 90,
         ingredients = {
@@ -26,12 +26,13 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "dynemicin", amount = 100},
         },
+        icons = py.composite_icon("dynemicin", "venom-gland")
     }
 
     RECIPE {
         type = "recipe",
         name = "cognition-osteochain-to-kondo-substrate",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         energy_required = 90,
         ingredients = {
@@ -40,12 +41,13 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "kondo-substrate", amount = 100},
         },
+        icons = py.composite_icon("kondo-substrate", "cognition-osteochain")
     }
 
     RECIPE {
         type = "recipe",
         name = "dimensional-gastricorg-to-inverse-opal",
-        category = "atomizer",
+        categories = {"atomizer"},
         enabled = false,
         energy_required = 90,
         ingredients = {
@@ -54,6 +56,7 @@ if data and not yafc_turd_integration then
         results = {
             {type = "item", name = "inverse-opal", amount = 100},
         },
+        icons = py.composite_icon("inverse-opal", "dimensional-gastricorg")
     }
 end
 

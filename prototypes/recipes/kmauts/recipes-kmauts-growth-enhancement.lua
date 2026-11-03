@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "kmauts-improved",
-	category = "kmauts",
+	categories = {"kmauts"},
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	--main_product = "kmauts",
@@ -12,11 +12,11 @@ py.autorecipes {
 			{
 				{name = "nanochondria", amount = 1},
 				{name = "caged-kmauts", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-kmauts", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 70,
 			tech = "nanochondria"
 		},

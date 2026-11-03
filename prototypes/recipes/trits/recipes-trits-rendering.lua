@@ -23,7 +23,7 @@ local IMP_SPECIAL = 4
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	crafting_speed = 30,
@@ -33,7 +33,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "trits", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -44,12 +44,14 @@ py.autorecipes {
 				{name = "photophore",  amount = BASE_SPECIAL},
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "trits",
 			name = "full-render-trit",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-trits.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/trits.png",     draw_background = true}
+			}
 		},
 		--brain trits rendering
 		{

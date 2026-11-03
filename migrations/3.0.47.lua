@@ -1,3 +1,4 @@
+---@diagnostic disable
 -- Update actions to support short format
 for _, caravan_data in pairs(storage.caravans) do
     for _, schedule in pairs(caravan_data.schedule) do

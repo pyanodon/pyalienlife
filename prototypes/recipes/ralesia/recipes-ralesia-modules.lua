@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "ralesia-mk02",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "water",         amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "ralesia-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "ralesia",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "ralesia-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "ralesia",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "ralesia-mk02",
     icons =
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-mk02-breeder",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -46,9 +46,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "ralesia-mk02",       amount = 3},
-        {type = "item", name = "ralesia-mk02",       amount = 2, probability = 0.5},
-        {type = "item", name = "ralesia-seeds-mk02", amount = 2, probability = 0.5, ignored_by_productivity = 2},
-        {type = "item", name = "fawogae-spore-mk02", amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-mk02",       amount = 2, independent_probability = 0.5},
+        {type = "item", name = "ralesia-seeds-mk02", amount = 2, independent_probability = 0.5, ignored_by_productivity = 2},
+        {type = "item", name = "fawogae-spore-mk02", amount = 2, independent_probability = 0.5},
     },
     main_product = "ralesia-mk02",
     icons =
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-seeds-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -83,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-mk03",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -96,8 +96,8 @@ RECIPE {
         {type = "fluid", name = "water",              amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "ralesia-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "ralesia",      amount = 1, probability = 0.6},
+        {type = "item", name = "ralesia-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "ralesia",      amount = 1, independent_probability = 0.6},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "ralesia-mk03",
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-mk03-breeder",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -124,9 +124,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "ralesia-mk03",       amount = 3},
-        {type = "item", name = "ralesia-mk03",       amount = 1, probability = 0.5},
-        {type = "item", name = "ralesia-seeds-mk03", amount = 2, probability = 0.5, ignored_by_productivity = 2},
-        {type = "item", name = "fawogae-spore-mk03", amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-mk03",       amount = 1, independent_probability = 0.5},
+        {type = "item", name = "ralesia-seeds-mk03", amount = 2, independent_probability = 0.5, ignored_by_productivity = 2},
+        {type = "item", name = "fawogae-spore-mk03", amount = 2, independent_probability = 0.5},
     },
     main_product = "ralesia-mk03",
     icons =
@@ -142,7 +142,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-seeds-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -161,7 +161,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-mk04",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -174,8 +174,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "ralesia-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "ralesia",      amount = 1, probability = 0.7},
+        {type = "item", name = "ralesia-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "ralesia",      amount = 1, independent_probability = 0.7},
     },
     main_product = "ralesia-mk04",
     icons =
@@ -191,7 +191,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-mk04-breeder",
-    category = "ralesia",
+    categories = {"ralesia"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -201,9 +201,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "ralesia-mk04",       amount = 3},
-        {type = "item", name = "ralesia-mk04",       amount = 1, probability = 0.25},
-        {type = "item", name = "ralesia-seeds-mk04", amount = 2, probability = 0.5, ignored_by_productivity = 2},
-        {type = "item", name = "fawogae-spore-mk04", amount = 2, probability = 0.5},
+        {type = "item", name = "ralesia-mk04",       amount = 1, independent_probability = 0.25},
+        {type = "item", name = "ralesia-seeds-mk04", amount = 2, independent_probability = 0.5, ignored_by_productivity = 2},
+        {type = "item", name = "fawogae-spore-mk04", amount = 2, independent_probability = 0.5},
     },
     main_product = "ralesia-mk04",
     icons =
@@ -219,7 +219,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ralesia-seeds-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {

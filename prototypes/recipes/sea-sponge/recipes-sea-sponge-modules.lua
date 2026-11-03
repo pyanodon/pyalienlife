@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "sea-sponge-mk02",
-    category = "sponge",
+    categories = {"sponge"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -16,9 +16,9 @@ RECIPE {
         {type = "fluid", name = "zogna-bacteria", amount = 100},
     },
     results = {
-        {type = "item",  name = "sea-sponge-mk02", amount = 1, probability = 0.005},
+        {type = "item",  name = "sea-sponge-mk02", amount = 1, independent_probability = 0.005},
         {type = "fluid", name = "water-saline",    amount = 50},
-        {type = "item",  name = "sea-sponge",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item",  name = "sea-sponge",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "sea-sponge-mk02",
     icons =
@@ -34,7 +34,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-mk02-breeder",
-    category = "sponge",
+    categories = {"sponge"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -43,7 +43,7 @@ RECIPE {
         {type = "fluid", name = "zogna-bacteria",          amount = 50},
     },
     results = {
-        {type = "item",  name = "sea-sponge-mk02", amount = 1, probability = 0.8},
+        {type = "item",  name = "sea-sponge-mk02", amount = 1, independent_probability = 0.8},
         {type = "fluid", name = "water-saline",    amount = 50},
     },
     main_product = "sea-sponge-mk02",
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-mk02-breeder",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-mk03",
-    category = "sponge",
+    categories = {"sponge"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -95,9 +95,9 @@ RECIPE {
         {type = "fluid", name = "zogna-bacteria",  amount = 100},
     },
     results = {
-        {type = "item",  name = "sea-sponge-mk03", amount = 1, probability = 0.004},
+        {type = "item",  name = "sea-sponge-mk03", amount = 1, independent_probability = 0.004},
         {type = "fluid", name = "water-saline",    amount = 50},
-        {type = "item",  name = "sea-sponge",      amount = 1, probability = 0.5},
+        {type = "item",  name = "sea-sponge",      amount = 1, independent_probability = 0.5},
     },
     main_product = "sea-sponge-mk03",
     icons =
@@ -113,7 +113,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-mk03-breeder",
-    category = "sponge",
+    categories = {"sponge"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -122,7 +122,7 @@ RECIPE {
         {type = "fluid", name = "manure-bacteria",         amount = 50},
     },
     results = {
-        {type = "item",  name = "sea-sponge-mk03", amount = 1, probability = 0.7},
+        {type = "item",  name = "sea-sponge-mk03", amount = 1, independent_probability = 0.7},
         {type = "fluid", name = "water-saline",    amount = 50},
     },
     main_product = "sea-sponge-mk03",
@@ -139,7 +139,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-mk03-breeder",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -165,7 +165,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-mk04",
-    category = "sponge",
+    categories = {"sponge"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -175,9 +175,9 @@ RECIPE {
         {type = "fluid", name = "zogna-bacteria",       amount = 100},
     },
     results = {
-        {type = "item",  name = "sea-sponge-mk04", amount = 1, probability = 0.003},
+        {type = "item",  name = "sea-sponge-mk04", amount = 1, independent_probability = 0.003},
         {type = "fluid", name = "water-saline",    amount = 50},
-        {type = "item",  name = "sea-sponge",      amount = 1, probability = 0.5},
+        {type = "item",  name = "sea-sponge",      amount = 1, independent_probability = 0.5},
     },
     main_product = "sea-sponge-mk04",
     icons =
@@ -193,7 +193,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-mk04-breeder",
-    category = "sponge",
+    categories = {"sponge"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -202,7 +202,7 @@ RECIPE {
         {type = "fluid", name = "bacteria-1",              amount = 50},
     },
     results = {
-        {type = "item",  name = "sea-sponge-mk04", amount = 1, probability = 0.6},
+        {type = "item",  name = "sea-sponge-mk04", amount = 1, independent_probability = 0.6},
         {type = "fluid", name = "water-saline",    amount = 50},
     },
     main_product = "sea-sponge-mk04",
@@ -219,7 +219,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-mk04-breeder",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 80,
     ingredients = {

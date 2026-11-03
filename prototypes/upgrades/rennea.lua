@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
             },
             results = {{type = "item", name = "native-flora", amount = 55}},
             enabled = false,
-            category = "rennea",
+            categories = {"rennea"},
             energy_required = 15
         }
     }
@@ -42,7 +42,7 @@ if data and not yafc_turd_integration then
         RECIPE("rennea-4"):copy(),
     } do
         recipe.name = recipe.name .. "-hydrophile"
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.9)
         recipe:multiply_ingredient_amount("water", 200)
         recipe:add_result_amount("rennea", 1)
         recipe:remove_ingredient("coarse")

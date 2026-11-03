@@ -1,7 +1,7 @@
 -- RECIPE {
 --     type = "recipe",
 --     name = "starter-biomass",
---     category = "handcrafting",
+--     categories = {"handcrafting"},
 --     enabled = true,
 --     energy_required = 2,
 --     ingredients = {
@@ -15,7 +15,7 @@
 RECIPE {
     type = "recipe",
     name = "tree",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {

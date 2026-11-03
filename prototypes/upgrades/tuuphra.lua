@@ -18,7 +18,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "alcl3",
-            category = "mixer",
+            categories = {"mixer"},
             enabled = false,
             energy_required = 10,
             ingredients = {
@@ -42,7 +42,7 @@ if data and not yafc_turd_integration then
             type = "recipe",
             name = "fungicide",
             enabled = false,
-            category = "biofactory",
+            categories = {"biofactory"},
             ingredients = {
                 {type = "item",  name = "phenol",          amount = 10},
                 {type = "item",  name = "plastic-bar",     amount = 2},
@@ -67,7 +67,7 @@ if data and not yafc_turd_integration then
         recipe:add_result_amount("tuuphra", 1)
         recipe:remove_ingredient("pesticide-mk01")
         recipe:remove_ingredient("pesticide-mk02")
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.85)
         data:extend {recipe}
     end
 
@@ -77,11 +77,11 @@ if data and not yafc_turd_integration then
         energy_required = 2,
         ingredients = {{type = "item", name = "tuuphra", amount = 1}},
         results = {
-            {type = "item",  name = "starch", amount = 1, probability = 0.4},
+            {type = "item",  name = "starch", amount = 1, independent_probability = 0.4},
             {type = "fluid", name = "grease", amount = 16}
         },
         enabled = false,
-        category = "biofactory",
+        categories = {"biofactory"},
         main_product = "grease"
     }}
 end

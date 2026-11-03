@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "korlex-pup",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"korlex"},
 	subgroup = "py-alienlife-korlex",
 	order = "c",
@@ -20,11 +20,11 @@ py.autorecipes {
 				{name = "korlex-food-01",          amount = 2},
 				{name = "fish-hydrolysate-barrel", amount = 5,  return_barrel = true},
 				{name = "water-barrel",            amount = 20, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "korlex-pup", amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "korlex"
 		},
 		--py
@@ -186,7 +186,7 @@ py.autorecipes {
 --raising
 py.autorecipes {
 	name = "korlex",
-	category = "korlex",
+	categories = {"korlex"},
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	main_product = "korlex",
@@ -202,11 +202,11 @@ py.autorecipes {
 				{name = "kicalk",         amount = 1, fallback = {name = "raw-fiber", amount = 5}},
 				{name = "korlex-food-01", amount = 1},
 				{name = "water-barrel",   amount = 8, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "korlex", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "korlex"
 		},
@@ -284,7 +284,7 @@ py.autorecipes {
 				{
 
 					{name='caged-korlex', remove_item = true},
-					{name='caged-korlex', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-korlex', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

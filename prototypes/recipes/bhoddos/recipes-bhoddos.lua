@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "bhoddos-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 35,
     ingredients = {
@@ -22,12 +22,13 @@ RECIPE {
     results = {
         {type = "item", name = "bhoddos", amount = 1},
     },
+    icons = py.composite_icon("bhoddos", "bhoddos-codex")
 }:add_unlock("bhoddos")
 
 RECIPE {
     type = "recipe",
     name = "bhoddos-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -44,7 +45,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore",
-    category = "spore",
+    categories = {"spore"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -58,20 +59,20 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'bhoddos-spore-2',
-    category = 'spore',
+    categories = {'spore'},
     enabled = false,
     energy_required = 5,
     ingredients = {
     },
     results = {
-        {type = 'item', name = 'bhoddos-spore', amount = 1, probability = 0.6},
+        {type = 'item', name = 'bhoddos-spore', amount = 1, independent_probability = 0.6},
     },
 }:add_unlock("microfilters")
 ]] --
 -- RECIPE {
 --     type = "recipe",
 --     name = "bhoddos-spore-3",
---     category = "spore",
+--     categories = {"spore"},
 --     enabled = false,
 --     energy_required = 10,
 --     ingredients = {

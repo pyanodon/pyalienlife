@@ -105,6 +105,7 @@ for i = 1, 4 do
         module_slots = MODULE_SLOTS,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"ulric"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "ulric-corral-mk01"),
         energy_source = {
             type = "electric",
@@ -205,7 +206,6 @@ for i = 1, 4 do
         impact_category = "metal-large",
         working_sound = {
             sound = {filename = "__pycoalprocessinggraphics__/sounds/ulric-corral.ogg", volume = 0.5},
-            apparent_volume = 0.45
         }
     }
 end

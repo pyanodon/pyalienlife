@@ -1,3 +1,10 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
+---@class (partial) PyAlienLifeStorage
+---@field worm_skins table
+
 Worm = {}
 
 py.on_event(py.events.on_init(), function()

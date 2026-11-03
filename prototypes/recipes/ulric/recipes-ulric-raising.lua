@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "ulric-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "c",
@@ -18,13 +18,13 @@ py.autorecipes {
 				{name = "fawogae",       amount = 3},
 				{name = "ulric-food-01", amount = 2},
 				{name = "water-barrel",  amount = 15, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				--{name = 'ulric', amount = 2,},
 				{name = "ulric-cub", amount = 3},
 				--{name = 'manure', amount = 1}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 15,
 			tech = "ulric"
 		},
@@ -195,7 +195,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "ulric",
-	category = "ulric",
+	categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "ulric",
@@ -237,12 +237,12 @@ py.autorecipes {
 				{name = "ralesia-seeds", amount = 15},
 				{name = "ulric-food-01", amount = 1},
 				{name = "water-barrel",  amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "ulric", amount = 3},
 				--{name = 'manure', amount = 3}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "ulric"
 		},
@@ -322,7 +322,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-ulric', remove_item = true},
-					{name='caged-ulric', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-ulric', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "phagnot-improved",
-	category = "phagnot",
+	categories = {"phagnot"},
 	--main_product = "phagnot",
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-phagnot", amount = 1},
 				{name = "nanochondria",  amount = 1},
 				{name = "antiviral",     amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-phagnot", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

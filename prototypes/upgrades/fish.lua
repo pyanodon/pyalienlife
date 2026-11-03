@@ -5,7 +5,7 @@ local function new_fluid_boxes()
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0.0, -5.0}, direction = defines.direction.north}},
             secondary_draw_orders = {north = -1}
         },
@@ -13,7 +13,7 @@ local function new_fluid_boxes()
             production_type = "input",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {0.0, 5.0}, direction = defines.direction.south}},
             secondary_draw_orders = {north = -1}
         },
@@ -21,7 +21,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {5.0, -1.0}, direction = defines.direction.east}},
             secondary_draw_orders = {north = -1}
         },
@@ -29,7 +29,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {-5.0, 1.0}, direction = defines.direction.west}},
             secondary_draw_orders = {north = -1}
         },
@@ -37,7 +37,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {-5.0, -1.0}, direction = defines.direction.west}},
             secondary_draw_orders = {north = -1}
         },
@@ -45,7 +45,7 @@ local function new_fluid_boxes()
             production_type = "output",
             pipe_covers = py.pipe_covers(true, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input-output", position = {5.0, 1.0}, direction = defines.direction.east}},
             secondary_draw_orders = {north = -1}
         },
@@ -79,18 +79,18 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-agressive-selection"
         recipe:add_result_amount("fish", -i)
         recipe:add_result {type = "item", name = "fish-food-01", amount = i}
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.9)
         data:extend {recipe}
     end
 
-    local ingredients = table.deepcopy(data.raw.recipe["fish-hydrolysate"].ingredients)
+    local ingredients = table.deepcopy(data.raw.recipe["fish-hydrolysate"].ingredients)--[[@as data.IngredientPrototype[] ]]
     ingredients[#ingredients + 1] = {type = "item", name = "cooling-tower-mk01", amount = 1}
     data:extend {{
         type = "recipe",
-        category = data.raw.recipe["fish-hydrolysate"].category,
-        energy_required = data.raw.recipe["fish-hydrolysate"].energy_required * 2,
+        categories = data.raw.recipe["fish-hydrolysate"].categories,
+        energy_required = data.raw.recipe["fish-hydrolysate"].energy_required--[[@cast -?]] * 2,
         results = {
-            {type = "item",  name = "cooling-tower-mk01", amount = 1,  probability = 0.999},
+            {type = "item",  name = "cooling-tower-mk01", amount = 1,  independent_probability = 0.999},
             {type = "fluid", name = "fish-hydrolysate",   amount = 300}
         },
         ingredients = ingredients,
@@ -102,7 +102,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "cyanic-acid-from-fish-hydrolysate",
-        category = "reformer",
+        categories = {"reformer"},
         enabled = false,
         energy_required = 5,
         ingredients = {
@@ -128,30 +128,31 @@ if data and not yafc_turd_integration then
     } do
         recipe.name = recipe.name .. "-doused"
         recipe:multiply_result_amount("fish-egg", 0.8)
-        for _, ingredient in pairs(recipe.ingredients) do
+        for _, ingredient in pairs(recipe.ingredients--[[@cast -?]]) do
             if ingredient.name == "water-saline" then
                 ingredient.name = "pressured-water"
                 break
             end
         end
-        for _, result in pairs(recipe.results) do
+        for _, result in pairs(recipe.results--[[@cast -?]]) do
             if result.name == "waste-water" then
                 result.fluidbox_index = 1
                 break
             end
         end
 
+        
         local path_three_dousing_byproducts = {
             {type = "fluid", name = "fish-oil",         amount = 10 + i * 5, fluidbox_index = 2},
             {type = "fluid", name = "fish-hydrolysate", amount = 5 + i * 5,  fluidbox_index = 3},
             {type = "item",  name = "fishmeal",         amount = 5},
             {type = "fluid", name = "fish-emulsion",    amount = 0 + i * 5,  fluidbox_index = 4},
-        }
+        }--[[@as table<int, data.ProductPrototype> ]]
 
         for j = 1, i do
             recipe:add_result(path_three_dousing_byproducts[j])
         end
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.9)
         data:extend {recipe}
     end
 

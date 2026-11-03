@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "seaweed-mk02",
-    category = "seaweed",
+    categories = {"seaweed"},
     enabled = true,
     energy_required = 25,
     ingredients = {
@@ -18,7 +18,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "seaweed-mk03",
-    category = "seaweed",
+    categories = {"seaweed"},
     enabled = true,
     energy_required = 25,
     ingredients = {
@@ -34,7 +34,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "seaweed-mk04",
-    category = "seaweed",
+    categories = {"seaweed"},
     enabled = true,
     energy_required = 25,
     ingredients = {

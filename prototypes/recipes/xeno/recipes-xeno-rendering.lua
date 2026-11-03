@@ -16,7 +16,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering-xeno",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	crafting_speed = 25,
@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-xeno", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",         amount = BASE_BONES},
@@ -35,12 +35,14 @@ py.autorecipes {
 				{name = "sulfuric-acid", amount = BASE_BLOOD},
 				{name = "cage",          amount = INPUT_AMOUNT},
 				{name = "brain",         amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "xeno",
 			name = "full-render-xenos",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xeno.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xeno.png",     draw_background = true}
+			}
 		},
 		--brain xeno rendering
 		{

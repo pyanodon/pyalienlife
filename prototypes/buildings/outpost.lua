@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "outpost",
     energy_required = 1,
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients = {
         {type = "item", name = "steel-plate",    amount = 5},
@@ -30,7 +30,6 @@ ITEM {
 data:extend {{
     inventory_type = "with_filters_and_bar",
     ---@diagnostic disable-next-line: assign-type-mismatch
-    scale_info_icons = true,
     name = "outpost",
     type = "container",
     circuit_connector = table.deepcopy(data.raw.container["steel-chest"].circuit_connector), -- todo

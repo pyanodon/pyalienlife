@@ -36,9 +36,7 @@ TECHNOLOGY("ralesia"):add_pack("py-science-pack-1")
 -- digosaurus recipes
 ----------------------------------------------------------------------------------------------------
 
-Digosaurus = Digosaurus or {}
-require "__pyalienlife__/scripts/digosaurus/digosaurus-prototypes"
-for food, value in pairs(Digosaurus.favorite_foods) do
+for food, value in pairs(data.raw["mod-data"].pyanodons.data.digosaurus.foods) do
     RECIPE {
         type = "recipe",
         name = "digosaurus-helmod-recipe-" .. food,
@@ -50,7 +48,7 @@ for food, value in pairs(Digosaurus.favorite_foods) do
         results = {
             {type = "item", name = "nexelit-ore", amount = value}
         },
-        category = "dino-dig-site",
+        categories = {"dino-dig-site"},
         hide_from_player_crafting = true
     }
 end
@@ -183,9 +181,7 @@ require "prototypes/buildings/hidden-beacon"
 ----------------------------------------------------------------------------------------------------
 
 for _, recipe in pairs(data.raw.recipe) do
-    recipe:replace_ingredient("organics", "biomass")
-    recipe:replace_result("organics", "biomass")
-    recipe:replace_ingredient("raw-fish", "fish")
+    RECIPE(recipe.name):replace_ingredient("organics", "biomass"):replace_result("organics", "biomass"):replace_ingredient("raw-fish", "fish")
 end
 data.raw.item["organics"] = nil
 
@@ -208,7 +204,7 @@ RECIPE("empty-sweet-syrup-barrel"):set_fields {results = {{type = "item", name =
 
 --copy`s of combustion recipes with biomass
 for _, recipe in pairs(data.raw.recipe) do
-    if recipe.category == "combustion" and string.match(recipe.name, "biomass") == nil then
+    if table.find(recipe.categories or {}, "combustion") and string.match(recipe.name, "biomass") == nil then
         local recipe_copy = table.deepcopy(recipe)
         local name = recipe_copy.name
         if recipe_copy.ingredients ~= nil then
@@ -218,13 +214,13 @@ for _, recipe in pairs(data.raw.recipe) do
                     local locale
                     local type
                     local temp
-                    for _, ingred in pairs(recipe.ingredients) do
+                    for _, ingred in pairs(recipe.ingredients--[[@cast -?]]) do
                         if ingred.name ~= "water" and ingred.name ~= "coke" then
                             locale = ingred.name
                             type = ingred.type
                         end
                     end
-                    for _, result in pairs(recipe.results) do
+                    for _, result in pairs(recipe.results--[[@cast -?]]) do
                         if result.name == "combustion-mixture1" then
                             temp = result.temperature
                         end
@@ -232,7 +228,7 @@ for _, recipe in pairs(data.raw.recipe) do
                     RECIPE {
                         type = "recipe",
                         name = name .. "-biomass",
-                        category = "combustion",
+                        categories = {"combustion"},
                         enabled = false,
                         energy_required = 3,
                         ingredients = recipe_copy.ingredients,
@@ -259,6 +255,7 @@ for _, recipe in pairs(data.raw.recipe) do
     end
 end
 
+---@diagnostic disable-next-line: undefined-field
 if data.data_crawler then
     data.script_enabled = data.script_enabled or {}
     table.insert(data.script_enabled, {type = "entity", name = "tar-patch"})
@@ -329,21 +326,21 @@ for _, prototype in pairs(dingrido_nonwalkable_prototypes) do
 end
 
 -- science pack order and subgroup
-data.raw.tool["py-science-pack-1"].subgroup = "science-pack"
-data.raw.tool["py-science-pack-2"].subgroup = "science-pack"
-data.raw.tool["py-science-pack-3"].subgroup = "science-pack"
-data.raw.tool["py-science-pack-4"].subgroup = "science-pack"
-data.raw.tool["automation-science-pack"].order = "a"
-data.raw.tool["py-science-pack-1"].order = "b"
-data.raw.tool["logistic-science-pack"].order = "c"
-data.raw.tool["military-science-pack"].order = "d"
-data.raw.tool["py-science-pack-2"].order = "e"
-data.raw.tool["chemical-science-pack"].order = "f"
-data.raw.tool["py-science-pack-3"].order = "g"
-data.raw.tool["production-science-pack"].order = "h"
-data.raw.tool["py-science-pack-4"].order = "i"
-data.raw.tool["utility-science-pack"].order = "j"
-data.raw.tool["space-science-pack"].order = "k"
+data.raw.item["py-science-pack-1"].subgroup = "science-pack"
+data.raw.item["py-science-pack-2"].subgroup = "science-pack"
+data.raw.item["py-science-pack-3"].subgroup = "science-pack"
+data.raw.item["py-science-pack-4"].subgroup = "science-pack"
+data.raw.item["automation-science-pack"].order = "a"
+data.raw.item["py-science-pack-1"].order = "b"
+data.raw.item["logistic-science-pack"].order = "c"
+data.raw.item["military-science-pack"].order = "d"
+data.raw.item["py-science-pack-2"].order = "e"
+data.raw.item["chemical-science-pack"].order = "f"
+data.raw.item["py-science-pack-3"].order = "g"
+data.raw.item["production-science-pack"].order = "h"
+data.raw.item["py-science-pack-4"].order = "i"
+data.raw.item["utility-science-pack"].order = "j"
+data.raw.item["space-science-pack"].order = "k"
 
 -- autotech settings
 if mods.autotech then
@@ -400,5 +397,6 @@ if register_cache_file ~= nil then
 end
 
 if mods["dependency-graph-lib"] then
+    ---@diagnostic disable-next-line: inject-field
     data.raw.item["iron-chest"].autotech_startup = true
 end

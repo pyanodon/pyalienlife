@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "flyavan",
     energy_required = 50,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "alien-sample-02",   amount = 5},
@@ -42,7 +42,8 @@ data:extend
     {
         ai_settings = {do_separation = false, path_resolution_modifier = -1},
         type = "unit",
-        additional_pastable_entities = {"flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd"},
+        tall = true,
+        additional_pastable_entities = {"fluidflyavan","flyavan", "flyavan-turd", "caravan", "caravan-turd", "fluidavan", "fluidavan-turd"},
         name = "flyavan",
         map_color = {1, 1, 1},
         icon = "__pyalienlifegraphics2__/graphics/icons/flyavan.png",

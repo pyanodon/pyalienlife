@@ -19,7 +19,7 @@ local IMP_SPECIAL = 5
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-kmauts",
 	order = "b",
 	crafting_speed = 30,
@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-kmauts", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -39,12 +39,14 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "cage",            amount = INPUT_AMOUNT},
 				{name = "brain",           amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "kmauts",
 			name = "full-render-kmauts",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-kmauts.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/kmauts.png",    draw_background = true}
+			}
 		},
 		--brain kmauts rendering
 		{

@@ -23,7 +23,7 @@ local IMP_SPECIAL = 4
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-scrondrix",
 	order = "b",
 	crafting_speed = 30,
@@ -33,7 +33,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-scrondrix", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",        amount = BASE_BONES},
@@ -45,12 +45,14 @@ py.autorecipes {
 				{name = "pineal-gland", amount = BASE_SPECIAL},
 				{name = "cage",         amount = INPUT_AMOUNT},
 				{name = "brain",        amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "scrondrix",
 			name = "full-render-scrondrixs",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-scrondrix.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/scrondrix.png", draw_background = true}
+			}
 		},
 		--brain scrondrix rendering
 		{

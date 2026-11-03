@@ -8,7 +8,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-soil"
         recipe:add_ingredient {name = "soil", amount = 40 * i, type = "item"}
         recipe:multiply_result_amount("cadaveric-arum", 1.3)
-        recipe.energy_required = math.ceil(recipe.energy_required * 1.15)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 1.15)
         data:extend {recipe}
     end
 

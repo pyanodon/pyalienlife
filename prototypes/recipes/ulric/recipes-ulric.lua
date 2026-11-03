@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "ulric",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -19,12 +19,13 @@ RECIPE {
     results = {
         {type = "item", name = "ulric", amount = 1},
     },
+    icons = py.composite_icon("ulric", "ulric-codex")
 }:add_unlock("ulric")
 
 RECIPE {
     type = "recipe",
     name = "ulric-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -41,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-horse-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -58,7 +59,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -79,7 +80,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -105,7 +106,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ulric-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -124,7 +125,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'ulric-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -154,7 +155,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-ulric",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -169,7 +170,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-ulric",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {

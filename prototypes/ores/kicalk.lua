@@ -17,7 +17,6 @@ ENTITY {
         --fluid_amount = 100,
         --required_fluid = "coal-gas"
     },
-    starting_area = false,
     collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     stage_counts = {800},
@@ -66,8 +65,6 @@ data:extend {
                 priority = "extra-high",
                 width = 128,
                 height = 160,
-                frame_count = 8,
-                variation_count = 1,
                 scale = 0.5,
                 shift = util.by_pixel(0, -16),
             }

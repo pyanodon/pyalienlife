@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "fawogae-mk02",
-    category = "fawogae",
+    categories = {"fawogae"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -20,8 +20,8 @@ RECIPE {
         {type = "fluid", name = "water",         amount = 1000},
     },
     results = {
-        {type = "item", name = "fawogae-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "fawogae",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "fawogae-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "fawogae",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "fawogae-mk02",
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-mk02-breeder",
-    category = "fawogae",
+    categories = {"fawogae"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -50,7 +50,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "fawogae-mk02", amount = 2,},
-        {type = "item", name = "fawogae-mk02", amount = 1, probability = 0.5},
+        {type = "item", name = "fawogae-mk02", amount = 1, independent_probability = 0.5},
     },
     main_product = "fawogae-mk02",
     icons =
@@ -69,7 +69,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-mk03",
-    category = "fawogae",
+    categories = {"fawogae"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -82,8 +82,8 @@ RECIPE {
         {type = "fluid", name = "water",           amount = 1000},
     },
     results = {
-        {type = "item", name = "fawogae-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "fawogae",      amount = 1, probability = 0.6},
+        {type = "item", name = "fawogae-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "fawogae",      amount = 1, independent_probability = 0.6},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "fawogae-mk03",
@@ -100,7 +100,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-mk03-breeder",
-    category = "fawogae",
+    categories = {"fawogae"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -114,7 +114,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "fawogae-mk03", amount = 2,},
-        {type = "item", name = "fawogae-mk03", amount = 1, probability = 0.5},
+        {type = "item", name = "fawogae-mk03", amount = 1, independent_probability = 0.5},
     },
     main_product = "fawogae-mk03",
     icons =
@@ -133,7 +133,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-mk04",
-    category = "fawogae",
+    categories = {"fawogae"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -146,8 +146,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000},
     },
     results = {
-        {type = "item", name = "fawogae-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "fawogae",      amount = 1, probability = 0.7},
+        {type = "item", name = "fawogae-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "fawogae",      amount = 1, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "fawogae-mk04",
@@ -164,7 +164,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-mk04-breeder",
-    category = "fawogae",
+    categories = {"fawogae"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -178,7 +178,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "fawogae-mk04", amount = 2},
-        {type = "item", name = "fawogae-mk04", amount = 1, probability = 0.5},
+        {type = "item", name = "fawogae-mk04", amount = 1, independent_probability = 0.5},
     },
     main_product = "fawogae-mk04",
     icons =

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "fawogae",
-	category = "fawogae",
+	categories = {"fawogae"},
 	subgroup = "py-alienlife-fawogae",
 	order = "b",
 	number_icons = true,
@@ -25,11 +25,11 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "fawogae-spore", amount = 3},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "fawogae", amount = 7}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "fawogae-mk01"
 		},

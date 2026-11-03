@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "cridren-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -19,12 +19,13 @@ RECIPE {
     results = {
         {type = "item", name = "cridren", amount = 2},
     },
+    icons = py.composite_icon("cridren", "cridren-codex")
 }:add_unlock("cridren")
 
 RECIPE {
     type = "recipe",
     name = "cridren-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -40,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-venus-fly-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -58,7 +59,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cridren-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 10,
     ingredients = {

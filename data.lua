@@ -386,13 +386,16 @@ require "prototypes/creatures/caravan"
 require "prototypes/creatures/flying-caravan"
 require "prototypes/creatures/nuka-caravan"
 require "prototypes/creatures/fluid-caravan"
+require "prototypes/creatures/fluid-flying-caravan"
 data.raw.unit["caravan"].affected_by_tiles = false
 data.raw.unit["fluidavan"].affected_by_tiles = false
 data.raw.unit["flyavan"].affected_by_tiles = false
+data.raw.unit["fluidflyavan"].affected_by_tiles = false
 data.raw.unit["nukavan"].affected_by_tiles = false
 require "prototypes/buildings/outpost-fluid"
 require "prototypes/buildings/outpost"
 require "prototypes/buildings/outpost-aerial"
+require "prototypes/buildings/outpost-aerial-fluid"
 require "prototypes/creatures/digosaurus"
 require "prototypes/creatures/thikats"
 require "prototypes/creatures/work-o-dile"
@@ -712,5 +715,11 @@ data.raw["utility-constants"].default.main_menu_background_image_location = "__p
 --sprities
 require "prototypes/sprites/sprites"
 --require 'prototypes/ores/fake-plants'
+
+--mod-data
+-- require "prototypes/mod-data/caravans"
+require "prototypes/mod-data/digosaurus"
+require "prototypes/mod-data/farming"
+require "prototypes/mod-data/recipe-gui"
 
 data.raw.fluid["bio-oil"].fuel_value = "0.8MJ"

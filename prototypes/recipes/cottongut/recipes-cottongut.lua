@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "cottongut",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -19,12 +19,13 @@ RECIPE {
     results = {
         {type = "item", name = "cottongut-mk01", amount = 1},
     },
+    icons = py.composite_icon("cottongut-mk01", "cottongut-codex")
 }:add_unlock("cottongut-mk01")
 
 RECIPE {
     type = "recipe",
     name = "cottongut-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -41,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-mouse-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -58,7 +59,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cottongut-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -77,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cottongut-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -102,7 +103,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cottongut-pup-mk01-raising",
-    category = "cottongut",
+    categories = {"cottongut"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -114,9 +115,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "cottongut-mk01",     amount = 1,     ignored_by_stats = 1, ignored_by_productivity = 1},
-        {type = "item", name = "cottongut-mk01",     amount = 1,     probability = 0.5,    ignored_by_productivity = 1},
-        {type = "item", name = "cottongut-pup",      amount = 1,     probability = 0.5},
-        {type = "item", name = "cottongut-pup-mk01", amount_min = 3, amount_max = 8,       probability = 0.8},
+        {type = "item", name = "cottongut-mk01",     amount = 1,     independent_probability = 0.5,    ignored_by_productivity = 1},
+        {type = "item", name = "cottongut-pup",      amount = 1,     independent_probability = 0.5},
+        {type = "item", name = "cottongut-pup-mk01", amount_min = 3, amount_max = 8,       independent_probability = 0.8},
     },
     main_product = "cottongut-pup-mk01",
     --icon = '__pyalienlifegraphics__/graphics/icons/evolution-mk02.png',
@@ -129,7 +130,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cottongut-mature-basic-01",
-    category = "cottongut",
+    categories = {"cottongut"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -152,7 +153,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -172,7 +173,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'cottongut-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 20,
     ingredients = {

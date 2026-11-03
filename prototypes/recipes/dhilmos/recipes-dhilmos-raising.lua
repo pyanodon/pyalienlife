@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "dhilmos-egg",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"dhilmos"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "c",
@@ -18,11 +18,11 @@ py.autorecipes {
 				{name = "phytoplankton",    amount = 50,  fluidbox_index = 1},
 				{name = "water-saline",     amount = 100, fluidbox_index = 2, return_item = {name = "waste-water"}},
 				{name = "filtration-media", amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dhilmos-egg", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 25,
 			tech = "dhilmos"
 		},
@@ -79,7 +79,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "dhilmos-hatching",
-	category = "dhilmos",
+	categories = {"dhilmos"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "c",
 	main_product = "dhilmos-pup",
@@ -93,11 +93,11 @@ py.autorecipes {
 				{name = "ralesia-seeds", amount = 80},
 				{name = "water-saline",  amount = 100, fluidbox_index = 2, return_item = {name = "waste-water"}},
 				{name = "hot-air",       amount = 50,  fluidbox_index = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dhilmos-pup", amount = 20},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "dhilmos"
 		},
@@ -186,7 +186,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "dhilmos",
-	category = "dhilmos",
+	categories = {"dhilmos"},
 	subgroup = "py-alienlife-dhilmos",
 	order = "b",
 	main_product = "dhilmos",
@@ -200,11 +200,11 @@ py.autorecipes {
 				{name = "dhilmos-pup",   amount = 1},
 				{name = "phytoplankton", amount = 50},
 				{name = "water-saline",  amount = 100, return_item = {name = "waste-water"}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dhilmos", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "dhilmos"
 		},
@@ -280,7 +280,7 @@ py.autorecipes {
 			results =
 				{
 					{name='dhilmos', remove_item = true},
-					{name='dhilmos', probability = 1, amount_min =1, amount_max =2},
+					{name='dhilmos', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "mukmoux-improved",
-	category = "mukmoux",
+	categories = {"mukmoux"},
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	--main_product = "mukmoux",
@@ -12,11 +12,11 @@ py.autorecipes {
 			{
 				{name = "nanochondria",  amount = 1},
 				{name = "caged-mukmoux", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-mukmoux", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "nanochondria"
 		},

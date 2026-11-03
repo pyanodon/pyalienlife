@@ -21,7 +21,7 @@ local IMP_SPECIAL = 2
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-vonix",
 	order = "b",
 	crafting_speed = 30,
@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "vonix", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -41,12 +41,14 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "venom-gland",     amount = BASE_SPECIAL},
 				{name = "brain",           amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "vonix",
 			name = "full-render-vonix",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vonix.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/vonix.png",     draw_background = true}
+			}
 		},
 		--brain vonix rendering
 		{

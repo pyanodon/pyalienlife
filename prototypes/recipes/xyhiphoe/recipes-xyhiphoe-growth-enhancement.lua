@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "xyhiphoe-improve",
-	category = "xyhiphoe",
+	categories = {"xyhiphoe"},
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	--main_product = "xyhiphoe",
@@ -12,11 +12,11 @@ py.autorecipes {
 			{
 				{name = "anabolic-rna", amount = 1},
 				{name = "xyhiphoe",     amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat-xyhiphoe", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "anabolic-rna"
 		},

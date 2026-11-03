@@ -1,5 +1,5 @@
-local farm = {
-    seed = "replicator-yotoi-fruit", --the seed being planted
+return {
+    name = "replicator-yotoi-fruit", -- the seed being planted (item launched)
     crop = "yotoi-tree-fruit",       --the 'ore' that is spawned
     recipes =                        --all the recipes that use these seeds to grow the crop
     {
@@ -45,5 +45,3 @@ local farm = {
         },
     }
 }
-
-return farm

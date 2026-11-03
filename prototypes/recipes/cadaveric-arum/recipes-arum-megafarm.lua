@@ -3,7 +3,8 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "arum-super-1",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -13,29 +14,32 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 1},
     },
+    order = "arum-a"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-2",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
         {type = "item",  name = "stone-wool", amount = 100},
         {type = "fluid", name = "coal-gas",   amount = 1000},
         {type = "fluid", name = "water",      amount = 3000},
-        {type = "item",  name = "sand",       amount = 150},
     },
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 1.5},
     },
-}:add_unlock("mega-farm-cadaveric-arum")
+    order = "arum-b"
+}--[[@as data.RecipePrototype]]:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-3",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -47,12 +51,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 3},
     },
+    order = "arum-c"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-4",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -66,12 +72,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 4},
     },
+    order = "arum-d"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-5",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -86,12 +94,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 5},
     },
+    order = "arum-e"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-6",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -106,12 +116,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 6},
     },
+    order = "arum-f"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-7",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -126,12 +138,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 7},
     },
+    order = "arum-g"
 }:add_unlock("mega-farm-cadaveric-arum")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-8",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -146,12 +160,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 8},
     },
+    order = "arum-h"
 }:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-9",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -167,12 +183,14 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 9},
     },
+    order = "arum-i"
 }:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = "recipe",
     name = "arum-super-10",
-    category = "arum-farm",
+    categories = {"arum-farm"},
+    subgroup = "py-alienlife-cadaveric-smartfarm",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -188,4 +206,5 @@ RECIPE {
     results = {
         {type = "item", name = "cadaveric-arum", amount = tile_count * 10},
     },
+    order = "arum-j"
 }:add_unlock("mega-farm-cadaveric-arum"):replace_ingredient("manure", "urea")

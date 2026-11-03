@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "mukmoux",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -14,18 +14,19 @@ RECIPE {
         {type = "item",  name = "bio-sample",       amount = 5},
         {type = "item",  name = "mukmoux-codex",    amount = 1},
         {type = "item",  name = "earth-cow-sample", amount = 1}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "fetal-serum",      amount = 100},
         {type = "fluid", name = "artificial-blood", amount = 100},
+        {type = "fluid", name = "fetal-serum",      amount = 100},
     },
     results = {
         {type = "item", name = "mukmoux", amount = 1},
     },
+    icons = py.composite_icon("mukmoux", "mukmoux-codex")
 }:add_unlock("mukmoux")
 
 RECIPE {
     type = "recipe",
     name = "mukmoux-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-cow-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -59,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mukmoux-food-01",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -80,7 +81,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mukmoux-food-02",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -112,7 +113,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mature-01',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -131,7 +132,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'mukmoux-mature-02',
-    category = 'creature-chamber',
+    categories = {'creature-chamber'},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -160,7 +161,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-mukmoux",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -175,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-mukmoux",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {

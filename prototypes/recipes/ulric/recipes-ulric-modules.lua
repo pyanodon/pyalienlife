@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "ulric-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"ulric"},
     enabled = false,
     energy_required = 30,
@@ -19,9 +19,9 @@ RECIPE {
         {type = "item", name = "water-barrel",  amount = 7},
     },
     results = {
-        {type = "item", name = "ulric-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "ulric-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",     amount = 7, ignored_by_productivity = 7, ignored_by_stats = 7},
-        {type = "item", name = "ulric",      amount = 1, probability = 0.5,           ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "ulric",      amount = 1, independent_probability = 0.5,           ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     --main_product = "ulric-mk02",
     icons =
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk02-dna-sample",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk02-dna-sample-02",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -92,7 +92,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk02-breeding",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -121,7 +121,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk02-raising",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -149,7 +149,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-recharge-mk02",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -177,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"ulric"},
     enabled = false,
     energy_required = 30,
@@ -189,9 +189,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 7},
     },
     results = {
-        {type = "item", name = "ulric-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "ulric-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",     amount = 7, ignored_by_productivity = 7, ignored_by_stats = 7},
-        {type = "item", name = "ulric-mk02", amount = 1, probability = 0.6,           ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "ulric-mk02", amount = 1, independent_probability = 0.6,           ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     --main_product = "ulric-mk03",
     icons =
@@ -208,7 +208,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk03-dna-sample",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -230,7 +230,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk03-dna-sample-02",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -253,7 +253,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk03-breeding",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -282,7 +282,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk03-raising",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -310,7 +310,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-recharge-mk03",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -329,7 +329,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"ulric"},
     enabled = false,
     energy_required = 30,
@@ -341,9 +341,9 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 7},
     },
     results = {
-        {type = "item", name = "ulric-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "ulric-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",     amount = 7, ignored_by_productivity = 7, ignored_by_stats = 7},
-        {type = "item", name = "ulric-mk03", amount = 1, probability = 0.7,           ignored_by_productivity = 1, ignored_by_stats = 1},
+        {type = "item", name = "ulric-mk03", amount = 1, independent_probability = 0.7,           ignored_by_productivity = 1, ignored_by_stats = 1},
     },
     --main_product = "ulric-mk04",
     icons =
@@ -360,7 +360,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk04-dna-sample",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -382,7 +382,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk04-dna-sample-02",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -405,7 +405,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk04-breeding",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -434,7 +434,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-mk04-raising",
-    category = "ulric",
+    categories = {"ulric"},
     enabled = false,
     energy_required = 90,
     ingredients = {
@@ -462,7 +462,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ulric-recharge-mk04",
-    category = "bay",
+    categories = {"bay"},
     enabled = false,
     energy_required = 60,
     ingredients = {

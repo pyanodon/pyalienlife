@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "dingrits-improved",
-	category = "dingrits",
+	categories = {"dingrits"},
 	subgroup = "py-alienlife-dingrits",
 	order = "b",
 	--main_product = "dingrits",
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-dingrits", amount = 1},
 				{name = "nanochondria",   amount = 1},
 				{name = "antiviral",      amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-dingrits", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

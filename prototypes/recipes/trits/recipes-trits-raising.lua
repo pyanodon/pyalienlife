@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "trits-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"trits"},
 	subgroup = "py-alienlife-trits",
 	order = "c",
@@ -21,11 +21,11 @@ py.autorecipes {
 				{name = "sea-sponge",       amount = 2},
 				{name = "filtration-media", amount = 2},
 				{name = "water-saline",     amount = 300, return_item = {name = "waste-water", amount = 300}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "trits-pup", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "trits"
 		},
@@ -197,7 +197,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "trits",
-	category = "trits",
+	categories = {"trits"},
 	subgroup = "py-alienlife-trits",
 	order = "b",
 	main_product = "trits",
@@ -214,11 +214,11 @@ py.autorecipes {
 				{name = "moondrop",         amount = 15,  fallback = "fawogae"},
 				{name = "filtration-media", amount = 2},
 				{name = "water-saline",     amount = 500, return_item = {name = "waste-water", amount = 250}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "trits", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 280,
 			tech = "trits"
 		},
@@ -293,7 +293,7 @@ py.autorecipes {
 			results =
 				{
 					{name = 'trits', remove_item = true},
-					{name = 'trits', probability = 1, amount_min =2, amount_max =3},
+					{name = 'trits', independent_probability = 1, amount_min =2, amount_max =3},
 				},
 			crafting_speed = 50,
 			tech = 'antiviral'

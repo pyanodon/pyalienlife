@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "arthurian-growth-enhancement",
-	category = "arthurian",
+	categories = {"arthurian"},
 	subgroup = "py-alienlife-arthurian",
 	order = "c",
 	mats =
@@ -14,11 +14,11 @@ py.autorecipes {
 				{name = "caged-arthurian", amount = 1},
 				{name = "nanochondria",    amount = 1},
 				{name = "gh",              amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-arthurian", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			name = "arthurian-11",
 			tech = "nanochondria"

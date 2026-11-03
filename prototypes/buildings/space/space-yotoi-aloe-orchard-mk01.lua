@@ -43,7 +43,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-5.2, -5.2}, {5.2, 5.2}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-    forced_symmetry = "diagonal-pos",
+    use_mirroring = true,
     module_slots = 33,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"yotoi"},
@@ -146,14 +146,14 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {-5.0, 0.0}, direction = defines.direction.west}}
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 1000,
+            volume = 100,
             pipe_connections = {{flow_direction = "input", position = {5.0, 0.0}, direction = defines.direction.east}}
         },
         {
@@ -175,6 +175,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 1.9},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/yotoi-aloe-orchard.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

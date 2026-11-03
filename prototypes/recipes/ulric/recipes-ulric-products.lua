@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "ulric-manure",
-	category = "ulric",
+	categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	main_product = "manure",
@@ -16,11 +16,11 @@ py.autorecipes {
 				{name = "ralesia-seeds", amount = 15},
 				{name = "ulric-food-01", amount = 1},
 				{name = "water-barrel",  amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "manure", amount = 3}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "ulric"
 		},

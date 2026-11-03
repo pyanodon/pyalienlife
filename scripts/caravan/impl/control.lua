@@ -1,10 +1,14 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local P = {}
 
 ---Pathfinds a caravan to follow another entity
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 ---@param entity LuaEntity
 function P.goto_entity(caravan_data, entity)
     local caravan = caravan_data.entity
@@ -18,7 +22,7 @@ function P.goto_entity(caravan_data, entity)
 end
 
 ---Pathfinds a caravan to a position
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 ---@param position MapPosition
 function P.goto_position(caravan_data, position)
     local caravan = caravan_data.entity
@@ -32,7 +36,7 @@ function P.goto_position(caravan_data, position)
 end
 
 ---Sets the caravan to walk aimlessly in a radius.
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 function P.wander(caravan_data)
     caravan_data.entity.commandable.set_command {
         type = defines.command.wander,
@@ -43,7 +47,7 @@ end
 
 ---Stops all actions of the caravan and cancels the current pathfinder request.
 ---This is used for example when it runs out of food or the GUI is interacted with.
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 function P.stop_actions(caravan_data)
     caravan_data.schedule_id = -1
     caravan_data.action_id = -1
@@ -54,7 +58,7 @@ end
 
 ---Reduces the fuel bar of the caravan by 1. If the fuel bar is empty, it will also attempt to refill it using fuel from the fuel inventory.
 ---If this function returns false, the caravan is starved and all actions stop.
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 ---@return boolean
 function P.eat(caravan_data)
     local entity = caravan_data.entity
@@ -82,7 +86,7 @@ local function exists_and_valid(v) return v and v.valid end
 ---Checks if the caravan entity is valid, the caravan inventory is valid, and the fuel inventory is valid.
 ---If not, all lua objects are destroyed and the caravan is removed from the global table.
 ---If this caravan is itemized, then we return false however lua objects are not destroyed.
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 ---@return boolean
 function P.validity_check(caravan_data)
     if not caravan_data or caravan_data.itemised then return false end

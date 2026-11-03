@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "simik-improved",
-	category = "simik",
+	categories = {"simik"},
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	--main_product = "simik",
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-simik",  amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-simik", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

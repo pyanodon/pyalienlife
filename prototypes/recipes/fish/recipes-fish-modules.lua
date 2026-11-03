@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "fish-mk02",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -18,8 +18,8 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",    amount = 60, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "fish-mk02", amount = 1,  probability = 0.005},
-        {type = "item", name = "fish",      amount = 10, probability = 0.5,  ignored_by_productivity = 10},
+        {type = "item", name = "fish-mk02", amount = 1,  independent_probability = 0.005},
+        {type = "item", name = "fish",      amount = 10, independent_probability = 0.5,  ignored_by_productivity = 10},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "fish-mk02",
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-egg-mk02-breeder",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -46,8 +46,8 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "fish-egg-mk02", amount = 10},
-        {type = "item",  name = "fish-egg-mk02", amount = 2,  probability = 0.5},
-        {type = "item",  name = "fish-egg",      amount = 2,  probability = 0.5},
+        {type = "item",  name = "fish-egg-mk02", amount = 2,  independent_probability = 0.5},
+        {type = "item",  name = "fish-egg",      amount = 2,  independent_probability = 0.5},
         {type = "fluid", name = "waste-water",   amount = 100},
     },
     main_product = "fish-egg-mk02",
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-mk02-breeder",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -76,8 +76,8 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "fish-mk02",   amount = 6},
-        {type = "item",  name = "fish-mk02",   amount = 2,  probability = 0.5},
-        {type = "item",  name = "fish",        amount = 2,  probability = 0.5},
+        {type = "item",  name = "fish-mk02",   amount = 2,  independent_probability = 0.5},
+        {type = "item",  name = "fish",        amount = 2,  independent_probability = 0.5},
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fish-mk02",
@@ -96,7 +96,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-mk03",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -108,8 +108,8 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",    amount = 60, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "fish-mk03", amount = 1,  probability = 0.004},
-        {type = "item", name = "fish",      amount = 10, probability = 0.6},
+        {type = "item", name = "fish-mk03", amount = 1,  independent_probability = 0.004},
+        {type = "item", name = "fish",      amount = 10, independent_probability = 0.6},
     },
     main_product = "fish-mk03",
     icons =
@@ -125,7 +125,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-egg-mk03-breeder",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -135,8 +135,8 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "fish-egg-mk03", amount = 10},
-        {type = "item",  name = "fish-egg-mk03", amount = 2,  probability = 0.5},
-        {type = "item",  name = "fish-egg-mk02", amount = 2,  probability = 0.5},
+        {type = "item",  name = "fish-egg-mk03", amount = 2,  independent_probability = 0.5},
+        {type = "item",  name = "fish-egg-mk02", amount = 2,  independent_probability = 0.5},
         {type = "fluid", name = "waste-water",   amount = 100},
     },
     main_product = "fish-egg-mk03",
@@ -152,7 +152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-mk03-breeder",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -165,8 +165,8 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "fish-mk03",   amount = 6},
-        {type = "item",  name = "fish-mk03",   amount = 2,  probability = 0.25},
-        {type = "item",  name = "fish-mk02",   amount = 2,  probability = 0.75},
+        {type = "item",  name = "fish-mk03",   amount = 2,  independent_probability = 0.25},
+        {type = "item",  name = "fish-mk02",   amount = 2,  independent_probability = 0.75},
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fish-mk03",
@@ -185,7 +185,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-mk04",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -197,8 +197,8 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",    amount = 60, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "fish-mk04", amount = 1,  probability = 0.003},
-        {type = "item", name = "fish",      amount = 10, probability = 0.7},
+        {type = "item", name = "fish-mk04", amount = 1,  independent_probability = 0.003},
+        {type = "item", name = "fish",      amount = 10, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "fish-mk04",
@@ -215,7 +215,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-egg-mk04-breeder",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -226,8 +226,8 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "fish-egg-mk04", amount = 10},
-        {type = "item",  name = "fish-egg-mk04", amount = 2,  probability = 0.5},
-        {type = "item",  name = "fish-egg-mk03", amount = 2,  probability = 0.5},
+        {type = "item",  name = "fish-egg-mk04", amount = 2,  independent_probability = 0.5},
+        {type = "item",  name = "fish-egg-mk03", amount = 2,  independent_probability = 0.5},
         {type = "fluid", name = "waste-water",   amount = 100},
     },
     main_product = "fish-egg-mk04",
@@ -243,7 +243,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-mk04-breeder",
-    category = "fish-farm",
+    categories = {"fish-farm"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -256,8 +256,8 @@ RECIPE {
     },
     results = {
         {type = "item",  name = "fish-mk04",   amount = 6},
-        {type = "item",  name = "fish-mk04",   amount = 2,  probability = 0.25},
-        {type = "item",  name = "fish-mk03",   amount = 2,  probability = 0.75},
+        {type = "item",  name = "fish-mk04",   amount = 2,  independent_probability = 0.25},
+        {type = "item",  name = "fish-mk03",   amount = 2,  independent_probability = 0.75},
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fish-mk04",

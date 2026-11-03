@@ -23,7 +23,7 @@ local IMP_SPECIAL = 10
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-simik",
 	order = "b",
 	crafting_speed = 30,
@@ -33,7 +33,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-simik", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -45,12 +45,14 @@ py.autorecipes {
 				{name = "simik-blood", amount = BASE_BLOOD},
 				{name = "cage",        amount = INPUT_AMOUNT},
 				{name = "brain",       amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "simik-mk01",
 			name = "full-render-simik",
-			icon = "__pyalienlifegraphics2__/graphics/icons/rendering-simik.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics2__/graphics/icons/simik.png",    draw_background = true}
+			}
 		},
 		--brain simik rendering
 		{

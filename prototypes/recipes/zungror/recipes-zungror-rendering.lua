@@ -19,7 +19,7 @@ local IMP_BRAIN = 5
 
 py.autorecipes {
 	name = "rendering-zungror",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	crafting_speed = 50,
@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-zungror", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -39,12 +39,14 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "brain",           amount = BASE_BRAIN},
 				{name = "cage",            amount = INPUT_AMOUNT}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "zungror",
 			name = "full-render-zun",
-			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-zungror.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/zungror.png",   draw_background = true}
+			}
 		},
 		--brain zungror rendering
 		{

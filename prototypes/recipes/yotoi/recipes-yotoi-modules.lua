@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-gmo-mk02",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "milk",                amount = 100, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "yotoi-fruit-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "yotoi-fruit",      amount = 1, probability = 0.5},
+        {type = "item", name = "yotoi-fruit-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "yotoi-fruit",      amount = 1, independent_probability = 0.5},
     },
     main_product = "yotoi-fruit-mk02",
     icons =
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-seeds-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -61,7 +61,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-mk02",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -87,7 +87,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-gmo-mk03",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -125,8 +125,8 @@ RECIPE {
         {type = "fluid", name = "arqad-jelly",       amount = 100, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "yotoi-fruit-mk03", amount = 1, probability = 0.005},
-        {type = "item", name = "yotoi-fruit",      amount = 1, probability = 0.5},
+        {type = "item", name = "yotoi-fruit-mk03", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "yotoi-fruit",      amount = 1, independent_probability = 0.5},
     },
     main_product = "yotoi-fruit-mk03",
     icons =
@@ -142,7 +142,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-seeds-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -167,7 +167,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-mk03",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -221,7 +221,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-gmo-mk04",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -233,8 +233,8 @@ RECIPE {
         {type = "fluid", name = "simik-blood",             amount = 100, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "yotoi-fruit-mk04", amount = 1, probability = 0.005},
-        {type = "item", name = "yotoi-fruit",      amount = 1, probability = 0.5},
+        {type = "item", name = "yotoi-fruit-mk04", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "yotoi-fruit",      amount = 1, independent_probability = 0.5},
     },
     main_product = "yotoi-fruit-mk04",
     icons =
@@ -250,7 +250,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-seeds-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -275,7 +275,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-mk04",
-    category = "yotoi",
+    categories = {"yotoi"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -304,7 +304,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 30,
     ingredients = {

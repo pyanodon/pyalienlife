@@ -12,7 +12,7 @@ local BASE_SPECIAL = 100
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-fish",
 	order = "b",
 	mats =
@@ -21,7 +21,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "fish", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",    amount = BASE_BONES},
@@ -29,12 +29,14 @@ py.autorecipes {
 				{name = "skin",     amount = BASE_SKIN},
 				{name = "guts",     amount = BASE_GUTS},
 				{name = "fish-oil", amount = BASE_SPECIAL},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "water-animals-mk01",
 			name = "full-render-fish",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-fish.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/fish.png",      draw_background = true, icon_size = 32}
+			}
 		},
 	}
 }

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "cridren",
-	category = "cridren",
+	categories = {"cridren"},
 	subgroup = "py-alienlife-cridren",
 	order = "a",
 	number_icons = true,
@@ -14,12 +14,12 @@ py.autorecipes {
 				{name = "caged-arthurian", amount = 1},
 				{name = "fish",            amount = 10},
 				{name = "soil",            amount = 15},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "cridren", amount = 3},
 				{name = "cage",    amount = 1}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 120,
 			tech = "cridren",
 			main_product = "cridren"

@@ -3,7 +3,8 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "ralesia-super-1",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -15,12 +16,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 2},
     },
+    order = "ra-a"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-2",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -32,12 +35,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 3},
     },
+    order = "ra-b"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-3",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -49,12 +54,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 4},
     },
+    order = "ra-c"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-4",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -67,12 +74,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 5},
     },
+    order = "ra-d"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-5",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -85,12 +94,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 6},
     },
+    order = "ra-e"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-6",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -104,12 +115,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 7},
     },
+    order = "ra-f"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-7",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -121,12 +134,14 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 8},
     },
+    order = "ra-g"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-10",
-    category = "ralesia-farm",
+    categories = {"ralesia-farm"},
+    subgroup = "py-alienlife-ralesia-smartfarm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -141,4 +156,5 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 11},
     },
+    order = "ra-j"
 }:add_unlock("mega-farm-ralesia")

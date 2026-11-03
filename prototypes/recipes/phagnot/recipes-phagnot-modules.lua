@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "phagnot-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"phagnot"},
     enabled = false,
     energy_required = 30,
@@ -20,9 +20,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "phagnot-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "phagnot-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",       amount = 5},
-        {type = "item", name = "phagnot",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "phagnot",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     --main_product = "phagnot-mk02",
     icons =
@@ -38,7 +38,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mk02-breeder",
-    category = "phagnot",
+    categories = {"phagnot"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -50,9 +50,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "phagnot-cub-mk02", amount = 1},
-        {type = "item", name = "phagnot-cub-mk02", amount = 1,     probability = 0.5},
+        {type = "item", name = "phagnot-cub-mk02", amount = 1,     independent_probability = 0.5},
         {type = "item", name = "barrel",           amount = 5},
-        {type = "item", name = "phagnot-cub",      amount = 1,     probability = 0.5},
+        {type = "item", name = "phagnot-cub",      amount = 1,     independent_probability = 0.5},
         {type = "item", name = "phagnot-mk02",     amount_min = 0, amount_max = 2,   ignored_by_productivity = 2}
     },
     main_product = "phagnot-mk02",
@@ -65,7 +65,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mature-basic-mk02",
-    category = "phagnot",
+    categories = {"phagnot"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -89,7 +89,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"phagnot"},
     enabled = false,
     energy_required = 30,
@@ -102,9 +102,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 5},
     },
     results = {
-        {type = "item", name = "phagnot-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "phagnot-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",       amount = 5},
-        {type = "item", name = "phagnot",      amount = 1, probability = 0.6},
+        {type = "item", name = "phagnot",      amount = 1, independent_probability = 0.6},
     },
     --main_product = "phagnot-mk03",
     icons =
@@ -120,7 +120,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mk03-breeder",
-    category = "phagnot",
+    categories = {"phagnot"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -133,10 +133,10 @@ RECIPE {
     results = {
         {type = "item", name = "phagnot-mk03",     amount_min = 0, amount_max = 2,    ignored_by_productivity = 2},
         {type = "item", name = "phagnot-cub-mk03", amount = 1},
-        {type = "item", name = "phagnot-cub-mk03", amount = 1,     probability = 0.5},
-        {type = "item", name = "phagnot-cub-mk02", amount = 1,     probability = 0.25},
+        {type = "item", name = "phagnot-cub-mk03", amount = 1,     independent_probability = 0.5},
+        {type = "item", name = "phagnot-cub-mk02", amount = 1,     independent_probability = 0.25},
         {type = "item", name = "barrel",           amount = 5},
-        {type = "item", name = "phagnot-cub",      amount = 1,     probability = 0.25},
+        {type = "item", name = "phagnot-cub",      amount = 1,     independent_probability = 0.25},
     },
     main_product = "phagnot-mk03",
     icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk03.png",
@@ -148,7 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mature-basic-mk03",
-    category = "phagnot",
+    categories = {"phagnot"},
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -172,7 +172,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"phagnot"},
     enabled = false,
     energy_required = 30,
@@ -185,9 +185,9 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 5},
     },
     results = {
-        {type = "item", name = "phagnot-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "phagnot-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",       amount = 5},
-        {type = "item", name = "phagnot",      amount = 1, probability = 0.7},
+        {type = "item", name = "phagnot",      amount = 1, independent_probability = 0.7},
     },
     --main_product = "phagnot-mk04",
     icons =
@@ -203,7 +203,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mk04-breeder",
-    category = "phagnot",
+    categories = {"phagnot"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -217,11 +217,11 @@ RECIPE {
     results = {
         {type = "item", name = "phagnot-mk04",     amount_min = 0, amount_max = 2,    ignored_by_productivity = 2},
         {type = "item", name = "phagnot-cub-mk04", amount = 1},
-        {type = "item", name = "phagnot-cub-mk04", amount = 1,     probability = 0.5},
-        {type = "item", name = "phagnot-cub-mk03", amount = 1,     probability = 0.4},
-        {type = "item", name = "phagnot-cub-mk03", amount = 1,     probability = 0.3},
+        {type = "item", name = "phagnot-cub-mk04", amount = 1,     independent_probability = 0.5},
+        {type = "item", name = "phagnot-cub-mk03", amount = 1,     independent_probability = 0.4},
+        {type = "item", name = "phagnot-cub-mk03", amount = 1,     independent_probability = 0.3},
         {type = "item", name = "barrel",           amount = 5},
-        {type = "item", name = "phagnot-cub",      amount = 1,     probability = 0.25},
+        {type = "item", name = "phagnot-cub",      amount = 1,     independent_probability = 0.25},
     },
     main_product = "phagnot-mk04",
     icon = "__pyalienlifegraphics__/graphics/icons/evolution-mk04.png",
@@ -233,7 +233,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mature-basic-mk04",
-    category = "phagnot",
+    categories = {"phagnot"},
     enabled = false,
     energy_required = 50,
     ingredients = {

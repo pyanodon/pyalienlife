@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
             {type = "item", name = "barrel",     amount = 6},
         },
         energy_required = 85,
-        category = "rc",
+        categories = {"rc"},
         allowed_module_categories = {"vonix"},
         main_product = "vonix-cub"
     }}
@@ -33,7 +33,7 @@ if data and not yafc_turd_integration then
         RECIPE("vonix-raising-3"):copy(),
     } do
         recipe.name = recipe.name .. "-cancer"
-        local _, barrel_count = recipe:remove_result("barrel")
+        local _, barrel_count = recipe:remove_result("barrel")--[[@cast barrel_count int]]
         recipe:add_result {type = "item", name = "mutant-enzymes-barrel", amount = barrel_count * 5}
         recipe:multiply_ingredient_amount("arqad-honey-barrel", 5)
         recipe.icon = "__pyalienlifegraphics__/graphics/icons/mutant-enzymes.png"
@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         data:extend {recipe}
     end
 
-    local previous = {{type = "item", name = "soil", amount = 20}, {type = "item", name = "vonix-den-mk01", amount = 1}, {type = "item", name = "vonix-den-mk02", amount = 1}}
+    local previous = {{type = "item", name = "soil", amount = 20}, {type = "item", name = "vonix-den-mk01", amount = 1}, {type = "item", name = "vonix-den-mk02", amount = 1}}--[[@as data.ItemIngredientPrototype[] ]]
     for i, recipe in pairs {
         RECIPE("vonix-den-mk01"):copy(),
         RECIPE("vonix-den-mk02"):copy(),

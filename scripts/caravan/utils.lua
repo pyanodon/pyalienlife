@@ -1,9 +1,12 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require "caravan-prototypes"
 local italian_names = require "italian-names"
 
 local P = {}
 
----@param caravan_data Caravan
 ---@param entity LuaEntity
 function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     local prototype = caravan_prototypes[caravan_entity_name]
@@ -12,7 +15,7 @@ function P.get_valid_actions_for_entity(caravan_entity_name, entity)
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
             valid_actions = all_actions.outpost
-        elseif entity.name == "outpost-fluid" then
+        elseif entity.name == "outpost-fluid" or entity.name == "outpost-aerial-fluid" then
             valid_actions = all_actions["outpost-fluid"]
         else
             valid_actions = all_actions[entity.type]
@@ -28,7 +31,7 @@ function P.get_all_actions_for_entity(entity)
     if entity and entity.valid then
         if entity.name == "outpost" or entity.name == "outpost-aerial" then
             valid_actions = all_actions.outpost
-        elseif entity.name == "outpost-fluid" then
+        elseif entity.name == "outpost-fluid" or entity.name == "outpost-aerial-fluid" then
             valid_actions = all_actions["outpost-fluid"]
         else
             valid_actions = all_actions[entity.type]
@@ -83,7 +86,7 @@ function P.get_action_from_button(element)
 
     local action
     if action_list_type == Caravan.action_list_types.standard_schedule then
-        action = storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions[tags.action_id]
+        action = storage.caravans[tags.unit_number--[[@as int]]].schedule--[[@cast -?]][tags.schedule_id].actions[tags.action_id]
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
@@ -109,12 +112,12 @@ function P.get_schedule(element)
     local action_list_type = tags.action_list_type
 
     if action_list_type == Caravan.action_list_types.standard_schedule then
-        local caravan_data = storage.caravans[tags.unit_number]
+        local caravan_data = storage.caravans[tags.unit_number--[[@as int]]]
         local schedule = caravan_data.schedule
-        if tags.action_id then schedule = schedule[tags.schedule_id].actions end
+        if tags.action_id then schedule = schedule--[[@cast -?]][tags.schedule_id].actions end
         return schedule
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
-        local caravan_data = storage.caravans[tags.unit_number]
+        local caravan_data = storage.caravans[tags.unit_number--[[@as int]]]
         return caravan_data.interrupts
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
         return storage.interrupts[tags.interrupt_name].conditions
@@ -132,7 +135,7 @@ function P.get_actions_from_tags(tags, player_index)
 
     local action
     if action_list_type == Caravan.action_list_types.standard_schedule then
-        return storage.caravans[tags.unit_number].schedule[tags.schedule_id].actions
+        return storage.caravans[tags.unit_number].schedule--[[@cast -?]][tags.schedule_id].actions
     elseif action_list_type == Caravan.action_list_types.interrupt_schedule then
         error()
     elseif action_list_type == Caravan.action_list_types.interrupt_condition then
@@ -179,14 +182,14 @@ end
 
 local function get_fluidavan_inventory_tooltip(caravan_data)
     if caravan_data.fluid then
-        return {"", "\n[fluid=" .. caravan_data.fluid.name .. "] ", " ×", caravan_data.fluid.amount}
+        return {"", "\n[fluid=" .. caravan_data.fluid.name .. "] ", " ×", string.format("%g", caravan_data.fluid.amount)}
     else
         return {"", "\n[img=utility/fluid_icon] ", {"caravan-gui.tank-is-empty"}}
     end
 end
 
 function P.get_inventory_tooltip(caravan_data)
-    if caravan_data.entity.name:find("^fluidavan") then
+    if caravan_data.entity.name:find("^fluid") then
         return get_fluidavan_inventory_tooltip(caravan_data)
     end
     return get_caravan_inventory_tooltip(caravan_data)

@@ -3,7 +3,7 @@ ITEM {
     name = "powdered-biomass",
     icon = "__pyalienlifegraphics__/graphics/icons/powdered-biomass.png",
     icon_size = 32,
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "0.5MJ",
     flags = {},
     subgroup = "py-alienlife-items",
@@ -16,7 +16,7 @@ ITEM {
     name = "fine-powdered-biomass",
     icon = "__pyalienlifegraphics__/graphics/icons/fine-powdered-biomass.png",
     icon_size = 32,
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "0.75MJ",
     flags = {},
     subgroup = "py-alienlife-items",
@@ -29,7 +29,7 @@ ITEM {
     name = "dried-biomass",
     icon = "__pyalienlifegraphics__/graphics/icons/dried-biomass.png",
     icon_size = 64,
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "1.2MJ",
     flags = {},
     subgroup = "py-alienlife-items",
@@ -43,7 +43,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -54,7 +54,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/sic.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -65,7 +65,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/quartz-tube.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -76,7 +76,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/mosfet.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -87,7 +87,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/nisi.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-anorganics",
     order = "a",
     stack_size = 100
 }
@@ -426,7 +426,7 @@ ITEM {
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/bio/29.png", scale = 1}
     },
     flags = {},
-    subgroup = "py-alienlife-items",
+    subgroup = "py-alienlife-native-flora-smartfarm",
     order = "a",
     stack_size = 50
 }
@@ -435,7 +435,7 @@ ITEM {
     type = "item",
     name = "charcoal-briquette",
     fuel_value = "180MJ",
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     icon = "__pyalienlifegraphics3__/graphics/icons/charcoal-briq.png",
     icon_size = 64,
     flags = {},
@@ -481,7 +481,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-01.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "aa",
     stack_size = 50
 }
@@ -492,7 +492,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-02.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ab",
     stack_size = 50
 }
@@ -503,7 +503,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-03.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ac",
     stack_size = 50
 }
@@ -514,7 +514,7 @@ ITEM {
     icon = "__pyalienlifegraphics2__/graphics/icons/brain-cartridge-04.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-used",
+    subgroup = "py-alienlife-vatbrain",
     order = "ad",
     stack_size = 50
 }
@@ -528,7 +528,7 @@ ITEM {
     subgroup = "py-alienlife-special-creatures",
     order = "z-b",
     stack_size = 10,
-    fuel_category = "gastrocapacitor",
+    fuel_categories = {"gastrocapacitor"},
     fuel_value = "2GJ",
     fuel_acceleration_multiplier = 1,
     fuel_top_speed_multiplier = 3

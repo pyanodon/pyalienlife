@@ -1,7 +1,7 @@
 --Aoug breeding
 py.autorecipes {
 	name = "auog-pooping",
-	category = "auog",
+	categories = {"auog"},
 	subgroup = "py-alienlife-auog",
 	order = "b",
 	number_icons = true,
@@ -14,11 +14,11 @@ py.autorecipes {
 				{name = "native-flora", amount = 20},
 				{name = "moss",         amount = 10},
 				{name = "water-barrel", amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "manure", amount_min = 3, amount_max = 8}
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "auog",
 			main_product = "manure"

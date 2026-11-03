@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "vonix-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"vonix"},
     enabled = false,
     energy_required = 30,
@@ -20,9 +20,9 @@ RECIPE {
         {type = "item", name = "water-barrel",  amount = 15},
     },
     results = {
-        {type = "item", name = "vonix-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "vonix-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",     amount = 15},
-        {type = "item", name = "vonix",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "vonix",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     --main_product = "vonix-mk02",
     icons =
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vonix-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"vonix"},
     enabled = false,
     energy_required = 30,
@@ -54,9 +54,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 15},
     },
     results = {
-        {type = "item", name = "vonix-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "vonix-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",     amount = 15},
-        {type = "item", name = "vonix-mk02", amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "vonix-mk02", amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
     },
     --main_product = "vonix-mk03",
     icons =
@@ -75,7 +75,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vonix-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"vonix"},
     enabled = false,
     energy_required = 30,
@@ -88,9 +88,9 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 15},
     },
     results = {
-        {type = "item", name = "vonix-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "vonix-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",     amount = 15},
-        {type = "item", name = "vonix-mk03", amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "vonix-mk03", amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
     },
     --main_product = "vonix-mk04",
     icons =
@@ -108,7 +108,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vonix-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -141,7 +141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-vonix-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -159,7 +159,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "vonix-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -192,7 +192,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-vonix-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

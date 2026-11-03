@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "chorkok",
     energy_required = 120,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "earth-bat-sample",       amount = 1},
@@ -12,8 +12,8 @@ RECIPE {
         {type = "item",  name = "bio-sample",             amount = 15},
         {type = "item",  name = "pheromones",             amount = 5},
         {type = "fluid", name = "artificial-blood",       amount = 100},
-        {type = "fluid", name = "fetal-serum",            amount = 100},
         {type = "fluid", name = "coal-slurry",            amount = 200},
+        {type = "fluid", name = "fetal-serum",            amount = 100},
     },
     results = {
         {type = "item", name = "chorkok", amount = 1}
@@ -36,7 +36,7 @@ RECIPE {
     type = "recipe",
     name = "earth-bat-sample",
     energy_required = 300,
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     ingredients = {
         {type = "item", name = "earth-generic-sample", amount = 50},
@@ -51,7 +51,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bat-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -94,6 +94,7 @@ local animation = {
 local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = "unit",
+    tall = true,
     name = "chorkok",
     icon = "__pyalienlifegraphics2__/graphics/icons/chorkok.png",
     icon_size = 64,

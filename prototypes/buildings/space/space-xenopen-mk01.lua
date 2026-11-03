@@ -159,6 +159,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.65},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/xenopen.ogg", volume = 0.3},
-        apparent_volume = 1.2
     }
 }

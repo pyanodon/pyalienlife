@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local CaravanUtils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
@@ -103,7 +107,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_action_play_stop_button"] = 
     local element = event.element
     local tags = element.tags
     local caravan_data = storage.caravans[tags.unit_number]
-    local schedule = caravan_data.schedule[tags.schedule_id]
+    local schedule = caravan_data.schedule--[[@cast -?]][tags.schedule_id]
 
     if caravan_data.schedule_id == tags.schedule_id then
         if caravan_data.action_id == tags.action_id then
@@ -128,7 +132,7 @@ end
 local prefix = "py_caravan_action_number_selection"
 
 local function on_confirmed(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     local tags = event.element.tags
     local textfield = event.element.parent[prefix .. "_text_field"]

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "grod-sample",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -20,12 +20,13 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = 1},
     },
+    icons = py.composite_icon("grod", "grod-codex")
 }:add_unlock("grod")
 
 RECIPE {
     type = "recipe",
     name = "grod-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-jute-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -63,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-seeds",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -78,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-grod",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 30,
     ingredients = {

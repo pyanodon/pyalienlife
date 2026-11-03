@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "zungror",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -16,19 +16,20 @@ RECIPE {
         {type = "item",  name = "earth-spider-sample",    amount = 2},
         {type = "item",  name = "strorix-unknown-sample", amount = 2},
         {type = "item",  name = "earth-goat-sample",      amount = 1},
-        {type = "fluid", name = "fetal-serum",            amount = 500},
-        {type = "fluid", name = "artificial-blood",       amount = 100},
         {type = "item",  name = "zungror-codex",          amount = 1},
+        {type = "fluid", name = "artificial-blood",       amount = 100},
+        {type = "fluid", name = "fetal-serum",            amount = 500},
     },
     results = {
         {type = "item", name = "zungror", amount = 1},
     },
+    icons = py.composite_icon("zungror", "zungror-codex")
 }:add_unlock("zungror")
 
 RECIPE {
     type = "recipe",
     name = "earth-spider-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -44,7 +45,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-goat-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -60,7 +61,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -77,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-zungror",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -92,7 +93,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-zungror",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 0.5,
     ingredients = {

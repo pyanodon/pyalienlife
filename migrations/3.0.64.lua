@@ -1,0 +1,2 @@
+---@diagnostic disable
+storage.gui_elements_by_name = nil

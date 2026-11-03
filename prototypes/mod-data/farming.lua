@@ -1,5 +1,17 @@
-local farm_buildings = {
-    ["antelope-enclosure"] = {default_module = "antelope", domain = "animal"},
+---@diagnostic disable-next-line: assign-type-mismatch
+---@type pyModData
+local mod_data = data.raw["mod-data"].pyanodons.data
+
+-- note, farm building does not need to include -mk0x or -turd, they are filtered out manually (may change in the future)
+
+---@class (partial) pyModData
+---@field farm_buildings table<string,AlienlifeFarmPrototype>
+
+---@class AlienlifeFarmPrototype
+---@field default_module? data.ModuleName
+---@field domain "plant"|"animal"|"fungi"
+
+mod_data.farm_buildings = {
     ["arqad-hive"] = {default_module = "arqad", domain = "animal"},
     ["arthurian-pen"] = {default_module = "arthurian", domain = "animal"},
     ["auog-paddock"] = {default_module = "auog", domain = "animal"},
@@ -7,7 +19,6 @@ local farm_buildings = {
     ["dhilmos-pool"] = {default_module = "dhilmos", domain = "animal"},
     ["dingrits-pack"] = {default_module = "dingrits", domain = "animal"},
     ["fish-farm"] = {default_module = "fish", domain = "animal"},
-    ["fish-farm-turd"] = {default_module = "fish", domain = "animal"},
     ["kmauts-enclosure"] = {default_module = "kmauts", domain = "animal"},
     ["mukmoux-pasture"] = {default_module = "mukmoux", domain = "animal"},
     ["phadai-enclosure"] = {default_module = "phadai", domain = "animal"},
@@ -24,19 +35,15 @@ local farm_buildings = {
     ["xenopen"] = {default_module = "xeno", domain = "animal"},
     ["xyhiphoe-pool"] = {default_module = "xyhiphoe", domain = "animal"},
     ["zipir-reef"] = {default_module = "zipir1", domain = "animal"},
-    ["cadaveric-arum"] = {default_module = "cadaveric-arum", domain = "plant"},
     ["fwf"] = {default_module = "tree-mk01", domain = "plant"},
     ["grods-swamp"] = {default_module = "grod", domain = "plant"},
     ["guar-gum-plantation"] = {default_module = "guar", domain = "plant"},
-    ["kicalk-plantation"] = {default_module = "kicalk", domain = "plant"},
-    ["moondrop-greenhouse"] = {default_module = "moondrop", domain = "plant"},
     ["moss-farm"] = {default_module = "moss", domain = "plant"},
     ["ralesia-plantation"] = {default_module = "ralesia", domain = "plant"},
     ["rennea-plantation"] = {default_module = "rennea", domain = "plant"},
     ["sap-extractor"] = {default_module = "sap-tree", domain = "plant"},
     ["seaweed-crop"] = {default_module = "seaweed", domain = "plant"},
     ["sponge-culture"] = {default_module = "sea-sponge", domain = "plant"},
-    ["wpu-turd"] = {default_module = "py-sawblade-module-mk01", domain = "plant"},
     ["tuuphra-plantation"] = {default_module = "tuuphra", domain = "plant"},
     ["yotoi-aloe-orchard"] = {default_module = "yotoi", domain = "plant"},
     ["bhoddos-culture"] = {default_module = "bhoddos", domain = "fungi"},
@@ -44,5 +51,3 @@ local farm_buildings = {
     ["navens-culture"] = {default_module = "navens", domain = "fungi"},
     ["yaedols-culture"] = {default_module = "yaedols", domain = "fungi"},
 }
-
-return farm_buildings

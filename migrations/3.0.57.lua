@@ -1,3 +1,4 @@
+---@diagnostic disable
 local util = require '__core__.lualib.util'
 local SECONDS = 60
 -- recreate beacons to reflect the new radius
@@ -30,7 +31,7 @@ for _, unit_number in pairs(storage.vatbrains) do
             end
         end
         local new_beacon = surface.create_entity {
-            name = "hidden-beacon",
+            name = "hidden-beacon-vatbrain",
             position = vatbrain.position,
             force = vatbrain.force,
         }

@@ -105,6 +105,7 @@ for tier = 1, 4 do
         module_slots = module_slots,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"auog"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (tier == 1) and py.farm_speed(module_slots, base_craft_speed) or py.farm_speed_derived(module_slots, base_name .. 1, 1, tier),
         energy_source = {
             type = "electric",
@@ -170,7 +171,6 @@ for tier = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 1.5},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/auog-paddock.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }
     }
 end

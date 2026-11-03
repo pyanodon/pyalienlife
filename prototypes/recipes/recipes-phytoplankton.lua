@@ -2,7 +2,7 @@
 RECIPE {
     type = "recipe",
     name = "phytoplankton-3",
-    category = "plankton",
+    categories = {"plankton"},
     enabled = false,
     energy_required = 15,
     ingredients = {

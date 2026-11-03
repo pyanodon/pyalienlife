@@ -3,7 +3,8 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "kicalk-super-1",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -13,12 +14,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 1},
     },
+    order = "k-a-a"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-2",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -29,12 +32,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 2},
     },
+    order = "k-a-b"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-3",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -46,12 +51,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 3},
     },
+    order = "k-a-c"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-4",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -65,12 +72,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 4},
     },
+    order = "k-a-d"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-5",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -85,12 +94,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 5},
     },
+    order = "k-a-e"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-6",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -105,12 +116,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 6},
     },
+    order = "k-a-f"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-7",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -125,12 +138,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 7},
     },
+    order = "k-a-g"
 }:add_unlock("mega-farm-kicalk")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-8",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -145,12 +160,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 8},
     },
+    order = "k-a-h"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-9",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -166,12 +183,14 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 9},
     },
+    order = "k-a-i"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-super-10",
-    category = "kicalk-farm",
+    categories = {"kicalk-farm"},
+    subgroup = "py-alienlife-kicalk-smartfarm",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -187,4 +206,5 @@ RECIPE {
     results = {
         {type = "item", name = "kicalk", amount = tile_count * 10},
     },
+    order = "k-a-j"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")

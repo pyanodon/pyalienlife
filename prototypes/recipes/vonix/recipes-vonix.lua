@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "vonix",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -16,18 +16,19 @@ RECIPE {
         {type = "item",  name = "arthurian-egg",       amount = 20},
         {type = "item",  name = "earth-wolf-sample",   amount = 1},
         {type = "item",  name = "earth-flower-sample", amount = 1},
-        {type = "fluid", name = "fetal-serum",         amount = 50},
         {type = "fluid", name = "artificial-blood",    amount = 50},
+        {type = "fluid", name = "fetal-serum",         amount = 50},
     },
     results = {
         {type = "item", name = "vonix", amount = 1},
     },
+    icons = py.composite_icon("vonix", "vonix-codex")
 }:add_unlock("vonix")
 
 RECIPE {
     type = "recipe",
     name = "vonix-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -45,7 +46,7 @@ RECIPE {
 -- RECIPE {
 --     type = 'recipe',
 --     name = 'vonix-mature-01',
---     category = 'creature-chamber',
+--     categories = {'creature-chamber'},
 --     enabled = false,
 --     energy_required = 80,
 --     ingredients = {
@@ -63,7 +64,7 @@ RECIPE {
 -- RECIPE {
 --     type = 'recipe',
 --     name = 'vonix-mature-02',
---     category = 'creature-chamber',
+--     categories = {'creature-chamber'},
 --     enabled = false,
 --     energy_required = 60,
 --     ingredients = {

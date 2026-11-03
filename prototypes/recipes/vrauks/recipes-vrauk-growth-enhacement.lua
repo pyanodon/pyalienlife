@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "vrauks-improved",
-	category = "vrauks",
+	categories = {"vrauks"},
 	subgroup = "py-alienlife-vrauks",
 	order = "b",
 	mats =
@@ -11,11 +11,11 @@ py.autorecipes {
 			{
 				{name = "caged-vrauks", amount = 1},
 				{name = "nanochondria", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-vrauks", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

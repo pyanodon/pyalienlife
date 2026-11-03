@@ -15,7 +15,7 @@ local IMP_BLOOD = 300
 
 py.autorecipes {
 	name = "rendering",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-xyhiphoe",
 	order = "b",
 	crafting_speed = 30,
@@ -25,19 +25,21 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "xyhiphoe", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
 				{name = "shell",           amount = BASE_SKIN},
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "water-invertebrates-mk01",
 			name = "full-render-xyhiphoe",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-xyhiphoe.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/xyhiphoe.png",  draw_background = true}
+			}
 		},
 		--meat xyhiphoe rendering
 		{

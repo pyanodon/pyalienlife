@@ -12,7 +12,7 @@ if data and not yafc_turd_integration then
             name = "paper-towel",
             type = "recipe",
             enabled = false,
-            category = "pulp",
+            categories = {"pulp"},
             energy_required = 4,
             ingredients = {
                 {name = "cellulose", type = "item",  amount = 2},
@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         data:extend {recipe}
     end
 
-    local fluidbox_indexs = {2, 2, 1, 1}
+    local fluidbox_indexs = {2, 2, 1, 1}--[[@as int[] ]]
     for i, recipe in pairs {
         RECIPE("ralesia-1"):copy(),
         RECIPE("ralesia-2"):copy(),

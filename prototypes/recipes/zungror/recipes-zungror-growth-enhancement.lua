@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "zungror-improved",
-	category = "zungror",
+	categories = {"zungror"},
 	subgroup = "py-alienlife-zungror",
 	order = "b",
 	--main_product = "zungror",
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-zungror", amount = 2},
 				{name = "nanochondria",  amount = 1},
 				{name = "antiviral",     amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-zungror", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 180,
 			tech = "nanochondria"
 		},

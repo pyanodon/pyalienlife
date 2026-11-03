@@ -4,7 +4,7 @@ if data and not yafc_turd_integration then
         name = "ash-sap",
         energy_required = 80,
         enabled = false,
-        category = "fts-reactor",
+        categories = {"fts-reactor"},
         ingredients = {
             {type = "item",  name = "saps",     amount = 60},
             {type = "fluid", name = "water",    amount = 2000},
@@ -38,7 +38,7 @@ if data and not yafc_turd_integration then
         name = "nano-cellulose-sap",
         energy_required = 45,
         enabled = false,
-        category = "sap-extractor",
+        categories = {"sap-extractor"},
         ingredients = {
             {type = "item",  name = "bhoddos",           amount = 1},
             {type = "fluid", name = "tailings", amount = 30},
@@ -46,7 +46,7 @@ if data and not yafc_turd_integration then
         },
         results = {
             {type = "item", name = "resveratrol",   amount_min = 1, amount_max = 3},
-            {type = "item", name = "bulk-inserter", amount = 1,     probability = 0.999, ignored_by_stats = 1, ignored_by_productivity = 1},
+            {type = "item", name = "bulk-inserter", amount = 1,     independent_probability = 0.999, ignored_by_stats = 1, ignored_by_productivity = 1},
         },
         main_product = "resveratrol"
     }}
@@ -57,7 +57,7 @@ if data and not yafc_turd_integration then
             name = "sap-tree-mulch-mk0" .. i,
             energy_required = 20,
             enabled = false,
-            category = "wpu",
+            categories = {"wpu"},
             ingredients = {
                 i == 1 and {type = "item", name = "sap-tree", amount = 1} or {type = "item", name = "sap-tree-mk0" .. i, amount = 1}
             },

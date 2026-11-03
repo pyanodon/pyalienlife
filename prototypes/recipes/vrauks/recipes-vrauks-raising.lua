@@ -1,6 +1,6 @@
 py.autorecipes {
     name = "vrauks",
-    category = "vrauks",
+    categories = {"vrauks"},
     subgroup = "py-alienlife-vrauks",
     order = "b",
     main_product = "vrauks",
@@ -13,10 +13,10 @@ py.autorecipes {
                 {name = "native-flora", amount = 15},
                 {name = "moss",         amount = 5},
                 {name = "water-barrel", amount = 3, return_barrel = true}
-            },
+			}--[[@as data.IngredientPrototype[] ]],
             results = {
                 {name = "vrauks", amount = 2},
-            },
+			}--[[@as data.ProductPrototype[] ]],
             crafting_speed = 160,
             tech = "vrauks"
         },
@@ -80,7 +80,7 @@ py.autorecipes {
 
 py.autorecipes {
     name = "vrauks-cocoon",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"vrauks"},
     subgroup = "py-alienlife-vrauks",
     order = "c",
@@ -95,11 +95,11 @@ py.autorecipes {
                 {name = "saps",         amount = 3},
                 {name = "native-flora", amount = 5},
                 {name = "water-barrel", amount = 4, return_barrel = true}
-            },
+			}--[[@as data.IngredientPrototype[] ]],
             results = {
                 {name = "cocoon", amount_min = 4, amount_max = 6},
                 --{name = "vrauks", amount = 2},
-            },
+			}--[[@as data.ProductPrototype[] ]],
             crafting_speed = 40,
             tech = "vrauks"
         },

@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "phagnot-cub",
-	category = "rc",
+	categories = {"rc"},
 	allowed_module_categories = {"phagnot"},
 	main_product = "phagnot-cub",
 	subgroup = "py-alienlife-phagnot",
@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "phagnot-food-01", amount = 2},
 				{name = "bedding",         amount = 1},
 				{name = "water-barrel",    amount = 10, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "phagnot-cub", amount = 6},
 				--{name = 'manure', amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 20,
 			tech = "phagnot"
 		},
@@ -192,7 +192,7 @@ py.autorecipes {
 
 py.autorecipes {
 	name = "phagnot",
-	category = "phagnot",
+	categories = {"phagnot"},
 	main_product = "phagnot",
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
@@ -234,12 +234,12 @@ py.autorecipes {
 				{name = "bhoddos",         amount = 3},
 				{name = "phagnot-food-01", amount = 1},
 				{name = "water-barrel",    amount = 3, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "phagnot", amount = 3},
 				--{name = 'manure', amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "phagnot"
 		},
@@ -320,7 +320,7 @@ py.autorecipes {
 			results =
 				{
 					{name='caged-phagnot', remove_item = true},
-					{name='caged-phagnot', probability = 1, amount_min =1, amount_max =2},
+					{name='caged-phagnot', independent_probability = 1, amount_min =1, amount_max =2},
 				},
 			crafting_speed = 30,
 			tech = 'antiviral'

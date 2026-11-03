@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "huzu",
     energy_required = 120,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "earth-generic-sample", amount = 2},
@@ -11,8 +11,8 @@ RECIPE {
         {type = "item",  name = "alien-sample-03",      amount = 3},
         {type = "item",  name = "bio-sample",           amount = 10},
         {type = "fluid", name = "water-saline",         amount = 50},
-        {type = "fluid", name = "fetal-serum",          amount = 50},
         {type = "fluid", name = "coal-slurry",          amount = 100},
+        {type = "fluid", name = "fetal-serum",          amount = 50},
     },
     results = {
         {type = "item", name = "huzu", amount = 1}
@@ -63,6 +63,7 @@ local animation = {
 local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = "unit",
+    tall = true,
     name = "huzu",
     icon = "__pyalienlifegraphics2__/graphics/icons/huzu.png",
     icon_size = 64,

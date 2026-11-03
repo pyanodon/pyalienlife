@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "korlex-improved",
-	category = "korlex",
+	categories = {"korlex"},
 	subgroup = "py-alienlife-korlex",
 	order = "b",
 	--main_product = "korlex",
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-korlex", amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-korlex", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "bio-scafold",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -16,12 +16,13 @@ RECIPE {
         {type = "item", name = "bio-scafold", amount = 1},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("bio-scafold", "bonemeal")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "bio-scafold-2",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -35,12 +36,13 @@ RECIPE {
         {type = "item", name = "bio-scafold", amount = 5},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("bio-scafold", "guts")
 }:add_unlock("organ-printing-mk02"):replace_ingredient("guts", "collagen")
 
 RECIPE {
     type = "recipe",
     name = "bio-scafold-3",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -54,12 +56,13 @@ RECIPE {
         {type = "item", name = "bio-scafold", amount = 8},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("bio-scafold", "chitosan")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "bio-scafold-4",
-    category = "nmf",
+    categories = {"nmf"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -73,6 +76,7 @@ RECIPE {
         {type = "item", name = "bio-scafold", amount = 15},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("bio-scafold", "nanofibrils")
 }:add_unlock("organ-printing-mk03")
 
 ------------------------------------PARTS CONVERSION-----------------------------------------------
@@ -80,7 +84,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-bones",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -91,12 +95,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 45},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "bones")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-bonemeal",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -107,12 +112,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 85},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "bonemeal")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-skin",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -123,12 +129,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 60},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "skin")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-chitin",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -139,12 +146,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 70},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "chitin")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-guts",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -155,12 +163,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 40},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "guts")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-fat",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -171,12 +180,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 20},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "mukmoux-fat")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-meat",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -187,12 +197,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 30},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "meat")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "xenogenic-from-brains",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -203,6 +214,7 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 20},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "brain")
 }:add_unlock("organ-printing")
 
 
@@ -216,7 +228,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-bones",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -228,12 +240,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 90},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "bones", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-bonemeal",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -245,12 +258,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 160},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "bonemeal", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-skin",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -262,12 +276,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 75},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "skin", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-guts",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -279,12 +294,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 60},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "guts", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-fat",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -296,12 +312,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 45},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "mukmoux-fat", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-meat",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 13,
     ingredients = {
@@ -313,12 +330,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 60},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "meat", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "plasmid-xenogenic-from-brains",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -330,6 +348,7 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 50},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "brain", nil, "plasmids")
 }:add_unlock("organ-printing-mk02")
 
 
@@ -338,7 +357,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-bones",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -351,12 +370,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 155},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "bones", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-bonemeal",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -369,12 +389,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 260},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "bonemeal", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-skin",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 12,
     ingredients = {
@@ -387,12 +408,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 140},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "skin", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-guts",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -405,12 +427,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 110},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "guts", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-fat",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 12,
     ingredients = {
@@ -423,12 +446,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 120},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "mukmoux-fat", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-meat",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 13,
     ingredients = {
@@ -441,12 +465,13 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 100},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "meat", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "gh-xenogenic-from-brains",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -459,6 +484,7 @@ RECIPE {
         {type = "fluid", name = "xenogenic-cells", amount = 125},
     },
     --main_product = "cocoon",
+    icons = py.composite_icon("xenogenic-cells", "brain", nil, "gh")
 }:add_unlock("organ-printing-mk03")
 
 
@@ -472,7 +498,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "psc",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -491,7 +517,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "psc-cbp",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -506,12 +532,13 @@ RECIPE {
         {type = "fluid", name = "carbon-dioxide", amount = 50},
     },
     main_product = "psc",
+    icons = py.composite_icon("psc", "cbp")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "psc-mutant",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -526,12 +553,13 @@ RECIPE {
         {type = "fluid", name = "carbon-dioxide", amount = 50},
     },
     main_product = "psc",
+    icons = py.composite_icon("psc", "mutant-enzymes")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "psc-gh",
-    category = "bio-reactor",
+    categories = {"bio-reactor"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -546,6 +574,7 @@ RECIPE {
         {type = "fluid", name = "carbon-dioxide", amount = 50},
     },
     main_product = "psc",
+    icons = py.composite_icon("psc", "gh")
 }:add_unlock("organ-printing-mk03")
 
 
@@ -557,7 +586,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "print-bones",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -568,13 +597,13 @@ RECIPE {
     results = {
         {type = "item", name = "bones", amount = 3},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("bones", "psc")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "print-bonemeal",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -585,13 +614,13 @@ RECIPE {
     results = {
         {type = "item", name = "bonemeal", amount = 4},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("bonemeal", "psc")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "print-meat",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -602,13 +631,13 @@ RECIPE {
     results = {
         {type = "item", name = "meat", amount = 4},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("meat", "psc")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "print-fat",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -619,13 +648,13 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux-fat", amount = 5},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("mukmoux-fat", "psc")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "print-brain",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -636,13 +665,13 @@ RECIPE {
     results = {
         {type = "item", name = "brain", amount = 2},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("brain", "psc")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "print-skin",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -653,13 +682,13 @@ RECIPE {
     results = {
         {type = "item", name = "skin", amount = 5},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("skin", "psc")
 }:add_unlock("organ-printing")
 
 RECIPE {
     type = "recipe",
     name = "print-guts",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -670,7 +699,7 @@ RECIPE {
     results = {
         {type = "item", name = "guts", amount = 6},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("guts", "psc")
 }:add_unlock("organ-printing")
 
 
@@ -685,7 +714,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "print-bones-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -697,13 +726,13 @@ RECIPE {
     results = {
         {type = "item", name = "bones", amount = 5},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("bones", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-meat-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -715,13 +744,13 @@ RECIPE {
     results = {
         {type = "item", name = "meat", amount = 7},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("meat", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-fat-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -733,13 +762,13 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux-fat", amount = 8},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("mukmoux-fat", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-brain-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -751,13 +780,13 @@ RECIPE {
     results = {
         {type = "item", name = "brain", amount = 4},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("brain", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-skin-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -769,13 +798,13 @@ RECIPE {
     results = {
         {type = "item", name = "skin", amount = 8},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("skin", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-guts-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -787,7 +816,7 @@ RECIPE {
     results = {
         {type = "item", name = "guts", amount = 10},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("guts", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 
@@ -798,7 +827,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "print-bones-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -811,13 +840,13 @@ RECIPE {
     results = {
         {type = "item", name = "bones", amount = 15},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("bones", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-meat-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -830,13 +859,13 @@ RECIPE {
     results = {
         {type = "item", name = "meat", amount = 21},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("meat", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-fat-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -849,13 +878,13 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux-fat", amount = 25},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("mukmoux-fat", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-brain-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -868,13 +897,13 @@ RECIPE {
     results = {
         {type = "item", name = "brain", amount = 13},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("brain", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-skin-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -887,13 +916,13 @@ RECIPE {
     results = {
         {type = "item", name = "skin", amount = 25},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("skin", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-guts-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -906,7 +935,7 @@ RECIPE {
     results = {
         {type = "item", name = "guts", amount = 35},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("guts", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 
@@ -917,7 +946,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "print-chitin-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 120,
@@ -929,13 +958,13 @@ RECIPE {
     results = {
         {type = "item", name = "chitin", amount = 30},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("chitin", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-carapace-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 120,
@@ -947,13 +976,13 @@ RECIPE {
     results = {
         {type = "item", name = "carapace", amount = 4},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("carapace", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-pelt-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 120,
@@ -965,13 +994,13 @@ RECIPE {
     results = {
         {type = "item", name = "pelt", amount = 10},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("pelt", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-dingrit-spike-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -983,13 +1012,13 @@ RECIPE {
     results = {
         {type = "item", name = "dingrit-spike", amount = 5},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("dingrit-spike", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-pineal-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -1001,13 +1030,13 @@ RECIPE {
     results = {
         {type = "item", name = "pineal-gland", amount = 5},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("pineal-gland", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-tendon-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -1019,13 +1048,13 @@ RECIPE {
     results = {
         {type = "item", name = "tendon", amount = 2},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("tendon", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 RECIPE {
     type = "recipe",
     name = "print-gas-bladder-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -1037,13 +1066,13 @@ RECIPE {
     results = {
         {type = "item", name = "gas-bladder", amount = 10},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("gas-bladder", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 -- RECIPE {
 --     type = 'recipe',
 --     name = 'print-venon-fs',
---     category = 'bio-printer',
+--     categories = {'bio-printer'},
 --     enabled = false,
 --     energy_required = 60,
 --     ingredients = {
@@ -1060,7 +1089,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "print-shell-fs",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 60,
@@ -1072,13 +1101,13 @@ RECIPE {
     results = {
         {type = "item", name = "shell", amount = 35},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("shell", "psc", nil, "fetal-serum")
 }:add_unlock("organ-printing-mk02")
 
 -- RECIPE {
 --     type = 'recipe',
 --     name = 'print-adrenal-fs',
---     category = 'bio-printer',
+--     categories = {'bio-printer'},
 --     enabled = false,
 --     energy_required = 60,
 --     ingredients = {
@@ -1098,7 +1127,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "print-chitin-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1111,13 +1140,13 @@ RECIPE {
     results = {
         {type = "item", name = "chitin", amount = 40},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("chitin", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-carapace-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1130,13 +1159,13 @@ RECIPE {
     results = {
         {type = "item", name = "carapace", amount = 7},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("carapace", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-pelt-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1149,13 +1178,13 @@ RECIPE {
     results = {
         {type = "item", name = "pelt", amount = 12},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("pelt", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-dingrit-spike-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1168,13 +1197,13 @@ RECIPE {
     results = {
         {type = "item", name = "dingrit-spike", amount = 8},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("dingrit-spike", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-pineal-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1187,13 +1216,13 @@ RECIPE {
     results = {
         {type = "item", name = "pineal-gland", amount = 12},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("pineal-gland", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-tendon-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1206,13 +1235,13 @@ RECIPE {
     results = {
         {type = "item", name = "tendon", amount = 5},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("tendon", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-gas-bladder-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1225,13 +1254,13 @@ RECIPE {
     results = {
         {type = "item", name = "gas-bladder", amount = 16},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("gas-bladder", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-venon-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1244,13 +1273,13 @@ RECIPE {
     results = {
         {type = "item", name = "venom-gland", amount = 4},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("venom-gland", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-shell-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1263,13 +1292,13 @@ RECIPE {
     results = {
         {type = "item", name = "shell", amount = 55}, -- this is limestone it has to be HUGE
     },
-    --main_product = "psc",
+    icons = py.composite_icon("shell", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "print-adrenal-immunosupressants",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 45,
@@ -1282,7 +1311,7 @@ RECIPE {
     results = {
         {type = "item", name = "adrenal-cortex", amount = 8},
     },
-    --main_product = "psc",
+    icons = py.composite_icon("adrenal-cortex", "psc", nil, "immunosupressants")
 }:add_unlock("organ-printing-mk03")
 
 
@@ -1298,7 +1327,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bioartificial-guts",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 30,
@@ -1312,13 +1341,12 @@ RECIPE {
     results = {
         {type = "item", name = "bioartificial-guts", amount = 1},
     },
-    --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "biomimetic-skin",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 30,
@@ -1332,13 +1360,12 @@ RECIPE {
     results = {
         {type = "item", name = "biomimetic-skin", amount = 1},
     },
-    --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "in-vitro-meat",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 30,
@@ -1352,13 +1379,12 @@ RECIPE {
     results = {
         {type = "item", name = "in-vitro-meat", amount = 1},
     },
-    --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "laboratory-grown-brain",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 30,
@@ -1372,13 +1398,12 @@ RECIPE {
     results = {
         {type = "item", name = "laboratory-grown-brain", amount = 1},
     },
-    --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "scafold-free-bones",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 30,
@@ -1393,13 +1418,12 @@ RECIPE {
     results = {
         {type = "item", name = "scafold-free-bones", amount = 1},
     },
-    --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
 
 RECIPE {
     type = "recipe",
     name = "tissue-engineered-fat",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     allowed_module_categories = {"bioprinting", "speed", "efficiency", "quality"},
     enabled = false,
     energy_required = 30,
@@ -1413,7 +1437,6 @@ RECIPE {
     results = {
         {type = "item", name = "tissue-engineered-fat", amount = 1},
     },
-    --main_product = "psc",
 }:add_unlock("organ-printing-mk03")
 
 
@@ -1422,7 +1445,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "art-auog",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1438,13 +1461,12 @@ RECIPE {
     results = {
         {type = "item", name = "auog", amount = 60},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-ulric",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1460,13 +1482,12 @@ RECIPE {
     results = {
         {type = "item", name = "ulric", amount = 50},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-mukmoux",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1482,13 +1503,12 @@ RECIPE {
     results = {
         {type = "item", name = "mukmoux", amount = 30},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-arqad",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1504,13 +1524,12 @@ RECIPE {
     results = {
         {type = "item", name = "arqad", amount = 20},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-cottongut",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1526,13 +1545,12 @@ RECIPE {
     results = {
         {type = "item", name = "cottongut", amount = 80},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-vrauks",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1548,13 +1566,12 @@ RECIPE {
     results = {
         {type = "item", name = "vrauks", amount = 100},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-arthurian",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1570,13 +1587,12 @@ RECIPE {
     results = {
         {type = "item", name = "arthurian", amount = 15},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-dhilmos",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1592,13 +1608,12 @@ RECIPE {
     results = {
         {type = "item", name = "dhilmos", amount = 20},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-scrondrix",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1614,13 +1629,12 @@ RECIPE {
     results = {
         {type = "item", name = "scrondrix", amount = 10},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-phadai",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1636,13 +1650,12 @@ RECIPE {
     results = {
         {type = "item", name = "phadai", amount = 5},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-dingrits",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1658,13 +1671,12 @@ RECIPE {
     results = {
         {type = "item", name = "dingrits", amount = 15},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-xenos",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1680,13 +1692,12 @@ RECIPE {
     results = {
         {type = "item", name = "xeno", amount = 10},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-vonix",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1702,13 +1713,12 @@ RECIPE {
     results = {
         {type = "item", name = "vonix", amount = 5},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-phagnot",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1724,13 +1734,12 @@ RECIPE {
     results = {
         {type = "item", name = "phagnot", amount = 20},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-zipir",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1746,13 +1755,12 @@ RECIPE {
     results = {
         {type = "item", name = "zipir1", amount = 30},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-trits",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1768,13 +1776,12 @@ RECIPE {
     results = {
         {type = "item", name = "trits", amount = 8},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-xyhiphoe",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1790,13 +1797,12 @@ RECIPE {
     results = {
         {type = "item", name = "xyhiphoe", amount = 25},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")
 
 RECIPE {
     type = "recipe",
     name = "art-simik",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1812,5 +1818,4 @@ RECIPE {
     results = {
         {type = "item", name = "simik", amount = 10},
     },
-    --main_product = "psc",
 }:add_unlock("mass-production")

@@ -6,7 +6,7 @@ local no_fuel_map_tag = {
 }
 
 ---Is this caravan currently doing anything?
----@param caravan_data Caravan
+---@param caravan_data table Caravan
 ---@return boolean
 local function is_automated(caravan_data)
     return caravan_data.schedule_id and caravan_data.schedule_id >= 0

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "guar",
-	category = "guar",
+	categories = {"guar"},
 	main_product = "guar",
 	subgroup = "py-alienlife-guar",
 	order = "a",
@@ -15,11 +15,11 @@ py.autorecipes {
 				{name = "water",      amount = 200, fluidbox_index = 1},
 				{name = "sand",       amount = 8},
 				{name = "soil",       amount = 10},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "guar", amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "guar"
 		},

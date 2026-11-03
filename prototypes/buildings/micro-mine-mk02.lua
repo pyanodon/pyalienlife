@@ -120,6 +120,5 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/micro-mine.ogg", volume = 1.5},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/micro-mine.ogg", volume = 0.3},
-        apparent_volume = 2.5
     }
 }

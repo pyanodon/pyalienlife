@@ -627,6 +627,7 @@ if mods["pyalternativeenergy"] then
     local new_modules = {"zungror", "numal"}
     for i = 1, 4, 1 do
         for _, new_module in pairs(new_modules) do
+            ---@diagnostic disable-next-line: undefined-field
             table.insert(modules["rc-mk0" .. i], new_module)
         end
     end

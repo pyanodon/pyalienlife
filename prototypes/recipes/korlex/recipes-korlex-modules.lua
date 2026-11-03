@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "korlex-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"korlex"},
     enabled = false,
     energy_required = 30,
@@ -21,9 +21,9 @@ RECIPE {
         {type = "item", name = "water-barrel",   amount = 6},
     },
     results = {
-        {type = "item", name = "korlex-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "korlex-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",      amount = 6},
-        {type = "item", name = "korlex",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "korlex",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "korlex-mk02",
     icons =
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"korlex"},
     enabled = false,
     energy_required = 30,
@@ -56,9 +56,9 @@ RECIPE {
         {type = "item", name = "water-barrel",    amount = 6},
     },
     results = {
-        {type = "item", name = "korlex-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "korlex-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",      amount = 6},
-        {type = "item", name = "korlex",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "korlex",      amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
     },
     --main_product = "korlex-mk03",
     icons =
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"korlex"},
     enabled = false,
     energy_required = 30,
@@ -91,9 +91,9 @@ RECIPE {
         {type = "item", name = "water-barrel",         amount = 6},
     },
     results = {
-        {type = "item", name = "korlex-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "korlex-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",      amount = 6},
-        {type = "item", name = "korlex",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "korlex",      amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
     },
     --main_product = "korlex-mk04",
     icons =
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-korlex-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -190,7 +190,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-korlex-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -208,7 +208,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -239,7 +239,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-korlex-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

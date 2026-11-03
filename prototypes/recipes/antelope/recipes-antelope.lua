@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "antelope",
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -14,18 +14,19 @@ RECIPE {
         {type = "item",  name = "bio-sample",            amount = 20},
         {type = "item",  name = "antelope-codex",        amount = 2},
         {type = "item",  name = "earth-antelope-sample", amount = 1},
-        {type = "fluid", name = "fetal-serum",           amount = 100},
         {type = "fluid", name = "tritium",               amount = 60},
+        {type = "fluid", name = "fetal-serum",           amount = 100},
     },
     results = {
         {type = "item", name = "antelope", amount = 1},
     },
+    icons = py.composite_icon("antelope", "antelope-codex")
 }:add_unlock("schrodinger-antelope")
 
 RECIPE {
     type = "recipe",
     name = "antelope-codex",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -41,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-antelope-sample",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -74,7 +75,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cage-antelope",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -93,7 +94,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-antelope",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -108,7 +109,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncage-antelope",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -116,7 +117,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "cage-antelope", amount = 1},
-        {type = "item", name = "antelope",      amount = 1, probability = 0.5},
+        {type = "item", name = "antelope",      amount = 1, independent_probability = 0.5},
     },
     main_product = "antelope",
 }:add_unlock("schrodinger-antelope")

@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "gobachov",
     energy_required = 120,
-    category = "creature-chamber",
+    categories = {"creature-chamber"},
     enabled = false,
     ingredients = {
         {type = "item",  name = "earth-generic-sample", amount = 2},
@@ -10,8 +10,8 @@ RECIPE {
         {type = "item",  name = "alien-sample-02",      amount = 3},
         {type = "item",  name = "bio-sample",           amount = 5},
         {type = "fluid", name = "water-saline",         amount = 50},
-        {type = "fluid", name = "fetal-serum",          amount = 50},
         {type = "fluid", name = "coal-slurry",          amount = 100},
+        {type = "fluid", name = "fetal-serum",          amount = 50},
     },
     results = {
         {type = "item", name = "gobachov", amount = 1}
@@ -62,6 +62,7 @@ local animation = {
 local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = "unit",
+    tall = true,
     name = "gobachov",
     icon = "__pyalienlifegraphics2__/graphics/icons/gobachov.png",
     icon_size = 64,

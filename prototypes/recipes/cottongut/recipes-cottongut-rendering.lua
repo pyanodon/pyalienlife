@@ -21,7 +21,7 @@ local IMP_BRAIN = 5
 
 py.autorecipes {
 	name = "rendering-cottongut",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-cottongut",
 	order = "b",
 	crafting_speed = 30,
@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "cottongut", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -41,12 +41,14 @@ py.autorecipes {
 				{name = "mukmoux-fat", amount = BASE_FAT},
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "cottongut-mk01",
 			name = "full-render-cottongut",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-cottongut.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/cottongut.png", draw_background = true}
+			}
 		},
 		--brain cottongut rendering
 		{

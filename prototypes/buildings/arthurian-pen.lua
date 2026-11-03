@@ -106,6 +106,7 @@ for tier = 1, 4 do
         module_slots = module_slots,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"arthurian"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (tier == 1) and py.farm_speed(module_slots, base_craft_speed) or py.farm_speed_derived(module_slots, base_name .. 1),
         energy_source = {
             type = "electric",
@@ -230,7 +231,6 @@ for tier = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 1.0},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/arthurian-pen.ogg", volume = 0.3},
-            apparent_volume = 0.45
         }
     }
 end

@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "trits-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"trits"},
     enabled = false,
     energy_required = 30,
@@ -21,8 +21,8 @@ RECIPE {
         {type = "fluid", name = "water-saline",     amount = 300},
     },
     results = {
-        {type = "item", name = "trits-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "trits",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "trits-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "trits",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "trits-mk02",
@@ -42,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "trits-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"trits"},
     enabled = false,
     energy_required = 30,
@@ -56,8 +56,8 @@ RECIPE {
         {type = "fluid", name = "water-saline",     amount = 300},
     },
     results = {
-        {type = "item", name = "trits-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "trits",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "trits-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "trits",      amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "trits-mk03",
@@ -77,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "trits-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"trits"},
     enabled = false,
     energy_required = 30,
@@ -91,8 +91,8 @@ RECIPE {
         {type = "fluid", name = "water-saline",         amount = 300},
     },
     results = {
-        {type = "item", name = "trits-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "trits",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "trits-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "trits",      amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "trits-mk04",
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "trits-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -143,7 +143,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-trits-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -161,7 +161,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "trits-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 250,
     ingredients = {
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-trits-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -212,7 +212,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "trits-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -244,7 +244,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-trits-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

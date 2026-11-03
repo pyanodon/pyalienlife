@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "phadai-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"phadai"},
     enabled = false,
     energy_required = 30,
@@ -22,9 +22,9 @@ RECIPE {
         {type = "item", name = "meat",                 amount = 5},
     },
     results = {
-        {type = "item", name = "phadai-mk02", amount = 1, probability = 0.005},
+        {type = "item", name = "phadai-mk02", amount = 1, independent_probability = 0.005},
         {type = "item", name = "barrel",      amount = 7},
-        {type = "item", name = "phadai",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "phadai",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     --main_product = "phadai-mk02",
     icons =
@@ -43,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"phadai"},
     enabled = false,
     energy_required = 30,
@@ -58,9 +58,9 @@ RECIPE {
         {type = "item", name = "meat",                 amount = 5},
     },
     results = {
-        {type = "item", name = "phadai-mk03", amount = 1, probability = 0.004},
+        {type = "item", name = "phadai-mk03", amount = 1, independent_probability = 0.004},
         {type = "item", name = "barrel",      amount = 7},
-        {type = "item", name = "phadai",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "phadai",      amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
     },
     --main_product = "phadai-mk03",
     icons =
@@ -79,7 +79,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"phadai"},
     enabled = false,
     energy_required = 30,
@@ -94,9 +94,9 @@ RECIPE {
         {type = "item", name = "meat",                 amount = 5},
     },
     results = {
-        {type = "item", name = "phadai-mk04", amount = 1, probability = 0.003},
+        {type = "item", name = "phadai-mk04", amount = 1, independent_probability = 0.003},
         {type = "item", name = "barrel",      amount = 7},
-        {type = "item", name = "phadai",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "phadai",      amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
     },
     --main_product = "phadai-mk04",
     icons =
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-phadai-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -162,7 +162,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -195,7 +195,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-phadai-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -213,7 +213,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -242,7 +242,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-phadai-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

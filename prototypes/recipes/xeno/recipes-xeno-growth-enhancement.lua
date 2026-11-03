@@ -2,7 +2,7 @@
 
 py.autorecipes {
 	name = "xeno-improved",
-	category = "xeno",
+	categories = {"xeno"},
 	subgroup = "py-alienlife-xeno",
 	order = "b",
 	--main_product = "caged-xeno",
@@ -15,12 +15,12 @@ py.autorecipes {
 				{name = "caged-xeno",   amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-xeno", amount = 1},
 				--{name='cage', amount=1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "nanochondria"
 		},

@@ -1,7 +1,7 @@
 ITEM {
     type = "item",
     name = "fiber",
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "8MJ",
     icon = "__pyalienlifegraphics__/graphics/icons/fiber.png",
     icon_size = 32,

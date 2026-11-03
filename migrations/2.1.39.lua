@@ -1,3 +1,4 @@
+---@diagnostic disable
 local lib = require("scripts/turd/bhoddos-lib")
 storage.turd_bhoddos = {}
 storage.turd_bonuses = storage.turd_bonuses or {}

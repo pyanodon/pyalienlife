@@ -26,14 +26,14 @@ if data and not yafc_turd_integration then
             _, water = recipe:remove_ingredient("water")
         end
         recipe:add_ingredient {type = "fluid", name = "water-saline", amount = math.ceil(water / 5), fluidbox_index = 1}
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.9)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.9)
         recipe:multiply_ingredient_amount("guar-seeds", 0.65)
         recipe:remove_ingredient("pesticide-mk01")
         recipe:remove_ingredient("pesticide-mk02")
         data:extend {recipe}
     end
 
-    local bots = {"py-logistic-robot-mk01", "py-logistic-robot-mk02", "py-logistic-robot-mk03", "py-logistic-robot-mk04"}
+    local bots = {"py-logistic-robot-mk01", "py-logistic-robot-mk02", "py-logistic-robot-mk03", "py-logistic-robot-mk04"}--[[@as table<int, string> ]]
     for i, recipe in pairs {
         RECIPE("guar-gum-plantation"):copy(),
         RECIPE("guar-gum-plantation-mk02"):copy(),
@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         RECIPE("guar-gum-plantation-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-bots"
-        recipe:add_ingredient {type = "item", name = bots[i], amount = 4 * i}
+        recipe:add_ingredient {type = "item", name = bots[i], amount = 4 * i}--[[@as data.IngredientPrototype]]
         data:extend {recipe}
     end
 end

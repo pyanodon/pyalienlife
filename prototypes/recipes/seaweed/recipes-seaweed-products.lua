@@ -2,7 +2,7 @@
 
 py.autorecipes {
     name = "seaweed",
-    category = "seaweed",
+    categories = {"seaweed"},
     number_icons = true,
     mats = {
         --base

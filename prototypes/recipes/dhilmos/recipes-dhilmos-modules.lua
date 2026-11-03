@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "dhilmos-mk02",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"dhilmos"},
     enabled = false,
     energy_required = 30,
@@ -20,8 +20,8 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",    amount = 60, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "dhilmos-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "dhilmos",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "dhilmos-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "dhilmos",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "dhilmos-mk02",
@@ -41,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-mk03",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"dhilmos"},
     enabled = false,
     energy_required = 30,
@@ -54,8 +54,8 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",    amount = 60, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "dhilmos-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "dhilmos",      amount = 1, probability = 0.6,  ignored_by_productivity = 1},
+        {type = "item", name = "dhilmos-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "dhilmos",      amount = 1, independent_probability = 0.6,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "dhilmos-mk03",
@@ -75,7 +75,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-mk04",
-    category = "rc",
+    categories = {"rc"},
     allowed_module_categories = {"dhilmos"},
     enabled = false,
     energy_required = 30,
@@ -88,8 +88,8 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",        amount = 60, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "dhilmos-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "dhilmos",      amount = 1, probability = 0.7,  ignored_by_productivity = 1},
+        {type = "item", name = "dhilmos-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "dhilmos",      amount = 1, independent_probability = 0.7,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     --main_product = "dhilmos-mk04",
@@ -110,7 +110,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-mk02r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -141,7 +141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-dhilmos-codex",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -159,7 +159,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-mk03r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -191,7 +191,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-dhilmos-im",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -209,7 +209,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-mk04r",
-    category = "bio-printer",
+    categories = {"bio-printer"},
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -241,7 +241,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "compile-dhilmos-ai",
-    category = "data-array",
+    categories = {"data-array"},
     enabled = false,
     energy_required = 30,
     ingredients = {

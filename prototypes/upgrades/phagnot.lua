@@ -5,7 +5,7 @@ if data and not yafc_turd_integration then
             name = "gas-bladder-to-deuterium",
             enabled = false,
             energy_required = 10,
-            category = "gas-refinery",
+            categories = {"gas-refinery"},
             ingredients = {{type = "item", name = "gas-bladder", amount = 1}},
             results = {{type = "fluid", name = "deuterium", amount = 5}}
         },
@@ -14,7 +14,7 @@ if data and not yafc_turd_integration then
             name = "gas-bladder-to-dry-gas-stream",
             enabled = false,
             energy_required = 10,
-            category = "gas-refinery",
+            categories = {"gas-refinery"},
             ingredients = {{type = "item", name = "gas-bladder", amount = 1}},
             results = {{type = "fluid", name = "dry-gas-stream", amount = 5}}
         }
@@ -27,7 +27,7 @@ if data and not yafc_turd_integration then
         RECIPE("phagnot-cub-4"):copy(),
     } do
         recipe.name = recipe.name .. "-fast"
-        recipe.energy_required = math.ceil(recipe.energy_required * 0.7)
+        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.7)
         recipe:multiply_ingredient_amount("yotoi-seeds", 2 / 3)
         recipe:add_result_amount("phagnot-cub", 1)
         data:extend {recipe}

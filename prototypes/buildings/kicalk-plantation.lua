@@ -108,10 +108,11 @@ for i = 1, 4 do
         dying_explosion = "big-explosion",
         collision_box = {{-6.2, -6.2}, {6.2, 6.2}},
         selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
-        forced_symmetry = "diagonal-pos",
+        use_mirroring = true,
         module_slots = MODULE_SLOTS,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"kicalk"},
+        effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
         crafting_speed = (i == 1) and py.farm_speed(MODULE_SLOTS, FULL_CRAFTING_SPEED) or py.farm_speed_derived(MODULE_SLOTS, "kicalk-plantation-mk01"),
         energy_source = {
             type = "electric",
@@ -235,14 +236,14 @@ for i = 1, 4 do
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
                 pipe_covers = py.pipe_covers(false, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, 6.0}, direction = defines.direction.south}}
             },
             {
                 production_type = "input",
                 pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.1, -4.1}, nil, nil, pipe),
                 pipe_covers = py.pipe_covers(false, true, true, true),
-                volume = 1000,
+                volume = 100,
                 pipe_connections = {{flow_direction = "input", position = {0.0, -6.0}, direction = defines.direction.north}}
             },
             {
@@ -264,20 +265,21 @@ for i = 1, 4 do
         working_sound = {
             sound = {filename = "__pyalienlifegraphics__/sounds/kicalk-plantation.ogg", volume = 1.5},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/kicalk-plantation.ogg", volume = 0.3},
-            apparent_volume = 2.5
         }
     }
 
     -- Swap to niobium pipes
-    for _, fluid_box in pairs(data.raw["assembling-machine"][name].fluid_boxes) do
+    for _, fluid_box in pairs(data.raw["assembling-machine"][name].fluid_boxes--[[@cast -?]]) do
         -- Yeah let's just throw a boolean value in the list of fluid boxes - someone at Wube, probably
         if type(fluid_box) == "boolean" then
             break
         end
+        if fluid_box.pipe_covers == nil or fluid_box.pipe_covers.south == nil then error() end
         if fluid_box.pipe_covers.south.layers then
-            fluid_box.pipe_covers.south.layers[1].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
-            fluid_box.pipe_covers.south.layers[2].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
+            fluid_box.pipe_covers.south.layers[1]--[[@cast -?]].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south.png"
+            fluid_box.pipe_covers.south.layers[2]--[[@cast -?]].filename = "__pyindustrygraphics__/graphics/entity/niobium-pipe/pipe-cover-south-shadow.png"
         end
+        if fluid_box.pipe_picture == nil or fluid_box.pipe_picture.south == nil then error() end
         -- Move cover up to compensate
         fluid_box.pipe_picture.south.scale = 0.5
         fluid_box.pipe_picture.south.shift = {0, -2.33}

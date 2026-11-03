@@ -52,6 +52,15 @@ require "prototypes/recipes/moondrop/recipes-auto-moondrop"
 require "prototypes/recipes/moondrop/recipes-moondrop-modules"
 --require 'prototypes/recipes/moondrop/recipes-moondrop-copper' TODO: SETUP TURD FARM TECHS AGAIN
 
+-- update smart farm recipe ui
+py.mod_data.recipe_gui.subgroups["arum-super"] = true
+py.mod_data.recipe_gui.alt_icons["arum-super"] = "cadaveric-arum"
+py.mod_data.recipe_gui.subgroups["kicalk-super"] = true
+py.mod_data.recipe_gui.alt_icons["kicalk-super"] = "kicalk"
+
+-- update rc and slaughterhouse ui
+py.mod_data.recipe_gui.subgroups["antelope"] = true
+
 data.raw["recipe-category"]["arum"].allowed_module_categories = {"arum"}
 data.raw["recipe-category"]["arum"].modules_required = true
 data.raw["recipe-category"]["moon"].allowed_module_categories = {"moondrop"}

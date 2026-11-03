@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "cottongut-science-red-seeds",
-    category = "incubator",
+    categories = {"incubator"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -15,7 +15,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus", amount = 3},
     },
     main_product = "solidified-sarcorus",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk01")
 
@@ -23,7 +22,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-green-seeds",
     enabled = false,
-    category = "incubator",
+    categories = {"incubator"},
     energy_required = 30,
     ingredients = {
         {type = "fluid", name = "subcritical-water", amount = 200},
@@ -38,7 +37,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus", amount = 5},
     },
     main_product = "paragen",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk02")
 
@@ -46,7 +44,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-blue-seeds",
     enabled = false,
-    category = mods.pyhightech and "nano" or "incubator",
+    categories = {mods.pyhightech and "nano" or "incubator"},
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "alien-sample-02", amount = 1},
@@ -65,7 +63,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus", amount = 7},
     },
     main_product = "negasium",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk03"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 1}
 
@@ -73,7 +70,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-py-seeds",
     enabled = false,
-    category = mods.pyhightech and "nano" or "incubator",
+    categories = {mods.pyhightech and "nano" or "incubator"},
     energy_required = 15,
     ingredients = {
         {type = "fluid", name = "simik-blood",   amount = 50},
@@ -94,7 +91,6 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus",    amount = 9},
     },
     main_product = "nonconductive-phazogen",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk04")
 
@@ -102,7 +98,7 @@ RECIPE {
     type = "recipe",
     name = "cottongut-science-prod-seeds",
     enabled = false,
-    category = mods.pyhightech and "nano" or "incubator",
+    categories = {mods.pyhightech and "nano" or "incubator"},
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "alien-sample-03",   amount = 3},
@@ -125,6 +121,5 @@ RECIPE {
         {type = "item", name = "solidified-sarcorus",    amount = 11},
     },
     main_product = "denatured-seismite",
-    subgroup = "py-alienlife-items",
     order = "a1"
 }:add_unlock("cottongut-science-mk05"):add_ingredient {type = "item", name = "kicalk-seeds", amount = 20}

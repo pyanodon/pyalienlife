@@ -8,7 +8,7 @@
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore-mk02",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 1000},
     },
     results = {
-        {type = "item", name = "bhoddos-spore-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "bhoddos-spore",      amount = 5, probability = 0.8}
+        {type = "item", name = "bhoddos-spore-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "bhoddos-spore",      amount = 5, independent_probability = 0.8}
     },
     --main_product = "bhoddos-mk02",
     icons =
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-mk02",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -65,7 +65,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore-mk02-breeding",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -93,7 +93,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore-mk03",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -105,8 +105,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 1000},
     },
     results = {
-        {type = "item", name = "bhoddos-spore-mk03", amount = 1, probability = 0.005},
-        {type = "item", name = "bhoddos-spore-mk02", amount = 5, probability = 0.8}
+        {type = "item", name = "bhoddos-spore-mk03", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "bhoddos-spore-mk02", amount = 5, independent_probability = 0.8}
     },
     --main_product = "bhoddos-mk02",
     icons =
@@ -123,7 +123,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-mk03",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -151,7 +151,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore-mk03-breeding",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -179,7 +179,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore-mk04",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -191,8 +191,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000},
     },
     results = {
-        {type = "item", name = "bhoddos-spore-mk04", amount = 1, probability = 0.005},
-        {type = "item", name = "bhoddos-spore-mk03", amount = 5, probability = 0.8}
+        {type = "item", name = "bhoddos-spore-mk04", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "bhoddos-spore-mk03", amount = 5, independent_probability = 0.8}
     },
     --main_product = "bhoddos-mk02",
     icons =
@@ -209,7 +209,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-mk04",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -237,7 +237,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bhoddos-spore-mk04-breeding",
-    category = "bhoddos",
+    categories = {"bhoddos"},
     enabled = false,
     energy_required = 30,
     ingredients = {

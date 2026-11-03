@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "ulric-improved",
-	category = "ulric",
+	categories = {"ulric"},
 	subgroup = "py-alienlife-ulric",
 	order = "b",
 	--main_product = 'ulric',
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-ulric",  amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-ulric", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

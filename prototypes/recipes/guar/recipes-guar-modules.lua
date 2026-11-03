@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "guar-mk02",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "guar-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "guar",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "guar-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "guar",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
     },
     main_product = "guar-mk02",
     icons =
@@ -36,7 +36,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-mk02-breeder",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-seeds-mk02-breeder",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -72,7 +72,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "guar-seeds-mk02", amount = 2},
-        {type = "item", name = "guar-seeds-mk02", amount = 1, probability = 0.6}
+        {type = "item", name = "guar-seeds-mk02", amount = 1, independent_probability = 0.6}
     },
     main_product = "guar-seeds-mk02",
     icons =
@@ -92,7 +92,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-mk03",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -105,8 +105,8 @@ RECIPE {
         {type = "fluid", name = "water",           amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "guar-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "guar",      amount = 1, probability = 0.6},
+        {type = "item", name = "guar-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "guar",      amount = 1, independent_probability = 0.6},
     },
     main_product = "guar-mk03",
     icons =
@@ -122,7 +122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-mk03-breeder",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -150,7 +150,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-seeds-mk03-breeder",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "guar-seeds-mk03", amount = 2},
-        {type = "item", name = "guar-seeds-mk03", amount = 1, probability = 0.5}
+        {type = "item", name = "guar-seeds-mk03", amount = 1, independent_probability = 0.5}
     },
     main_product = "guar-seeds-mk03",
     icons =
@@ -176,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-mk04",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -189,8 +189,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "guar-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "guar",      amount = 1, probability = 0.7},
+        {type = "item", name = "guar-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "guar",      amount = 1, independent_probability = 0.7},
     },
     main_product = "guar-mk04",
     icons =
@@ -206,7 +206,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-mk04-breeder",
-    category = "guar",
+    categories = {"guar"},
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -236,7 +236,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "guar-seeds-mk04-breeder",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -244,7 +244,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "guar-seeds-mk04", amount = 2},
-        {type = "item", name = "guar-seeds-mk04", amount = 1, probability = 0.4}
+        {type = "item", name = "guar-seeds-mk04", amount = 1, independent_probability = 0.4}
     },
     main_product = "guar-seeds-mk04",
     icons =

@@ -1,6 +1,6 @@
 py.autorecipes {
 	name = "caged-phadai",
-	category = "phadai",
+	categories = {"phadai"},
 	subgroup = "py-alienlife-phadai",
 	order = "b",
 	--main_product = "phadai",
@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-phadai", amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-phadai", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

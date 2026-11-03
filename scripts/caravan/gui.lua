@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local caravan_prototypes = require("caravan-prototypes")
 require "gui/components"
 
@@ -31,6 +35,7 @@ end
 
 local relative_gui_types = {
     ["electric-pole"] = defines.relative_gui_type.electric_network_gui,
+    ["storage-tank"] = defines.relative_gui_type.pipe_gui,
     ["character"] = defines.relative_gui_type.other_player_gui,
     ["unit"] = defines.relative_gui_type.script_inventory_gui
 }
@@ -123,7 +128,7 @@ function P.refocus(gui, target)
 end
 
 py.on_event(defines.events.on_gui_closed, function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = event.element
 
     if not gui then -- not modded UI, the only thing we care to do is check for the relative frame
@@ -149,7 +154,7 @@ py.on_event(defines.events.on_gui_closed, function(event)
         if slider_frame then
             slider_frame.destroy()
         elseif add_interrupt_frame then
-            local btn = storage.gui_elements_by_name["py_caravan_add_interrupt_search_button"]
+            local btn = add_interrupt_frame.title_bar_flow.py_caravan_add_interrupt_search_button
             if btn and btn.toggled then
                 AddInterruptGui.toggle_search_button(player)
             else

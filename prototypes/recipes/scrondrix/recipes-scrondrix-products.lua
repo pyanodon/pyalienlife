@@ -2,7 +2,9 @@
 
 py.autorecipes {
 	name = "Scrondrix-Manure",
-	category = "scrondrix",
+	categories = {"scrondrix"},
+	subgroup = "py-alienlife-scrondrix",
+	order = "b",
 	main_product = "manure",
 	number_icons = true,
 	mats =
@@ -15,11 +17,11 @@ py.autorecipes {
 				{name = "meat",         amount = 5},
 				{name = "yotoi-leaves", amount = 10},
 				{name = "water-barrel", amount = 5, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "manure", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "scrondrix",
 		},

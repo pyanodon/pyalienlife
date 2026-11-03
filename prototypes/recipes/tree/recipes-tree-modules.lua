@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "tree-mk02",
-    category = "fwf",
+    categories = {"fwf"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tree-mk03",
-    category = "fwf",
+    categories = {"fwf"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -34,7 +34,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tree-mk04",
-    category = "fwf",
+    categories = {"fwf"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -51,7 +51,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seedling-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -68,7 +68,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seedling-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -86,7 +86,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seedling-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -105,7 +105,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -114,8 +114,8 @@ RECIPE {
         {type = "item",  name = "moss-gen",          amount = 3},
     },
     results = {
-        {type = "item", name = "wood-seeds-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "wood-seeds",      amount = 1, probability = 0.5},
+        {type = "item", name = "wood-seeds-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "wood-seeds",      amount = 1, independent_probability = 0.5},
     },
     main_product = "wood-seeds-mk02",
     icons = {
@@ -127,7 +127,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -138,8 +138,8 @@ RECIPE {
         {type = "item",  name = "cdna",              amount = 3},
     },
     results = {
-        {type = "item", name = "wood-seeds-mk03", amount = 1, probability = 0.005},
-        {type = "item", name = "wood-seeds-mk02", amount = 1, probability = 0.5},
+        {type = "item", name = "wood-seeds-mk03", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "wood-seeds-mk02", amount = 1, independent_probability = 0.5},
     },
     main_product = "wood-seeds-mk03",
     icons = {
@@ -151,7 +151,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -163,8 +163,8 @@ RECIPE {
         {type = "item",  name = "peptidase-m58",  amount = 3},
     },
     results = {
-        {type = "item", name = "wood-seeds-mk04", amount = 1, probability = 0.005},
-        {type = "item", name = "wood-seeds-mk03", amount = 1, probability = 0.5},
+        {type = "item", name = "wood-seeds-mk04", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "wood-seeds-mk03", amount = 1, independent_probability = 0.5},
     },
     main_product = "wood-seeds-mk04",
     icons = {
@@ -176,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds-mk02-breeder",
-    category = "wpu",
+    categories = {"wpu"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds-mk03-breeder",
-    category = "wpu",
+    categories = {"wpu"},
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -212,7 +212,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds-mk04-breeder",
-    category = "wpu",
+    categories = {"wpu"},
     enabled = false,
     energy_required = 20,
     ingredients = {

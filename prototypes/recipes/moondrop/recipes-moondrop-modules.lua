@@ -7,7 +7,7 @@
 RECIPE {
     type = "recipe",
     name = "moondrop-mk02",
-    category = "moon",
+    categories = {"moon"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -19,8 +19,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "moondrop-mk02", amount = 1, probability = 0.005},
-        {type = "item", name = "moondrop",      amount = 1, probability = 0.5,  ignored_by_productivity = 1},
+        {type = "item", name = "moondrop-mk02", amount = 1, independent_probability = 0.005},
+        {type = "item", name = "moondrop",      amount = 1, independent_probability = 0.5,  ignored_by_productivity = 1},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk02",
@@ -37,7 +37,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-mk02-breeder",
-    category = "moon",
+    categories = {"moon"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -64,7 +64,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-seeds-mk02",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -73,9 +73,9 @@ RECIPE {
     results = {
         {type = "item", name = "moondrop-mk02",       amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2},
         {type = "item", name = "moondrop-seeds-mk02", amount = 2},
-        {type = "item", name = "moondrop-seeds-mk02", amount = 2, probability = 0.5},
-        {type = "item", name = "moondrop",            amount = 2, probability = 0.5},
-        {type = "item", name = "moondrop-seeds",      amount = 2, probability = 0.5},
+        {type = "item", name = "moondrop-seeds-mk02", amount = 2, independent_probability = 0.5},
+        {type = "item", name = "moondrop",            amount = 2, independent_probability = 0.5},
+        {type = "item", name = "moondrop-seeds",      amount = 2, independent_probability = 0.5},
     },
     main_product = "moondrop-seeds-mk02",
 }:add_unlock("moondrop-mk02")
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-mk03",
-    category = "moon",
+    categories = {"moon"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -98,8 +98,8 @@ RECIPE {
         {type = "fluid", name = "water",               amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "moondrop-mk03", amount = 1, probability = 0.004},
-        {type = "item", name = "moondrop",      amount = 1, probability = 0.6},
+        {type = "item", name = "moondrop-mk03", amount = 1, independent_probability = 0.004},
+        {type = "item", name = "moondrop",      amount = 1, independent_probability = 0.6},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk03",
@@ -116,7 +116,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-mk03-breeder",
-    category = "moon",
+    categories = {"moon"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -144,7 +144,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-seeds-mk03",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -153,9 +153,9 @@ RECIPE {
     results = {
         {type = "item", name = "moondrop-mk03",       amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2},
         {type = "item", name = "moondrop-seeds-mk03", amount = 2},
-        {type = "item", name = "moondrop-seeds-mk03", amount = 1, probability = 0.5},
-        {type = "item", name = "moondrop-mk02",       amount = 2, probability = 0.5},
-        {type = "item", name = "moondrop-seeds-mk02", amount = 2, probability = 0.5},
+        {type = "item", name = "moondrop-seeds-mk03", amount = 1, independent_probability = 0.5},
+        {type = "item", name = "moondrop-mk02",       amount = 2, independent_probability = 0.5},
+        {type = "item", name = "moondrop-seeds-mk02", amount = 2, independent_probability = 0.5},
     },
     main_product = "moondrop-seeds-mk03",
 }:add_unlock("moondrop-mk04")
@@ -165,7 +165,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-mk04",
-    category = "moon",
+    categories = {"moon"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -178,8 +178,8 @@ RECIPE {
         {type = "fluid", name = "water",                amount = 1000, fluidbox_index = 1},
     },
     results = {
-        {type = "item", name = "moondrop-mk04", amount = 1, probability = 0.003},
-        {type = "item", name = "moondrop",      amount = 1, probability = 0.7},
+        {type = "item", name = "moondrop-mk04", amount = 1, independent_probability = 0.003},
+        {type = "item", name = "moondrop",      amount = 1, independent_probability = 0.7},
         --{type = 'item', name = 'barrel', amount = 7},
     },
     main_product = "moondrop-mk04",
@@ -196,7 +196,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-mk04-breeder",
-    category = "moon",
+    categories = {"moon"},
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -224,7 +224,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-seeds-mk04",
-    category = "nursery",
+    categories = {"nursery"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -233,9 +233,9 @@ RECIPE {
     results = {
         {type = "item", name = "moondrop-mk04",       amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2},
         {type = "item", name = "moondrop-seeds-mk04", amount = 2},
-        {type = "item", name = "moondrop-seeds-mk04", amount = 1, probability = 0.25},
-        {type = "item", name = "moondrop-mk03",       amount = 2, probability = 0.5},
-        {type = "item", name = "moondrop-seeds-mk03", amount = 2, probability = 0.5},
+        {type = "item", name = "moondrop-seeds-mk04", amount = 1, independent_probability = 0.25},
+        {type = "item", name = "moondrop-mk03",       amount = 2, independent_probability = 0.5},
+        {type = "item", name = "moondrop-seeds-mk03", amount = 2, independent_probability = 0.5},
     },
     main_product = "moondrop-seeds-mk04",
 }:add_unlock("moondrop-mk05")

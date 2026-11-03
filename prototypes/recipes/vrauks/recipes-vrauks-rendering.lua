@@ -17,7 +17,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering-vrauks",
-	category = "slaughterhouse",
+	categories = {"slaughterhouse"},
 	subgroup = "py-alienlife-vrauks",
 	order = "b",
 	crafting_speed = 10,
@@ -27,7 +27,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-vrauks", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",        amount = BASE_MEAT},
@@ -36,11 +36,13 @@ py.autorecipes {
 				{name = "formic-acid", amount = BASE_BLOOD},
 				{name = "brain",       amount = BASE_BRAIN},
 				{name = "cage",        amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "rendering",
 			name = "full-render-vrauks",
-			icon = "__pyalienlifegraphics__/graphics/icons/rendering-vrauks.png",
-			icon_size = 64,
+			icons = {
+				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
+				{icon = "__pyalienlifegraphics__/graphics/icons/vrauks.png",    draw_background = true}
+			}
 		},
 		--brain vrauks rendering
 		{
