@@ -306,13 +306,21 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
                 Oculua.go_home(oculua_data); return
             end
 
-            local stack = target.get_inventory(CHEST).find_item_stack(oculua_data.item)
-            if not stack then
+            local src_inv = target.get_inventory(CHEST)
+            local item_name = oculua_data.item
+
+            local transfer_amount = math.min(
+                src_inv.get_item_count(item_name),
+                prototypes.item[item_name].stack_size,
+                oculua_data.target_count
+            )
+            if transfer_amount == 0 then
                 Oculua.go_home(oculua_data); return
             end
 
             -- collect items
-            oculua_data.inventory[1].transfer_stack(stack, oculua_data.target_count)
+            local actual_inserted = oculua_data.inventory.insert({name = item_name, count = transfer_amount})
+            src_inv.remove({name = item_name, count = actual_inserted})
             Oculua.fire_laser_beam(oculua_data)
             Oculua.render_altmode_icon(oculua_data)
             Oculua.set_target(oculua_data, character)
