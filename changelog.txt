@@ -2,6 +2,7 @@
 Version: 3.1.9
 Date: ???
   Changes:
+    - Improved Recipes for extracting blood now properly indicate which blood shall be extracted.
     - Made biofluid, caravan, digosaurus and ocula units tall
     - Fixed 3.0.57 migration for old saves
     - Fixed Ocula delivery logic for multi-stack requests (thanks, novaakropola!)
