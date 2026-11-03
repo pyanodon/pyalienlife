@@ -4,7 +4,7 @@ require "prototypes/technologies/mega-farm-cadaveric-arum"
 require "prototypes/technologies/moondrop"
 
 TECHNOLOGY("epoxy"):remove_pack("chemical-science-pack")
-TECHNOLOGY("fertilizer"):set_fields {enabled = false, hidden = true}
+TECHNOLOGY("fertilizer"):hide().enabled = false
 TECHNOLOGY("py-asphalt"):add_pack("py-science-pack-1")
 TECHNOLOGY("separation"):add_pack("py-science-pack-1")
 TECHNOLOGY("fertilizer-mk03"):remove_pack("chemical-science-pack")
@@ -61,7 +61,11 @@ py.mod_data.recipe_gui.alt_icons["kicalk-super"] = "kicalk"
 -- update rc and slaughterhouse ui
 py.mod_data.recipe_gui.subgroups["antelope"] = true
 
-data.raw.recipe.urea.hidden = true
+data.raw["recipe-category"]["arum"].allowed_module_categories = {"arum"}
+data.raw["recipe-category"]["arum"].modules_required = true
+data.raw["recipe-category"]["moon"].allowed_module_categories = {"moondrop"}
+data.raw["recipe-category"]["moon"].modules_required = true
+RECIPE("urea"):hide()
 
 TECHNOLOGY("melamine"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
 TECHNOLOGY("fiberboard"):remove_pack("logistic-science-pack"):add_pack("py-science-pack-1")
@@ -193,7 +197,7 @@ end
 RECIPE {
     type = "recipe",
     name = "inductor1-2",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -263,25 +267,21 @@ RECIPE("cadaveric-arum-mk04"):remove_unlock("basic-electronics")
 
 local FULL_CRAFTING_SPEED = 1 -- crafting speed when full of mk01 modules
 ITEM("moondrop-greenhouse-mk01"):subgroup_order("py-alienlife-farm-buildings-mk01", "b")
-data.raw["assembling-machine"]["moondrop-greenhouse-mk01"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["moondrop-greenhouse-mk01"].module_slots = 16
 data.raw["assembling-machine"]["moondrop-greenhouse-mk01"].crafting_speed = py.farm_speed(16, FULL_CRAFTING_SPEED)
 
 RECIPE("moondrop-greenhouse-mk02"):add_unlock("botany-mk02")
 ITEM("moondrop-greenhouse-mk02"):subgroup_order("py-alienlife-farm-buildings-mk02", "b")
-data.raw["assembling-machine"]["moondrop-greenhouse-mk02"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["moondrop-greenhouse-mk02"].module_slots = 32
 data.raw["assembling-machine"]["moondrop-greenhouse-mk02"].crafting_speed = py.farm_speed_derived(32, "moondrop-greenhouse-mk01")
 
 RECIPE("moondrop-greenhouse-mk03"):add_unlock("botany-mk03")
 ITEM("moondrop-greenhouse-mk03"):subgroup_order("py-alienlife-farm-buildings-mk03", "b")
-data.raw["assembling-machine"]["moondrop-greenhouse-mk03"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["moondrop-greenhouse-mk03"].module_slots = 48
 data.raw["assembling-machine"]["moondrop-greenhouse-mk03"].crafting_speed = py.farm_speed_derived(48, "moondrop-greenhouse-mk01")
 
 RECIPE("moondrop-greenhouse-mk04"):add_unlock("botany-mk04")
 ITEM("moondrop-greenhouse-mk04"):subgroup_order("py-alienlife-farm-buildings-mk04", "b")
-data.raw["assembling-machine"]["moondrop-greenhouse-mk04"].effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}}
 data.raw["assembling-machine"]["moondrop-greenhouse-mk04"].module_slots = 64
 data.raw["assembling-machine"]["moondrop-greenhouse-mk04"].crafting_speed = py.farm_speed_derived(64, "moondrop-greenhouse-mk01")
 
@@ -389,15 +389,12 @@ RECIPE("wyrmhole"):replace_ingredient("processing-unit", "intelligent-unit"):add
 ----RECIPES----
 RECIPE("fungal-substrate-02"):add_ingredient {type = "item", name = "urea", amount = 3}
 RECIPE("alien-sample-03"):replace_ingredient("plastic-bar", "graphene-roll")
-RECIPE("log7-2"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):add_unlock("wood-processing-3"):replace_category("nursery", "fwf")
+RECIPE("log7-2"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):add_unlock("wood-processing-3").category = "fwf"
 --RECIPE('urea'):replace_ingredient('fawogae', 'seaweed'):subgroup_order('py-alienlife-items', 'a')
-RECIPE("bonemeal2"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
-RECIPE("bonemeal3"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
-RECIPE("bonemeal4"):remove_unlock("advanced-circuit"):subgroup_order("py-alienlife-items", "a"):set_fields {hidden = true}
 RECIPE("cobalt-extract"):replace_ingredient("sulfuric-acid", "cyanic-acid")
 RECIPE("neuroprocessor"):replace_ingredient("electronic-circuit", "pcb2"):add_ingredient {type = "item", name = "resistor1", amount = 5}:add_ingredient {type = "item", name = "capacitor1", amount = 5}:add_ingredient {type = "item", name = "inductor1", amount = 10}
 RECIPE("empty-neuromorphic-chip"):add_ingredient {type = "item", name = "bakelite", amount = 5}:add_ingredient {type = "item", name = "micro-fiber", amount = 4}:add_ingredient {type = "item", name = "capacitor2", amount = 5}:add_ingredient {type = "item", name = "melamine", amount = 10}:add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:add_ingredient {type = "item", name = "nylon-parts", amount = 10} --:add_ingredient({type = 'item', name = 'diamagnetic-material', amount = 4})
-RECIPE("formamide"):replace_ingredient("nitrogen", "ammonia"):replace_category("chemistry", "fbreactor")
+RECIPE("formamide"):replace_ingredient("nitrogen", "ammonia").category = "fbreactor"
 RECIPE("bacteria-2"):remove_unlock("biopolymer"):add_unlock("microbiology-mk04"):add_ingredient {type = "item", name = "petri-dish", amount = 3}:add_ingredient {type = "item", name = "nexelit-plate", amount = 2}:add_ingredient {type = "item", name = "flask", amount = 5}:add_ingredient {type = "item", name = "chitin", amount = 5}
 RECIPE("rendering"):remove_unlock("basic-electronics")
 RECIPE("crco-alloy"):remove_ingredient("tailings-dust"):add_ingredient {type = "item", name = "cobalt-nx", amount = 2}
@@ -410,15 +407,15 @@ RECIPE("dms"):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock("basic
 RECIPE("cobalt-fluoride"):replace_ingredient("chromium", "reo")
 RECIPE("micro-fiber"):remove_unlock("microfibers"):add_unlock("filtration")
 RECIPE("alien-sample-02"):add_ingredient {type = "item", name = "micro-fiber", amount = 5}
-RECIPE("resveratrol"):replace_category("biofactory", "pulp")
+RECIPE("resveratrol").category = "pulp"
 RECIPE("dhilmos-pool-mk01"):replace_ingredient("glass", "phosphate-glass"):add_ingredient {type = "item", name = "aerogel", amount = 5}
 RECIPE("dhilmos-codex"):replace_ingredient("glass", "phosphate-glass")
-RECIPE("fertilizer-1"):replace_category("biofactory", "fbreactor")
-RECIPE("fertilizer-3"):replace_category("bio-reactor", "fbreactor")
-RECIPE("fertilizer-4"):replace_category("biofactory", "fbreactor")
-RECIPE("fertilizer-fish-1"):replace_category("biofactory", "fbreactor")
-RECIPE("fertilizer-fish-2"):replace_category("biofactory", "fbreactor")
-RECIPE("fertilizer-fish-3"):replace_category("biofactory", "fbreactor")
+RECIPE("fertilizer-1").category = "fbreactor"
+RECIPE("fertilizer-3").category = "fbreactor"
+RECIPE("fertilizer-4").category = "fbreactor"
+RECIPE("fertilizer-fish-1").category = "fbreactor"
+RECIPE("fertilizer-fish-2").category = "fbreactor"
+RECIPE("fertilizer-fish-3").category = "fbreactor"
 RECIPE("fish-food-02"):remove_ingredient("blood"):add_ingredient {type = "item", name = "blood-meal", amount = 5}
 RECIPE("dingrits-codex"):replace_ingredient("glass", "phosphate-glass")
 RECIPE("scrondrix-codex"):replace_ingredient("glass", "phosphate-glass")
@@ -428,28 +425,28 @@ RECIPE("quantum-vortex-storage-system"):add_ingredient {type = "item", name = "s
 RECIPE("nv-center"):add_ingredient {type = "item", name = "strangelets", amount = 2}
 RECIPE("space-science-pack"):add_ingredient {type = "item", name = "yellow-cake", amount = 2}:add_ingredient {type = "item", name = "intelligent-unit", amount = 6}
 RECIPE("yag-laser-module"):add_ingredient {type = "item", name = "nanofibrils", amount = 3}:add_ingredient {type = "item", name = "cobalt-fluoride", amount = 3}
-RECIPE("parametric-oscilator"):add_ingredient {type = "item", name = "nanofibrils", amount = 3}:replace_category("advanced-crafting", "research")
-RECIPE("superconductor-servomechanims"):replace_category("advanced-crafting", "research")
-RECIPE("superconductor"):add_ingredient {type = "item", name = "biobattery", amount = 2}:replace_category("advanced-crafting", "research")
+RECIPE("parametric-oscilator"):add_ingredient {type = "item", name = "nanofibrils", amount = 3}.category = "research"
+RECIPE("superconductor-servomechanims").category = "research"
+RECIPE("superconductor"):add_ingredient {type = "item", name = "biobattery", amount = 2}.category = "research"
 RECIPE("sc-unit"):add_ingredient {type = "item", name = "re-magnet", amount = 12}
-RECIPE("harmonic-absorber"):replace_category("pa", "research")
-RECIPE("diamagnetic-material"):replace_category("pa", "research") --:remove_unlock('earnshaw-theorem'):add_unlock('pharmacogenomics')
-RECIPE("paramagnetic-material"):replace_category("pa", "research")
-RECIPE("myoglobin"):replace_category("hydrocyclone", "genlab")
+RECIPE("harmonic-absorber").category = "research"
+RECIPE("diamagnetic-material").category = "research" --:remove_unlock('earnshaw-theorem'):add_unlock('pharmacogenomics')
+RECIPE("paramagnetic-material").category = "research"
+RECIPE("myoglobin").category = "genlab"
 
 RECIPE("zipir-carcass"):remove_unlock("basic-electronics")
 RECIPE("capacitor-core"):add_ingredient {type = "item", name = "nano-cellulose", amount = 2}
 RECIPE("fawogae2"):remove_unlock("advanced-circuit")
 --RECIPE('fiber'):remove_unlock('basic-electronics')
---RECIPE('urea').categories = {'vrauks'}):subgroup_order('py-alienlife-auog', 'a'
+--RECIPE('urea').category = 'vrauks'):subgroup_order('py-alienlife-auog', 'a'
 ITEM("urea"):subgroup_order("py-alienlife-auog", "a")
 ITEM("mosfet"):subgroup_order("py-hightech-tier-2", "f")
-RECIPE("waste-water-urea"):subgroup_order("py-alienlife-items", "a"):remove_unlock("fluid-separation"):add_unlock("water-invertebrates-mk01")
-RECIPE("ammonia-urea"):subgroup_order("py-hightech-fluids", "a1"):remove_unlock("basic-electronics"):add_unlock("biotech-mk02")
-RECIPE("urea2"):remove_unlock("auog-2"):set_fields {hidden = true}
+RECIPE("waste-water-urea"):subgroup_order("py-alienlife-recipes", "a"):remove_unlock("fluid-separation"):add_unlock("water-invertebrates-mk01")
+RECIPE("ammonia-urea"):subgroup_order("py-alienlife-recipes", "a"):remove_unlock("basic-electronics"):add_unlock("biotech-mk02")
+RECIPE("urea2"):remove_unlock("auog-2")
 RECIPE("urea"):set_fields {enabled = false}
-RECIPE("mukmoux-fat2"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
-RECIPE("mukmoux-fat3"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
+RECIPE("mukmoux-fat2"):remove_unlock("advanced-circuit")
+RECIPE("mukmoux-fat3"):remove_unlock("advanced-circuit")
 RECIPE("fertilizer"):remove_unlock("basic-electronics")
 RECIPE("advanced-circuit"):add_ingredient {type = "item", name = "battery", amount = 5}:add_ingredient {type = "item", name = "mosfet", amount = 5}
 RECIPE("processing-unit"):add_ingredient {type = "item", name = "mosfet", amount = 10}:add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
@@ -528,7 +525,7 @@ RECIPE("brain-cartridge-03"):add_ingredient {type = "item", name = "rayon", amou
 RECIPE {
     type = "recipe",
     name = "phytoplankton-2",
-    categories = {"plankton"},
+    category = "plankton",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -549,7 +546,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bones-to-phosphate",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -558,14 +555,13 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 5},
     },
-    icons = py.composite_icon("phosphate-rock", "bones")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "carapace-to-re",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -574,14 +570,13 @@ RECIPE {
     results = {
         {type = "item", name = "rare-earth-ore", amount = 20},
     },
-    icons = py.composite_icon("rare-earth-ore", "carapace")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-cyanic",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -590,14 +585,13 @@ RECIPE {
     results = {
         {type = "fluid", name = "cyanic-acid", amount = 50},
     },
-    icons = py.composite_icon("cyanic-acid", "meat")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-to-iron",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -606,14 +600,13 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 20},
     },
-    icons = py.composite_icon("iron-ore", "kicalk-seeds")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "cadaveric-to-sulfur",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -622,14 +615,13 @@ RECIPE {
     results = {
         {type = "item", name = "sulfur", amount = 5},
     },
-    icons = py.composite_icon("sulfur", "cadaveric-arum")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "cadaveric-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -638,14 +630,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 10},
     },
-    icons = py.composite_icon("copper-ore", "cadaveric-arum")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "blood-to-urea",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -654,14 +645,13 @@ RECIPE {
     results = {
         {type = "item", name = "urea", amount = 10},
     },
-    icons = py.composite_icon("urea", "blood")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "ethylene-from-fruit",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -675,7 +665,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phenol-02",
-    categories = {"distilator"},
+    category = "distilator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -689,7 +679,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "filtration-media-4",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -707,7 +697,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "urea-from-liquid-manure",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -723,7 +713,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-fiber",
-    categories = {"wpu"},
+    category = "wpu",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -737,7 +727,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cellulose-01",
-    categories = {"pulp"},
+    category = "pulp",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -752,7 +742,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "methane-from-liquid-manure",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -771,8 +761,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "ralesia-super-8",
-    categories = {"ralesia-farm"},
-    subgroup = "py-alienlife-ralesia-smartfarm",
+    category = "ralesia-farm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -785,14 +774,12 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 8},
     },
-    order = "ra-h"
 }:add_unlock("mega-farm-ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-super-9",
-    categories = {"ralesia-farm"},
-    subgroup = "py-alienlife-ralesia-smartfarm",
+    category = "ralesia-farm",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -806,7 +793,6 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = tile_count * 9},
     },
-    order = "ra-i"
 }:add_unlock("mega-farm-ralesia")
 
 --------------------------rennea mega farm----------------
@@ -814,8 +800,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "rennea-super-8",
-    categories = {"rennea-farm"},
-    subgroup = "py-alienlife-rennea-smartfarm",
+    category = "rennea-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -828,14 +813,12 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 8},
     },
-    order = "ren-a-h"
 }:add_unlock("mega-farm-rennea")
 
 RECIPE {
     type = "recipe",
     name = "rennea-super-9",
-    categories = {"rennea-farm"},
-    subgroup = "py-alienlife-rennea-smartfarm",
+    category = "rennea-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -849,7 +832,6 @@ RECIPE {
     results = {
         {type = "item", name = "rennea", amount = tile_count * 9},
     },
-    order = "ren-a-i"
 }:add_unlock("mega-farm-rennea")
 
 --------------------------tuuphra mega farm----------------
@@ -857,8 +839,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-8",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -872,14 +853,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 8},
     },
-    order = "ta-h"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-9",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -894,7 +873,6 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 9},
     },
-    order = "ta-i"
 }:add_unlock("mega-farm-tuuphra")
 
 --------------------------grod mega farm----------------
@@ -902,8 +880,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-super-9",
-    categories = {"grod-farm"},
-    subgroup = "py-alienlife-grod-smartfarm",
+    category = "grod-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -918,7 +895,6 @@ RECIPE {
     results = {
         {type = "item", name = "grod", amount = tile_count * 9},
     },
-    order = "grod-i"
 }:add_unlock("mega-farm-grod")
 
 --------------------------yotoi mega farm----------------
@@ -926,8 +902,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-super-9",
-    categories = {"yotoi-farm"},
-    subgroup = "py-alienlife-yotoi-smartfarm",
+    category = "yotoi-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -944,7 +919,6 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi", amount = tile_count * 9},
     },
-    order = "ya-a-i"
 }:add_unlock("mega-farm-yotoi")
 
 --------------------------yotoi fruit mega farm----------------
@@ -952,7 +926,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-9",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -970,14 +944,13 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 9},
     },
-    order = "ya-f-i"
 }:add_unlock("mega-farm-yotoi")
 
 
 RECIPE {
     type = "recipe",
     name = "chithin-to-phosphate",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -986,14 +959,13 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 7},
     },
-    icons = py.composite_icon("phosphate-rock", "chitin")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-phosphate",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1002,14 +974,13 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 3},
     },
-    icons = py.composite_icon("phosphate-rock", "meat")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "fish-to-phosphate",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1018,14 +989,13 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 1},
     },
-    icons = py.composite_icon("phosphate-rock", "fish")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "wood-seeds-to-phosphate",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1034,14 +1004,13 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 2},
     },
-    icons = py.composite_icon("phosphate-rock", "wood-seeds")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "rennea-to-phosphate",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1050,14 +1019,13 @@ RECIPE {
     results = {
         {type = "item", name = "phosphate-rock", amount = 3},
     },
-    icons = py.composite_icon("phosphate-rock", "rennea-seeds")
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = "recipe",
     name = "gas-bladder-to-methane",
-    categories = {"gas-separator"},
+    category = "gas-separator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1065,14 +1033,13 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "methane", amount = 50}
-    },
-    icons = py.composite_icon("methane", "gas-bladder")
-}:add_unlock("phagnot-mk02"):replace_category("gas-separator", "gas-refinery")
+    }
+}:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
     type = "recipe",
     name = "gas-bladder-to-ammonia",
-    categories = {"gas-separator"},
+    category = "gas-separator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1080,14 +1047,13 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ammonia", amount = 40}
-    },
-    icons = py.composite_icon("ammonia", "gas-bladder")
-}:add_unlock("phagnot-mk02"):replace_category("gas-separator", "gas-refinery")
+    }
+}:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
     type = "recipe",
     name = "gas-bladder-to-propene",
-    categories = {"gas-separator"},
+    category = "gas-separator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1095,14 +1061,13 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "propene", amount = 35}
-    },
-    icons = py.composite_icon("propene", "gas-bladder")
-}:add_unlock("phagnot-mk02"):replace_category("gas-separator", "gas-refinery")
+    }
+}:add_unlock("phagnot-mk02").category = "gas-refinery"
 
 RECIPE {
     type = "recipe",
     name = "gas-bladder-to-ethylene",
-    categories = {"gas-separator"},
+    category = "gas-separator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1110,14 +1075,13 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "ethylene", amount = 30}
-    },
-    icons = py.composite_icon("ethylene", "gas-bladder")
-}:add_unlock("phagnot-mk03"):replace_category("gas-separator", "gas-refinery")
+    }
+}:add_unlock("phagnot-mk03").category = "gas-refinery"
 
 RECIPE {
     type = "recipe",
     name = "biopolymer-2",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1135,7 +1099,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phenol-3",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1151,7 +1115,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "recombinant-ery-2",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -1176,7 +1140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nanofibrils-2",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -1191,7 +1155,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "kicalk-to-chelator",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1206,7 +1170,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-pb",
-    categories = {"arum"},
+    category = "arum",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -1218,13 +1182,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "s-biomass",
-    icons = py.composite_icon("s-biomass", "cadaveric-arum")
+    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "cadaveric-pb-2",
-    categories = {"arum"},
+    category = "arum",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -1237,13 +1202,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "s-biomass",
-    icons = py.composite_icon("s-biomass", "cadaveric-arum", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "cadaveric-pb-3",
-    categories = {"arum"},
+    category = "arum",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -1257,13 +1223,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "s-biomass",
-    icons = py.composite_icon("s-biomass", "cadaveric-arum", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/s-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-zn",
-    categories = {"kicalk"},
+    category = "kicalk",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -1275,13 +1242,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "kicalk")
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-zn-2",
-    categories = {"kicalk"},
+    category = "kicalk",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -1294,13 +1262,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "kicalk", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "kicalk-zn-3",
-    categories = {"kicalk"},
+    category = "kicalk",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -1314,7 +1283,8 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "kicalk", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 -------BIOMASS EXTRACTION----------------------------------
@@ -1322,7 +1292,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "s-biomass-extraction",
-    categories = {"desulfurization"},
+    category = "desulfurization",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1334,14 +1304,15 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product = "sulfur",
-    icons = py.composite_icon("sulfur", "s-biomass")
-}:add_unlock("phytomining"):replace_category("desulfurization", "pulp")
+    icon = "__base__/graphics/icons/sulfur.png",
+    icon_size = 64,
+}:add_unlock("phytomining").category = "pulp"
 
 
 RECIPE {
     type = "recipe",
     name = "casein-melamine",
-    categories = {"fbreactor"},
+    category = "fbreactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1359,7 +1330,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein-solution",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1376,7 +1347,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "raw-fiber-casein",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -1396,7 +1367,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein-mixture-01",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1413,7 +1384,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethyl-mercaptan-2",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1430,7 +1401,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nisi",
-    categories = {"gas-separator"},
+    category = "chemical",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1441,15 +1412,15 @@ RECIPE {
     },
     results = {
         {type = "item", name = "nisi",           amount = 1},
-        {type = "item", name = "cobalt-extract", amount = 2, independent_probability = 0.5, ignored_by_productivity = 2},
+        {type = "item", name = "cobalt-extract", amount = 2, probability = 0.5, ignored_by_productivity = 2},
     },
     main_product = "nisi",
-}:add_unlock("basic-electronics")
+}:add_unlock("basic-electronics").category = "gas-separator"
 
 RECIPE {
     type = "recipe",
     name = "mosfet",
-    categories = {"electronic"},
+    category = "electronic",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -1473,7 +1444,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cooling-system",
-    categories = {"electronic"},
+    category = "electronic",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1499,7 +1470,7 @@ RECIPE {
 -- RECIPE {
 --     type = 'recipe',
 --     name = 'starch-3',
---     categories = {'pulp'},
+--     category = 'pulp',
 --     enabled = false,
 --     energy_required = 3,
 --     ingredients = {
@@ -1519,7 +1490,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "starch-4",
-    categories = {"pulp"},
+    category = "pulp",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1597,7 +1568,7 @@ RECIPE("biofilm"):replace_result("biofilm", "biofilm", 10)
 RECIPE {
     type = "recipe",
     name = "starch-3",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {

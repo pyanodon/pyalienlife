@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-1",
-    categories = {"bioreserve-farm"},
+    category = "bioreserve-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -13,13 +13,12 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 1},
     },
-    order = "flora-a"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-2",
-    categories = {"bioreserve-farm"},
+    category = "bioreserve-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -31,13 +30,12 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 2},
     },
-    order = "flora-b"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-3",
-    categories = {"bioreserve-farm"},
+    category = "bioreserve-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -50,13 +48,12 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 3},
     },
-    order = "flora-c"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-4",
-    categories = {"bioreserve-farm"},
+    category = "bioreserve-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -70,13 +67,12 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 4},
     },
-    order = "flora-d"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-5",
-    categories = {"bioreserve-farm"},
+    category = "bioreserve-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -91,13 +87,12 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 5},
     },
-    order = "flora-e"
 }:add_unlock("mega-farm-bioreserve")
 
 RECIPE {
     type = "recipe",
     name = "bioreserve-super-6",
-    categories = {"bioreserve-farm"},
+    category = "bioreserve-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -112,5 +107,4 @@ RECIPE {
     results = {
         {type = "item", name = "native-flora", amount = tile_count * 6},
     },
-    order = "flora-f"
 }:add_unlock("mega-farm-bioreserve")

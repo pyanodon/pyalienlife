@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "naphtha-arqad",
         enabled = false,
-        categories = {"biofactory"},
+        category = "biofactory",
         energy_required = 10,
         ingredients = {
             {type = "fluid", name = "high-distillate", amount = 100},
@@ -22,7 +22,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "carbon-black-phytoplankton",
         enabled = false,
-        categories = {"biofactory"},
+        category = "biofactory",
         energy_required = 40,
         ingredients = {
             {type = "item",  name = "biomass",       amount = 1},
@@ -42,7 +42,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "nanofibrils-xyhiphoe",
         enabled = false,
-        categories = {"biofactory"},
+        category = "biofactory",
         energy_required = 90,
         ingredients = {
             {type = "item",  name = "xyhiphoe-cub",  amount = 5},
@@ -60,7 +60,7 @@ if data and not yafc_turd_integration then
     RECIPE {
         type = "recipe",
         name = "filtration-media-2-nanofibril-turd",
-        categories = {"crafting"},
+        category = "crafting",
         enabled = false,
         energy_required = 100,
         ingredients = {

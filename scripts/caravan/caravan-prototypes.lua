@@ -222,17 +222,17 @@ Caravan.valid_actions = {
         "is-inventory-empty",
         "caravan-item-count",
         "target-item-count",
-        "outpost-item-count",
         "is-tank-full",
         "is-tank-empty",
         "caravan-fluid-count",
         "target-fluid-count",
-        "outpost-fluid-count",
         "food-count",
         "circuit-condition",
         "circuit-condition-static",
         "at-outpost",
         "not-at-outpost",
+        "outpost-item-count",
+        "outpost-fluid-count"
     }
 }
 Caravan.valid_actions.nukavan = table.deepcopy(Caravan.valid_actions.caravan)
@@ -306,7 +306,7 @@ local caravan_prototypes = {
     },
     fluidavan = {
         opens_player_inventory = true,
-        max_volume = prototypes.entity["py-tank-4000"].fluid_capacity,
+        max_volume = prototypes.entity["py-tank-4"].fluid_capacity,
         fuel_size = 2,
         destructible = false,
         outpost = "outpost-fluid",
@@ -345,7 +345,7 @@ local caravan_prototypes = {
     },
     fluidflyavan = {
         opens_player_inventory = true,
-        max_volume = prototypes.entity["py-tank-10000"].fluid_capacity,
+        max_volume = prototypes.entity["py-tank-10"].fluid_capacity,
         fuel_size = 4,
         destructible = false,
         outpost = "outpost-aerial-fluid",

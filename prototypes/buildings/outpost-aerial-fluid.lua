@@ -16,7 +16,7 @@ RECIPE {
         {type = "item", name = "concrete",             amount = 50},
         {type = "item", name = "zipir-reef-mk01",      amount = 1},
         {type = "item", name = "neuroprocessor",       amount = 10},
-        {type = "item", name = "py-tank-10000",        amount = 1}
+        {type = "item", name = "py-tank-10",        amount = 1}
     },
     results = {{type = "item", name = "outpost-aerial-fluid", amount = 1}}
 }:add_unlock("domestication-mk03")
@@ -83,7 +83,7 @@ data:extend {{
     icon_size = 64,
     fluid_box = {
         -- don't hardcode so that volume gets adjusted when "realistic" setting is on.
-        volume = data.raw["storage-tank"]["py-tank-10000"].fluid_box.volume,
+        volume = data.raw["storage-tank"]["py-tank-10"].fluid_box.volume,
         pipe_picture = {
             north = {
                 layers = {

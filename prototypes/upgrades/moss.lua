@@ -2,7 +2,7 @@ if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "chlorinated-water",
-        categories = {"chemistry"},
+        category = "chemistry",
         enabled = false,
         energy_required = 3,
         ingredients = {
@@ -27,7 +27,7 @@ if data and not yafc_turd_integration then
         recipe.name = recipe.name .. "-chlorinated"
         recipe:add_ingredient {name = "chlorinated-water", amount = 1, type = "item"}
         recipe:multiply_result_amount("moss", 1.4)
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.75)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.75)
         data:extend {recipe}
     end
 
@@ -60,7 +60,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "unrefine-refsyngas",
-            categories = {"moss"},
+            category = "moss",
             energy_required = 8,
             ingredients = {
                 {type = "fluid", name = "refsyngas",         amount = 50},
@@ -75,7 +75,7 @@ if data and not yafc_turd_integration then
         {
             type = "recipe",
             name = "unrefine-refined-natural-gas",
-            categories = {"moss"},
+            category = "moss",
             energy_required = 8,
             ingredients = {
                 {type = "fluid", name = "refined-natural-gas", amount = 100},

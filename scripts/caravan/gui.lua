@@ -106,7 +106,7 @@ end
 function P.refocus(gui, target)
     local camera = gui.entity_frame.camera_frame.camera
     local refocus_button = gui.entity_frame.subheader_frame.contents_flow.py_refocus -- reverts camera to the GUI's entity
-    local caravan_unit = storage.caravans[gui.tags.unit_number--[[@as int]]].entity
+    local caravan_unit = storage.caravans[gui.tags.unit_number].entity
     -- reset
     if target == nil then
         camera.entity = caravan_unit

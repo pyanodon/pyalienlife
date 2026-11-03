@@ -73,15 +73,15 @@ TECHNOLOGY("military-4"):add_pack("py-science-pack-4")
 
 TECHNOLOGY("destroyer"):add_pack("py-science-pack-4")
 
-ITEM("raw-fish"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
-ITEM("raw-fish"):set("icon_size", 32)
+ITEM("raw-fish", "capsule"):set("icon", "__pyalienlifegraphics__/graphics/icons/fish.png")
+ITEM("raw-fish", "capsule"):set("icon_size", 32)
 RECIPE("power-armor"):add_ingredient {type = "item", name = "pelt", amount = 1}
 TECHNOLOGY("atomic-bomb"):remove_prereq("kovarex-enrichment-process"):remove_prereq("military-4"):remove_prereq("rocketry"):add_prereq("domestication-mk02"):add_prereq("uranium-mk03")
 RECIPE("atomic-bomb"):add_ingredient {type = "item", name = "titanium-plate", amount = 20}:add_ingredient {type = "item", name = "fuelrod-mk01", amount = 10}:remove_ingredient("yellow-cake"):add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
 RECIPE("small-electric-pole"):replace_ingredient("wood", "log")
 
--- RECIPE('automation-science-pack').categories = {'research-handcrafting'}
-RECIPE("logistic-science-pack").categories = {"research"}
+-- RECIPE('automation-science-pack').category = 'research-handcrafting'
+RECIPE("logistic-science-pack").category = "research"
 RECIPE("logistic-science-pack"):add_ingredient {type = "item", name = "solidified-sarcorus", amount = 1}:add_ingredient {type = "item", name = "animal-sample-01", amount = 2}:remove_ingredient("lab-instrument")
 RECIPE("logistic-science-pack"):replace_ingredient("alien-sample01", {type = "item", name = "alien-sample01", amount = 2})
 RECIPE("logistic-science-pack"):set_fields {
@@ -90,26 +90,26 @@ RECIPE("logistic-science-pack"):set_fields {
     },
     energy_required = 90
 }
-RECIPE("chemical-science-pack").categories = {"research"}
-RECIPE("military-science-pack").categories = {"research"}
-RECIPE("production-science-pack").categories = {"research"}
-RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-samples", amount = 1}.categories = {"research"}
+RECIPE("chemical-science-pack").category = "research"
+RECIPE("military-science-pack").category = "research"
+RECIPE("production-science-pack").category = "research"
+RECIPE("utility-science-pack"):add_ingredient {type = "item", name = "perfect-samples", amount = 1}.category = "research"
 
 ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
 RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}
 RECIPE("barrel").allow_productivity = false
 
-TECHNOLOGY("worker-robots-speed-1"):add_pack("py-science-pack-2")
-TECHNOLOGY("worker-robots-speed-3"):remove_pack("production-science-pack"):add_pack("py-science-pack-3")
+data.raw.technology["worker-robots-speed-1"]:add_pack("py-science-pack-2")
+data.raw.technology["worker-robots-speed-3"]:remove_pack("production-science-pack"):add_pack("py-science-pack-3")
 -- https://github.com/pyanodon/pybugreports/issues/608
-TECHNOLOGY("worker-robots-speed-5"):remove_pack("utility-science-pack"):add_pack("py-science-pack-4")
+data.raw.technology["worker-robots-speed-5"]:remove_pack("utility-science-pack"):add_pack("py-science-pack-4")
 local worker_robot_speed_7 = table.deepcopy(data.raw.technology["worker-robots-speed-6"])
 worker_robot_speed_7.name = "worker-robots-speed-7"
 data:extend{worker_robot_speed_7}
-data.raw.technology["worker-robots-speed-6"].unit--[[@cast -?]].count_formula = nil
-data.raw.technology["worker-robots-speed-6"].unit--[[@cast -?]].count = 1000
+data.raw.technology["worker-robots-speed-6"].unit.count_formula = nil
+data.raw.technology["worker-robots-speed-6"].unit.count = 1000
 data.raw.technology["worker-robots-speed-6"].max_level = nil
-TECHNOLOGY("worker-robots-speed-6"):remove_pack("space-science-pack")
+data.raw.technology["worker-robots-speed-6"]:remove_pack("space-science-pack")
 
 data.raw.technology["worker-robots-speed-1"].prerequisites = {"logistic-robotics", "py-science-pack-2"}
 data.raw.technology["worker-robots-speed-2"].prerequisites = {"worker-robots-speed-1"}

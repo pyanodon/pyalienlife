@@ -9,7 +9,7 @@
 RECIPE {
     type = "recipe",
     name = "fungal-substrate",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -26,7 +26,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fungal-substrate-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -46,7 +46,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fungal-substrate-03",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -67,7 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seedling",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -83,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "wood-seeds",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -97,7 +97,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "empty-petri-dish",
-    categories = {"glassworks"},
+    category = "glassworks",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -111,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "coke-co2",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -125,7 +125,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "agar",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "petri-dish",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -155,7 +155,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moss-gen",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -170,7 +170,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cage",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -187,16 +187,16 @@ if mods.pyalternativeenergy then
     RECIPE {
         type = "recipe",
         name = "cage-recycle-into-titanium",
-        categories = {"crafting"},
+        category = "crafting",
         enabled = false,
         energy_required = 4,
         ingredients = {
-            {type = "item", name = "cage", amount = 1},
+            {type = "item", name = "cage",           amount = 1},
         },
         results = {
-            {type = "item", name = "iron-stick", amount = 15, independent_probability = 0.25},
-            {type = "item", name = "solder",     amount = 2,  independent_probability = 0.25},
-            (not mods.pystellarexpedition) and {type = "item", name = "titanium-plate", amount = 5, independent_probability = 0.25} or nil,
+            {type = "item", name = "iron-stick",     amount = 15, probability = 0.25},
+            {type = "item", name = "solder",     amount = 2,  probability = 0.25},
+            (not mods.pystellarexpedition) and {type = "item", name = "titanium-plate", amount = 5, probability = 0.25} or nil,
         },
         icons = {
             {
@@ -217,7 +217,7 @@ end
 RECIPE {
     type = "recipe",
     name = "neuroprocessor",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -237,7 +237,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "py-science-pack-1",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -252,7 +252,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "py-science-pack-2",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 180,
     ingredients = {
@@ -276,7 +276,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "py-science-pack-3",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -299,7 +299,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "py-science-pack-4",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -322,7 +322,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fertilizer-1",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -340,7 +340,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fertilizer-4",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -356,7 +356,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fertilizer-fish-1",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -370,7 +370,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fertilizer-fish-2",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -384,7 +384,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fertilizer-fish-3",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -398,7 +398,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flutec-pp6",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -413,7 +413,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cobalt-fluoride",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -430,7 +430,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "decalin",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -447,7 +447,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flavonoids",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -462,7 +462,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cytostatics",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -480,7 +480,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cytostatics-2",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -499,7 +499,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "microcin-j25",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -519,7 +519,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "resveratrol",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -540,7 +540,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gh",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -561,7 +561,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gh-2",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -584,7 +584,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lard-from-brains",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -598,7 +598,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hcl-from-guts",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -612,7 +612,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "olechemicals-from-skin",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -630,7 +630,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pelt-processing",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -649,7 +649,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "reca",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -672,7 +672,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "reca-2",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -696,7 +696,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mixed-ores",
-    categories = {"ball-mill"},
+    category = "ball-mill",
     enabled = false,
     energy_required = 2.5,
     ingredients = {
@@ -705,7 +705,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "mixed-ores", amount = 5},
-        {type = "item", name = "stone",      amount = 1, independent_probability = 0.5},
+        {type = "item", name = "stone",      amount = 1, probability = 0.5},
     },
     main_product = "mixed-ores",
 }:add_unlock("cobalt-mk01"):add_ingredient {type = "item", name = "rare-earth-ore", amount = 4}
@@ -713,7 +713,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cobalt-extract",
-    categories = {"flotation"},
+    category = "flotation",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -722,8 +722,8 @@ RECIPE {
         {type = "item",  name = "mixed-ores",    amount = 15},
     },
     results = {
-        {type = "item",  name = "cobalt-extract", amount = 3},
-        {type = "fluid", name = "tailings",       amount = 50},
+        {type = "item",  name = "cobalt-extract",    amount = 3},
+        {type = "fluid", name = "tailings", amount = 50},
     },
     main_product = "cobalt-extract",
 }:add_unlock("cobalt-mk01")
@@ -731,7 +731,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cobalt-sulfate",
-    categories = {"leaching"},
+    category = "leaching",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -747,7 +747,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cobalt-sulfate-02",
-    categories = {"leaching"},
+    category = "leaching",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -762,7 +762,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cobalt-oxide",
-    categories = {"leaching"},
+    category = "leaching",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -770,8 +770,8 @@ RECIPE {
         {type = "item",  name = "cobalt-sulfate-02", amount = 3},
     },
     results = {
-        {type = "item",  name = "cobalt-oxide", amount = 3},
-        {type = "fluid", name = "tailings",     amount = 100},
+        {type = "item",  name = "cobalt-oxide",      amount = 3},
+        {type = "fluid", name = "tailings", amount = 100},
     },
     main_product = "cobalt-oxide",
 }:add_unlock("cobalt-mk02")
@@ -779,7 +779,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cobalt-nx",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -794,7 +794,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dried-grods",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -808,7 +808,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bedding",
-    categories = {"wpu"},
+    category = "wpu",
     enabled = false,
     energy_required = 7,
     ingredients = {
@@ -825,7 +825,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bedding-improve",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 7,
     ingredients = {
@@ -843,7 +843,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zymogens",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -865,7 +865,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mmp",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -886,7 +886,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "peptidase-m58",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -901,7 +901,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "alien-enzymes",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -923,7 +923,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "antiviral",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 500,
     ingredients = {
@@ -944,7 +944,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "antiviral-02",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 500,
     ingredients = {
@@ -967,7 +967,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nitrogen-mustard",
-    categories = {"wet-scrubber"},
+    category = "wet-scrubber",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -983,7 +983,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pacifastin",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -999,7 +999,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "metallic-glass",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -1013,12 +1013,12 @@ RECIPE {
     results = {
         {type = "item", name = "metallic-glass", amount = 1}
     }
-}:add_unlock("bio-implants"):add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:replace_ingredient("nickel-plate", "powdered-phosphate-rock"):replace_category("nmf", "nano")
+}:add_unlock("bio-implants"):add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:replace_ingredient("nickel-plate", "powdered-phosphate-rock"):add_category("nano")
 
 RECIPE {
     type = "recipe",
     name = "ticocr-alloy",
-    categories = {"py-rawores-smelter"},
+    category = "py-rawores-smelter",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1035,7 +1035,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nanochondria",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -1053,12 +1053,12 @@ RECIPE {
     results = {
         {type = "item", name = "nanochondria", amount = 200}
     }
-}:add_unlock("nanochondria"):add_ingredient {type = "item", name = "resilin", amount = 1}:add_ingredient {type = "item", name = "collagen", amount = 5}:replace_ingredient("bacteria-1", "bacteria-2"):replace_category("research", "nano")
+}:add_unlock("nanochondria"):add_ingredient {type = "item", name = "resilin", amount = 1}:add_ingredient {type = "item", name = "collagen", amount = 5}:replace_ingredient("bacteria-1", "bacteria-2"):add_category("nano")
 
 RECIPE {
     type = "recipe",
     name = "bmp",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -1081,7 +1081,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bmp-2",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -1106,7 +1106,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hyaline",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1122,7 +1122,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cellulose-00",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1137,7 +1137,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cellulose-02",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1152,7 +1152,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lignin",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -1163,12 +1163,12 @@ RECIPE {
     results = {
         {type = "item", name = "lignin", amount = 8},
     },
-}:add_unlock("cellulose-mk02"):replace_category("biofactory", "cracker")
+}:add_unlock("cellulose-mk02"):add_category("cracker")
 
 RECIPE {
     type = "recipe",
     name = "lignin-to-aromatics",
-    categories = {"distilator"},
+    category = "distilator",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1182,7 +1182,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pheromones",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -1204,7 +1204,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "empty-neuromorphic-chip",
-    categories = {"bio-printer"},
+    category = "bio-printer",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -1224,7 +1224,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "format-neuromorphic-chip",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1239,7 +1239,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nano-cellulose",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1256,7 +1256,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gasoline-cellulose",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1272,7 +1272,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "filtration-media-3",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -1289,7 +1289,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cellulose-gasification",
-    categories = {"gasifier"},
+    category = "gasifier",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1305,7 +1305,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-cellulose",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -1320,7 +1320,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biofilm-3",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1337,7 +1337,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "manure-to-crude",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1351,14 +1351,14 @@ RECIPE {
         {type = "fluid", name = "syngas",    amount = 50},
     },
     main_product = "crude-oil",
-    subgroup = "py-alienlife-fluids",
+    subgroup = "py-alienlife-recipes",
     order = "a"
 }:add_unlock("biotech-mk03")
 
 RECIPE {
     type = "recipe",
     name = "sodium-alginate",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = true,
     energy_required = 5,
     ingredients = {
@@ -1375,7 +1375,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "latex-slab",
-    categories = {"distilator"},
+    category = "distilator",
     enabled = true,
     energy_required = 5,
     ingredients = {
@@ -1391,7 +1391,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "latex",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1406,7 +1406,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "stopper",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1421,7 +1421,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adrenal-cortex",
-    categories = {"slaughterhouse"},
+    category = "slaughterhouse",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -1436,7 +1436,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-container",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -1454,7 +1454,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "naven-coal",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -1463,7 +1463,6 @@ RECIPE {
     results = {
         {type = "item", name = "raw-coal", amount = 10}
     },
-    icons = py.composite_icon("raw-coal", "navens")
     --main_product = "adrenal-cortex",
 }:add_unlock("navens")
 
@@ -1471,7 +1470,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oleochemical-combustion",
-    categories = {"combustion"},
+    category = "combustion",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1494,7 +1493,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-oil-combustion",
-    categories = {"combustion"},
+    category = "combustion",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1517,7 +1516,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lard-combustion",
-    categories = {"combustion"},
+    category = "combustion",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1541,7 +1540,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethanol-combustion",
-    categories = {"combustion"},
+    category = "combustion",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1564,7 +1563,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-oil-combustion",
-    categories = {"combustion"},
+    category = "combustion",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -1588,7 +1587,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "seeds-extract-01",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1600,12 +1599,12 @@ RECIPE {
         {type = "item", name = "seeds-extract-01", amount = 5}
     },
     --main_product = "adrenal-cortex",
-}:add_unlock("energy-drink"):replace_category("crafting", "pulp")
+}:add_unlock("energy-drink"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "syrup-01",
-    categories = {"scrubber"},
+    category = "scrubber",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1622,7 +1621,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "energy-drink",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1640,7 +1639,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "a-molasse",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1651,12 +1650,12 @@ RECIPE {
         {type = "item",  name = "biomass",   amount = 8}
     },
     main_product = "a-molasse",
-}:add_unlock("sugar"):replace_category("biofactory", "pulp")
+}:add_unlock("sugar"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "sweet-syrup",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1672,7 +1671,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sugar",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1688,7 +1687,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "b-molasse",
-    categories = {"carbonfilter"},
+    category = "carbonfilter",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1705,7 +1704,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethanol",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1722,7 +1721,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "lime-from-shell",
-    categories = {"ball-mill"},
+    category = "ball-mill",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1737,7 +1736,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-bioreserve",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -1757,7 +1756,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "oleochemicals-3",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1774,7 +1773,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sporopollenin",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1791,17 +1790,17 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crude-from-manure",
-    categories = {"lor"},
+    category = "lor",
     enabled = false,
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "depolymerized-organics", amount = 100},
     },
     results = {
-        {type = "fluid", name = "crude-oil", amount = 70},
-        {type = "fluid", name = "steam",     amount = 50, temperature = 150},
-        {type = "fluid", name = "tailings",  amount = 50},
-        {type = "item",  name = "ash",       amount = 3},
+        {type = "fluid", name = "crude-oil",         amount = 70},
+        {type = "fluid", name = "steam",             amount = 50, temperature = 150},
+        {type = "fluid", name = "tailings", amount = 50},
+        {type = "item",  name = "ash",               amount = 3},
     },
     main_product = "crude-oil",
 }:add_unlock("light-oil-mk01")
@@ -1809,7 +1808,7 @@ RECIPE {
 local bonemeal_recipe = RECIPE {
     type = "recipe",
     name = "bone-to-bonemeal-2",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1822,15 +1821,15 @@ local bonemeal_recipe = RECIPE {
     --main_product = "crude-oil",
 }
 if mods.pyhightech then
-    RECIPE(bonemeal_recipe):add_unlock("logistic-science-pack"):replace_category("biofactory", "fbreactor")
+    bonemeal_recipe:add_unlock("logistic-science-pack"):add_category("fbreactor")
 else
-    RECIPE(bonemeal_recipe):add_unlock("logistic-science-pack"):replace_category("biofactory", "bio-reactor")
+    bonemeal_recipe:add_unlock("logistic-science-pack"):add_category("bio-reactor")
 end
 
 RECIPE {
     type = "recipe",
     name = "magnetic-beads",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1842,12 +1841,12 @@ RECIPE {
     results = {
         {type = "item", name = "magnetic-beads", amount = 5},
     },
-}:add_unlock("chitin"):replace_category("nmf", "nano")
+}:add_unlock("chitin"):add_category("nano")
 
 RECIPE {
     type = "recipe",
     name = "chitosan",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -1864,7 +1863,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nanofibrils",
-    categories = {"nmf"},
+    category = "nmf",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -1879,7 +1878,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "filtration-media-2",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -1896,7 +1895,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biobattery",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1915,11 +1914,11 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "extract-lead",
-    categories = {"carbonfilter"},
+    category = "carbonfilter",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "chitosan", amount = 3},
+        {type = "item",  name = "chitosan",          amount = 3},
         {type = "fluid", name = "tailings", amount = 150},
     },
     results = {
@@ -1930,11 +1929,11 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "extract-aluminium",
-    categories = {"carbonfilter"},
+    category = "carbonfilter",
     enabled = false,
     energy_required = 10,
     ingredients = {
-        {type = "item",  name = "chitosan", amount = 3},
+        {type = "item",  name = "chitosan",          amount = 3},
         {type = "fluid", name = "tailings", amount = 150},
     },
     results = {
@@ -1945,7 +1944,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fish-oil-to-lube",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1960,7 +1959,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "albumin-1",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1975,7 +1974,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "albumin-2",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1990,7 +1989,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "perfect-samples",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -2019,7 +2018,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein-mixture-02",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2036,7 +2035,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein-mixture-03",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2053,7 +2052,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein-pulp-01",
-    categories = {"agitator"},
+    category = "agitator",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -2061,8 +2060,8 @@ RECIPE {
         {type = "fluid", name = "water",          amount = 500},
     },
     results = {
-        {type = "fluid", name = "casein-pulp-01", amount = 100},
-        {type = "fluid", name = "muddy-sludge",   amount = 50},
+        {type = "fluid", name = "casein-pulp-01",    amount = 100},
+        {type = "fluid", name = "muddy-sludge", amount = 50},
     },
     main_product = "casein-pulp-01",
 }:add_unlock("korlex")
@@ -2070,7 +2069,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein-pulp-02",
-    categories = {"pan"},
+    category = "pan",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -2087,7 +2086,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "casein",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2102,7 +2101,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plastic-from-casein",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -2117,7 +2116,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "barrel-milk",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 1,
     ingredients = {
@@ -2132,7 +2131,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flask-2",
-    categories = {"glassworks"},
+    category = "glassworks",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -2153,7 +2152,7 @@ RECIPE {
     type = "recipe",
     name = "flask-3",
     enabled = false,
-    categories = {"glassworks"},
+    category = "glassworks",
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "molten-glass",    amount = 140, fluidbox_index = 2},
@@ -2174,7 +2173,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "biomass-cooking",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2189,7 +2188,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "flue-gas-1",
-    categories = {"gasifier"},
+    category = "gasifier",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -2199,12 +2198,12 @@ RECIPE {
         {type = "fluid", name = "flue-gas", amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("compost"):replace_category("gasifier", "gas-refinery")
+}:add_unlock("compost"):add_category("gas-refinery")
 
 RECIPE {
     type = "recipe",
     name = "flue-gas-2",
-    categories = {"gasifier"},
+    category = "gasifier",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -2215,13 +2214,13 @@ RECIPE {
         {type = "fluid", name = "flue-gas", amount = 150},
     },
     --main_product = "casein-pulp-01",
-}:add_unlock("filtration"):replace_category("gasifier", "gas-refinery")
+}:add_unlock("filtration"):add_category("gas-refinery")
 
 --[[
 RECIPE {
     type = 'recipe',
     name = 'biomass-cooking-2',
-    categories = {'hpf'},
+    category = 'hpf',
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2240,7 +2239,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dried-meat-01",
-    categories = {"smelting"},
+    category = "smelting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2257,7 +2256,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sample-cup",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 2,
     ingredients = {
@@ -2271,7 +2270,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "space-suit",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -2295,7 +2294,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "space-dingrit",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -2312,7 +2311,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mcb",
-    categories = {"wet-scrubber"},
+    category = "wet-scrubber",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2330,7 +2329,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "chloral",
-    categories = {"gas-refinery"},
+    category = "gas-refinery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2347,7 +2346,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-pesticide-01",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2365,7 +2364,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pesticide-mk01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -2384,7 +2383,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethyl-mercaptan",
-    categories = {"mixer"},
+    category = "mixer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2402,7 +2401,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dda",
-    categories = {"agitator"},
+    category = "agitator",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -2418,7 +2417,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pre-pesticide-02",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2435,7 +2434,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pesticide-mk02",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -2452,7 +2451,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "quartz-tube",
-    categories = {"glassworks"},
+    category = "glassworks",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -2468,7 +2467,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "powedered-biomass",
-    categories = {"secondary-crusher"},
+    category = "secondary-crusher",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2478,12 +2477,12 @@ RECIPE {
         {type = "item", name = "powdered-biomass", amount = 20},
     },
     --main_product = "chloral",
-}:add_unlock("bioprocessing"):replace_category("secondary-crusher", "pulp")
+}:add_unlock("bioprocessing"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "fine-powdered-biomass",
-    categories = {"screener"},
+    category = "screener",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2491,8 +2490,8 @@ RECIPE {
     },
     results = {
         {type = "item", name = "fine-powdered-biomass", amount = 18},
-        {type = "item", name = "powdered-biomass",      amount = 6, independent_probability = 0.2, ignored_by_productivity = 6},
-        {type = "item", name = "biomass",               amount = 6, independent_probability = 0.1},
+        {type = "item", name = "powdered-biomass",      amount = 6, probability = 0.2, ignored_by_productivity = 6},
+        {type = "item", name = "biomass",               amount = 6, probability = 0.1},
     },
     main_product = "fine-powdered-biomass",
 }:add_unlock("bioprocessing")
@@ -2500,7 +2499,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dried-biomass",
-    categories = {"evaporator"},
+    category = "evaporator",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2515,7 +2514,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "green-sic",
-    categories = {"eaf"},
+    category = "eaf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2531,7 +2530,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sic",
-    categories = {"secondary-crusher"},
+    category = "secondary-crusher",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2543,13 +2542,14 @@ RECIPE {
     --main_product = "chloral",
     icon = "__pyalienlifegraphics__/graphics/icons/green-sic-recrush.png",
     icon_size = 64,
+    subgroup = "py-alienlife-items",
     order = "h"
 }:add_unlock("silicon-carbide")
 
 RECIPE {
     type = "recipe",
     name = "bio-oil-1",
-    categories = {"distilator"},
+    category = "distilator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2566,16 +2566,16 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-oil-2",
-    categories = {"lor"},
+    category = "lor",
     enabled = false,
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "bio-oil", amount = 300},
     },
     results = {
-        {type = "fluid", name = "condensates",       amount = 150, autotech_is_not_primary_source = true},
-        {type = "fluid", name = "low-distillate",    amount = 50,  autotech_is_not_primary_source = true},
-        {type = "fluid", name = "medium-distillate", amount = 50,  autotech_is_not_primary_source = true},
+        {type = "fluid", name = "condensates",       amount = 150},
+        {type = "fluid", name = "low-distillate",    amount = 50},
+        {type = "fluid", name = "medium-distillate", amount = 50},
     },
     main_product = "condensates",
 }:add_unlock("light-oil-mk02")
@@ -2583,7 +2583,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-oil-3",
-    categories = {"reformer"},
+    category = "reformer",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -2598,7 +2598,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-oil-4",
-    categories = {"gas-refinery"},
+    category = "gas-refinery",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -2614,7 +2614,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-oil-5",
-    categories = {"gas-refinery"},
+    category = "gas-refinery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2630,7 +2630,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-oil-6",
-    categories = {"gas-refinery"},
+    category = "gas-refinery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2646,7 +2646,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthropod-blood-to-organic-solvent",
-    categories = {"rectisol"},
+    category = "rectisol",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2661,7 +2661,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fetal-serum-01",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2678,7 +2678,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-generic-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -2694,7 +2694,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "bio-sample",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2709,7 +2709,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fertilizer-3",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2726,7 +2726,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fiber-01",
-    categories = {"wpu"},
+    category = "wpu",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2740,7 +2740,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-fiber",
-    categories = {"wpu"},
+    category = "wpu",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -2750,12 +2750,12 @@ RECIPE {
         {type = "item", name = "raw-fiber", amount = 3},
     },
     allow_productivity = true,
-}:add_unlock("yotoi"):replace_category("wpu", "pulp")
+}:add_unlock("yotoi"):add_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "concrete-02",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -2773,7 +2773,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "soil-separation-2",
-    categories = {"solid-separator"},
+    category = "solid-separator",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -2825,7 +2825,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "charcoal-briquette",
-    categories = {"fts-reactor"},
+    category = "fts-reactor",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2851,7 +2851,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "animal-sample-01",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2872,7 +2872,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gastrocapacitor",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2892,7 +2892,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "workers-food",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -2914,7 +2914,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "workers-food-02",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -2937,7 +2937,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "workers-food-03",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 320,
     ingredients = {
@@ -2964,7 +2964,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "battery-mk01",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 10,
     ingredients = {
