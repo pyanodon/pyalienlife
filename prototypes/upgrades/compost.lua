@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     data.raw.fluid["sweet-syrup"].default_temperature = 0
     data.raw.recipe["sweet-syrup"].results--[[@cast -?]][1]--[[@cast -?]].temperature = 10
     data.raw.recipe["empty-sweet-syrup-barrel"].results--[[@cast -?]][2]--[[@cast -?]].temperature = 10
