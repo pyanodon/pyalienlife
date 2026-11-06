@@ -12,6 +12,7 @@ local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     local prototype = caravan_prototypes[entity.name]
@@ -22,13 +23,13 @@ py.on_event(py.events.on_built(), function(event)
     local tags = event.tags or (inventory and not inventory.is_empty() and inventory[1].valid_for_read and inventory[1].is_item_with_tags and inventory[1].tags) or nil
 
     if tags and tags.unit_number and storage.caravans[tags.unit_number] then
-        local caravan_data = storage.caravans[tags.unit_number]
+        local caravan_data = storage.caravans[tags.unit_number --[[@as uint]]]
         caravan_data.itemised = nil
-        caravan_data.unit_number = entity.unit_number
+        caravan_data.unit_number = entity.unit_number --[[@cast entity.unit_number -?]]
         caravan_data.entity = entity
         CaravanImpl.stop_actions(caravan_data)
         storage.caravans[entity.unit_number] = caravan_data
-        storage.caravans[tags.unit_number] = nil
+        storage.caravans[tags.unit_number --[[@as uint]]] = nil
     else
         CaravanImpl.instantiate_caravan(entity)
     end
@@ -36,6 +37,7 @@ py.on_event(py.events.on_built(), function(event)
     storage.caravan_queue = nil
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local prototype = caravan_prototypes[entity.name]
@@ -45,8 +47,8 @@ py.on_event(py.events.on_destroyed(), function(event)
 
     local buffer = event.buffer
     if buffer then
-        buffer[1].tags = {unit_number = entity.unit_number}
-        local caravan_data = storage.caravans[entity.unit_number]
+        buffer[1].tags = {unit_number = entity.unit_number --[[@as uint]]}
+        local caravan_data = storage.caravans[entity.unit_number --[[@as uint]]]
         if caravan_data then
             buffer[1].custom_description = {
                 "",

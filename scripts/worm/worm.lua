@@ -11,6 +11,7 @@ py.on_event(py.events.on_init(), function()
     storage.worm_skins = storage.worm_skins or {}
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "wyrmhole" then return end
