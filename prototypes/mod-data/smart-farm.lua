@@ -12,21 +12,6 @@ local mod_data = py.mod_data --[[@as pyModData]]
 
 mod_data.smart_farm = {
     crops = {
-        ["replicator-cadaveric-arum"] = {
-            resource = "arum",
-            recipes = {
-                ["arum-super-1"] = 1,
-                ["arum-super-2"] = 2,
-                ["arum-super-3"] = 3,
-                ["arum-super-4"] = 4,
-                ["arum-super-5"] = 5,
-                ["arum-super-6"] = 6,
-                ["arum-super-7"] = 7,
-                ["arum-super-8"] = 8,
-                ["arum-super-9"] = 9,
-                ["arum-super-10"] = 10,
-            }
-        },
         ["replicator-bioreserve"] = {
             resource = "ore-bioreserve",
             recipes = {
@@ -51,21 +36,6 @@ mod_data.smart_farm = {
                 ["grod-super-8"] = 8,
                 ["grod-super-9"] = 9,
                 ["grod-super-10"] = 10,
-            }
-        },
-        ["replicator-kicalk"] = {
-            resource = "kicalk-tree",
-            recipes = {
-                ["kicalk-super-1"] = 1,
-                ["kicalk-super-2"] = 2,
-                ["kicalk-super-3"] = 3,
-                ["kicalk-super-4"] = 4,
-                ["kicalk-super-5"] = 5,
-                ["kicalk-super-6"] = 6,
-                ["kicalk-super-7"] = 7,
-                ["kicalk-super-8"] = 8,
-                ["kicalk-super-9"] = 9,
-                ["kicalk-super-10"] = 10,
             }
         },
         ["replicator-ralesia"] = {
