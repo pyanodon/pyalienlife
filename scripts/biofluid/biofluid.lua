@@ -147,6 +147,7 @@ py.on_event(py.events.on_init(), function(changes)
     end
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if not entity.valid then return end
@@ -157,7 +158,7 @@ py.on_event(py.events.on_built(), function(event)
         diode = defines.entity_status_diode.green,
         label = {"entity-status.working"},
    }
-    local unit_number = entity.unit_number
+    local unit_number = entity.unit_number --[[@cast unit_number -?]]
     if connection_type == Biofluid.type.requester then
         local tags = event.tags or {}
         storage.biofluid_requesters[unit_number] = {
@@ -968,13 +969,14 @@ py.on_event(defines.events.on_player_rotated_entity, function(event)
     if Biofluid.connectables[name] then Biofluid.built_pipe() end
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if not entity.valid then return end
     local name = entity.name
     if Biofluid.connectables[name] then
-        local unit_number = entity.unit_number
-        if entity.name == BIOPORT then
+        local unit_number = entity.unit_number --[[@cast unit_number -?]]
+        if name == BIOPORT then
             local bioport_data = storage.biofluid_bioports[unit_number]
             if not bioport_data then return end
             local graphic = bioport_data.animation_entity

@@ -759,6 +759,7 @@ end
 py.on_event(defines.events.on_research_finished, on_researched)
 py.on_event(defines.events.on_research_reversed, on_unresearched)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 local on_turd_built = function(event)
     local entity = event.entity
     if just_built_new_machine or not entity.valid or not entity.unit_number then return end
@@ -787,6 +788,7 @@ end
 
 py.on_event(py.events.on_built(), on_turd_built)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if not entity.valid or not entity.unit_number then return end
