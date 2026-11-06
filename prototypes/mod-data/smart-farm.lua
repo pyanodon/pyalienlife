@@ -158,10 +158,8 @@ if helpers.stage == "prototype" then
         bioreserve_copy.localised_name = {"entity-name.ore-bioreserve"}
         data:extend {bioreserve_copy}
 
-        if mod_data.smart_farm.crops["ore-bioreserve"] then
-            mod_data.smart_farm.crops["ore-bioreserve-farming"] = mod_data.smart_farm.crops["ore-bioreserve"]
-            mod_data.smart_farm.crops["ore-bioreserve"] = nil
-            mod_data.smart_farm.crops["ore-bioreserve-farming"].resource = "ore-bioreserve-farming"
+        if mod_data.smart_farm.crops["replicator-bioreserve"] then
+            mod_data.smart_farm.crops["replicator-bioreserve"].resource = "ore-bioreserve-farming"
         end
 
         for launch_item, crop_data in pairs(mod_data.smart_farm.crops) do
