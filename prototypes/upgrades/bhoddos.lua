@@ -83,7 +83,7 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-bhoddos.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"bhoddos-mk02", "phytomining", "efficiency-module-2"},
+        prerequisites = {"bhoddos-mk02", "phytomining"},
         unit = {
             count = 500,
             ingredients = {

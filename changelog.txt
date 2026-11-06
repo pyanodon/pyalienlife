@@ -8,6 +8,7 @@ Date: ????
     - Moved farming buildings to mod-data
     - Made biofluid, caravan, digosaurus and ocula units tall
     - Fixed 3.0.57 migration for old saves
+    - Fixed that bhoddos TURD was locked behind Efficiency Modules 2 for no reason. Resolves https://github.com/pyanodon/pybugreports/issues/1634
     - Fixed Ocula delivery logic for multi-stack requests (thanks, novaakropola!)
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.8
