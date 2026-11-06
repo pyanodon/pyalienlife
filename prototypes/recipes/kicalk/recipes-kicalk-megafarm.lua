@@ -208,3 +208,19 @@ RECIPE {
     },
     order = "k-a-j"
 }:add_unlock("mega-farm-kicalk"):replace_ingredient("manure", "urea")
+
+py.mod_data.smart_farm.crops["replicator-kicalk"] = {
+    resource = "kicalk-tree",
+    recipes = {
+        ["kicalk-super-1"] = 1,
+        ["kicalk-super-2"] = 2,
+        ["kicalk-super-3"] = 3,
+        ["kicalk-super-4"] = 4,
+        ["kicalk-super-5"] = 5,
+        ["kicalk-super-6"] = 6,
+        ["kicalk-super-7"] = 7,
+        ["kicalk-super-8"] = 8,
+        ["kicalk-super-9"] = 9,
+        ["kicalk-super-10"] = 10,
+    }
+}
