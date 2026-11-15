@@ -6,6 +6,7 @@ Date: ????
     - Removed smart farm landfilling (yes, that was a feature)
     - Added extra count fraction to smart farm resource yield calculations
     - Moved farming buildings to mod-data
+    - Improved Recipes for extracting blood now properly indicate which blood shall be extracted.
     - Made biofluid, caravan, digosaurus and ocula units tall
     - Fixed 3.0.57 migration for old saves
     - Fixed that bhoddos TURD was locked behind Efficiency Modules 2 for no reason. Resolves https://github.com/pyanodon/pybugreports/issues/1634
