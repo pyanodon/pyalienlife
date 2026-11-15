@@ -143,3 +143,19 @@ RECIPE {
         {type = "item", name = "replicator-cadaveric-arum", amount = 1},
     },
 }:add_unlock("mega-farm-cadaveric-arum"):add_ingredient {type = "item", name = "nems", amount = 10}:add_ingredient {type = "item", name = "carbon-nanotube", amount = 10}
+
+py.mod_data.smart_farm.crops["replicator-cadaveric-arum"] = {
+    resource = "arum",
+    recipes = {
+        ["arum-super-1"] = 1,
+        ["arum-super-2"] = 2,
+        ["arum-super-3"] = 3,
+        ["arum-super-4"] = 4,
+        ["arum-super-5"] = 5,
+        ["arum-super-6"] = 6,
+        ["arum-super-7"] = 7,
+        ["arum-super-8"] = 8,
+        ["arum-super-9"] = 9,
+        ["arum-super-10"] = 10,
+    }
+}

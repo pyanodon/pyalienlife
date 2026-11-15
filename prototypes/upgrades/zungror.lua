@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     local zungror = RECIPE("zungror"):copy()
     zungror.name = "zungror-with-yaedols-codex"
     zungror:add_ingredient {name = "yaedols-codex", amount = 6, type = "item"}
