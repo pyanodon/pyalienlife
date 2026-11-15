@@ -18,11 +18,11 @@ py.autorecipes {
 				{name = "phytoplankton",    amount = 50,  fluidbox_index = 1},
 				{name = "water-saline",     amount = 100, fluidbox_index = 2, return_item = {name = "waste-water"}},
 				{name = "filtration-media", amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dhilmos-egg", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 25,
 			tech = "dhilmos"
 		},
@@ -93,11 +93,11 @@ py.autorecipes {
 				{name = "ralesia-seeds", amount = 80},
 				{name = "water-saline",  amount = 100, fluidbox_index = 2, return_item = {name = "waste-water"}},
 				{name = "hot-air",       amount = 50,  fluidbox_index = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dhilmos-pup", amount = 20},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "dhilmos"
 		},
@@ -200,11 +200,11 @@ py.autorecipes {
 				{name = "dhilmos-pup",   amount = 1},
 				{name = "phytoplankton", amount = 50},
 				{name = "water-saline",  amount = 100, return_item = {name = "waste-water"}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dhilmos", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "dhilmos"
 		},

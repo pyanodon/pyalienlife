@@ -16,11 +16,11 @@ py.autorecipes {
 				{name = "water",      amount = 500, fluidbox_index = 1},
 				{name = "limestone",  amount = 5},
 				{name = "soil",       amount = 10},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "grod", amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "grod"
 		},

@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "zipir1", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -38,7 +38,7 @@ py.autorecipes {
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD, autotech_is_not_primary_source = true},
 				{name = "brain",           amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "zipir",
 			name = "full-render-zipir",

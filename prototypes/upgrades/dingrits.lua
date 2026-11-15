@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     data:extend {
         {
             type = "module",
@@ -11,7 +11,7 @@ if data and not yafc_turd_integration then
             tier = 5,
             order = "d-e",
             effect = {pollution = 1, speed = 4, productivity = 0.01},
-            fuel_category = "dingrits",
+            fuel_categories = {"dingrits"},
             fuel_value = "1.5GW",
             burnt_result = "dingrits-mk04"
         },

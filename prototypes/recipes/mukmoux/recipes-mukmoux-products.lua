@@ -18,13 +18,13 @@ py.autorecipes {
                 {name = "mukmoux-food-01", amount = 2},
                 {name = "bedding",         amount = 2},
                 {name = "water-barrel",    amount = 15},
-            },
+			}--[[@as data.IngredientPrototype[] ]],
             results =
             {
                 {name = "manure",                 amount = 5},
                 {name = "barrel",                 amount = 14},
                 {name = "manure-bacteria-barrel", amount = 1},
-            },
+			}--[[@as data.ProductPrototype[] ]],
             crafting_speed = 90,
             tech = "mukmoux"
         },

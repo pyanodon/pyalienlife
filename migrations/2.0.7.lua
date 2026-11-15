@@ -1,3 +1,4 @@
+---@diagnostic disable
 if storage.farms then
     game.print("pYAL: Migrated " .. #(storage.indexed_farm_list or {}) .. " farm buildings")
     storage.farms = nil

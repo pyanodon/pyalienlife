@@ -179,13 +179,6 @@ data:extend {{
     },
     flow_length_in_ticks = 360,
     impact_category = "metal-large",
-    working_sound = {
-        sound = {
-            filename = "__base__/sound/storage-tank.ogg",
-            volume = 0.8
-        },
-        max_sounds_per_prototype = 3
-    },
     resistances = {
         {
             percent = 90,

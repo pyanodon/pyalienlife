@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local Impl = require "__pyalienlife__/scripts/caravan/impl"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local inv = require "inventories"
@@ -101,9 +105,9 @@ function P.update_cargo_pane(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_flush_button"] = function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = player.gui.screen.caravan_gui
-    local unit_number = gui.tags.unit_number
+    local unit_number = gui.tags.unit_number--[[@as int]]
 
     local caravan = storage.caravans[unit_number]
     caravan.fluid = nil

@@ -1,9 +1,4 @@
----@diagnostic disable-next-line: assign-type-mismatch
----@class RecipeGUIData
----@field subgroups {[string]: true?}
----@field machines {[data.CraftingMachineName]: true?}
----@field alt_icons {[string]: string?}
-local recipe_gui = py.mod_data.recipe_gui
+local recipe_gui = py.mod_data.recipe_gui --[[@as RecipeGUIData]]
 
 py.assert_type (
     recipe_gui,
@@ -17,6 +12,7 @@ py.assert_type (
     "ERROR: pY mod data [recipe_gui] has invalid machines"
 )
 
+---@diagnostic disable-next-line: assign-type-mismatch
 RecipeGUI.permitted_recipes = {}
 RecipeGUI.machines = {}
 

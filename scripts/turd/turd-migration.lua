@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 return function(master_tech_name, sub_tech_name)
     local reset_time_in_hours = 10
     local reset_time_in_ticks = reset_time_in_hours * 3600 * 60

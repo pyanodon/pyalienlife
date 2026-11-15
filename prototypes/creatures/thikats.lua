@@ -179,6 +179,7 @@ local mining_animation = {
 
 ENTITY {
     type = "unit",
+    tall = true,
     name = "thikat",
     icon = item_icon,
     icon_size = 64,

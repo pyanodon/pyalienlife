@@ -94,6 +94,7 @@ local animation = {
 local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = "unit",
+    tall = true,
     name = "chorkok",
     icon = "__pyalienlifegraphics2__/graphics/icons/chorkok.png",
     icon_size = 64,

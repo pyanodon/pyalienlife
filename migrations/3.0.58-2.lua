@@ -1,3 +1,4 @@
+---@diagnostic disable
 --closes the edit interrupt gui and clears the global
 --we could try and migrate but that brings up a lot of edge cases
 --also this is a second file because people are running github versions /tableflip

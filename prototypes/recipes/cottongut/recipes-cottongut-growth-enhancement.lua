@@ -12,12 +12,12 @@ py.autorecipes {
 				{name = "cottongut",    amount = 4},
 				{name = "gh",           amount = 1},
 				{name = "nanochondria", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "cottongut",       remove_item = true},
 				{name = "brain-cottongut", amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

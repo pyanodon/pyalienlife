@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local P = {}
 
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
@@ -185,7 +189,7 @@ function P.update_fuel_inventory(player, caravan_data)
 end
 
 local function handle_slot_click(event, caravan_data, inventory, target_inventory, is_supported_pred)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     -- spectators, begone
     if not player.cursor_stack then return end
     if not inventory or not target_inventory then return end -- fluidavan
@@ -296,32 +300,32 @@ gui_events[defines.events.on_gui_click]["py_caravan_fuel_inventory_slot_."] = fu
 end
 
 py.on_event(defines.events.on_player_main_inventory_changed, function (event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
 
-    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local caravan_data = storage.caravans[gui.tags.unit_number--[[@as int]]]
     P.update_character_inventory(player, caravan_data)
 end)
 
 -- needed to handle edge-case: power armor is click-dragged to the player
 -- bottom-left corner armor equipment. The hand location must then be reset.
 py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local gui = player.gui.screen.caravan_gui
     if not gui then return end
     if player.controller_type ~= defines.controllers.character then return end
 
-    if player.cursor_stack.count > 0 then return end
+    if player.cursor_stack--[[@cast -?]].count > 0 then return end
     player.hand_location = nil
-    local caravan_data = storage.caravans[gui.tags.unit_number]
+    local caravan_data = storage.caravans[gui.tags.unit_number--[[@as int]]]
     P.update_character_inventory(player, caravan_data)
 end)
 
 -- allow pipette on fuel slots to quick-grab fuel from the player inventory
 -- TODO: expand to regular slots
 py.on_event("py_caravan_pipette", function(event)
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
     local element = event.element
     -- element meets requirements?
     if not element or not element.name or not element.name:match("^py_caravan_fuel_inventory_slot_") then return end
@@ -330,7 +334,7 @@ py.on_event("py_caravan_pipette", function(event)
     local main_inventory = get_inventory(player)
     if not main_inventory or not player.is_cursor_empty() then return end
     -- edge case (not handled): god controller/cheat mode where pipette gives you a full stack
-    local target_slot = caravan_data.fuel_inventory[event.element.tags.slot_index]
+    local target_slot = caravan_data.fuel_inventory--[[@cast -?]][event.element.tags.slot_index]--[[@as LuaItemStack]]
     -- fuel slot has something in it, so find that item in the player inventory
     if target_slot.valid_for_read then
         local _, index = main_inventory.find_item_stack(target_slot.name)

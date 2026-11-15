@@ -207,7 +207,7 @@ for i = 1, 4 do
         }--]]
     }
 
-    table.insert(data.raw["assembling-machine"][name].graphics_set.working_visualisations, {
+    table.insert(data.raw["assembling-machine"][name].graphics_set--[[@cast -?]].working_visualisations--[[@cast -?]], {
         animation = {
             filename = "__pyalienlifegraphics__/graphics/entity/incubator/cooler.png",
             frame_count = 80,
@@ -222,7 +222,7 @@ for i = 1, 4 do
         constant_speed = true,
     })
 
-    table.insert(data.raw["assembling-machine"][name].graphics_set.working_visualisations, {
+    table.insert(data.raw["assembling-machine"][name].graphics_set--[[@cast -?]].working_visualisations--[[@cast -?]], {
         animation = {
             filename = "__pyalienlifegraphics__/graphics/entity/incubator/smoke.png",
             frame_count = 50,

@@ -1,26 +1,35 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
+---@class (partial) PyAlienLifeStorage
+---@field vatbrains table
+
 Vatbrain = {}
 
 py.on_event(py.events.on_init(), function()
     storage.vatbrains = storage.vatbrains or {}
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if not entity.valid or entity.name ~= "vat-brain" then return end
 
     local beacon = entity.surface.create_entity {
-        name = "hidden-beacon",
+        name = "hidden-beacon-vatbrain",
         position = entity.position,
         force = entity.force,
     }
     storage.vatbrains[beacon.unit_number] = {beacon = beacon, vatbrain = entity}
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "vat-brain" then return end
 
-    local beacon = entity.surface.find_entities_filtered {position = entity.position, radius = 3, name = "hidden-beacon", limit = 1}[1]
+    local beacon = entity.surface.find_entities_filtered {position = entity.position, radius = 3, name = "hidden-beacon-vatbrain", limit = 1}[1]
     if beacon then
         storage.vatbrains[beacon.unit_number] = nil
         beacon.destroy()

@@ -35,6 +35,7 @@ ITEM {
 ---@as data.UnitPrototype
 local unit = {
     type = "unit",
+    tall = true,
     name = "nukavan",
     can_open_gates = true,
     additional_pastable_entities = {"nukavan", "nukavan-turd"},

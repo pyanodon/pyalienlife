@@ -81,11 +81,13 @@ py.on_event(py.events.on_init(), function()
 end)
 
 script.on_event("py_toggle_turd_gui", function(event)
+    ---@diagnostic disable-next-line: undefined-field
     local player = game.get_player(event.player_index)
     remote.call("pywiki", "open_wiki_to_page", player, "turd")
 end)
 
 script.on_event("py_toggle_caravan_manager_gui", function(event)
+    ---@diagnostic disable-next-line: undefined-field
     local player = game.get_player(event.player_index)
     remote.call("pywiki", "open_wiki_to_page", player, "caravan-manager")
 end)

@@ -11,11 +11,11 @@ py.autorecipes {
 			{
 				{name = "arqad",        amount = 1},
 				{name = "anabolic-rna", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat-arqad", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "anabolic-rna"
 		},

@@ -1,3 +1,10 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
+---@class (partial) PyAlienLifeStorage
+---@field caravan_queue table
+
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
 local EditInterruptGui = require "__pyalienlife__/scripts/caravan/gui/edit_interrupt"
@@ -5,6 +12,7 @@ local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     local prototype = caravan_prototypes[entity.name]
@@ -15,13 +23,13 @@ py.on_event(py.events.on_built(), function(event)
     local tags = event.tags or (inventory and not inventory.is_empty() and inventory[1].valid_for_read and inventory[1].is_item_with_tags and inventory[1].tags) or nil
 
     if tags and tags.unit_number and storage.caravans[tags.unit_number] then
-        local caravan_data = storage.caravans[tags.unit_number]
+        local caravan_data = storage.caravans[tags.unit_number --[[@as uint]]]
         caravan_data.itemised = nil
-        caravan_data.unit_number = entity.unit_number
+        caravan_data.unit_number = entity.unit_number --[[@cast entity.unit_number -?]]
         caravan_data.entity = entity
         CaravanImpl.stop_actions(caravan_data)
         storage.caravans[entity.unit_number] = caravan_data
-        storage.caravans[tags.unit_number] = nil
+        storage.caravans[tags.unit_number --[[@as uint]]] = nil
     else
         CaravanImpl.instantiate_caravan(entity)
     end
@@ -29,6 +37,7 @@ py.on_event(py.events.on_built(), function(event)
     storage.caravan_queue = nil
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local prototype = caravan_prototypes[entity.name]
@@ -38,8 +47,8 @@ py.on_event(py.events.on_destroyed(), function(event)
 
     local buffer = event.buffer
     if buffer then
-        buffer[1].tags = {unit_number = entity.unit_number}
-        local caravan_data = storage.caravans[entity.unit_number]
+        buffer[1].tags = {unit_number = entity.unit_number --[[@as uint]]}
+        local caravan_data = storage.caravans[entity.unit_number --[[@as uint]]]
         if caravan_data then
             buffer[1].custom_description = {
                 "",
@@ -113,7 +122,7 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function(event)
     local stack = player.cursor_stack
     if stack and stack.valid_for_read and stack.name == "caravan-control" then return end
     local ghost = player.cursor_ghost
-    if ghost and ghost.name.name == "caravan-control" then return end
+    if ghost and ghost.name--[[@cast -?]].name == "caravan-control" then return end
     restore_controller(player, last_opened)
     if last_opened.caravan then
         local caravan_data = storage.caravans[last_opened.caravan]
@@ -141,7 +150,7 @@ local function on_carrot_used(player, cursor_position)
         if not CaravanImpl.validity_check(caravan_data) then return end
         schedule = caravan_data.schedule
         prototype = caravan_prototypes[caravan_data.entity.name]
-        only_outpost = prototype.only_allow_outpost_as_destination
+        -- only_outpost = prototype.only_allow_outpost_as_destination
     end
     if interrupt_data then
         schedule = interrupt_data.schedule
@@ -183,7 +192,7 @@ local function on_carrot_used(player, cursor_position)
 
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-        if only_outpost and entity.name ~= prototype.outpost then return end
+        -- if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
 
         sch.entity = entity
@@ -203,7 +212,7 @@ local function on_carrot_used(player, cursor_position)
     elseif entity then
         if entity.operable then storage.make_operable_next_tick[#storage.make_operable_next_tick + 1] = entity end
         entity.operable = false -- Prevents the player from opening the gui of the clicked entity
-        if only_outpost and entity.name ~= prototype.outpost then return end
+        -- if only_outpost and entity.name ~= prototype.outpost then return end
         if caravan_data and (entity == caravan_data.entity or entity.surface ~= caravan_data.entity.surface) then return end
         local player_index = nil
         local localised_name = {"caravan-gui.entity-position", entity.prototype.localised_name, math.floor(entity.position.x), math.floor(entity.position.y)}
@@ -245,6 +254,7 @@ py.on_event(py.events.on_entity_clicked(), function(event)
     end
 
     if cursor_contents then
+        --[[@cast cursor_contents LuaItemPrototype]]
         -- If we're setting the caravan destination
         if cursor_contents.name == "caravan-control" then
             on_carrot_used(player, event.cursor_position)

@@ -1822,9 +1822,9 @@ local bonemeal_recipe = RECIPE {
     --main_product = "crude-oil",
 }
 if mods.pyhightech then
-    bonemeal_recipe:add_unlock("logistic-science-pack"):replace_category("biofactory", "fbreactor")
+    RECIPE(bonemeal_recipe):add_unlock("logistic-science-pack"):replace_category("biofactory", "fbreactor")
 else
-    bonemeal_recipe:add_unlock("logistic-science-pack"):replace_category("biofactory", "bio-reactor")
+    RECIPE(bonemeal_recipe):add_unlock("logistic-science-pack"):replace_category("biofactory", "bio-reactor")
 end
 
 RECIPE {

@@ -13,11 +13,11 @@ py.autorecipes {
 				{name = "caged-ulric",  amount = 1},
 				{name = "nanochondria", amount = 1},
 				{name = "antiviral",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-ulric", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria"
 		},

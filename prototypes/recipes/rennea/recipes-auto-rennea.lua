@@ -16,11 +16,11 @@ py.autorecipes {
 				{name = "soil",            amount = 10},
 				{name = "coarse",          amount = 8},
 				{name = "fertilizer",      amount = 3},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "rennea", amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "rennea"
 		},

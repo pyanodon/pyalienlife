@@ -15,11 +15,11 @@ py.autorecipes {
 				{name = "caged-scrondrix", amount = 1},
 				{name = "gh",              amount = 1},
 				{name = "nanochondria",    amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "brain-caged-scrondrix", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "nanochondria",
 			name = "Caged-scrondrix-9",

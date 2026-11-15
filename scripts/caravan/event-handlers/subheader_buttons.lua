@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local CaravanGui = require "__pyalienlife__/scripts/caravan/gui"
 local CaravanGuiComponents = require "__pyalienlife__/scripts/caravan/gui/components"
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"

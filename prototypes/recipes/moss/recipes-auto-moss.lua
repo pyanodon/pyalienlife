@@ -26,11 +26,11 @@ py.autorecipes {
 			{
 				{name = "muddy-sludge", amount = 100},
 				{name = "carbon-dioxide",    amount = 100},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "moss", amount = 8},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "moss-mk01"
 		},

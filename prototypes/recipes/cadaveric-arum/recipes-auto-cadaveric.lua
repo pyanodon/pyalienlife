@@ -15,11 +15,11 @@ py.autorecipes {
 				{name = "water",                amount = 500, fluidbox_index = 2},
 				{name = "sand",                 amount = 5},
 				{name = "stone-wool",           amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "cadaveric-arum", amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 125,
 			tech = "cadaveric-arum"
 		},

@@ -1,6 +1,13 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 Mounts = {}
 
 local transfer_efficiency = 2
+
+---@class (partial) PyAlienLifeStorage
+---@field mounts table
 
 py.on_event(py.events.on_init(), function()
     storage.mounts = storage.mounts or {}
@@ -61,6 +68,7 @@ local mounts = {
     ["phadaisus"] = true,
 }
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if not entity.valid or not mounts[entity.name] then return end
@@ -77,6 +85,7 @@ py.on_event(py.events.on_built(), function(event)
     storage.mounts[entity.unit_number] = entity
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local unit_number = entity.valid and entity.unit_number
@@ -90,12 +99,12 @@ py.on_event(defines.events.on_player_removed_equipment, function(event)
             name = equipment_name,
             position = {3, 0},
         }
-        game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
+        game.get_player(event.player_index)--[[@cast -?]].remove_item {name = equipment_name, count = 100}
     elseif equipment_name == "phadaisus-hidden-belt-immunity-equipment" then
         event.grid.put {
             name = equipment_name,
             position = {0, 0},
         }
-        game.get_player(event.player_index).remove_item {name = equipment_name, count = 100}
+        game.get_player(event.player_index)--[[@cast -?]].remove_item {name = equipment_name, count = 100}
     end
 end)

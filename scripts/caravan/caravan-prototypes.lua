@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 require "util"
 
 ---@enum CaravanActionListType
@@ -278,6 +282,7 @@ Caravan.foods = {
         ["gastrocapacitor"] = 50
     },
 }
+---@alias CaravanName "caravan"|"fluidavan"|"flyavan"|"fluidflyavan"|"nukavan"|"caravan-turd"|"fluidavan-turd"|"flyavan-turd"|"fluidflyavan-turd"|"nukavan-turd"
 
 local caravan_prototypes = {
     caravan = {

@@ -140,7 +140,7 @@ py.on_event(defines.events.on_gui_opened, function(event)
     local food_flow = content_flow.add {type = "flow", name = "food_flow", direction = "horizontal"}
     for i = 1, #dig_data.food_inventory do
         local slot = food_flow.add {type = "sprite-button", name = "dig_food_" .. i, style = "inventory_slot"}
-        slot.tags = {unit_number = dig_data.unit_number, i = i}
+        slot.tags = {unit_number = dig_data.unit_number, i = i}--[[@as Tags]]
     end
 
     Digosaurus.update_gui(main_frame)

@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "arqad-honey-barrel", amount = 3,  return_barrel = true},
 				{name = "natural-gas-barrel", amount = 10, return_barrel = true},
 				{name = "redhot-coke",        amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arqad-egg",   amount = 10},
 				{name = "arqad-queen", amount = 1, independent_probability = 0.999, ignored_by_productivity = 1, ignored_by_stats = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "arqad"
 		},
 		--red tech
@@ -103,12 +103,12 @@ py.autorecipes {
 				{name = "arqad-egg",    amount = 30},
 				{name = "caged-vrauks", amount = 10},
 				{name = "honeycomb",    amount = 5, return_item = {name = "used-comb"}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arqad-maggot", amount = 30},
 				{name = "cage",         amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 70,
 			tech = "arqad"
 		},
@@ -135,11 +135,11 @@ py.autorecipes {
 				{name = "empty-comb",         amount = 1},
 				{name = "vrauks",             amount = 1},
 				{name = "vrauks-food-01",     amount = 1}
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arqad-egg-nest", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 90,
 			tech = "arqad"
 		},
@@ -213,12 +213,12 @@ py.autorecipes {
 				{name = "biomass",            amount = 15},
 				{name = "ralesia",            amount = 5},
 				{name = "natural-gas-barrel", amount = 10, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arqad",     amount_min = 2, amount_max = 4},
 				{name = "used-comb", amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 140,
 			tech = "arqad"
 		},
@@ -297,12 +297,12 @@ py.autorecipes {
 				{name = "arqad-egg-nest",     amount = 1},
 				{name = "arqad-honey-barrel", amount = 5, return_barrel = true},
 				{name = "natural-gas-barrel", amount = 3, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "arqad-queen", amount = 1, independent_probability = 0.01},
 				{name = "used-comb",   amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 140,
 			tech = "arqad"
 		},

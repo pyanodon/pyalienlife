@@ -38,19 +38,15 @@ data:extend {{
     hidden = true
 }}
 
-local recipe = RECIPE {
+RECIPE {
     type = "recipe",
     name = "bioport-hidden-recipe",
     enabled = false,
     allow_inserter_overload = false,
     hidden = true,
-    ingredients = {
-        {type = "item", name = "gobachov", amount = data.raw.item["gobachov"].stack_size},
-        {type = "item", name = "huzu",     amount = data.raw.item["huzu"].stack_size},
-        {type = "item", name = "chorkok",  amount = data.raw.item["chorkok"].stack_size},
-    },
+    ingredients = {},
     results = {
-        {type = "item",  name = "guano",                                              amount = data.raw.item["guano"].stack_size},
+        {type = "item",  name = "guano", amount = data.raw.item["guano"].stack_size},
         {type = "fluid", name = mods.pyalternativeenergy and "void" or "vacuum", amount = 1},
     },
     energy_required = 100,
@@ -59,10 +55,6 @@ local recipe = RECIPE {
     icon_size = 64,
     subgroup = "py-alienlife-biofluid-network",
 }
-
-for name, _ in pairs(Biofluid.favorite_foods) do
-    recipe:add_ingredient {name = name, amount = data.raw.item[name].stack_size, type = "item"}
-end
 
 ENTITY {
     type = "assembling-machine",
@@ -150,9 +142,9 @@ local function add_creature_animations(animations, animation_order, name)
     for i, _ in pairs(animation_order) do
         local layers = {}
         for j = 1, i do
-            local layer_data = animation_order[j]
+            local layer_data = animation_order[j] --[[@as table<int, number> ]]
             local shift = util.by_pixel(layer_data[1] / 2 - 62, layer_data[2] / 2 - 113.75 - 32)
-            if name == "chorkok" then shift[2] = shift[2] + 0.16 end
+            if name == "chorkok" then shift[2] = shift[2]--[[@cast -?]] + 0.16 end
             layers[#layers + 1] = table.deepcopy(animations[layer_data[3]])
             layers[#layers].shift = shift
         end

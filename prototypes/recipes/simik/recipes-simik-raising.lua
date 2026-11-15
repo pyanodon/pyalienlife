@@ -21,12 +21,12 @@ py.autorecipes {
 				{name = "simik-food-01",      amount = 2},
 				{name = "olefin-barrel",      amount = 5, return_barrel = true},
 				{name = "molten-iron-barrel", amount = 2, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				--{name = 'simik', amount_min = 1, amount_max = 4},
 				{name = "simik-pup", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			tech = "simik-mk01"
 		},
 		--py
@@ -205,11 +205,11 @@ py.autorecipes {
 				{name = "simik-food-01", amount = 1},
 				{name = "iron-plate",    amount = 10},
 				{name = "olefin-barrel", amount = 2, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "simik", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 100,
 			tech = "simik-mk01"
 		},
@@ -625,11 +625,11 @@ py.autorecipes {
 				{name = "simik-food-01", amount = 1},
 				{name = "stone",         amount = 10},
 				{name = "olefin-barrel", amount = 2, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "simik-poop", amount = 5},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "simik-mk01"
 		},

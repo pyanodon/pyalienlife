@@ -16,11 +16,11 @@ py.autorecipes {
 				{name = "fish",          amount = 12},
 				{name = "phytoplankton", amount = 50,  fluidbox_index = 1},
 				{name = "water-saline",  amount = 100, fluidbox_index = 2, return_item = {name = "waste-water"}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "fish-egg", amount = 25},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 80,
 			tech = "fish-mk01"
 		},
@@ -167,11 +167,11 @@ py.autorecipes {
 				{name = "small-lamp",   amount = 3},
 				{name = "biomass",      amount = 10},
 				{name = "water-saline", amount = 100, fluidbox_index = 2, return_item = {name = "waste-water", amount = 100}},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "fish", amount = 10},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "fish-mk01"
 		},

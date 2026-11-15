@@ -63,6 +63,7 @@ local animation = {
 local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = "unit",
+    tall = true,
     name = "huzu",
     icon = "__pyalienlifegraphics2__/graphics/icons/huzu.png",
     icon_size = 64,

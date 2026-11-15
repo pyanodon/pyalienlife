@@ -9,7 +9,7 @@ ITEM {
     subgroup = "py-alienlife-auog",
     order = "a",
     stack_size = 100,
-    fuel_category = "auog",
+    fuel_categories = {"auog"},
     fuel_value = "800MJ",
     burnt_result = "used-auog"
 }
@@ -25,7 +25,7 @@ ITEM {
     subgroup = "py-alienlife-dingrits",
     order = "a",
     stack_size = 100,
-    fuel_category = "dingrits",
+    fuel_categories = {"dingrits"},
     fuel_value = "470MJ",
     burnt_result = "used-dingrit"
 }
@@ -35,7 +35,7 @@ ITEM {
     name = "biomass",
     icon = "__pyalienlifegraphics__/graphics/icons/biomass.png",
     icon_size = 64,
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "0.25MJ",
     flags = {},
     subgroup = "py-alienlife-items",
@@ -954,7 +954,7 @@ ITEM {
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-05.png", scale = 0.66},
         {size = 64, filename = "__pyalienlifegraphics__/graphics/icons/mip/meat-06.png", scale = 0.66}
     },
-    fuel_category = "dingrit-food",
+    fuel_categories = {"dingrit-food"},
     fuel_value = "5MJ",
     fuel_acceleration_multiplier = 1,
     fuel_top_speed_multiplier = 1,
@@ -1011,7 +1011,7 @@ ITEM {
     name = "cellulose",
     icon = "__pyalienlifegraphics__/graphics/icons/cellulose.png",
     icon_size = 64,
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "5MJ",
     flags = {},
     subgroup = "py-alienlife-items",
@@ -1024,7 +1024,7 @@ ITEM {
     name = "lignin",
     icon = "__pyalienlifegraphics__/graphics/icons/lignin.png",
     icon_size = 64,
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "8MJ",
     flags = {},
     subgroup = "py-alienlife-items",
@@ -2820,7 +2820,7 @@ ITEM {
     subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 100,
-    fuel_category = "phadai-food",
+    fuel_categories = {"phadai-food"},
     fuel_value = "120MJ",
     fuel_acceleration_multiplier = 1,
     fuel_top_speed_multiplier = 3.5
@@ -2835,7 +2835,7 @@ ITEM {
     subgroup = "py-alienlife-food",
     order = "h",
     stack_size = 100,
-    fuel_category = "phadai-food",
+    fuel_categories = {"phadai-food"},
     fuel_value = "160MJ",
     fuel_acceleration_multiplier = 1,
     fuel_top_speed_multiplier = 5.5
@@ -3306,7 +3306,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3319,7 +3319,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3332,7 +3332,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3345,7 +3345,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3358,7 +3358,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3371,7 +3371,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3384,7 +3384,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3397,7 +3397,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3410,7 +3410,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3423,7 +3423,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3436,7 +3436,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3449,7 +3449,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3462,7 +3462,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ITEM {
@@ -3475,7 +3475,7 @@ ITEM {
     order = "h",
     stack_size = 100,
     fuel_value = "2.5MJ",
-    fuel_category = "biomass"
+    fuel_categories = {"biomass"}
 }
 
 ---------------------------------------
@@ -3508,7 +3508,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-food-01.png",
     icon_size = 64,
     flags = {},
-    fuel_category = "dingrit-food",
+    fuel_categories = {"dingrit-food"},
     fuel_value = "20MJ",
     fuel_acceleration_multiplier = 1,
     fuel_top_speed_multiplier = 1.4,
@@ -3523,7 +3523,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/dingrits-food-02.png",
     icon_size = 64,
     flags = {},
-    fuel_category = "dingrit-food",
+    fuel_categories = {"dingrit-food"},
     fuel_value = "40MJ",
     fuel_acceleration_multiplier = 1.2,
     fuel_top_speed_multiplier = 1.8,
@@ -5688,7 +5688,7 @@ ITEM {
 ITEM {
     type = "item",
     name = "raw-fiber",
-    fuel_category = "biomass",
+    fuel_categories = {"biomass"},
     fuel_value = "6MJ",
     icon = "__pyalienlifegraphics__/graphics/icons/raw-fiber.png",
     icon_size = 32,
@@ -6996,7 +6996,7 @@ ITEM {
     order = "a",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    fuel_category = "auog",
+    fuel_categories = {"auog"},
     fuel_value = "500MJ",
     burnt_result = "used-auog"
 }
@@ -7016,7 +7016,7 @@ ITEM {
     order = "a-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    fuel_category = "auog",
+    fuel_categories = {"auog"},
     fuel_value = "1000MJ",
     burnt_result = "used-auog-mk02"
 }
@@ -7036,7 +7036,7 @@ ITEM {
     order = "a-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    fuel_category = "auog",
+    fuel_categories = {"auog"},
     fuel_value = "1500MJ",
     burnt_result = "used-auog-mk03"
 }
@@ -7056,7 +7056,7 @@ ITEM {
     order = "a-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    fuel_category = "auog",
+    fuel_categories = {"auog"},
     fuel_value = "2000MJ",
     burnt_result = "used-auog-mk04"
 }
@@ -7137,7 +7137,7 @@ ITEM {
     },
     category = "fish",
     tier = 1,
-    fuel_category = "fish",
+    fuel_categories = {"fish"},
     fuel_value = "10MJ",
     fuel_acceleration_multiplier = 1.2,
     fuel_top_speed_multiplier = 1.2,
@@ -7167,7 +7167,7 @@ ITEM {
     },
     category = "fish",
     tier = 2,
-    fuel_category = "fish",
+    fuel_categories = {"fish"},
     fuel_value = "20MJ",
     fuel_acceleration_multiplier = 1.3,
     fuel_top_speed_multiplier = 1.3,
@@ -7197,7 +7197,7 @@ ITEM {
     },
     category = "fish",
     tier = 3,
-    fuel_category = "fish",
+    fuel_categories = {"fish"},
     fuel_value = "30MJ",
     fuel_acceleration_multiplier = 1.4,
     fuel_top_speed_multiplier = 1.4,
@@ -7227,7 +7227,7 @@ ITEM {
     },
     category = "fish",
     tier = 4,
-    fuel_category = "fish",
+    fuel_categories = {"fish"},
     fuel_value = "40MJ",
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.5,
@@ -7319,7 +7319,7 @@ ITEM {
     order = "d-a",
     stack_size = 50,
     effect = {pollution = 1, speed = 1},
-    fuel_category = "dingrits",
+    fuel_categories = {"dingrits"},
     fuel_value = "250MJ",
     burnt_result = "used-dingrit"
 }
@@ -7339,7 +7339,7 @@ ITEM {
     order = "d-b",
     stack_size = 50,
     effect = {pollution = 1, speed = 2},
-    fuel_category = "dingrits",
+    fuel_categories = {"dingrits"},
     fuel_value = "320MJ",
     burnt_result = "used-dingrit-mk02"
 }
@@ -7359,7 +7359,7 @@ ITEM {
     order = "d-c",
     stack_size = 50,
     effect = {pollution = 1, speed = 3},
-    fuel_category = "dingrits",
+    fuel_categories = {"dingrits"},
     fuel_value = "350MJ",
     burnt_result = "used-dingrit-mk03"
 }
@@ -7379,7 +7379,7 @@ ITEM {
     order = "d-d",
     stack_size = 50,
     effect = {pollution = 1, speed = 4},
-    fuel_category = "dingrits",
+    fuel_categories = {"dingrits"},
     fuel_value = "480MJ",
     burnt_result = "used-dingrit-mk04"
 }

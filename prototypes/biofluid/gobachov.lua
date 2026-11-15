@@ -62,6 +62,7 @@ local animation = {
 local unit = {
     ai_settings = {do_separation = false, path_resolution_modifier = -2},
     type = "unit",
+    tall = true,
     name = "gobachov",
     icon = "__pyalienlifegraphics2__/graphics/icons/gobachov.png",
     icon_size = 64,

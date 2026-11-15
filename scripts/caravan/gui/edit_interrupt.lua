@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 local InterruptConditionsGui = require "__pyalienlife__/scripts/caravan/gui/interrupt_conditions"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local ActionGui = require "__pyalienlife__/scripts/caravan/gui/actions"
@@ -92,7 +96,7 @@ function P.build_conditions_operators_list(parent)
 end
 
 function P.build_add_interrupt_condition_dropdown(parent)
-    local conditions = Caravan.valid_actions["interrupt-condition"]
+    local conditions = Caravan.valid_actions["interrupt-condition"]--[[@as string[] ]]
     conditions = table.map(conditions, function(v) return {"caravan-actions." .. v, v} end)
 
     table.insert(conditions, "+ Add interrupt condition")
@@ -275,7 +279,7 @@ py.on_event(defines.events.on_gui_click, function(event)
     -- do not destroy the frame right after creating it
     if event.element.name == "py_caravan_interrupt_edit_button" then return end
 
-    local player = game.get_player(event.player_index)
+    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
 
     local gui = player.gui.screen.edit_interrupt_gui
     if not gui then return end
@@ -322,7 +326,7 @@ gui_events[defines.events.on_gui_click]["py_interrupt_count_label"] = function(e
     if not interrupt_name or not caravan_ids then return end
     local player = game.get_player(event.player_index)
     for id in pairs(caravan_ids) do
-        id = tonumber(id) -- .tags caveat
+        id = tonumber(id)--[[@as int]] -- .tags caveat
         local unit = (storage.caravans[id] or {}).entity
         if unit and unit.valid then
             draw_alert_with_duration(player, unit, interrupt_name, 6)

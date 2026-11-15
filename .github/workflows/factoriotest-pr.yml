@@ -17,4 +17,6 @@ jobs:
       repository: ${{ github.repository }}
       ref: ${{ github.event.pull_request.head.sha }}
       test_branch: ${{ github.head_ref || github.ref_name }}
-    secrets: inherit
+    secrets:
+      TESTUSER_TOKEN: ${{ secrets.TESTUSER_TOKEN }}
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}

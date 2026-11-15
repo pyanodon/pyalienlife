@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "vonix", amount = INPUT_AMOUNT},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -41,7 +41,7 @@ py.autorecipes {
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "venom-gland",     amount = BASE_SPECIAL},
 				{name = "brain",           amount = BASE_BRAIN},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 30,
 			tech = "vonix",
 			name = "full-render-vonix",

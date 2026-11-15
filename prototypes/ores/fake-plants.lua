@@ -1,5 +1,5 @@
 for _, ore in pairs(data.raw.resource) do
-    if string.match(ore.icon, "__pyalienlife") ~= nil then
+    if string.match(ore.icon--[[@as string]], "__pyalienlife") ~= nil then
         if ore.name == "ore-bioreserve" then
             local x = 0
             local y = 0
@@ -27,6 +27,7 @@ for _, ore in pairs(data.raw.resource) do
             end
         end
 
+        if ore.stages == nil or ore.stages.sheet == nil then error() end
         data:extend {
             {
                 type = "tree",

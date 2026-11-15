@@ -20,12 +20,12 @@ py.autorecipes {
 				{name = "mukmoux-food-01", amount = 2},
 				{name = "bedding",         amount = 2},
 				{name = "water-barrel",    amount = 15, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "mukmoux-calf", amount = 2},
 				--{name = 'mukmoux', amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 10,
 			tech = "mukmoux"
 		},
@@ -235,11 +235,11 @@ py.autorecipes {
 				{name = "ralesia-seeds",   amount = 15},
 				{name = "mukmoux-food-01", amount = 2},
 				{name = "water-barrel",    amount = 6, return_barrel = true},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "mukmoux", amount = 2},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 75,
 			tech = "mukmoux"
 		},

@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     data:extend {
         {
             name = "paper-towel",
@@ -41,7 +41,7 @@ if data and not yafc_turd_integration then
         data:extend {recipe}
     end
 
-    local fluidbox_indexs = {2, 2, 1, 1}
+    local fluidbox_indexs = {2, 2, 1, 1}--[[@as int[] ]]
     for i, recipe in pairs {
         RECIPE("ralesia-1"):copy(),
         RECIPE("ralesia-2"):copy(),

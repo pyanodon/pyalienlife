@@ -12,11 +12,11 @@ py.autorecipes {
 				{name = "moondrop-seeds", amount = 1},
 				{name = "copper-ore",     amount = 5},
 				{name = "water",          amount = 100},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "moondrop", amount = 4},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 130,
 			tech = "cu",
 			name = "moondrop-1a",

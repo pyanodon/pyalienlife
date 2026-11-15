@@ -1,3 +1,7 @@
+---@namespace PyAlienLife
+---@type PyAlienLifeStorage
+storage = storage --[[@as PyAlienLifeStorage]]
+
 ---@class Farming
 ---@field farm_prototypes table<string, AlienlifeFarmPrototype>
 Farming = {}
@@ -39,11 +43,18 @@ function Farming.process(farm_data)
     end
 end
 
+---@class (partial) PyAlienLifeStorage
+---@field farms table
+---@field farm_count uint
+---@field farm_batch_size uint?
+---@field last_farm_index uint?
+
 py.on_event(py.events.on_init(), function()
     storage.farms = storage.farms or {}
     storage.farm_count = storage.farm_count or 0
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     local kingdom = Farming.get_kingdom(entity)
@@ -61,6 +72,9 @@ py.on_event(defines.events.on_object_destroyed, function(event)
         py.clear_alert(storage.farms[unit_number].alert_id)
         storage.farms[unit_number] = nil
         storage.farm_count = storage.farm_count - 1
+    end
+    if unit_number == storage.last_farm_index then
+        storage.last_farm_index = nil
     end
 end)
 

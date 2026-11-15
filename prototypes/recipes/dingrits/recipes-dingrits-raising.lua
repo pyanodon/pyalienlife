@@ -19,12 +19,12 @@ py.autorecipes {
 				{name = "yotoi-seeds",     amount = 30},
 				{name = "water-barrel",    amount = 15, return_barrel = true},
 				{name = "bedding",         amount = 1}, {name = "dingrits-food-01", amount = 2},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dingrits-cub", amount_min = 1, amount_max = 7},
 				{name = "cage",         amount = 3},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 15,
 			tech = "dingrits"
 		},
@@ -200,12 +200,12 @@ py.autorecipes {
 				{name = "water-barrel",     amount = 5, return_barrel = true},
 				{name = "bedding",          amount = 1},
 				{name = "dingrits-food-01", amount = 1},
-			},
+			}--[[@as data.IngredientPrototype[] ]],
 			results =
 			{
 				{name = "dingrits", amount_min = 1, amount_max = 3},
 				{name = "cage",     amount = 1},
-			},
+			}--[[@as data.ProductPrototype[] ]],
 			crafting_speed = 150,
 			tech = "dingrits"
 		},

@@ -30,7 +30,7 @@ Digosaurus = {}
 ---@field state string
 ---@field ores_gained_per_trip uint
 
----@class (partial) PyAlienLifeStorage:PyPostProcessingStorage
+---@class (partial) PyAlienLifeStorage
 ---@field dig_sites {[uint]: DigSite?}
 ---@field digosaurs {[uint64]: Digosaur?}
 storage = {}
@@ -168,7 +168,7 @@ local function remove_nonfood_items_from_food_inventory(dig_site)
     if trash_slot.valid_for_read then return end
     local food_inventory = dig_site.food_inventory
     for i = 1, #food_inventory do
-        local food = food_inventory[i]
+        local food = food_inventory[i--[[@as uint]]]
         if food.valid_for_read and not Digosaurus.foods[food.name] then
             food.swap_stack(trash_slot)
             return
@@ -274,6 +274,7 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
     end
 end)
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "dino-dig-site" then return end
@@ -299,6 +300,7 @@ py.on_event(py.events.on_built(), function(event)
     Digosaurus.scan_ores(storage.dig_sites[entity.unit_number])
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "dino-dig-site" then return end
