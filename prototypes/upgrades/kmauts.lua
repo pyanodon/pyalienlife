@@ -1,4 +1,4 @@
-if data and not yafc_turd_integration then
+if data then
     for _, recipe in pairs {
         RECIPE("kmauts-cub-1"):copy(),
         RECIPE("kmauts-cub-2"):copy(),
@@ -23,7 +23,7 @@ if data and not yafc_turd_integration then
                 break
             end
         end
-        local _, amount = recipe:remove_result("barrel")
+        local _, amount = recipe:remove_result("barrel")--[[@cast amount int]]
         recipe:add_result {type = "item", name = "soaked-gel-barrel", amount = amount}
         data:extend {recipe}
     end

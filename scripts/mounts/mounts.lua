@@ -68,6 +68,7 @@ local mounts = {
     ["phadaisus"] = true,
 }
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if not entity.valid or not mounts[entity.name] then return end
@@ -84,6 +85,7 @@ py.on_event(py.events.on_built(), function(event)
     storage.mounts[entity.unit_number] = entity
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     local unit_number = entity.valid and entity.unit_number

@@ -25,7 +25,7 @@ else
     }
 end
 
-if data and not yafc_turd_integration then
+if data then
     for i, recipe in pairs {
         RECIPE("arqad-egg-1"):copy(),
         RECIPE("arqad-egg-2"):copy(),

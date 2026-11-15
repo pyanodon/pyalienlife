@@ -306,13 +306,21 @@ py.on_event(defines.events.on_ai_command_completed, function(event)
                 Oculua.go_home(oculua_data); return
             end
 
-            local stack = target.get_inventory(CHEST).find_item_stack(oculua_data.item)
-            if not stack then
+            local src_inv = target.get_inventory(CHEST)
+            local item_name = oculua_data.item
+
+            local transfer_amount = math.min(
+                src_inv.get_item_count(item_name),
+                prototypes.item[item_name].stack_size,
+                oculua_data.target_count
+            )
+            if transfer_amount == 0 then
                 Oculua.go_home(oculua_data); return
             end
 
             -- collect items
-            oculua_data.inventory[1].transfer_stack(stack, oculua_data.target_count)
+            local actual_inserted = oculua_data.inventory.insert({name = item_name, count = transfer_amount})
+            src_inv.remove({name = item_name, count = actual_inserted})
             Oculua.fire_laser_beam(oculua_data)
             Oculua.render_altmode_icon(oculua_data)
             Oculua.set_target(oculua_data, character)
@@ -384,6 +392,7 @@ function Oculua.fire_laser_beam(oculua_data)
     }
 end
 
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name == "ipod" then
@@ -403,6 +412,7 @@ py.on_event(py.events.on_built(), function(event)
     end
 end)
 
+---@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name == "ipod" then

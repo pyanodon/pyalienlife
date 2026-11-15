@@ -136,9 +136,9 @@ local expression_variables = {k=1000, K=1000, m=1000000, M=1000000, g=1000000000
 
 
 --- Parses a mathematical expression using MathExp library with predefined variables.
---- @param expr string
---- @param vars table<string, number>?
---- @return number?
+---@param expr string
+---@param vars table<string, number>?
+---@return number?
 local function parse_math_expr(expr, vars)
     if not expr or expr == "" then return nil end
 

@@ -61,7 +61,7 @@ ENTITY {
     working_sound = nil, -- TODO
     fluid_boxes = {
         {
-            volume = Biofluid.tank_size,
+            volume = 100000,
             pipe_covers = _G.pipecoverspictures(),
             pipe_connections = {
                 {flow_direction = "output", position = {0, 0}, direction = defines.direction.north, connection_category = "default"},

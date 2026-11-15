@@ -69,7 +69,7 @@ local function add_new_fish_farm(i)
     data:extend {entity}
 end
 
-if data and not yafc_turd_integration then
+if data then
     for i, recipe in pairs {
         RECIPE("breed-fish-1"):copy(),
         RECIPE("breed-fish-2"):copy(),
