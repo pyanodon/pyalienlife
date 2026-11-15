@@ -12,6 +12,7 @@ Date: ????
     - Fixed Ocula delivery logic for multi-stack requests (thanks, novaakropola!)
     - Fixed guar gum mk03 missing -100% base speed. Resolves https://github.com/pyanodon/pybugreports/issues/1637
     - Fixed TURD real speed not being localized
+    - Updated RU locale (thanks, Astorin!)
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.8
 Date: 2026-10-06
