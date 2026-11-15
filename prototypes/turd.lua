@@ -134,7 +134,7 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     if effective_speed then
         local adjusted_speed = effect.speed * 100
-        py.add_to_description(module, {"turd.adjusted-speed"}, (adjusted_speed >= 0 and "+" or "") .. tostring(adjusted_speed))
+        py.add_to_description(module, {"turd.adjusted-speed"}, (adjusted_speed >= 0 and "+" or "") .. tostring(adjusted_speed) .. "%")
     end
 
     if is_this_a_speed_module_that_effects_farm_buildings then
