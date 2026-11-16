@@ -101,52 +101,54 @@ local shadow_translations = {
 local animations = {}
 for picture_location, variant in pairs(variants) do
     animations[picture_location] = {
-        layers = {
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (variant == "alone" and "straight-base-vertical" or variant) .. ".png",
-                priority = "high",
-                width = 640 / 5,
-                height = 768 / 6,
-                frame_count = 5 * 6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.335,
-                animation_speed = 0.5
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (glow_translations[variant] or variant) .. "-glow.png",
-                priority = "high",
-                width = 640 / 5,
-                height = 768 / 6,
-                frame_count = 5 * 6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.335,
-                animation_speed = 0.5,
-                draw_as_glow = true
-            },
-            {
-                filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (shadow_translations[variant] or variant) .. "-shadow.png",
-                priority = "high",
-                width = 640 / 5,
-                height = 768 / 6,
-                frame_count = 5 * 6,
-                line_length = 5,
-                shift = {0, 0},
-                scale = 0.335,
-                animation_speed = 0.5,
-                draw_as_shadow = true
-            },
-            {
-                filename = "__core__/graphics/light-small.png",
-                priority = "high",
-                width = 150,
-                height = 150,
-                shift = {0, 0},
-                frame_count = 1,
-                repeat_count = 30,
-                draw_as_light = true,
-                tint = {0.5, 0.5, 1, 0.4}
+        {
+            layers = {
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (variant == "alone" and "straight-base-vertical" or variant) .. ".png",
+                    priority = "high",
+                    width = 640 / 5,
+                    height = 768 / 6,
+                    frame_count = 5 * 6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.5
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (glow_translations[variant] or variant) .. "-glow.png",
+                    priority = "high",
+                    width = 640 / 5,
+                    height = 768 / 6,
+                    frame_count = 5 * 6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.5,
+                    draw_as_glow = true
+                },
+                {
+                    filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-" .. (shadow_translations[variant] or variant) .. "-shadow.png",
+                    priority = "high",
+                    width = 640 / 5,
+                    height = 768 / 6,
+                    frame_count = 5 * 6,
+                    line_length = 5,
+                    shift = {0, 0},
+                    scale = 0.335,
+                    animation_speed = 0.5,
+                    draw_as_shadow = true
+                },
+                {
+                    filename = "__core__/graphics/light-small.png",
+                    priority = "high",
+                    width = 150,
+                    height = 150,
+                    shift = {0, 0},
+                    frame_count = 1,
+                    repeat_count = 30,
+                    draw_as_light = true,
+                    tint = {0.5, 0.5, 1, 0.4}
+                }
             }
         }
     }
@@ -178,7 +180,7 @@ local gap_glow = {
 }
 
 local function fix_gap(picture_location)
-    table.insert(animations[picture_location].layers, 2, gap)
+    table.insert(animations[picture_location][1].layers, 2, gap)
     --table.insert(animations[picture_location].layers, gap_glow)
 end
 

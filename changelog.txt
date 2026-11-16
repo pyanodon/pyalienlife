@@ -14,6 +14,7 @@ Date: ????
     - Fixed guar gum mk03 missing -100% base speed. Resolves https://github.com/pyanodon/pybugreports/issues/1637
     - Fixed TURD real speed not being localized
     - Updated RU locale (thanks, Astorin!)
+    - Fixed loading on Factorio 2.1.25
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.8
 Date: 2026-10-06
