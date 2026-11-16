@@ -17,7 +17,7 @@ RECIPE {
     enabled = false,
     categories = {"mixer"},
     ingredients = {
-        {type = "item",  name = "manure", amount = 8},
+        {type = "item",  name = "manure", amount = 8, ignored_by_stats = 8},
         {type = "item",  name = "guano",  amount = 8},
         {type = "fluid", name = "water",  amount = 5}
     },
@@ -107,7 +107,7 @@ RECIPE {
     enabled = false,
     categories = {"auog"},
     ingredients = {
-        {type = "item", name = "chorkok",         amount = 1},
+        {type = "item", name = "chorkok",         amount = 1, ignored_by_stats = 1},
         {type = "item", name = "workers-food-03", amount = 1},
 
     },

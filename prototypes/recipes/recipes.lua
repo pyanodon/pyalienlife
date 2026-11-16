@@ -617,7 +617,7 @@ RECIPE {
     energy_required = 10,
     ingredients = {
         {type = "item",  name = "skin",       amount = 10},
-        {type = "fluid", name = "bacteria-1", amount = 10},
+        {type = "fluid", name = "bacteria-1", amount = 10, ignored_by_stats = 10},
     },
     results = {
         {type = "fluid", name = "oleochemicals", amount = 35},
