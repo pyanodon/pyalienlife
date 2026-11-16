@@ -12,10 +12,10 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = "fluid", name = "muddy-sludge", amount = 200},
-        {type = "item",  name = "sodium-alginate",   amount = 1},
-        {type = "item",  name = "moss",              amount = 5},
-        {type = "item",  name = "wood",              amount = 5},
+        {type = "fluid", name = "muddy-sludge",    amount = 200},
+        {type = "item",  name = "sodium-alginate", amount = 1},
+        {type = "item",  name = "moss",            amount = 5},
+        {type = "item",  name = "wood",            amount = 5},
     },
     results = {
         {type = "item", name = "moss-mk02", amount = 1, independent_probability = 0.02},
@@ -38,10 +38,10 @@ RECIPE {
     enabled = true,
     energy_required = 25,
     ingredients = {
-        {type = "fluid", name = "tailings", amount = 200},
-        {type = "item",  name = "fertilizer",        amount = 10},
-        {type = "item",  name = "moss-mk02",         amount = 5},
-        {type = "item",  name = "tuuphra-seeds",     amount = 5},
+        {type = "fluid", name = "tailings",      amount = 200},
+        {type = "item",  name = "fertilizer",    amount = 10},
+        {type = "item",  name = "moss-mk02",     amount = 5},
+        {type = "item",  name = "tuuphra-seeds", amount = 5},
     },
     results = {
         {type = "item", name = "moss-mk03", amount = 1, independent_probability = 0.02},
@@ -90,7 +90,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "item",  name = "moss-mk02",           amount = 2},
+        {type = "item",  name = "moss-mk02",           amount = 2,  ignored_by_stats = 2},
         {type = "item",  name = "cdna",                amount = 1},
         {type = "item",  name = "moss-gen",            amount = 3},
         {type = "fluid", name = "liquid-manure",       amount = 50},
@@ -120,7 +120,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "item",  name = "moss-mk03",       amount = 2},
+        {type = "item",  name = "moss-mk03",       amount = 2,  ignored_by_stats = 2},
         {type = "item",  name = "cdna",            amount = 1},
         {type = "item",  name = "moss-gen",        amount = 3},
         {type = "fluid", name = "chelator",        amount = 50},
@@ -150,7 +150,7 @@ RECIPE {
     enabled = false,
     energy_required = 100,
     ingredients = {
-        {type = "item",  name = "moss-mk04",             amount = 2},
+        {type = "item",  name = "moss-mk04",             amount = 2,  ignored_by_stats = 2},
         {type = "item",  name = "cdna",                  amount = 3},
         {type = "item",  name = "moss-gen",              amount = 5},
         {type = "item",  name = "tissue-engineered-fat", amount = 2},
