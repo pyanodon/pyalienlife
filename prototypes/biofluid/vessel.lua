@@ -239,7 +239,7 @@ for cardinal, direction in pairs {["north"] = "up", ["east"] = "right", ["south"
                 height = 768 / 6,
                 frame_count = 5 * 6,
                 line_length = 5,
-				shift = {0, 0},
+                shift = {0, 0},
                 scale = 0.335,
                 animation_speed = 0.5,
                 draw_as_glow = true,
@@ -275,15 +275,15 @@ end
 
 -- graphic fix for south-facing pipe-to-ground
 table.insert(ug_pipe_integration["south"].layers, {
-	filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down.png",
-	priority = "high",
-	width = 640 / 5,
-	height = 768 / 6,
-	frame_count = 5 * 6,
-	line_length = 5,
-	shift = util.by_pixel(0, 12),
-	scale = 0.335,
-	animation_speed = 0.5
+    filename = "__pyalienlifegraphics2__/graphics/entity/vessel/vessel-to-ground-down.png",
+    priority = "high",
+    width = 640 / 5,
+    height = 768 / 6,
+    frame_count = 5 * 6,
+    line_length = 5,
+    shift = util.by_pixel(0, 12),
+    scale = 0.335,
+    animation_speed = 0.5
 })
 
 
@@ -298,7 +298,7 @@ underground_pipe.fluid_box = {
     volume = 1,
     max_pipeline_extent = 2000000, -- The radius of nauvis
     hide_connection_info = true,
-	  pipe_connections = {
+      pipe_connections = {
         { 
             direction = defines.direction.north, 
             position = {0, 0},
