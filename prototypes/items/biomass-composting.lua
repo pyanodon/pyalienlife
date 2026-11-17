@@ -520,10 +520,12 @@ for i, item in pairs(biomass_convertion) do
     RECIPE {
         type = "recipe",
         name = "biomass-" .. i,
-        categories = {"compost"},
+        category = "compost",
         enabled = false,
         hide_from_player_crafting = true,
         autotech_always_available = true,
+        hidden_in_factoriopedia = false,
+        hidden = false,
         energy_required = 3,
         ingredients = {
             {type = local_name_type, name = i, amount = item.item_amount},
@@ -536,7 +538,7 @@ for i, item in pairs(biomass_convertion) do
         subgroup = "py-alienlife-compost",
         order = i,
         localised_name = {"recipe-name.biomass-composting", tostring(item.item_amount), prototype.localised_name or {local_name_type .. "-name." .. i}}
-    }--[[@as data.RecipePrototype]]:add_unlock("compost")
+    }:add_unlock("compost")
     py.add_to_description(prototype, {"item-description.compost-amount"}, {"", tostring(math.floor(item.biomass_amount / item.item_amount * 10) / 10), " [item=biomass]"})
 
     ::continue::

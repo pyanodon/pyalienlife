@@ -158,7 +158,7 @@ end
 function P.begin_schedule(caravan_data, schedule_id, skip_eating)
     local schedule = caravan_data.schedule[schedule_id]
 
-    if not schedule then
+    if not schedule or (schedule.entity and not schedule.entity.valid) then
         ImplControl.stop_actions(caravan_data); return
     end
     if caravan_data.last_scheduled_tick and caravan_data.last_scheduled_tick + 30 > game.tick then
@@ -177,6 +177,7 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
         ImplControl.stop_actions(caravan_data); return
     end
 
+    local schedule = caravan_data.schedule[schedule_id]
     if caravan_data.fuel_inventory then
         if not skip_eating and not ImplControl.eat(caravan_data) then
             ImplControl.stop_actions(caravan_data); return
@@ -192,7 +193,7 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
         else
             ---@diagnostic disable-next-line: undefined-field
             ImplGui.add_alert(entity, Caravan.alerts.destination_destroyed)
-            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 60, 30)
+            py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 30)
             ImplControl.wander(caravan_data)
             caravan_data.retry_pathfinder = 1
             return

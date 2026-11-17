@@ -38,15 +38,19 @@ data:extend {{
     hidden = true
 }}
 
-RECIPE {
+local recipe = RECIPE {
     type = "recipe",
     name = "bioport-hidden-recipe",
     enabled = false,
     allow_inserter_overload = false,
     hidden = true,
-    ingredients = {},
+    ingredients = {
+        {type = "item", name = "gobachov", amount = data.raw.item["gobachov"].stack_size},
+        {type = "item", name = "huzu",     amount = data.raw.item["huzu"].stack_size},
+        {type = "item", name = "chorkok",  amount = data.raw.item["chorkok"].stack_size},
+    },
     results = {
-        {type = "item",  name = "guano", amount = data.raw.item["guano"].stack_size},
+        {type = "item",  name = "guano",                                              amount = data.raw.item["guano"].stack_size},
         {type = "fluid", name = mods.pyalternativeenergy and "void" or "vacuum", amount = 1},
     },
     energy_required = 100,

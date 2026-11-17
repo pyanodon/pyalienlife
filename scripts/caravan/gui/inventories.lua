@@ -35,7 +35,7 @@ local MainFrameComponents = require "main_frame"
 -- Do not show number of items when item is not stackable (e.g. deconstruction planners, caravans)
 --
 -- Won't implement(?)
--- Z (single-item transfer)
+-- Pipette
 -- Shift LMB + drag
 -- Shift RMB + drag w/ and w/o item in cursor
 -- Click sounds (https://lua-api.factorio.com/latest/prototypes/ItemPrototype.html#inventory_move_sound)
@@ -320,40 +320,6 @@ py.on_event(defines.events.on_player_cursor_stack_changed, function (event)
     player.hand_location = nil
     local caravan_data = storage.caravans[gui.tags.unit_number--[[@as int]]]
     P.update_character_inventory(player, caravan_data)
-end)
-
--- allow pipette on fuel slots to quick-grab fuel from the player inventory
--- TODO: expand to regular slots
-py.on_event("py_caravan_pipette", function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
-    local element = event.element
-    -- element meets requirements?
-    if not element or not element.name or not element.name:match("^py_caravan_fuel_inventory_slot_") then return end
-    local caravan_data = storage.caravans[event.element.tags.unit_number]
-    -- player meets requirements?
-    local main_inventory = get_inventory(player)
-    if not main_inventory or not player.is_cursor_empty() then return end
-    -- edge case (not handled): god controller/cheat mode where pipette gives you a full stack
-    local target_slot = caravan_data.fuel_inventory--[[@cast -?]][event.element.tags.slot_index]--[[@as LuaItemStack]]
-    -- fuel slot has something in it, so find that item in the player inventory
-    if target_slot.valid_for_read then
-        local _, index = main_inventory.find_item_stack(target_slot.name)
-        if index then
-            py.transfer_stack_to_cursor(player, main_inventory[index])
-        end
-    else -- otherwise find the most valuable food in the player inventory and put it into the cursor
-        local best_slot, best_value = nil, 0
-        for food_name, food_value in pairs(caravan_prototypes[caravan_data.entity.name].favorite_foods) do
-            local _, new_slot = main_inventory.find_item_stack(food_name)
-            if new_slot and food_value > best_value then
-                best_slot = new_slot
-                best_value = food_value
-            end
-        end
-        if best_value > 0 then
-            py.transfer_stack_to_cursor(player, main_inventory[best_slot])
-        end
-    end
 end)
 
 return P

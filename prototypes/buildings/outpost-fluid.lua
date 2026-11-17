@@ -4,14 +4,14 @@ RECIPE {
     type = "recipe",
     name = "outpost-fluid",
     energy_required = 1,
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     ingredients = {
         {type = "item", name = "steel-plate",    amount = 5},
         {type = "item", name = "small-parts-01", amount = 50},
         {type = "item", name = "concrete",       amount = 20},
         {type = "item", name = "glass",          amount = 5},
-        {type = "item", name = "py-tank-4000",   amount = 1}
+        {type = "item", name = "py-tank-4",   amount = 1}
     },
     results = {{type = "item", name = "outpost-fluid", amount = 1}}
 }:add_unlock("zoology")
@@ -28,6 +28,8 @@ ITEM {
 }
 
 data:extend {{
+    inventory_type = "with_filters_and_bar",
+    scale_info_icons = true,
     name = "outpost-fluid",
     type = "storage-tank",
     circuit_connector = table.deepcopy(data.raw["storage-tank"]["storage-tank"].circuit_connector), -- todo
@@ -77,7 +79,7 @@ data:extend {{
     icon_size = 64,
     fluid_box = {
         -- don't hardcode so that volume gets adjusted when "realistic" setting is on.
-        volume = data.raw["storage-tank"]["py-tank-4000"].fluid_box.volume,
+        volume = data.raw["storage-tank"]["py-tank-4"].fluid_box.volume,
         pipe_picture = {
             north = {
                 layers = {
@@ -178,6 +180,7 @@ data:extend {{
             filename = "__base__/sound/storage-tank.ogg",
             volume = 0.8
         },
+        apparent_volume = 1.5,
         max_sounds_per_prototype = 3
     },
     resistances = {

@@ -21,7 +21,7 @@ RECIPE {
         {type = "item",  name = "mukmoux-fat",       amount = 500},
         {type = "fluid", name = "hydrogen",          amount = 500},
         {type = "item",  name = "small-parts-01",    amount = 100},
-        {type = "item",  name = "py-tank-10000",     amount = 1},
+        {type = "item",  name = "py-tank-10",     amount = 1},
         {type = "item",  name = "pump",              amount = 2}
     },
     results = {{type = "item", name = "fluidflyavan", amount = 1}}

@@ -104,8 +104,8 @@ TECHNOLOGY("nexelit-mk03"):add_pack("military-science-pack")
 RECIPE("chemical-plant-mk01"):remove_unlock("filtration"):add_unlock("electric-energy-accumulators")
 RECIPE("compressor-mk01"):remove_unlock("nitrogen-mk02")
 
-RECIPE("mukmoux-fat-salt"):remove_unlock("mukmoux"):set_fields {hidden = true}
-RECIPE("bonemeal-salt"):remove_unlock("ulric"):set_fields {hidden = true}
+RECIPE("mukmoux-fat-salt"):remove_unlock("mukmoux")
+RECIPE("bonemeal-salt"):remove_unlock("ulric"):hide()
 RECIPE("fertilizer-2"):remove_unlock("basic-electronics")
 RECIPE("molten-stainless-steel"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
 RECIPE("full-molten-stainless-steel-3"):add_ingredient {type = "item", name = "cobalt-extract", amount = 1}
@@ -123,7 +123,7 @@ RECIPE("starch-2"):add_unlock("starch-mk02")
 RECIPE {
     type = "recipe",
     name = "fertilizer-5",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -141,7 +141,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "hydrogen-chloride-quartz",
-    categories = {"chemistry"},
+    category = "chemistry",
     enabled = false,
     energy_required = 3,
     ingredients = {
@@ -152,7 +152,7 @@ RECIPE {
     },
     results = {
         {type = "fluid", name = "hydrogen-chloride", amount = 100},
-        {type = "item",  name = "small-lamp",        amount = 1,  independent_probability = 0.9,    ignored_by_productivity = 1},
+        {type = "item",  name = "small-lamp",        amount = 1,  probability = 0.9,    ignored_by_productivity = 1},
         {type = "item",  name = "quartz-tube",       amount = 1,  ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     main_product = "hydrogen-chloride",
@@ -165,7 +165,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "drill-head-6",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -182,7 +182,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "drill-head-7",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -200,7 +200,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "mold",
-    categories = {"casting"},
+    category = "casting",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -215,11 +215,10 @@ RECIPE {
     order = "a"
 }:add_unlock("casting-mk02"):add_ingredient {type = "item", name = "silicon", amount = 5}:add_ingredient {type = "item", name = "clay", amount = 1}
 
-RECIPE("nexelit-mine"):remove_unlock("big-mines").hidden = true
+RECIPE("nexelit-mine"):remove_unlock("big-mines"):hide()
 data.raw["resource"]["nexelit-rock"].autoplace = nil
 data.raw["autoplace-control"]["nexelit-rock"] = nil
----@diagnostic disable-next-line: need-check-nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["nexelit-rock"] = nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["nexelit-rock"] = nil
 
-data.raw.recipe["coal-fawogae"].ingredients--[[@cast -?]][1]--[[@cast -?]].amount = 2
+data.raw.recipe["coal-fawogae"].ingredients[1].amount = 2

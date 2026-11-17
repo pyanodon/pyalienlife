@@ -39,10 +39,6 @@ function P.build_action_flow(parent, caravan_data, action, tags)
     elseif Utils.contains({"load-caravan", "unload-caravan", "load-target", "unload-target"}, action.type) then
         -- don't know why we restrict comparison here, shouldn't it be a regular dropdown?
         comparator.build_static_comparator_widgets(flow, action, tags, "item", nil, "=")
-    elseif Utils.contains({"fill-tank-until-caravan-has", "empty-tank-until-target-has"}, action.type) then
-        comparator.build_static_comparator_widgets(flow, action, tags, "fluid", nil, "≥")
-    elseif Utils.contains({"fill-tank-until-target-has", "empty-tank-until-caravan-has"}, action.type) then
-        comparator.build_static_comparator_widgets(flow, action, tags, "fluid", nil, "≤")
         -- these are interrupt-only
     elseif Utils.contains({"food-count", "caravan-item-count", "target-item-count"}, action.type) then
         local filters
@@ -61,7 +57,7 @@ function P.build_action_flow(parent, caravan_data, action, tags)
         else
             label.caption = {locale_key, {"caravan-gui.not-specified"}}
         end
-        comparator.build_static_comparator_widgets(flow, action, tags, "item", nil)
+        comparator.build_static_comparator_widgets(flow, action, tags, "item", filters)
     elseif action.type == "store-specific-food" then
         local filters = {{filter = "name", name = Caravan.foods.all}}
 

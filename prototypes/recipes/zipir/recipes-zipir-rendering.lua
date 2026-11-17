@@ -19,7 +19,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering-zipir",
-	categories = {"slaughterhouse"},
+	categories = { "slaughterhouse" },
 	subgroup = "py-alienlife-zipir",
 	order = "b",
 	crafting_speed = 30,
@@ -29,7 +29,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "zipir1", amount = INPUT_AMOUNT},
-			}--[[@as data.IngredientPrototype[] ]],
+			},
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -38,14 +38,12 @@ py.autorecipes {
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD, autotech_is_not_primary_source = true},
 				{name = "brain",           amount = BASE_BRAIN},
-			}--[[@as data.ProductPrototype[] ]],
+			},
 			crafting_speed = 30,
 			tech = "zipir",
 			name = "full-render-zipir",
-			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/zipir.png",     draw_background = true}
-			}
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-zipir.png",
+			icon_size = 64,
 		},
 		--brain zipir rendering
 		{

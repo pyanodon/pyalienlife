@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "fluidavan",
     energy_required = 50,
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     ingredients = {
         {type = "item",  name = "cocoon",               amount = 10},
@@ -12,7 +12,7 @@ RECIPE {
         {type = "item",  name = "moss-gen",             amount = 15},
         {type = "item",  name = "earth-generic-sample", amount = 1},
         {type = "fluid", name = "water-saline",         amount = 100},
-        {type = "item",  name = "py-tank-4000",         amount = 1},
+        {type = "item",  name = "py-tank-4",         amount = 1},
         {type = "item",  name = "pump",                 amount = 2}
     },
     results = {{type = "item", name = "fluidavan", amount = 1}}
@@ -32,9 +32,8 @@ ITEM {
 
 data:extend {{
     type = "unit",
-    tall = true,
     ai_settings = {do_separation = false},
-    additional_pastable_entities = {"fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "fluidflyavan", "fluidflyavan-turd", "caravan", "caravan-turd"},
+    additional_pastable_entities = {"fluidavan", "fluidavan-turd", "flyavan", "flyavan-turd", "caravan", "caravan-turd"},
     name = "fluidavan",
     can_open_gates = true,
     map_color = {1, 1, 1},
