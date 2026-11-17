@@ -61,7 +61,7 @@ if data then
         name = "cheap-retrovirus",
         categories = {"incubator"},
         ingredients = {
-            {type = "item",  name = "retrovirus", amount = 1},
+            {type = "item",  name = "retrovirus", amount = 1, ignored_by_stats = 1},
             {type = "item",  name = "biomass",    amount = 2},
             {type = "fluid", name = "hot-air",    amount = 30},
         },

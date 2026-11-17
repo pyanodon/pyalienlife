@@ -50,11 +50,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "moondrop", amount = 5},
+        {type = "item", name = "moondrop", amount = 5, ignored_by_stats = 5},
     },
     results = {
         {type = "item", name = "moondrop",       amount = 2,     ignored_by_productivity = 2, ignored_by_stats = 2},
-        {type = "item", name = "moondrop",       amount_min = 1, amount_max = 3,              independent_probability = 0.10,  ignored_by_productivity = 3, ignored_by_stats = 3},
+        {type = "item", name = "moondrop",       amount_min = 1, amount_max = 3,              independent_probability = 0.10, ignored_by_productivity = 3, ignored_by_stats = 3},
         {type = "item", name = "moondrop-seeds", amount = 7},
         {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3,              independent_probability = 0.25}
     },

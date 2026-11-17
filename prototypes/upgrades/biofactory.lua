@@ -9,7 +9,7 @@ if data then
             {type = "fluid", name = "high-distillate", amount = 100},
             {type = "fluid", name = "pitch",           amount = 50},
             {type = "fluid", name = "natural-gas",     amount = 5},
-            {type = "item",  name = "arqad-maggot",    amount = 10}
+            {type = "item",  name = "arqad-maggot",    amount = 10, ignored_by_stats = 10}
         },
         results = {
             {type = "fluid", name = "naphtha",              amount = 650},
