@@ -216,7 +216,7 @@ RECIPE {
 }:add_unlock("casting-mk02"):add_ingredient {type = "item", name = "silicon", amount = 5}:add_ingredient {type = "item", name = "clay", amount = 1}
 
 RECIPE("nexelit-mine"):remove_unlock("big-mines"):set_fields {hidden = true}
-data.raw["resource"]["nexelit-rock"]:set_fields {hidden = true, autoplace = nil}
+data.raw["resource"]["nexelit-rock"].autoplace = nil
 data.raw["autoplace-control"]["nexelit-rock"] = nil
 ---@diagnostic disable-next-line: need-check-nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["nexelit-rock"] = nil
