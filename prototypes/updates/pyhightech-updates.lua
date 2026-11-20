@@ -404,7 +404,7 @@ RECIPE("crco-alloy"):remove_ingredient("tailings-dust"):add_ingredient {type = "
 RECIPE("hotair-crco-alloy"):remove_ingredient("tailings-dust"):add_ingredient {type = "item", name = "cobalt-nx", amount = 2}
 RECIPE("raw-fiber"):remove_unlock("fertilizer"):set_fields {enabled = false}:set_fields {hidden = true}
 RECIPE("raw-fiber2"):remove_unlock("basic-electronics"):set_fields {enabled = false}:set_fields {hidden = true}
---RECIPE('raw-fiber3'):remove_unlock('basic-electronics'):set_fields {enabled = false}
+RECIPE('raw-fiber3'):set_fields {hidden = true}
 RECIPE("raw-fiber4"):remove_unlock("kicalk"):set_fields {enabled = false}:set_fields {hidden = true}
 RECIPE("dms"):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock("basic-electronics"):set_fields {hidden = true}
 RECIPE("cobalt-fluoride"):replace_ingredient("chromium", "reo")
