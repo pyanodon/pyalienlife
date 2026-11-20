@@ -57,12 +57,12 @@ RECIPE("soot-to-lead"):remove_unlock("oil-sands"):add_unlock("soot-separation")
 RECIPE("soot-to-silver"):remove_unlock("oil-sands"):add_unlock("soot-separation")
 RECIPE("soot-to-gold"):remove_unlock("oil-sands"):add_unlock("soot-separation")
 
-RECIPE("guar-separation"):remove_unlock("oil-machines-mk02")
-RECIPE("guar-01"):remove_unlock("oil-machines-mk01")
-RECIPE("guar-02"):remove_unlock("coal-processing-2")
-RECIPE("guar-03"):remove_unlock("coal-processing-2")
-RECIPE("guar-04"):remove_unlock("coal-processing-2")
-RECIPE("guar-05"):remove_unlock("fertilizer")
+RECIPE("guar-separation"):remove_unlock("oil-machines-mk02"):set_fields {hidden = true}
+RECIPE("guar-01"):remove_unlock("oil-machines-mk01"):set_fields {hidden = true}
+RECIPE("guar-02"):remove_unlock("coal-processing-2"):set_fields {hidden = true}
+RECIPE("guar-03"):remove_unlock("coal-processing-2"):set_fields {hidden = true}
+RECIPE("guar-04"):remove_unlock("coal-processing-2"):set_fields {hidden = true}
+RECIPE("guar-05"):remove_unlock("fertilizer"):set_fields {hidden = true}
 RECIPE("guar-gum"):add_unlock("guar")
 
 ITEM("guar-gum-plantation"):subgroup_order("py-alienlife-farm-buildings-mk01", "a")

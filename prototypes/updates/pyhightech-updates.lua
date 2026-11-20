@@ -399,14 +399,14 @@ RECIPE("neuroprocessor"):replace_ingredient("electronic-circuit", "pcb2"):add_in
 RECIPE("empty-neuromorphic-chip"):add_ingredient {type = "item", name = "bakelite", amount = 5}:add_ingredient {type = "item", name = "micro-fiber", amount = 4}:add_ingredient {type = "item", name = "capacitor2", amount = 5}:add_ingredient {type = "item", name = "melamine", amount = 10}:add_ingredient {type = "item", name = "paramagnetic-material", amount = 2}:add_ingredient {type = "item", name = "nylon-parts", amount = 10} --:add_ingredient({type = 'item', name = 'diamagnetic-material', amount = 4})
 RECIPE("formamide"):replace_ingredient("nitrogen", "ammonia"):replace_category("chemistry", "fbreactor")
 RECIPE("bacteria-2"):remove_unlock("biopolymer"):add_unlock("microbiology-mk04"):add_ingredient {type = "item", name = "petri-dish", amount = 3}:add_ingredient {type = "item", name = "nexelit-plate", amount = 2}:add_ingredient {type = "item", name = "flask", amount = 5}:add_ingredient {type = "item", name = "chitin", amount = 5}
-RECIPE("rendering"):remove_unlock("basic-electronics")
+RECIPE("rendering"):remove_unlock("basic-electronics"):set_fields {hidden = true}
 RECIPE("crco-alloy"):remove_ingredient("tailings-dust"):add_ingredient {type = "item", name = "cobalt-nx", amount = 2}
 RECIPE("hotair-crco-alloy"):remove_ingredient("tailings-dust"):add_ingredient {type = "item", name = "cobalt-nx", amount = 2}
-RECIPE("raw-fiber"):remove_unlock("fertilizer"):set_fields {enabled = false}
-RECIPE("raw-fiber2"):remove_unlock("basic-electronics"):set_fields {enabled = false}
---RECIPE('raw-fiber3'):remove_unlock('basic-electronics'):set_fields {enabled = false}
-RECIPE("raw-fiber4"):remove_unlock("kicalk"):set_fields {enabled = false}
-RECIPE("dms"):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock("basic-electronics")
+RECIPE("raw-fiber"):remove_unlock("fertilizer"):set_fields {enabled = false}:set_fields {hidden = true}
+RECIPE("raw-fiber2"):remove_unlock("basic-electronics"):set_fields {enabled = false}:set_fields {hidden = true}
+RECIPE('raw-fiber3'):set_fields {hidden = true}
+RECIPE("raw-fiber4"):remove_unlock("kicalk"):set_fields {enabled = false}:set_fields {hidden = true}
+RECIPE("dms"):subgroup_order("py-alienlife-cadaveric", "a"):remove_unlock("basic-electronics"):set_fields {hidden = true}
 RECIPE("cobalt-fluoride"):replace_ingredient("chromium", "reo")
 RECIPE("micro-fiber"):remove_unlock("microfibers"):add_unlock("filtration")
 RECIPE("alien-sample-02"):add_ingredient {type = "item", name = "micro-fiber", amount = 5}
@@ -437,9 +437,10 @@ RECIPE("diamagnetic-material"):replace_category("pa", "research") --:remove_unlo
 RECIPE("paramagnetic-material"):replace_category("pa", "research")
 RECIPE("myoglobin"):replace_category("hydrocyclone", "genlab")
 
-RECIPE("zipir-carcass"):remove_unlock("basic-electronics")
+RECIPE("zipir-carcass"):remove_unlock("basic-electronics"):set_fields {hidden = true}
+ITEM("zipir-carcass"):set_fields {hidden = true}
 RECIPE("capacitor-core"):add_ingredient {type = "item", name = "nano-cellulose", amount = 2}
-RECIPE("fawogae2"):remove_unlock("advanced-circuit")
+RECIPE("fawogae2"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
 --RECIPE('fiber'):remove_unlock('basic-electronics')
 --RECIPE('urea').categories = {'vrauks'}):subgroup_order('py-alienlife-auog', 'a'
 ITEM("urea"):subgroup_order("py-alienlife-auog", "a")
@@ -447,10 +448,10 @@ ITEM("mosfet"):subgroup_order("py-hightech-tier-2", "f")
 RECIPE("waste-water-urea"):subgroup_order("py-alienlife-items", "a"):remove_unlock("fluid-separation"):add_unlock("water-invertebrates-mk01")
 RECIPE("ammonia-urea"):subgroup_order("py-hightech-fluids", "a1"):remove_unlock("basic-electronics"):add_unlock("biotech-mk02")
 RECIPE("urea2"):remove_unlock("auog-2"):set_fields {hidden = true}
-RECIPE("urea"):set_fields {enabled = false}
+RECIPE("urea"):set_fields {enabled = false}:set_fields {hidden = true}
 RECIPE("mukmoux-fat2"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
 RECIPE("mukmoux-fat3"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
-RECIPE("fertilizer"):remove_unlock("basic-electronics")
+RECIPE("fertilizer"):remove_unlock("basic-electronics"):set_fields {hidden = true}
 RECIPE("advanced-circuit"):add_ingredient {type = "item", name = "battery", amount = 5}:add_ingredient {type = "item", name = "mosfet", amount = 5}
 RECIPE("processing-unit"):add_ingredient {type = "item", name = "mosfet", amount = 10}:add_ingredient {type = "item", name = "neuromorphic-chip", amount = 1}
 RECIPE("fault-current-inductor"):replace_ingredient("battery", "biobattery")
