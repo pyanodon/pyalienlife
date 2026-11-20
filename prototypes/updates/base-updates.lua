@@ -99,6 +99,9 @@ ENTITY("beacon"):set_fields {allowed_effects = {"consumption", "speed"}}
 RECIPE("car"):add_ingredient {type = "item", name = "light-armor", amount = 1}
 RECIPE("barrel").allow_productivity = false
 
+RECIPE("solar-panel"):set_fields {enabled = false, hidden = true}
+ITEM("solar-panel"):set_fields {enabled = false, hidden_in_factoriopedia = true}
+
 TECHNOLOGY("worker-robots-speed-1"):add_pack("py-science-pack-2")
 TECHNOLOGY("worker-robots-speed-3"):remove_pack("production-science-pack"):add_pack("py-science-pack-3")
 -- https://github.com/pyanodon/pybugreports/issues/608
