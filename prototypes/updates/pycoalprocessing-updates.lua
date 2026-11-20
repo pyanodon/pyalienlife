@@ -87,7 +87,7 @@ ITEM("bonemeal"):subgroup_order("py-alienlife-creature-product", "a")
 ITEM("organics"):subgroup_order("py-alienlife-items", "a")
 ITEM("mukmoux-fat"):subgroup_order("py-alienlife-creature-product", "a")
 ITEM("fawogae-substrate"):subgroup_order("py-alienlife-items", "a")
-RECIPE("fawogae"):set_fields {enabled = false}
+RECIPE("fawogae"):set_fields {enabled = false, hidden = true}
 RECIPE("log1"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):replace_category("nursery", "fwf")
 RECIPE("log2"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):replace_category("nursery", "fwf")
 RECIPE("log3"):add_ingredient {type = "item", name = "wood-seedling", amount = 3}:subgroup_order("py-alienlife-plants", "a"):replace_category("nursery", "fwf")
