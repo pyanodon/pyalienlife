@@ -438,6 +438,7 @@ RECIPE("paramagnetic-material"):replace_category("pa", "research")
 RECIPE("myoglobin"):replace_category("hydrocyclone", "genlab")
 
 RECIPE("zipir-carcass"):remove_unlock("basic-electronics"):set_fields {hidden = true}
+ITEM("zipir-carcass"):set_fields {hidden = true}
 RECIPE("capacitor-core"):add_ingredient {type = "item", name = "nano-cellulose", amount = 2}
 RECIPE("fawogae2"):remove_unlock("advanced-circuit"):set_fields {hidden = true}
 --RECIPE('fiber'):remove_unlock('basic-electronics')
