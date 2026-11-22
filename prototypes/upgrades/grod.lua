@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for _, recipe in pairs {
         RECIPE("grod-1"):copy(),
         RECIPE("grod-2"):copy(),

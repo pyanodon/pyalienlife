@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     local manure = RECIPE("manure-bacteria"):copy()
     manure.name = "manure-bacteria-fish"
     manure:add_ingredient {name = "fish-hydrolysate", type = "fluid", amount = 5}

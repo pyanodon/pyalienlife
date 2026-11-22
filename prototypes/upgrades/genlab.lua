@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     local adam = RECIPE("adam42-gen"):copy()
     adam.name = "adam42-gen-laser"
     adam:add_ingredient {name = "personal-laser-defense-equipment", amount = 1, type = "item"}

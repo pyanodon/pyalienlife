@@ -1,4 +1,6 @@
-local farm_buildings = py.mod_data.farm_buildings --[[@as table<string,AlienlifeFarmPrototype>]]
+---@diagnostic disable-next-line: assign-type-mismatch
+---@type table<string,AlienlifeFarmPrototype>
+local farm_buildings = py.mod_data.farm_buildings
 
 py.assert_type (
     farm_buildings,

@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("cadaveric-arum-1"):copy(),
         RECIPE("cadaveric-arum-2"):copy(),

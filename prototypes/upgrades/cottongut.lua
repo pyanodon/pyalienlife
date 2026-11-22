@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     --[[@type table<integer, string> ]]
     local cottongut_sciences = {"solidified-sarcorus", "paragen", "negasium", "nonconductive-phazogen", "denatured-seismite", "denatured-seismite"}
     for i, recipe in pairs {

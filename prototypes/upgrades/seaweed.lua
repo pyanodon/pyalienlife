@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for recipe, ingredient in pairs {
         [RECIPE("seaweed-crop-mk01"):copy()] = {type = "item", name = "decider-combinator", amount = 10},
         [RECIPE("seaweed-crop-mk02"):copy()] = {type = "item", name = "arithmetic-combinator", amount = 20},

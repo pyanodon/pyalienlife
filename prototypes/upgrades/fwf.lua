@@ -29,7 +29,7 @@
                           ...;%@@@@@%%:;;;;,..    Gilo97
 ]]
 
-if data then
+if data and not yafc_turd_integration then
     local fiber = RECIPE("fiber-01"):copy()
     fiber.name = "fiber-dry-storage"
     fiber.energy_required = fiber.energy_required--[[@cast -?]] * 2

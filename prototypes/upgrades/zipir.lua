@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("zipir-a-1"):copy(),
         RECIPE("zipir-a-2"):copy(),

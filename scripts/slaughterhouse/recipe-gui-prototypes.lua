@@ -1,4 +1,9 @@
-local recipe_gui = py.mod_data.recipe_gui --[[@as RecipeGUIData]]
+---@diagnostic disable-next-line: assign-type-mismatch
+---@class RecipeGUIData
+---@field subgroups {[string]: true?}
+---@field machines {[data.CraftingMachineName]: true?}
+---@field alt_icons {[string]: string?}
+local recipe_gui = py.mod_data.recipe_gui
 
 py.assert_type (
     recipe_gui,

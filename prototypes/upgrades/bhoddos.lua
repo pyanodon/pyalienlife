@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     local biomass = {"nacl-biomass", "s-biomass", "ni-biomass", "ti-biomass"}
     for i, recipe in pairs {
         RECIPE("bhoddos-1"):copy(),
@@ -83,7 +83,7 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-bhoddos.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"bhoddos-mk02", "phytomining"},
+        prerequisites = {"bhoddos-mk02", "phytomining", "efficiency-module-2"},
         unit = {
             count = 500,
             ingredients = {
