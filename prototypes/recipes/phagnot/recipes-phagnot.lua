@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "phagnot",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -19,13 +19,12 @@ RECIPE {
     results = {
         {type = "item", name = "phagnot", amount = 1},
     },
-    icons = py.composite_icon("phagnot", "phagnot-codex")
 }:add_unlock("phagnot")
 
 RECIPE {
     type = "recipe",
     name = "phagnot-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-giraffe-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -59,7 +58,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -83,7 +82,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -111,7 +110,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -130,7 +129,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phagnot-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -154,7 +153,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phagnot-mature-basic-01",
-    categories = {"phagnot"},
+    category = "phagnot",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -164,7 +163,7 @@ RECIPE {
         {type = "item", name = "fawogae",     amount = 5},
     },
     results = {
-        {type = "item", name = "phagnot",           amount = 1, independent_probability = 0.25},
+        {type = "item", name = "phagnot",           amount = 1, probability = 0.25},
         {type = "item", name = "empty-barrel-milk", amount = 1}
     },
     main_product = "phagnot",
@@ -180,7 +179,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-phagnot",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -195,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-phagnot",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

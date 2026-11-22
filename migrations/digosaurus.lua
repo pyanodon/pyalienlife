@@ -1,4 +1,3 @@
----@diagnostic disable
 storage.dig_sites = storage.dig_sites or {}
 for _, dig_data in pairs(storage.dig_sites) do
     if dig_data.powersource then

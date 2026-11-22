@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     data:extend {
         {
             type = "recipe",
@@ -11,7 +11,7 @@ if data then
             results = {
                 {type = "item", name = "pure-sand", amount = 16}
             },
-            categories = {"sponge"},
+            category = "sponge",
             subgroup = "py-alienlife-sponge",
             order = "x",
             energy_required = 4
@@ -27,7 +27,7 @@ if data then
             results = {
                 {type = "item", name = "stone-brick", amount = 9}
             },
-            categories = {"sponge"},
+            category = "sponge",
             subgroup = "py-alienlife-sponge",
             order = "x",
             energy_required = 4
@@ -43,7 +43,7 @@ if data then
             results = {
                 {type = "item", name = "rich-clay", amount = 12}
             },
-            categories = {"sponge"},
+            category = "sponge",
             subgroup = "py-alienlife-sponge",
             order = "x",
             energy_required = 4
@@ -51,7 +51,7 @@ if data then
     }
 
     local productivity = {}
-    local sponges = {"sea-sponge", "sea-sponge-mk02", "sea-sponge-mk03", "sea-sponge-mk04"}--[[@as string[] ]]
+    local sponges = {"sea-sponge", "sea-sponge-mk02", "sea-sponge-mk03", "sea-sponge-mk04"}
     for i, recipe in pairs {
         RECIPE("sea-sponge-sprouts"):copy(),
         RECIPE("sea-sponge-sprouts-2"):copy(),
@@ -60,9 +60,9 @@ if data then
     } do
         recipe.name = recipe.name .. "-flagellum"
         productivity[i] = recipe.name
-        recipe:add_result {name = sponges[i], independent_probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1}--[[@as data.ProductPrototype]]
+        recipe:add_result {name = sponges[i], probability = 0.15 + i * 0.2, type = "item", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1}
         recipe:add_ingredient {name = "limestone", type = "item", amount = 2}
-        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 1.5
+        recipe.energy_required = recipe.energy_required * 1.5
         recipe.main_product = sponges[i]
         data:extend {recipe}
     end

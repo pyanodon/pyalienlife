@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "sap-01",
-    categories = {"sap-extractor"},
+    category = "sap-extractor",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -29,7 +29,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk02-gen",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -46,7 +46,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-tree-mk02-gen",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -63,7 +63,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk02",
-    categories = {"sap-extractor"},
+    category = "sap-extractor",
     --hidden = true,
     enabled = false,
     energy_required = 80,
@@ -83,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk02",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -97,7 +97,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk03-gen",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -114,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-tree-mk03-gen",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -131,7 +131,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk03",
-    categories = {"sap-extractor"},
+    category = "sap-extractor",
     --hidden = true,
     enabled = false,
     energy_required = 80,
@@ -150,7 +150,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk03",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -164,7 +164,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk04-gen",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -181,7 +181,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-tree-mk04-gen",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -198,7 +198,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-mk04",
-    categories = {"sap-extractor"},
+    category = "sap-extractor",
     --hidden = true,
     enabled = false,
     energy_required = 80,
@@ -216,7 +216,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sap-seeds-mk04",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {

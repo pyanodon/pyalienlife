@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     local biomass = {"nacl-biomass", "s-biomass", "ni-biomass", "ti-biomass"}
     for i, recipe in pairs {
         RECIPE("bhoddos-1"):copy(),
@@ -7,7 +7,7 @@ if data then
         RECIPE("bhoddos-4"):copy(),
     } do
         recipe.name = recipe.name .. "-meltdown"
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.3333)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.3333)
         recipe:remove_ingredient("fungal-substrate")
         recipe:remove_ingredient("fungal-substrate-02")
         recipe:remove_ingredient("fungal-substrate-03")
@@ -61,7 +61,7 @@ if data then
     biomass_sporopollenin.icon_size = nil
     data:extend {biomass_sporopollenin}
     table.insert(
-        data.raw.technology["microfilters-mk02"].effects--[[@cast -?]],
+        data.raw.technology["microfilters-mk02"].effects,
         {
             type = "change-recipe-productivity",
             recipe = "bhoddos-spore-upgraded",
@@ -83,7 +83,7 @@ return {
         icon = "__pyalienlifegraphics3__/graphics/technology/updates/u-bhoddos.png",
         icon_size = 128,
         order = "c-a",
-        prerequisites = {"bhoddos-mk02", "phytomining"},
+        prerequisites = {"bhoddos-mk02", "phytomining", "efficiency-module-2"},
         unit = {
             count = 500,
             ingredients = {

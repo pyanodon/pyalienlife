@@ -1,4 +1,3 @@
----@diagnostic disable
 for _, interrupt in pairs(storage.interrupts or {}) do
     if not interrupt.conditions_operators then
         interrupt.conditions_operators = {}

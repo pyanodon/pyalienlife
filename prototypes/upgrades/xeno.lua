@@ -1,11 +1,11 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("caged-xeno-1"):copy(),
         RECIPE("caged-xeno-2"):copy(),
         RECIPE("caged-xeno-3"):copy(),
         RECIPE("caged-xeno-4"):copy(),
     } do
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] / 2)
+        recipe.energy_required = math.ceil(recipe.energy_required / 2)
         recipe.name = recipe.name .. "-dna-polymerase"
         if i == 1 or i == 3 then
             recipe:add_result {name = "dna-polymerase", amount = i * 20, type = "item"}
@@ -20,7 +20,7 @@ if data then
         name = "xeno-rc-breeding",
         enabled = false,
         energy_required = 150,
-        categories = {"rc"},
+        category = "rc",
         main_product = "caged-xeno",
         ingredients = {
             {type = "item", name = "water-barrel",   amount = 6},

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "fish-emulsion",
-    categories = {"compressor"},
+    category = "compressor",
     enabled = false,
     energy_required = 5,
     ingredients = {

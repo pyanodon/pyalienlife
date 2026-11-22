@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("xyhiphoe-1"):copy(),
         RECIPE("xyhiphoe-2"):copy(),
@@ -27,7 +27,7 @@ if data then
         recipe:add_ingredient {name = "redhot-coke", amount = 1, type = "item"}
         recipe:add_result {type = "item", name = "coke", amount = 1}
 
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 8 / 14)
+        recipe.energy_required = math.ceil(recipe.energy_required * 8 / 14)
         data:extend {recipe}
     end
 
@@ -46,7 +46,7 @@ if data then
         },
         main_product = "xyhiphoe",
         enabled = false,
-        categories = {"xyhiphoe"},
+        category = "xyhiphoe",
         energy_required = 140
     }}
 

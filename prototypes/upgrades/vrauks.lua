@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for _, recipe in pairs {
         RECIPE("vrauks-1"):copy(),
         RECIPE("vrauks-2"):copy(),
@@ -33,7 +33,7 @@ if data then
     data:extend {{
         type = "recipe",
         name = "ammonia-from-cyanic",
-        categories = {"distilator"},
+        category = "distilator",
         enabled = false,
         energy_required = 24,
         ingredients = {

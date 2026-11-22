@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "arthurian",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -14,19 +14,18 @@ RECIPE {
         {type = "item",  name = "cdna",                amount = 5},
         {type = "item",  name = "arthurian-codex",     amount = 2},
         {type = "item",  name = "earth-lizard-sample", amount = 1}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "artificial-blood",    amount = 100},
         {type = "fluid", name = "fetal-serum",         amount = 100},
+        {type = "fluid", name = "artificial-blood",    amount = 100},
     },
     results = {
         {type = "item", name = "arthurian", amount = 1},
     },
-    icons = py.composite_icon("arthurian", "arthurian-codex")
 }:add_unlock("arthurian")
 
 RECIPE {
     type = "recipe",
     name = "arthurian-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -43,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-lizard-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -60,7 +59,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -82,7 +81,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -114,7 +113,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "arthurian-grow-01",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 64,
     ingredients = {
@@ -135,7 +134,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arthurian-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -154,7 +153,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'arthurian-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -180,7 +179,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-arthurian",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -195,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-arthurian",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

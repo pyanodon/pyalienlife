@@ -5,7 +5,7 @@ end
 RECIPE {
     type = "recipe",
     name = "crane-mk01",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     subgroup = "inserter",
     order = "i[crane-mk01]",
     energy_required = 1,
@@ -29,7 +29,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crane-mk02",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     subgroup = "inserter",
     order = "i[crane-mk02]",
     energy_required = 1,
@@ -53,7 +53,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crane-mk03",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     subgroup = "inserter",
     order = "i[crane-mk03]",
     energy_required = 1,
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "crane-mk04",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     subgroup = "inserter",
     order = "i[crane-mk04]",
     energy_required = 1,
@@ -118,7 +118,7 @@ for i = 1, 4 do
         order = "i[" .. name .. "]",
         stack_size = 10,
         place_result = name,
-    }--[[@as data.ItemPrototype]]
+    }
 
     ENTITY {
         type = "inserter",
@@ -193,5 +193,8 @@ for i = 1, 4 do
                 tint = py.tints[i]
             }
         },
-    }--[[@as data.EntityPrototype]]
+    }
+    if feature_flags.belt_stacking then
+        data.raw.inserter[name].max_belt_stack_size = 10000
+    end
 end

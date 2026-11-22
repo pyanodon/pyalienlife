@@ -1,10 +1,10 @@
-if data then
+if data and not yafc_turd_integration then
     local recipe = RECIPE("yotoi-seeds"):copy()
     recipe.name = "yotoi-seeds-cold"
     recipe:add_ingredient {type = "fluid", name = "cold-air", amount = 30}
     recipe:add_ingredient {type = "item", name = "yotoi-leaves", amount = 1}
     recipe:multiply_result_amount("yotoi-seeds", 3)
-    recipe.energy_required = recipe.energy_required--[[@cast -?]] * 4
+    recipe.energy_required = recipe.energy_required * 4
     data:extend {recipe}
 
     for i, recipe in pairs {
@@ -35,7 +35,7 @@ if data then
             energy_required = 40,
             results = {{type = "item", name = "nutrient", amount = 1}},
             name = "nutrient",
-            categories = {"electronic"},
+            category = "electronic",
             ingredients = {
                 {type = "fluid", name = "manure-bacteria",       amount = 100},
                 {type = "fluid", name = "etching",               amount = 100},
@@ -59,7 +59,7 @@ if data then
         RECIPE("yotoi-fruit-4"):copy(),
     } do
         recipe.name = recipe.name .. "-nutrient"
-        local _, amount = recipe:remove_ingredient("fertilizer")--[[@cast amount int]]
+        local _, amount = recipe:remove_ingredient("fertilizer")
         recipe:add_result {type = "item", name = "fertilizer", amount = amount}
         recipe:add_result_amount("yotoi", 1)
         recipe:add_result_amount("yotoi-fruit", 1)

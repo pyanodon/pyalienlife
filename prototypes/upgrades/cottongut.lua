@@ -1,5 +1,4 @@
-if data then
-    --[[@type table<integer, string> ]]
+if data and not yafc_turd_integration then
     local cottongut_sciences = {"solidified-sarcorus", "paragen", "negasium", "nonconductive-phazogen", "denatured-seismite", "denatured-seismite"}
     for i, recipe in pairs {
         RECIPE("cottongut-science-red-seeds"):copy(),
@@ -11,7 +10,7 @@ if data then
     } do
         recipe.name = recipe.name .. "-80-20"
         recipe:add_result_amount(cottongut_sciences[i], 1)
-        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 5
+        recipe.energy_required = recipe.energy_required * 5
         data:extend {recipe}
     end
 
@@ -20,7 +19,7 @@ if data then
         name = "cottongut-food-03",
         enabled = false,
         energy_required = 10,
-        categories = {"crafting-with-fluid"},
+        category = "crafting-with-fluid",
         ingredients = {
             {type = "item",  name = "bones",             amount = 10},
             {type = "item",  name = "moondrop",          amount = 1},
@@ -43,11 +42,10 @@ if data then
         recipe.name = recipe.name .. "-cannibal"
         recipe:add_ingredient {name = "cottongut-food-03", amount = 1, type = "item"}
         recipe:multiply_result_amount("cottongut", 1.5)
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.85)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.85)
         data:extend {recipe}
     end
 
-    --[[@type table<integer, string> ]]
     local metals = {"high-grade-lead", "reduced-chromium", "reduced-silver", "high-grade-quartz"}
     for i, recipe in pairs {
         RECIPE("prandium-lab-mk01"):copy(),
@@ -56,7 +54,7 @@ if data then
         RECIPE("prandium-lab-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-ultrasound"
-        recipe:add_ingredient {name = metals[i], amount = 80, type = "item"}--[[@as data.IngredientPrototype]]
+        recipe:add_ingredient {name = metals[i], amount = 80, type = "item"}
         data:extend {recipe}
     end
 end

@@ -1,5 +1,5 @@
 if data and not yafc_turd_integration then
-    RECIPE("energy-drinkb"):replace_category("mixer", "chemistry")
+    data.raw.recipe["energy-drinkb"].category = "chemistry"
 
     for i, recipe in pairs {
         RECIPE("Phadai-Dance-Dance-Revolution-1"):copy(),

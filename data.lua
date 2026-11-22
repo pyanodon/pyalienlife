@@ -7,7 +7,6 @@ require "prototypes/recipe-categories"
 require "prototypes/fuel-categories"
 require "prototypes/module-categories"
 require "prototypes/circuit-connector-definitions"
-require "prototypes/keyboard-shortcuts"
 
 -- Increase empty barrel stack size in order to prevent inserter deadlocks. https://github.com/pyanodon/pybugreports/issues/314
 data.raw.item["barrel"].stack_size = 50
@@ -387,16 +386,13 @@ require "prototypes/creatures/caravan"
 require "prototypes/creatures/flying-caravan"
 require "prototypes/creatures/nuka-caravan"
 require "prototypes/creatures/fluid-caravan"
-require "prototypes/creatures/fluid-flying-caravan"
 data.raw.unit["caravan"].affected_by_tiles = false
 data.raw.unit["fluidavan"].affected_by_tiles = false
 data.raw.unit["flyavan"].affected_by_tiles = false
-data.raw.unit["fluidflyavan"].affected_by_tiles = false
 data.raw.unit["nukavan"].affected_by_tiles = false
 require "prototypes/buildings/outpost-fluid"
 require "prototypes/buildings/outpost"
 require "prototypes/buildings/outpost-aerial"
-require "prototypes/buildings/outpost-aerial-fluid"
 require "prototypes/creatures/digosaurus"
 require "prototypes/creatures/thikats"
 require "prototypes/creatures/work-o-dile"
@@ -407,6 +403,8 @@ require "prototypes/creatures/phadaisus"
 require "prototypes/creatures/ocula"
 require "prototypes/creatures/ulric-man"
 
+Biofluid = {}
+require "scripts.biofluid.biofluid-prototypes"
 require "prototypes/biofluid/gobachov"
 require "prototypes/biofluid/huzu"
 require "prototypes/biofluid/chorkok"
@@ -714,13 +712,5 @@ data.raw["utility-constants"].default.main_menu_background_image_location = "__p
 --sprities
 require "prototypes/sprites/sprites"
 --require 'prototypes/ores/fake-plants'
-
---mod-data
--- require "prototypes/mod-data/caravans"
-require "prototypes/mod-data/digosaurus"
-require "prototypes/mod-data/farming"
-require "prototypes/mod-data/recipe-gui"
-require "prototypes/mod-data/smart-farm"
-require "prototypes/mod-data/biofluid"
 
 data.raw.fluid["bio-oil"].fuel_value = "0.8MJ"

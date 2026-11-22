@@ -47,7 +47,6 @@ ENTITY {
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"zungror"},
-    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "zungror-lair-mk01"),
     energy_source = {
         type = "electric",
@@ -57,7 +56,6 @@ ENTITY {
         },
     },
     energy_usage = "4000kW",
-    tall = true,
     graphics_set = {
         working_visualisations = {
             {
@@ -244,5 +242,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics3__/sounds/zungror-lair.ogg", volume = 0.6},
         idle_sound = {filename = "__pyalienlifegraphics3__/sounds/zungror-lair.ogg", volume = 0.25},
+        apparent_volume = 2.5
     }
 }

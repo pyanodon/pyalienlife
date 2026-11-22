@@ -4,7 +4,7 @@ RECIPE {
     type = "recipe",
     name = "outpost-aerial",
     energy_required = 50,
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     ingredients = {
         {type = "item", name = "stainless-steel",      amount = 15},
@@ -33,6 +33,7 @@ ITEM {
 
 data:extend {{
     ---@diagnostic disable-next-line: assign-type-mismatch
+    scale_info_icons = true,
     name = "outpost-aerial",
     type = "container",
     circuit_connector = table.deepcopy(data.raw.container["steel-chest"].circuit_connector), -- todo

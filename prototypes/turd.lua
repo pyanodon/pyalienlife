@@ -96,9 +96,10 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     local effective_speed
 
-    local is_this_a_speed_module_that_effects_farm_buildings = mk1--[[@cast -?]].crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
+    local is_this_a_speed_module_that_effects_farm_buildings = mk1.crafting_speed ~= 1 and tech_upgrade.module_category and tech_upgrade.affected_entities and effect.speed and effect.speed ~= 0
     if is_this_a_speed_module_that_effects_farm_buildings then
-        effective_speed = mk1_module_slots--[[@cast -?]] * effect.speed
+        local desired_mk1_speed = mk1.crafting_speed * (mk1_module_slots + 1)
+        effective_speed = (desired_mk1_speed / mk1.crafting_speed) * effect.speed
     end
 
     local module = {
@@ -134,7 +135,8 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
 
     if effective_speed then
         local adjusted_speed = effect.speed * 100
-        py.add_to_description(module, {"turd.adjusted-speed"}, (adjusted_speed >= 0 and "+" or "") .. tostring(adjusted_speed) .. "%")
+        if adjusted_speed >= 0 then adjusted_speed = "+" .. adjusted_speed end
+        py.add_to_description("module", module, {"turd.adjusted-speed", tostring(adjusted_speed)})
     end
 
     if is_this_a_speed_module_that_effects_farm_buildings then
@@ -144,7 +146,9 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
             module.name = module.name .. "-mk0" .. i
             module.tier = i
             if i ~= 1 and entity.module_slots and entity.module_slots ~= 0 then
-                module.effect.speed = effect.speed * entity.module_slots * i
+                local module_slots = entity.module_slots
+                local desired_speed = entity.crafting_speed * (module_slots + 1 / i) * i
+                module.effect.speed = (desired_speed / entity.crafting_speed) * effect.speed
             end
             if i ~= 1 then
                 module.localised_name = {"", {"technology-name." .. sub_tech.name}, " MK0" .. i}
@@ -156,9 +160,10 @@ local function build_module_effects_turd(tech_upgrade, sub_tech, effect)
     end
 
     -- https://github.com/pyanodon/pybugreports/issues/809
+    local crafting_categories = table.invert(mk1.crafting_categories or {})
     if effect.productivity and effect.productivity ~= 0 then
         for _, recipe in pairs(data.raw.recipe) do
-            if not recipe.allow_productivity and RECIPE(recipe.name):has_categories(mk1--[[@cast -?]].crafting_categories) then
+            if not recipe.allow_productivity and recipe.category and crafting_categories[recipe.category] then
                 recipe.allow_productivity = true
             end
         end
@@ -195,12 +200,12 @@ local function build_tech_upgrade(tech_upgrade)
             if effect.type == "module-effects" then
                 build_module_effects_turd(tech_upgrade, sub_tech, effect)
             elseif effect.type == "unlock-recipe" and not effect.also_unlocked_by_techs and data.raw.recipe[effect.recipe] and not recipes_with_turd_description[effect.recipe] then
-                py.add_to_description(data.raw.recipe[effect.recipe], nil, {"turd.font", {"turd.recipe"}})
+                py.add_to_description("recipe", data.raw.recipe[effect.recipe], {"turd.font", {"turd.recipe"}})
                 recipes_with_turd_description[effect.recipe] = true
             elseif effect.type == "recipe-replacement" and data.raw.recipe[effect.new] then
-                py.add_to_description(data.raw.recipe[effect.new], nil, {"turd.font", {"turd.recipe-replacement"}})
+                py.add_to_description("recipe", data.raw.recipe[effect.new], {"turd.font", {"turd.recipe-replacement"}})
                 local recipe = data.raw.recipe[effect.new]
-                local icon_base = recipe and RECIPE(recipe.name):get_icons()
+                local icon_base = recipe and recipe:get_icons()
                 if icon_base then
                     -- Combine the base icon with our overlay
                     recipe.icons = util.combine_icons(icon_base, {{
@@ -249,131 +254,38 @@ local function build_tech_upgrade(tech_upgrade)
         prerequisites = master_tech.prerequisites,
         effects = effects,
         unit = master_tech.unit,
+        is_turd = true,
         localised_description = {"", {"turd.font", {"turd.tech"}}, "\n", {"turd.tech-2", tostring(#tech_upgrade.sub_techs)}}
     }
 end
 
-if helpers.stage == "prototype" then
+if data and not yafc_turd_integration then
     for _, tech_upgrade in pairs(tech_upgrades) do build_tech_upgrade(tech_upgrade) end
-end
-
-local indexed_tech_upgrades = {}
-local farm_building_tiers = {}
-local turd_machines = {}
-for _, upgrade in pairs(tech_upgrades) do
-    local indexed_sub_techs = {}
-    for _, sub_tech in pairs(upgrade.sub_techs) do
-        indexed_sub_techs[sub_tech.name] = sub_tech
-        for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
-            if effect.type == "machine-replacement" then
-                turd_machines[effect.new] = effect.old
-            end
-        end
-    end
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    upgrade.sub_techs = indexed_sub_techs
-
-    indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
-
-    local indexed_affected_entities = {}
-    for i, affected_entity in pairs(upgrade.affected_entities) do
-        indexed_affected_entities[affected_entity] = i
-        if upgrade.module_category then farm_building_tiers[affected_entity] = i end
-    end
-    ---@diagnostic disable-next-line: assign-type-mismatch
-    upgrade.affected_entities = indexed_affected_entities
-end
-
-if helpers.stage == "prototype" then
-    py.yafc_integrations.pyalienlife_turds = function()
-        py.log.debug("Improve TURD selection")
-
-        ITEM {
-            type = "item",
-            name = "hidden-beacon-turd",
-            icon = data.raw["beacon"]["hidden-beacon-turd"].icon,
-            icon_size = data.raw["beacon"]["hidden-beacon-turd"].icon_size,
-            place_result = "hidden-beacon-turd"
-        }
-        RECIPE {
-            type = "recipe",
-            name = "hidden-beacon-turd",
-            ingredients = {},
-            results = {{type = "item", name = "hidden-beacon-turd", amount = 1}}
-        }
-
-        for _, tech_upgrade in pairs(indexed_tech_upgrades) do
-            local master_tech = tech_upgrade.master_tech
-            for _, tech in pairs(tech_upgrade.sub_techs) do
-                local effects = {}
-                for _, effect in pairs(tech.effects) do
-                    if effect.type == "module-effects" then
-                        local modules = {}
-                        if data.raw.module[tech.name .. "-module"] then
-                            table.insert(modules, tech.name .. "-module")
-                        else
-                            for i, entity in pairs(tech_upgrade.affected_entities or {}) do
-                                table.insert(modules, tech.name .. "-module-mk0" .. i)
-                            end
-                        end
-                        for _, module in pairs(modules) do
-                            RECIPE {
-                                type = "recipe",
-                                name = module,
-                                enabled = false,
-                                ingredients = {},
-                                result = module
-                            }
-                            table.insert(effects, {
-                                type = "unlock-recipe",
-                                recipe = module
-                            })
-                        end
-                    elseif effect.type == "unlock-recipe" then
-                        table.insert(effects, {
-                            type = "unlock-recipe",
-                            recipe = effect.recipe
-                        })
-                    elseif effect.type == "recipe-replacement" then
-                        table.insert(effects, {
-                            type = "unlock-recipe",
-                            recipe = effect.new
-                        })
-                    end
+else
+    local indexed_tech_upgrades = {}
+    local farm_building_tiers = {}
+    local turd_machines = {}
+    for _, upgrade in pairs(tech_upgrades) do
+        local indexed_sub_techs = {}
+        for _, sub_tech in pairs(upgrade.sub_techs) do
+            indexed_sub_techs[sub_tech.name] = sub_tech
+            for _, effect in pairs(type(sub_tech.effects) == "table" and sub_tech.effects or {}) do
+                if effect.type == "machine-replacement" then
+                    turd_machines[effect.new] = effect.old
                 end
-                TECHNOLOGY {
-                    type = "technology",
-                    name = "turd-select-" .. tech.name,
-                    localised_name = {"", {"turd.select"}, " ", {"technology-name." .. tech.name}},
-                    icon = tech.icon,
-                    icon_size = tech.icon_size,
-                    order = tech.order,
-                    prerequisites = {},
-                    effects = {},
-                    enabled = false,
-                    unit = {
-                        count = 1,
-                        ingredients = {},
-                        time = 60
-                    }
-                }
-                TECHNOLOGY {
-                    type = "technology",
-                    name = tech.name,
-                    icon = tech.icon,
-                    icon_size = tech.icon_size,
-                    order = tech.order,
-                    prerequisites = {master_tech.name, "turd-select-" .. tech.name},
-                    effects = effects,
-                    unit = {
-                        count = 1,
-                        ingredients = {},
-                        time = 60
-                    }
-                }
             end
         end
-    end
-end
+        upgrade.sub_techs = indexed_sub_techs
 
-return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
+        indexed_tech_upgrades[upgrade.master_tech.name] = upgrade
+
+        local indexed_affected_entities = {}
+        for i, affected_entity in pairs(upgrade.affected_entities) do
+            indexed_affected_entities[affected_entity] = i
+            if upgrade.module_category then farm_building_tiers[affected_entity] = i end
+        end
+        upgrade.affected_entities = indexed_affected_entities
+    end
+
+    return {indexed_tech_upgrades, farm_building_tiers, turd_machines}
+end

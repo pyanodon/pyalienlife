@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for _, recipe in pairs {
         RECIPE("moondrop-1"):copy(),
         RECIPE("moondrop-2"):copy(),
@@ -9,7 +9,7 @@ if data then
         recipe.name = recipe.name .. "-cu"
         recipe:add_ingredient {name = "copper-ore", amount = 10, type = "item"}
         recipe:multiply_result_amount("moondrop", 2)
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.5)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.5)
         recipe:remove_ingredient("hydrogen")
         recipe:remove_ingredient("biomass")
         recipe:remove_ingredient("fertilizer")
@@ -29,9 +29,9 @@ if data then
         results = {
             {type = "fluid", amount = 60, name = "methane"},
             {type = "fluid", amount = 40, name = "oxygen"},
-            {type = "item",  amount = 1,  name = "small-lamp", independent_probability = 0.95, ignored_by_productivity = 1},
+            {type = "item",  amount = 1,  name = "small-lamp", probability = 0.95, ignored_by_productivity = 1},
         },
-        categories = {"moon"},
+        category = "moon",
         enabled = false,
         type = "recipe",
         main_product = "methane"
@@ -42,7 +42,7 @@ if data then
         results = {{type = "fluid", amount = 200, name = "carbon-dioxide", fluidbox_index = 1}},
         energy_required = 5,
         ingredients = {},
-        categories = {"moon"},
+        category = "moon",
         enabled = false,
         type = "recipe"
     }}

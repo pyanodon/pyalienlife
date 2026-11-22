@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "moondrop-sample",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -19,13 +19,12 @@ RECIPE {
     results = {
         {type = "item", name = "moondrop", amount = 4},
     },
-    icons = py.composite_icon("moondrop", "moondrop-codex")
 }:add_unlock("moondrop")
 
 RECIPE {
     type = "recipe",
     name = "moondrop-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -46,7 +45,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moondrop-seeds",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -54,9 +53,9 @@ RECIPE {
     },
     results = {
         {type = "item", name = "moondrop",       amount = 2,     ignored_by_productivity = 2, ignored_by_stats = 2},
-        {type = "item", name = "moondrop",       amount_min = 1, amount_max = 3,              independent_probability = 0.10,  ignored_by_productivity = 3, ignored_by_stats = 3},
+        {type = "item", name = "moondrop",       amount_min = 1, amount_max = 3,              probability = 0.10,  ignored_by_productivity = 3, ignored_by_stats = 3},
         {type = "item", name = "moondrop-seeds", amount = 7},
-        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3,              independent_probability = 0.25}
+        {type = "item", name = "moondrop-seeds", amount_min = 1, amount_max = 3,              probability = 0.25}
     },
     main_product = "moondrop-seeds",
 }:add_unlock("moondrop")

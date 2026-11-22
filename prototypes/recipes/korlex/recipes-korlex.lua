@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "korlex",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -15,19 +15,18 @@ RECIPE {
         {type = "item",  name = "korlex-codex",     amount = 1},
         {type = "item",  name = "fish",             amount = 5},
         {type = "item",  name = "earth-cow-sample", amount = 3}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "artificial-blood", amount = 100},
         {type = "fluid", name = "fetal-serum",      amount = 100},
+        {type = "fluid", name = "artificial-blood", amount = 100},
     },
     results = {
         {type = "item", name = "korlex", amount = 1},
     },
-    icons = py.composite_icon("korlex", "korlex-codex")
 }:add_unlock("korlex")
 
 RECIPE {
     type = "recipe",
     name = "korlex-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -45,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -68,7 +67,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "korlex-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -99,7 +98,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'korlex-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -118,7 +117,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'korlex-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -147,7 +146,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-korlex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -162,7 +161,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-korlex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

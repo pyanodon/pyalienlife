@@ -46,7 +46,6 @@ ENTITY {
     module_slots = MODULE_SLOTS,
     allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"phadai"},
-    effect_receiver = {base_effect = {speed = -1}, speed_limits = {low = -0.9999}},
     crafting_speed = py.farm_speed_derived(MODULE_SLOTS, "phadai-enclosure-mk01"),
     energy_source = {
         type = "electric",
@@ -217,5 +216,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/phadai-enclosure.ogg", volume = 0.55},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/phadai-out.ogg", volume = 0.9},
+        apparent_volume = 1.2
     }
 }

@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     data:extend {
         {
             type = "item",
@@ -12,7 +12,7 @@ if data then
             type = "recipe",
             name = "saddle",
             energy_required = 4,
-            categories = {"crafting-with-fluid"},
+            category = "crafting-with-fluid",
             enabled = false,
             ingredients = {
                 {name = "skin",          amount = 4,   type = "item"},
@@ -25,7 +25,7 @@ if data then
             type = "recipe",
             name = "saddle-b",
             energy_required = 4,
-            categories = {"crafting-with-fluid"},
+            category = "crafting-with-fluid",
             enabled = false,
             ingredients = {
                 {name = "skin",        amount = 4, type = "item"},
@@ -39,7 +39,7 @@ if data then
             name = "noooo-dont-turn-that-horse-into-glue",
             energy_required = 8,
             enabled = false,
-            categories = {"impact-crusher"},
+            category = "impact-crusher",
             ingredients = {
                 {name = "caged-ulric", amount = 1, type = "item"},
                 {name = "collagen",    amount = 1, type = "item"},

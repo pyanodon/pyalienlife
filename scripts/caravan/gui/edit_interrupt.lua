@@ -1,7 +1,3 @@
----@namespace PyAlienLife
----@type PyAlienLifeStorage
-storage = storage --[[@as PyAlienLifeStorage]]
-
 local InterruptConditionsGui = require "__pyalienlife__/scripts/caravan/gui/interrupt_conditions"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local ActionGui = require "__pyalienlife__/scripts/caravan/gui/actions"
@@ -10,7 +6,7 @@ local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prot
 local P = {}
 
 function P.build_main_frame(parent, fallback_location)
-    local frame = parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
+    local frame =  parent.add {type = "frame", name = "edit_interrupt_gui", direction = "vertical"}
     -- values copied from vanilla edit_interrupt frame
     frame.style.maximal_height = 1290
     Utils.restore_gui_location(frame, fallback_location)
@@ -65,7 +61,6 @@ function P.build_subheader_frame(parent)
     -- work out how many caravans have this interrupt and store in the element tags for use in on_click
     local relevant_caravans = caravans_with_interrupt(edited_interrupt.name)
     flow.add {type = "label", name = "py_interrupt_count_label", caption = {"caravan-gui.interrupt-count", table_size(relevant_caravans)}, style = "clickable_squashable_label", tags = {name = edited_interrupt.name, ids = relevant_caravans}}.style.horizontal_align = "right"
-    flow.add {type = "sprite-button", name = "py_duplicate_interrupt_button", style = "tool_button", sprite = "utility/copy", tooltip = {"caravan-gui.duplicate-interrupt"}}
     -- handle deletion
     flow.add {type = "label", visible = false, name = "py_delete_interrupt_confirm", caption = {"caravan-gui.confirm-deletion"}}
     flow.add {type = "sprite-button", name = "py_delete_interrupt_button", style = "tool_button_red", sprite = "utility/trash", tooltip = {"caravan-gui.delete-interrupt"}, tags = {interrupt_name = edited_interrupt.name}}
@@ -83,11 +78,11 @@ function P.build_conditions_operators_list(parent)
     flow.style.width = 100
     flow.style.horizontal_align = "right"
     flow.style.vertical_spacing = 4
-    flow.style.top_margin = 40
+    flow.style.top_margin = 40 
 
     local operators = storage.edited_interrupts[parent.player_index].conditions_operators
 
-    local has_both_operators = #operators > 0 and table.any(operators, function(o) return o ~= operators[1] end)
+    local has_both_operators = #operators > 0 and table.any(operators, function (o) return o ~= operators[1] end)
 
     for i = 1, #operators do
         local tags = {condition_operator_id = i}
@@ -96,7 +91,7 @@ function P.build_conditions_operators_list(parent)
 end
 
 function P.build_add_interrupt_condition_dropdown(parent)
-    local conditions = Caravan.valid_actions["interrupt-condition"]--[[@as string[] ]]
+    local conditions = Caravan.valid_actions["interrupt-condition"]
     conditions = table.map(conditions, function(v) return {"caravan-actions." .. v, v} end)
 
     table.insert(conditions, "+ Add interrupt condition")
@@ -131,7 +126,6 @@ function P.build_conditions_pane(parent)
     -- This is 400 maximum width by default (inherited from style), we need it a bit wider
     pane.style.width = 500
     pane.style.natural_width = 500
-    pane.style.minimal_height = 90
 
     pane.style.vertically_stretchable = false
     P.build_conditions_flow(pane)
@@ -206,7 +200,6 @@ function P.build_targets_pane(parent)
     -- This is 400 maximum width by default (inherited from style), we need it a bit wider
     pane.style.width = 500
     pane.style.natural_width = 500
-    pane.style.minimal_height = 90
 
     pane.style.vertically_stretchable = false
     P.build_targets_flow(pane)
@@ -264,6 +257,7 @@ function P.update_conditions_pane(player)
     P.build_conditions_flow(conditions_pane)
 end
 
+
 function P.update_targets_pane(player)
     local gui = player.gui.screen.edit_interrupt_gui
     if not gui then return end
@@ -274,12 +268,12 @@ function P.update_targets_pane(player)
     P.build_targets_flow(targets_pane)
 end
 
-py.on_event(defines.events.on_gui_click, function(event)
+py.on_event(defines.events.on_gui_click, function (event)
     if not event.element.valid then return end
     -- do not destroy the frame right after creating it
     if event.element.name == "py_caravan_interrupt_edit_button" then return end
 
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
 
     local gui = player.gui.screen.edit_interrupt_gui
     if not gui then return end
@@ -307,10 +301,10 @@ local function redraw_alert(player, entity, alert_name)
         true
     )
 end
--- register the func if necessary
-py.register_delayed_function("draw_alert_with_duration", redraw_alert)
 --- Draws an alert for 10s * cycles
 local function draw_alert_with_duration(player, entity, alert_name, cycles)
+    -- register the func if necessary
+    py.on_tick_funcs["draw_alert_with_duration"] = redraw_alert
     local args = {player, entity, alert_name}
     redraw_alert(table.unpack(args)) -- initial 10s
     for i = 1, cycles - 1 do         -- refresh every 10s (600ticks) after
@@ -326,7 +320,7 @@ gui_events[defines.events.on_gui_click]["py_interrupt_count_label"] = function(e
     if not interrupt_name or not caravan_ids then return end
     local player = game.get_player(event.player_index)
     for id in pairs(caravan_ids) do
-        id = tonumber(id)--[[@as int]] -- .tags caveat
+        id = tonumber(id) -- .tags caveat
         local unit = (storage.caravans[id] or {}).entity
         if unit and unit.valid then
             draw_alert_with_duration(player, unit, interrupt_name, 6)

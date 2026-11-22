@@ -42,7 +42,7 @@ ENTITY {
     dying_explosion = "big-explosion",
     collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
     selection_box = {{-5.0, -5.0}, {5.0, 5.0}},
-    use_mirroring = true,
+    forced_symmetry = "diagonal-pos",
     module_slots = 4,
     allowed_effects = {"speed", "consumption"},
     crafting_categories = {"bay"},
@@ -146,6 +146,7 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 2.5},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/pyphoon-bay.ogg", volume = 0.3},
+        apparent_volume = 2.5
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
     fluid_boxes = {
@@ -153,7 +154,7 @@ ENTITY {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {
                 {flow_direction = "output", position = {1.5, -4.5}, direction = defines.direction.north}
             },
@@ -163,7 +164,7 @@ ENTITY {
             production_type = "output",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {0.0, -0.88}, nil, nil),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {
                 {flow_direction = "output", position = {-1.5, -4.5}, direction = defines.direction.north}
             },

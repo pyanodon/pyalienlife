@@ -21,7 +21,7 @@ local IMP_BRAIN = 8
 
 py.autorecipes {
 	name = "rendering-arthurian",
-	categories = {"slaughterhouse"},
+	category = "slaughterhouse",
 	subgroup = "py-alienlife-arthurian",
 	order = "b",
 	crafting_speed = 30,
@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-arthurian", amount = INPUT_AMOUNT},
-			}--[[@as data.IngredientPrototype[] ]],
+			},
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -42,14 +42,12 @@ py.autorecipes {
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "cage",        amount = INPUT_AMOUNT},
 				{name = "brain",       amount = BASE_BRAIN},
-			}--[[@as data.ProductPrototype[] ]],
+			},
 			crafting_speed = 30,
 			tech = "arthurian",
 			name = "full-render-arthurian",
-			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/arthurian.png", draw_background = true}
-			}
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-arthurian.png",
+			icon_size = 64,
 		},
 		--brain arthurian rendering
 		{

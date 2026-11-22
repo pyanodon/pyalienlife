@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("kicalk-1"):copy(),
         RECIPE("kicalk-2"):copy(),
@@ -7,19 +7,19 @@ if data then
         RECIPE("kicalk-5"):copy(),
     } do
         recipe.name = recipe.name .. "-dry"
-        local amount = recipe.results--[[@cast -?]][1]--[[@cast -?]].amount--[[@as number]]
+        local amount = recipe.results[1].amount
         recipe:remove_result("kicalk")
         recipe:add_result {type = "item", name = "kicalk-dry", amount = math.floor(amount / 2)}
         recipe:add_result {type = "item", name = "kicalk", amount = math.ceil(amount * 0.35)}
         recipe.main_product = "kicalk-dry"
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.8)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend {recipe}
     end
 
     data:extend {{
         type = "recipe",
         name = "heating-system-cheap",
-        categories = {"crafting-with-fluid"},
+        category = "crafting-with-fluid",
         enabled = false,
         energy_required = 20,
         results = {
@@ -37,7 +37,7 @@ if data then
     data:extend {{
         type = "recipe",
         name = "kicalk-dry-bedding",
-        categories = {"wpu"},
+        category = "wpu",
         enabled = false,
         energy_required = 3.5,
         ingredients = {
@@ -72,7 +72,7 @@ if data then
         recipe:remove_ingredient("water")
         recipe:add_ingredient {type = "fluid", amount = 200, name = "water-saline", fluidbox_index = 1}
         recipe.main_product = "kicalk"
-        recipe.energy_required = math.ceil(recipe.energy_required--[[@cast -?]] * 0.8)
+        recipe.energy_required = math.ceil(recipe.energy_required * 0.8)
         data:extend {recipe}
     end
 

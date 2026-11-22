@@ -4,7 +4,7 @@ ITEM {
     icon = "__pyalienlifegraphics__/graphics/icons/energy-drink.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-anorganics",
+    subgroup = "py-alienlife-items",
     order = "f",
     stack_size = 100,
     capsule_action = {
@@ -53,6 +53,7 @@ ITEM {
                     },
                     type = "direct"
                 },
+                category = "capsule",
                 target_type = "position"
             },
             cooldown = 30,

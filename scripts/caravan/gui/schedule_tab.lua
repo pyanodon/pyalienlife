@@ -1,7 +1,3 @@
----@namespace PyAlienLife
----@type PyAlienLifeStorage
-storage = storage --[[@as PyAlienLifeStorage]]
-
 local ActionGui = require "actions"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local AddInterruptGui = require "add_interrupt"
@@ -163,7 +159,7 @@ function P.update_schedule_pane(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_interrupt_add_button"] = function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
 
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     
@@ -174,7 +170,7 @@ gui_events[defines.events.on_gui_click]["py_caravan_interrupt_add_button"] = fun
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_interrupt_edit_button"] = function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
 
     local caravan_data = storage.caravans[event.element.tags.unit_number]
     

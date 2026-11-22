@@ -3,7 +3,7 @@ RECIPE {
     name = "bioport",
     energy_required = 200,
     enabled = false,
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     ingredients = {
         {type = "item",  name = "megadar",              amount = 1},
         {type = "item",  name = "earth-generic-sample", amount = 5},
@@ -12,8 +12,8 @@ RECIPE {
         {type = "item",  name = "alien-sample-02",      amount = 5},
         {type = "item",  name = "bio-sample",           amount = 20},
         {type = "fluid", name = "water-saline",         amount = 200},
-        {type = "fluid", name = "coal-slurry",          amount = 100},
         {type = "fluid", name = "fetal-serum",          amount = 100},
+        {type = "fluid", name = "coal-slurry",          amount = 100},
     },
     results = {
         {type = "item", name = "bioport", amount = 1}
@@ -38,23 +38,31 @@ data:extend {{
     hidden = true
 }}
 
-RECIPE {
+local recipe = RECIPE {
     type = "recipe",
     name = "bioport-hidden-recipe",
     enabled = false,
     allow_inserter_overload = false,
     hidden = true,
-    ingredients = {},
+    ingredients = {
+        {type = "item", name = "gobachov", amount = data.raw.item["gobachov"].stack_size},
+        {type = "item", name = "huzu",     amount = data.raw.item["huzu"].stack_size},
+        {type = "item", name = "chorkok",  amount = data.raw.item["chorkok"].stack_size},
+    },
     results = {
-        {type = "item",  name = "guano", amount = data.raw.item["guano"].stack_size},
+        {type = "item",  name = "guano",                                              amount = data.raw.item["guano"].stack_size},
         {type = "fluid", name = mods.pyalternativeenergy and "void" or "vacuum", amount = 1},
     },
     energy_required = 100,
-    categories = {"biofluid"},
+    category = "biofluid",
     icon = "__pyalienlifegraphics2__/graphics/icons/o-roboport.png",
     icon_size = 64,
     subgroup = "py-alienlife-biofluid-network",
 }
+
+for name, _ in pairs(Biofluid.favorite_foods) do
+    recipe:add_ingredient {name = name, amount = data.raw.item[name].stack_size, type = "item"}
+end
 
 ENTITY {
     type = "assembling-machine",
@@ -72,6 +80,7 @@ ENTITY {
     corpse = "big-remnants",
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    forced_symmetry = "diagonal-pos",
     dying_explosion = "medium-explosion",
     crafting_speed = 1,
     energy_usage = "1W",
@@ -83,14 +92,13 @@ ENTITY {
         {
             production_type = "output",
             max_pipeline_extent = 2000000, -- The radius of nauvis
-            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.75}, nil, nil),
+            pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
             pipe_covers = py.pipe_covers(false, true, true, true),
             volume = 100,
             pipe_connections = {{flow_direction = "output", position = {0.0, -2.0}, direction = defines.direction.north, connection_category = "biofluid"}}
         },
     },
     impact_category = "metal-large",
-    tall = true,
     graphics_set = {
         integration_patch = {
             layers = {
@@ -100,7 +108,8 @@ ENTITY {
                     width = 351,
                     height = 365,
                     shift = util.by_pixel(16.75, -38.75 - 32 - 9),
-                    scale = 0.5
+                    scale = 0.5,
+                    frame_count = 1
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/glow.png",
@@ -109,7 +118,8 @@ ENTITY {
                     height = 365,
                     shift = util.by_pixel(16.75, -38.75 - 32 - 9),
                     draw_as_glow = true,
-                    scale = 0.5
+                    scale = 0.5,
+                    frame_count = 1
                 },
                 {
                     filename = "__pyalienlifegraphics2__/graphics/entity/bots/roboport/sh.png",
@@ -118,7 +128,8 @@ ENTITY {
                     width = 352,
                     height = 232,
                     shift = {1.5, 1.5 - 9 / 32},
-                    scale = 0.5
+                    scale = 0.5,
+                    frame_count = 1
                 }
             }
         },
@@ -142,9 +153,9 @@ local function add_creature_animations(animations, animation_order, name)
     for i, _ in pairs(animation_order) do
         local layers = {}
         for j = 1, i do
-            local layer_data = animation_order[j] --[[@as table<int, number> ]]
+            local layer_data = animation_order[j]
             local shift = util.by_pixel(layer_data[1] / 2 - 62, layer_data[2] / 2 - 113.75 - 32)
-            if name == "chorkok" then shift[2] = shift[2]--[[@cast -?]] + 0.16 end
+            if name == "chorkok" then shift[2] = shift[2] + 0.16 end
             layers[#layers + 1] = table.deepcopy(animations[layer_data[3]])
             layers[#layers].shift = shift
         end

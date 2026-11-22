@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for _, recipe in pairs {
         RECIPE("bio-scafold"):copy(),
         RECIPE("bio-scafold-2"):copy(),
@@ -27,7 +27,7 @@ if data then
             type = "recipe",
             name = "stem-cell-recycle-1",
             enabled = false,
-            categories = {"atomizer"},
+            category = "atomizer",
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
                 {type = "item",   name = "bones",       amount = 3},
@@ -41,7 +41,7 @@ if data then
             type = "recipe",
             name = "stem-cell-recycle-2",
             enabled = false,
-            categories = {"atomizer"},
+            category = "atomizer",
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
                 {type = "item",   name = "bonemeal", amount = 3},
@@ -55,7 +55,7 @@ if data then
             type = "recipe",
             name = "stem-cell-recycle-3",
             enabled = false,
-            categories = {"atomizer"},
+            category = "atomizer",
             results = {{type = "fluid", name = "psc", amount = 30}},
             ingredients = {
                 {type = "item",   name = "guts",  amount = 6},

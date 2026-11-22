@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "artificial-blood",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {

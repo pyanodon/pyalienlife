@@ -1,32 +1,58 @@
----@class SmartFarm
----@field crops table<data.ResourceEntityName, SmartFarmCropData>
-SmartFarm = {}
+Smart_Farm = {}
 
-require "smart-farm-prototypes"
+local farm_filenames = {
+    "farm-ralesia",
+    "farm-rennea",
+    "farm-tuuphra",
+    "farm-grod",
+    "farm-yotoi",
+    "farm-kicalk",
+    "farm-arum",
+    "farm-yotoi-fruit",
+    "farm-bioreserve",
+    script.active_mods["pyalternativeenergy"] and "__pyalternativeenergy__/scripts/crops/farm-mova"
+}
+
+local farms = {}
+for _, filename in pairs(farm_filenames) do
+    local farm = require(filename)
+    farms[farm.seed] = farm
+end
+
+py.on_event(py.events.on_init(), function()
+    storage.smart_farm_landfill_data = storage.smart_farm_landfill_data or {}
+end)
 
 local function get_fence_positions(entity)
     local position = entity.position
     position.y = position.y - 15
     local fence_positions = {}
     for x = -12, 12 do
-        fence_positions[#fence_positions+1] = {position.x + x, position.y + 13}
-        fence_positions[#fence_positions+1] = {position.x + x, position.y - 13}
+        table.insert(fence_positions, {position.x + x, position.y + 13})
+        table.insert(fence_positions, {position.x + x, position.y - 13})
     end
     for y = -13, 13 do
-        fence_positions[#fence_positions+1] = {position.x + 13, position.y + y}
-        fence_positions[#fence_positions+1] = {position.x - 13, position.y + y}
+        table.insert(fence_positions, {position.x + 13, position.y + y})
+        table.insert(fence_positions, {position.x - 13, position.y + y})
     end
     return fence_positions
 end
 
----@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
+local function get_landfill_positions(entity)
+    local position = entity.position
+    position.y = position.y - 15
+    local landfill_positions = {}
+    for x = -12, 12 do
+        for y = -12, 12 do
+            table.insert(landfill_positions, {position.x + x, position.y + y})
+        end
+    end
+    return landfill_positions
+end
+
 py.on_event(py.events.on_built(), function(event)
     local entity = event.entity
     if entity.name ~= "mega-farm" then return end
-
-    -- finally, added in 2.0.73
-	  entity.send_to_orbit_automatically = true
-
     local surface = entity.surface
 
     for _, position in pairs(get_fence_positions(entity)) do
@@ -38,13 +64,32 @@ py.on_event(py.events.on_built(), function(event)
             }
         end
     end
+
+    local landfill_tiles = {}
+    for _, position in pairs(get_landfill_positions(entity)) do
+        local x, y = position[1], position[2]
+
+        local previous_tile = surface.get_tile(position)
+        if not previous_tile.valid or previous_tile.prototype.collision_mask.layers.water_tile then goto continue end
+        if previous_tile.name == "sut-panel" then goto continue end
+
+        table.insert(landfill_tiles, {name = "landfill", position = position})
+
+        storage.smart_farm_landfill_data[x] = storage.smart_farm_landfill_data[x] or {}
+        if storage.smart_farm_landfill_data[x][y] then
+            storage.smart_farm_landfill_data[x][y].depth = storage.smart_farm_landfill_data[x][y].depth + 1
+        else
+            storage.smart_farm_landfill_data[x][y] = {depth = 1, name = previous_tile.name}
+        end
+
+        ::continue::
+    end
+    surface.set_tiles(landfill_tiles)
 end)
 
----@param event EventData.on_player_mined_entity|EventData.on_robot_mined_entity|EventData.on_space_platform_mined_entity|EventData.script_raised_destroy|EventData.on_entity_died
 py.on_event(py.events.on_destroyed(), function(event)
     local entity = event.entity
     if entity.name ~= "mega-farm" then return end
-
     local surface = entity.surface
 
     for _, position in pairs(get_fence_positions(entity)) do
@@ -53,43 +98,69 @@ py.on_event(py.events.on_destroyed(), function(event)
             fence.destroy()
         end
     end
+
+    local tiles_to_reset = {}
+    for _, position in pairs(get_landfill_positions(entity)) do
+        local x, y = position[1], position[2]
+
+        if not storage.smart_farm_landfill_data[x] or not storage.smart_farm_landfill_data[x][y] then goto continue end
+
+        local data = storage.smart_farm_landfill_data[x][y]
+        data.depth = data.depth - 1
+
+        if data.depth > 0 then goto continue end
+        table.insert(tiles_to_reset, {name = data.name, position = position})
+
+        storage.smart_farm_landfill_data[x][y] = nil
+        if table_size(storage.smart_farm_landfill_data[x]) == 0 then
+            storage.smart_farm_landfill_data[x] = nil
+        end
+
+        ::continue::
+    end
+
+    if table_size(tiles_to_reset) == 0 then return end
+    surface.set_tiles(tiles_to_reset, true, false, false, true)
 end)
 
 ---@param event EventData.on_rocket_launched
 py.on_event(defines.events.on_rocket_launched, function(event)
-    local silo = event.rocket_silo
+    local silo = event.rocket_silo --[[@as LuaEntity]]
     if not silo or not silo.valid then return end -- silo died after launch started
     if silo.name ~= "mega-farm" then return end
-    local satellite = event.rocket.cargo_pod--[[@cast -?]].get_inventory(defines.inventory.cargo_unit)--[[@cast -?]].get_contents()[1]
-    if not satellite then return end
-    local crop_data = SmartFarm.crops[satellite.name]
-    if not crop_data then return end
-    local recipe = silo.get_recipe().name
-    if not recipe then return end
-    local yield = crop_data.recipes[recipe]
-    if not yield then return end
-    local extra_count_fraction = yield - math.floor(yield)
-    yield = math.floor(yield)
     local surface = silo.surface
     local position = silo.position
     position.y = position.y - 15
+    local replicator = event.rocket.cargo_pod.get_inventory(defines.inventory.cargo_unit).get_contents()[1]
+    if not replicator then return end
+    local farm = farms[replicator.name]
+    if not farm then return end
+
+    local output
+    local recipe_name = silo.get_recipe().name
+    for _, recipe in pairs(farm.recipes) do
+        if recipe.recipe_name == recipe_name then
+            output = recipe.crop_output
+            break
+        end
+    end
+    if not output then return end
 
     local is_alien_biomes = script.active_mods["alien-biomes"] or script.active_mods["combat-mechanics-overhaul"]
     for x = -11, 11 do
         for y = -11, 11 do
             local ore_location = {position.x + x, position.y + y}
-            ---@diagnostic disable-next-line: missing-parameter
+            ---@diagnostic disable-next-line: missing-parameter, param-type-mismatch
             if is_alien_biomes or not surface.get_tile(ore_location).collides_with("resource") then
-                local ore = surface.find_entity(crop_data.resource, ore_location)
+                local ore = surface.find_entity(farm.crop, ore_location)
 
-                local addition = yield + (math.random() <= extra_count_fraction and 1 or 0)
-                if ore and addition > 0 then
-                    ore.amount = ore.amount + addition --[[@as uint]]
-                elseif addition > 0 then
+                if ore then
+                    ore.amount = ore.amount + output
+                else
                     surface.create_entity {
-                        name = crop_data.resource,
+                        name = farm.crop,
                         position = ore_location,
-                        amount = yield + addition,
+                        amount = output,
                         force = "neutral"
                     }
                 end
@@ -102,5 +173,10 @@ py.on_event(defines.events.on_rocket_launched, function(event)
         name = {"harvester", "flora-collector-mk01", "flora-collector-mk02", "flora-collector-mk03", "flora-collector-mk04"}
     }) do
         harvester.update_connections()
+        local control_behavior = harvester.get_or_create_control_behavior() --[[@as LuaControlBehavior]]
+        if control_behavior.circuit_read_resources then
+            control_behavior.circuit_read_resources = false
+            control_behavior.circuit_read_resources = true
+        end
     end
 end)

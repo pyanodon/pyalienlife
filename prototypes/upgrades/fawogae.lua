@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("fawogae-1"):copy(),
         RECIPE("fawogae-2"):copy(),
@@ -20,7 +20,7 @@ if data then
         type = "recipe",
         name = "acid-gas-fawogae",
         enabled = false,
-        categories = {"desulfurization"},
+        category = "desulfurization",
         energy_required = 6,
         ingredients = {
             {type = "item",  name = "fawogae", amount = 2},
@@ -45,8 +45,8 @@ if data then
 
     local coal_fawogae = RECIPE("coal-fawogae"):copy()
     coal_fawogae.name = "coal-fawogae-buffed"
-    coal_fawogae.energy_required = coal_fawogae.energy_required--[[@cast -?]] * 4
-    coal_fawogae.ingredients--[[@cast -?]][1]--[[@cast -?]].amount = 10
+    coal_fawogae.energy_required = coal_fawogae.energy_required * 4
+    coal_fawogae.ingredients[1].amount = 10
     coal_fawogae:remove_result("raw-coal")
     coal_fawogae:add_result {type = "item", name = "active-carbon", amount = 3}
     coal_fawogae.icons = nil

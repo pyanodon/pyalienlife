@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     for i, recipe in pairs {
         RECIPE("auog-food-01"):copy(),
         RECIPE("auog-food-02"):copy(),
@@ -16,12 +16,12 @@ if data then
 
     for i = 1, 4 do
         local results = {
-            {name = i == 1 and "auog" or "auog-mk0" .. i, amount = 1, type = "item", independent_probability = 0.95},
-            {name = "yaedols",                            amount = 1, type = "item", independent_probability = 0.85},
+            {name = i == 1 and "auog" or "auog-mk0" .. i, amount = 1, type = "item", probability = 0.95},
+            {name = "yaedols",                            amount = 1, type = "item", probability = 0.85},
         }
-        for _, result in pairs(data.raw.recipe["ex-used-auog"].results--[[@cast -?]]) do
+        for _, result in pairs(data.raw.recipe["ex-used-auog"].results) do
             result = table.deepcopy(result)
-            result.independent_probability = 0.05
+            result.probability = 0.05
             table.insert(results, result)
         end
         data:extend {{
@@ -35,7 +35,7 @@ if data then
             },
             results = results,
             main_product = i == 1 and "auog" or "auog-mk0" .. i,
-            categories = {"bay"}
+            category = "bay"
         }}
     end
 
@@ -55,6 +55,7 @@ if data then
 
     local buffed_generator = table.deepcopy(data.raw["burner-generator"]["generator-1"])
     buffed_generator.burner.effectivity = 2
+    buffed_generator.effectivity = 2
     buffed_generator.max_power_output = "111MW"
     buffed_generator.localised_description = buffed_generator.localised_description or {"entity-description." .. buffed_generator.name}
     buffed_generator.placeable_by = {item = buffed_generator.name, count = 1}

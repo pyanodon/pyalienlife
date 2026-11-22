@@ -15,7 +15,7 @@ RECIPE {
     name = "guano-manure",
     energy_required = 8,
     enabled = false,
-    categories = {"mixer"},
+    category = "mixer",
     ingredients = {
         {type = "item",  name = "manure", amount = 8},
         {type = "item",  name = "guano",  amount = 8},
@@ -31,7 +31,7 @@ RECIPE {
     name = "guano-gunpowder",
     energy_required = 4,
     enabled = false,
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     ingredients = {
         {type = "item",  name = "coke",         amount = 1},
         {type = "item",  name = "sulfur",       amount = 1},
@@ -50,7 +50,7 @@ data:extend {{
     icon = "__pyalienlifegraphics2__/graphics/icons/ammonium-nitrate.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-anorganics",
+    subgroup = "py-alienlife-items",
     order = "a",
     stack_size = 100
 }}
@@ -60,7 +60,7 @@ RECIPE {
     name = "ammonium-nitrate",
     energy_required = 2,
     enabled = false,
-    categories = {"evaporator"},
+    category = "evaporator",
     ingredients = {
         {type = "item",  name = "guano",           amount = 2},
         {type = "fluid", name = "pressured-water", amount = 10}
@@ -75,7 +75,7 @@ RECIPE {
     name = "guano-explosives",
     energy_required = 4,
     enabled = false,
-    categories = {"chemistry"},
+    category = "chemistry",
     ingredients = {
         {type = "fluid", name = "glycerol",         amount = 100},
         {type = "fluid", name = "sulfuric-acid",    amount = 50},
@@ -96,7 +96,7 @@ FLUID {
     flow_color = {r = 1, g = 0.5, b = 0.5},
     max_temperature = 100,
     gas_temperature = 15,
-    subgroup = "py-alienlife-gases",
+    subgroup = "py-alienlife-fluids",
     order = "d"
 }
 
@@ -105,7 +105,7 @@ RECIPE {
     name = "free-guano",
     energy_required = 4,
     enabled = false,
-    categories = {"auog"},
+    category = "auog",
     ingredients = {
         {type = "item", name = "chorkok",         amount = 1},
         {type = "item", name = "workers-food-03", amount = 1},
@@ -113,7 +113,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "guano",   amount = 50},
-        {type = "item", name = "chorkok", amount = 1, independent_probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1},
+        {type = "item", name = "chorkok", amount = 1, probability = 0.95, ignored_by_stats = 1, ignored_by_productivity = 1},
     },
     allow_productivity = true,
     main_product = "guano"
@@ -124,7 +124,7 @@ RECIPE {
     name = "nitrous-oxide",
     energy_required = 4,
     enabled = false,
-    categories = {"gasifier"},
+    category = "gasifier",
     ingredients = {
         {type = "item",  name = "ammonium-nitrate",    amount = 2},
         {type = "fluid", name = "subcritical-water",   amount = 100},

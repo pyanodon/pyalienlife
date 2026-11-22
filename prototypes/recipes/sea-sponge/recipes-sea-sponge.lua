@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "sea-sponge",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -19,13 +19,12 @@ RECIPE {
     results = {
         {type = "item", name = "sea-sponge", amount = 1},
     },
-    icons = py.composite_icon("sea-sponge", "sea-sponge-codex")
 }:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
     type = "recipe",
     name = "sea-sponge-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -42,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-sea-sponge-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -60,7 +59,7 @@ RECIPE {
 ---breeding---
 py.autorecipes {
     name = "sea-sponge",
-    categories = {"sponge"},
+    category = "sponge",
     main_product = "sea-sponge",
     number_icons = true,
     mats =
@@ -102,7 +101,7 @@ py.autorecipes {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-processing-01",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -111,15 +110,14 @@ RECIPE {
     results = {
         {type = "item", name = "ore-quartz", amount = 10},
     },
-    subgroup = "py-alienlife-sponge",
+    subgroup = "py-alienlife-items",
     order = "c",
-    icons = py.composite_icon("ore-quartz", "sea-sponge")
 }:add_unlock("water-invertebrates-mk01")
 
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-processing-01",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -128,9 +126,8 @@ RECIPE {
     results = {
         {type = "item", name = "ore-quartz", amount = 7},
     },
-    subgroup = "py-alienlife-sponge",
+    subgroup = "py-alienlife-items",
     order = "c",
-    icons = py.composite_icon("ore-quartz", "sea-sponge-sprouts")
 }:add_unlock("water-invertebrates-mk01")
 
 
@@ -138,7 +135,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -152,7 +149,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-2",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -166,7 +163,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-3",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -180,7 +177,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "sea-sponge-sprouts-4",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {

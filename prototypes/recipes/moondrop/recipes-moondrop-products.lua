@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "moonshine-gasoline-1",
-    categories = {"moon"},
+    category = "moon",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -17,7 +17,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-diesel-1",
-    categories = {"moon"},
+    category = "moon",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -33,7 +33,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-kerosene-1",
-    categories = {"moon"},
+    category = "moon",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -49,7 +49,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-fueloil-1",
-    categories = {"moon"},
+    category = "moon",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -69,7 +69,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-gasoline-pressing-1",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-diesel-pressing-1",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -101,7 +101,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-kerosene-pressing-1",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -117,7 +117,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "moonshine-fueloil-pressing-1",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 5,
     ingredients = {

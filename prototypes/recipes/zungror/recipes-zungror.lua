@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "zungror",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -16,20 +16,19 @@ RECIPE {
         {type = "item",  name = "earth-spider-sample",    amount = 2},
         {type = "item",  name = "strorix-unknown-sample", amount = 2},
         {type = "item",  name = "earth-goat-sample",      amount = 1},
-        {type = "item",  name = "zungror-codex",          amount = 1},
-        {type = "fluid", name = "artificial-blood",       amount = 100},
         {type = "fluid", name = "fetal-serum",            amount = 500},
+        {type = "fluid", name = "artificial-blood",       amount = 100},
+        {type = "item",  name = "zungror-codex",          amount = 1},
     },
     results = {
         {type = "item", name = "zungror", amount = 1},
     },
-    icons = py.composite_icon("zungror", "zungror-codex")
 }:add_unlock("zungror")
 
 RECIPE {
     type = "recipe",
     name = "earth-spider-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -45,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-goat-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -61,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zungror-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -78,7 +77,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-zungror",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -93,7 +92,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-zungror",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "phadai",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -15,19 +15,18 @@ RECIPE {
         {type = "item",  name = "cytostatics",        amount = 5},
         {type = "item",  name = "phadai-codex",       amount = 2},
         {type = "item",  name = "earth-tiger-sample", amount = 1},
-        {type = "fluid", name = "artificial-blood",   amount = 100},
         {type = "fluid", name = "fetal-serum",        amount = 100},
+        {type = "fluid", name = "artificial-blood",   amount = 100},
     },
     results = {
         {type = "item", name = "phadai", amount = 1},
     },
-    icons = py.composite_icon("phadai", "phadai-codex")
 }:add_unlock("phadai")
 
 RECIPE {
     type = "recipe",
     name = "phadai-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -43,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-tiger-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -61,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -84,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phadai-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -120,7 +119,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phadai-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -139,7 +138,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'phadai-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 70,
     ingredients = {
@@ -170,7 +169,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-phadai",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -185,7 +184,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-phadai",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

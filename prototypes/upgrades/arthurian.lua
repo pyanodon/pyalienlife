@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     data:extend {
         {
             type = "item",
@@ -12,7 +12,7 @@ if data then
         {
             type = "recipe",
             name = "abacus",
-            categories = {"crafting"},
+            category = "crafting",
             enabled = false,
             energy_required = 6,
             ingredients = {
@@ -50,8 +50,8 @@ if data then
         recipe:add_result {name = "warmer-stone-brick", amount = 2, type = "item"}
         recipe:add_result_amount("arthurian-egg", i)
         local _, barrels = recipe:remove_result("barrel")
-        recipe:add_result {type = "item", name = "hot-air-barrel", amount = barrels}--[[@as data.ProductPrototype]]
-        recipe.energy_required = recipe.energy_required--[[@cast -?]] / 2
+        recipe:add_result {type = "item", name = "hot-air-barrel", amount = barrels}
+        recipe.energy_required = recipe.energy_required / 2
         recipe.main_product = "warmer-stone-brick"
         recipe:remove_ingredient("bedding")
         data:extend {recipe}
@@ -74,7 +74,7 @@ if data then
             {name = "blood-barrel", amount = 3, type = "item"},
             {name = "barrel",       amount = 3, type = "item"},
         },
-        categories = {"arthurian"},
+        category = "arthurian",
         main_product = "agar"
     }}
 end

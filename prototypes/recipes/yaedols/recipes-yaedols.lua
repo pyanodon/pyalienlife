@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "yaedols-sample",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 35,
     ingredients = {
@@ -22,13 +22,12 @@ RECIPE {
     results = {
         {type = "item", name = "yaedols", amount = 1},
     },
-    icons = py.composite_icon("yaedols", "yaedols-codex")
 }:add_unlock("yaedols")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -44,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yaedols-spores",
-    categories = {"spore"},
+    category = "spore",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -57,7 +56,7 @@ RECIPE {
 -- RECIPE {
 --     type = "recipe",
 --     name = "yaedols-spores-2",
---     categories = {"spore"},
+--     category = "spore",
 --     enabled = false,
 --     energy_required = 15,
 --     ingredients = {
@@ -70,7 +69,7 @@ RECIPE {
 -- RECIPE {
 --     type = "recipe",
 --     name = "yaedols-spores-3",
---     categories = {"spore"},
+--     category = "spore",
 --     enabled = false,
 --     energy_required = 10,
 --     ingredients = {

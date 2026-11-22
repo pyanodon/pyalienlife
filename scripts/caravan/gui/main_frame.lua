@@ -1,7 +1,3 @@
----@namespace PyAlienLife
----@type PyAlienLifeStorage
-storage = storage --[[@as PyAlienLifeStorage]]
-
 local caravan_prototypes = require "__pyalienlife__/scripts/caravan/caravan-prototypes"
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 local CaravanImpl = require "__pyalienlife__/scripts/caravan/impl"
@@ -29,7 +25,7 @@ end
 
 function P.build_main_frame(parent, name, caravan_data)
     local main_frame = parent.add {type = "frame", direction = "vertical", name = name, tags = {unit_number = caravan_data.unit_number}}
-    if caravan_data.entity.name:find("^fluid") then
+    if caravan_data.entity.name:find("^fluidavan") then
         main_frame.style.natural_height = 910
     else
         -- enough to show the full cargo tab with starting inventory, without scroll bars
@@ -103,7 +99,7 @@ function P.update_status_flow(player)
 end
 
 gui_events[defines.events.on_gui_click]["py_caravan_close_button"] = function(event)
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
 
     local slider_frame = number_selection.get_slider_frame(player)
     local add_interrupt_frame = player.gui.screen.add_interrupt_gui

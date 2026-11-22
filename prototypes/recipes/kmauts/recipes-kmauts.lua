@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "kmauts",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -19,13 +19,12 @@ RECIPE {
     results = {
         {type = "item", name = "kmauts", amount = 1},
     },
-    icons = py.composite_icon("kmauts", "kmauts-codex")
 }:add_unlock("kmauts")
 
 RECIPE {
     type = "recipe",
     name = "kmauts-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -46,7 +45,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 140,
     ingredients = {
@@ -66,7 +65,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'kmauts-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -95,7 +94,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-kmauts",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -110,7 +109,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-kmauts",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

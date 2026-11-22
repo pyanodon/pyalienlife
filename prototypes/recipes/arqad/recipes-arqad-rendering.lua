@@ -16,7 +16,7 @@ local IMP_SPECIAL = 80
 
 py.autorecipes {
 	name = "rendering-arqad",
-	categories = {"slaughterhouse"},
+	category = "slaughterhouse",
 	subgroup = "py-alienlife-arqad",
 	order = "b",
 	crafting_speed = 30,
@@ -26,7 +26,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "arqad", amount = INPUT_AMOUNT}
-			}--[[@as data.IngredientPrototype[] ]],
+			},
 			results =
 			{
 				{name = "meat",            amount = BASE_MEAT},
@@ -34,14 +34,12 @@ py.autorecipes {
 				{name = "guts",            amount = BASE_GUTS},
 				{name = "arthropod-blood", amount = BASE_BLOOD},
 				{name = "bee-venom",       amount = BASE_SPECIAL}
-			}--[[@as data.ProductPrototype[] ]],
+			},
 			crafting_speed = 30,
 			tech = "arqad",
 			name = "full-render-arqads",
-			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics3__/graphics/icons/arqad.png",    draw_background = true}
-			}
+			icon = "__pyalienlifegraphics3__/graphics/icons/rendering-arqad.png",
+			icon_size = 64,
 		},
 		{
 			ingredients =

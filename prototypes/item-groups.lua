@@ -3,6 +3,7 @@ data:extend {
         type = "item-group",
         name = "py-alienlife",
         order = "v",
+        inventory_order = "z",
         icon = "__pyalienlifegraphics__/graphics/technology/item-group.png",
         icon_size = 64
     },
@@ -83,8 +84,8 @@ data:extend {
     {
         type = "item-subgroup",
         name = "py-alienlife-vatbrain",
-        group = "production",
-        order = "fb"
+        group = "py-alienlife",
+        order = "ba-2"
     },
     {
         type = "item-subgroup",
@@ -106,12 +107,6 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-native-flora-smartfarm",
-        group = "py-alienlife",
-        order = "bc-b"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-genetics",
         group = "py-alienlife",
         order = "bd"
@@ -128,24 +123,6 @@ data:extend {
         group = "py-alienlife",
         order = "bf"
     },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-creature-product",
-        group = "py-alienlife",
-        order = "bbb"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-fertilizer",
-        group = "py-alienlife",
-        order = "bbc"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-anorganics",
-        group = "py-alienlife",
-        order = "bba"
-    },
 
 
     -- fluids
@@ -157,21 +134,15 @@ data:extend {
     },
     {
         type = "item-subgroup",
+        name = "py-alienlife-recipes",
+        group = "py-alienlife",
+        order = "cb"
+    },
+    {
+        type = "item-subgroup",
         name = "py-alienlife-gases",
         group = "py-alienlife",
         order = "cc"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-psc-chelator",
-        group = "py-alienlife",
-        order = "caa"
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-xenogenic",
-        group = "py-alienlife",
-        order = "cab"
     },
 
     -- codex
@@ -207,6 +178,12 @@ data:extend {
     },
 
     -- animals
+    {
+        type = "item-subgroup",
+        name = "py-alienlife-sea-sponge",
+        group = "py-alienlife",
+        order = "e",
+    },
     {
         type = "item-subgroup",
         name = "py-alienlife-ulric",
@@ -377,33 +354,15 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-ralesia-smartfarm",
-        group = "py-alienlife",
-        order = "f-aa"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-rennea",
         group = "py-alienlife",
         order = "f-b",
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-rennea-smartfarm",
-        group = "py-alienlife",
-        order = "f-ba"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-yotoi",
         group = "py-alienlife",
         order = "f-c",
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-yotoi-smartfarm",
-        group = "py-alienlife",
-        order = "f-cb",
     },
     {
         type = "item-subgroup",
@@ -419,21 +378,9 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-tuuphra-smartfarm",
-        group = "py-alienlife",
-        order = "f-da"
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-grod",
         group = "py-alienlife",
         order = "f-e",
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-grod-smartfarm",
-        group = "py-alienlife",
-        order = "f-ea"
     },
     {
         type = "item-subgroup",
@@ -449,21 +396,9 @@ data:extend {
     },
     {
         type = "item-subgroup",
-        name = "py-alienlife-kicalk-smartfarm",
-        group = "py-alienlife",
-        order = "f-g",
-    },
-    {
-        type = "item-subgroup",
         name = "py-alienlife-cadaveric",
         group = "py-alienlife",
         order = "f-h",
-    },
-    {
-        type = "item-subgroup",
-        name = "py-alienlife-cadaveric-smartfarm",
-        group = "py-alienlife",
-        order = "f-ha",
     },
     {
         type = "item-subgroup",

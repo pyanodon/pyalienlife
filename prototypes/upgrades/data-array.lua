@@ -1,4 +1,4 @@
-if data then
+if data and not yafc_turd_integration then
     data:extend {{
         type = "recipe",
         name = "earth-generic-sample-duplication",
@@ -9,7 +9,7 @@ if data then
         results = {{name = "earth-generic-sample", amount = 2, type = "item", ignored_by_productivity = 1, ignored_by_stats = 1}},
         enabled = false,
         energy_required = 40,
-        categories = {"data-array"}
+        category = "data-array"
     }}
 
     data:extend {{
@@ -26,7 +26,7 @@ if data then
         results = {{name = "solar-panel-mk01", amount = 1, type = "item"}},
         enabled = false,
         energy_required = 40,
-        categories = {"crafting"}
+        category = "crafting"
     }}
 
     local machine_recipe = RECIPE("data-array"):copy()

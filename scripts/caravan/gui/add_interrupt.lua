@@ -1,7 +1,3 @@
----@namespace PyAlienLife
----@type PyAlienLifeStorage
-storage = storage --[[@as PyAlienLifeStorage]]
-
 local Utils = require "__pyalienlife__/scripts/caravan/utils"
 
 local P = {}
@@ -33,6 +29,8 @@ function P.build_title_bar_flow(parent, tags)
     flow.add {type = "textfield", name = "py_caravan_add_interrupt_search_textfield", style = "search_popup_textfield", visible = false, tags = tags}
     local search_button = flow.add {type = "sprite-button", name = "py_caravan_add_interrupt_search_button", style = "frame_action_button", sprite = "utility/search", tags = tags}
     flow.add {type = "sprite-button", name = "py_caravan_add_interrupt_close_button", style = "close_button", sprite = "utility/close", tags = tags}
+
+    storage.gui_elements_by_name[search_button.name] = search_button
     return flow
 end
 
@@ -118,7 +116,7 @@ function P.update_interrupt_list(player)
     local scroll_pane = textfield.parent.parent.contents_frame.scroll_pane
     scroll_pane.contents_flow.destroy()
 
-    local interrupts = Utils.filter(storage.interrupts, function (e) return string.find(e.name, textfield.text, nil, true) end)
+    local interrupts = Utils.filter(storage.interrupts, function (e) return string.find(e.name, textfield.text) end)
 
     P.build_interrupt_list(scroll_pane, caravan_data, interrupts, tags)
 end
@@ -171,7 +169,7 @@ py.on_event(defines.events.on_gui_click, function (event)
     -- do not destroy the frame right after creating it
     if event.element.name == "py_caravan_interrupt_add_button" then return end
 
-    local player = game.get_player(event.player_index)--[[@as LuaPlayer]]
+    local player = game.get_player(event.player_index)
 
     local gui = player.gui.screen.add_interrupt_gui
     if not gui then return end

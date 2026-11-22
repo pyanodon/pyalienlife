@@ -46,6 +46,7 @@ ENTITY {
     crafting_speed = 1,
     to_be_inserted_to_rocket_inventory_size = 1,
     module_slots = 4,
+    icon_draw_specification = {shift = {0, 3.3}},
     --fixed_recipe = "rocket-part",
     show_recipe_icon = true,
     allowed_effects = {"consumption", "speed"},
@@ -55,7 +56,7 @@ ENTITY {
     corpse = "rocket-silo-remnants",
     collision_box = {{-3.5, -3.5}, {3.5, 3.5}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    use_mirroring = true,
+    forced_symmetry = "diagonal-pos",
     hole_clipping_box = {{-0.5, -0.5}, {0.5, 0.5}},
     resistances =
     {
@@ -84,15 +85,17 @@ ENTITY {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "input", position = {3.0, 0.0}, direction = defines.direction.east}},
+            priority = "extra-high"
         },
         {
             production_type = "input",
             pipe_covers = py.pipe_covers(false, true, true, true),
             pipe_picture = py.pipe_pictures("assembling-machine-3", nil, {-0.00, -0.95}, nil, nil),
-            volume = 100,
+            volume = 1000,
             pipe_connections = {{flow_direction = "input", position = {-3.0, 0.0}, direction = defines.direction.west}},
+            priority = "extra-high"
         },
     },
     energy_source =
@@ -187,7 +190,9 @@ ENTITY {
                 filename = "__pyalienlifegraphics2__/graphics/entity/mega-farm/farm/bot.png",
                 width = 288,
                 height = 64,
+                frame_count = 100,
                 line_length = 7,
+                animation_speed = 0.3,
                 shift = util.by_pixel(32, 112),
             },
         }

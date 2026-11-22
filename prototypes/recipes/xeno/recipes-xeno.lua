@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "xeno",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -16,19 +16,18 @@ RECIPE {
         {type = "item",  name = "cdna",                   amount = 3},
         {type = "item",  name = "xeno-codex",             amount = 1},
         {type = "fluid", name = "artificial-blood",       amount = 1000},
-        {type = "fluid", name = "sulfuric-acid",          amount = 150},
         {type = "fluid", name = "fetal-serum",            amount = 100},
+        {type = "fluid", name = "sulfuric-acid",          amount = 150},
     },
     results = {
         {type = "item", name = "xeno", amount = 1},
     },
-    icons = py.composite_icon("xeno", "xeno-codex")
 }:add_unlock("xeno")
 
 RECIPE {
     type = "recipe",
     name = "xeno-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -49,7 +48,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xeno-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -68,7 +67,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'xeno-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -100,7 +99,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-xeno",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -115,7 +114,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-xeno",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -132,7 +131,7 @@ if mods["pyhightech"] then
     RECIPE {
         type = "recipe",
         name = "xeno-phosphoric",
-        categories = {"biofactory"},
+        category = "biofactory",
         enabled = false,
         energy_required = 5,
         ingredients = {

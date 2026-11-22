@@ -15,7 +15,7 @@ FLUID {
 RECIPE {
     type = "recipe",
     name = "formic-acid",
-    categories = {"distilator"},
+    category = "distilator",
     enabled = false,
     energy_required = 4,
     ingredients = {
@@ -24,6 +24,6 @@ RECIPE {
         {type = "fluid", name = "sulfuric-acid", amount = 50},
     },
     results = {
-        {type = "fluid", name = "formic-acid", amount = 100, autotech_is_not_primary_source = true},
+        {type = "fluid", name = "formic-acid", amount = 100},
     },
 }:add_unlock("biotech-mk02")

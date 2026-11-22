@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "blood-to-iron",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -10,14 +10,13 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 10},
     },
-    icons = py.composite_icon("iron-ore", "blood"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-iron",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -26,14 +25,13 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 10},
     },
-    icons = py.composite_icon("iron-ore", "meat"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "meat-and-gut-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -43,14 +41,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 35},
     },
-    icons = py.composite_icon("copper-ore", "meat", nil, "guts"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "arthropod-blood-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -59,14 +56,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 20},
     },
-    icons = py.composite_icon("copper-ore", "arthropod-blood"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -75,14 +71,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 20},
     },
-    icons = py.composite_icon("copper-ore", "tuuphra"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -91,14 +86,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 10},
     },
-    icons = py.composite_icon("copper-ore", "meat"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "guts-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -107,14 +101,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 15},
     },
-    icons = py.composite_icon("copper-ore", "guts"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "fish-to-iron",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -123,14 +116,13 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 20},
     },
-    icons = py.composite_icon("iron-ore", "fish-oil"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "tuupha-to-iron",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -139,14 +131,13 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 6},
     },
-    icons = py.composite_icon("iron-ore", "tuuphra-seeds"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "fawogae-to-iron",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -155,14 +146,13 @@ RECIPE {
     results = {
         {type = "item", name = "iron-ore", amount = 5},
     },
-    icons = py.composite_icon("iron-ore", "fawogae"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion")
 
 RECIPE {
     type = "recipe",
     name = "fish-oil-to-tin",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -171,14 +161,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-tin", amount = 10},
     },
-    icons = py.composite_icon("ore-tin", "fish-oil"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-nitrogen",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -187,14 +176,13 @@ RECIPE {
     results = {
         {type = "fluid", name = "nitrogen", amount = 150},
     },
-    icons = py.composite_icon("nitrogen", "meat"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "guts-to-chlorine",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -203,14 +191,13 @@ RECIPE {
     results = {
         {type = "fluid", name = "chlorine", amount = 100},
     },
-    icons = py.composite_icon("chlorine", "guts"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion")
 
 RECIPE {
     type = "recipe",
     name = "blood-to-chlorine",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -219,14 +206,13 @@ RECIPE {
     results = {
         {type = "fluid", name = "chlorine", amount = 50},
     },
-    icons = py.composite_icon("chlorine", "blood"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "brain-guts-to-zinc",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -236,14 +222,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-zinc", amount = 30},
     },
-    icons = py.composite_icon("ore-zinc", "guts", nil, "brain"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-to-zinc",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -252,14 +237,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-zinc", amount = 5},
     },
-    icons = py.composite_icon("ore-zinc", "grod-seeds"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "blood-to-zinc",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -268,14 +252,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-zinc", amount = 20},
     },
-    icons = py.composite_icon("ore-zinc", "blood"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "bhoddos-to-ti",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -284,14 +267,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-titanium", amount = 10},
     },
-    icons = py.composite_icon("ore-titanium", "bhoddos"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "navens-to-ti",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -300,14 +282,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-titanium", amount = 17},
     },
-    icons = py.composite_icon("ore-titanium", "navens"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "yaedol-to-sulfur",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -316,14 +297,13 @@ RECIPE {
     results = {
         {type = "item", name = "sulfur", amount = 12},
     },
-    icons = py.composite_icon("sulfur", "yaedols"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "fawogae-to-sulfur",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -332,14 +312,13 @@ RECIPE {
     results = {
         {type = "item", name = "sulfur", amount = 5},
     },
-    icons = py.composite_icon("sulfur", "fawogae"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "rennea-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -348,14 +327,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 10},
     },
-    icons = py.composite_icon("copper-ore", "rennea-seeds"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-to-copper",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -364,14 +342,13 @@ RECIPE {
     results = {
         {type = "item", name = "copper-ore", amount = 8},
     },
-    icons = py.composite_icon("copper-ore", "yaedols"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "brain-to-zinc",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -380,14 +357,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-zinc", amount = 12},
     },
-    icons = py.composite_icon("ore-zinc", "brain"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = "recipe",
     name = "guts-to-zinc",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -396,14 +372,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-zinc", amount = 15},
     },
-    icons = py.composite_icon("ore-zinc", "guts"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = "recipe",
     name = "carapace-to-al",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -412,14 +387,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-aluminium", amount = 25},
     },
-    icons = py.composite_icon("ore-aluminium", "carapace"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = "recipe",
     name = "spikes-to-mo",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -428,14 +402,13 @@ RECIPE {
     results = {
         {type = "item", name = "molybdenum-ore", amount = 30},
     },
-    icons = py.composite_icon("molybdenum-ore", "dingrit-spike"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-to-mo",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -444,14 +417,13 @@ RECIPE {
     results = {
         {type = "item", name = "molybdenum-ore", amount = 5},
     },
-    icons = py.composite_icon("molybdenum-ore", "tuuphra"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "cridren-seeds-to-mo",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -460,14 +432,13 @@ RECIPE {
     results = {
         {type = "item", name = "molybdenum-ore", amount = 10},
     },
-    icons = py.composite_icon("molybdenum-ore", "cridren-seeds"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-leaves-to-chromium",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -476,14 +447,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-chromium", amount = 17},
     },
-    icons = py.composite_icon("ore-chromium", "yotoi-leaves"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-to-chromium",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -492,14 +462,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-chromium", amount = 10},
     },
-    icons = py.composite_icon("ore-chromium", "yotoi-fruit"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-chromium",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -508,14 +477,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-chromium", amount = 15},
     },
-    icons = py.composite_icon("ore-chromium", "meat"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-seed-to-chromium",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -524,14 +492,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-chromium", amount = 25},
     },
-    icons = py.composite_icon("ore-chromium", "yotoi-seeds"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "meat-to-tin",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -540,14 +507,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-tin", amount = 15},
     },
-    icons = py.composite_icon("ore-tin", "meat"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion")
 
 RECIPE {
     type = "recipe",
     name = "fish-to-tin",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -556,14 +522,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-tin", amount = 25},
     },
-    icons = py.composite_icon("ore-tin", "fish"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-to-tin",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -572,14 +537,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-tin", amount = 10},
     },
-    icons = py.composite_icon("ore-tin", "yotoi-fruit"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-to-tin",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -588,14 +552,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-tin", amount = 5},
     },
-    icons = py.composite_icon("ore-tin", "grod"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-to-tin",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -604,14 +567,13 @@ RECIPE {
     results = {
         {type = "item", name = "ore-tin", amount = 17},
     },
-    icons = py.composite_icon("ore-tin", "navens"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "manure-to-nitrogen",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -620,14 +582,13 @@ RECIPE {
     results = {
         {type = "fluid", name = "nitrogen", amount = 50},
     },
-    icons = py.composite_icon("nitrogen", "manure"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk02")
 
 RECIPE {
     type = "recipe",
     name = "simik-scales-to-uranium",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -636,14 +597,13 @@ RECIPE {
     results = {
         {type = "item", name = "uranium-ore", amount = 8},
     },
-    icons = py.composite_icon("uranium-ore", "simik-scales"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk04")
 
 RECIPE {
     type = "recipe",
     name = "simik-poop-to-borax",
-    categories = {"atomizer"},
+    category = "atomizer",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -652,18 +612,17 @@ RECIPE {
     results = {
         {type = "item", name = "raw-borax", amount = 8},
     },
-    icons = py.composite_icon("raw-borax", "simik-poop"),
     --main_product = 'cocoon',
 }:add_unlock("molecular-decohesion-mk03")
 
 if mods.pyalternativeenergy then
-    -- DEPRECATE: probably deprecate this in next major py update in favor of chain in breaking changes branch
+    -- DEPRECATE: probably deprecate this in next major py update
     RECIPE {
         type = "recipe",
         name = "chitin-to-geothermal-water",
-        categories = {"atomizer"},
+        category = "atomizer",
         enabled = false,
-        hidden = false,
+        hidden = true,
         energy_required = 10,
         ingredients = {
             {type = "item", name = "chitin", amount = 2},
@@ -671,6 +630,49 @@ if mods.pyalternativeenergy then
         results = {
             {type = "fluid", name = "geothermal-water", amount = 50, temperature = 3000},
         },
-        -- icons = py.composite_icon("geothermal-water", "chitin") TODO enable once linearization is done, geowater doesnt exist when this is ran
+    }:add_unlock("molecular-decohesion")
+ 
+    RECIPE {
+        type = "recipe",
+        name = "chitin-to-geothermal-water-new",
+        category = "atomizer",
+        enabled = false,
+        energy_required = 10,
+        ingredients = {
+            {type = "item", name = "chitin", amount = 2},
+        },
+        results = {
+            {type = "fluid", name = "geothermal-water", amount = 50, temperature = 15},
+        },
+    }:add_unlock("molecular-decohesion")
+
+    RECIPE {
+        type = "recipe",
+        name = "bonemeal-to-geothermal-water",
+        category = "atomizer",
+        enabled = false,
+        energy_requred = 10,
+        ingredients = {
+            {type = "item", name = "bonemeal", amount = 5},
+        },
+        results = {
+            {type = "fluid", name = "geothermal-water", amount = 60, temperature = 15}
+        },
+        main_product = "geothermal-water"
+    }:add_unlock("molecular-decohesion")
+
+    RECIPE {
+        type = "recipe",
+        name = "heat-geothermal-water-to-3000",
+        category = "rhe",
+        enabled = false,
+        energy_required = 10, -- I chose this number for fun :)
+        ingredients = {
+            {type = "fluid", name = "geothermal-water", amount = 240, temperature = 15}
+        },
+        results = {
+            {type = "fluid", name = "geothermal-water", amount = 220, temperature = 3000}
+        },
+        main_product = "geothermal-water"
     }:add_unlock("molecular-decohesion")
 end
