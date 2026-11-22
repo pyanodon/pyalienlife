@@ -3,7 +3,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "cridren-sixth-layer-ethylene-chlorohydrin",
         enabled = false,
-        categories = {"cridren"},
+        category = "cridren",
         ingredients = {
             {type = "item", name = "caged-phadai", amount = 1},
             {type = "item", name = "silver-plate", amount = 2},
@@ -25,7 +25,7 @@ if data and not yafc_turd_integration then
         type = "recipe",
         name = "cridren-sixth-layer-organic-acid-anhydride",
         enabled = false,
-        categories = {"cridren"},
+        category = "cridren",
         ingredients = {
             {type = "item", name = "caged-vrauks",            amount = 1},
             {type = "item", name = "geothermal-water-barrel", amount = 20},
@@ -53,12 +53,11 @@ if data and not yafc_turd_integration then
         recipe:multiply_ingredient_amount("caged-arthurian", 2)
         recipe:multiply_result_amount("cridren", 2)
         recipe:add_result_amount("cridren", 1)
-        recipe.energy_required = recipe.energy_required--[[@cast -?]] * 2
+        recipe.energy_required = recipe.energy_required * 2
         recipe:multiply_result_amount("cage", 2)
         data:extend {recipe}
     end
 
-    --[[@type table<integer, string> ]]
     local mufflers = {"polycrystalline-slab", "alag-grid", "wall-shield", "reinforced-wall-shield"}
     for i, recipe in pairs {
         RECIPE("cridren-enclosure-mk01"):copy(),
@@ -67,7 +66,7 @@ if data and not yafc_turd_integration then
         RECIPE("cridren-enclosure-mk04"):copy(),
     } do
         recipe.name = recipe.name .. "-with-mufflers"
-        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}--[[@as data.IngredientPrototype]]
+        recipe:add_ingredient {type = "item", name = mufflers[i], amount = i * 35}
         data:extend {recipe}
     end
 end

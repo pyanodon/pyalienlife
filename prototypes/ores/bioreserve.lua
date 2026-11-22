@@ -1,6 +1,5 @@
 local resource_autoplace = require "resource-autoplace"
 
----@diagnostic disable-next-line: need-check-nil
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["ore-bioreserve"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["ore-bioreserve"] = {}
 
@@ -58,6 +57,7 @@ ENTITY {
             width = 128,
             height = 160,
             frame_count = 64,
+            randomize_visual_position = true,
             variation_count = 11,
             shift = util.by_pixel(0, -16),
             scale = 0.65

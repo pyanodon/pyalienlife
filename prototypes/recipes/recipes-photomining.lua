@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "hmas",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -25,7 +25,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yotoi-to-chelator",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -40,7 +40,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fawogae-to-chelator",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -55,7 +55,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "yeadols-to-chelator",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -70,7 +70,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "phytoplankton-to-chelator",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -85,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "seaweed-to-chelator",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -103,7 +103,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-pb",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -115,13 +115,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod")
+    icon = "__pyalienlifegraphics__/graphics/icons/pb-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "grod-sn",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -133,13 +134,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod")
+    icon = "__pyalienlifegraphics__/graphics/icons/sn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "grod-al",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -151,13 +153,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod")
+    icon = "__pyalienlifegraphics__/graphics/icons/al-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ag",
-    categories = {"bhoddos"},
+    category = "bhoddos",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -169,13 +172,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos")
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "seaweed-ag",
-    categories = {"seaweed"},
+    category = "seaweed",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -187,13 +191,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed")
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "moss-zn",
-    categories = {"moss"},
+    category = "moss",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -205,13 +210,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss")
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "navens-au",
-    categories = {"navens"},
+    category = "navens",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -223,13 +229,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens")
+    icon = "__pyalienlifegraphics__/graphics/icons/au-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-fe",
-    categories = {"navens"},
+    category = "navens",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -241,13 +248,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens")
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "rennea-cu",
-    categories = {"rennea"},
+    category = "rennea",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -259,13 +267,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea")
+    icon = "__pyalienlifegraphics__/graphics/icons/cu-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "rennea-co",
-    categories = {"rennea"},
+    category = "rennea",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -277,13 +286,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea")
+    icon = "__pyalienlifegraphics__/graphics/icons/co-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-ni",
-    categories = {"ralesia"},
+    category = "ralesia",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -295,13 +305,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia")
+    icon = "__pyalienlifegraphics__/graphics/icons/ni-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-nacl",
-    categories = {"tuuphra"},
+    category = "tuuphra",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -313,13 +324,14 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 50},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra")
+    icon = "__pyalienlifegraphics__/graphics/icons/nacl-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-ti",
-    categories = {"yaedols"},
+    category = "yaedols",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -331,13 +343,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols")
+    icon = "__pyalienlifegraphics__/graphics/icons/ti-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fe",
-    categories = {"yotoi"},
+    category = "yotoi",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -349,7 +362,8 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 50},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi")
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining")
 
 
@@ -358,7 +372,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-pb-2",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -371,13 +385,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/pb-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "grod-sn-2",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -390,13 +405,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/sn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "grod-al-2",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -409,13 +425,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/al-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ag-2",
-    categories = {"bhoddos"},
+    category = "bhoddos",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -428,13 +445,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "seaweed-ag-2",
-    categories = {"seaweed"},
+    category = "seaweed",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -447,13 +465,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "moss-zn-2",
-    categories = {"moss"},
+    category = "moss",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -466,13 +485,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "navens-au-2",
-    categories = {"navens"},
+    category = "navens",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -485,13 +505,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/au-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-fe-2",
-    categories = {"navens"},
+    category = "navens",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -504,13 +525,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "rennea-cu-2",
-    categories = {"rennea"},
+    category = "rennea",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -523,13 +545,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/cu-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "rennea-co-2",
-    categories = {"rennea"},
+    category = "rennea",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -542,13 +565,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/co-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-ni-2",
-    categories = {"ralesia"},
+    category = "ralesia",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -561,13 +585,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ni-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-nacl-2",
-    categories = {"tuuphra"},
+    category = "tuuphra",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -580,13 +605,14 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 80},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/nacl-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-ti-2",
-    categories = {"yaedols"},
+    category = "yaedols",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -599,13 +625,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ti-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fe-2",
-    categories = {"yotoi"},
+    category = "yotoi",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -618,7 +645,8 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 80},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, "chelator", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk02")
 
 
@@ -628,7 +656,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "grod-pb-3",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -642,13 +670,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "pb-biomass",
-    icons = py.composite_icon("pb-biomass", "grod", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/pb-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-sn-3",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -662,13 +691,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "sn-biomass",
-    icons = py.composite_icon("sn-biomass", "grod", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/sn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "grod-al-3",
-    categories = {"grod"},
+    category = "grod",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -682,13 +712,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "al-biomass",
-    icons = py.composite_icon("al-biomass", "grod", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/al-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ag-3",
-    categories = {"bhoddos"},
+    category = "bhoddos",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -702,13 +733,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "bhoddos", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "seaweed-ag-3",
-    categories = {"seaweed"},
+    category = "seaweed",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -722,13 +754,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ag-biomass",
-    icons = py.composite_icon("ag-biomass", "seaweed", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ag-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "moss-zn-3",
-    categories = {"moss"},
+    category = "moss",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -742,13 +775,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "zn-biomass",
-    icons = py.composite_icon("zn-biomass", "moss", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/zn-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-au-3",
-    categories = {"navens"},
+    category = "navens",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -762,13 +796,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "au-biomass",
-    icons = py.composite_icon("au-biomass", "navens", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/au-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "navens-fe-3",
-    categories = {"navens"},
+    category = "navens",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -782,13 +817,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "navens", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "rennea-cu-3",
-    categories = {"rennea"},
+    category = "rennea",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -802,13 +838,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "cu-biomass",
-    icons = py.composite_icon("cu-biomass", "rennea", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/cu-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "rennea-co-3",
-    categories = {"rennea"},
+    category = "rennea",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -822,13 +859,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "co-biomass",
-    icons = py.composite_icon("co-biomass", "rennea", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/co-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-ni-3",
-    categories = {"ralesia"},
+    category = "ralesia",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -842,13 +880,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ni-biomass",
-    icons = py.composite_icon("ni-biomass", "ralesia", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ni-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-nacl-3",
-    categories = {"tuuphra"},
+    category = "tuuphra",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -862,13 +901,14 @@ RECIPE {
         {type = "fluid", name = "waste-water",  amount = 100},
     },
     main_product = "nacl-biomass",
-    icons = py.composite_icon("nacl-biomass", "tuuphra", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/nacl-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "yaedols-ti-3",
-    categories = {"yaedols"},
+    category = "yaedols",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -882,13 +922,14 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "ti-biomass",
-    icons = py.composite_icon("ti-biomass", "yaedols", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/ti-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fe-3",
-    categories = {"yotoi"},
+    category = "yotoi",
     enabled = false,
     energy_required = 50,
     ingredients = {
@@ -902,7 +943,8 @@ RECIPE {
         {type = "fluid", name = "waste-water", amount = 100},
     },
     main_product = "fe-biomass",
-    icons = py.composite_icon("fe-biomass", "yotoi", nil, "hmas", nil)
+    icon = "__pyalienlifegraphics__/graphics/icons/fe-biomass.png",
+    icon_size = 64,
 }:add_unlock("phytomining-mk03")
 
 
@@ -918,7 +960,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "pb-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -930,13 +972,14 @@ RECIPE {
         {type = "item", name = "biomass",  amount = 5},
     },
     main_product = "ore-lead",
-    icons = py.composite_icon("ore-lead", "pb-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/mip/ore-lead.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "sn-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -948,13 +991,14 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product = "ore-tin",
-    icons = py.composite_icon("ore-tin", "sn-biomass")
-}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/mip/ore-tin.png",
+    icon_size = 64,
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "al-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -966,13 +1010,14 @@ RECIPE {
         {type = "item", name = "biomass",       amount = 5},
     },
     main_product = "ore-aluminium",
-    icons = py.composite_icon("ore-aluminium", "al-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/mip/ore-aluminium.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "ag-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -984,13 +1029,14 @@ RECIPE {
         {type = "item", name = "biomass",              amount = 5},
     },
     main_product = "lead-refined-dust-03",
-    icons = py.composite_icon("lead-refined-dust-03", "ag-biomass")
-}:add_unlock("phytomining-mk03"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/lead-refined-dust-03.png",
+    icon_size = 32,
+}:add_unlock("phytomining-mk03"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "au-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1002,13 +1048,14 @@ RECIPE {
         {type = "item", name = "biomass",          amount = 5},
     },
     main_product = "gold-concentrate",
-    icons = py.composite_icon("gold-concentrate", "au-biomass")
-}:add_unlock("phytomining-mk03"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/gold-concentrate.png",
+    icon_size = 32,
+}:add_unlock("phytomining-mk03"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "zn-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1020,13 +1067,14 @@ RECIPE {
         {type = "item", name = "biomass",  amount = 5},
     },
     main_product = "ore-zinc",
-    icons = py.composite_icon("ore-zinc", "zn-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/mip/ore-zinc.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "cu-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1038,13 +1086,14 @@ RECIPE {
         {type = "item", name = "biomass",    amount = 5},
     },
     main_product = "copper-ore",
-    icons = py.composite_icon("copper-ore", "cu-biomass")
-}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
+    icon = "__base__/graphics/icons/copper-ore.png",
+    icon_size = 64,
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "co-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1056,13 +1105,14 @@ RECIPE {
         {type = "item", name = "biomass",        amount = 5},
     },
     main_product = "cobalt-extract",
-    icons = py.composite_icon("cobalt-extract", "co-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pyalienlifegraphics__/graphics/icons/cobalt-extract.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "nacl-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1074,13 +1124,14 @@ RECIPE {
         {type = "item", name = "biomass", amount = 5},
     },
     main_product = "salt",
-    icons = py.composite_icon("salt", "nacl-biomass")
-}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/salt.png",
+    icon_size = 32,
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "ti-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1092,13 +1143,14 @@ RECIPE {
         {type = "item", name = "biomass",      amount = 5},
     },
     main_product = "ore-titanium",
-    icons = py.composite_icon("ore-titanium", "ti-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/mip/ore-titanium.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "fe-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1110,13 +1162,14 @@ RECIPE {
         {type = "item", name = "biomass",  amount = 5},
     },
     main_product = "iron-ore",
-    icons = py.composite_icon("iron-ore", "fe-biomass")
-}:add_unlock("phytomining"):replace_category("biofactory", "pulp")
+    icon = "__base__/graphics/icons/iron-ore.png",
+    icon_size = 64,
+}:add_unlock("phytomining"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "ni-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1128,13 +1181,14 @@ RECIPE {
         {type = "item", name = "biomass",    amount = 5},
     },
     main_product = "ore-nickel",
-    icons = py.composite_icon("ore-nickel", "ni-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pyraworesgraphics__/graphics/icons/mip/ore-nickel.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "nb-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -1146,13 +1200,14 @@ RECIPE {
         {type = "item", name = "biomass",     amount = 5},
     },
     main_product = "niobium-ore",
-    icons = py.composite_icon("niobium-ore", "nb-biomass")
-}:add_unlock("phytomining-mk02"):replace_category("biofactory", "pulp")
+    icon = "__pycoalprocessinggraphics__/graphics/icons/mip/niobium-ore.png",
+    icon_size = 64,
+}:add_unlock("phytomining-mk02"):change_category("pulp")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ur",
-    categories = {"bhoddos"},
+    category = "bhoddos",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -1163,14 +1218,13 @@ RECIPE {
         {type = "item",  name = "ur-biomass", amount = 10},
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
-    main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos")
+    main_product = "ur-biomass"
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ur-2",
-    categories = {"bhoddos"},
+    category = "bhoddos",
     enabled = false,
     energy_required = 140,
     ingredients = {
@@ -1182,14 +1236,13 @@ RECIPE {
         {type = "item",  name = "ur-biomass", amount = 20},
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
-    main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "chelator", nil)
+    main_product = "ur-biomass"
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "bhodos-ur-3",
-    categories = {"bhoddos"},
+    category = "bhoddos",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -1202,14 +1255,13 @@ RECIPE {
         {type = "item",  name = "ur-biomass", amount = 80},
         {type = "fluid", name = "steam",      amount = 500, temperature = 1000},
     },
-    main_product = "ur-biomass",
-    icons = py.composite_icon("ur-biomass", "bhoddos", nil, "hmas", nil)
+    main_product = "ur-biomass"
 }:add_unlock("phytomining-mk03")
 
 RECIPE {
     type = "recipe",
     name = "ur-biomass-extraction",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -1220,5 +1272,4 @@ RECIPE {
         {type = "item", name = "uranium-ore", amount = 5},
     },
     main_product = "uranium-ore",
-    icons = py.composite_icon("uranium-ore", "ur-biomass")
-}:add_unlock("phytomining-mk03"):replace_category("biofactory", "pulp")
+}:add_unlock("phytomining-mk03"):change_category("pulp")

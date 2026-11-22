@@ -1,4 +1,3 @@
----@diagnostic disable
 for _, interrupt_data in pairs(storage.interrupts or {}) do
     for _, condition in pairs(interrupt_data.conditions or {}) do
         -- migrate broken conditions

@@ -4,7 +4,7 @@
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-sample",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -25,7 +25,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -44,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-arum-seeds",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -60,7 +60,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-processing-01",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -76,7 +76,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-processing-02",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -93,7 +93,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-processing-03",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -109,7 +109,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cadaveric-acidgas-01",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -126,7 +126,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-cadaveric-arum",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 30,
     ingredients = {

@@ -121,7 +121,7 @@ for i = 1, 4 do
         dying_explosion = "medium-explosion",
         collision_box = {{-3.2, -3.2}, {3.2, 3.2}},
         selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-        use_mirroring = true,
+        forced_symmetry = "diagonal-pos",
         module_slots = i,
         allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
         crafting_categories = {"incubator"},
@@ -188,26 +188,30 @@ for i = 1, 4 do
                 production_type = "output",
                 volume = 100,
                 pipe_connections = {{flow_direction = "output", position = {-2.0, -3.0}, direction = defines.direction.north}},
+                priority = "extra-high"
             },
             {
                 production_type = "input",
-                volume = 100,
+                volume = 1000,
                 pipe_connections = {{flow_direction = "input", position = {2.0, 3.0}, direction = defines.direction.south}},
+                priority = "extra-high"
             },
             {
                 production_type = "input",
-                volume = 100,
+                volume = 1000,
                 pipe_connections = {{flow_direction = "input", position = {3.0, -2.0}, direction = defines.direction.east}},
+                priority = "extra-high"
             },
         },
         impact_category = "metal-large",
         --[[working_sound = { -- disabled for now, this is annoying
             sound = {filename = "__pyalienlifegraphics__/sounds/incubator.ogg", volume = 0.7},
             idle_sound = {filename = "__pyalienlifegraphics__/sounds/incubator.ogg", volume = 0.3},
+            apparent_volume = 2.5
         }--]]
     }
 
-    table.insert(data.raw["assembling-machine"][name].graphics_set--[[@cast -?]].working_visualisations--[[@cast -?]], {
+    table.insert(data.raw["assembling-machine"][name].graphics_set.working_visualisations, {
         animation = {
             filename = "__pyalienlifegraphics__/graphics/entity/incubator/cooler.png",
             frame_count = 80,
@@ -222,7 +226,7 @@ for i = 1, 4 do
         constant_speed = true,
     })
 
-    table.insert(data.raw["assembling-machine"][name].graphics_set--[[@cast -?]].working_visualisations--[[@cast -?]], {
+    table.insert(data.raw["assembling-machine"][name].graphics_set.working_visualisations, {
         animation = {
             filename = "__pyalienlifegraphics__/graphics/entity/incubator/smoke.png",
             frame_count = 50,

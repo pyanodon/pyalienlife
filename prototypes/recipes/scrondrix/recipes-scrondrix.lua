@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "scrondrix",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -16,19 +16,18 @@ RECIPE {
         {type = "item",  name = "scrondrix-codex",         amount = 2},
         {type = "item",  name = "earth-lizard-sample",     amount = 1},
         {type = "item",  name = "earth-roadrunner-sample", amount = 1},
-        {type = "fluid", name = "artificial-blood",        amount = 100},
         {type = "fluid", name = "fetal-serum",             amount = 100},
+        {type = "fluid", name = "artificial-blood",        amount = 100},
     },
     results = {
         {type = "item", name = "scrondrix", amount = 1},
     },
-    icons = py.composite_icon("scrondrix", "scrondrix-codex")
 }:add_unlock("scrondrix")
 
 RECIPE {
     type = "recipe",
     name = "scrondrix-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -44,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-roadrunner-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -70,7 +69,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mature-01',
-    categories = {'scrondrix'},
+    category = 'scrondrix',
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -91,7 +90,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'scrondrix-mature-02',
-    categories = {'scrondrix'},
+    category = 'scrondrix',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -119,7 +118,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-scrondrix",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -134,7 +133,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-scrondrix",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

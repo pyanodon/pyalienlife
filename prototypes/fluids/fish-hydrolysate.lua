@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "fish-hydrolysate",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {

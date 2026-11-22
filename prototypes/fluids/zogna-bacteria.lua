@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "zogna-bacteria",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 5,
     ingredients = {

@@ -3,7 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-1",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -15,13 +15,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 1},
     },
-    order = "ya-f-a"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-2",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -34,13 +33,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 2},
     },
-    order = "ya-f-b"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-3",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -53,13 +51,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 3},
     },
-    order = "ya-f-c"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-4",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -73,13 +70,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 4},
     },
-    order = "ya-f-d"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-5",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -94,13 +90,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 5},
     },
-    order = "ya-f-e"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-6",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -116,13 +111,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 6},
     },
-    order = "ya-f-f"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-7",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -139,13 +133,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 7},
     },
-    order = "ya-f-g"
 }:add_unlock("mega-farm-yotoi"):add_ingredient {type = "item", name = "urea", amount = 300}
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-8",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 100,
@@ -162,13 +155,12 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 8},
     },
-    order = "ya-f-h"
 }:add_unlock("mega-farm-yotoi")
 
 RECIPE {
     type = "recipe",
     name = "yotoi-fruit-super-10",
-    categories = {"yotoi-farm"},
+    category = "yotoi-farm",
     subgroup = "py-alienlife-yotoi-fruit-smartfarm",
     enabled = false,
     energy_required = 60,
@@ -185,5 +177,4 @@ RECIPE {
     results = {
         {type = "item", name = "yotoi-fruit", amount = tile_count * 10},
     },
-    order = "ya-f-j"
 }:add_unlock("mega-farm-yotoi"):add_ingredient {type = "item", name = "urea", amount = 300}:add_ingredient {type = "item", name = "blood-meal", amount = 120}

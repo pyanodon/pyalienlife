@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "simik",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 350,
     ingredients = {
@@ -16,20 +16,19 @@ RECIPE {
         {type = "item",  name = "earth-tiger-sample",     amount = 1},
         {type = "item",  name = "earth-lizard-sample",    amount = 1},
         {type = "item",  name = "strorix-unknown-sample", amount = 5}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "artificial-blood",       amount = 200},
-        {type = "fluid", name = "blood",                  amount = 700},
         {type = "fluid", name = "fetal-serum",            amount = 100},
+        {type = "fluid", name = "blood",                  amount = 700},
+        {type = "fluid", name = "artificial-blood",       amount = 200},
     },
     results = {
         {type = "item", name = "simik", amount = 1},
     },
-    icons = py.composite_icon("simik", "simik-codex")
 }:add_unlock("simik-mk01")
 
 RECIPE {
     type = "recipe",
     name = "strorix-unknown-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -45,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -63,7 +62,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -86,7 +85,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -119,7 +118,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'simik-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -138,7 +137,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'simik-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -164,7 +163,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-blood-to-tar",
-    categories = {"tar"},
+    category = "tar",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -185,7 +184,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-blood-to-oleochemicals",
-    categories = {"olefin"},
+    category = "olefin",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -199,7 +198,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-blood-to-kimberlite",
-    categories = {"pan"},
+    category = "pan",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -214,7 +213,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "caged-simik",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {
@@ -229,7 +228,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uncaged-simik",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 0.5,
     ingredients = {

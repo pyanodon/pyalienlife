@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "ralesia-sample",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -20,13 +20,12 @@ RECIPE {
     results = {
         {type = "item", name = "ralesia", amount = 2},
     },
-    icons = py.composite_icon("ralesia", "ralesia-codex")
 }:add_unlock("ralesia")
 
 RECIPE {
     type = "recipe",
     name = "ralesia-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -43,7 +42,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-flower-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -59,7 +58,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "replicator-ralesia",
-    categories = {"advanced-crafting"},
+    category = "advanced-crafting",
     enabled = false,
     energy_required = 30,
     ingredients = {

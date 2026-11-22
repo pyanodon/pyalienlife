@@ -3,7 +3,7 @@
 RECIPE {
     type = "recipe",
     name = "simik-iron",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -27,7 +27,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-copper",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -51,7 +51,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-quartz",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -78,7 +78,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-coal",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -104,7 +104,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-tin",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -129,7 +129,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-aluminium",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -156,7 +156,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-boron",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -182,7 +182,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-chromium",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -209,7 +209,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-molybdenum",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -234,7 +234,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-zinc",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -249,7 +249,7 @@ RECIPE {
         {type = "item", name = "concentrated-zinc", amount = 2},
         {type = "item", name = "zinc-waste-barrel", amount = 4},
         {type = "item", name = "bio-oil-barrel",    amount = 1},
-        {type = "item", name = "bio-ore",           amount = 1, independent_probability = 0.65, ignored_by_productivity = 1},
+        {type = "item", name = "bio-ore",           amount = 1, probability = 0.65, ignored_by_productivity = 1},
         {type = "item", name = "hot-air-barrel",    amount = 1},
     },
     main_product = "concentrated-zinc",
@@ -262,7 +262,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-nickel",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -277,7 +277,7 @@ RECIPE {
         {type = "item", name = "nickel-pulp-03-barrel",  amount = 3},
         {type = "item", name = "bio-oil-barrel",         amount = 1},
         {type = "item", name = "hot-air-barrel",         amount = 1},
-        {type = "item", name = "bio-ore",                amount = 1, independent_probability = 0.65, ignored_by_productivity = 1},
+        {type = "item", name = "bio-ore",                amount = 1, probability = 0.65, ignored_by_productivity = 1},
     },
     main_product = "nickel-pulp-03-barrel",
     subgroup = "py-alienlife-simik",
@@ -289,7 +289,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-lead",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -304,7 +304,7 @@ RECIPE {
         {type = "item", name = "pbsb-alloy",     amount = 2},
         {type = "item", name = "lead-acetate",   amount = 3},
         {type = "item", name = "bio-oil-barrel", amount = 1},
-        {type = "item", name = "bio-ore",        amount = 1, independent_probability = 0.65, ignored_by_productivity = 1},
+        {type = "item", name = "bio-ore",        amount = 1, probability = 0.65, ignored_by_productivity = 1},
         {type = "item", name = "hot-air-barrel", amount = 1},
     },
     main_product = "pbsb-alloy",
@@ -317,7 +317,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-titanium",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -343,7 +343,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-niobium",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -369,7 +369,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-nexelit",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -395,7 +395,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-silver",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -421,7 +421,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-gold",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -447,7 +447,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "simik-uranium",
-    categories = {"simik"},
+    category = "simik",
     enabled = false,
     energy_required = 80,
     ingredients = {

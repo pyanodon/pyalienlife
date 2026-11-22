@@ -140,11 +140,12 @@ ENTITY {
         },
     },
 
-    perceived_performance = {minimum = 0.1},
+    min_perceived_performance = 0.1,
+    performance_to_sound_speedup = 0.0,
     impact_category = "metal-large",
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg", volume = 0.80},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/generator-1.ogg", volume = 0.3},
-        activity_to_speed_modifiers = {multiplier = 0}
+        apparent_volume = 2.5
     }
 }

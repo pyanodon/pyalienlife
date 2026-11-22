@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "phadai-recharge-1",
-    categories = {"bay"},
+    category = "bay",
     enabled = false,
     energy_required = 40,
     ingredients = {

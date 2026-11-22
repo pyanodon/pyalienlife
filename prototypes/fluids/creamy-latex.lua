@@ -15,7 +15,7 @@ FLUID {
 RECIPE {
     type = "recipe",
     name = "creamy-latex",
-    categories = {"washer"},
+    category = "washer",
     enabled = true,
     energy_required = 8,
     ingredients = {

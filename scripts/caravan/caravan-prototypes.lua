@@ -1,7 +1,3 @@
----@namespace PyAlienLife
----@type PyAlienLifeStorage
-storage = storage --[[@as PyAlienLifeStorage]]
-
 require "util"
 
 ---@enum CaravanActionListType
@@ -49,11 +45,7 @@ Caravan.all_actions = {
             "fill-tank",
             "empty-tank",
             "circuit-condition",
-            "circuit-condition-static",
-            "fill-tank-until-caravan-has",
-            "fill-tank-until-target-has",
-            "empty-tank-until-caravan-has",
-            "empty-tank-until-target-has",
+            "circuit-condition-static"
         },
         ["character"] = table.invert {
             "time-passed",
@@ -202,11 +194,7 @@ Caravan.valid_actions = {
             "fill-tank",
             "empty-tank",
             "circuit-condition",
-            "circuit-condition-static",
-            "fill-tank-until-caravan-has",
-            "fill-tank-until-target-has",
-            "empty-tank-until-caravan-has",
-            "empty-tank-until-target-has",
+            "circuit-condition-static"
         },
         ["electric-pole"] = table.invert{
             "time-passed",
@@ -253,10 +241,6 @@ Caravan.actions_with_item_count = table.invert{
     "outpost-fluid-count",
     "caravan-fluid-count",
     "target-fluid-count",
-    "fill-tank-until-caravan-has",
-    "fill-tank-until-target-has",
-    "empty-tank-until-caravan-has",
-    "empty-tank-until-target-has",
 }
 
 Caravan.foods = {
@@ -282,7 +266,6 @@ Caravan.foods = {
         ["gastrocapacitor"] = 50
     },
 }
----@alias CaravanName "caravan"|"fluidavan"|"flyavan"|"fluidflyavan"|"nukavan"|"caravan-turd"|"fluidavan-turd"|"flyavan-turd"|"fluidflyavan-turd"|"nukavan-turd"
 
 local caravan_prototypes = {
     caravan = {
@@ -343,26 +326,6 @@ local caravan_prototypes = {
             allow_paths_through_own_entities = true
         }
     },
-    fluidflyavan = {
-        opens_player_inventory = true,
-        max_volume = prototypes.entity["py-tank-10"].fluid_capacity,
-        fuel_size = 4,
-        destructible = false,
-        outpost = "outpost-aerial-fluid",
-        favorite_foods = Caravan.foods.flyavan,
-        actions = Caravan.valid_actions.fluidavan,
-        camera_zoom = 0.25,
-        placeable_by = "fluidflyavan",
-        map_tag = {
-            type = "virtual",
-            name = "caravan-map-tag-mk02"
-        },
-        requeue_required = true,
-        pathfinder_flags = {
-            allow_destroy_friendly_entities = true,
-            allow_paths_through_own_entities = true
-        }
-    },
     nukavan = {
         inventory_size = 10,
         opens_player_inventory = true,
@@ -391,12 +354,10 @@ caravan_prototypes["caravan-turd"]   = caravan_prototypes["caravan"]
 caravan_prototypes["fluidavan-turd"] = caravan_prototypes["fluidavan"]
 caravan_prototypes["flyavan-turd"]   = caravan_prototypes["flyavan"]
 caravan_prototypes["nukavan-turd"]   = caravan_prototypes["nukavan"]
-caravan_prototypes["fluidflyavan-turd"]   = caravan_prototypes["fluidflyavan"]
 caravan_prototypes["caravan-turd"].placeable_by   = "caravan-turd"
 caravan_prototypes["fluidavan-turd"].placeable_by = "fluidavan-turd"
 caravan_prototypes["flyavan-turd"].placeable_by   = "flyavan-turd"
 caravan_prototypes["nukavan-turd"].placeable_by   = "nukavan-turd"
-caravan_prototypes["fluidflyavan-turd"].placeable_by   = "fluidflyavan"
 
 -- small migration script to ensure we are not transfering deleted items
 -- I have no access to the JSON migrations so invalid items are just deleted
@@ -427,21 +388,14 @@ local function migrate_proto(name, type_name, migrations)
     end
     return nil
 end
-local function get_elem_type(condition_or_action_type)
-    if condition_or_action_type:find("fluid") or condition_or_action_type:find("tank") then
-        return "fluid"
-    end
-    return "item"
-end
 local function migrate_action(action, caravan_data, migrations)
     local prev_value = action.elem_value
     if prev_value == nil then
         return
     end
-    local elem_type = get_elem_type(action.type)
-    action.elem_value = migrate_proto(prev_value, elem_type, migrations)
+    action.elem_value = migrate_proto(prev_value, "item", migrations)
     if not action.elem_value then
-        error_caravan(caravan_data, prev_value, elem_type)
+        error_caravan(caravan_data, prev_value, "item")
     end
 end
 local function migrate_circuit_condition(condition, caravan_data, migrations)
@@ -485,7 +439,7 @@ py.on_event(py.events.on_init(), function(changes)
         for _, condition in pairs(interrupt_data.conditions or {}) do
             local elem_value = condition.elem_value
             if elem_value ~= nil then
-                local elem_type = get_elem_type(condition.type)
+                local elem_type = condition.type:find("fluid") and "fluid" or "item"
                 condition.elem_value = migrate_proto(elem_value, elem_type, migrations)
                 if condition.elem_value == nil then
                     error_caravan(interrupt_name, elem_value, elem_type)

@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "dhilmos",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -15,19 +15,18 @@ RECIPE {
         {type = "item",  name = "fish",                    amount = 15},
         {type = "item",  name = "dhilmos-codex",           amount = 2},
         {type = "item",  name = "earth-crustacean-sample", amount = 1}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "artificial-blood",        amount = 100},
         {type = "fluid", name = "fetal-serum",             amount = 100},
+        {type = "fluid", name = "artificial-blood",        amount = 100},
     },
     results = {
         {type = "item", name = "dhilmos", amount = 1},
     },
-    icons = py.composite_icon("dhilmos", "dhilmos-codex")
 }:add_unlock("dhilmos")
 
 RECIPE {
     type = "recipe",
     name = "dhilmos-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -50,7 +49,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-grow-01",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 24,
     ingredients = {
@@ -71,7 +70,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mature-01',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 80,
     ingredients = {
@@ -89,7 +88,7 @@ RECIPE {
 RECIPE {
     type = 'recipe',
     name = 'dhilmos-mature-02',
-    categories = {'creature-chamber'},
+    category = 'creature-chamber',
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -112,7 +111,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -134,7 +133,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dhilmos-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {

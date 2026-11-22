@@ -199,5 +199,6 @@ ENTITY {
     working_sound = {
         sound = {filename = "__pyalienlifegraphics__/sounds/vonix-den.ogg", volume = 0.8},
         idle_sound = {filename = "__pyalienlifegraphics__/sounds/vonix-den.ogg", volume = 0.3},
+        apparent_volume = 0.45
     }
 }

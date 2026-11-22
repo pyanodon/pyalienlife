@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "zipir1",
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     energy_required = 150,
     ingredients = {
@@ -15,19 +15,18 @@ RECIPE {
         {type = "item",  name = "bio-sample",              amount = 10},
         {type = "item",  name = "zipir-codex",             amount = 2},
         {type = "item",  name = "earth-crustacean-sample", amount = 1}, --add alien sample from pyALiens mod here.
-        {type = "fluid", name = "artificial-blood",        amount = 100},
         {type = "fluid", name = "fetal-serum",             amount = 100},
+        {type = "fluid", name = "artificial-blood",        amount = 100},
     },
     results = {
         {type = "item", name = "zipir1", amount = 1},
     },
-    icons = py.composite_icon("zipir1", "zipir-codex")
 }:add_unlock("zipir")
 
 RECIPE {
     type = "recipe",
     name = "zipir-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -44,7 +43,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "earth-crustacean-sample",
-    categories = {"data-array"},
+    category = "data-array",
     enabled = false,
     energy_required = 300,
     ingredients = {
@@ -62,7 +61,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-food-01",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -84,7 +83,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-food-02",
-    categories = {"crafting-with-fluid"},
+    category = "crafting-with-fluid",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -111,7 +110,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-grow-01",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 40,
     ingredients = {
@@ -128,7 +127,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zipir-pup-maturation",
-    categories = {"zipir"},
+    category = "zipir",
     enabled = false,
     energy_required = 80,
     ingredients = {

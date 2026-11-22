@@ -1,7 +1,3 @@
----@namespace PyAlienLife
----@type PyAlienLifeStorage
-storage = storage --[[@as PyAlienLifeStorage]]
-
 require "actions"
 
 local ImplControl = require "control"
@@ -152,7 +148,7 @@ end
 
 ---Starts a caravan pathfinding to its next scheduled entity. Sets the action ID to -1 becuase it cannot do actions while in transit.
 ---This is called whenever it finishes all its actions on the previous schedule or it is started manually via the GUI.
----@param caravan_data table Caravan
+---@param caravan_data Caravan
 ---@param schedule_id int
 ---@param skip_eating boolean?
 function P.begin_schedule(caravan_data, schedule_id, skip_eating)
@@ -191,7 +187,6 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
         if schedule_entity.valid and schedule_entity.surface == entity.surface then
             ImplControl.goto_entity(caravan_data, schedule.entity)
         else
-            ---@diagnostic disable-next-line: undefined-field
             ImplGui.add_alert(entity, Caravan.alerts.destination_destroyed)
             py.draw_error_sprite(entity, "virtual-signal.py-destination-destroyed", 30)
             ImplControl.wander(caravan_data)
@@ -206,7 +201,7 @@ function P.begin_schedule(caravan_data, schedule_id, skip_eating)
 end
 
 ---Begins the action with the specified ID inside the caravan's current schedule.
----@param caravan_data table Caravan
+---@param caravan_data Caravan
 ---@param action_id int
 function P.begin_action(caravan_data, action_id)
     local entity = caravan_data.entity

@@ -3,8 +3,7 @@ local tile_count = 529
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-1",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -15,14 +14,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 1},
     },
-    order = "ta-a"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-2",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -34,14 +31,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 2},
     },
-    order = "ta-b"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-3",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -54,14 +49,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 3},
     },
-    order = "ta-c"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-4",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -75,14 +68,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 4},
     },
-    order = "ta-d"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-5",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -96,14 +87,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 5},
     },
-    order = "ta-e"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-6",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -118,14 +107,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 6},
     },
-    order = "ta-f"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-7",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 100,
     ingredients = {
@@ -139,14 +126,12 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 7},
     },
-    order = "ta-g"
 }:add_unlock("mega-farm-tuuphra")
 
 RECIPE {
     type = "recipe",
     name = "tuuphra-super-10",
-    categories = {"tuuphra-farm"},
-    subgroup = "py-alienlife-tuuphra-smartfarm",
+    category = "tuuphra-farm",
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -161,5 +146,4 @@ RECIPE {
     results = {
         {type = "item", name = "tuuphra", amount = tile_count * 10},
     },
-    order = "ta-j"
 }:add_unlock("mega-farm-tuuphra")

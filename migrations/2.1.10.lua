@@ -1,4 +1,3 @@
----@diagnostic disable
 local function exists_and_valid(v) return v and v.valid end
 
 if not storage.caravans then return end

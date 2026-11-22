@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "petri-dish-bacteria",
-    categories = {"micro-mine"},
+    category = "micro-mine",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -15,7 +15,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "plasmids",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -33,7 +33,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "retrovirus",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -51,7 +51,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "retrovirus-2",
-    categories = {"incubator"},
+    category = "incubator",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -70,7 +70,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cdna",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -91,7 +91,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "primers",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -102,14 +102,14 @@ RECIPE {
         {type = "fluid", name = "phytoplankton",       amount = 80},
     },
     results = {
-        {type = "item", name = "primers", amount = 1, independent_probability = 0.7},
+        {type = "item", name = "primers", amount = 1, probability = 0.7},
     },
 }:add_unlock("genetics-mk03")
 
 RECIPE {
     type = "recipe",
     name = "primers-02",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -128,7 +128,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "primers-03",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -148,7 +148,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dna-polymerase",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -166,7 +166,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dna-polymerase-2",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -184,7 +184,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "alien-sample-02",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -206,7 +206,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "alien-sample-03",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -229,7 +229,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "gta",
-    categories = {"bio-reactor"},
+    category = "bio-reactor",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -251,7 +251,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cysteine",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -269,7 +269,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "adam42-gen",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 25,
     ingredients = {
@@ -293,7 +293,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "zinc-finger-proteins",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -315,7 +315,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anabolic-rna",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 380,
     ingredients = {
@@ -337,7 +337,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "anabolic-rna-2",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 380,
     ingredients = {
@@ -360,7 +360,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "propeptides",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -381,7 +381,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "purine-analogues",
-    categories = {"hpf"},
+    category = "hpf",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -398,7 +398,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "immunosupressants",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -417,7 +417,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "antitumor",
-    categories = {mods.pyhightech and "nano" or "research"},
+    category = mods.pyhightech and "nano" or "research",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -440,7 +440,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "antitumor-2",
-    categories = {mods.pyhightech and "nano" or "research"},
+    category = mods.pyhightech and "nano" or "research",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -464,7 +464,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dynemicin",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -484,7 +484,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "enediyne",
-    categories = {"biofactory"},
+    category = "biofactory",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -504,7 +504,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "enzyme-pks",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -525,7 +525,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "recombinant-ery",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -547,7 +547,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "recombinant-ery-3",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -571,7 +571,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "orexigenic",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -595,7 +595,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "orexigenic-2",
-    categories = {"research"},
+    category = "research",
     enabled = false,
     energy_required = 120,
     ingredients = {
@@ -621,7 +621,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "cbp",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -639,7 +639,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "chimeric-proteins",
-    categories = {"genlab"},
+    category = "genlab",
     enabled = false,
     energy_required = 30,
     ingredients = {

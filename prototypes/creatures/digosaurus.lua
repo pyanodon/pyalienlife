@@ -5,7 +5,7 @@ RECIPE {
     type = "recipe",
     name = "digosaurus",
     energy_required = 120,
-    categories = {"creature-chamber"},
+    category = "creature-chamber",
     enabled = false,
     ingredients = {
         {type = "item",  name = "moss-gen",             amount = 30},
@@ -138,7 +138,6 @@ local mining_animation = {
 
 ENTITY {
     type = "unit",
-    tall = true,
     name = "digosaurus",
     icon = item_icon,
     icon_size = 64,
@@ -197,7 +196,7 @@ RECIPE {
     name = "digosaurus-hidden-recipe",
     ingredients = {},
     results = {{type = "item", name = "nexelit-ore", amount = 4000}},
-    categories = {"dino-dig-site"},
+    category = "dino-dig-site",
     enabled = false,
     localised_name = {"entity-name.ore-nexelit"},
     hidden = true,
@@ -215,7 +214,6 @@ ENTITY {
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "no-automated-item-insertion"},
     minable = {mining_time = 0.5, result = "dino-dig-site"},
-    placeable_by = {item = "dino-dig-site", count = 1},
     max_health = 350,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -269,7 +267,6 @@ ENTITY {
     hidden = true,
     flags = {"not-blueprintable", "not-in-made-in"},
     minable = ENTITY("dino-dig-site").minable,
-    placeable_by = ENTITY("dino-dig-site").placeable_by,
     collision_box = ENTITY("dino-dig-site").collision_box,
     selection_box = ENTITY("dino-dig-site").selection_box,
     graphics_set = ENTITY("dino-dig-site").graphics_set,
@@ -279,7 +276,7 @@ ENTITY {
     resource_searching_radius = 1.0,
     mining_speed = 0,
     resource_categories = {"ore-nexelit"}
-}--[[@as data.EntityPrototype]]
+}
 
 ITEM {
     type = "item",
@@ -309,6 +306,7 @@ ENTITY {
     collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
     collision_mask = {layers = {}},
     inventory_size = 2,
+    enable_inventory_bar = false,
     picture = {
         filename = "__core__/graphics/empty.png",
         width = 1,

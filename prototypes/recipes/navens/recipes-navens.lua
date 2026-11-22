@@ -5,7 +5,7 @@
 RECIPE {
     type = "recipe",
     name = "navens-sample",
-    categories = {"nursery"},
+    category = "nursery",
     enabled = false,
     energy_required = 200,
     ingredients = {
@@ -20,13 +20,12 @@ RECIPE {
     results = {
         {type = "item", name = "navens", amount = 2},
     },
-    icons = py.composite_icon("navens", "navens-codex")
 }:add_unlock("navens")
 
 RECIPE {
     type = "recipe",
     name = "navens-codex",
-    categories = {"crafting"},
+    category = "crafting",
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -42,7 +41,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "navens-spore",
-    categories = {"spore"},
+    category = "spore",
     enabled = false,
     energy_required = 20,
     ingredients = {
@@ -55,7 +54,7 @@ RECIPE {
 -- RECIPE {
 --     type = "recipe",
 --     name = "navens-spore-2",
---     categories = {"spore"},
+--     category = "spore",
 --     enabled = false,
 --     energy_required = 15,
 --     ingredients = {
@@ -68,7 +67,7 @@ RECIPE {
 -- RECIPE {
 --     type = "recipe",
 --     name = "navens-spore-3",
---     categories = {"spore"},
+--     category = "spore",
 --     enabled = false,
 --     energy_required = 10,
 --     ingredients = {

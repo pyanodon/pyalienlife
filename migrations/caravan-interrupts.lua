@@ -1,4 +1,3 @@
----@diagnostic disable
 for unit_number, caravan_data in pairs(storage.caravans or {}) do
     caravan_data.interrupts = caravan_data.interrupts or {}
 

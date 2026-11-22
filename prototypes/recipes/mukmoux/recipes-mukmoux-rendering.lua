@@ -21,7 +21,7 @@ local IMP_BRAIN = 4
 
 py.autorecipes {
 	name = "rendering",
-	categories = {"slaughterhouse"},
+	category = "slaughterhouse",
 	subgroup = "py-alienlife-mukmoux",
 	order = "b",
 	crafting_speed = 30,
@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-mukmoux", amount = INPUT_AMOUNT},
-			}--[[@as data.IngredientPrototype[] ]],
+			},
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -42,14 +42,12 @@ py.autorecipes {
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "cage",        amount = INPUT_AMOUNT},
 				{name = "brain",       amount = BASE_BRAIN},
-			}--[[@as data.ProductPrototype[] ]],
+			},
 			crafting_speed = 30,
 			tech = "mukmoux",
 			name = "full-render-mukmoux",
-			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/mukmoux.png",   draw_background = true}
-			}
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-mukmoux.png",
+			icon_size = 64,
 		},
 		--brain mukmoux rendering
 		{

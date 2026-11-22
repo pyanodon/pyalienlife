@@ -21,7 +21,7 @@ local IMP_SPECIAL = 2
 
 py.autorecipes {
 	name = "rendering",
-	categories = {"slaughterhouse"},
+	category = "slaughterhouse",
 	subgroup = "py-alienlife-phagnot",
 	order = "b",
 	crafting_speed = 30,
@@ -31,7 +31,7 @@ py.autorecipes {
 			ingredients =
 			{
 				{name = "caged-phagnot", amount = INPUT_AMOUNT},
-			}--[[@as data.IngredientPrototype[] ]],
+			},
 			results =
 			{
 				{name = "bones",       amount = BASE_BONES},
@@ -42,14 +42,12 @@ py.autorecipes {
 				{name = "blood",       amount = BASE_BLOOD},
 				{name = "cage",        amount = INPUT_AMOUNT},
 				{name = "brain",       amount = BASE_BRAIN},
-			}--[[@as data.ProductPrototype[] ]],
+			},
 			crafting_speed = 30,
 			tech = "phagnot",
 			name = "full-render-phagnots",
-			icons = {
-				{icon = "__pyalienlifegraphics__/graphics/icons/rendering.png", draw_background = false},
-				{icon = "__pyalienlifegraphics__/graphics/icons/phagnot.png",   draw_background = true}
-			}
+			icon = "__pyalienlifegraphics__/graphics/icons/rendering-phagnot.png",
+			icon_size = 64,
 		},
 		--brain phagnot rendering
 		{
