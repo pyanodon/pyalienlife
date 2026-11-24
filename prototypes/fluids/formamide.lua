@@ -6,7 +6,7 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = "fluid", name = "carbon-dioxide", amount = 100},
-        {type = "fluid", name = "methanol",       amount = 100},
+        {type = "fluid", name = "methanol",       amount = 100, ignored_by_stats = 100},
         {type = "fluid", name = "nitrogen",       amount = 100},
     },
     results = {

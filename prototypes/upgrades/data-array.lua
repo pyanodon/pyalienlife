@@ -4,7 +4,7 @@ if data then
         name = "earth-generic-sample-duplication",
         ingredients = {
             {type = "item", name = "iron-chest",           amount = 1},
-            {type = "item", name = "earth-generic-sample", amount = 1}
+            {type = "item", name = "earth-generic-sample", amount = 1, ignored_by_stats = 1}
         },
         results = {{name = "earth-generic-sample", amount = 2, type = "item", ignored_by_productivity = 1, ignored_by_stats = 1}},
         enabled = false,

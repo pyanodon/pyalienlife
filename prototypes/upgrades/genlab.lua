@@ -1,7 +1,7 @@
 if data then
     local adam = RECIPE("adam42-gen"):copy()
     adam.name = "adam42-gen-laser"
-    adam:add_ingredient {name = "personal-laser-defense-equipment", amount = 1, type = "item"}
+    adam:add_ingredient {name = "personal-laser-defense-equipment", amount = 1, type = "item", ignored_by_stats = 1}
     adam:add_result {name = "personal-laser-defense-equipment", amount = 1, type = "item", independent_probability = 0.99, ignored_by_productivity = 1, ignored_by_stats = 1}
     adam:remove_result("adam42-gen")
     adam:add_result {name = "adam42-gen", type = "item", amount_min = 1, amount_max = 2}
