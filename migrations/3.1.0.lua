@@ -4,14 +4,14 @@ storage.farms = storage.farms or {}
 storage.farm_count = storage.farm_count or 0
 storage.alerts = storage.alerts or {}
 storage.alert_count = storage.alert_count or 0
-for _, entity in pairs(storage.disabled_farm_buildings) do
+for _, entity in pairs(storage.disabled_farm_buildings or {}) do
     entity.disabled_by_script = false
     entity.custom_status = nil
     storage.farms[entity.unit_number] = {entity = entity}
     Farming.process(storage.farms[entity.unit_number])
     storage.farm_count = storage.farm_count + 1
 end
-for _, entity in pairs(storage.enabled_farm_buildings) do
+for _, entity in pairs(storage.enabled_farm_buildings or {}) do
     storage.farms[entity.unit_number] = {entity = entity}
     storage.farm_count = storage.farm_count + 1
 end
